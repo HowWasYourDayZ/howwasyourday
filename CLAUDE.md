@@ -12,6 +12,9 @@
    change against LIVE_SCHEMA.md. If it's stale, ask the owner to re-run
    `db/dump-live-schema.sql` and refresh it.
 2. **`PROJECT.md`** — business rules (fee model, session durations, trials).
+   **2026-10-25 owner decisions in PROJECT.md override older rules in this file:** UK-only launch,
+   NO free sessions, 8/16/32-minute sessions, Google sign-in, in-house scheduled sessions. Where this
+   file still says "free 5-minute session", "15/30/45" or EU, follow PROJECT.md (see its §16).
 
 ## Architecture rules (learned from production bugs)
 
