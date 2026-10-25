@@ -32,6 +32,14 @@ const TOKEN_AUTH = process.env.NEXT_PUBLIC_MSG91_TOKEN_AUTH || ''
 // The widget's OTP length is set in the MSG91 dashboard; keep this in sync.
 const OTP_LEN = Math.max(4, Math.min(8, Number(process.env.NEXT_PUBLIC_MSG91_OTP_LENGTH) || 6))
 const widgetConfigured = Boolean(WIDGET_ID && TOKEN_AUTH)
+// Google sign-in (PROJECT.md §8.1): on once the Google provider is set up in
+// Supabase Auth (client id/secret there, redirect URL /auth/callback).
+const googleEnabled = process.env.NEXT_PUBLIC_GOOGLE_AUTH_ENABLED === 'true'
+const OAUTH_ERRORS: Record<string, string> = {
+  google: 'Google sign-in did not complete. Please try again.',
+  consent: 'Please tick both boxes before continuing with Google.',
+  suspended: 'This account has been suspended. Please contact support.',
+}
 
 // MSG91 exposes these on window once initSendOTP() runs with exposeMethods:true.
 declare global {
@@ -88,6 +96,9 @@ const S = `
   .otp-box{width:48px;height:56px;border:2px solid var(--border);border-radius:14px;font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;color:var(--navy);text-align:center;background:white;outline:none;transition:all 0.2s;}
   .otp-box:focus{border-color:var(--orange);background:#FFFBF5;}
   .btn{width:100%;padding:16px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;margin-top:24px;box-shadow:0 4px 20px rgba(255,153,51,0.3);}
+  .btn-google{display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#1F1F1F;border:1.5px solid #DADCE0;box-shadow:none;margin-top:12px;}
+  .or-divider{display:flex;align-items:center;gap:12px;margin:20px 0 0;color:#6B8FA8;font-size:13px;font-weight:700;}
+  .or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:#DDE8F0;}
   .btn:hover{background:#e8861a;}
   .btn:disabled{opacity:0.5;cursor:not-allowed;}
   .resend-row{text-align:center;margin-top:20px;}
@@ -231,6 +242,40 @@ export default function AuthPage() {
     }
   }, [])
 
+  // Google sign-in: record the consent server-side (signed cookie checked by
+  // /auth/callback), then hand over to Supabase's Google OAuth (PKCE). The
+  // destination stays in sessionStorage across the round trip.
+  async function signInWithGoogle() {
+    if (!adultConfirmed) { setError('Please confirm you are 18 or older to continue.'); return }
+    if (!sensitiveConsent) { setError('Please give your consent to continue.'); return }
+    setError('')
+    setLoading(true)
+    try {
+      const res = await fetch('/api/auth/consent-intent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ageConfirmed: true, sensitiveDataConsent: true }),
+      })
+      if (!res.ok) {
+        const d = await res.json().catch(() => ({}))
+        setError(d?.error || 'Could not start Google sign-in. Please try again.')
+        setLoading(false)
+        return
+      }
+      const { error: oauthErr } = await sb.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+          queryParams: { prompt: 'select_account' },
+        },
+      })
+      if (oauthErr) { setError('Could not start Google sign-in. Please try again.'); setLoading(false) }
+    } catch {
+      setError('Network error. Please check your connection and try again.')
+      setLoading(false)
+    }
+  }
+
   // Session cookies are now set by the server route. Decide new-vs-returning
   // by asking the server for a profile name (admin read, bypasses RLS).
   async function afterSignIn() {
@@ -277,8 +322,18 @@ export default function AuthPage() {
     if (mode) sessionStorage.setItem('auth_mode', mode)
     if (mode === 'listener') setIsListenerMode(true)
     if (redirect?.startsWith('/talk')) setFromTalk(true)
+    const oauthError = params.get('error')
+    if (oauthError && OAUTH_ERRORS[oauthError]) setError(OAUTH_ERRORS[oauthError])
+    const fromGoogle = params.get('oauth') === '1'
 
     sb.auth.getUser().then(({ data: { user } }) => {
+      if (user && fromGoogle && !handledRef.current) {
+        // Back from Google (/auth/callback): same new-vs-returning step as phone.
+        setLoading(true)
+        setChecking(false)
+        afterSignIn()
+        return
+      }
       if (user && !handledRef.current) {
         handledRef.current = true
         const dest = safeRedirect(sessionStorage.getItem('auth_redirect'), mode === 'listener' ? '/dashboard' : '/browse')
@@ -477,7 +532,7 @@ export default function AuthPage() {
     return (<><style>{S}</style><div className="loading-screen">Checking your session…</div></>)
   }
 
-  if (!widgetConfigured) {
+  if (!widgetConfigured && !googleEnabled) {
     return (
       <>
         <style>{S}</style>
@@ -486,7 +541,7 @@ export default function AuthPage() {
           <div className="content">
             <div className="step-icon">🔧</div>
             <h1>Sign-in is being set up</h1>
-            <p className="subtitle">Phone verification isn&apos;t configured yet. Please check back shortly.</p>
+            <p className="subtitle">Sign-in isn&apos;t configured yet. Please check back shortly.</p>
           </div>
         </div>
       </>
@@ -519,6 +574,7 @@ export default function AuthPage() {
                     ? "Confirm your mobile number with a one-time code, and we'll connect you with a listener straight away. Your number is never shown to them."
                     : "We'll send a one-time code to verify. No spam, ever."}
               </p>
+              {widgetConfigured && (<>
               <label className="label">Mobile number</label>
               <div className="phone-wrap">
                 {/* Custom country code dropdown — emoji flags render properly in a div-based list */}
@@ -575,6 +631,7 @@ export default function AuthPage() {
               </div>
               {/* MSG91's invisible-captcha renders here when required. */}
               <div id="msg91-captcha" />
+              </>)}
               {error && <p className="error">{error}</p>}
               <label className="tos" style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer', textAlign: 'left' }}>
                 <input type="checkbox" checked={adultConfirmed} onChange={e => setAdultConfirmed(e.target.checked)} style={{ width: 18, height: 18, marginTop: 1, flexShrink: 0, accentColor: '#1A8FA0' }} />
@@ -584,9 +641,24 @@ export default function AuthPage() {
                 <input type="checkbox" checked={sensitiveConsent} onChange={e => setSensitiveConsent(e.target.checked)} style={{ width: 18, height: 18, marginTop: 1, flexShrink: 0, accentColor: '#1A8FA0' }} />
                 <span>I explicitly consent to How Was Your Day processing what I share about my wellbeing and mental health in conversations, so the service can work and keep people safe. I can withdraw this consent at any time by deleting my account (<a href="/privacy#sensitive">how we use it</a>).</span>
               </label>
-              <button className="btn" onClick={requestOtp} disabled={loading || !isValidPhone() || !adultConfirmed || !sensitiveConsent}>
-                {loading ? <span className="spin">⟳</span> : !widgetReady ? 'Loading…' : 'Send OTP →'}
-              </button>
+              {widgetConfigured && (
+                <button className="btn" onClick={requestOtp} disabled={loading || !isValidPhone() || !adultConfirmed || !sensitiveConsent}>
+                  {loading ? <span className="spin">⟳</span> : !widgetReady ? 'Loading…' : 'Send OTP →'}
+                </button>
+              )}
+              {googleEnabled && (
+                <>
+                  {widgetConfigured && <div className="or-divider" aria-hidden="true"><span>or</span></div>}
+                  <button type="button" className="btn btn-google" onClick={signInWithGoogle} disabled={loading || !adultConfirmed || !sensitiveConsent}>
+                    <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+                    Continue with Google
+                  </button>
+                  <p className="fine-print" style={{ fontSize: 12, color: '#6B8FA8', textAlign: 'center', marginTop: 8 }}>
+                    We only use your Google email to recover your account and send booking emails. Listeners see only the first name you choose.
+                    Signing in with Google and with your phone creates two separate accounts.
+                  </p>
+                </>
+              )}
             </>
           )}
 

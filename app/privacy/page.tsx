@@ -30,7 +30,7 @@ const S = `
 `
 
 const purposes: [string, string, string][] = [
-  ['Create and run your account; sign you in with a one-time code', 'Phone number, chosen first name, country, sign-in records', 'Contract (Art. 6(1)(b))'],
+  ['Create and run your account; sign you in with a one-time code or Google', 'Phone number, or the email address from your Google account (we do not use your Google name or photo), chosen first name, sign-in records', 'Contract (Art. 6(1)(b))'],
   ['Connect you with a listener and run text or voice sessions', 'Session details (type, length, times, rating), text messages, voice connection data (calls are not recorded)', 'Contract (Art. 6(1)(b)); for anything you share about your health or wellbeing: your explicit consent (Art. 9(2)(a))'],
   ['Wallet, payments, refunds and listener payouts', 'Top-ups, session charges, refunds, payout requests and bank details for listeners', 'Contract (Art. 6(1)(b)); keeping financial records: legal obligation (Art. 6(1)(c))'],
   ['Keep people safe: crisis-word alerts, reports, contact-detail checks, suspensions', 'Messages, reports, flags, account status', 'Legitimate interests in a safe service (Art. 6(1)(f)); explicit consent for health-related content (Art. 9(2)(a)); in an emergency, vital interests (Art. 6(1)(d), 9(2)(c))'],
@@ -45,6 +45,7 @@ const processors: [string, string, string][] = [
   ['Supabase', 'Database, sign-in and file storage', LEGAL.hostingRegion],
   ['Vercel', 'Website hosting', 'Global edge network; USA'],
   ['MSG91', 'Sends and checks sign-in codes by SMS', 'India'],
+  ['Google (only if you sign in with Google)', 'Confirms your identity and shares your email address with us', 'USA'],
   ['Agora', 'Real-time voice connection (not recorded)', 'Global network; USA'],
   ['Google Firebase Cloud Messaging', 'Push notifications', 'USA'],
   ['Resend', 'Service emails', 'USA'],
@@ -85,8 +86,8 @@ export default function PrivacyPage() {
         <h2>4. What we do NOT collect</h2>
         <ul>
           <li>We do not record voice calls.</li>
-          <li>We do not ask seekers for their full name, email address or date of birth.</li>
-          <li>We do not show your phone number to listeners, or a listener&apos;s phone number to you.</li>
+          <li>We do not ask seekers for their full name or date of birth. If you sign in with Google we receive your email address, which we use only for account recovery and booking emails.</li>
+          <li>We do not show your phone number or email address to listeners, or a listener&apos;s to you.</li>
           <li>We do not collect national identity numbers.</li>
         </ul>
 

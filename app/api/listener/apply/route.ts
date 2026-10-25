@@ -27,6 +27,12 @@ export async function POST(req: NextRequest) {
     if (isReviewPhone(user.phone))
       return NextResponse.json({ error: 'The demo account can’t apply as a listener.' }, { status: 403 })
 
+    // Listeners need a verified UK mobile on the account (PROJECT.md §8.1):
+    // a Google-only account has no phone, so it must sign in by phone to apply.
+    if (!user.phone) {
+      return NextResponse.json({ error: 'To apply as a listener, please sign in with your UK mobile number (a one-time code verifies it).', code: 'phone_required' }, { status: 403 })
+    }
+
     if (!checkRateLimit(`listener-apply:${user.id}`, 10, 60_000)) {
       return NextResponse.json({ error: 'Too many requests. Please wait.' }, { status: 429 })
     }
