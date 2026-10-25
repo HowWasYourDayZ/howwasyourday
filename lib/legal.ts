@@ -3,7 +3,7 @@
 // and is shown publicly as written. UK GDPR requires the controller's identity
 // and contact details; a business outside the EU that serves EU users needs an
 // EU representative (Art. 27); ICO registration (data protection fee) is a
-// legal requirement in the UK.
+// legal requirement in the UK. UK-only at launch (PROJECT.md §14).
 
 export const LEGAL = {
   // Data controller / contracting party.
@@ -11,8 +11,8 @@ export const LEGAL = {
   companyNumber: '[TODO: Companies House number]',
   registeredAddress: '[TODO: registered office address, United Kingdom]',
   icoRegistration: '[TODO: ICO registration number]',
-  // EU Art. 27 representative (needed while there is no EU establishment).
-  euRepresentative: '[TODO: EU representative name and address]',
+  // EU Art. 27 representative — only needed if HWYD starts serving EU users (UK-only at launch).
+  euRepresentative: '',
   privacyEmail: 'privacy@howwasyourday.live',
   supportEmail: 'support@howwasyourday.live',
   // Where the main database lives. Create the Supabase project in a UK/EU

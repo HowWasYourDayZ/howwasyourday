@@ -288,9 +288,9 @@
   balance or a pending payout/refund; admin deletion keeps pending payouts/refunds payable, and
   leftovers show on the admin Overview as "Deleted accounts still holding money".
 - Session durations: 5 (free trial) / 15 / 30 / 45 minutes. The free trial may be text OR voice.
-- Crisis helplines (UK/EU, Oct 2026): ONLY Samaritans (116 123, UK & Ireland), Shout (text SHOUT
-  to 85258, UK), emergency 999 / 112, and findahelpline.com for other EU countries — the set in
-  `CRISIS_RESOURCES` (`lib/constants.ts`). Never add other numbers without the owner.
+- Crisis helplines (UK launch, Oct 2026): ONLY Samaritans (116 123), Shout (text SHOUT to 85258) and
+  emergency 999 / 112 — the set in `CRISIS_RESOURCES` (`lib/constants.ts`). Never add other numbers
+  without the owner.
 - Soft delete only — never hard-delete user data.
 - The owner's full name must never appear anywhere on the platform.
 - Admin email/phone live in env vars only — never in code or UI.

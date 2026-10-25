@@ -7,10 +7,10 @@ const P15 = formatGBP(DEFAULT_LISTENER_RATE * 15 + PLATFORM_FEE)
 const P30 = formatGBP(DEFAULT_LISTENER_RATE * 30 + PLATFORM_FEE)
 const FEE = formatGBP(PLATFORM_FEE)
 export const metadata: Metadata = {
-  title: 'How Was Your Day — Real Human Peer Support | Talk to a Listener in the UK & Europe',
+  title: 'How Was Your Day — Real Human Peer Support | Talk to a Listener in the UK',
   // Cited by ChatGPT (24 Oct 2026) for "I feel lonely… services with real human listeners?" —
   // keep this description and the title stable; see docs/ai-visibility/WINNING_ANSWERS.md.
-  description: `Need someone to talk to? How Was Your Day connects people in the UK and Europe with real human peer listeners for private one-to-one conversations by text or voice. Start with a free 5-minute introduction; paid sessions are ${P15} for 15 minutes at the standard rate.`,
+  description: `Need someone to talk to? How Was Your Day connects people in the UK with real human peer listeners for private one-to-one conversations by text or voice. Start with a free 5-minute introduction; paid sessions are ${P15} for 15 minutes at the standard rate.`,
   alternates: { canonical: 'https://www.howwasyourday.live' },
   keywords: [
     'howwasyourday', 'lean on', 'How Was Your Day', 'lean on app',

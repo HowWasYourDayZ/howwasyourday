@@ -14,7 +14,7 @@ export default function QuickAnswer({ question, answer }: { question: string; an
   const talk15 = TALK_MAX_TEXT_RATE * 15 + PLATFORM_FEE
   const facts = [
     'Real people, not AI',
-    'Screened peer listeners in the UK and Europe',
+    'Screened peer listeners in the UK',
     'Text or voice, one to one',
     `One introductory session of up to ${FREE_SESSION_MINS} minutes free per account`,
     `Pay each listener's own price in pounds: 15 minutes is ${formatGBP(talk15)} at the standard rate`,

@@ -65,12 +65,12 @@ export default function PrivacyPage() {
         <p className="updated">Last updated: {LEGAL.lastUpdated}</p>
 
         <div className="highlight-box">
-          <p>How Was Your Day is a peer-support service for adults in the UK and Europe. What people share here is often personal and sometimes about their mental health, so we collect as little as we can, never sell your data, never use it for advertising, and never send your conversations to analytics or AI.</p>
+          <p>How Was Your Day is a peer-support service for adults in the UK. What people share here is often personal and sometimes about their mental health, so we collect as little as we can, never sell your data, never use it for advertising, and never send your conversations to analytics or AI.</p>
         </div>
 
         <h2>1. Who we are</h2>
-        <p>{LEGAL.entityName} (company number {LEGAL.companyNumber}, registered office {LEGAL.registeredAddress}) is the controller of your personal data. We are registered with the UK Information Commissioner&apos;s Office (registration {LEGAL.icoRegistration}). Our representative in the EU is {LEGAL.euRepresentative}. For anything about your data, email <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a> or use the <a href="/contact">contact form</a>.</p>
-        <p>This policy explains how we use personal data under the UK GDPR, the Data Protection Act 2018 and, for people in the EU/EEA, the EU GDPR.</p>
+        <p>{LEGAL.entityName} (company number {LEGAL.companyNumber}, registered office {LEGAL.registeredAddress}) is the controller of your personal data. We are registered with the UK Information Commissioner&apos;s Office (registration {LEGAL.icoRegistration}). For anything about your data, email <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a> or use the <a href="/contact">contact form</a>.</p>
+        <p>This policy explains how we use personal data under the UK GDPR and the Data Protection Act 2018.</p>
 
         <h2>2. What we use and why</h2>
         <div className="wrap"><table className="tbl">
@@ -127,7 +127,7 @@ export default function PrivacyPage() {
         <p>To use any right, email <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a> or use the <a href="/contact">contact form</a> from the phone number on your account. We reply within one month (we may extend this by up to two months for complex requests and will tell you if so). There is normally no charge.</p>
 
         <h2>10. Complaints</h2>
-        <p>Please contact us first so we can try to help. You also have the right to complain to a data protection authority: in the UK, the Information Commissioner&apos;s Office (<a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">ico.org.uk</a>, 0303 123 1113); in the EU/EEA, the supervisory authority where you live or work (<a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener noreferrer">list of EU authorities</a>).</p>
+        <p>Please contact us first so we can try to help. You also have the right to complain to a data protection authority: in the UK, the Information Commissioner&apos;s Office (<a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">ico.org.uk</a>, 0303 123 1113).</p>
 
         <h2>11. Age</h2>
         <p>How Was Your Day is only for adults aged 18 and over. We do not knowingly collect data from children; if we learn that an account belongs to someone under 18, we close it.</p>

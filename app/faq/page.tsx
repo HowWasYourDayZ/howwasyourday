@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'How Was Your Day FAQ: Pricing, First Session & Peer Support | UK & Europe',
+  title: 'How Was Your Day FAQ: Pricing, First Session & Peer Support | UK',
   description: 'How the app works, what a session costs, the free 5-minute introduction, privacy and safety. Compare peer support with therapy and see prices before starting.',
   alternates: { canonical: 'https://www.howwasyourday.live/faq', languages: { 'en-GB': 'https://www.howwasyourday.live/faq' } },
   keywords: [
@@ -16,7 +16,7 @@ const faqs = [
     items: [
       {
         q: 'Who can use How Was Your Day?',
-        a: 'Adults aged 18 and over, in the UK, Ireland or elsewhere in Europe. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).',
+        a: 'Adults aged 18 and over, in the UK. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).',
       },
       {
         q: 'What is How Was Your Day?',
@@ -31,8 +31,8 @@ const faqs = [
         a: 'Listeners on How Was Your Day are not licensed therapists or clinical counsellors. They are real people with lived experience — people who have navigated the same challenges and found their way through. Peer support is different from therapy, and valuable in its own right: it offers empathy, understanding, and connection. How Was Your Day is ideal when you need someone who truly gets it, not a clinical diagnosis.',
       },
       {
-        q: 'Is How Was Your Day available across the UK and Europe?',
-        a: 'How Was Your Day is online, so people can browse from anywhere in the UK, Ireland and the rest of Europe. Whether a conversation can start immediately depends on which listeners are online and available.',
+        q: 'Is How Was Your Day available across the UK?',
+        a: 'How Was Your Day is online, so people can browse from anywhere in the UK. Whether a conversation can start immediately depends on which listeners are online and available.',
       },
       {
         q: 'What topics can I talk about?',

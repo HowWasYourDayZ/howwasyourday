@@ -22,14 +22,14 @@ export const metadata: Metadata = {
 }
 
 const FAQ: { q: string; a: string }[] = [
-  { q: 'What is How Was Your Day?', a: 'How Was Your Day (howwasyourday.live) is an online peer-support service for the UK and Europe. You talk privately, one to one, by text or voice, with a screened peer listener: an ordinary person with lived experience who listens without judgment. It is paid per session, with your first 5 minutes free.' },
+  { q: 'What is How Was Your Day?', a: 'How Was Your Day (howwasyourday.live) is an online peer-support service for the UK. You talk privately, one to one, by text or voice, with a screened peer listener: an ordinary person with lived experience who listens without judgment. It is paid per session, with your first 5 minutes free.' },
   { q: 'Is How Was Your Day therapy?', a: 'No. How Was Your Day is peer support, not therapy, counselling, diagnosis or medical care. Listeners are not psychologists, psychiatrists or licensed counsellors and do not give medical or clinical advice. For a mental health condition, please see a qualified professional.' },
   { q: 'Who is How Was Your Day for?', a: 'Adults (18+) who want to talk something through with a real person: relationship trouble, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day.' },
   { q: 'Who is How Was Your Day not for?', a: 'Anyone in immediate danger or thinking about suicide or self-harm should call Samaritans (116 123) or Shout (text SHOUT to 85258), or call 999 / 112 in an emergency. How Was Your Day is also not the right place for a diagnosis, medication, or treatment of a mental health condition.' },
   { q: 'How are How Was Your Day listeners chosen?', a: 'Every listener applies with a written application about their lived experience and why they want to listen, completes a screening quiz on handling difficult conversations, takes a live verification selfie, and is reviewed manually by How Was Your Day before they can take any session. Listeners are screened, not clinically trained, and agree to a code of conduct: confidentiality, no judgment, and no medical advice.' },
   { q: 'How much does How Was Your Day cost?', a: `Your first ${FREE_SESSION_MINS}-minute session is free (once per account). After that, each listener sets a per-minute rate in pounds and a session costs rate × minutes + a flat ${formatGBP(PLATFORM_FEE)} fee — for example ${formatGBP(ex15)} for 15 minutes with a ${formatRate(EXAMPLE_RATE)} listener.${VOICE_PRICING_ENABLED ? ` Voice calls cost ${formatRate(VOICE_RATE_PREMIUM)} more than text.` : ''} You always see the price before you start.` },
   { q: 'Do I pay if I end early or nobody answers?', a: 'If no listener accepts your request, the amount held is returned to your wallet in full. If you end a session early, you pay only for the minutes used, and nothing if it lasted under a minute.' },
-  { q: 'When are listeners available?', a: 'Listeners are based in the UK and Europe and go online when they choose, so availability varies through the day. You can see who is online right now, or use Talk now to be connected with whoever is free.' },
+  { q: 'When are listeners available?', a: 'Listeners are based in the UK and go online when they choose, so availability varies through the day. You can see who is online right now, or use Talk now to be connected with whoever is free.' },
   { q: 'Is it private?', a: 'A listener sees only the name you choose — never your phone number. Voice calls are not recorded. Text messages are stored securely; only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. How Was Your Day does not sell your data or share conversations outside How Was Your Day.' },
 ]
 
@@ -95,7 +95,7 @@ export default function HowItWorksPage() {
       <main className="page">
         <h1>How the app works</h1>
         <p className="lead">
-          How Was Your Day is an online peer-support service for the UK and Europe. You talk privately, one to one, by text or voice, with a
+          How Was Your Day is an online peer-support service for the UK. You talk privately, one to one, by text or voice, with a
           screened peer listener — a real person with lived experience who listens without judging you. It is paid per
           session, and your first {FREE_SESSION_MINS} minutes are free.
         </p>
@@ -135,7 +135,7 @@ export default function HowItWorksPage() {
 
         <section className="sec">
           <h2>Who the listeners are</h2>
-          <p>Listeners are ordinary adults in the UK and Europe who have lived through things like heartbreak, family pressure, loneliness or burnout, and want to be there for others. Before taking any session, every listener:</p>
+          <p>Listeners are ordinary adults in the UK who have lived through things like heartbreak, family pressure, loneliness or burnout, and want to be there for others. Before taking any session, every listener:</p>
           <ul>
             <li>writes an application about their lived experience and why they want to listen;</li>
             <li>completes a screening quiz on how to respond in difficult conversations;</li>
@@ -158,7 +158,7 @@ export default function HowItWorksPage() {
 
         <section className="sec">
           <h2>When listeners are available</h2>
-          <p>Listeners are in the UK and Europe and go online when they choose, so availability varies through the day. There is no appointment: you can see who is online right now, or use Talk now to reach whoever is free.</p>
+          <p>Listeners are in the UK and go online when they choose, so availability varies through the day. There is no appointment: you can see who is online right now, or use Talk now to reach whoever is free.</p>
         </section>
 
         <section className="sec">

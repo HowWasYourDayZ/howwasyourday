@@ -17,37 +17,11 @@ import { createClient } from '@/lib/supabase'
 // route for the full trust model.
 
 // Supported countries — must match MSG91 "Country Wise Restriction" allowed list.
-// UK first (the default), then Ireland and the EU alphabetically. Digit counts
-// are the national number WITHOUT the leading 0 (stripped in digits()).
+// UK-only launch (PROJECT.md §14): +44 mobiles only. Digit count is the national
+// number WITHOUT the leading 0 (stripped in digits()). To open another country,
+// add it here and in MSG91.
 const COUNTRIES = [
   { code: 'GB', name: 'United Kingdom', dialCode: '44',  flag: '🇬🇧', minDigits: 10, maxDigits: 10 },
-  { code: 'IE', name: 'Ireland',        dialCode: '353', flag: '🇮🇪', minDigits: 9,  maxDigits: 9  },
-  { code: 'AT', name: 'Austria',        dialCode: '43',  flag: '🇦🇹', minDigits: 10, maxDigits: 13 },
-  { code: 'BE', name: 'Belgium',        dialCode: '32',  flag: '🇧🇪', minDigits: 9,  maxDigits: 9  },
-  { code: 'BG', name: 'Bulgaria',       dialCode: '359', flag: '🇧🇬', minDigits: 8,  maxDigits: 9  },
-  { code: 'HR', name: 'Croatia',        dialCode: '385', flag: '🇭🇷', minDigits: 8,  maxDigits: 9  },
-  { code: 'CY', name: 'Cyprus',         dialCode: '357', flag: '🇨🇾', minDigits: 8,  maxDigits: 8  },
-  { code: 'CZ', name: 'Czechia',        dialCode: '420', flag: '🇨🇿', minDigits: 9,  maxDigits: 9  },
-  { code: 'DK', name: 'Denmark',        dialCode: '45',  flag: '🇩🇰', minDigits: 8,  maxDigits: 8  },
-  { code: 'EE', name: 'Estonia',        dialCode: '372', flag: '🇪🇪', minDigits: 7,  maxDigits: 8  },
-  { code: 'FI', name: 'Finland',        dialCode: '358', flag: '🇫🇮', minDigits: 9,  maxDigits: 10 },
-  { code: 'FR', name: 'France',         dialCode: '33',  flag: '🇫🇷', minDigits: 9,  maxDigits: 9  },
-  { code: 'DE', name: 'Germany',        dialCode: '49',  flag: '🇩🇪', minDigits: 10, maxDigits: 11 },
-  { code: 'GR', name: 'Greece',         dialCode: '30',  flag: '🇬🇷', minDigits: 10, maxDigits: 10 },
-  { code: 'HU', name: 'Hungary',        dialCode: '36',  flag: '🇭🇺', minDigits: 9,  maxDigits: 9  },
-  { code: 'IT', name: 'Italy',          dialCode: '39',  flag: '🇮🇹', minDigits: 9,  maxDigits: 10 },
-  { code: 'LV', name: 'Latvia',         dialCode: '371', flag: '🇱🇻', minDigits: 8,  maxDigits: 8  },
-  { code: 'LT', name: 'Lithuania',      dialCode: '370', flag: '🇱🇹', minDigits: 8,  maxDigits: 8  },
-  { code: 'LU', name: 'Luxembourg',     dialCode: '352', flag: '🇱🇺', minDigits: 9,  maxDigits: 9  },
-  { code: 'MT', name: 'Malta',          dialCode: '356', flag: '🇲🇹', minDigits: 8,  maxDigits: 8  },
-  { code: 'NL', name: 'Netherlands',    dialCode: '31',  flag: '🇳🇱', minDigits: 9,  maxDigits: 9  },
-  { code: 'PL', name: 'Poland',         dialCode: '48',  flag: '🇵🇱', minDigits: 9,  maxDigits: 9  },
-  { code: 'PT', name: 'Portugal',       dialCode: '351', flag: '🇵🇹', minDigits: 9,  maxDigits: 9  },
-  { code: 'RO', name: 'Romania',        dialCode: '40',  flag: '🇷🇴', minDigits: 9,  maxDigits: 9  },
-  { code: 'SK', name: 'Slovakia',       dialCode: '421', flag: '🇸🇰', minDigits: 9,  maxDigits: 9  },
-  { code: 'SI', name: 'Slovenia',       dialCode: '386', flag: '🇸🇮', minDigits: 8,  maxDigits: 8  },
-  { code: 'ES', name: 'Spain',          dialCode: '34',  flag: '🇪🇸', minDigits: 9,  maxDigits: 9  },
-  { code: 'SE', name: 'Sweden',         dialCode: '46',  flag: '🇸🇪', minDigits: 7,  maxDigits: 9  },
 ] as const
 
 type Country = typeof COUNTRIES[number]

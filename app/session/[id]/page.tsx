@@ -1821,7 +1821,7 @@ function SessionContent() {
 
         {crisisAlert && (
           <div className="crisis-bar">
-            🆘 In crisis? Call <strong>Samaritans: <a href="tel:116123">116 123</a></strong> or <strong>text SHOUT to <a href="sms:85258">85258</a></strong> (free · 24/7). In danger right now? Call <strong><a href="tel:112">999 / 112</a></strong>. Outside the UK &amp; Ireland: <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a>. You can still continue this conversation.
+            🆘 In crisis? Call <strong>Samaritans: <a href="tel:116123">116 123</a></strong> or <strong>text SHOUT to <a href="sms:85258">85258</a></strong> (free · 24/7). In danger right now? Call <strong><a href="tel:112">999 / 112</a></strong>. You can still continue this conversation.
             <button onClick={() => setCrisisAlert(false)} style={{float:'right',background:'none',border:'none',cursor:'pointer',color:'#7A2020',fontWeight:900,fontSize:14}}>✕</button>
           </div>
         )}

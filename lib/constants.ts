@@ -83,14 +83,11 @@ export const RECHARGE_AMOUNTS   = [500, 1000, 2000, 5000] as const // pence: £5
 export const MIN_RECHARGE       = 500    // pence (£5) — custom top-up floor
 export const MAX_RECHARGE       = 20_000 // pence (£200) — custom top-up ceiling
 export const UUID_RE            = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
-// Crisis lines shown across the site (UK & Ireland + EU emergency). Only these —
-// see CLAUDE.md. 116 123 is Samaritans in both the UK and Ireland; 112 works in
-// the UK and every EU country; findahelpline.com covers the rest of Europe.
+// Crisis lines shown across the site (UK launch). Only these — see PROJECT.md §12.
 export const CRISIS_RESOURCES   = {
   SAMARITANS: { name: 'Samaritans', number: '116 123',            href: 'tel:116123' },
   SHOUT:      { name: 'Shout',      number: 'text SHOUT to 85258', href: 'sms:85258' },
   EMERGENCY:  { name: 'Emergency',  number: '999 / 112',          href: 'tel:112' },
-  EU_FINDER:  { name: 'Find a helpline (other EU countries)', number: 'findahelpline.com', href: 'https://findahelpline.com' },
 } as const
 
 export const LANGUAGES = [

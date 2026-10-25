@@ -36,7 +36,7 @@ export default function TermsPage() {
         <p className="updated">Last updated: {LEGAL.lastUpdated}</p>
 
         <div className="warning-box">
-          <p>⚠️ How Was Your Day is a peer support platform only. It is NOT a mental health service, therapy platform, or medical service. Listeners are not licensed therapists, psychologists, or counselors unless an individual profile explicitly states a relevant qualification. If you are in crisis or immediate danger, call 999 or 112, Samaritans on 116 123 (UK &amp; Ireland), or text SHOUT to 85258 (UK).</p>
+          <p>⚠️ How Was Your Day is a peer support platform only. It is NOT a mental health service, therapy platform, or medical service. Listeners are not licensed therapists, psychologists, or counselors unless an individual profile explicitly states a relevant qualification. If you are in crisis or immediate danger, call 999 or 112, Samaritans on 116 123, or text SHOUT to 85258.</p>
         </div>
 
         <h2>1. What How Was Your Day is</h2>
@@ -45,7 +45,7 @@ export default function TermsPage() {
         <h2>2. Who can use How Was Your Day</h2>
         <ul>
           <li>You must be 18 years or older to use How Was Your Day</li>
-          <li>You must be located in the United Kingdom, Ireland or another country of the European Economic Area where How Was Your Day is offered</li>
+          <li>You must live in the United Kingdom</li>
           <li>You must provide a valid mobile number and any other information required to create an account</li>
           <li>Country availability, payment methods, and other product features may vary by market</li>
         </ul>
@@ -83,7 +83,7 @@ export default function TermsPage() {
         <p>How Was Your Day is not liable for the advice or content shared by listeners. We do not guarantee outcomes from peer support sessions. We are a platform, not a healthcare provider. Nothing in these terms limits or excludes our liability for death or personal injury caused by our negligence, for fraud, or any other liability that cannot be limited by law, and nothing affects your statutory rights as a consumer (including under the Consumer Rights Act 2015).</p>
 
         <h2>8. Governing law</h2>
-        <p>These terms are governed by the law of {LEGAL.governingLaw}. If you live in Scotland or Northern Ireland you can also bring proceedings there, and if you live in the EU/EEA you keep the protection of the mandatory consumer laws of your country and can bring proceedings in your local courts.</p>
+        <p>These terms are governed by the law of {LEGAL.governingLaw}. If you live in Scotland or Northern Ireland you can also bring proceedings there.</p>
 
         <h2>9. Contact</h2>
         <p>For legal or compliance queries, please use the <a href="/contact">contact form</a> on our website and select &ldquo;Legal&rdquo; as the topic.</p>

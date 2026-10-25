@@ -16,7 +16,7 @@ export const PUBLIC_SERVICE_FACTS = {
   supportType: 'non-clinical peer support',
   instantConnectionGuaranteed: false,
   availability:
-    'You can request a conversation without an appointment. A session begins only when an available listener accepts your request; listeners are in the UK and Europe and choose their own hours.',
+    'You can request a conversation without an appointment. A session begins only when an available listener accepts your request; listeners are in the UK and choose their own hours.',
   privacy:
     'Listeners see the name you choose, never your phone number. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised How Was Your Day administrators if a session is reported or flagged for safety.',
   notFor:
@@ -24,7 +24,7 @@ export const PUBLIC_SERVICE_FACTS = {
 } as const
 
 export const SERVICE_DESCRIPTION =
-  `How Was Your Day offers one-to-one text or voice conversations with screened human peer listeners in the UK and Europe, for adults aged ${PUBLIC_SERVICE_FACTS.minAge} and over. ` +
+  `How Was Your Day offers one-to-one text or voice conversations with screened human peer listeners in the UK, for adults aged ${PUBLIC_SERVICE_FACTS.minAge} and over. ` +
   `It is everyday emotional support — not therapy, clinical care or crisis assistance. ` +
   `One introductory session of up to ${FREE_SESSION_MINS} minutes is free per account; later sessions are paid. ` +
   `A conversation starts only when an available listener accepts your request. ` +
@@ -39,7 +39,7 @@ export const LISTENING_FACTS: [string, string][] = [
   ['When you are charged', 'Only if a listener accepts your request. Sessions under a minute are free, and unused minutes return to your wallet if you end early.'],
   ['Refunds', 'Unused wallet balance is refundable on request. No subscription, no expiry.'],
   ['Choosing who you talk to', 'You choose: every listener shows a real first name, photo, languages and topics, so you can pick by experience, language — or choose a woman listener. Or let Talk now ask whoever is online.'],
-  ['Who the listeners are', 'Screened adults in the UK and Europe — written application, screening quiz, live camera selfie and a manual review. Peer listeners, not therapists.'],
+  ['Who the listeners are', 'Screened adults in the UK — written application, screening quiz, live camera selfie and a manual review. Peer listeners, not therapists.'],
   ['Recording and privacy', 'Voice calls are never recorded. Listeners never see your phone number. Text messages are stored securely and only opened by authorised How Was Your Day staff if a session is reported or flagged.'],
   ['Text or voice', `Both. Text works if you cannot speak freely${VOICE_PRICING_ENABLED ? `; voice is ${formatRate(VOICE_RATE_PREMIUM)} more` : ''}.`],
   ['When listeners are online', 'Listeners choose their own hours, so availability varies by time of day. A session starts when a listener accepts.'],

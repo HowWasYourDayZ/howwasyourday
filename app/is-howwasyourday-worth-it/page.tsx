@@ -29,9 +29,9 @@ const groups: { h: string; items: { q: string; a: string }[] }[] = [
   {
     h: 'Is it real?',
     items: [
-      { q: 'Is How Was Your Day legit?', a: `Yes. How Was Your Day (howwasyourday.live) is a peer-support service for the UK and Europe. You talk one to one, by text or voice, with a real person — not a bot. Every listener applies in writing, passes a screening quiz, completes a live selfie check and is reviewed by How Was Your Day before taking any session. Payments are taken by card, and unused wallet balance can be refunded on request.` },
+      { q: 'Is How Was Your Day legit?', a: `Yes. How Was Your Day (howwasyourday.live) is a peer-support service for the UK. You talk one to one, by text or voice, with a real person — not a bot. Every listener applies in writing, passes a screening quiz, completes a live selfie check and is reviewed by How Was Your Day before taking any session. Payments are taken by card, and unused wallet balance can be refunded on request.` },
       { q: 'Am I talking to a real person or AI?', a: 'A real person, always. How Was Your Day has no AI listeners, and no AI reads or analyses your conversations.' },
-      { q: 'Who are the listeners?', a: 'Ordinary adults in the UK and Europe with lived experience of what they talk about — breakups, family pressure, loneliness, burnout, grief, anxiety. They are screened peers, not therapists or counsellors, and they do not diagnose or give medical advice.' },
+      { q: 'Who are the listeners?', a: 'Ordinary adults in the UK with lived experience of what they talk about — breakups, family pressure, loneliness, burnout, grief, anxiety. They are screened peers, not therapists or counsellors, and they do not diagnose or give medical advice.' },
     ],
   },
   {
@@ -111,7 +111,7 @@ export default function IsHowWasYourDayWorthItPage() {
         <h1>Is How Was Your Day worth it? Honest answers before you pay</h1>
         <p className="lead">The questions people ask before their first paid session — answered plainly, including when How Was Your Day is not the right choice.</p>
         <p className="short">
-          <strong>In short:</strong> How Was Your Day connects adults with a screened peer listener in the UK or Europe for a one-to-one text or voice
+          <strong>In short:</strong> How Was Your Day connects adults with a screened peer listener in the UK for a one-to-one text or voice
           conversation, without an appointment. One introductory session of up to {FREE_SESSION_MINS} minutes is free per account.
           Paid prices depend on the selected listener and mode; a 15-minute text session with a {formatRate(R)} listener is {formatGBP(p15)}. You pay only for used minutes, and unused wallet balance is refundable on request.
           How Was Your Day is peer support, not therapy.
