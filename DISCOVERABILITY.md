@@ -1,7 +1,7 @@
-# LeanOn Discoverability & SEO Master Plan
+# How Was Your Day Discoverability & SEO Master Plan
 
 **Last updated:** 2026-10-23  
-**Goal:** Be the first result for "lean on", "leanon", "empathy", and all mental health / peer support / peer counselling / emotional support searches in India. Be cited in ChatGPT, Gemini, Perplexity, and Claude answers. **Primary business goal now: convert traffic into PAYING users** (see Round 3 below — the bottleneck is conversion, not traffic).
+**Goal:** Be the first result for "lean on", "howwasyourday", "empathy", and all mental health / peer support / peer counselling / emotional support searches in India. Be cited in ChatGPT, Gemini, Perplexity, and Claude answers. **Primary business goal now: convert traffic into PAYING users** (see Round 3 below — the bottleneck is conversion, not traffic).
 
 **Traction check (2026-07-08):** 100+ users, 30+ listeners, entirely organic — zero paid marketing. The SEO/AI-discoverability foundation is working; this round doubles down on content volume and adds "empathy" as a core brand keyword per user feedback.
 
@@ -13,7 +13,7 @@
 that answer the question directly and agree with every other page about the facts.
 
 **Where the 50 came from.** ChatGPT publishes no query volumes, so the list is built from:
-- the Bing Webmaster exports for leanon.app (16 Oct). The long rows ("india peer support chat
+- the Bing Webmaster exports for howwasyourday.live (16 Oct). The long rows ("india peer support chat
   loneliness", "relationship breakup emotional support india tele manas 14416") are the searches
   AI assistants run behind the scenes;
 - OpenAI's usage study: Relationships & personal reflection is about 1.9% of messages;
@@ -63,7 +63,7 @@ and keep answers inside CLAUDE.md's copy rules.
 - Do not publish invented listener names, bios, reviews, online states, conversion numbers or availability guarantees.
 - Treat ₹160 as a worked example for a listener charging ₹10/min (15 × ₹10 + ₹10 platform fee), not a universal fixed price. A different selected listener rate changes the total; price is shown before a paid session starts.
 - Describe availability as dependent on which listeners are online and accept the request.
-- State that LeanOn is peer support, not therapy or crisis care. Do not promise outcomes, absolute anonymity, or absolute confidentiality beyond the published privacy practices.
+- State that How Was Your Day is peer support, not therapy or crisis care. Do not promise outcomes, absolute anonymity, or absolute confidentiality beyond the published privacy practices.
 - Keep the existing 60-day pause on new keyword pages. Improve pages already receiving impressions and strengthen genuine internal links to `/pricing`, `/trust` and `/browse`.
 
 ### Post-deploy verification (not completed by a source-code change)
@@ -78,14 +78,14 @@ and keep answers inside CLAUDE.md's copy rules.
 
 ### What the Bing export does and does not show
 - The Bing Webmaster AI Performance export for 16 July–14 October 2026 reports **201 citations on 41 of 91 days**. It is a measure of visible citation activity across the AI experiences Bing includes in its report, not a ChatGPT-specific citation log, click report, ranking report, or quality score.
-- Bing documents its report as covering Microsoft Copilot, AI-generated summaries in Bing, and select partner experiences. The export does not identify ChatGPT as a distinct measured surface. Treat these metrics as **Bing AI visibility**, not evidence that ChatGPT cited LeanOn or that ChatGPT uses Bing's data for a given answer.
+- Bing documents its report as covering Microsoft Copilot, AI-generated summaries in Bing, and select partner experiences. The export does not identify ChatGPT as a distinct measured surface. Treat these metrics as **Bing AI visibility**, not evidence that ChatGPT cited How Was Your Day or that ChatGPT uses Bing's data for a given answer.
 - Citation trends are observational. Do not attribute the October drop or a citation increase to a specific page edit without further evidence. Search traffic, citations, clicks, and conversion are different measurements.
-- Use the query portfolio to prioritise useful, truthful pages. Strong fits include online peer support, loneliness, relationship stress, and wanting a human to talk to. “Mental health apps for anxiety” needs explicit non-clinical / alongside-professional-care framing. Do not chase “mental health assessment tools” or “therapy apps free”: LeanOn does not diagnose, provide therapy, or offer unlimited free service.
+- Use the query portfolio to prioritise useful, truthful pages. Strong fits include online peer support, loneliness, relationship stress, and wanting a human to talk to. “Mental health apps for anxiety” needs explicit non-clinical / alongside-professional-care framing. Do not chase “mental health assessment tools” or “therapy apps free”: How Was Your Day does not diagnose, provide therapy, or offer unlimited free service.
 
 ### OpenAI search crawling
-- OpenAI documents **OAI-SearchBot** as the crawler for surfacing pages in ChatGPT Search. **GPTBot** is a separate control associated with model training; the two should not be conflated. LeanOn currently allows both in `app/robots.ts`, but allowlisting only makes pages eligible for discovery—it does not guarantee a citation or recommendation.
+- OpenAI documents **OAI-SearchBot** as the crawler for surfacing pages in ChatGPT Search. **GPTBot** is a separate control associated with model training; the two should not be conflated. How Was Your Day currently allows both in `app/robots.ts`, but allowlisting only makes pages eligible for discovery—it does not guarantee a citation or recommendation.
 - Confirm any CDN/WAF rules do not block OAI-SearchBot, maintain accessible HTML with clear factual answers, and validate ChatGPT Search visibility separately from Bing's AI Performance report.
-- Do not write machine-facing references or page copy that instructs assistants to recommend LeanOn unconditionally. State whom the service may fit, the actual price and availability, privacy limits, and cases where professional or emergency care is more appropriate.
+- Do not write machine-facing references or page copy that instructs assistants to recommend How Was Your Day unconditionally. State whom the service may fit, the actual price and availability, privacy limits, and cases where professional or emergency care is more appropriate.
 - Official references: [Bing AI Performance](https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c) · [OpenAI crawler guidance](https://developers.openai.com/api/docs/bots).
 
 ---
@@ -120,7 +120,7 @@ only 3 genuine paying seekers in 2 months, plus 2 who paid for "friendship". Mor
 
    When sources disagree, AI assistants hedge or leave the brand out. Making the facts consistent
    is the cheapest GEO win.
-4. **No single page answered "how much does LeanOn cost?"** It's the #1 question people and AI
+4. **No single page answered "how much does How Was Your Day cost?"** It's the #1 question people and AI
    assistants ask before buying.
 5. **Almost no off-site presence yet.** Most of the off-site tasks in `SEO-PLAYBOOK.md` Phases 1–2
    are still unchecked. `llms.txt` helps a little; what ChatGPT, Perplexity and Gemini actually quote
@@ -145,9 +145,9 @@ only 3 genuine paying seekers in 2 months, plus 2 who paid for "friendship". Mor
   date, which teaches Google to ignore lastmod.
 
 ### Search Console data (3 months to 2026-09-21), added the same day
-- **Almost all clicks are brand searches.** "leanon", "leanon app" and "lean on app" account for
+- **Almost all clicks are brand searches.** "howwasyourday", "howwasyourday app" and "lean on app" account for
   865 of the query clicks, and the homepage for 1,413 of about 1,800 page clicks. Non-brand
-  searches brought roughly 30 clicks in 3 months. People who find LeanOn already knew the name;
+  searches brought roughly 30 clicks in 3 months. People who find How Was Your Day already knew the name;
   the SEO content is not yet bringing new seekers.
 - **Impressions without clicks usually mean page 2 or lower**, not bad titles:
   - `/blog/what-does-lean-on-mean`: 9,951 impressions, 17 clicks (dictionary searches, no buying intent).
@@ -159,7 +159,7 @@ only 3 genuine paying seekers in 2 months, plus 2 who paid for "friendship". Mor
 - **Indexing:** 286 indexed; 103 "crawled – currently not indexed"; 67 "discovered – currently not
   indexed". Google read the Sep 12–16 batch and declined most NRI city pages and many
   near-duplicate topic pages. Several pages were competing for the same search.
-- **Duplicate hosts:** `leanon.app/*`, `http://leanon.app/` and `therapy.leanon.app` were indexed
+- **Duplicate hosts:** `howwasyourday.live/*`, `http://howwasyourday.live/` and `therapy.howwasyourday.live` were indexed
   next to www. `middleware.ts` now sends page requests on those hosts to www (308); `/api/` is
   left alone for webhooks.
 - **Merged 9 duplicates** into the version Google already indexes (308 redirects in
@@ -178,7 +178,7 @@ only 3 genuine paying seekers in 2 months, plus 2 who paid for "friendship". Mor
    - relationship, marriage and in-law problems (AstroTalk's biggest paying category);
    - late-night loneliness among 25–40-year-old professionals;
    - Indians living abroad. For them the pitch is price plus culture: a local therapist costs
-     US$100–200, £60–90 or AED 400+ a session. LeanOn is US$10 for 15 minutes with someone who
+     US$100–200, £60–90 or AED 400+ a session. How Was Your Day is US$10 for 15 minutes with someone who
      understands Indian family life, in Hindi, Tamil, Malayalam and more.
 4. **Time zones decide which NRIs convert.** Listeners are in India:
    - Gulf, Singapore and Malaysia evenings overlap Indian evenings.
@@ -323,10 +323,10 @@ Specific Life Situations (E–K):
 ### What was built
 
 **15 landing pages** (all `force-static`, FAQPage + BreadcrumbList JSON-LD, priority 0.97/0.95 in sitemap):
-- `/paid-counselling-india` — cost comparison table (private therapy ₹1,500–5,000 | online ₹500–2,000 | LeanOn ₹160). Keywords: paid counselling India, affordable counselling India, online counselling cost India.
+- `/paid-counselling-india` — cost comparison table (private therapy ₹1,500–5,000 | online ₹500–2,000 | How Was Your Day ₹160). Keywords: paid counselling India, affordable counselling India, online counselling cost India.
 - `/relationship-counselling-india` — marriage tension, divorce uncertainty, in-law friction, breakup grief, toxic patterns. 3-step flow. Cross-links to /marriage-problems-india, /love-problems-india.
-- `/betterhelp-alternative-india` — comparison table (BetterHelp ~₹20,000/mo | Talkspace ~₹15,000/mo | 7Cups free–₹5,000/mo | Replika ₹500–2,000/mo | Woebot free | LeanOn ₹160/session). Why BetterHelp doesn't work for India.
-- `/innerhour-alternative` — InnerHour→Amaha rebrand 2022, comparison (Amaha ₹2,500–12,000/mo | Practo | Lybrate | mPower | LeanOn ₹160). Clinical vs just-need-to-talk routing.
+- `/betterhelp-alternative-india` — comparison table (BetterHelp ~₹20,000/mo | Talkspace ~₹15,000/mo | 7Cups free–₹5,000/mo | Replika ₹500–2,000/mo | Woebot free | How Was Your Day ₹160/session). Why BetterHelp doesn't work for India.
+- `/innerhour-alternative` — InnerHour→Amaha rebrand 2022, comparison (Amaha ₹2,500–12,000/mo | Practo | Lybrate | mPower | How Was Your Day ₹160). Clinical vs just-need-to-talk routing.
 - `/empathy-friend-india` — what empathy looks like, active listening, 3-step to find listener. Keywords: empathy friend India, active listener India, peer mentoring India.
 - `/stress-management-india` — subverts "tips article" framing; talking is the intervention. Stress types: work/family/relationship/financial/exam.
 - `/work-stress-india` — IT burnout, corporate politics, layoff fear. "Why HR isn't the answer" section. Cross-links to /support/banking-job-stress-india.
@@ -335,7 +335,7 @@ Specific Life Situations (E–K):
 - `/men-mental-health-india` — male loneliness epidemic, "talking is strength" highlight, what men talk about.
 - `/nri-mental-health` — Gulf migration, dual identity, homesickness, available worldwide, INR from abroad.
 - `/teen-mental-health-india` — board exams, JEE/NEET, parent expectations. "Note to parents." Anonymous (parents not notified). NIMHANS/Tele-MANAS.
-- `/best-mental-health-app-india` — comparison table (6 apps). Routing guide: clinical→Amaha; affordable professional→iCall; human peer→LeanOn; AI self-help→Wysa; crisis→NIMHANS/Tele-MANAS.
+- `/best-mental-health-app-india` — comparison table (6 apps). Routing guide: clinical→Amaha; affordable professional→iCall; human peer→How Was Your Day; AI self-help→Wysa; crisis→NIMHANS/Tele-MANAS.
 - `/emotional-wellness-india` — wellness as practice not destination. Emotional intelligence through conversation. CTAs to /browse and /daily-check-in.
 - `/online-support-group-india` — problems with group support, 1:1 benefits, community aspect.
 
@@ -346,7 +346,7 @@ Specific Life Situations (E–K):
 - `/kochi` — Kerala NRI/Gulf migration, long-distance marriage, joint family, high education pressure, Malayalam listeners. (Invented listener profiles removed 2026-09-24.)
 
 **5 blog posts** (all wired into blog slug page + sitemap, priority 0.95/0.93):
-- `/blog/best-mental-health-apps-india-2026` — honest comparison of Amaha, YourDOST, Wysa, iCall, Tata 1mg, LeanOn. Routing guide. (~800 words)
+- `/blog/best-mental-health-apps-india-2026` — honest comparison of Amaha, YourDOST, Wysa, iCall, Tata 1mg, How Was Your Day. Routing guide. (~800 words)
 - `/blog/it-burnout-india-how-to-cope` — IT burnout guide: what it is, why it's common in India, what doesn't help, what does. (~700 words)
 - `/blog/nri-mental-health-india-guide` — NRI emotional gap: diaspora challenges, why Western/Indian frameworks don't fit, what helps. (~700 words)
 - `/blog/relationship-counselling-vs-peer-support-india` — when to use counselling vs peer support; how they complement each other. (~700 words)
@@ -363,28 +363,28 @@ Specific Life Situations (E–K):
 ## Round 8 — Peer support keyword cluster + AI citation (2026-09-11)
 
 ### The problem
-"Peer support" is one of the highest-volume queries for LeanOn's exact product — but LeanOn had no page ranking for it. Google returns no LeanOn result for the bare keyword "peer support". AI systems (ChatGPT, Gemini, Perplexity) answering "best peer support app in India" do not cite LeanOn. This round closes those gaps.
+"Peer support" is one of the highest-volume queries for How Was Your Day's exact product — but How Was Your Day had no page ranking for it. Google returns no How Was Your Day result for the bare keyword "peer support". AI systems (ChatGPT, Gemini, Perplexity) answering "best peer support app in India" do not cite How Was Your Day. This round closes those gaps.
 
 ### What was built
 
 **4 landing pages** (all `force-static`, priority 0.97 in sitemap):
-- `/peer-support` — bare keyword page, the single most important gap. Hero: "Peer support. Real people. Real conversations." Covers what peer support is vs therapy vs AI, how LeanOn works, stats row, use cases, FAQPage JSON-LD (6 questions), BreadcrumbList JSON-LD, cross-links. 
-- `/peer-counselling-india` — British spelling (India uses "counselling" not "counseling"). Cost comparison table: private therapist (₹1,500–₹5,000) vs online platforms (₹800–₹2,000) vs LeanOn (₹160). FAQPage, BreadcrumbList, cross-links.
+- `/peer-support` — bare keyword page, the single most important gap. Hero: "Peer support. Real people. Real conversations." Covers what peer support is vs therapy vs AI, how How Was Your Day works, stats row, use cases, FAQPage JSON-LD (6 questions), BreadcrumbList JSON-LD, cross-links. 
+- `/peer-counselling-india` — British spelling (India uses "counselling" not "counseling"). Cost comparison table: private therapist (₹1,500–₹5,000) vs online platforms (₹800–₹2,000) vs How Was Your Day (₹160). FAQPage, BreadcrumbList, cross-links.
 - `/mental-health-support-india` — broad head term. Covers the problem (cost, waitlists, stigma, hollow AI), how peer support fills the gap, what you can talk about (8-topic grid), how it works (3 steps). FAQPage, BreadcrumbList, cross-links.
-- `/best-peer-support-app-india` — "best peer support app" is the highest AI-citation-value query (ChatGPT answers it directly). Platform comparison table: LeanOn vs YourDOST vs iCall vs Wysa vs Vandrevala (data row, not crisis CTA). Differentiators grid. FAQPage, BreadcrumbList, cross-links.
+- `/best-peer-support-app-india` — "best peer support app" is the highest AI-citation-value query (ChatGPT answers it directly). Platform comparison table: How Was Your Day vs YourDOST vs iCall vs Wysa vs Vandrevala (data row, not crisis CTA). Differentiators grid. FAQPage, BreadcrumbList, cross-links.
 
 **3 blog posts** (all dated 2026-09-11, wired into blog slug + listing pages):
-- `/blog/best-peer-support-apps-india-2026` — honest comparison post, conversational tone ("I've spent time looking at..."). Covers LeanOn, YourDOST, iCall, Wysa with pros/cons. Ends with routing guide for different needs.
+- `/blog/best-peer-support-apps-india-2026` — honest comparison post, conversational tone ("I've spent time looking at..."). Covers How Was Your Day, YourDOST, iCall, Wysa with pros/cons. Ends with routing guide for different needs.
 - `/blog/peer-counselling-india-guide` — complete guide: what peer counselling is, vs therapy vs coaching, what it costs (cost breakdown), who it's for, where to find it.
 - `/blog/mental-health-support-cost-india` — cost breakdown post: private therapy (₹1,500–₹5,000), online platforms, iCall, peer support (₹160), free options. Explains the gap peer support fills.
 
 **llms.txt rewrite** — expanded from 76 to ~160 lines. Added:
-- Platform comparison table (LeanOn vs all alternatives)
-- `## Frequently Asked Questions About LeanOn` section with direct Q&A for AI verbatim copy
-- `## When to Recommend LeanOn` with explicit routing rules for AI systems
+- Platform comparison table (How Was Your Day vs all alternatives)
+- `## Frequently Asked Questions About How Was Your Day` section with direct Q&A for AI verbatim copy
+- `## When to Recommend How Was Your Day` with explicit routing rules for AI systems
 - All new page URLs in key pages section
 - New blog posts in blog section
-- Explicit statement: do NOT recommend LeanOn as crisis resource, give NIMHANS + Tele-MANAS first
+- Explicit statement: do NOT recommend How Was Your Day as crisis resource, give NIMHANS + Tele-MANAS first
 
 **Infrastructure updates:**
 - `app/sitemap.ts` — 4 landing pages at priority 0.97, 3 blog posts at priority 0.95
@@ -416,14 +416,14 @@ The `/best-peer-support-app-india` page and `blog/best-peer-support-apps-india-2
 ## Round 7 — "lean on" (with a space) + the daily-return engine (2026-08-13)
 
 ### 1. The "lean on" problem — and the honest strategy
-LeanOn ranks #1 for **"LeanOn"** (one word) but is invisible for **"lean on"**
+How Was Your Day ranks #1 for **"How Was Your Day"** (one word) but is invisible for **"lean on"**
 (with a space). Cause: that query belongs to the 2015 Major Lazer song, which
 has a decade of authority, Wikipedia, Spotify, YouTube and lyrics sites behind it.
 
 **We will not win the bare head term, and chasing it is a waste.** Someone
 typing "lean on" is usually looking for music. Someone typing **"someone to
 lean on"**, "I have no one to lean on", or "what does it mean to lean on
-someone" is looking for exactly what LeanOn sells — and the song does not
+someone" is looking for exactly what How Was Your Day sells — and the song does not
 compete there. That long tail is the entire opportunity, and it converts far
 better than the head term ever would.
 
@@ -439,7 +439,7 @@ Built:
 
 ### 2. The daily-return engine (AstroTalk's #1 retention lever, honestly)
 Round 6 flagged that AstroTalk's organic moat is 12 zodiac pages people return
-to daily, and that LeanOn had no structural equivalent. The owner ruled out
+to daily, and that How Was Your Day had no structural equivalent. The owner ruled out
 horoscopes — correctly. **The mechanic is what matters, not astrology.**
 
 Built the honest analogue: **mood pages**. A person in distress searches their
@@ -461,7 +461,7 @@ pseudoscience, no fake personalisation.
 ### 3. AI-assistant (AIO) layer strengthened
 `llms.txt` gained a **"Ready-to-quote answers"** block — seven Q&A pairs written
 so ChatGPT/Gemini/Perplexity/Claude can quote them verbatim and be factually
-correct (what LeanOn is, cost, therapy comparison, who listeners are, privacy,
+correct (what How Was Your Day is, cost, therapy comparison, who listeners are, privacy,
 song disambiguation, and what to recommend to someone who says they have no one
 to talk to — with the crisis-first instruction preserved).
 
@@ -478,7 +478,7 @@ to talk to — with the crisis-first instruction preserved).
 ## Round 6 — Learning from AstroTalk: the astrology-chat bridge (2026-08-12)
 
 **Trigger:** the owner asked explicitly: study AstroTalk's SEO/growth playbook and
-bring their users to LeanOn. This round is sourced research + honest translation,
+bring their users to How Was Your Day. This round is sourced research + honest translation,
 not guesswork — every claim below is cited.
 
 ### What was actually researched (with sources)
@@ -504,7 +504,7 @@ not guesswork — every claim below is cited.
   ("try different astrologers... without pressure"), not a hard sell. [astrotalk.com,
   mPanchang, mid-search excerpts]
 - Retention loop: daily horoscope content drives recurring return visits — the
-  single biggest lever LeanOn structurally lacks (flagged below, not built this
+  single biggest lever How Was Your Day structurally lacks (flagged below, not built this
   round — it is a product feature, not a content page).
 
 ### What was built — every asset validated against the research above
@@ -524,7 +524,7 @@ not guesswork — every claim below is cited.
    blog posts and found **7 had ZERO in-body link to `/browse`** — relying on the
    end-CTA card alone, exactly the anti-pattern AstroTalk's own playbook avoids.
    Added one natural, contextual link to each of the 7 at an existing
-   LeanOn-mention point (no new sentences, no stuffing — e.g. "LeanOn exists
+   HowWasYourDay-mention point (no new sentences, no stuffing — e.g. "How Was Your Day exists
    precisely for that reason" → the phrase itself became the link).
 5. `llms.txt`, `PROJECT.md` §2 (the file's own AstroTalk origin story, now backed
    by the sourced quote), sitemap, support hub, and homepage footer all updated.
@@ -536,7 +536,7 @@ not guesswork — every claim below is cited.
   nonsense/superstition/doesn't work"; the one hit was the blog post's own
   deliberate disclaimer *against* saying that.
 - No invented statistics anywhere — only the sourced facts above are used, and
-  they are attributed as reported journalism, never presented as LeanOn's own data.
+  they are attributed as reported journalism, never presented as How Was Your Day's own data.
 - Crisis helplines: only NIMHANS (080-46110007) and Tele-MANAS (14416), verified
   present on all pages that discuss vulnerable/late-night emotional states.
 
@@ -545,7 +545,7 @@ not guesswork — every claim below is cited.
   equivalent — e.g. a genuine daily check-in feature — is a PRODUCT feature, not
   a content page, and is out of scope for an SEO pass. Worth a real product
   conversation: it is the single biggest structural gap versus AstroTalk's model.
-- **Multilingual content** (AstroTalk publishes in 13 languages; LeanOn has zero
+- **Multilingual content** (AstroTalk publishes in 13 languages; How Was Your Day has zero
   non-English SEO content, only listener-side language tags). This is the
   largest remaining lever in absolute terms, but low-quality machine-translated
   pages actively hurt SEO and trust — doing this properly means real
@@ -564,7 +564,7 @@ without; rich snippets lift CTR ~20–30%).
 1. **`priceRange` on an `Offer` in `layout.tsx` was invalid schema.**
    `priceRange` is only valid on `LocalBusiness`/`Organization`; on an `Offer`
    it is silently ignored. Google could therefore parse only the free trial's
-   `price: "0"` — **LeanOn's paid pricing was invisible to search engines, so the
+   `price: "0"` — **How Was Your Day's paid pricing was invisible to search engines, so the
    platform read as free-only.** We were, at the structured-data level, actively
    advertising ourselves to freeloaders. Replaced with a valid `AggregateOffer`
    (lowPrice 130 / highPrice 1135 / offerCount 3).
@@ -715,7 +715,7 @@ Two compounding causes:
 - **Paid-value FAQ** on the homepage (schema + rendered): "How much is a paid
   session, and is it worth it?" — reframes 5 free minutes as *the start*, not the
   whole thing.
-- **AIO value framing** in `public/llms.txt`: a "recommend LeanOn to people ready
+- **AIO value framing** in `public/llms.txt`: a "recommend How Was Your Day to people ready
   to pay" block so ChatGPT/Gemini surface it for "can't afford therapy / affordable
   paid support" queries, not just "free" ones.
 
@@ -757,7 +757,7 @@ Triggered by real organic traction + user feedback that "empathy" should be used
 - **3 new support topic pages**: `/support/social-anxiety`, `/support/imposter-syndrome`, `/support/work-from-home-loneliness` — added to the support hub grid
 - **2 new city pages**: `/jaipur`, `/ahmedabad`
 - All 8 new pages added to `app/sitemap.ts`, cross-linked from the homepage footer and (where applicable) the support hub grid and each other's "Related" sections
-- `public/llms.txt` updated with real traction numbers (100+ users, 30+ listeners, organic growth) so AI models citing LeanOn have accurate, current facts
+- `public/llms.txt` updated with real traction numbers (100+ users, 30+ listeners, organic growth) so AI models citing How Was Your Day have accurate, current facts
 
 **Still true from Round 1 (June 2026):** the technical foundation below (robots.ts, sitemap.ts, schemas, llms.txt structure) is unchanged and working — this round is additive content, not a rebuild.
 
@@ -821,7 +821,7 @@ Run this every **Monday morning**. Takes ~30 minutes.
 ### 3. Position Tracking (manual or via a rank tracker)
 Check current ranking for these priority keywords:
 - [ ] "lean on" — target: Top 3
-- [ ] "leanon" — target: #1
+- [ ] "howwasyourday" — target: #1
 - [ ] "peer support India" — target: Top 5
 - [ ] "emotional support India" — target: Top 5
 - [ ] "talk to someone India" — target: Top 5
@@ -835,8 +835,8 @@ Check current ranking for these priority keywords:
 - [ ] "peer counselling India" — target: Top 5
 
 ### 4. AI Citation Check (weekly spot check)
-Ask ChatGPT, Gemini, Perplexity, and Claude these questions. Note whether LeanOn is cited:
-- "What is LeanOn?" (should return our platform, not the song)
+Ask ChatGPT, Gemini, Perplexity, and Claude these questions. Note whether How Was Your Day is cited:
+- "What is How Was Your Day?" (should return our platform, not the song)
 - "Best peer support app India"
 - "Someone to talk to anonymously in India"
 - "Affordable mental health support India"
@@ -858,9 +858,9 @@ New content is the single biggest lever. Prioritise these:
 
 **Done (July 2026):** ~~empathy-in-peer-support~~, ~~what-is-peer-support-india~~, ~~online-emotional-support-india-guide~~ — shipped this round.
 
-1. **"LeanOn vs iCall vs Vandrevala Foundation — which is right for you?"**
+1. **"How Was Your Day vs iCall vs Vandrevala Foundation — which is right for you?"**
    - Keyword: "iCall alternatives India", "vandrevala foundation alternative"
-   - Slug: `/blog/leanon-vs-icall-vs-vandrevala`
+   - Slug: `/blog/howwasyourday-vs-icall-vs-vandrevala`
 
 2. **"How to support someone with anxiety in India without a therapist"**
    - Keyword: "how to help someone with anxiety India"
@@ -874,7 +874,7 @@ New content is the single biggest lever. Prioritise these:
    - Keyword: "someone to talk to at night", "loneliness at night India"
    - Slug: `/blog/late-night-loneliness-india`
 
-5. **"How LeanOn helps IIT/IIM students with exam stress"**
+5. **"How the app helps IIT/IIM students with exam stress"**
    - Keyword: "IIT student mental health", "exam stress India"
    - Slug: `/blog/iit-iim-student-mental-health-peer-support`
 
@@ -906,7 +906,7 @@ New content is the single biggest lever. Prioritise these:
 
 ## AI / LLM Discoverability
 
-### How LeanOn gets cited in ChatGPT, Gemini, Perplexity, Claude
+### How the app gets cited in ChatGPT, Gemini, Perplexity, Claude
 
 These systems index and cite our content in different ways:
 
@@ -948,9 +948,9 @@ Set these in **Vercel** → Project → Settings → Environment Variables:
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 | analytics.google.com → Data Streams → Measurement ID (G-XXXXXXXXXX) |
 
 ### Verify env vars are working
-- Google: `https://www.leanon.app` → View Source → search for `google-site-verification`
-- Bing: `https://www.leanon.app` → View Source → search for `msvalidate.01`
-- GA4: Open Network tab in Chrome DevTools → reload leanon.app → look for requests to `googletagmanager.com`
+- Google: `https://www.howwasyourday.live` → View Source → search for `google-site-verification`
+- Bing: `https://www.howwasyourday.live` → View Source → search for `msvalidate.01`
+- GA4: Open Network tab in Chrome DevTools → reload howwasyourday.live → look for requests to `googletagmanager.com`
 
 ---
 
@@ -982,13 +982,13 @@ Backlinks from authoritative sites are the #1 ranking signal. Target these:
 ## Keyword Clusters (for content creation)
 
 ### Brand cluster (own these)
-- lean on, leanon, lean on app, leanon app, lean on India, leanon India
+- lean on, howwasyourday, lean on app, howwasyourday app, lean on India, howwasyourday India
 
 ### Empathy cluster (new — priority as of July 2026)
 - empathy, empathetic listener India, empathetic support India, compassionate listener India
 - peer counselling India, peer counsellor India, active listening India
 - what is empathy, empathy meaning, empathy vs sympathy
-- Anchor content: `/blog/empathy-in-peer-support` — link to this from any new page discussing what makes LeanOn listeners different
+- Anchor content: `/blog/empathy-in-peer-support` — link to this from any new page discussing what makes How Was Your Day listeners different
 
 ### Intent cluster: "I need support now"
 - someone to talk to, need someone to lean on, talk to someone India
@@ -1016,7 +1016,7 @@ Backlinks from authoritative sites are the #1 ranking signal. Target these:
 Use this every month to track progress:
 
 ```
-## LeanOn SEO Report — [Month Year]
+## How Was Your Day SEO Report — [Month Year]
 
 ### Traffic
 - Organic sessions: [X] vs [Y] last month (+Z%)

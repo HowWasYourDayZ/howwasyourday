@@ -6,36 +6,36 @@ export const dynamic = 'force-static'
 
 // For people already living with a mental health condition — in treatment,
 // on medication, between therapy sessions, or on a waiting list — who also
-// want someone to talk to. LeanOn is ALONGSIDE care, never instead of it:
+// want someone to talk to. How Was Your Day is ALONGSIDE care, never instead of it:
 // listeners never advise on diagnosis or medication. Only Tele-MANAS /
 // NIMHANS as crisis numbers (CLAUDE.md).
 
-const URL = 'https://www.leanon.app/peer-support-alongside-therapy'
+const URL = 'https://www.howwasyourday.live/peer-support-alongside-therapy'
 
 export const metadata: Metadata = {
-  title: 'Someone to Talk To Between Therapy Sessions or While You Wait | LeanOn',
+  title: 'Someone to Talk To Between Therapy Sessions or While You Wait | How Was Your Day',
   description: `In therapy, on medication or on a waiting list — and need someone to talk to in between? Talk privately to a real, screened peer listener in India. Alongside your care, never instead of it. First ${FREE_SESSION_MINS} minutes free.`,
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
-  openGraph: { title: 'Someone to talk to between therapy sessions', description: 'Peer support alongside professional care — never instead of it.', url: URL, siteName: 'LeanOn', type: 'article' },
+  openGraph: { title: 'Someone to talk to between therapy sessions', description: 'Peer support alongside professional care — never instead of it.', url: URL, siteName: 'How Was Your Day', type: 'article' },
 }
 
 const QA_Q = 'I am in therapy or on a waiting list — can I talk to someone in between?'
-const QA_A = 'Yes. Many people use LeanOn between therapy sessions, late at night when their therapist is not available, or while they wait for a first appointment. You talk privately, by text or voice, with a screened peer listener in India who listens without judging. Keep your doctor or therapist: LeanOn listeners never advise on diagnosis or medication. Your first 5 minutes are free.'
+const QA_A = 'Yes. Many people use How Was Your Day between therapy sessions, late at night when their therapist is not available, or while they wait for a first appointment. You talk privately, by text or voice, with a screened peer listener in India who listens without judging. Keep your doctor or therapist: How Was Your Day listeners never advise on diagnosis or medication. Your first 5 minutes are free.'
 
 const faqs = [
-  { q: 'Can I use LeanOn if I have depression, anxiety or another diagnosis?', a: 'Yes, as long as you keep your professional care. A peer listener can be someone to talk to about your day, your worries or how you are coping. They are not clinicians: they will not diagnose you, change your treatment or tell you what medication to take. Share only what you are comfortable sharing.' },
+  { q: 'Can I use How Was Your Day if I have depression, anxiety or another diagnosis?', a: 'Yes, as long as you keep your professional care. A peer listener can be someone to talk to about your day, your worries or how you are coping. They are not clinicians: they will not diagnose you, change your treatment or tell you what medication to take. Share only what you are comfortable sharing.' },
   { q: 'Can a listener tell me whether to change or stop my medication?', a: 'No — and they will not try. Only your psychiatrist or doctor should decide anything about medication. If something about your treatment worries you, write it down and take it to them.' },
   { q: 'I am on a waiting list for therapy. Is it okay to talk to someone meanwhile?', a: 'Yes. Waiting can be hard, and talking to someone who listens can make it more bearable. If things get worse while you wait — especially thoughts of harming yourself — call Tele-MANAS on 14416 (free, 24/7) or NIMHANS on 080-46110007, and contact the service you are waiting for.' },
-  { q: 'Should I tell my therapist I use LeanOn?', a: 'It is up to you, but many therapists welcome knowing what helps you between sessions. You can bring anything that came up in a LeanOn conversation into therapy.' },
+  { q: 'Should I tell my therapist I use How Was Your Day?', a: 'It is up to you, but many therapists welcome knowing what helps you between sessions. You can bring anything that came up in a How Was Your Day conversation into therapy.' },
   { q: 'What is the difference between a peer listener and my therapist?', a: 'Your therapist is a trained professional who assesses and treats. A peer listener is an ordinary adult with lived experience who listens — no treatment plan, no diagnosis. Peer support can sit alongside therapy, but it does not replace it.' },
-  { q: 'Is it private?', a: 'The listener sees only the name you choose, never your phone number. Voice calls are not recorded. Text messages are stored securely and only authorised LeanOn administrators can open them, for example to review a reported or safety-flagged session.' },
+  { q: 'Is it private?', a: 'The listener sees only the name you choose, never your phone number. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session.' },
 ]
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'WebPage', name: 'Someone to talk to between therapy sessions or while you wait', url: URL, dateModified: '2026-10-16', isPartOf: { '@id': 'https://www.leanon.app/#website' }, about: { '@id': 'https://www.leanon.app/#organization' } },
+    { '@type': 'WebPage', name: 'Someone to talk to between therapy sessions or while you wait', url: URL, dateModified: '2026-10-16', isPartOf: { '@id': 'https://www.howwasyourday.live/#website' }, about: { '@id': 'https://www.howwasyourday.live/#organization' } },
     { '@type': 'FAQPage', mainEntity: [{ q: QA_Q, a: QA_A }, ...faqs].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
   ],
 }
@@ -65,13 +65,13 @@ export default function PeerSupportAlongsideTherapyPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" /></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" /></a></nav>
       <main className="page">
         <h1>Someone to talk to between therapy sessions — or while you wait</h1>
         <p className="lead">Therapy is once a week at best. Waiting lists are long. The hard moments don&apos;t keep to a schedule. Peer support can help in between — alongside your care, never instead of it.</p>
         <QuickAnswer question={QA_Q} answer={QA_A} />
 
-        <h2 className="s">When people use LeanOn alongside care</h2>
+        <h2 className="s">When people use How Was Your Day alongside care</h2>
         <ul className="l">
           <li>Late at night or on weekends, when their therapist isn&apos;t available</li>
           <li>While waiting weeks for a first therapy or psychiatry appointment</li>
@@ -91,7 +91,7 @@ export default function PeerSupportAlongsideTherapyPage() {
           <div className="q" key={f.q}><h3>{f.q}</h3><p>{f.a}</p></div>
         ))}
 
-        <p className="fine">More: <a href="/peer-support-vs-therapy">Peer support vs therapy</a> · <a href="/is-leanon-worth-it">Is LeanOn worth it?</a> · <a href="/trust">Trust &amp; safety</a></p>
+        <p className="fine">More: <a href="/peer-support-vs-therapy">Peer support vs therapy</a> · <a href="/is-howwasyourday-worth-it">Is How Was Your Day worth it?</a> · <a href="/trust">Trust &amp; safety</a></p>
       </main>
     </>
   )

@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Support for Indians in Leicester | Melton Road, Belgrave | LeanOn',
+  title: 'Support for Indians in Leicester | Melton Road, Belgrave | How Was Your Day',
   description: 'Leicester has the highest proportion of Indians outside India. Melton Road, Belgrave — a community that built this city. And still needs somewhere safe to talk.',
   keywords: ['indians in leicester', 'leicester indian community', 'belgrave road leicester', 'melton road indian', 'desi support leicester', 'leicester gujarati support', 'indian loneliness leicester'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-leicester' },
-  openGraph: { title: 'Support for Indians in Leicester | Melton Road, Belgrave | LeanOn', description: 'Leicester has the highest proportion of Indians outside India. Melton Road, Belgrave — a community that built this city. And still needs somewhere safe to talk.', url: 'https://www.leanon.app/indians-in-leicester', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-leicester' },
+  openGraph: { title: 'Support for Indians in Leicester | Melton Road, Belgrave | How Was Your Day', description: 'Leicester has the highest proportion of Indians outside India. Melton Road, Belgrave — a community that built this city. And still needs somewhere safe to talk.', url: 'https://www.howwasyourday.live/indians-in-leicester', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Leicester Gujarati and Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the British Indian diaspora experience — including the unique Leicester context of a community with roots going back to the East African Indian migration of the 1970s, and the specific Gujarati cultural pressures. No explanation needed.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Leicester Gujarati and Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the British Indian diaspora experience — including the unique Leicester context of a community with roots going back to the East African Indian migration of the 1970s, and the specific Gujarati cultural pressures. No explanation needed.' } },
   { '@type': 'Question', name: 'When is a good time to connect from Leicester?', acceptedAnswer: { '@type': 'Answer', text: 'Leicester (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours in summer. Indian evenings (6–10pm IST) are Leicester afternoons (1:30–5:30pm BST in summer). Afternoons in Leicester map well to Indian evening availability.' } },
   { '@type': 'Question', name: 'Is this private from the Belgrave Road community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the Leicester Indian community. Nothing is shared with anyone.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Leicester', item: 'https://www.leanon.app/indians-in-leicester' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Leicester', item: 'https://www.howwasyourday.live/indians-in-leicester' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInLeicesterPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Leicester</span></nav>
         <div className="hero">

@@ -11,26 +11,26 @@ export const dynamic = 'force-static'
 // literally true: prices from lib/constants + lib/geo-pricing, listeners
 // SCREENED (never "trained"), only Tele-MANAS / NIMHANS, no listener earnings.
 
-const URL = 'https://www.leanon.app/is-leanon-worth-it'
+const URL = 'https://www.howwasyourday.live/is-howwasyourday-worth-it'
 const R = TALK_MAX_TEXT_RATE
 const p15 = R * 15 + PLATFORM_FEE, p30 = R * 30 + PLATFORM_FEE, p45 = R * 45 + PLATFORM_FEE
 const langs = LANGUAGES.map(l => l.label.replace(/^.*\((.*)\)$/, '$1')).join(', ')
 const recharge = RECHARGE_AMOUNTS.map(a => `₹${a.toLocaleString('en-IN')}`).join(', ')
 
 export const metadata: Metadata = {
-  title: 'Is LeanOn Worth It? Honest Answers Before You Pay | LeanOn',
-  description: `Is LeanOn legit, private and worth the money? Straight answers before your first paid session: who the listeners are, what it costs (₹${p15} for 15 min in India, US$${NRI_USD_PRICES[15]} abroad), refunds, privacy, and when LeanOn is the wrong choice.`,
+  title: 'Is How Was Your Day Worth It? Honest Answers Before You Pay | How Was Your Day',
+  description: `Is How Was Your Day legit, private and worth the money? Straight answers before your first paid session: who the listeners are, what it costs (₹${p15} for 15 min in India, US$${NRI_USD_PRICES[15]} abroad), refunds, privacy, and when How Was Your Day is the wrong choice.`,
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
-  openGraph: { title: 'Is LeanOn worth it? Honest answers before you pay', description: 'Who the listeners are, what it costs, refunds, privacy — and when LeanOn is not the right choice.', url: URL, siteName: 'LeanOn', type: 'article' },
+  openGraph: { title: 'Is How Was Your Day worth it? Honest answers before you pay', description: 'Who the listeners are, what it costs, refunds, privacy — and when How Was Your Day is not the right choice.', url: URL, siteName: 'How Was Your Day', type: 'article' },
 }
 
 const groups: { h: string; items: { q: string; a: string }[] }[] = [
   {
     h: 'Is it real?',
     items: [
-      { q: 'Is LeanOn legit?', a: `Yes. LeanOn (leanon.app) is a peer-support service run from India. You talk one to one, by text or voice, with a real person — not a bot. Every listener applies in writing, passes a screening quiz, completes a live selfie check and is reviewed by LeanOn before taking any session. Payments go through Razorpay, and unused wallet balance can be refunded on request.` },
-      { q: 'Am I talking to a real person or AI?', a: 'A real person, always. LeanOn has no AI listeners, and no AI reads or analyses your conversations.' },
+      { q: 'Is How Was Your Day legit?', a: `Yes. How Was Your Day (howwasyourday.live) is a peer-support service run from India. You talk one to one, by text or voice, with a real person — not a bot. Every listener applies in writing, passes a screening quiz, completes a live selfie check and is reviewed by How Was Your Day before taking any session. Payments go through Razorpay, and unused wallet balance can be refunded on request.` },
+      { q: 'Am I talking to a real person or AI?', a: 'A real person, always. How Was Your Day has no AI listeners, and no AI reads or analyses your conversations.' },
       { q: 'Who are the listeners?', a: 'Ordinary adults in India with lived experience of what they talk about — breakups, family pressure, loneliness, burnout, grief, anxiety. They are screened peers, not therapists or counsellors, and they do not diagnose or give medical advice.' },
     ],
   },
@@ -38,7 +38,7 @@ const groups: { h: string; items: { q: string; a: string }[] }[] = [
     h: 'Is it worth the money?',
     items: [
       { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that, in India, a text session with a ₹${R}/min listener is ₹${p15} for 15 minutes, ₹${p30} for 30 or ₹${p45} for 45 (including a flat ₹${PLATFORM_FEE} platform fee); voice is ₹${VOICE_RATE_PREMIUM}/min more, and some listeners charge more — the exact price is shown before you start. Outside India, sessions start at US$${NRI_USD_PRICES[15]} for 15 minutes, US$${NRI_USD_PRICES[30]} for 30 and US$${NRI_USD_PRICES[45]} for 45. No subscription.` },
-      { q: 'Is it worth paying compared with therapy?', a: 'They serve different purposes. A qualified professional can assess and treat mental-health conditions. LeanOn may suit someone who wants a non-clinical conversation about loneliness, a breakup or a difficult day; it is not therapy or a replacement for professional care. One introductory session up to 5 minutes is free per account, so you can decide whether peer support feels useful before paying.' },
+      { q: 'Is it worth paying compared with therapy?', a: 'They serve different purposes. A qualified professional can assess and treat mental-health conditions. How Was Your Day may suit someone who wants a non-clinical conversation about loneliness, a breakup or a difficult day; it is not therapy or a replacement for professional care. One introductory session up to 5 minutes is free per account, so you can decide whether peer support feels useful before paying.' },
       { q: 'What if it does not help?', a: 'You can end a session whenever you want and you pay only for the minutes you used; the rest of the held amount goes back to your wallet straight away. If no listener accepts your request, nothing is charged.' },
     ],
   },
@@ -46,22 +46,22 @@ const groups: { h: string; items: { q: string; a: string }[] }[] = [
     h: 'Is it private?',
     items: [
       { q: 'Will my family or anyone I know find out?', a: 'The listener sees only the name you choose — never your phone number. Nothing is posted anywhere. You can use a first name or a nickname.' },
-      { q: 'Are my conversations recorded or read?', a: 'Voice calls are not recorded. Text messages are stored securely; only authorised LeanOn administrators can open them, for example to review a reported or safety-flagged session. LeanOn is private, but not "100% anonymous" — your phone number is verified so that everyone on the platform is a real person.' },
-      { q: 'Will the listener judge me?', a: 'Listening without judging is the whole job, and listeners are screened for it. If anything feels wrong, end the session and report it to LeanOn.' },
+      { q: 'Are my conversations recorded or read?', a: 'Voice calls are not recorded. Text messages are stored securely; only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. How Was Your Day is private, but not "100% anonymous" — your phone number is verified so that everyone on the platform is a real person.' },
+      { q: 'Will the listener judge me?', a: 'Listening without judging is the whole job, and listeners are screened for it. If anything feels wrong, end the session and report it to How Was Your Day.' },
     ],
   },
   {
     h: 'How does it work?',
     items: [
-      { q: 'Do I need to book an appointment?', a: 'No appointment is needed. Open leanon.app/talk, choose text or voice and select what is on your mind; LeanOn requests a conversation with a screened listener and may try another if there is no response within about 30 seconds. You can also browse listener profiles at leanon.app/browse. A session begins only when a listener accepts, and an immediate match is not guaranteed because availability varies.' },
-      { q: 'Can I talk in my language, or choose who I talk to?', a: `Often, yes. Listeners can offer ${langs} — filter by language on leanon.app/browse to see who speaks yours. Each profile shows the listener's name, languages and the topics they talk about, so you can choose someone you are comfortable with. You can also book the same listener again from their profile.` },
-      { q: 'How do I pay?', a: `Top up your LeanOn wallet (${recharge}) through Razorpay; a small payment-gateway charge is added at checkout. The session amount is held only when you send a request, returned in full if nobody accepts, and anything left in your wallet can be refunded on request from the wallet page.` },
+      { q: 'Do I need to book an appointment?', a: 'No appointment is needed. Open howwasyourday.live/talk, choose text or voice and select what is on your mind; How Was Your Day requests a conversation with a screened listener and may try another if there is no response within about 30 seconds. You can also browse listener profiles at howwasyourday.live/browse. A session begins only when a listener accepts, and an immediate match is not guaranteed because availability varies.' },
+      { q: 'Can I talk in my language, or choose who I talk to?', a: `Often, yes. Listeners can offer ${langs} — filter by language on howwasyourday.live/browse to see who speaks yours. Each profile shows the listener's name, languages and the topics they talk about, so you can choose someone you are comfortable with. You can also book the same listener again from their profile.` },
+      { q: 'How do I pay?', a: `Top up your How Was Your Day wallet (${recharge}) through Razorpay; a small payment-gateway charge is added at checkout. The session amount is held only when you send a request, returned in full if nobody accepts, and anything left in your wallet can be refunded on request from the wallet page.` },
     ],
   },
   {
-    h: 'When is LeanOn the wrong choice?',
+    h: 'When is How Was Your Day the wrong choice?',
     items: [
-      { q: 'When should I not use LeanOn?', a: 'If you are in danger or thinking about harming yourself, call Tele-MANAS on 14416 (free, 24/7) or NIMHANS on 080-46110007 now. LeanOn is also not for diagnosis, medication, couples therapy or legal advice — for those, see a qualified professional. LeanOn is peer support alongside professional care, never instead of it.' },
+      { q: 'When should I not use How Was Your Day?', a: 'If you are in danger or thinking about harming yourself, call Tele-MANAS on 14416 (free, 24/7) or NIMHANS on 080-46110007 now. How Was Your Day is also not for diagnosis, medication, couples therapy or legal advice — for those, see a qualified professional. How Was Your Day is peer support alongside professional care, never instead of it.' },
     ],
   },
 ]
@@ -70,11 +70,11 @@ const all = groups.flatMap(g => g.items)
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'WebPage', name: 'Is LeanOn worth it? Honest answers before you pay', url: URL, dateModified: '2026-10-17', isPartOf: { '@id': 'https://www.leanon.app/#website' }, about: { '@id': 'https://www.leanon.app/#organization' } },
+    { '@type': 'WebPage', name: 'Is How Was Your Day worth it? Honest answers before you pay', url: URL, dateModified: '2026-10-17', isPartOf: { '@id': 'https://www.howwasyourday.live/#website' }, about: { '@id': 'https://www.howwasyourday.live/#organization' } },
     { '@type': 'FAQPage', mainEntity: all.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' },
-      { '@type': 'ListItem', position: 2, name: 'Is LeanOn worth it?', item: URL },
+      { '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' },
+      { '@type': 'ListItem', position: 2, name: 'Is How Was Your Day worth it?', item: URL },
     ] },
   ],
 }
@@ -101,21 +101,21 @@ const S = `
   .fine{font-size:13px;color:#5A7A8A;text-align:center;margin-top:16px;line-height:1.6;}
 `
 
-export default function IsLeanOnWorthItPage() {
+export default function IsHowWasYourDayWorthItPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" /></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" /></a></nav>
       <main className="page">
-        <h1>Is LeanOn worth it? Honest answers before you pay</h1>
-        <p className="lead">The questions people ask before their first paid session — answered plainly, including when LeanOn is not the right choice.</p>
+        <h1>Is How Was Your Day worth it? Honest answers before you pay</h1>
+        <p className="lead">The questions people ask before their first paid session — answered plainly, including when How Was Your Day is not the right choice.</p>
         <p className="short">
-          <strong>In short:</strong> LeanOn connects adults with a screened peer listener in India for a one-to-one text or voice
+          <strong>In short:</strong> How Was Your Day connects adults with a screened peer listener in India for a one-to-one text or voice
           conversation, without an appointment. One introductory session of up to {FREE_SESSION_MINS} minutes is free per account.
           Paid prices depend on the selected listener and mode; a 15-minute text session with a ₹{R}/min listener is ₹{p15} in India,
           while overseas sessions start at US${NRI_USD_PRICES[15]}. You pay only for used minutes, and unused wallet balance is refundable on request.
-          LeanOn is peer support, not therapy.
+          How Was Your Day is peer support, not therapy.
         </p>
         {groups.map(g => (
           <section key={g.h}>
@@ -129,7 +129,7 @@ export default function IsLeanOnWorthItPage() {
           <p>Your one introductory session of up to {FREE_SESSION_MINS} minutes is free per account — enough to decide whether peer support feels right for you.</p>
           <a className="btn" href="/talk?src=seo">Talk to someone now</a>
         </div>
-        <p className="fine">More: <a href="/pricing">Pricing</a> · <a href="/trust">Trust &amp; safety</a> · <a href="/how-leanon-works">How LeanOn works</a> · Updated 17 October 2026</p>
+        <p className="fine">More: <a href="/pricing">Pricing</a> · <a href="/trust">Trust &amp; safety</a> · <a href="/how-it-works">How the app works</a> · Updated 17 October 2026</p>
       </main>
     </>
   )

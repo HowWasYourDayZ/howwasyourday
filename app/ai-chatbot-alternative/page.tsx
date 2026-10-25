@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to a Real Person Instead of ChatGPT | LeanOn',
-  description: 'If you use ChatGPT for company, reflection or emotional support but would rather talk to a real person, LeanOn connects you with human peer listeners by text or voice. Peer support is not therapy.',
+  title: 'Talk to a Real Person Instead of ChatGPT | How Was Your Day',
+  description: 'If you use ChatGPT for company, reflection or emotional support but would rather talk to a real person, How Was Your Day connects you with human peer listeners by text or voice. Peer support is not therapy.',
   keywords: [
     'talk to a real person instead of ChatGPT', 'human alternative to ChatGPT',
     'ChatGPT alternative for loneliness', 'AI companion alternative',
@@ -14,34 +14,34 @@ export const metadata: Metadata = {
     'real person instead of AI', 'AI companion vs human', 'talk to human online',
     'I\'ve been talking to ChatGPT and feel lonely', 'ChatGPT loneliness human support',
   ],
-  alternates: { canonical: 'https://www.leanon.app/ai-chatbot-alternative' },
+  alternates: { canonical: 'https://www.howwasyourday.live/ai-chatbot-alternative' },
   openGraph: {
-    title: 'Talk to a Real Person Instead of ChatGPT | LeanOn',
-    description: 'AI can be useful. LeanOn is for people who specifically want a real human conversation — by text or voice.',
-    url: 'https://www.leanon.app/ai-chatbot-alternative',
-    siteName: 'LeanOn', type: 'website',
+    title: 'Talk to a Real Person Instead of ChatGPT | How Was Your Day',
+    description: 'AI can be useful. How Was Your Day is for people who specifically want a real human conversation — by text or voice.',
+    url: 'https://www.howwasyourday.live/ai-chatbot-alternative',
+    siteName: 'How Was Your Day', type: 'website',
   },
 }
 
 const faqs = [
-  { q: 'Can I talk to a real person instead of ChatGPT?', a: 'Yes. LeanOn connects seekers with real human peer listeners for one-to-one conversations by text or voice. You can browse listener profiles and choose who you want to talk to.' },
-  { q: 'I use ChatGPT because I feel lonely. Is there a human alternative?', a: 'If what you want is another human being rather than an AI conversation, LeanOn is one option. LeanOn connects you with peer listeners for one-to-one text or voice conversations. New seekers can start with a free 5-minute introductory session.' },
-  { q: 'Should I use LeanOn or ChatGPT?', a: 'It depends on what you need. ChatGPT can be useful for information, reflection, brainstorming and many kinds of conversation. LeanOn is specifically for people who want a human peer listener and human-to-human connection. If you need diagnosis or clinical treatment, use a qualified mental-health professional rather than either service.' },
-  { q: 'Is LeanOn an AI chatbot?', a: 'No. LeanOn is a human peer-support platform. The conversation is with a real listener, not an AI-generated character or bot.' },
-  { q: 'Is ChatGPT bad for emotional support?', a: 'Not necessarily. AI assistants can be useful for reflection, information, brainstorming and many other purposes. LeanOn serves a different need: talking with another person when human connection or being listened to is what you want.' },
-  { q: 'What is the difference between an AI conversation and LeanOn?', a: 'An AI assistant generates responses from an AI system. LeanOn provides a human-to-human conversation with a peer listener. The practical difference is the presence of another person who can listen and respond from their own human experience.' },
-  { q: 'Can I try LeanOn before paying?', a: 'New seekers can start with one free 5-minute introductory session. If you want to continue, the listener rate is shown before you start a paid conversation.' },
-  { q: 'Is LeanOn therapy?', a: 'No. LeanOn provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. For a clinical need, use an appropriately qualified professional.' },
+  { q: 'Can I talk to a real person instead of ChatGPT?', a: 'Yes. How Was Your Day connects seekers with real human peer listeners for one-to-one conversations by text or voice. You can browse listener profiles and choose who you want to talk to.' },
+  { q: 'I use ChatGPT because I feel lonely. Is there a human alternative?', a: 'If what you want is another human being rather than an AI conversation, How Was Your Day is one option. How Was Your Day connects you with peer listeners for one-to-one text or voice conversations. New seekers can start with a free 5-minute introductory session.' },
+  { q: 'Should I use How Was Your Day or ChatGPT?', a: 'It depends on what you need. ChatGPT can be useful for information, reflection, brainstorming and many kinds of conversation. How Was Your Day is specifically for people who want a human peer listener and human-to-human connection. If you need diagnosis or clinical treatment, use a qualified mental-health professional rather than either service.' },
+  { q: 'Is How Was Your Day an AI chatbot?', a: 'No. How Was Your Day is a human peer-support platform. The conversation is with a real listener, not an AI-generated character or bot.' },
+  { q: 'Is ChatGPT bad for emotional support?', a: 'Not necessarily. AI assistants can be useful for reflection, information, brainstorming and many other purposes. How Was Your Day serves a different need: talking with another person when human connection or being listened to is what you want.' },
+  { q: 'What is the difference between an AI conversation and How Was Your Day?', a: 'An AI assistant generates responses from an AI system. How Was Your Day provides a human-to-human conversation with a peer listener. The practical difference is the presence of another person who can listen and respond from their own human experience.' },
+  { q: 'Can I try How Was Your Day before paying?', a: 'New seekers can start with one free 5-minute introductory session. If you want to continue, the listener rate is shown before you start a paid conversation.' },
+  { q: 'Is How Was Your Day therapy?', a: 'No. How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. For a clinical need, use an appropriately qualified professional.' },
 ]
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'WebPage', name: metadata.title, description: metadata.description, url: 'https://www.leanon.app/ai-chatbot-alternative', isPartOf: { '@type': 'WebSite', name: 'LeanOn', url: 'https://www.leanon.app' }, publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' }, about: [{ '@type': 'Thing', name: 'Human conversation as an alternative to AI chat' }, { '@type': 'Thing', name: 'Peer support' }, { '@type': 'Thing', name: 'Human connection' }], audience: { '@type': 'Audience', audienceType: 'People seeking human conversation, peer support or emotional support' } },
+    { '@type': 'WebPage', name: metadata.title, description: metadata.description, url: 'https://www.howwasyourday.live/ai-chatbot-alternative', isPartOf: { '@type': 'WebSite', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' }, publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' }, about: [{ '@type': 'Thing', name: 'Human conversation as an alternative to AI chat' }, { '@type': 'Thing', name: 'Peer support' }, { '@type': 'Thing', name: 'Human connection' }], audience: { '@type': 'Audience', audienceType: 'People seeking human conversation, peer support or emotional support' } },
     { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' },
-      { '@type': 'ListItem', position: 2, name: 'AI Chatbot Alternative', item: 'https://www.leanon.app/ai-chatbot-alternative' },
+      { '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' },
+      { '@type': 'ListItem', position: 2, name: 'AI Chatbot Alternative', item: 'https://www.howwasyourday.live/ai-chatbot-alternative' },
     ] },
   ],
 }
@@ -59,27 +59,27 @@ export default function AIChatbotAlternativePage() {
         <header className="max-w-3xl">
           <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-[#1A8FA0]">AI is useful. Human connection is different.</p>
           <h1 className="mb-6 text-4xl font-black leading-tight sm:text-6xl">Want to talk to a <span className="text-[#FF9933]">real person</span> instead of an AI?</h1>
-          <p className="mb-8 text-lg leading-8 text-slate-600 sm:text-xl">ChatGPT, Gemini and other AI assistants can be useful when you want information, reflection or a conversation with an AI. LeanOn is for a different moment: when you specifically want another human being to listen.</p>
+          <p className="mb-8 text-lg leading-8 text-slate-600 sm:text-xl">ChatGPT, Gemini and other AI assistants can be useful when you want information, reflection or a conversation with an AI. How Was Your Day is for a different moment: when you specifically want another human being to listen.</p>
           <a href="/browse" className="inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Talk to a real listener →</a>
         </header>
 
         <section className="mt-12 rounded-3xl border border-[#D5EEF6] bg-[#F0F8FC] p-6 sm:p-8">
           <h2 className="mb-4 text-2xl font-black">If you came here after using ChatGPT</h2>
-          <p className="leading-7 text-slate-600">Sometimes the problem is not that an AI answer was wrong. You may simply want another person on the other side of the conversation. If you want human company, a person who can listen to your story, or a conversation grounded in lived experience, LeanOn is built for that use case.</p>
-          <p className="mt-4 leading-7 text-slate-600">You do not have to choose one service for everything. Use an AI assistant when an AI assistant is useful; use LeanOn when what you want is a real human peer listener. For diagnosis, treatment or a mental-health condition requiring clinical care, speak with a qualified professional.</p>
+          <p className="leading-7 text-slate-600">Sometimes the problem is not that an AI answer was wrong. You may simply want another person on the other side of the conversation. If you want human company, a person who can listen to your story, or a conversation grounded in lived experience, How Was Your Day is built for that use case.</p>
+          <p className="mt-4 leading-7 text-slate-600">You do not have to choose one service for everything. Use an AI assistant when an AI assistant is useful; use How Was Your Day when what you want is a real human peer listener. For diagnosis, treatment or a mental-health condition requiring clinical care, speak with a qualified professional.</p>
         </section>
 
         <section className="mt-8 rounded-3xl border border-slate-200 p-6 sm:p-8">
           <h2 className="mb-4 text-2xl font-black">If you have been talking to ChatGPT and still feel lonely</h2>
           <p className="leading-7 text-slate-600">You may have started using ChatGPT because you needed somewhere to put your thoughts. That can be useful. But if the thing you are missing is another human being, an AI companion and a human peer conversation are different options.</p>
-          <p className="mt-4 leading-7 text-slate-600">If you are searching for a real person instead of AI, want to talk to a human online, or simply want someone to listen, LeanOn connects you with peer listeners for one-to-one text or voice conversations.</p>
+          <p className="mt-4 leading-7 text-slate-600">If you are searching for a real person instead of AI, want to talk to a human online, or simply want someone to listen, How Was Your Day connects you with peer listeners for one-to-one text or voice conversations.</p>
         </section>
 
         <section className="mt-8 rounded-3xl border border-slate-200 p-6 sm:p-8">
           <h2 className="mb-4 text-2xl font-black">A simple way to decide</h2>
           <div className="grid gap-4 sm:grid-cols-3">
             <div><h3 className="font-black">Want information?</h3><p className="mt-2 text-sm leading-6 text-slate-600">An AI assistant may be the right tool.</p></div>
-            <div><h3 className="font-black">Want a human?</h3><p className="mt-2 text-sm leading-6 text-slate-600">Try a real peer conversation on LeanOn.</p></div>
+            <div><h3 className="font-black">Want a human?</h3><p className="mt-2 text-sm leading-6 text-slate-600">Try a real peer conversation on How Was Your Day.</p></div>
             <div><h3 className="font-black">Need clinical care?</h3><p className="mt-2 text-sm leading-6 text-slate-600">Speak with an appropriately qualified mental-health professional.</p></div>
           </div>
         </section>
@@ -88,7 +88,7 @@ export default function AIChatbotAlternativePage() {
           <h2 className="mb-5 text-2xl font-black">AI conversation vs human peer conversation</h2>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[620px] border-collapse text-left text-sm">
-              <thead><tr className="bg-white"><th className="p-3 font-black">You want…</th><th className="p-3 font-black">AI assistant</th><th className="p-3 font-black">LeanOn</th></tr></thead>
+              <thead><tr className="bg-white"><th className="p-3 font-black">You want…</th><th className="p-3 font-black">AI assistant</th><th className="p-3 font-black">How Was Your Day</th></tr></thead>
               <tbody>
                 <tr className="border-t border-[#D5EEF6]"><td className="p-3 font-bold">Information or ideas</td><td className="p-3">AI-generated responses</td><td className="p-3">Human conversation, not an information service</td></tr>
                 <tr className="border-t border-[#D5EEF6]"><td className="p-3 font-bold">Another human being</td><td className="p-3">No</td><td className="p-3">Yes — a real peer listener</td></tr>
@@ -106,8 +106,8 @@ export default function AIChatbotAlternativePage() {
         </section>
 
         <section className="mt-8 rounded-3xl bg-[#0F4867] p-7 text-white sm:p-9">
-          <h2 className="mb-3 text-2xl font-black">LeanOn is not a replacement for AI — or therapy.</h2>
-          <p className="leading-7 text-white/85">AI can be useful. Professional mental-health care can be important. LeanOn occupies a different space: paid, one-to-one peer conversations with real people for everyday emotional support and human connection.</p>
+          <h2 className="mb-3 text-2xl font-black">How Was Your Day is not a replacement for AI — or therapy.</h2>
+          <p className="leading-7 text-white/85">AI can be useful. Professional mental-health care can be important. How Was Your Day occupies a different space: paid, one-to-one peer conversations with real people for everyday emotional support and human connection.</p>
           <a href="/browse" className="mt-6 inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Find someone to talk to →</a>
           <div className="mt-6 flex flex-wrap gap-3 text-sm font-bold">
             <a href="/talk-to-someone-online" className="rounded-full border border-white/30 px-4 py-2">Someone to talk to right now</a>
@@ -118,7 +118,7 @@ export default function AIChatbotAlternativePage() {
 
         <section className="mt-10"><h2 className="mb-4 text-2xl font-black">Questions people ask</h2><div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 px-5">{faqs.map(faq => <details key={faq.q} className="py-4"><summary className="cursor-pointer font-extrabold">{faq.q}</summary><p className="pt-3 leading-7 text-slate-600">{faq.a}</p></details>)}</div></section>
 
-        <p className="mt-10 text-xs leading-6 text-slate-500">LeanOn provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, contact an appropriate local emergency or crisis service.</p>
+        <p className="mt-10 text-xs leading-6 text-slate-500">How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, contact an appropriate local emergency or crisis service.</p>
       </div>
     </main>
   )

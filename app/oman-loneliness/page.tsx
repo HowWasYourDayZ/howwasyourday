@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Oman | LeanOn',
-  description: 'Feeling lonely or overwhelmed in Oman? LeanOn connects Indian expats with a screened Indian peer listener — in your language, on Indian time, starting with a free 5-minute trial.',
+  title: 'Emotional Support for Indians in Oman | How Was Your Day',
+  description: 'Feeling lonely or overwhelmed in Oman? How Was Your Day connects Indian expats with a screened Indian peer listener — in your language, on Indian time, starting with a free 5-minute trial.',
   keywords: [
     'emotional support Oman Indian', 'lonely in Oman Indian', 'Indian expat Oman loneliness',
     'talk to someone Oman', 'Oman NRI support', 'feeling isolated Oman',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'missing home Oman', 'Muscat Indian expat lonely', 'no one to talk to Oman',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/oman-loneliness',
-    languages: { 'en-IN': 'https://www.leanon.app/oman-loneliness' },
+    canonical: 'https://www.howwasyourday.live/oman-loneliness',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/oman-loneliness' },
   },
   openGraph: {
     title: 'Emotional Support for Indians in Oman — Talk to an Indian Listener',
-    description: 'Lonely or overwhelmed in Oman? LeanOn peer listeners understand the Indian expat experience and speak your language. First 5 minutes free.',
-    url: 'https://www.leanon.app/oman-loneliness',
-    siteName: 'LeanOn',
+    description: 'Lonely or overwhelmed in Oman? How Was Your Day peer listeners understand the Indian expat experience and speak your language. First 5 minutes free.',
+    url: 'https://www.howwasyourday.live/oman-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,7 +38,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost from Oman?',
+      name: 'How much does How Was Your Day cost from Oman?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions cost OMR 4 for 15 minutes, OMR 6 for 30 minutes, and OMR 8 for 45 minutes. Your first session always starts with a completely free 5-minute trial.',
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I speak to a listener in Malayalam or Hindi from Oman?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has Malayalam, Hindi, Tamil, Telugu, Kannada, Bengali, and other Indian language listeners. Kerala has one of the largest Indian populations in Oman, and Malayalam-speaking listeners are available. Check a listener\'s profile for their languages.',
+        text: 'Yes. How Was Your Day has Malayalam, Hindi, Tamil, Telugu, Kannada, Bengali, and other Indian language listeners. Kerala has one of the largest Indian populations in Oman, and Malayalam-speaking listeners are available. Check a listener\'s profile for their languages.',
       },
     },
     {
@@ -57,12 +57,12 @@ const faqSchema = {
       name: 'I work long hours in Oman and rarely get time for myself. Is there a quick way to talk?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A 15-minute session is often enough to feel lighter. LeanOn sessions are on-demand — no appointments, no waiting rooms. Open the app, pick a listener who is online, and start talking. Even a short conversation can break the weight of a hard day.',
+        text: 'A 15-minute session is often enough to feel lighter. How Was Your Day sessions are on-demand — no appointments, no waiting rooms. Open the app, pick a listener who is online, and start talking. Even a short conversation can break the weight of a hard day.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous? My employer must not find out.',
+      name: 'Is How Was Your Day anonymous? My employer must not find out.',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Private. You can use any name — nothing is connected to your real identity, your employer, or your visa. Speak freely and without worry.',
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Emotional Support Oman', item: 'https://www.leanon.app/oman-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Emotional Support Oman', item: 'https://www.howwasyourday.live/oman-loneliness' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function OmanLonelinessPage() {
         <p className="lead">
           Oman has one of the largest and most established Indian communities in the Gulf.
           But for many — especially those in construction, hospitality, or domestic work — it is
-          a place of long hours, limited freedom, and deep loneliness. LeanOn is here to make
+          a place of long hours, limited freedom, and deep loneliness. How Was Your Day is here to make
           sure you always have someone to talk to, in your own language.
         </p>
 
@@ -176,7 +176,7 @@ export default function OmanLonelinessPage() {
 
         <div className="night-box">
           <h2>🌙 Late night in Muscat, Salalah, or Sohar?</h2>
-          <p>LeanOn listeners are based in India, so availability follows Indian time. India and Oman share a very similar time zone —
+          <p>How Was Your Day listeners are based in India, so availability follows Indian time. India and Oman share a very similar time zone —
             which means Indian listeners are awake and available whenever you need them.</p>
           <p>Start with a free 5 minutes. No payment required to begin.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
@@ -185,7 +185,7 @@ export default function OmanLonelinessPage() {
         <div className="card">
           <h2>Talk to an Indian listener in your language</h2>
           <p>Oman has a very large Malayali population, alongside significant Hindi, Tamil, and
-            Telugu communities. LeanOn listeners speak Malayalam, Hindi, Tamil, Telugu, Kannada,
+            Telugu communities. How Was Your Day listeners speak Malayalam, Hindi, Tamil, Telugu, Kannada,
             Bengali, and other Indian languages. Talking in your mother tongue opens doors that
             English cannot always reach.</p>
         </div>
@@ -216,12 +216,12 @@ export default function OmanLonelinessPage() {
               and domestic work — describe deep isolation despite being in a country with a large Indian community.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost from Oman?</h3>
+            <h3>How much does How Was Your Day cost from Oman?</h3>
             <p>OMR 4 for 15 minutes, OMR 6 for 30 minutes, OMR 8 for 45 minutes. First 5 minutes are free.</p>
           </div>
           <div className="faq-item">
             <h3>Can I speak in Malayalam or Hindi from Oman?</h3>
-            <p>Yes. LeanOn has Malayalam, Hindi, Tamil, Telugu, Kannada, Bengali, and other Indian language
+            <p>Yes. How Was Your Day has Malayalam, Hindi, Tamil, Telugu, Kannada, Bengali, and other Indian language
               listeners. Check a listener&apos;s profile to find your language.</p>
           </div>
           <div className="faq-item">
@@ -230,7 +230,7 @@ export default function OmanLonelinessPage() {
               online listener, and start talking immediately.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn anonymous — will my employer find out?</h3>
+            <h3>Is How Was Your Day anonymous — will my employer find out?</h3>
             <p>Private. Nothing is connected to your real identity, employer, or visa. Speak
               freely and without worry.</p>
           </div>
@@ -249,7 +249,7 @@ export default function OmanLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Support for Indians in Kuwait | Emotional Support Online | LeanOn',
+  title: 'NRI Support for Indians in Kuwait | Emotional Support Online | How Was Your Day',
   description: 'Emotional support for Indians living and working in Kuwait. Talk anonymously to a screened Indian peer listener who understands the Gulf expat experience. Free trial.',
   keywords: [
     'NRI support Kuwait', 'Indian expat Kuwait emotional support', 'Indian in Kuwait feeling lonely',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'NRI Kuwait talk to someone', 'Gulf expat mental health Indian',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/kuwait-nri-support',
-    languages: { 'en-IN': 'https://www.leanon.app/kuwait-nri-support' },
+    canonical: 'https://www.howwasyourday.live/kuwait-nri-support',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/kuwait-nri-support' },
   },
   openGraph: {
-    title: 'Emotional Support for Indians in Kuwait — NRI Peer Support | LeanOn',
-    description: 'Indian in Kuwait and feeling the weight of expat life? LeanOn peer listeners understand Gulf NRI experience. Anonymous, in your language, first 5 minutes free.',
-    url: 'https://www.leanon.app/kuwait-nri-support',
-    siteName: 'LeanOn',
+    title: 'Emotional Support for Indians in Kuwait — NRI Peer Support | How Was Your Day',
+    description: 'Indian in Kuwait and feeling the weight of expat life? How Was Your Day peer listeners understand Gulf NRI experience. Anonymous, in your language, first 5 minutes free.',
+    url: 'https://www.howwasyourday.live/kuwait-nri-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Is there emotional support available for Indians in Kuwait?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn connects you with screened Indian peer listeners who understand the NRI and Gulf expat experience. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes. No appointment needed.',
+        text: 'Yes. How Was Your Day connects you with screened Indian peer listeners who understand the NRI and Gulf expat experience. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes. No appointment needed.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can I talk in Malayalam or Hindi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has listeners in twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, and Gujarati. The Kerala community is particularly large in Kuwait — there are Malayalam-speaking listeners available.',
+        text: 'Yes. How Was Your Day has listeners in twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, and Gujarati. The Kerala community is particularly large in Kuwait — there are Malayalam-speaking listeners available.',
       },
     },
     {
@@ -81,7 +81,7 @@ export default function KuwaitNriSupportPage() {
         </h1>
 
         <p style={{ fontSize: '1.05rem', color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          Life in Kuwait has a particular weight to it — long working hours, distance from family, the pressure of being the one who is "settled abroad," and a loneliness that can be hard to name when you are surrounded by people. LeanOn gives you a screened Indian peer listener who understands this from the inside. Anonymous, available any hour, in your language.
+          Life in Kuwait has a particular weight to it — long working hours, distance from family, the pressure of being the one who is "settled abroad," and a loneliness that can be hard to name when you are surrounded by people. How Was Your Day gives you a screened Indian peer listener who understands this from the inside. Anonymous, available any hour, in your language.
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>
@@ -93,7 +93,7 @@ export default function KuwaitNriSupportPage() {
           There is an unspoken rule in many Indian expat communities: you are supposed to be grateful. You left India, you are earning well by comparison, your family is proud. Admitting that you are lonely, or anxious, or that something is deeply wrong — that can feel like ingratitude. So most people say nothing.
         </p>
         <p style={{ color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          LeanOn is built for exactly this. A private conversation with someone who has lived something similar and will not minimise what you are carrying. The Gulf community — particularly the Kerala, Tamil Nadu, and Andhra Pradesh diaspora in Kuwait — is large, but the emotional support infrastructure within it is nearly invisible. This is an attempt to change that.
+          How Was Your Day is built for exactly this. A private conversation with someone who has lived something similar and will not minimise what you are carrying. The Gulf community — particularly the Kerala, Tamil Nadu, and Andhra Pradesh diaspora in Kuwait — is large, but the emotional support infrastructure within it is nearly invisible. This is an attempt to change that.
         </p>
 
         <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 16 }}>Frequently Asked Questions</h2>

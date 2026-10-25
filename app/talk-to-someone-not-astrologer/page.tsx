@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Just Want to Talk, Not a Prediction? Here\'s a Direct Option | LeanOn',
-  description: 'If you find yourself calling an astrologer at night just to talk to someone, you\'re not alone. LeanOn connects you with a real person for real conversation.',
-  alternates: { canonical: 'https://www.leanon.app/talk-to-someone-not-astrologer', languages: { 'en-IN': 'https://www.leanon.app/talk-to-someone-not-astrologer' } },
+  title: 'Just Want to Talk, Not a Prediction? Here\'s a Direct Option | How Was Your Day',
+  description: 'If you find yourself calling an astrologer at night just to talk to someone, you\'re not alone. How Was Your Day connects you with a real person for real conversation.',
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-not-astrologer', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-someone-not-astrologer' } },
   keywords: 'talk to someone instead of astrologer, astrology chat for loneliness, why do I call an astrologer just to talk, someone to talk to at night India',
   openGraph: {
-    title: 'Just Want to Talk, Not a Prediction? Here\'s a Direct Option | LeanOn',
-    description: 'If you find yourself calling an astrologer at night just to talk to someone, you\'re not alone. LeanOn connects you with a real person for real conversation.',
-    url: 'https://www.leanon.app/talk-to-someone-not-astrologer',
-    siteName: 'LeanOn',
+    title: 'Just Want to Talk, Not a Prediction? Here\'s a Direct Option | How Was Your Day',
+    description: 'If you find yourself calling an astrologer at night just to talk to someone, you\'re not alone. How Was Your Day connects you with a real person for real conversation.',
+    url: 'https://www.howwasyourday.live/talk-to-someone-not-astrologer',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,18 +38,18 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from an astrology chat?',
+      name: 'How is How Was Your Day different from an astrology chat?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners are peers with their own lived experience of things like loneliness, anxiety, or grief — not people making predictions about your future. There\'s no birth chart, no reading, no framing your life around fate. The conversation itself is the point. You\'re heard, not forecasted.',
+        text: 'How Was Your Day listeners are peers with their own lived experience of things like loneliness, anxiety, or grief — not people making predictions about your future. There\'s no birth chart, no reading, no framing your life around fate. The conversation itself is the point. You\'re heard, not forecasted.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn private and anonymous?',
+      name: 'Is How Was Your Day private and anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. You can talk using just a first name, without sharing your identity. LeanOn is built to be DPDP compliant, so your conversations and personal information stay private and protected.',
+        text: 'Yes. You can talk using just a first name, without sharing your identity. How Was Your Day is built to be DPDP compliant, so your conversations and personal information stay private and protected.',
       },
     },
     {
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to Someone', item: 'https://www.leanon.app/talk-to-someone-not-astrologer' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to Someone', item: 'https://www.howwasyourday.live/talk-to-someone-not-astrologer' },
   ],
 }
 
@@ -133,7 +133,7 @@ export default function TalkToSomeoneNotAstrologerPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -174,13 +174,13 @@ export default function TalkToSomeoneNotAstrologerPage() {
           <p>If what you're after is genuinely a conversation — an empathetic person, present with you, listening without an agenda — there's a more direct route to that than routing it through a horoscope.</p>
 
           <h3>Real People, Real Experience</h3>
-          <p>LeanOn listeners aren't reading charts or predicting what's ahead for you. They're peers who've lived through their own versions of loneliness, anxiety, heartbreak, or grief, and who show up with empathy built from having actually been there — not from a script or a chart.</p>
+          <p>How Was Your Day listeners aren't reading charts or predicting what's ahead for you. They're peers who've lived through their own versions of loneliness, anxiety, heartbreak, or grief, and who show up with empathy built from having actually been there — not from a script or a chart.</p>
 
           <h3>The Conversation Doesn't Need a Framing</h3>
           <p>You don't need a horoscope question to justify wanting to talk. "I just need to tell someone how today went" is a complete and valid reason to open a chat. The conversation is the point, not a means to an ending or a forecast.</p>
 
           <h3>Anonymous, Judgment-Free, Always On</h3>
-          <p>You can talk using just a first name. No one on the other end needs your birth details, your identity, or your history to be genuinely, empathetically present with you. And like the astrology chats that stay open past midnight, LeanOn listeners go online at different hours, often when the need actually shows up.</p>
+          <p>You can talk using just a first name. No one on the other end needs your birth details, your identity, or your history to be genuinely, empathetically present with you. And like the astrology chats that stay open past midnight, How Was Your Day listeners go online at different hours, often when the need actually shows up.</p>
 
           <h3>You Choose Who You Talk To</h3>
           <p>Instead of being matched by planetary alignment, you pick a listener based on what they've actually lived through — grief, breakups, work stress, loneliness, family pressure. It's a small shift, but it means the connection is grounded in shared human experience rather than a birth chart.</p>
@@ -208,12 +208,12 @@ export default function TalkToSomeoneNotAstrologerPage() {
             <div className="faq-a">Not at all. Wanting connection, a listening ear, or simply a voice on the other end of the line is one of the most human things there is. There is nothing wrong with turning to astrology chat for that, and there is nothing wrong with wanting a more direct route to conversation either. Both are valid ways of meeting the same need — to feel less alone.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How is LeanOn different from an astrology chat?</div>
-            <div className="faq-a">LeanOn listeners are peers with their own lived experience of things like loneliness, anxiety, or grief — not people making predictions about your future. There's no birth chart, no reading, no framing your life around fate. The conversation itself is the point. You're heard, not forecasted.</div>
+            <div className="faq-q">How is How Was Your Day different from an astrology chat?</div>
+            <div className="faq-a">How Was Your Day listeners are peers with their own lived experience of things like loneliness, anxiety, or grief — not people making predictions about your future. There's no birth chart, no reading, no framing your life around fate. The conversation itself is the point. You're heard, not forecasted.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn private and anonymous?</div>
-            <div className="faq-a">Yes. You can talk using just a first name, without sharing your identity. LeanOn is built to be DPDP compliant, so your conversations and personal information stay private and protected.</div>
+            <div className="faq-q">Is How Was Your Day private and anonymous?</div>
+            <div className="faq-a">Yes. You can talk using just a first name, without sharing your identity. How Was Your Day is built to be DPDP compliant, so your conversations and personal information stay private and protected.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does it cost?</div>
@@ -224,7 +224,7 @@ export default function TalkToSomeoneNotAstrologerPage() {
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/astrotalk-alternative" className="related-link">AstroTalk Alternative</a>
             <a href="/relationship-advice-online-india" className="related-link">Relationship Advice Online</a>
@@ -237,9 +237,9 @@ export default function TalkToSomeoneNotAstrologerPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

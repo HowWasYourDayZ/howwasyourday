@@ -1,4 +1,4 @@
-const BASE = 'https://www.leanon.app'
+const BASE = 'https://www.howwasyourday.live'
 const URLS = [
   ['india', '2026-09-16'],
   ['usa', '2026-09-16'],

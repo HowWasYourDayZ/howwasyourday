@@ -1,6 +1,6 @@
-# LeanOn 2.0 — Project Bible (Source of Truth)
+# How Was Your Day 2.0 — Project Bible (Source of Truth)
 
-> This file is the durable contract for how LeanOn works. It changes rarely.
+> This file is the durable contract for how How Was Your Day works. It changes rarely.
 > Roadmap, build status, account credentials, and cost estimates live in a
 > SEPARATE file (STATUS.md). Do NOT put volatile information here.
 >
@@ -28,9 +28,9 @@
 
 AstroTalk's founder discovered that a large share of night-session bookings were not about astrology. People booked astrologers just to talk, because they were lonely.
 
-LeanOn removes the astrology wrapper and monetises the real thing: **human connection and lived-experience guidance.**
+How Was Your Day removes the astrology wrapper and monetises the real thing: **human connection and lived-experience guidance.**
 
-**This is not just an internal theory — it is documented.** Reporting on India's astrology-app boom (The Revealer, "Why Young People in India Are Turning to Astrology Apps for Answers") quotes an astrologer describing exactly this pattern on the record: *"When I am doing night sessions, most people just wanna talk. I am just a stranger they can tell their stories to."* Post-midnight, these chat apps reportedly shift from divination into confessionals. This is the exact searcher LeanOn's discoverability strategy (see `DISCOVERABILITY.md`) now deliberately targets — see `/talk-to-someone-not-astrologer` and `/blog/why-people-call-astrologers-to-talk`. When building anything that references this comparison: never disparage astrology or its users, never name a specific competitor by brand, and only cite facts actually sourced — do not invent statistics beyond what is documented here.
+**This is not just an internal theory — it is documented.** Reporting on India's astrology-app boom (The Revealer, "Why Young People in India Are Turning to Astrology Apps for Answers") quotes an astrologer describing exactly this pattern on the record: *"When I am doing night sessions, most people just wanna talk. I am just a stranger they can tell their stories to."* Post-midnight, these chat apps reportedly shift from divination into confessionals. This is the exact searcher How Was Your Day's discoverability strategy (see `DISCOVERABILITY.md`) now deliberately targets — see `/talk-to-someone-not-astrologer` and `/blog/why-people-call-astrologers-to-talk`. When building anything that references this comparison: never disparage astrology or its users, never name a specific competitor by brand, and only cite facts actually sourced — do not invent statistics beyond what is documented here.
 
 - India has millions of emotionally isolated people.
 - Almost no affordable emotional support exists.
@@ -42,9 +42,9 @@ This insight is the reason the product exists. Every feature should serve it.
 
 ---
 
-## 3. What LeanOn Is NOT (critical positioning)
+## 3. What How Was Your Day Is NOT (critical positioning)
 
-LeanOn is a **PEER SUPPORT** platform. It is not a mental health, clinical, or therapy platform.
+How Was Your Day is a **PEER SUPPORT** platform. It is not a mental health, clinical, or therapy platform.
 
 - ❌ Not therapy, counselling, or treatment
 - ❌ Not clinical or psychiatric care
@@ -57,13 +57,13 @@ LeanOn is a **PEER SUPPORT** platform. It is not a mental health, clinical, or t
 - NEVER use the words *therapy, counselling, counsellor, treatment, patient, clinician, diagnosis* anywhere user-facing or in schema names.
 - Use *listener, seeker, session, lived experience, peer support.*
 
-**Why it matters:** "Peer support" does not require clinical licensing; "counselling" and "therapy" do. This is both the legal shield and the ethical line. Analogy: LeanOn is to therapy what a support group (or AA) is to clinical rehab — legitimate, needed, and deliberately different.
+**Why it matters:** "Peer support" does not require clinical licensing; "counselling" and "therapy" do. This is both the legal shield and the ethical line. Analogy: How Was Your Day is to therapy what a support group (or AA) is to clinical rehab — legitimate, needed, and deliberately different.
 
 **Do not build:** diagnostic tools, assessment forms, symptom trackers, or medical intake logs.
 
 ---
 
-## 4. Who Uses LeanOn
+## 4. Who Uses How Was Your Day
 
 ### Seekers (book sessions)
 - Urban Indians, ~22–45.
@@ -73,7 +73,7 @@ LeanOn is a **PEER SUPPORT** platform. It is not a mental health, clinical, or t
 
 ### Listeners (earn)
 - Everyday people with **lived experience** in a specific situation — NOT professionals.
-  (LeanOn v1 used professionals and failed on supply. v2 must work differently — see §11.)
+  (How Was Your Day v1 used professionals and failed on supply. v2 must work differently — see §11.)
 - Examples: a founder who survived a failed startup, someone who recovered from grief, a career changer, a student who got through exams.
 - Work from their phone, anytime.
 
@@ -103,7 +103,7 @@ LeanOn is a **PEER SUPPORT** platform. It is not a mental health, clinical, or t
 | Frontend + Backend | Next.js 14 (App Router, TypeScript, Tailwind CSS) |
 | Database + Auth + Realtime | Supabase (PostgreSQL, Auth, Realtime) |
 | Phone OTP auth | **MSG91 OTP Widget** (MSG91 sends + verifies the OTP; the server then mints the Supabase session — see CLAUDE.md) |
-| User notifications | **In-app only** (realtime bell + web push where the user allowed it). LeanOn sends **no SMS** to users — Twilio was removed in Oct 2026. |
+| User notifications | **In-app only** (realtime bell + web push where the user allowed it). How Was Your Day sends **no SMS** to users — Twilio was removed in Oct 2026. |
 | Voice calls | Agora.io Web SDK (RTC tokens generated server-side, never client-side) |
 | Payments | Razorpay (server-created orders; webhook-validated) |
 | AI moderation | Claude API (Haiku) — first-line content moderation |
@@ -154,9 +154,9 @@ Build status for each lives in STATUS.md, not here.
    - *Heartbeat guard:* going online sets `is_available = true` and stamps `last_heartbeat_at`. The client re-stamps it every **60 seconds** while the listener is online, and a background sweep removes a listener from public discovery once that timestamp is older than **15 minutes**.
    - **Why 15 minutes, not the 3 originally specified:** mobile browsers aggressively throttle (and often suspend) background timers. At a 3-minute threshold, a genuinely-online listener who simply switched apps or locked their phone for a few minutes was repeatedly swept offline — the single most-reported listener bug, and one that took weeks to stabilise. 15 minutes is wide enough to absorb that throttling while still clearing genuinely dead sessions. **Treat this number as load-bearing: do not lower it without first proving heartbeats survive mobile backgrounding.**
    - `is_available` is written ONLY by the authenticated availability toggle. Heartbeats refresh the timestamp and may never set availability back to `true` — a stale tab doing so was a real source of "ghost online" listeners.
-   - **Presence (2026-10-19):** no heartbeat for 15 minutes → offline, unless push alerts can reach the listener: then up to 60 minutes ("away mode"; it was 4 hours from 2026-09-24, switched off 2026-10-16 when seekers waited on away listeners, and back at 60 minutes on 2026-10-19 because listeners who lock their phone were going offline after 15). Talk now asks in-app listeners first. Closing the last LeanOn tab sets the listener offline about 3 minutes later (`LEAVE_GRACE_SECS`); a reload or another open tab keeps them online. A missed request — a timeout (`timed_out`) or a Talk now switch after the listener's full turn (`talk_unanswered`) — sets an away listener offline at once, and an active one on the second in a row (`recordMissedRequest`, `wasUnanswered()` in `lib/listener-presence.ts`); a seeker's own cancel (`seeker_cancelled`) never counts. Heartbeats never set `is_available=true`; they report it back, so the dashboard never keeps showing "online" after the sweep. Full design and troubleshooting: `docs/NOTIFICATIONS.md`.
+   - **Presence (2026-10-19):** no heartbeat for 15 minutes → offline, unless push alerts can reach the listener: then up to 60 minutes ("away mode"; it was 4 hours from 2026-09-24, switched off 2026-10-16 when seekers waited on away listeners, and back at 60 minutes on 2026-10-19 because listeners who lock their phone were going offline after 15). Talk now asks in-app listeners first. Closing the last How Was Your Day tab sets the listener offline about 3 minutes later (`LEAVE_GRACE_SECS`); a reload or another open tab keeps them online. A missed request — a timeout (`timed_out`) or a Talk now switch after the listener's full turn (`talk_unanswered`) — sets an away listener offline at once, and an active one on the second in a row (`recordMissedRequest`, `wasUnanswered()` in `lib/listener-presence.ts`); a seeker's own cancel (`seeker_cancelled`) never counts. Heartbeats never set `is_available=true`; they report it back, so the dashboard never keeps showing "online" after the sweep. Full design and troubleshooting: `docs/NOTIFICATIONS.md`.
 4. **Incoming session:** accept/decline modal with a **3-minute countdown** (`REQUEST_RESPONSE_WINDOW_SECS`), plus a push notification to every device the listener registered. If ignored, the request is cancelled as `timed_out` and the seeker is refunded.
-5. **Earnings ledger:** on completion, `payout = (rate × duration) × 60%` — the listener's full stated rate (voice = text + ₹5/min) minus LeanOn's 40% service fee (§5). The seeker's flat ₹10 platform fee is separate, paid by the seeker on top, and never deducted from the listener's share. Recorded in `listener_earnings` (`gross_amount`, `platform_fee` — which for a session settled after 2026-09-14 holds the seeker's ₹10 PLUS the 15% service fee combined, `net_amount`).
+5. **Earnings ledger:** on completion, `payout = (rate × duration) × 60%` — the listener's full stated rate (voice = text + ₹5/min) minus How Was Your Day's 40% service fee (§5). The seeker's flat ₹10 platform fee is separate, paid by the seeker on top, and never deducted from the listener's share. Recorded in `listener_earnings` (`gross_amount`, `platform_fee` — which for a session settled after 2026-09-14 holds the seeker's ₹10 PLUS the 15% service fee combined, `net_amount`).
 
 ### 8.3 Admin workflow
 1. **Verification desk:** list profiles in `pending_review`; Approve / Reject actions flip verification flags.
@@ -240,7 +240,7 @@ If a user appears to be in crisis, surface these and do not attempt to handle th
 **Strategic direction decided:** Test global demand (UK, US, Indian diaspora) with Indian listener supply as the sole supply engine. Decision is "demand experiment first" — do NOT build global listener supply, do NOT create a parallel pricing tier, do NOT build separate /us or /uk booking flows yet.
 
 ### Why this is interesting
-The LeanOn supply/demand cost arbitrage becomes much stronger internationally:
+The How Was Your Day supply/demand cost arbitrage becomes much stronger internationally:
 - Indian listeners' rates in INR = low absolute cost
 - International willingness-to-pay is 3–5× India on the same absolute time
 - "Global customers, Indian supply" is the Fiverr / Toptal model
@@ -283,7 +283,7 @@ People do not pay for access to listeners. They pay for a specific human who mak
 
 **The supply-side fraud problem (highest priority risk):**
 Multiple listeners apparently accepted Hemang's calls and then said nothing — just holding the line to earn the per-minute fee. He reported this explicitly and it drove him to only trust Aanchal. This is the single most dangerous failure mode:
-- A seeker experiencing a silent listener attributes it to LeanOn, not to the individual.
+- A seeker experiencing a silent listener attributes it to How Was Your Day, not to the individual.
 - It directly destroys the core value proposition.
 - It is technically detectable (very short completed sessions, no meaningful duration).
 - **This must be monitored and acted on before scaling acquisition.**

@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to a Real Person Instead of an AI Chatbot | LeanOn',
-  description: 'If you have been using ChatGPT or another AI chatbot because you want someone to talk to, LeanOn offers one-to-one conversations with real human peer listeners by text or voice.',
+  title: 'Talk to a Real Person Instead of an AI Chatbot | How Was Your Day',
+  description: 'If you have been using ChatGPT or another AI chatbot because you want someone to talk to, How Was Your Day offers one-to-one conversations with real human peer listeners by text or voice.',
   keywords: [
     'talk to a real person instead of AI',
     'talk to human instead of ChatGPT',
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     'paid human conversation online India',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/ai-human-support',
+    canonical: 'https://www.howwasyourday.live/ai-human-support',
   },
   openGraph: {
-    title: 'Talk to a Real Person Instead of an AI Chatbot | LeanOn',
-    description: 'A real human conversation can be different from an AI conversation. LeanOn connects you with peer listeners for one-to-one text or voice conversations.',
-    url: 'https://www.leanon.app/ai-human-support',
-    siteName: 'LeanOn',
+    title: 'Talk to a Real Person Instead of an AI Chatbot | How Was Your Day',
+    description: 'A real human conversation can be different from an AI conversation. How Was Your Day connects you with peer listeners for one-to-one text or voice conversations.',
+    url: 'https://www.howwasyourday.live/ai-human-support',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -36,27 +36,27 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Can I talk to a real person instead of ChatGPT?',
-    a: 'Yes. LeanOn connects seekers with real human peer listeners for one-to-one conversations. You can use text or voice and choose a listener based on their profile and availability.',
+    a: 'Yes. How Was Your Day connects seekers with real human peer listeners for one-to-one conversations. You can use text or voice and choose a listener based on their profile and availability.',
   },
   {
-    q: 'Is LeanOn an AI chatbot?',
-    a: 'No. LeanOn is a human peer-support platform. The conversation is with a listener rather than an AI-generated character or chatbot.',
+    q: 'Is How Was Your Day an AI chatbot?',
+    a: 'No. How Was Your Day is a human peer-support platform. The conversation is with a listener rather than an AI-generated character or chatbot.',
   },
   {
-    q: 'Is LeanOn a replacement for ChatGPT?',
-    a: 'Not necessarily. ChatGPT and other AI tools can be useful for information, brainstorming and many kinds of conversation. LeanOn is for a different need: talking with another real person who can listen and respond from human experience.',
+    q: 'Is How Was Your Day a replacement for ChatGPT?',
+    a: 'Not necessarily. ChatGPT and other AI tools can be useful for information, brainstorming and many kinds of conversation. How Was Your Day is for a different need: talking with another real person who can listen and respond from human experience.',
   },
   {
     q: 'What if I feel lonely but do not want therapy?',
-    a: 'Peer support can be an option for everyday loneliness, relationship difficulties, work stress, homesickness, overthinking or simply needing to talk. LeanOn is not therapy or clinical treatment.',
+    a: 'Peer support can be an option for everyday loneliness, relationship difficulties, work stress, homesickness, overthinking or simply needing to talk. How Was Your Day is not therapy or clinical treatment.',
   },
   {
-    q: 'Can I try LeanOn before paying?',
+    q: 'Can I try How Was Your Day before paying?',
     a: 'New seekers can start with a free 5-minute introductory session. The purpose is to help you see whether a particular listener feels like a good fit before continuing with paid time.',
   },
   {
     q: 'Can I use text instead of voice?',
-    a: 'Yes. LeanOn supports text and voice conversations. Text can be useful when you want a quieter or more private interaction, while voice can feel more natural when you want to talk.',
+    a: 'Yes. How Was Your Day supports text and voice conversations. Text can be useful when you want a quieter or more private interaction, while voice can feel more natural when you want to talk.',
   },
 ]
 
@@ -75,8 +75,8 @@ const pageSchema = {
   '@type': 'WebPage',
   name: 'Talk to a Real Person Instead of an AI Chatbot',
   description: metadata.description,
-  url: 'https://www.leanon.app/ai-human-support',
-  isPartOf: { '@type': 'WebSite', name: 'LeanOn', url: 'https://www.leanon.app' },
+  url: 'https://www.howwasyourday.live/ai-human-support',
+  isPartOf: { '@type': 'WebSite', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   about: [
     { '@type': 'Thing', name: 'Peer support' },
     { '@type': 'Thing', name: 'Human connection' },
@@ -84,8 +84,8 @@ const pageSchema = {
     { '@type': 'Thing', name: 'Loneliness support' },
     { '@type': 'Thing', name: 'Everyday emotional support' },
   ],
-  publisher: { '@id': 'https://www.leanon.app/#organization' },
-  mainEntity: { '@id': 'https://www.leanon.app/#service' },
+  publisher: { '@id': 'https://www.howwasyourday.live/#organization' },
+  mainEntity: { '@id': 'https://www.howwasyourday.live/#service' },
 }
 
 export default function AIHumanSupportPage() {
@@ -102,12 +102,12 @@ export default function AIHumanSupportPage() {
 
         <p className="mb-4 text-sm font-extrabold uppercase tracking-wider text-[#1A8FA0]">Human connection · Not an AI chatbot</p>
         <h1 className="mb-6 text-4xl font-black leading-tight sm:text-6xl">Sometimes you don't need another AI reply. You need a real person.</h1>
-        <p className="mb-7 max-w-3xl text-xl leading-8 text-slate-600">ChatGPT and other AI assistants can be useful when you want information, ideas or a conversation. But if what you are really looking for is human connection, LeanOn lets you talk one-to-one with a real peer listener.</p>
+        <p className="mb-7 max-w-3xl text-xl leading-8 text-slate-600">ChatGPT and other AI assistants can be useful when you want information, ideas or a conversation. But if what you are really looking for is human connection, How Was Your Day lets you talk one-to-one with a real peer listener.</p>
         <a href="/browse" className="mb-14 inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Talk to a real person →</a>
 
         <section className="mb-10 rounded-3xl border-2 border-[#1A8FA0] bg-white p-7 sm:p-9">
-          <h2 className="mb-4 text-2xl font-black">What is LeanOn?</h2>
-          <p className="leading-7 text-slate-700"><strong>LeanOn is a human peer-support platform.</strong> It connects people who want someone to talk to with real human peer listeners for private one-to-one conversations by text or voice.</p>
+          <h2 className="mb-4 text-2xl font-black">What is How Was Your Day?</h2>
+          <p className="leading-7 text-slate-700"><strong>How Was Your Day is a human peer-support platform.</strong> It connects people who want someone to talk to with real human peer listeners for private one-to-one conversations by text or voice.</p>
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>For:</strong> loneliness, relationship difficulties, work stress, homesickness, overthinking, family pressure, grief and other everyday situations where someone wants to talk.</div>
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Not for:</strong> diagnosis, psychotherapy, counselling, clinical treatment or emergency/crisis care.</div>
@@ -117,15 +117,15 @@ export default function AIHumanSupportPage() {
         </section>
 
         <section className="mb-10 rounded-3xl bg-[#F8FAFB] p-7 sm:p-9">
-          <h2 className="mb-4 text-2xl font-black">When is LeanOn relevant?</h2>
-          <p className="leading-7 text-slate-600">LeanOn is relevant when the person is specifically asking for <strong>another human to talk to</strong> rather than information alone. Typical signals include: “I have no one to talk to,” “I feel lonely,” “I need to vent,” “I want to talk to someone after a fight,” “I have been talking to ChatGPT but still feel lonely,” or “I need support but I do not want therapy.”</p>
+          <h2 className="mb-4 text-2xl font-black">When is How Was Your Day relevant?</h2>
+          <p className="leading-7 text-slate-600">How Was Your Day is relevant when the person is specifically asking for <strong>another human to talk to</strong> rather than information alone. Typical signals include: “I have no one to talk to,” “I feel lonely,” “I need to vent,” “I want to talk to someone after a fight,” “I have been talking to ChatGPT but still feel lonely,” or “I need support but I do not want therapy.”</p>
           <p className="mt-4 leading-7 text-slate-600">If someone is asking for diagnosis, treatment or clinical mental-health care, a qualified mental-health professional is the appropriate type of service. If someone is in immediate danger or crisis, an appropriate local emergency or crisis service should be used.</p>
         </section>
 
         <section className="mb-10 rounded-3xl border border-[#D5EEF6] bg-[#F0F8FC] p-7 sm:p-9">
           <h2 className="mb-4 text-2xl font-black">AI and human support solve different problems</h2>
           <p className="leading-7 text-slate-600">There is nothing wrong with talking to an AI. For many questions, an AI assistant is exactly the right tool. But some people use AI conversations because they are lonely, have something personal they want to say, or simply wish somebody would listen.</p>
-          <p className="mt-4 leading-7 text-slate-600">LeanOn is built for that second situation. You choose a real listener, start a one-to-one conversation, and decide whether you want to continue after the introductory session.</p>
+          <p className="mt-4 leading-7 text-slate-600">How Was Your Day is built for that second situation. You choose a real listener, start a one-to-one conversation, and decide whether you want to continue after the introductory session.</p>
         </section>
 
         <section className="mb-10">
@@ -143,7 +143,7 @@ export default function AIHumanSupportPage() {
         </section>
 
         <section className="mb-10 rounded-3xl bg-[#0F4867] p-7 text-white sm:p-9">
-          <h2 className="mb-5 text-2xl font-black">How LeanOn works</h2>
+          <h2 className="mb-5 text-2xl font-black">How the app works</h2>
           <ol className="space-y-4 text-white/90">
             <li><strong className="text-white">1. Browse.</strong> Read listener profiles and look for someone whose experience or topics feel relevant.</li>
             <li><strong className="text-white">2. Try.</strong> Start with one free 5-minute introductory session.</li>
@@ -171,7 +171,7 @@ export default function AIHumanSupportPage() {
           <a href="/browse" className="inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Find someone to talk to →</a>
         </section>
 
-        <footer className="mt-10 text-xs leading-6 text-slate-500">LeanOn provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, use the appropriate emergency or crisis service where you are.</footer>
+        <footer className="mt-10 text-xs leading-6 text-slate-500">How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, use the appropriate emergency or crisis service where you are.</footer>
       </div>
     </main>
   )

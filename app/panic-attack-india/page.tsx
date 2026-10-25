@@ -4,23 +4,23 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Panic Attack India — What Happens After | LeanOn',
+  title: 'Panic Attack India — What Happens After | How Was Your Day',
   description: 'The panic has passed. Now comes the shame, the exhaustion, the fear of the next one. Talk to someone anonymously from ₹160.',
   keywords: ['panic attack India', 'panic attack support India', 'panic disorder India', 'panic attack aftermath India'],
-  alternates: { canonical: 'https://www.leanon.app/panic-attack-india', languages: { 'en-IN': 'https://www.leanon.app/panic-attack-india' } },
-  openGraph: { title: 'Panic Attack India — What Happens After | LeanOn', description: 'The panic has passed. Now comes the shame, the exhaustion, the fear of the next one. Talk to someone anonymously from ₹160.', url: 'https://www.leanon.app/panic-attack-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/panic-attack-india', languages: { 'en-IN': 'https://www.howwasyourday.live/panic-attack-india' } },
+  openGraph: { title: 'Panic Attack India — What Happens After | How Was Your Day', description: 'The panic has passed. Now comes the shame, the exhaustion, the fear of the next one. Talk to someone anonymously from ₹160.', url: 'https://www.howwasyourday.live/panic-attack-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'What causes panic attacks?', acceptedAnswer: {'@type': 'Answer', text: 'Panic attacks are the body\'s threat-response system (fight-or-flight) activating inappropriately &mdash; without a genuine external threat. This can be triggered by accumulated stress, specific phobias, hyperventilation, caffeine, or sometimes seemingly nothing at all. Understanding the mechanism does not always stop them, but it does reduce the catastrophic interpretation that something is seriously wrong with your health.'}},
     {'@type': 'Question', name: 'Should I see a doctor after a panic attack?', acceptedAnswer: {'@type': 'Answer', text: 'If you have not been evaluated for panic attacks before, yes &mdash; a doctor can rule out cardiac causes for the symptoms, which can look similar. Once physical causes are ruled out, ongoing support for panic can come from therapy (especially CBT) or peer support for the emotional processing component.'}},
-    {'@type': 'Question', name: 'Is LeanOn a crisis service?', acceptedAnswer: {'@type': 'Answer', text: 'No. LeanOn is for peer emotional support. In an immediate crisis, call NIMHANS 080-46110007 or Tele-MANAS 14416. LeanOn is for processing the emotional aftermath of panic, anxiety, and other difficult experiences.'}},
+    {'@type': 'Question', name: 'Is How Was Your Day a crisis service?', acceptedAnswer: {'@type': 'Answer', text: 'No. How Was Your Day is for peer emotional support. In an immediate crisis, call NIMHANS 080-46110007 or Tele-MANAS 14416. How Was Your Day is for processing the emotional aftermath of panic, anxiety, and other difficult experiences.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Panic Attack India', item: 'https://www.leanon.app/panic-attack-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Panic Attack India', item: 'https://www.howwasyourday.live/panic-attack-india' },
 ] }
 
 const S = `
@@ -67,7 +67,7 @@ export default function PanicAttackIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Panic Attack India</span></nav>
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>

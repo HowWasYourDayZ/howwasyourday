@@ -4,7 +4,7 @@ export const post = {
   description: 'Career, marriage, money, children — the pressure of Indian family expectations is constant and rarely discussed honestly. Here is what it actually does, and what helps.',
   date: '2026-09-09',
   readTime: '7 min read',
-  topics: ['family pressure India', 'Indian family', 'mental health India', 'peer support', 'LeanOn'],
+  topics: ['family pressure India', 'Indian family', 'mental health India', 'peer support', 'How Was Your Day'],
   content: `
 <p>There is a particular exhaustion that comes from Indian family pressure. It is not the exhaustion of doing something hard. It is the exhaustion of performing stability while something is pressing hard from inside — of managing your family&apos;s anxiety about your life by suppressing your own anxiety about it, so that they can be okay.</p>
 
@@ -56,7 +56,7 @@ export const post = {
 
 <p>The reason talking to friends has limits is that your friends know your family. They may have opinions. Something you tell them may reach the wrong person. And even when none of that happens, you are aware of the risk, which keeps you from saying the full, unmanaged truth.</p>
 
-<p>A peer listener on LeanOn has no connection to your family, your social circle, or your community. They do not know the people you are talking about. They have no stake in the outcome. They agreed to keep it confidential. What you say in that conversation ends there — and you can say it in full knowledge of that, which changes what actually gets said.</p>
+<p>A peer listener on How Was Your Day has no connection to your family, your social circle, or your community. They do not know the people you are talking about. They have no stake in the outcome. They agreed to keep it confidential. What you say in that conversation ends there — and you can say it in full knowledge of that, which changes what actually gets said.</p>
 
 <h2>You Are Not Betraying Your Family by Needing This</h2>
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Support for Indians in Australia | Emotional Support Online | LeanOn',
+  title: 'NRI Support for Indians in Australia | Emotional Support Online | How Was Your Day',
   description: 'Emotional support for Indians living in Australia. Talk to a screened Indian peer listener who understands immigrant life, loneliness, visa stress and family pressure. Anonymous. Free trial.',
   keywords: [
     'NRI support australia', 'Indian expat australia emotional support', 'Indians in australia lonely',
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     'Indian Australian mental health peer support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/australia-nri-support',
-    languages: { 'en-AU': 'https://www.leanon.app/australia-nri-support' },
+    canonical: 'https://www.howwasyourday.live/australia-nri-support',
+    languages: { 'en-AU': 'https://www.howwasyourday.live/australia-nri-support' },
   },
   openGraph: {
-    title: 'NRI Emotional Support for Indians in Australia | LeanOn',
+    title: 'NRI Emotional Support for Indians in Australia | How Was Your Day',
     description: 'Indian in Australia and carrying the weight of expat life? Talk anonymously to a peer listener who understands. First 5 minutes free.',
-    url: 'https://www.leanon.app/australia-nri-support',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/australia-nri-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -35,15 +35,15 @@ const faqSchema = {
       name: 'Is there peer support available for Indians in Australia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn connects you with screened Indian peer listeners who understand the NRI experience — immigration stress, loneliness, homesickness, family pressure, the gap between the life you imagined and the one you are living. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes.',
+        text: 'Yes. How Was Your Day connects you with screened Indian peer listeners who understand the NRI experience — immigration stress, loneliness, homesickness, family pressure, the gap between the life you imagined and the one you are living. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What makes LeanOn different from Australian mental health services?',
+      name: 'What makes How Was Your Day different from Australian mental health services?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Australian services like Beyond Blue and Lifeline focus on clinical mental health and crisis support. LeanOn is peer support — for the everyday emotional weight that falls below a clinical threshold but is still real: loneliness, the exhaustion of starting over, the particular pressure of being an Indian immigrant in Australia. No waitlists, no referrals, no clinical notes.',
+        text: 'Australian services like Beyond Blue and Lifeline focus on clinical mental health and crisis support. How Was Your Day is peer support — for the everyday emotional weight that falls below a clinical threshold but is still real: loneliness, the exhaustion of starting over, the particular pressure of being an Indian immigrant in Australia. No waitlists, no referrals, no clinical notes.',
       },
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'Can I talk about visa stress and immigration anxiety?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many Indians in Australia carry visa-related anxiety — the PR process, 189/190/491 points, partner visa timelines, uncertainty about the future. LeanOn listeners are not immigration lawyers, but they can listen without judgment and without needing the whole thing explained from the beginning. The emotional weight of that uncertainty is real, and having someone who gets it can help.',
+        text: 'Yes. Many Indians in Australia carry visa-related anxiety — the PR process, 189/190/491 points, partner visa timelines, uncertainty about the future. How Was Your Day listeners are not immigration lawyers, but they can listen without judgment and without needing the whole thing explained from the beginning. The emotional weight of that uncertainty is real, and having someone who gets it can help.',
       },
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'Can I speak in Hindi, Tamil, Telugu or Gujarati?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn supports twelve Indian languages including Hindi, Tamil, Telugu, Malayalam, Kannada, Gujarati, Marathi, Bengali, and Punjabi.',
+        text: 'Yes. How Was Your Day supports twelve Indian languages including Hindi, Tamil, Telugu, Malayalam, Kannada, Gujarati, Marathi, Bengali, and Punjabi.',
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'Is it anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Completely. You can use LeanOn with a nickname. Nothing is shared with your employer, your partner\'s visa applications, or your family in India.',
+        text: 'Completely. You can use How Was Your Day with a nickname. Nothing is shared with your employer, your partner\'s visa applications, or your family in India.',
       },
     },
   ],
@@ -93,7 +93,7 @@ export default function AustraliaNriSupportPage() {
           Moving to Australia is an achievement. It can also be exhausting, lonely, and nothing like what you imagined. The people back home think you are living the dream. The people around you in Australia are colleagues, not close friends. And the weight of building a life from scratch — while managing visa stress, missing family, and holding the gap between expectation and reality — can be very real.
         </p>
         <p style={{ fontSize: '1.05rem', color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          LeanOn is a screened Indian peer listener — not a therapist, not a helpline — who has lived through something similar and is there to listen without judgment. Anonymous, available in your language, no appointment needed.
+          How Was Your Day is a screened Indian peer listener — not a therapist, not a helpline — who has lived through something similar and is there to listen without judgment. Anonymous, available in your language, no appointment needed.
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>

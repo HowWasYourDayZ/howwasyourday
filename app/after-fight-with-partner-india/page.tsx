@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'After a Fight With Your Partner — Process It Before It Festers | LeanOn',
+  title: 'After a Fight With Your Partner — Process It Before It Festers | How Was Your Day',
   description: "You had the fight. Now you're replaying it. Your body is still activated. Talk to someone real — anonymous, 15 minutes, ₹160. Before it festers.",
   keywords: [
     'after fight with partner india',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'still upset after fight india',
     'fight replay loop india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/after-fight-with-partner-india', languages: { 'en-IN': 'https://www.leanon.app/after-fight-with-partner-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/after-fight-with-partner-india', languages: { 'en-IN': 'https://www.howwasyourday.live/after-fight-with-partner-india' } },
   openGraph: {
-    title: 'After a Fight With Your Partner — Process It Before It Festers | LeanOn',
+    title: 'After a Fight With Your Partner — Process It Before It Festers | How Was Your Day',
     description: "You had the fight. Now you're replaying it. Your body is still activated. Talk to someone real — anonymous, 15 minutes, ₹160. Before it festers.",
-    url: 'https://www.leanon.app/after-fight-with-partner-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/after-fight-with-partner-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — After a Fight' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — After a Fight' }],
   },
 }
 
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'After a Fight With Your Partner', item: 'https://www.leanon.app/after-fight-with-partner-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'After a Fight With Your Partner', item: 'https://www.howwasyourday.live/after-fight-with-partner-india' },
   ],
 }
 
@@ -115,7 +115,7 @@ export default function AfterFightWithPartnerIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 

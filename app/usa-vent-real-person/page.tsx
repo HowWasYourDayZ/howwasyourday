@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Vent to a Real Person Online in the US — Anonymous, Human | LeanOn',
-  description: 'LeanOn lets you vent to a real human listener in the US — on Indian time, anonymous, first 5 minutes free. No AI, no judgment. From $10 for 15 min, $15 for 30 min.',
+  title: 'Vent to a Real Person Online in the US — Anonymous, Human | How Was Your Day',
+  description: 'How Was Your Day lets you vent to a real human listener in the US — on Indian time, anonymous, first 5 minutes free. No AI, no judgment. From $10 for 15 min, $15 for 30 min.',
   keywords: [
     'vent to real person USA', 'anonymous venting online USA', 'someone to talk to in America',
     'vent online USA', 'talk to someone USA', 'real human listener America',
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     'peer support venting United States',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-vent-real-person',
+    canonical: 'https://www.howwasyourday.live/usa-vent-real-person',
   },
   openGraph: {
-    title: 'Vent to a Real Person Online in the US — Anonymous, Human | LeanOn',
-    description: "You've got a lot on your mind. A real human is ready to listen. LeanOn — anonymous, online daily on Indian time, first 5 min free.",
-    url: 'https://www.leanon.app/usa-vent-real-person',
-    siteName: 'LeanOn',
+    title: 'Vent to a Real Person Online in the US — Anonymous, Human | How Was Your Day',
+    description: "You've got a lot on your mind. A real human is ready to listen. How Was Your Day — anonymous, online daily on Indian time, first 5 min free.",
+    url: 'https://www.howwasyourday.live/usa-vent-real-person',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn — Anonymous Venting with Real Humans in the US',
-  description: 'LeanOn lets Americans vent to real human peer listeners — private, no appointment needed, no AI. First 5 minutes free, then from $10 for 15 minutes.',
-  provider: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  name: 'How Was Your Day — Anonymous Venting with Real Humans in the US',
+  description: 'How Was Your Day lets Americans vent to real human peer listeners — private, no appointment needed, no AI. First 5 minutes free, then from $10 for 15 minutes.',
+  provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'United States',
   audience: {
@@ -45,10 +45,10 @@ const serviceSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, LeanOn listeners are real humans who genuinely listen, ask questions, and hold space.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, How Was Your Day listeners are real humans who genuinely listen, ask questions, and hold space.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -60,20 +60,20 @@ const faqSchema = {
       name: 'Where can I vent to someone online in the US?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn lets you vent to a real human listener — online daily on Indian time, private, first 5 minutes free. No AI, no judgment, just a real person ready to hear you out.',
+        text: 'How Was Your Day lets you vent to a real human listener — online daily on Indian time, private, first 5 minutes free. No AI, no judgment, just a real person ready to hear you out.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous in the US?',
+      name: 'Is How Was Your Day anonymous in the US?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. You don't need to share your real name, location, or any identifying information. LeanOn sessions are private and confidential.",
+        text: "Yes. You don't need to share your real name, location, or any identifying information. How Was Your Day sessions are private and confidential.",
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does it cost to vent on LeanOn in the US?',
+      name: 'How much does it cost to vent on How Was Your Day in the US?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5 minutes are free. After that, from $10 for 15 minutes, $15 for 30 minutes, or $20 for 45 minutes — significantly cheaper than therapy, with no insurance or appointment needed.',
@@ -81,7 +81,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What can I vent about on LeanOn?',
+      name: 'What can I vent about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Work stress, relationship frustration, family conflict, loneliness, feeling overwhelmed, grief, anxiety about the future — anything emotionally heavy that you need to say out loud to someone who will genuinely hear it.',
@@ -92,7 +92,7 @@ const faqSchema = {
       name: 'Why vent to a human instead of writing in a journal or talking to AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "A journal doesn't respond. AI doesn't truly hear you. A LeanOn listener is a real person who receives your words, responds with genuine empathy, and helps you feel less alone — which is what venting is actually for.",
+        text: "A journal doesn't respond. AI doesn't truly hear you. A How Was Your Day listener is a real person who receives your words, responds with genuine empathy, and helps you feel less alone — which is what venting is actually for.",
       },
     },
   ],
@@ -102,8 +102,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person — US', item: 'https://www.leanon.app/usa-vent-real-person' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person — US', item: 'https://www.howwasyourday.live/usa-vent-real-person' },
   ],
 }
 
@@ -182,7 +182,7 @@ export default function USAVentRealPersonPage() {
 
         <h1>You&apos;ve Got a Lot on Your Mind.<br />A Real Human Is Ready to Listen.</h1>
         <p className="lead">
-          LeanOn is a peer support platform where you can vent to a real human listener — anonymously,
+          How Was Your Day is a peer support platform where you can vent to a real human listener — anonymously,
           whenever a listener is online (they are in India), with no judgment and no AI. Just a real person in the US who is
           fully present and ready to receive what you&apos;re carrying.
         </p>
@@ -202,12 +202,12 @@ export default function USAVentRealPersonPage() {
             neither of them fully works: what you need is to be heard by a real human being.
           </p>
           <p>
-            LeanOn gives you a real person to vent to — screened, approved, and ready. Not in weeks. Now.
+            How Was Your Day gives you a real person to vent to — screened, approved, and ready. Not in weeks. Now.
           </p>
         </div>
 
         <div className="card">
-          <h2>What Americans vent about on LeanOn</h2>
+          <h2>What Americans vent about on How Was Your Day</h2>
           <ul className="checklist" style={{ marginTop: '0' }}>
             <li>Work exhaustion, toxic management, and burnout that&apos;s hard to name</li>
             <li>Relationship tension — romantic, family, friendships going cold</li>
@@ -220,14 +220,14 @@ export default function USAVentRealPersonPage() {
         </div>
 
         <div className="compare-box">
-          <h2>Venting to AI vs. venting to a real LeanOn human</h2>
+          <h2>Venting to AI vs. venting to a real How Was Your Day human</h2>
           <div className="compare-row">
             <div className="compare-col ai">
               <h3>📓 Journal / AI chatbot</h3>
               <p>You put words out into silence. Nothing comes back that has actually received you.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>A real person receives what you say and responds with genuine presence and understanding.</p>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function USAVentRealPersonPage() {
               <p>Produces empathy-shaped text without ever feeling anything — hollow by design</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>Can be moved by what you share — has their own experience of hard things</p>
             </div>
           </div>
@@ -247,7 +247,7 @@ export default function USAVentRealPersonPage() {
               <p>Never truly anonymous — your words train future models and feed data systems</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>Private — no name, no location, no identifying details required</p>
             </div>
           </div>
@@ -261,7 +261,7 @@ export default function USAVentRealPersonPage() {
             to talk to.
           </p>
           <p>
-            LeanOn has real human listeners available right now — not a bot, not a delayed response,
+            How Was Your Day has real human listeners available right now — not a bot, not a delayed response,
             not an 8am appointment slot. A real person. Tonight.
           </p>
           <a href="/browse" className="cta-night">Find a listener right now →</a>
@@ -278,29 +278,29 @@ export default function USAVentRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I vent to someone online in the US?</h3>
-            <p>LeanOn lets you vent to a real human listener — online daily on Indian time, private,
+            <p>How Was Your Day lets you vent to a real human listener — online daily on Indian time, private,
               first 5 minutes free. No AI, no judgment, just a real person ready to hear you out.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn anonymous in the US?</h3>
+            <h3>Is How Was Your Day anonymous in the US?</h3>
             <p>Yes. You don&apos;t need to share your real name, location, or any identifying information.
-              LeanOn sessions are private and confidential.</p>
+              How Was Your Day sessions are private and confidential.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does it cost to vent on LeanOn in the US?</h3>
+            <h3>How much does it cost to vent on How Was Your Day in the US?</h3>
             <p>Your first 5 minutes are free. After that, from $10 for 15 minutes, $15 for 30 minutes, or
               $20 for 45 minutes — significantly cheaper than therapy, with no insurance or appointment
               needed.</p>
           </div>
           <div className="faq-item">
-            <h3>What can I vent about on LeanOn?</h3>
+            <h3>What can I vent about on How Was Your Day?</h3>
             <p>Work stress, relationship frustration, family conflict, loneliness, feeling overwhelmed,
               grief, anxiety about the future — anything emotionally heavy that you need to say out loud
               to someone who will genuinely hear it.</p>
           </div>
           <div className="faq-item">
             <h3>Why vent to a human instead of writing in a journal or talking to AI?</h3>
-            <p>A journal doesn&apos;t respond. AI doesn&apos;t truly hear you. A LeanOn listener is a
+            <p>A journal doesn&apos;t respond. AI doesn&apos;t truly hear you. A How Was Your Day listener is a
               real person who receives your words, responds with genuine empathy, and helps you feel less
               alone — which is what venting is actually for.</p>
           </div>
@@ -315,7 +315,7 @@ export default function USAVentRealPersonPage() {
 
         <div className="disclaimer">
           ⚠️ If you&apos;re in crisis or experiencing suicidal thoughts, please contact your local emergency services right away. In India: <strong>NIMHANS 080-46110007</strong> · <strong>Tele-MANAS 14416</strong>.<br />
-          LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+          How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
         </div>
       </div>
     </>

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — LeanOn',
-  description: 'LeanOn privacy policy. Learn how we protect your data, session confidentiality, and your rights as a LeanOn user.',
-  alternates: { canonical: 'https://www.leanon.app/privacy' },
+  title: 'Privacy Policy — How Was Your Day',
+  description: 'How Was Your Day privacy policy. Learn how we protect your data, session confidentiality, and your rights as a How Was Your Day user.',
+  alternates: { canonical: 'https://www.howwasyourday.live/privacy' },
 }
 
 const S = `
@@ -29,12 +29,12 @@ export default function PrivacyPage() {
     <>
       <style>{S}</style>
       <div className="page">
-        <a href="/" className="back">← Back to LeanOn</a>
+        <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Privacy Policy</h1>
         <p className="updated">Last updated: 24 October 2026</p>
 
         <div className="highlight-box">
-          <p>LeanOn is a peer support platform. We take your privacy seriously — especially given the sensitive nature of the conversations on our platform.</p>
+          <p>How Was Your Day is a peer support platform. We take your privacy seriously — especially given the sensitive nature of the conversations on our platform.</p>
         </div>
 
         <h2>1. What we collect</h2>
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
           <li>Your phone number (for authentication via OTP)</li>
           <li>Your first name (optional, for personalisation)</li>
           <li>Session details: type, duration, rating</li>
-          <li>Text chat messages — stored securely so a session can be reviewed if it is reported or flagged for safety. Only authorised LeanOn administrators can open them</li>
+          <li>Text chat messages — stored securely so a session can be reviewed if it is reported or flagged for safety. Only authorised How Was Your Day administrators can open them</li>
           <li>Wallet transaction history</li>
           <li>Device type and basic usage analytics (Google Analytics and Vercel Analytics). We never send chat content, names or phone numbers to analytics</li>
         </ul>
@@ -55,14 +55,14 @@ export default function PrivacyPage() {
         </ul>
 
         <h2>3. Safety checks</h2>
-        <p>If words linked to self-harm or suicide appear in a chat, LeanOn shows crisis helplines, lets the listener know to take extra care, and flags the session for review by the LeanOn team. Sessions are not analysed by AI. Reported or flagged conversations may be read by authorised LeanOn administrators to keep people safe and handle disputes.</p>
-        <p>Messages are also checked automatically (by fixed rules, not AI) for contact details such as phone numbers, email addresses and social media handles, so that no one can be pulled off LeanOn. A message containing an actual contact detail is not delivered; messages that only hint at one are delivered and noted for the LeanOn team to review.</p>
+        <p>If words linked to self-harm or suicide appear in a chat, How Was Your Day shows crisis helplines, lets the listener know to take extra care, and flags the session for review by the How Was Your Day team. Sessions are not analysed by AI. Reported or flagged conversations may be read by authorised How Was Your Day administrators to keep people safe and handle disputes.</p>
+        <p>Messages are also checked automatically (by fixed rules, not AI) for contact details such as phone numbers, email addresses and social media handles, so that no one can be pulled off How Was Your Day. A message containing an actual contact detail is not delivered; messages that only hint at one are delivered and noted for the How Was Your Day team to review.</p>
 
         <h2>4. Data storage and retention</h2>
         <p>Your data is stored on Supabase servers hosted in the Asia South (Mumbai) region. Text messages and session records are kept for safety, dispute handling and accounting, including after an account is deleted — without your contact details (see <a href="/delete-account">what deletion removes</a>). We comply with India&apos;s Digital Personal Data Protection Act (DPDP Act 2023).</p>
 
         <h2>5. Listener identity verification</h2>
-        <p>Listeners give their Aadhaar number and take a live camera selfie for identity checks. Only the last 4 digits of the Aadhaar number and a one-way coded version of it are stored, never the full number. The selfie is kept in private storage that only authorised LeanOn administrators can open — it is never shown to seekers — and it is deleted when the listener&apos;s account is deleted. We do not share this data with third parties.</p>
+        <p>Listeners give their Aadhaar number and take a live camera selfie for identity checks. Only the last 4 digits of the Aadhaar number and a one-way coded version of it are stored, never the full number. The selfie is kept in private storage that only authorised How Was Your Day administrators can open — it is never shown to seekers — and it is deleted when the listener&apos;s account is deleted. We do not share this data with third parties.</p>
 
         <h2 id="delete-account">6. Your rights</h2>
         <ul>

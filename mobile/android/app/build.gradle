@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace = "app.leanon"
+    namespace = "app.howwasyourday"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        // Play Console listing is locked to com.leanon.app (first upload). The Java
-        // code package (namespace) stays app.leanon — they are allowed to differ.
-        applicationId "com.leanon.app"
+        // Play Console listing is locked to app.howwasyourday (first upload). The Java
+        // code package (namespace) stays app.howwasyourday — they are allowed to differ.
+        applicationId "app.howwasyourday"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        // Bump for every Play Store upload (CI: LEANON_VERSION_CODE / _NAME).
-        versionCode Integer.parseInt(System.getenv("LEANON_VERSION_CODE") ?: "1")
-        versionName System.getenv("LEANON_VERSION_NAME") ?: "1.0.0"
+        // Bump for every Play Store upload (CI: HOWWASYOURDAY_VERSION_CODE / _NAME).
+        versionCode Integer.parseInt(System.getenv("HOWWASYOURDAY_VERSION_CODE") ?: "1")
+        versionName System.getenv("HOWWASYOURDAY_VERSION_NAME") ?: "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -24,17 +24,17 @@ android {
     // Never commit a keystore or its passwords.
     signingConfigs {
         release {
-            if (System.getenv("LEANON_KEYSTORE_FILE")) {
-                storeFile file(System.getenv("LEANON_KEYSTORE_FILE"))
-                storePassword System.getenv("LEANON_KEYSTORE_PASSWORD")
-                keyAlias System.getenv("LEANON_KEY_ALIAS")
-                keyPassword System.getenv("LEANON_KEY_PASSWORD")
+            if (System.getenv("HOWWASYOURDAY_KEYSTORE_FILE")) {
+                storeFile file(System.getenv("HOWWASYOURDAY_KEYSTORE_FILE"))
+                storePassword System.getenv("HOWWASYOURDAY_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("HOWWASYOURDAY_KEY_ALIAS")
+                keyPassword System.getenv("HOWWASYOURDAY_KEY_PASSWORD")
             }
         }
     }
     buildTypes {
         release {
-            if (System.getenv("LEANON_KEYSTORE_FILE")) signingConfig signingConfigs.release
+            if (System.getenv("HOWWASYOURDAY_KEYSTORE_FILE")) signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -57,7 +57,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
-    // Native request alerts (LeanOnMessagingService). google-services.json comes
+    // Native request alerts (HowWasYourDayMessagingService). google-services.json comes
     // from the Firebase console (docs/ANDROID_APP.md); without it the app builds
     // and runs, but cannot receive alerts.
     implementation platform('com.google.firebase:firebase-bom:33.7.0')

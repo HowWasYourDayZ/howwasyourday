@@ -3,19 +3,19 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'LeanOn — What Is LeanOn? India\'s Peer Support Platform',
-  description: 'LeanOn (Lean On) is India\'s peer support platform. Learn what LeanOn means, how it works, who it\'s for, and why it\'s the most human alternative to therapy in India. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/leanon' },
+  title: 'How Was Your Day — What Is How Was Your Day? India\'s Peer Support Platform',
+  description: 'How Was Your Day (Lean On) is India\'s peer support platform. Learn what How Was Your Day means, how it works, who it\'s for, and why it\'s the most human alternative to therapy in India. No appointment needed.',
+  alternates: { canonical: 'https://www.howwasyourday.live/howwasyourday' },
   keywords: [
-    'LeanOn', 'leanon', 'lean on', 'lean on app', 'leanon app', 'what is leanon',
-    'leanon India', 'leanon peer support', 'leanon meaning', 'lean on meaning',
-    'leanon review', 'leanon how it works', 'leanon app India',
+    'How Was Your Day', 'howwasyourday', 'lean on', 'lean on app', 'howwasyourday app', 'what is howwasyourday',
+    'howwasyourday India', 'howwasyourday peer support', 'howwasyourday meaning', 'lean on meaning',
+    'howwasyourday review', 'howwasyourday how it works', 'howwasyourday app India',
   ],
   openGraph: {
-    title: 'LeanOn — What Is LeanOn? India\'s Peer Support Platform',
-    description: 'LeanOn is India\'s peer support platform. Someone to lean on, anytime.',
-    url: 'https://www.leanon.app/leanon',
-    siteName: 'LeanOn',
+    title: 'How Was Your Day — What Is How Was Your Day? India\'s Peer Support Platform',
+    description: 'How Was Your Day is India\'s peer support platform. Someone to lean on, anytime.',
+    url: 'https://www.howwasyourday.live/howwasyourday',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
 const brandSchema = {
   '@context': 'https://schema.org',
   '@type': 'Brand',
-  name: 'LeanOn',
-  alternateName: ['Lean On', 'leanon', 'LeanOn App', 'leanon app'],
-  description: 'LeanOn is India\'s peer support platform — someone to lean on, anytime. Talk to real people who have lived through what you\'re facing.',
-  url: 'https://www.leanon.app',
-  logo: 'https://www.leanon.app/logo.png',
+  name: 'How Was Your Day',
+  alternateName: ['Lean On', 'howwasyourday', 'How Was Your Day App', 'howwasyourday app'],
+  description: 'How Was Your Day is India\'s peer support platform — someone to lean on, anytime. Talk to real people who have lived through what you\'re facing.',
+  url: 'https://www.howwasyourday.live',
+  logo: 'https://www.howwasyourday.live/logo.png',
   sameAs: [
-    'https://www.instagram.com/leanon.app',
-    'https://twitter.com/leanonapp',
-    'https://www.linkedin.com/company/leanon-app',
+    'https://www.instagram.com/howwasyourday.live',
+    'https://twitter.com/howwasyourdayapp',
+    'https://www.linkedin.com/company/howwasyourday-app',
   ],
 }
 
@@ -41,66 +41,66 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is LeanOn?',
+      name: 'What is How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is India\'s peer support platform — an app that connects people with verified peer listeners who have personally experienced the same challenges. It\'s not therapy. It\'s real human connection, starting at ₹0 for the first 5 minutes.',
+        text: 'How Was Your Day is India\'s peer support platform — an app that connects people with verified peer listeners who have personally experienced the same challenges. It\'s not therapy. It\'s real human connection, starting at ₹0 for the first 5 minutes.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What does "LeanOn" mean?',
+      name: 'What does "How Was Your Day" mean?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn takes its name from the phrase "lean on" — which means to emotionally rely on someone, to let another person support you when you\'re struggling. The platform is built on the idea that everyone deserves someone to lean on. LeanOn (one word) is the brand; "lean on" is what the platform enables.',
+        text: 'How Was Your Day takes its name from the phrase "lean on" — which means to emotionally rely on someone, to let another person support you when you\'re struggling. The platform is built on the idea that everyone deserves someone to lean on. How Was Your Day (one word) is the brand; "lean on" is what the platform enables.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why is it called LeanOn?',
+      name: 'Why is it called How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The name LeanOn was chosen because "lean on" captures the emotional core of what we offer: not diagnosis, not advice, not therapy — just someone to lean on. A real human who has been through what you\'re going through. The name comes from the phrase "lean on me" — someone you can trust to hold your weight when you\'re unsteady.',
+        text: 'The name How Was Your Day was chosen because "lean on" captures the emotional core of what we offer: not diagnosis, not advice, not therapy — just someone to lean on. A real human who has been through what you\'re going through. The name comes from the phrase "lean on me" — someone you can trust to hold your weight when you\'re unsteady.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn the same as therapy?',
+      name: 'Is How Was Your Day the same as therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support, not therapy. Listeners on LeanOn are verified people with lived experience — not licensed therapists or counselors. They offer genuine empathy and understanding, not clinical diagnosis. LeanOn is for when you need someone who truly gets it, not a professional evaluation.',
+        text: 'No. How Was Your Day is peer support, not therapy. Listeners on How Was Your Day are verified people with lived experience — not licensed therapists or counselors. They offer genuine empathy and understanding, not clinical diagnosis. How Was Your Day is for when you need someone who truly gets it, not a professional evaluation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost?',
+      name: 'How much does How Was Your Day cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn offers a 5-minute trial session for new users — no credit card, no wallet top-up. After that, sessions start from ₹160 for 15 minutes, including a flat ₹10 platform fee. This is significantly more affordable than therapy, which typically costs ₹1,500–5,000 per session in India.',
+        text: 'How Was Your Day offers a 5-minute trial session for new users — no credit card, no wallet top-up. After that, sessions start from ₹160 for 15 minutes, including a flat ₹10 platform fee. This is significantly more affordable than therapy, which typically costs ₹1,500–5,000 per session in India.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn safe and private?',
+      name: 'Is How Was Your Day safe and private?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn uses phone OTP sign-up (no full name required), never shares conversation content outside LeanOn, shows crisis helplines in every session, and lets you report any listener. A listener sees only the name you choose.',
+        text: 'Yes. How Was Your Day uses phone OTP sign-up (no full name required), never shares conversation content outside How Was Your Day, shows crisis helplines in every session, and lets you report any listener. A listener sees only the name you choose.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from other mental health apps?',
+      name: 'How is How Was Your Day different from other mental health apps?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Most mental health apps in India are either AI chatbots (not real humans) or professional therapy platforms (expensive, clinical). LeanOn sits between: real humans with lived experience, with no appointment, at a fraction of the cost of therapy. It\'s peer support — the most human option.',
+        text: 'Most mental health apps in India are either AI chatbots (not real humans) or professional therapy platforms (expensive, clinical). How Was Your Day sits between: real humans with lived experience, with no appointment, at a fraction of the cost of therapy. It\'s peer support — the most human option.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available across India?',
+      name: 'Is How Was Your Day available across India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is fully online and available across all of India — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Ahmedabad, and everywhere else. Sign up takes 30 seconds with just your mobile number.',
+        text: 'Yes. How Was Your Day is fully online and available across all of India — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Ahmedabad, and everywhere else. Sign up takes 30 seconds with just your mobile number.',
       },
     },
   ],
@@ -110,8 +110,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'About LeanOn', item: 'https://www.leanon.app/leanon' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'About How Was Your Day', item: 'https://www.howwasyourday.live/howwasyourday' },
   ],
 }
 
@@ -167,7 +167,7 @@ const S = `
   .related-link:hover{border-color:var(--teal);color:var(--teal);}
 `
 
-export default function LeanOnBrandPage() {
+export default function HowWasYourDayBrandPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }} />
@@ -176,44 +176,44 @@ export default function LeanOnBrandPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo"><button className="btn-nav">Get started</button></a>
       </nav>
 
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a><span>›</span>
-          <span style={{color:'var(--navy)'}}>About LeanOn</span>
+          <span style={{color:'var(--navy)'}}>About How Was Your Day</span>
         </nav>
 
         <div className="hero">
-          <p className="tag">Brand · LeanOn</p>
-          <h1>What Is <em>LeanOn</em>?</h1>
-          <p className="lead">LeanOn is India&apos;s peer support platform — named after the act of leaning on someone. Real humans. Real understanding. Available any time, anywhere in India. No appointment needed.</p>
+          <p className="tag">Brand · How Was Your Day</p>
+          <h1>What Is <em>How Was Your Day</em>?</h1>
+          <p className="lead">How Was Your Day is India&apos;s peer support platform — named after the act of leaning on someone. Real humans. Real understanding. Available any time, anywhere in India. No appointment needed.</p>
         </div>
 
         {/* The name meaning */}
         <div className="meaning-card">
           <h2>&ldquo;Lean on&rdquo; — What It Means</h2>
-          <p>To <strong>lean on</strong> someone means to draw on their emotional strength when yours is running low. To trust them with your weight. To let another human being hold part of what you&apos;re carrying. LeanOn (one word, one platform) gives everyone access to that — to real people who have been through what you&apos;re facing and found their way through.</p>
+          <p>To <strong>lean on</strong> someone means to draw on their emotional strength when yours is running low. To trust them with your weight. To let another human being hold part of what you&apos;re carrying. How Was Your Day (one word, one platform) gives everyone access to that — to real people who have been through what you&apos;re facing and found their way through.</p>
         </div>
 
-        {/* Why LeanOn exists */}
+        {/* Why How Was Your Day exists */}
         <div className="section">
-          <h2>Why LeanOn Was Built</h2>
+          <h2>Why How Was Your Day Was Built</h2>
           <p>In India, millions of people are struggling silently. With loneliness, burnout, grief, anxiety, relationship pain, career confusion. They need someone to talk to — but therapy is expensive, stigmatised, and hard to access. AI chatbots feel hollow. Friends don&apos;t always understand. Family often can&apos;t be trusted with certain struggles.</p>
-          <p>LeanOn was built to fill that gap. It connects people with <strong>peer listeners</strong> — real individuals who have personally navigated the same challenge, and come out the other side. They&apos;re not therapists. They&apos;re not AI. They&apos;re human beings who get it.</p>
+          <p>How Was Your Day was built to fill that gap. It connects people with <strong>peer listeners</strong> — real individuals who have personally navigated the same challenge, and come out the other side. They&apos;re not therapists. They&apos;re not AI. They&apos;re human beings who get it.</p>
 
-          <h3>The LeanOn Promise</h3>
-          <p>Every person who comes to LeanOn deserves someone who truly understands. Not a script. Not a diagnosis. A human being who has been there, and is ready to listen without judgment. That is the LeanOn promise — and everything we build is in service of it.</p>
+          <h3>The How Was Your Day Promise</h3>
+          <p>Every person who comes to How Was Your Day deserves someone who truly understands. Not a script. Not a diagnosis. A human being who has been there, and is ready to listen without judgment. That is the How Was Your Day promise — and everything we build is in service of it.</p>
         </div>
 
         {/* How it differs */}
         <div className="section">
-          <h2>LeanOn vs. Other Options</h2>
+          <h2>How Was Your Day vs. Other Options</h2>
           <div className="diff-grid">
             <div className="diff-card them">
-              <div className="diff-title">❌ Without LeanOn</div>
+              <div className="diff-title">❌ Without How Was Your Day</div>
               <div className="diff-list">
                 Therapy: ₹1,500–5,000/session<br/>
                 Wait weeks for an appointment<br/>
@@ -223,7 +223,7 @@ export default function LeanOnBrandPage() {
               </div>
             </div>
             <div className="diff-card us">
-              <div className="diff-title">✅ LeanOn</div>
+              <div className="diff-title">✅ How Was Your Day</div>
               <div className="diff-list">
                 From ₹160 for 15 minutes<br/>
                 Start in 60 seconds<br/>
@@ -237,9 +237,9 @@ export default function LeanOnBrandPage() {
 
         {/* Consistent branding section */}
         <div className="section">
-          <h2>Always &ldquo;LeanOn&rdquo; — One Word, One Mission</h2>
-          <p>The brand is always written as <strong>LeanOn</strong> — one word, capital L, capital O. This reflects the platform&apos;s core idea: that the act of leaning on someone is a single, unified thing. Not two separate actions, but one continuous experience of trust, support, and connection.</p>
-          <p>Whether you see it written as <em>LeanOn</em>, <em>leanon</em>, or <em>lean on app</em> — it all points to the same platform, the same promise, and the same community of real humans ready to listen.</p>
+          <h2>Always &ldquo;How Was Your Day&rdquo; — One Word, One Mission</h2>
+          <p>The brand is always written as <strong>How Was Your Day</strong> — one word, capital L, capital O. This reflects the platform&apos;s core idea: that the act of leaning on someone is a single, unified thing. Not two separate actions, but one continuous experience of trust, support, and connection.</p>
+          <p>Whether you see it written as <em>How Was Your Day</em>, <em>howwasyourday</em>, or <em>lean on app</em> — it all points to the same platform, the same promise, and the same community of real humans ready to listen.</p>
         </div>
 
         {/* CTA */}
@@ -254,16 +254,16 @@ export default function LeanOnBrandPage() {
 
         {/* FAQ */}
         <div className="section">
-          <h2>Frequently Asked Questions About LeanOn</h2>
+          <h2>Frequently Asked Questions About How Was Your Day</h2>
           {[
-            { q: 'What is LeanOn?', a: 'LeanOn is India\'s peer support platform — an app that connects people with verified peer listeners who have personally experienced the same challenges. It\'s not therapy. It\'s real human connection. Sessions start at ₹160 for 15 minutes, with a trial session for new users.' },
-            { q: 'What does "LeanOn" mean?', a: '"LeanOn" takes its name from "lean on" — to emotionally rely on someone, to let another person support you when you\'re struggling. The platform is built on the idea that everyone deserves someone to lean on.' },
-            { q: 'Why is it called LeanOn?', a: 'The name was chosen because "lean on" captures what we offer: not therapy, not AI, not advice — just someone to lean on. A real human who has been through what you\'re going through.' },
-            { q: 'Is LeanOn the same as therapy?', a: 'No. LeanOn is peer support, not therapy. Listeners are verified people with lived experience — not licensed therapists. They offer genuine empathy and understanding, not clinical diagnosis.' },
-            { q: 'How much does LeanOn cost?', a: 'LeanOn offers a 5-minute trial session for new users. After that, sessions start from ₹160 for 15 minutes — significantly more affordable than therapy (₹1,500–5,000/session in India).' },
-            { q: 'Is LeanOn safe and private?', a: 'Yes. Phone OTP sign-up (no full name required), conversations never shared outside LeanOn, crisis helplines in every session, and every report reviewed by a person.' },
-            { q: 'How is LeanOn different from other mental health apps?', a: 'Unlike AI chatbots (not real humans) or professional therapy platforms (expensive, clinical), LeanOn offers real humans with lived experience, with no appointment, at a fraction of therapy cost.' },
-            { q: 'Is LeanOn available across India?', a: 'Yes — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, and everywhere else. Online.' },
+            { q: 'What is How Was Your Day?', a: 'How Was Your Day is India\'s peer support platform — an app that connects people with verified peer listeners who have personally experienced the same challenges. It\'s not therapy. It\'s real human connection. Sessions start at ₹160 for 15 minutes, with a trial session for new users.' },
+            { q: 'What does "How Was Your Day" mean?', a: '"How Was Your Day" takes its name from "lean on" — to emotionally rely on someone, to let another person support you when you\'re struggling. The platform is built on the idea that everyone deserves someone to lean on.' },
+            { q: 'Why is it called How Was Your Day?', a: 'The name was chosen because "lean on" captures what we offer: not therapy, not AI, not advice — just someone to lean on. A real human who has been through what you\'re going through.' },
+            { q: 'Is How Was Your Day the same as therapy?', a: 'No. How Was Your Day is peer support, not therapy. Listeners are verified people with lived experience — not licensed therapists. They offer genuine empathy and understanding, not clinical diagnosis.' },
+            { q: 'How much does How Was Your Day cost?', a: 'How Was Your Day offers a 5-minute trial session for new users. After that, sessions start from ₹160 for 15 minutes — significantly more affordable than therapy (₹1,500–5,000/session in India).' },
+            { q: 'Is How Was Your Day safe and private?', a: 'Yes. Phone OTP sign-up (no full name required), conversations never shared outside How Was Your Day, crisis helplines in every session, and every report reviewed by a person.' },
+            { q: 'How is How Was Your Day different from other mental health apps?', a: 'Unlike AI chatbots (not real humans) or professional therapy platforms (expensive, clinical), How Was Your Day offers real humans with lived experience, with no appointment, at a fraction of therapy cost.' },
+            { q: 'Is How Was Your Day available across India?', a: 'Yes — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, and everywhere else. Online.' },
           ].map((f, i) => (
             <div key={i} className="faq-item">
               <div className="faq-q">{f.q}</div>
@@ -272,15 +272,15 @@ export default function LeanOnBrandPage() {
           ))}
         </div>
 
-        {/* LeanOn vs Lean On (the song) — disambiguation */}
+        {/* How Was Your Day vs Lean On (the song) — disambiguation */}
         <div className="section">
-          <h2>LeanOn vs &ldquo;Lean On&rdquo; — The App vs The Song</h2>
+          <h2>How Was Your Day vs &ldquo;Lean On&rdquo; — The App vs The Song</h2>
           <p>If you found us while searching for the Major Lazer song &ldquo;Lean On&rdquo; — welcome! You&apos;ve found something different (and arguably more useful).</p>
           <table style={{width:'100%',borderCollapse:'collapse',marginTop:12,marginBottom:16}}>
             <thead>
               <tr>
                 <th style={{textAlign:'left',padding:'10px 12px',background:'var(--light)',border:'1.5px solid var(--border)',fontWeight:800,color:'var(--navy)',fontSize:13}}>Feature</th>
-                <th style={{textAlign:'center',padding:'10px 12px',background:'rgba(255,153,51,0.1)',border:'1.5px solid var(--border)',fontWeight:800,color:'var(--navy)',fontSize:13}}>LeanOn (the app)</th>
+                <th style={{textAlign:'center',padding:'10px 12px',background:'rgba(255,153,51,0.1)',border:'1.5px solid var(--border)',fontWeight:800,color:'var(--navy)',fontSize:13}}>How Was Your Day (the app)</th>
                 <th style={{textAlign:'center',padding:'10px 12px',background:'var(--light)',border:'1.5px solid var(--border)',fontWeight:800,color:'var(--gray)',fontSize:13}}>&ldquo;Lean On&rdquo; (the song)</th>
               </tr>
             </thead>
@@ -300,14 +300,14 @@ export default function LeanOnBrandPage() {
               ))}
             </tbody>
           </table>
-          <p style={{fontSize:13,color:'var(--gray)'}}>Bottom line: &ldquo;Lean On&rdquo; (the song) is catchy. LeanOn (this app) is where you actually lean on a real person when life gets hard. Both have their place — but only one can help you through a rough night.</p>
+          <p style={{fontSize:13,color:'var(--gray)'}}>Bottom line: &ldquo;Lean On&rdquo; (the song) is catchy. How Was Your Day (this app) is where you actually lean on a real person when life gets hard. Both have their place — but only one can help you through a rough night.</p>
 
-          <h3>More FAQs: LeanOn App vs The Song</h3>
+          <h3>More FAQs: How Was Your Day App vs The Song</h3>
           {[
-            { q: 'Is LeanOn the app or the song?', a: 'LeanOn is an app — India\'s peer support platform. The song "Lean On" is by Major Lazer and DJ Snake. We share the same phrase but are entirely unrelated.' },
-            { q: 'What does "lean on" mean in the LeanOn app context?', a: 'In the app, "lean on" means finding a real human you can emotionally rely on during hard times. A peer listener who has been through what you\'re going through and can offer genuine understanding — not advice, not therapy, just presence.' },
-            { q: 'Is LeanOn an app review or a song?', a: 'LeanOn is a peer support app — read user reviews on our website. If you\'re looking for the "Lean On" song review, that\'s a different (and very catchy) song.' },
-            { q: 'What is "leanon app" India?', a: 'LeanOn is India\'s peer emotional support app — you can talk to real listeners about anxiety, loneliness, burnout, relationships, and more. No appointment needed.' },
+            { q: 'Is How Was Your Day the app or the song?', a: 'How Was Your Day is an app — India\'s peer support platform. The song "Lean On" is by Major Lazer and DJ Snake. We share the same phrase but are entirely unrelated.' },
+            { q: 'What does "lean on" mean in the How Was Your Day app context?', a: 'In the app, "lean on" means finding a real human you can emotionally rely on during hard times. A peer listener who has been through what you\'re going through and can offer genuine understanding — not advice, not therapy, just presence.' },
+            { q: 'Is How Was Your Day an app review or a song?', a: 'How Was Your Day is a peer support app — read user reviews on our website. If you\'re looking for the "Lean On" song review, that\'s a different (and very catchy) song.' },
+            { q: 'What is "howwasyourday app" India?', a: 'How Was Your Day is India\'s peer emotional support app — you can talk to real listeners about anxiety, loneliness, burnout, relationships, and more. No appointment needed.' },
           ].map((f, i) => (
             <div key={i} className="faq-item" style={{marginTop: i === 0 ? 16 : 0}}>
               <div className="faq-q">{f.q}</div>
@@ -318,9 +318,9 @@ export default function LeanOnBrandPage() {
 
         {/* Related */}
         <div className="section">
-          <h2>Learn More About LeanOn</h2>
+          <h2>Learn More About How Was Your Day</h2>
           <div className="related">
-            <a href="/about" className="related-link">About LeanOn</a>
+            <a href="/about" className="related-link">About How Was Your Day</a>
             <a href="/faq" className="related-link">Full FAQ</a>
             <a href="/glossary" className="related-link">Peer support glossary</a>
             <a href="/blog/what-does-lean-on-mean" className="related-link">What does &ldquo;lean on&rdquo; mean?</a>

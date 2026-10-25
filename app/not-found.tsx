@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-export const metadata: Metadata = { title: '404 — Page not found · LeanOn' }
+export const metadata: Metadata = { title: '404 — Page not found · How Was Your Day' }
 
 const S = `
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -22,7 +22,7 @@ export default function NotFound() {
     <>
       <style>{S}</style>
       <div className="wrap">
-        <img src="/logo.png" alt="LeanOn" className="logo" />
+        <img src="/logo.png" alt="How Was Your Day" className="logo" />
         <h1>404</h1>
         <h2>Page not found.</h2>
         <p>The page you&apos;re looking for doesn&apos;t exist — but someone to talk to always does.</p>

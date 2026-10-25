@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'AstroYogi Alternative India — Talk Without the Astrology | LeanOn',
-  description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. LeanOn is ₹160 for 15 minutes of real peer support, no horoscopes.',
+  title: 'AstroYogi Alternative India — Talk Without the Astrology | How Was Your Day',
+  description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. How Was Your Day is ₹160 for 15 minutes of real peer support, no horoscopes.',
   keywords: [
     'AstroYogi alternative', 'AstroSage alternative india', 'AstroTalk alternative india',
     'astrology app alternative india', 'cheap astrologer alternative india',
     'pay astrologer india alternative', 'online astrologer alternative india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/astroyogi-alternative', languages: { 'en-IN': 'https://www.leanon.app/astroyogi-alternative' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/astroyogi-alternative', languages: { 'en-IN': 'https://www.howwasyourday.live/astroyogi-alternative' } },
   openGraph: {
-    title: 'AstroYogi Alternative India — Talk Without the Astrology | LeanOn',
-    description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. LeanOn is ₹160 for 15 minutes of real peer support, no horoscopes.',
-    url: 'https://www.leanon.app/astroyogi-alternative',
-    siteName: 'LeanOn',
+    title: 'AstroYogi Alternative India — Talk Without the Astrology | How Was Your Day',
+    description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. How Was Your Day is ₹160 for 15 minutes of real peer support, no horoscopes.',
+    url: 'https://www.howwasyourday.live/astroyogi-alternative',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — AstroYogi Alternative' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — AstroYogi Alternative' }],
   },
 }
 
@@ -27,13 +27,13 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn anti-astrology?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not at all. LeanOn is pro-emotional support. Many people who use LeanOn also consult astrologers. The point is not that astrology is wrong, but that when what you need is to be heard and emotionally supported, a peer listener provides that more directly and more affordably than a ₹20-per-minute astrologer call.' },
+      name: 'Is How Was Your Day anti-astrology?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Not at all. How Was Your Day is pro-emotional support. Many people who use How Was Your Day also consult astrologers. The point is not that astrology is wrong, but that when what you need is to be heard and emotionally supported, a peer listener provides that more directly and more affordably than a ₹20-per-minute astrologer call.' },
     },
     {
       '@type': 'Question',
-      name: 'Can I believe in astrology and still use LeanOn?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Millions of Indians believe in astrology and many of them also benefit from talking to someone who listens without judgment. These are not contradictory. LeanOn is for the moments when you need to be heard &mdash; astrology is for other purposes.' },
+      name: 'Can I believe in astrology and still use How Was Your Day?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Millions of Indians believe in astrology and many of them also benefit from talking to someone who listens without judgment. These are not contradictory. How Was Your Day is for the moments when you need to be heard &mdash; astrology is for other purposes.' },
     },
     {
       '@type': 'Question',
@@ -43,7 +43,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is it anonymous?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Your first name only. The session is private. What you say stays there. Unlike many astrology app sessions where you share your full birth details, LeanOn requires only a phone number and first name.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Your first name only. The session is private. What you say stays there. Unlike many astrology app sessions where you share your full birth details, How Was Your Day requires only a phone number and first name.' },
     },
   ],
 }
@@ -52,8 +52,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'AstroYogi Alternative', item: 'https://www.leanon.app/astroyogi-alternative' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'AstroYogi Alternative', item: 'https://www.howwasyourday.live/astroyogi-alternative' },
   ],
 }
 
@@ -112,7 +112,7 @@ export default function AstroYogiAlternativePage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -124,8 +124,8 @@ export default function AstroYogiAlternativePage() {
 
         <div className="hero">
           <p className="badge">Real Support &middot; No Horoscopes &middot; From &#8377;160</p>
-          <h1>You&apos;re already paying &#8377;20/min for someone to talk to. <em>LeanOn is &#8377;160 for 15 minutes.</em> No predictions.</h1>
-          <p className="lead">India&apos;s astrology apps have 50 million users &mdash; not because Indians want predictions, but because they want someone to talk to and astrologers are cheaper and more accessible than therapists. LeanOn removes the astrology and keeps the human connection.</p>
+          <h1>You&apos;re already paying &#8377;20/min for someone to talk to. <em>How Was Your Day is &#8377;160 for 15 minutes.</em> No predictions.</h1>
+          <p className="lead">India&apos;s astrology apps have 50 million users &mdash; not because Indians want predictions, but because they want someone to talk to and astrologers are cheaper and more accessible than therapists. How Was Your Day removes the astrology and keeps the human connection.</p>
           <a href="/browse" className="cta-hero">Find a listener &rarr;</a>
         </div>
 
@@ -136,7 +136,7 @@ export default function AstroYogiAlternativePage() {
         </div>
 
         <div className="section">
-          <h2>The Real Cost of Astrology Apps vs LeanOn</h2>
+          <h2>The Real Cost of Astrology Apps vs How Was Your Day</h2>
           <div style={{overflowX:'auto'}}>
             <table className="compare-table">
               <thead>
@@ -146,22 +146,22 @@ export default function AstroYogiAlternativePage() {
                 <tr><td>AstroYogi</td><td>&#8377;20&ndash;50/min</td><td>&#8377;600&ndash;1,500</td><td>Astrology reading + conversation</td></tr>
                 <tr><td>AstroTalk</td><td>&#8377;20&ndash;60/min</td><td>&#8377;600&ndash;1,800</td><td>Astrology reading + conversation</td></tr>
                 <tr><td>AstroSage</td><td>&#8377;15&ndash;40/min</td><td>&#8377;450&ndash;1,200</td><td>Astrology reading + conversation</td></tr>
-                <tr className="highlight-row"><td>LeanOn</td><td>&#8377;10&ndash;17/min</td><td>&#8377;320 (30 min)</td><td>Real peer support, active listening, empathy</td></tr>
+                <tr className="highlight-row"><td>How Was Your Day</td><td>&#8377;10&ndash;17/min</td><td>&#8377;320 (30 min)</td><td>Real peer support, active listening, empathy</td></tr>
               </tbody>
             </table>
           </div>
-          <p>LeanOn is typically 60&ndash;80% less expensive than astrology app consultations, for conversations that are focused entirely on you &mdash; not on a reading.</p>
+          <p>How Was Your Day is typically 60&ndash;80% less expensive than astrology app consultations, for conversations that are focused entirely on you &mdash; not on a reading.</p>
         </div>
 
         <div className="section">
-          <h2>What LeanOn Does Differently</h2>
+          <h2>What How Was Your Day Does Differently</h2>
           <p>No predictions. No system imposed on your experience. A peer listener is screened and expected to follow your thread, not to interpret it through a framework. The conversation goes where you need it to go.</p>
           <p>And because there are no predictions, there is no false certainty. No &ldquo;your Saturn return will end in November&rdquo; that creates either false hope or false fear. Just an honest conversation about where you are now.</p>
         </div>
 
         <div className="section">
-          <h2>Who Switches from Astrology Apps to LeanOn</h2>
-          <p>People who realise, after a few sessions with an astrologer, that the part that helped was not the reading. It was the conversation. The feeling of being heard. The relief of saying their problem to someone outside their life. Once they identify what they actually need, LeanOn is the more direct, more affordable, and more consistently reliable way to get it.</p>
+          <h2>Who Switches from Astrology Apps to How Was Your Day</h2>
+          <p>People who realise, after a few sessions with an astrologer, that the part that helped was not the reading. It was the conversation. The feeling of being heard. The relief of saying their problem to someone outside their life. Once they identify what they actually need, How Was Your Day is the more direct, more affordable, and more consistently reliable way to get it.</p>
         </div>
 
         <div className="section">

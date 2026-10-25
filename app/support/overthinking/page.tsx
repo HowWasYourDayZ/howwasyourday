@@ -4,15 +4,15 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'How to Stop Overthinking — Talk to Someone Who Gets It | LeanOn',
+  title: 'How to Stop Overthinking — Talk to Someone Who Gets It | How Was Your Day',
   description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. First 5 minutes free.",
   keywords: 'how to stop overthinking, overthinking at night, racing thoughts India, anxiety overthinking, talk to someone about overthinking, rumination help, overthinking help India, peer support overthinking',
-  alternates: { canonical: 'https://www.leanon.app/support/overthinking', languages: { 'en-IN': 'https://www.leanon.app/support/overthinking' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/overthinking', languages: { 'en-IN': 'https://www.howwasyourday.live/support/overthinking' } },
   openGraph: {
-    title: 'How to Stop Overthinking — Talk to Someone Who Gets It | LeanOn',
+    title: 'How to Stop Overthinking — Talk to Someone Who Gets It | How Was Your Day',
     description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. First 5 minutes free.",
-    url: 'https://www.leanon.app/support/overthinking',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/overthinking',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -21,7 +21,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I can't stop overthinking, especially at night \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Saying the loop out loud to a real person often breaks it. LeanOn connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Your first 5 minutes are free. It is peer support, not therapy." } },
+    { '@type': 'Question', name: "I can't stop overthinking, especially at night \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Saying the loop out loud to a real person often breaks it. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Your first 5 minutes are free. It is peer support, not therapy." } },
     {
       '@type': 'Question',
       name: 'Why does my mind race more at night?',
@@ -51,15 +51,15 @@ const faqSchema = {
       name: 'How does talking to a peer listener break the overthinking loop?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A loop survives because it stays inside your head, where it can repeat endlessly without ever finishing. Speaking it to another human forces it into words, gives it a beginning and an end, and lets someone reflect it back to you. LeanOn listeners have lived through their own spirals, so they listen with empathy instead of rushing you towards a solution.',
+        text: 'A loop survives because it stays inside your head, where it can repeat endlessly without ever finishing. Speaking it to another human forces it into words, gives it a beginning and an end, and lets someone reflect it back to you. How Was Your Day listeners have lived through their own spirals, so they listen with empathy instead of rushing you towards a solution.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn peer support cost?',
+      name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.',
       },
     },
   ],
@@ -69,9 +69,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Overthinking', item: 'https://www.leanon.app/support/overthinking' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Overthinking', item: 'https://www.howwasyourday.live/support/overthinking' },
   ],
 }
 
@@ -132,7 +132,7 @@ export default function OverthinkingSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -151,8 +151,8 @@ export default function OverthinkingSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Overthinking</p>
           <h1>Your Mind Won&apos;t Stop. You&apos;re Not <em>Broken</em>.</h1>
-          <p className="lead">If you&apos;re reading this at 1 AM with the same three thoughts going round and round, you&apos;re in the right place. LeanOn connects you with peer listeners across India who have lived inside their own spirals — and know that the loop usually loosens the moment you say it out loud to someone.</p>
-          <QuickAnswer question={"I can't stop overthinking, especially at night \u2014 who can I talk to?"} answer={"Saying the loop out loud to a real person often breaks it. LeanOn connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Your first 5 minutes are free. It is peer support, not therapy."} />
+          <p className="lead">If you&apos;re reading this at 1 AM with the same three thoughts going round and round, you&apos;re in the right place. How Was Your Day connects you with peer listeners across India who have lived inside their own spirals — and know that the loop usually loosens the moment you say it out loud to someone.</p>
+          <QuickAnswer question={"I can't stop overthinking, especially at night \u2014 who can I talk to?"} answer={"Saying the loop out loud to a real person often breaks it. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Your first 5 minutes are free. It is peer support, not therapy."} />
         </div>
 
         {/* Understanding overthinking */}
@@ -176,10 +176,10 @@ export default function OverthinkingSupportPage() {
           <p>The most natural response — just stop thinking about it — is the one that reliably fails. To push a thought away you have to keep checking whether it is gone, and every check brings it back. Add the second layer of frustration at yourself for still thinking about it, and now you have two loops instead of one. Thoughts tend to quieten not when they are forced out but when they are given somewhere to land: written down, or better, said out loud to another person who receives it without flinching.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps You Break the Loop</h2>
-          <p>LeanOn is not therapy, and we are honest about that. We are peer support — real humans talking to real humans. When your mind will not stop, here is what that actually does for you:</p>
+          <h2>How the app Helps You Break the Loop</h2>
+          <p>How Was Your Day is not therapy, and we are honest about that. We are peer support — real humans talking to real humans. When your mind will not stop, here is what that actually does for you:</p>
 
           <h3>Saying It Out Loud Interrupts the Loop</h3>
           <p>A thought can repeat forever inside your head because it never has to finish. Speaking it to another person changes that. You have to find words, put them in order, and reach the end of the sentence — and somewhere in that process the thought stops being a fog and becomes a thing with edges. Most people notice it partway through: the worry that felt enormous at 2 AM sounds smaller in their own voice. That is not the thought being dismissed. It is the loop finally being interrupted.</p>
@@ -188,10 +188,10 @@ export default function OverthinkingSupportPage() {
           <p>Our listeners are not reading from a script about racing thoughts. They have had the sleepless nights, the reread messages, the week-long replay of one conversation. That lived experience shows up as real empathy rather than polite sympathy — they understand why you cannot simply put it down, because they could not either.</p>
 
           <h3>Available at 2 AM When It Peaks</h3>
-          <p>Overthinking does not keep office hours. It peaks exactly when there is no one left to call and everyone you know is asleep. LeanOn listeners go online at different hours, so on the nights when you are staring at the ceiling and the loop is winning, there is a real person you can reach in a couple of minutes.</p>
+          <p>Overthinking does not keep office hours. It peaks exactly when there is no one left to call and everyone you know is asleep. How Was Your Day listeners go online at different hours, so on the nights when you are staring at the ceiling and the loop is winning, there is a real person you can reach in a couple of minutes.</p>
 
           <h3>No Judgment, No Advice You Did Not Ask For</h3>
-          <p>Most people, with the best intentions, respond to overthinking by trying to fix it — do not worry, it is nothing, just sleep. It rarely helps, and it often adds a quiet shame for still being stuck. LeanOn listeners are screened and expected to listen with empathy first. They will not tell you your worry is silly, and they will not hand you solutions you never asked for. You get to say the whole thing, uninterrupted, to someone who is genuinely there for it.</p>
+          <p>Most people, with the best intentions, respond to overthinking by trying to fix it — do not worry, it is nothing, just sleep. It rarely helps, and it often adds a quiet shame for still being stuck. How Was Your Day listeners are screened and expected to listen with empathy first. They will not tell you your worry is silly, and they will not hand you solutions you never asked for. You get to say the whole thing, uninterrupted, to someone who is genuinely there for it.</p>
         </div>
 
         {/* Listener cards */}
@@ -232,7 +232,7 @@ export default function OverthinkingSupportPage() {
           <p>Talk to a peer listener who knows the loop from the inside. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Quiet the loop — talk it out — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -253,18 +253,18 @@ export default function OverthinkingSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does talking to a peer listener break the overthinking loop?</div>
-            <div className="faq-a">A loop survives because it stays inside your head, where it can repeat endlessly without ever finishing. Speaking it to another human forces it into words, gives it a beginning and an end, and lets someone reflect it back to you. LeanOn listeners have lived through their own spirals, so they listen with empathy instead of rushing you towards a solution.</div>
+            <div className="faq-a">A loop survives because it stays inside your head, where it can repeat endlessly without ever finishing. Speaking it to another human forces it into words, gives it a beginning and an end, and lets someone reflect it back to you. How Was Your Day listeners have lived through their own spirals, so they listen with empathy instead of rushing you towards a solution.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn peer support cost?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.</div>
+            <div className="faq-q">How much does How Was Your Day peer support cost?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Overthinking rarely travels alone. Explore more peer support on LeanOn:</p>
+          <p>Overthinking rarely travels alone. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>

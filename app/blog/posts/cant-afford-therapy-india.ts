@@ -4,7 +4,7 @@ export const post = {
   description: 'Therapy in India costs ₹1,500–₹5,000 per session — out of reach for most people who need it. Here is an honest guide to what actually fills the gap.',
   date: '2026-09-09',
   readTime: '7 min read',
-  topics: ['therapy cost India', 'affordable mental health India', 'peer support', 'mental health India', 'LeanOn'],
+  topics: ['therapy cost India', 'affordable mental health India', 'peer support', 'mental health India', 'How Was Your Day'],
   content: `
 <p>Let us start with the honest number. A single session with a qualified therapist in India — a psychologist or counsellor in any metro city — costs between ₹1,500 and ₹5,000. In cities like Bengaluru, Mumbai, or Delhi, the average for someone good is closer to ₹2,500–₹3,000. Weekly sessions, which is what most therapeutic approaches actually require to be effective, come to ₹10,000–₹20,000 per month.</p>
 
@@ -42,7 +42,7 @@ export const post = {
 <li>Crisis intervention (crisis helplines exist for that)</li>
 </ul>
 
-<p>On LeanOn, the price depends on the listener's per-minute rate: 15 minutes with a ₹10/min listener costs ₹160, and 30 minutes costs ₹310. Your first 5-minute session is free, so you can see if the connection feels right before committing.</p>
+<p>On How Was Your Day, the price depends on the listener's per-minute rate: 15 minutes with a ₹10/min listener costs ₹160, and 30 minutes costs ₹310. Your first 5-minute session is free, so you can see if the connection feels right before committing.</p>
 
 <h2>Journaling: Useful for Some Things, Not Others</h2>
 

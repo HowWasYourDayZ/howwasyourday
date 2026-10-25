@@ -1,17 +1,17 @@
-package app.leanon;
+package app.howwasyourday;
 
 import com.getcapacitor.Plugin;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 // Loaded by the Capacitor bridge BEFORE the first page loads, so the
-// synchronous window.LeanOnAndroid object (LeanOnBridge) exists on every page
-// of www.leanon.app from the start. Also fetches the FCM token once per launch.
-@CapacitorPlugin(name = "LeanOnNative")
-public class LeanOnNativePlugin extends Plugin {
+// synchronous window.HowWasYourDayAndroid object (HowWasYourDayBridge) exists on every page
+// of www.howwasyourday.live from the start. Also fetches the FCM token once per launch.
+@CapacitorPlugin(name = "HowWasYourDayNative")
+public class HowWasYourDayNativePlugin extends Plugin {
     @Override
     public void load() {
-        getBridge().getWebView().addJavascriptInterface(new LeanOnBridge(getActivity()), "LeanOnAndroid");
+        getBridge().getWebView().addJavascriptInterface(new HowWasYourDayBridge(getActivity()), "HowWasYourDayAndroid");
         refreshPushToken(getActivity().getApplicationContext());
     }
 

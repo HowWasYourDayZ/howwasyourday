@@ -1,4 +1,4 @@
-# Sentry Setup for LeanOn
+# Sentry Setup for How Was Your Day
 
 ## Install
 ```bash

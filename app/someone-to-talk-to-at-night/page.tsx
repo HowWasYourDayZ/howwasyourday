@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 
 export const metadata: Metadata = {
-  title: 'Need Someone to Talk To at Night? Talk to a Real Person | LeanOn',
-  description: 'Feeling alone at night in India? LeanOn connects you with real peer listeners in India, many of whom are online late at night. Anonymous, affordable, and genuinely human.',
+  title: 'Need Someone to Talk To at Night? Talk to a Real Person | How Was Your Day',
+  description: 'Feeling alone at night in India? How Was Your Day connects you with real peer listeners in India, many of whom are online late at night. Anonymous, affordable, and genuinely human.',
   keywords: ['someone to talk to at night', 'midnight support india', 'night anxiety india', 'lonely at night india', 'talk to someone 2am india', 'late night emotional support'],
-  alternates: { canonical: 'https://www.leanon.app/someone-to-talk-to-at-night' },
+  alternates: { canonical: 'https://www.howwasyourday.live/someone-to-talk-to-at-night' },
 }
 
 const S = `
@@ -36,35 +36,35 @@ export default function SomeoneTalkToAtNightPage() {
     <>
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{height:48}} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>
       </nav>
       <div className="page">
         <a href="/" style={{display:'inline-flex',alignItems:'center',gap:6,fontSize:14,fontWeight:700,color:'var(--gray)',marginBottom:28}}>← Back</a>
         <h1>Someone to Talk To at Night — A Real Person, Not a Bot</h1>
-        <p className="lead">It&apos;s 1 AM and you can&apos;t sleep. Your thoughts are spiralling. Everyone you know is asleep, and calling someone feels like too much. LeanOn is here for exactly this moment.</p>
+        <p className="lead">It&apos;s 1 AM and you can&apos;t sleep. Your thoughts are spiralling. Everyone you know is asleep, and calling someone feels like too much. How Was Your Day is here for exactly this moment.</p>
 
         <div className="disclaimer">
-          LeanOn provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
+          How Was Your Day provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
         </div>
 
         <GeoQuickAnswer path="/someone-to-talk-to-at-night" />
         <div className="card">
           <h2>Why nights feel harder</h2>
           <p>Night anxiety is real and common. When there&apos;s no distraction, no work, no noise — the thoughts you&apos;ve been pushing down all day come flooding in. Loneliness, regrets, fears about the future. Everything feels heavier at 2 AM.</p>
-          <p>In India, with joint families and shared spaces, there&apos;s often nowhere private to process these feelings. You can&apos;t call a friend at midnight without alarming them. Therapists aren&apos;t available at 3 AM. LeanOn fills that gap.</p>
+          <p>In India, with joint families and shared spaces, there&apos;s often nowhere private to process these feelings. You can&apos;t call a friend at midnight without alarming them. Therapists aren&apos;t available at 3 AM. How Was Your Day fills that gap.</p>
         </div>
 
         <div className="card">
           <h2>Real people, no appointment</h2>
-          <p>LeanOn has peer listeners available across all time zones and working through the night shift. Our listeners are real people — many of them are night owls themselves, or have been through dark nights of their own. They understand what it feels like to be alone with heavy thoughts.</p>
+          <p>How Was Your Day has peer listeners available across all time zones and working through the night shift. Our listeners are real people — many of them are night owls themselves, or have been through dark nights of their own. They understand what it feels like to be alone with heavy thoughts.</p>
           <p>You can text (so no one hears) or use voice if you need to hear a calm voice. Start a 5-minute session now — no top-up, no scheduling, no waiting room.</p>
         </div>
 
         <div className="card">
           <h2>You are not alone in this</h2>
           <p>Millions of people in India lie awake at night with the same feelings. The loneliness that comes at night is one of the most common and least talked-about human experiences. There is no shame in needing someone to talk to.</p>
-          <p>LeanOn&apos;s listeners have been through dark nights themselves. That&apos;s not a marketing line — it&apos;s our selection criteria. Only people with real lived experience are approved to listen on our platform.</p>
+          <p>How Was Your Day&apos;s listeners have been through dark nights themselves. That&apos;s not a marketing line — it&apos;s our selection criteria. Only people with real lived experience are approved to listen on our platform.</p>
         </div>
 
         <div className="crisis-box">

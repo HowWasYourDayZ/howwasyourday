@@ -21,7 +21,7 @@ export type ReadyToTalkLandingData = {
 }
 
 export default function ReadyToTalkLanding({ data }: { data: ReadyToTalkLandingData }) {
-  const url = `https://www.leanon.app${data.canonical}`
+  const url = `https://www.howwasyourday.live${data.canonical}`
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -31,13 +31,13 @@ export default function ReadyToTalkLanding({ data }: { data: ReadyToTalkLandingD
         url,
         name: data.title,
         description: data.description,
-        isPartOf: { '@id': 'https://www.leanon.app/#website' },
-        about: { '@type': 'Service', name: 'LeanOn peer support', serviceType: 'Peer support' },
+        isPartOf: { '@id': 'https://www.howwasyourday.live/#website' },
+        about: { '@type': 'Service', name: 'How Was Your Day peer support', serviceType: 'Peer support' },
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' },
+          { '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' },
           { '@type': 'ListItem', position: 2, name: data.h1, item: url },
         ],
       },
@@ -67,7 +67,7 @@ export default function ReadyToTalkLanding({ data }: { data: ReadyToTalkLandingD
           <p className="mb-8 text-lg leading-8 text-slate-600 sm:text-xl">{data.intro}</p>
           <div className="flex flex-wrap gap-3">
             <a href="/browse" className="rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Browse listeners →</a>
-            <a href="/trust" className="rounded-full border-2 border-[#1A8FA0] px-6 py-3 font-extrabold text-[#1A8FA0]">How LeanOn handles trust</a>
+            <a href="/trust" className="rounded-full border-2 border-[#1A8FA0] px-6 py-3 font-extrabold text-[#1A8FA0]">How the app handles trust</a>
           </div>
           <p className="mt-4 text-sm font-semibold text-slate-500">Start with one free 5-minute introduction per account. Continue with paid time only if you want to.</p>
         </header>
@@ -109,7 +109,7 @@ export default function ReadyToTalkLanding({ data }: { data: ReadyToTalkLandingD
 
         <section className="mt-8 rounded-3xl bg-[#F0F8FC] p-6 sm:p-8">
           <h2 className="mb-5 text-2xl font-black">Why not just use AI?</h2>
-          <p className="leading-7 text-slate-600">AI assistants can be useful for information, reflection, brainstorming and conversation. LeanOn serves a different need: a conversation with another human being. If what you want is to be heard by a person rather than receive another generated response, that distinction matters.</p>
+          <p className="leading-7 text-slate-600">AI assistants can be useful for information, reflection, brainstorming and conversation. How Was Your Day serves a different need: a conversation with another human being. If what you want is to be heard by a person rather than receive another generated response, that distinction matters.</p>
           <a href="/ai-human-support" className="mt-5 inline-flex rounded-full border-2 border-[#1A8FA0] px-6 py-3 font-extrabold text-[#1A8FA0]">Human support vs AI →</a>
         </section>
 
@@ -127,11 +127,11 @@ export default function ReadyToTalkLanding({ data }: { data: ReadyToTalkLandingD
         </section>
 
         <section className="mt-8">
-          <h2 className="mb-4 text-xl font-black">Explore related LeanOn pages</h2>
+          <h2 className="mb-4 text-xl font-black">Explore related How Was Your Day pages</h2>
           <div className="flex flex-wrap gap-3">{data.related.map(r => <a key={r.href} href={r.href} className="rounded-full bg-[#F0F8FC] px-4 py-2 text-sm font-bold">{r.label}</a>)}</div>
         </section>
 
-        <p className="mt-10 text-xs leading-6 text-slate-500">LeanOn provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, use an appropriate local emergency or crisis service.</p>
+        <p className="mt-10 text-xs leading-6 text-slate-500">How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, use an appropriate local emergency or crisis service.</p>
       </div>
     </main>
   )

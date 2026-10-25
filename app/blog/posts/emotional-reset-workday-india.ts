@@ -4,7 +4,7 @@ export const post = {
   description: 'Something hit you at 11 AM and your whole day shifted. Here is how to actually reset your emotional state mid-day without waiting until evening, without therapy, without pretending.',
   date: '2026-09-08',
   readTime: '6 min read',
-  topics: ['work stress India', 'emotional reset', 'mental health India', 'venting', 'LeanOn'],
+  topics: ['work stress India', 'emotional reset', 'mental health India', 'venting', 'How Was Your Day'],
   content: `
 <p>It is 11 AM. Or 1 PM. Or just after lunch. Something happened — a message, a call, a meeting, something someone said — and you are no longer the same person who opened their laptop this morning.</p>
 
@@ -40,7 +40,7 @@ export const post = {
 
 <p>For these, what you need is to say it out loud to a person who will hear it. Not to solve anything. Not to process it fully. Just to complete the loop — to speak it to someone who receives it, so the brain can register that the communication cycle is done and the thing does not have to keep circling.</p>
 
-<p>A LeanOn listener can be booked in the time it takes to get a coffee. A 15-minute session in the middle of a work day — during your lunch break, between calls, before a difficult afternoon — is often worth more than a two-hour conversation in the evening when you are already depleted. You are addressing it while it is fresh, at the moment the pressure is highest, and coming back to your afternoon from a genuinely lighter place.</p>
+<p>A How Was Your Day listener can be booked in the time it takes to get a coffee. A 15-minute session in the middle of a work day — during your lunch break, between calls, before a difficult afternoon — is often worth more than a two-hour conversation in the evening when you are already depleted. You are addressing it while it is fresh, at the moment the pressure is highest, and coming back to your afternoon from a genuinely lighter place.</p>
 
 <h2>The Return: How to Come Back</h2>
 

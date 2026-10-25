@@ -5,21 +5,21 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'Talk to a Friendly Stranger in India — Someone Outside Your Circle | LeanOn',
+  title: 'Talk to a Friendly Stranger in India — Someone Outside Your Circle | How Was Your Day',
   description: 'Sometimes a stranger is easier to talk to than anyone you know. Anonymous, judgment-free, real conversations in India from ₹160.',
   keywords: [
     'stranger friend india', 'friendly stranger india', 'talk to stranger india',
     'talk to someone anonymous india', 'anonymous conversation india',
     'talk to stranger online india', 'friendly stranger online india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/stranger-friend-india', languages: { 'en-IN': 'https://www.leanon.app/stranger-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/stranger-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/stranger-friend-india' } },
   openGraph: {
-    title: 'Talk to a Friendly Stranger in India — Someone Outside Your Circle | LeanOn',
+    title: 'Talk to a Friendly Stranger in India — Someone Outside Your Circle | How Was Your Day',
     description: 'Sometimes a stranger is easier to talk to than anyone you know. Anonymous, judgment-free, real conversations in India from ₹160.',
-    url: 'https://www.leanon.app/stranger-friend-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/stranger-friend-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Stranger Friend India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Stranger Friend India' }],
   },
 }
 
@@ -30,12 +30,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is this safe?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are screened, approved by LeanOn, and bound by confidentiality. Sessions are private &mdash; 1:1 voice calls that nobody else can hear. Your information is protected. A listener sees only the name you choose, and nothing else unless you share it.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are screened, approved by How Was Your Day, and bound by confidentiality. Sessions are private &mdash; 1:1 voice calls that nobody else can hear. Your information is protected. A listener sees only the name you choose, and nothing else unless you share it.' },
     },
     {
       '@type': 'Question',
       name: 'How is this different from Omegle or random chat apps?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Completely different. On Omegle or random chat apps, you are matched with a truly random person with no vetting, no training, and no accountability. On LeanOn, every listener has been specifically selected through a screening process, assessed on active listening, and is bound by confidentiality. You can read their profile before choosing them. It is the difference between talking to a random person on the street and talking to a screened, accountable human being.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Completely different. On Omegle or random chat apps, you are matched with a truly random person with no vetting, no training, and no accountability. On How Was Your Day, every listener has been specifically selected through a screening process, assessed on active listening, and is bound by confidentiality. You can read their profile before choosing them. It is the difference between talking to a random person on the street and talking to a screened, accountable human being.' },
     },
     {
       '@type': 'Question',
@@ -59,8 +59,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Stranger Friend India', item: 'https://www.leanon.app/stranger-friend-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Stranger Friend India', item: 'https://www.howwasyourday.live/stranger-friend-india' },
   ],
 }
 
@@ -114,7 +114,7 @@ export default function StrangerFriendIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -135,13 +135,13 @@ export default function StrangerFriendIndiaPage() {
           <h2>Why Strangers Are Sometimes Better Than Friends for Hard Conversations</h2>
           <p>Think about what makes honest conversation so difficult with the people you know. They have opinions about the person you&apos;re talking about. They will remember what you said. They might tell someone. They have their own feelings about your situation, which colour everything they hear.</p>
           <p>The most honest conversations of people&apos;s lives often happen with someone they will never see again &mdash; a fellow passenger on a long train journey, someone at a bus stop, a chance encounter. The reason is simple: there is no social cost. Nothing you say will change how someone treats you tomorrow.</p>
-          <p>A LeanOn listener gives you this without the randomness. They are real, screened, accountable &mdash; and completely outside your social circle.</p>
+          <p>A How Was Your Day listener gives you this without the randomness. They are real, screened, accountable &mdash; and completely outside your social circle.</p>
         </div>
 
         <div className="section">
-          <h2>The Difference Between a Random Stranger and a LeanOn Listener</h2>
+          <h2>The Difference Between a Random Stranger and a How Was Your Day Listener</h2>
           <p>A random stranger is unvetted, untrained, and could respond in any way. They might judge you. They might give terrible advice. They might not know how to hold difficult things.</p>
-          <p>A LeanOn listener is:</p>
+          <p>A How Was Your Day listener is:</p>
           <ul>
             <li>Selected by you, based on their real background and areas of experience</li>
             <li>Trained specifically in active listening and empathetic support</li>
@@ -153,7 +153,7 @@ export default function StrangerFriendIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What People Talk About With Their LeanOn Listener</h2>
+          <h2>What People Talk About With Their How Was Your Day Listener</h2>
           <p>The things that are too personal for family, too complicated for friends, too much context for a casual conversation:</p>
           <ul>
             <li>Something that happened at work that they cannot tell colleagues or HR</li>
@@ -166,7 +166,7 @@ export default function StrangerFriendIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>Anonymity on LeanOn</h2>
+          <h2>Anonymity on How Was Your Day</h2>
           <p>Your first name. That&apos;s all. No last name, no photo, no social media link, no email. The listener knows nothing about you except what you choose to share in the session.</p>
           <p>Sessions are private 1:1 voice calls. Nobody else can hear them. There is no recording shared with anyone. What you say stays between you and the listener.</p>
         </div>

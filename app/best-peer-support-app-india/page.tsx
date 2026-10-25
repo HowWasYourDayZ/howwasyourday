@@ -4,15 +4,15 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Best Peer Support App in India 2026 — LeanOn vs Alternatives',
-  description: 'Looking for the best peer support app in India? Compare LeanOn, YourDOST, iCall, Wysa and more. Real people. Anonymous. From ₹160.',
+  title: 'Best Peer Support App in India 2026 — How Was Your Day vs Alternatives',
+  description: 'Looking for the best peer support app in India? Compare How Was Your Day, YourDOST, iCall, Wysa and more. Real people. Anonymous. From ₹160.',
   keywords: ['best peer support app India', 'peer support app India', 'peer support platform India', 'best mental health app India 2026', 'peer support app review India'],
-  alternates: { canonical: 'https://www.leanon.app/best-peer-support-app-india', languages: { 'en-IN': 'https://www.leanon.app/best-peer-support-app-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/best-peer-support-app-india', languages: { 'en-IN': 'https://www.howwasyourday.live/best-peer-support-app-india' } },
   openGraph: {
-    title: 'Best Peer Support App in India 2026 — LeanOn vs Alternatives',
-    description: 'Looking for the best peer support app in India? Compare LeanOn, YourDOST, iCall, Wysa and more. Real people. Anonymous. From ₹160.',
-    url: 'https://www.leanon.app/best-peer-support-app-india',
-    siteName: 'LeanOn',
+    title: 'Best Peer Support App in India 2026 — How Was Your Day vs Alternatives',
+    description: 'Looking for the best peer support app in India? Compare How Was Your Day, YourDOST, iCall, Wysa and more. Real people. Anonymous. From ₹160.',
+    url: 'https://www.howwasyourday.live/best-peer-support-app-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -26,23 +26,23 @@ const faqSchema = {
       name: 'What is the best peer support app in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For people who want to talk to a real human with lived experience, LeanOn is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session with the first 5 minutes free, is private, and is available without an appointment. For clinical counselling with a licensed professional, options like iCall (TISS) may be more appropriate. For a free AI companion, Wysa is available.',
+        text: 'For people who want to talk to a real human with lived experience, How Was Your Day is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session with the first 5 minutes free, is private, and is available without an appointment. For clinical counselling with a licensed professional, options like iCall (TISS) may be more appropriate. For a free AI companion, Wysa is available.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How does LeanOn compare to YourDOST?',
+      name: 'How does How Was Your Day compare to YourDOST?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'YourDOST is a mixed platform offering both AI tools and sessions with licensed counsellors and psychologists. Sessions typically cost ₹500–₹2,000 and require booking in advance. LeanOn focuses exclusively on peer support — real people with lived experience rather than clinical professionals. LeanOn is more affordable (₹160/session), private, and available without an appointment. The choice depends on whether you need clinical counselling or human peer connection.',
+        text: 'YourDOST is a mixed platform offering both AI tools and sessions with licensed counsellors and psychologists. Sessions typically cost ₹500–₹2,000 and require booking in advance. How Was Your Day focuses exclusively on peer support — real people with lived experience rather than clinical professionals. How Was Your Day is more affordable (₹160/session), private, and available without an appointment. The choice depends on whether you need clinical counselling or human peer connection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn better than Wysa?',
+      name: 'Is How Was Your Day better than Wysa?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Wysa is an AI chatbot — it uses artificial intelligence to provide mental health support. LeanOn uses real human peer listeners with lived experience. If you want a free AI-based coping tool, Wysa is designed for that. If you want to talk to an actual person who has been through something like what you are facing, LeanOn is the right choice. Many people use both — Wysa for quick coping tools and LeanOn when they need genuine human connection.',
+        text: 'Wysa is an AI chatbot — it uses artificial intelligence to provide mental health support. How Was Your Day uses real human peer listeners with lived experience. If you want a free AI-based coping tool, Wysa is designed for that. If you want to talk to an actual person who has been through something like what you are facing, How Was Your Day is the right choice. Many people use both — Wysa for quick coping tools and How Was Your Day when they need genuine human connection.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'What does peer support cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'On LeanOn, peer support costs approximately ₹160 per session, with the first 5 minutes free. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.',
+        text: 'On How Was Your Day, peer support costs approximately ₹160 per session, with the first 5 minutes free. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.',
       },
     },
     {
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'Are there free peer support apps in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Wysa offers a free AI chatbot. iCall (run by TISS) offers subsidised counselling sessions starting at ₹200. Government crisis helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free but designed for acute crises, not ongoing peer support. LeanOn offers a free 5-minute trial for every session, with paid sessions from ₹160.',
+        text: 'Wysa offers a free AI chatbot. iCall (run by TISS) offers subsidised counselling sessions starting at ₹200. Government crisis helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.',
       },
     },
     {
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Best Peer Support App India', item: 'https://www.leanon.app/best-peer-support-app-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Best Peer Support App India', item: 'https://www.howwasyourday.live/best-peer-support-app-india' },
   ],
 }
 
@@ -115,8 +115,8 @@ const S = `
   .compare-table td{font-size:13px;color:#3A6070;padding:10px 10px;border-bottom:1px solid var(--border);line-height:1.55;vertical-align:top;}
   .compare-table tr:last-child td{border-bottom:none;}
   .compare-table .col-label{font-weight:800;color:var(--navy);}
-  .leanon-row td{background:rgba(26,143,160,0.04);}
-  .leanon-row .col-label{color:var(--teal);}
+  .howwasyourday-row td{background:rgba(26,143,160,0.04);}
+  .howwasyourday-row .col-label{color:var(--teal);}
   .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:50px;}
   .badge-green{background:#e6f9f0;color:#167a47;}
   .badge-orange{background:#fff4e6;color:#b45309;}
@@ -151,7 +151,7 @@ export default function BestPeerSupportAppIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -189,8 +189,8 @@ export default function BestPeerSupportAppIndiaPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="leanon-row">
-                  <td className="col-label">LeanOn</td>
+                <tr className="howwasyourday-row">
+                  <td className="col-label">How Was Your Day</td>
                   <td>Peer support</td>
                   <td>₹160/session</td>
                   <td><span className="badge badge-green">✅ Real people</span></td>
@@ -235,14 +235,14 @@ export default function BestPeerSupportAppIndiaPage() {
           <p style={{marginTop:12,fontSize:13,color:'var(--gray)'}}>Costs are approximate and may vary. This table compares options — it is not an endorsement of all platforms. For mental health crises, use NIMHANS 080-46110007 or Tele-MANAS 14416 (free, government of India).</p>
         </div>
 
-        {/* What makes LeanOn different */}
+        {/* What makes How Was Your Day different */}
         <div className="section">
-          <h2>What Makes LeanOn Different</h2>
+          <h2>What Makes How Was Your Day Different</h2>
           <div className="differentiators">
             <div className="diff-card">
               <div className="diff-icon">🤝</div>
               <div className="diff-title">Lived experience, not scripts</div>
-              <div className="diff-desc">Every LeanOn listener has personally been through something relevant to the conversations they take — not trained on a script, but from life.</div>
+              <div className="diff-desc">Every How Was Your Day listener has personally been through something relevant to the conversations they take — not trained on a script, but from life.</div>
             </div>
             <div className="diff-card">
               <div className="diff-icon">🔒</div>
@@ -262,10 +262,10 @@ export default function BestPeerSupportAppIndiaPage() {
           </div>
         </div>
 
-        {/* Who should use LeanOn */}
+        {/* Who should use How Was Your Day */}
         <div className="section">
-          <h2>Who Should Use LeanOn</h2>
-          <p>LeanOn is the right choice if:</p>
+          <h2>Who Should Use How Was Your Day</h2>
+          <p>How Was Your Day is the right choice if:</p>
           <ul>
             <li>You need to talk to a real human — not an AI, not a bot — who has actually been through something like what you are facing</li>
             <li>You want to vent right now, not in two weeks when a therapist has an opening</li>
@@ -273,12 +273,12 @@ export default function BestPeerSupportAppIndiaPage() {
             <li>You need it to be private — you cannot let the people in your life know you are seeking support</li>
             <li>You cannot afford private therapy (₹1,500–₹5,000/session) but want something more human than an AI chatbot</li>
           </ul>
-          <p>LeanOn is <strong>not</strong> the right choice for diagnosed mental health conditions that require clinical treatment, medication management, or structured psychotherapy. For those, a licensed professional is what is needed — and iCall or a private therapist are more appropriate.</p>
+          <p>How Was Your Day is <strong>not</strong> the right choice for diagnosed mental health conditions that require clinical treatment, medication management, or structured psychotherapy. For those, a licensed professional is what is needed — and iCall or a private therapist are more appropriate.</p>
         </div>
 
         {/* CTA */}
         <div className="cta-card">
-          <h2>Try LeanOn — First 5 Minutes Free</h2>
+          <h2>Try How Was Your Day — First 5 Minutes Free</h2>
           <p>Browse real peer listeners by experience area. No appointment, no subscription. Talk anonymously from ₹160/session.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
@@ -291,23 +291,23 @@ export default function BestPeerSupportAppIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">What is the best peer support app in India?</div>
-            <div className="faq-a">For people who want to talk to a real human with lived experience, LeanOn is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session with the first 5 minutes free, is private, and is available without an appointment.</div>
+            <div className="faq-a">For people who want to talk to a real human with lived experience, How Was Your Day is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session with the first 5 minutes free, is private, and is available without an appointment.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How does LeanOn compare to YourDOST?</div>
-            <div className="faq-a">YourDOST is a mixed platform offering AI tools and sessions with licensed counsellors. Sessions typically cost ₹500–₹2,000 and require booking in advance. LeanOn focuses exclusively on peer support — real people with lived experience. LeanOn is more affordable (₹160/session), private, and available without an appointment.</div>
+            <div className="faq-q">How does How Was Your Day compare to YourDOST?</div>
+            <div className="faq-a">YourDOST is a mixed platform offering AI tools and sessions with licensed counsellors. Sessions typically cost ₹500–₹2,000 and require booking in advance. How Was Your Day focuses exclusively on peer support — real people with lived experience. How Was Your Day is more affordable (₹160/session), private, and available without an appointment.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn better than Wysa?</div>
-            <div className="faq-a">Wysa is an AI chatbot. LeanOn uses real human peer listeners with lived experience. If you want a free AI-based coping tool, Wysa is designed for that. If you want to talk to an actual person who has been through something like what you are facing, LeanOn is the right choice.</div>
+            <div className="faq-q">Is How Was Your Day better than Wysa?</div>
+            <div className="faq-a">Wysa is an AI chatbot. How Was Your Day uses real human peer listeners with lived experience. If you want a free AI-based coping tool, Wysa is designed for that. If you want to talk to an actual person who has been through something like what you are facing, How Was Your Day is the right choice.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What does peer support cost in India?</div>
-            <div className="faq-a">On LeanOn, peer support costs approximately ₹160 per session, with the first 5 minutes free. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.</div>
+            <div className="faq-a">On How Was Your Day, peer support costs approximately ₹160 per session, with the first 5 minutes free. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Are there free peer support apps in India?</div>
-            <div className="faq-a">Wysa offers a free AI chatbot. iCall offers subsidised counselling from ₹200. Government crisis helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free but designed for acute crises, not ongoing peer support. LeanOn offers a free 5-minute trial for every session, with paid sessions from ₹160.</div>
+            <div className="faq-a">Wysa offers a free AI chatbot. iCall offers subsidised counselling from ₹200. Government crisis helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How is peer support different from counselling?</div>

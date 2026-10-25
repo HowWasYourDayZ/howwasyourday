@@ -1,4 +1,4 @@
-package app.leanon;
+package app.howwasyourday;
 
 import android.app.Activity;
 import android.app.KeyguardManager;
@@ -67,7 +67,7 @@ public class IncomingRequestActivity extends Activity {
         int pad = dp(28);
         root.setPadding(pad, pad, pad, pad);
 
-        TextView label = text("LeanOn", 16, Color.parseColor("#9FE3EE"), true);
+        TextView label = text("How Was Your Day", 16, Color.parseColor("#9FE3EE"), true);
         TextView head = text(title == null || title.isEmpty() ? "New session request" : title, 28, Color.WHITE, true);
         TextView sub = text(body == null ? "" : body, 17, Color.parseColor("#D8EEF5"), false);
         root.addView(label);

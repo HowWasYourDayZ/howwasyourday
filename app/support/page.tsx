@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathetic Peer Support for Every Challenge | LeanOn India',
+  title: 'Empathetic Peer Support for Every Challenge | How Was Your Day India',
   description: 'Find empathetic peer support and peer counselling for loneliness, anxiety, grief, breakups, student stress, imposter syndrome, and founder burnout. Explore support topics and request a conversation with a screened human peer listener in India; acceptance depends on availability.',
   keywords: 'empathy, empathetic listener India, peer counselling India, peer support topics India, emotional support India',
-  alternates: { canonical: 'https://www.leanon.app/support' },
+  alternates: { canonical: 'https://www.howwasyourday.live/support' },
   openGraph: {
-    title: 'Empathetic Peer Support for Every Challenge — LeanOn India',
-    description: 'Whatever you are going through, there is someone on LeanOn who has been there. Browse peer support topics and connect with a listener who brings real empathy.',
-    url: 'https://www.leanon.app/support',
-    siteName: 'LeanOn',
+    title: 'Empathetic Peer Support for Every Challenge — How Was Your Day India',
+    description: 'Whatever you are going through, there is someone on How Was Your Day who has been there. Browse peer support topics and connect with a listener who brings real empathy.',
+    url: 'https://www.howwasyourday.live/support',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -20,8 +20,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
   ],
 }
 
@@ -177,7 +177,7 @@ export default function SupportHubPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -216,7 +216,7 @@ export default function SupportHubPage() {
         {/* Intro section */}
         <div className="intro-section">
           <h2>Why Peer Support Works</h2>
-          <p>Unlike therapy, peer support connects you with real people who have lived through similar challenges. On LeanOn, adults can request a one-to-one conversation with a screened peer listener by text or voice. One introductory session of up to 5 minutes is free per account; paid prices depend on listener and mode. Availability varies and requests are not always accepted. Peer listening is not a replacement for therapy.</p>
+          <p>Unlike therapy, peer support connects you with real people who have lived through similar challenges. On How Was Your Day, adults can request a one-to-one conversation with a screened peer listener by text or voice. One introductory session of up to 5 minutes is free per account; paid prices depend on listener and mode. Availability varies and requests are not always accepted. Peer listening is not a replacement for therapy.</p>
         </div>
 
         {/* CTA */}

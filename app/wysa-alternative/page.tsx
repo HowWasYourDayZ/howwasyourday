@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Wysa Alternative — Talk to a Real Human, Not an AI | LeanOn',
-  description: 'Wysa is an AI chatbot — it can\'t truly understand you. LeanOn connects you to a real peer listener in under 2 minutes. First 5 min free. Anonymous.',
+  title: 'Wysa Alternative — Talk to a Real Human, Not an AI | How Was Your Day',
+  description: 'Wysa is an AI chatbot — it can\'t truly understand you. How Was Your Day connects you to a real peer listener in under 2 minutes. First 5 min free. Anonymous.',
   keywords: [
     'wysa alternative', 'wysa app alternative', 'alternative to wysa',
     'wysa vs real person', 'ai chatbot alternative mental health',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'wysa not helpful', 'ai chatbot not enough',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/wysa-alternative',
-    languages: { 'en-IN': 'https://www.leanon.app/wysa-alternative' },
+    canonical: 'https://www.howwasyourday.live/wysa-alternative',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/wysa-alternative' },
   },
   openGraph: {
-    title: 'Done Talking to a Bot? Talk to a Real Person on LeanOn',
-    description: 'Wysa is an AI chatbot — it can\'t truly understand you. LeanOn connects you to a real peer listener in under 2 minutes. First 5 min free. Anonymous.',
-    url: 'https://www.leanon.app/wysa-alternative',
-    siteName: 'LeanOn',
+    title: 'Done Talking to a Bot? Talk to a Real Person on How Was Your Day',
+    description: 'Wysa is an AI chatbot — it can\'t truly understand you. How Was Your Day connects you to a real peer listener in under 2 minutes. First 5 min free. Anonymous.',
+    url: 'https://www.howwasyourday.live/wysa-alternative',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -31,10 +31,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from Wysa?',
+      name: 'How is How Was Your Day different from Wysa?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Wysa is an AI chatbot that uses scripted responses and mood-tracking patterns. LeanOn connects you with a real peer listener — a human being who has experienced life, can read between the lines, and genuinely understands what you\'re feeling. AI is useful for tracking moods; for actually feeling heard, you need a human.',
+        text: 'Wysa is an AI chatbot that uses scripted responses and mood-tracking patterns. How Was Your Day connects you with a real peer listener — a human being who has experienced life, can read between the lines, and genuinely understands what you\'re feeling. AI is useful for tracking moods; for actually feeling heard, you need a human.',
       },
     },
     {
@@ -47,10 +47,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn an AI?',
+      name: 'Is How Was Your Day an AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is entirely human. Every listener on LeanOn is a real person — a screened peer who has been through their own struggles and genuinely wants to support others. There is no AI, no bots, no automated replies.',
+        text: 'No. How Was Your Day is entirely human. Every listener on How Was Your Day is a real person — a screened peer who has been through their own struggles and genuinely wants to support others. There is no AI, no bots, no automated replies.',
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn free?',
+      name: 'Is How Was Your Day free?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5-minute session is completely free — no credit card, no commitment. After that, sessions start at ₹160 for 15 minutes. You only pay for the time you use.',
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Wysa Alternative', item: 'https://www.leanon.app/wysa-alternative' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Wysa Alternative', item: 'https://www.howwasyourday.live/wysa-alternative' },
   ],
 }
 
@@ -152,11 +152,11 @@ export default function WysaAlternativePage() {
           <a href="/">Home</a><span>›</span>Wysa Alternative
         </div>
 
-        <h1>Done Talking to a Bot?<br />Talk to a Real Person on LeanOn</h1>
+        <h1>Done Talking to a Bot?<br />Talk to a Real Person on How Was Your Day</h1>
         <p className="lead">
           Wysa is a well-designed AI chatbot — and AI is genuinely useful for tracking moods and building
           habits. But when you need to actually feel understood, no algorithm can replace a human being who
-          has been through it themselves. LeanOn connects you to a real peer listener in under 2 minutes.
+          has been through it themselves. How Was Your Day connects you to a real peer listener in under 2 minutes.
           First 5 minutes free. Private.
         </p>
 
@@ -177,13 +177,13 @@ export default function WysaAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>Wysa vs LeanOn — what&apos;s actually different</h2>
+          <h2>Wysa vs How Was Your Day — what&apos;s actually different</h2>
           <table className="compare-table">
             <thead>
               <tr>
                 <th>Feature</th>
                 <th>Wysa</th>
-                <th>LeanOn</th>
+                <th>How Was Your Day</th>
               </tr>
             </thead>
             <tbody>
@@ -222,7 +222,7 @@ export default function WysaAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>How LeanOn works — 3 simple steps</h2>
+          <h2>How the app works — 3 simple steps</h2>
           <ul className="steps">
             <li>
               <div>
@@ -253,7 +253,7 @@ export default function WysaAlternativePage() {
           </p>
           <p>
             The difference is that emotional support — the feeling that someone truly gets you — requires
-            a human on the other end. Peer listeners on LeanOn have been through their own struggles.
+            a human on the other end. Peer listeners on How Was Your Day have been through their own struggles.
             They are not reading from a script. They are actually with you.
           </p>
         </div>
@@ -268,8 +268,8 @@ export default function WysaAlternativePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>How is LeanOn different from Wysa?</h3>
-            <p>Wysa is an AI chatbot that uses scripted responses and mood-tracking patterns. LeanOn connects
+            <h3>How is How Was Your Day different from Wysa?</h3>
+            <p>Wysa is an AI chatbot that uses scripted responses and mood-tracking patterns. How Was Your Day connects
               you with a real peer listener — a human who has experienced life, can read between the lines, and
               genuinely understands what you&apos;re feeling. AI is useful for tracking moods; for actually
               feeling heard, you need a human.</p>
@@ -281,8 +281,8 @@ export default function WysaAlternativePage() {
               Many people find that being truly heard reduces anxiety more than any chatbot script.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn an AI?</h3>
-            <p>No. LeanOn is entirely human. Every listener on LeanOn is a real person — a screened peer who has
+            <h3>Is How Was Your Day an AI?</h3>
+            <p>No. How Was Your Day is entirely human. Every listener on How Was Your Day is a real person — a screened peer who has
               been through their own struggles and genuinely wants to support others. There is no AI, no bots,
               no automated replies.</p>
           </div>
@@ -293,7 +293,7 @@ export default function WysaAlternativePage() {
               give you the one thing AI cannot: genuine human presence and empathy.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn free?</h3>
+            <h3>Is How Was Your Day free?</h3>
             <p>Your first 5-minute session is completely free — no credit card, no commitment. After that,
               sessions start at ₹160 for 15 minutes. You only pay for the time you use.</p>
           </div>
@@ -312,7 +312,7 @@ export default function WysaAlternativePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for emergency mental health care.
+            How Was Your Day is peer support — not a substitute for emergency mental health care.
           </p>
         </div>
       </div>

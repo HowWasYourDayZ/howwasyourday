@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone Online in Malaysia | LeanOn',
-  description: 'Need a real person to talk to in Malaysia? LeanOn connects Indian expats with screened peer listeners in India — in Tamil, Hindi, Telugu, and more. First 5 minutes free.',
+  title: 'Talk to Someone Online in Malaysia | How Was Your Day',
+  description: 'Need a real person to talk to in Malaysia? How Was Your Day connects Indian expats with screened peer listeners in India — in Tamil, Hindi, Telugu, and more. First 5 minutes free.',
   keywords: [
     'talk to someone online malaysia', 'someone to talk to malaysia', 'need to talk malaysia',
     'online chat support malaysia', 'talk to a person malaysia', 'emotional support online malaysia',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'online listener malaysia', 'indian expat support malaysia', 'tamil listener malaysia',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/malaysia-talk-to-someone',
-    languages: { 'en-MY': 'https://www.leanon.app/malaysia-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/malaysia-talk-to-someone',
+    languages: { 'en-MY': 'https://www.howwasyourday.live/malaysia-talk-to-someone' },
   },
   openGraph: {
-    title: 'Talk to Someone Online in Malaysia — Real Indian Listeners | LeanOn',
-    description: 'Need a real person to talk to in Malaysia? LeanOn connects Indian expats with peer listeners in India — in Tamil, Hindi, and your language, with no judgment.',
-    url: 'https://www.leanon.app/malaysia-talk-to-someone',
-    siteName: 'LeanOn',
+    title: 'Talk to Someone Online in Malaysia — Real Indian Listeners | How Was Your Day',
+    description: 'Need a real person to talk to in Malaysia? How Was Your Day connects Indian expats with peer listeners in India — in Tamil, Hindi, and your language, with no judgment.',
+    url: 'https://www.howwasyourday.live/malaysia-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Can I talk to someone in Malaysia right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time. No appointment needed, no waiting list. Browse the listeners who are online and start talking immediately.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time. No appointment needed, no waiting list. Browse the listeners who are online and start talking immediately.',
       },
     },
     {
@@ -50,15 +50,15 @@ const faqSchema = {
       name: 'Can I talk to a Tamil-speaking listener from Malaysia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has Tamil-speaking listeners available on Indian time. You can also talk in Hindi, Telugu, Malayalam, Kannada, Bengali, or English. Browse listener profiles to find one who speaks your language.',
+        text: 'Yes. How Was Your Day has Tamil-speaking listeners available on Indian time. You can also talk in Hindi, Telugu, Malayalam, Kannada, Bengali, or English. Browse listener profiles to find one who speaks your language.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are LeanOn listeners real people?',
+      name: 'Are How Was Your Day listeners real people?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, every listener on LeanOn is a real, screened human being from India — not a chatbot or AI. They go through a thorough vetting and training process before being allowed on the platform.',
+        text: 'Yes, every listener on How Was Your Day is a real, screened human being from India — not a chatbot or AI. They go through a thorough vetting and training process before being allowed on the platform.',
       },
     },
     {
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Malaysia', item: 'https://www.leanon.app/malaysia-talk-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Malaysia', item: 'https://www.howwasyourday.live/malaysia-talk-to-someone' },
   ],
 }
 
@@ -157,7 +157,7 @@ export default function MalaysiaTalkToSomeonePage() {
         <h1>You Just Want Someone<br />to Actually Talk To.</h1>
         <p className="lead">
           Not an app. Not a chatbot. Not another scroll through social media. A real person — warm,
-          Indian, who understands your world — who will give you their complete attention. LeanOn
+          Indian, who understands your world — who will give you their complete attention. How Was Your Day
           makes that possible from Malaysia — your evenings overlap Indian evenings, when most listeners are online.
         </p>
 
@@ -181,13 +181,13 @@ export default function MalaysiaTalkToSomeonePage() {
           <p>It is past 11 PM. The day was a lot. You are not ready to sleep, but you do not want
             to stare at your phone. You want to talk — for real, to a real person, in Tamil or Hindi
             or whatever feels natural.</p>
-          <p>LeanOn listeners are online right now. Indian, screened, warm, and ready.</p>
+          <p>How Was Your Day listeners are online right now. Indian, screened, warm, and ready.</p>
           <a href="/browse" className="cta-night">Find someone to talk to →</a>
         </div>
 
         <div className="card">
           <h2>Real listeners. Not AI. Not bots.</h2>
-          <p>Every LeanOn listener is a human being from India who chose this work. They are screened by LeanOn — a written application, a quiz on handling difficult conversations and a manual review — before their first session. They speak Tamil, Hindi,
+          <p>Every How Was Your Day listener is a human being from India who chose this work. They are screened by How Was Your Day — a written application, a quiz on handling difficult conversations and a manual review — before their first session. They speak Tamil, Hindi,
             Telugu, Malayalam, Kannada, Bengali, and English.</p>
           <p>You can be yourself completely. There is no algorithm deciding how to respond. There
             is a person — genuinely paying attention to you.</p>
@@ -224,7 +224,7 @@ export default function MalaysiaTalkToSomeonePage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Can I talk to someone in Malaysia right now?</h3>
-            <p>Yes. LeanOn listeners are based in India, so availability follows Indian time. No appointment needed. Browse online listeners
+            <p>Yes. How Was Your Day listeners are based in India, so availability follows Indian time. No appointment needed. Browse online listeners
               and start talking immediately.</p>
           </div>
           <div className="faq-item">
@@ -234,11 +234,11 @@ export default function MalaysiaTalkToSomeonePage() {
           </div>
           <div className="faq-item">
             <h3>Can I talk to a Tamil-speaking listener from Malaysia?</h3>
-            <p>Yes. LeanOn has Tamil-speaking listeners (availability follows Indian time). You can also find
+            <p>Yes. How Was Your Day has Tamil-speaking listeners (availability follows Indian time). You can also find
               listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English.</p>
           </div>
           <div className="faq-item">
-            <h3>Are LeanOn listeners real people?</h3>
+            <h3>Are How Was Your Day listeners real people?</h3>
             <p>Yes — real, trained human beings from India, not chatbots or AI. They go through thorough
               vetting and training before joining the platform.</p>
           </div>
@@ -262,7 +262,7 @@ export default function MalaysiaTalkToSomeonePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

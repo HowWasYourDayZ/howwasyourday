@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'Talk to a Stranger Online India — Real Person, No Judgment, Right Now | LeanOn',
+  title: 'Talk to a Stranger Online India — Real Person, No Judgment, Right Now | How Was Your Day',
   description: 'Sometimes the best person to talk to is someone who does not know you. Talk to a real peer listener in India — private, confidential, no appointment.',
   keywords: [
     'talk to a stranger online India', 'stranger to talk to online India',
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     'talk to someone I don\'t know India', 'random chat with real person India',
     'confide in stranger online India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/talk-to-stranger-online-india', languages: { 'en-IN': 'https://www.leanon.app/talk-to-stranger-online-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-stranger-online-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-stranger-online-india' } },
   openGraph: {
-    title: 'Talk to a Stranger Online India — Real Person, No Judgment, Right Now | LeanOn',
+    title: 'Talk to a Stranger Online India — Real Person, No Judgment, Right Now | How Was Your Day',
     description: 'Sometimes the best person to talk to is someone who does not know you. Talk to a real peer listener in India — private, confidential, no appointment.',
-    url: 'https://www.leanon.app/talk-to-stranger-online-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/talk-to-stranger-online-india',
+    siteName: 'How Was Your Day',
     type: 'website',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Talk to a Stranger Online India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Talk to a Stranger Online India' }],
   },
 }
 
@@ -35,27 +35,27 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is it safe to talk to a stranger online in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'On LeanOn, yes. Unlike random chat apps, LeanOn listeners are screened, approved, and bound by LeanOn’s confidentiality rules. They are not random strangers — they are peer listeners who have applied, been reviewed, and selected to hold space for difficult conversations. You can be anonymous; they are accountable.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'On How Was Your Day, yes. Unlike random chat apps, How Was Your Day listeners are screened, approved, and bound by How Was Your Day’s confidentiality rules. They are not random strangers — they are peer listeners who have applied, been reviewed, and selected to hold space for difficult conversations. You can be anonymous; they are accountable.' },
     },
     {
       '@type': 'Question',
       name: 'Why would I want to talk to a stranger instead of someone I know?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Because people who know you come with history, stakes, and social consequences. When you tell a friend something difficult, you often end up managing their reaction too. A peer listener on LeanOn has no connection to your life, no prior opinions about the people you mention, and no risk of the conversation going further. That creates a kind of honesty that is often not available with people close to you.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Because people who know you come with history, stakes, and social consequences. When you tell a friend something difficult, you often end up managing their reaction too. A peer listener on How Was Your Day has no connection to your life, no prior opinions about the people you mention, and no risk of the conversation going further. That creates a kind of honesty that is often not available with people close to you.' },
     },
     {
       '@type': 'Question',
-      name: 'What can I talk about with a stranger on LeanOn?',
+      name: 'What can I talk about with a stranger on How Was Your Day?',
       acceptedAnswer: { '@type': 'Answer', text: 'Anything you need to get off your chest. Work stress, a fight with a partner, loneliness, anxiety, a decision you are wrestling with, something you cannot tell the people around you, something you just need to say out loud. There is no topic too small and no threshold of severity required. If something is pressing on you, that is enough.' },
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from random stranger chat apps?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Completely different. Random chat apps connect you with unvetted strangers whose intentions are unknown. LeanOn is a platform specifically for emotional support — every listener has been reviewed, screened for active listening and supportive conversation, and has agreed to maintain your confidentiality. You are not talking to a random person. You are talking to someone who chose this role and knows how to hold it.' },
+      name: 'How is How Was Your Day different from random stranger chat apps?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Completely different. Random chat apps connect you with unvetted strangers whose intentions are unknown. How Was Your Day is a platform specifically for emotional support — every listener has been reviewed, screened for active listening and supportive conversation, and has agreed to maintain your confidentiality. You are not talking to a random person. You are talking to someone who chose this role and knows how to hold it.' },
     },
     {
       '@type': 'Question',
       name: 'Will the stranger I talk to judge me?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Peer listeners on LeanOn are specifically screened for non-judgmental listening. Part of what makes them effective is the absence of judgment — they are not there to evaluate you, advise you, or form opinions about your choices. They are there to hear what you need to say and to be present with you through it. People consistently report feeling received rather than assessed.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Peer listeners on How Was Your Day are specifically screened for non-judgmental listening. Part of what makes them effective is the absence of judgment — they are not there to evaluate you, advise you, or form opinions about your choices. They are there to hear what you need to say and to be present with you through it. People consistently report feeling received rather than assessed.' },
     },
     {
       '@type': 'Question',
@@ -69,8 +69,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to a Stranger Online', item: 'https://www.leanon.app/talk-to-stranger-online-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to a Stranger Online', item: 'https://www.howwasyourday.live/talk-to-stranger-online-india' },
   ],
 }
 
@@ -136,7 +136,7 @@ export default function TalkToStrangerOnlineIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -161,7 +161,7 @@ export default function TalkToStrangerOnlineIndiaPage() {
           <h2>Why a Stranger? The Train Conversation Phenomenon</h2>
           <p>There is a reason people tell things to strangers on trains that they have not told their closest friends. Something about the combination of presence and no-consequences creates a different kind of honesty. You can say the unedited version. You can say the thing that makes you look bad. You can express the feeling you would normally soften for an audience who knows you.</p>
           <p>The conversation ends and you go your separate ways. But something has shifted — the thing you were carrying is lighter. This is not a bug in how humans work. It is a feature that most people never deliberately access.</p>
-          <p>LeanOn makes that conversation available, on demand, with someone who has selected to hold it.</p>
+          <p>How Was Your Day makes that conversation available, on demand, with someone who has selected to hold it.</p>
         </div>
 
         <div className="section">
@@ -178,7 +178,7 @@ export default function TalkToStrangerOnlineIndiaPage() {
               </ul>
             </div>
             <div className="compare-card good">
-              <h3>LeanOn peer listener</h3>
+              <h3>How Was Your Day peer listener</h3>
               <ul>
                 <li>Reviewed and approved</li>
                 <li>Screened for active listening</li>
@@ -198,7 +198,7 @@ export default function TalkToStrangerOnlineIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>Who Uses LeanOn for This</h2>
+          <h2>Who Uses How Was Your Day for This</h2>
           <p>People who need to say something they cannot say in their regular life:</p>
           <ul>
             <li>The thing about a family member that would cause conflict if said directly</li>

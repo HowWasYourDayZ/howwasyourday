@@ -4,17 +4,17 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Like a Failure? Peer Support in India | LeanOn',
+  title: 'Feeling Like a Failure? Peer Support in India | How Was Your Day',
   description: 'Feel like you\'re failing at life, work, or relationships? Talk to a real peer listener in India who has felt the same and come through it. Anonymous, no appointment.',
   keywords: ['feeling like a failure India', 'I am a failure India', 'feel worthless India', 'feel like I am not good enough India', 'failure at life India', 'failing at everything India', 'I am a disappointment India', 'feel inadequate India', 'not good enough India', 'peer support for failure India', 'I failed my family India', 'startup failure India', 'career failure India', 'exam failure India', 'how to deal with failure India'],
-  alternates: { canonical: 'https://www.leanon.app/support/feeling-like-a-failure', languages: { 'en-IN': 'https://www.leanon.app/support/feeling-like-a-failure' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/feeling-like-a-failure', languages: { 'en-IN': 'https://www.howwasyourday.live/support/feeling-like-a-failure' } },
   openGraph: {
-    title: 'Feeling Like a Failure? Peer Support in India | LeanOn',
+    title: 'Feeling Like a Failure? Peer Support in India | How Was Your Day',
     description: 'Feel like you\'re failing at life, work, or relationships? Talk to a real peer listener in India who has felt the same and come through it. Anonymous, no appointment.',
-    url: 'https://www.leanon.app/support/feeling-like-a-failure',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/feeling-like-a-failure',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn peer support for feeling like a failure' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day peer support for feeling like a failure' }],
   },
 }
 
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'How does talking to a peer listener help with feeling like a failure?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer listeners on LeanOn have personally felt what you are feeling — startup failures, exam failures, career wrong turns, relationship failures. When they tell you it is survivable, they are not being optimistic. They are reporting from the other side of the same hole. That is different from being reassured by someone who has never been there.',
+        text: 'Peer listeners on How Was Your Day have personally felt what you are feeling — startup failures, exam failures, career wrong turns, relationship failures. When they tell you it is survivable, they are not being optimistic. They are reporting from the other side of the same hole. That is different from being reassured by someone who has never been there.',
       },
     },
     {
@@ -77,9 +77,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Feeling Like a Failure', item: 'https://www.leanon.app/support/feeling-like-a-failure' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Feeling Like a Failure', item: 'https://www.howwasyourday.live/support/feeling-like-a-failure' },
   ],
 }
 
@@ -140,7 +140,7 @@ export default function FeelingLikeAFailurePage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -158,7 +158,7 @@ export default function FeelingLikeAFailurePage() {
         <div className="hero">
           <p className="tag">Peer Support · Failure & Inadequacy</p>
           <h1>The Feeling of <em>Failure</em> Is Not the Fact of Failure</h1>
-          <p className="lead">Millions of people in India carry a persistent sense of not being enough — even when the evidence does not support it. LeanOn connects you with peer listeners who have personally navigated failure, come through it, and can sit with you in it now.</p>
+          <p className="lead">Millions of people in India carry a persistent sense of not being enough — even when the evidence does not support it. How Was Your Day connects you with peer listeners who have personally navigated failure, come through it, and can sit with you in it now.</p>
         </div>
 
         <GeoQuickAnswer path="/support/feeling-like-a-failure" />
@@ -213,7 +213,7 @@ export default function FeelingLikeAFailurePage() {
           <p>There is something specific that happens when you say &apos;I feel like a failure&apos; out loud to another person. It changes the experience of the thought. The thought that loops endlessly in your head, when spoken out loud, becomes something you can look at rather than something that is looking at you. The person&apos;s response matters less than the act of externalising it.</p>
 
           <h3>Talking to Someone Who Has Been There</h3>
-          <p>Advice from people who have never failed — or who are in the reassurance business — does not land. What lands is: someone who has personally sat where you are sitting, who knows what the specific gravity of that feeling is like, and who is on the other side of it. LeanOn peer listeners are people who have navigated startup failure, exam failure, career setbacks, and family disappointment. When they tell you it gets better, they know what they are talking about.</p>
+          <p>Advice from people who have never failed — or who are in the reassurance business — does not land. What lands is: someone who has personally sat where you are sitting, who knows what the specific gravity of that feeling is like, and who is on the other side of it. How Was Your Day peer listeners are people who have navigated startup failure, exam failure, career setbacks, and family disappointment. When they tell you it gets better, they know what they are talking about.</p>
 
           <h3>Decoupling Worth From Outcome</h3>
           <p>This is the deeper work — and it is not something that happens in one conversation. But it begins somewhere. The beginning is usually recognising that the equation of worth with outcome was given to you, not chosen by you. You were taught it. And what was taught can be examined, and gradually, unlearned.</p>
@@ -255,7 +255,7 @@ export default function FeelingLikeAFailurePage() {
           <p>A peer listener who has personally navigated failure — and come through it — may be online right now. Private, no judgment, no appointments.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who will listen — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -271,7 +271,7 @@ export default function FeelingLikeAFailurePage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>The feeling of failure often connects with other experiences. Explore more peer support on LeanOn:</p>
+          <p>The feeling of failure often connects with other experiences. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/imposter-syndrome" className="related-link">Imposter Syndrome</a>
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>

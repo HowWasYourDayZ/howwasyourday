@@ -1,5 +1,5 @@
 /**
- * LeanOn.app — Exhaustive End-to-End Test Suite
+ * How Was Your Day — Exhaustive End-to-End Test Suite
  *
  * Covers every happy path, sad path, edge case, security concern, and race
  * condition across all three personas:
@@ -8,7 +8,7 @@
  *   - Admin (authenticated platform admin)
  *
  * Notes:
- *  • Production at https://www.leanon.app is tested when PLAYWRIGHT_BASE_URL is set.
+ *  • Production at https://www.howwasyourday.live is tested when PLAYWRIGHT_BASE_URL is set.
  *  • skipIfBlocked() auto-skips browser tests when Vercel deployment-protection
  *    returns 403 from the test environment (CI / datacenter IPs).
  *  • API security tests accept [401, 403] — Vercel's WAF may return 403 before
@@ -64,8 +64,8 @@ async function skipIfBlocked(page: Page) {
 
 test.describe('Public pages — status codes', () => {
   const publicRoutes = [
-    '/', '/browse', '/faq', '/about', '/leanon', '/why-leanon',
-    '/how-leanon-works', '/is-leanon-safe', '/support/loneliness',
+    '/', '/browse', '/faq', '/about', '/howwasyourday', '/why-howwasyourday',
+    '/how-it-works', '/is-howwasyourday-safe', '/support/loneliness',
     '/support/anxiety', '/support/grief', '/support/breakup',
     '/support/career-confusion', '/support/founder-burnout',
     '/support/student-stress', '/support/emotional-support',
@@ -76,7 +76,7 @@ test.describe('Public pages — status codes', () => {
     '/alternatives-to-therapy-india', '/feeling-lonely-in-india',
     '/online-emotional-support-india', '/our-story', '/trust', '/press',
     '/privacy', '/terms', '/contact', '/glossary',
-    '/leanon-app-mental-health', '/anonymous-peer-support',
+    '/howwasyourday-app-mental-health', '/anonymous-peer-support',
     '/need-someone-to-talk-to-india', '/get-paid-to-chat-india',
   ]
 
@@ -112,11 +112,11 @@ test.describe('Public pages — does not require auth', () => {
 // ─── 2. SEO & METADATA ────────────────────────────────────────────────────────
 
 test.describe('SEO metadata', () => {
-  test('homepage — title contains "LeanOn"', async ({ page }) => {
+  test('homepage — title contains "How Was Your Day"', async ({ page }) => {
     await skipIfBlocked(page)
     await page.goto('/')
     const title = await page.title()
-    expect(title).toContain('LeanOn')
+    expect(title).toContain('How Was Your Day')
   })
 
   test('homepage — meta description is substantial', async ({ page }) => {
@@ -176,12 +176,12 @@ test.describe('SEO metadata', () => {
     expect(title).toBeTruthy()
   })
 
-  test('sitemap.xml — returns 200 with leanon.app URLs', async ({ page }) => {
+  test('sitemap.xml — returns 200 with howwasyourday.live URLs', async ({ page }) => {
     await skipIfBlocked(page)
     const res = await page.goto('/sitemap.xml')
     expect(res?.status()).toBe(200)
     const text = await page.content()
-    expect(text).toContain('leanon.app')
+    expect(text).toContain('howwasyourday.live')
   })
 
   test('robots.txt — accessible with sitemap or user-agent directive', async ({ page }) => {
@@ -203,18 +203,18 @@ test.describe('SEO metadata', () => {
     await page.goto('/')
     const canonical = await page.getAttribute('link[rel="canonical"]', 'href')
     expect(canonical).toBeTruthy()
-    expect(canonical).toContain('leanon.app')
+    expect(canonical).toContain('howwasyourday.live')
   })
 })
 
 // ─── 3. HOMEPAGE CONTENT ──────────────────────────────────────────────────────
 
 test.describe('Homepage content', () => {
-  test('shows brand name "LeanOn"', async ({ page }) => {
+  test('shows brand name "How Was Your Day"', async ({ page }) => {
     await skipIfBlocked(page)
     await page.goto('/')
     const text = await page.evaluate(() => document.body.innerText)
-    expect(text).toMatch(/LeanOn/i)
+    expect(text).toMatch(/How Was Your Day/i)
   })
 
   test('has CTA button linking to /browse or /auth', async ({ page }) => {
@@ -755,33 +755,33 @@ test.describe('Content pages — substance checks', () => {
     expect(res?.status()).not.toBe(500)
   })
 
-  test('/our-story — mentions LeanOn or mission', async ({ page }) => {
+  test('/our-story — mentions How Was Your Day or mission', async ({ page }) => {
     await skipIfBlocked(page)
     await page.goto('/our-story')
     await page.waitForLoadState('domcontentloaded')
     const text = await page.evaluate(() => document.body.innerText)
-    expect(text.toLowerCase()).toMatch(/leanon|story|mission|why|peer/i)
+    expect(text.toLowerCase()).toMatch(/howwasyourday|story|mission|why|peer/i)
   })
 
-  test('/is-leanon-safe — mentions safety', async ({ page }) => {
+  test('/is-howwasyourday-safe — mentions safety', async ({ page }) => {
     await skipIfBlocked(page)
-    await page.goto('/is-leanon-safe')
+    await page.goto('/is-howwasyourday-safe')
     await page.waitForLoadState('domcontentloaded')
     const text = await page.evaluate(() => document.body.innerText)
     expect(text.toLowerCase()).toMatch(/safe|privacy|anonymous/i)
   })
 
-  test('/how-leanon-works — explains the process', async ({ page }) => {
+  test('/how-it-works — explains the process', async ({ page }) => {
     await skipIfBlocked(page)
-    await page.goto('/how-leanon-works')
+    await page.goto('/how-it-works')
     await page.waitForLoadState('domcontentloaded')
     const text = await page.evaluate(() => document.body.innerText)
     expect(text.toLowerCase()).toMatch(/how|step|listener|session/i)
   })
 
-  test('/why-leanon — gives reasons', async ({ page }) => {
+  test('/why-howwasyourday — gives reasons', async ({ page }) => {
     await skipIfBlocked(page)
-    await page.goto('/why-leanon')
+    await page.goto('/why-howwasyourday')
     await page.waitForLoadState('domcontentloaded')
     const text = await page.evaluate(() => document.body.innerText)
     expect(text.length).toBeGreaterThan(100)
@@ -831,7 +831,7 @@ test.describe('404 handling', () => {
     await page.goto('/nonexistent-page-testing-404')
     await page.waitForLoadState('domcontentloaded')
     const html = await page.content()
-    expect(html).toMatch(/browse|home|leanon/i)
+    expect(html).toMatch(/browse|home|howwasyourday/i)
   })
 
   test('404 page has "404" or "not found" text', async ({ page }) => {
@@ -909,7 +909,7 @@ test.describe('Navigation flows', () => {
     if (await homeLink.isVisible({ timeout: 2000 })) {
       await homeLink.click()
       await page.waitForLoadState('domcontentloaded')
-      expect(page.url()).toMatch(/leanon\.app\/?$|localhost:\d+\/?$/)
+      expect(page.url()).toMatch(/howwasyourday\.app\/?$|localhost:\d+\/?$/)
     }
   })
 })
@@ -1096,7 +1096,7 @@ test.describe('CSRF protection', () => {
   })
 
   test('POST to /api/webhooks/razorpay is exempt from CSRF origin check', async ({ request }) => {
-    // Webhooks come from Razorpay servers, not from leanon.app
+    // Webhooks come from Razorpay servers, not from howwasyourday.live
     const res = await request.post('/api/webhooks/razorpay', {
       data: JSON.stringify({ event: 'test' }),
       headers: {

@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Noida — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Noida, NCR. Young professionals, IT burnout, apartment loneliness. Talk anonymously on LeanOn from ₹160.',
-  alternates: { canonical: 'https://www.leanon.app/noida', languages: { 'en-IN': 'https://www.leanon.app/noida' } },
-  keywords: 'peer support Noida, emotional support Noida NCR, IT burnout Noida, loneliness Noida, work stress Noida, talk to someone Noida, leanon Noida',
+  title: 'Emotional Support in Noida — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Noida, NCR. Young professionals, IT burnout, apartment loneliness. Talk anonymously on How Was Your Day from ₹160.',
+  alternates: { canonical: 'https://www.howwasyourday.live/noida', languages: { 'en-IN': 'https://www.howwasyourday.live/noida' } },
+  keywords: 'peer support Noida, emotional support Noida NCR, IT burnout Noida, loneliness Noida, work stress Noida, talk to someone Noida, howwasyourday Noida',
   openGraph: {
-    title: 'Emotional Support in Noida — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Noida, NCR. Young professionals, IT burnout, apartment loneliness. Talk anonymously on LeanOn from ₹160.',
-    url: 'https://www.leanon.app/noida',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Noida — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Noida, NCR. Young professionals, IT burnout, apartment loneliness. Talk anonymously on How Was Your Day from ₹160.',
+    url: 'https://www.howwasyourday.live/noida',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -46,7 +46,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What kind of issues do Noida users talk about on LeanOn?',
+      name: 'What kind of issues do Noida users talk about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'The most common topics from Noida include work pressure and IT burnout, loneliness in apartment complexes, career confusion, relationship stress (often long-distance), and the specific anxiety of being far from family while navigating a demanding career.',
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn peer support different from therapy?',
+      name: 'Is How Was Your Day peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is peer support, not therapy. Listeners are screened peers with lived experience — not licensed therapists. More accessible (from ₹160 for 15 minutes), and anonymous. For clinical mental health concerns, professional help is always recommended.',
+        text: 'Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers with lived experience — not licensed therapists. More accessible (from ₹160 for 15 minutes), and anonymous. For clinical mental health concerns, professional help is always recommended.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Noida', item: 'https://www.leanon.app/noida' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Noida', item: 'https://www.howwasyourday.live/noida' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/noida',
+  url: 'https://www.howwasyourday.live/noida',
   areaServed: { '@type': 'City', name: 'Noida', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -144,7 +144,7 @@ export default function NoidaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -157,7 +157,7 @@ export default function NoidaPage() {
         <div className="hero">
           <p className="tag">Peer Support · Noida · NCR</p>
           <h1>Peer Support in Noida — Someone to Talk to in <em>India&apos;s IT Corridor</em></h1>
-          <p className="lead">Noida is home to lakhs of young professionals building careers in IT, finance, and corporate India. What the sectors do not show: the loneliness of apartment life, the burnout of long hours, and the commute that eats what is left. LeanOn connects you with peer listeners who get it.</p>
+          <p className="lead">Noida is home to lakhs of young professionals building careers in IT, finance, and corporate India. What the sectors do not show: the loneliness of apartment life, the burnout of long hours, and the commute that eats what is left. How Was Your Day connects you with peer listeners who get it.</p>
         </div>
 
         <div className="section">
@@ -173,7 +173,7 @@ export default function NoidaPage() {
         </div>
 
         <div className="section">
-          <h2>What Noida Users Talk About on LeanOn</h2>
+          <h2>What Noida Users Talk About on How Was Your Day</h2>
           <ul>
             <li><strong>Work stress and IT burnout</strong> — the sprint that never ends, performance reviews, the fear of being replaced</li>
             <li><strong>Loneliness after relocating</strong> — having colleagues but not friends, the hollow feeling of a full calendar</li>
@@ -207,12 +207,12 @@ export default function NoidaPage() {
             <div className="faq-a">NCR commutes — especially on the Delhi-Noida stretch — are among the most draining in India. Many workers spend 3-4 hours daily commuting, reducing time for social connection and compounding the isolation of apartment living.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What kind of issues do Noida users talk about on LeanOn?</div>
+            <div className="faq-q">What kind of issues do Noida users talk about on How Was Your Day?</div>
             <div className="faq-a">The most common topics include work pressure and IT burnout, loneliness in apartment complexes, career confusion, long-distance relationship stress, and the anxiety of being far from family.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn peer support different from therapy?</div>
-            <div className="faq-a">Yes. LeanOn is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and anonymous.</div>
+            <div className="faq-q">Is How Was Your Day peer support different from therapy?</div>
+            <div className="faq-a">Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and anonymous.</div>
           </div>
         </div>
 
@@ -229,9 +229,9 @@ export default function NoidaPage() {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals.</p>
         </div>
       </div>
     </>

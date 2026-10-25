@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: data.title,
   description: data.description,
   keywords: data.searchTerms,
-  alternates: { canonical: 'https://www.leanon.app/india' },
-  openGraph: { title: data.title, description: data.description, url: 'https://www.leanon.app/india', type: 'website', siteName: 'LeanOn' },
+  alternates: { canonical: 'https://www.howwasyourday.live/india' },
+  openGraph: { title: data.title, description: data.description, url: 'https://www.howwasyourday.live/india', type: 'website', siteName: 'How Was Your Day' },
 }
 export default function Page() {
   return <CountrySeoPage data={data} />

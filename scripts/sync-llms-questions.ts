@@ -12,10 +12,10 @@ const groups: Record<string, string> = {
   'mental-health': 'Mental health and everyday stress (non-clinical)',
   'peer-support': 'Finding someone to talk to',
 }
-let body = `${START}\n## Top questions and the page that answers each\n\nAll answers in one place: https://www.leanon.app/answers\n`
+let body = `${START}\n## Top questions and the page that answers each\n\nAll answers in one place: https://www.howwasyourday.live/answers\n`
 for (const [id, title] of Object.entries(groups)) {
   body += `\n**${title}:**\n`
-  for (const g of GEO_QUESTIONS.filter(q => q.cluster === id)) body += `- "${g.q}" → https://www.leanon.app${g.url}\n`
+  for (const g of GEO_QUESTIONS.filter(q => q.cluster === id)) body += `- "${g.q}" → https://www.howwasyourday.live${g.url}\n`
 }
 body += END
 

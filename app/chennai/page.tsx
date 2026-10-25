@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Chennai — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Chennai, India. No appointment needed. Talk anonymously in Tamil or English about anxiety, loneliness, family pressure, and more on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/chennai', languages: { 'en-IN': 'https://www.leanon.app/chennai' } },
-  keywords: 'peer support Chennai, emotional support Chennai, loneliness Chennai, talk to someone Chennai, Tamil emotional support, family pressure Chennai, leanon Chennai',
+  title: 'Emotional Support in Chennai — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Chennai, India. No appointment needed. Talk anonymously in Tamil or English about anxiety, loneliness, family pressure, and more on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/chennai', languages: { 'en-IN': 'https://www.howwasyourday.live/chennai' } },
+  keywords: 'peer support Chennai, emotional support Chennai, loneliness Chennai, talk to someone Chennai, Tamil emotional support, family pressure Chennai, howwasyourday Chennai',
   openGraph: {
-    title: 'Emotional Support in Chennai — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Chennai, India. No appointment needed. Talk anonymously in Tamil or English on LeanOn.',
-    url: 'https://www.leanon.app/chennai',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Chennai — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Chennai, India. No appointment needed. Talk anonymously in Tamil or English on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/chennai',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -22,10 +22,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Can I talk to a listener in Tamil on LeanOn?',
+      name: 'Can I talk to a listener in Tamil on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has peer listeners who speak Tamil as well as English. You can filter listeners by language on the browse page and have your entire session in Tamil if that is what feels most natural. Many people find that emotional conversations flow far more honestly in their mother tongue.',
+        text: 'Yes. How Was Your Day has peer listeners who speak Tamil as well as English. You can filter listeners by language on the browse page and have your entire session in Tamil if that is what feels most natural. Many people find that emotional conversations flow far more honestly in their mother tongue.',
       },
     },
     {
@@ -38,10 +38,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous? My family circle in Chennai is very connected.',
+      name: 'Is How Was Your Day anonymous? My family circle in Chennai is very connected.',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, completely. Only the name you choose (a first name or nickname is fine) is shown to a listener — no phone number, no photo, no surname, no location. Nobody in your family, office, or social circle can discover that you use LeanOn. This matters especially in close-knit communities where word travels fast.',
+        text: 'Yes, completely. Only the name you choose (a first name or nickname is fine) is shown to a listener — no phone number, no photo, no surname, no location. Nobody in your family, office, or social circle can discover that you use How Was Your Day. This matters especially in close-knit communities where word travels fast.',
       },
     },
     {
@@ -59,17 +59,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Chennai', item: 'https://www.leanon.app/chennai' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Chennai', item: 'https://www.howwasyourday.live/chennai' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/chennai',
+  url: 'https://www.howwasyourday.live/chennai',
   areaServed: { '@type': 'City', name: 'Chennai', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -128,7 +128,7 @@ export default function ChennaiPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -141,7 +141,7 @@ export default function ChennaiPage() {
         <div className="hero">
           <p className="tag">Peer Support · Chennai</p>
           <h1>Peer Support in Chennai — Someone to Lean On, in <em>Tamil or English</em></h1>
-          <p className="lead">Chennai holds tradition and modernity in the same hand — IT corridors and agraharam values, global careers and deeply rooted family expectations. LeanOn connects you with peer listeners who understand both worlds, in the language your feelings actually speak.</p>
+          <p className="lead">Chennai holds tradition and modernity in the same hand — IT corridors and agraharam values, global careers and deeply rooted family expectations. How Was Your Day connects you with peer listeners who understand both worlds, in the language your feelings actually speak.</p>
         </div>
 
         <div className="section">
@@ -155,19 +155,19 @@ export default function ChennaiPage() {
           <p>Few cities take family obligations as seriously as Chennai. Alliance discussions, horoscope matching, the expectations of extended family — these carry real weight here. If you are past the &quot;expected age&quot; and unmarried, navigating a relationship your family would not approve of, or simply unsure what you want, the pressure can feel suffocating. A peer listener offers a space to think out loud without any of it getting back to anyone.</p>
 
           <h3>The Mother-Tongue Difference</h3>
-          <p>Emotional honesty often comes easier in Tamil than in English. LeanOn has listeners who speak Tamil, so you can have the conversation in whichever language your feelings actually live in. For many users, the first session in their mother tongue is the first time the words come out whole.</p>
+          <p>Emotional honesty often comes easier in Tamil than in English. How Was Your Day has listeners who speak Tamil, so you can have the conversation in whichever language your feelings actually live in. For many users, the first session in their mother tongue is the first time the words come out whole.</p>
         </div>
 
         <div className="section">
-          <h2>Who Uses LeanOn in Chennai</h2>
+          <h2>Who Uses How Was Your Day in Chennai</h2>
           <h3>IT Professionals Under Quiet Pressure</h3>
           <p>Long commutes, on-call schedules, appraisal anxiety, and the constant comparison culture of the IT corridor — many professionals carry a low-grade stress that never quite switches off. Talking to someone who has lived it helps more than another productivity hack.</p>
 
           <h3>Students and Young Professionals</h3>
-          <p>Chennai&apos;s academic intensity is famous — entrance exam pressure, engineering college expectations, and the weight of being the family&apos;s big hope. Students use LeanOn late at night, when the pressure feels loudest and everyone else is asleep.</p>
+          <p>Chennai&apos;s academic intensity is famous — entrance exam pressure, engineering college expectations, and the weight of being the family&apos;s big hope. Students use How Was Your Day late at night, when the pressure feels loudest and everyone else is asleep.</p>
 
           <h3>Women Navigating Expectations</h3>
-          <p>Many women in Chennai describe the particular loneliness of being constantly cared about but rarely truly heard — every choice observed, every deviation discussed. LeanOn offers a space where you can be fully honest without social consequences.</p>
+          <p>Many women in Chennai describe the particular loneliness of being constantly cared about but rarely truly heard — every choice observed, every deviation discussed. How Was Your Day offers a space where you can be fully honest without social consequences.</p>
         </div>
 
         <div className="cta-card">
@@ -182,16 +182,16 @@ export default function ChennaiPage() {
         <div className="section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
-            <div className="faq-q">Can I talk to a listener in Tamil on LeanOn?</div>
-            <div className="faq-a">Yes. LeanOn has peer listeners who speak Tamil as well as English. Filter by language on the browse page and have your entire session in Tamil if that feels most natural. Emotional conversations often flow far more honestly in your mother tongue.</div>
+            <div className="faq-q">Can I talk to a listener in Tamil on How Was Your Day?</div>
+            <div className="faq-a">Yes. How Was Your Day has peer listeners who speak Tamil as well as English. Filter by language on the browse page and have your entire session in Tamil if that feels most natural. Emotional conversations often flow far more honestly in your mother tongue.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What emotional pressures are specific to Chennai?</div>
             <div className="faq-a">Chennai combines a deeply rooted, tradition-conscious culture with one of India&apos;s largest professional workforces. People often live two lives: a modern professional identity at work and a traditional family identity at home. The gap between these selves — around marriage, career, and personal freedom — is a major source of silent stress.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn anonymous? My family circle is very connected.</div>
-            <div className="faq-a">Yes, completely. Only the name you choose is shown to a listener — no phone number, photo, surname, or location. Nobody in your family, office, or social circle can discover that you use LeanOn.</div>
+            <div className="faq-q">Is How Was Your Day anonymous? My family circle is very connected.</div>
+            <div className="faq-a">Yes, completely. Only the name you choose is shown to a listener — no phone number, photo, surname, or location. Nobody in your family, office, or social circle can discover that you use How Was Your Day.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does a session cost in Chennai?</div>
@@ -201,7 +201,7 @@ export default function ChennaiPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/relationship-stress" className="related-link">Relationship Stress</a>
             <a href="/support/student-stress" className="related-link">Student Stress</a>
@@ -213,9 +213,9 @@ export default function ChennaiPage() {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

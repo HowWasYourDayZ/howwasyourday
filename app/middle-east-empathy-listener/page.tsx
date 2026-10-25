@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy Listener for Indians in the Gulf | LeanOn',
-  description: 'Feeling unheard in the Gulf? LeanOn empathy listeners are screened Indians who give you their full attention — in your language, without judgment — so you feel genuinely understood.',
+  title: 'Empathy Listener for Indians in the Gulf | How Was Your Day',
+  description: 'Feeling unheard in the Gulf? How Was Your Day empathy listeners are screened Indians who give you their full attention — in your language, without judgment — so you feel genuinely understood.',
   keywords: [
     'empathy listener Gulf Indian', 'feeling unheard Gulf', 'someone to understand me UAE',
     'Indian empathy support Gulf', 'peer listener Gulf Indians', 'emotional support Gulf',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'Gulf Indian mental health listener', 'compassionate listener UAE', 'feel understood Gulf',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/middle-east-empathy-listener',
-    languages: { 'en-IN': 'https://www.leanon.app/middle-east-empathy-listener' },
+    canonical: 'https://www.howwasyourday.live/middle-east-empathy-listener',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/middle-east-empathy-listener' },
   },
   openGraph: {
     title: 'Empathy Listener for Indians in the Gulf — Feel Genuinely Understood',
-    description: 'When you feel invisible and unheard in the Gulf, LeanOn empathy listeners give you their full, undivided attention — in your language, without judgment, any time.',
-    url: 'https://www.leanon.app/middle-east-empathy-listener',
-    siteName: 'LeanOn',
+    description: 'When you feel invisible and unheard in the Gulf, How Was Your Day empathy listeners give you their full, undivided attention — in your language, without judgment, any time.',
+    url: 'https://www.howwasyourday.live/middle-east-empathy-listener',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -46,10 +46,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can a LeanOn listener talk to me in my own language?',
+      name: 'Can a How Was Your Day listener talk to me in my own language?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners speak Hindi, Malayalam, Tamil, Telugu, Kannada, Gujarati, Bengali, and other Indian languages. Talking in your mother tongue makes it easier to express what you really feel — especially things that do not translate well into English.',
+        text: 'Yes. How Was Your Day listeners speak Hindi, Malayalam, Tamil, Telugu, Kannada, Gujarati, Bengali, and other Indian languages. Talking in your mother tongue makes it easier to express what you really feel — especially things that do not translate well into English.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'I do not even know why I feel bad — can I still talk to a listener?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, and this is actually one of the most common reasons people come to LeanOn. You do not need to know what is wrong or have a clear topic. Just start talking, and your listener will be with you through the confusion, helping you find words for what you feel.',
+        text: 'Yes, and this is actually one of the most common reasons people come to How Was Your Day. You do not need to know what is wrong or have a clear topic. Just start talking, and your listener will be with you through the confusion, helping you find words for what you feel.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Gulf', item: 'https://www.leanon.app/middle-east-empathy-listener' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Gulf', item: 'https://www.howwasyourday.live/middle-east-empathy-listener' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function MiddleEastEmpathyListenerPage() {
         <h1>You Want to Be Heard.<br />Not Fixed. Not Advised. Just Heard.</h1>
         <p className="lead">
           In the Gulf, you are often surrounded by people — yet truly seen by almost none of them.
-          LeanOn empathy listeners are screened Indians who give you their full, undivided attention,
+          How Was Your Day empathy listeners are screened Indians who give you their full, undivided attention,
           in your own language, with genuine care. Because feeling understood is not a luxury. It is
           a basic human need.
         </p>
@@ -178,7 +178,7 @@ export default function MiddleEastEmpathyListenerPage() {
           <h2>💬 What genuine empathy feels like</h2>
           <p>When someone truly listens — when they ask &quot;what do you mean by that?&quot; and &quot;how did
             that make you feel?&quot; — something shifts. You do not just feel lighter. You feel real again.
-            That is what LeanOn listeners are screened and expected to give you.</p>
+            That is what How Was Your Day listeners are screened and expected to give you.</p>
           <p>Listeners online daily (Indian time). In your language. From anywhere in the Gulf.</p>
           <a href="/browse" className="cta-night">Find an empathy listener now →</a>
         </div>
@@ -223,7 +223,7 @@ export default function MiddleEastEmpathyListenerPage() {
               family who see them as full people, creating a deep hunger for someone who listens with care.</p>
           </div>
           <div className="faq-item">
-            <h3>Can a LeanOn listener talk to me in my own language?</h3>
+            <h3>Can a How Was Your Day listener talk to me in my own language?</h3>
             <p>Yes. Listeners speak Hindi, Malayalam, Tamil, Telugu, Kannada, Gujarati, Bengali, and more.
               Check a listener&apos;s profile to find your language.</p>
           </div>
@@ -233,7 +233,7 @@ export default function MiddleEastEmpathyListenerPage() {
           </div>
           <div className="faq-item">
             <h3>What if I do not even know why I feel bad?</h3>
-            <p>That is one of the most common reasons people come to LeanOn. Just start talking — your
+            <p>That is one of the most common reasons people come to How Was Your Day. Just start talking — your
               listener will be with you through the confusion, helping you find words for what you feel.</p>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function MiddleEastEmpathyListenerPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

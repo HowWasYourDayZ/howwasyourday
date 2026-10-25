@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Controlling Partner India — Anonymous Support | LeanOn',
+  title: 'Controlling Partner India — Anonymous Support | How Was Your Day',
   description: 'Checking your phone, monitoring your friends, deciding what you wear. A controlling relationship slowly erodes you. Talk anonymously from ₹160.',
   keywords: ['controlling partner India', 'controlling husband India', 'possessive partner India', 'jealous controlling relationship India', 'controlling relationship signs India'],
-  alternates: { canonical: 'https://www.leanon.app/controlling-relationship-india', languages: { 'en-IN': 'https://www.leanon.app/controlling-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/controlling-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/controlling-relationship-india' } },
   openGraph: {
-    title: 'Controlling Partner India — Anonymous Support | LeanOn',
+    title: 'Controlling Partner India — Anonymous Support | How Was Your Day',
     description: 'Checking your phone, monitoring your friends, deciding what you wear. A controlling relationship slowly erodes you. Talk anonymously from ₹160.',
-    url: 'https://www.leanon.app/controlling-relationship-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/controlling-relationship-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }],
   },
 }
 
@@ -34,7 +34,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can talking to someone help if I am not ready to leave?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most people are not ready to make a decision when they first reach out. LeanOn is not a service that pushes you toward decisions. It is a space to say what you are carrying, feel less alone in it, and think more clearly about what you want.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most people are not ready to make a decision when they first reach out. How Was Your Day is not a service that pushes you toward decisions. It is a space to say what you are carrying, feel less alone in it, and think more clearly about what you want.' },
     },
     {
       '@type': 'Question',
@@ -48,8 +48,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Controlling Partner India — Anonymous Support', item: 'https://www.leanon.app/controlling-relationship-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Controlling Partner India — Anonymous Support', item: 'https://www.howwasyourday.live/controlling-relationship-india' },
   ],
 }
 
@@ -102,7 +102,7 @@ export default function ControllingRelationshipIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

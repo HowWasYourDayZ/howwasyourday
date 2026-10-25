@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in Canada — Especially in Winter | LeanOn',
-  description: 'Moving to Canada as an Indian can be brutally isolating — the cold, the silence, the starting over. LeanOn connects you with a real human listener who gets it, anytime you need.',
+  title: 'Feeling Lonely in Canada — Especially in Winter | How Was Your Day',
+  description: 'Moving to Canada as an Indian can be brutally isolating — the cold, the silence, the starting over. How Was Your Day connects you with a real human listener who gets it, anytime you need.',
   keywords: [
     'lonely in canada', 'feeling lonely in canada', 'indian lonely canada', 'loneliness canada immigrants',
     'new to canada lonely', 'winter loneliness canada', 'south asian loneliness canada',
     'no friends in canada', 'isolated in canada', 'moving to canada lonely',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada-loneliness',
-    languages: { 'en-CA': 'https://www.leanon.app/canada-loneliness' },
+    canonical: 'https://www.howwasyourday.live/canada-loneliness',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada-loneliness' },
   },
   openGraph: {
-    title: 'Feeling Lonely in Canada — Especially in Winter | LeanOn',
-    description: 'The cold outside is manageable. The cold inside — starting over, no support network, missing home — is harder. LeanOn peer listeners are here anytime.',
-    url: 'https://www.leanon.app/canada-loneliness',
-    siteName: 'LeanOn',
+    title: 'Feeling Lonely in Canada — Especially in Winter | How Was Your Day',
+    description: 'The cold outside is manageable. The cold inside — starting over, no support network, missing home — is harder. How Was Your Day peer listeners are here anytime.',
+    url: 'https://www.howwasyourday.live/canada-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -45,7 +45,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does a LeanOn session cost in Canada?',
+      name: 'How much does a How Was Your Day session cost in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5 minutes are completely free. After that, sessions are CA$14 for 15 minutes, CA$21 for 30 minutes, and CA$28 for 45 minutes. You pay in Indian rupees through the app — straightforward and affordable.',
@@ -56,15 +56,15 @@ const faqSchema = {
       name: 'Can I talk to someone who understands the Indian immigrant experience?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners understand the complexity of the Indian immigrant experience — the pressure, the guilt, the homesickness, the longing to belong. You will not have to explain why you miss home or why a phone call from your parents makes you cry.',
+        text: 'Yes. How Was Your Day listeners understand the complexity of the Indian immigrant experience — the pressure, the guilt, the homesickness, the longing to belong. You will not have to explain why you miss home or why a phone call from your parents makes you cry.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a substitute for therapy?',
+      name: 'Is How Was Your Day a substitute for therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support, not therapy. Our listeners are screened and expected to hold space and listen deeply — they are not mental health professionals. If you are experiencing serious mental health challenges, please also consider speaking with a licensed therapist or counsellor.',
+        text: 'How Was Your Day is peer support, not therapy. Our listeners are screened and expected to hold space and listen deeply — they are not mental health professionals. If you are experiencing serious mental health challenges, please also consider speaking with a licensed therapist or counsellor.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Loneliness Support Canada', item: 'https://www.leanon.app/canada-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Loneliness Support Canada', item: 'https://www.howwasyourday.live/canada-loneliness' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function CanadaLonelinessPage() {
         <p className="lead">
           You planned for the visa stress, the job search, the new city. You didn&apos;t plan for the silence.
           For weekends with nowhere to be. For winters that seem to last forever when you have no one to call.
-          LeanOn is here for exactly this.
+          How Was Your Day is here for exactly this.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
@@ -176,7 +176,7 @@ export default function CanadaLonelinessPage() {
           <p>In India, even a bad day ends with noise, people, movement. In Canada, winter evenings are dark
             by 4 PM and profoundly silent. That contrast — especially in your first year — can be genuinely
             overwhelming.</p>
-          <p>LeanOn listeners are available whenever the silence gets too loud — midnight, 2 AM, any time.
+          <p>How Was Your Day listeners are available whenever the silence gets too loud — midnight, 2 AM, any time.
             Just a real conversation with a real person who gets it.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -191,7 +191,7 @@ export default function CanadaLonelinessPage() {
         </div>
 
         <div className="card">
-          <h2>What a LeanOn session looks like</h2>
+          <h2>What a How Was Your Day session looks like</h2>
           <ul className="checklist">
             <li>Your first 5 minutes are completely free — no card needed</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
@@ -223,18 +223,18 @@ export default function CanadaLonelinessPage() {
               country without a strong network, winter can turn manageable loneliness into something much heavier.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does a LeanOn session cost in Canada?</h3>
+            <h3>How much does a How Was Your Day session cost in Canada?</h3>
             <p>Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.
               Affordable support, whenever you need it.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to someone who understands the Indian immigrant experience?</h3>
-            <p>Yes. Many LeanOn listeners understand this experience personally — the pressure, the guilt, the
+            <p>Yes. Many How Was Your Day listeners understand this experience personally — the pressure, the guilt, the
               homesickness. You will not need to explain why missing home hurts so much.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn a substitute for therapy?</h3>
-            <p>LeanOn is peer support, not therapy. Our listeners are screened and expected to hold space and listen deeply.
+            <h3>Is How Was Your Day a substitute for therapy?</h3>
+            <p>How Was Your Day is peer support, not therapy. Our listeners are screened and expected to hold space and listen deeply.
               For serious mental health challenges, please also consider a licensed professional.</p>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function CanadaLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

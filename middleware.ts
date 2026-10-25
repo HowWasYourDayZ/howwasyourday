@@ -25,10 +25,10 @@ const PUBLIC_PAGES = [
   '/trust',
   '/press',
   '/our-story',
-  '/leanon',
-  '/why-leanon',
-  '/how-leanon-works',
-  '/is-leanon-safe',
+  '/howwasyourday',
+  '/why-howwasyourday',
+  '/how-it-works',
+  '/is-howwasyourday-safe',
   '/anonymous-support-online',
   '/someone-to-talk-to-at-night',
   '/online-emotional-support-india',
@@ -46,7 +46,7 @@ const PUBLIC_PAGES = [
   '/chennai',
   '/pune',
   '/kolkata',
-  '/leanon-app-mental-health',
+  '/howwasyourday-app-mental-health',
   '/anonymous-peer-support',
   '/need-someone-to-talk-to-india',
   '/get-paid-to-chat-india',
@@ -88,7 +88,7 @@ const AUTH_REQUIRED_PREFIXES = [
 
 // CSRF: reject cross-origin mutations. Allow same-host, explicit production
 // domains, and same Vercel deployment previews.
-const EXPLICIT_ORIGINS = ['https://leanon.app', 'https://www.leanon.app']
+const EXPLICIT_ORIGINS = ['https://howwasyourday.live', 'https://www.howwasyourday.live']
 if (process.env.NODE_ENV === 'development') EXPLICIT_ORIGINS.push('http://localhost:3000')
 
 function isTrustedOrigin(origin: string, reqHostname: string): boolean {
@@ -196,17 +196,17 @@ async function suspendedRedirect(
   return null
 }
 
-// Hosts that must 308 to www. Google indexed leanon.app/* and therapy.leanon.app
+// Hosts that must 308 to www. Google indexed howwasyourday.live/* and therapy.howwasyourday.live
 // alongside www (duplicate pages splitting clicks). Pages only: /api/ is left
 // alone so webhooks and payment callbacks pointed at these hosts keep working.
-const REDIRECT_TO_WWW = new Set(['leanon.app', 'therapy.leanon.app'])
+const REDIRECT_TO_WWW = new Set(['howwasyourday.live', 'therapy.howwasyourday.live'])
 
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl
 
   const host = (req.headers.get('host') ?? '').toLowerCase().split(':')[0]
   if (REDIRECT_TO_WWW.has(host) && !pathname.startsWith('/api/') && (req.method === 'GET' || req.method === 'HEAD')) {
-    return NextResponse.redirect(`https://www.leanon.app${pathname}${search}`, 308)
+    return NextResponse.redirect(`https://www.howwasyourday.live${pathname}${search}`, 308)
   }
 
   // 1. Never intercept public prefixes (API, Next.js internals, static files)

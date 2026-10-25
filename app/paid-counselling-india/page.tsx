@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Paid Counselling India — Affordable, Anonymous & Online | LeanOn',
+  title: 'Paid Counselling India — Affordable, Anonymous & Online | How Was Your Day',
   description: 'Paid online counselling in India from ₹160 per session. Talk to a screened peer listener — anonymous, judgment-free.',
   keywords: ['paid counselling india', 'affordable counselling india', 'low cost counselling india', 'mental health counselling india', 'talk to counsellor online india', 'emotional counselling india'],
-  alternates: { canonical: 'https://www.leanon.app/online-counselling-india-cost', languages: { 'en-IN': 'https://www.leanon.app/online-counselling-india-cost' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-counselling-india-cost', languages: { 'en-IN': 'https://www.howwasyourday.live/online-counselling-india-cost' } },
   openGraph: {
-    title: 'Paid Counselling India — Affordable, Anonymous & Online | LeanOn',
+    title: 'Paid Counselling India — Affordable, Anonymous & Online | How Was Your Day',
     description: 'Paid online counselling in India from ₹160 per session. Talk to a screened peer listener — anonymous, judgment-free.',
-    url: 'https://www.leanon.app/online-counselling-india-cost',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/online-counselling-india-cost',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -25,15 +25,15 @@ const faqSchema = {
       name: 'Is paid counselling worth it?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For many people, yes — having a dedicated space to talk to someone who listens without judgment makes a real difference. The challenge in India is that professional therapy costs ₹1,500–₹5,000 per session, which is out of reach for most people. Peer support on LeanOn starts at ₹160 per session, making it accessible without the same financial commitment.',
+        text: 'For many people, yes — having a dedicated space to talk to someone who listens without judgment makes a real difference. The challenge in India is that professional therapy costs ₹1,500–₹5,000 per session, which is out of reach for most people. Peer support on How Was Your Day starts at ₹160 per session, making it accessible without the same financial commitment.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How does LeanOn pricing work?',
+      name: 'How does How Was Your Day pricing work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Your first 5-minute session is free, so you can try a listener before committing. You recharge your wallet and use it when you need it.',
+        text: 'How Was Your Day is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Your first 5-minute session is free, so you can try a listener before committing. You recharge your wallet and use it when you need it.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What is the difference between a counsellor and a peer listener?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A counsellor or therapist is a licensed mental health professional who can diagnose and treat conditions. A peer listener is a real person with lived experience who is screened and expected to listen, hold space, and provide support — but does not diagnose or prescribe. Peer support is for everyday emotional weight. Professional counselling is for clinical conditions. LeanOn provides peer support.',
+        text: 'A counsellor or therapist is a licensed mental health professional who can diagnose and treat conditions. A peer listener is a real person with lived experience who is screened and expected to listen, hold space, and provide support — but does not diagnose or prescribe. Peer support is for everyday emotional weight. Professional counselling is for clinical conditions. How Was Your Day provides peer support.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Is this covered by insurance?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn peer support sessions are not covered by health insurance, as they are not clinical services. However, at ₹160 per session they are significantly more affordable than insured services typically cost out-of-pocket.',
+        text: 'How Was Your Day peer support sessions are not covered by health insurance, as they are not clinical services. However, at ₹160 per session they are significantly more affordable than insured services typically cost out-of-pocket.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Paid Counselling India', item: 'https://www.leanon.app/online-counselling-india-cost' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Paid Counselling India', item: 'https://www.howwasyourday.live/online-counselling-india-cost' },
   ],
 }
 
@@ -135,7 +135,7 @@ export default function PaidCounsellingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -152,7 +152,7 @@ export default function PaidCounsellingIndiaPage() {
         <div className="hero">
           <p className="tag">Paid Counselling · India · From ₹160</p>
           <h1>Paid counselling that fits your life — <em>and your budget</em></h1>
-          <p className="lead">Private therapy costs ₹1,500–₹5,000 per session. LeanOn peer sessions start at ₹160. Real human listeners, anonymous, no waitlist, no subscription.</p>
+          <p className="lead">Private therapy costs ₹1,500–₹5,000 per session. How Was Your Day peer sessions start at ₹160. Real human listeners, anonymous, no waitlist, no subscription.</p>
         </div>
 
         <div className="stats-row">
@@ -196,7 +196,7 @@ export default function PaidCounsellingIndiaPage() {
                   <td>Partial</td>
                 </tr>
                 <tr className="highlight-row">
-                  <td className="col-label">LeanOn peer support</td>
+                  <td className="col-label">How Was Your Day peer support</td>
                   <td>From ₹160</td>
                   <td>No</td>
                   <td>Yes</td>
@@ -207,7 +207,7 @@ export default function PaidCounsellingIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What You Get with a LeanOn Session</h2>
+          <h2>What You Get with a How Was Your Day Session</h2>
           <ul>
             <li><strong>1:1 voice call</strong> with a real human peer listener — not a bot, not a form</li>
             <li><strong>Screened peer listener</strong> with lived experience in the area you want to discuss</li>
@@ -220,7 +220,7 @@ export default function PaidCounsellingIndiaPage() {
 
         <div className="section">
           <h2>Who Is This For?</h2>
-          <p>LeanOn peer support is for anyone who needs to talk but cannot justify ₹2,000 per session. That includes:</p>
+          <p>How Was Your Day peer support is for anyone who needs to talk but cannot justify ₹2,000 per session. That includes:</p>
           <ul>
             <li>Working professionals carrying stress they cannot talk about at work</li>
             <li>Students under exam or career pressure</li>
@@ -244,11 +244,11 @@ export default function PaidCounsellingIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">Is paid counselling worth it?</div>
-            <div className="faq-a">For many people, yes — having a dedicated space to talk to someone who listens without judgment makes a real difference. The challenge in India is that professional therapy costs ₹1,500–₹5,000 per session. Peer support on LeanOn starts at ₹160, making it accessible without the same financial commitment.</div>
+            <div className="faq-a">For many people, yes — having a dedicated space to talk to someone who listens without judgment makes a real difference. The challenge in India is that professional therapy costs ₹1,500–₹5,000 per session. Peer support on How Was Your Day starts at ₹160, making it accessible without the same financial commitment.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How does LeanOn pricing work?</div>
-            <div className="faq-a">LeanOn is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Your first 5-minute session is free. You recharge your wallet and use it when you need it.</div>
+            <div className="faq-q">How does How Was Your Day pricing work?</div>
+            <div className="faq-a">How Was Your Day is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Your first 5-minute session is free. You recharge your wallet and use it when you need it.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is ₹160 really the full cost?</div>
@@ -256,11 +256,11 @@ export default function PaidCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between a counsellor and a peer listener?</div>
-            <div className="faq-a">A counsellor is a licensed professional who can diagnose and treat conditions. A peer listener is a real person with lived experience, chosen for how well they listen and hold space — not to diagnose or prescribe. LeanOn provides peer support, not clinical counselling.</div>
+            <div className="faq-a">A counsellor is a licensed professional who can diagnose and treat conditions. A peer listener is a real person with lived experience, chosen for how well they listen and hold space — not to diagnose or prescribe. How Was Your Day provides peer support, not clinical counselling.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is this covered by insurance?</div>
-            <div className="faq-a">LeanOn peer support sessions are not covered by health insurance, as they are not clinical services. However, at ₹160 per session they are significantly more affordable than most insured services cost out-of-pocket.</div>
+            <div className="faq-a">How Was Your Day peer support sessions are not covered by health insurance, as they are not clinical services. However, at ₹160 per session they are significantly more affordable than most insured services cost out-of-pocket.</div>
           </div>
         </div>
 

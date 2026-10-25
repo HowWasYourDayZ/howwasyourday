@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Counselling India — Affordable Emotional Support | LeanOn',
-  description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on LeanOn.',
+  title: 'Peer Counselling India — Affordable Emotional Support | How Was Your Day',
+  description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on How Was Your Day.',
   keywords: ['peer counselling India', 'peer counselling online India', 'peer counselling app India', 'peer counsellor India', 'peer counselling cost India', 'online peer counselling'],
-  alternates: { canonical: 'https://www.leanon.app/peer-counselling-india', languages: { 'en-IN': 'https://www.leanon.app/peer-counselling-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-counselling-india', languages: { 'en-IN': 'https://www.howwasyourday.live/peer-counselling-india' } },
   openGraph: {
-    title: 'Peer Counselling India — Affordable Emotional Support | LeanOn',
-    description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on LeanOn.',
-    url: 'https://www.leanon.app/peer-counselling-india',
-    siteName: 'LeanOn',
+    title: 'Peer Counselling India — Affordable Emotional Support | How Was Your Day',
+    description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/peer-counselling-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'How much does peer counselling cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000 per session. Peer counselling on LeanOn costs approximately ₹160 per session, and the first 5 minutes are free. There are no subscription fees or automatic renewals.',
+        text: 'Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000 per session. Peer counselling on How Was Your Day costs approximately ₹160 per session, and the first 5 minutes are free. There are no subscription fees or automatic renewals.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is peer counselling confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. On LeanOn, all peer counselling sessions are fully confidential. Listeners agree to keep what you share confidential. You use only a first name — no last name, no photo, no social account.',
+        text: 'Yes. On How Was Your Day, all peer counselling sessions are fully confidential. Listeners agree to keep what you share confidential. You use only a first name — no last name, no photo, no social account.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Where can I find peer counselling in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn (leanon.app) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Your first 5-minute session is free.',
+        text: 'How Was Your Day (howwasyourday.live) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Your first 5-minute session is free.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Peer Counselling India', item: 'https://www.leanon.app/peer-counselling-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Peer Counselling India', item: 'https://www.howwasyourday.live/peer-counselling-india' },
   ],
 }
 
@@ -140,7 +140,7 @@ export default function PeerCounsellingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -158,7 +158,7 @@ export default function PeerCounsellingIndiaPage() {
         <div className="hero">
           <p className="tag">Peer Counselling · India · No Appointment Needed</p>
           <h1>Peer counselling. From someone <em>who has been there.</em></h1>
-          <p className="lead">Not a licensed therapist. Not an AI. A real person who has personally lived through something like what you are carrying — screened for listening, no appointment, and affordable. Peer counselling on LeanOn starts at ₹160/session, with the first 5 minutes free.</p>
+          <p className="lead">Not a licensed therapist. Not an AI. A real person who has personally lived through something like what you are carrying — screened for listening, no appointment, and affordable. Peer counselling on How Was Your Day starts at ₹160/session, with the first 5 minutes free.</p>
         </div>
 
         {/* What is peer counselling */}
@@ -200,7 +200,7 @@ export default function PeerCounsellingIndiaPage() {
                   <td>Yes</td>
                 </tr>
                 <tr className="highlight-row">
-                  <td className="col-label">LeanOn peer counselling</td>
+                  <td className="col-label">How Was Your Day peer counselling</td>
                   <td>Screened peer listener with lived experience</td>
                   <td>₹160/session (first 5 min free)</td>
                   <td>No appointment needed</td>
@@ -220,7 +220,7 @@ export default function PeerCounsellingIndiaPage() {
         {/* Who it's for */}
         <div className="section">
           <h2>Who Is Peer Counselling For?</h2>
-          <p>Peer counselling on LeanOn is used by people who need to talk to someone who understands — not necessarily to solve anything, but to be genuinely heard. Common situations include:</p>
+          <p>Peer counselling on How Was Your Day is used by people who need to talk to someone who understands — not necessarily to solve anything, but to be genuinely heard. Common situations include:</p>
           <ul>
             <li><strong>Loneliness</strong> — in a new city, inside a relationship that has grown distant, or the particular loneliness of carrying things you cannot say to anyone in your life</li>
             <li><strong>Relationship stress</strong> — a marriage under strain, a difficult breakup, a friendship that has gone cold</li>
@@ -255,11 +255,11 @@ export default function PeerCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does peer counselling cost in India?</div>
-            <div className="faq-a">Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000. Peer counselling on LeanOn costs approximately ₹160 per session, and the first 5 minutes are free. No subscription fees, no automatic renewals.</div>
+            <div className="faq-a">Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000. Peer counselling on How Was Your Day costs approximately ₹160 per session, and the first 5 minutes are free. No subscription fees, no automatic renewals.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is peer counselling confidential?</div>
-            <div className="faq-a">Yes. On LeanOn, all sessions are fully confidential. Listeners agree to keep what you share confidential. You use only a first name — no last name, no photo required.</div>
+            <div className="faq-a">Yes. On How Was Your Day, all sessions are fully confidential. Listeners agree to keep what you share confidential. You use only a first name — no last name, no photo required.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Does peer counselling work for anxiety?</div>
@@ -267,7 +267,7 @@ export default function PeerCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Where can I find peer counselling in India?</div>
-            <div className="faq-a">LeanOn (leanon.app) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Your first 5-minute session is free.</div>
+            <div className="faq-a">How Was Your Day (howwasyourday.live) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Your first 5-minute session is free.</div>
           </div>
         </div>
 

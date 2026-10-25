@@ -1,7 +1,7 @@
 export const post = {
   slug: 'tarot-astrology-emotional-support-india',
   title: 'Why Indians Call Astrologers When They Need Someone to Talk To',
-  author: 'LeanOn Team',
+  author: 'How Was Your Day Team',
   date: '2026-09-12',
   readTime: '5 min read',
   description: 'Millions of Indians call astrologers and tarot readers not just for predictions but for emotional relief. Here is what is really going on in that conversation &mdash; and what it reveals about unmet emotional needs.',
@@ -34,6 +34,6 @@ export const post = {
 <p>Genuine emotional support does the opposite. It follows your lead. It stays with your experience rather than redirecting to predictions or prescriptions. It does not try to resolve the uncertainty &mdash; it creates a space where you can be fully present with it, which is often the first step toward real clarity.</p>
 
 <h2>A Different Kind of Conversation</h2>
-<p>LeanOn is not anti-astrology. If consulting an astrologer gives you comfort and a sense of direction, that is a legitimate form of support. But if what you actually need is to say the difficult thing out loud &mdash; to have a real person hear you, understand you, and sit with you in the complexity of your situation &mdash; that is a different conversation. And it is available here, anonymously, for the cost of a coffee.</p>
+<p>How Was Your Day is not anti-astrology. If consulting an astrologer gives you comfort and a sense of direction, that is a legitimate form of support. But if what you actually need is to say the difficult thing out loud &mdash; to have a real person hear you, understand you, and sit with you in the complexity of your situation &mdash; that is a different conversation. And it is available here, anonymously, for the cost of a coffee.</p>
 `,
 }

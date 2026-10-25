@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Working Woman Stress India — Carrying Career, Home and Family All at Once | LeanOn',
+  title: 'Working Woman Stress India — Carrying Career, Home and Family All at Once | How Was Your Day',
   description: 'For working women in India navigating the weight of career, home, family, and the endless expectation to do it all without complaint. Talk to someone who understands what that double shift actually feels like.',
   keywords: [
     'working woman stress India', 'working women mental health India', 'professional woman burnout India',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'working woman exhausted India', 'IT woman burnout India', 'career break women India',
     'returning to work after baby India', 'women identity career India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/working-woman-india', languages: { 'en-IN': 'https://www.leanon.app/support/working-woman-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/working-woman-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/working-woman-india' } },
   openGraph: {
-    title: 'Working Woman Stress India | LeanOn',
+    title: 'Working Woman Stress India | How Was Your Day',
     description: 'Career + home + family. All at once. For working women in India who are tired of carrying everything.',
-    url: 'https://www.leanon.app/support/working-woman-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/working-woman-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Working Woman Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Working Woman Support India' }],
   },
 }
 
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is it possible to talk about work stress on LeanOn without it becoming career advice?',
+      name: 'Is it possible to talk about work stress on How Was Your Day without it becoming career advice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — and this is specifically what LeanOn peer listeners are screened and expected to offer. Not career coaching, not advice about what to do, not a to-do list. A real person who listens to what you are actually experiencing — the stress, the exhaustion, the feeling of being invisible at home while performing perfectly at work — and receives it without trying to fix it.',
+        text: 'Yes — and this is specifically what How Was Your Day peer listeners are screened and expected to offer. Not career coaching, not advice about what to do, not a to-do list. A real person who listens to what you are actually experiencing — the stress, the exhaustion, the feeling of being invisible at home while performing perfectly at work — and receives it without trying to fix it.',
       },
     },
     {
@@ -75,9 +75,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.leanon.app/for-women' },
-    { '@type': 'ListItem', position: 3, name: 'Working Woman India', item: 'https://www.leanon.app/support/working-woman-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.howwasyourday.live/for-women' },
+    { '@type': 'ListItem', position: 3, name: 'Working Woman India', item: 'https://www.howwasyourday.live/support/working-woman-india' },
   ],
 }
 
@@ -136,7 +136,7 @@ export default function WorkingWomanIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 
@@ -199,7 +199,7 @@ export default function WorkingWomanIndiaPage() {
         </p>
 
         <div className="card">
-          <div className="card-label">What LeanOn offers working women</div>
+          <div className="card-label">What How Was Your Day offers working women</div>
           <h3>A space that is entirely about you</h3>
           <p>
             Not your child&apos;s needs. Not your husband&apos;s perspective. Not your manager&apos;s feedback.

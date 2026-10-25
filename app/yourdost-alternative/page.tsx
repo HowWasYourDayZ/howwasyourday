@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Looking for a YourDOST Alternative? Try LeanOn',
-  description: 'YourDOST feels corporate and expensive. LeanOn connects you to a real peer listener in under 2 minutes — anonymous, ₹160/session, no HR data sharing.',
+  title: 'Looking for a YourDOST Alternative? Try How Was Your Day',
+  description: 'YourDOST feels corporate and expensive. How Was Your Day connects you to a real peer listener in under 2 minutes — anonymous, ₹160/session, no HR data sharing.',
   keywords: [
-    'yourdost alternative', 'alternative to yourdost', 'yourdost vs leanon',
+    'yourdost alternative', 'alternative to yourdost', 'yourdost vs howwasyourday',
     'corporate wellness alternative india', 'peer support india', 'anonymous mental health support india',
     'talk to someone without hr knowing', 'affordable emotional support india', 'yourdost without employer',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/yourdost-alternative',
-    languages: { 'en-IN': 'https://www.leanon.app/yourdost-alternative' },
+    canonical: 'https://www.howwasyourday.live/yourdost-alternative',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/yourdost-alternative' },
   },
   openGraph: {
-    title: 'Looking for a YourDOST Alternative? Try LeanOn',
-    description: 'YourDOST feels corporate and expensive. LeanOn connects you to a real peer listener in under 2 minutes — anonymous, ₹160/session, no HR data sharing.',
-    url: 'https://www.leanon.app/yourdost-alternative',
-    siteName: 'LeanOn',
+    title: 'Looking for a YourDOST Alternative? Try How Was Your Day',
+    description: 'YourDOST feels corporate and expensive. How Was Your Day connects you to a real peer listener in under 2 minutes — anonymous, ₹160/session, no HR data sharing.',
+    url: 'https://www.howwasyourday.live/yourdost-alternative',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -29,10 +29,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn like YourDOST?',
+      name: 'Is How Was Your Day like YourDOST?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn and YourDOST both exist to help you feel better — but they work very differently. YourDOST connects you with credentialed counselors through your employer. LeanOn connects you with screened peer listeners who have been through similar experiences, directly and anonymously, without any employer involvement. Think of LeanOn as a complement to therapy — more accessible, more immediate, and completely private.',
+        text: 'How Was Your Day and YourDOST both exist to help you feel better — but they work very differently. YourDOST connects you with credentialed counselors through your employer. How Was Your Day connects you with screened peer listeners who have been through similar experiences, directly and anonymously, without any employer involvement. Think of How Was Your Day as a complement to therapy — more accessible, more immediate, and completely private.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Is my conversation private from my employer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, completely. LeanOn has no relationship with your employer. You sign up with just a phone number — no company email, no employee ID, no HR portal. Your conversations are between you and your listener only. No one at your company will ever know you used it.',
+        text: 'Yes, completely. How Was Your Day has no relationship with your employer. You sign up with just a phone number — no company email, no employee ID, no HR portal. Your conversations are between you and your listener only. No one at your company will ever know you used it.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What if I just need to vent, not get counseling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is exactly what LeanOn is designed for. Sometimes you do not need a diagnosis or a treatment plan — you just need someone to hear you out without judgment. Our peer listeners are screened and expected to hold space, ask gentle questions, and help you feel understood. No clinical notes, no homework, no advice you did not ask for.',
+        text: 'That is exactly what How Was Your Day is designed for. Sometimes you do not need a diagnosis or a treatment plan — you just need someone to hear you out without judgment. Our peer listeners are screened and expected to hold space, ask gentle questions, and help you feel understood. No clinical notes, no homework, no advice you did not ask for.',
       },
     },
     {
@@ -56,15 +56,15 @@ const faqSchema = {
       name: 'How much does it cost compared to YourDOST?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If your company\'s YourDOST subscription has expired — or you left the job — counseling sessions typically cost ₹500 to ₹2,000 per session out of pocket. On LeanOn, sessions start at ₹160 for 15 minutes, and your very first 5 minutes are free. No subscription, no commitment, pay only when you want to talk.',
+        text: 'If your company\'s YourDOST subscription has expired — or you left the job — counseling sessions typically cost ₹500 to ₹2,000 per session out of pocket. On How Was Your Day, sessions start at ₹160 for 15 minutes, and your very first 5 minutes are free. No subscription, no commitment, pay only when you want to talk.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn without a corporate subscription?',
+      name: 'Can I use How Was Your Day without a corporate subscription?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has nothing to do with your employer. Anyone in India can sign up directly — whether you are employed, between jobs, a student, or self-employed. You just need a phone number to get started, and your first session is free.',
+        text: 'Yes. How Was Your Day has nothing to do with your employer. Anyone in India can sign up directly — whether you are employed, between jobs, a student, or self-employed. You just need a phone number to get started, and your first session is free.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'YourDOST Alternative', item: 'https://www.leanon.app/yourdost-alternative' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'YourDOST Alternative', item: 'https://www.howwasyourday.live/yourdost-alternative' },
   ],
 }
 
@@ -150,10 +150,10 @@ export default function YourDOSTAlternativePage() {
           <a href="/">Home</a><span>›</span>YourDOST Alternative
         </div>
 
-        <h1>Looking for a YourDOST Alternative? Try LeanOn</h1>
+        <h1>Looking for a YourDOST Alternative? Try How Was Your Day</h1>
         <p className="lead">
           YourDOST does good work — but it is tied to your employer, runs on office hours, and can feel clinical
-          when you just need to talk. LeanOn connects you with a real peer listener in under 2 minutes,
+          when you just need to talk. How Was Your Day connects you with a real peer listener in under 2 minutes,
           privately, whenever a listener is online. No HR, no corporate portal, no waiting list.
         </p>
 
@@ -173,18 +173,18 @@ export default function YourDOSTAlternativePage() {
             someone who actually gets it, quickly, without it going anywhere near their HR file.
           </p>
           <p>
-            That is exactly the gap LeanOn was built for.
+            That is exactly the gap How Was Your Day was built for.
           </p>
         </div>
 
         <div className="card">
-          <h2>YourDOST vs LeanOn — what actually differs</h2>
+          <h2>YourDOST vs How Was Your Day — what actually differs</h2>
           <table className="compare-table">
             <thead>
               <tr>
                 <th>Feature</th>
                 <th>YourDOST</th>
-                <th>LeanOn</th>
+                <th>How Was Your Day</th>
               </tr>
             </thead>
             <tbody>
@@ -223,7 +223,7 @@ export default function YourDOSTAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>How LeanOn works — 3 simple steps</h2>
+          <h2>How the app works — 3 simple steps</h2>
           <ul className="steps">
             <li>
               <div>
@@ -247,9 +247,9 @@ export default function YourDOSTAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>Who uses LeanOn after YourDOST</h2>
+          <h2>Who uses How Was Your Day after YourDOST</h2>
           <p>
-            A lot of the people who find LeanOn have used YourDOST before — and liked it, actually. But then
+            A lot of the people who find How Was Your Day have used YourDOST before — and liked it, actually. But then
             something changed: they switched jobs, got laid off, started freelancing, or their company stopped
             the subscription. Suddenly the support they had relied on was gone.
           </p>
@@ -259,7 +259,7 @@ export default function YourDOSTAlternativePage() {
             feeding back to their manager.
           </p>
           <p>
-            LeanOn is not trying to replace YourDOST. It is the thing you reach for when YourDOST is not
+            How Was Your Day is not trying to replace YourDOST. It is the thing you reach for when YourDOST is not
             available, not affordable, or not private enough for the moment.
           </p>
         </div>
@@ -274,21 +274,21 @@ export default function YourDOSTAlternativePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>Is LeanOn like YourDOST?</h3>
-            <p>LeanOn and YourDOST both exist to help you feel better — but they work very differently.
-              YourDOST connects you with credentialed counselors through your employer. LeanOn connects you
+            <h3>Is How Was Your Day like YourDOST?</h3>
+            <p>How Was Your Day and YourDOST both exist to help you feel better — but they work very differently.
+              YourDOST connects you with credentialed counselors through your employer. How Was Your Day connects you
               with screened peer listeners, directly and anonymously, with no employer involvement. Think of
-              LeanOn as more accessible and more immediate — a complement to therapy, not a replacement.</p>
+              How Was Your Day as more accessible and more immediate — a complement to therapy, not a replacement.</p>
           </div>
           <div className="faq-item">
             <h3>Is my conversation private from my employer?</h3>
-            <p>Yes, completely. LeanOn has no relationship with your employer. You sign up with just a
+            <p>Yes, completely. How Was Your Day has no relationship with your employer. You sign up with just a
               phone number — no company email, no employee ID, no HR portal. Your conversations are
               between you and your listener only. No one at your company will ever know you used it.</p>
           </div>
           <div className="faq-item">
             <h3>What if I just need to vent, not get counseling?</h3>
-            <p>That is exactly what LeanOn is designed for. Sometimes you do not need a diagnosis or a
+            <p>That is exactly what How Was Your Day is designed for. Sometimes you do not need a diagnosis or a
               treatment plan — you just need someone to hear you out without judgment. Our peer listeners
               are screened and expected to hold space and help you feel understood. No clinical notes, no homework,
               no unsolicited advice.</p>
@@ -296,13 +296,13 @@ export default function YourDOSTAlternativePage() {
           <div className="faq-item">
             <h3>How much does it cost compared to YourDOST?</h3>
             <p>If your company&apos;s YourDOST subscription has lapsed, counseling sessions typically
-              cost ₹500 to ₹2,000 per session out of pocket. On LeanOn, sessions start at ₹160 for
+              cost ₹500 to ₹2,000 per session out of pocket. On How Was Your Day, sessions start at ₹160 for
               15 minutes, and your very first 5 minutes are free. No subscription, no commitment —
               pay only when you want to talk.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I use LeanOn without a corporate subscription?</h3>
-            <p>Yes. LeanOn has nothing to do with your employer. Anyone in India can sign up directly —
+            <h3>Can I use How Was Your Day without a corporate subscription?</h3>
+            <p>Yes. How Was Your Day has nothing to do with your employer. Anyone in India can sign up directly —
               whether you are employed, between jobs, a student, or self-employed. You just need a phone
               number to get started, and your first session is free.</p>
           </div>
@@ -319,7 +319,7 @@ export default function YourDOSTAlternativePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for emergency mental health care.
+            How Was Your Day is peer support — not a substitute for emergency mental health care.
           </p>
         </div>
       </div>

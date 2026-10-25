@@ -1,7 +1,7 @@
 export const post = {
   slug: 'divorce-india-emotional-recovery',
   title: 'Emotional Recovery After Divorce in India: What Nobody Tells You',
-  author: 'LeanOn Team',
+  author: 'How Was Your Day Team',
   date: '2026-09-12',
   readTime: '6 min read',
   description: 'Divorce in India is not just the end of a marriage. It is a complete social and identity disruption. Here is what emotional recovery actually looks like, and why so few people talk about it honestly.',
@@ -25,7 +25,7 @@ export const post = {
 
 <h2>What Recovery Actually Looks Like</h2>
 <p>Emotional recovery from divorce is not linear and it is not fast. It involves moving through stages that do not arrive in order and sometimes recycle. The most useful thing most people can do is find ways to process the experience rather than suppress it &mdash; because suppressed grief does not go away. It accumulates.</p>
-<p>Processing means saying it out loud. Not to everyone &mdash; to someone safe. Someone able to hold the complexity without judgment, without advice, without making it about anything other than your experience of it. That kind of space is what LeanOn peer listeners are there to provide.</p>
+<p>Processing means saying it out loud. Not to everyone &mdash; to someone safe. Someone able to hold the complexity without judgment, without advice, without making it about anything other than your experience of it. That kind of space is what How Was Your Day peer listeners are there to provide.</p>
 <p>Sessions start at &#8377;160. Anonymous. The first 5 minutes are free. You do not have to explain the entire situation to be understood. You just have to start.</p>
 `,
 }

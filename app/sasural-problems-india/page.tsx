@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Sasural Problems — In-Law Conflict India | LeanOn',
+  title: 'Sasural Problems — In-Law Conflict India | How Was Your Day',
   description: 'Saas, devar, nand — navigating sasural dynamics is exhausting. Talk to someone anonymously who understands Indian family structures. From ₹160.',
   keywords: ['sasural problems India', 'saas bahu conflict India', 'in-law problems India', 'husband\'s family problems India', 'joint family conflict India'],
-  alternates: { canonical: 'https://www.leanon.app/sasural-problems-india', languages: { 'en-IN': 'https://www.leanon.app/sasural-problems-india' } },
-  openGraph: { title: 'Sasural Problems — In-Law Conflict India | LeanOn', description: 'Saas, devar, nand — navigating sasural dynamics is exhausting. Talk to someone anonymously who understands Indian family structures. From ₹160.', url: 'https://www.leanon.app/sasural-problems-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/sasural-problems-india', languages: { 'en-IN': 'https://www.howwasyourday.live/sasural-problems-india' } },
+  openGraph: { title: 'Sasural Problems — In-Law Conflict India | How Was Your Day', description: 'Saas, devar, nand — navigating sasural dynamics is exhausting. Talk to someone anonymously who understands Indian family structures. From ₹160.', url: 'https://www.howwasyourday.live/sasural-problems-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'How is sasural stress different from general in-law stress?', acceptedAnswer: {'@type': 'Answer', text: 'Sasural stress in India has a specific cultural texture: the saas-bahu dynamic, the expectation that the bahu will adjust, the public performance of family harmony, and the social cost of appearing to struggle. These are specific enough that the person you talk to benefits from understanding this context.'}},
-    {'@type': 'Question', name: 'Can a peer listener understand sasural dynamics?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. LeanOn listeners come from backgrounds that include this experience, and are screened and expected to listen to it without either dismissing it or amplifying it. They understand the cultural context without requiring you to explain it from scratch.'}},
+    {'@type': 'Question', name: 'Can a peer listener understand sasural dynamics?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. How Was Your Day listeners come from backgrounds that include this experience, and are screened and expected to listen to it without either dismissing it or amplifying it. They understand the cultural context without requiring you to explain it from scratch.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Sasural Problems', item: 'https://www.leanon.app/sasural-problems-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Sasural Problems', item: 'https://www.howwasyourday.live/sasural-problems-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function SasuralProblemsIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Sasural Problems</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function SasuralProblemsIndiaPage() {
         <div className="section">
           <h2>Why You Cannot Talk to Your Husband About Everything</h2>
           <p>He loves both you and his family. When you describe a problem with them, he is not hearing it the way a neutral person would hear it. He is hearing it through his relationship with those people, through his loyalty, through his guilt about putting you in this situation. That makes genuinely open conversation very difficult.</p>
-          <p>A LeanOn listener has no relationship with any of the people you are describing. They hear only what you tell them, with no overlay of prior relationship.</p>
+          <p>A How Was Your Day listener has no relationship with any of the people you are describing. They hear only what you tell them, with no overlay of prior relationship.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>You deserve a space that is yours.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

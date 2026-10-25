@@ -6,7 +6,7 @@ import { createClient } from '@/lib/supabase'
 // Phone sign-in via the MSG91 OTP Widget.
 //
 // India's DLT regime blocks the "Supabase generates the OTP, a carrier delivers
-// it" path (needs a DLT template → needs an active GST LeanOn no longer has —
+// it" path (needs a DLT template → needs an active GST How Was Your Day no longer has —
 // see CLAUDE.md). MSG91's only no-DLT product is the OTP Widget, where MSG91
 // generates AND verifies the OTP and hands the browser a short-lived token.
 //
@@ -184,20 +184,20 @@ export default function AuthPage() {
     const stored = sessionStorage.getItem('auth_redirect')
     const mode = sessionStorage.getItem('auth_mode')
     // Default fallback — if the user came from a topic page (/browse?topic=X),
-    // that topic was stored in sessionStorage.leanon_last_topic by browse/page.tsx.
+    // that topic was stored in sessionStorage.howwasyourday_last_topic by browse/page.tsx.
     // Restoring it here means new users land back on the right filtered view
     // even when the explicit auth_redirect param wasn't set (e.g. clicking a nav
     // "Open app" button rather than a listener card).
     let fallback = mode === 'listener' ? '/dashboard' : '/browse'
     if (mode !== 'listener') {
       try {
-        const lastTopic = sessionStorage.getItem('leanon_last_topic')
+        const lastTopic = sessionStorage.getItem('howwasyourday_last_topic')
         if (lastTopic) {
           fallback = `/browse?topic=${encodeURIComponent(lastTopic)}`
           // Also keep a copy for the WelcomeBanner modal — browse/page.tsx clears
-          // leanon_last_topic on mount, but the modal reads leanon_intent_topic
+          // howwasyourday_last_topic on mount, but the modal reads howwasyourday_intent_topic
           // so it can personalise the CTA label even after the key is gone.
-          sessionStorage.setItem('leanon_intent_topic', lastTopic)
+          sessionStorage.setItem('howwasyourday_intent_topic', lastTopic)
         }
       } catch { /* sessionStorage unavailable */ }
     }
@@ -451,7 +451,7 @@ export default function AuthPage() {
     const dest = storedRedirect ? getDestination() : mode === 'listener' ? listenerDest : '/talk?src=signup'
     sessionStorage.removeItem('auth_redirect')
     sessionStorage.removeItem('auth_mode')
-    sessionStorage.setItem('leanon_welcome_new', '1')
+    sessionStorage.setItem('howwasyourday_welcome_new', '1')
     handledRef.current = true
     window.location.assign(dest)
   }
@@ -580,7 +580,7 @@ export default function AuthPage() {
               {error && <p className="error">{error}</p>}
               <label className="tos" style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer', textAlign: 'left' }}>
                 <input type="checkbox" checked={adultConfirmed} onChange={e => setAdultConfirmed(e.target.checked)} style={{ width: 18, height: 18, marginTop: 1, flexShrink: 0, accentColor: '#1A8FA0' }} />
-                <span>I am 18 or older. LeanOn is for adults only. I agree to the <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</span>
+                <span>I am 18 or older. How Was Your Day is for adults only. I agree to the <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</span>
               </label>
               <button className="btn" onClick={requestOtp} disabled={loading || !isValidPhone() || !adultConfirmed}>
                 {loading ? <span className="spin">⟳</span> : !widgetReady ? 'Loading…' : 'Send OTP →'}

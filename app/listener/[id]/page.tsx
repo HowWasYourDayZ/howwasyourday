@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await fetchProfile(params.id)
 
   if (!data) {
-    return { title: 'Listener — LeanOn', description: 'Peer support listener on LeanOn.' }
+    return { title: 'Listener — How Was Your Day', description: 'Peer support listener on How Was Your Day.' }
   }
 
   const usersData = data.users as { name: string } | { name: string }[] | null
@@ -50,21 +50,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tags = ((data.specialty_tags as string[]) || []).slice(0, 3).join(', ')
   const verified = (data as { is_verified?: boolean }).is_verified === true
   const title = verified
-    ? `${name} — Verified Peer Listener on LeanOn India`
-    : `${name} — Peer Listener on LeanOn India`
+    ? `${name} — Verified Peer Listener on How Was Your Day India`
+    : `${name} — Peer Listener on How Was Your Day India`
   const description = data.bio
-    ? `Talk to ${name} on LeanOn — ${data.bio.slice(0, 130)}… No appointment needed.`
-    : `Talk to ${name}, a verified peer listener on LeanOn India. ${tags ? `Specialises in: ${tags}.` : ''} Affordable peer support. No appointment needed.`
+    ? `Talk to ${name} on How Was Your Day — ${data.bio.slice(0, 130)}… No appointment needed.`
+    : `Talk to ${name}, a verified peer listener on How Was Your Day India. ${tags ? `Specialises in: ${tags}.` : ''} Affordable peer support. No appointment needed.`
 
   return {
     title,
     description,
-    keywords: [name, 'peer listener India', 'leanon', tags, 'emotional support India', 'peer support'].filter(Boolean),
+    keywords: [name, 'peer listener India', 'howwasyourday', tags, 'emotional support India', 'peer support'].filter(Boolean),
     openGraph: {
       title,
       description,
-      url: `https://www.leanon.app/listener/${params.id}`,
-      siteName: 'LeanOn',
+      url: `https://www.howwasyourday.live/listener/${params.id}`,
+      siteName: 'How Was Your Day',
       type: 'profile',
     },
     twitter: {
@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
     },
-    alternates: { canonical: `https://www.leanon.app/listener/${params.id}` },
+    alternates: { canonical: `https://www.howwasyourday.live/listener/${params.id}` },
   }
 }
 
@@ -94,19 +94,19 @@ export default async function ListenerPage({ params }: Props) {
     '@type': 'Person',
     name,
     jobTitle: 'Verified Peer Listener',
-    worksFor: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+    worksFor: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
     knowsAbout: tags,
-    url: `https://www.leanon.app/listener/${params.id}`,
-    description: data.bio || `Verified peer listener on LeanOn. Specialises in: ${tags.join(', ')}.`,
+    url: `https://www.howwasyourday.live/listener/${params.id}`,
+    description: data.bio || `Verified peer listener on How Was Your Day. Specialises in: ${tags.join(', ')}.`,
   } : null
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-      { '@type': 'ListItem', position: 2, name: 'Browse Listeners', item: 'https://www.leanon.app/browse' },
-      { '@type': 'ListItem', position: 3, name: name, item: `https://www.leanon.app/listener/${params.id}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+      { '@type': 'ListItem', position: 2, name: 'Browse Listeners', item: 'https://www.howwasyourday.live/browse' },
+      { '@type': 'ListItem', position: 3, name: name, item: `https://www.howwasyourday.live/listener/${params.id}` },
     ],
   }
 

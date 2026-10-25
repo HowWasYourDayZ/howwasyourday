@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Seattle | Bellevue, Redmond | LeanOn',
+  title: 'Emotional Support for Indians in Seattle | Bellevue, Redmond | How Was Your Day',
   description: 'Bellevue, Redmond, Sammamish — Seattle\'s Indian tech community is booming. But Microsoft and Amazon salaries don\'t solve the Seattle Freeze. Talk to someone who gets it.',
   keywords: ['indians in seattle', 'bellevue indian community', 'redmond indian support', 'seattle indian mental health', 'microsoft amazon indian', 'desi support seattle', 'seattle freeze indian'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-seattle' },
-  openGraph: { title: 'Emotional Support for Indians in Seattle | Bellevue, Redmond | LeanOn', description: 'Bellevue, Redmond, Sammamish — Seattle\'s Indian tech community is booming. But Microsoft and Amazon salaries don\'t solve the Seattle Freeze. Talk to someone who gets it.', url: 'https://www.leanon.app/indians-in-seattle', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-seattle' },
+  openGraph: { title: 'Emotional Support for Indians in Seattle | Bellevue, Redmond | How Was Your Day', description: 'Bellevue, Redmond, Sammamish — Seattle\'s Indian tech community is booming. But Microsoft and Amazon salaries don\'t solve the Seattle Freeze. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/indians-in-seattle', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand Seattle Indian tech worker life?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI tech worker experience — including the specific isolation of Seattle, the Microsoft and Amazon culture, the H-1B dependency, and the grey winters that compound everything. No explanation needed.' } },
+  { '@type': 'Question', name: 'Do listeners understand Seattle Indian tech worker life?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI tech worker experience — including the specific isolation of Seattle, the Microsoft and Amazon culture, the H-1B dependency, and the grey winters that compound everything. No explanation needed.' } },
   { '@type': 'Question', name: 'When can I connect from Seattle?', acceptedAnswer: { '@type': 'Answer', text: 'Seattle (PST/PDT) is 13.5 hours behind IST. 8am Seattle = 9:30pm India. Early mornings in Seattle align with late Indian evenings — listeners are often still available. 6am Seattle = 7:30pm India, a strong window.' } },
   { '@type': 'Question', name: 'Is this confidential from my Microsoft or Amazon colleagues?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous. Only a phone number and first name required. Nothing reaches your employer, your Bellevue or Redmond community, or family back in India.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Seattle', item: 'https://www.leanon.app/indians-in-seattle' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Seattle', item: 'https://www.howwasyourday.live/indians-in-seattle' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInSeattlePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Seattle</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInSeattlePage() {
           <h2>Bellevue, Redmond, Sammamish: The Indian Tech Corridor</h2>
           <p>The Eastside of Seattle — Bellevue, Redmond, Sammamish, Issaquah — has become one of the largest Indian tech worker concentrations in America, driven by Microsoft&rsquo;s headquarters in Redmond and Amazon&rsquo;s massive expansion in Bellevue. The Bellevue BAPS temple and the Redmond Shiva-Vishnu temple serve a large and growing community. Grocery stores, restaurants, community organisations — the infrastructure is here.</p>
           <p>And yet: the Seattle Freeze is real. Seattle is famous among newcomers for the difficulty of forming genuine friendships. Locals are polite and then closed. The Indian community offers warmth — but that warmth comes with the usual community dynamics: gossip, comparison, the performance of success. And underneath it all: nine months of grey sky every year, a work culture of 60-hour weeks, and the anxiety of a life entirely dependent on your employer&rsquo;s goodwill.</p>
-          <p>LeanOn is for exactly this. A real Indian peer listener in India — outside your Eastside bubble, inside your culture. First 5 minutes free.</p>
+          <p>How Was Your Day is for exactly this. A real Indian peer listener in India — outside your Eastside bubble, inside your culture. First 5 minutes free.</p>
         </div>
 
         <div className="section">

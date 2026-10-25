@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Postpartum Loneliness and Exhaustion in India — You Don\'t Have to Feel This Way Alone | LeanOn',
+  title: 'Postpartum Loneliness and Exhaustion in India — You Don\'t Have to Feel This Way Alone | How Was Your Day',
   description: 'New motherhood in India can be isolating in ways nobody warns you about — judgment, expectations, lost identity, and exhaustion you cannot admit. Talk to someone who won\'t judge you.',
   keywords: [
     'postpartum support India', 'new mother India emotional support', 'postpartum loneliness India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'new mother support India', 'baby blues India', 'motherhood identity India',
     'new baby mental health India', 'postpartum help India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/postpartum-india', languages: { 'en-IN': 'https://www.leanon.app/support/postpartum-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/postpartum-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/postpartum-india' } },
   openGraph: {
-    title: 'Postpartum Loneliness and Exhaustion in India — You Don\'t Have to Feel This Way Alone | LeanOn',
+    title: 'Postpartum Loneliness and Exhaustion in India — You Don\'t Have to Feel This Way Alone | How Was Your Day',
     description: 'New motherhood in India can be isolating in ways nobody warns you about. Talk to someone who won\'t judge you.',
-    url: 'https://www.leanon.app/support/postpartum-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/postpartum-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Postpartum Support for New Mothers in India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Postpartum Support for New Mothers in India' }],
   },
 }
 
@@ -30,7 +30,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is postpartum depression different from baby blues?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Baby blues are very common — tearfulness, irritability, and emotional swings in the first one to two weeks after birth, caused by the hormonal shift after delivery. Postpartum depression is more intense, lasts longer, and can include persistent low mood, anxiety, difficulty bonding with the baby, or feeling hopeless. If you are unsure which you are experiencing, it is worth speaking to a doctor — and a LeanOn session can be a supportive space alongside that, not a substitute for medical help.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Baby blues are very common — tearfulness, irritability, and emotional swings in the first one to two weeks after birth, caused by the hormonal shift after delivery. Postpartum depression is more intense, lasts longer, and can include persistent low mood, anxiety, difficulty bonding with the baby, or feeling hopeless. If you are unsure which you are experiencing, it is worth speaking to a doctor — and a How Was Your Day session can be a supportive space alongside that, not a substitute for medical help.' },
     },
     {
       '@type': 'Question',
@@ -40,21 +40,21 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can I talk about my in-laws in these sessions?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Family dynamics — including the specific pressures of a joint family or in-law involvement after a baby — are things people bring to LeanOn sessions. You can speak about the criticism, the unsolicited advice, the loss of autonomy, or any other dimension of the family situation without the listener taking sides or making judgements about anyone in your life.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Family dynamics — including the specific pressures of a joint family or in-law involvement after a baby — are things people bring to How Was Your Day sessions. You can speak about the criticism, the unsolicited advice, the loss of autonomy, or any other dimension of the family situation without the listener taking sides or making judgements about anyone in your life.' },
     },
     {
       '@type': 'Question',
       name: 'What if my husband does not understand what I am going through?',
-      acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common things new mothers describe — feeling alone in the experience even when a partner is present and trying. A LeanOn session is a space where you do not have to manage your husband\'s feelings or explain yourself in a way he can accept. You can say what you are actually experiencing, without softening it.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common things new mothers describe — feeling alone in the experience even when a partner is present and trying. A How Was Your Day session is a space where you do not have to manage your husband\'s feelings or explain yourself in a way he can accept. You can say what you are actually experiencing, without softening it.' },
     },
     {
       '@type': 'Question',
       name: 'Is peer support appropriate for postpartum depression or do I need a professional?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Postpartum depression is a medical condition and a doctor or therapist is the right primary support. LeanOn is peer support — it is not therapy and does not replace professional care. But if access to a therapist is limited or you are on a waitlist, or if you want a space to talk between professional appointments, peer support can provide genuine relief and reduce isolation. If you are in distress, please reach out to NIMHANS (080-46110007) or Tele-MANAS (14416).' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Postpartum depression is a medical condition and a doctor or therapist is the right primary support. How Was Your Day is peer support — it is not therapy and does not replace professional care. But if access to a therapist is limited or you are on a waitlist, or if you want a space to talk between professional appointments, peer support can provide genuine relief and reduce isolation. If you are in distress, please reach out to NIMHANS (080-46110007) or Tele-MANAS (14416).' },
     },
     {
       '@type': 'Question',
-      name: 'How soon after birth can I use LeanOn?',
+      name: 'How soon after birth can I use How Was Your Day?',
       acceptedAnswer: { '@type': 'Answer', text: 'Any time. There is no waiting period. The earliest weeks and months of new motherhood — when you are most sleep-deprived and overwhelmed, and the support has often already gone home — are exactly when many people most need someone to talk to. You can book a session at any point, including the first week home from hospital.' },
     },
   ],
@@ -64,9 +64,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Postpartum Support India', item: 'https://www.leanon.app/support/postpartum-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Postpartum Support India', item: 'https://www.howwasyourday.live/support/postpartum-india' },
   ],
 }
 
@@ -125,7 +125,7 @@ export default function PostpartumIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -143,7 +143,7 @@ export default function PostpartumIndiaPage() {
         <div className="hero">
           <p className="badge">New Motherhood · Postpartum · Peer Support</p>
           <h1>Postpartum Loneliness and Exhaustion in India — <em>You Don&apos;t Have to Feel This Way Alone</em></h1>
-          <p className="lead">New motherhood in India can be isolating in ways nobody warns you about — the judgment, the expectations, the loss of your identity, and the exhaustion you cannot admit. A LeanOn listener will not judge you for what you actually feel.</p>
+          <p className="lead">New motherhood in India can be isolating in ways nobody warns you about — the judgment, the expectations, the loss of your identity, and the exhaustion you cannot admit. A How Was Your Day listener will not judge you for what you actually feel.</p>
           <a href="/browse?topic=parenting" className="cta-hero">Talk to someone who won&apos;t judge you →</a>
         </div>
 
@@ -185,7 +185,7 @@ export default function PostpartumIndiaPage() {
 
         <div className="section">
           <h2>A Space Where You Can Say the Real Thing</h2>
-          <p>A LeanOn session is not a substitute for medical care. If you are experiencing symptoms of postpartum depression — persistent low mood, difficulty bonding, intrusive thoughts, or thoughts of harming yourself or your baby — please talk to a doctor. The helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free and available 24/7.</p>
+          <p>A How Was Your Day session is not a substitute for medical care. If you are experiencing symptoms of postpartum depression — persistent low mood, difficulty bonding, intrusive thoughts, or thoughts of harming yourself or your baby — please talk to a doctor. The helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free and available 24/7.</p>
           <p>But for the vast territory between clinical crisis and performing-fine — the exhaustion, the ambivalence, the grief, the loneliness, the anger you cannot show, the feelings you have not named to anyone yet — peer support offers something that therapy and helplines do not always provide: a real person who has been through something similar, listening without agenda, without judgment, and without needing anything from you in return.</p>
           <p>You can start a session with "I just had a baby and I do not know how I feel" or "I am not okay and I do not know how to say it to anyone in my life." That is enough. A listener will meet you there.</p>
           <div className="how-steps" style={{marginTop:20}}>

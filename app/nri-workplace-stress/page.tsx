@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Workplace Stress in the West | When the Office Feels Like a Foreign Country | LeanOn',
+  title: 'NRI Workplace Stress in the West | When the Office Feels Like a Foreign Country | How Was Your Day',
   description: 'NRI workplace stress is different — navigating Western office culture, accents, promotions, and the immigrant chip on your shoulder. Talk to someone who gets it.',
   keywords: ['nri workplace stress', 'indian immigrant work stress', 'h1b work pressure', 'nri career anxiety', 'indian professional abroad', 'minority stress at work'],
-  alternates: { canonical: 'https://www.leanon.app/nri-workplace-stress' },
-  openGraph: { title: 'NRI Workplace Stress in the West | When the Office Feels Like a Foreign Country | LeanOn', description: 'NRI workplace stress is different — navigating Western office culture, accents, promotions, and the immigrant chip on your shoulder. Talk to someone who gets it.', url: 'https://www.leanon.app/nri-workplace-stress', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-workplace-stress' },
+  openGraph: { title: 'NRI Workplace Stress in the West | When the Office Feels Like a Foreign Country | How Was Your Day', description: 'NRI workplace stress is different — navigating Western office culture, accents, promotions, and the immigrant chip on your shoulder. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/nri-workplace-stress', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Workplace Stress', item: 'https://www.leanon.app/nri-workplace-stress' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Workplace Stress', item: 'https://www.howwasyourday.live/nri-workplace-stress' },
 ] }
 
 const S = `
@@ -70,20 +70,20 @@ export default function NriWorkplaceStressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Workplace Stress</span></nav>
         <div className="hero">
           <p className="badge">NRI Work Stress &middot; Indian Professional Abroad &middot; Immigrant Burnout</p>
           <h1>You work harder than everyone. <em>And somehow it still doesn&rsquo;t feel like enough.</em></h1>
           <p className="lead">NRI workplace stress is not regular work stress. It is navigating Western office culture while carrying an accent, a visa, and the immigrant need to prove yourself twice. The model minority pressure. The promotions that go to people who did less. The daily code-switching that nobody acknowledges. Talk to someone who understands the full picture. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Immigrant Chip on Your Shoulder — and Why It Is Entirely Justified</h2>
           <p>If you are an Indian professional in a Western workplace, you carry a specific cognitive load that your non-immigrant colleagues simply do not. You are monitoring your accent in every meeting. You are managing the impression of being the foreign one. You are working harder than your peers because you know that a mistake by you is read differently than a mistake by a native-born colleague. You are performing competence at a higher threshold just to be seen as equal.</p>
-          <p>This is not paranoia. It is an accurate read of a real dynamic. And the exhaustion of it — the constant vigilance, the energy spent on impression management that non-immigrants can use on actual work — is a real cost that rarely gets named. You cannot complain about it to your manager. You cannot fully explain it to non-immigrant friends. LeanOn listeners are Indian, understand this dynamic from the inside, and will hear it without making you justify the feeling.</p>
+          <p>This is not paranoia. It is an accurate read of a real dynamic. And the exhaustion of it — the constant vigilance, the energy spent on impression management that non-immigrants can use on actual work — is a real cost that rarely gets named. You cannot complain about it to your manager. You cannot fully explain it to non-immigrant friends. How Was Your Day listeners are Indian, understand this dynamic from the inside, and will hear it without making you justify the feeling.</p>
         </div>
 
         <div className="section">
@@ -95,11 +95,11 @@ export default function NriWorkplaceStressPage() {
         <div className="section">
           <h2>Success That Still Feels Empty</h2>
           <p>Sometimes the work stress is not about being held back — it is about succeeding and finding that the success does not feel the way you expected. You got the job title. You got the salary. You are, by every external measure, doing well. And there is a persistent hollowness that you cannot quite name.</p>
-          <p>The Indian overachiever burnout is real. The drive that brought you abroad, that got you the degree and the visa and the career, does not simply turn off when you achieve the goal. It finds a new goal. And at some point, usually when you are exhausted and far from home, you notice that you are running a treadmill that does not seem to have an end point. LeanOn is a space to speak that exhaustion honestly to someone who understands why the dream does not automatically deliver the peace.</p>
+          <p>The Indian overachiever burnout is real. The drive that brought you abroad, that got you the degree and the visa and the career, does not simply turn off when you achieve the goal. It finds a new goal. And at some point, usually when you are exhausted and far from home, you notice that you are running a treadmill that does not seem to have an end point. How Was Your Day is a space to speak that exhaustion honestly to someone who understands why the dream does not automatically deliver the peace.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The immigrant work weight deserves to be heard.</h2><p>No performance, no justification. Just a real listener who gets it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The immigrant work weight deserves to be heard.</h2><p>No performance, no justification. Just a real listener who gets it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-burnout">NRI burnout &rarr;</a>
           <a href="/nri-h1b-visa-stress">H1B visa stress &rarr;</a>

@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation'
 
 const SUPPORT_PHONE = '918971149279'
-const PREFILL_MSG = 'Hi, I need help with LeanOn'
+const PREFILL_MSG = 'Hi, I need help with How Was Your Day'
 const WA_URL = `https://wa.me/${SUPPORT_PHONE}?text=${encodeURIComponent(PREFILL_MSG)}`
 
 export default function WhatsAppSupport() {
@@ -68,7 +68,7 @@ export default function WhatsAppSupport() {
         target="_blank"
         rel="noopener noreferrer"
         className="wa-support"
-        aria-label="Chat with LeanOn support on WhatsApp"
+        aria-label="Chat with How Was Your Day support on WhatsApp"
       >
         <span className="wa-support-pill">Need help? Chat with us</span>
         <span className="wa-support-btn">

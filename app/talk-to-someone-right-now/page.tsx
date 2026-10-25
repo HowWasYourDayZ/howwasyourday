@@ -4,15 +4,15 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone Right Now — Anonymous, no appointment | LeanOn India',
+  title: 'Talk to Someone Right Now — Anonymous, no appointment | How Was Your Day India',
   description: "Talk to someone right now — a real, screened peer listener in India, online now, by text or voice. No appointment. First 5 minutes free.",
-  alternates: { canonical: 'https://www.leanon.app/talk-to-someone-right-now', languages: { 'en-IN': 'https://www.leanon.app/talk-to-someone-right-now' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-right-now', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-someone-right-now' } },
   keywords: 'talk to someone right now, need to talk to someone now India, someone to talk to immediately, urgent emotional support India, talk to someone online now, anonymous listener India',
   openGraph: {
-    title: 'Talk to Someone Right Now — Anonymous, no appointment | LeanOn India',
+    title: 'Talk to Someone Right Now — Anonymous, no appointment | How Was Your Day India',
     description: "Talk to someone right now — a real, screened peer listener in India, online now, by text or voice. No appointment. First 5 minutes free.",
-    url: 'https://www.leanon.app/talk-to-someone-right-now',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/talk-to-someone-right-now',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -21,7 +21,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "Can I talk to someone right now, without an appointment?", acceptedAnswer: { '@type': 'Answer', text: "Yes. Open leanon.app/talk, choose text or voice and tap what is on your mind. LeanOn asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, call Tele-MANAS 14416 first." } },
+    { '@type': 'Question', name: "Can I talk to someone right now, without an appointment?", acceptedAnswer: { '@type': 'Answer', text: "Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, call Tele-MANAS 14416 first." } },
     {
       '@type': 'Question',
       name: 'How fast can I actually talk to someone?',
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'What if I am in crisis?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are thinking of harming yourself or you are in immediate danger, please call NIMHANS at 080-46110007 or Tele-MANAS at 14416 right now. Both are free, 24/7 Government of India helplines staffed by trained crisis professionals. LeanOn is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.',
+        text: 'If you are thinking of harming yourself or you are in immediate danger, please call NIMHANS at 080-46110007 or Tele-MANAS at 14416 right now. Both are free, 24/7 Government of India helplines staffed by trained crisis professionals. How Was Your Day is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.',
       },
     },
   ],
@@ -69,8 +69,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Right Now', item: 'https://www.leanon.app/talk-to-someone-right-now' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Right Now', item: 'https://www.howwasyourday.live/talk-to-someone-right-now' },
   ],
 }
 
@@ -131,7 +131,7 @@ export default function TalkToSomeoneRightNowPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -142,7 +142,7 @@ export default function TalkToSomeoneRightNowPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 If you are thinking of harming yourself, call now: <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). LeanOn is peer support, not a crisis service.
+          🆘 If you are thinking of harming yourself, call now: <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support, not a crisis service.
         </div>
 
         {/* Hero */}
@@ -150,7 +150,7 @@ export default function TalkToSomeoneRightNowPage() {
           <p className="tag">No Appointment · Private</p>
           <h1>Someone Is Ready to <em>Listen</em> — Right Now</h1>
           <p className="lead">You do not need an appointment, a referral, or a reason good enough. Open the listener directory, see who is online, and start talking when a listener accepts.</p>
-          <QuickAnswer question={"Can I talk to someone right now, without an appointment?"} answer={"Yes. Open leanon.app/talk, choose text or voice and tap what is on your mind. LeanOn asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, call Tele-MANAS 14416 first."} />
+          <QuickAnswer question={"Can I talk to someone right now, without an appointment?"} answer={"Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, call Tele-MANAS 14416 first."} />
         </div>
 
         {/* How it works */}
@@ -266,7 +266,7 @@ export default function TalkToSomeoneRightNowPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I am in crisis?</div>
-            <div className="faq-a">If you are thinking of harming yourself or you are in immediate danger, please call <a href="tel:08046110007" style={{color:'var(--teal)',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'var(--teal)',fontWeight:800}}>Tele-MANAS 14416</a> right now. Both are free, 24/7 Government of India helplines staffed by trained crisis professionals. LeanOn is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.</div>
+            <div className="faq-a">If you are thinking of harming yourself or you are in immediate danger, please call <a href="tel:08046110007" style={{color:'var(--teal)',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'var(--teal)',fontWeight:800}}>Tele-MANAS 14416</a> right now. Both are free, 24/7 Government of India helplines staffed by trained crisis professionals. How Was Your Day is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.</div>
           </div>
         </div>
 
@@ -287,7 +287,7 @@ export default function TalkToSomeoneRightNowPage() {
         {/* People Also Search For */}
         <div className="section">
           <h2>People Also Search For</h2>
-          <p>Other ways people find someone to talk to on LeanOn:</p>
+          <p>Other ways people find someone to talk to on How Was Your Day:</p>
           <div className="related">
             <a href="/someone-to-talk-to-at-night" className="related-link">Someone to talk to at night</a>
             <a href="/need-someone-to-talk-to-india" className="related-link">Need someone to talk to</a>

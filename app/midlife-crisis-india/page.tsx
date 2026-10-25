@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Midlife Crisis India — 40s Don\'t Have to Feel Like a Dead End | LeanOn',
+  title: 'Midlife Crisis India — 40s Don\'t Have to Feel Like a Dead End | How Was Your Day',
   description: 'Feeling like you\'ve taken the wrong turn somewhere in your 40s? Talk to someone who\'s been through it. Real peer support from ₹160.',
   keywords: [
     'midlife crisis india', '40s anxiety india', 'midlife meaning india',
     'midlife crisis symptoms india', 'feeling stuck 40s india',
     'career plateau india', 'midlife identity crisis india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/midlife-crisis-india', languages: { 'en-IN': 'https://www.leanon.app/midlife-crisis-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/midlife-crisis-india', languages: { 'en-IN': 'https://www.howwasyourday.live/midlife-crisis-india' } },
   openGraph: {
-    title: 'Midlife Crisis India — 40s Don\'t Have to Feel Like a Dead End | LeanOn',
+    title: 'Midlife Crisis India — 40s Don\'t Have to Feel Like a Dead End | How Was Your Day',
     description: 'Feeling like you\'ve taken the wrong turn somewhere in your 40s? Talk to someone who\'s been through it. Real peer support from ₹160.',
-    url: 'https://www.leanon.app/midlife-crisis-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/midlife-crisis-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Midlife Crisis India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Midlife Crisis India' }],
   },
 }
 
@@ -38,7 +38,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Who do I talk to?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not your children &mdash; they are too close and too young to hold this. Not your parents &mdash; they often feel threatened by the questioning. Not most colleagues &mdash; professional risk. A peer listener on LeanOn is specifically suited to this: they have no stake in your choices, no investment in how it turns out, and often have navigated their own version of this reckoning.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Not your children &mdash; they are too close and too young to hold this. Not your parents &mdash; they often feel threatened by the questioning. Not most colleagues &mdash; professional risk. A peer listener on How Was Your Day is specifically suited to this: they have no stake in your choices, no investment in how it turns out, and often have navigated their own version of this reckoning.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Midlife Crisis India', item: 'https://www.leanon.app/midlife-crisis-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Midlife Crisis India', item: 'https://www.howwasyourday.live/midlife-crisis-india' },
   ],
 }
 
@@ -112,7 +112,7 @@ export default function MidlifeCrisisIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -161,7 +161,7 @@ export default function MidlifeCrisisIndiaPage() {
         <div className="section">
           <h2>Why Peer Support Helps</h2>
           <p>Someone who has been through their own midlife reckoning &mdash; not a therapist with a clinical framework, but a real person who has navigated the same confusion &mdash; can hold this in a way that is specific and grounding. They do not panic at the questions. They do not rush to solutions. They have sat in the same uncertainty and come out with something, even if that something is simply a different relationship with the uncertainty.</p>
-          <p>That is what LeanOn peer listeners offer for midlife conversations.</p>
+          <p>That is what How Was Your Day peer listeners offer for midlife conversations.</p>
         </div>
 
         <div className="section">

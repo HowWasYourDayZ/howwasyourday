@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Marriage Problems in the USA | Talk to Someone | LeanOn',
+  title: 'NRI Marriage Problems in the USA | Talk to Someone | How Was Your Day',
   description: 'Arranged marriage pressure, long-distance spouse, or marriage problems as an Indian in America? Talk to a peer listener who understands the NRI marriage experience.',
   keywords: ['nri marriage usa', 'nri marriage problems america', 'arranged marriage nri usa', 'indian marriage issues usa', 'nri spouse problems', 'nri marriage stress', 'desi marriage usa'],
-  alternates: { canonical: 'https://www.leanon.app/nri-marriage-usa' },
-  openGraph: { title: 'NRI Marriage Problems in the USA | Talk to Someone | LeanOn', description: 'Arranged marriage pressure, long-distance spouse, or marriage problems as an Indian in America? Talk to a peer listener who understands the NRI marriage experience.', url: 'https://www.leanon.app/nri-marriage-usa', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-marriage-usa' },
+  openGraph: { title: 'NRI Marriage Problems in the USA | Talk to Someone | How Was Your Day', description: 'Arranged marriage pressure, long-distance spouse, or marriage problems as an Indian in America? Talk to a peer listener who understands the NRI marriage experience.', url: 'https://www.howwasyourday.live/nri-marriage-usa', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'What kinds of NRI marriage issues do people talk about?', acceptedAnswer: { '@type': 'Answer', text: 'Everything: the arranged match you agreed to under pressure and are now questioning. The long-distance marriage with a spouse still waiting for their visa. The marriage to someone your parents disapprove of. The marriage that looks fine from the outside but feels lonely from the inside. The exhaustion of navigating two families with different expectations across an ocean.' } },
-  { '@type': 'Question', name: 'Is LeanOn the right place for marriage problems?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is peer support, not mediation or professional advice. But peer listeners are real Indians who have heard many of these stories. Sometimes what you need before anything else is to be heard — by someone who truly understands the cultural complexity, without judgement.' } },
+  { '@type': 'Question', name: 'Is How Was Your Day the right place for marriage problems?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is peer support, not mediation or professional advice. But peer listeners are real Indians who have heard many of these stories. Sometimes what you need before anything else is to be heard — by someone who truly understands the cultural complexity, without judgement.' } },
   { '@type': 'Question', name: 'What if I\'m not sure my marriage is a problem — just that something feels off?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly what peer support is for. You don\'t need a crisis or a clear problem to talk to someone. "Something feels off and I can\'t name it" is a completely valid reason to reach out.' } },
   { '@type': 'Question', name: 'Is this confidential from my family?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. Only a phone number and first name. Nothing is shared with your family in India or the US, your community, or anyone else.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Marriage USA', item: 'https://www.leanon.app/nri-marriage-usa' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Marriage USA', item: 'https://www.howwasyourday.live/nri-marriage-usa' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function NriMarriageUsaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Marriage USA</span></nav>
         <div className="hero">
@@ -84,12 +84,12 @@ export default function NriMarriageUsaPage() {
           <h2>NRI Marriage in America: The Pressures Nobody Names</h2>
           <p>NRI marriage in America is not just about two people — it involves two families, two cultural scripts, two sets of expectations, and often an ocean between them. The couple living in Plano or Sugar Land has to navigate the parents in India watching every decision, the aunties and uncles in the Indian community in America watching every move, and the American-born or raised children who will grow up in a completely different world than either parent knew.</p>
           <p>There are many forms this takes. The arranged marriage where both parties knew each other for six months before the wedding and are now living together in a suburb, discovering each other under significant pressure to make it work. The love marriage to someone of a different background that the family has grudgingly accepted but never fully welcomed. The marriage to an Indian-American — a different cultural identity entirely — where the expectations around Indian womanhood or manhood create friction. The marriage that started well and has drifted.</p>
-          <p>Whatever the form, the common thread is that there is often no one to talk to about it — the community watches, the family has opinions, and the stakes of saying the wrong thing to the wrong person are high. LeanOn offers a real Indian peer listener in India — outside your social network entirely — who understands all of this. First 5 minutes free.</p>
+          <p>Whatever the form, the common thread is that there is often no one to talk to about it — the community watches, the family has opinions, and the stakes of saying the wrong thing to the wrong person are high. How Was Your Day offers a real Indian peer listener in India — outside your social network entirely — who understands all of this. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>What a Peer Listener Can Offer</h2>
-          <p>LeanOn is peer support, not professional advice. A peer listener will not tell you what to do about your marriage. What they will do is listen — deeply and without judgement — while you say the things you have not been able to say out loud. They have cultural fluency. They understand what it means to be told "just adjust" or "log kya kahenge." They understand the weight of family honour and what it costs to carry it.</p>
+          <p>How Was Your Day is peer support, not professional advice. A peer listener will not tell you what to do about your marriage. What they will do is listen — deeply and without judgement — while you say the things you have not been able to say out loud. They have cultural fluency. They understand what it means to be told "just adjust" or "log kya kahenge." They understand the weight of family honour and what it costs to carry it.</p>
           <p>Sometimes being heard — really heard, by someone who truly gets the cultural context — is the thing that creates movement when everything has felt stuck. Talk to someone. First 5 minutes free. From US$10 for a full 15-minute session.</p>
         </div>
 

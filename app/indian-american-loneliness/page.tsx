@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indian-American Loneliness — The In-Between Feeling | LeanOn',
-  description: 'Too Indian for America, too American for India. The ABCD in-between identity is a unique kind of loneliness that most people around you will never fully understand. LeanOn gets it.',
+  title: 'Indian-American Loneliness — The In-Between Feeling | How Was Your Day',
+  description: 'Too Indian for America, too American for India. The ABCD in-between identity is a unique kind of loneliness that most people around you will never fully understand. How Was Your Day gets it.',
   keywords: [
     'indian american loneliness', 'abcd identity crisis', 'second generation indian american lonely',
     'too indian for america too american for india', 'desi identity usa', 'indian american belonging',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'desi american feeling lost', 'indian american cultural identity support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-loneliness',
-    languages: { 'en-US': 'https://www.leanon.app/usa-loneliness' },
+    canonical: 'https://www.howwasyourday.live/usa-loneliness',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa-loneliness' },
   },
   openGraph: {
     title: 'Indian-American Loneliness — The In-Between Feeling',
-    description: 'Not fully Indian, not fully American. That in-between space can be profoundly lonely. LeanOn peer listeners understand this identity without needing it explained.',
-    url: 'https://www.leanon.app/usa-loneliness',
-    siteName: 'LeanOn',
+    description: 'Not fully Indian, not fully American. That in-between space can be profoundly lonely. How Was Your Day peer listeners understand this identity without needing it explained.',
+    url: 'https://www.howwasyourday.live/usa-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -46,10 +46,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can a LeanOn listener help with identity-related stress?',
+      name: 'Can a How Was Your Day listener help with identity-related stress?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many LeanOn listeners have navigated the Indian-American experience themselves. They understand the cultural tug-of-war, the family expectations, the feeling of being between two worlds. They will not judge you or tell you how to feel — they will simply listen and make you feel understood.',
+        text: 'Yes. Many How Was Your Day listeners have navigated the Indian-American experience themselves. They understand the cultural tug-of-war, the family expectations, the feeling of being between two worlds. They will not judge you or tell you how to feel — they will simply listen and make you feel understood.',
       },
     },
     {
@@ -57,12 +57,12 @@ const faqSchema = {
       name: 'What if my parents do not understand what I am going through?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Tiger parenting and high expectations are real pressures that many Indian-American families navigate. A LeanOn listener is a neutral space where you can say things you cannot say at home — without worrying about disappointing anyone.',
+        text: 'Tiger parenting and high expectations are real pressures that many Indian-American families navigate. A How Was Your Day listener is a neutral space where you can say things you cannot say at home — without worrying about disappointing anyone.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost from the USA?',
+      name: 'How much does How Was Your Day cost from the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. No referral needed, no waitlist.',
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Indian-American Loneliness', item: 'https://www.leanon.app/usa-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Indian-American Loneliness', item: 'https://www.howwasyourday.live/usa-loneliness' },
   ],
 }
 
@@ -154,7 +154,7 @@ export default function IndianAmericanLonelinessPage() {
           The in-between is a real place, and it can be incredibly lonely. You grew up navigating two
           cultures simultaneously — Indian at home, American everywhere else — and somehow never feeling
           fully at home in either. That specific kind of displacement rarely gets talked about honestly.
-          LeanOn is a space where it can be.
+          How Was Your Day is a space where it can be.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
@@ -186,7 +186,7 @@ export default function IndianAmericanLonelinessPage() {
             every career decision, every life choice carries the weight of that sacrifice. You grew up
             knowing that failing was not just personal — it would reflect on the whole family.</p>
           <p>The result is often a person who is outwardly very high-achieving and inwardly completely
-            exhausted. A LeanOn listener is the one place where you do not have to perform okayness.
+            exhausted. A How Was Your Day listener is the one place where you do not have to perform okayness.
             You can just be honest about how you actually feel.</p>
         </div>
 
@@ -221,17 +221,17 @@ export default function IndianAmericanLonelinessPage() {
               to identity confusion, anxiety, and deep loneliness.</p>
           </div>
           <div className="faq-item">
-            <h3>Can a LeanOn listener help with identity-related stress?</h3>
-            <p>Yes. Many LeanOn listeners have navigated the Indian-American experience themselves. They
+            <h3>Can a How Was Your Day listener help with identity-related stress?</h3>
+            <p>Yes. Many How Was Your Day listeners have navigated the Indian-American experience themselves. They
               understand the cultural tug-of-war and will not judge you — they will simply listen.</p>
           </div>
           <div className="faq-item">
             <h3>What if my parents do not understand what I am going through?</h3>
-            <p>A LeanOn listener is a neutral space where you can say things you cannot say at home —
+            <p>A How Was Your Day listener is a neutral space where you can say things you cannot say at home —
               without worrying about disappointing anyone or explaining the cultural context first.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost from the USA?</h3>
+            <h3>How much does How Was Your Day cost from the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. First 5
               minutes are always free. No referral needed, no waitlist.</p>
           </div>
@@ -250,7 +250,7 @@ export default function IndianAmericanLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

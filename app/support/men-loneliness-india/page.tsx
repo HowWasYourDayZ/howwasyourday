@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Men in India Get Lonely Too — They Just Can\'t Say It | LeanOn',
+  title: 'Men in India Get Lonely Too — They Just Can\'t Say It | How Was Your Day',
   description: 'Loneliness in men in India is real, common, and almost never discussed. Job pressure, marriage pressure, no one to actually talk to — and no permission to admit any of it. That changes here.',
   keywords: [
     'men loneliness India', 'lonely man India', 'Indian men mental health',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'male emotional health India', 'men need support India', 'lonely single man India',
     'men adulting India loneliness', 'men under pressure India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/men-loneliness-india', languages: { 'en-IN': 'https://www.leanon.app/support/men-loneliness-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/men-loneliness-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/men-loneliness-india' } },
   openGraph: {
-    title: 'Men in India Get Lonely Too — They Just Can\'t Say It | LeanOn',
+    title: 'Men in India Get Lonely Too — They Just Can\'t Say It | How Was Your Day',
     description: 'Job pressure. Marriage pressure. No one to actually talk to. Male loneliness in India is real and almost never discussed.',
-    url: 'https://www.leanon.app/support/men-loneliness-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/men-loneliness-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Men Loneliness India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Men Loneliness India' }],
   },
 }
 
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What is LeanOn and how does it help with loneliness?',
+      name: 'What is How Was Your Day and how does it help with loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn connects you with screened peer listeners — real people who have their own lived experience and are selected to listen actively and without judgment. A session is not therapy — it is a real conversation with a real person who is there specifically to hear what you are going through. Many men use LeanOn specifically because it provides what their current social circle cannot: someone to talk to about the actual internal experience, not just the surface level. Sessions start at ₹160 for 15 minutes. First 5 minutes are free.',
+        text: 'How Was Your Day connects you with screened peer listeners — real people who have their own lived experience and are selected to listen actively and without judgment. A session is not therapy — it is a real conversation with a real person who is there specifically to hear what you are going through. Many men use How Was Your Day specifically because it provides what their current social circle cannot: someone to talk to about the actual internal experience, not just the surface level. Sessions start at ₹160 for 15 minutes. First 5 minutes are free.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Will I be judged for how I feel?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn listeners are chosen for their ability not to judge. The whole point is to provide a space where you can say what is actually true — not the version you would tell your family or your male friends or your manager. You can say "I am lonely and I don\'t know why" or "I am exhausted by the pressure and I cannot say that to anyone" or "I don\'t want to get married but my family won\'t listen" — and it will be received, not evaluated.',
+        text: 'No. How Was Your Day listeners are chosen for their ability not to judge. The whole point is to provide a space where you can say what is actually true — not the version you would tell your family or your male friends or your manager. You can say "I am lonely and I don\'t know why" or "I am exhausted by the pressure and I cannot say that to anyone" or "I don\'t want to get married but my family won\'t listen" — and it will be received, not evaluated.',
       },
     },
   ],
@@ -75,9 +75,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/browse' },
-    { '@type': 'ListItem', position: 3, name: 'Men Loneliness India', item: 'https://www.leanon.app/support/men-loneliness-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/browse' },
+    { '@type': 'ListItem', position: 3, name: 'Men Loneliness India', item: 'https://www.howwasyourday.live/support/men-loneliness-india' },
   ],
 }
 
@@ -151,7 +151,7 @@ export default function MenLonelinessIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 
@@ -219,14 +219,14 @@ export default function MenLonelinessIndiaPage() {
           <div className="card-label">What talking actually does</div>
           <h3>Not therapy. Just a real conversation.</h3>
           <p>
-            LeanOn is not therapy. Our listeners are screened people — some of them men who understand the specific
+            How Was Your Day is not therapy. Our listeners are screened people — some of them men who understand the specific
             pressure of being an Indian man in his 20s or 30s — who will listen without judgment, without
             making it about themselves, without giving unsolicited advice. Just a real conversation.
             Sometimes that is all you needed.
           </p>
         </div>
 
-        <h2>Related Topics Men Talk About on LeanOn</h2>
+        <h2>Related Topics Men Talk About on How Was Your Day</h2>
         <div className="related">
           <a href="/support/not-ready-to-get-married-india" className="rel-card">
             <h4>Not Ready to Get Married</h4>
@@ -265,7 +265,7 @@ export default function MenLonelinessIndiaPage() {
           <p>A real person. No judgment. No advice you didn&apos;t ask for. private, no appointment. First 5 minutes free.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Someone is listening — start free now →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works</button></a>
           </div>
         </div>
       </div>

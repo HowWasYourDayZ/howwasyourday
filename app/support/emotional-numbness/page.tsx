@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Numbness — When You\'ve Forgotten What It Feels Like to Feel | LeanOn',
+  title: 'Emotional Numbness — When You\'ve Forgotten What It Feels Like to Feel | How Was Your Day',
   description: 'Feeling emotionally numb — not sad, not happy, just nothing — is one of the most disorienting experiences there is. Talk to someone who understands what it is like to not feel at all.',
   keywords: [
     'emotional numbness India', 'feeling numb emotionally India', 'can\'t feel emotions India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'emotional disconnection India', 'anhedonia India', 'feeling empty inside India',
     'numb for years India', 'emotional flatness India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/emotional-numbness', languages: { 'en-IN': 'https://www.leanon.app/support/emotional-numbness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-numbness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/emotional-numbness' } },
   openGraph: {
-    title: 'Emotional Numbness — When You\'ve Forgotten What It Feels Like to Feel | LeanOn',
+    title: 'Emotional Numbness — When You\'ve Forgotten What It Feels Like to Feel | How Was Your Day',
     description: 'Feeling emotionally numb — not sad, not happy, just nothing. Talk to someone who understands.',
-    url: 'https://www.leanon.app/support/emotional-numbness',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/emotional-numbness',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Emotional Numbness Support' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Emotional Numbness Support' }],
   },
 }
 
@@ -50,7 +50,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Should I see a therapist for emotional numbness?',
-      acceptedAnswer: { '@type': 'Answer', text: 'If numbness has been with you for years, yes — a therapist is worth pursuing when you can access one. Chronic emotional numbness that began after difficult experiences in childhood or adolescence often has roots that benefit from professional support. That said, professional help in India is genuinely hard to access — cost, availability, stigma. While you navigate toward that, peer support through LeanOn is not a replacement but it is not nothing. Speaking to someone who has also experienced emotional disconnection, having your experience witnessed without judgment, can be meaningful support while you work toward the bigger picture.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'If numbness has been with you for years, yes — a therapist is worth pursuing when you can access one. Chronic emotional numbness that began after difficult experiences in childhood or adolescence often has roots that benefit from professional support. That said, professional help in India is genuinely hard to access — cost, availability, stigma. While you navigate toward that, peer support through How Was Your Day is not a replacement but it is not nothing. Speaking to someone who has also experienced emotional disconnection, having your experience witnessed without judgment, can be meaningful support while you work toward the bigger picture.' },
     },
     {
       '@type': 'Question',
@@ -64,9 +64,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Emotional Numbness', item: 'https://www.leanon.app/support/emotional-numbness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Emotional Numbness', item: 'https://www.howwasyourday.live/support/emotional-numbness' },
   ],
 }
 
@@ -125,7 +125,7 @@ export default function EmotionalNumbnessPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -175,7 +175,7 @@ export default function EmotionalNumbnessPage() {
           <p>There is a specific, underrated exhaustion that comes from being emotionally numb in a world that expects you to feel. You learn, early and well, to perform. To mirror the appropriate response — excitement when others are excited, sadness at appropriate moments, enthusiasm for things that are supposed to matter. You become very good at it. People around you probably have no idea.</p>
           <p>This performance is not deceptive, exactly. It is survival. It is the only available way to navigate social reality when the actual feeling is not there. But it is draining in a particular way — you are spending real energy to generate a facsimile of something that should come naturally. And there is a loneliness to it that is hard to describe: being surrounded by people who think they know you, when the you they know is mostly a careful construction.</p>
           <p>The longing that often coexists with numbness — the desperate need for love or connection or someone to really see you — is partly this: the wish to stop performing. To find someone in whose presence the performance could drop, even briefly. To be known in the place where you actually are, not the place where you have learned to appear.</p>
-          <p>Peer support on LeanOn is not the same as therapy. But it is a space where the performance can, at least in part, stop. Where you can say &quot;I don&apos;t feel anything and I have not for years&quot; to someone who will not be alarmed, who will not try to fix it, who will simply receive it and stay.</p>
+          <p>Peer support on How Was Your Day is not the same as therapy. But it is a space where the performance can, at least in part, stop. Where you can say &quot;I don&apos;t feel anything and I have not for years&quot; to someone who will not be alarmed, who will not try to fix it, who will simply receive it and stay.</p>
         </div>
 
         <div className="section">
@@ -183,13 +183,13 @@ export default function EmotionalNumbnessPage() {
           <p>Emotional numbness is hard to name as a problem because it does not feel like a crisis. You are not in acute pain. There is no clear event to point to. When someone asks &quot;what&apos;s wrong?&quot; the honest answer is &quot;nothing specific, I just don&apos;t feel anything&quot; — which sounds strange to say and often produces confused or dismissive responses.</p>
           <p>There is also the question of whether you deserve support for something that is not, technically, a breakdown. The answer is yes. The threshold for deserving support is not suffering loudly enough. It is simply experiencing something that is diminishing your life — and years of emotional flatness, of going through the motions, of the quiet grief of not being present to your own experience, is exactly that.</p>
           <p>Talking helps not because it resolves the numbness immediately, but because it begins to make it real. When something that has existed only as a private, unnamed experience gets spoken to another person and witnessed — something shifts. Not a dramatic shift, not a sudden flood of feeling. But a small, incremental movement toward the self that has been waiting under the flat line.</p>
-          <p>The people who talk to LeanOn listeners about emotional numbness often say the same thing: they did not know what they were going to say, they did not know if it would help, but the act of saying &quot;I don&apos;t feel things&quot; to a real person who heard it — without judgment, without a script — was itself a small beginning.</p>
+          <p>The people who talk to How Was Your Day listeners about emotional numbness often say the same thing: they did not know what they were going to say, they did not know if it would help, but the act of saying &quot;I don&apos;t feel things&quot; to a real person who heard it — without judgment, without a script — was itself a small beginning.</p>
         </div>
 
         <div className="section">
           <h2>You Don&apos;t Need to Understand It to Start</h2>
           <p>You do not need to have a clear diagnosis, a coherent narrative of how this happened, or a sense of what you need from a conversation. You do not need to be in crisis. You do not need to be sure that talking will help.</p>
-          <p>You can start with: &quot;I have been feeling numb for a very long time and I don&apos;t really know what to do with that.&quot; That is enough. A LeanOn listener is screened and expected to meet you in the uncertainty — to help you find language for what you are experiencing, to sit with you in the flatness without needing to immediately fix or explain it.</p>
+          <p>You can start with: &quot;I have been feeling numb for a very long time and I don&apos;t really know what to do with that.&quot; That is enough. A How Was Your Day listener is screened and expected to meet you in the uncertainty — to help you find language for what you are experiencing, to sit with you in the flatness without needing to immediately fix or explain it.</p>
           <p>The numbness did not develop overnight. It will not resolve overnight either. But the first honest conversation — the first time you say this to someone who actually hears it — is where something, slowly, begins.</p>
         </div>
 

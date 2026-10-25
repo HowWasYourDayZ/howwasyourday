@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in New York | Jackson Heights, Flushing | LeanOn',
+  title: 'Emotional Support for Indians in New York | Jackson Heights, Flushing | How Was Your Day',
   description: 'Jackson Heights, Flushing, Murray Hill — NYC\'s Indian community spans every borough. Yet New York loneliness is its own kind of beast. Talk to someone who understands.',
   keywords: ['indians in new york', 'jackson heights indian', 'queens indian community', 'nyc indian mental health', 'desi support new york', 'indian loneliness nyc', 'manhattan indian support'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-new-york' },
-  openGraph: { title: 'Emotional Support for Indians in New York | Jackson Heights, Flushing | LeanOn', description: 'Jackson Heights, Flushing, Murray Hill — NYC\'s Indian community spans every borough. Yet New York loneliness is its own kind of beast. Talk to someone who understands.', url: 'https://www.leanon.app/indians-in-new-york', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-new-york' },
+  openGraph: { title: 'Emotional Support for Indians in New York | Jackson Heights, Flushing | How Was Your Day', description: 'Jackson Heights, Flushing, Murray Hill — NYC\'s Indian community spans every borough. Yet New York loneliness is its own kind of beast. Talk to someone who understands.', url: 'https://www.howwasyourday.live/indians-in-new-york', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand New York Indian life?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience — including the specific intensity of New York: the pace, the cost of living pressure, the isolation of a city of millions. You don\'t need to explain the context.' } },
+  { '@type': 'Question', name: 'Do listeners understand New York Indian life?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the specific intensity of New York: the pace, the cost of living pressure, the isolation of a city of millions. You don\'t need to explain the context.' } },
   { '@type': 'Question', name: 'When can I connect from New York?', acceptedAnswer: { '@type': 'Answer', text: 'New York (EST) is 10.5 hours behind IST. 8am NYC = 6:30pm India. Your morning commute on the subway — Queens to Manhattan or anywhere — is Indian evening. No appointment needed.' } },
   { '@type': 'Question', name: 'Is this private from my community in Queens or New Jersey?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the NYC or NJ Indian network. Nothing is shared with anyone.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in New York', item: 'https://www.leanon.app/indians-in-new-york' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in New York', item: 'https://www.howwasyourday.live/indians-in-new-york' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInNewYorkPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in New York</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInNewYorkPage() {
           <h2>Jackson Heights to Murray Hill: New York&rsquo;s Indian Map</h2>
           <p>New York&rsquo;s Indian community is spread across the city in ways that reflect its diversity. Jackson Heights in Queens — the neighbourhood around 74th Street — is one of the most famous South Asian corridors in America, with Bengali, Bangladeshi, Pakistani, and Indian communities layered on top of each other. Flushing has a large Indian presence. Murray Hill in Manhattan is home to younger professionals. Long Island has established South Asian suburbs. New Jersey — just across the water — is an extension of this same diaspora.</p>
           <p>The city moves fast. Friendships form in workplaces and immediately take on a professional texture. The community is present — the restaurants, the temples, the cultural events — but deeply distributed. You might go weeks without a real conversation. The pace and ambition that drew you here are also the things that keep genuine connection at arm&rsquo;s length.</p>
-          <p>LeanOn is for exactly this: a real Indian peer listener in India, understanding everything about where you come from, available when the New York pace briefly stops and something quieter comes through. First 5 minutes free.</p>
+          <p>How Was Your Day is for exactly this: a real Indian peer listener in India, understanding everything about where you come from, available when the New York pace briefly stops and something quieter comes through. First 5 minutes free.</p>
         </div>
 
         <div className="section">

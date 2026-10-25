@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support for Social Anxiety in India | LeanOn',
-  description: 'Struggling with social anxiety? Talk to a peer listener who gets it. No appointment needed. LeanOn listeners are empathetic.',
-  alternates: { canonical: 'https://www.leanon.app/support/social-anxiety', languages: { 'en-IN': 'https://www.leanon.app/support/social-anxiety' } },
+  title: 'Peer Support for Social Anxiety in India | How Was Your Day',
+  description: 'Struggling with social anxiety? Talk to a peer listener who gets it. No appointment needed. How Was Your Day listeners are empathetic.',
+  alternates: { canonical: 'https://www.howwasyourday.live/support/social-anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/social-anxiety' } },
   openGraph: {
-    title: 'Peer Support for Social Anxiety in India | LeanOn',
-    description: 'Struggling with social anxiety? Talk to a peer listener who gets it. No appointment needed. LeanOn listeners are empathetic.',
-    url: 'https://www.leanon.app/support/social-anxiety',
-    siteName: 'LeanOn',
+    title: 'Peer Support for Social Anxiety in India | How Was Your Day',
+    description: 'Struggling with social anxiety? Talk to a peer listener who gets it. No appointment needed. How Was Your Day listeners are empathetic.',
+    url: 'https://www.howwasyourday.live/support/social-anxiety',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -48,15 +48,15 @@ const faqSchema = {
       name: 'How can a peer listener help with social anxiety if they are not a therapist?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer listeners on LeanOn have personally lived through social anxiety, public speaking fear, avoided gatherings, or interview panic, and offer empathy instead of clinical advice. Simply being heard without judgment, in a low-pressure format, can help you practice opening up and build confidence for real-world conversations.',
+        text: 'Peer listeners on How Was Your Day have personally lived through social anxiety, public speaking fear, avoided gatherings, or interview panic, and offer empathy instead of clinical advice. Simply being heard without judgment, in a low-pressure format, can help you practice opening up and build confidence for real-world conversations.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn peer support cost?',
+      name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.',
       },
     },
   ],
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Social Anxiety', item: 'https://www.leanon.app/support/social-anxiety' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Social Anxiety', item: 'https://www.howwasyourday.live/support/social-anxiety' },
   ],
 }
 
@@ -129,7 +129,7 @@ export default function SocialAnxietySupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -148,7 +148,7 @@ export default function SocialAnxietySupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Social Anxiety</p>
           <h1>You Are Not <em>Broken</em> — Social Anxiety Is Common and Treatable</h1>
-          <p className="lead">Racing heart before a meeting. Rehearsing a sentence five times before you say it out loud. Avoiding weddings and family functions because being watched and judged feels unbearable — social anxiety touches millions of people in India, even though it is rarely called by its name. LeanOn connects you with peer listeners who have lived through social anxiety themselves, in a space with zero pressure to perform.</p>
+          <p className="lead">Racing heart before a meeting. Rehearsing a sentence five times before you say it out loud. Avoiding weddings and family functions because being watched and judged feels unbearable — social anxiety touches millions of people in India, even though it is rarely called by its name. How Was Your Day connects you with peer listeners who have lived through social anxiety themselves, in a space with zero pressure to perform.</p>
         </div>
 
         {/* Understanding social anxiety */}
@@ -172,25 +172,25 @@ export default function SocialAnxietySupportPage() {
           <p>Scrolling through curated highlight reels of other people&apos;s confidence, achievements, and social lives can quietly deepen social anxiety. It becomes easy to believe that everyone else finds social situations effortless, which only intensifies the shame and self-consciousness around your own struggle — when in reality, far more people feel this way than ever post about it.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps With Social Anxiety</h2>
-          <p>LeanOn is not therapy, and we are honest about that. We are peer support — real people who understand social anxiety from the inside, offering empathy instead of advice you didn&apos;t ask for. Here is how we help:</p>
+          <h2>How the app Helps With Social Anxiety</h2>
+          <p>How Was Your Day is not therapy, and we are honest about that. We are peer support — real people who understand social anxiety from the inside, offering empathy instead of advice you didn&apos;t ask for. Here is how we help:</p>
 
           <h3>Listeners Who Have Lived It</h3>
           <p>Our listeners have personally navigated social anxiety — the racing thoughts before a meeting, the dread of a wedding invitation, the interview that felt like a trial. They bring genuine empathy, not textbook responses, because they have sat exactly where you are sitting now.</p>
 
           <h3>A Pressure-Free Way to Be Heard</h3>
-          <p>For many people with social anxiety, even reaching out feels like a social risk. LeanOn offers a text-based option alongside calls, so you can open up at your own pace without the in-person pressure of eye contact, tone, or being watched. It is an empathetic space designed to feel safe, not performative.</p>
+          <p>For many people with social anxiety, even reaching out feels like a social risk. How Was Your Day offers a text-based option alongside calls, so you can open up at your own pace without the in-person pressure of eye contact, tone, or being watched. It is an empathetic space designed to feel safe, not performative.</p>
 
           <h3>Practicing Connection Before It Counts</h3>
           <p>Talking to a listener who won&apos;t judge you is a low-stakes way to practice being heard. Many users find that after a few sessions, expressing themselves in real-world conversations — with a colleague, a friend, a family member — starts to feel a little less terrifying.</p>
 
           <h3>Support Before the Moment That Scares You</h3>
-          <p>Social anxiety often peaks in anticipation — the night before an interview, the morning of a wedding, an hour before a big presentation. LeanOn listeners go online at different hours, so you can talk through your nerves right before the moment that scares you, not days later in a scheduled appointment.</p>
+          <p>Social anxiety often peaks in anticipation — the night before an interview, the morning of a wedding, an hour before a big presentation. How Was Your Day listeners go online at different hours, so you can talk through your nerves right before the moment that scares you, not days later in a scheduled appointment.</p>
 
           <h3>Privacy That Removes the Fear of Judgment</h3>
-          <p>The fear of being judged is at the core of social anxiety, so privacy matters enormously. LeanOn conversations are anonymous and confidential — no one from your family, college, or workplace will ever know you reached out, which makes it far easier to be completely honest.</p>
+          <p>The fear of being judged is at the core of social anxiety, so privacy matters enormously. How Was Your Day conversations are anonymous and confidential — no one from your family, college, or workplace will ever know you reached out, which makes it far easier to be completely honest.</p>
         </div>
 
         {/* Listener cards */}
@@ -231,7 +231,7 @@ export default function SocialAnxietySupportPage() {
           <p>Talk to a peer listener who truly understands social anxiety. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">No judgment, no pressure — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -252,18 +252,18 @@ export default function SocialAnxietySupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How can a peer listener help with social anxiety if they are not a therapist?</div>
-            <div className="faq-a">Peer listeners on LeanOn have personally lived through social anxiety, public speaking fear, avoided gatherings, or interview panic, and offer empathy instead of clinical advice. Simply being heard without judgment, in a low-pressure format, can help you practice opening up and build confidence for real-world conversations.</div>
+            <div className="faq-a">Peer listeners on How Was Your Day have personally lived through social anxiety, public speaking fear, avoided gatherings, or interview panic, and offer empathy instead of clinical advice. Simply being heard without judgment, in a low-pressure format, can help you practice opening up and build confidence for real-world conversations.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn peer support cost?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.</div>
+            <div className="faq-q">How much does How Was Your Day peer support cost?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Social anxiety often travels with other challenges. Explore more peer support on LeanOn:</p>
+          <p>Social anxiety often travels with other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>

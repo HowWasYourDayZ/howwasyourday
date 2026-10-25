@@ -4,7 +4,7 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to a Real Person About Relationship Problems in India | LeanOn',
+  title: 'Talk to a Real Person About Relationship Problems in India | How Was Your Day',
   description: "Talk through a fight, breakup, trust concerns or marriage pressure with a screened peer listener in India by text or voice. This is non-clinical peer support, not couples therapy or legal advice. One introductory session up to 5 minutes is free per account; availability varies.",
   keywords: [
     'relationship advice real person', 'someone to talk to about relationship problems',
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     'talk about marriage problems', 'breakup support online india',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/relationship-support-real-person',
+    canonical: 'https://www.howwasyourday.live/relationship-support-real-person',
   },
   openGraph: {
-    title: 'Relationship Support from a Real Person | LeanOn',
-    description: 'LeanOn offers one-to-one text or voice conversations with screened peer listeners about relationship stress. It is not professional counselling; one introductory session up to 5 minutes is free per account, and availability depends on who is online.',
-    url: 'https://www.leanon.app/relationship-support-real-person',
-    siteName: 'LeanOn',
+    title: 'Relationship Support from a Real Person | How Was Your Day',
+    description: 'How Was Your Day offers one-to-one text or voice conversations with screened peer listeners about relationship stress. It is not professional counselling; one introductory session up to 5 minutes is free per account, and availability depends on who is online.',
+    url: 'https://www.howwasyourday.live/relationship-support-real-person',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -28,29 +28,29 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "Who can I talk to about relationship problems?", acceptedAnswer: { '@type': 'Answer', text: "If you want to talk through a fight, breakup, trust concern or marriage and family pressure, LeanOn lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. One introductory session up to 5 minutes is free per account; a match is not guaranteed." } },
+    { '@type': 'Question', name: "Who can I talk to about relationship problems?", acceptedAnswer: { '@type': 'Answer', text: "If you want to talk through a fight, breakup, trust concern or marriage and family pressure, How Was Your Day lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. One introductory session up to 5 minutes is free per account; a match is not guaranteed." } },
     {
       '@type': 'Question',
       name: 'Where can I get relationship advice from a real person online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn offers one-to-one conversations with screened peer listeners about relationships, breakups, marriage stress and emotional disconnection. It is non-clinical support, not therapy. One introductory session up to 5 minutes is free per account; availability varies.',
+        text: 'How Was Your Day offers one-to-one conversations with screened peer listeners about relationships, breakups, marriage stress and emotional disconnection. It is non-clinical support, not therapy. One introductory session up to 5 minutes is free per account; availability varies.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn relationship advice or therapy?',
+      name: 'Is How Was Your Day relationship advice or therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support — a real human who listens and helps you process your feelings about a relationship. It is not professional therapy or couples counseling.',
+        text: 'How Was Your Day is peer support — a real human who listens and helps you process your feelings about a relationship. It is not professional therapy or couples counseling.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How does privacy work on LeanOn?',
+      name: 'How does privacy work on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Avoid sharing details you are not comfortable disclosing, and read the Privacy Policy for details.',
+        text: 'How Was Your Day uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Avoid sharing details you are not comfortable disclosing, and read the Privacy Policy for details.',
       },
     },
     {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'Why talk to a human listener instead of asking an AI for relationship advice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI gives generic advice based on patterns in data. A LeanOn listener brings genuine empathy and real human perspective — they have navigated real relationships and understand what it actually feels like.',
+        text: 'AI gives generic advice based on patterns in data. A How Was Your Day listener brings genuine empathy and real human perspective — they have navigated real relationships and understand what it actually feels like.',
       },
     },
   ],
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Support — Real Person', item: 'https://www.leanon.app/relationship-support-real-person' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Support — Real Person', item: 'https://www.howwasyourday.live/relationship-support-real-person' },
   ],
 }
 
@@ -155,16 +155,16 @@ export default function RelationshipSupportPage() {
         <h1>Where Can I Talk to a Real Person About Relationship Problems in India?</h1>
         <p style={{ fontSize: 20, fontWeight: 800, color: '#FF9933', margin: '-6px 0 14px' }}>Talk it through with a screened human peer listener — not an AI, not a therapist.</p>
         <p className="lead">
-          When you&apos;re dealing with a relationship problem — a fight, a breakup, a slow drift apart or feeling unheard — you may want a human conversation outside your usual circle. LeanOn lets adults request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not professional relationship counselling.
+          When you&apos;re dealing with a relationship problem — a fight, a breakup, a slow drift apart or feeling unheard — you may want a human conversation outside your usual circle. How Was Your Day lets adults request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not professional relationship counselling.
         </p>
-        <QuickAnswer question={"Where can I talk to a real person about relationship problems in India?"} answer={"If you want to talk through a fight, breakup, trust concern or marriage and family pressure, LeanOn lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. One introductory session up to 5 minutes is free per account; a match is not guaranteed."} />
+        <QuickAnswer question={"Where can I talk to a real person about relationship problems in India?"} answer={"If you want to talk through a fight, breakup, trust concern or marriage and family pressure, How Was Your Day lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. One introductory session up to 5 minutes is free per account; a match is not guaranteed."} />
         <p style={{ fontSize: 14, margin: '10px 0 20px', lineHeight: 1.7, color: '#4A6470' }}>Not sure what kind of help fits? <a href="/relationship-emotional-support-guide-india" style={{ fontWeight: 800, color: '#0F7788', textDecoration: 'underline' }}>Read our relationship and emotional support guide</a> for marriage, family pressure, women’s emotional load, and when to choose counselling instead of peer listening.</p>
 
         <a href="/talk?src=seo" className="cta-hero">Talk it through — first 5 minutes free →</a>
 
         <div className="card">
-          <h2>Relationship situations LeanOn listeners understand</h2>
-          <p>LeanOn listeners are screened peers who bring varied lived experiences. Read the listener profile and share what kind of support you want; listeners are not therapists and cannot provide professional relationship counselling.</p>
+          <h2>Relationship situations How Was Your Day listeners understand</h2>
+          <p>How Was Your Day listeners are screened peers who bring varied lived experiences. Read the listener profile and share what kind of support you want; listeners are not therapists and cannot provide professional relationship counselling.</p>
           <ul className="checklist">
             <li>A recent breakup that still doesn&apos;t feel real</li>
             <li>A recurring argument with a partner with no resolution in sight</li>
@@ -187,7 +187,7 @@ export default function RelationshipSupportPage() {
             </div>
             <div className="compare-col human">
               <h3>Human peer conversation</h3>
-              <p>If you prefer a human conversation, LeanOn offers one-to-one text or voice with a screened peer listener. Experience and availability vary.</p>
+              <p>If you prefer a human conversation, How Was Your Day offers one-to-one text or voice with a screened peer listener. Experience and availability vary.</p>
             </div>
           </div>
           <div className="compare-row">
@@ -203,10 +203,10 @@ export default function RelationshipSupportPage() {
           <div className="compare-row">
             <div className="compare-col ai">
               <h3>Privacy and context</h3>
-              <p>Review the privacy practices of any tool you use. On LeanOn, voice calls are not recorded; stored text messages may be reviewed by authorised administrators if reported or safety-flagged.</p>
+              <p>Review the privacy practices of any tool you use. On How Was Your Day, voice calls are not recorded; stored text messages may be reviewed by authorised administrators if reported or safety-flagged.</p>
             </div>
             <div className="compare-col human">
-              <h3>LeanOn peer support</h3>
+              <h3>How Was Your Day peer support</h3>
               <p>Listeners do not see your phone number; you can choose a display name. Text messages are stored, so avoid sharing identifying information you do not wish to disclose.</p>
             </div>
           </div>
@@ -219,7 +219,7 @@ export default function RelationshipSupportPage() {
             at 3 AM when your mind won&apos;t stop, on a Sunday when your friends are all busy.
           </p>
           <p>
-            LeanOn does not guarantee a listener will be available at every moment. Browse current availability or request a conversation; a session starts when a listener accepts.
+            How Was Your Day does not guarantee a listener will be available at every moment. Browse current availability or request a conversation; a session starts when a listener accepts.
           </p>
           <a href="/browse" className="cta-night">Find a listener who understands →</a>
         </div>
@@ -235,17 +235,17 @@ export default function RelationshipSupportPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I get relationship advice from a real person online?</h3>
-            <p>LeanOn connects you with peer listeners who have real lived experience of relationships,
+            <p>How Was Your Day connects you with peer listeners who have real lived experience of relationships,
               breakups, marriage stress, and emotional disconnection. One introductory session up to 5 minutes is free per account; availability varies.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn relationship advice or therapy?</h3>
-            <p>LeanOn is peer support — a real human who listens and helps you process your feelings about
+            <h3>Is How Was Your Day relationship advice or therapy?</h3>
+            <p>How Was Your Day is peer support — a real human who listens and helps you process your feelings about
               a relationship. It is not professional therapy or couples counseling.</p>
           </div>
           <div className="faq-item">
-            <h3>How does privacy work on LeanOn?</h3>
-            <p>LeanOn uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy for details and share only information you are comfortable disclosing.</p>
+            <h3>How does privacy work on How Was Your Day?</h3>
+            <p>How Was Your Day uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy for details and share only information you are comfortable disclosing.</p>
           </div>
           <div className="faq-item">
             <h3>What kind of relationship issues can I discuss?</h3>
@@ -255,7 +255,7 @@ export default function RelationshipSupportPage() {
           </div>
           <div className="faq-item">
             <h3>When might you prefer a human conversation?</h3>
-            <p>Some people use AI tools to reflect or organise their thoughts; others prefer to talk to another person. LeanOn offers a non-clinical peer conversation for people who want human connection. It does not claim to be better for everyone or replace professional counselling.</p>
+            <p>Some people use AI tools to reflect or organise their thoughts; others prefer to talk to another person. How Was Your Day offers a non-clinical peer conversation for people who want human connection. It does not claim to be better for everyone or replace professional counselling.</p>
           </div>
         </div>
 
@@ -270,7 +270,7 @@ export default function RelationshipSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

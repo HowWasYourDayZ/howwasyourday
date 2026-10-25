@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Lonely in Dubai? Talk to Someone Who Gets It | LeanOn',
-  description: 'Dubai shines on the outside but many Indian expats feel profoundly alone in it. LeanOn connects you with an Indian peer listener who understands expat life — in your language, any time.',
+  title: 'Lonely in Dubai? Talk to Someone Who Gets It | How Was Your Day',
+  description: 'Dubai shines on the outside but many Indian expats feel profoundly alone in it. How Was Your Day connects you with an Indian peer listener who understands expat life — in your language, any time.',
   keywords: [
     'lonely in Dubai', 'loneliness Dubai Indian', 'Indian expat Dubai lonely', 'talk to someone Dubai',
     'Dubai expat blues', 'feeling isolated Dubai', 'emotional support Dubai', 'Dubai NRI loneliness',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'Dubai life lonely', 'peer support Dubai', 'Indian expat mental health Dubai',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/dubai-loneliness',
-    languages: { 'en-IN': 'https://www.leanon.app/dubai-loneliness' },
+    canonical: 'https://www.howwasyourday.live/dubai-loneliness',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/dubai-loneliness' },
   },
   openGraph: {
     title: 'Lonely in Dubai? Talk to an Indian Listener — First 5 Min Free',
-    description: 'Dubai is glamorous on Instagram but lonely in reality for many Indian expats. LeanOn peer listeners understand the expat experience. Talk now, in your language.',
-    url: 'https://www.leanon.app/dubai-loneliness',
-    siteName: 'LeanOn',
+    description: 'Dubai is glamorous on Instagram but lonely in reality for many Indian expats. How Was Your Day peer listeners understand the expat experience. Talk now, in your language.',
+    url: 'https://www.howwasyourday.live/dubai-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,12 +41,12 @@ const faqSchema = {
       name: 'I have friends in Dubai but I still feel lonely. Is that normal?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. Social loneliness (not having people around) is different from emotional loneliness (not feeling deeply understood). You can have a full social calendar in Dubai and still feel that no one truly knows you. This gap is what LeanOn listeners help bridge.',
+        text: 'Absolutely. Social loneliness (not having people around) is different from emotional loneliness (not feeling deeply understood). You can have a full social calendar in Dubai and still feel that no one truly knows you. This gap is what How Was Your Day listeners help bridge.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost from Dubai?',
+      name: 'How much does How Was Your Day cost from Dubai?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions cost AED 37 for 15 minutes, AED 55 for 30 minutes, and AED 74 for 45 minutes. Your first session begins with a completely free 5-minute trial — no payment required to start.',
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Can I talk to a listener in Hindi or my regional language?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners include speakers of Hindi, Gujarati, Malayalam, Tamil, Telugu, Kannada, Bengali, and other Indian languages. You can check a listener\'s languages on their profile before starting.',
+        text: 'Yes. How Was Your Day listeners include speakers of Hindi, Gujarati, Malayalam, Tamil, Telugu, Kannada, Bengali, and other Indian languages. You can check a listener\'s languages on their profile before starting.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'What if I just want to talk — no specific problem, just feeling low?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is exactly what LeanOn is for. You do not need a crisis or a defined problem. Feeling low, empty, or disconnected is a perfectly valid reason to reach out. LeanOn listeners are screened and expected to sit with you in those moments without judgment.',
+        text: 'That is exactly what How Was Your Day is for. You do not need a crisis or a defined problem. Feeling low, empty, or disconnected is a perfectly valid reason to reach out. How Was Your Day listeners are screened and expected to sit with you in those moments without judgment.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Lonely in Dubai', item: 'https://www.leanon.app/dubai-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Lonely in Dubai', item: 'https://www.howwasyourday.live/dubai-loneliness' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function DubaiLonelinessPage() {
         <p className="lead">
           From the outside, life in Dubai looks incredible — the skyline, the salary, the freedom.
           But behind the Instagram posts, many Indian expats describe a quiet ache: no one who really
-          knows them, no roots, no softness. LeanOn is a place to say that out loud.
+          knows them, no roots, no softness. How Was Your Day is a place to say that out loud.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
@@ -177,13 +177,13 @@ export default function DubaiLonelinessPage() {
           <h2>🌙 Dubai nights can be the hardest</h2>
           <p>After the meetings, the gyms, the malls — when it all goes quiet — that is when the
             loneliness hits. Many Indians in Dubai describe the evenings as the hardest part of the day.</p>
-          <p>LeanOn listeners are there for exactly these moments. Talk in your language, whenever you need.</p>
+          <p>How Was Your Day listeners are there for exactly these moments. Talk in your language, whenever you need.</p>
           <a href="/browse" className="cta-night">Find a listener right now →</a>
         </div>
 
         <div className="card">
           <h2>Why talking to an Indian listener is different</h2>
-          <p>You do not have to translate your world for a LeanOn listener. They know what it means to
+          <p>You do not have to translate your world for a How Was Your Day listener. They know what it means to
             leave everything behind to build something better. They understand the pressure of being the
             &quot;successful one&quot; in the family. They speak your language — literally and figuratively.</p>
           <p>Whether you want to speak in Hindi, Gujarati, Tamil, Malayalam, or English, there is a
@@ -218,20 +218,20 @@ export default function DubaiLonelinessPage() {
           <div className="faq-item">
             <h3>I have friends in Dubai but I still feel lonely. Is that normal?</h3>
             <p>Absolutely. Social loneliness (no people around) is different from emotional loneliness (not
-              feeling deeply understood). LeanOn listeners help bridge exactly that gap.</p>
+              feeling deeply understood). How Was Your Day listeners help bridge exactly that gap.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost from Dubai?</h3>
+            <h3>How much does How Was Your Day cost from Dubai?</h3>
             <p>AED 37 for 15 minutes, AED 55 for 30 minutes, AED 74 for 45 minutes. First 5 minutes are free.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk in Hindi or my regional language?</h3>
-            <p>Yes. LeanOn listeners speak Hindi, Gujarati, Malayalam, Tamil, Telugu, Kannada, Bengali, and more.
+            <p>Yes. How Was Your Day listeners speak Hindi, Gujarati, Malayalam, Tamil, Telugu, Kannada, Bengali, and more.
               Check a listener&apos;s profile to find your language.</p>
           </div>
           <div className="faq-item">
             <h3>What if I just want to talk with no specific problem?</h3>
-            <p>That is exactly what LeanOn is for. Feeling low or disconnected is a perfectly valid reason
+            <p>That is exactly what How Was Your Day is for. Feeling low or disconnected is a perfectly valid reason
               to reach out. No crisis needed — just a desire to be heard.</p>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function DubaiLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

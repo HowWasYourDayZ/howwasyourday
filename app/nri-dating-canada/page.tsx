@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Dating in Canada | The Complexity of Finding Love as an Indian Abroad | LeanOn',
+  title: 'NRI Dating in Canada | The Complexity of Finding Love as an Indian Abroad | How Was Your Day',
   description: 'Dating as an Indian in Canada — Brampton, Toronto, Vancouver — comes with layers no dating app can solve. Talk to a listener who understands the desi dating world.',
   keywords: ['nri dating canada', 'indian dating canada', 'desi dating canada', 'indian single canada', 'nri relationships canada', 'indian dating toronto', 'nri dating toronto'],
-  alternates: { canonical: 'https://www.leanon.app/nri-dating-canada' },
-  openGraph: { title: 'NRI Dating in Canada | The Complexity of Finding Love as an Indian Abroad | LeanOn', description: 'Dating as an Indian in Canada — Brampton, Toronto, Vancouver — comes with layers no dating app can solve. Talk to a listener who understands the desi dating world.', url: 'https://www.leanon.app/nri-dating-canada', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-dating-canada' },
+  openGraph: { title: 'NRI Dating in Canada | The Complexity of Finding Love as an Indian Abroad | How Was Your Day', description: 'Dating as an Indian in Canada — Brampton, Toronto, Vancouver — comes with layers no dating app can solve. Talk to a listener who understands the desi dating world.', url: 'https://www.howwasyourday.live/nri-dating-canada', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Dating Canada', item: 'https://www.leanon.app/nri-dating-canada' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Dating Canada', item: 'https://www.howwasyourday.live/nri-dating-canada' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriDatingCanadaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Dating Canada</span></nav>
         <div className="hero">
           <p className="badge">NRI Dating Canada &middot; Desi Dating &middot; Indian Abroad</p>
           <h1>NRI Dating in Canada — <em>Love, But Complicated</em></h1>
           <p className="lead">Dating as an Indian in Canada comes with layers no dating app was designed for. The Brampton community where everyone knows everyone. Parents in India still wanting to arrange a match. The question of dating someone outside the community. The loneliness of being single in a new country where the rules are different. Talk to a listener who already understands the desi dating world. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -98,7 +98,7 @@ export default function NriDatingCanadaPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The dating life you can&rsquo;t explain to your parents.</h2><p>Real peer listener. Understands desi dating in Canada. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The dating life you can&rsquo;t explain to your parents.</h2><p>Real peer listener. Understands desi dating in Canada. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-loneliness-canada">NRI loneliness Canada &rarr;</a>
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>

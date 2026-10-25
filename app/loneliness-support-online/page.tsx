@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Loneliness Support — Talk to a Real Person Now | LeanOn',
-  description: 'Loneliness doesn\'t always look like isolation. Sometimes you\'re surrounded by people and still feel completely alone. LeanOn peer listeners understand.',
+  title: 'Loneliness Support — Talk to a Real Person Now | How Was Your Day',
+  description: 'Loneliness doesn\'t always look like isolation. Sometimes you\'re surrounded by people and still feel completely alone. How Was Your Day peer listeners understand.',
   keywords: ['loneliness support', 'feeling lonely', 'lonely and need to talk', 'talk to someone when lonely', 'online loneliness support', 'feeling alone support', 'lonely need someone to talk to'],
-  alternates: { canonical: 'https://www.leanon.app/loneliness-support-online' },
-  openGraph: { title: 'Loneliness Support — Talk to a Real Person Now | LeanOn', description: 'Loneliness doesn\'t always look like isolation. Sometimes you\'re surrounded by people and still feel completely alone. LeanOn peer listeners understand.', url: 'https://www.leanon.app/loneliness-support-online', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/loneliness-support-online' },
+  openGraph: { title: 'Loneliness Support — Talk to a Real Person Now | How Was Your Day', description: 'Loneliness doesn\'t always look like isolation. Sometimes you\'re surrounded by people and still feel completely alone. How Was Your Day peer listeners understand.', url: 'https://www.howwasyourday.live/loneliness-support-online', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Can talking to someone online really help with loneliness?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — genuine human connection, even through text, reduces the acute feeling of being unseen. LeanOn listeners are real people who give you their full attention. Being truly heard by another person changes something, even in a short conversation.' } },
-  { '@type': 'Question', name: 'What if I am surrounded by people but still feel lonely?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common and most painful forms of loneliness. Being physically around people is not the same as being truly known or seen by them. LeanOn listeners are selected to be genuinely present — which is exactly what superficial social contact fails to provide.' } },
-  { '@type': 'Question', name: 'Is there a specific reason I need to be lonely to use LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'No. You do not need a diagnosis or a specific event. Feeling lonely is sufficient reason to reach out. LeanOn is for anyone who needs to be heard.' } },
-  { '@type': 'Question', name: 'Will the listener judge me for being lonely?', acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn listeners are screened and expected to listen without judgment. Loneliness is one of the most common human experiences. There is nothing to be judged for.' } },
+  { '@type': 'Question', name: 'Can talking to someone online really help with loneliness?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — genuine human connection, even through text, reduces the acute feeling of being unseen. How Was Your Day listeners are real people who give you their full attention. Being truly heard by another person changes something, even in a short conversation.' } },
+  { '@type': 'Question', name: 'What if I am surrounded by people but still feel lonely?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common and most painful forms of loneliness. Being physically around people is not the same as being truly known or seen by them. How Was Your Day listeners are selected to be genuinely present — which is exactly what superficial social contact fails to provide.' } },
+  { '@type': 'Question', name: 'Is there a specific reason I need to be lonely to use How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. You do not need a diagnosis or a specific event. Feeling lonely is sufficient reason to reach out. How Was Your Day is for anyone who needs to be heard.' } },
+  { '@type': 'Question', name: 'Will the listener judge me for being lonely?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners are screened and expected to listen without judgment. Loneliness is one of the most common human experiences. There is nothing to be judged for.' } },
   { '@type': 'Question', name: 'How do I start?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listeners who are currently online. Choose someone whose profile resonates with you. Start a session — no appointment, no form. The first 5 minutes are free.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Loneliness Support — Talk to a Real Person Now', item: 'https://www.leanon.app/loneliness-support-online' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Loneliness Support — Talk to a Real Person Now', item: 'https://www.howwasyourday.live/loneliness-support-online' },
 ] }
 
 const S = `
@@ -73,7 +73,7 @@ export default function LonelinessSupportOnlinePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Loneliness Support Online</span></nav>
         <div className="hero">
@@ -115,7 +115,7 @@ export default function LonelinessSupportOnlinePage() {
         <div className="section">
           <h2>Why Being Heard Changes Something</h2>
           <p>Loneliness is fundamentally about invisibility &mdash; the sense that no one is genuinely registering your presence, your inner life, your specific reality. The antidote is not more social activity. It is genuine human contact: someone paying real attention, acknowledging what you share, being actually present.</p>
-          <p>LeanOn listeners are screened for active listening. They do not try to fix your loneliness with advice or silver linings. They are present while you talk. That experience of being genuinely received by another person &mdash; even a stranger, especially a stranger &mdash; shifts something that social noise cannot.</p>
+          <p>How Was Your Day listeners are screened for active listening. They do not try to fix your loneliness with advice or silver linings. They are present while you talk. That experience of being genuinely received by another person &mdash; even a stranger, especially a stranger &mdash; shifts something that social noise cannot.</p>
         </div>
         <div className="section">
           <h2>No Appointment. No Reason Required.</h2>

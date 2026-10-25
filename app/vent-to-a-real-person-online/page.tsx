@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Vent to a Real Person Online — Someone Who Actually Listens | LeanOn',
-  description: 'Need to vent but have no one to talk to? LeanOn connects you with real human listeners online — anonymous, first 5 minutes free. Not an AI. A real person.',
+  title: 'Vent to a Real Person Online — Someone Who Actually Listens | How Was Your Day',
+  description: 'Need to vent but have no one to talk to? How Was Your Day connects you with real human listeners online — anonymous, first 5 minutes free. Not an AI. A real person.',
   keywords: [
     'vent to someone online', 'i need to vent', 'someone to vent to', 'vent online',
     'vent to a real person', 'vent anonymously online', 'need to vent no one to talk to',
     'where can i vent online', 'someone who will listen', 'vent without judgment',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/vent-to-a-real-person-online',
+    canonical: 'https://www.howwasyourday.live/vent-to-a-real-person-online',
   },
   openGraph: {
-    title: 'Vent to a Real Person Online | LeanOn',
-    description: 'Sometimes you don\'t need advice. You just need to let it out. LeanOn connects you with real human listeners — anonymous, first 5 minutes free.',
-    url: 'https://www.leanon.app/vent-to-a-real-person-online',
-    siteName: 'LeanOn',
+    title: 'Vent to a Real Person Online | How Was Your Day',
+    description: 'Sometimes you don\'t need advice. You just need to let it out. How Was Your Day connects you with real human listeners — anonymous, first 5 minutes free.',
+    url: 'https://www.howwasyourday.live/vent-to-a-real-person-online',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -31,7 +31,7 @@ const faqSchema = {
       name: 'Where can I vent to someone online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn lets you vent to a real human listener — someone with lived experience who won\'t judge you, won\'t give unsolicited advice, and won\'t try to fix you. First 5 minutes free.',
+        text: 'How Was Your Day lets you vent to a real human listener — someone with lived experience who won\'t judge you, won\'t give unsolicited advice, and won\'t try to fix you. First 5 minutes free.',
       },
     },
     {
@@ -39,7 +39,7 @@ const faqSchema = {
       name: 'Is it safe to vent to someone online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn sessions are anonymous and confidential. Listeners are real, screened people who hold space — they do not share your conversations and you do not need to share your real name.',
+        text: 'How Was Your Day sessions are anonymous and confidential. Listeners are real, screened people who hold space — they do not share your conversations and you do not need to share your real name.',
       },
     },
     {
@@ -47,7 +47,7 @@ const faqSchema = {
       name: 'What\'s the difference between venting to an AI and venting to a real person?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Venting to an AI like ChatGPT doesn\'t release emotional pressure the same way — because you know no real person heard you. On LeanOn, a real human is genuinely receiving your words, and that changes how cathartic it feels.',
+        text: 'Venting to an AI like ChatGPT doesn\'t release emotional pressure the same way — because you know no real person heard you. On How Was Your Day, a real human is genuinely receiving your words, and that changes how cathartic it feels.',
       },
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       name: 'Can I vent about anything?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Frustration with a partner, stress at work, family dynamics, feeling misunderstood, grief, anxiety, life feeling pointless — whatever it is, a LeanOn listener will hear it without judgment.',
+        text: 'Yes. Frustration with a partner, stress at work, family dynamics, feeling misunderstood, grief, anxiety, life feeling pointless — whatever it is, a How Was Your Day listener will hear it without judgment.',
       },
     },
     {
@@ -73,8 +73,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person Online', item: 'https://www.leanon.app/vent-to-a-real-person-online' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person Online', item: 'https://www.howwasyourday.live/vent-to-a-real-person-online' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function VentToRealPersonPage() {
         <p className="lead">
           You have something weighing on you. You have been carrying it for hours, maybe days. You don&apos;t
           need someone to fix it — you just need to say it out loud to a real person who will actually hear
-          you. LeanOn makes that possible, right now.
+          you. How Was Your Day makes that possible, right now.
         </p>
 
         <a href="/browse" className="cta-hero">Find someone to listen — first 5 min free →</a>
@@ -162,7 +162,7 @@ export default function VentToRealPersonPage() {
           <h2>🌙 Need to vent at 2 AM?</h2>
           <p>
             The urge to vent doesn&apos;t follow a schedule. It hits late at night when everyone you know
-            is asleep and the thoughts won&apos;t stop. LeanOn listeners go online at different hours,
+            is asleep and the thoughts won&apos;t stop. How Was Your Day listeners go online at different hours,
             often including late at night.
           </p>
           <p>
@@ -175,7 +175,7 @@ export default function VentToRealPersonPage() {
         <div className="card">
           <h2>What you can vent about</h2>
           <p>There is no minimum requirement for what counts as &quot;worth venting about.&quot; If it&apos;s
-            bothering you, it matters. LeanOn listeners are here for all of it:</p>
+            bothering you, it matters. How Was Your Day listeners are here for all of it:</p>
           <ul className="checklist">
             <li>A fight with your partner that still doesn&apos;t feel resolved</li>
             <li>A family member who never listens or always criticises</li>
@@ -196,7 +196,7 @@ export default function VentToRealPersonPage() {
               <p>Your words go to a language model. No human hears them. Nothing is truly received.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 Venting to a LeanOn listener</h3>
+              <h3>💙 Venting to a How Was Your Day listener</h3>
               <p>A real person receives what you say. Your words land somewhere. That&apos;s what makes venting actually help.</p>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function VentToRealPersonPage() {
               <p>AI validates everything. It agrees even when agreement isn&apos;t what you need — just noise.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 Venting to a LeanOn listener</h3>
+              <h3>💙 Venting to a How Was Your Day listener</h3>
               <p>A real human listens actively, reflects back what they hear, and asks questions that help you process.</p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function VentToRealPersonPage() {
               <p>The relief is temporary. You know no one heard you. The feelings return quickly.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 Venting to a LeanOn listener</h3>
+              <h3>💙 Venting to a How Was Your Day listener</h3>
               <p>Being genuinely heard by another person releases the pressure in a way AI simply cannot replicate.</p>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function VentToRealPersonPage() {
         <div className="card">
           <h2>How it works</h2>
           <p>
-            Browse LeanOn&apos;s listeners at <a href="/browse" style={{ color: 'var(--teal)', fontWeight: 700 }}>leanon.app/browse</a>.
+            Browse How Was Your Day&apos;s listeners at <a href="/browse" style={{ color: 'var(--teal)', fontWeight: 700 }}>howwasyourday.live/browse</a>.
             You can filter by availability, language, and what they specialize in. Read their short bio —
             many share what they&apos;ve personally been through, so you can find someone whose experience
             resonates with what you&apos;re dealing with.
@@ -251,24 +251,24 @@ export default function VentToRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I vent to someone online?</h3>
-            <p>LeanOn lets you vent to a real human listener — someone with lived experience who won&apos;t
+            <p>How Was Your Day lets you vent to a real human listener — someone with lived experience who won&apos;t
               judge you, won&apos;t give unsolicited advice, and won&apos;t try to fix you. No appointment,
               first 5 minutes free.</p>
           </div>
           <div className="faq-item">
             <h3>Is it safe to vent to someone online?</h3>
-            <p>LeanOn sessions are anonymous and confidential. Listeners are real, screened people who hold space — they do not share your conversations and you do not need to share your real name.</p>
+            <p>How Was Your Day sessions are anonymous and confidential. Listeners are real, screened people who hold space — they do not share your conversations and you do not need to share your real name.</p>
           </div>
           <div className="faq-item">
             <h3>What&apos;s the difference between venting to an AI and venting to a real person?</h3>
             <p>Venting to an AI like ChatGPT doesn&apos;t release emotional pressure the same way — because
-              you know no real person heard you. On LeanOn, a real human is genuinely receiving your words,
+              you know no real person heard you. On How Was Your Day, a real human is genuinely receiving your words,
               and that changes how cathartic it feels.</p>
           </div>
           <div className="faq-item">
             <h3>Can I vent about anything?</h3>
             <p>Yes. Frustration with a partner, stress at work, family dynamics, feeling misunderstood,
-              grief, anxiety, life feeling pointless — whatever it is, a LeanOn listener will hear it
+              grief, anxiety, life feeling pointless — whatever it is, a How Was Your Day listener will hear it
               without judgment.</p>
           </div>
           <div className="faq-item">
@@ -289,7 +289,7 @@ export default function VentToRealPersonPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

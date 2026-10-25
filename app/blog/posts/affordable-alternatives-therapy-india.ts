@@ -4,7 +4,7 @@ export const post = {
   description: 'Therapy in India can cost ₹1,500-5,000 per session. Explore the most effective and affordable mental health support alternatives — including peer support, helplines, and online resources.',
   date: '2025-06-14',
   readTime: '8 min read',
-  topics: ['mental health India', 'affordable support', 'therapy alternatives', 'peer support', 'leanon'],
+  topics: ['mental health India', 'affordable support', 'therapy alternatives', 'peer support', 'howwasyourday'],
   content: `
 <p>You know you need support. You have known it for a while — the anxiety that does not lift, the low mood that colours everything, the stress that has stopped feeling temporary. You have even thought about therapy. And then you looked up the price.</p>
 
@@ -28,15 +28,15 @@ export const post = {
 
 <p>But for the most common presentations — mild to moderate anxiety and depression, stress, loneliness, life transitions, relationship difficulties, burnout — research suggests that a range of non-clinical interventions are genuinely effective. These include peer support, structured self-help, psychoeducation, social connection, and physical health interventions. The alternatives below are not consolation prizes. For many people, they are genuinely the right fit.</p>
 
-<h2>Option 1: Peer Support (LeanOn)</h2>
+<h2>Option 1: Peer Support (How Was Your Day)</h2>
 
 <p>Peer support — talking to someone who has navigated similar experiences and is chosen for their ability to listen without judgment — is one of the most evidence-supported alternatives to therapy for common mental health concerns. Multiple studies have found that peer support produces outcomes comparable to professional counselling for mild to moderate anxiety, depression, and loneliness.</p>
 
 <p>The mechanism makes sense: peer supporters offer something therapists often cannot — lived experience. When you are struggling with burnout, talking to someone who has genuinely been through it and emerged carries a different kind of weight than talking to someone whose understanding is academic.</p>
 
-<p><strong>LeanOn</strong> connects you with screened peer supporters across India who have personal experience of the issues they support — anxiety, loneliness, burnout, relationship stress, grief, career confusion, and more. Sessions are significantly more <strong>affordable therapy India</strong> alternatives, and many people find that peer support is not a stepping stone to therapy but the right level of support for what they are dealing with.</p>
+<p><strong>How Was Your Day</strong> connects you with screened peer supporters across India who have personal experience of the issues they support — anxiety, loneliness, burnout, relationship stress, grief, career confusion, and more. Sessions are significantly more <strong>affordable therapy India</strong> alternatives, and many people find that peer support is not a stepping stone to therapy but the right level of support for what they are dealing with.</p>
 
-<p>You can <a href="/browse">browse available supporters on LeanOn</a> by their areas of experience, and start a conversation that fits your schedule and budget. This is the <strong>lean on app</strong> built specifically for this gap in Indian mental health care.</p>
+<p>You can <a href="/browse">browse available supporters on How Was Your Day</a> by their areas of experience, and start a conversation that fits your schedule and budget. This is the <strong>lean on app</strong> built specifically for this gap in Indian mental health care.</p>
 
 <h2>Option 2: Free Government Helplines</h2>
 
@@ -88,12 +88,12 @@ export const post = {
 
 <p>The honest answer is that most people benefit from a combination of resources rather than a single solution. Peer support alongside structured self-help. A helpline for crisis moments alongside ongoing community connection. The point is not to find the one right answer but to build a support ecosystem that is sustainable and actually fits your life.</p>
 
-<p>If you are dealing primarily with loneliness, relationship difficulties, or the weight of ordinary hard things — <a href="/support/anxiety">anxiety</a> about the future, the stress of caregiving, the confusion of a major life transition — peer support through LeanOn is likely to be genuinely helpful and accessible in a way that therapy is not.</p>
+<p>If you are dealing primarily with loneliness, relationship difficulties, or the weight of ordinary hard things — <a href="/support/anxiety">anxiety</a> about the future, the stress of caregiving, the confusion of a major life transition — peer support through How Was Your Day is likely to be genuinely helpful and accessible in a way that therapy is not.</p>
 
 <p>If you are dealing with <a href="/support/loneliness">loneliness</a> specifically, know that loneliness responds better to connection than to almost any other intervention. Structured, intentional connection — like peer support — is more effective than self-help alone, because what loneliness needs is not information or techniques. It needs relationship.</p>
 
-<p>The <strong>peer support India</strong> ecosystem is growing. <strong>LeanOn</strong> exists specifically to make genuine human support accessible to people who need it — without the cost, the waiting lists, or the clinical overhead of formal therapy. It is not a replacement for everything. But for millions of Indians navigating the ordinary difficulties of human life, it is exactly what they need.</p>
+<p>The <strong>peer support India</strong> ecosystem is growing. <strong>How Was Your Day</strong> exists specifically to make genuine human support accessible to people who need it — without the cost, the waiting lists, or the clinical overhead of formal therapy. It is not a replacement for everything. But for millions of Indians navigating the ordinary difficulties of human life, it is exactly what they need.</p>
 
-<p><a href="/browse">Browse LeanOn supporters now</a> — filter by topic, by experience, by language. Find someone who understands. You do not have to wait until you can afford ₹3,000 a session. Support is available to you today.</p>
+<p><a href="/browse">Browse How Was Your Day supporters now</a> — filter by topic, by experience, by language. Find someone who understands. You do not have to wait until you can afford ₹3,000 a session. Support is available to you today.</p>
   `.trim(),
 }

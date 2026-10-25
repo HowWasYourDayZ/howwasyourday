@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Work Stress India — Talk to Someone Who Gets IT Burnout | LeanOn',
+  title: 'Work Stress India — Talk to Someone Who Gets IT Burnout | How Was Your Day',
   description: 'Work stress eating you alive? Talk to a real person — not an HR bot. Peer support for corporate burnout, IT pressure, office politics. From ₹160.',
   keywords: ['work stress india', 'IT burnout india', 'corporate burnout india', 'office politics stress india', 'layoff stress india', 'professional burnout india', 'tech job stress india', 'software engineer burnout india'],
-  alternates: { canonical: 'https://www.leanon.app/work-stress-india', languages: { 'en-IN': 'https://www.leanon.app/work-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/work-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/work-stress-india' } },
   openGraph: {
-    title: 'Work Stress India — Talk to Someone Who Gets IT Burnout | LeanOn',
+    title: 'Work Stress India — Talk to Someone Who Gets IT Burnout | How Was Your Day',
     description: 'Work stress eating you alive? Talk to a real person — not an HR bot. Peer support for corporate burnout, IT pressure, office politics. From ₹160.',
-    url: 'https://www.leanon.app/work-stress-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/work-stress-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'How do I talk about work stress without it affecting my job?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is private and confidential. Your real name, employer, and personal details are never required. What you say in a session stays between you and your listener. No HR involvement, no professional risk.',
+        text: 'How Was Your Day is private and confidential. Your real name, employer, and personal details are never required. What you say in a session stays between you and your listener. No HR involvement, no professional risk.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk during lunch break?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Sessions start within minutes of browsing. A 15-minute session at ₹160 fits into a lunch break or commute. Many people use LeanOn between meetings when they need to decompress.',
+        text: 'Yes. Sessions start within minutes of browsing. A 15-minute session at ₹160 fits into a lunch break or commute. Many people use How Was Your Day between meetings when they need to decompress.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What if I am afraid I will get fired?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Fear of losing your job is one of the most common things people come to LeanOn to talk about — layoff anxiety, PIP pressure, manager relationships, wondering if you will be next. It is one of the heaviest things to carry alone because you cannot talk about it openly at work.',
+        text: 'Fear of losing your job is one of the most common things people come to How Was Your Day to talk about — layoff anxiety, PIP pressure, manager relationships, wondering if you will be next. It is one of the heaviest things to carry alone because you cannot talk about it openly at work.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Work Stress India', item: 'https://www.leanon.app/work-stress-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Work Stress India', item: 'https://www.howwasyourday.live/work-stress-india' },
   ],
 }
 
@@ -123,7 +123,7 @@ export default function WorkStressIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -136,11 +136,11 @@ export default function WorkStressIndiaPage() {
         <div className="hero">
           <p className="tag">IT Burnout · Corporate Burnout · India · From ₹160</p>
           <h1>IT job. Late nights. Toxic manager. <em>You can&apos;t talk to your team. You can talk here.</em></h1>
-          <p className="lead">Performance review anxiety. Midnight deployments. 12-hour days. FAANG rejection. The pressure of India&apos;s corporate and tech world is specific, relentless, and almost impossible to talk about with anyone at work. That is what LeanOn is for.</p>
+          <p className="lead">Performance review anxiety. Midnight deployments. 12-hour days. FAANG rejection. The pressure of India&apos;s corporate and tech world is specific, relentless, and almost impossible to talk about with anyone at work. That is what How Was Your Day is for.</p>
         </div>
 
         <div className="section">
-          <h2>What Indian Professionals Talk About on LeanOn</h2>
+          <h2>What Indian Professionals Talk About on How Was Your Day</h2>
           <ul>
             <li><strong>IT burnout</strong> — the slow hollowing out of a job that used to mean something</li>
             <li><strong>Software engineering pressure</strong> — sprint deadlines, performance reviews, the constant feeling of not being senior enough, fast enough, impressive enough</li>
@@ -159,7 +159,7 @@ export default function WorkStressIndiaPage() {
           <h3>Why Therapy Feels Like Too Much</h3>
           <p>Booking a therapist, going on a waitlist, explaining Indian corporate culture from scratch — it is a lot of friction for what is, honestly, work stress. Sometimes you just need to talk to someone who has been in a similar situation and actually gets it.</p>
           <h3>Why Peer Support Works</h3>
-          <p>LeanOn listeners have been in the corporate world. They are Indian. They understand the pressures. They listen without professional risk, without advice-pushing, and without the social consequences of admitting you are struggling to someone in your network. From ₹160, in a 15-minute window, during your commute or lunch break.</p>
+          <p>How Was Your Day listeners have been in the corporate world. They are Indian. They understand the pressures. They listen without professional risk, without advice-pushing, and without the social consequences of admitting you are struggling to someone in your network. From ₹160, in a 15-minute window, during your commute or lunch break.</p>
         </div>
 
         <div className="cta-card">
@@ -179,7 +179,7 @@ export default function WorkStressIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I talk about work stress without it affecting my job?</div>
-            <div className="faq-a">LeanOn is private and confidential. Your real name, employer, and personal details are never required. What you say in a session stays between you and your listener. No HR involvement, no professional risk.</div>
+            <div className="faq-a">How Was Your Day is private and confidential. Your real name, employer, and personal details are never required. What you say in a session stays between you and your listener. No HR involvement, no professional risk.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is this anonymous?</div>
@@ -187,11 +187,11 @@ export default function WorkStressIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I talk during lunch break?</div>
-            <div className="faq-a">Yes. Sessions start within minutes of browsing. A 15-minute session at ₹160 fits into a lunch break or commute. Many people use LeanOn between meetings when they need to decompress.</div>
+            <div className="faq-a">Yes. Sessions start within minutes of browsing. A 15-minute session at ₹160 fits into a lunch break or commute. Many people use How Was Your Day between meetings when they need to decompress.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I am afraid I will get fired?</div>
-            <div className="faq-a">Fear of losing your job is one of the most common things people come to LeanOn to talk about — layoff anxiety, PIP pressure, manager relationships. It is one of the heaviest things to carry alone because you cannot talk about it openly at work.</div>
+            <div className="faq-a">Fear of losing your job is one of the most common things people come to How Was Your Day to talk about — layoff anxiety, PIP pressure, manager relationships. It is one of the heaviest things to carry alone because you cannot talk about it openly at work.</div>
           </div>
         </div>
 

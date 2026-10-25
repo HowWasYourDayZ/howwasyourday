@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Arranged Marriage Pressure as an NRI | You Don\'t Have to Decide Alone | LeanOn',
+  title: 'Arranged Marriage Pressure as an NRI | You Don\'t Have to Decide Alone | How Was Your Day',
   description: 'Arranged marriage pressure as an NRI is unique — parents abroad, families in India, a community watching. Talk to a peer listener before you make a life decision under pressure.',
   keywords: ['arranged marriage nri', 'arranged marriage pressure nri', 'arranged marriage abroad', 'nri arranged marriage stress', 'resisting arranged marriage nri', 'arranged marriage usa uk canada'],
-  alternates: { canonical: 'https://www.leanon.app/arranged-marriage-nri' },
-  openGraph: { title: 'Arranged Marriage Pressure as an NRI | You Don\'t Have to Decide Alone | LeanOn', description: 'Arranged marriage pressure as an NRI is unique — parents abroad, families in India, a community watching. Talk to a peer listener before you make a life decision under pressure.', url: 'https://www.leanon.app/arranged-marriage-nri', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/arranged-marriage-nri' },
+  openGraph: { title: 'Arranged Marriage Pressure as an NRI | You Don\'t Have to Decide Alone | How Was Your Day', description: 'Arranged marriage pressure as an NRI is unique — parents abroad, families in India, a community watching. Talk to a peer listener before you make a life decision under pressure.', url: 'https://www.howwasyourday.live/arranged-marriage-nri', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Is it okay to talk about arranged marriage resistance without being judged?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are not moral authorities — they don\'t have a position on arranged marriage. Their role is to hear you, wherever you are. Whether you\'re open to an arranged match but feeling pressured, or resistant to the whole idea but don\'t know how to say it, a listener will meet you where you are.' } },
+  { '@type': 'Question', name: 'Is it okay to talk about arranged marriage resistance without being judged?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are not moral authorities — they don\'t have a position on arranged marriage. Their role is to hear you, wherever you are. Whether you\'re open to an arranged match but feeling pressured, or resistant to the whole idea but don\'t know how to say it, a listener will meet you where you are.' } },
   { '@type': 'Question', name: 'What if I\'m considering an arranged match but have genuine fears?', acceptedAnswer: { '@type': 'Answer', text: 'Fear before a life decision is completely normal. Talking through your fears with someone who understands the cultural context — without the pressure of family involvement — can help you get clearer about what you actually want.' } },
   { '@type': 'Question', name: 'What if I\'ve already said yes to someone my parents chose and I\'m having doubts?', acceptedAnswer: { '@type': 'Answer', text: 'Pre-wedding doubt is common and rarely talked about. The pressure to continue once the families are involved is enormous. A peer listener can hold that weight with you — not tell you what to do, but help you feel less alone while you figure it out.' } },
   { '@type': 'Question', name: 'Is this confidential from my family?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, your prospective match\'s family, or anyone else.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Arranged Marriage NRI', item: 'https://www.leanon.app/arranged-marriage-nri' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Arranged Marriage NRI', item: 'https://www.howwasyourday.live/arranged-marriage-nri' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function ArrangedMarriageNriPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Arranged Marriage NRI</span></nav>
         <div className="hero">
@@ -84,7 +84,7 @@ export default function ArrangedMarriageNriPage() {
           <h2>The NRI Arranged Marriage Pressure: A Different Kind</h2>
           <p>Arranged marriage pressure on NRIs has a particular character. In India, the pressure exists within a world where everyone around you is navigating the same thing — your friends are also dealing with rishtas, your colleagues are also having the family conversations. You can complain, compare notes, laugh about it together.</p>
           <p>Abroad, it is different. The rishta pressure comes from family back in India, who worry that time is running out and that you are drifting away from your culture and values. It comes from the diaspora community around you, which has its own dense social surveillance. And it arrives into a world — your American, British, or Canadian life — where none of your non-Indian friends understand what a rishta even is, and where your Indian friends are also carrying the same pressure but rarely talking about it openly.</p>
-          <p>The result is a very specific kind of silence. You say yes to the meetings, the WhatsApp exchanges, the visits. You smile. You perform openness. And inside, you have a different set of feelings that there is no safe place to voice. LeanOn gives you that place. First 5 minutes free.</p>
+          <p>The result is a very specific kind of silence. You say yes to the meetings, the WhatsApp exchanges, the visits. You smile. You perform openness. And inside, you have a different set of feelings that there is no safe place to voice. How Was Your Day gives you that place. First 5 minutes free.</p>
         </div>
 
         <div className="section">

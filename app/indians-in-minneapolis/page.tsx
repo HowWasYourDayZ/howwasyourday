@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Minneapolis | Peer Support for Minnesota\'s Indian Community | LeanOn',
+  title: 'Indians in Minneapolis | Peer Support for Minnesota\'s Indian Community | How Was Your Day',
   description: "Indians in Minneapolis — medical professionals, tech workers, students — face one of the most isolating winters in America. Talk to someone who gets it.",
   keywords: ['indians in minneapolis', 'indian community minnesota', 'nri minnesota', 'south asian minneapolis', 'desi twin cities', 'indian minnesota'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-minneapolis' },
-  openGraph: { title: 'Indians in Minneapolis | Peer Support for Minnesota\'s Indian Community | LeanOn', description: "Indians in Minneapolis — medical professionals, tech workers, students — face one of the most isolating winters in America. Talk to someone who gets it.", url: 'https://www.leanon.app/indians-in-minneapolis', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-minneapolis' },
+  openGraph: { title: 'Indians in Minneapolis | Peer Support for Minnesota\'s Indian Community | How Was Your Day', description: "Indians in Minneapolis — medical professionals, tech workers, students — face one of the most isolating winters in America. Talk to someone who gets it.", url: 'https://www.howwasyourday.live/indians-in-minneapolis', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand the Minnesota Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the NRI experience, including the specific isolation of being Indian in Minnesota — the brutal winters, the predominantly white state, the smaller Indian community, and the pressure of being a high-achieving immigrant in a state that is not known for its diversity.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Minnesota Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific isolation of being Indian in Minnesota — the brutal winters, the predominantly white state, the smaller Indian community, and the pressure of being a high-achieving immigrant in a state that is not known for its diversity.' } },
   { '@type': 'Question', name: 'What time can I connect from Minneapolis?', acceptedAnswer: { '@type': 'Answer', text: 'Minneapolis (CST) is 11.5 hours behind IST. 7am Minneapolis = 6:30pm India. Early mornings before work are a good time to connect — Indian listeners are available in their evening.' } },
   { '@type': 'Question', name: 'Does the seasonal darkness in Minnesota affect what I can talk about?', acceptedAnswer: { '@type': 'Answer', text: 'No. You can talk about anything — including the specific weight of Minnesota winters as an Indian immigrant. The seasonal isolation, the lack of sunlight, the way January feels when you are from a warm country and your social world is already thin — listeners are prepared to hear all of it.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
-  { '@type': 'Question', name: 'I work at Mayo Clinic or the U of M. Is this private from my institution?', acceptedAnswer: { '@type': 'Answer', text: 'Completely private. LeanOn is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, or institution.' } },
+  { '@type': 'Question', name: 'I work at Mayo Clinic or the U of M. Is this private from my institution?', acceptedAnswer: { '@type': 'Answer', text: 'Completely private. How Was Your Day is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, or institution.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Minneapolis', item: 'https://www.leanon.app/indians-in-minneapolis' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Minneapolis', item: 'https://www.howwasyourday.live/indians-in-minneapolis' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function IndiansInMinneapolisPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Minneapolis</span></nav>
         <div className="hero">
           <p className="badge">Indians in Minneapolis &middot; Twin Cities &middot; Minnesota</p>
           <h1>-20°C outside. <em>Just as cold inside.</em></h1>
           <p className="lead">Minneapolis draws Indian professionals to its medical institutions, tech companies, and the University of Minnesota. But Minnesota winters are not just cold — they are isolating in a way that compounds everything else. When you are Indian in one of the whitest states in America, with a small community and a brutal winter, the loneliness has a specific texture. Talk to someone who gets it. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>Mayo Clinic, UMN, Medtronic: The Minnesota Indian Medical World</h2>
           <p>The Twin Cities draw Indian professionals primarily through two channels: the medical world and technology. Mayo Clinic in Rochester draws Indian physicians and researchers from across the country. The University of Minnesota has a significant Indian student and faculty community. Medtronic, UnitedHealth Group, 3M — the Minneapolis corporate world has Indian engineers and professionals distributed across the suburbs from Eden Prairie to Maple Grove to Eagan.</p>
           <p>The Indian community here is real but small by comparison to coastal cities. There are temples, cultural associations, and a functioning Indian social world. But you can spend a week in Minneapolis without seeing another Indian face in your building, your neighbourhood, or your gym. The visibility — being conspicuous as an Indian in a predominantly white state — is its own weight. The sense of being watched, of representing your entire country in every room you enter, is exhausting in a way that accumulates.</p>
-          <p>LeanOn listeners understand this specific kind of fatigue. First 5 minutes free, from US$10.</p>
+          <p>How Was Your Day listeners understand this specific kind of fatigue. First 5 minutes free, from US$10.</p>
         </div>
 
         <div className="section">
@@ -97,11 +97,11 @@ export default function IndiansInMinneapolisPage() {
         <div className="section">
           <h2>The Identity Conspicuousness of Being Indian in Minnesota</h2>
           <p>Minnesota is one of the least diverse major states in America. For most Indians here, every day involves being one of the only Indian people in any given room. This has a particular effect over time. You become a spokesperson for your country in contexts where you just wanted to eat lunch. You answer questions about Indian food, Hinduism, Bollywood, and cricket that you are tired of answering. You manage other people&rsquo;s curiosity as part of your daily work.</p>
-          <p>This is a real weight, and it almost never gets talked about honestly — because talking about it requires explaining the exhaustion to the very people causing it, which makes it worse. LeanOn exists for exactly this: a listener who already understands, who doesn&rsquo;t need to be educated, who can hold the specific complexity of Indian identity in a white Midwestern state. No appointment, no commute in the cold. First 5 minutes free.</p>
+          <p>This is a real weight, and it almost never gets talked about honestly — because talking about it requires explaining the exhaustion to the very people causing it, which makes it worse. How Was Your Day exists for exactly this: a listener who already understands, who doesn&rsquo;t need to be educated, who can hold the specific complexity of Indian identity in a white Midwestern state. No appointment, no commute in the cold. First 5 minutes free.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Minnesota winter is brutal. You don&rsquo;t have to go through it alone.</h2><p>Real Indian peer listener. Understands the Twin Cities Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Minnesota winter is brutal. You don&rsquo;t have to go through it alone.</h2><p>Real Indian peer listener. Understands the Twin Cities Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

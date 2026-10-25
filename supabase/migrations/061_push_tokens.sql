@@ -1,7 +1,7 @@
 -- 061: one push token per device (listener phone AND laptop both ring).
 --
 -- Before this, users.fcm_token held ONE token: whichever device registered last
--- won, so a listener who opened LeanOn on a laptop silently stopped getting
+-- won, so a listener who opened How Was Your Day on a laptop silently stopped getting
 -- request alerts on their phone. users.fcm_token stays as a fallback that the
 -- app still reads and writes (lib/push.ts), so running this is safe at any time.
 --

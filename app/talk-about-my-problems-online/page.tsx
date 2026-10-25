@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Want to Talk About Your Problems Online? LeanOn India',
+  title: 'Want to Talk About Your Problems Online? How Was Your Day India',
   description: 'Find someone to talk to about your problems — a real peer listener who listens without judgment. Anonymous. First 5 min free.',
   keywords: [
     'talk about my problems online', 'someone to talk to about my problems',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'share problems with someone online', 'need someone to talk to about problems India',
     'get things off my chest online India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/talk-about-my-problems-online', languages: { 'en-IN': 'https://www.leanon.app/talk-about-my-problems-online' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-about-my-problems-online', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-about-my-problems-online' } },
   openGraph: {
-    title: 'Want to Talk About Your Problems Online? LeanOn India',
+    title: 'Want to Talk About Your Problems Online? How Was Your Day India',
     description: 'Find someone to talk to about your problems — a real peer listener who listens without judgment. Anonymous.',
-    url: 'https://www.leanon.app/talk-about-my-problems-online',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/talk-about-my-problems-online',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Talk About Your Problems Online' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Talk About Your Problems Online' }],
   },
 }
 
@@ -38,12 +38,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will my problems stay private?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Completely. You do not need to share your real name or location. Listeners agree to keep what you share confidential before joining LeanOn. What you say in a session stays in that session — it does not reach your friends, your family, or anyone else in your life.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Completely. You do not need to share your real name or location. Listeners agree to keep what you share confidential before joining How Was Your Day. What you say in a session stays in that session — it does not reach your friends, your family, or anyone else in your life.' },
     },
     {
       '@type': 'Question',
-      name: 'Do I need to be in crisis to use LeanOn?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not at all. Most people who use LeanOn are not in crisis — they are just carrying something they need to say out loud. Everyday weight is reason enough: work stress, relationship tension, family pressure, or simply feeling off without knowing why. If you are in a mental health crisis or having thoughts of self-harm, please call NIMHANS (080-46110007) or Tele-MANAS (14416), both free and 24/7.' },
+      name: 'Do I need to be in crisis to use How Was Your Day?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Not at all. Most people who use How Was Your Day are not in crisis — they are just carrying something they need to say out loud. Everyday weight is reason enough: work stress, relationship tension, family pressure, or simply feeling off without knowing why. If you are in a mental health crisis or having thoughts of self-harm, please call NIMHANS (080-46110007) or Tele-MANAS (14416), both free and 24/7.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk About My Problems Online', item: 'https://www.leanon.app/talk-about-my-problems-online' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk About My Problems Online', item: 'https://www.howwasyourday.live/talk-about-my-problems-online' },
   ],
 }
 
@@ -121,7 +121,7 @@ export default function TalkAboutMyProblemsOnlinePage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -154,7 +154,7 @@ export default function TalkAboutMyProblemsOnlinePage() {
 
         <div className="section">
           <h2>What Kind of Problems Can You Talk About?</h2>
-          <p>All of them. There is no minimum threshold on LeanOn. Some of the most common things people bring:</p>
+          <p>All of them. There is no minimum threshold on How Was Your Day. Some of the most common things people bring:</p>
           <ul>
             <li>Work stress — a bad manager, too much pressure, not knowing what you are doing with your career</li>
             <li>Relationship tension — a fight you cannot move past, something going cold, not knowing how to say what you feel</li>
@@ -168,7 +168,7 @@ export default function TalkAboutMyProblemsOnlinePage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Works</h2>
+          <h2>How It Works</h2>
           <div className="how-steps">
             <div className="step">
               <div className="step-num">1</div>
@@ -197,11 +197,11 @@ export default function TalkAboutMyProblemsOnlinePage() {
         <div className="section">
           <h2>Not Your Friends. Not Your Family. Someone Else.</h2>
           <p>There are things you cannot say to the people in your life. Maybe you do not want to worry them. Maybe the problem involves them. Maybe you are not ready to be seen struggling by someone whose opinion of you matters. Maybe you just need space that is not already full of history and context.</p>
-          <p>That is what a LeanOn listener is. Someone who is completely outside your life. Anonymous on both sides. No shared contacts, no chance of it getting back to anyone. Just a person who will listen without it changing anything between you and the people you actually know.</p>
+          <p>That is what a How Was Your Day listener is. Someone who is completely outside your life. Anonymous on both sides. No shared contacts, no chance of it getting back to anyone. Just a person who will listen without it changing anything between you and the people you actually know.</p>
           <p>You can say things here that you genuinely cannot say anywhere else.</p>
 
           <h3>And no advice, unless you want it</h3>
-          <p>Listeners on LeanOn are screened and expected to follow your lead. If you say &quot;I do not want advice, I just need to vent&quot; — that is what happens. If you want them to reflect back what they are hearing, they will. If you want a question to help you think, you can ask. You set the terms.</p>
+          <p>Listeners on How Was Your Day are screened and expected to follow your lead. If you say &quot;I do not want advice, I just need to vent&quot; — that is what happens. If you want them to reflect back what they are hearing, they will. If you want a question to help you think, you can ask. You set the terms.</p>
         </div>
 
         <div className="section">

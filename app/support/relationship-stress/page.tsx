@@ -4,14 +4,14 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Stress Peer Support India | LeanOn',
+  title: 'Relationship Stress Peer Support India | How Was Your Day',
   description: "Relationship stress building up? Talk it through with a neutral, real peer listener in India — private, text or voice, online now. Not couples therapy. First 5 minutes free.",
-  alternates: { canonical: 'https://www.leanon.app/support/relationship-stress', languages: { 'en-IN': 'https://www.leanon.app/support/relationship-stress' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/relationship-stress', languages: { 'en-IN': 'https://www.howwasyourday.live/support/relationship-stress' } },
   openGraph: {
-    title: 'Relationship Stress Peer Support India | LeanOn',
+    title: 'Relationship Stress Peer Support India | How Was Your Day',
     description: "Relationship stress building up? Talk it through with a neutral, real peer listener in India — private, text or voice, online now. Not couples therapy. First 5 minutes free.",
-    url: 'https://www.leanon.app/support/relationship-stress',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/relationship-stress',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "My relationship is stressing me out \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. LeanOn connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "My relationship is stressing me out \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. How Was Your Day connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Your first 5 minutes are free." } },
     {
       '@type': 'Question',
       name: 'What counts as relationship stress?',
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Can a peer listener really help with relationship problems?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer listeners on LeanOn have personally navigated difficult relationships — including family pressure, toxic dynamics, long-distance stress, and painful breakups. They are not therapists and will not give prescriptions, but they will listen without judgment, help you feel less alone, and often offer genuine perspective that friends or family cannot, because they have no stake in your situation.',
+        text: 'Peer listeners on How Was Your Day have personally navigated difficult relationships — including family pressure, toxic dynamics, long-distance stress, and painful breakups. They are not therapists and will not give prescriptions, but they will listen without judgment, help you feel less alone, and often offer genuine perspective that friends or family cannot, because they have no stake in your situation.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can I talk about family relationship stress, not just romantic relationships?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. Relationship stress on LeanOn covers all kinds of relationships — parents, in-laws, siblings, friends, and romantic partners. Many Indians carry enormous stress from family dynamics they cannot discuss openly at home. LeanOn is a safe, private space to talk about any relationship that is weighing on you.',
+        text: 'Absolutely. Relationship stress on How Was Your Day covers all kinds of relationships — parents, in-laws, siblings, friends, and romantic partners. Many Indians carry enormous stress from family dynamics they cannot discuss openly at home. How Was Your Day is a safe, private space to talk about any relationship that is weighing on you.',
       },
     },
     {
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'When should relationship stress become a reason to see a therapist?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If relationship stress is causing persistent depression, anxiety that disrupts daily functioning, thoughts of self-harm, or if the relationship involves abuse or coercion, please seek a qualified mental health professional. LeanOn peer support is a helpful complement — and a lower-barrier first step — but it is not a replacement for clinical therapy when those signs are present.',
+        text: 'If relationship stress is causing persistent depression, anxiety that disrupts daily functioning, thoughts of self-harm, or if the relationship involves abuse or coercion, please seek a qualified mental health professional. How Was Your Day peer support is a helpful complement — and a lower-barrier first step — but it is not a replacement for clinical therapy when those signs are present.',
       },
     },
   ],
@@ -68,9 +68,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Relationship Stress', item: 'https://www.leanon.app/support/relationship-stress' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Relationship Stress', item: 'https://www.howwasyourday.live/support/relationship-stress' },
   ],
 }
 
@@ -135,7 +135,7 @@ export default function RelationshipStressSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -150,8 +150,8 @@ export default function RelationshipStressSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Relationship Stress</p>
           <h1>Getting Through Relationship Stress — You Don&apos;t Have to <em>Face It Alone</em></h1>
-          <p className="lead">Relationship stress is one of the heaviest burdens to carry — especially when you feel you cannot talk to anyone about it. LeanOn connects you with peer listeners in India who have navigated the same complicated feelings and come out the other side.</p>
-          <QuickAnswer question={"My relationship is stressing me out \u2014 who can I talk to?"} answer={"When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. LeanOn connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Your first 5 minutes are free."} />
+          <p className="lead">Relationship stress is one of the heaviest burdens to carry — especially when you feel you cannot talk to anyone about it. How Was Your Day connects you with peer listeners in India who have navigated the same complicated feelings and come out the other side.</p>
+          <QuickAnswer question={"My relationship is stressing me out \u2014 who can I talk to?"} answer={"When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. How Was Your Day connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Your first 5 minutes are free."} />
         </div>
 
         {/* What Is Relationship Stress */}
@@ -210,16 +210,16 @@ export default function RelationshipStressSupportPage() {
           <p>Friends and family are invested in the story. A peer listener has no prior relationship with you, no loyalty to the other person, and no social consequence if you tell the truth about what is happening. That neutrality is genuinely rare and valuable when you are in the middle of a charged situation.</p>
 
           <h3>Lived Experience, Not Theory</h3>
-          <p>LeanOn listeners have personally navigated difficult relationships — they have been through painful family dynamics, trust issues, and the confusion of troubled partnerships. They speak from experience, not from a framework, which makes their understanding feel real rather than clinical.</p>
+          <p>How Was Your Day listeners have personally navigated difficult relationships — they have been through painful family dynamics, trust issues, and the confusion of troubled partnerships. They speak from experience, not from a framework, which makes their understanding feel real rather than clinical.</p>
 
           <h3>A Space to Think Out Loud</h3>
           <p>Often what people need most is not advice but a chance to hear themselves think. Peer listeners are present to listen actively, ask gentle questions, and reflect back what they hear — helping you gain clarity from your own words rather than from someone else&apos;s prescriptions.</p>
         </div>
 
-        {/* What LeanOn Listeners Offer */}
+        {/* What How Was Your Day Listeners Offer */}
         <div className="section">
-          <h2>What LeanOn Listeners Offer</h2>
-          <p>LeanOn peer listeners are real people — not bots, not professionals reading scripts — who have applied to support others because they have been through something difficult themselves. Here is what you can expect from a session focused on relationship stress:</p>
+          <h2>What How Was Your Day Listeners Offer</h2>
+          <p>How Was Your Day peer listeners are real people — not bots, not professionals reading scripts — who have applied to support others because they have been through something difficult themselves. Here is what you can expect from a session focused on relationship stress:</p>
           <ul>
             <li>A private, non-judgmental space to describe exactly what is happening without fear of being told you are overreacting</li>
             <li>Empathetic listening from someone who has personally experienced relationship challenges in an Indian context</li>
@@ -227,7 +227,7 @@ export default function RelationshipStressSupportPage() {
             <li>Perspective from someone who has no stake in the relationship — no allegiances, no agenda, no judgment</li>
             <li>Availability any time, including late nights when relationship worries tend to be loudest</li>
           </ul>
-          <p>LeanOn listeners do not provide therapy, couples counselling, or legal advice. If your situation involves safety concerns, abuse, or serious mental health issues, please reach out to a qualified professional.</p>
+          <p>How Was Your Day listeners do not provide therapy, couples counselling, or legal advice. If your situation involves safety concerns, abuse, or serious mental health issues, please reach out to a qualified professional.</p>
         </div>
 
         {/* Listener cards */}
@@ -268,7 +268,7 @@ export default function RelationshipStressSupportPage() {
           <p>Find a peer listener who understands relationship stress. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -281,7 +281,7 @@ export default function RelationshipStressSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Can a peer listener really help with relationship problems?</div>
-            <div className="faq-a">Peer listeners on LeanOn have personally navigated difficult relationships — including family pressure, toxic dynamics, long-distance stress, and painful breakups. They offer a non-judgmental space and genuine perspective that friends or family often cannot, because they have no stake in your situation.</div>
+            <div className="faq-a">Peer listeners on How Was Your Day have personally navigated difficult relationships — including family pressure, toxic dynamics, long-distance stress, and painful breakups. They offer a non-judgmental space and genuine perspective that friends or family often cannot, because they have no stake in your situation.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How does relationship stress affect mental health in India?</div>
@@ -289,24 +289,24 @@ export default function RelationshipStressSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I talk about family relationship stress, not just romantic relationships?</div>
-            <div className="faq-a">Absolutely. Relationship stress on LeanOn covers all kinds of relationships — parents, in-laws, siblings, friends, and romantic partners. LeanOn is a safe, private space to talk about any relationship that is weighing on you.</div>
+            <div className="faq-a">Absolutely. Relationship stress on How Was Your Day covers all kinds of relationships — parents, in-laws, siblings, friends, and romantic partners. How Was Your Day is a safe, private space to talk about any relationship that is weighing on you.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">When should relationship stress become a reason to see a therapist?</div>
-            <div className="faq-a">If relationship stress is causing persistent depression, anxiety that disrupts daily functioning, thoughts of self-harm, or if the relationship involves abuse or coercion, please seek a qualified mental health professional. LeanOn peer support is a helpful first step, but not a replacement for clinical therapy when those signs are present.</div>
+            <div className="faq-a">If relationship stress is causing persistent depression, anxiety that disrupts daily functioning, thoughts of self-harm, or if the relationship involves abuse or coercion, please seek a qualified mental health professional. How Was Your Day peer support is a helpful first step, but not a replacement for clinical therapy when those signs are present.</div>
           </div>
         </div>
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>Peer support is not a substitute for professional mental health care.</strong> LeanOn listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
+          <p><strong>Peer support is not a substitute for professional mental health care.</strong> How Was Your Day listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
           <p><strong>Crisis helplines in India:</strong> NIMHANS — <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:700}}>080-46110007</a> &nbsp;|&nbsp; Tele-MANAS — <a href="tel:14416" style={{color:'#7A5020',fontWeight:700}}>14416</a> (free · 24/7 · Govt of India)</p>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Relationship stress often overlaps with other emotional challenges. Explore more peer support on LeanOn:</p>
+          <p>Relationship stress often overlaps with other emotional challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/breakup" className="related-link">Breakup &amp; Heartbreak</a>
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>

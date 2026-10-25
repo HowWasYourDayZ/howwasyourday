@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'H-1B Visa Stress — When Your Job is Also Your Visa | LeanOn',
+  title: 'H-1B Visa Stress — When Your Job is Also Your Visa | How Was Your Day',
   description: 'The anxiety of living on an H-1B in the USA is unlike anything else. Layoff fear, visa limbo, the 60-day countdown — talk to someone who understands what is actually at stake.',
   keywords: [
     'h1b visa stress', 'h1b anxiety', 'h1b layoff fear', 'h-1b visa stress support',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'tech layoff h1b stress',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/nri-h1b-visa-stress',
-    languages: { 'en-US': 'https://www.leanon.app/nri-h1b-visa-stress' },
+    canonical: 'https://www.howwasyourday.live/nri-h1b-visa-stress',
+    languages: { 'en-US': 'https://www.howwasyourday.live/nri-h1b-visa-stress' },
   },
   openGraph: {
     title: 'H-1B Visa Stress — When Your Job is Also Your Visa',
-    description: 'You are not just afraid of losing a job. You are afraid of losing your entire life in the USA. That fear deserves to be heard. LeanOn listeners understand H-1B reality.',
-    url: 'https://www.leanon.app/nri-h1b-visa-stress',
-    siteName: 'LeanOn',
+    description: 'You are not just afraid of losing a job. You are afraid of losing your entire life in the USA. That fear deserves to be heard. How Was Your Day listeners understand H-1B reality.',
+    url: 'https://www.howwasyourday.live/nri-h1b-visa-stress',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Who can I talk to about H-1B stress without being judged?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn peer listeners understand the H-1B experience. They will not tell you to be positive or explain the visa rules back at you — they will just listen, hold space for what you are feeling, and help you feel less alone in the uncertainty.',
+        text: 'How Was Your Day peer listeners understand the H-1B experience. They will not tell you to be positive or explain the visa rules back at you — they will just listen, hold space for what you are feeling, and help you feel less alone in the uncertainty.',
       },
     },
     {
@@ -57,15 +57,15 @@ const faqSchema = {
       name: 'What if I cannot afford therapy while dealing with this stress?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Therapy in the USA can cost $150-$250 per hour with a six-week waitlist. LeanOn sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes, with your first 5-minute session free. You can start a conversation right now.',
+        text: 'Therapy in the USA can cost $150-$250 per hour with a six-week waitlist. How Was Your Day sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes, with your first 5-minute session free. You can start a conversation right now.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I talk to a LeanOn listener in Hindi or Telugu?',
+      name: 'Can I talk to a How Was Your Day listener in Hindi or Telugu?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, and other Indian languages. Filter by language when you browse.',
+        text: 'Yes. Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, and other Indian languages. Filter by language when you browse.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'H-1B Visa Stress', item: 'https://www.leanon.app/nri-h1b-visa-stress' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'H-1B Visa Stress', item: 'https://www.howwasyourday.live/nri-h1b-visa-stress' },
   ],
 }
 
@@ -175,7 +175,7 @@ export default function UsaH1bVisaStressPage() {
           <p>Even when nothing bad has happened yet, the permanent awareness that it could — at any moment,
             for any reason — is exhausting. You cannot fully relax. You cannot make long-term plans.
             You cannot stop monitoring the news.</p>
-          <p>A LeanOn listener will not fix the visa situation. But they will give you a space to say all
+          <p>A How Was Your Day listener will not fix the visa situation. But they will give you a space to say all
             of this out loud to someone who already understands what is actually at stake.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
@@ -185,7 +185,7 @@ export default function UsaH1bVisaStressPage() {
           <p>Your American colleagues think visa concerns are just &quot;paperwork stress.&quot; Your family in
             India worries and adds to the pressure rather than relieving it. Your partner is going through
             the same anxiety so you try not to pile on.</p>
-          <p>A LeanOn listener is a neutral, confidential space. They understand the H-1B system without
+          <p>A How Was Your Day listener is a neutral, confidential space. They understand the H-1B system without
             needing it explained. They will sit with you in the uncertainty without minimising it or
             catastrophising it.</p>
           <p>Sessions start at <strong>$10 for 15 minutes</strong> — your first 5-minute session free.</p>
@@ -223,17 +223,17 @@ export default function UsaH1bVisaStressPage() {
           </div>
           <div className="faq-item">
             <h3>Who can I talk to about H-1B stress without being judged?</h3>
-            <p>LeanOn peer listeners understand the H-1B experience. They will not tell you to be positive —
+            <p>How Was Your Day peer listeners understand the H-1B experience. They will not tell you to be positive —
               they will just listen, hold space for what you are feeling, and help you feel less alone.</p>
           </div>
           <div className="faq-item">
             <h3>What if I cannot afford therapy while dealing with this stress?</h3>
-            <p>Therapy in the USA costs $150-$250 per hour with long waitlists. LeanOn sessions start at
+            <p>Therapy in the USA costs $150-$250 per hour with long waitlists. How Was Your Day sessions start at
               $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes — first 5-minute session free.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I talk to a LeanOn listener in Hindi or Telugu?</h3>
-            <p>Yes. Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, and other
+            <h3>Can I talk to a How Was Your Day listener in Hindi or Telugu?</h3>
+            <p>Yes. Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, and other
               Indian languages. Filter by language when you browse.</p>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function UsaH1bVisaStressPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

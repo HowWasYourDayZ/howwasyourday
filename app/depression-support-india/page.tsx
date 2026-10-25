@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Depressed? Talk to Someone Who Understands | LeanOn India',
+  title: 'Feeling Depressed? Talk to Someone Who Understands | How Was Your Day India',
   description: 'Feeling low, empty, or hopeless? You don\'t need a diagnosis to deserve support. Talk to a real peer listener — anonymous, ₹160/session, first 5 min free.',
   alternates: {
-    canonical: 'https://www.leanon.app/depression-support-india',
-    languages: { 'en-IN': 'https://www.leanon.app/depression-support-india' },
+    canonical: 'https://www.howwasyourday.live/depression-support-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/depression-support-india' },
   },
   openGraph: {
-    title: 'Feeling Depressed? Talk to Someone Who Understands | LeanOn India',
+    title: 'Feeling Depressed? Talk to Someone Who Understands | How Was Your Day India',
     description: 'Feeling low, empty, or hopeless? You don\'t need a diagnosis to deserve support. Talk to a real peer listener — anonymous, ₹160/session, first 5 min free.',
-    url: 'https://www.leanon.app/depression-support-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/depression-support-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -24,10 +24,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn a substitute for therapy or clinical treatment for depression?',
+      name: 'Is How Was Your Day a substitute for therapy or clinical treatment for depression?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support, not clinical care. Our listeners are people with lived experience of low moods and emotional struggles — they are not therapists, psychiatrists, or counsellors. If you think you may have clinical depression, we strongly encourage you to consult a mental health professional alongside or instead of using LeanOn. Peer support can complement professional care, but it does not replace it.',
+        text: 'No. How Was Your Day is peer support, not clinical care. Our listeners are people with lived experience of low moods and emotional struggles — they are not therapists, psychiatrists, or counsellors. If you think you may have clinical depression, we strongly encourage you to consult a mental health professional alongside or instead of using How Was Your Day. Peer support can complement professional care, but it does not replace it.',
       },
     },
     {
@@ -35,7 +35,7 @@ const faqSchema = {
       name: 'Is it anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn does not require your real name or any identifying information. You sign in with a phone number (used only for account security), choose your own display name, and your conversations are private. Listeners do not know who you are outside the session.',
+        text: 'Yes. How Was Your Day does not require your real name or any identifying information. You sign in with a phone number (used only for account security), choose your own display name, and your conversations are private. Listeners do not know who you are outside the session.',
       },
     },
     {
@@ -43,12 +43,12 @@ const faqSchema = {
       name: 'What if I am in crisis or having thoughts of suicide?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are in crisis or having thoughts of ending your life, please reach out to a crisis helpline immediately. In India, you can call NIMHANS on 080-46110007 or Tele-MANAS on 14416 — both are free, available 24/7, and run by the Government of India. LeanOn is not a crisis service and is not equipped to handle emergencies.',
+        text: 'If you are in crisis or having thoughts of ending your life, please reach out to a crisis helpline immediately. In India, you can call NIMHANS on 080-46110007 or Tele-MANAS on 14416 — both are free, available 24/7, and run by the Government of India. How Was Your Day is not a crisis service and is not equipped to handle emergencies.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I talk about feeling depressed on LeanOn?',
+      name: 'Can I talk about feeling depressed on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Absolutely. Feeling persistently low, empty, hopeless, or like you have lost interest in things you once cared about is exactly the kind of thing our listeners are here for. You do not need a diagnosis, a referral, or a specific reason. If you have been struggling and need to say it out loud to another person, this is the right place.',
@@ -61,8 +61,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Depression Support India', item: 'https://www.leanon.app/depression-support-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Depression Support India', item: 'https://www.howwasyourday.live/depression-support-india' },
   ],
 }
 
@@ -132,7 +132,7 @@ export default function DepressionSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -155,7 +155,7 @@ export default function DepressionSupportPage() {
 
         {/* Honest positioning notice */}
         <div className="honest-notice">
-          <strong>Honest about what we are:</strong> LeanOn is peer emotional support — not therapy, not clinical care.
+          <strong>Honest about what we are:</strong> How Was Your Day is peer emotional support — not therapy, not clinical care.
           If you think you might have clinical depression, please also see a professional. Both peer support and professional
           care have value. This page is for people who need to say the words out loud to another human being — before or
           alongside professional help.
@@ -167,7 +167,7 @@ export default function DepressionSupportPage() {
           <p>
             Call <strong><a href="tel:08046110007">NIMHANS 080-46110007</a></strong> or{' '}
             <strong><a href="tel:14416">Tele-MANAS 14416</a></strong> — free, 24/7, Government of India.
-            LeanOn is not a crisis service. Please call these lines if you are having thoughts of harming yourself.
+            How Was Your Day is not a crisis service. Please call these lines if you are having thoughts of harming yourself.
           </p>
         </div>
 
@@ -185,7 +185,7 @@ export default function DepressionSupportPage() {
             To have someone say &ldquo;I hear you&rdquo; and actually mean it. To feel, for an hour, less alone.
           </p>
           <p>
-            That is what peer support is for. LeanOn connects you with listeners who have personally been through
+            That is what peer support is for. How Was Your Day connects you with listeners who have personally been through
             low moods, depression, or the long grey stretch of not-quite-okay. They&apos;re not clinicians.
             They&apos;re people who know what this feels like from the inside — and who have found their way through.
           </p>
@@ -213,10 +213,10 @@ export default function DepressionSupportPage() {
 
         {/* What peer support looks like */}
         <div className="section">
-          <h2>What Peer Support on LeanOn Actually Looks Like</h2>
+          <h2>What Peer Support on How Was Your Day Actually Looks Like</h2>
           <h3>A real person, not a chatbot</h3>
           <p>
-            Every listener on LeanOn is a real human being who went through their own emotional struggles and chose
+            Every listener on How Was Your Day is a real human being who went through their own emotional struggles and chose
             to be there for others. When you connect, you&apos;re talking to someone who has sat with the same
             heaviness you&apos;re feeling right now.
           </p>
@@ -255,18 +255,18 @@ export default function DepressionSupportPage() {
         <div className="section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn a substitute for therapy?</div>
+            <div className="faq-q">Is How Was Your Day a substitute for therapy?</div>
             <div className="faq-a">
-              No — and we want to be clear about that. LeanOn is peer support, not clinical care. Our listeners
+              No — and we want to be clear about that. How Was Your Day is peer support, not clinical care. Our listeners
               are people with lived experience of emotional struggle, not trained therapists or psychiatrists.
               If you think you might have clinical depression, please also consult a mental health professional.
-              LeanOn can complement professional care, or serve as a first step toward it — but it does not replace it.
+              How Was Your Day can complement professional care, or serve as a first step toward it — but it does not replace it.
             </div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is it anonymous?</div>
             <div className="faq-a">
-              Yes. LeanOn does not require your real name or any personally identifying information. You sign in with
+              Yes. How Was Your Day does not require your real name or any personally identifying information. You sign in with
               a phone number (used only for account security), choose your own display name, and your conversations
               are private. Listeners do not know who you are outside the session.
             </div>
@@ -276,11 +276,11 @@ export default function DepressionSupportPage() {
             <div className="faq-a">
               If you are in crisis or having thoughts of suicide, please call a crisis helpline immediately.
               In India: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> — both free,
-              24/7, Government of India. LeanOn is not a crisis or emergency service.
+              24/7, Government of India. How Was Your Day is not a crisis or emergency service.
             </div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Can I talk about depression on LeanOn?</div>
+            <div className="faq-q">Can I talk about depression on How Was Your Day?</div>
             <div className="faq-a">
               Absolutely. Feeling persistently low, empty, hopeless, or disconnected from things you used to enjoy
               is exactly what our listeners are here for. You do not need a diagnosis, a referral, or a clear reason.

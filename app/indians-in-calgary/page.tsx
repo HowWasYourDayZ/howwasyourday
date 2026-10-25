@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Calgary | Peer Support for Alberta\'s Growing Indian Community | LeanOn',
+  title: 'Indians in Calgary | Peer Support for Alberta\'s Growing Indian Community | How Was Your Day',
   description: "Calgary's Indian community — students, oil industry workers, IT — face long winters and a small desi network. Talk to someone who understands Indian life in Alberta.",
   keywords: ['indians in calgary', 'indian community calgary', 'nri calgary', 'south asian alberta', 'desi calgary', 'indian alberta'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-calgary' },
-  openGraph: { title: 'Indians in Calgary | Peer Support for Alberta\'s Growing Indian Community | LeanOn', description: "Calgary's Indian community — students, oil industry workers, IT — face long winters and a small desi network. Talk to someone who understands Indian life in Alberta.", url: 'https://www.leanon.app/indians-in-calgary', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-calgary' },
+  openGraph: { title: 'Indians in Calgary | Peer Support for Alberta\'s Growing Indian Community | How Was Your Day', description: "Calgary's Indian community — students, oil industry workers, IT — face long winters and a small desi network. Talk to someone who understands Indian life in Alberta.", url: 'https://www.howwasyourday.live/indians-in-calgary', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand the Calgary Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the NRI experience, including the specific dynamics of Alberta — the oil industry cycles, the long bitter winters, being far from the main Ontario Indian hubs, and the particular isolation of a city whose Indian community is still building its roots.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Calgary Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific dynamics of Alberta — the oil industry cycles, the long bitter winters, being far from the main Ontario Indian hubs, and the particular isolation of a city whose Indian community is still building its roots.' } },
   { '@type': 'Question', name: 'What time can I connect from Calgary?', acceptedAnswer: { '@type': 'Answer', text: 'Calgary (MST) is 12.5 hours behind IST. 7am Calgary = 7:30pm India. Early mornings before work are a good time to connect — Indian listeners are available in their evening.' } },
-  { '@type': 'Question', name: 'Is this different from talking to my Indian community in Calgary?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are completely outside your Calgary social circle. They don\'t know your family, your coworkers, or your temple community. You can say what you actually feel without worrying about it getting back to anyone.' } },
+  { '@type': 'Question', name: 'Is this different from talking to my Indian community in Calgary?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are completely outside your Calgary social circle. They don\'t know your family, your coworkers, or your temple community. You can say what you actually feel without worrying about it getting back to anyone.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
-  { '@type': 'Question', name: 'I\'m worried about the oil industry slowdown. Can I talk about financial anxiety?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners can hold financial anxiety, job insecurity, and the stress of an uncertain industry. You don\'t have to have a crisis to talk — the low-grade worry about your career and your family\'s future is a real weight and worth talking about.' } },
+  { '@type': 'Question', name: 'I\'m worried about the oil industry slowdown. Can I talk about financial anxiety?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners can hold financial anxiety, job insecurity, and the stress of an uncertain industry. You don\'t have to have a crisis to talk — the low-grade worry about your career and your family\'s future is a real weight and worth talking about.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Calgary', item: 'https://www.leanon.app/indians-in-calgary' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Calgary', item: 'https://www.howwasyourday.live/indians-in-calgary' },
 ] }
 
 const S = `
@@ -70,37 +70,37 @@ export default function IndiansInCalgaryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Calgary</span></nav>
         <div className="hero">
           <p className="badge">Indians in Calgary &middot; Alberta &middot; Canada</p>
           <h1>Chinook winds and oil patch cycles. <em>No one warned you about this part.</em></h1>
           <p className="lead">Calgary&rsquo;s Indian community is real, warm, and spread thin. The city draws Indian immigrants through oil and gas, IT, healthcare, and the university — but it is far from Brampton and Mississauga, the winters are long, and the Indian social infrastructure is still building. Talk to someone who understands Indian life in Alberta. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Calgary Indian Community: Oil, IT, and the Long Haul</h2>
           <p>Calgary&rsquo;s Indian community came in waves — early IT workers in the 2000s, oil and gas professionals through the boom years, and a more recent wave of students and healthcare workers. The community is centred around the NE and NW quadrants of the city — Forest Lawn, Martindale, Saddle Ridge — with newer Indian families also settling in the suburbs of Chestermere and Airdrie. The Diwali celebrations, cricket leagues, and Gujarati associations are there.</p>
           <p>But Calgary is not Brampton. The Indian community infrastructure that the Greater Toronto Area has built over decades — the density of cultural events, the Indian grocery stores on every corner, the street-level Indian presence that makes you feel at home without effort — is not the same in Calgary. You can go days in certain parts of the city without the cultural anchoring that comes naturally in denser Indian communities. That gap is real, and it matters.</p>
-          <p>LeanOn listeners are based in India, available without appointment, and understand the Alberta Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India, available without appointment, and understand the Alberta Indian experience. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>Oil Industry Uncertainty and the Immigrant Who Bet on Alberta</h2>
           <p>Many Indians came to Calgary specifically because of the oil and gas industry — the salaries were exceptional, the standard of living was high, and the Alberta advantage seemed secure. And then the oil price cycles hit. The boom-bust pattern of Calgary&rsquo;s economy is something Indian immigrants — who often came here with specific financial goals for their family back in India — find particularly destabilising.</p>
-          <p>The Indian engineer at Suncor or Enbridge who watched colleagues get laid off and is calculating how many months they can sustain if their contract ends. The IT contractor whose project was cancelled because oil prices dropped. The Indian family who bought a house at the top of the market and is now watching prices move in the wrong direction. Financial anxiety for NRIs carries an extra layer — it is not just your own security, it is remittances, it is the promise you made when you left, it is your parents&rsquo; retirement. LeanOn is a space to talk about all of it. Calgary (MST) is 12.5 hours behind IST.</p>
+          <p>The Indian engineer at Suncor or Enbridge who watched colleagues get laid off and is calculating how many months they can sustain if their contract ends. The IT contractor whose project was cancelled because oil prices dropped. The Indian family who bought a house at the top of the market and is now watching prices move in the wrong direction. Financial anxiety for NRIs carries an extra layer — it is not just your own security, it is remittances, it is the promise you made when you left, it is your parents&rsquo; retirement. How Was Your Day is a space to talk about all of it. Calgary (MST) is 12.5 hours behind IST.</p>
         </div>
 
         <div className="section">
           <h2>Stampede Culture and the Indian Who Is Always a Visitor</h2>
           <p>Calgary has a very specific cultural identity built around the Calgary Stampede and Western Canadian culture — cowboy hats, rodeos, country music, a particular brand of frontier pride. This is not bad or hostile — Calgarians are genuinely friendly. But it is far from the Indian cultural world in a way that creates a low-grade sense of permanent visitor status.</p>
-          <p>The Indian family who has been in Calgary for eight years and still feels like they are watching the city from the outside. The Indian professional whose colleagues are warm and welcoming and with whom they share almost nothing cultural. The way you get invited to Stampede parties every year and go and enjoy it and come home feeling somehow more aware of what you are not. LeanOn is the space to talk about this without having to explain it. Real Indian listener, anonymous, no appointment needed. From US$10.</p>
+          <p>The Indian family who has been in Calgary for eight years and still feels like they are watching the city from the outside. The Indian professional whose colleagues are warm and welcoming and with whom they share almost nothing cultural. The way you get invited to Stampede parties every year and go and enjoy it and come home feeling somehow more aware of what you are not. How Was Your Day is the space to talk about this without having to explain it. Real Indian listener, anonymous, no appointment needed. From US$10.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Alberta is home now. Talk to someone who understands what that means.</h2><p>Real Indian peer listener. Understands the Calgary Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Alberta is home now. Talk to someone who understands what that means.</h2><p>Real Indian peer listener. Understands the Calgary Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-loneliness-canada">NRI loneliness Canada &rarr;</a>
           <a href="/indians-in-toronto">Indians in Toronto &rarr;</a>

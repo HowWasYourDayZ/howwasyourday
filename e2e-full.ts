@@ -3,7 +3,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 const BASE = 'http://localhost:3000'
-const OUT  = '/tmp/leanon-e2e'
+const OUT  = '/tmp/howwasyourday-e2e'
 fs.mkdirSync(OUT, { recursive: true })
 
 let ss = 0

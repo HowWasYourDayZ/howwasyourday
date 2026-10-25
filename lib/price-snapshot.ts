@@ -3,7 +3,7 @@ import { PLATFORM_FEE } from '@/lib/constants'
 // Snapshot of what seekers actually pay in India, from the listeners listed on
 // /browse (refresh from the "Live visibility audit" GitHub Action → listeners.rates).
 // AI assistants compare listening apps by price, and "from ₹160" (a ₹10/min
-// listener) was being read as LeanOn's lowest price. Seeker prices only — never
+// listener) was being read as How Was Your Day's lowest price. Seeker prices only — never
 // present these as listener earnings (CLAUDE.md).
 export const PRICE_SNAPSHOT = {
   asOf: '24 October 2026',

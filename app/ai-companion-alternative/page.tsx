@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'AI Companion Alternative — Talk to a Real Person | LeanOn',
-  description: 'Looking for an AI companion alternative or a real person instead of a chatbot? Compare AI conversations with human peer support, empathy and active listening on LeanOn.',
+  title: 'AI Companion Alternative — Talk to a Real Person | How Was Your Day',
+  description: 'Looking for an AI companion alternative or a real person instead of a chatbot? Compare AI conversations with human peer support, empathy and active listening on How Was Your Day.',
   keywords: ['AI companion alternative', 'AI companion alternative for loneliness', 'real person instead of chatbot', 'talk to a human instead of AI', 'ChatGPT alternative for loneliness', 'human emotional support', 'real person to talk to online', 'peer support'],
-  alternates: { canonical: 'https://www.leanon.app/ai-companion-alternative' },
+  alternates: { canonical: 'https://www.howwasyourday.live/ai-companion-alternative' },
   openGraph: {
-    title: 'AI Companion Alternative — Talk to a Real Person | LeanOn',
-    description: 'If you have tried an AI chatbot and realised you want human connection, LeanOn offers one-to-one peer support with real listeners.',
-    url: 'https://www.leanon.app/ai-companion-alternative',
-    siteName: 'LeanOn',
+    title: 'AI Companion Alternative — Talk to a Real Person | How Was Your Day',
+    description: 'If you have tried an AI chatbot and realised you want human connection, How Was Your Day offers one-to-one peer support with real listeners.',
+    url: 'https://www.howwasyourday.live/ai-companion-alternative',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -20,9 +20,9 @@ const faq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'What is an AI companion alternative?', acceptedAnswer: { '@type': 'Answer', text: 'An AI companion alternative can mean a service where you talk with another human rather than software. LeanOn is a peer-support platform where people can have one-to-one conversations with real peer listeners.' } },
-    { '@type': 'Question', name: 'Can I talk to a human instead of ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn lets you browse peer listeners and start a one-to-one conversation by text or voice, subject to current listener availability and the platform rules.' } },
-    { '@type': 'Question', name: 'Is LeanOn therapy?', acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. Peer listeners are screened and expected to listen and support within those boundaries.' } },
+    { '@type': 'Question', name: 'What is an AI companion alternative?', acceptedAnswer: { '@type': 'Answer', text: 'An AI companion alternative can mean a service where you talk with another human rather than software. How Was Your Day is a peer-support platform where people can have one-to-one conversations with real peer listeners.' } },
+    { '@type': 'Question', name: 'Can I talk to a human instead of ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day lets you browse peer listeners and start a one-to-one conversation by text or voice, subject to current listener availability and the platform rules.' } },
+    { '@type': 'Question', name: 'Is How Was Your Day therapy?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. Peer listeners are screened and expected to listen and support within those boundaries.' } },
     { '@type': 'Question', name: 'Why would someone want a real person instead of an AI chatbot?', acceptedAnswer: { '@type': 'Answer', text: 'Some people want human presence, lived experience, empathy, a natural voice conversation or the feeling of being heard by another person. Those are different goals from getting an information or text-generation response.' } },
     { '@type': 'Question', name: 'Can AI and human support be used together?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. People can use AI for information or reflection and seek human support when they want a conversation with another person. The two formats serve different purposes.' } },
   ],
@@ -39,13 +39,13 @@ const comparison = [
 export default function AICompanionAlternativePage() {
   return <main style={s.page}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <nav style={s.nav}><a href="/" style={s.logo}>LeanOn</a><a href="/browse" style={s.navCta}>Talk to a real person</a></nav>
+    <nav style={s.nav}><a href="/" style={s.logo}>How Was Your Day</a><a href="/browse" style={s.navCta}>Talk to a real person</a></nav>
     <div style={s.wrap}>
       <p style={s.kicker}>AI COMPANION ALTERNATIVE · HUMAN CONNECTION</p>
       <h1 style={s.h1}>Looking for a real person instead of a chatbot?</h1>
       <p style={s.lead}>AI can be useful. But sometimes the thing you were looking for was not another generated response. It was another human being — someone who can listen, bring lived experience and share a real conversation with you.</p>
 
-      <section style={s.heroBox}><strong>LeanOn is a human alternative to an AI-only conversation.</strong><span>Browse peer listeners and start a private one-to-one text or voice conversation when someone is available.</span></section>
+      <section style={s.heroBox}><strong>How Was Your Day is a human alternative to an AI-only conversation.</strong><span>Browse peer listeners and start a private one-to-one text or voice conversation when someone is available.</span></section>
 
       <Section title="Why people look for an AI companion alternative">
         <p>People may start talking to an AI because it is available, easy to access and does not create the social pressure of talking to someone they know. That can be useful. But a person looking for companionship or emotional support may eventually want something different: a human voice, another person's lived experience, reciprocal conversation or simply the feeling that somebody is genuinely listening.</p>
@@ -66,7 +66,7 @@ export default function AICompanionAlternativePage() {
         <p style={{marginTop:20}}><a href="/human-connection" style={s.link}>Learn more about human connection →</a></p>
       </Section>
 
-      <Section title="ChatGPT alternative for loneliness: what is actually different?"><p>If you searched for a “ChatGPT alternative for loneliness,” you may not really be looking for a different chatbot. You may be looking for a person. Loneliness is partly about the absence of connection, so changing one AI interface for another may not address the thing you wanted in the first place.</p><p>LeanOn approaches that search intent differently: connect with another human through peer support. You can talk about loneliness, relationships, breakup recovery, burnout, grief, overthinking, student pressure, marriage loneliness or simply whatever is weighing on you.</p></Section>
+      <Section title="ChatGPT alternative for loneliness: what is actually different?"><p>If you searched for a “ChatGPT alternative for loneliness,” you may not really be looking for a different chatbot. You may be looking for a person. Loneliness is partly about the absence of connection, so changing one AI interface for another may not address the thing you wanted in the first place.</p><p>How Was Your Day approaches that search intent differently: connect with another human through peer support. You can talk about loneliness, relationships, breakup recovery, burnout, grief, overthinking, student pressure, marriage loneliness or simply whatever is weighing on you.</p></Section>
 
       <Section title="Talk to a human instead of AI — when it may fit">
         <ul style={s.ul}>
@@ -79,14 +79,14 @@ export default function AICompanionAlternativePage() {
         </ul>
       </Section>
 
-      <Section title="What LeanOn is — and is not">
-        <p>LeanOn is a peer-support platform for one-to-one conversations with real listeners. It is not an AI chatbot, therapist, psychiatrist, counsellor or crisis service. Peer support is not a replacement for professional mental-health care when clinical care is needed.</p>
+      <Section title="What How Was Your Day is — and is not">
+        <p>How Was Your Day is a peer-support platform for one-to-one conversations with real listeners. It is not an AI chatbot, therapist, psychiatrist, counsellor or crisis service. Peer support is not a replacement for professional mental-health care when clinical care is needed.</p>
         <p>The aim is straightforward: give people another place to talk when they want human connection, empathy and someone who will listen.</p>
       </Section>
 
       <section style={s.cta}><h2 style={s.ctaH2}>Want a human conversation?</h2><p style={s.ctaP}>Browse peer listeners and choose someone whose experience feels relevant to you.</p><a href="/browse" style={s.button}>Find a real person →</a></section>
 
-      <Section title="More ways to explore LeanOn"><div style={s.links}>{[['/ai-human-support','Talk to a human instead of AI'],['/peer-support','Peer support'],['/empathy','Empathy'],['/active-listening','Active listening'],['/support/loneliness','Loneliness support'],['/support/emotional-support','Emotional support'],['/peer-support-vs-counselling','Peer support vs counselling'],['/talk-to-someone-right-now','Talk to someone right now']].map(([href,label])=><a key={href} href={href} style={s.linkCard}>{label} →</a>)}</div></Section>
+      <Section title="More ways to explore How Was Your Day"><div style={s.links}>{[['/ai-human-support','Talk to a human instead of AI'],['/peer-support','Peer support'],['/empathy','Empathy'],['/active-listening','Active listening'],['/support/loneliness','Loneliness support'],['/support/emotional-support','Emotional support'],['/peer-support-vs-counselling','Peer support vs counselling'],['/talk-to-someone-right-now','Talk to someone right now']].map(([href,label])=><a key={href} href={href} style={s.linkCard}>{label} →</a>)}</div></Section>
     </div>
   </main>
 }

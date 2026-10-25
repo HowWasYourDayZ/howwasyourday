@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Marriage Problems in India? Talk to Someone Privately | LeanOn',
+  title: 'Marriage Problems in India? Talk to Someone Privately | How Was Your Day',
   description: 'Struggling with marriage problems? Talk anonymously to a peer listener who gets it — no judgment, first 5 minutes free, then from ₹160 for 15 minutes.',
   keywords: [
     'marriage problems india talk to someone', 'marriage advice online india',
@@ -17,16 +17,16 @@ export const metadata: Metadata = {
     'husband does not listen india', 'thinking about divorce india talk to someone',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/marriage-problems-india',
-    languages: { 'en-IN': 'https://www.leanon.app/marriage-problems-india' },
+    canonical: 'https://www.howwasyourday.live/marriage-problems-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/marriage-problems-india' },
   },
   openGraph: {
-    title: 'Marriage Problems? Talk to Someone Who Understands | LeanOn India',
+    title: 'Marriage Problems? Talk to Someone Who Understands | How Was Your Day India',
     description: 'Struggling with marriage problems? Talk anonymously to a peer listener who gets it — no judgment, first 5 minutes free, then from ₹160 for 15 minutes.',
-    url: 'https://www.leanon.app/marriage-problems-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/marriage-problems-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Marriage Problems India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Marriage Problems India' }],
   },
 }
 
@@ -39,7 +39,7 @@ const faqSchema = {
       name: 'Where can I talk to someone about my marriage problems in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn (www.leanon.app) lets you talk one-to-one with a screened peer listener in India, by text or voice, without an appointment. You use any first name, the listener never sees your phone number, and the first 5 minutes are free; after that a 15-minute session starts at ₹160. It is for being heard and thinking things through — not couples therapy or legal advice.',
+        text: 'How Was Your Day (www.howwasyourday.live) lets you talk one-to-one with a screened peer listener in India, by text or voice, without an appointment. You use any first name, the listener never sees your phone number, and the first 5 minutes are free; after that a 15-minute session starts at ₹160. It is for being heard and thinking things through — not couples therapy or legal advice.',
       },
     },
     {
@@ -47,7 +47,7 @@ const faqSchema = {
       name: 'Can I talk about problems with my in-laws?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — in-law pressure is something many people bring to LeanOn. Interference, comparisons, expectations about children or money, a spouse who will not take your side: you can say all of it to someone who has no connection to your family.',
+        text: 'Yes — in-law pressure is something many people bring to How Was Your Day. Interference, comparisons, expectations about children or money, a spouse who will not take your side: you can say all of it to someone who has no connection to your family.',
       },
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       name: 'I am thinking about divorce. Can a listener help?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A listener can help you think out loud — about what you feel, what you are afraid of, and what matters to you — without pushing you either way. They cannot give legal advice; for that, speak to a family lawyer. Many people use LeanOn to get clear in their own head before they talk to family or a lawyer.',
+        text: 'A listener can help you think out loud — about what you feel, what you are afraid of, and what matters to you — without pushing you either way. They cannot give legal advice; for that, speak to a family lawyer. Many people use How Was Your Day to get clear in their own head before they talk to family or a lawyer.',
       },
     },
     {
@@ -87,7 +87,7 @@ const faqSchema = {
       name: 'Can I talk about my marriage without my spouse knowing?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is designed for individuals seeking support for themselves. Your spouse does not need to know, be involved, or consent to you talking about your own experience. Nothing is sent to your spouse or anyone in your life. The session is private to you.',
+        text: 'Yes. How Was Your Day is designed for individuals seeking support for themselves. Your spouse does not need to know, be involved, or consent to you talking about your own experience. Nothing is sent to your spouse or anyone in your life. The session is private to you.',
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'Is this the same as marriage counselling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Marriage counselling is a clinical process that typically involves both partners working with a licensed therapist toward improving the relationship. LeanOn is peer support for you as an individual. It is a space to be heard, to think out loud, to say things you cannot say elsewhere — not a therapeutic intervention on your marriage. If couples counselling is what you need, a qualified relationship therapist is the right resource. But for many people, what they need first is just someone to talk to.',
+        text: 'No. Marriage counselling is a clinical process that typically involves both partners working with a licensed therapist toward improving the relationship. How Was Your Day is peer support for you as an individual. It is a space to be heard, to think out loud, to say things you cannot say elsewhere — not a therapeutic intervention on your marriage. If couples counselling is what you need, a qualified relationship therapist is the right resource. But for many people, what they need first is just someone to talk to.',
       },
     },
   ],
@@ -105,9 +105,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Support', item: 'https://www.leanon.app/relationship-advice-online-india' },
-    { '@type': 'ListItem', position: 3, name: 'Marriage Problems India', item: 'https://www.leanon.app/marriage-problems-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Support', item: 'https://www.howwasyourday.live/relationship-advice-online-india' },
+    { '@type': 'ListItem', position: 3, name: 'Marriage Problems India', item: 'https://www.howwasyourday.live/marriage-problems-india' },
   ],
 }
 
@@ -182,7 +182,7 @@ export default function MarriageProblemsIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 
@@ -204,7 +204,7 @@ export default function MarriageProblemsIndiaPage() {
         <div className="card">
           <div className="card-label">The short answer</div>
           <p>
-            LeanOn lets you talk privately about your marriage — fights, distance, in-laws, an arranged
+            How Was Your Day lets you talk privately about your marriage — fights, distance, in-laws, an arranged
             marriage that is not working, thoughts of divorce — with a screened listener in India, by text or
             voice. Use any name; the listener never sees your number. You can choose a woman listener.
             First 5 minutes free, then from ₹160 for 15 minutes. Not couples therapy, not legal advice.

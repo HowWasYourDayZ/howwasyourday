@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in London | Peer Support for Britain\'s Largest Indian Community | LeanOn',
+  title: 'Indians in London | Peer Support for Britain\'s Largest Indian Community | How Was Your Day',
   description: "London has the largest Indian diaspora outside India. But Wembley, Southall, East Ham can feel crowded and still lonely. Talk to someone who really understands.",
   keywords: ['indians in london', 'indian community london', 'british indians', 'nri london', 'south asian london', 'desi london', 'wembley indians'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-london' },
-  openGraph: { title: 'Indians in London | Peer Support for Britain\'s Largest Indian Community | LeanOn', description: "London has the largest Indian diaspora outside India. But Wembley, Southall, East Ham can feel crowded and still lonely. Talk to someone who really understands.", url: 'https://www.leanon.app/indians-in-london', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-london' },
+  openGraph: { title: 'Indians in London | Peer Support for Britain\'s Largest Indian Community | How Was Your Day', description: "London has the largest Indian diaspora outside India. But Wembley, Southall, East Ham can feel crowded and still lonely. Talk to someone who really understands.", url: 'https://www.howwasyourday.live/indians-in-london', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand London\'s Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the British Indian experience in depth — including London\'s fragmented Indian landscape: the Gujarati Wembley world, the Punjabi Southall culture, the Tamil East Ham community, the finance-district Indian elite, and the specific paradox of being lonely in a city with a million Indians.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand London\'s Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the British Indian experience in depth — including London\'s fragmented Indian landscape: the Gujarati Wembley world, the Punjabi Southall culture, the Tamil East Ham community, the finance-district Indian elite, and the specific paradox of being lonely in a city with a million Indians.' } },
   { '@type': 'Question', name: 'What time can I connect from London?', acceptedAnswer: { '@type': 'Answer', text: 'London (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours in summer. 2pm in London in winter = 7:30pm India. Afternoons are a good time to connect — Indian listeners are available during their evening.' } },
   { '@type': 'Question', name: 'London\'s Indian community is huge. Why would I still feel lonely?', acceptedAnswer: { '@type': 'Answer', text: 'Scale does not equal connection. London\'s Indian community is large but fragmented — by region of origin, by class, by generation, by neighbourhood. You can be surrounded by Indians who share your heritage but not your specific experience. And the city itself — the pace, the cost, the transience — makes deep connection genuinely hard.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
-  { '@type': 'Question', name: 'I\'ve lived in London for years but still don\'t feel I belong. Is this normal?', acceptedAnswer: { '@type': 'Answer', text: 'Very. The London Indian loneliness paradox — the sense of being surrounded by Indians and still feeling unseen — is one of the most common experiences LeanOn listeners hear about from British Indians. Belonging is not the same as presence. You can be in the most Indian city outside India and still feel invisible.' } },
+  { '@type': 'Question', name: 'I\'ve lived in London for years but still don\'t feel I belong. Is this normal?', acceptedAnswer: { '@type': 'Answer', text: 'Very. The London Indian loneliness paradox — the sense of being surrounded by Indians and still feeling unseen — is one of the most common experiences How Was Your Day listeners hear about from British Indians. Belonging is not the same as presence. You can be in the most Indian city outside India and still feel invisible.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in London', item: 'https://www.leanon.app/indians-in-london' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in London', item: 'https://www.howwasyourday.live/indians-in-london' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function IndiansInLondonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in London</span></nav>
         <div className="hero">
           <p className="badge">Indians in London &middot; Wembley &middot; Southall &middot; East Ham</p>
           <h1>A million Indians in London. <em>Still couldn&rsquo;t find the right person to talk to.</em></h1>
           <p className="lead">London has more Indians than any city outside India. Wembley, Southall, East Ham, Harrow, Ilford — entire parts of the city that are almost entirely Indian. And yet the London Indian loneliness paradox is real: you can be surrounded by your own people and still feel completely unseen. Talk to someone who understands why. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>Wembley, Southall, East Ham: London&rsquo;s Fragmented Indian World</h2>
           <p>London&rsquo;s Indian community is not one community — it is many, often invisible to each other. Wembley and Harrow are predominantly Gujarati — the mandir communities, the Patel and Shah families, the jewellery shops and sweet centres on Ealing Road. Southall is Punjabi in character — the gurdwaras, the music, the wedding halls on every other street. East Ham and Green Street are heavily Tamil and Kerala. Tooting has a Sri Lankan Tamil community. The City and Canary Wharf have the Indian finance elite, who often have almost nothing in common socially with the Wembley or Southall communities.</p>
           <p>These are not the same community with the same experience — they are different histories, different class backgrounds, different generations in the UK. The newly arrived Indian professional in East London who goes to a Wembley temple event and feels like a tourist in their own diaspora. The third-generation Punjabi from Southall whose relationship to India is entirely different from the first-generation Tamil IT worker who arrived last year. The fragmentation is real, and it means that scale does not equal connection.</p>
-          <p>LeanOn listeners understand the complexity of the British Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand the complexity of the British Indian experience. First 5 minutes free.</p>
         </div>
 
         <div className="section">
@@ -97,11 +97,11 @@ export default function IndiansInLondonPage() {
         <div className="section">
           <h2>Racism on the Tube and the Weight You Carry Without Naming It</h2>
           <p>London is genuinely more diverse and more accepting than most cities in the world. And racism happens here. The microaggression on the Tube that you absorbed and said nothing about. The comment from a colleague that was technically a compliment but landed wrong. The way certain spaces in the city — certain clubs, certain social circles, certain conversations — quietly let you know you are tolerated but not quite welcome. For Indians who came to London from India, this is sometimes the first sustained experience of being racially marked, and it is disorienting in a way that compounds other difficulties.</p>
-          <p>LeanOn is a space where you do not have to explain what it is like to be brown in Britain. Listeners already understand. You can talk about the Tube incident, the difficult colleague, the exhaustion of navigating a world that was built by and for people who look nothing like you — without having to provide context or justify your reaction. Anonymous, private, no appointment needed.</p>
+          <p>How Was Your Day is a space where you do not have to explain what it is like to be brown in Britain. Listeners already understand. You can talk about the Tube incident, the difficult colleague, the exhaustion of navigating a world that was built by and for people who look nothing like you — without having to provide context or justify your reaction. Anonymous, private, no appointment needed.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The most Indian city outside India. Still worth talking.</h2><p>Real Indian peer listener. Understands the British Indian London experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The most Indian city outside India. Still worth talking.</h2><p>Real Indian peer listener. Understands the British Indian London experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

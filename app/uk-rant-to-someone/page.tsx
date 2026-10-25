@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Rant? Talk to Someone in the UK — No Judgment | LeanOn',
-  description: 'Work stress, microaggressions, NHS exhaustion, finance burnout — sometimes you just need to let it all out. LeanOn gives you a real human to rant to, on Indian time, no judgment.',
+  title: 'Need to Rant? Talk to Someone in the UK — No Judgment | How Was Your Day',
+  description: 'Work stress, microaggressions, NHS exhaustion, finance burnout — sometimes you just need to let it all out. How Was Your Day gives you a real human to rant to, on Indian time, no judgment.',
   keywords: [
     'rant to someone uk', 'vent to someone uk', 'need to rant uk', 'talk about work stress uk',
     'venting support uk indians', 'microaggressions uk talk', 'nhs work stress talk',
     'uk work burnout support', 'south asian vent support', 'someone to listen uk',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-rant-to-someone',
-    languages: { 'en-GB': 'https://www.leanon.app/uk-rant-to-someone' },
+    canonical: 'https://www.howwasyourday.live/uk-rant-to-someone',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk-rant-to-someone' },
   },
   openGraph: {
     title: 'Need to Rant? Someone in the UK Will Listen — No Judgment',
-    description: 'Work stress, microaggressions, burnout — sometimes you just need to let it out. LeanOn peer listeners are online daily on Indian time.',
-    url: 'https://www.leanon.app/uk-rant-to-someone',
-    siteName: 'LeanOn',
+    description: 'Work stress, microaggressions, burnout — sometimes you just need to let it out. How Was Your Day peer listeners are online daily on Indian time.',
+    url: 'https://www.howwasyourday.live/uk-rant-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -29,7 +29,7 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is it okay to just rant to a LeanOn listener?',
+      name: 'Is it okay to just rant to a How Was Your Day listener?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes, completely. You do not need a structured problem or a neat question. You can just start talking — let it all out, as messy and frustrated as it actually is. Listeners are screened and expected to receive that without shutting it down, steering you, or making you feel silly for being upset.',
@@ -45,7 +45,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What kind of things do people rant about on LeanOn?',
+      name: 'What kind of things do people rant about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Everything. A manager who keeps giving credit to someone else. A microaggression at work that nobody else noticed. The exhaustion of working in the NHS while holding everything together. A commute that broke you. A comment from a relative that stung more than it should have. No topic is too small or too big.',
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Rant to Someone UK', item: 'https://www.leanon.app/uk-rant-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Rant to Someone UK', item: 'https://www.howwasyourday.live/uk-rant-to-someone' },
   ],
 }
 
@@ -174,7 +174,7 @@ export default function UkRantToSomeonePage() {
         <div className="night-box">
           <h2>🗣️ Just start talking. No structure needed.</h2>
           <p>You do not need to explain yourself neatly. You do not need to justify why you are upset.
-            LeanOn listeners will follow you wherever the conversation goes — whether that is anger,
+            How Was Your Day listeners will follow you wherever the conversation goes — whether that is anger,
             tears, or just exhaustion you cannot quite name.</p>
           <p>No judgment. No advice unless you want it. No one in your life will know.</p>
           <a href="/browse" className="cta-night">Find a listener right now →</a>
@@ -182,7 +182,7 @@ export default function UkRantToSomeonePage() {
 
         <div className="card">
           <h2>Why venting to a stranger actually works</h2>
-          <p>Your friends love you — but they also have opinions, histories, and limits. A LeanOn listener
+          <p>Your friends love you — but they also have opinions, histories, and limits. A How Was Your Day listener
             is different. They are not involved in your life. They will not get bored or one-up your problems.
             They will not tell anyone. And they will not secretly judge you for feeling the way you feel.</p>
           <p>That kind of safety makes it possible to say things you have been holding in for weeks.</p>
@@ -209,7 +209,7 @@ export default function UkRantToSomeonePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>Is it okay to just rant to a LeanOn listener?</h3>
+            <h3>Is it okay to just rant to a How Was Your Day listener?</h3>
             <p>Yes, completely. You can just start talking — let it all out, as messy and frustrated as it
               actually is. Listeners are screened and expected to receive that without shutting it down or making you feel
               silly for being upset.</p>
@@ -249,7 +249,7 @@ export default function UkRantToSomeonePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

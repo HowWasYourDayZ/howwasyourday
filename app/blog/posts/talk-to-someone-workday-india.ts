@@ -1,7 +1,7 @@
 export const post = {
   slug: 'talk-to-someone-workday-india',
   title: "Talk to Someone During Your Workday — It's Not Weird, It's Necessary",
-  author: 'LeanOn Team',
+  author: 'How Was Your Day Team',
   date: '2026-09-12',
   readTime: '5 min read',
   description: "You don't have to wait until the weekend to process something hard. A 15-minute session during lunch or your commute is enough.",
@@ -24,7 +24,7 @@ export const post = {
 
 <p>The commute is the most underused emotional support window in most people's days. You are already alone. You are already going over whatever happened in your head. You are transitioning between home and work, or work and home &mdash; already in a liminal mental space. The commute is a natural processing window, and most people spend it ruminating rather than actually processing.</p>
 
-<p>A LeanOn session is a voice call. Earphones in, speak freely. Many people book during their morning commute and are done before they arrive at the office. The morning drive becomes the reset before the day starts, rather than an extension of the morning's tension.</p>
+<p>A How Was Your Day session is a voice call. Earphones in, speak freely. Many people book during their morning commute and are done before they arrive at the office. The morning drive becomes the reset before the day starts, rather than an extension of the morning's tension.</p>
 
 <p>The lunch break is the second window. A quiet corner, earphones in, fifteen minutes. The afternoon is different from what it would have been if you had carried the morning into it. You arrive at your 2pm meeting without the weight of whatever happened at 8am still pressing down.</p>
 
@@ -36,9 +36,9 @@ export const post = {
 
 <p>Processing earlier is better than processing later. And processing in 15 minutes is better than waiting for a window that never comes.</p>
 
-<h2>How LeanOn Fits the Workday</h2>
+<h2>How the app Fits the Workday</h2>
 
-<p>LeanOn sessions are voice calls. You do not need to be at a desk or visible. You do not need a quiet room &mdash; earphones and somewhere you can speak without being overheard is enough. The most common sessions happen during commutes, during lunch breaks, and in short windows between meetings.</p>
+<p>How Was Your Day sessions are voice calls. You do not need to be at a desk or visible. You do not need a quiet room &mdash; earphones and somewhere you can speak without being overheard is enough. The most common sessions happen during commutes, during lunch breaks, and in short windows between meetings.</p>
 
 <p>There is no appointment. There is no intake form. You open the app, browse listeners who are online, and book. Most people connect within a couple of minutes. A 15-minute session costs &#x20b9;160. There is no subscription, no ongoing commitment, no explanation required.</p>
 

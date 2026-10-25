@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Middle East Loneliness Support for Indians | LeanOn',
-  description: 'Millions of Indians across the Middle East live with quiet loneliness — far from home, away from everyone who knows them. LeanOn connects you with an Indian peer listener in your language.',
+  title: 'Middle East Loneliness Support for Indians | How Was Your Day',
+  description: 'Millions of Indians across the Middle East live with quiet loneliness — far from home, away from everyone who knows them. How Was Your Day connects you with an Indian peer listener in your language.',
   keywords: [
     'Middle East loneliness Indian', 'loneliness support Middle East', 'Indian expat lonely Middle East',
     'emotional support Middle East Indians', 'NRI loneliness Middle East', 'Gulf Indians lonely',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'missing home Middle East Indian', 'isolated Middle East Indian worker',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/middle-east-loneliness',
-    languages: { 'en-IN': 'https://www.leanon.app/middle-east-loneliness' },
+    canonical: 'https://www.howwasyourday.live/middle-east-loneliness',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/middle-east-loneliness' },
   },
   openGraph: {
     title: 'Middle East Loneliness Support for Indians — Talk in Your Language',
-    description: 'Far from home in the Middle East and feeling the weight of it? LeanOn peer listeners are Indian, speak your language, and are online daily on Indian time. First 5 minutes free.',
-    url: 'https://www.leanon.app/middle-east-loneliness',
-    siteName: 'LeanOn',
+    description: 'Far from home in the Middle East and feeling the weight of it? How Was Your Day peer listeners are Indian, speak your language, and are online daily on Indian time. First 5 minutes free.',
+    url: 'https://www.howwasyourday.live/middle-east-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -39,23 +39,23 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How does LeanOn help with loneliness?',
+      name: 'How does How Was Your Day help with loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Loneliness shrinks when someone genuinely listens. LeanOn listeners are screened and expected to give you their full attention, ask questions that make you feel seen, and hold space without judgment. A single real conversation can break the cycle of isolation — even temporarily.',
+        text: 'Loneliness shrinks when someone genuinely listens. How Was Your Day listeners are screened and expected to give you their full attention, ask questions that make you feel seen, and hold space without judgment. A single real conversation can break the cycle of isolation — even temporarily.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What languages do LeanOn listeners speak?',
+      name: 'What languages do How Was Your Day listeners speak?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners speak Hindi, Malayalam, Tamil, Telugu, Kannada, Bengali, Gujarati, and other Indian languages. You can check a listener\'s language profile before starting a session.',
+        text: 'How Was Your Day listeners speak Hindi, Malayalam, Tamil, Telugu, Kannada, Bengali, Gujarati, and other Indian languages. You can check a listener\'s language profile before starting a session.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What does LeanOn cost across the Middle East?',
+      name: 'What does How Was Your Day cost across the Middle East?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'From the UAE: AED 37/55/74 for 15/30/45 min. Kuwait: KD 4/5/7. Oman: OMR 4/6/8. Available everywhere in the Middle East — Saudi Arabia, Qatar, Bahrain, and beyond. First 5 minutes free — one free session per account.',
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available late at night from the Middle East?',
+      name: 'Is How Was Your Day available late at night from the Middle East?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are available throughout the day. Many India-based listeners are active during Gulf evening hours. No appointment needed — browse who is online right now.',
+        text: 'Yes. How Was Your Day listeners are available throughout the day. Many India-based listeners are active during Gulf evening hours. No appointment needed — browse who is online right now.',
       },
     },
   ],
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Middle East Loneliness Support', item: 'https://www.leanon.app/middle-east-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Middle East Loneliness Support', item: 'https://www.howwasyourday.live/middle-east-loneliness' },
   ],
 }
 
@@ -154,7 +154,7 @@ export default function MiddleEastLonelinessPage() {
         <p className="lead">
           From Dubai to Riyadh, from Muscat to Doha — Indians have built the Middle East and sent
           money home for decades. But beneath the hard work and the sacrifices is a loneliness that
-          rarely gets named. LeanOn is here for that silence.
+          rarely gets named. How Was Your Day is here for that silence.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
@@ -175,7 +175,7 @@ export default function MiddleEastLonelinessPage() {
         <div className="night-box">
           <h2>🌙 The loneliness peaks after sundown</h2>
           <p>When the workday ends and there is nothing left to distract you, the quiet fills in fast.
-            LeanOn listeners are available throughout the day, with many active during Gulf evening hours. You are
+            How Was Your Day listeners are available throughout the day, with many active during Gulf evening hours. You are
             never left alone with it after dark.</p>
           <p>First 5 minutes are completely free. No card needed to start.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
@@ -183,7 +183,7 @@ export default function MiddleEastLonelinessPage() {
 
         <div className="card">
           <h2>Talk to an Indian listener who understands your world</h2>
-          <p>LeanOn listeners are Indian. They understand what it means to be far from home, to be the
+          <p>How Was Your Day listeners are Indian. They understand what it means to be far from home, to be the
             one who was sent to succeed, to carry a family&apos;s expectations across an ocean. They speak
             Hindi, Malayalam, Tamil, Telugu, Kannada, Gujarati, Bengali, and more.</p>
           <p>You will not have to explain yourself. You can just talk.</p>
@@ -215,22 +215,22 @@ export default function MiddleEastLonelinessPage() {
               successful all combine to create endemic loneliness — even among millions of fellow Indians.</p>
           </div>
           <div className="faq-item">
-            <h3>How does LeanOn help with loneliness?</h3>
-            <p>Loneliness shrinks when someone genuinely listens. LeanOn listeners give you their full
+            <h3>How does How Was Your Day help with loneliness?</h3>
+            <p>Loneliness shrinks when someone genuinely listens. How Was Your Day listeners give you their full
               attention, ask questions that help you feel seen, and hold space without judgment.</p>
           </div>
           <div className="faq-item">
-            <h3>What languages do LeanOn listeners speak?</h3>
+            <h3>What languages do How Was Your Day listeners speak?</h3>
             <p>Hindi, Malayalam, Tamil, Telugu, Kannada, Bengali, Gujarati, and more. Check a listener&apos;s
               profile before starting.</p>
           </div>
           <div className="faq-item">
-            <h3>What does LeanOn cost across the Middle East?</h3>
+            <h3>What does How Was Your Day cost across the Middle East?</h3>
             <p>UAE: AED 37/55/74. Kuwait: KD 4/5/7. Oman: OMR 4/6/8. Available in Saudi Arabia, Qatar, and
               Bahrain too. First 5 minutes free — one free session per account.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn available late at night from the Middle East?</h3>
+            <h3>Is How Was Your Day available late at night from the Middle East?</h3>
             <p>Yes. The small time difference with India means listeners are often available during Gulf evening hours —
               — even during Gulf night hours. You are never alone with your thoughts.</p>
           </div>
@@ -249,7 +249,7 @@ export default function MiddleEastLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

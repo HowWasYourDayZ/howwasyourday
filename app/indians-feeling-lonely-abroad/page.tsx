@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians Feeling Lonely Abroad | You\'re Not Ungrateful. You\'re Human. | LeanOn',
+  title: 'Indians Feeling Lonely Abroad | You\'re Not Ungrateful. You\'re Human. | How Was Your Day',
   description: 'Feeling lonely abroad doesn\'t make you ungrateful for the opportunity you worked for. It makes you human. Talk to someone who won\'t judge you for it.',
   keywords: ['indians feeling lonely abroad', 'indian lonely abroad', 'indian isolation abroad', 'lonely indian in foreign country', 'desi lonely abroad', 'nri feeling lonely'],
-  alternates: { canonical: 'https://www.leanon.app/indians-feeling-lonely-abroad' },
-  openGraph: { title: 'Indians Feeling Lonely Abroad | You\'re Not Ungrateful. You\'re Human. | LeanOn', description: 'Feeling lonely abroad doesn\'t make you ungrateful for the opportunity you worked for. It makes you human. Talk to someone who won\'t judge you for it.', url: 'https://www.leanon.app/indians-feeling-lonely-abroad', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-feeling-lonely-abroad' },
+  openGraph: { title: 'Indians Feeling Lonely Abroad | You\'re Not Ungrateful. You\'re Human. | How Was Your Day', description: 'Feeling lonely abroad doesn\'t make you ungrateful for the opportunity you worked for. It makes you human. Talk to someone who won\'t judge you for it.', url: 'https://www.howwasyourday.live/indians-feeling-lonely-abroad', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians Feeling Lonely Abroad', item: 'https://www.leanon.app/indians-feeling-lonely-abroad' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians Feeling Lonely Abroad', item: 'https://www.howwasyourday.live/indians-feeling-lonely-abroad' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function IndiansLonelyAbroadPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians Feeling Lonely Abroad</span></nav>
         <div className="hero">
           <p className="badge">Indian Loneliness Abroad &middot; Immigrant Life &middot; Peer Support</p>
           <h1>Indians Feeling Lonely Abroad — <em>You&rsquo;re Not Ungrateful. You&rsquo;re Human.</em></h1>
           <p className="lead">You fought hard to get here. Your parents sacrificed. So why does feeling lonely feel like an insult to all of that? It doesn&rsquo;t. Feeling lonely abroad doesn&rsquo;t cancel the gratitude. It doesn&rsquo;t erase the achievement. It just means you are human, and being human in a foreign country is genuinely hard. Talk to someone who won&rsquo;t judge you for it. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -94,12 +94,12 @@ export default function IndiansLonelyAbroadPage() {
         </div>
 
         <div className="section">
-          <h2>What LeanOn Offers</h2>
+          <h2>What How Was Your Day Offers</h2>
           <p>A listener who already understands the immigrant context and will not need you to justify feeling lonely when your life looks good. No gratitude calculation. No comparison to what people in India face. No performance required. Just the actual thing you are experiencing, heard by someone who already knows the terrain. Private. Anonymous. First 5 minutes free. That is enough. Sometimes it is everything.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The loneliness that doesn&rsquo;t need to be earned by suffering.</h2><p>Real peer listener. No judgment. Already understands the immigrant weight. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The loneliness that doesn&rsquo;t need to be earned by suffering.</h2><p>Real peer listener. No judgment. Already understands the immigrant weight. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>

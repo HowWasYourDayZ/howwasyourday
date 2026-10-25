@@ -125,7 +125,7 @@ const MSG_PING_COOLDOWN_MS = 12 * 60 * 60 * 1000 // 12 hours
 //       case (e.g. "Need a patient listener") where, previously, nobody was ever
 //       told the listener returned. That gap is exactly why a message could rot
 //       for weeks with no way to reconnect.
-// Each seeker gets an in-app notification (realtime bell). LeanOn sends no SMS.
+// Each seeker gets an in-app notification (realtime bell). How Was Your Day sends no SMS.
 // Non-blocking — called fire-and-forget; failures are logged only.
 async function notifyRecentSeekers(
   sb: ReturnType<typeof createAdminClient>,

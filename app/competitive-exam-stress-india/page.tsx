@@ -4,17 +4,17 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Competitive Exam Stress India — CAT, GATE, Banking, UPSC | LeanOn',
+  title: 'Competitive Exam Stress India — CAT, GATE, Banking, UPSC | How Was Your Day',
   description: 'The pressure of competitive exams in India is unlike anything. Talk to someone who gets it — anonymous peer support from ₹160.',
   keywords: ['competitive exam stress India', 'CAT exam anxiety India', 'GATE exam stress India', 'banking exam stress India', 'exam anxiety India adults'],
-  alternates: { canonical: 'https://www.leanon.app/competitive-exam-stress-india', languages: { 'en-IN': 'https://www.leanon.app/competitive-exam-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/competitive-exam-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/competitive-exam-stress-india' } },
   openGraph: {
-    title: 'Competitive Exam Stress India — CAT, GATE, Banking, UPSC | LeanOn',
+    title: 'Competitive Exam Stress India — CAT, GATE, Banking, UPSC | How Was Your Day',
     description: 'The pressure of competitive exams in India is unlike anything. Talk to someone who gets it — anonymous peer support from ₹160.',
-    url: 'https://www.leanon.app/competitive-exam-stress-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/competitive-exam-stress-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }],
   },
 }
 
@@ -23,7 +23,7 @@ const faqSchema = {
   '@type': 'FAQPage',
   mainEntity: [
     {'@type': 'Question', name: 'Is it normal to feel this much pressure about an exam?', acceptedAnswer: {'@type': 'Answer', text: 'For competitive exams in India, yes. The social and family stakes are real. The sense that your entire future is contingent on one result is a real pressure, not an irrational one. The emotional response to that pressure &mdash; anxiety, paralysis, mood swings &mdash; is entirely normal.'}},
-    {'@type': 'Question', name: 'Can I talk to someone about exam stress even if I am not in crisis?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. You do not need to be in crisis to use LeanOn. Many people use it for regular stress processing &mdash; just to have somewhere to put what they are carrying. A 15-minute session during preparation can help more than hours of unproductive overthinking.'}},
+    {'@type': 'Question', name: 'Can I talk to someone about exam stress even if I am not in crisis?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. You do not need to be in crisis to use How Was Your Day. Many people use it for regular stress processing &mdash; just to have somewhere to put what they are carrying. A 15-minute session during preparation can help more than hours of unproductive overthinking.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
   ],
 }
@@ -32,8 +32,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Competitive Exam Stress India', item: 'https://www.leanon.app/competitive-exam-stress-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Competitive Exam Stress India', item: 'https://www.howwasyourday.live/competitive-exam-stress-india' },
   ],
 }
 
@@ -84,7 +84,7 @@ export default function CompetitiveExamStressIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">
@@ -107,7 +107,7 @@ export default function CompetitiveExamStressIndiaPage() {
         <div className="section">
           <h2>What Carrying This Does to You</h2>
           <p>The pressure affects sleep, concentration, appetite, and relationships. You become irritable. You oscillate between overwork and paralysis. You feel guilty when you are not studying and unable to study when you are. Your sense of yourself has narrowed to this one measure of performance.</p>
-          <p>A LeanOn listener does not know your rank or your preparation status. They only know what you tell them about how you are feeling. That is a relief in itself.</p>
+          <p>A How Was Your Day listener does not know your rank or your preparation status. They only know what you tell them about how you are feeling. That is a relief in itself.</p>
         </div>
         <div className="section">
           <h2>Frequently Asked Questions</h2>

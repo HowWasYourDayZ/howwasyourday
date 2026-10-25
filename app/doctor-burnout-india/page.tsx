@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Doctor Burnout India — You Heal Everyone. Who Heals You? | LeanOn',
+  title: 'Doctor Burnout India — You Heal Everyone. Who Heals You? | How Was Your Day',
   description: 'Doctor burnout in India is at crisis levels — long hours, emotional labour, patient deaths, impossible expectations. Talk to someone real, anonymously. From ₹160.',
   keywords: [
     'doctor burnout india', 'healthcare worker mental health india', 'frontline worker india stress',
     'physician burnout india', 'medical professional stress india', 'nurse burnout india',
     'hospital worker stress india', 'medical burnout india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/doctor-burnout-india', languages: { 'en-IN': 'https://www.leanon.app/doctor-burnout-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/doctor-burnout-india', languages: { 'en-IN': 'https://www.howwasyourday.live/doctor-burnout-india' } },
   openGraph: {
-    title: 'Doctor Burnout India — You Heal Everyone. Who Heals You? | LeanOn',
+    title: 'Doctor Burnout India — You Heal Everyone. Who Heals You? | How Was Your Day',
     description: 'Doctor burnout in India is at crisis levels — long hours, emotional labour, patient deaths, impossible expectations. Talk to someone real, anonymously. From ₹160.',
-    url: 'https://www.leanon.app/doctor-burnout-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/doctor-burnout-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Doctor Burnout India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Doctor Burnout India' }],
   },
 }
 
@@ -27,18 +27,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn confidential?',
+      name: 'Is How Was Your Day confidential?',
       acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private 1:1 voice calls. Listeners are bound by confidentiality. You sign up with only your phone number and first name. There is no employer connection, no records shared with anyone, no way for your professional life to be affected by what you say. Your session content is completely private.' },
     },
     {
       '@type': 'Question',
       name: 'Will this affect my medical career?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn is an anonymous peer support platform. There is no employer, no medical council, no licensing body involved. Nothing you say in a session is connected to your professional identity. Your use of LeanOn is entirely private.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day is an anonymous peer support platform. There is no employer, no medical council, no licensing body involved. Nothing you say in a session is connected to your professional identity. Your use of How Was Your Day is entirely private.' },
     },
     {
       '@type': 'Question',
       name: 'Can I talk about specific cases (anonymised)?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many doctors use LeanOn specifically to process the weight of what they have witnessed &mdash; patient deaths, difficult diagnoses, impossible situations &mdash; anonymously, without any names. The listener will not encourage you to share identifying information, and Your listener never sees your phone number, and nothing is shared with anyone in your life.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many doctors use How Was Your Day specifically to process the weight of what they have witnessed &mdash; patient deaths, difficult diagnoses, impossible situations &mdash; anonymously, without any names. The listener will not encourage you to share identifying information, and Your listener never sees your phone number, and nothing is shared with anyone in your life.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Doctor Burnout India', item: 'https://www.leanon.app/doctor-burnout-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Doctor Burnout India', item: 'https://www.howwasyourday.live/doctor-burnout-india' },
   ],
 }
 
@@ -111,7 +111,7 @@ export default function DoctorBurnoutIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

@@ -1,12 +1,12 @@
 // Google Play store assets from the LIVE site (run in GitHub Actions — it can
-// reach www.leanon.app). Real app screens + a caption; feature graphic 1024x500.
+// reach www.howwasyourday.live). Real app screens + a caption; feature graphic 1024x500.
 //   node scripts/store-assets.mjs   (needs playwright + chromium)
 import { chromium } from 'playwright-core'
 import { mkdirSync, readFileSync, writeFileSync } from 'fs'
 
 const OUT = 'store-assets'
 mkdirSync(`${OUT}/raw`, { recursive: true })
-const BASE = 'https://www.leanon.app'
+const BASE = 'https://www.howwasyourday.live'
 const SHOTS = [
   { path: '/', file: '01-home', caption: 'Talk to a real person,\nnot AI' },
   { path: '/talk', file: '02-talk', caption: 'Say what’s on your mind,\nby text or voice' },
@@ -66,7 +66,7 @@ background:linear-gradient(135deg,#0F4867 0%,#1A8FA0 100%);display:flex;align-it
 h1{color:#fff;font-size:72px;font-weight:900;line-height:1}
 h2{color:#FFB366;font-size:40px;font-weight:900;margin:14px 0 18px;line-height:1.15}
 p{color:rgba(255,255,255,.88);font-size:26px;font-weight:700;line-height:1.4}</style></head>
-<body><div class="icon"></div><div><h1>LeanOn</h1><h2>Talk to a real person,<br>not AI</h2>
+<body><div class="icon"></div><div><h1>How Was Your Day</h1><h2>Talk to a real person,<br>not AI</h2>
 <p>Screened peer listeners in India · Text or voice<br>First 5 minutes free</p></div></body></html>`, { waitUntil: 'networkidle' }).catch(() => {})
 await page.waitForTimeout(800)
 await page.screenshot({ path: `${OUT}/feature-graphic-1024x500.png` })

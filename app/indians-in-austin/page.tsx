@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Austin Texas | Peer Support for Austin\'s Growing Desi Community | LeanOn',
-  description: "Austin's Indian community has exploded with tech migration. But tech success in Austin doesn't mean you have someone to talk to. LeanOn is here.",
+  title: 'Indians in Austin Texas | Peer Support for Austin\'s Growing Desi Community | How Was Your Day',
+  description: "Austin's Indian community has exploded with tech migration. But tech success in Austin doesn't mean you have someone to talk to. How Was Your Day is here.",
   keywords: ['indians in austin', 'austin indian community', 'desi austin', 'nri austin texas', 'south asian austin', 'indian tech austin'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-austin' },
-  openGraph: { title: 'Indians in Austin Texas | Peer Support for Austin\'s Growing Desi Community | LeanOn', description: "Austin's Indian community has exploded with tech migration. But tech success in Austin doesn't mean you have someone to talk to. LeanOn is here.", url: 'https://www.leanon.app/indians-in-austin', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-austin' },
+  openGraph: { title: 'Indians in Austin Texas | Peer Support for Austin\'s Growing Desi Community | How Was Your Day', description: "Austin's Indian community has exploded with tech migration. But tech success in Austin doesn't mean you have someone to talk to. How Was Your Day is here.", url: 'https://www.howwasyourday.live/indians-in-austin', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Austin Indian tech experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the NRI experience, including the specific dynamics of Austin\'s Indian tech migration — the transplant loneliness, the cultural mismatch of Indian values in an aggressively Texan city, the startup culture pressure, and the isolation of being far from established Indian communities on the coasts.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Austin Indian tech experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific dynamics of Austin\'s Indian tech migration — the transplant loneliness, the cultural mismatch of Indian values in an aggressively Texan city, the startup culture pressure, and the isolation of being far from established Indian communities on the coasts.' } },
   { '@type': 'Question', name: 'What time can I connect from Austin?', acceptedAnswer: { '@type': 'Answer', text: 'Austin (CST) is 11.5 hours behind IST. 7am Austin = 6:30pm India. Before your morning standup or commute, Indian listeners are available in their evening.' } },
-  { '@type': 'Question', name: 'I moved to Austin for work and know almost no one. Can listeners help with this?', acceptedAnswer: { '@type': 'Answer', text: 'Transplant loneliness — being new to a city with no pre-existing network — is one of the most common things LeanOn listeners hear about. You can talk through the specific loneliness of being in a new city, far from family, with colleagues but no real friends.' } },
+  { '@type': 'Question', name: 'I moved to Austin for work and know almost no one. Can listeners help with this?', acceptedAnswer: { '@type': 'Answer', text: 'Transplant loneliness — being new to a city with no pre-existing network — is one of the most common things How Was Your Day listeners hear about. You can talk through the specific loneliness of being in a new city, far from family, with colleagues but no real friends.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'Austin feels very un-Indian culturally. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The specific cultural mismatch of Indian sensibility in a city built around individualism, country music, BBQ, and a very particular brand of Texas pride is something listeners can hold. The pressure to love the city you moved to — and the guilt when you don\'t — is real.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Austin', item: 'https://www.leanon.app/indians-in-austin' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Austin', item: 'https://www.howwasyourday.live/indians-in-austin' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function IndiansInAustinPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Austin</span></nav>
         <div className="hero">
           <p className="badge">Indians in Austin &middot; Texas &middot; Keep Austin Weird</p>
           <h1>Tesla, Oracle, and 40,000 Indians. <em>No one to actually talk to.</em></h1>
           <p className="lead">Austin&rsquo;s Indian community has tripled in five years. The Tesla Gigafactory, Oracle headquarters, Dell, and a growing startup ecosystem pulled thousands of Indian engineers and professionals to Texas. The city is booming, the weather is warm, and the loneliness is real. When you moved for a job and your entire family is elsewhere, the city&rsquo;s energy doesn&rsquo;t fill that gap. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Austin Indian Tech Migration: Big Numbers, Thin Roots</h2>
           <p>Austin&rsquo;s Indian community is one of the fastest-growing in America — but it is almost entirely made up of transplants. Unlike New Jersey or Fremont, where Indian communities have been building infrastructure for thirty years, Austin&rsquo;s Indian community is young. The temples are newer. The cultural associations are still forming. The Indian grocery stores are there, but the dense, intergenerational Indian social fabric that takes decades to build is not.</p>
           <p>The South Austin and Cedar Park and Round Rock suburbs fill with Indian families who all arrived within the last five years. They know each other through work, through the temple WhatsApp groups, through the kids&rsquo; schools. But the friendships are surface — transplant friendships, built quickly because everyone is in the same situation. The kind of deep friendship where you can say what you are actually feeling is hard to build in five years, especially when you are also building a career and raising children and navigating a city that is very much still figuring out what it is.</p>
-          <p>LeanOn listeners are based in India, available without appointment, and understand the transplant Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India, available without appointment, and understand the transplant Indian experience. First 5 minutes free.</p>
         </div>
 
         <div className="section">
@@ -96,11 +96,11 @@ export default function IndiansInAustinPage() {
         <div className="section">
           <h2>Far from Family, Closer to the Edge</h2>
           <p>One of the distinctive features of Austin Indian life is how far it is from the established Indian community hubs. No family in Austin. The nearest large Indian community is Dallas, two and a half hours away. The Bay Area cousins, the New Jersey aunties — everyone is a flight away. And flights from Austin are not cheap.</p>
-          <p>The Indian overachiever who chose Austin for the opportunity and the lower taxes and the space, and now has a house with three bedrooms and nobody to fill it with on a hard Sunday. The Indian couple who moved together and have each other and are grateful for that and also deeply lonely because &ldquo;each other&rdquo; is not the same as a network. LeanOn is a real Indian listener, available in minutes, who understands this specific situation. From US$10.</p>
+          <p>The Indian overachiever who chose Austin for the opportunity and the lower taxes and the space, and now has a house with three bedrooms and nobody to fill it with on a hard Sunday. The Indian couple who moved together and have each other and are grateful for that and also deeply lonely because &ldquo;each other&rdquo; is not the same as a network. How Was Your Day is a real Indian listener, available in minutes, who understands this specific situation. From US$10.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Austin is booming. You should be able to say when you&rsquo;re not.</h2><p>Real Indian peer listener. Understands the Austin Indian transplant experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Austin is booming. You should be able to say when you&rsquo;re not.</h2><p>Real Indian peer listener. Understands the Austin Indian transplant experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

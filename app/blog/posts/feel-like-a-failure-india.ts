@@ -4,7 +4,7 @@ export const post = {
   description: 'The feeling of failure is not the same as the fact of failure. Here is why so many people in India feel like failures — and what actually breaks the loop.',
   date: '2026-09-08',
   readTime: '7 min read',
-  topics: ['mental health India', 'failure', 'imposter syndrome', 'peer support India', 'LeanOn'],
+  topics: ['mental health India', 'failure', 'imposter syndrome', 'peer support India', 'How Was Your Day'],
   content: `
 <p>You do not have to have actually failed for this feeling to be real. That is the first thing to understand — and the thing that makes it so frustrating. The feeling of being a failure exists in its own ecosystem, largely independent of evidence. You can have a job, an education, people who love you, and still carry, underneath all of it, the quiet persistent conviction that you are somehow not enough.</p>
 
@@ -40,7 +40,7 @@ export const post = {
 
 <h2>What Actually Helps</h2>
 
-<p><strong>Say it out loud to someone who will hear it.</strong> There is something specific that happens when you speak &quot;I feel like a failure&quot; to a real person and they do not panic, dismiss it, or rush to reassure you. The feeling becomes external — you can look at it rather than carry it. A peer listener on LeanOn who has personally navigated their own failure will not try to talk you out of it or fix it. They will hear it. That is what starts to move it.</p>
+<p><strong>Say it out loud to someone who will hear it.</strong> There is something specific that happens when you speak &quot;I feel like a failure&quot; to a real person and they do not panic, dismiss it, or rush to reassure you. The feeling becomes external — you can look at it rather than carry it. A peer listener on How Was Your Day who has personally navigated their own failure will not try to talk you out of it or fix it. They will hear it. That is what starts to move it.</p>
 
 <p><strong>Separate the feeling from the story.</strong> The feeling is real. The story it is telling you — &quot;I am a failure, I will always fail, I am not worth as much as other people&quot; — is not. This is not toxic positivity. It is accuracy. The narrative your brain builds around the feeling is not reliable. It is heavily distorted by the comparison culture, the impossible standards, and the years of conditioning. You are allowed to feel the feeling without accepting the story it comes with.</p>
 

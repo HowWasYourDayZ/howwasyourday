@@ -4,7 +4,7 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'I Need Professional Help But Can\'t Access It — What to Do Right Now in India | LeanOn',
+  title: 'I Need Professional Help But Can\'t Access It — What to Do Right Now in India | How Was Your Day',
   description: 'You know you need professional support. But the cost, the wait, the stigma, or the fear is in the way. Here is what to do right now while you figure out the bigger picture.',
   keywords: [
     'need professional help India', 'can\'t afford therapist India', 'how to get mental health help India',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'mental health support India affordable', 'professional help India cost',
     'therapy India difficult', 'psychological help India', 'counseling access India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/i-need-professional-help-india', languages: { 'en-IN': 'https://www.leanon.app/i-need-professional-help-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/i-need-professional-help-india', languages: { 'en-IN': 'https://www.howwasyourday.live/i-need-professional-help-india' } },
   openGraph: {
-    title: 'I Need Professional Help But Can\'t Access It — What to Do Right Now in India | LeanOn',
+    title: 'I Need Professional Help But Can\'t Access It — What to Do Right Now in India | How Was Your Day',
     description: 'You know you need professional support but it is out of reach. Here is what to do right now in India.',
-    url: 'https://www.leanon.app/i-need-professional-help-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/i-need-professional-help-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Mental Health Help India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Mental Health Help India' }],
   },
 }
 
@@ -45,8 +45,8 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn while I\'m looking for a therapist?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — that is one of the most honest uses of LeanOn. You know you need professional help. You are working on finding and accessing it. In the meantime, you are carrying things alone that feel heavy, and you could use a real person to talk to about how you are feeling. LeanOn is not therapy. It will not do what a therapist does. But it can help you feel less alone, help you clarify what you are experiencing, and provide real human support while you navigate toward professional care. Many people find that talking to a peer listener also helps them figure out what they want to say to a therapist when they finally get an appointment.' },
+      name: 'Can I use How Was Your Day while I\'m looking for a therapist?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — that is one of the most honest uses of How Was Your Day. You know you need professional help. You are working on finding and accessing it. In the meantime, you are carrying things alone that feel heavy, and you could use a real person to talk to about how you are feeling. How Was Your Day is not therapy. It will not do what a therapist does. But it can help you feel less alone, help you clarify what you are experiencing, and provide real human support while you navigate toward professional care. Many people find that talking to a peer listener also helps them figure out what they want to say to a therapist when they finally get an appointment.' },
     },
     {
       '@type': 'Question',
@@ -65,8 +65,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'I Need Professional Help India', item: 'https://www.leanon.app/i-need-professional-help-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'I Need Professional Help India', item: 'https://www.howwasyourday.live/i-need-professional-help-india' },
   ],
 }
 
@@ -124,7 +124,7 @@ export default function INeedProfessionalHelpIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -171,9 +171,9 @@ export default function INeedProfessionalHelpIndiaPage() {
         <div className="section">
           <h2>What to Do Right Now — Before the Therapy Appointment</h2>
           <p>The most important thing to do right now is not to wait. Waiting for the &quot;right&quot; moment, the right budget, the right circumstance — while the weight continues to build — makes everything harder. There are things you can do today that will matter.</p>
-          <p><strong>Talk to someone.</strong> LeanOn is not therapy. But it is a real person, with no appointment, who will listen without judgment to whatever you are carrying. For the cost of a session (a fraction of a therapy appointment), you can have a real conversation with someone who has navigated their own difficult experiences. That conversation — the act of saying things out loud to another human being — is not a substitute for therapy, but it is not nothing. It often helps people clarify what they are experiencing well enough to then go to a professional with greater clarity.</p>
+          <p><strong>Talk to someone.</strong> How Was Your Day is not therapy. But it is a real person, with no appointment, who will listen without judgment to whatever you are carrying. For the cost of a session (a fraction of a therapy appointment), you can have a real conversation with someone who has navigated their own difficult experiences. That conversation — the act of saying things out loud to another human being — is not a substitute for therapy, but it is not nothing. It often helps people clarify what they are experiencing well enough to then go to a professional with greater clarity.</p>
           <p><strong>Start the search while you are waiting.</strong> Even if therapy is not accessible right now, begin orienting toward it. Research what is available in your city or online. Look at government hospital options. Ask your company HR if there is an Employee Assistance Program (many larger companies offer a few free therapy sessions through EAPs). Check whether any university clinics in your area offer low-cost therapy.</p>
-          <p><strong>Say it out loud somewhere.</strong> The isolation of carrying this alone is its own weight. Whether through LeanOn, a trusted friend, or a family member who can hold it carefully — saying what you are going through to another person matters. You do not have to carry this entirely inside.</p>
+          <p><strong>Say it out loud somewhere.</strong> The isolation of carrying this alone is its own weight. Whether through How Was Your Day, a trusted friend, or a family member who can hold it carefully — saying what you are going through to another person matters. You do not have to carry this entirely inside.</p>
         </div>
 
         <div className="section">
@@ -207,9 +207,9 @@ export default function INeedProfessionalHelpIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>LeanOn Is Not Therapy. Here Is What It Is.</h2>
-          <p>This page would not be honest if it told you LeanOn is a substitute for professional care. It is not. If you have been carrying things for years — numbness since your teenage years, the effects of a difficult childhood, a depression that is affecting your ability to function — you need, and deserve, a trained professional. A therapist or psychologist who can work with you over time, who has the clinical tools to help you process what you are carrying at a structural level.</p>
-          <p>But here is what LeanOn is:</p>
+          <h2>How Was Your Day Is Not Therapy. Here Is What It Is.</h2>
+          <p>This page would not be honest if it told you How Was Your Day is a substitute for professional care. It is not. If you have been carrying things for years — numbness since your teenage years, the effects of a difficult childhood, a depression that is affecting your ability to function — you need, and deserve, a trained professional. A therapist or psychologist who can work with you over time, who has the clinical tools to help you process what you are carrying at a structural level.</p>
+          <p>But here is what How Was Your Day is:</p>
           <ul>
             <li>A real person, with no appointment, who has navigated their own hard experiences and is screened and expected to listen without judgment</li>
             <li>A space to say things out loud that you have never said — to have them witnessed by another human being without being dismissed, fixed, or alarmed</li>
@@ -217,7 +217,7 @@ export default function INeedProfessionalHelpIndiaPage() {
             <li>A conversation that often helps people clarify what they are experiencing, and what they want to say when they get to a therapist</li>
             <li>No appointment, from anywhere, privately — listeners never see your phone number</li>
           </ul>
-          <p>Someone who knows they need professional help can still use LeanOn while they wait for it — knowing it is not therapy. The professional help may not be available right then, the weight is real right then, and a real conversation with a real person is better than nothing.</p>
+          <p>Someone who knows they need professional help can still use How Was Your Day while they wait for it — knowing it is not therapy. The professional help may not be available right then, the weight is real right then, and a real conversation with a real person is better than nothing.</p>
           <p>Better than nothing is underselling it. Being heard — by a person, not an algorithm, in real time, without judgment — does something. It does not do everything. But it does something real. And for many people, that something is where the movement toward getting the bigger help begins.</p>
         </div>
 

@@ -62,8 +62,8 @@ async function assertNoMoneyOutstanding(admin: ReturnType<typeof createAdminClie
   const balance = Number(u?.wallet_balance ?? 0)
   if (balance >= 1) {
     throw new MoneyOutstanding((earned ?? 0) > 0
-      ? `You still have ₹${balance} in your LeanOn wallet. Please request a payout from your dashboard first — once it has been transferred you can delete your account.`
-      : `You still have ₹${balance} in your LeanOn wallet. Please use it or request a refund from the Wallet page first — then you can delete your account.`)
+      ? `You still have ₹${balance} in your How Was Your Day wallet. Please request a payout from your dashboard first — once it has been transferred you can delete your account.`
+      : `You still have ₹${balance} in your How Was Your Day wallet. Please use it or request a refund from the Wallet page first — then you can delete your account.`)
   }
 }
 

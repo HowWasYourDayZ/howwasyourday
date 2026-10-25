@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Relationship Problems | When Cultural Expectations Collide | LeanOn',
+  title: 'NRI Relationship Problems | When Cultural Expectations Collide | How Was Your Day',
   description: 'NRI relationships carry unique weight — family pressure, cross-cultural mismatch, identity conflicts. Talk to a peer listener who understands the Indian relationship context.',
   keywords: ['nri relationship problems', 'indian relationship issues abroad', 'desi relationship problems', 'nri couple problems', 'cultural mismatch nri', 'nri family expectations relationships'],
-  alternates: { canonical: 'https://www.leanon.app/nri-relationship-problems' },
-  openGraph: { title: 'NRI Relationship Problems | When Cultural Expectations Collide | LeanOn', description: 'NRI relationships carry unique weight — family pressure, cross-cultural mismatch, identity conflicts. Talk to a peer listener who understands the Indian relationship context.', url: 'https://www.leanon.app/nri-relationship-problems', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-relationship-problems' },
+  openGraph: { title: 'NRI Relationship Problems | When Cultural Expectations Collide | How Was Your Day', description: 'NRI relationships carry unique weight — family pressure, cross-cultural mismatch, identity conflicts. Talk to a peer listener who understands the Indian relationship context.', url: 'https://www.howwasyourday.live/nri-relationship-problems', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Relationship Problems', item: 'https://www.leanon.app/nri-relationship-problems' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Relationship Problems', item: 'https://www.howwasyourday.live/nri-relationship-problems' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function NriRelationshipProblemsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Relationship Problems</span></nav>
         <div className="hero">
@@ -84,13 +84,13 @@ export default function NriRelationshipProblemsPage() {
           <h2>The Cultural Weight That Comes Into Every NRI Relationship</h2>
           <p>Indian relationships abroad carry weight that is different from Indian relationships in India and different from local relationships in the country you live in. You are navigating the expectations you absorbed growing up — about what a partner should be, what a family should look like, what obligations you have to your parents, what success in a relationship means — and all of this has to interact with another person who may have absorbed different expectations entirely.</p>
           <p>If you are with someone from a different cultural background, you are managing the constant work of translation — explaining your family to them, explaining their family to yourself, finding the common ground in two sets of inherited ideas about love, commitment, money, gender roles, children, and what it means to be part of a family. This is exhausting and meaningful and sometimes overwhelming.</p>
-          <p>If you are with someone Indian, the cultural match may be closer — but it is never simple. Different regions, different castes, different family dynamics, different expectations formed in very different homes. And then the NRI overlay: two people trying to figure out what kind of Indian life to build in a non-Indian country, with parents watching from India and community watching from the diaspora. LeanOn offers a space for all of this. First 5 minutes free.</p>
+          <p>If you are with someone Indian, the cultural match may be closer — but it is never simple. Different regions, different castes, different family dynamics, different expectations formed in very different homes. And then the NRI overlay: two people trying to figure out what kind of Indian life to build in a non-Indian country, with parents watching from India and community watching from the diaspora. How Was Your Day offers a space for all of this. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>When There Is Nobody Safe to Talk To</h2>
           <p>One of the loneliest aspects of NRI relationship problems is having no one safe to talk to. You cannot tell your parents — they have opinions that would make things worse, or they would worry, or they would tell other family members. You cannot tell your Indian community friends — it goes in the gossip circuit. You cannot tell your non-Indian friends — they don&rsquo;t have the cultural framework to understand. You are alone with the weight of it.</p>
-          <p>LeanOn is built for exactly this gap. A real Indian peer listener in India — outside your social network entirely, inside the cultural context completely — who can hear what you are actually carrying. Anonymous. Private. No appointment. First 5 minutes free — one free session per account.</p>
+          <p>How Was Your Day is built for exactly this gap. A real Indian peer listener in India — outside your social network entirely, inside the cultural context completely — who can hear what you are actually carrying. Anonymous. Private. No appointment. First 5 minutes free — one free session per account.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

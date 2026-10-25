@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Someone to Talk to in the USA — Real Human, Not a Chatbot | LeanOn',
-  description: 'When you need a real person to talk to in the USA — not an AI, not a hotline, not a six-week therapy waitlist — LeanOn connects you with a warm Indian peer listener — availability follows Indian time.',
+  title: 'Someone to Talk to in the USA — Real Human, Not a Chatbot | How Was Your Day',
+  description: 'When you need a real person to talk to in the USA — not an AI, not a hotline, not a six-week therapy waitlist — How Was Your Day connects you with a warm Indian peer listener — availability follows Indian time.',
   keywords: [
     'someone to talk to usa', 'need someone to talk to usa indian', 'real person to talk to usa',
     'not a chatbot listener usa', 'human listener usa', 'talk to a person usa nri',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'indian peer support usa', 'emotional support call usa indian',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-talk-to-someone',
-    languages: { 'en-US': 'https://www.leanon.app/usa-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/usa-talk-to-someone',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa-talk-to-someone' },
   },
   openGraph: {
     title: 'Someone to Talk to in the USA — Real Human, Not a Chatbot',
     description: 'Not an AI. Not a hotline. Not a six-week waitlist. A warm, real Indian listener — available right now, for $10.',
-    url: 'https://www.leanon.app/usa-talk-to-someone',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/usa-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -30,15 +30,15 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What makes LeanOn different from AI chat or mental health apps?',
+      name: 'What makes How Was Your Day different from AI chat or mental health apps?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn connects you with a real human being — a screened peer listener who is actually present with you, responding in real time, genuinely curious about your experience. AI cannot hold space. AI cannot feel the weight of what you are saying and be moved by it. A LeanOn listener can.',
+        text: 'How Was Your Day connects you with a real human being — a screened peer listener who is actually present with you, responding in real time, genuinely curious about your experience. AI cannot hold space. AI cannot feel the weight of what you are saying and be moved by it. A How Was Your Day listener can.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How quickly can I talk to someone on LeanOn?',
+      name: 'How quickly can I talk to someone on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Immediately. Browse available listeners, pick one who feels right, and start the session. No appointment, no registration form, no insurance. Your first 5 minutes are free.',
@@ -46,7 +46,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What can I talk about with a LeanOn listener?',
+      name: 'What can I talk about with a How Was Your Day listener?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Anything. Loneliness, relationship struggles, work stress, visa anxiety, homesickness, family pressure, grief, feeling lost, needing to vent — or just wanting to hear a warm voice. You do not need a specific reason. You just need to want to talk.',
@@ -54,7 +54,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost from the USA?',
+      name: 'How much does How Was Your Day cost from the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. Compared to $200/hour therapy, it is genuinely accessible.',
@@ -62,10 +62,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Are LeanOn listeners Indian?',
+      name: 'Are How Was Your Day listeners Indian?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners are Indian or South Asian, and many speak Hindi, Telugu, Tamil, and other Indian languages. You can browse listener profiles and choose someone who feels like the right fit for you.',
+        text: 'Many How Was Your Day listeners are Indian or South Asian, and many speak Hindi, Telugu, Tamil, and other Indian languages. You can browse listener profiles and choose someone who feels like the right fit for you.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Someone to Talk to USA', item: 'https://www.leanon.app/usa-talk-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Someone to Talk to USA', item: 'https://www.howwasyourday.live/usa-talk-to-someone' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function UsaTalkToSomeonePage() {
         <p className="lead">
           You do not need an appointment. You do not need a crisis. You do not need to wait six weeks for
           a therapy slot. You just need a real human being who will listen — properly, warmly, without
-          judgment. LeanOn peer listeners are in India, so availability follows Indian time — check who is online now.
+          judgment. How Was Your Day peer listeners are in India, so availability follows Indian time — check who is online now.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to a real person now — first 5 min free →</a>
@@ -163,7 +163,7 @@ export default function UsaTalkToSomeonePage() {
           <p>AI can generate empathy-sounding words. It cannot actually feel the weight of what you are
             saying and be moved by it. It cannot slow down and say &quot;wait — tell me more about that part.&quot;
             It cannot hold space. It cannot be genuinely present with you.</p>
-          <p>When you need to be heard, you need a human. LeanOn listeners are real people who chose
+          <p>When you need to be heard, you need a human. How Was Your Day listeners are real people who chose
             to do this because they care about connection. There is no substitute for that.</p>
         </div>
 
@@ -171,7 +171,7 @@ export default function UsaTalkToSomeonePage() {
           <h2>🕐 US evenings are Indian mornings — when listeners are often online</h2>
           <p>Emotional needs do not arrive at office hours. They arrive at 11 PM on a Tuesday when
             India is asleep, you cannot sleep, and everything is just too much.</p>
-          <p>LeanOn listeners are based in India, so availability follows Indian time. You can open the app right now, browse who is online,
+          <p>How Was Your Day listeners are based in India, so availability follows Indian time. You can open the app right now, browse who is online,
             and be in a session within minutes.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -191,7 +191,7 @@ export default function UsaTalkToSomeonePage() {
         <div className="card">
           <h2>From $10 for 15 minutes — accessible support, right now</h2>
           <p>Therapy in the USA costs $200 per session, requires insurance or weeks of paperwork, and
-            often has a waiting list measured in months. LeanOn sessions start at <strong>$10 for 15 minutes</strong>,
+            often has a waiting list measured in months. How Was Your Day sessions start at <strong>$10 for 15 minutes</strong>,
             <strong> $15 for 30 minutes</strong>, and <strong>$20 for 45 minutes</strong>.</p>
           <p>Your first 5-minute session free. No insurance required. No referral needed. No waitlist.
             Just a real person.</p>
@@ -207,29 +207,29 @@ export default function UsaTalkToSomeonePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>What makes LeanOn different from AI chat or mental health apps?</h3>
-            <p>LeanOn connects you with a real human being — a screened peer listener who is actually
+            <h3>What makes How Was Your Day different from AI chat or mental health apps?</h3>
+            <p>How Was Your Day connects you with a real human being — a screened peer listener who is actually
               present with you, responding in real time, genuinely curious about your experience.
-              AI cannot hold space. A LeanOn listener can.</p>
+              AI cannot hold space. A How Was Your Day listener can.</p>
           </div>
           <div className="faq-item">
-            <h3>How quickly can I talk to someone on LeanOn?</h3>
+            <h3>How quickly can I talk to someone on How Was Your Day?</h3>
             <p>Immediately. Browse available listeners, pick one who feels right, and start the session.
               No appointment, no registration form, no insurance. Your first 5 minutes are free.</p>
           </div>
           <div className="faq-item">
-            <h3>What can I talk about with a LeanOn listener?</h3>
+            <h3>What can I talk about with a How Was Your Day listener?</h3>
             <p>Anything. Loneliness, work stress, visa anxiety, homesickness, relationships, grief —
               or just wanting to hear a warm voice. You do not need a specific reason.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost from the USA?</h3>
+            <h3>How much does How Was Your Day cost from the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first
               5 minutes free — one free session per account.</p>
           </div>
           <div className="faq-item">
-            <h3>Are LeanOn listeners Indian?</h3>
-            <p>Many LeanOn listeners are Indian or South Asian, and many speak Hindi, Telugu, Tamil, and
+            <h3>Are How Was Your Day listeners Indian?</h3>
+            <p>Many How Was Your Day listeners are Indian or South Asian, and many speak Hindi, Telugu, Tamil, and
               other Indian languages. Browse profiles and choose someone who feels like the right fit.</p>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function UsaTalkToSomeonePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

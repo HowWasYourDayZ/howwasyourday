@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Bengali NRI Support | Talk to Someone Who Understands Bangla Culture | LeanOn',
+  title: 'Bengali NRI Support | Talk to Someone Who Understands Bangla Culture | How Was Your Day',
   description: 'Bengali NRIs in the UK, USA, and beyond — the cultural weight, intellectual loneliness, and missing home are real. Talk to Bengali listeners who understand.',
   keywords: ['bengali nri support', 'bangladeshi nri', 'bengali diaspora uk', 'bengali in usa', 'talk to bengali person online', 'bangali abroad'],
-  alternates: { canonical: 'https://www.leanon.app/bengali-nri-support' },
-  openGraph: { title: 'Bengali NRI Support | Talk to Someone Who Understands Bangla Culture | LeanOn', description: 'Bengali NRIs in the UK, USA, and beyond — the cultural weight, intellectual loneliness, and missing home are real. Talk to Bengali listeners who understand.', url: 'https://www.leanon.app/bengali-nri-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/bengali-nri-support' },
+  openGraph: { title: 'Bengali NRI Support | Talk to Someone Who Understands Bangla Culture | How Was Your Day', description: 'Bengali NRIs in the UK, USA, and beyond — the cultural weight, intellectual loneliness, and missing home are real. Talk to Bengali listeners who understand.', url: 'https://www.howwasyourday.live/bengali-nri-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Can I talk in Bengali?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several LeanOn listeners speak Bengali. Mention your language preference when beginning your session and your listener will communicate with you in Bengali or Hindi, as you prefer.' } },
+  { '@type': 'Question', name: 'Can I talk in Bengali?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several How Was Your Day listeners speak Bengali. Mention your language preference when beginning your session and your listener will communicate with you in Bengali or Hindi, as you prefer.' } },
   { '@type': 'Question', name: 'Do listeners understand the West Bengal vs Bangladesh distinction?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Bengali diaspora spans both West Bengal and Bangladesh and carries different cultural weights. Listeners understand this without needing it explained — the specific experiences of Bong NRIs versus Bangladeshi NRIs are different and both are heard.' } },
   { '@type': 'Question', name: 'I feel a specific intellectual loneliness abroad. Can listeners understand that?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Bengali intellectual tradition is something listeners understand — the specific frustration of being in an environment where your cultural reference points do not land, where the conversation is always a translation. That is a real and nameable form of loneliness.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Bengali community and your family will never know. Sessions are anonymous — phone number and first name only. Nothing is shared beyond the session.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Bengali NRI Support', item: 'https://www.leanon.app/bengali-nri-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Bengali NRI Support', item: 'https://www.howwasyourday.live/bengali-nri-support' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function BengaliNriSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Bengali NRI Support</span></nav>
         <div className="hero">
           <p className="badge">Bengali NRI &middot; Bangla Culture &middot; Diaspora Support</p>
           <h1>The intellectual loneliness of being Bengali abroad <em>is real and nameable.</em></h1>
           <p className="lead">Bengali NRIs carry a specific kind of cultural weight — the literature, the music, the food, the particular intellectual tradition that does not translate easily into other contexts. Whether you are from West Bengal or Bangladesh, in the UK, the US, or beyond, the loneliness of being between two worlds has a texture. Talk to a Bengali peer listener who understands it. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Cultural Weight That Goes Abroad With You</h2>
           <p>Bengali culture has a deep intellectual and artistic tradition — Tagore, Ray, the Baul music, the specific pleasure of adda, the way food is central to every occasion, the language pride that runs through generations. When you move abroad, you carry all of this with you, and what you find is that it is hard to fully live out in a new context.</p>
           <p>The UK Bengali community is one of the oldest South Asian diaspora communities — Tower Hamlets, east London, the generations who came before. The US has significant Bengali communities in New York, Boston, and the Bay Area. But being part of a diaspora community does not resolve the specific loneliness of missing the original. Community events are warm substitutes. Durga Puja in Queens is beautiful. It is not the same as being in Kolkata for it, and you can love it and still feel that absence.</p>
-          <p>LeanOn listeners understand this — the specific, high-context Bengali homesickness that is partly cultural and partly personal. You do not have to explain it. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand this — the specific, high-context Bengali homesickness that is partly cultural and partly personal. You do not have to explain it. First 5 minutes free.</p>
         </div>
 
         <div className="section">
@@ -95,12 +95,12 @@ export default function BengaliNriSupportPage() {
 
         <div className="section">
           <h2>West Bengal and Bangladesh — Different Journeys, Same Belonging</h2>
-          <p>The Bengali diaspora includes people from West Bengal and Bangladesh, and these are meaningfully different experiences — different political histories, different migration patterns, different family cultures, sometimes different religions. LeanOn listeners understand these distinctions. You do not have to code-switch or simplify your identity for the listener to understand you.</p>
+          <p>The Bengali diaspora includes people from West Bengal and Bangladesh, and these are meaningfully different experiences — different political histories, different migration patterns, different family cultures, sometimes different religions. How Was Your Day listeners understand these distinctions. You do not have to code-switch or simplify your identity for the listener to understand you.</p>
           <p>Whether the weight you are carrying is about family in Dhaka, homesickness for Kolkata, the specific stress of UK immigration status, or the loneliness of being the &ldquo;foreign one&rdquo; in every room you are in — a listener will hear it as it is. No judgment. First 5 minutes free.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Amar kotha, amar moto keu shunuk.</h2><p>A Bengali listener who gets the weight without the translation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Amar kotha, amar moto keu shunuk.</h2><p>A Bengali listener who gets the weight without the translation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk Therapy India — The Power of Saying It Out Loud | LeanOn',
-  description: 'Talk therapy works because speaking things out loud changes them. LeanOn offers real-voice peer conversations from ₹160 — no appointment.',
+  title: 'Talk Therapy India — The Power of Saying It Out Loud | How Was Your Day',
+  description: 'Talk therapy works because speaking things out loud changes them. How Was Your Day offers real-voice peer conversations from ₹160 — no appointment.',
   keywords: [
     'talk therapy india', 'talking therapy india', 'verbal therapy india',
     'talk about problems india', 'talking through problems india',
     'peer talk therapy india', 'affordable talk therapy india',
     'online talk therapy india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/talk-therapy-india', languages: { 'en-IN': 'https://www.leanon.app/talk-therapy-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-therapy-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-therapy-india' } },
   openGraph: {
-    title: 'Talk Therapy India — The Power of Saying It Out Loud | LeanOn',
-    description: 'Talk therapy works because speaking things out loud changes them. LeanOn offers real-voice peer conversations from ₹160 — no appointment.',
-    url: 'https://www.leanon.app/talk-therapy-india',
-    siteName: 'LeanOn',
+    title: 'Talk Therapy India — The Power of Saying It Out Loud | How Was Your Day',
+    description: 'Talk therapy works because speaking things out loud changes them. How Was Your Day offers real-voice peer conversations from ₹160 — no appointment.',
+    url: 'https://www.howwasyourday.live/talk-therapy-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Talk Therapy India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Talk Therapy India' }],
   },
 }
 
@@ -28,8 +28,8 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn talk therapy?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn is peer support, not clinical talk therapy. Talk therapy (psychotherapy, CBT, etc.) is delivered by licensed mental health professionals and involves clinical assessment and treatment. LeanOn peer listeners are screened, real people who listen, empathise, and hold space &mdash; but they do not assess or treat. For clinical conditions, please see a professional.' },
+      name: 'Is How Was Your Day talk therapy?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day is peer support, not clinical talk therapy. Talk therapy (psychotherapy, CBT, etc.) is delivered by licensed mental health professionals and involves clinical assessment and treatment. How Was Your Day peer listeners are screened, real people who listen, empathise, and hold space &mdash; but they do not assess or treat. For clinical conditions, please see a professional.' },
     },
     {
       '@type': 'Question',
@@ -49,7 +49,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can I do it on my phone?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn sessions are voice calls on your phone. No video required. No app download needed in most cases. Browse at leanon.app, choose a listener, and start a session from your browser.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day sessions are voice calls on your phone. No video required. No app download needed in most cases. Browse at howwasyourday.live, choose a listener, and start a session from your browser.' },
     },
   ],
 }
@@ -58,8 +58,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk Therapy India', item: 'https://www.leanon.app/talk-therapy-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk Therapy India', item: 'https://www.howwasyourday.live/talk-therapy-india' },
   ],
 }
 
@@ -113,7 +113,7 @@ export default function TalkTherapyIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -138,7 +138,7 @@ export default function TalkTherapyIndiaPage() {
           <h2>What Talk Therapy Actually Is</h2>
           <p>In the clinical sense, &ldquo;talk therapy&rdquo; refers to psychotherapy &mdash; structured interventions like CBT (Cognitive Behavioural Therapy), psychodynamic therapy, or person-centred counselling, delivered by licensed professionals. These are effective for clinical conditions and require trained therapists.</p>
           <p>But at a broader level, &ldquo;talk therapy&rdquo; simply means using language &mdash; talking, with a listener &mdash; to process experience. This broader category includes formal therapy but also peer support, mentoring, supportive friendships, and any conversation where being heard leads to emotional processing.</p>
-          <p>LeanOn operates in this broader category. It is not clinical therapy &mdash; listeners are screened peers, not licensed professionals. But it is talk: real voice conversations that use the mechanism of language and listener to help people process what they are carrying.</p>
+          <p>How Was Your Day operates in this broader category. It is not clinical therapy &mdash; listeners are screened peers, not licensed professionals. But it is talk: real voice conversations that use the mechanism of language and listener to help people process what they are carrying.</p>
         </div>
 
         <div className="section">
@@ -150,14 +150,14 @@ export default function TalkTherapyIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>Talk Therapy on LeanOn vs Formal Therapy</h2>
-          <p>LeanOn is appropriate for processing everyday weight, venting, gaining perspective, reducing the pressure of things left unsaid, and feeling less alone in difficult situations. It is not appropriate for diagnosing or treating clinical mental health conditions.</p>
-          <p>The distinction: if you are carrying something heavy but do not have a clinical condition, LeanOn is likely the right tool. If you are experiencing persistent clinical symptoms &mdash; major depression, an anxiety disorder, trauma, eating disorders, psychosis &mdash; please see a licensed professional. LeanOn and professional therapy are not in competition; they serve different needs.</p>
+          <h2>Talk Therapy on How Was Your Day vs Formal Therapy</h2>
+          <p>How Was Your Day is appropriate for processing everyday weight, venting, gaining perspective, reducing the pressure of things left unsaid, and feeling less alone in difficult situations. It is not appropriate for diagnosing or treating clinical mental health conditions.</p>
+          <p>The distinction: if you are carrying something heavy but do not have a clinical condition, How Was Your Day is likely the right tool. If you are experiencing persistent clinical symptoms &mdash; major depression, an anxiety disorder, trauma, eating disorders, psychosis &mdash; please see a licensed professional. How Was Your Day and professional therapy are not in competition; they serve different needs.</p>
         </div>
 
         <div className="section">
           <h2>Getting Started: What a First Session Is Like</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Choose someone whose background resonates with what you are going through. Start the session. The first 5 minutes are free &mdash; use them to feel the connection.</p>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose someone whose background resonates with what you are going through. Start the session. The first 5 minutes are free &mdash; use them to feel the connection.</p>
           <p>You do not need to prepare. You do not need to have it organised. You can start with &ldquo;I don&apos;t quite know where to begin&rdquo; and that is fine. A good listener will follow you wherever you need to go.</p>
         </div>
 

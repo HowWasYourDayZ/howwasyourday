@@ -4,15 +4,15 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Mental Health Support India — Real People, Not Just Apps | LeanOn',
+  title: 'Mental Health Support India — Real People, Not Just Apps | How Was Your Day',
   description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. One introductory session of up to 5 minutes is free per account.",
   keywords: ['mental health support India', 'mental health support online India', 'mental health help India', 'mental health chat India', 'online mental health support India', 'affordable mental health India'],
-  alternates: { canonical: 'https://www.leanon.app/mental-health-support-india', languages: { 'en-IN': 'https://www.leanon.app/mental-health-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/mental-health-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/mental-health-support-india' } },
   openGraph: {
-    title: 'Mental Health Support India — Real People, Not Just Apps | LeanOn',
+    title: 'Mental Health Support India — Real People, Not Just Apps | How Was Your Day',
     description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. One introductory session of up to 5 minutes is free per account.",
-    url: 'https://www.leanon.app/mental-health-support-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/mental-health-support-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -21,21 +21,21 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "Where can I get mental health support online in India?", acceptedAnswer: { '@type': 'Answer', text: "For non-urgent stress, loneliness, low mood or relationship difficulties, LeanOn lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. One introductory session of up to 5 minutes is free per account. Availability depends on who is online, so an immediate match is not guaranteed." } },
+    { '@type': 'Question', name: "Where can I get mental health support online in India?", acceptedAnswer: { '@type': 'Answer', text: "For non-urgent stress, loneliness, low mood or relationship difficulties, How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. One introductory session of up to 5 minutes is free per account. Availability depends on who is online, so an immediate match is not guaranteed." } },
     {
       '@type': 'Question',
       name: 'What kind of mental health support is available in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Options include qualified mental-health professionals for assessment and treatment, government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Prices and availability vary by provider. LeanOn offers peer-listener conversations, not clinical treatment; one introductory session of up to 5 minutes is free per account, and paid prices are shown before booking.',
+        text: 'Options include qualified mental-health professionals for assessment and treatment, government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Prices and availability vary by provider. How Was Your Day offers peer-listener conversations, not clinical treatment; one introductory session of up to 5 minutes is free per account, and paid prices are shown before booking.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a mental health app?',
+      name: 'Is How Was Your Day a mental health app?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is a peer emotional support platform — not a therapy app or a mental health treatment service. It connects people who need someone to talk to with screened peer listeners who have lived experience. LeanOn does not provide clinical diagnosis or treatment, and does not claim to be a substitute for professional mental health care.',
+        text: 'How Was Your Day is a peer emotional support platform — not a therapy app or a mental health treatment service. It connects people who need someone to talk to with screened peer listeners who have lived experience. How Was Your Day does not provide clinical diagnosis or treatment, and does not claim to be a substitute for professional mental health care.',
       },
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'Is mental health support free in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Tele-MANAS (14416) is a free, 24/7 Government of India mental-health helpline. Private-care fees vary by clinician, service and location. LeanOn offers one introductory session of up to 5 minutes free per account; paid prices depend on the listener and mode and are shown before booking.',
+        text: 'Tele-MANAS (14416) is a free, 24/7 Government of India mental-health helpline. Private-care fees vary by clinician, service and location. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the listener and mode and are shown before booking.',
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'How can I get immediate mental health support in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For a mental-health crisis or immediate danger, call Tele-MANAS at 14416 (free, 24/7) or contact local emergency services. For non-crisis emotional support, LeanOn offers peer-listener conversations without an appointment; availability depends on who is online. Peer support is not clinical treatment. Browse at leanon.app/browse.',
+        text: 'For a mental-health crisis or immediate danger, call Tele-MANAS at 14416 (free, 24/7) or contact local emergency services. For non-crisis emotional support, How Was Your Day offers peer-listener conversations without an appointment; availability depends on who is online. Peer support is not clinical treatment. Browse at howwasyourday.live/browse.',
       },
     },
   ],
@@ -77,8 +77,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Mental Health Support India', item: 'https://www.leanon.app/mental-health-support-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Mental Health Support India', item: 'https://www.howwasyourday.live/mental-health-support-india' },
   ],
 }
 
@@ -148,7 +148,7 @@ export default function MentalHealthSupportIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -166,8 +166,8 @@ export default function MentalHealthSupportIndiaPage() {
         <div className="hero">
           <p className="tag">Mental Health Support · India · Peer Conversations</p>
           <h1>Mental health support that <em>actually feels human</em></h1>
-          <p className="lead">When you feel stressed, low or alone, talking with another person may help you feel heard. LeanOn connects adults with screened peer listeners for everyday emotional conversations by text or voice. It is not therapy or clinical treatment. Pricing is shown before booking, and immediate availability is not guaranteed.</p>
-          <QuickAnswer question={"Where can I get mental health support online in India?"} answer={"For non-urgent stress, loneliness, low mood or relationship difficulties, LeanOn lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. One introductory session of up to 5 minutes is free per account. Availability depends on who is online, so an immediate match is not guaranteed."} />
+          <p className="lead">When you feel stressed, low or alone, talking with another person may help you feel heard. How Was Your Day connects adults with screened peer listeners for everyday emotional conversations by text or voice. It is not therapy or clinical treatment. Pricing is shown before booking, and immediate availability is not guaranteed.</p>
+          <QuickAnswer question={"Where can I get mental health support online in India?"} answer={"For non-urgent stress, loneliness, low mood or relationship difficulties, How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. One introductory session of up to 5 minutes is free per account. Availability depends on who is online, so an immediate match is not guaranteed."} />
           <p style={{ fontSize: 14, margin: '10px 0 20px', lineHeight: 1.7, color: '#4A6470' }}>Not sure what kind of help fits? <a href="/relationship-emotional-support-guide-india" style={{ fontWeight: 800, color: '#0F7788', textDecoration: 'underline' }}>Read our relationship and emotional support guide</a> for marriage, family pressure, women’s emotional load, and when to choose counselling instead of peer listening.</p>
         </div>
 
@@ -182,17 +182,17 @@ export default function MentalHealthSupportIndiaPage() {
           <p>If what you want is a non-clinical conversation and a chance to talk through everyday emotional stress, peer support may be one option alongside other care. It is not a substitute for professional assessment or treatment when those are needed.</p>
 
           <h3>Stigma Is Still Real</h3>
-          <p>In many Indian families and workplaces, seeking mental health support — especially professional support — still carries stigma. The person who needs help often cannot tell the people around them that they are seeking it. They may prefer to talk outside their usual circle. On LeanOn, listeners do not see a user's phone number, and users can choose a display name; text messages are stored and authorised administrators may review reports or safety-flagged sessions.</p>
+          <p>In many Indian families and workplaces, seeking mental health support — especially professional support — still carries stigma. The person who needs help often cannot tell the people around them that they are seeking it. They may prefer to talk outside their usual circle. On How Was Your Day, listeners do not see a user's phone number, and users can choose a display name; text messages are stored and authorised administrators may review reports or safety-flagged sessions.</p>
 
           <h3>When you specifically want a human conversation</h3>
-          <p>Some people find AI tools useful for reflection; others prefer to talk with a person. LeanOn is for adults who want a human peer conversation. It does not claim to be better for everyone, and it does not replace professional care.</p>
+          <p>Some people find AI tools useful for reflection; others prefer to talk with a person. How Was Your Day is for adults who want a human peer conversation. It does not claim to be better for everyone, and it does not replace professional care.</p>
         </div>
 
         {/* A different kind of support */}
         <div className="section">
           <h2>A Different Kind of Support</h2>
-          <p>LeanOn is a peer support platform. Every listener on LeanOn is a real person who has lived through something relevant to the conversations they take. They are screened for active listening, supportive conversation, and knowing when to refer someone to professional help.</p>
-          <p>This is not therapy. LeanOn does not diagnose or treat mental-health conditions. It may suit someone who wants a non-clinical conversation, but it is not a substitute for a qualified professional when clinical care is needed.</p>
+          <p>How Was Your Day is a peer support platform. Every listener on How Was Your Day is a real person who has lived through something relevant to the conversations they take. They are screened for active listening, supportive conversation, and knowing when to refer someone to professional help.</p>
+          <p>This is not therapy. How Was Your Day does not diagnose or treat mental-health conditions. It may suit someone who wants a non-clinical conversation, but it is not a substitute for a qualified professional when clinical care is needed.</p>
         </div>
 
         {/* Topics grid */}
@@ -267,11 +267,11 @@ export default function MentalHealthSupportIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">What kind of mental health support is available in India?</div>
-            <div className="faq-a">Options include qualified mental-health professionals for assessment or treatment, free government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Fees and availability vary. LeanOn is not a clinical service; one introductory session of up to 5 minutes is free per account, and paid prices are shown before booking.</div>
+            <div className="faq-a">Options include qualified mental-health professionals for assessment or treatment, free government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Fees and availability vary. How Was Your Day is not a clinical service; one introductory session of up to 5 minutes is free per account, and paid prices are shown before booking.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn a mental health app?</div>
-            <div className="faq-a">LeanOn is a peer emotional support platform — not a therapy app or mental health treatment service. It connects people who need someone to talk to with screened peer listeners who have lived experience. LeanOn does not provide clinical diagnosis or treatment, and does not claim to be a substitute for professional care.</div>
+            <div className="faq-q">Is How Was Your Day a mental health app?</div>
+            <div className="faq-a">How Was Your Day is a peer emotional support platform — not a therapy app or mental health treatment service. It connects people who need someone to talk to with screened peer listeners who have lived experience. How Was Your Day does not provide clinical diagnosis or treatment, and does not claim to be a substitute for professional care.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How does peer support help mental health?</div>
@@ -279,7 +279,7 @@ export default function MentalHealthSupportIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is mental health support free in India?</div>
-            <div className="faq-a">Tele-MANAS (14416) is a free, 24/7 Government of India mental-health helpline. LeanOn offers one introductory session of up to 5 minutes free per account; paid prices depend on the selected listener and mode and are shown before booking.</div>
+            <div className="faq-a">Tele-MANAS (14416) is a free, 24/7 Government of India mental-health helpline. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the selected listener and mode and are shown before booking.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between mental health support and therapy?</div>
@@ -287,7 +287,7 @@ export default function MentalHealthSupportIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How can I get immediate mental health support in India?</div>
-            <div className="faq-a">For a mental health crisis or immediate danger, call NIMHANS 080-46110007 or Tele-MANAS 14416 — free and available 24/7. For non-crisis emotional support, LeanOn offers peer-listener conversations without an appointment; availability depends on which listeners are online. Peer support is not clinical treatment.</div>
+            <div className="faq-a">For a mental health crisis or immediate danger, call NIMHANS 080-46110007 or Tele-MANAS 14416 — free and available 24/7. For non-crisis emotional support, How Was Your Day offers peer-listener conversations without an appointment; availability depends on which listeners are online. Peer support is not clinical treatment.</div>
           </div>
         </div>
 

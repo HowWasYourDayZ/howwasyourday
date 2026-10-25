@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Online Emotional Support from Real People | LeanOn',
+  title: 'Online Emotional Support from Real People | How Was Your Day',
   description: 'Real peer listeners with lived experience. More human than AI, more accessible than therapy. No appointment, no judgment.',
   keywords: ['online emotional support', 'emotional support online', 'emotional support chat', 'peer emotional support online', 'online support chat', 'emotional support real person'],
-  alternates: { canonical: 'https://www.leanon.app/online-emotional-support' },
-  openGraph: { title: 'Online Emotional Support from Real People | LeanOn', description: 'Real peer listeners with lived experience. More human than AI, more accessible than therapy. No appointment, no judgment.', url: 'https://www.leanon.app/online-emotional-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-emotional-support' },
+  openGraph: { title: 'Online Emotional Support from Real People | How Was Your Day', description: 'Real peer listeners with lived experience. More human than AI, more accessible than therapy. No appointment, no judgment.', url: 'https://www.howwasyourday.live/online-emotional-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'What is online emotional support?', acceptedAnswer: { '@type': 'Answer', text: 'Online emotional support is talking to a real person about what you are going through — not to receive diagnosis or treatment, but to be genuinely heard. LeanOn peer listeners provide emotional support through text-based sessions, no appointment needed needed.' } },
-  { '@type': 'Question', name: 'How is LeanOn different from an AI chatbot?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are real humans with lived experience. An AI generates responses that simulate understanding. A real person who has been through something similar actually knows what it feels like. Most people who try both describe AI emotional support as hollow — it mimics empathy but does not provide it.' } },
-  { '@type': 'Question', name: 'How is this different from therapy?', acceptedAnswer: { '@type': 'Answer', text: 'Therapy is a clinical service with a licensed professional — appropriate for diagnosis and treatment. LeanOn is peer support: informal, accessible, and focused on being heard rather than treated. It needs no appointment, and is significantly more affordable.' } },
-  { '@type': 'Question', name: 'Do I need a reason to use LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'No. You do not need to be in crisis or have a diagnosed condition. Feeling overwhelmed, lonely, anxious, or just needing to talk is sufficient. LeanOn is for anyone who needs to be heard.' } },
+  { '@type': 'Question', name: 'What is online emotional support?', acceptedAnswer: { '@type': 'Answer', text: 'Online emotional support is talking to a real person about what you are going through — not to receive diagnosis or treatment, but to be genuinely heard. How Was Your Day peer listeners provide emotional support through text-based sessions, no appointment needed needed.' } },
+  { '@type': 'Question', name: 'How is How Was Your Day different from an AI chatbot?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are real humans with lived experience. An AI generates responses that simulate understanding. A real person who has been through something similar actually knows what it feels like. Most people who try both describe AI emotional support as hollow — it mimics empathy but does not provide it.' } },
+  { '@type': 'Question', name: 'How is this different from therapy?', acceptedAnswer: { '@type': 'Answer', text: 'Therapy is a clinical service with a licensed professional — appropriate for diagnosis and treatment. How Was Your Day is peer support: informal, accessible, and focused on being heard rather than treated. It needs no appointment, and is significantly more affordable.' } },
+  { '@type': 'Question', name: 'Do I need a reason to use How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. You do not need to be in crisis or have a diagnosed condition. Feeling overwhelmed, lonely, anxious, or just needing to talk is sufficient. How Was Your Day is for anyone who needs to be heard.' } },
   { '@type': 'Question', name: 'Can I talk to someone right now?', acceptedAnswer: { '@type': 'Answer', text: 'Often, yes. Browse listeners who are currently online and request a session; it starts when a listener accepts. The first 5 minutes are free, once per account.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Online Emotional Support from Real People', item: 'https://www.leanon.app/online-emotional-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Online Emotional Support from Real People', item: 'https://www.howwasyourday.live/online-emotional-support' },
 ] }
 
 const S = `
@@ -73,7 +73,7 @@ export default function OnlineEmotionalSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Online Emotional Support from Real People</span></nav>
         <div className="hero">
@@ -86,10 +86,10 @@ export default function OnlineEmotionalSupportPage() {
           <h2>What Online Emotional Support Actually Means</h2>
           <p>Emotional support is not advice. It is not problem-solving. It is not diagnosis. It is having someone genuinely present while you say the things you have been holding &mdash; someone who receives what you share without immediately trying to fix or reframe it.</p>
           <p>This is harder to find than it sounds. Most people in your life &mdash; family, friends, partners &mdash; get uncomfortable when you stay in the feeling too long. They try to help by offering solutions, silver linings, or context. Which is kind. But it is not the same as being heard.</p>
-          <p>LeanOn peer listeners are specifically screened for active listening. Their job in a session is not to fix you or advise you &mdash; it is to be genuinely present while you talk. That difference in intent changes everything.</p>
+          <p>How Was Your Day peer listeners are specifically screened for active listening. Their job in a session is not to fix you or advise you &mdash; it is to be genuinely present while you talk. That difference in intent changes everything.</p>
         </div>
         <div className="section">
-          <h2>The Three Things LeanOn Is Built On</h2>
+          <h2>The Three Things How Was Your Day Is Built On</h2>
           <div className="pillars">
             <div className="pillar">
               <div className="pillar-title">Real humans</div>
@@ -108,7 +108,7 @@ export default function OnlineEmotionalSupportPage() {
         <div className="section">
           <h2>When Online Emotional Support Helps Most</h2>
           <p>You are overwhelmed and need to say it out loud before you can even think about what to do. You have been holding something for weeks and have not had a safe place to put it. Your usual support people are part of the problem, or would worry, or would not understand. You need to talk now &mdash; not in two weeks when an appointment opens up. The thing is not a crisis but it is real and it is heavy.</p>
-          <p>These are the exact moments LeanOn is designed for. No reason required. No minimum severity. If you need to talk, that is enough.</p>
+          <p>These are the exact moments How Was Your Day is designed for. No reason required. No minimum severity. If you need to talk, that is enough.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>Real emotional support, right now.</h2><p>No AI. No appointment. No judgment. A real person with lived experience. First 5 minutes free.</p><a href="/browse" className="btn-cta">Start talking &rarr;</a></div>

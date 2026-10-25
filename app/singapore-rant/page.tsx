@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Rant? Someone to Listen in Singapore | LeanOn',
-  description: 'Work stress, toxic boss, impossible deadlines, no one to vent to in Singapore — LeanOn gives you a real Indian listener who will hear you out completely, without judgment or unsolicited advice.',
+  title: 'Need to Rant? Someone to Listen in Singapore | How Was Your Day',
+  description: 'Work stress, toxic boss, impossible deadlines, no one to vent to in Singapore — How Was Your Day gives you a real Indian listener who will hear you out completely, without judgment or unsolicited advice.',
   keywords: [
     'need to rant singapore', 'someone to vent to singapore', 'vent frustration singapore',
     'talk about work stress singapore', 'no one to talk to singapore', 'need to vent indian singapore',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'emotional release singapore', 'venting support singapore indian',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/singapore-rant',
-    languages: { 'en-SG': 'https://www.leanon.app/singapore-rant' },
+    canonical: 'https://www.howwasyourday.live/singapore-rant',
+    languages: { 'en-SG': 'https://www.howwasyourday.live/singapore-rant' },
   },
   openGraph: {
-    title: 'Need to Rant? Someone to Listen in Singapore — LeanOn',
-    description: 'Work stress and frustration build up fast in Singapore. LeanOn gives you a real Indian listener who will hear you out fully — no advice, no judgment, just a proper listening ear.',
-    url: 'https://www.leanon.app/singapore-rant',
-    siteName: 'LeanOn',
+    title: 'Need to Rant? Someone to Listen in Singapore — How Was Your Day',
+    description: 'Work stress and frustration build up fast in Singapore. How Was Your Day gives you a real Indian listener who will hear you out fully — no advice, no judgment, just a proper listening ear.',
+    url: 'https://www.howwasyourday.live/singapore-rant',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -30,10 +30,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is it okay to just rant to a LeanOn listener?',
+      name: 'Is it okay to just rant to a How Was Your Day listener?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. You do not need a mental health crisis to talk to a listener. Sometimes you just need to get it out — the frustrating meeting, the boss who never gives credit, the day that would not end. LeanOn listeners are screened and expected to hold space while you vent, without interrupting or redirecting.',
+        text: 'Absolutely. You do not need a mental health crisis to talk to a listener. Sometimes you just need to get it out — the frustrating meeting, the boss who never gives credit, the day that would not end. How Was Your Day listeners are screened and expected to hold space while you vent, without interrupting or redirecting.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Why do I need to rant to a stranger instead of a friend?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Friends are great, but they have limits — they get tired of hearing the same story, they offer advice when you just want to be heard, or they are connected to the people you are ranting about. A LeanOn listener is a complete outsider with no stake in your life — just undivided attention.',
+        text: 'Friends are great, but they have limits — they get tired of hearing the same story, they offer advice when you just want to be heard, or they are connected to the people you are ranting about. A How Was Your Day listener is a complete outsider with no stake in your life — just undivided attention.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What if I just want to talk about work stress without being told to quit?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is exactly what LeanOn is for. Our listeners are screened and expected to NOT give unsolicited advice. They will ask what you need at the start — just to vent, or also to think through options — and then follow your lead.',
+        text: 'That is exactly what How Was Your Day is for. Our listeners are screened and expected to NOT give unsolicited advice. They will ask what you need at the start — just to vent, or also to think through options — and then follow your lead.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Can I rant in Hindi or another Indian language from Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. Sometimes venting feels more natural in your first language — choose a listener who speaks yours.',
+        text: 'Yes. How Was Your Day listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. Sometimes venting feels more natural in your first language — choose a listener who speaks yours.',
       },
     },
     {
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Someone to Listen Singapore', item: 'https://www.leanon.app/singapore-rant' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Someone to Listen Singapore', item: 'https://www.howwasyourday.live/singapore-rant' },
   ],
 }
 
@@ -156,7 +156,7 @@ export default function SingaporeRantPage() {
         <h1>Singapore Work Life Is Stressful.<br />You Need Someone to Just Listen.</h1>
         <p className="lead">
           High expectations, long hours, a boss who does not understand the pressure, colleagues who do not
-          get it — the frustration piles up and you have nowhere to put it. LeanOn gives you a real Indian
+          get it — the frustration piles up and you have nowhere to put it. How Was Your Day gives you a real Indian
           listener who will hear you out completely, without interrupting, without advising, without judging.
         </p>
 
@@ -172,7 +172,7 @@ export default function SingaporeRantPage() {
             <li>&ldquo;I just need to say all of this out loud to someone who isn&apos;t going to panic.&rdquo;</li>
             <li>&ldquo;I don&apos;t want advice. I just want to be heard.&rdquo;</li>
           </ul>
-          <p style={{ marginTop: '12px' }}>A LeanOn listener will let you say all of it.</p>
+          <p style={{ marginTop: '12px' }}>A How Was Your Day listener will let you say all of it.</p>
         </div>
 
         <div className="night-box">
@@ -180,7 +180,7 @@ export default function SingaporeRantPage() {
           <p>By the time you leave the office, you are carrying the weight of a hundred small irritations —
             the dismissive comment, the unrealistic deadline, the meeting that should have been an email.
             You go home and there is no one to just dump it all on.</p>
-          <p>LeanOn listeners are in India, and Singapore evenings overlap Indian evenings. Start talking, get it out, feel lighter.</p>
+          <p>How Was Your Day listeners are in India, and Singapore evenings overlap Indian evenings. Start talking, get it out, feel lighter.</p>
           <a href="/browse" className="cta-night">Talk to a listener now →</a>
         </div>
 
@@ -188,7 +188,7 @@ export default function SingaporeRantPage() {
           <h2>Why a stranger is sometimes the best listener</h2>
           <p>Your friends and family back home worry about you. Your friends in Singapore are connected to
             your work world. Every rant has a cost when the person you are talking to knows the players.</p>
-          <p>A LeanOn listener knows nobody in your life. They have no stake in your situation. They are
+          <p>A How Was Your Day listener knows nobody in your life. They have no stake in your situation. They are
             there only to listen — and that freedom changes how honestly you can speak.</p>
         </div>
 
@@ -222,24 +222,24 @@ export default function SingaporeRantPage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>Is it okay to just rant to a LeanOn listener?</h3>
+            <h3>Is it okay to just rant to a How Was Your Day listener?</h3>
             <p>Absolutely. You do not need a crisis to talk. Sometimes you just need to get it all out.
-              LeanOn listeners are screened and expected to hold space while you vent, without interrupting or redirecting.</p>
+              How Was Your Day listeners are screened and expected to hold space while you vent, without interrupting or redirecting.</p>
           </div>
           <div className="faq-item">
             <h3>Why talk to a stranger instead of a friend?</h3>
             <p>Friends get tired of hearing the same story, offer advice when you just want to be heard, or
-              are connected to the people you are ranting about. A LeanOn listener is a complete outsider
+              are connected to the people you are ranting about. A How Was Your Day listener is a complete outsider
               with no stake in your life — just undivided attention.</p>
           </div>
           <div className="faq-item">
             <h3>What if I just want to vent without being told to quit?</h3>
-            <p>That is exactly what LeanOn is for. Listeners are screened and expected to not give unsolicited advice.
+            <p>That is exactly what How Was Your Day is for. Listeners are screened and expected to not give unsolicited advice.
               They will ask what you need at the start and then follow your lead.</p>
           </div>
           <div className="faq-item">
             <h3>Can I rant in Hindi or another Indian language from Singapore?</h3>
-            <p>Yes. LeanOn listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English.
+            <p>Yes. How Was Your Day listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English.
               Venting often feels more natural in your first language.</p>
           </div>
           <div className="faq-item">
@@ -262,7 +262,7 @@ export default function SingaporeRantPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

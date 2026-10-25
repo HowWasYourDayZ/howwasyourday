@@ -14,7 +14,7 @@
 // Sessions under 60 seconds are treated as accidental starts: full refund
 // to the seeker (including the platform fee), nothing to the listener.
 //
-// LISTENER SERVICE FEE: LeanOn takes the rate in force when the session
+// LISTENER SERVICE FEE: How Was Your Day takes the rate in force when the session
 // STARTED (serviceFeeRateAt, lib/constants.ts) out of the listener's share. This is
 // entirely separate from PLATFORM_FEE (the seeker's flat ₹10) — the seeker's
 // amountHeld and refundAmount math below are completely unaffected by this
@@ -33,7 +33,7 @@ export type SettlementInput = {
   isFreeTrial: boolean       // sessions.is_free_trial
   /**
    * When set (NRI sessions), the listener earns at most this rate × billed_mins.
-   * The NRI flat price in amountHeld is higher; the difference is LeanOn's margin.
+   * The NRI flat price in amountHeld is higher; the difference is How Was Your Day's margin.
    * For India sessions leave undefined — billing uses amountHeld - platformFee as always.
    * sessions.listener_rate_per_min (stored at booking time, migration 054).
    */
@@ -51,7 +51,7 @@ export type Settlement = {
   billedMins: number         // minutes actually billed (0..bookedMins)
   listenerEarning: number    // credit to listener wallet (after the service fee)
   refundAmount: number       // refund to seeker wallet — unaffected by the service fee
-  listenerServiceFee: number // LeanOn's service fee on the listener's share (ledger only)
+  listenerServiceFee: number // How Was Your Day's service fee on the listener's share (ledger only)
 }
 
 export function settleSession(s: SettlementInput): Settlement {
@@ -74,7 +74,7 @@ export function settleSession(s: SettlementInput): Settlement {
   //
   // India: listenerRatePerMin × booked == pool, so the listener gets all of it.
   // NRI (flat price, listenerRatePerMin set): the listener earns their own rate
-  //   × billed minutes; LeanOn keeps the rest of the charged part (NRI margin).
+  //   × billed minutes; How Was Your Day keeps the rest of the charged part (NRI margin).
   //
   // (Before 2026-09-24 the NRI refund was computed as held − listener share,
   // which handed the whole NRI margin back on ANY early exit: an NRI ending

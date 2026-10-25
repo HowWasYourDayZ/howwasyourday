@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: "My Partner Doesn't Understand Me — Talk to Someone Who Will | LeanOn",
+  title: "My Partner Doesn't Understand Me — Talk to Someone Who Will | How Was Your Day",
   description: "Your partner doesn't understand. You've explained it a hundred times. Talk to a real peer listener who will actually hear you — anonymous, ₹160.",
   keywords: [
     'partner not understanding me india',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'partner not listening india',
     'feel invisible in relationship india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/partner-not-understanding-india', languages: { 'en-IN': 'https://www.leanon.app/partner-not-understanding-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/partner-not-understanding-india', languages: { 'en-IN': 'https://www.howwasyourday.live/partner-not-understanding-india' } },
   openGraph: {
-    title: "My Partner Doesn't Understand Me — Talk to Someone Who Will | LeanOn",
+    title: "My Partner Doesn't Understand Me — Talk to Someone Who Will | How Was Your Day",
     description: "Your partner doesn't understand. You've explained it a hundred times. Talk to a real peer listener who will actually hear you — anonymous, ₹160.",
-    url: 'https://www.leanon.app/partner-not-understanding-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/partner-not-understanding-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Partner Not Understanding' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Partner Not Understanding' }],
   },
 }
 
@@ -43,12 +43,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if my partner finds out I talked to someone about our relationship?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The session is private: your listener sees only the name you choose, never your phone number, and LeanOn never contacts your partner or family. Your partner has no way of knowing unless you tell them. And it is worth noting: talking to a neutral person about how you feel in a relationship is a healthy thing to do. You are not betraying anyone by processing your own experience.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The session is private: your listener sees only the name you choose, never your phone number, and How Was Your Day never contacts your partner or family. Your partner has no way of knowing unless you tell them. And it is worth noting: talking to a neutral person about how you feel in a relationship is a healthy thing to do. You are not betraying anyone by processing your own experience.' },
     },
     {
       '@type': 'Question',
       name: 'How is this different from a therapist?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A therapist is a licensed professional who treats mental health conditions over structured sessions. A peer listener is someone who has lived experience, chosen for how well they listen actively and support without advising. You do not need a diagnosis or a long-term treatment plan to use LeanOn. If you have been carrying the feeling of not being understood for a week and you need to say it out loud, that is what a peer listener is for.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A therapist is a licensed professional who treats mental health conditions over structured sessions. A peer listener is someone who has lived experience, chosen for how well they listen actively and support without advising. You do not need a diagnosis or a long-term treatment plan to use How Was Your Day. If you have been carrying the feeling of not being understood for a week and you need to say it out loud, that is what a peer listener is for.' },
     },
     {
       '@type': 'Question',
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Partner Not Understanding India', item: 'https://www.leanon.app/partner-not-understanding-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Partner Not Understanding India', item: 'https://www.howwasyourday.live/partner-not-understanding-india' },
   ],
 }
 
@@ -115,7 +115,7 @@ export default function PartnerNotUnderstandingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -139,7 +139,7 @@ export default function PartnerNotUnderstandingIndiaPage() {
         <div className="section">
           <h2>When &ldquo;You Don&apos;t Understand Me&rdquo; Becomes the Core of Every Argument</h2>
           <p>There is a particular frustration that comes from feeling seen by a complete stranger and invisible to the person you live with. The stranger gets it in five minutes. Your partner has known you for years and still looks at you like you are speaking a different language.</p>
-          <p>This is not rare. It is one of the most common things that brings people to LeanOn. And it is not a sign that the relationship is doomed &mdash; but it is a sign that the feeling of not being understood has built up to the point where it needs somewhere to go. It needs to be said to someone who will receive it cleanly, without getting defensive, without making it about them.</p>
+          <p>This is not rare. It is one of the most common things that brings people to How Was Your Day. And it is not a sign that the relationship is doomed &mdash; but it is a sign that the feeling of not being understood has built up to the point where it needs somewhere to go. It needs to be said to someone who will receive it cleanly, without getting defensive, without making it about them.</p>
         </div>
 
         <div className="section">
@@ -163,7 +163,7 @@ export default function PartnerNotUnderstandingIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>Who Uses LeanOn for This</h2>
+          <h2>Who Uses How Was Your Day for This</h2>
           <p>People who had a conversation that went nowhere the night before and are processing it during their morning commute. People who are sitting at their desk after a lunch call with their partner that ended in frustration. People who are walking back from the school drop-off run and still replaying the conversation from before they left.</p>
           <p>The 15-minute session is specifically for this. You do not need a long appointment. You need fifteen minutes, somewhere you can speak freely, and a listener who will actually hear it. That is the entire product.</p>
         </div>

@@ -2,17 +2,17 @@
 > hybrid Capacitor build (`mobile/`) with call-style request alerts, not the PWABuilder TWA
 > below. Kept for reference only.
 
-# Launching the new LeanOn on Google Play — plain-English guide (v4, Oct 2026)
+# Launching the new How Was Your Day on Google Play — plain-English guide (v4, Oct 2026)
 
 **Situation (confirmed 9 Oct 2026):**
-- Developer account **LeanOn** (personal), created **Oct 2021** → **exempt from
+- Developer account **How Was Your Day** (personal), created **Oct 2021** → **exempt from
   the 14-day / 12-tester rule**. A new app can go straight to production.
-- The app already on Play (`app.leanon.therapy`, 2024) is a **legacy therapist
-  app**, not today's LeanOn. We **retire it** and publish a **new app**,
-  package **`app.leanon`**.
+- The app already on Play (`app.howwasyourday.therapy`, 2024) is a **legacy therapist
+  app**, not today's How Was Your Day. We **retire it** and publish a **new app**,
+  package **`app.howwasyourday`**.
 
 How the new app works: it's a thin Android "frame" (a **TWA — Trusted Web
-Activity**) that opens www.leanon.app full-screen with no address bar. Website
+Activity**) that opens www.howwasyourday.live full-screen with no address bar. Website
 changes reach the app instantly — no app update needed.
 
 Whenever a step says "send to Claude", paste the value in chat. You never edit
@@ -30,11 +30,11 @@ files yourself. **Never send anyone the signing-key passwords — including Clau
 ## PART 0 — Before you start (30 minutes)
 
 ### 0a. Unpublish the legacy app (do this first)
-People searching "LeanOn" on Play today find the old therapist app (33 new
-installs in the last 28 days). Two apps called LeanOn from one developer can
+People searching "How Was Your Day" on Play today find the old therapist app (33 new
+installs in the last 28 days). Two apps called How Was Your Day from one developer can
 also be flagged as duplicates. Unpublishing is **reversible** and does not
 delete anything; current installs keep working on those phones.
-1. Play Console → **All apps** → open the old **LeanOn (`app.leanon.therapy`)**.
+1. Play Console → **All apps** → open the old **How Was Your Day (`app.howwasyourday.therapy`)**.
 2. Left menu → **Test and release** → **Setup** → **Advanced settings**.
 3. **App availability** tab → choose **Unpublished** → **Save** → confirm.
 4. You can ignore that app's "Must fix" / data-safety warnings once it is
@@ -44,11 +44,11 @@ delete anything; current installs keep working on those phones.
 ### 0b. Public developer profile (privacy)
 The developer name and email are shown publicly on the Play Store.
 1. ⚙ **Settings** → **Developer account** → **About you**.
-2. Developer name is **`LeanOn`** ✅ (already correct).
+2. Developer name is **`How Was Your Day`** ✅ (already correct).
 3. Under **"Details shown as part of your Play developer profile"**, change the
-   **Developer email** from `zubair@leanon.app` to a neutral address such as
-   `support@leanon.app` (create it first if needed).
-4. **Do not set up a merchant account** ("Monetize with Play"). LeanOn takes
+   **Developer email** from `zubair@howwasyourday.live` to a neutral address such as
+   `support@howwasyourday.live` (create it first if needed).
+4. **Do not set up a merchant account** ("Monetize with Play"). How Was Your Day takes
    payments through Razorpay; a Play merchant account can make your **legal name
    and home address public** on the listing.
 5. Open **Play developer profile** → preview it → confirm no full name or address
@@ -68,7 +68,7 @@ The developer name and email are shown publicly on the Play Store.
 ## PART 2 — Build the Android app on PWABuilder (30 minutes)
 
 1. On your laptop, open **https://www.pwabuilder.com** in Chrome.
-2. In the box, type **`https://www.leanon.app`** → click **Start**.
+2. In the box, type **`https://www.howwasyourday.live`** → click **Start**.
 3. Wait for the report card. Yellow/red warnings (e.g. "screenshots") are fine —
    ignore them.
 4. Click **Package For Stores** (top right).
@@ -77,12 +77,12 @@ The developer name and email are shown publicly on the Play Store.
 
    | Field | Value |
    |---|---|
-   | Package ID | **`app.leanon`** |
-   | App name | `LeanOn — Peer Support` |
-   | Launcher name | `LeanOn` |
+   | Package ID | **`app.howwasyourday`** |
+   | App name | `How Was Your Day — Peer Support` |
+   | Launcher name | `How Was Your Day` |
    | App version | `1.0.0` |
    | App version code | `1` |
-   | Host | `www.leanon.app` |
+   | Host | `www.howwasyourday.live` |
    | Start URL | `/` |
    | Theme color | `#1A8FA0` |
    | Background color | `#0F4867` |
@@ -92,15 +92,15 @@ The developer name and email are shown publicly on the Play Store.
    | Location delegation | OFF |
    | Google Play billing | **OFF** |
    | Signing key | **Create new** |
-   | Key full name | **`LeanOn`** (NOT your personal name) |
-   | Key organization | `LeanOn` |
+   | Key full name | **`How Was Your Day`** (NOT your personal name) |
+   | Key organization | `How Was Your Day` |
    | Key organizational unit | `App` |
    | Key country code | `IN` |
    | Key password / Store password | leave the generated ones |
 
 7. Click **Download Package**. You get a **.zip** file.
 8. **Right now, before anything else:** upload the whole .zip to a **private
-   Google Drive folder** named `LeanOn Android signing — DO NOT DELETE`, and keep
+   Google Drive folder** named `How Was Your Day Android signing — DO NOT DELETE`, and keep
    a second copy on a USB stick or another drive.
    - Inside are `signing.keystore` and `signing-key-info.txt` (passwords).
      You need them for every future app update.
@@ -117,7 +117,7 @@ The developer name and email are shown publicly on the Play Store.
 ## PART 3 — Create the app in Play Console (15 minutes)
 1. **play.google.com/console** → **Create app** (top right).
 2. Fill in:
-   - App name: `LeanOn — Peer Support`
+   - App name: `How Was Your Day — Peer Support`
    - Default language: **English (India) – en-IN**
    - App or game: **App**
    - Free or paid: **Free**
@@ -129,7 +129,7 @@ The developer name and email are shown publicly on the Play Store.
 Internal testing has **no Google review** — it's for you to try the app.
 
 1. Left menu → **Test and release** → **Testing** → **Internal testing**.
-2. Open the **Testers** tab → **Create email list** → name it `LeanOn team` →
+2. Open the **Testers** tab → **Create email list** → name it `How Was Your Day team` →
    add **your Gmail** (the one on your Android phone) and 1–2 others → **Save**.
    Tick the list → **Save**.
 3. Open the **Releases** tab → **Create new release**.
@@ -156,8 +156,8 @@ This removes the web address bar inside the app.
 3. **Send it to Claude.** Claude puts both fingerprints (this one + the one from
    Part 2 step 9) into the website's `assetlinks.json` and deploys.
 4. After Claude confirms, open
-   **https://www.leanon.app/.well-known/assetlinks.json** in Chrome — you should
-   see `app.leanon` and two long codes.
+   **https://www.howwasyourday.live/.well-known/assetlinks.json** in Chrome — you should
+   see `app.howwasyourday` and two long codes.
 
 ---
 
@@ -165,12 +165,12 @@ This removes the web address bar inside the app.
 1. On the phone, open the tester link from Part 4 step 8 → **Accept invite** →
    **Download it on Google Play** → **Install**.
    (If Play says "not available", wait 30 minutes — new apps take time to appear.)
-2. Open LeanOn and check each item:
+2. Open How Was Your Day and check each item:
    - [ ] **No address bar** at the top. (If you see one: wait 15 min, uninstall,
          reinstall. Still there → tell Claude.)
    - [ ] **Login** with your phone number + OTP works.
    - [ ] **Wallet recharge** with a small real payment → UPI app opens → after
-         paying you come **back into LeanOn** and the balance updates.
+         paying you come **back into How Was Your Day** and the balance updates.
    - [ ] **Voice session** with a second account (a friend as listener): the app
          asks for **microphone** permission, and both of you can hear each other.
    - [ ] **Notifications**: log in as a listener on the phone, allow
@@ -188,18 +188,18 @@ This removes the web address bar inside the app.
 ### 7a. Main store listing
 Left menu → **Grow users** → **Store presence** → **Main store listing**.
 Copy text from **`docs/PLAY_STORE_LISTING.md`** in the repo.
-- App name: `LeanOn — Peer Support`
+- App name: `How Was Your Day — Peer Support`
 - Short description (max 80 characters) and Full description: from that file.
-- **App icon**: download **https://www.leanon.app/icon-512.png** (right-click →
+- **App icon**: download **https://www.howwasyourday.live/icon-512.png** (right-click →
   Save image as) and upload it.
 - **Feature graphic** (1024 × 500): on **canva.com** search "Google Play feature
-  graphic", put the LeanOn logo + "Someone to lean on, anytime." on a navy/teal
+  graphic", put the How Was Your Day logo + "Someone to lean on, anytime." on a navy/teal
   background → Download PNG → upload.
 - **Phone screenshots** (2–8): take them **inside the installed app** on your
   phone — home, browse listeners, a chat, wallet. **Hide or blur real users'
   names/photos** — use your own test accounts.
 - App category: **Health & Fitness**. Contact email: your **support** address.
-  Website: `https://www.leanon.app`.
+  Website: `https://www.howwasyourday.live`.
 - **Save**.
 
 ### 7b. App content (left menu → **Policy and programs** → **App content**)
@@ -207,7 +207,7 @@ Complete every item that shows "Start" / red:
 
 | Item | What to choose |
 |---|---|
-| Privacy policy | `https://www.leanon.app/privacy` |
+| Privacy policy | `https://www.howwasyourday.live/privacy` |
 | App access | **All or some functionality is restricted** → add the reviewer login Claude gives you (Part 1) |
 | Ads | **No, my app does not contain ads** |
 | Content rating | Start questionnaire → category **All other app types** → answer honestly: users can **interact/communicate**: **Yes**; digital purchases: **Yes**; violence/sexual/drugs/gambling: **No**. Accept whatever rating comes out. |
@@ -217,7 +217,7 @@ Complete every item that shows "Start" / red:
 | Financial features | **My app doesn't provide any financial features** |
 | Health apps | Tick only the **mental / behavioural health or wellness** option(s). **Do not** tick anything medical, clinical, diagnosis or treatment. |
 | Data safety | See table below |
-| Account deletion URL (inside Data safety) | `https://www.leanon.app/privacy#delete-account` |
+| Account deletion URL (inside Data safety) | `https://www.howwasyourday.live/privacy#delete-account` |
 
 **Data safety answers** (if a question isn't covered here, screenshot it and send
 to Claude):
@@ -228,7 +228,7 @@ to Claude):
 - **Personal info → Other** (listeners only: UPI/bank details for payouts):
   collected, optional, purpose *App functionality*.
 - **Financial info → Purchase history**: collected, *App functionality*. (Card/UPI
-  details are entered on Razorpay, not stored by LeanOn.)
+  details are entered on Razorpay, not stored by How Was Your Day.)
 - **Messages → Other in-app messages**: collected (session chats), *App
   functionality*.
 - **Photos** (listener profile photo + verification selfie): collected,
@@ -237,7 +237,7 @@ to Claude):
 - **Device or other IDs** (push notification token): collected, *App
   functionality*.
 - **Shared with third parties**: **No** (Razorpay, Agora etc. act as service
-  providers on LeanOn's behalf — that is not "sharing" under Google's definition).
+  providers on How Was Your Day's behalf — that is not "sharing" under Google's definition).
 - Data sold: **No**.
 
 ---
@@ -248,7 +248,7 @@ to Claude):
    Singapore, Malaysia (or all countries) → Save.
 2. **Releases** → **Create new release** → **Add from library** → choose the
    `1.0.0 (1)` bundle you already uploaded → release notes:
-   `LeanOn — talk to a real person, anytime.` → **Next** → **Save**.
+   `How Was Your Day — talk to a real person, anytime.` → **Next** → **Save**.
 3. Left menu → **Publishing overview** → **Send changes for review**.
 4. Wait. A brand-new app usually takes **a few days, sometimes 1–2 weeks**
    (health apps get extra scrutiny). You get an email when it's live.

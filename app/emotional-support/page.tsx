@@ -3,20 +3,20 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support Online India — Complete Guide | LeanOn',
-  description: 'The complete guide to emotional support in India. Understand your options, find the right support for loneliness, anxiety, burnout, grief, relationships and more. LeanOn peer support —.',
-  alternates: { canonical: 'https://www.leanon.app/emotional-support' },
+  title: 'Emotional Support Online India — Complete Guide | How Was Your Day',
+  description: 'The complete guide to emotional support in India. Understand your options, find the right support for loneliness, anxiety, burnout, grief, relationships and more. How Was Your Day peer support —.',
+  alternates: { canonical: 'https://www.howwasyourday.live/emotional-support' },
   keywords: [
     'emotional support India', 'online emotional support India', 'emotional support online',
     'peer support India', 'mental health support India', 'someone to lean on India',
-    'leanon', 'lean on', 'talk to someone India', 'anonymous emotional support',
+    'howwasyourday', 'lean on', 'talk to someone India', 'anonymous emotional support',
     'emotional wellness India', 'mental health app India', 'peer support platform India',
   ],
   openGraph: {
-    title: 'Emotional Support Online India — Complete Guide | LeanOn',
+    title: 'Emotional Support Online India — Complete Guide | How Was Your Day',
     description: 'Everything you need to know about emotional support in India. Find the right support for your situation.',
-    url: 'https://www.leanon.app/emotional-support',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/emotional-support',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -24,29 +24,29 @@ export const metadata: Metadata = {
 const hubSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Emotional Support Online India — LeanOn',
+  name: 'Emotional Support Online India — How Was Your Day',
   description: 'The complete topical authority hub for emotional support in India. Covers peer support, loneliness, anxiety, burnout, grief, relationships, student stress, and more.',
-  url: 'https://www.leanon.app/emotional-support',
+  url: 'https://www.howwasyourday.live/emotional-support',
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-      { '@type': 'ListItem', position: 2, name: 'Emotional Support', item: 'https://www.leanon.app/emotional-support' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+      { '@type': 'ListItem', position: 2, name: 'Emotional Support', item: 'https://www.howwasyourday.live/emotional-support' },
     ],
   },
   mainEntity: {
     '@type': 'ItemList',
     name: 'Emotional Support Topics',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Loneliness Support', url: 'https://www.leanon.app/support/loneliness' },
-      { '@type': 'ListItem', position: 2, name: 'Anxiety Support', url: 'https://www.leanon.app/support/anxiety' },
-      { '@type': 'ListItem', position: 3, name: 'Breakup Support', url: 'https://www.leanon.app/support/breakup' },
-      { '@type': 'ListItem', position: 4, name: 'Grief Support', url: 'https://www.leanon.app/support/grief' },
-      { '@type': 'ListItem', position: 5, name: 'Burnout Support', url: 'https://www.leanon.app/support/founder-burnout' },
-      { '@type': 'ListItem', position: 6, name: 'Student Stress', url: 'https://www.leanon.app/support/student-stress' },
-      { '@type': 'ListItem', position: 7, name: 'Career Confusion', url: 'https://www.leanon.app/support/career-confusion' },
-      { '@type': 'ListItem', position: 8, name: 'Relationship Stress', url: 'https://www.leanon.app/support/relationship-stress' },
-      { '@type': 'ListItem', position: 9, name: 'Anonymous Support', url: 'https://www.leanon.app/support/anonymous-support' },
+      { '@type': 'ListItem', position: 1, name: 'Loneliness Support', url: 'https://www.howwasyourday.live/support/loneliness' },
+      { '@type': 'ListItem', position: 2, name: 'Anxiety Support', url: 'https://www.howwasyourday.live/support/anxiety' },
+      { '@type': 'ListItem', position: 3, name: 'Breakup Support', url: 'https://www.howwasyourday.live/support/breakup' },
+      { '@type': 'ListItem', position: 4, name: 'Grief Support', url: 'https://www.howwasyourday.live/support/grief' },
+      { '@type': 'ListItem', position: 5, name: 'Burnout Support', url: 'https://www.howwasyourday.live/support/founder-burnout' },
+      { '@type': 'ListItem', position: 6, name: 'Student Stress', url: 'https://www.howwasyourday.live/support/student-stress' },
+      { '@type': 'ListItem', position: 7, name: 'Career Confusion', url: 'https://www.howwasyourday.live/support/career-confusion' },
+      { '@type': 'ListItem', position: 8, name: 'Relationship Stress', url: 'https://www.howwasyourday.live/support/relationship-stress' },
+      { '@type': 'ListItem', position: 9, name: 'Anonymous Support', url: 'https://www.howwasyourday.live/support/anonymous-support' },
     ],
   },
 }
@@ -63,7 +63,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get emotional support online in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is India\'s leading peer emotional support platform. Sign up with your phone number (OTP, 30 seconds), browse verified peer listeners, and request a session. No appointment needed. Sessions from ₹160 for 15 minutes.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is India\'s leading peer emotional support platform. Sign up with your phone number (OTP, 30 seconds), browse verified peer listeners, and request a session. No appointment needed. Sessions from ₹160 for 15 minutes.' },
     },
     {
       '@type': 'Question',
@@ -72,13 +72,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What emotional support topics does LeanOn cover?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn covers loneliness, anxiety, burnout, grief and loss, breakups, relationship stress, career confusion, student stress, startup founder challenges, and general emotional support. Listeners specialise in the topics they have personally experienced.' },
+      name: 'What emotional support topics does How Was Your Day cover?',
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day covers loneliness, anxiety, burnout, grief and loss, breakups, relationship stress, career confusion, student stress, startup founder challenges, and general emotional support. Listeners specialise in the topics they have personally experienced.' },
     },
     {
       '@type': 'Question',
       name: 'Is online emotional support anonymous in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'On LeanOn, you sign up with your phone number and first name only. Your full name is never shared. Sessions are private and confidential. This makes LeanOn ideal for people in joint families or situations where privacy is essential.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'On How Was Your Day, you sign up with your phone number and first name only. Your full name is never shared. Sessions are private and confidential. This makes How Was Your Day ideal for people in joint families or situations where privacy is essential.' },
     },
   ],
 }
@@ -142,7 +142,7 @@ export default function EmotionalSupportHubPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo"><button className="btn-nav">Get started</button></a>
       </nav>
 
@@ -161,7 +161,7 @@ export default function EmotionalSupportHubPage() {
         {/* Support Topic Cluster */}
         <div className="section">
           <h2>Emotional Support by Topic</h2>
-          <p>LeanOn offers peer support for the most common emotional challenges in India. Each topic has listeners with personal lived experience:</p>
+          <p>How Was Your Day offers peer support for the most common emotional challenges in India. Each topic has listeners with personal lived experience:</p>
           <div className="topic-cluster">
             {[
               { icon:'🌙', title:'Loneliness', desc:'Feeling disconnected — even in a crowd or joint family.', href:'/support/loneliness' },
@@ -214,7 +214,7 @@ export default function EmotionalSupportHubPage() {
         {/* City coverage */}
         <div className="section">
           <h2>Emotional Support Across India</h2>
-          <p>LeanOn is available in every city and town across India — fully online. We have specific guidance for people in India&apos;s major cities:</p>
+          <p>How Was Your Day is available in every city and town across India — fully online. We have specific guidance for people in India&apos;s major cities:</p>
           <div className="city-grid">
             {[
               { city:'Bengaluru', href:'/bengaluru' },
@@ -246,10 +246,10 @@ export default function EmotionalSupportHubPage() {
           <h2>Frequently Asked Questions</h2>
           {[
             { q:'What is emotional support?', a:'Emotional support means having someone listen, understand, and validate your feelings without judgment. Research shows it is one of the strongest predictors of mental wellbeing and recovery.' },
-            { q:'How do I get emotional support online in India?', a:'Sign up on LeanOn with your phone number (OTP, 30 seconds), browse verified peer listeners, and request a session. No appointment needed. Sessions from ₹160 for 15 minutes.' },
+            { q:'How do I get emotional support online in India?', a:'Sign up on How Was Your Day with your phone number (OTP, 30 seconds), browse verified peer listeners, and request a session. No appointment needed. Sessions from ₹160 for 15 minutes.' },
             { q:'Is peer emotional support different from therapy?', a:'Yes. Therapy is clinical — licensed professionals for diagnosis and treatment. Peer support is human — people who have lived through the same challenges. Both valuable, but for different needs.' },
-            { q:'What topics does LeanOn cover?', a:'Loneliness, anxiety, burnout, grief, breakups, relationship stress, career confusion, student stress, startup challenges, and general emotional support.' },
-            { q:'Is online emotional support anonymous?', a:'On LeanOn, you sign up with your phone and first name only. Full name never shared. Sessions private and confidential — ideal for joint families and privacy-sensitive situations.' },
+            { q:'What topics does How Was Your Day cover?', a:'Loneliness, anxiety, burnout, grief, breakups, relationship stress, career confusion, student stress, startup challenges, and general emotional support.' },
+            { q:'Is online emotional support anonymous?', a:'On How Was Your Day, you sign up with your phone and first name only. Full name never shared. Sessions private and confidential — ideal for joint families and privacy-sensitive situations.' },
           ].map((f, i) => (
             <div key={i} className="faq-item">
               <div className="faq-q">{f.q}</div>

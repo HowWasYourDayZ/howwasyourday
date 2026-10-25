@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Trapped — In Your Marriage, Job, or Family | LeanOn India',
+  title: 'Feeling Trapped — In Your Marriage, Job, or Family | How Was Your Day India',
   description: 'Can\'t leave, can\'t stay. Feeling trapped is one of the most suffocating feelings there is. Talk to someone anonymously from ₹160.',
   keywords: [
     'feeling trapped India', 'trapped in marriage India', 'trapped in job India',
     'feel stuck India', 'no way out feeling India', 'trapped in relationship India',
     'feel stuck in life India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/feeling-trapped-india', languages: { 'en-IN': 'https://www.leanon.app/feeling-trapped-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-trapped-india', languages: { 'en-IN': 'https://www.howwasyourday.live/feeling-trapped-india' } },
   openGraph: {
-    title: 'Feeling Trapped — In Your Marriage, Job, or Family | LeanOn India',
+    title: 'Feeling Trapped — In Your Marriage, Job, or Family | How Was Your Day India',
     description: 'Can\'t leave, can\'t stay. Feeling trapped is one of the most suffocating feelings there is. Talk to someone anonymously from ₹160.',
-    url: 'https://www.leanon.app/feeling-trapped-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/feeling-trapped-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Feeling Trapped India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Feeling Trapped India' }],
   },
 }
 
@@ -42,8 +42,8 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What kind of situations does LeanOn help with?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Any situation where you are carrying something you cannot say out loud to the people in your life. Trapped in a marriage but cannot leave because of family pressure, finances, or children. Trapped in a job you hate but cannot quit. Trapped in a family dynamic that is slowly eroding you. Trapped in expectations you never agreed to. These are all conversations LeanOn listeners are screened and expected to hold.' },
+      name: 'What kind of situations does How Was Your Day help with?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Any situation where you are carrying something you cannot say out loud to the people in your life. Trapped in a marriage but cannot leave because of family pressure, finances, or children. Trapped in a job you hate but cannot quit. Trapped in a family dynamic that is slowly eroding you. Trapped in expectations you never agreed to. These are all conversations How Was Your Day listeners are screened and expected to hold.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Feeling Trapped India', item: 'https://www.leanon.app/feeling-trapped-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Feeling Trapped India', item: 'https://www.howwasyourday.live/feeling-trapped-india' },
   ],
 }
 
@@ -109,7 +109,7 @@ export default function FeelingTrappedIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

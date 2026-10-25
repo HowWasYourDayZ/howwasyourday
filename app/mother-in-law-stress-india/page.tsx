@@ -4,21 +4,21 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Mother-in-Law Stress India — Anonymous Support for Saas-Bahu Tension | LeanOn',
+  title: 'Mother-in-Law Stress India — Anonymous Support for Saas-Bahu Tension | How Was Your Day',
   description: 'Saas-bahu tension, controlling in-laws, joint family conflict. Talk to someone who understands Indian family dynamics — anonymous, from ₹160.',
   keywords: [
     'mother in law stress India', 'saas bahu problem India', 'in-law conflict India',
     'sasural tension India', 'controlling mother in law India', 'joint family tension India',
     'mother in law problems India', 'saas problem India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/mother-in-law-stress-india', languages: { 'en-IN': 'https://www.leanon.app/mother-in-law-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/mother-in-law-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/mother-in-law-stress-india' } },
   openGraph: {
-    title: 'Mother-in-Law Stress India — Anonymous Support for Saas-Bahu Tension | LeanOn',
+    title: 'Mother-in-Law Stress India — Anonymous Support for Saas-Bahu Tension | How Was Your Day',
     description: 'Saas-bahu tension, controlling in-laws, joint family conflict. Talk to someone who understands Indian family dynamics — anonymous, from ₹160.',
-    url: 'https://www.leanon.app/mother-in-law-stress-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/mother-in-law-stress-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Mother-in-Law Stress India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Mother-in-Law Stress India' }],
   },
 }
 
@@ -39,7 +39,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if I sound like I am complaining?',
-      acceptedAnswer: { '@type': 'Answer', text: 'You are not complaining. You are describing your actual experience. There is a culture of expectation in India that a bahu should adjust — and women who do not adjust are often labelled difficult, sensitive, or dramatic. A LeanOn listener has no stake in that narrative. They will listen to exactly what you are experiencing without applying a filter of "but she means well" or "that is just how it is." Your feelings are valid. Your experience is real. A neutral ear confirms that.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'You are not complaining. You are describing your actual experience. There is a culture of expectation in India that a bahu should adjust — and women who do not adjust are often labelled difficult, sensitive, or dramatic. A How Was Your Day listener has no stake in that narrative. They will listen to exactly what you are experiencing without applying a filter of "but she means well" or "that is just how it is." Your feelings are valid. Your experience is real. A neutral ear confirms that.' },
     },
     {
       '@type': 'Question',
@@ -63,8 +63,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Mother-in-Law Stress India', item: 'https://www.leanon.app/mother-in-law-stress-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Mother-in-Law Stress India', item: 'https://www.howwasyourday.live/mother-in-law-stress-india' },
   ],
 }
 
@@ -118,7 +118,7 @@ export default function MotherInLawStressIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -157,8 +157,8 @@ export default function MotherInLawStressIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Helps</h2>
-          <p>LeanOn listeners understand Indian family dynamics. Many of them have lived through joint family situations themselves. They are not going to tell you that you are being difficult. They are not going to ask you to consider your mother-in-law&apos;s perspective before you have had a chance to fully express your own.</p>
+          <h2>How the app Helps</h2>
+          <p>How Was Your Day listeners understand Indian family dynamics. Many of them have lived through joint family situations themselves. They are not going to tell you that you are being difficult. They are not going to ask you to consider your mother-in-law&apos;s perspective before you have had a chance to fully express your own.</p>
           <p>A session gives you a private, confidential space to say what you have been carrying. That alone changes something. When the thing that has been pressing down on you internally is finally said out loud and received, it loses some of its weight. Not all of it — the situation is still there. But you are more able to think about it, and more able to decide what, if anything, you want to do.</p>
         </div>
 

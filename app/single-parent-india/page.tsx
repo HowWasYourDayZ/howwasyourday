@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Single Parent India — You\'re Carrying Two Roles. You Need Support Too. | LeanOn',
+  title: 'Single Parent India — You\'re Carrying Two Roles. You Need Support Too. | How Was Your Day',
   description: 'Single parenting in India is exhausting and often completely invisible. Talk to someone who understands — anonymous peer support from ₹160.',
   keywords: [
     'single parent india', 'single mother india support', 'single father india',
     'divorced parent india', 'widowed parent india', 'single parenting india',
     'single mom india support', 'lone parent india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/single-parent-india', languages: { 'en-IN': 'https://www.leanon.app/single-parent-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/single-parent-india', languages: { 'en-IN': 'https://www.howwasyourday.live/single-parent-india' } },
   openGraph: {
-    title: 'Single Parent India — You\'re Carrying Two Roles. You Need Support Too. | LeanOn',
+    title: 'Single Parent India — You\'re Carrying Two Roles. You Need Support Too. | How Was Your Day',
     description: 'Single parenting in India is exhausting and often completely invisible. Talk to someone who understands — anonymous peer support from ₹160.',
-    url: 'https://www.leanon.app/single-parent-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/single-parent-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Single Parent India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Single Parent India' }],
   },
 }
 
@@ -28,7 +28,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is this support for me or for my child?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For you. LeanOn is peer support for adults navigating difficult life circumstances. Your children&apos;s needs are enormous and your own are often sidelined in service of theirs. This is a space where your needs come first &mdash; without guilt.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'For you. How Was Your Day is peer support for adults navigating difficult life circumstances. Your children&apos;s needs are enormous and your own are often sidelined in service of theirs. This is a space where your needs come first &mdash; without guilt.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Single Parent India', item: 'https://www.leanon.app/single-parent-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Single Parent India', item: 'https://www.howwasyourday.live/single-parent-india' },
   ],
 }
 
@@ -111,7 +111,7 @@ export default function SingleParentIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">
@@ -141,7 +141,7 @@ export default function SingleParentIndiaPage() {
           <p>You are allowed to resent it sometimes. The life you imagined, the partnership that was supposed to be there, the ease that other families seem to have &mdash; it is okay to be angry about what did not work out. That anger is not a failure of gratitude. It is an honest response to a genuinely hard situation.</p>
         </div>
         <div className="section">
-          <h2>How LeanOn Fits Single Parent Life</h2>
+          <h2>How the app Fits Single Parent Life</h2>
           <p>15 minutes. No appointment. Text or voice from your phone. You do not need to find a babysitter. You do not need to schedule something two weeks out. You do not need to commute anywhere. During school hours, during nap time, after bedtime &mdash; the session fits around your life rather than demanding you reorganise around it.</p>
         </div>
         <div className="section">

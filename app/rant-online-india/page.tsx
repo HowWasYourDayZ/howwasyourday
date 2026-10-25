@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Rant Online India — Say It Without Anyone Judging You | LeanOn',
+  title: 'Rant Online India — Say It Without Anyone Judging You | How Was Your Day',
   description: 'Need to rant — really rant — without someone telling you to calm down or look on the bright side? Real peer listener in India. Anonymous. From ₹160.',
   keywords: [
     'rant online india', 'rant to someone india', 'rant about relationship india',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     'no one to rant to india', 'emotional release india', 'verbal processing india',
     'let it out india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/vent-to-someone-online', languages: { 'en-IN': 'https://www.leanon.app/vent-to-someone-online' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/vent-to-someone-online', languages: { 'en-IN': 'https://www.howwasyourday.live/vent-to-someone-online' } },
   openGraph: {
-    title: 'Rant Online India — Say It Without Anyone Judging You | LeanOn',
+    title: 'Rant Online India — Say It Without Anyone Judging You | How Was Your Day',
     description: 'Need to rant — really rant — without someone telling you to calm down or look on the bright side? Real peer listener in India. Anonymous. From ₹160.',
-    url: 'https://www.leanon.app/vent-to-someone-online',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/vent-to-someone-online',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Rant Online India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Rant Online India' }],
   },
 }
 
@@ -29,7 +29,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will the listener judge me for ranting?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn listeners are chosen for their ability not to judge. They know that a rant is a pressure release, not a statement of character. Whatever comes out &mdash; anger, frustration, unfairness, even things that are not entirely rational &mdash; they will receive it without evaluation. You are not being assessed. You are being heard.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners are chosen for their ability not to judge. They know that a rant is a pressure release, not a statement of character. Whatever comes out &mdash; anger, frustration, unfairness, even things that are not entirely rational &mdash; they will receive it without evaluation. You are not being assessed. You are being heard.' },
     },
     {
       '@type': 'Question',
@@ -58,8 +58,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Rant Online India', item: 'https://www.leanon.app/vent-to-someone-online' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Rant Online India', item: 'https://www.howwasyourday.live/vent-to-someone-online' },
   ],
 }
 
@@ -113,7 +113,7 @@ export default function RantOnlineIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -150,7 +150,7 @@ export default function RantOnlineIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What a Rant Session on LeanOn Looks Like</h2>
+          <h2>What a Rant Session on How Was Your Day Looks Like</h2>
           <p>You start the session. You say &ldquo;I just need to rant.&rdquo; The listener says okay. You go.</p>
           <p>No interruptions, no steering, no &ldquo;have you tried talking to them?&rdquo; The listener receives everything. They reflect back enough to show they are tracking &mdash; not to redirect, just to confirm they are there. They make room for more if there is more.</p>
           <p>At the end of 15 minutes, something usually has changed. Not the situation. But the pressure is lower. The loop is quieter. You can breathe. That is the session. That is the point.</p>
@@ -159,7 +159,7 @@ export default function RantOnlineIndiaPage() {
         <div className="section">
           <h2>The Difference Between Ranting and Complaining</h2>
           <p>Ranting is temporary, intense pressure release. It is acute &mdash; something happened and you need to say it. It ends, and you feel better. Complaining is sustained, chronic, usually without a specific trigger, and typically does not reduce pressure over time &mdash; it can actually amplify it by keeping you focused on what is wrong.</p>
-          <p>LeanOn supports both ranting and processing, but what most people need after a difficult day is the rant. A clean, full, uninterrupted expression of what happened and how you feel about it &mdash; to someone who will not flinch, and will not make it about anything other than what you need to say.</p>
+          <p>How Was Your Day supports both ranting and processing, but what most people need after a difficult day is the rant. A clean, full, uninterrupted expression of what happened and how you feel about it &mdash; to someone who will not flinch, and will not make it about anything other than what you need to say.</p>
         </div>
 
         <div className="section">

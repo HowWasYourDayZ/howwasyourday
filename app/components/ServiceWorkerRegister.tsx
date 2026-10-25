@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 /**
  * Registers /sw.js on load. The service worker is intentionally non-caching
- * (see public/sw.js) — it exists only to make LeanOn pass Chrome's
+ * (see public/sw.js) — it exists only to make How Was Your Day pass Chrome's
  * PWA-installability bar so it can be wrapped as a TWA / added to the home
  * screen. Registration is best-effort and silent: any failure (unsupported
  * browser, insecure context) is a no-op and never affects the page.

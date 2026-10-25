@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Second Generation Indian in the USA | ABCD Identity & Pressure | LeanOn',
+  title: 'Second Generation Indian in the USA | ABCD Identity & Pressure | How Was Your Day',
   description: 'Born in America, Indian at home. The ABCD identity is real — caught between two cultures with no instruction manual. Talk to a peer listener who understands.',
   keywords: ['second generation indian usa', 'abcd mental health', 'american born desi', 'abcd identity crisis', 'second gen indian pressure', 'indian american identity', 'desi american problems'],
-  alternates: { canonical: 'https://www.leanon.app/second-generation-indian-usa' },
-  openGraph: { title: 'Second Generation Indian in the USA | ABCD Identity & Pressure | LeanOn', description: 'Born in America, Indian at home. The ABCD identity is real — caught between two cultures with no instruction manual. Talk to a peer listener who understands.', url: 'https://www.leanon.app/second-generation-indian-usa', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/second-generation-indian-usa' },
+  openGraph: { title: 'Second Generation Indian in the USA | ABCD Identity & Pressure | How Was Your Day', description: 'Born in America, Indian at home. The ABCD identity is real — caught between two cultures with no instruction manual. Talk to a peer listener who understands.', url: 'https://www.howwasyourday.live/second-generation-indian-usa', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Is LeanOn for second-generation Indian-Americans?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Second-generation Indian-Americans — those who grew up in the US with Indian parents — face a specific set of identity and pressure challenges. LeanOn listeners understand the ABCD experience: the gap between home culture and school culture, the parental expectations, the identity questions, without needing it explained.' } },
+  { '@type': 'Question', name: 'Is How Was Your Day for second-generation Indian-Americans?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Second-generation Indian-Americans — those who grew up in the US with Indian parents — face a specific set of identity and pressure challenges. How Was Your Day listeners understand the ABCD experience: the gap between home culture and school culture, the parental expectations, the identity questions, without needing it explained.' } },
   { '@type': 'Question', name: 'Will a listener in India understand the American-raised Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Surprisingly well. Indian listeners have extensive experience with NRI families, with siblings who grew up abroad, and with the specific identity tensions of growing up between cultures. The ABCD experience is well-known in India — the cultural shorthand exists.' } },
-  { '@type': 'Question', name: 'What if my problem is my relationship with my Indian parents?', acceptedAnswer: { '@type': 'Answer', text: 'That is one of the most common second-generation Indian-American experiences people bring to LeanOn — the weight of parental expectations, the guilt of growing into someone different, the love and the friction. A listener will hear it without taking sides.' } },
+  { '@type': 'Question', name: 'What if my problem is my relationship with my Indian parents?', acceptedAnswer: { '@type': 'Answer', text: 'That is one of the most common second-generation Indian-American experiences people bring to How Was Your Day — the weight of parental expectations, the guilt of growing into someone different, the love and the friction. A listener will hear it without taking sides.' } },
   { '@type': 'Question', name: 'Is this confidential from my parents?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family or anyone else.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Second Generation Indian USA', item: 'https://www.leanon.app/second-generation-indian-usa' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Second Generation Indian USA', item: 'https://www.howwasyourday.live/second-generation-indian-usa' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function SecondGenerationIndianUsaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Second Generation Indian USA</span></nav>
         <div className="hero">
@@ -84,13 +84,13 @@ export default function SecondGenerationIndianUsaPage() {
           <h2>The ABCD Experience: Real and Rarely Named</h2>
           <p>Growing up as an American-born child of Indian immigrants — the &ldquo;ABCD&rdquo; — means inhabiting two worlds that don&rsquo;t fully overlap. At school, you are the Indian kid — the one who brings strange food, observes Diwali instead of Halloween, has parents who are stricter and more academically focused, who speaks another language at home. In the Indian community, you are the Americanised one — your Hindi is accented, you don&rsquo;t know the film songs your parents grew up with, your relationship expectations are different.</p>
           <p>Neither world fully claims you. You are always the representative of a different place — either explaining India to Americans or explaining America to Indians. The identity is genuinely in-between, and that in-between is not a failure of belonging. It is just the reality of where you were raised. But it creates a particular kind of loneliness: the sense that no one fully understands your world.</p>
-          <p>LeanOn listeners in India understand the ABCD experience well — it is not unfamiliar in India, where NRI families are discussed constantly and the &ldquo;Indian-raised-abroad&rdquo; identity is well-mapped. You do not need to explain the cultural gap you live in. They already know its shape. First 5 minutes free.</p>
+          <p>How Was Your Day listeners in India understand the ABCD experience well — it is not unfamiliar in India, where NRI families are discussed constantly and the &ldquo;Indian-raised-abroad&rdquo; identity is well-mapped. You do not need to explain the cultural gap you live in. They already know its shape. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>The Weight of Parental Sacrifice</h2>
           <p>The second-generation Indian-American experience is inseparable from the weight of parental sacrifice. Your parents came here with nothing and built something. Their hopes are mapped onto you. They want you to succeed, to marry well, to be happy — but their template for what success and happiness look like was formed in a different world. The gap between what they want for you and what you are becoming is a source of genuine grief on both sides, rarely spoken directly.</p>
-          <p>The guilt of that gap is something second-generation Indian-Americans carry often silently. A real Indian peer listener at LeanOn — who understands the immigrant sacrifice narrative from the inside — can hear this without judgment and without a fixed position. Sessions are anonymous. First 5 minutes free.</p>
+          <p>The guilt of that gap is something second-generation Indian-Americans carry often silently. A real Indian peer listener at How Was Your Day — who understands the immigrant sacrifice narrative from the inside — can hear this without judgment and without a fixed position. Sessions are anonymous. First 5 minutes free.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

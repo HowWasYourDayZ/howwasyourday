@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Marriage Issues in Canada | Punjabi, Gujarati Families | LeanOn',
+  title: 'NRI Marriage Issues in Canada | Punjabi, Gujarati Families | How Was Your Day',
   description: 'Marriage pressure on Punjabi or Gujarati NRIs in Canada is real and complex. Talk to a peer listener who understands arranged marriage, joint family pressure, and NRI expectations.',
   keywords: ['nri marriage canada', 'punjabi marriage canada', 'arranged marriage nri canada', 'indian marriage issues canada', 'desi marriage canada', 'nri spouse canada', 'brampton marriage pressure'],
-  alternates: { canonical: 'https://www.leanon.app/nri-marriage-canada' },
-  openGraph: { title: 'NRI Marriage Issues in Canada | Punjabi, Gujarati Families | LeanOn', description: 'Marriage pressure on Punjabi or Gujarati NRIs in Canada is real and complex. Talk to a peer listener who understands arranged marriage, joint family pressure, and NRI expectations.', url: 'https://www.leanon.app/nri-marriage-canada', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-marriage-canada' },
+  openGraph: { title: 'NRI Marriage Issues in Canada | Punjabi, Gujarati Families | How Was Your Day', description: 'Marriage pressure on Punjabi or Gujarati NRIs in Canada is real and complex. Talk to a peer listener who understands arranged marriage, joint family pressure, and NRI expectations.', url: 'https://www.howwasyourday.live/nri-marriage-canada', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand Punjabi and Gujarati marriage dynamics in Canada?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand Punjabi and Gujarati cultural dynamics around marriage — the rishta process, joint family pressure, the community watching, and the specific weight of these traditions in the Canadian diaspora context.' } },
+  { '@type': 'Question', name: 'Do listeners understand Punjabi and Gujarati marriage dynamics in Canada?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand Punjabi and Gujarati cultural dynamics around marriage — the rishta process, joint family pressure, the community watching, and the specific weight of these traditions in the Canadian diaspora context.' } },
   { '@type': 'Question', name: 'What if I\'m facing pressure to get married and don\'t want to?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly the kind of thing a peer listener can hold with you. The pressure to marry, the fear of disappointing your family, the guilt of wanting something different — these are real and complicated. A listener won\'t tell you what to do, but they will genuinely hear you.' } },
   { '@type': 'Question', name: 'What if my marriage is in trouble and I don\'t want the community to know?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions are private. Only a phone number and first name. Listeners are in India, outside your Brampton or Surrey community entirely. Nothing is shared with anyone.' } },
-  { '@type': 'Question', name: 'Is this also for men dealing with marriage pressure?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn is for anyone, regardless of gender. Men in the Indian diaspora often have fewer places to talk about marriage pressure, relationship struggles, or family expectations. A real peer listener will hear you without judgement.' } },
+  { '@type': 'Question', name: 'Is this also for men dealing with marriage pressure?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is for anyone, regardless of gender. Men in the Indian diaspora often have fewer places to talk about marriage pressure, relationship struggles, or family expectations. A real peer listener will hear you without judgement.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Marriage Canada', item: 'https://www.leanon.app/nri-marriage-canada' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Marriage Canada', item: 'https://www.howwasyourday.live/nri-marriage-canada' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function NriMarriageCanadaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Marriage Canada</span></nav>
         <div className="hero">
@@ -84,7 +84,7 @@ export default function NriMarriageCanadaPage() {
           <h2>Marriage Pressure in Brampton, Surrey, and Beyond</h2>
           <p>The Punjabi communities of Brampton, Ontario and Surrey, British Columbia have recreated community structures of extraordinary density and warmth. The gurdwaras are packed. The family networks are tight. The expectations around marriage — when, to whom, from what family background — are high and publicly enforced.</p>
           <p>For Indian-Canadians navigating these communities, marriage pressure is one of the most common sources of genuine distress. The aunties at the gurdwara know your age. The parents have shortlists. The family WhatsApp groups circulate rishtas. If you are in your late twenties or thirties and unmarried, the scrutiny is constant. If you are married but struggling, the expectation to stay and adjust — and to keep it private — is equally intense.</p>
-          <p>Gujarati communities in the GTA face similar dynamics — the rishta culture, the caste considerations, the expectation that family honour is maintained through proper marriages. LeanOn is for anyone navigating these pressures, whatever their background. A real Indian peer listener in India — outside your Brampton or Surrey community entirely. First 5 minutes free.</p>
+          <p>Gujarati communities in the GTA face similar dynamics — the rishta culture, the caste considerations, the expectation that family honour is maintained through proper marriages. How Was Your Day is for anyone navigating these pressures, whatever their background. A real Indian peer listener in India — outside your Brampton or Surrey community entirely. First 5 minutes free.</p>
         </div>
 
         <div className="section">

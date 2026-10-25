@@ -9,7 +9,7 @@ import { SHOW_LISTENER_GROWTH_NOTICE, SHOW_LISTENER_PRICING_UPDATE_NOTICE } from
 import { PRICING_NOTICE } from '@/lib/listener-announcements'
 import { estimateListenerTakeHome } from '@/lib/session-billing'
 import { showToast } from '@/lib/toast'
-import { registerPushNotifications, getAlertStatus, getLastPushFailure, waitForTestPush, showLocalNotification, closeLocalNotifications, leanOnApp, type AlertStatus } from '@/lib/firebase-client'
+import { registerPushNotifications, getAlertStatus, getLastPushFailure, waitForTestPush, showLocalNotification, closeLocalNotifications, howWasYourDayApp, type AlertStatus } from '@/lib/firebase-client'
 import { compressImage, extForType, MAX_INPUT_BYTES } from '@/lib/compress-image'
 import Avatar from '@/app/components/Avatar'
 import { TAGLINE_PHRASES, TAGLINE_PICK, LIVED_MIN_CHARS, LIVED_MAX_CHARS } from '@/lib/listener-onboarding'
@@ -272,10 +272,10 @@ export default function DashboardPage() {
   const [pushRegistered, setPushRegistered] = useState<boolean | null>(null)
   const [alertStatus, setAlertStatus] = useState<AlertStatus | null>(null)
   const [testingAlert, setTestingAlert] = useState(false)
-  // Opened from the installed LeanOn app (Play Store / home screen) rather than
+  // Opened from the installed How Was Your Day app (Play Store / home screen) rather than
   // a Chrome tab — notification permission is then set in the app's settings.
   const [inInstalledApp, setInInstalledApp] = useState(false)
-  useEffect(() => { try { setInInstalledApp(!!leanOnApp() || window.matchMedia('(display-mode: standalone)').matches) } catch { /* ignore */ } }, [])
+  useEffect(() => { try { setInInstalledApp(!!howWasYourDayApp() || window.matchMedia('(display-mode: standalone)').matches) } catch { /* ignore */ } }, [])
   // Outcome of the last test alert, shown in the alerts card (toasts vanish too fast for setup steps).
   const [testResult, setTestResult] = useState<{ ok: boolean; text: string } | null>(null)
 
@@ -296,14 +296,14 @@ export default function DashboardPage() {
     // Odd seq = a toggle is in flight; a changed seq = the answer is outdated.
     if (d?.is_available === false && seq === toggleSeqRef.current && seq % 2 === 0) {
       setAvail(false)
-      showToast("You were set offline — LeanOn was in the background too long, or a request went unanswered. Tap Go online when you're ready.", 'info')
+      showToast("You were set offline — How Was Your Day was in the background too long, or a request went unanswered. Tap Go online when you're ready.", 'info')
     }
   }
 
   useEffect(() => {
     setAlertStatus(getAlertStatus())
     // Permission already granted on this device → silently (re)register so the
-    // push token is current and lives on the single LeanOn service worker.
+    // push token is current and lives on the single How Was Your Day service worker.
     if (getAlertStatus() === 'granted') registerPushNotifications().then(setPushRegistered, () => setPushRegistered(false))
   }, [])
 
@@ -313,7 +313,7 @@ export default function DashboardPage() {
     setPushRegistered(ok)
     setAlertStatus(getAlertStatus())
     if (ok) showToast('Phone alerts are on for this device.', 'success')
-    else if (getAlertStatus() === 'denied') showToast('Notifications are blocked for LeanOn — allow them in your phone settings.', 'error')
+    else if (getAlertStatus() === 'denied') showToast('Notifications are blocked for How Was Your Day — allow them in your phone settings.', 'error')
     else showToast('Could not turn on alerts on this device.', 'error')
   }
 
@@ -335,12 +335,12 @@ export default function DashboardPage() {
         const desktop = !/Android|iPhone|iPad|Mobi/i.test(navigator.userAgent)
         if (outcome === 'refused') {
           setTestResult({ ok: false, text: desktop
-            ? 'The test alert reached this computer, but it wasn\'t allowed to show — notifications are blocked for LeanOn.'
-            : 'The test alert reached this phone, but it wasn\'t allowed to show — notifications are blocked for LeanOn.' })
+            ? 'The test alert reached this computer, but it wasn\'t allowed to show — notifications are blocked for How Was Your Day.'
+            : 'The test alert reached this phone, but it wasn\'t allowed to show — notifications are blocked for How Was Your Day.' })
         } else if (outcome === 'shown') {
           setTestResult({ ok: true, text: desktop
-            ? 'The test alert reached this computer. If no pop-up appeared, your computer is hiding LeanOn alerts.'
-            : 'The test alert reached this phone. If no pop-up appeared, your phone is hiding LeanOn alerts.' })
+            ? 'The test alert reached this computer. If no pop-up appeared, your computer is hiding How Was Your Day alerts.'
+            : 'The test alert reached this phone. If no pop-up appeared, your phone is hiding How Was Your Day alerts.' })
         } else {
           setTestResult({ ok: false, text: desktop
             ? 'The test alert didn\'t reach this computer within 20 seconds.'
@@ -348,8 +348,8 @@ export default function DashboardPage() {
         }
       }
       else if (d.reason === 'no_device') showToast('This device is not registered for alerts yet — tap "Turn on alerts".', 'error')
-      else if (d.reason === 'not_configured') showToast('Alerts are not set up on the server yet. Please tell LeanOn support.', 'error')
-      else showToast(d.error || `The test alert could not be sent${Array.isArray(d.errors) && d.errors.length ? ` (${d.errors[0]})` : ''}. Please screenshot this and send it to LeanOn support.`, 'error')
+      else if (d.reason === 'not_configured') showToast('Alerts are not set up on the server yet. Please tell How Was Your Day support.', 'error')
+      else showToast(d.error || `The test alert could not be sent${Array.isArray(d.errors) && d.errors.length ? ` (${d.errors[0]})` : ''}. Please screenshot this and send it to How Was Your Day support.`, 'error')
     } finally { setTestingAlert(false) }
   }
 
@@ -475,16 +475,16 @@ export default function DashboardPage() {
     if (ringTimerRef.current) clearInterval(ringTimerRef.current)
     ringTimerRef.current = setInterval(ringOnce, 3000)
     if (savedTitleRef.current === null) savedTitleRef.current = document.title
-    document.title = '🔔 New session request — LeanOn'
+    document.title = '🔔 New session request — How Was Your Day'
     // Notification for a backgrounded tab. Goes through the service worker —
     // `new Notification()` throws on Android Chrome, so this never showed on
     // phones before. Same tag as the server push for this request, so the two
     // replace each other rather than stacking.
-    alertTagRef.current = `leanon-req-${s.id}`
+    alertTagRef.current = `howwasyourday-req-${s.id}`
     if (document.visibilityState !== 'visible') {
       showLocalNotification('🔔 New session request', {
         body: `${s.duration_mins}-min ${s.session_type} session — tap to accept`,
-        tag: `leanon-req-${s.id}`, url: '/dashboard', requireInteraction: true,
+        tag: `howwasyourday-req-${s.id}`, url: '/dashboard', requireInteraction: true,
       })
     }
   }
@@ -763,7 +763,7 @@ export default function DashboardPage() {
       // unlock the Web-Audio chime (autoplay policy) and register for push
       // notifications (requests browser permission the first time; silently
       // reconfirms the token if already granted). Push reaches the listener
-      // even with no LeanOn tab open — the in-tab chime alone cannot.
+      // even with no How Was Your Day tab open — the in-tab chime alone cannot.
       ensureAudioUnlocked()
       registerPushNotifications().then(ok => setPushRegistered(ok), () => setPushRegistered(false)).finally(() => setAlertStatus(getAlertStatus()))
     }
@@ -783,7 +783,7 @@ export default function DashboardPage() {
       // the specific error so the owner can run the diagnostic query.
       if (body?.error === 'write_reverted') {
         showToast('DB trigger is blocking availability change (W01). Check the browser console for the diagnostic SQL to run.', 'error')
-        console.error('[LeanOn W01] Availability write reverted by live DB trigger.\nRun in Supabase SQL Editor:\nSELECT tgname, tgenabled, tgtype, pg_get_triggerdef(oid) FROM pg_trigger WHERE tgrelid = \'public.listener_profiles\'::regclass;')
+        console.error('[How Was Your Day W01] Availability write reverted by live DB trigger.\nRun in Supabase SQL Editor:\nSELECT tgname, tgenabled, tgtype, pg_get_triggerdef(oid) FROM pg_trigger WHERE tgrelid = \'public.listener_profiles\'::regclass;')
       } else {
         showToast(body?.error || 'Could not update availability. Please try again.', 'error')
       }
@@ -799,7 +799,7 @@ export default function DashboardPage() {
       // immediately — without this they wait up to 5 s for their next poll.
       if (user) {
         try {
-          const bc = new BroadcastChannel('leanon-availability')
+          const bc = new BroadcastChannel('howwasyourday-availability')
           bc.postMessage({ user_id: user.id, is_available: dbValue })
           bc.close()
         } catch { /* BroadcastChannel unavailable in some environments */ }
@@ -1271,7 +1271,7 @@ export default function DashboardPage() {
                     <br/>15 min → you earn {earn(15)}
                     <br/>30 min → you earn {earn(30)}
                     <br/>45 min → you earn {earn(45)}
-                    <br/><span style={{fontSize:11,opacity:0.85}}>You keep {Math.round((1 - effectiveFeeRate)*100)}% of your rate on every paid session — LeanOn&apos;s {Math.round(effectiveFeeRate*100)}% service fee supports bringing seekers to LeanOn, payments, safety and support.</span>
+                    <br/><span style={{fontSize:11,opacity:0.85}}>You keep {Math.round((1 - effectiveFeeRate)*100)}% of your rate on every paid session — How Was Your Day&apos;s {Math.round(effectiveFeeRate*100)}% service fee supports bringing seekers to How Was Your Day, payments, safety and support.</span>
                   </div>
                 )
               })()}
@@ -1332,14 +1332,14 @@ export default function DashboardPage() {
         </div>
 
         {/* Phone alerts — whether session requests can reach THIS device with
-            LeanOn in the background. Before, a missing/blocked permission failed
+            How Was Your Day in the background. Before, a missing/blocked permission failed
             silently and listeners only found out by missing requests. */}
         {profile.is_approved !== false && alertStatus && alertStatus !== 'not_configured' && (
           <div style={{background: alertStatus === 'granted' && pushRegistered !== false ? '#F0FFF4' : '#FFF8EC', border: `1.5px solid ${alertStatus === 'granted' && pushRegistered !== false ? '#B7EBC6' : '#FFD9A0'}`, borderRadius:14, padding:'12px 14px', marginBottom:18, fontSize:12.5, lineHeight:1.55, color:'#27394A'}}>
             {alertStatus === 'granted' && pushRegistered !== false ? (
               <>
                 <div style={{fontWeight:800, color:'#276749', marginBottom:2}}>🔔 Request alerts are on for this device</div>
-                <div>Requests ring this device even with your screen locked or another app open, so you stay online for up to {AWAY_WITH_ALERTS_MINS} minutes with LeanOn in the background. Answer quickly when it rings: a request left unanswered while you&apos;re away sets you offline. Closing LeanOn sets you offline about {LEAVE_GRACE_SECS / 60} minutes later.</div>
+                <div>Requests ring this device even with your screen locked or another app open, so you stay online for up to {AWAY_WITH_ALERTS_MINS} minutes with How Was Your Day in the background. Answer quickly when it rings: a request left unanswered while you&apos;re away sets you offline. Closing How Was Your Day sets you offline about {LEAVE_GRACE_SECS / 60} minutes later.</div>
                 <div style={{display:'flex', gap:8, flexWrap:'wrap', marginTop:10}}>
                   <button onClick={sendTestAlert} disabled={testingAlert} style={{flex:'1 1 140px', background:'white', border:'1.5px solid #38A169', color:'#276749', borderRadius:50, padding:'9px 14px', fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:'inherit'}}>
                     {testingAlert ? 'Checking…' : 'Send a test alert'}
@@ -1359,10 +1359,10 @@ export default function DashboardPage() {
                 <div>
                   {alertStatus === 'granted' && <>This device couldn&apos;t connect for request alerts.{getLastPushFailure() && <span style={{display:'block', marginTop:2, fontSize:11, color:'var(--gray)'}}>Error: {getLastPushFailure()}</span>}</>}
                   {alertStatus === 'prompt' && <>Turn them on so requests reach you while you use other apps.</>}
-                  {alertStatus === 'denied' && <>Notifications are blocked for LeanOn {inInstalledApp ? 'in the LeanOn app' : 'in your browser'}. The step-by-step check shows exactly where to allow them.</>}
+                  {alertStatus === 'denied' && <>Notifications are blocked for How Was Your Day {inInstalledApp ? 'in the How Was Your Day app' : 'in your browser'}. The step-by-step check shows exactly where to allow them.</>}
                   {alertStatus === 'ios_install' && <>On iPhone, alerts only work from the home-screen app.</>}
                   {alertStatus === 'unsupported' && <>This browser can&apos;t show alerts — use Chrome.</>}
-                  {' '}Without alerts you only hear requests while LeanOn is open, and you go offline about {LEAVE_GRACE_SECS / 60} minutes after closing it ({STALE_HEARTBEAT_MINS} minutes after switching away from it).
+                  {' '}Without alerts you only hear requests while How Was Your Day is open, and you go offline about {LEAVE_GRACE_SECS / 60} minutes after closing it ({STALE_HEARTBEAT_MINS} minutes after switching away from it).
                 </div>
                 <div style={{display:'flex', gap:8, flexWrap:'wrap', marginTop:10}}>
                   {(alertStatus === 'prompt' || alertStatus === 'granted') && (
@@ -1416,7 +1416,7 @@ export default function DashboardPage() {
               <button onClick={dismiss} aria-label="Dismiss"
                 style={{position:'absolute',top:12,right:12,background:'transparent',border:'none',color:'var(--gray)',fontSize:20,fontWeight:900,cursor:'pointer',lineHeight:1,padding:4}}>×</button>
               <div style={{fontSize:16,fontWeight:900,color:'var(--navy)',marginBottom:12,paddingRight:24}}>
-                📣 {VOICE_PRICING_ENABLED ? 'Two updates' : 'An update'} to how you earn on LeanOn
+                📣 {VOICE_PRICING_ENABLED ? 'Two updates' : 'An update'} to how you earn on How Was Your Day
               </div>
               <div style={{fontSize:13,color:'#3A6070',lineHeight:1.65,fontWeight:500,display:'grid',gap:10}}>
                 {VOICE_PRICING_ENABLED && <div>
@@ -1425,8 +1425,8 @@ export default function DashboardPage() {
                 </div>}
                 <div>
                   <strong style={{color:'var(--navy)'}}>🤝 You keep {Math.round((1 - effectiveFeeRate) * 100)}% of your rate on every paid session.</strong> From
-                  24 Sep 2026, LeanOn&apos;s service fee is {Math.round(effectiveFeeRate * 100)}%. It supports the work around your
-                  conversations — bringing seekers to LeanOn, secure payments and payouts, verification, safety and support — so you can focus
+                  24 Sep 2026, How Was Your Day&apos;s service fee is {Math.round(effectiveFeeRate * 100)}%. It supports the work around your
+                  conversations — bringing seekers to How Was Your Day, secure payments and payouts, verification, safety and support — so you can focus
                   on listening. Sessions you&apos;ve already completed aren&apos;t affected.
                 </div>
                 <div>
@@ -1559,7 +1559,7 @@ export default function DashboardPage() {
                 <div style={{ fontSize: 36, marginBottom: 12 }}>⚠️</div>
                 <h3 style={{ fontSize: 18, fontWeight: 800, color: '#B71C1C', marginBottom: 8 }}>Delete your account?</h3>
                 <p style={{ fontSize: 13, color: '#5A7A8A', fontWeight: 600, lineHeight: 1.6, marginBottom: 16 }}>
-                  This is permanent and cannot be undone. Your name, phone number, bank details, profile, and all personal data will be permanently erased. Your listener profile will be removed from LeanOn.
+                  This is permanent and cannot be undone. Your name, phone number, bank details, profile, and all personal data will be permanently erased. Your listener profile will be removed from How Was Your Day.
                 </p>
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#0F4867', marginBottom: 10 }}>
                   Type <strong>DELETE</strong> to confirm
@@ -1744,7 +1744,7 @@ export default function DashboardPage() {
 
         {sessions.length === 0 && SHOW_LISTENER_GROWTH_NOTICE && (
           <div style={{marginTop:8,background:'rgba(255,153,51,0.08)',border:'1.5px solid rgba(255,153,51,0.25)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'#7A5200',lineHeight:1.6,fontWeight:500}}>
-            <strong style={{fontWeight:800}}>A heads up:</strong> LeanOn is a growing platform with a smaller user base right now. Your first session request might take a few days — session volume depends on how many seekers are active when you&apos;re online. Keep your availability on and we&apos;ll notify you the moment someone books.
+            <strong style={{fontWeight:800}}>A heads up:</strong> How Was Your Day is a growing platform with a smaller user base right now. Your first session request might take a few days — session volume depends on how many seekers are active when you&apos;re online. Keep your availability on and we&apos;ll notify you the moment someone books.
           </div>
         )}
       </div>

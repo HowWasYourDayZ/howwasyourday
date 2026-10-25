@@ -1,7 +1,7 @@
 {
-  "name": "leanon-android",
+  "name": "howwasyourday-android",
   "private": true,
-  "description": "LeanOn Android app (Capacitor shell around www.leanon.app + native call-style request alerts). See docs/ANDROID_APP.md.",
+  "description": "How Was Your Day Android app (Capacitor shell around www.howwasyourday.live + native call-style request alerts). See docs/ANDROID_APP.md.",
   "scripts": {
     "sync": "cap sync android",
     "open": "cap open android"

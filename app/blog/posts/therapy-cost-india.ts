@@ -4,7 +4,7 @@ export const post = {
   description: 'An honest breakdown of therapy cost in India — psychiatrist, psychologist and online session prices, the hidden costs, and affordable options when you cannot pay.',
   date: '2026-08-11',
   readTime: '9 min read',
-  topics: ['therapy', 'peer support', 'mental health India', 'affordable support', 'LeanOn'],
+  topics: ['therapy', 'peer support', 'mental health India', 'affordable support', 'How Was Your Day'],
   content: `
 <p>Almost everyone who considers getting help for their mental health in India runs into the same wall at almost the same moment. You decide, finally, that you want to talk to someone. You search. You find a clinic or a platform. And then you see the price, and you quietly close the tab.</p>
 
@@ -19,7 +19,7 @@ export const post = {
   <li><strong>Clinical psychologist or therapist:</strong> roughly ₹1,500 to ₹4,000 per session. Senior practitioners in metros sit at the upper end of that range, and sometimes above it.</li>
   <li><strong>Online therapy platforms:</strong> broadly similar to in-person rates — commonly ₹1,000 to ₹3,000 per session. Online delivery removes travel, not the cost of the clinician&apos;s time.</li>
   <li><strong>Government helplines:</strong> completely free, 24/7. NIMHANS runs a national helpline at <strong>080-46110007</strong>, and Tele-MANAS is reachable at <strong>14416</strong>. These are staffed, real, and cost nothing.</li>
-  <li><strong>LeanOn peer support:</strong> listeners set their own per-minute rate, plus a flat ₹10 platform fee per session. For example, a 15-minute session with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. Any unused wallet balance is fully refundable.</li>
+  <li><strong>How Was Your Day peer support:</strong> listeners set their own per-minute rate, plus a flat ₹10 platform fee per session. For example, a 15-minute session with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. Any unused wallet balance is fully refundable.</li>
 </ul>
 
 <p>Those are the headline figures. But the headline figures are not the whole picture, and the gap between them and what people actually end up spending is where most budgets break.</p>
@@ -62,7 +62,7 @@ export const post = {
 
 <h3>If you have clinical symptoms</h3>
 
-<p>Persistent depression that has lasted months. Panic attacks. Trauma responses, flashbacks, dissociation. OCD. Anything where you suspect medication may be needed, or where daily functioning has broken down. <strong>This is where a licensed professional is the right place to spend your money — full stop.</strong> Peer support is not a substitute for clinical treatment, and we will say that as plainly as we can: LeanOn does not treat, diagnose, or cure anything. If this describes you, prioritise the psychiatrist or the clinical psychologist, even if it means saving for it, using a sliding-scale clinic, or asking about lower-cost options at a government hospital or teaching institution.</p>
+<p>Persistent depression that has lasted months. Panic attacks. Trauma responses, flashbacks, dissociation. OCD. Anything where you suspect medication may be needed, or where daily functioning has broken down. <strong>This is where a licensed professional is the right place to spend your money — full stop.</strong> Peer support is not a substitute for clinical treatment, and we will say that as plainly as we can: How Was Your Day does not treat, diagnose, or cure anything. If this describes you, prioritise the psychiatrist or the clinical psychologist, even if it means saving for it, using a sliding-scale clinic, or asking about lower-cost options at a government hospital or teaching institution.</p>
 
 <h3>If you are carrying everyday emotional weight</h3>
 
@@ -70,11 +70,11 @@ export const post = {
 
 <p>If you want a fuller map of the options in this middle band, we have written about <a href="/alternatives-to-therapy-india">alternatives to therapy in India</a> and about how <a href="/blog/peer-support-vs-therapy-india">peer support vs therapy</a> actually differ in purpose.</p>
 
-<h2>How LeanOn Keeps the Cost Low</h2>
+<h2>How the app Keeps the Cost Low</h2>
 
 <p>We think you should know exactly why our numbers are lower, because &quot;cheaper&quot; with no explanation should make anyone suspicious.</p>
 
-<p>The first reason is the honest one: <strong>LeanOn listeners are peers, not licensed clinicians.</strong> They are people who have lived through anxiety, burnout, grief, loneliness, family pressure, heartbreak — and who have been verified and chosen for how well they listen without judgment. They are not carrying a decade of clinical training whose cost has to be recovered, because they are not doing clinical work. They are offering understanding from experience. That is a different service, and it costs less because it is genuinely different, not because it is a discounted version of therapy.</p>
+<p>The first reason is the honest one: <strong>How Was Your Day listeners are peers, not licensed clinicians.</strong> They are people who have lived through anxiety, burnout, grief, loneliness, family pressure, heartbreak — and who have been verified and chosen for how well they listen without judgment. They are not carrying a decade of clinical training whose cost has to be recovered, because they are not doing clinical work. They are offering understanding from experience. That is a different service, and it costs less because it is genuinely different, not because it is a discounted version of therapy.</p>
 
 <p>The second reason is our fee structure. What you pay is the listener&apos;s stated rate plus a flat ₹10 per session — not a percentage of your bill, not a subscription, not a cut that grows with the listener&apos;s price. That is the entire fee you see as a seeker.</p>
 
@@ -88,6 +88,6 @@ export const post = {
 
 <p>The case for <strong>peer support India</strong> is not that it beats professional care. It is that between a free crisis helpline and a ₹30,000 treatment course there was, until recently, almost nothing — and that most emotional difficulty lives precisely in that gap. Empathy from someone who has been there is not a lesser product. It is simply a different one, priced at what it actually costs to provide.</p>
 
-<p>If that sounds like what you need, you can <a href="/browse">browse peer listeners</a> and see who has lived something close to your situation — your first introductory session of up to five minutes is free once per account. If you would rather understand the exact session prices first, see <a href="/pricing">LeanOn pricing</a>; privacy and refund details are in our <a href="/faq">FAQ</a>. And if you are in crisis right now, please call NIMHANS on 080-46110007 or Tele-MANAS on 14416 before anything else.</p>
+<p>If that sounds like what you need, you can <a href="/browse">browse peer listeners</a> and see who has lived something close to your situation — your first introductory session of up to five minutes is free once per account. If you would rather understand the exact session prices first, see <a href="/pricing">How Was Your Day pricing</a>; privacy and refund details are in our <a href="/faq">FAQ</a>. And if you are in crisis right now, please call NIMHANS on 080-46110007 or Tele-MANAS on 14416 before anything else.</p>
   `.trim(),
 }

@@ -22,7 +22,7 @@ function isMissingTable(err: { code?: string; message?: string } | null): boolea
   return err.code === '42P01' || err.code === 'PGRST205' || /push_tokens/.test(err.message ?? '')
 }
 
-// `native` = a LeanOn Android app install (mobile/), marked at registration
+// `native` = a How Was Your Day Android app install (mobile/), marked at registration
 // (/api/push/register with kind 'android_app'); everything else is web push.
 export type PushTarget = { token: string; native: boolean }
 
@@ -116,7 +116,7 @@ export async function sendRequestWithdrawn(sb: Sb, listenerId: string, sessionId
       title: 'Request withdrawn',
       body: 'The seeker was connected with someone else or cancelled. No action needed.',
       url: '/dashboard',
-      tag: `leanon-req-${sessionId}`,
+      tag: `howwasyourday-req-${sessionId}`,
       ttlSecs: 300,
       urgent: false,
       data: { sessionId, type: 'request_closed' },

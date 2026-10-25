@@ -3,8 +3,8 @@ import ReadyToTalkLanding, { type ReadyToTalkLandingData } from '@/app/component
 
 const data: ReadyToTalkLandingData = {
   "canonical": "/need-someone-to-talk-to-but-dont-need-therapy",
-  "title": "Need Someone to Talk To but Don't Need Therapy? | LeanOn",
-  "description": "Need someone to talk to but do not think you need therapy? Learn how peer support works and start a private human conversation on LeanOn with a free 5-minute introduction.",
+  "title": "Need Someone to Talk To but Don't Need Therapy? | How Was Your Day",
+  "description": "Need someone to talk to but do not think you need therapy? Learn how peer support works and start a private human conversation on How Was Your Day with a free 5-minute introduction.",
   "keywords": [
     "need someone to talk to but dont need therapy",
     "Need Someone to Talk To but Don't Need Therapy?",
@@ -25,11 +25,11 @@ const data: ReadyToTalkLandingData = {
     "No diagnosis — A peer listener does not diagnose a condition or provide clinical treatment.",
     "Lived experience — Peer support centres on listening, mutual understanding and relevant experience rather than clinical assessment.",
     "Conversation first — You can use the session to talk, vent or reflect rather than arrive with a treatment goal.",
-    "A different service — LeanOn should not replace professional care when you need assessment or treatment."
+    "A different service — How Was Your Day should not replace professional care when you need assessment or treatment."
   ],
-  "whyTitle": "Why LeanOn fits this moment",
+  "whyTitle": "Why How Was Your Day fits this moment",
   "why": [
-    "LeanOn is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
+    "How Was Your Day is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
     "You choose a listener rather than receiving a generic response. The goal is a human conversation where you can talk, vent, reflect or simply not feel alone for a while.",
     "You can start without committing to a long programme: one free 5-minute introduction is available per account, followed by paid time only if you choose to continue."
   ],
@@ -76,6 +76,6 @@ const data: ReadyToTalkLandingData = {
   ]
 }
 
-export const metadata: Metadata = { title: data.title, description: data.description, keywords: data.keywords, alternates: { canonical: 'https://www.leanon.app'+data.canonical }, openGraph: { title: data.title, description: data.description, url: 'https://www.leanon.app'+data.canonical, siteName: 'LeanOn', type: 'website' } }
+export const metadata: Metadata = { title: data.title, description: data.description, keywords: data.keywords, alternates: { canonical: 'https://www.howwasyourday.live'+data.canonical }, openGraph: { title: data.title, description: data.description, url: 'https://www.howwasyourday.live'+data.canonical, siteName: 'How Was Your Day', type: 'website' } }
 
 export default function Page() { return <ReadyToTalkLanding data={data} /> }

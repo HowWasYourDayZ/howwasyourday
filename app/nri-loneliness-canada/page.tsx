@@ -3,23 +3,23 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Loneliness in Canada | You\'re Not Alone | LeanOn',
+  title: 'NRI Loneliness in Canada | You\'re Not Alone | How Was Your Day',
   description: 'The loneliness of being Indian in Canada is different. It\'s not just missing home — it\'s feeling invisible in two countries. Talk to someone who gets it. First 5 min free.',
   keywords: ['nri loneliness canada', 'lonely indian in canada', 'indian loneliness toronto', 'punjabi loneliness canada', 'missing home india canada', 'indian isolation canada', 'feeling lonely abroad canada'],
-  alternates: { canonical: 'https://www.leanon.app/nri-loneliness-canada' },
-  openGraph: { title: 'NRI Loneliness in Canada | You\'re Not Alone | LeanOn', description: 'The loneliness of being Indian in Canada is different. It\'s not just missing home — it\'s feeling invisible in two countries. Talk to someone who gets it. First 5 min free.', url: 'https://www.leanon.app/nri-loneliness-canada', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-loneliness-canada' },
+  openGraph: { title: 'NRI Loneliness in Canada | You\'re Not Alone | How Was Your Day', description: 'The loneliness of being Indian in Canada is different. It\'s not just missing home — it\'s feeling invisible in two countries. Talk to someone who gets it. First 5 min free.', url: 'https://www.howwasyourday.live/nri-loneliness-canada', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Is what I\'m feeling normal for Indians in Canada?', acceptedAnswer: { '@type': 'Answer', text: 'Very. The transition to Canadian life — the quiet streets, the transactional friendships, the isolation in winter — hits many Indians hard in the first few years. It is not weakness. It is a real adjustment that very few people talk about honestly.' } },
   { '@type': 'Question', name: 'I have friends here. Why do I still feel alone?', acceptedAnswer: { '@type': 'Answer', text: 'Because cultural understanding goes deeper than friendship. You can have a full social life and still feel unseen. Our listeners have heard this from hundreds of people — having friends here does not automatically fill the particular gap that comes from being Indian abroad.' } },
-  { '@type': 'Question', name: 'What if I don\'t want to tell my family back home?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly why LeanOn exists — an anonymous conversation you control completely. You sign up with only a phone number. No one in your family or network back home or in Canada knows.' } },
+  { '@type': 'Question', name: 'What if I don\'t want to tell my family back home?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly why How Was Your Day exists — an anonymous conversation you control completely. You sign up with only a phone number. No one in your family or network back home or in Canada knows.' } },
   { '@type': 'Question', name: 'Is this different from a hotline or crisis line?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This is not a crisis service. It is peer support — a calm, judgment-free conversation with a screened Indian listener. For actual emergencies, please contact local emergency services.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Loneliness in Canada', item: 'https://www.leanon.app/nri-loneliness-canada' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Loneliness in Canada', item: 'https://www.howwasyourday.live/nri-loneliness-canada' },
 ] }
 
 const S = `
@@ -68,7 +68,7 @@ export default function NriLonelinessCanadaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Loneliness in Canada</span></nav>
         <div className="hero">
@@ -89,8 +89,8 @@ export default function NriLonelinessCanadaPage() {
           <p>It is also normal. The transition from Indian social density to Canadian social distance is a real adjustment that takes longer than anyone admits. It passes faster when you talk about it &mdash; particularly when you talk to someone who understands the specific shape of it without needing an explanation.</p>
         </div>
         <div className="section">
-          <h2>How LeanOn works across the ocean</h2>
-          <p>LeanOn listeners are India-based, active in the evenings IST &mdash; which is Canadian morning. Brampton and Toronto are 9.5 hours behind India. An 8am call in Brampton is 5:30pm in India. Surrey and Vancouver are 12.5 hours behind. 8am in Surrey is 8:30pm in India &mdash; perfect listener availability.</p>
+          <h2>How the app works across the ocean</h2>
+          <p>How Was Your Day listeners are India-based, active in the evenings IST &mdash; which is Canadian morning. Brampton and Toronto are 9.5 hours behind India. An 8am call in Brampton is 5:30pm in India. Surrey and Vancouver are 12.5 hours behind. 8am in Surrey is 8:30pm in India &mdash; perfect listener availability.</p>
           <p>You sign up with just your phone number. No photo, no full name, no social account. Your family back home and your colleagues in Canada never know. There is no appointment, no waiting list. Browse who is online right now and start a session. The first 5 minutes are free.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

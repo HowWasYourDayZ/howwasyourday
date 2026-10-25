@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Career Confusion Support India | Job Change Layoff Burnout Help | LeanOn',
+  title: 'Career Confusion Support India | Job Change Layoff Burnout Help | How Was Your Day',
   description: 'Facing a layoff, career switch, or mid-career crisis in India? Talk to peer listeners who have navigated career confusion and found clarity. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/support/career-confusion' },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/career-confusion' },
   openGraph: {
-    title: 'Career Confusion Support — LeanOn',
+    title: 'Career Confusion Support — How Was Your Day',
     description: 'Peer support for career confusion, layoffs, career switches, and mid-career crises in India. Real conversations with people who have been there.',
-    url: 'https://www.leanon.app/support/career-confusion',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/career-confusion',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Career Confusion', item: 'https://www.leanon.app/support/career-confusion' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Career Confusion', item: 'https://www.howwasyourday.live/support/career-confusion' },
   ],
 }
 
@@ -130,7 +130,7 @@ export default function CareerConfusionSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -144,7 +144,7 @@ export default function CareerConfusionSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Career Confusion</p>
           <h1>Career Crossroads Are <em>Hard. You Don&apos;t Have to Navigate Them Alone.</em></h1>
-          <p className="lead">A layoff, a career switch decision, a mid-career crisis — these moments are some of the most disorienting and isolating a working adult faces. LeanOn connects you with peer listeners who have been through career upheaval and found their footing on the other side.</p>
+          <p className="lead">A layoff, a career switch decision, a mid-career crisis — these moments are some of the most disorienting and isolating a working adult faces. How Was Your Day connects you with peer listeners who have been through career upheaval and found their footing on the other side.</p>
         </div>
 
         <div className="section">
@@ -181,19 +181,19 @@ export default function CareerConfusionSupportPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Helps With Career Confusion</h2>
+          <h2>How the app Helps With Career Confusion</h2>
 
           <h3>Not Advice — Perspective</h3>
-          <p>Career coaches and counsellors give advice. LeanOn listeners share perspective — what it actually felt like to leave a stable job, survive a layoff, or make a career pivot. This lived experience is different and often more useful than professional guidance when you are in the thick of the confusion.</p>
+          <p>Career coaches and counsellors give advice. How Was Your Day listeners share perspective — what it actually felt like to leave a stable job, survive a layoff, or make a career pivot. This lived experience is different and often more useful than professional guidance when you are in the thick of the confusion.</p>
 
           <h3>A Space to Say What You Cannot Say Elsewhere</h3>
-          <p>You cannot tell your parents you hate your engineering career. You cannot tell colleagues you are thinking of quitting. You cannot admit to your spouse the extent of the financial fear. LeanOn is the private space where you can say all of it without consequences.</p>
+          <p>You cannot tell your parents you hate your engineering career. You cannot tell colleagues you are thinking of quitting. You cannot admit to your spouse the extent of the financial fear. How Was Your Day is the private space where you can say all of it without consequences.</p>
 
           <h3>Normalising Career Non-Linearity</h3>
           <p>One of the most helpful things a peer listener can do is simply confirm that career confusion, pivots, and setbacks are normal — not signs of failure. Hearing this from someone who has been through it, not just read about it, lands differently.</p>
 
           <h3>Support Through the Transition</h3>
-          <p>Career transitions are not events — they are processes that take months or years. LeanOn provides ongoing support through each phase: the shock, the grief, the uncertainty, the tentative exploration, and the rebuilding.</p>
+          <p>Career transitions are not events — they are processes that take months or years. How Was Your Day provides ongoing support through each phase: the shock, the grief, the uncertainty, the tentative exploration, and the rebuilding.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Understand Career Confusion</h2>
@@ -232,7 +232,7 @@ export default function CareerConfusionSupportPage() {
           <p>Talk to someone who has been through career confusion and found their way. No judgment, no scripts.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk it through — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -262,7 +262,7 @@ export default function CareerConfusionSupportPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Career confusion often connects with other challenges. Explore more peer support on LeanOn:</p>
+          <p>Career confusion often connects with other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/anxiety" className="related-link">Anxiety</a>
             <a href="/support/founder-burnout" className="related-link">Founder Burnout</a>

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Banking Job Stress India — The Pressure That Comes Home With You | LeanOn',
+  title: 'Banking Job Stress India — The Pressure That Comes Home With You | How Was Your Day',
   description: 'Bank jobs in India come with targets, long hours, branch pressure, and the specific exhaustion of working in a high-accountability environment every day. Talk to someone who gets what that weight feels like.',
   keywords: [
     'banking job stress India', 'bank employee burnout India', 'bank job pressure India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'corporate job stress India', 'office job burnout India', 'high pressure job India',
     'job stress and loneliness India', 'banking career burnout India', 'bank job exhausting India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/banking-job-stress-india', languages: { 'en-IN': 'https://www.leanon.app/support/banking-job-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/banking-job-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/banking-job-stress-india' } },
   openGraph: {
-    title: 'Banking Job Stress India — The Pressure That Comes Home With You | LeanOn',
+    title: 'Banking Job Stress India — The Pressure That Comes Home With You | How Was Your Day',
     description: 'Targets, long hours, accountability pressure. The specific exhaustion of a bank job in India. Talk to someone who gets it.',
-    url: 'https://www.leanon.app/support/banking-job-stress-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/banking-job-stress-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Banking Job Stress India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Banking Job Stress India' }],
   },
 }
 
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/browse' },
-    { '@type': 'ListItem', position: 3, name: 'Banking Job Stress India', item: 'https://www.leanon.app/support/banking-job-stress-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/browse' },
+    { '@type': 'ListItem', position: 3, name: 'Banking Job Stress India', item: 'https://www.howwasyourday.live/support/banking-job-stress-india' },
   ],
 }
 
@@ -127,7 +127,7 @@ export default function BankingJobStressIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 
@@ -171,7 +171,7 @@ export default function BankingJobStressIndiaPage() {
           the loneliness, the question of whether this is the life they want.
         </p>
         <p>
-          LeanOn peer listeners are not career coaches. They will not tell you what to do about your job.
+          How Was Your Day peer listeners are not career coaches. They will not tell you what to do about your job.
           They will just listen — to the weight of it, to what it actually feels like — without judgment,
           without advice, without making it about themselves.
         </p>

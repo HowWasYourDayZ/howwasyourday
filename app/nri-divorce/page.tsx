@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Divorce and Separation | Talking Through It With Someone Who Understands | LeanOn',
+  title: 'NRI Divorce and Separation | Talking Through It With Someone Who Understands | How Was Your Day',
   description: 'Divorce as an NRI brings layers no one else quite sees — immigration status, community shame, family in India, assets across borders. Talk to someone who understands.',
   keywords: ['nri divorce', 'nri separation', 'indian divorce abroad', 'nri marriage problems', 'nri divorce usa', 'nri divorce uk', 'indian immigrant divorce'],
-  alternates: { canonical: 'https://www.leanon.app/nri-divorce' },
-  openGraph: { title: 'NRI Divorce and Separation | Talking Through It With Someone Who Understands | LeanOn', description: 'Divorce as an NRI brings layers no one else quite sees — immigration status, community shame, family in India, assets across borders. Talk to someone who understands.', url: 'https://www.leanon.app/nri-divorce', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-divorce' },
+  openGraph: { title: 'NRI Divorce and Separation | Talking Through It With Someone Who Understands | How Was Your Day', description: 'Divorce as an NRI brings layers no one else quite sees — immigration status, community shame, family in India, assets across borders. Talk to someone who understands.', url: 'https://www.howwasyourday.live/nri-divorce', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Is this for before, during, or after separation?', acceptedAnswer: { '@type': 'Answer', text: 'All three. LeanOn listeners are not legal advisors — they are peer listeners for the emotional weight of NRI separation, whether you are still deciding what to do, in the middle of it, or on the other side trying to rebuild. All stages carry real weight and all are heard.' } },
+  { '@type': 'Question', name: 'Is this for before, during, or after separation?', acceptedAnswer: { '@type': 'Answer', text: 'All three. How Was Your Day listeners are not legal advisors — they are peer listeners for the emotional weight of NRI separation, whether you are still deciding what to do, in the middle of it, or on the other side trying to rebuild. All stages carry real weight and all are heard.' } },
   { '@type': 'Question', name: 'Do listeners understand the visa anxiety around divorce?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The specific fear of what happens to your immigration status if the marriage ends — dependent visa, joint sponsorship, H4 expiry — is something listeners understand. You do not have to explain why that anxiety layers onto the emotional grief. They already know the shape of it.' } },
   { '@type': 'Question', name: 'Will this be confidential from my community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your Indian diaspora community, your family in India, and your spouse will never know you spoke to anyone. Confidentiality is absolute.' } },
   { '@type': 'Question', name: 'What about the shame of telling parents in India?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common and most painful parts of NRI separation — the dread of the conversation with parents in India, the anticipated disappointment, the community fallout back home. Listeners understand this weight completely and will hold it with you without judgment.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Divorce', item: 'https://www.leanon.app/nri-divorce' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Divorce', item: 'https://www.howwasyourday.live/nri-divorce' },
 ] }
 
 const S = `
@@ -70,37 +70,37 @@ export default function NriDivorcePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Divorce</span></nav>
         <div className="hero">
           <p className="badge">NRI Divorce &middot; Separation &middot; Indian Abroad</p>
           <h1>You don&rsquo;t need legal advice right now. <em>You need someone to talk to.</em></h1>
           <p className="lead">NRI divorce brings layers that most people around you cannot fully see — immigration status tied to your marriage, community shame that spans two countries, parents in India who don&rsquo;t know yet, children with roots in two places. This is not a legal guide. It is a space to speak the human part of it to someone who understands. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Layers Nobody Else Sees</h2>
           <p>When a marriage ends for an NRI, the grief comes with layers that most people around you — colleagues, local friends, even counsellors unfamiliar with the immigrant experience — will not fully understand. The first layer is the personal loss, which is the same for anyone. But then there are the NRI-specific layers that compound everything.</p>
           <p>If your visa is tied to your spouse, separation is not just emotional — it is existential. Your right to stay in the country you have built your life in is suddenly in question. This fear — which might seem like a practical concern — actually runs deep emotionally, because it means the loss of the marriage might mean the loss of the life, the career, and the identity you have built abroad. That is a specific kind of terror that divorce support resources rarely address.</p>
-          <p>And then there is the conversation with your parents in India. The community back home. The distant relatives whose opinion somehow still matters. The shame that travels faster than news. LeanOn listeners understand all of these layers without needing them explained. You can talk about the emotional weight of the NRI divorce experience — not the legalities, just the human part. First 5 minutes free.</p>
+          <p>And then there is the conversation with your parents in India. The community back home. The distant relatives whose opinion somehow still matters. The shame that travels faster than news. How Was Your Day listeners understand all of these layers without needing them explained. You can talk about the emotional weight of the NRI divorce experience — not the legalities, just the human part. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>Single NRI Parent Abroad — an Invisible Hardship</h2>
           <p>If you have children and your marriage is ending, the situation is even more complex. Children with roots in two countries — who may have family in India they are close to, who have grown up navigating two cultures — face their own identity complications when their parents separate. And you, as a single NRI parent abroad, face the loneliness of parenting in a foreign country without the support network you would have had back home.</p>
-          <p>Your parents in India cannot fly over for every difficult week. Your siblings have their own lives. The diaspora community may be supportive or may be judgmental — and you often cannot predict which. LeanOn is a space where you can speak honestly about all of this without worrying about what it reveals or who it reaches.</p>
+          <p>Your parents in India cannot fly over for every difficult week. Your siblings have their own lives. The diaspora community may be supportive or may be judgmental — and you often cannot predict which. How Was Your Day is a space where you can speak honestly about all of this without worrying about what it reveals or who it reaches.</p>
         </div>
 
         <div className="section">
           <h2>Community Shame That Crosses Borders</h2>
           <p>In Indian communities, divorce still carries a social weight that is hard to overstate. The news travels — through families, through the diaspora community, sometimes through WhatsApp chains that reach people in India before you have had a chance to tell your own parents. The shame is not just about what happened — it is about the public nature of what happened, the fact that people will have opinions, and that those opinions will reach people who matter to you.</p>
-          <p>This shame is a real emotional burden. It layers on top of the grief of the relationship ending and makes it harder to speak honestly about either. LeanOn peer listeners offer something unusual: a completely private, anonymous space to speak it all — the grief, the shame, the fear, the relief, the complexity — to someone who understands the Indian diaspora social context and will judge none of it.</p>
+          <p>This shame is a real emotional burden. It layers on top of the grief of the relationship ending and makes it harder to speak honestly about either. How Was Your Day peer listeners offer something unusual: a completely private, anonymous space to speak it all — the grief, the shame, the fear, the relief, the complexity — to someone who understands the Indian diaspora social context and will judge none of it.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The human weight of NRI separation deserves to be heard.</h2><p>No legal advice. No judgment. Just a real listener who understands. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The human weight of NRI separation deserves to be heard.</h2><p>No legal advice. No judgment. Just a real listener who understands. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

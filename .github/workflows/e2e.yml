@@ -28,7 +28,7 @@ on:
       base_url:
         description: "Deployment URL to test manually"
         required: false
-        default: "https://www.leanon.app"
+        default: "https://www.howwasyourday.live"
 
 permissions:
   contents: read
@@ -91,7 +91,7 @@ jobs:
             echo "Timed out waiting for a successful Vercel preview deployment URL." >&2
             exit 1
           fi
-          base_url="${MANUAL_BASE_URL:-https://www.leanon.app}"
+          base_url="${MANUAL_BASE_URL:-https://www.howwasyourday.live}"
           echo "Using manually selected URL: $base_url"
           echo "base_url=$base_url" >> "$GITHUB_OUTPUT"
 

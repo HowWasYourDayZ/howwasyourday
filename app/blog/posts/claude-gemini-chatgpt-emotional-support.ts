@@ -30,11 +30,11 @@ export const post = {
 
 <h2>What AI Cannot Give You, No Matter How Sophisticated It Gets</h2>
 
-<p><strong>Lived experience.</strong> The core offering of peer emotional support is someone who has been where you are. A listener on LeanOn who has survived a painful divorce does not just know what divorce means — they know the specific texture of it, the particular way meals feel strange, the morning moment when you remember again. That knowledge cannot be trained into a model. It was lived.</p>
+<p><strong>Lived experience.</strong> The core offering of peer emotional support is someone who has been where you are. A listener on How Was Your Day who has survived a painful divorce does not just know what divorce means — they know the specific texture of it, the particular way meals feel strange, the morning moment when you remember again. That knowledge cannot be trained into a model. It was lived.</p>
 
 <p><strong>Memory that accumulates into relationship.</strong> Most AI conversations reset. Even in systems that preserve conversation history, what persists is tokens — not the felt sense of who you are. You explain yourself again from the beginning. Over weeks and months of AI conversations, this becomes its own kind of loneliness: being perpetually met as a stranger.</p>
 
-<p><strong>Accountability.</strong> When a peer listener shows up for your session on LeanOn, they are accountable for that interaction. They applied to be there, went through a process, and have something at stake in the conversation going well. An AI has no stake in your wellbeing. There is no relationship to damage or protect. That accountability creates a quality of presence that changes the conversation — even when you cannot name exactly what it is.</p>
+<p><strong>Accountability.</strong> When a peer listener shows up for your session on How Was Your Day, they are accountable for that interaction. They applied to be there, went through a process, and have something at stake in the conversation going well. An AI has no stake in your wellbeing. There is no relationship to damage or protect. That accountability creates a quality of presence that changes the conversation — even when you cannot name exactly what it is.</p>
 
 <p><strong>The sense that something was received.</strong> Many people who talk to AI about hard things describe a specific feeling afterwards: a hollowness. The words were processed; nothing was held. This can make the original pain feel sharper, not softer — because now it has a shape and a name and is still unreceived. Real human connection does the opposite: the burden is shared. Someone else now knows. That changes something.</p>
 
@@ -54,13 +54,13 @@ export const post = {
 
 <h2>What Real Peer Support Looks Like</h2>
 
-<p>LeanOn connects you with screened peer listeners — real people who have applied, gone through a process, and are there to listen without agenda. They are not therapists. They are not going to diagnose you or give you clinical advice. They are humans who have lived through difficult things and practised listening in real conversations — and who show up, are accountable, and are genuinely present for a conversation.</p>
+<p>How Was Your Day connects you with screened peer listeners — real people who have applied, gone through a process, and are there to listen without agenda. They are not therapists. They are not going to diagnose you or give you clinical advice. They are humans who have lived through difficult things and practised listening in real conversations — and who show up, are accountable, and are genuinely present for a conversation.</p>
 
 <p>Sessions start with a free five minutes. There is no appointment. Listeners are available in twelve Indian languages and speak to experiences that are hard to explain to anyone who has not lived them: immigrant loneliness, family pressure, relationship problems that do not have clean names, the particular weight of holding something alone.</p>
 
 <p>AI can help you understand what you are feeling. A real person can help you feel less alone with it. These are different things, and both matter. The question is which one you actually need right now.</p>
 
-<p>If it is the second one — if you are looking for someone who has genuinely been where you are, who will remember you, and who has something at stake in being present — a peer listener on LeanOn is a better fit than any model, no matter how well-calibrated its responses are.</p>
+<p>If it is the second one — if you are looking for someone who has genuinely been where you are, who will remember you, and who has something at stake in being present — a peer listener on How Was Your Day is a better fit than any model, no matter how well-calibrated its responses are.</p>
 
 <p style="margin-top: 32px"><a href="/browse" style="display:inline-block;background:#0F4867;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700">Browse listeners — first 5 minutes free</a></p>
 

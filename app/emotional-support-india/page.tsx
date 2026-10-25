@@ -3,23 +3,23 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support India — Real People, Real Understanding | LeanOn',
+  title: 'Emotional Support India — Real People, Real Understanding | How Was Your Day',
   description: 'Sometimes you need emotional support, not solutions. Screened peer listeners in India. Anonymous, from ₹160.',
   keywords: ['emotional support India', 'emotional support online India', 'need emotional support India', 'where to get emotional support India', 'emotional support person India'],
-  alternates: { canonical: 'https://www.leanon.app/support/emotional-support', languages: { 'en-IN': 'https://www.leanon.app/support/emotional-support' } },
-  openGraph: { title: 'Emotional Support India — Real People, Real Understanding | LeanOn', description: 'Sometimes you need emotional support, not solutions. Screened peer listeners in India. Anonymous, from ₹160.', url: 'https://www.leanon.app/support/emotional-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-support', languages: { 'en-IN': 'https://www.howwasyourday.live/support/emotional-support' } },
+  openGraph: { title: 'Emotional Support India — Real People, Real Understanding | How Was Your Day', description: 'Sometimes you need emotional support, not solutions. Screened peer listeners in India. Anonymous, from ₹160.', url: 'https://www.howwasyourday.live/support/emotional-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    {'@type': 'Question', name: 'Is emotional support the same as therapy?', acceptedAnswer: {'@type': 'Answer', text: 'No. Therapy is a clinical service provided by licensed professionals. It involves diagnosis, treatment planning, and specific evidence-based interventions. Emotional support &mdash; the kind LeanOn provides &mdash; is peer-based, non-clinical, and focused on being heard rather than treated. Many people benefit from both.'}},
-    {'@type': 'Question', name: 'Who provides emotional support on LeanOn?', acceptedAnswer: {'@type': 'Answer', text: 'Real people &mdash; screened peer listeners with lived experience. They are not AI, not therapists, and not volunteers. They are compensated for their time and screened for active listening and supportive conversation.'}},
+    {'@type': 'Question', name: 'Is emotional support the same as therapy?', acceptedAnswer: {'@type': 'Answer', text: 'No. Therapy is a clinical service provided by licensed professionals. It involves diagnosis, treatment planning, and specific evidence-based interventions. Emotional support &mdash; the kind How Was Your Day provides &mdash; is peer-based, non-clinical, and focused on being heard rather than treated. Many people benefit from both.'}},
+    {'@type': 'Question', name: 'Who provides emotional support on How Was Your Day?', acceptedAnswer: {'@type': 'Answer', text: 'Real people &mdash; screened peer listeners with lived experience. They are not AI, not therapists, and not volunteers. They are compensated for their time and screened for active listening and supportive conversation.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free. No subscription.'}},
     {'@type': 'Question', name: 'Is it anonymous?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. First name only. Listener agrees to keep it confidential.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Emotional Support India', item: 'https://www.leanon.app/support/emotional-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Emotional Support India', item: 'https://www.howwasyourday.live/support/emotional-support' },
 ] }
 
 const S = `
@@ -66,7 +66,7 @@ export default function EmotionalSupportIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Emotional Support India</span></nav>
         <div className="hero">
@@ -81,8 +81,8 @@ export default function EmotionalSupportIndiaPage() {
           <p>This is rarer than it sounds. Most people, when someone they care about is suffering, instinctively move to fix, advise, or minimise. Genuine emotional support requires staying present with the discomfort without trying to make it stop.</p>
         </div>
         <div className="section">
-          <h2>Why LeanOn Listeners Are Different</h2>
-          <p>LeanOn listeners are screened specifically for the skills that make emotional support possible: active listening, reflecting without steering, genuine curiosity, and the capacity to hold complexity without rushing to resolution. They have also been through difficult things themselves &mdash; which means they understand what being heard in a hard moment actually requires.</p>
+          <h2>Why How Was Your Day Listeners Are Different</h2>
+          <p>How Was Your Day listeners are screened specifically for the skills that make emotional support possible: active listening, reflecting without steering, genuine curiosity, and the capacity to hold complexity without rushing to resolution. They have also been through difficult things themselves &mdash; which means they understand what being heard in a hard moment actually requires.</p>
           <p>Sessions are anonymous, available immediately, and start at ₹160. First 5 minutes are free.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

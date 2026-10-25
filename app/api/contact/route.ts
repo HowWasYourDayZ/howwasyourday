@@ -51,18 +51,18 @@ export async function POST(req: NextRequest) {
     // to it. Falls back to ADMIN_EMAIL when CONTACT_EMAIL is unset, so existing
     // deployments keep working unchanged.
     const adminTo = process.env.CONTACT_EMAIL || process.env.ADMIN_EMAIL
-    const fromAddr = process.env.RESEND_FROM || 'LeanOn <onboarding@resend.dev>'
+    const fromAddr = process.env.RESEND_FROM || 'How Was Your Day <onboarding@resend.dev>'
     if (process.env.RESEND_API_KEY && adminTo) {
       const resend = getResend()
       try {
         // NOTE: resend.emails.send returns { data, error } — it does NOT throw on API errors.
         // With onboarding@resend.dev, Resend only delivers to the account-owner's email.
-        // Verify leanon.app as a sending domain and set RESEND_FROM to send anywhere.
+        // Verify howwasyourday.live as a sending domain and set RESEND_FROM to send anywhere.
         const { data, error } = await resend.emails.send({
           from:    fromAddr,
           to:      adminTo,
           replyTo: cleanEmail,
-          subject: `[LeanOn Contact] ${cleanType} from ${cleanName}`,
+          subject: `[How Was Your Day Contact] ${cleanType} from ${cleanName}`,
           html: `
             <p><strong>From:</strong> ${esc(cleanName)} &lt;${esc(cleanEmail)}&gt;</p>
             <p><strong>Topic:</strong> ${esc(cleanType)}</p>
@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
         })
         // Resend's error is a PLAIN object { statusCode, name, message }, not an
         // Error — so `String(error)` yields "[object Object]" and hides the real
-        // reason (e.g. "The leanon.app domain is not verified"). Serialize it.
+        // reason (e.g. "The howwasyourday.live domain is not verified"). Serialize it.
         if (error) logger.error('Resend API rejected the email:', { error: serializeResendError(error) })
         else logger.info('Resend accepted contact email:', { id: data?.id })
       } catch (err) {

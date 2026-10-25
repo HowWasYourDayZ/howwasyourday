@@ -4,17 +4,17 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Vent? Talk to Someone Who Will Actually Listen | LeanOn',
+  title: 'Need to Vent? Talk to Someone Who Will Actually Listen | How Was Your Day',
   description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. First 5 minutes free.",
   keywords: ['need to vent India', 'someone to vent to India', 'want to vent my feelings India', 'need to talk about my problems India', 'need to get things off my chest', 'vent to someone online India', 'talk about my problems India', 'someone to listen to me vent India', 'need to express my feelings India', 'I just want to talk India', 'need to release emotions India', 'emotional outlet India', 'talk to someone who listens India', 'vent without judgment India', 'talk about life problems India'],
-  alternates: { canonical: 'https://www.leanon.app/support/need-to-vent', languages: { 'en-IN': 'https://www.leanon.app/support/need-to-vent' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/need-to-vent', languages: { 'en-IN': 'https://www.howwasyourday.live/support/need-to-vent' } },
   openGraph: {
-    title: 'Need to Vent? Talk to Someone Who Will Actually Listen | LeanOn',
+    title: 'Need to Vent? Talk to Someone Who Will Actually Listen | How Was Your Day',
     description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. First 5 minutes free.",
-    url: 'https://www.leanon.app/support/need-to-vent',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/need-to-vent',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn - someone to vent to in India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day - someone to vent to in India' }],
   },
 }
 
@@ -22,7 +22,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I just need to vent to someone \u2014 where can I do that?", acceptedAnswer: { '@type': 'Answer', text: "Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what LeanOn is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "I just need to vent to someone \u2014 where can I do that?", acceptedAnswer: { '@type': 'Answer', text: "Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what How Was Your Day is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Your first 5 minutes are free." } },
     {
       '@type': 'Question',
       name: 'Why is venting to someone important for mental health?',
@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'What is the difference between venting and therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Venting is about expression — getting it out, being heard, releasing what has been building. Therapy is about treatment — diagnosis, structured intervention, working through patterns over time. Both have value, and they are different. Most people who need to vent do not need therapy. They need someone who will listen without judging, without redirecting, and without immediately trying to fix the problem. That is what LeanOn peer listeners offer.',
+        text: 'Venting is about expression — getting it out, being heard, releasing what has been building. Therapy is about treatment — diagnosis, structured intervention, working through patterns over time. Both have value, and they are different. Most people who need to vent do not need therapy. They need someone who will listen without judging, without redirecting, and without immediately trying to fix the problem. That is what How Was Your Day peer listeners offer.',
       },
     },
     {
@@ -52,12 +52,12 @@ const faqSchema = {
       name: 'What should I do when I want to vent but have no one to talk to?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'This is exactly what LeanOn is built for. Browse listener profiles, pick someone whose experience resonates, and book a session. You do not have to prepare anything. You do not have to have it figured out. You can open with \'I just need to talk about something\' — and go from there.',
+        text: 'This is exactly what How Was Your Day is built for. Browse listener profiles, pick someone whose experience resonates, and book a session. You do not have to prepare anything. You do not have to have it figured out. You can open with \'I just need to talk about something\' — and go from there.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Will a LeanOn listener give me advice when I vent?',
+      name: 'Will a How Was Your Day listener give me advice when I vent?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Only if you ask for it. Peer listeners are screened for active listening, which means their job is to hear you — not to advise you, fix you, or steer you to a conclusion. If you want to vent without receiving opinions, say so at the start. Your listener will follow your lead.',
@@ -78,9 +78,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Need to Vent', item: 'https://www.leanon.app/support/need-to-vent' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Need to Vent', item: 'https://www.howwasyourday.live/support/need-to-vent' },
   ],
 }
 
@@ -141,7 +141,7 @@ export default function NeedToVentPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -159,8 +159,8 @@ export default function NeedToVentPage() {
         <div className="hero">
           <p className="tag">Peer Support · Venting &amp; Expression</p>
           <h1>Need to <em>Vent</em>? Someone Is Ready to Listen</h1>
-          <p className="lead">Sometimes you do not need advice. You do not need a solution. You just need to say what you have been carrying — and have someone actually hear it. LeanOn peer listeners listen without judgment, without redirecting, and without rushing to fix anything.</p>
-          <QuickAnswer question={"I just need to vent to someone \u2014 where can I do that?"} answer={"Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what LeanOn is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Your first 5 minutes are free."} />
+          <p className="lead">Sometimes you do not need advice. You do not need a solution. You just need to say what you have been carrying — and have someone actually hear it. How Was Your Day peer listeners listen without judgment, without redirecting, and without rushing to fix anything.</p>
+          <QuickAnswer question={"I just need to vent to someone \u2014 where can I do that?"} answer={"Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what How Was Your Day is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Your first 5 minutes are free."} />
         </div>
 
         <div className="section">
@@ -206,13 +206,13 @@ export default function NeedToVentPage() {
           <h2>What a Peer Listener Offers That No One Else Can</h2>
 
           <h3>A Dedicated Space With No Social Consequence</h3>
-          <p>When you talk to a LeanOn peer listener, you are in a space that exists entirely for your expression. The listener has no prior relationship with you. They have no stake in what you decide. They are not going to tell anyone what you said. The social consequence of speaking honestly — the reason you censor yourself with friends and family — simply does not exist here. You can say the thing you have not been able to say anywhere else.</p>
+          <p>When you talk to a How Was Your Day peer listener, you are in a space that exists entirely for your expression. The listener has no prior relationship with you. They have no stake in what you decide. They are not going to tell anyone what you said. The social consequence of speaking honestly — the reason you censor yourself with friends and family — simply does not exist here. You can say the thing you have not been able to say anywhere else.</p>
 
           <h3>Screened to Not Fix or Judge</h3>
-          <p>Active listening is a skill. LeanOn peer listeners are screened for it. They know how to hear you without immediately pivoting to advice. They know how to reflect back what you are saying in ways that help you hear yourself. They know how to hold the space for you to keep talking — because sometimes what you need most is not a response but more room to speak. You can vent for 20 minutes and have a listener who is genuinely receiving every word without trying to redirect you.</p>
+          <p>Active listening is a skill. How Was Your Day peer listeners are screened for it. They know how to hear you without immediately pivoting to advice. They know how to reflect back what you are saying in ways that help you hear yourself. They know how to hold the space for you to keep talking — because sometimes what you need most is not a response but more room to speak. You can vent for 20 minutes and have a listener who is genuinely receiving every word without trying to redirect you.</p>
 
           <h3>Someone Who Has Been There</h3>
-          <p>LeanOn listeners are not trained counsellors — they are people who have personally navigated difficult experiences and want to help others do the same. When you vent about something they have been through, they hear it with a recognition that a stranger-by-training cannot offer. That recognition — the sense that someone genuinely understands the specific texture of what you are describing — is often what people most need.</p>
+          <p>How Was Your Day listeners are not trained counsellors — they are people who have personally navigated difficult experiences and want to help others do the same. When you vent about something they have been through, they hear it with a recognition that a stranger-by-training cannot offer. That recognition — the sense that someone genuinely understands the specific texture of what you are describing — is often what people most need.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Know How to Hear You</h2>
@@ -251,7 +251,7 @@ export default function NeedToVentPage() {
           <p>A peer listener is ready right now — no judgment, no advice unless you want it, no social consequence. Start with a free trial session.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Just say it — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -267,7 +267,7 @@ export default function NeedToVentPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more ways to feel heard on LeanOn:</p>
+          <p>Explore more ways to feel heard on How Was Your Day:</p>
           <div className="related">
             <a href="/support/someone-to-talk-to" className="related-link">Someone to Talk To</a>
             <a href="/support/loneliness" className="related-link">Loneliness</a>

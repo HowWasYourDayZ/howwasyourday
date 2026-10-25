@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Hyderabad — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Hyderabad, India. No appointment needed. Talk anonymously on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/hyderabad', languages: { 'en-IN': 'https://www.leanon.app/hyderabad' } },
-  keywords: 'peer support Hyderabad, emotional support Hyderabad, loneliness Hyderabad, WFH isolation Hyderabad, career confusion Hyderabad, leanon Hyderabad',
+  title: 'Emotional Support in Hyderabad — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Hyderabad, India. No appointment needed. Talk anonymously on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/hyderabad', languages: { 'en-IN': 'https://www.howwasyourday.live/hyderabad' } },
+  keywords: 'peer support Hyderabad, emotional support Hyderabad, loneliness Hyderabad, WFH isolation Hyderabad, career confusion Hyderabad, howwasyourday Hyderabad',
   openGraph: {
-    title: 'Emotional Support in Hyderabad — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Hyderabad, India. No appointment needed. Talk anonymously on LeanOn.',
-    url: 'https://www.leanon.app/hyderabad',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Hyderabad — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Hyderabad, India. No appointment needed. Talk anonymously on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/hyderabad',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -49,15 +49,15 @@ const faqSchema = {
       name: 'Is career confusion common among tech workers in Hyderabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Very. Many people come to Hyderabad for a specific job — and then find themselves, one or two years in, questioning whether this is what they actually want. The tech sector here is large enough to create a sense that everyone else knows exactly what they are doing, which amplifies individual career anxiety. Questions like "Am I in the right field?", "Should I stay in tech or pivot?", and "Why do I feel so hollow when I\'m doing well by every external measure?" come up frequently on LeanOn from Hyderabad users.',
+        text: 'Very. Many people come to Hyderabad for a specific job — and then find themselves, one or two years in, questioning whether this is what they actually want. The tech sector here is large enough to create a sense that everyone else knows exactly what they are doing, which amplifies individual career anxiety. Questions like "Am I in the right field?", "Should I stay in tech or pivot?", and "Why do I feel so hollow when I\'m doing well by every external measure?" come up frequently on How Was Your Day from Hyderabad users.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from other mental health apps available in Hyderabad?',
+      name: 'How is How Was Your Day different from other mental health apps available in Hyderabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Most mental health apps are either therapy platforms (high cost, scheduled sessions, clinical focus) or meditation apps (useful but passive). LeanOn is peer support — real humans who have been through what you are going through, chosen for how well they listen and support without judgment. Sessions start at ₹160 for 15 minutes, with no appointment. It is, accessible from anywhere, and requires no prior mental health history or diagnosis. For the everyday emotional weight of life in Hyderabad, it fills a gap that other options do not.',
+        text: 'Most mental health apps are either therapy platforms (high cost, scheduled sessions, clinical focus) or meditation apps (useful but passive). How Was Your Day is peer support — real humans who have been through what you are going through, chosen for how well they listen and support without judgment. Sessions start at ₹160 for 15 minutes, with no appointment. It is, accessible from anywhere, and requires no prior mental health history or diagnosis. For the everyday emotional weight of life in Hyderabad, it fills a gap that other options do not.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Hyderabad', item: 'https://www.leanon.app/hyderabad' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Hyderabad', item: 'https://www.howwasyourday.live/hyderabad' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/hyderabad',
+  url: 'https://www.howwasyourday.live/hyderabad',
   areaServed: {
     '@type': 'City',
     name: 'Hyderabad',
@@ -148,7 +148,7 @@ export default function HyderabadPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function HyderabadPage() {
         <div className="hero">
           <p className="tag">Peer Support · Hyderabad</p>
           <h1>Peer Support in Hyderabad — Because Even <em>HiTech City Has Hard Days</em></h1>
-          <p className="lead">Hyderabad has grown faster than almost any other Indian city — and with that growth has come a wave of people navigating relocation loneliness, WFH isolation, career confusion, and the specific exhaustion of building a life in a city that is still figuring out what it wants to be. LeanOn connects you with peer listeners who understand.</p>
+          <p className="lead">Hyderabad has grown faster than almost any other Indian city — and with that growth has come a wave of people navigating relocation loneliness, WFH isolation, career confusion, and the specific exhaustion of building a life in a city that is still figuring out what it wants to be. How Was Your Day connects you with peer listeners who understand.</p>
         </div>
 
         {/* Hyderabad's growth and emotional cost */}
@@ -207,7 +207,7 @@ export default function HyderabadPage() {
           <p>The first six months in Hyderabad are often the hardest. The novelty of a new city wears off quickly. The work is demanding and leaves little energy for socialising. The social opportunities that exist — industry events, weekend activities — feel performative and transactional rather than genuinely connecting. Many people in this phase describe a deep ambivalence: grateful for the opportunity, but quietly wondering whether they made the right choice.</p>
 
           <h3>Cultural Navigation</h3>
-          <p>Hyderabad has a distinctive culture — Hyderabadi warmth, the food, the Deccani sensibility, the particular mix of tradition and modernity. For people arriving from very different cultural contexts — North India, South India, other countries — learning to navigate that culture while also doing a demanding job and trying to build a life takes time and energy. LeanOn listeners who have been through this transition can make the process feel less isolating.</p>
+          <p>Hyderabad has a distinctive culture — Hyderabadi warmth, the food, the Deccani sensibility, the particular mix of tradition and modernity. For people arriving from very different cultural contexts — North India, South India, other countries — learning to navigate that culture while also doing a demanding job and trying to build a life takes time and energy. How Was Your Day listeners who have been through this transition can make the process feel less isolating.</p>
 
           <h3>When the Excitement Fades</h3>
           <p>Most people come to Hyderabad with a story about why this move is good — the opportunity, the growth, the adventure. That story is useful in the early days. But when the excitement fades and the reality of daily life sets in, there is often a reckoning: is this actually what I want? That question deserves a proper conversation with someone who has been through it and come out the other side.</p>
@@ -272,18 +272,18 @@ export default function HyderabadPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is career confusion common among tech workers in Hyderabad?</div>
-            <div className="faq-a">Very. Many people come to Hyderabad for a specific job — and then find themselves, one or two years in, questioning whether this is what they actually want. Questions like "Am I in the right field?" and "Why do I feel so hollow when I'm doing well by every external measure?" come up frequently on LeanOn from Hyderabad users.</div>
+            <div className="faq-a">Very. Many people come to Hyderabad for a specific job — and then find themselves, one or two years in, questioning whether this is what they actually want. Questions like "Am I in the right field?" and "Why do I feel so hollow when I'm doing well by every external measure?" come up frequently on How Was Your Day from Hyderabad users.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How is LeanOn different from other mental health apps available in Hyderabad?</div>
-            <div className="faq-a">Most mental health apps are either therapy platforms (high cost, scheduled sessions) or meditation apps (passive). LeanOn is peer support — real humans who have been through what you are going through, chosen for how well they listen without judgment. Sessions start at ₹160 for 15 minutes, with no appointment. No prior mental health history needed. For the everyday emotional weight of life in Hyderabad, it fills a gap that other options do not.</div>
+            <div className="faq-q">How is How Was Your Day different from other mental health apps available in Hyderabad?</div>
+            <div className="faq-a">Most mental health apps are either therapy platforms (high cost, scheduled sessions) or meditation apps (passive). How Was Your Day is peer support — real humans who have been through what you are going through, chosen for how well they listen without judgment. Sessions start at ₹160 for 15 minutes, with no appointment. No prior mental health history needed. For the everyday emotional weight of life in Hyderabad, it fills a gap that other options do not.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
             <a href="/support/founder-burnout" className="related-link">Founder Burnout</a>
@@ -296,9 +296,9 @@ export default function HyderabadPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

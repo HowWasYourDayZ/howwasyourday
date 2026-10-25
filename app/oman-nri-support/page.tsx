@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Support for Indians in Oman | Emotional Support Online | LeanOn',
+  title: 'NRI Support for Indians in Oman | Emotional Support Online | How Was Your Day',
   description: 'Emotional support for Indians living and working in Oman. Talk anonymously to a screened Indian peer listener who understands the Gulf expat experience. Free trial.',
   keywords: [
     'NRI support Oman', 'Indian expat Oman emotional support', 'Indians in Oman lonely',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'NRI Oman talk to someone', 'Muscat Indian emotional support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/oman-nri-support',
-    languages: { 'en-IN': 'https://www.leanon.app/oman-nri-support' },
+    canonical: 'https://www.howwasyourday.live/oman-nri-support',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/oman-nri-support' },
   },
   openGraph: {
-    title: 'NRI Emotional Support for Indians in Oman | LeanOn',
+    title: 'NRI Emotional Support for Indians in Oman | How Was Your Day',
     description: 'Indian in Oman and feeling the weight of expat life? Talk anonymously to a peer listener who understands. First 5 minutes free.',
-    url: 'https://www.leanon.app/oman-nri-support',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/oman-nri-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Is there emotional support available for Indians in Oman?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn connects you with screened Indian peer listeners who understand Gulf expat life. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes. No appointment needed.',
+        text: 'Yes. How Was Your Day connects you with screened Indian peer listeners who understand Gulf expat life. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes. No appointment needed.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can I talk in Malayalam, Hindi or Tamil?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn supports twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, and Gujarati. The Kerala community is very large in Oman — there are Malayalam-speaking listeners available.',
+        text: 'Yes. How Was Your Day supports twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, and Gujarati. The Kerala community is very large in Oman — there are Malayalam-speaking listeners available.',
       },
     },
     {
@@ -81,7 +81,7 @@ export default function OmanNriSupportPage() {
         </h1>
 
         <p style={{ fontSize: '1.05rem', color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          The Indian community in Oman — particularly from Kerala, Tamil Nadu, and Andhra Pradesh — is one of the largest in the Gulf. But the size of the community does not close the emotional gap that expat life creates. LeanOn is a screened peer listener who understands the specific weight of this life, available anonymously any hour of the day.
+          The Indian community in Oman — particularly from Kerala, Tamil Nadu, and Andhra Pradesh — is one of the largest in the Gulf. But the size of the community does not close the emotional gap that expat life creates. How Was Your Day is a screened peer listener who understands the specific weight of this life, available anonymously any hour of the day.
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>
@@ -93,7 +93,7 @@ export default function OmanNriSupportPage() {
           There is a specific loneliness that comes with being an NRI in the Gulf: you are successful by every external measure, your family is proud, your friends back home assume you are living a good life — and you are still carrying something heavy that you cannot quite put into words or share with anyone around you.
         </p>
         <p style={{ color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          The financial pressure is real. The distance from family is real. The isolation of not having anyone close enough to say the true thing to is real. LeanOn is designed for exactly this — not therapy, not a helpline, but a screened human listener who has lived something similar and will not minimise what you are carrying.
+          The financial pressure is real. The distance from family is real. The isolation of not having anyone close enough to say the true thing to is real. How Was Your Day is designed for exactly this — not therapy, not a helpline, but a screened human listener who has lived something similar and will not minimise what you are carrying.
         </p>
 
         <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 16 }}>Frequently Asked Questions</h2>

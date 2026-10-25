@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Dating in the UK | British Indian Dating | LeanOn',
+  title: 'NRI Dating in the UK | British Indian Dating | How Was Your Day',
   description: 'Dating as a British Indian is its own kind of complicated — family expectations, cultural identity, community gossip. Talk to someone who gets it without you explaining.',
   keywords: ['nri dating uk', 'british indian dating', 'desi dating uk', 'dating indian in uk', 'british asian dating problems', 'second generation indian dating uk'],
-  alternates: { canonical: 'https://www.leanon.app/nri-dating-uk' },
-  openGraph: { title: 'NRI Dating in the UK | British Indian Dating | LeanOn', description: 'Dating as a British Indian is its own kind of complicated — family expectations, cultural identity, community gossip. Talk to someone who gets it without you explaining.', url: 'https://www.leanon.app/nri-dating-uk', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-dating-uk' },
+  openGraph: { title: 'NRI Dating in the UK | British Indian Dating | How Was Your Day', description: 'Dating as a British Indian is its own kind of complicated — family expectations, cultural identity, community gossip. Talk to someone who gets it without you explaining.', url: 'https://www.howwasyourday.live/nri-dating-uk', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand British Indian dating culture?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the British Indian diaspora experience — the generational dynamics, the community gossip, the expectations around who you should marry and when. They won\'t need the cultural context explained.' } },
+  { '@type': 'Question', name: 'Do listeners understand British Indian dating culture?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the British Indian diaspora experience — the generational dynamics, the community gossip, the expectations around who you should marry and when. They won\'t need the cultural context explained.' } },
   { '@type': 'Question', name: 'What if I\'m in a secret relationship and it\'s taking a toll?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly the kind of weight peer support is for. The exhaustion of a hidden relationship, the fear of coming out to your family, the guilt and the longing — a listener will hear all of it without judgement.' } },
-  { '@type': 'Question', name: 'Is this for British Indians of all backgrounds — Punjabi, Gujarati, Tamil?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners have cultural familiarity across North and South Indian backgrounds. Your specific community context doesn\'t need extensive explanation.' } },
+  { '@type': 'Question', name: 'Is this for British Indians of all backgrounds — Punjabi, Gujarati, Tamil?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners have cultural familiarity across North and South Indian backgrounds. Your specific community context doesn\'t need extensive explanation.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, community, or anyone else.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Dating UK', item: 'https://www.leanon.app/nri-dating-uk' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Dating UK', item: 'https://www.howwasyourday.live/nri-dating-uk' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function NriDatingUkPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Dating UK</span></nav>
         <div className="hero">
@@ -84,7 +84,7 @@ export default function NriDatingUkPage() {
           <h2>British Indian Dating: Living in the Gap</h2>
           <p>The British Indian dating experience is one of the most under-talked-about sources of genuine stress in the diaspora. You have grown up in Britain — with British friends, British cultural references, British ideas about relationships and love and personal freedom. You have also grown up Indian — with an Indian family, Indian food and festivals and language at home, Indian community events on the weekends, Indian expectations about who you should marry and when and how.</p>
           <p>These two cultures have very different ideas about love and commitment. British dating culture — apps, casual dating, taking your time, sleeping together before commitment, leaving if it isn&rsquo;t working — is the water you swim in at work and with your non-Indian friends. Indian family culture has different expectations: a match of suitable family background, involvement of parents, marriage as a life commitment not easily undone, the community&rsquo;s opinion mattering.</p>
-          <p>You are navigating both of these simultaneously, often in secret from one side or the other. It is genuinely exhausting. LeanOn is a space to say all of it — to a real Indian peer listener who understands both sides completely. First 5 minutes free.</p>
+          <p>You are navigating both of these simultaneously, often in secret from one side or the other. It is genuinely exhausting. How Was Your Day is a space to say all of it — to a real Indian peer listener who understands both sides completely. First 5 minutes free.</p>
         </div>
 
         <div className="section">

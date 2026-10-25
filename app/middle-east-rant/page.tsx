@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Rant? Talk to Someone in the Middle East | LeanOn',
-  description: 'Work stress, kafala pressures, visa anxieties, being far from everyone who cares — sometimes you just need to vent to someone who will listen without judgment. That\'s LeanOn.',
+  title: 'Need to Rant? Talk to Someone in the Middle East | How Was Your Day',
+  description: 'Work stress, kafala pressures, visa anxieties, being far from everyone who cares — sometimes you just need to vent to someone who will listen without judgment. That\'s How Was Your Day.',
   keywords: [
     'need to rant Middle East', 'vent to someone Middle East', 'talk to someone Gulf',
     'Indian expat rant Middle East', 'work stress Gulf Indian', 'kafala pressure',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'just need to talk Middle East', 'someone to listen Gulf Indian',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/middle-east-rant',
-    languages: { 'en-IN': 'https://www.leanon.app/middle-east-rant' },
+    canonical: 'https://www.howwasyourday.live/middle-east-rant',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/middle-east-rant' },
   },
   openGraph: {
     title: 'Need to Rant? There\'s an Indian Listener Ready in the Gulf — First 5 Min Free',
     description: 'Work stress, visa anxieties, kafala pressures — sometimes you just need someone to hear you out without fixing, judging, or minimising what you feel.',
-    url: 'https://www.leanon.app/middle-east-rant',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/middle-east-rant',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -31,10 +31,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn just to vent — without wanting advice?',
+      name: 'Can I use How Was Your Day just to vent — without wanting advice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, absolutely. LeanOn listeners are screened and expected to listen first — not to fix, advise, or redirect. If you just need to get it all out, say so at the start and your listener will simply hold space for you.',
+        text: 'Yes, absolutely. How Was Your Day listeners are screened and expected to listen first — not to fix, advise, or redirect. If you just need to get it all out, say so at the start and your listener will simply hold space for you.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Is it safe to talk openly? Will anything I say be shared?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn sessions are completely private. You can use an anonymous name — nothing is linked to your real identity. Your employer, visa sponsor, family, and anyone else will never know what you said. You can speak without filters.',
+        text: 'How Was Your Day sessions are completely private. You can use an anonymous name — nothing is linked to your real identity. Your employer, visa sponsor, family, and anyone else will never know what you said. You can speak without filters.',
       },
     },
     {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'What if I do not know what I want to say — I just feel overwhelmed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Perfect. Start talking and let it come out. LeanOn listeners are patient — they will follow your lead, gently ask questions when helpful, and make you feel heard without rushing you. Sometimes just starting is the hardest part.',
+        text: 'Perfect. Start talking and let it come out. How Was Your Day listeners are patient — they will follow your lead, gently ask questions when helpful, and make you feel heard without rushing you. Sometimes just starting is the hardest part.',
       },
     },
   ],
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Need to Rant Middle East', item: 'https://www.leanon.app/middle-east-rant' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Need to Rant Middle East', item: 'https://www.howwasyourday.live/middle-east-rant' },
   ],
 }
 
@@ -155,7 +155,7 @@ export default function MiddleEastRantPage() {
           Living and working in the Gulf as an Indian carries pressures that build up slowly — and then
           all at once. The work stress. The visa anxiety. Being away from everyone who truly knows you.
           Sometimes you do not need a solution. You just need to rant to someone who actually listens.
-          That is exactly what LeanOn is for.
+          That is exactly what How Was Your Day is for.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
@@ -177,7 +177,7 @@ export default function MiddleEastRantPage() {
         <div className="night-box">
           <h2>🔥 Something just happened and you need to talk right now</h2>
           <p>Whether it was today at work, a call that went badly, a decision that does not feel right —
-            LeanOn listeners are available on Indian time. You do not have to wait until it passes.</p>
+            How Was Your Day listeners are available on Indian time. You do not have to wait until it passes.</p>
           <p>Start talking in your language. First 5 minutes are free, no payment needed to begin.</p>
           <a href="/browse" className="cta-night">Find a listener right now →</a>
         </div>
@@ -186,14 +186,14 @@ export default function MiddleEastRantPage() {
           <h2>A listener who just listens — no unsolicited advice</h2>
           <p>The most frustrating thing about venting to someone is when they immediately try to fix it,
             minimise it, or tell you what you should have done differently.</p>
-          <p>LeanOn listeners are screened and expected to listen first. If you just want to get it all out, tell your
+          <p>How Was Your Day listeners are screened and expected to listen first. If you just want to get it all out, tell your
             listener that at the start — and they will hold that space for you, fully and patiently,
             without jumping in with solutions you did not ask for.</p>
         </div>
 
         <div className="card">
           <h2>Completely safe. Completely private.</h2>
-          <p>In the Gulf, speaking openly about frustrations at work can feel risky. LeanOn sessions
+          <p>In the Gulf, speaking openly about frustrations at work can feel risky. How Was Your Day sessions
             are anonymous — you can use any name. Your employer, sponsor, and anyone you know will
             never find out what you said. You can speak without a filter, without consequences.</p>
         </div>
@@ -208,7 +208,7 @@ export default function MiddleEastRantPage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>Can I use LeanOn just to vent — without wanting advice?</h3>
+            <h3>Can I use How Was Your Day just to vent — without wanting advice?</h3>
             <p>Yes, absolutely. Tell your listener at the start and they will simply hold space for you to
               get it all out, without fixing or redirecting.</p>
           </div>
@@ -219,7 +219,7 @@ export default function MiddleEastRantPage() {
           </div>
           <div className="faq-item">
             <h3>Is it safe to talk openly without being identified?</h3>
-            <p>Completely. LeanOn sessions are anonymous — nothing is linked to your real identity. Your
+            <p>Completely. How Was Your Day sessions are anonymous — nothing is linked to your real identity. Your
               employer and sponsor will never know. Speak without filters.</p>
           </div>
           <div className="faq-item">
@@ -229,7 +229,7 @@ export default function MiddleEastRantPage() {
           </div>
           <div className="faq-item">
             <h3>What if I do not know what to say — I just feel overwhelmed?</h3>
-            <p>Just start. LeanOn listeners will follow your lead patiently. Sometimes just starting is
+            <p>Just start. How Was Your Day listeners will follow your lead patiently. Sometimes just starting is
               the hardest part — and they are screened and expected to help you through that.</p>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function MiddleEastRantPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

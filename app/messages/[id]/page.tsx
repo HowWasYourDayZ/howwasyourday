@@ -157,7 +157,7 @@ export default function MessageThreadPage({ params }: { params: { id: string } }
 
           {thread.iAmListener && (
             <div style={{ marginTop: 12, background: '#F0F8FC', border: '1.5px solid #D5EEF6', borderRadius: 14, padding: '14px 16px', fontSize: 13, fontWeight: 600, color: '#5A7A8A', lineHeight: 1.6 }}>
-              💡 Reach back out with one tap. Go online, then tap the button below — we&apos;ll let {thread.otherName} know you&apos;re available and send them to your profile to start a live session. (You can&apos;t chat here — LeanOn keeps support to live sessions.)
+              💡 Reach back out with one tap. Go online, then tap the button below — we&apos;ll let {thread.otherName} know you&apos;re available and send them to your profile to start a live session. (You can&apos;t chat here — How Was Your Day keeps support to live sessions.)
             </div>
           )}
 

@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Rant? Someone to Listen in Canada | LeanOn',
-  description: 'Immigration stress, work frustration, cost of living pressure — sometimes you just need to vent to someone who actually listens. LeanOn listeners are here for exactly this.',
+  title: 'Need to Rant? Someone to Listen in Canada | How Was Your Day',
+  description: 'Immigration stress, work frustration, cost of living pressure — sometimes you just need to vent to someone who actually listens. How Was Your Day listeners are here for exactly this.',
   keywords: [
     'need to rant canada', 'someone to vent to canada', 'vent to someone canada',
     'immigration frustration canada', 'rant about work canada indian', 'need to talk canada',
     'frustrated in canada immigrant', 'south asian vent canada', 'stress relief canada',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada-rant-to-someone',
-    languages: { 'en-CA': 'https://www.leanon.app/canada-rant-to-someone' },
+    canonical: 'https://www.howwasyourday.live/canada-rant-to-someone',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada-rant-to-someone' },
   },
   openGraph: {
-    title: 'Need to Rant? Someone to Listen in Canada | LeanOn',
-    description: 'Tired of holding it all together? LeanOn peer listeners will hear you out — no judgment, no unsolicited advice, no "just think positive".',
-    url: 'https://www.leanon.app/canada-rant-to-someone',
-    siteName: 'LeanOn',
+    title: 'Need to Rant? Someone to Listen in Canada | How Was Your Day',
+    description: 'Tired of holding it all together? How Was Your Day peer listeners will hear you out — no judgment, no unsolicited advice, no "just think positive".',
+    url: 'https://www.howwasyourday.live/canada-rant-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'Can I just rant without being given advice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. You can tell your LeanOn listener upfront — "I just need to vent, I am not looking for advice right now." Listeners are screened and expected to follow your lead. If you want to be heard without solutions being thrown at you, that is exactly what you will get.',
+        text: 'Absolutely. You can tell your How Was Your Day listener upfront — "I just need to vent, I am not looking for advice right now." Listeners are screened and expected to follow your lead. If you want to be heard without solutions being thrown at you, that is exactly what you will get.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Is it okay to rant about immigration or work frustration?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — and many people do. PR delays, Express Entry uncertainty, credential recognition frustrations, cost of living stress — these are legitimate, heavy burdens. You do not have to explain or justify why they upset you. A LeanOn listener is here to hear it all.',
+        text: 'Yes — and many people do. PR delays, Express Entry uncertainty, credential recognition frustrations, cost of living stress — these are legitimate, heavy burdens. You do not have to explain or justify why they upset you. A How Was Your Day listener is here to hear it all.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'Will the listener judge me for what I say?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn listeners are screened and expected to listen without judgment. Whatever you are feeling — frustration, resentment, regret, anger — you can say it freely. This is a space where you do not have to manage other people\'s reactions to your emotions.',
+        text: 'No. How Was Your Day listeners are screened and expected to listen without judgment. Whatever you are feeling — frustration, resentment, regret, anger — you can say it freely. This is a space where you do not have to manage other people\'s reactions to your emotions.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Rant to Someone Canada', item: 'https://www.leanon.app/canada-rant-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Rant to Someone Canada', item: 'https://www.howwasyourday.live/canada-rant-to-someone' },
   ],
 }
 
@@ -152,13 +152,13 @@ export default function CanadaRantPage() {
         <p className="lead">
           You have been holding it together for so long. The immigration stress, the work frustration,
           the cost of living, the loneliness — and nobody around you seems to have the time or the
-          bandwidth to actually hear you. LeanOn listeners are here for exactly this.
+          bandwidth to actually hear you. How Was Your Day listeners are here for exactly this.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
 
         <div className="card">
-          <h2>Things people come to LeanOn to get off their chest</h2>
+          <h2>Things people come to How Was Your Day to get off their chest</h2>
           <ul className="checklist">
             <li>Another PR delay, another Express Entry round gone without a pick</li>
             <li>A manager who doesn&apos;t respect your Indian degree or your experience</li>
@@ -174,7 +174,7 @@ export default function CanadaRantPage() {
           <h2>😤 No advice. No silver linings. Just someone who listens.</h2>
           <p>How many times have you started to share something real and someone immediately said
             &quot;at least you have X&quot; or &quot;just think positive&quot;? It makes you feel worse, not better.</p>
-          <p>LeanOn listeners are screened and expected to NOT do that. You can rant, cry, repeat yourself, circle back.
+          <p>How Was Your Day listeners are screened and expected to NOT do that. You can rant, cry, repeat yourself, circle back.
             They will stay with you through all of it — without rushing you toward resolution.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -184,7 +184,7 @@ export default function CanadaRantPage() {
           <p>Friends and family are wonderful — but they have their own worries. They have opinions
             about your situation. They might repeat things. You end up managing their reaction while
             also trying to express your own feelings.</p>
-          <p>A LeanOn listener has no stake in your story. No shared history to protect. No community
+          <p>A How Was Your Day listener has no stake in your story. No shared history to protect. No community
             to gossip with. Just your words, and their full attention.</p>
         </div>
 
@@ -216,7 +216,7 @@ export default function CanadaRantPage() {
           <div className="faq-item">
             <h3>Is it okay to rant about immigration or work frustration?</h3>
             <p>Yes — and many people do. PR delays, Express Entry stress, credential frustrations, cost of
-              living pressure — all of it is valid and a LeanOn listener is here to hear it.</p>
+              living pressure — all of it is valid and a How Was Your Day listener is here to hear it.</p>
           </div>
           <div className="faq-item">
             <h3>What if I do not even know what I want to say?</h3>
@@ -229,7 +229,7 @@ export default function CanadaRantPage() {
           </div>
           <div className="faq-item">
             <h3>Will the listener judge me for what I say?</h3>
-            <p>No. LeanOn listeners are screened and expected to listen without judgment. Whatever you are feeling —
+            <p>No. How Was Your Day listeners are screened and expected to listen without judgment. Whatever you are feeling —
               frustration, resentment, regret, anger — you can say it freely here.</p>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function CanadaRantPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

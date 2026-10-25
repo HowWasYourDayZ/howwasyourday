@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in the USA — The Silent Side of the American Dream | LeanOn',
-  description: 'Millions of Indians in the USA feel deeply lonely — in suburbs with no community, in tech jobs with no warmth, missing home across time zones. LeanOn connects you with a real Indian listener who gets it.',
+  title: 'Feeling Lonely in the USA — The Silent Side of the American Dream | How Was Your Day',
+  description: 'Millions of Indians in the USA feel deeply lonely — in suburbs with no community, in tech jobs with no warmth, missing home across time zones. How Was Your Day connects you with a real Indian listener who gets it.',
   keywords: [
     'lonely in usa indian', 'indian loneliness usa', 'nri loneliness america', 'feeling lonely usa',
     'indian american loneliness', 'south asian loneliness usa', 'desi loneliness america',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'nri emotional support usa', 'indian community usa loneliness',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-loneliness',
-    languages: { 'en-US': 'https://www.leanon.app/usa-loneliness' },
+    canonical: 'https://www.howwasyourday.live/usa-loneliness',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa-loneliness' },
   },
   openGraph: {
     title: 'Feeling Lonely in the USA — The Silent Side of the American Dream',
-    description: 'You moved to America for a better life. Nobody told you it would feel this empty. LeanOn peer listeners are Indian and they understand; US evenings are Indian mornings, when listeners are often online.',
-    url: 'https://www.leanon.app/usa-loneliness',
-    siteName: 'LeanOn',
+    description: 'You moved to America for a better life. Nobody told you it would feel this empty. How Was Your Day peer listeners are Indian and they understand; US evenings are Indian mornings, when listeners are often online.',
+    url: 'https://www.howwasyourday.live/usa-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,15 +41,15 @@ const faqSchema = {
       name: 'Is there someone I can talk to who understands NRI loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn peer listeners include many Indians who have lived the NRI experience — the immigration stress, the culture shift, the missing home. They are not therapists, but they understand in a way that most American counselors simply do not.',
+        text: 'Yes. How Was Your Day peer listeners include many Indians who have lived the NRI experience — the immigration stress, the culture shift, the missing home. They are not therapists, but they understand in a way that most American counselors simply do not.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost in the USA?',
+      name: 'How much does How Was Your Day cost in the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. Compare that to $200/hour for therapy — LeanOn is accessible emotional support whenever you need it.',
+        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. Compare that to $200/hour for therapy — How Was Your Day is accessible emotional support whenever you need it.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Can I talk to a listener in Hindi or my regional language?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other Indian languages. Filter by language when you browse to find someone who speaks yours.',
+        text: 'Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other Indian languages. Filter by language when you browse to find someone who speaks yours.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'What if I just want to talk and not be judged?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is exactly what LeanOn is for. No diagnosis, no advice unless you ask, no judgment. Just a warm, attentive human on the other side — online daily on Indian time, even at 2 AM when the time zone gap to India feels widest.',
+        text: 'That is exactly what How Was Your Day is for. No diagnosis, no advice unless you ask, no judgment. Just a warm, attentive human on the other side — online daily on Indian time, even at 2 AM when the time zone gap to India feels widest.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Loneliness Support USA', item: 'https://www.leanon.app/usa-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Loneliness Support USA', item: 'https://www.howwasyourday.live/usa-loneliness' },
   ],
 }
 
@@ -176,7 +176,7 @@ export default function UsaLonelinessPage() {
           <h2>🌙 It hits hardest at 11 PM when India is sleeping</h2>
           <p>You want to call someone but it is 9:30 AM in Mumbai and they are rushing to work.
             You do not want to be a burden. So you scroll your phone until you fall asleep, alone with it.</p>
-          <p>LeanOn listeners are based in India, so availability follows Indian time — check who is online now US time. You do not need to wait for morning.</p>
+          <p>How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now US time. You do not need to wait for morning.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
 
@@ -185,13 +185,13 @@ export default function UsaLonelinessPage() {
           <p>You book a therapist — $200 an hour, six-week waitlist — and spend half the session explaining
             what an H-1B is, what your parents expect, why you feel guilty for leaving India. They nod
             sympathetically but they do not really understand the cultural weight of it all.</p>
-          <p>LeanOn listeners are people who have lived the Indian experience. Many are themselves NRIs or
+          <p>How Was Your Day listeners are people who have lived the Indian experience. Many are themselves NRIs or
             have family abroad. They do not need the background explained. They already get it.</p>
           <p>Sessions start at <strong>$10 for 15 minutes</strong> — your first 5-minute session free.</p>
         </div>
 
         <div className="card">
-          <h2>Who talks to LeanOn from the USA?</h2>
+          <h2>Who talks to How Was Your Day from the USA?</h2>
           <ul className="checklist">
             <li>H-1B workers anxious about layoffs and what job loss means for their visa</li>
             <li>Couples where one partner has adapted faster to American life and the gap is growing</li>
@@ -219,22 +219,22 @@ export default function UsaLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>Is there someone I can talk to who understands NRI loneliness?</h3>
-            <p>Yes. LeanOn peer listeners include many Indians who have lived the NRI experience — the immigration
+            <p>Yes. How Was Your Day peer listeners include many Indians who have lived the NRI experience — the immigration
               stress, the culture shift, the missing home. They understand in a way most American counselors do not.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost in the USA?</h3>
+            <h3>How much does How Was Your Day cost in the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first
               5 minutes free — one free session per account — far more accessible than $200/hour therapy.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk in Hindi or my regional language?</h3>
-            <p>Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and more.
+            <p>Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and more.
               Filter by language when you browse to find someone who speaks yours.</p>
           </div>
           <div className="faq-item">
             <h3>What if I just want to talk without being judged?</h3>
-            <p>That is exactly what LeanOn is for. No diagnosis, no advice unless you ask, no judgment.
+            <p>That is exactly what How Was Your Day is for. No diagnosis, no advice unless you ask, no judgment.
               Just a warm human on the other side — online daily on Indian time.</p>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function UsaLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

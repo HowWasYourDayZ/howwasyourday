@@ -214,7 +214,7 @@ export async function POST(req: NextRequest) {
 
     // NRI pricing (Phase 2): if the seeker signed up with a non-India country,
     // bill at the flat INR equivalent of the USD price. The listener still earns
-    // their configured rate × billed_mins minus the service fee — LeanOn keeps the NRI margin.
+    // their configured rate × billed_mins minus the service fee — How Was Your Day keeps the NRI margin.
     // We read account_country from the DB (never from the request body) so a
     // crafted request cannot claim India status to avoid NRI pricing.
     let isNriSession = false
@@ -396,7 +396,7 @@ export async function POST(req: NextRequest) {
       if (txErr) logger.error('Session POST: wallet_transactions insert failed (audit gap):', { sessionId, error: txErr.message })
     }
 
-    // Push to every device of the listener — reaches them with LeanOn in the
+    // Push to every device of the listener — reaches them with How Was Your Day in the
     // background or closed. High urgency so Android delivers it through Doze;
     // TTL = the response window so a late push never rings for a dead request.
     // Tapping opens /dashboard, where the accept/decline modal lives.
@@ -408,7 +408,7 @@ export async function POST(req: NextRequest) {
           ? "tap to accept, they're waiting."
           : `tap to accept, you have ${Math.round(REQUEST_RESPONSE_WINDOW_SECS / 60)} minutes.`}`,
         url: '/dashboard',
-        tag: `leanon-req-${sessionId}`,
+        tag: `howwasyourday-req-${sessionId}`,
         ttlSecs: REQUEST_RESPONSE_WINDOW_SECS,
         urgent: true,
         requireInteraction: true,

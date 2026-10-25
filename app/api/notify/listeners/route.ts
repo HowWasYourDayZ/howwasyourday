@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
       user_id: l.user_id,
       type: 'seeker_waiting',
       title: 'Someone needs support right now',
-      body: 'A seeker is looking for a listener. Log in to LeanOn and go online to connect.',
+      body: 'A seeker is looking for a listener. Log in to How Was Your Day and go online to connect.',
       action_url: '/dashboard',
     }))
 

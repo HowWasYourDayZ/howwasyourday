@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Student Stress Support India | LeanOn Peer Listeners',
-  description: 'Student stress getting overwhelming? Talk to a peer listener anonymously on LeanOn. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/support/student-stress', languages: { 'en-IN': 'https://www.leanon.app/support/student-stress' } },
+  title: 'Student Stress Support India | How Was Your Day Peer Listeners',
+  description: 'Student stress getting overwhelming? Talk to a peer listener anonymously on How Was Your Day. No appointment needed.',
+  alternates: { canonical: 'https://www.howwasyourday.live/support/student-stress', languages: { 'en-IN': 'https://www.howwasyourday.live/support/student-stress' } },
   openGraph: {
-    title: 'Student Stress Support India | LeanOn Peer Listeners',
-    description: 'Student stress getting overwhelming? Talk to a peer listener anonymously on LeanOn. No appointment needed.',
-    url: 'https://www.leanon.app/support/student-stress',
-    siteName: 'LeanOn',
+    title: 'Student Stress Support India | How Was Your Day Peer Listeners',
+    description: 'Student stress getting overwhelming? Talk to a peer listener anonymously on How Was Your Day. No appointment needed.',
+    url: 'https://www.howwasyourday.live/support/student-stress',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What do I do if I am being bullied at college?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Campus bullying — including ragging, which remains a serious problem in many Indian institutions despite regulations — can cause significant psychological harm. You should report it to the institution\'s anti-ragging committee and, if needed, the UGC anti-ragging helpline. You should also talk to someone you trust. LeanOn peer listeners who have navigated campus bullying can offer support while you navigate the situation.',
+        text: 'Campus bullying — including ragging, which remains a serious problem in many Indian institutions despite regulations — can cause significant psychological harm. You should report it to the institution\'s anti-ragging committee and, if needed, the UGC anti-ragging helpline. You should also talk to someone you trust. How Was Your Day peer listeners who have navigated campus bullying can offer support while you navigate the situation.',
       },
     },
     {
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Student Stress', item: 'https://www.leanon.app/support/student-stress' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Student Stress', item: 'https://www.howwasyourday.live/support/student-stress' },
   ],
 }
 
@@ -128,7 +128,7 @@ export default function StudentStressSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -142,15 +142,15 @@ export default function StudentStressSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Student Stress</p>
           <h1>Your Marks Do Not Define <em>Your Worth</em></h1>
-          <p className="lead">Indian students face some of the world&apos;s most intense academic pressure. From JEE coaching to NEET failures to hostel homesickness and campus bullying — LeanOn connects you with peer listeners who have navigated the Indian education system and understand what you are carrying.</p>
+          <p className="lead">Indian students face some of the world&apos;s most intense academic pressure. From JEE coaching to NEET failures to hostel homesickness and campus bullying — How Was Your Day connects you with peer listeners who have navigated the Indian education system and understand what you are carrying.</p>
         </div>
 
         <div className="notice">
-          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#7A5020',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). LeanOn is peer support and cannot replace crisis intervention.
+          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#7A5020',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support and cannot replace crisis intervention.
         </div>
 
         <div className="section">
-          <p style={{background:'#FFF8F0',borderLeft:'4px solid #FF9933',borderRadius:'0 12px 12px 0',padding:'14px 18px',fontWeight:600}}>LeanOn is for adults aged 18 and over. If you are under 18 and need to talk, please reach out to a parent, teacher or another adult you trust, or call Tele-MANAS on <a href="tel:14416">14416</a> (free).</p>
+          <p style={{background:'#FFF8F0',borderLeft:'4px solid #FF9933',borderRadius:'0 12px 12px 0',padding:'14px 18px',fontWeight:600}}>How Was Your Day is for adults aged 18 and over. If you are under 18 and need to talk, please reach out to a parent, teacher or another adult you trust, or call Tele-MANAS on <a href="tel:14416">14416</a> (free).</p>
           <h2>The Reality of Student Life in India</h2>
           <p>India&apos;s education system is one of the most demanding in the world. The stakes attached to competitive examinations, the family expectations that surround academic success, and the lack of adequate mental health support in most educational institutions create a perfect storm of student stress.</p>
 
@@ -162,7 +162,7 @@ export default function StudentStressSupportPage() {
           <p>Leaving home for the first time to live in a hostel — often hundreds of kilometres from family — is a significant adjustment that Indian students are rarely prepared for. Hostel homesickness involves missing family, navigating unfamiliar food and routines, making new friends from scratch in a competitive environment, and doing all of this while maintaining high academic performance.</p>
 
           <h3>Campus Bullying and Ragging</h3>
-          <p>Despite regulations, ragging and campus bullying remain serious problems in many Indian educational institutions. The power dynamics of senior-junior relationships, gender-based harassment, and social exclusion can cause lasting psychological harm. Students who experience this often feel they have no one to turn to — LeanOn offers a private, judgment-free space to talk.</p>
+          <p>Despite regulations, ragging and campus bullying remain serious problems in many Indian educational institutions. The power dynamics of senior-junior relationships, gender-based harassment, and social exclusion can cause lasting psychological harm. Students who experience this often feel they have no one to turn to — How Was Your Day offers a private, judgment-free space to talk.</p>
 
           <h3>Imposter Syndrome at Top Colleges</h3>
           <p>Many students who worked years for admission to IITs, NITs, AIIMS, or top private colleges arrive and immediately feel like they do not belong — surrounded by students who seem smarter, more confident, more prepared. This experience is extremely common, but because everyone is performing confidence, it can feel uniquely personal.</p>
@@ -172,19 +172,19 @@ export default function StudentStressSupportPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Helps Indian Students</h2>
+          <h2>How the app Helps Indian Students</h2>
 
           <h3>Listeners Who Survived the System</h3>
           <p>Our listeners include people who have navigated JEE drops, NEET attempts, college adjustments, and career pivots. They are not counsellors reading from textbooks — they are young adults who have been exactly where you are and have perspective to offer.</p>
 
           <h3>Completely Private</h3>
-          <p>Many students cannot talk honestly about how they are struggling — parents would panic, friends are competing, teachers do not understand. LeanOn is completely private. Nothing you say reaches your family, institution, or peers.</p>
+          <p>Many students cannot talk honestly about how they are struggling — parents would panic, friends are competing, teachers do not understand. How Was Your Day is completely private. Nothing you say reaches your family, institution, or peers.</p>
 
           <h3>Available During Exam Season</h3>
-          <p>Stress peaks during exam periods, late at night when revision feels impossible and panic sets in. LeanOn listeners go online at different hours, including during board exam weeks, JEE season, and final placements.</p>
+          <p>Stress peaks during exam periods, late at night when revision feels impossible and panic sets in. How Was Your Day listeners go online at different hours, including during board exam weeks, JEE season, and final placements.</p>
 
           <h3>No Judgment About Your Academic Choices</h3>
-          <p>Whether you want to switch streams, take a gap year, leave engineering for art, or are questioning whether the career your family chose for you is actually what you want — LeanOn listeners will not judge your choices. They will help you think through them.</p>
+          <p>Whether you want to switch streams, take a gap year, leave engineering for art, or are questioning whether the career your family chose for you is actually what you want — How Was Your Day listeners will not judge your choices. They will help you think through them.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Understand Student Stress</h2>
@@ -223,7 +223,7 @@ export default function StudentStressSupportPage() {
           <p>Talk to someone who has been through the pressure of Indian student life and made it through. No appointment needed.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who gets student life — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -243,7 +243,7 @@ export default function StudentStressSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What do I do if I am being bullied at college?</div>
-            <div className="faq-a">You should report campus bullying to the institution&apos;s anti-ragging committee and, if needed, the UGC anti-ragging helpline. You should also talk to someone you trust. LeanOn peer listeners who have navigated campus bullying can offer support while you navigate the situation.</div>
+            <div className="faq-a">You should report campus bullying to the institution&apos;s anti-ragging committee and, if needed, the UGC anti-ragging helpline. You should also talk to someone you trust. How Was Your Day peer listeners who have navigated campus bullying can offer support while you navigate the situation.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I handle career anxiety as a student in India?</div>
@@ -253,7 +253,7 @@ export default function StudentStressSupportPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Student stress connects with many other challenges. Explore more peer support on LeanOn:</p>
+          <p>Student stress connects with many other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/anxiety" className="related-link">Anxiety</a>
             <a href="/support/loneliness" className="related-link">Loneliness</a>

@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   description: data.description,
   keywords: data.searchTerms,
   alternates: {
-    canonical: 'https://www.leanon.app/oman',
-    languages: { 'en-OM': 'https://www.leanon.app/oman', 'x-default': 'https://www.leanon.app/india' },
+    canonical: 'https://www.howwasyourday.live/oman',
+    languages: { 'en-OM': 'https://www.howwasyourday.live/oman', 'x-default': 'https://www.howwasyourday.live/india' },
   },
-  openGraph: { title: data.title, description: data.description, url: 'https://www.leanon.app/oman', type: 'website', siteName: 'LeanOn' },
+  openGraph: { title: data.title, description: data.description, url: 'https://www.howwasyourday.live/oman', type: 'website', siteName: 'How Was Your Day' },
 }
 
 export default function Page() {

@@ -4,7 +4,7 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Married but Feel Very Lonely? Someone to Talk To in India | LeanOn',
+  title: 'Married but Feel Very Lonely? Someone to Talk To in India | How Was Your Day',
   description: "Lonely in your marriage and can't tell family? Talk privately to a real peer listener in India — text or voice, your number never shown. Not couples therapy. First 5 minutes free.",
   keywords: [
     'married but lonely India', 'lonely in marriage India', 'unhappy marriage India',
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     'marriage not working India', 'loveless marriage India', 'feeling unloved in marriage India',
     'lonely married women India support',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/married-but-lonely', languages: { 'en-IN': 'https://www.leanon.app/support/married-but-lonely' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/married-but-lonely', languages: { 'en-IN': 'https://www.howwasyourday.live/support/married-but-lonely' } },
   openGraph: {
-    title: 'Married but Lonely India | LeanOn',
+    title: 'Married but Lonely India | How Was Your Day',
     description: 'Alone in every way that matters — emotionally, mentally, sometimes financially. The loneliness inside a marriage is one of the hardest things to name.',
-    url: 'https://www.leanon.app/support/married-but-lonely',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/married-but-lonely',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Married but Lonely India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Married but Lonely India' }],
   },
 }
 
@@ -29,7 +29,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I feel lonely in my marriage \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Feeling alone while married is common and hard to say out loud, especially to family. LeanOn connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "I feel lonely in my marriage \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Feeling alone while married is common and hard to say out loud, especially to family. How Was Your Day connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Your first 5 minutes are free." } },
     {
       '@type': 'Question',
       name: 'Is it normal to feel lonely inside a marriage?',
@@ -64,10 +64,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn couples counselling?',
+      name: 'Is How Was Your Day couples counselling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — LeanOn is peer support for individuals. It is a space for you to be heard, not a space to work on the marriage together. If couples counselling is something you want to explore, a qualified relationship therapist is the right resource. LeanOn is for your experience, your feelings, your weight — which is just as important.',
+        text: 'No — How Was Your Day is peer support for individuals. It is a space for you to be heard, not a space to work on the marriage together. If couples counselling is something you want to explore, a qualified relationship therapist is the right resource. How Was Your Day is for your experience, your feelings, your weight — which is just as important.',
       },
     },
   ],
@@ -77,9 +77,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/browse' },
-    { '@type': 'ListItem', position: 3, name: 'Married but Lonely', item: 'https://www.leanon.app/support/married-but-lonely' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/browse' },
+    { '@type': 'ListItem', position: 3, name: 'Married but Lonely', item: 'https://www.howwasyourday.live/support/married-but-lonely' },
   ],
 }
 
@@ -147,7 +147,7 @@ export default function MarriedButLonelyPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 
@@ -167,7 +167,7 @@ export default function MarriedButLonelyPage() {
           things because you already know they will not really hear you. Where the distance between two people
           in the same house can feel wider than any ocean.
         </p>
-        <QuickAnswer question={"I'm married but feel very lonely. Is there someone I can talk to?"} answer={"Feeling alone while married is common and hard to say out loud, especially to family. LeanOn connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Your first 5 minutes are free."} />
+        <QuickAnswer question={"I'm married but feel very lonely. Is there someone I can talk to?"} answer={"Feeling alone while married is common and hard to say out loud, especially to family. How Was Your Day connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Your first 5 minutes are free."} />
 
         <div className="crisis">
           <strong>If you are having thoughts of self-harm</strong>
@@ -209,7 +209,7 @@ export default function MarriedButLonelyPage() {
         </p>
 
         <div className="card">
-          <div className="card-label">What LeanOn offers</div>
+          <div className="card-label">What How Was Your Day offers</div>
           <h3>A space that is just for you</h3>
           <p>
             Not couples counselling. Not a space where your husband&apos;s side of things is also weighed.

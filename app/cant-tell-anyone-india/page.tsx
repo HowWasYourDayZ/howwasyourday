@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Can\'t Tell Anyone? Say It Here — Anonymous, No Judgment | LeanOn',
-  description: 'The thing you\'ve been carrying alone because there\'s no safe person to say it to. Say it to a real person on LeanOn. Anonymous, private, from ₹160.',
+  title: 'Can\'t Tell Anyone? Say It Here — Anonymous, No Judgment | How Was Your Day',
+  description: 'The thing you\'ve been carrying alone because there\'s no safe person to say it to. Say it to a real person on How Was Your Day. Anonymous, private, from ₹160.',
   keywords: [
     'cant tell anyone india', 'something I cant tell anyone india', 'no one to confide in india',
     'too embarrassed to say india', 'shame india support', 'secret I cant share india',
     'keeping secrets alone india', 'too personal to share india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/cant-tell-anyone-india', languages: { 'en-IN': 'https://www.leanon.app/cant-tell-anyone-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/cant-tell-anyone-india', languages: { 'en-IN': 'https://www.howwasyourday.live/cant-tell-anyone-india' } },
   openGraph: {
-    title: 'Can\'t Tell Anyone? Say It Here — Anonymous, No Judgment | LeanOn',
-    description: 'The thing you\'ve been carrying alone because there\'s no safe person to say it to. Say it to a real person on LeanOn. Anonymous, private, from ₹160.',
-    url: 'https://www.leanon.app/cant-tell-anyone-india',
-    siteName: 'LeanOn',
+    title: 'Can\'t Tell Anyone? Say It Here — Anonymous, No Judgment | How Was Your Day',
+    description: 'The thing you\'ve been carrying alone because there\'s no safe person to say it to. Say it to a real person on How Was Your Day. Anonymous, private, from ₹160.',
+    url: 'https://www.howwasyourday.live/cant-tell-anyone-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Can\'t Tell Anyone India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Can\'t Tell Anyone India' }],
   },
 }
 
@@ -38,7 +38,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will the listener share what I said?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn listeners are bound by confidentiality. They do not share session content with anyone, including other LeanOn staff. The only exception would be a situation involving imminent risk to safety &mdash; but a conversation about something difficult or shameful does not trigger this. Your words stay in the session.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners are bound by confidentiality. They do not share session content with anyone, including other How Was Your Day staff. The only exception would be a situation involving imminent risk to safety &mdash; but a conversation about something difficult or shameful does not trigger this. Your words stay in the session.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Can\'t Tell Anyone India', item: 'https://www.leanon.app/cant-tell-anyone-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Can\'t Tell Anyone India', item: 'https://www.howwasyourday.live/cant-tell-anyone-india' },
   ],
 }
 
@@ -111,7 +111,7 @@ export default function CantTellAnyoneIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Heartbreak Support India — Talk to Someone Who Gets It | LeanOn',
+  title: 'Heartbreak Support India — Talk to Someone Who Gets It | How Was Your Day',
   description: 'Heartbreak is physical. It\'s not \'just feelings\'. Talk to a peer listener who has been there — anonymous, from ₹160.',
   keywords: [
     'heartbreak India', 'breakup pain India', 'heartbroken India',
     'how to get over heartbreak India', 'breakup support India',
     'heartbreak recovery India', 'breakup pain relief India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/heartbreak-india', languages: { 'en-IN': 'https://www.leanon.app/heartbreak-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/heartbreak-india', languages: { 'en-IN': 'https://www.howwasyourday.live/heartbreak-india' } },
   openGraph: {
-    title: 'Heartbreak Support India — Talk to Someone Who Gets It | LeanOn',
+    title: 'Heartbreak Support India — Talk to Someone Who Gets It | How Was Your Day',
     description: 'Heartbreak is physical. It\'s not \'just feelings\'. Talk to a peer listener who has been there — anonymous, from ₹160.',
-    url: 'https://www.leanon.app/heartbreak-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/heartbreak-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Heartbreak India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Heartbreak India' }],
   },
 }
 
@@ -27,8 +27,8 @@ const faqSchema = {
   mainEntity: [
     { '@type': 'Question', name: 'Why does heartbreak hurt physically?', acceptedAnswer: { '@type': 'Answer', text: 'Because the brain processes social rejection through the same neural pathways as physical pain. This is not a metaphor. The chest pain, the inability to eat, the disrupted sleep, the physical heaviness — these are real physiological responses to emotional pain. Your body is reacting to the loss of something that was central to how it felt safe and connected. Telling yourself it is "just feelings" does not help and it is also inaccurate.' } },
     { '@type': 'Question', name: 'Why do some heartbreaks hit harder than others?', acceptedAnswer: { '@type': 'Answer', text: 'The intensity of heartbreak is usually proportional to the degree of hope and investment you put into the relationship — not necessarily its duration. A relationship that felt like it could be the one, or a person who represented a particular future you had imagined, leaves a gap that is proportional to the size of that hope. It is also affected by attachment style, past loss, and how much of your identity was bound up in the relationship.' } },
-    { '@type': 'Question', name: 'Is LeanOn different from talking to a friend about a breakup?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Friends who care about you usually get exhausted after a point — they feel helpless, they run out of things to say, they subtly start redirecting you toward moving on. A LeanOn listener has infinite patience for the grief, has no personal exhaustion about the topic, and is selected to hold difficult emotional conversations without trying to resolve them prematurely.' } },
-    { '@type': 'Question', name: 'Does LeanOn offer support for breakups specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. There is also a dedicated /support/breakup page for the process of getting through a breakup. This page specifically addresses the physical and emotional pain of heartbreak — the acute phase where you cannot think about anything else and the pain feels unbearable.' } },
+    { '@type': 'Question', name: 'Is How Was Your Day different from talking to a friend about a breakup?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Friends who care about you usually get exhausted after a point — they feel helpless, they run out of things to say, they subtly start redirecting you toward moving on. A How Was Your Day listener has infinite patience for the grief, has no personal exhaustion about the topic, and is selected to hold difficult emotional conversations without trying to resolve them prematurely.' } },
+    { '@type': 'Question', name: 'Does How Was Your Day offer support for breakups specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. There is also a dedicated /support/breakup page for the process of getting through a breakup. This page specifically addresses the physical and emotional pain of heartbreak — the acute phase where you cannot think about anything else and the pain feels unbearable.' } },
     { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. The first 5 minutes are free. No subscription needed.' } },
   ],
 }
@@ -37,8 +37,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Heartbreak India', item: 'https://www.leanon.app/heartbreak-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Heartbreak India', item: 'https://www.howwasyourday.live/heartbreak-india' },
   ],
 }
 
@@ -87,7 +87,7 @@ export default function HeartbreakIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">
@@ -109,7 +109,7 @@ export default function HeartbreakIndiaPage() {
         <div className="section">
           <h2>What You Need Right Now</h2>
           <p>Right now, you need to be heard. Not fixed. Not redirected. Not told that you are better off without them. You need someone to sit with you in the pain of it and not try to make it stop.</p>
-          <p>LeanOn listeners are screened and expected to do exactly this. They hold the space for grief without trying to resolve it prematurely. A conversation that does not try to fix anything often does more than one that does.</p>
+          <p>How Was Your Day listeners are screened and expected to do exactly this. They hold the space for grief without trying to resolve it prematurely. A conversation that does not try to fix anything often does more than one that does.</p>
           <p>See also: <a href="/support/breakup" style={{color:'var(--teal)',fontWeight:700}}>Support for breakups</a> &mdash; for the process of getting through the days that follow.</p>
         </div>
         <div className="section">

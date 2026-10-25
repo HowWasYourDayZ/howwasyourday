@@ -45,6 +45,6 @@ export const post = {
 <h2>When to Get Professional Help</h2>
 <p>If what you are experiencing includes persistent low mood, inability to feel pleasure, thoughts of self-harm, or significant changes in sleep and appetite over weeks — that is beyond burnout and warrants professional support. Please speak to a doctor or mental health professional.</p>
 <p>For crisis support: NIMHANS (080-46110007) or Tele-MANAS (14416).</p>
-<p>For a conversation with someone who understands IT burnout from the inside — not a clinical intervention, just a real human conversation — LeanOn connects you with peer listeners who have been through it.</p>
+<p>For a conversation with someone who understands IT burnout from the inside — not a clinical intervention, just a real human conversation — How Was Your Day connects you with peer listeners who have been through it.</p>
 `,
 }

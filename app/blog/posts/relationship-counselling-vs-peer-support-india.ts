@@ -35,12 +35,12 @@ export const post = {
 
 <h2>The Specific Gap Peer Support Fills</h2>
 <p>There is a space between "things are fine" and "we need couples therapy" that most people navigate alone or with friends. Friends have limits: they have opinions, histories with you, their own stakes. They may tell you what you want to hear, or what they believe, rather than simply listening.</p>
-<p>A peer listener on LeanOn has one job: to listen. They are not your mutual friend. They do not know your partner. They are not going to judge either of you. They can hear the full complexity of what you are carrying and reflect it back — which is often exactly what you need before you can figure out what to do next.</p>
+<p>A peer listener on How Was Your Day has one job: to listen. They are not your mutual friend. They do not know your partner. They are not going to judge either of you. They can hear the full complexity of what you are carrying and reflect it back — which is often exactly what you need before you can figure out what to do next.</p>
 
 <h2>When You Need Both</h2>
 <p>These are not mutually exclusive. Many people use peer support to process their own feelings and clarify their thinking — and then, when they have a clearer sense of what they want, they bring that to couples therapy with their partner. The peer conversation becomes preparation for the more structured work.</p>
 
-<h2>Common Relationship Topics on LeanOn</h2>
+<h2>Common Relationship Topics on How Was Your Day</h2>
 <ul>
 <li>Marriage tension — communication breaking down, feeling unheard by a partner</li>
 <li>Divorce and separation uncertainty — not knowing whether to stay or leave</li>

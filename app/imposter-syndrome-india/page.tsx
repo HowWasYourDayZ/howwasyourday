@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Imposter Syndrome India — Talk to Someone Who Has Been There | LeanOn',
+  title: 'Imposter Syndrome India — Talk to Someone Who Has Been There | How Was Your Day',
   description: 'Waiting to be found out, feeling like a fraud despite your achievements. Imposter syndrome is epidemic in India. Anonymous peer support from ₹160.',
   keywords: ['imposter syndrome India', 'feeling like a fraud India', 'imposter syndrome at work India', 'high achiever anxiety India'],
-  alternates: { canonical: 'https://www.leanon.app/imposter-syndrome-india', languages: { 'en-IN': 'https://www.leanon.app/imposter-syndrome-india' } },
-  openGraph: { title: 'Imposter Syndrome India — Talk to Someone Who Has Been There | LeanOn', description: 'Waiting to be found out, feeling like a fraud despite your achievements. Imposter syndrome is epidemic in India. Anonymous peer support from ₹160.', url: 'https://www.leanon.app/imposter-syndrome-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/imposter-syndrome-india', languages: { 'en-IN': 'https://www.howwasyourday.live/imposter-syndrome-india' } },
+  openGraph: { title: 'Imposter Syndrome India — Talk to Someone Who Has Been There | How Was Your Day', description: 'Waiting to be found out, feeling like a fraud despite your achievements. Imposter syndrome is epidemic in India. Anonymous peer support from ₹160.', url: 'https://www.howwasyourday.live/imposter-syndrome-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -17,8 +17,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Imposter Syndrome India', item: 'https://www.leanon.app/imposter-syndrome-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Imposter Syndrome India', item: 'https://www.howwasyourday.live/imposter-syndrome-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function ImposterSyndromeIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Imposter Syndrome India</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function ImposterSyndromeIndiaPage() {
         <div className="section">
           <h2>Why It Is Especially Common in India</h2>
           <p>India's meritocratic pressure creates a culture of constant performance evaluation from childhood. The people who succeed the most have often done so through enormous effort in genuinely competitive environments. But that success was often contingent and hard-won enough that the feeling of belonging never fully formed. Simultaneously, the culture of not discussing difficulty means the fraud feeling is carried privately.</p>
-          <p>LeanOn listeners understand this specific Indian professional pressure. You do not need to explain the context.</p>
+          <p>How Was Your Day listeners understand this specific Indian professional pressure. You do not need to explain the context.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>You earned it. Let someone help you believe it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

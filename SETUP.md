@@ -1,4 +1,4 @@
-# LeanOn — Windows Setup Guide
+# How Was Your Day — Windows Setup Guide
 # Run these commands in PowerShell (Run as Administrator for Node install)
 
 ## ─────────────────────────────────────────
@@ -85,7 +85,7 @@ code .env.local
 npm run dev
 
 # Open in browser: http://localhost:3000
-# You should see the LeanOn landing page!
+# You should see the How Was Your Day landing page!
 
 
 ## ─────────────────────────────────────────

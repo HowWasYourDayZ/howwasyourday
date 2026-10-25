@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Abuse India — Talk to Someone Anonymously | LeanOn',
+  title: 'Emotional Abuse India — Talk to Someone Anonymously | How Was Your Day',
   description: 'Constant criticism, silent treatment, being made to feel crazy. Emotional abuse is real. Talk anonymously from ₹160. Not therapy — a real person who gets it.',
   keywords: [
     'emotional abuse India', 'emotional abuse in marriage India', 'emotional abuse partner India',
     'psychological abuse India', 'is my partner emotionally abusive India',
     'emotional abuse signs India', 'verbal abuse India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/emotional-abuse-india', languages: { 'en-IN': 'https://www.leanon.app/emotional-abuse-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/emotional-abuse-india', languages: { 'en-IN': 'https://www.howwasyourday.live/emotional-abuse-india' } },
   openGraph: {
-    title: 'Emotional Abuse India — Talk to Someone Anonymously | LeanOn',
+    title: 'Emotional Abuse India — Talk to Someone Anonymously | How Was Your Day',
     description: 'Constant criticism, silent treatment, being made to feel crazy. Emotional abuse is real. Talk anonymously from ₹160.',
-    url: 'https://www.leanon.app/emotional-abuse-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/emotional-abuse-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Emotional Abuse India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Emotional Abuse India' }],
   },
 }
 
@@ -37,22 +37,22 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is it safe to talk about this on LeanOn?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private and confidential. You do not use your full name. The listener is bound by LeanOn’s confidentiality rules. Nothing leaves the session. LeanOn is specifically designed for situations where you cannot speak freely in the rest of your life.' },
+      name: 'Is it safe to talk about this on How Was Your Day?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private and confidential. You do not use your full name. The listener is bound by How Was Your Day’s confidentiality rules. Nothing leaves the session. How Was Your Day is specifically designed for situations where you cannot speak freely in the rest of your life.' },
     },
     {
       '@type': 'Question',
       name: 'Should I go to therapy instead?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Therapy is valuable and we always encourage it for situations involving sustained abuse. But therapy requires time, money, and readiness. Many people are not ready to enter a clinical setting yet — they are still figuring out whether what they are experiencing is real, and whether it has a name. LeanOn is often the first step: a space to say what you are going through out loud, feel validated, and think about what you want to do next.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Therapy is valuable and we always encourage it for situations involving sustained abuse. But therapy requires time, money, and readiness. Many people are not ready to enter a clinical setting yet — they are still figuring out whether what they are experiencing is real, and whether it has a name. How Was Your Day is often the first step: a space to say what you are going through out loud, feel validated, and think about what you want to do next.' },
     },
     {
       '@type': 'Question',
       name: 'What if I am in danger?',
-      acceptedAnswer: { '@type': 'Answer', text: 'If you are in immediate danger or fear for your physical safety, contact the police or local emergency services first. If you are in emotional crisis, call Tele-MANAS on 14416 or NIMHANS on 080-46110007 (free). LeanOn peer support is for emotional processing — it is not a crisis intervention service.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'If you are in immediate danger or fear for your physical safety, contact the police or local emergency services first. If you are in emotional crisis, call Tele-MANAS on 14416 or NIMHANS on 080-46110007 (free). How Was Your Day peer support is for emotional processing — it is not a crisis intervention service.' },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost?',
+      name: 'How much does How Was Your Day cost?',
       acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Your first 5-minute session is free — you pay only if you continue. No subscription, no appointment, no waiting.' },
     },
   ],
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Emotional Abuse India', item: 'https://www.leanon.app/emotional-abuse-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Emotional Abuse India', item: 'https://www.howwasyourday.live/emotional-abuse-india' },
   ],
 }
 
@@ -117,7 +117,7 @@ export default function EmotionalAbuseIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -160,7 +160,7 @@ export default function EmotionalAbuseIndiaPage() {
         <div className="section">
           <h2>Who You Can Talk To</h2>
           <p>You cannot always talk to family &mdash; they are often inside the same system, or they will tell you to adjust. You may not be ready for a therapist. You may not want the social consequences of telling friends.</p>
-          <p>A LeanOn listener is a screened peer with no connection to your life. They will not judge. They will not tell you to adjust. They will not tell anyone. They will just listen while you say what you have been holding.</p>
+          <p>A How Was Your Day listener is a screened peer with no connection to your life. They will not judge. They will not tell you to adjust. They will not tell anyone. They will just listen while you say what you have been holding.</p>
           <p>That act of being genuinely heard &mdash; by someone with no stake in the outcome &mdash; is often the beginning of clarity.</p>
         </div>
 

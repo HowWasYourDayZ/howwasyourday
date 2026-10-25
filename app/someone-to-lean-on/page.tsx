@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Someone to Lean On — Talk to a Real Person Tonight | LeanOn India',
+  title: 'Someone to Lean On — Talk to a Real Person Tonight | How Was Your Day India',
   description: 'Need someone to lean on? Talk anonymously to a verified peer listener in India tonight. No appointment needed. Real humans with lived experience, not AI.',
   keywords: 'someone to lean on, need someone to lean on, having someone to lean on, no one to lean on, what does lean on mean, lean on someone meaning, someone to lean on India',
-  alternates: { canonical: 'https://www.leanon.app/someone-to-lean-on', languages: { 'en-IN': 'https://www.leanon.app/someone-to-lean-on' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/someone-to-lean-on', languages: { 'en-IN': 'https://www.howwasyourday.live/someone-to-lean-on' } },
   openGraph: {
-    title: 'Someone to Lean On — Talk to a Real Person Tonight | LeanOn India',
+    title: 'Someone to Lean On — Talk to a Real Person Tonight | How Was Your Day India',
     description: 'Need someone to lean on? Talk anonymously to a verified peer listener in India tonight. No appointment needed. Real humans with lived experience, not AI.',
-    url: 'https://www.leanon.app/someone-to-lean-on',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/someone-to-lean-on',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,15 +41,15 @@ const faqSchema = {
       name: 'What if I genuinely have no one to lean on right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is a real and painful situation, and it is far more common than it looks from the outside — including among people who appear socially surrounded. Sometimes the people around you are close to the problem, or would worry, or would repeat it. LeanOn was built for exactly this gap: verified peer listeners who have lived through similar things, available privately with no appointment, so there is often someone to lean on even when your own circle is not an option tonight.',
+        text: 'That is a real and painful situation, and it is far more common than it looks from the outside — including among people who appear socially surrounded. Sometimes the people around you are close to the problem, or would worry, or would repeat it. How Was Your Day was built for exactly this gap: verified peer listeners who have lived through similar things, available privately with no appointment, so there is often someone to lean on even when your own circle is not an option tonight.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn related to the song "Lean On" by Major Lazer?',
+      name: 'Is How Was Your Day related to the song "Lean On" by Major Lazer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — there is no connection of any kind. LeanOn (written as one word) is an Indian peer emotional support platform that connects people with verified peer listeners. The name comes from the everyday English phrase "someone to lean on", meaning a person you can rely on emotionally. The 2015 song is a separate and unrelated work by Major Lazer and DJ Snake.',
+        text: 'No — there is no connection of any kind. How Was Your Day (written as one word) is an Indian peer emotional support platform that connects people with verified peer listeners. The name comes from the everyday English phrase "someone to lean on", meaning a person you can rely on emotionally. The 2015 song is a separate and unrelated work by Major Lazer and DJ Snake.',
       },
     },
     {
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Someone to Lean On', item: 'https://www.leanon.app/someone-to-lean-on' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Someone to Lean On', item: 'https://www.howwasyourday.live/someone-to-lean-on' },
   ],
 }
 
@@ -121,7 +121,7 @@ const S = `
   .related-link:hover{border-color:var(--teal);color:var(--teal);}
 `
 
-export default function SomeoneToLeanOnPage() {
+export default function SomeoneToHowWasYourDayPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -129,7 +129,7 @@ export default function SomeoneToLeanOnPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -147,7 +147,7 @@ export default function SomeoneToLeanOnPage() {
         <div className="hero">
           <p className="tag">Peer Support · India</p>
           <h1>Everyone Needs <em>Someone to Lean On</em></h1>
-          <p className="lead">Not advice. Not a diagnosis. Not a lecture about what you should have done. Just someone to lean on — a real, empathetic person on the other end who listens properly while you say the thing you have been carrying alone. LeanOn connects you with verified peer listeners across India, privately, with no appointment.</p>
+          <p className="lead">Not advice. Not a diagnosis. Not a lecture about what you should have done. Just someone to lean on — a real, empathetic person on the other end who listens properly while you say the thing you have been carrying alone. How Was Your Day connects you with verified peer listeners across India, privately, with no appointment.</p>
         </div>
 
         {/* What it means */}
@@ -171,7 +171,7 @@ export default function SomeoneToLeanOnPage() {
         {/* No one to lean on */}
         <div className="section">
           <h2>When You Have No One to Lean On</h2>
-          <p>If you have ever scrolled your entire contact list at 2 AM and closed the phone without messaging anybody, you are not broken and you are not alone in that. It is one of the most common experiences people describe on LeanOn.</p>
+          <p>If you have ever scrolled your entire contact list at 2 AM and closed the phone without messaging anybody, you are not broken and you are not alone in that. It is one of the most common experiences people describe on How Was Your Day.</p>
 
           <h3>It Happens to People With Full Contact Lists</h3>
           <p>This is not only about isolated people. It happens to people with hundreds of contacts, a busy weekend calendar and a family they love. Social volume and emotional support are two different resources, and having a great deal of the first does not guarantee any of the second. Plenty of people who look thoroughly connected from the outside would tell you, honestly, that they have no one to lean on.</p>
@@ -188,14 +188,14 @@ export default function SomeoneToLeanOnPage() {
 
         {/* The name */}
         <div className="section">
-          <h2>LeanOn Was Named for Exactly This</h2>
-          <p>The platform is called LeanOn — one word — because that phrase is the whole idea. Not counselling, not coaching, not a chatbot. Just someone to lean on when you need it.</p>
+          <h2>How Was Your Day Was Named for Exactly This</h2>
+          <p>The platform is called How Was Your Day — one word — because that phrase is the whole idea. Not counselling, not coaching, not a chatbot. Just someone to lean on when you need it.</p>
 
           <h3>The Name Comes From the Phrase</h3>
-          <p>LeanOn takes its name directly from the everyday expression &quot;someone to lean on&quot;: a person you can rely on emotionally, who holds part of your weight without making you pay for it later. That belief is the founding premise of the platform — that everyone deserves someone to lean on, and that access to it should not depend on how lucky you were with the friends and family you happened to get.</p>
+          <p>How Was Your Day takes its name directly from the everyday expression &quot;someone to lean on&quot;: a person you can rely on emotionally, who holds part of your weight without making you pay for it later. That belief is the founding premise of the platform — that everyone deserves someone to lean on, and that access to it should not depend on how lucky you were with the friends and family you happened to get.</p>
 
           <h3>Verified Peers With Real Lived Experience — Not Therapists, Not AI</h3>
-          <p>Every listener on LeanOn is a verified human being who has personally lived through something like what you are carrying: a breakup, a job loss, years in a marriage they could not talk about, the long quiet of a city where nobody knows them. They are peers, not licensed therapists, and we are direct about that distinction. And there is no AI anywhere in the conversation — no generated replies, no simulated empathy. The person typing has actually been there.</p>
+          <p>Every listener on How Was Your Day is a verified human being who has personally lived through something like what you are carrying: a breakup, a job loss, years in a marriage they could not talk about, the long quiet of a city where nobody knows them. They are peers, not licensed therapists, and we are direct about that distinction. And there is no AI anywhere in the conversation — no generated replies, no simulated empathy. The person typing has actually been there.</p>
 
           <h3>Anonymous, First Names Only, Open at 3 AM</h3>
           <p>You choose a listener and talk. First names only, no photographs of you, nothing shared with anyone in your life, and nothing that shows up anywhere later. Listeners go online at different hours, often including the hours when this feeling is worst, so having someone to lean on does not depend on office timings. You can find out whether this particular person actually gets it with a short trial session before committing to a longer one.</p>
@@ -256,11 +256,11 @@ export default function SomeoneToLeanOnPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I genuinely have no one to lean on right now?</div>
-            <div className="faq-a">That is a real and painful situation, and it is far more common than it looks from the outside — including among people who appear socially surrounded. Sometimes the people around you are close to the problem, or would worry, or would repeat it. LeanOn was built for exactly this gap: verified peer listeners who have lived through similar things, available privately with no appointment, so there is often someone to lean on even when your own circle is not an option tonight.</div>
+            <div className="faq-a">That is a real and painful situation, and it is far more common than it looks from the outside — including among people who appear socially surrounded. Sometimes the people around you are close to the problem, or would worry, or would repeat it. How Was Your Day was built for exactly this gap: verified peer listeners who have lived through similar things, available privately with no appointment, so there is often someone to lean on even when your own circle is not an option tonight.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn related to the song &quot;Lean On&quot; by Major Lazer?</div>
-            <div className="faq-a">No — there is no connection of any kind. LeanOn (written as one word) is an Indian peer emotional support platform that connects people with verified peer listeners. The name comes from the everyday English phrase &quot;someone to lean on&quot;, meaning a person you can rely on emotionally. The 2015 song is a separate and unrelated work by Major Lazer and DJ Snake.</div>
+            <div className="faq-q">Is How Was Your Day related to the song &quot;Lean On&quot; by Major Lazer?</div>
+            <div className="faq-a">No — there is no connection of any kind. How Was Your Day (written as one word) is an Indian peer emotional support platform that connects people with verified peer listeners. The name comes from the everyday English phrase &quot;someone to lean on&quot;, meaning a person you can rely on emotionally. The 2015 song is a separate and unrelated work by Major Lazer and DJ Snake.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does it cost?</div>
@@ -289,7 +289,7 @@ export default function SomeoneToLeanOnPage() {
           <div className="related">
             <a href="/blog/what-does-lean-on-mean" className="related-link">What does &quot;lean on&quot; mean?</a>
             <a href="/blog/no-one-to-talk-to" className="related-link">No one to talk to</a>
-            <a href="/leanon" className="related-link">What is LeanOn?</a>
+            <a href="/howwasyourday" className="related-link">What is How Was Your Day?</a>
             <a href="/blog/empathy-in-peer-support" className="related-link">Empathy in peer support</a>
             <a href="/delhi" className="related-link">Peer support Delhi</a>
             <a href="/mumbai" className="related-link">Peer support Mumbai</a>

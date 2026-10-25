@@ -4,21 +4,21 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Am I in a Toxic Relationship? Anonymous Support India | LeanOn',
+  title: 'Am I in a Toxic Relationship? Anonymous Support India | How Was Your Day',
   description: 'Second-guessing everything, walking on eggshells, feeling worse than you did alone. Talk it out anonymously from ₹160.',
   keywords: [
     'toxic relationship India', 'toxic relationship signs India', 'am I in a toxic relationship India',
     'unhealthy relationship India', 'leave toxic relationship India',
     'toxic partner India', 'toxic marriage India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/toxic-relationship-india', languages: { 'en-IN': 'https://www.leanon.app/toxic-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/toxic-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/toxic-relationship-india' } },
   openGraph: {
-    title: 'Am I in a Toxic Relationship? Anonymous Support India | LeanOn',
+    title: 'Am I in a Toxic Relationship? Anonymous Support India | How Was Your Day',
     description: 'Second-guessing everything, walking on eggshells, feeling worse than you did alone. Talk it out anonymously from ₹160.',
-    url: 'https://www.leanon.app/toxic-relationship-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/toxic-relationship-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Toxic Relationship India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Toxic Relationship India' }],
   },
 }
 
@@ -49,7 +49,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is it anonymous?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Completely. You use a first name. The listener is bound by LeanOn’s confidentiality rules. Nothing is shared with anyone in your life. This is especially important when the person you are talking about is also in your social circle.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Completely. You use a first name. The listener is bound by How Was Your Day’s confidentiality rules. Nothing is shared with anyone in your life. This is especially important when the person you are talking about is also in your social circle.' },
     },
     {
       '@type': 'Question',
@@ -63,8 +63,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Toxic Relationship India', item: 'https://www.leanon.app/toxic-relationship-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Toxic Relationship India', item: 'https://www.howwasyourday.live/toxic-relationship-india' },
   ],
 }
 
@@ -118,7 +118,7 @@ export default function ToxicRelationshipIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -165,7 +165,7 @@ export default function ToxicRelationshipIndiaPage() {
         <div className="section">
           <h2>How a Neutral Listener Helps</h2>
           <p>Sometimes just saying things out loud to someone who is carefully listening is enough to create clarity. You describe a pattern. The listener reflects it back. Suddenly you hear it from the outside for the first time. That clarity does not require a diagnosis or a label. It just requires being genuinely heard.</p>
-          <p>LeanOn listeners are screened for this kind of listening. They will not push you toward conclusions. They will not label your relationship for you. They will help you find your own clarity at your own pace.</p>
+          <p>How Was Your Day listeners are screened for this kind of listening. They will not push you toward conclusions. They will not label your relationship for you. They will help you find your own clarity at your own pace.</p>
         </div>
 
         <div className="section">

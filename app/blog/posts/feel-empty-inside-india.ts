@@ -4,7 +4,7 @@ export const post = {
   description: 'Feeling emotionally empty, numb, or like nothing makes you happy anymore? This is more common than it seems — and it is a signal, not a flaw. Here is what it means and what helps.',
   date: '2026-09-08',
   readTime: '7 min read',
-  topics: ['emotional health India', 'feeling empty', 'mental health India', 'peer support', 'LeanOn'],
+  topics: ['emotional health India', 'feeling empty', 'mental health India', 'peer support', 'How Was Your Day'],
   content: `
 <p>If you are reading this, you have probably tried to describe the feeling and found it harder than expected. Not sad, exactly. Not angry. Not even particularly anxious — though that comes and goes. More like... flat. Like the lights are on but you are not quite home. Like you are watching your own life from a mild distance, going through the right motions, producing the right responses, and feeling almost nothing in return.</p>
 
@@ -47,7 +47,7 @@ export const post = {
 
 <p><strong>What does help:</strong> Expression. Speaking the feeling out loud — to a real person who will hear it without immediately trying to fix it — consistently does something that nothing else does. It moves the feeling from inside to outside. It makes it visible and nameable. And it interrupts the circuit of going around and around in your own head with something you have never let out.</p>
 
-<p>This is where peer listeners on LeanOn are specifically useful. Not because they have answers — they do not. But because they have been through their own version of emptiness, and they will not be alarmed by yours. They will sit with it. That act of being sat with is, for many people, the first crack in the numbness.</p>
+<p>This is where peer listeners on How Was Your Day are specifically useful. Not because they have answers — they do not. But because they have been through their own version of emptiness, and they will not be alarmed by yours. They will sit with it. That act of being sat with is, for many people, the first crack in the numbness.</p>
 
 <p>Small reconnections also help: physical movement, time in natural light, food you actually taste rather than consume, music you actually hear rather than play. These are not cures. They are points of contact with being alive — small doses of the sensory world that the emptiness has muffled.</p>
 

@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Kochi — Peer Listeners | LeanOn',
+  title: 'Emotional Support in Kochi — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Kochi. Gulf migration, NRI family separation, Kerala joint family dynamics, high education. From ₹160.',
-  alternates: { canonical: 'https://www.leanon.app/kochi', languages: { 'en-IN': 'https://www.leanon.app/kochi' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/kochi', languages: { 'en-IN': 'https://www.howwasyourday.live/kochi' } },
   keywords: 'peer support Kochi, emotional support Kerala, NRI mental health Kerala, Gulf migration loneliness, family separation Kerala, talk to someone Kochi Ernakulam',
   openGraph: {
-    title: 'Emotional Support in Kochi — Peer Listeners | LeanOn',
+    title: 'Emotional Support in Kochi — Peer Listeners | How Was Your Day',
     description: 'Connect with peer listeners in Kochi. Gulf migration, NRI family separation, Kerala joint family dynamics, high education. From ₹160.',
-    url: 'https://www.leanon.app/kochi',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/kochi',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -33,20 +33,20 @@ const faqSchema = {
       name: 'Is peer support available in English and Malayalam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners include people from Kerala who are comfortable in both English and Malayalam. When you browse, you can filter or look at listener bios to find someone whose language and background matches yours.',
+        text: 'Yes. How Was Your Day listeners include people from Kerala who are comfortable in both English and Malayalam. When you browse, you can filter or look at listener bios to find someone whose language and background matches yours.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn if I am in the Gulf or abroad?',
+      name: 'Can I use How Was Your Day if I am in the Gulf or abroad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is available worldwide. Many users connect from the Gulf, the UK, the US, Canada, and Australia. Sessions are conducted online via text or voice. Payment works from abroad with international cards and UPI for NRIs.',
+        text: 'Yes. How Was Your Day is available worldwide. Many users connect from the Gulf, the UK, the US, Canada, and Australia. Sessions are conducted online via text or voice. Payment works from abroad with international cards and UPI for NRIs.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What do Kochi users talk about on LeanOn?',
+      name: 'What do Kochi users talk about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Common topics include Gulf migration and the loneliness of working abroad, family separation (especially spouses and parents), the pressure to send remittances, joint family dynamics in Kerala, education pressure on children, marriage and relationship tension from long distance, and the identity questions that come from moving between Kerala culture and global exposure.',
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn peer support different from therapy?',
+      name: 'Is How Was Your Day peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and private. For clinical mental health concerns, professional help is always recommended.',
+        text: 'Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and private. For clinical mental health concerns, professional help is always recommended.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Kochi', item: 'https://www.leanon.app/kochi' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Kochi', item: 'https://www.howwasyourday.live/kochi' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/kochi',
+  url: 'https://www.howwasyourday.live/kochi',
   areaServed: { '@type': 'City', name: 'Kochi', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -144,7 +144,7 @@ export default function KochiPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -173,7 +173,7 @@ export default function KochiPage() {
         </div>
 
         <div className="section">
-          <h2>What Kochi Users Talk About on LeanOn</h2>
+          <h2>What Kochi Users Talk About on How Was Your Day</h2>
           <ul>
             <li><strong>Gulf loneliness</strong> — working far from family, missing milestones, the weight of being the provider from a distance</li>
             <li><strong>Long-distance relationships</strong> — the slow drift, the resentment, the difficulty of staying connected</li>
@@ -201,19 +201,19 @@ export default function KochiPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is peer support available in English and Malayalam?</div>
-            <div className="faq-a">Yes. LeanOn listeners include people from Kerala comfortable in both English and Malayalam. Browse listener bios to find someone whose language and background matches yours.</div>
+            <div className="faq-a">Yes. How Was Your Day listeners include people from Kerala comfortable in both English and Malayalam. Browse listener bios to find someone whose language and background matches yours.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Can I use LeanOn if I am in the Gulf or abroad?</div>
-            <div className="faq-a">Yes. LeanOn is available worldwide. Many users connect from Gulf countries, the UK, the US, and Australia. Sessions are online. Payment works with international cards.</div>
+            <div className="faq-q">Can I use How Was Your Day if I am in the Gulf or abroad?</div>
+            <div className="faq-a">Yes. How Was Your Day is available worldwide. Many users connect from Gulf countries, the UK, the US, and Australia. Sessions are online. Payment works with international cards.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What do Kochi users talk about on LeanOn?</div>
+            <div className="faq-q">What do Kochi users talk about on How Was Your Day?</div>
             <div className="faq-a">Gulf loneliness, long-distance marriage, return anxiety, joint family pressure, education pressure, and the mental health stigma that can persist even in highly educated communities.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn peer support different from therapy?</div>
-            <div className="faq-a">Yes. LeanOn is peer support, not therapy. Listeners are screened peers — not licensed therapists. Accessible from ₹160 for 15 minutes, anonymous.</div>
+            <div className="faq-q">Is How Was Your Day peer support different from therapy?</div>
+            <div className="faq-a">Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers — not licensed therapists. Accessible from ₹160 for 15 minutes, anonymous.</div>
           </div>
         </div>
 
@@ -230,9 +230,9 @@ export default function KochiPage() {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals.</p>
         </div>
       </div>
     </>

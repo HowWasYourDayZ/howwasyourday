@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lost in Life? Peer Support India | LeanOn',
+  title: 'Feeling Lost in Life? Peer Support India | How Was Your Day',
   description: "Feeling lost, stuck, or like you don't know who you are or what you want? Talk to a peer listener in India who has navigated the same uncertainty. Anonymous, no appointment.",
   keywords: ['feeling lost in life India', 'I feel stuck India', 'I dont know what I want India', 'I feel directionless India', 'I have no purpose India', 'feeling lost after college India', 'quarter life crisis India', 'lost and confused India', 'I dont know who I am India', 'what should I do with my life India', 'I feel like I am going nowhere India', 'lost in my twenties India', 'identity crisis India', 'feeling purposeless India', 'peer support feeling lost India'],
-  alternates: { canonical: 'https://www.leanon.app/support/feeling-lost', languages: { 'en-IN': 'https://www.leanon.app/support/feeling-lost' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/feeling-lost', languages: { 'en-IN': 'https://www.howwasyourday.live/support/feeling-lost' } },
   openGraph: {
-    title: 'Feeling Lost in Life? Peer Support India | LeanOn',
+    title: 'Feeling Lost in Life? Peer Support India | How Was Your Day',
     description: "Feeling lost, stuck, or like you don't know who you are or what you want? Talk to a peer listener in India who has navigated the same uncertainty. Anonymous, no appointment.",
-    url: 'https://www.leanon.app/support/feeling-lost',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/feeling-lost',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn peer support for feeling lost in life' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day peer support for feeling lost in life' }],
   },
 }
 
@@ -76,9 +76,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Feeling Lost', item: 'https://www.leanon.app/support/feeling-lost' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Feeling Lost', item: 'https://www.howwasyourday.live/support/feeling-lost' },
   ],
 }
 
@@ -139,7 +139,7 @@ export default function FeelingLostPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -157,7 +157,7 @@ export default function FeelingLostPage() {
         <div className="hero">
           <p className="tag">Peer Support · Direction &amp; Identity</p>
           <h1>Feeling <em>Lost</em> Is Not a Flaw. It Is a Signal.</h1>
-          <p className="lead">Millions of people in India — in stable jobs, in good relationships, by every external measure doing fine — feel completely directionless. LeanOn connects you with peer listeners who have navigated their own period of lostness and found something real on the other side.</p>
+          <p className="lead">Millions of people in India — in stable jobs, in good relationships, by every external measure doing fine — feel completely directionless. How Was Your Day connects you with peer listeners who have navigated their own period of lostness and found something real on the other side.</p>
         </div>
 
         <div className="section">
@@ -208,7 +208,7 @@ export default function FeelingLostPage() {
           <p>This is harder than it sounds in a culture that treats uncertainty as a problem to be solved immediately. The lostness wants you to rush to resolution — to have the answer, to know the direction, to get back to certainty. But not-knowing is not itself the problem. Not knowing what you want is a completely legitimate place to be, especially if you have spent years pursuing what you were told you should want. Sitting with it — giving it time, giving it air, not forcing a resolution — is sometimes the most useful thing you can do.</p>
 
           <h3>Talking to Someone Who Got Through Their Own Version</h3>
-          <p>Advice from people who have never been lost is of limited use. What is genuinely useful is talking to someone who has navigated their own version of this disorientation — who was lost, who sat with it, who found something on the other side — and who can report from that experience without rushing you to the destination. LeanOn peer listeners have been through their own quarter-life reckonings. They are not here to tell you what your purpose is. They are here to sit with you in the not-knowing and to offer the company of someone who has been there.</p>
+          <p>Advice from people who have never been lost is of limited use. What is genuinely useful is talking to someone who has navigated their own version of this disorientation — who was lost, who sat with it, who found something on the other side — and who can report from that experience without rushing you to the destination. How Was Your Day peer listeners have been through their own quarter-life reckonings. They are not here to tell you what your purpose is. They are here to sit with you in the not-knowing and to offer the company of someone who has been there.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Have Navigated Lostness</h2>
@@ -247,7 +247,7 @@ export default function FeelingLostPage() {
           <p>You do not have to have it figured out to start. A peer listener may be online right now — anonymous, no judgment, no appointments needed.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Someone is here — start free now →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -263,7 +263,7 @@ export default function FeelingLostPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Feeling lost often connects with other experiences. Explore more peer support on LeanOn:</p>
+          <p>Feeling lost often connects with other experiences. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>
             <a href="/support/imposter-syndrome" className="related-link">Imposter Syndrome</a>

@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to a Real Person Online India — Not an AI, Not a Bot | LeanOn',
-  description: 'Tired of talking to AI chatbots? LeanOn connects you with real human peer listeners across India — private and genuinely caring. First 5 minutes free.',
+  title: 'Talk to a Real Person Online India — Not an AI, Not a Bot | How Was Your Day',
+  description: 'Tired of talking to AI chatbots? How Was Your Day connects you with real human peer listeners across India — private and genuinely caring. First 5 minutes free.',
   keywords: [
     'talk to a real person online india', 'real human conversation online india', 'not ai not chatgpt india',
     'talk to human not bot india', 'human chat support india', 'real person to talk to india',
     'talk to someone real online', 'human listener online india', 'real conversation online india',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/talk-to-real-person-online-india',
-    languages: { 'en-IN': 'https://www.leanon.app/talk-to-real-person-online-india' },
+    canonical: 'https://www.howwasyourday.live/talk-to-real-person-online-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-real-person-online-india' },
   },
   openGraph: {
     title: 'Talk to a Real Person Online India — Human Support, Not AI',
-    description: 'LeanOn connects you with real screened peer listeners across India. No bots, no algorithms, no predictions — just genuine human conversation.',
-    url: 'https://www.leanon.app/talk-to-real-person-online-india',
-    siteName: 'LeanOn',
+    description: 'How Was Your Day connects you with real screened peer listeners across India. No bots, no algorithms, no predictions — just genuine human conversation.',
+    url: 'https://www.howwasyourday.live/talk-to-real-person-online-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -32,15 +32,15 @@ const faqSchema = {
       name: 'How can I talk to a real person online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn connects you with real screened peer listeners across India. Browse who is online, start a free 5-minute session, and talk to a real human who is there just to listen — no AI, no bots.',
+        text: 'How Was Your Day connects you with real screened peer listeners across India. Browse who is online, start a free 5-minute session, and talk to a real human who is there just to listen — no AI, no bots.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are LeanOn listeners real humans or AI?',
+      name: 'Are How Was Your Day listeners real humans or AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'All LeanOn listeners are real people. They go through a screening process (application, quiz, live selfie and review) before they can listen on the platform. You will never talk to a bot or AI on LeanOn.',
+        text: 'All How Was Your Day listeners are real people. They go through a screening process (application, quiz, live selfie and review) before they can listen on the platform. You will never talk to a bot or AI on How Was Your Day.',
       },
     },
     {
@@ -48,12 +48,12 @@ const faqSchema = {
       name: 'Why should I talk to a real person instead of a chatbot like ChatGPT?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI can provide information and conversation, while a human peer can respond as another person with their own lived experience. LeanOn is designed for people who want that human-to-human conversation.',
+        text: 'AI can provide information and conversation, while a human peer can respond as another person with their own lived experience. How Was Your Day is designed for people who want that human-to-human conversation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does it cost to talk to a real person on LeanOn?',
+      name: 'How much does it cost to talk to a real person on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5 minutes are free (one per account). After that, 15-minute paid sessions start at ₹160 depending on the listener. Much more affordable than professional therapy.',
@@ -61,10 +61,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is talking to a LeanOn listener private?',
+      name: 'Is talking to a How Was Your Day listener private?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is private — no real name required. Your conversations are private and confidential. Listeners sign agreements to maintain your privacy.',
+        text: 'Yes. How Was Your Day is private — no real name required. Your conversations are private and confidential. Listeners sign agreements to maintain your privacy.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person Online India', item: 'https://www.leanon.app/talk-to-real-person-online-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person Online India', item: 'https://www.howwasyourday.live/talk-to-real-person-online-india' },
   ],
 }
 
@@ -156,7 +156,7 @@ export default function TalkToRealPersonPage() {
         <h1>Done Talking to Bots?<br />Talk to a Real Human Who Listens</h1>
         <p className="lead">
           AI can answer questions. But when you are struggling, anxious, or just need to feel understood —
-          only a real human can do that. LeanOn connects you with real screened peer listeners across India,
+          only a real human can do that. How Was Your Day connects you with real screened peer listeners across India,
          . No AI. No bots. No predictions.
         </p>
 
@@ -176,7 +176,7 @@ export default function TalkToRealPersonPage() {
               </ul>
             </div>
             <div className="vs-col human">
-              <h3>💙 LeanOn listener</h3>
+              <h3>💙 How Was Your Day listener</h3>
               <ul>
                 <li>Genuinely present with you</li>
                 <li>Hears the emotion behind words</li>
@@ -193,7 +193,7 @@ export default function TalkToRealPersonPage() {
           <p>There are moments when you know ChatGPT or any AI just won&apos;t cut it. When you are
             crying at 2 AM. When you just had a big fight. When you are feeling numb and don&apos;t
             know why. When you need to say something out loud to another human being who will actually hear it.</p>
-          <p>That&apos;s exactly what LeanOn is built for.</p>
+          <p>That&apos;s exactly what How Was Your Day is built for.</p>
         </div>
 
         <div className="card">
@@ -221,8 +221,8 @@ export default function TalkToRealPersonPage() {
         </div>
 
         <div className="card">
-          <h2>Who are the LeanOn listeners?</h2>
-          <p>LeanOn listeners are everyday people who have been through things too — and who care enough
+          <h2>Who are the How Was Your Day listeners?</h2>
+          <p>How Was Your Day listeners are everyday people who have been through things too — and who care enough
             to show up for others. They go through a training process before they can listen on the platform,
             and they are guided by clear principles: listen without judging, don&apos;t give unsolicited advice,
             keep everything private.</p>
@@ -240,13 +240,13 @@ export default function TalkToRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>How can I talk to a real person online in India?</h3>
-            <p>LeanOn connects you with real screened peer listeners across India. Browse who is online, start a
+            <p>How Was Your Day connects you with real screened peer listeners across India. Browse who is online, start a
               free 5-minute session, and talk to a real human who is there just to listen.</p>
           </div>
           <div className="faq-item">
-            <h3>Are LeanOn listeners real humans or AI?</h3>
-            <p>All LeanOn listeners are real people. They go through a screening process (application, quiz, live selfie and review) before
-              they can listen on the platform. You will never talk to a bot or AI on LeanOn.</p>
+            <h3>Are How Was Your Day listeners real humans or AI?</h3>
+            <p>All How Was Your Day listeners are real people. They go through a screening process (application, quiz, live selfie and review) before
+              they can listen on the platform. You will never talk to a bot or AI on How Was Your Day.</p>
           </div>
           <div className="faq-item">
             <h3>Why should I talk to a real person instead of a chatbot?</h3>
@@ -255,13 +255,13 @@ export default function TalkToRealPersonPage() {
               genuinely heard. For emotional support, nothing replaces a real human.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does it cost to talk on LeanOn?</h3>
+            <h3>How much does it cost to talk on How Was Your Day?</h3>
             <p>Your first 5 minutes are free (one per account). After that, 15-minute paid sessions start at ₹160
               depending on the listener — much more affordable than professional therapy.</p>
           </div>
           <div className="faq-item">
-            <h3>Is talking to a LeanOn listener private?</h3>
-            <p>Yes. LeanOn is private — no real name required. Your conversations are private and
+            <h3>Is talking to a How Was Your Day listener private?</h3>
+            <p>Yes. How Was Your Day is private — no real name required. Your conversations are private and
               confidential.</p>
           </div>
         </div>
@@ -279,7 +279,7 @@ export default function TalkToRealPersonPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

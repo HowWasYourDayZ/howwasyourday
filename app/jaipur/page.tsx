@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Jaipur — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Jaipur, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/jaipur', languages: { 'en-IN': 'https://www.leanon.app/jaipur' } },
-  keywords: 'peer support Jaipur, emotional support Jaipur, loneliness Jaipur, family pressure Jaipur, talk to someone Jaipur, leanon Jaipur',
+  title: 'Emotional Support in Jaipur — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Jaipur, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/jaipur', languages: { 'en-IN': 'https://www.howwasyourday.live/jaipur' } },
+  keywords: 'peer support Jaipur, emotional support Jaipur, loneliness Jaipur, family pressure Jaipur, talk to someone Jaipur, howwasyourday Jaipur',
   openGraph: {
-    title: 'Emotional Support in Jaipur — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Jaipur, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-    url: 'https://www.leanon.app/jaipur',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Jaipur — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Jaipur, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/jaipur',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Is loneliness common among women in Jaipur?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, and it often takes a specific shape rooted in joint family life. Many women in Jaipur are closely observed by parents, in-laws, and extended relatives — what they wear, who they speak to, how they spend their time, and when they marry are all subject to comment and correction. Even educated, professionally employed women describe feeling unable to speak honestly about their frustrations, ambitions, or relationships for fear of being seen as disrespectful or too modern. LeanOn offers a completely private, judgment-free space where that honesty is finally possible.',
+        text: 'Yes, and it often takes a specific shape rooted in joint family life. Many women in Jaipur are closely observed by parents, in-laws, and extended relatives — what they wear, who they speak to, how they spend their time, and when they marry are all subject to comment and correction. Even educated, professionally employed women describe feeling unable to speak honestly about their frustrations, ambitions, or relationships for fear of being seen as disrespectful or too modern. How Was Your Day offers a completely private, judgment-free space where that honesty is finally possible.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What does men\'s mental health look like in Jaipur?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Rajasthani culture places heavy emphasis on men as providers and protectors — the ones who hold the family together, make the difficult decisions, and never show cracks in that strength. This expectation makes emotional expression especially difficult for men in Jaipur, who often carry financial pressure, family responsibility, and career anxiety with no outlet, because vulnerability is seen as a failure of duty. Over time, this suppression contributes to isolation, irritability, and untreated stress. LeanOn gives men in Jaipur a private space to be honest about what they are actually carrying.',
+        text: 'Rajasthani culture places heavy emphasis on men as providers and protectors — the ones who hold the family together, make the difficult decisions, and never show cracks in that strength. This expectation makes emotional expression especially difficult for men in Jaipur, who often carry financial pressure, family responsibility, and career anxiety with no outlet, because vulnerability is seen as a failure of duty. Over time, this suppression contributes to isolation, irritability, and untreated stress. How Was Your Day gives men in Jaipur a private space to be honest about what they are actually carrying.',
       },
     },
     {
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Jaipur', item: 'https://www.leanon.app/jaipur' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Jaipur', item: 'https://www.howwasyourday.live/jaipur' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/jaipur',
+  url: 'https://www.howwasyourday.live/jaipur',
   areaServed: {
     '@type': 'City',
     name: 'Jaipur',
@@ -148,7 +148,7 @@ export default function JaipurPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function JaipurPage() {
         <div className="hero">
           <p className="tag">Peer Support · Jaipur</p>
           <h1>Peer Support in Jaipur — Someone to Lean On in <em>the Pink City</em></h1>
-          <p className="lead">Jaipur is a city balancing centuries of Rajasthani tradition with a fast-growing economy of IT parks, startups, and tourism. Beneath the pink sandstone facades and joint family courtyards, a new generation is quietly negotiating who they want to become — often without anyone to talk to about it. LeanOn connects you with peer listeners who bring genuine empathy to the particular weight of building a modern life inside a deeply traditional one.</p>
+          <p className="lead">Jaipur is a city balancing centuries of Rajasthani tradition with a fast-growing economy of IT parks, startups, and tourism. Beneath the pink sandstone facades and joint family courtyards, a new generation is quietly negotiating who they want to become — often without anyone to talk to about it. How Was Your Day connects you with peer listeners who bring genuine empathy to the particular weight of building a modern life inside a deeply traditional one.</p>
         </div>
 
         {/* Jaipur's pressures */}
@@ -195,7 +195,7 @@ export default function JaipurPage() {
           <p>This unspoken rule has real consequences. Men in Jaipur often carry career pressure, family financial responsibility, and marriage expectations with no outlet at all, because asking for help can feel like an admission that they are failing at the very role they are meant to fulfil. Over time, that suppression shows up as irritability, withdrawal, and physical health strain.</p>
 
           <h3>A Private, Empathetic Space</h3>
-          <p>LeanOn offers Jaipur's men something genuinely rare: a private, empathetic space with no connection to their family or professional circles, where they can say what they are actually feeling. Several of our male listeners have carried the same "provider and protector" expectations themselves, and understand the conversation from the inside.</p>
+          <p>How Was Your Day offers Jaipur's men something genuinely rare: a private, empathetic space with no connection to their family or professional circles, where they can say what they are actually feeling. Several of our male listeners have carried the same "provider and protector" expectations themselves, and understand the conversation from the inside.</p>
         </div>
 
         {/* Women's loneliness */}
@@ -210,7 +210,7 @@ export default function JaipurPage() {
           <p>The pressure of arranged marriage does not end at the wedding — it often continues into the relationship with in-laws, where a woman is expected to adapt, defer, and keep the peace, sometimes at real emotional cost. Many women describe feeling unable to share these struggles even with their own parents, for fear of appearing ungrateful or of causing a family conflict.</p>
 
           <h3>Professional Women, Traditional Expectations</h3>
-          <p>Jaipur now has a growing population of educated, working women navigating corporate jobs, startups, and tourism-sector careers — while still being expected to prioritise marriage, household duties, and family approval above their own ambitions. LeanOn's female listeners bring real empathy to this exact tension, having lived it themselves, and offer a space where career and tradition do not have to be reconciled out loud for anyone else's comfort.</p>
+          <p>Jaipur now has a growing population of educated, working women navigating corporate jobs, startups, and tourism-sector careers — while still being expected to prioritise marriage, household duties, and family approval above their own ambitions. How Was Your Day's female listeners bring real empathy to this exact tension, having lived it themselves, and offer a space where career and tradition do not have to be reconciled out loud for anyone else's comfort.</p>
         </div>
 
         {/* Listener cards */}
@@ -268,11 +268,11 @@ export default function JaipurPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is loneliness common among women in Jaipur?</div>
-            <div className="faq-a">Yes, and it often takes a specific shape rooted in joint family life. Many women are closely observed by parents, in-laws, and extended relatives, and even educated, professionally employed women describe feeling unable to speak honestly about their frustrations or ambitions. LeanOn offers a completely private, judgment-free space where that honesty is finally possible.</div>
+            <div className="faq-a">Yes, and it often takes a specific shape rooted in joint family life. Many women are closely observed by parents, in-laws, and extended relatives, and even educated, professionally employed women describe feeling unable to speak honestly about their frustrations or ambitions. How Was Your Day offers a completely private, judgment-free space where that honesty is finally possible.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What does men's mental health look like in Jaipur?</div>
-            <div className="faq-a">Rajasthani culture places heavy emphasis on men as providers and protectors, which makes emotional expression especially difficult. Men in Jaipur often carry financial pressure, family responsibility, and career anxiety with no outlet, because vulnerability is seen as a failure of duty. LeanOn gives men in Jaipur a private space to be honest about what they are actually carrying.</div>
+            <div className="faq-a">Rajasthani culture places heavy emphasis on men as providers and protectors, which makes emotional expression especially difficult. Men in Jaipur often carry financial pressure, family responsibility, and career anxiety with no outlet, because vulnerability is seen as a failure of duty. How Was Your Day gives men in Jaipur a private space to be honest about what they are actually carrying.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How does career pressure in Jaipur differ from other cities?</div>
@@ -283,7 +283,7 @@ export default function JaipurPage() {
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/relationship-stress" className="related-link">Relationship Stress</a>
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>
@@ -296,9 +296,9 @@ export default function JaipurPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

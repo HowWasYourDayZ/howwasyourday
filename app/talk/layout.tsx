@@ -3,26 +3,26 @@ import { FREE_SESSION_MINS } from '@/lib/constants'
 import { NRI_USD_PRICES } from '@/lib/geo-pricing'
 import { TALK_FAQ, TALK_TRY_SECS } from '@/lib/talk-match'
 
-// /talk — "Talk now": the match-first entry and LeanOn's primary link for
+// /talk — "Talk now": the match-first entry and How Was Your Day's primary link for
 // anyone who wants to talk to someone. Indexable. The interactive page is a
 // client component (its first render is empty without JavaScript), so the
 // readable description and structured data are rendered HERE, on the server,
 // for search engines and AI assistants. The page hides this block while a
 // match is in progress (body.talk-busy).
 
-const URL = 'https://www.leanon.app/talk'
+const URL = 'https://www.howwasyourday.live/talk'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone — Request a Listener, First 5 Minutes Free | LeanOn',
-  description: `Request a conversation with a real person — no appointment. Pick what's on your mind, choose text or voice, and LeanOn asks screened peer listeners in India who are online; a session starts when one accepts. First ${FREE_SESSION_MINS} minutes free, once per account.`,
+  title: 'Talk to Someone — Request a Listener, First 5 Minutes Free | How Was Your Day',
+  description: `Request a conversation with a real person — no appointment. Pick what's on your mind, choose text or voice, and How Was Your Day asks screened peer listeners in India who are online; a session starts when one accepts. First ${FREE_SESSION_MINS} minutes free, once per account.`,
   keywords: ['talk to someone now', 'talk to someone online india', 'someone to talk to', 'talk to a real person', 'relationship problems talk to someone', 'nri talk to someone', 'peer support india', 'online emotional support india', 'vent to someone online'],
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Talk to someone now — LeanOn',
+    title: 'Talk to someone now — How Was Your Day',
     description: `Request a one-to-one conversation with a screened peer listener in India. A session starts when a listener accepts. First ${FREE_SESSION_MINS} minutes free.`,
     url: URL,
-    siteName: 'LeanOn',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -33,17 +33,17 @@ const jsonLd = [
     '@type': 'WebPage',
     '@id': `${URL}#webpage`,
     url: URL,
-    name: 'LeanOn Talk now — talk to someone now',
-    isPartOf: { '@id': 'https://www.leanon.app/#website' },
-    about: { '@id': 'https://www.leanon.app/#organization' },
+    name: 'How Was Your Day Talk now — talk to someone now',
+    isPartOf: { '@id': 'https://www.howwasyourday.live/#website' },
+    about: { '@id': 'https://www.howwasyourday.live/#organization' },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'LeanOn Talk now',
+    name: 'How Was Your Day Talk now',
     url: URL,
     serviceType: 'Peer emotional support (non-clinical)',
-    provider: { '@id': 'https://www.leanon.app/#organization' },
+    provider: { '@id': 'https://www.howwasyourday.live/#organization' },
     areaServed: ['India', 'United States', 'United Kingdom', 'Canada', 'Australia', 'United Arab Emirates', 'Kuwait', 'Oman', 'Singapore', 'Malaysia'],
     description: 'One-to-one text or voice conversation with a screened peer listener in India, starting when an available listener accepts the request. Not therapy or emergency care.',
     offers: [
@@ -54,12 +54,12 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: 'How to talk to someone now on LeanOn',
+    name: 'How to talk to someone now on How Was Your Day',
     step: [
       { '@type': 'HowToStep', position: 1, name: "Pick what's on your mind", text: 'Relationship, family, work or studies, loneliness, anxiety or overthinking, or just needing to talk.' },
       { '@type': 'HowToStep', position: 2, name: 'Choose text or voice', text: 'Type at your own pace or talk it through out loud.' },
       { '@type': 'HowToStep', position: 3, name: 'Confirm your phone number', text: 'A one-time code; your number is never shown to the listener.' },
-      { '@type': 'HowToStep', position: 4, name: 'Get connected', text: `LeanOn asks a listener who is free now, and the next one if they cannot answer within about ${TALK_TRY_SECS} seconds.` },
+      { '@type': 'HowToStep', position: 4, name: 'Get connected', text: `How Was Your Day asks a listener who is free now, and the next one if they cannot answer within about ${TALK_TRY_SECS} seconds.` },
     ],
   },
   {
@@ -99,7 +99,7 @@ export default function TalkLayout({ children }: { children: React.ReactNode }) 
             <p>{f.a}</p>
           </details>
         ))}
-        <p style={{ marginTop: 18 }}><a href="/how-leanon-works">How LeanOn works</a> · <a href="/pricing">Pricing</a> · <a href="/trust">Trust &amp; safety</a></p>
+        <p style={{ marginTop: 18 }}><a href="/how-it-works">How the app works</a> · <a href="/pricing">Pricing</a> · <a href="/trust">Trust &amp; safety</a></p>
       </section>
     </>
   )

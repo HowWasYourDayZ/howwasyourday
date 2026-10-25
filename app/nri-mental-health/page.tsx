@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Mental Health — Talk to Someone Who Gets India | LeanOn',
+  title: 'NRI Mental Health — Talk to Someone Who Gets India | How Was Your Day',
   description: 'Living abroad but missing home? Struggling in the gap between two worlds? Talk to an Indian peer listener who understands. From US$10.',
   keywords: ['NRI mental health support', 'Indian diaspora support', 'expat Indian mental health', 'overseas Indian mental health', 'NRI therapy india', 'NRI emotional support'],
-  alternates: { canonical: 'https://www.leanon.app/nri-mental-health', languages: { 'en-IN': 'https://www.leanon.app/nri-mental-health' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-mental-health', languages: { 'en-IN': 'https://www.howwasyourday.live/nri-mental-health' } },
   openGraph: {
-    title: 'NRI Mental Health — Talk to Someone Who Gets India | LeanOn',
+    title: 'NRI Mental Health — Talk to Someone Who Gets India | How Was Your Day',
     description: 'Living abroad but missing home? Struggling in the gap between two worlds? Talk to an Indian peer listener who understands. From US$10.',
-    url: 'https://www.leanon.app/nri-mental-health',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/nri-mental-health',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -22,10 +22,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn available for NRIs?',
+      name: 'Is How Was Your Day available for NRIs?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is available anywhere in the world. You can browse listeners, start sessions, and talk to someone regardless of which country you are in. Sessions are over voice call and work across any internet connection.',
+        text: 'Yes. How Was Your Day is available anywhere in the world. You can browse listeners, start sessions, and talk to someone regardless of which country you are in. Sessions are over voice call and work across any internet connection.',
       },
     },
     {
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'Do listeners understand NRI problems?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners have personal experience with the NRI condition — either they have lived abroad themselves, or they are deeply familiar with the dual-identity strain that Indian people navigating between two cultures describe. The core experience of feeling caught between India and wherever you live now is well understood on LeanOn.',
+        text: 'Many How Was Your Day listeners have personal experience with the NRI condition — either they have lived abroad themselves, or they are deeply familiar with the dual-identity strain that Indian people navigating between two cultures describe. The core experience of feeling caught between India and wherever you live now is well understood on How Was Your Day.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Can I pay in INR from abroad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Payment is processed in INR through the LeanOn platform. You can use international cards or UPI-linked accounts. Sessions start at US$10.',
+        text: 'Yes. Payment is processed in INR through the How Was Your Day platform. You can use international cards or UPI-linked accounts. Sessions start at US$10.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is it anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. First name only, no photo, no last name. Your parents in India, your colleagues abroad, and your social circle have no way of knowing you are using LeanOn.',
+        text: 'Yes. First name only, no photo, no last name. Your parents in India, your colleagues abroad, and your social circle have no way of knowing you are using How Was Your Day.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What timezone do sessions run on?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners are based in India, so availability follows Indian time. There is no fixed timezone — you browse available listeners at the time you want to talk and start immediately. This makes it accessible from the US, UK, UAE, Canada, Australia, or anywhere else.',
+        text: 'How Was Your Day listeners are based in India, so availability follows Indian time. There is no fixed timezone — you browse available listeners at the time you want to talk and start immediately. This makes it accessible from the US, UK, UAE, Canada, Australia, or anywhere else.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'NRI Mental Health', item: 'https://www.leanon.app/nri-mental-health' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'NRI Mental Health', item: 'https://www.howwasyourday.live/nri-mental-health' },
   ],
 }
 
@@ -123,7 +123,7 @@ export default function NriMentalHealthPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -146,7 +146,7 @@ export default function NriMentalHealthPage() {
           <h3>Relationship Pressure from India</h3>
           <p>The WhatsApp calls asking when you are getting married. The relatives who interpret your independence abroad as a failure to meet expectations at home. The arranged marriage conversations conducted across time zones. The guilt of every visit home that does not last long enough.</p>
           <h3>Identity Confusion</h3>
-          <p>Who are you now? Indian enough for India, Western enough for where you live? The performance of belonging in two places at once — and the quiet exhaustion of not fully belonging in either — is one of the most common things NRIs come to LeanOn to talk about.</p>
+          <p>Who are you now? Indian enough for India, Western enough for where you live? The performance of belonging in two places at once — and the quiet exhaustion of not fully belonging in either — is one of the most common things NRIs come to How Was Your Day to talk about.</p>
           <h3>Homesickness That Sounds Childish</h3>
           <p>You are an adult. You chose to leave. And sometimes you miss home in a way that feels like grief. That is not childish — it is real. And it deserves a space to be spoken.</p>
         </div>
@@ -154,7 +154,7 @@ export default function NriMentalHealthPage() {
         <div className="section">
           <h2>Why Indian Therapists Abroad Are Not Always the Answer</h2>
           <p>Finding an Indian therapist abroad is expensive — USD, GBP, or AUD rates for sessions that cost ₹5,000–₹15,000 equivalent per hour. Non-Indian therapists may not understand arranged marriage dynamics, Indian joint family structures, or the specific weight of parent expectations in Indian culture.</p>
-          <p>LeanOn peer listeners are Indian, understand the cultural context from the inside, and charge US$10 per session — not ₹10,000.</p>
+          <p>How Was Your Day peer listeners are Indian, understand the cultural context from the inside, and charge US$10 per session — not ₹10,000.</p>
         </div>
 
         <div className="cta-card">
@@ -169,24 +169,24 @@ export default function NriMentalHealthPage() {
         <div className="section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn available for NRIs?</div>
-            <div className="faq-a">Yes. LeanOn is available anywhere in the world. You can browse listeners, start sessions, and talk to someone regardless of which country you are in. Sessions work across any internet connection.</div>
+            <div className="faq-q">Is How Was Your Day available for NRIs?</div>
+            <div className="faq-a">Yes. How Was Your Day is available anywhere in the world. You can browse listeners, start sessions, and talk to someone regardless of which country you are in. Sessions work across any internet connection.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Do listeners understand NRI problems?</div>
-            <div className="faq-a">Many LeanOn listeners have personal experience with the NRI condition or are deeply familiar with the dual-identity strain. The experience of feeling caught between India and wherever you live now is well understood on LeanOn.</div>
+            <div className="faq-a">Many How Was Your Day listeners have personal experience with the NRI condition or are deeply familiar with the dual-identity strain. The experience of feeling caught between India and wherever you live now is well understood on How Was Your Day.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I pay in INR from abroad?</div>
-            <div className="faq-a">Yes. Payment is processed in INR through the LeanOn platform. You can use international cards or UPI-linked accounts. Sessions start at US$10.</div>
+            <div className="faq-a">Yes. Payment is processed in INR through the How Was Your Day platform. You can use international cards or UPI-linked accounts. Sessions start at US$10.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is it anonymous?</div>
-            <div className="faq-a">Yes. First name only, no photo, no last name. Your parents in India and your colleagues abroad have no way of knowing you are using LeanOn.</div>
+            <div className="faq-a">Yes. First name only, no photo, no last name. Your parents in India and your colleagues abroad have no way of knowing you are using How Was Your Day.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What timezone do sessions run on?</div>
-            <div className="faq-a">LeanOn listeners are based in India, so availability follows Indian time. There is no fixed timezone — you browse available listeners at the time you want to talk and start immediately. This makes it accessible from the US, UK, UAE, Canada, Australia, or anywhere else.</div>
+            <div className="faq-a">How Was Your Day listeners are based in India, so availability follows Indian time. There is no fixed timezone — you browse available listeners at the time you want to talk and start immediately. This makes it accessible from the US, UK, UAE, Canada, Australia, or anywhere else.</div>
           </div>
         </div>
 

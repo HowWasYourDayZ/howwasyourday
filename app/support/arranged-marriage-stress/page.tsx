@@ -4,8 +4,8 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Arranged Marriage Pressure and Stress in India — Talk to Someone Who Gets It | LeanOn',
-  description: 'The pressure of the arranged marriage process in India — the profiles, the meetings, the family expectations — is a specific kind of stress that most mental health content ignores. LeanOn listeners understand it.',
+  title: 'Arranged Marriage Pressure and Stress in India — Talk to Someone Who Gets It | How Was Your Day',
+  description: 'The pressure of the arranged marriage process in India — the profiles, the meetings, the family expectations — is a specific kind of stress that most mental health content ignores. How Was Your Day listeners understand it.',
   keywords: [
     'arranged marriage stress India', 'arranged marriage pressure India', 'arranged marriage anxiety India',
     'marriage pressure India', 'shaadi pressure India', 'marriage rejection India',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'biodata India stress', 'meeting for arranged marriage anxiety India',
     'parents marriage pressure India', 'unmarried pressure India', 'late marriage India anxiety',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/arranged-marriage-stress', languages: { 'en-IN': 'https://www.leanon.app/support/arranged-marriage-stress' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/arranged-marriage-stress', languages: { 'en-IN': 'https://www.howwasyourday.live/support/arranged-marriage-stress' } },
   openGraph: {
-    title: 'Arranged Marriage Pressure and Stress in India — Talk to Someone Who Gets It | LeanOn',
-    description: 'The profiles, the meetings, the family expectations — arranged marriage stress is real and rarely discussed. LeanOn listeners understand it.',
-    url: 'https://www.leanon.app/support/arranged-marriage-stress',
-    siteName: 'LeanOn',
+    title: 'Arranged Marriage Pressure and Stress in India — Talk to Someone Who Gets It | How Was Your Day',
+    description: 'The profiles, the meetings, the family expectations — arranged marriage stress is real and rarely discussed. How Was Your Day listeners understand it.',
+    url: 'https://www.howwasyourday.live/support/arranged-marriage-stress',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Arranged Marriage Stress Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Arranged Marriage Stress Support India' }],
   },
 }
 
@@ -31,12 +31,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will the listener have opinions about arranged marriage vs love marriage?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. Listeners on LeanOn do not have an agenda about how you should find a partner or whether arranged marriage is right for you. You can be going through the process and fully committed to it, ambivalent about it, or quietly resistant — the listener will meet you where you are, without steering you in any direction.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. Listeners on How Was Your Day do not have an agenda about how you should find a partner or whether arranged marriage is right for you. You can be going through the process and fully committed to it, ambivalent about it, or quietly resistant — the listener will meet you where you are, without steering you in any direction.' },
     },
     {
       '@type': 'Question',
       name: 'What if I am not sure I want to get married right now?',
-      acceptedAnswer: { '@type': 'Answer', text: 'That is one of the most common and most unsayable feelings in the arranged marriage process — and you can say it in a LeanOn session. The listener will not try to convince you either way. This is a space to think through what you actually feel, without someone else&apos;s expectations in the room.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'That is one of the most common and most unsayable feelings in the arranged marriage process — and you can say it in a How Was Your Day session. The listener will not try to convince you either way. This is a space to think through what you actually feel, without someone else&apos;s expectations in the room.' },
     },
     {
       '@type': 'Question',
@@ -46,12 +46,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if I am grieving a match that did not work out?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Grief after an arranged marriage match falls apart is real and often dismissed — by family ("there are so many others"), by friends who do not understand the process, by cultural messaging that treats it as just a failed transaction. But you spent time imagining a future with that person, and the loss is real. A LeanOn session is a place to grieve without being told to move on.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Grief after an arranged marriage match falls apart is real and often dismissed — by family ("there are so many others"), by friends who do not understand the process, by cultural messaging that treats it as just a failed transaction. But you spent time imagining a future with that person, and the loss is real. A How Was Your Day session is a place to grieve without being told to move on.' },
     },
     {
       '@type': 'Question',
-      name: 'Is this the kind of thing people actually talk about on LeanOn?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Arranged marriage stress — the process, the pressure, the family dynamics, the age anxiety, the feelings around rejection and being evaluated — is one of the real things people bring to LeanOn sessions. Many listeners have navigated the process themselves and understand it from the inside.' },
+      name: 'Is this the kind of thing people actually talk about on How Was Your Day?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Arranged marriage stress — the process, the pressure, the family dynamics, the age anxiety, the feelings around rejection and being evaluated — is one of the real things people bring to How Was Your Day sessions. Many listeners have navigated the process themselves and understand it from the inside.' },
     },
     {
       '@type': 'Question',
@@ -65,9 +65,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Arranged Marriage Stress', item: 'https://www.leanon.app/support/arranged-marriage-stress' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Arranged Marriage Stress', item: 'https://www.howwasyourday.live/support/arranged-marriage-stress' },
   ],
 }
 
@@ -126,7 +126,7 @@ export default function ArrangedMarriageStressPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -144,7 +144,7 @@ export default function ArrangedMarriageStressPage() {
         <div className="hero">
           <p className="badge">Marriage Pressure · Family Expectations · Peer Support</p>
           <h1>Arranged Marriage Pressure and Stress in India — <em>Talk to Someone Who Gets It</em></h1>
-          <p className="lead">The profiles, the meetings, the family expectations, the age anxiety, the rejections you cannot grieve — the arranged marriage process is genuinely stressful in ways that most mental health content never touches. LeanOn listeners understand it from the inside.</p>
+          <p className="lead">The profiles, the meetings, the family expectations, the age anxiety, the rejections you cannot grieve — the arranged marriage process is genuinely stressful in ways that most mental health content never touches. How Was Your Day listeners understand it from the inside.</p>
           <a href="/browse?topic=relationships" className="cta-hero">Talk to someone who understands →</a>
         </div>
 
@@ -162,7 +162,7 @@ export default function ArrangedMarriageStressPage() {
           <p>In the arranged marriage process in India, age operates differently than it does in most other contexts. Your age is not just a number — it is a statement of urgency, a factor in how many profiles come your way, and a source of direct and indirect pressure from family.</p>
           <p>At 25, the process begins in earnest. By 28, there is a palpable shift in tone. By 30, the conversations become pointed. "Good profiles are getting harder to find at your age." "You are being too selective." "Your younger cousin is already married." The clock is kept not just in your head but out loud, by the people around you who love you and are genuinely worried — which makes it harder to be angry about, and harder to bear.</p>
           <p>The age anxiety is layered. There is the genuine worry about the narrowing pool. There is the cultural message that something is wrong with you if you are not married by a certain age. There is the awareness that your parents' social standing is partly tied up in your marital status. And there is the part of you that is trying to make a decision about the rest of your life while all of this is in the room.</p>
-          <p>Talking about age anxiety in the arranged marriage context is something very few people can do honestly — because the people who understand the context are also the ones creating the pressure. A LeanOn listener sits outside that dynamic.</p>
+          <p>Talking about age anxiety in the arranged marriage context is something very few people can do honestly — because the people who understand the context are also the ones creating the pressure. A How Was Your Day listener sits outside that dynamic.</p>
         </div>
 
         <div className="section">
@@ -183,8 +183,8 @@ export default function ArrangedMarriageStressPage() {
 
         <div className="section">
           <h2>Finding a Space Where You Can Actually Say It</h2>
-          <p>A LeanOn session is not couples counselling, and it is not help deciding whether to accept a match. It is a space for the things you cannot say to your family, cannot explain to friends who have not been through it, and cannot put into a WhatsApp message.</p>
-          <p>Listeners on LeanOn who have navigated the arranged marriage process understand what it is like to sit across from a stranger and feel the weight of your family's hopes in the room. They know the exhaustion of the process, the loneliness of going through it, and the complication of not being able to talk about it honestly with the people closest to you.</p>
+          <p>A How Was Your Day session is not couples counselling, and it is not help deciding whether to accept a match. It is a space for the things you cannot say to your family, cannot explain to friends who have not been through it, and cannot put into a WhatsApp message.</p>
+          <p>Listeners on How Was Your Day who have navigated the arranged marriage process understand what it is like to sit across from a stranger and feel the weight of your family's hopes in the room. They know the exhaustion of the process, the loneliness of going through it, and the complication of not being able to talk about it honestly with the people closest to you.</p>
           <p>You can come to a session with the ambivalence, the age anxiety, the grief over a match that did not work out, the anger you have not been able to show, or the quiet worry that something is wrong with you. None of it will surprise a listener who has been there.</p>
         </div>
 

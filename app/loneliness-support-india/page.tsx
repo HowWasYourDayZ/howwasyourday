@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in India? You\'re Not the Only One. | LeanOn',
-  description: 'Loneliness is an epidemic in urban India — in offices, apartments, and even in relationships. LeanOn connects you with a real human listener, with no appointment.',
+  title: 'Feeling Lonely in India? You\'re Not the Only One. | How Was Your Day',
+  description: 'Loneliness is an epidemic in urban India — in offices, apartments, and even in relationships. How Was Your Day connects you with a real human listener, with no appointment.',
   keywords: [
     'loneliness support india', 'feeling lonely india', 'lonely in india', 'urban loneliness india',
     'feeling alone india', 'no one to talk to india', 'talk to someone when lonely india',
     'feeling isolated india', 'midnight loneliness india', '3am loneliness india',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/support/loneliness',
-    languages: { 'en-IN': 'https://www.leanon.app/support/loneliness' },
+    canonical: 'https://www.howwasyourday.live/support/loneliness',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/support/loneliness' },
   },
   openGraph: {
     title: 'Loneliness Support in India — Talk to a Real Person',
-    description: 'Loneliness is everywhere in modern India. LeanOn connects you with a real peer listener when the quiet gets too loud.',
-    url: 'https://www.leanon.app/support/loneliness',
-    siteName: 'LeanOn',
+    description: 'Loneliness is everywhere in modern India. How Was Your Day connects you with a real peer listener when the quiet gets too loud.',
+    url: 'https://www.howwasyourday.live/support/loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'What can I do when I feel lonely at night?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners go online at different hours, including late at night. Start a free 5-minute session and talk to a real person whenever the loneliness feels too heavy to carry alone.',
+        text: 'How Was Your Day listeners go online at different hours, including late at night. Start a free 5-minute session and talk to a real person whenever the loneliness feels too heavy to carry alone.',
       },
     },
     {
@@ -48,15 +48,15 @@ const faqSchema = {
       name: 'How does talking to a listener help with loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Loneliness shrinks when someone genuinely listens. LeanOn listeners are screened and expected to give you their full attention, ask questions that help you feel seen, and hold space without judgment. Just one real conversation can break the cycle of isolation.',
+        text: 'Loneliness shrinks when someone genuinely listens. How Was Your Day listeners are screened and expected to give you their full attention, ask questions that help you feel seen, and hold space without judgment. Just one real conversation can break the cycle of isolation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available in Hindi or regional languages?',
+      name: 'Is How Was Your Day available in Hindi or regional languages?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional languages. When browsing, you can filter by language or check a listener\'s bio.',
+        text: 'Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional languages. When browsing, you can filter by language or check a listener\'s bio.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'Can I talk to a listener just because I feel like I have nothing important to say?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, always. You do not need a big reason to reach out. Feeling lonely IS a big enough reason. LeanOn listeners are there for exactly these moments — when you just want a real human connection.',
+        text: 'Yes, always. You do not need a big reason to reach out. Feeling lonely IS a big enough reason. How Was Your Day listeners are there for exactly these moments — when you just want a real human connection.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Loneliness Support India', item: 'https://www.leanon.app/support/loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Loneliness Support India', item: 'https://www.howwasyourday.live/support/loneliness' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function LonelinessSupportPage() {
         <p className="lead">
           Loneliness in India is rarely talked about — but it is everywhere. In big cities where you know
           no one. In offices full of people but no real connection. In relationships where you still feel
-          unseen. LeanOn is here for exactly those moments.
+          unseen. How Was Your Day is here for exactly those moments.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
@@ -174,7 +174,7 @@ export default function LonelinessSupportPage() {
         <div className="night-box">
           <h2>🌙 Feeling it most at night?</h2>
           <p>Loneliness peaks after 10 PM when distractions run out and the quiet becomes too loud.
-            LeanOn listeners are — including 2 AM, 3 AM, any time you need them.</p>
+            How Was Your Day listeners are — including 2 AM, 3 AM, any time you need them.</p>
           <p>You don&apos;t need to wait until morning. You can talk right now.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -183,12 +183,12 @@ export default function LonelinessSupportPage() {
           <h2>How a conversation with a peer listener helps</h2>
           <p>Loneliness shrinks when someone genuinely listens. Not to solve your problems. Not to give you
             advice. Just to be present with you, hear you out, and make you feel less alone in your own head.</p>
-          <p>LeanOn listeners are screened and expected to do exactly this — to ask gentle questions, to reflect back what
+          <p>How Was Your Day listeners are screened and expected to do exactly this — to ask gentle questions, to reflect back what
             they hear, and to make you feel like you matter. Because you do.</p>
         </div>
 
         <div className="card">
-          <h2>Who talks to LeanOn listeners?</h2>
+          <h2>Who talks to How Was Your Day listeners?</h2>
           <ul className="checklist">
             <li>Students far from home, missing family and belonging</li>
             <li>Young professionals in metro cities with work-life exhaustion and social isolation</li>
@@ -216,24 +216,24 @@ export default function LonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <h3>What can I do when I feel lonely at night?</h3>
-            <p>LeanOn listeners go online at different hours, including late at night. Start a free 5-minute session and
+            <p>How Was Your Day listeners go online at different hours, including late at night. Start a free 5-minute session and
               talk to a real person whenever the loneliness feels too heavy to carry alone.</p>
           </div>
           <div className="faq-item">
             <h3>How does talking to a listener help with loneliness?</h3>
-            <p>Loneliness shrinks when someone genuinely listens. LeanOn listeners are screened and expected to give you their
+            <p>Loneliness shrinks when someone genuinely listens. How Was Your Day listeners are screened and expected to give you their
               full attention, ask questions that help you feel seen, and hold space without judgment. Just one
               real conversation can break the cycle of isolation.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn available in Hindi or regional languages?</h3>
-            <p>Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional
+            <h3>Is How Was Your Day available in Hindi or regional languages?</h3>
+            <p>Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional
               languages. When browsing, you can filter by language or check a listener&apos;s bio.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to a listener even if I have nothing important to say?</h3>
             <p>Yes, always. You do not need a big reason to reach out. Feeling lonely IS a big enough reason.
-              LeanOn listeners are there for exactly these moments.</p>
+              How Was Your Day listeners are there for exactly these moments.</p>
           </div>
         </div>
 
@@ -250,7 +250,7 @@ export default function LonelinessSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

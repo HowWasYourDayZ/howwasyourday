@@ -24,7 +24,7 @@ export const post = {
 
 <h3>Peer Support</h3>
 <p>For many people, the most useful thing is not a technique but a conversation. Having someone hear what you have been carrying — the frustration, the helplessness, the things that keep building — and reflect it back without judgment is genuinely helpful. It processes the pile. It makes the minor triggers less explosive.</p>
-<p>LeanOn connects you with peer listeners who understand the experience of carrying anger — who have navigated it themselves and can sit with you in it without advice or judgement. Available immediately, from ₹160, anonymous.</p>
+<p>How Was Your Day connects you with peer listeners who understand the experience of carrying anger — who have navigated it themselves and can sit with you in it without advice or judgement. Available immediately, from ₹160, anonymous.</p>
 
 <h3>Self-Help Tools</h3>
 <p>Wysa and similar apps have CBT-based anger management modules that are useful for between-session practice. They are not a substitute for human connection or clinical care, but they are a useful complement.</p>
@@ -36,6 +36,6 @@ export const post = {
 <h2>How to Start</h2>
 <p>The most common barrier to getting support for anger is the shame and stigma around admitting it. There is a cultural narrative in India (and elsewhere) that anger is a character flaw — that needing help with it is an admission of weakness or danger.</p>
 <p>It is not. Anger that is unprocessed accumulates. Seeking support is not weakness — it is exactly the kind of self-awareness that prevents the build-up from causing real damage.</p>
-<p>If you are not ready for clinical support, start with a conversation. A peer listener on LeanOn can be a safe first step — no clinical label, no formal diagnosis, just a real conversation with someone who understands.</p>
+<p>If you are not ready for clinical support, start with a conversation. A peer listener on How Was Your Day can be a safe first step — no clinical label, no formal diagnosis, just a real conversation with someone who understands.</p>
 `,
 }

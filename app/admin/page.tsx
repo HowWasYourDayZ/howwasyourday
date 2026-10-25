@@ -63,7 +63,7 @@ type SessionRow = {
   crisis_flagged?: boolean; crisis_flagged_at?: string | null; created_at?: string
   seeker?: { name?: string; phone?: string }; listener?: { name?: string; phone?: string }
   // Set by /api/admin/sessions when a listener_earnings row exists for this session.
-  // listener_service_fee = combined LeanOn extra beyond seeker's ₹10 flat fee.
+  // listener_service_fee = combined How Was Your Day extra beyond seeker's ₹10 flat fee.
   //   India sessions: just the listener service fee on rawShare.
   //   NRI sessions: service fee + NRI margin (amountHeld was the flat USD rate).
   // listener_net_amount = what the listener was actually credited (after the svc fee).
@@ -1011,7 +1011,7 @@ export default function AdminPage() {
             <div style={{fontSize:48,marginBottom:16}}>🔐</div>
             <h2 style={{fontSize:22,fontWeight:900,color:'#0F4867',marginBottom:10}}>Sign in required</h2>
             <p style={{fontSize:14,color:'#5A7A8A',fontWeight:600,lineHeight:1.7,marginBottom:24}}>
-              Sign in to your LeanOn account first, then return to this page.
+              Sign in to your How Was Your Day account first, then return to this page.
             </p>
             <a
               href="/auth?redirect=/admin"
@@ -1048,7 +1048,7 @@ export default function AdminPage() {
         <div className="topbar">
           <div>
             <h1>Admin Panel</h1>
-            <p>LeanOn platform management</p>
+            <p>How Was Your Day platform management</p>
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
             <button
@@ -1517,7 +1517,7 @@ export default function AdminPage() {
                 {/* ── GROSS PLATFORM REVENUE (platform fee) ── */}
                 {kpis.platformEarnings && (
                   <>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--gray)', marginBottom: 10 }}>LeanOn Revenue — before gateway costs (India: ₹10 flat + listener svc fee — {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}% now, 15% before 24 Sep 2026 · NRI: same + USD price margin)</div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--gray)', marginBottom: 10 }}>How Was Your Day Revenue — before gateway costs (India: ₹10 flat + listener svc fee — {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}% now, 15% before 24 Sep 2026 · NRI: same + USD price margin)</div>
                     <div className="kpi-grid" style={{ marginBottom: 20 }}>
                       <div className="kpi-card" style={{ borderLeft: '5px solid var(--green)' }}>
                         <div className="kpi-label">All Time</div>
@@ -2543,10 +2543,10 @@ export default function AdminPage() {
                                 // actual settlement ledger — exact, accounts for early exits
                                 // and the listener service fee.  Use these when available.
                                 if (s.listener_net_amount != null && s.listener_service_fee != null) {
-                                  const leanOnExtra  = s.listener_service_fee  // beyond ₹10 flat
-                                  const leanOnEarned = platformFee + leanOnExtra  // LeanOn total
+                                  const howWasYourDayExtra  = s.listener_service_fee  // beyond ₹10 flat
+                                  const howWasYourDayEarned = platformFee + howWasYourDayExtra  // How Was Your Day total
                                   const listenerNet  = s.listener_net_amount
-                                  const refund = Math.max(0, s.amount_held - leanOnEarned - listenerNet)
+                                  const refund = Math.max(0, s.amount_held - howWasYourDayEarned - listenerNet)
                                   const isEarlyExit = refund > 0
                                   // NRI: listener_rate_per_min is set for ALL non-free sessions
                                   // (migration 054), but NRI is only when the flat NRI price
@@ -2559,22 +2559,22 @@ export default function AdminPage() {
                                   const feeRate = serviceFeeRateAt(s.started_at ?? s.ended_at)
                                   const listenerRawShare = isNri ? Math.round(listenerNet / (1 - feeRate)) : 0
                                   const nriSvcFee   = isNri ? Math.round(listenerRawShare * feeRate) : 0
-                                  const nriMargin   = isNri ? leanOnExtra - nriSvcFee : 0
+                                  const nriMargin   = isNri ? howWasYourDayExtra - nriSvcFee : 0
 
                                   const tooltip = isNri
                                     ? [
                                         `NRI session · Seeker held ₹${s.amount_held}`,
                                         `Listener ₹${listenerNet} (rate ₹${s.listener_rate_per_min}/min × ${Math.round((1 - feeRate) * 100)}%)`,
                                         `Svc fee ₹${nriSvcFee} · NRI margin ₹${nriMargin} · Flat ₹${platformFee}`,
-                                        `LeanOn total ₹${leanOnEarned}`,
+                                        `How Was Your Day total ₹${howWasYourDayEarned}`,
                                         isEarlyExit ? `Refund ₹${refund}` : null,
                                       ].filter(Boolean).join(' | ')
                                     : [
                                         `Seeker held ₹${s.amount_held}`,
                                         `Listener earned ₹${listenerNet}`,
-                                        leanOnExtra > 0 ? `Service fee ₹${leanOnExtra}` : null,
+                                        howWasYourDayExtra > 0 ? `Service fee ₹${howWasYourDayExtra}` : null,
                                         `Platform fee ₹${platformFee}`,
-                                        `LeanOn total ₹${leanOnEarned}`,
+                                        `How Was Your Day total ₹${howWasYourDayEarned}`,
                                         isEarlyExit ? `Refund ₹${refund}` : null,
                                       ].filter(Boolean).join(' · ')
 
@@ -2582,7 +2582,7 @@ export default function AdminPage() {
                                     <span title={tooltip}>
                                       {isNri && <span style={{ fontSize: 9, background: '#E8F4FF', color: '#0066CC', borderRadius: 3, padding: '1px 4px', marginRight: 4, fontWeight: 800 }}>NRI</span>}
                                       ₹{listenerNet}
-                                      <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+₹{leanOnEarned}</span>
+                                      <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+₹{howWasYourDayEarned}</span>
                                       {isEarlyExit && <span style={{ fontSize: 10, color: 'var(--orange)', marginLeft: 3 }}>↩₹{refund}</span>}
                                     </span>
                                   )
@@ -2605,7 +2605,7 @@ export default function AdminPage() {
                                 // (same rate applied at settlement by settleSession()).
                                 // Show with ~ prefix so it's clear this is a live estimate.
                                 // NRI: rawShare = listener's India rate × booked mins (NOT amount_held − ₹10),
-                                // because amount_held includes the NRI USD margin that goes to LeanOn, not the listener.
+                                // because amount_held includes the NRI USD margin that goes to How Was Your Day, not the listener.
                                 if (s.status === 'active') {
                                   const isNriActive = !!s.listener_rate_per_min &&
                                     s.listener_rate_per_min * s.duration_mins < s.amount_held - platformFee
@@ -2618,7 +2618,7 @@ export default function AdminPage() {
                                   const nriMargin  = isNriActive ? (s.amount_held - platformFee - rawShare) : 0
                                   const platformTotal = platformFee + serviceFee + nriMargin
                                   return (
-                                    <span title={`Seeker held ₹${s.amount_held} · Projected listener ₹${listenerNet} (${Math.round(activeFeeRate * 100)}% svc fee ₹${serviceFee})${isNriActive ? ` · NRI margin ₹${nriMargin}` : ''} · LeanOn ~₹${platformTotal}`}>
+                                    <span title={`Seeker held ₹${s.amount_held} · Projected listener ₹${listenerNet} (${Math.round(activeFeeRate * 100)}% svc fee ₹${serviceFee})${isNriActive ? ` · NRI margin ₹${nriMargin}` : ''} · How Was Your Day ~₹${platformTotal}`}>
                                       ~₹{listenerNet}
                                       <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+₹{platformTotal}</span>
                                     </span>
@@ -2767,7 +2767,7 @@ export default function AdminPage() {
                       const listenerNet = transcriptSession.listener_net_amount != null
                         ? transcriptSession.listener_net_amount
                         : transcriptSession.amount_held - pFee - extra
-                      const leanOn = pFee + extra
+                      const howWasYourDay = pFee + extra
                       const isNri = !!transcriptSession.listener_rate_per_min &&
                         transcriptSession.listener_rate_per_min * transcriptSession.duration_mins < transcriptSession.amount_held - pFee
                       if (isNri) {
@@ -2775,9 +2775,9 @@ export default function AdminPage() {
                         const rawShare = Math.round(listenerNet / (1 - feeRate))
                         const nriSvcFee = Math.round(rawShare * feeRate)
                         const nriMargin = extra - nriSvcFee
-                        return ` · NRI ₹${transcriptSession.amount_held} · Listener ₹${listenerNet} + LeanOn ₹${leanOn} (₹${pFee} flat+₹${nriSvcFee} fee+₹${nriMargin} margin)`
+                        return ` · NRI ₹${transcriptSession.amount_held} · Listener ₹${listenerNet} + How Was Your Day ₹${howWasYourDay} (₹${pFee} flat+₹${nriSvcFee} fee+₹${nriMargin} margin)`
                       }
-                      return ` · ₹${listenerNet} listener + ₹${leanOn} LeanOn${extra > 0 ? ` (₹${pFee}+₹${extra})` : ''}`
+                      return ` · ₹${listenerNet} listener + ₹${howWasYourDay} How Was Your Day${extra > 0 ? ` (₹${pFee}+₹${extra})` : ''}`
                     })()}
                   </div>
                 </div>
@@ -2973,7 +2973,7 @@ export default function AdminPage() {
                             UPI: <span style={pill}>{p.upi_id}</span>
                             {!rzpxEnabled && (
                               <a
-                                href={`upi://pay?pa=${encodeURIComponent(p.upi_id!)}&pn=${encodeURIComponent(p.bank?.account_holder_name || p.users?.name || 'LeanOn Listener')}&am=${encodeURIComponent(String(p.amount))}&cu=INR&tn=${encodeURIComponent('LeanOn listener payout')}`}
+                                href={`upi://pay?pa=${encodeURIComponent(p.upi_id!)}&pn=${encodeURIComponent(p.bank?.account_holder_name || p.users?.name || 'How Was Your Day Listener')}&am=${encodeURIComponent(String(p.amount))}&cu=INR&tn=${encodeURIComponent('How Was Your Day listener payout')}`}
                                 style={{ background: 'var(--teal)', color: 'white', padding: '3px 12px', borderRadius: 20, fontSize: 12, fontWeight: 800, textDecoration: 'none' }}
                               >
                                 📲 Pay in UPI app

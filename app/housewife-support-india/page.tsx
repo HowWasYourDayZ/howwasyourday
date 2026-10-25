@@ -4,26 +4,26 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Housewife Mental Health India — Your Work Is Real. So Is Your Exhaustion. | LeanOn',
+  title: 'Housewife Mental Health India — Your Work Is Real. So Is Your Exhaustion. | How Was Your Day',
   description: 'Homemakers in India can request a conversation with a screened peer listener about loneliness, family pressure or emotional exhaustion. Non-clinical peer support; availability varies.',
   keywords: [
     'housewife mental health india', 'homemaker loneliness india', 'stay at home mom india support',
     'homemaker isolation india', 'housewife depression india', 'homemaker mental health india',
     'housewife support india', 'homemaker support india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/housewife-support-india', languages: { 'en-IN': 'https://www.leanon.app/housewife-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/housewife-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/housewife-support-india' } },
   openGraph: {
-    title: 'Housewife Mental Health India — Your Work Is Real. So Is Your Exhaustion. | LeanOn',
+    title: 'Housewife Mental Health India — Your Work Is Real. So Is Your Exhaustion. | How Was Your Day',
     description: 'Homemakers in India can request a conversation with a screened peer listener about loneliness, family pressure or emotional exhaustion. Non-clinical peer support; availability varies.',
-    url: 'https://www.leanon.app/housewife-support-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/housewife-support-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Housewife Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Housewife Support India' }],
   },
 }
 
 const directQuestion = "I'm a homemaker in India and feel lonely — where can I talk to someone?"
-const directAnswer = "LeanOn lets adults in India request a one-to-one text or voice conversation with a screened peer listener about isolation, marital stress or the emotional load of homemaking. This is non-clinical peer support, not therapy. One introductory session of up to five minutes is free per account; paid prices and availability vary."
+const directAnswer = "How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener about isolation, marital stress or the emotional load of homemaking. This is non-clinical peer support, not therapy. One introductory session of up to five minutes is free per account; paid prices and availability vary."
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -42,13 +42,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn without my family knowing?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn does not notify your family, but cannot guarantee nobody will discover your use through shared devices, browser history or payment records. Listeners see your chosen display name, not your phone number. Voice calls are not recorded; text messages are stored and authorised administrators may review reported or safety-flagged sessions.' },
+      name: 'Can I use How Was Your Day without my family knowing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day does not notify your family, but cannot guarantee nobody will discover your use through shared devices, browser history or payment records. Listeners see your chosen display name, not your phone number. Voice calls are not recorded; text messages are stored and authorised administrators may review reported or safety-flagged sessions.' },
     },
     {
       '@type': 'Question',
       name: 'Is it anonymous?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is not fully anonymous because sign-in requires phone verification. Listeners see your chosen display name rather than your phone number. Text messages are stored, and authorised administrators may review reported or safety-flagged sessions.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is not fully anonymous because sign-in requires phone verification. Listeners see your chosen display name rather than your phone number. Text messages are stored, and authorised administrators may review reported or safety-flagged sessions.' },
     },
     {
       '@type': 'Question',
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Housewife Support India', item: 'https://www.leanon.app/housewife-support-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Housewife Support India', item: 'https://www.howwasyourday.live/housewife-support-india' },
   ],
 }
 
@@ -117,7 +117,7 @@ export default function HousewifeSupportIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -165,7 +165,7 @@ export default function HousewifeSupportIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What LeanOn Offers</h2>
+          <h2>What How Was Your Day Offers</h2>
           <p>A space that is entirely yours. Where you are not a wife or a mother or a daughter-in-law. Just a person, with thoughts and feelings and a need to be heard. The listener has no connection to your family. Nothing you say will reach them. You can say everything you manage in silence every day &mdash; and be heard by someone who has no agenda except to understand.</p>
           <p>Sessions are 15 minutes. You can find 15 minutes. During school drop-off. While the lunch is on the stove. After everyone has gone to bed. This is not a major commitment &mdash; it is a small space that is entirely yours.</p>
         </div>

@@ -1,6 +1,6 @@
 import crypto from 'crypto'
 
-// Google Play reviewer login (2026-10-21). Reviewers can't receive a LeanOn OTP
+// Google Play reviewer login (2026-10-21). Reviewers can't receive a How Was Your Day OTP
 // (MSG91 sends it to a real phone), so ONE demo number may sign in with a fixed
 // code instead. OFF unless both Vercel env vars are set:
 //   REVIEW_LOGIN_PHONE  e.g. +919000000001   (a number nobody really uses)

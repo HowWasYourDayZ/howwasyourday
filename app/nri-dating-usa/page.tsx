@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Dating in the USA | Being Indian and Dating in America | LeanOn',
+  title: 'NRI Dating in the USA | Being Indian and Dating in America | How Was Your Day',
   description: 'Dating as an Indian in America is complicated — family expectations, apps, cultural mismatch. Talk to a peer listener who understands the NRI dating experience.',
   keywords: ['nri dating usa', 'indian dating america', 'desi dating usa', 'dating as indian in usa', 'nri dating apps', 'second generation indian dating', 'abcd dating problems'],
-  alternates: { canonical: 'https://www.leanon.app/nri-dating-usa' },
-  openGraph: { title: 'NRI Dating in the USA | Being Indian and Dating in America | LeanOn', description: 'Dating as an Indian in America is complicated — family expectations, apps, cultural mismatch. Talk to a peer listener who understands the NRI dating experience.', url: 'https://www.leanon.app/nri-dating-usa', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-dating-usa' },
+  openGraph: { title: 'NRI Dating in the USA | Being Indian and Dating in America | How Was Your Day', description: 'Dating as an Indian in America is complicated — family expectations, apps, cultural mismatch. Talk to a peer listener who understands the NRI dating experience.', url: 'https://www.howwasyourday.live/nri-dating-usa', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'What kinds of NRI dating situations do people talk about?', acceptedAnswer: { '@type': 'Answer', text: 'Many: the exhaustion of dating apps where you constantly have to explain your cultural background. The relationship your parents don\'t know about. The non-Indian partner your family won\'t accept. The Indian-American partner who doesn\'t feel Indian enough for your family. The loneliness of being single in the Indian community where everyone seems paired off.' } },
-  { '@type': 'Question', name: 'Will the listener judge me for dating non-Indians or outside my caste?', acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn listeners are peer listeners, not moral authorities. They will hear you without judgement, whatever your choices or situation. Their role is to understand, not to assess.' } },
+  { '@type': 'Question', name: 'Will the listener judge me for dating non-Indians or outside my caste?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners are peer listeners, not moral authorities. They will hear you without judgement, whatever your choices or situation. Their role is to understand, not to assess.' } },
   { '@type': 'Question', name: 'Is this confidential from my family and community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, community, or anyone else.' } },
-  { '@type': 'Question', name: 'What if I\'m second-generation and my dating life is complicated by identity questions?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is particularly well-suited to second-generation Indian-Americans, who often navigate an identity gap between their American life and their Indian family. Listeners understand the ABCD experience without needing extensive explanation.' } },
+  { '@type': 'Question', name: 'What if I\'m second-generation and my dating life is complicated by identity questions?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is particularly well-suited to second-generation Indian-Americans, who often navigate an identity gap between their American life and their Indian family. Listeners understand the ABCD experience without needing extensive explanation.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Dating USA', item: 'https://www.leanon.app/nri-dating-usa' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Dating USA', item: 'https://www.howwasyourday.live/nri-dating-usa' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function NriDatingUsaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Dating USA</span></nav>
         <div className="hero">
@@ -84,13 +84,13 @@ export default function NriDatingUsaPage() {
           <h2>The NRI Dating Double-Bind</h2>
           <p>Dating as an Indian in America puts you in a structural double-bind. American dating culture — apps, casual dating, taking time to find the right person, no rush — is fine in theory and complicated in practice when your family has a different timeline. Indian family culture — rishta, timelines, the community watching, your parents wanting to be involved — doesn&rsquo;t disappear because you live in Houston or Fremont.</p>
           <p>The result is a love life that often has a hidden layer. The relationship your parents don&rsquo;t know about. The non-Indian partner you&rsquo;re afraid to introduce. The Indian match your parents like and you don&rsquo;t. The exhausting Hinge conversations where you have to explain caste, your parents&rsquo; involvement, your timeline for marriage, and what Diwali means before you&rsquo;ve even had a first date. The loneliness of navigating all of this without a community of people who truly get it.</p>
-          <p>LeanOn is exactly that place — a real Indian peer listener who understands the double-bind from the inside. No explanation required. First 5 minutes free.</p>
+          <p>How Was Your Day is exactly that place — a real Indian peer listener who understands the double-bind from the inside. No explanation required. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>What People Actually Need to Say</h2>
           <p>The things people actually need to say about NRI dating are not the things that fit into a casual conversation with friends. "I&rsquo;m afraid that if I date the person I want, it will destroy my relationship with my parents." "I&rsquo;ve been on the apps for two years and I&rsquo;m starting to feel like something is wrong with me." "I&rsquo;m in a relationship I can&rsquo;t tell anyone about and it&rsquo;s exhausting." "My parents have a shortlist and I don&rsquo;t know how to say no without breaking their hearts."</p>
-          <p>These are real. A LeanOn listener will hear them — really hear them — without judgement, without advice you didn&rsquo;t ask for, and without the community gossip risk. Sessions are anonymous and completely private. First 5 minutes free — one free session per account.</p>
+          <p>These are real. A How Was Your Day listener will hear them — really hear them — without judgement, without advice you didn&rsquo;t ask for, and without the community gossip risk. Sessions are anonymous and completely private. First 5 minutes free — one free session per account.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

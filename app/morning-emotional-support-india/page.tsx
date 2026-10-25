@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Morning Emotional Support India — Reset Before the Day Starts | LeanOn',
+  title: 'Morning Emotional Support India — Reset Before the Day Starts | How Was Your Day',
   description: 'Relationship fight before work. Anxiety about the day. Something from last night still sitting heavy. 15-minute morning session from ₹160. Reset and go.',
   keywords: [
     'morning emotional support india',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'morning relationship fight india',
     'process before work india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/morning-emotional-support-india', languages: { 'en-IN': 'https://www.leanon.app/morning-emotional-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/morning-emotional-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/morning-emotional-support-india' } },
   openGraph: {
-    title: 'Morning Emotional Support India — Reset Before the Day Starts | LeanOn',
+    title: 'Morning Emotional Support India — Reset Before the Day Starts | How Was Your Day',
     description: 'Relationship fight before work. Anxiety about the day. Something from last night still sitting heavy. 15-minute morning session from ₹160. Reset and go.',
-    url: 'https://www.leanon.app/morning-emotional-support-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/morning-emotional-support-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Morning Emotional Support' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Morning Emotional Support' }],
   },
 }
 
@@ -33,7 +33,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can I do a session during my commute?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn sessions are voice calls. Many people book a session and take the call in the car, on a bus, or walking to the office. You need earphones and somewhere you can speak without being overheard. The commute is one of the most natural vent windows because you are already alone and already going over it in your head.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day sessions are voice calls. Many people book a session and take the call in the car, on a bus, or walking to the office. You need earphones and somewhere you can speak without being overheard. The commute is one of the most natural vent windows because you are already alone and already going over it in your head.' },
     },
     {
       '@type': 'Question',
@@ -43,7 +43,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is it voice or chat?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Voice. LeanOn sessions are voice calls between you and a real peer listener. This is deliberate &mdash; the spoken word moves emotion more effectively than text. It is also more natural for a commute: you are not typing while driving or on the metro, you are speaking.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Voice. How Was Your Day sessions are voice calls between you and a real peer listener. This is deliberate &mdash; the spoken word moves emotion more effectively than text. It is also more natural for a commute: you are not typing while driving or on the metro, you are speaking.' },
     },
     {
       '@type': 'Question',
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Morning Emotional Support India', item: 'https://www.leanon.app/morning-emotional-support-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Morning Emotional Support India', item: 'https://www.howwasyourday.live/morning-emotional-support-india' },
   ],
 }
 
@@ -115,7 +115,7 @@ export default function MorningEmotionalSupportIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 

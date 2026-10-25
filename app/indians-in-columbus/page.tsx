@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Columbus Ohio | Peer Support for the Buckeye State | LeanOn',
+  title: 'Indians in Columbus Ohio | Peer Support for the Buckeye State | How Was Your Day',
   description: 'Columbus has a growing Indian community — OSU students, tech workers, medical professionals. The isolation of the Midwest Indian experience is real. Talk to someone.',
   keywords: ['indians in columbus ohio', 'indian community columbus', 'nri ohio', 'south asian columbus', 'osu indian students', 'desi columbus'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-columbus' },
-  openGraph: { title: 'Indians in Columbus Ohio | Peer Support for the Buckeye State | LeanOn', description: 'Columbus has a growing Indian community — OSU students, tech workers, medical professionals. The isolation of the Midwest Indian experience is real. Talk to someone.', url: 'https://www.leanon.app/indians-in-columbus', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-columbus' },
+  openGraph: { title: 'Indians in Columbus Ohio | Peer Support for the Buckeye State | How Was Your Day', description: 'Columbus has a growing Indian community — OSU students, tech workers, medical professionals. The isolation of the Midwest Indian experience is real. Talk to someone.', url: 'https://www.howwasyourday.live/indians-in-columbus', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand Midwest Indian isolation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the NRI experience, including the specific weight of being Indian in a smaller Midwestern city — fewer Indians around you, less cultural infrastructure, the physical distance from the coasts where larger Indian communities live, and the particular loneliness that comes with being one of very few Indians in a predominantly white environment.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand Midwest Indian isolation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific weight of being Indian in a smaller Midwestern city — fewer Indians around you, less cultural infrastructure, the physical distance from the coasts where larger Indian communities live, and the particular loneliness that comes with being one of very few Indians in a predominantly white environment.' } },
   { '@type': 'Question', name: 'What time zone does Columbus use for connecting?', acceptedAnswer: { '@type': 'Answer', text: 'Columbus (EST) is 10.5 hours behind IST. 8am Columbus = 6:30pm India. Before your morning commute or your OSU class, Indian listeners are available in their evening.' } },
-  { '@type': 'Question', name: 'Is this private from OSU or my workplace?', acceptedAnswer: { '@type': 'Answer', text: 'Completely private. LeanOn uses phone number and first name only. Nothing is shared with Ohio State University, your employer, your Columbus community, or anyone else.' } },
+  { '@type': 'Question', name: 'Is this private from OSU or my workplace?', acceptedAnswer: { '@type': 'Answer', text: 'Completely private. How Was Your Day uses phone number and first name only. Nothing is shared with Ohio State University, your employer, your Columbus community, or anyone else.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
-  { '@type': 'Question', name: 'I\'m an OSU student feeling isolated. Is LeanOn right for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many LeanOn users are Indian students at American universities who feel the gap between their Indian identity and their American student life acutely. Listeners understand the student experience — the homesickness, the academic pressure, the social awkwardness of being one of few Indians in your department or dorm.' } },
+  { '@type': 'Question', name: 'I\'m an OSU student feeling isolated. Is How Was Your Day right for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many How Was Your Day users are Indian students at American universities who feel the gap between their Indian identity and their American student life acutely. Listeners understand the student experience — the homesickness, the academic pressure, the social awkwardness of being one of few Indians in your department or dorm.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Columbus', item: 'https://www.leanon.app/indians-in-columbus' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Columbus', item: 'https://www.howwasyourday.live/indians-in-columbus' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function IndiansInColumbusPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Columbus</span></nav>
         <div className="hero">
           <p className="badge">Indians in Columbus &middot; Ohio &middot; OSU &middot; Midwest</p>
           <h1>Ohio State, downtown Columbus. <em>Still very far from home.</em></h1>
           <p className="lead">Columbus is growing — OSU draws Indian students by the thousands, the tech and medical sectors have established Indian professional communities, and the city is more diverse than its Midwestern reputation suggests. But fewer Indians means less cultural infrastructure, and the particular isolation of the Midwest Indian experience is real. Talk to someone who understands. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>OSU, Nationwide Children&rsquo;s, OhioHealth: The Columbus Indian Community</h2>
           <p>Ohio State University has one of the largest Indian student populations of any Midwestern university — thousands of Indian graduate students, researchers, and undergraduates call Columbus home each year. The medical campuses — Nationwide Children&rsquo;s Hospital, OhioHealth, OSU Wexner Medical Center — have significant Indian physician and medical professional communities. The tech corridor around Easton and the Dublin and Westerville suburbs have Indian IT professional families.</p>
           <p>By most Midwestern standards, Columbus is welcoming. The city is younger and more diverse than many Ohio cities. There are Indian grocery stores, temples, cultural associations. The India Festival in downtown Columbus draws thousands. And yet the Columbus Indian community is smaller than Chicago, smaller than Detroit, smaller than the Bay Area or the New York metro. The cultural infrastructure that larger Indian communities take for granted — the density of people who just &ldquo;get it&rdquo; without explanation — is thinner here.</p>
-          <p>LeanOn listeners are based in India, available without appointment, and ready to hold the specific weight of Midwest Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India, available without appointment, and ready to hold the specific weight of Midwest Indian experience. First 5 minutes free.</p>
         </div>
 
         <div className="section">
@@ -97,11 +97,11 @@ export default function IndiansInColumbusPage() {
         <div className="section">
           <h2>Driving Everywhere in a City Built for Cars</h2>
           <p>One of the subtle loneliness amplifiers of Columbus — and Midwestern cities generally — is the physical structure of the city itself. You drive everywhere. There is no walking, no spontaneous encounter, no tube ride where you sit next to another Indian and nod in recognition. The isolation is built into the roads. You go from home to work to store to home, each leg in a car, each leg alone.</p>
-          <p>The Indian social infrastructure that exists in Columbus — the weekend cricket matches, the temple events, the Diwali parties — requires a car and a plan. Spontaneous connection is hard. The kind of relationship where you can show up at someone&rsquo;s door when things are hard doesn&rsquo;t exist in the same way it might in an Indian city or a denser American one. LeanOn fills that gap — real, immediate, Indian, and available whenever you need it.</p>
+          <p>The Indian social infrastructure that exists in Columbus — the weekend cricket matches, the temple events, the Diwali parties — requires a car and a plan. Spontaneous connection is hard. The kind of relationship where you can show up at someone&rsquo;s door when things are hard doesn&rsquo;t exist in the same way it might in an Indian city or a denser American one. How Was Your Day fills that gap — real, immediate, Indian, and available whenever you need it.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Buckeye State, but still needing to talk.</h2><p>Real Indian peer listener. Understands the Midwest Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Buckeye State, but still needing to talk.</h2><p>Real Indian peer listener. Understands the Midwest Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Washington DC | Peer Support for the DMV Indian Community | LeanOn',
+  title: 'Indians in Washington DC | Peer Support for the DMV Indian Community | How Was Your Day',
   description: 'The DC metro area — Fairfax, Ashburn, Bethesda — has a dense Indian community. But working in policy, tech, or government doesn\'t mean you\'re not lonely.',
   keywords: ['indians in washington dc', 'indian community dc', 'fairfax indians', 'ashburn indian community', 'dmv indians', 'nri washington', 'south asian dc'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-washington-dc' },
-  openGraph: { title: 'Indians in Washington DC | Peer Support for the DMV Indian Community | LeanOn', description: 'The DC metro area — Fairfax, Ashburn, Bethesda — has a dense Indian community. But working in policy, tech, or government doesn\'t mean you\'re not lonely.', url: 'https://www.leanon.app/indians-in-washington-dc', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-washington-dc' },
+  openGraph: { title: 'Indians in Washington DC | Peer Support for the DMV Indian Community | How Was Your Day', description: 'The DC metro area — Fairfax, Ashburn, Bethesda — has a dense Indian community. But working in policy, tech, or government doesn\'t mean you\'re not lonely.', url: 'https://www.howwasyourday.live/indians-in-washington-dc', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the DC area Indian professional experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners understand the NRI experience including the specific pressures of the DMV Indian community — government contractor work, H1B complexities in the policy world, the diplomatic distance of living near power, and the particular emotional suppression that comes with high-achieving, high-visibility careers.' } },
+  { '@type': 'Question', name: 'Do listeners understand the DC area Indian professional experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners understand the NRI experience including the specific pressures of the DMV Indian community — government contractor work, H1B complexities in the policy world, the diplomatic distance of living near power, and the particular emotional suppression that comes with high-achieving, high-visibility careers.' } },
   { '@type': 'Question', name: 'What time can I connect from the DC area?', acceptedAnswer: { '@type': 'Answer', text: 'Washington DC (EST) is 10.5 hours behind IST. 8am DC = 6:30pm India. Before your morning commute on the Silver Line, Indian listeners are in their evening and available. Early mornings work well.' } },
-  { '@type': 'Question', name: 'Is this completely private from my professional network?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. LeanOn is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, government contacts, or anyone in the Northern Virginia or DC Indian community.' } },
+  { '@type': 'Question', name: 'Is this completely private from my professional network?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. How Was Your Day is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, government contacts, or anyone in the Northern Virginia or DC Indian community.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
-  { '@type': 'Question', name: 'I work in a field where showing vulnerability feels professionally risky. Will this stay private?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. LeanOn was built specifically for people who cannot easily show vulnerability in their professional world. Sessions are anonymous, private, and outside your professional network entirely.' } },
+  { '@type': 'Question', name: 'I work in a field where showing vulnerability feels professionally risky. Will this stay private?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. How Was Your Day was built specifically for people who cannot easily show vulnerability in their professional world. Sessions are anonymous, private, and outside your professional network entirely.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Washington DC', item: 'https://www.leanon.app/indians-in-washington-dc' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Washington DC', item: 'https://www.howwasyourday.live/indians-in-washington-dc' },
 ] }
 
 const S = `
@@ -70,38 +70,38 @@ export default function IndiansInWashingtonDCPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Washington DC</span></nav>
         <div className="hero">
           <p className="badge">Indians in DC &middot; Fairfax &middot; Ashburn &middot; Northern Virginia</p>
           <h1>Fairfax, Ashburn, Herndon. <em>Little India. Big silence.</em></h1>
           <p className="lead">The Northern Virginia corridor — Fairfax, Ashburn, Herndon, Reston — is sometimes called &ldquo;Little India.&rdquo; Bethesda, Rockville, and Silver Spring hold some of the most accomplished Indian families in America. Living near power shapes you. The diplomatic distance, the high-stakes careers, the community that is too visible to be vulnerable in. Talk to someone outside all of it. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>Fairfax, Ashburn, Herndon: The Indian DMV</h2>
           <p>No Indian community in America is more concentrated in a single corridor than Northern Virginia. Fairfax County alone has one of the largest Indian populations of any county in the country. Ashburn and Herndon — where data centres sit alongside Indian grocery stores — are places where you can go days without speaking to anyone who isn&rsquo;t Indian or working in tech. The Silver Line was practically built for the Indian commuter.</p>
           <p>On the Maryland side, Rockville and Bethesda carry a significant Indian professional and medical community — the NIH, FEMA, and government contractor world has drawn Indian professionals for decades. Gaithersburg, Germantown, and the I-270 corridor have large Indian family communities. The DMV Indian community is one of the most established, credentialed, and quietly burdened in America.</p>
-          <p>LeanOn listeners are based in India, understand the NRI experience deeply, and are available without appointment. First 5 minutes free. From US$10.</p>
+          <p>How Was Your Day listeners are based in India, understand the NRI experience deeply, and are available without appointment. First 5 minutes free. From US$10.</p>
         </div>
 
         <div className="section">
           <h2>The Diplomatic Distance: Living Near Power, Feeling Far from Yourself</h2>
           <p>Working in or around government — policy, defence contracting, the World Bank, the IMF, embassy work, Capitol Hill staffing — has a particular effect on people. You become practiced at discretion. You learn to separate your professional face from your personal one. Vulnerability becomes professionally dangerous. And after years of this, the ability to simply say what you feel to another person atrophies.</p>
           <p>The DC Indian community carries this in a concentrated form. High-achieving, high-visibility, often in careers where the wrong thing said to the wrong person has real consequences. The Indian parent who is a senior official at a federal agency and has not told anyone — not even their spouse — how much they dread Monday mornings. The government contractor on a security clearance who has been managing a low-grade anxiety for three years and has told no one.</p>
-          <p>LeanOn is outside your professional network entirely. Anonymous. No notes that can be subpoenaed. A real Indian peer listener who understands the weight of the DMV Indian professional world.</p>
+          <p>How Was Your Day is outside your professional network entirely. Anonymous. No notes that can be subpoenaed. A real Indian peer listener who understands the weight of the DMV Indian professional world.</p>
         </div>
 
         <div className="section">
           <h2>The Community That Sees Everything</h2>
           <p>The Northern Virginia Indian community is famously tight-knit. The temple committees, the cultural associations, the Diwali galas at the Marriott, the school parent networks where the Indian parents all know each other — it is a warm and supportive community, and it is one where news travels fast. You can be surrounded by hundreds of Indians every weekend and have no one you can actually talk to, because everyone knows your family, your career, your parents back in India.</p>
-          <p>This is why LeanOn exists. Not a replacement for community — but a space outside it. A screened Indian peer listener who knows nothing about your career, your family, or your standing in the Fairfax Indian community. Someone who will just listen. Washington DC (EST) is 10.5 hours behind IST. 8am in DC is 6:30pm in India — before the commute, listeners are available.</p>
+          <p>This is why How Was Your Day exists. Not a replacement for community — but a space outside it. A screened Indian peer listener who knows nothing about your career, your family, or your standing in the Fairfax Indian community. Someone who will just listen. Washington DC (EST) is 10.5 hours behind IST. 8am in DC is 6:30pm in India — before the commute, listeners are available.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Living near power doesn&rsquo;t mean you have someone to talk to.</h2><p>Real Indian peer listener. Understands the DMV Indian experience. Private. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Living near power doesn&rsquo;t mean you have someone to talk to.</h2><p>Real Indian peer listener. Understands the DMV Indian experience. Private. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support in India — A Practical Guide | LeanOn',
-  description: 'What is peer support, how it differs from therapy and counselling, when to use it, how to choose a peer listener, and what to expect. A practical guide written by LeanOn, an India-origin peer support platform.',
-  alternates: { canonical: 'https://www.leanon.app/peer-support-india-guide' },
+  title: 'Peer Support in India — A Practical Guide | How Was Your Day',
+  description: 'What is peer support, how it differs from therapy and counselling, when to use it, how to choose a peer listener, and what to expect. A practical guide written by How Was Your Day, an India-origin peer support platform.',
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-support-india-guide' },
   openGraph: {
-    title: 'Peer Support in India — A Practical Guide | LeanOn',
-    description: 'What peer support is, how it differs from therapy, when to use it, and how to choose a peer listener. A practical guide from LeanOn.',
-    url: 'https://www.leanon.app/peer-support-india-guide',
-    siteName: 'LeanOn',
+    title: 'Peer Support in India — A Practical Guide | How Was Your Day',
+    description: 'What peer support is, how it differs from therapy, when to use it, and how to choose a peer listener. A practical guide from How Was Your Day.',
+    url: 'https://www.howwasyourday.live/peer-support-india-guide',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Is peer support the same as counselling?',
-    a: 'No. In India, counselling typically refers to professional support from a licensed counsellor — usually someone with a postgraduate qualification in psychology or counselling. Counsellors can assess, provide structured interventions and refer for psychiatric care. Peer support is non-clinical and based on lived experience. LeanOn is peer support, not counselling or therapy.',
+    a: 'No. In India, counselling typically refers to professional support from a licensed counsellor — usually someone with a postgraduate qualification in psychology or counselling. Counsellors can assess, provide structured interventions and refer for psychiatric care. Peer support is non-clinical and based on lived experience. How Was Your Day is peer support, not counselling or therapy.',
   },
   {
     q: 'Who can benefit from peer support?',
@@ -38,11 +38,11 @@ const faqs = [
   },
   {
     q: 'How do I choose a peer listener?',
-    a: 'Look for someone with lived experience in the area you want to discuss. Read their bio carefully — what have they actually been through? Check their rating and number of sessions. On LeanOn, every listener has been screened through an application review, identity verification, and an assessment on active listening, boundaries and crisis referral before going live. You can browse listener profiles and choose who you want to talk to before starting a session.',
+    a: 'Look for someone with lived experience in the area you want to discuss. Read their bio carefully — what have they actually been through? Check their rating and number of sessions. On How Was Your Day, every listener has been screened through an application review, identity verification, and an assessment on active listening, boundaries and crisis referral before going live. You can browse listener profiles and choose who you want to talk to before starting a session.',
   },
   {
     q: 'Is peer support confidential?',
-    a: 'Peer listeners on LeanOn are bound by confidentiality. LeanOn does not share session content. You sign up with a phone number and first name — no last name or photograph required. However, LeanOn is not a fully anonymous service: a phone number is required to create an account.',
+    a: 'Peer listeners on How Was Your Day are bound by confidentiality. How Was Your Day does not share session content. You sign up with a phone number and first name — no last name or photograph required. However, How Was Your Day is not a fully anonymous service: a phone number is required to create an account.',
   },
   {
     q: 'What is the difference between peer support and a friend?',
@@ -50,10 +50,10 @@ const faqs = [
   },
   {
     q: 'Is peer support available in Indian languages?',
-    a: 'Yes. LeanOn has peer listeners who speak English, Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati, Punjabi, Odia and Urdu. You can filter the listener browse by language.',
+    a: 'Yes. How Was Your Day has peer listeners who speak English, Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati, Punjabi, Odia and Urdu. You can filter the listener browse by language.',
   },
   {
-    q: 'What does a peer support session on LeanOn cost?',
+    q: 'What does a peer support session on How Was Your Day cost?',
     a: 'In India: the listener\'s per-minute rate × minutes + a flat ₹10 platform fee. At ₹10/min, a 15-minute session is ₹160. Voice calls are ₹5/min more than text. Outside India, prices start at US$10 (15 min), US$15 (30 min), US$20 (45 min). Every new account receives one free 5-minute introduction.',
   },
 ]
@@ -65,9 +65,9 @@ const jsonLd = {
       '@type': 'Article',
       headline: 'Peer Support in India — A Practical Guide',
       description: String(metadata.description),
-      url: 'https://www.leanon.app/peer-support-india-guide',
-      isPartOf: { '@type': 'WebSite', name: 'LeanOn', url: 'https://www.leanon.app' },
-      publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+      url: 'https://www.howwasyourday.live/peer-support-india-guide',
+      isPartOf: { '@type': 'WebSite', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
+      publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
       about: [
         { '@type': 'Thing', name: 'Peer support' },
         { '@type': 'Thing', name: 'Mental health support India' },
@@ -101,8 +101,8 @@ const jsonLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' },
-        { '@type': 'ListItem', position: 2, name: 'Peer Support India Guide', item: 'https://www.leanon.app/peer-support-india-guide' },
+        { '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' },
+        { '@type': 'ListItem', position: 2, name: 'Peer Support India Guide', item: 'https://www.howwasyourday.live/peer-support-india-guide' },
       ],
     },
   ],
@@ -162,7 +162,7 @@ export default function PeerSupportIndiaGuidePage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -174,7 +174,7 @@ export default function PeerSupportIndiaGuidePage() {
 
         <h1>Peer Support in India — A Practical Guide</h1>
         <p className="lead">What peer support is, how it is different from therapy and counselling, when it helps, and how to choose a peer listener.</p>
-        <p className="byline">Written by <a href="/">LeanOn</a> — an India-origin peer support platform. Last updated September 2026.</p>
+        <p className="byline">Written by <a href="/">How Was Your Day</a> — an India-origin peer support platform. Last updated September 2026.</p>
 
         <nav className="toc" aria-label="Contents">
           <h2>Contents</h2>
@@ -185,7 +185,7 @@ export default function PeerSupportIndiaGuidePage() {
             <li><a href="#peer-vs-ai">Peer support vs AI chatbots</a></li>
             <li><a href="#when-to-use">When to use peer support — and when not to</a></li>
             <li><a href="#how-to-choose">How to choose a peer listener</a></li>
-            <li><a href="#leanon">How LeanOn implements peer support</a></li>
+            <li><a href="#howwasyourday">How the app implements peer support</a></li>
             <li><a href="#safety">Safety model and crisis boundaries</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#faq">Frequently asked questions</a></li>
@@ -226,7 +226,7 @@ export default function PeerSupportIndiaGuidePage() {
           <h2>Peer support vs AI chatbots</h2>
           <p>AI assistants (ChatGPT, Gemini, Claude, Perplexity) are useful for many things: information, reflection, brainstorming, working through a problem. What they cannot offer is human presence — a real person with their own experience, their own stake in the conversation, and a genuine response rather than a pattern match.</p>
           <p>The WHO Commission on Social Connection (2024) has identified loneliness as a significant global health challenge — citing a lack of <em>social connection</em> with other people as a distinct need. If what a person needs is specifically another human being to listen, an AI conversation does not meet that need in the same way, regardless of how sophisticated the AI response is.</p>
-          <p>LeanOn connects people with real human peer listeners. It is not an AI and has no AI-generated responses.</p>
+          <p>How Was Your Day connects people with real human peer listeners. It is not an AI and has no AI-generated responses.</p>
         </div>
 
         <div id="when-to-use" className="section">
@@ -251,7 +251,7 @@ export default function PeerSupportIndiaGuidePage() {
           <div className="crisis-box">
             <strong>In crisis?</strong> If you are experiencing thoughts of self-harm or suicide, please contact a crisis service immediately.
             India crisis lines: <strong>NIMHANS: 080-46110007</strong> · <strong>Tele-MANAS: 14416</strong> (free, 24/7, Government of India).
-            LeanOn is not an emergency or crisis service.
+            How Was Your Day is not an emergency or crisis service.
           </div>
         </div>
 
@@ -267,19 +267,19 @@ export default function PeerSupportIndiaGuidePage() {
           </ul>
         </div>
 
-        <div id="leanon" className="section">
-          <h2>How LeanOn implements peer support</h2>
-          <p>LeanOn is an India-origin peer support platform connecting people with real human peer listeners for private one-to-one conversations by text or voice.</p>
+        <div id="howwasyourday" className="section">
+          <h2>How the app implements peer support</h2>
+          <p>How Was Your Day is an India-origin peer support platform connecting people with real human peer listeners for private one-to-one conversations by text or voice.</p>
 
           <h3>Who the listeners are</h3>
-          <p>Every listener on LeanOn is a real person who has personally lived through what they support. They apply to join and are screened through a process that includes identity verification with a private selfie, application review, and an assessment on active listening, holding boundaries, and knowing when to refer someone to professional help. Each application is reviewed before a listener goes live.</p>
-          <p>Listeners are not therapists and do not claim to be. They are peer supporters — people who listen from lived experience, not clinical training. LeanOn does not have a listener training programme; listeners are screened, not trained by LeanOn.</p>
+          <p>Every listener on How Was Your Day is a real person who has personally lived through what they support. They apply to join and are screened through a process that includes identity verification with a private selfie, application review, and an assessment on active listening, holding boundaries, and knowing when to refer someone to professional help. Each application is reviewed before a listener goes live.</p>
+          <p>Listeners are not therapists and do not claim to be. They are peer supporters — people who listen from lived experience, not clinical training. How Was Your Day does not have a listener training programme; listeners are screened, not trained by How Was Your Day.</p>
 
           <h3>What a session is and is not</h3>
-          <p>A LeanOn session is a private one-to-one conversation — text or voice — with a real human listener. It is not clinical care. Listeners do not diagnose, prescribe, or provide structured psychotherapy. Sessions are for being heard, not for clinical assessment.</p>
+          <p>A How Was Your Day session is a private one-to-one conversation — text or voice — with a real human listener. It is not clinical care. Listeners do not diagnose, prescribe, or provide structured psychotherapy. Sessions are for being heard, not for clinical assessment.</p>
 
           <h3>Privacy</h3>
-          <p>Sessions are private. LeanOn does not share session content. You sign up with a phone number (OTP verified) and a first name — no last name or photograph required. LeanOn is not a fully anonymous service: an account with a phone number is required.</p>
+          <p>Sessions are private. How Was Your Day does not share session content. You sign up with a phone number (OTP verified) and a first name — no last name or photograph required. How Was Your Day is not a fully anonymous service: an account with a phone number is required.</p>
 
           <h3>Availability</h3>
           <p>Listeners set their own availability. Most India-based listeners are most active during evening IST hours. There is no appointment required — browse who is available now and request a session. Listener availability varies and is not guaranteed at all hours.</p>
@@ -287,8 +287,8 @@ export default function PeerSupportIndiaGuidePage() {
 
         <div id="safety" className="section">
           <h2>Safety model and crisis boundaries</h2>
-          <p>LeanOn is peer support, not crisis care. Listeners are screened on how to handle disclosures that require professional intervention, including how to refer to appropriate crisis services. They are not trained counsellors or crisis workers.</p>
-          <p>If you disclose something that suggests immediate risk — thoughts of self-harm, suicidal intent, a dangerous situation — a LeanOn listener will refer you to appropriate services. They will not attempt to provide crisis intervention themselves.</p>
+          <p>How Was Your Day is peer support, not crisis care. Listeners are screened on how to handle disclosures that require professional intervention, including how to refer to appropriate crisis services. They are not trained counsellors or crisis workers.</p>
+          <p>If you disclose something that suggests immediate risk — thoughts of self-harm, suicidal intent, a dangerous situation — a How Was Your Day listener will refer you to appropriate services. They will not attempt to provide crisis intervention themselves.</p>
           <div className="crisis-box">
             <strong>India crisis helplines:</strong><br/>
             NIMHANS: <a href="tel:08046110007">080-46110007</a><br/>
@@ -303,7 +303,7 @@ export default function PeerSupportIndiaGuidePage() {
             <li><strong>India:</strong> listener&apos;s per-minute rate × minutes + ₹10 flat platform fee. At ₹10/min: 15 min = ₹160, 30 min = ₹310, 45 min = ₹460. Voice calls: +₹5/min.</li>
             <li><strong>Outside India:</strong> from US$10 (15 min), US$15 (30 min), US$20 (45 min).</li>
           </ul>
-          <p>Unused wallet balance is fully refundable. Full pricing: <a href="/pricing">leanon.app/pricing</a>.</p>
+          <p>Unused wallet balance is fully refundable. Full pricing: <a href="/pricing">howwasyourday.live/pricing</a>.</p>
         </div>
 
         <div id="faq" className="section">

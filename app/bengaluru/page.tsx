@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Bengaluru — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Bengaluru, India. No appointment needed. Talk anonymously on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/bengaluru', languages: { 'en-IN': 'https://www.leanon.app/bengaluru' } },
-  keywords: 'peer support Bengaluru, emotional support Bangalore, loneliness Bangalore, startup burnout Bengaluru, talk to someone Bangalore, leanon Bengaluru',
+  title: 'Emotional Support in Bengaluru — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Bengaluru, India. No appointment needed. Talk anonymously on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/bengaluru', languages: { 'en-IN': 'https://www.howwasyourday.live/bengaluru' } },
+  keywords: 'peer support Bengaluru, emotional support Bangalore, loneliness Bangalore, startup burnout Bengaluru, talk to someone Bangalore, howwasyourday Bengaluru',
   openGraph: {
-    title: 'Emotional Support in Bengaluru — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Bengaluru, India. No appointment needed. Talk anonymously on LeanOn.',
-    url: 'https://www.leanon.app/bengaluru',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Bengaluru — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Bengaluru, India. No appointment needed. Talk anonymously on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/bengaluru',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,12 +41,12 @@ const faqSchema = {
       name: 'How is relocating to Bengaluru different from other Indian cities?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Bengaluru is one of India\'s biggest internal migration destinations. People move here from Tamil Nadu, Andhra Pradesh, Kerala, and all across North India. The cultural mix is unique but can also mean you feel caught between worlds — not fully fitting into the local Kannada culture, yet also no longer part of your hometown community. This in-between feeling is a specific kind of loneliness that LeanOn listeners understand deeply.',
+        text: 'Bengaluru is one of India\'s biggest internal migration destinations. People move here from Tamil Nadu, Andhra Pradesh, Kerala, and all across North India. The cultural mix is unique but can also mean you feel caught between worlds — not fully fitting into the local Kannada culture, yet also no longer part of your hometown community. This in-between feeling is a specific kind of loneliness that How Was Your Day listeners understand deeply.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What kind of issues do Bengalureans talk to LeanOn listeners about?',
+      name: 'What kind of issues do Bengalureans talk to How Was Your Day listeners about?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'The most common topics from Bengaluru users include WFH isolation, startup or corporate burnout, career confusion ("Am I in the right field?"), loneliness after a breakup or move, and the anxiety of living a life that looks successful from the outside but feels hollow from the inside. Many people also talk about the flatmate culture — living with strangers and still feeling profoundly alone.',
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn peer support different from therapy or counselling?',
+      name: 'Is How Was Your Day peer support different from therapy or counselling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is peer support, not therapy. Our listeners are screened peers who have lived through the experiences they support — they are not licensed therapists. This makes it more accessible, more affordable (starting at ₹160 for 15 minutes). For clinical mental health concerns, we always recommend professional help. For the day-to-day weight of modern Bengaluru life, peer support is often exactly what is needed.',
+        text: 'Yes. How Was Your Day is peer support, not therapy. Our listeners are screened peers who have lived through the experiences they support — they are not licensed therapists. This makes it more accessible, more affordable (starting at ₹160 for 15 minutes). For clinical mental health concerns, we always recommend professional help. For the day-to-day weight of modern Bengaluru life, peer support is often exactly what is needed.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Bengaluru', item: 'https://www.leanon.app/bengaluru' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Bengaluru', item: 'https://www.howwasyourday.live/bengaluru' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/bengaluru',
+  url: 'https://www.howwasyourday.live/bengaluru',
   areaServed: {
     '@type': 'City',
     name: 'Bengaluru',
@@ -148,7 +148,7 @@ export default function BengaluruPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function BengaluruPage() {
         <div className="hero">
           <p className="tag">Peer Support · Bengaluru</p>
           <h1>Peer Support in Bengaluru — Someone to Lean On in <em>India's Tech Capital</em></h1>
-          <p className="lead">Bengaluru is full of driven, talented people — and quietly, a lot of them are struggling. Whether it is WFH isolation in a one-BHK, the exhaustion of startup culture, or the specific loneliness of building a life far from home, LeanOn connects you with peer listeners who truly get it.</p>
+          <p className="lead">Bengaluru is full of driven, talented people — and quietly, a lot of them are struggling. Whether it is WFH isolation in a one-BHK, the exhaustion of startup culture, or the specific loneliness of building a life far from home, How Was Your Day connects you with peer listeners who truly get it.</p>
         </div>
 
         {/* Bengaluru's unique emotional challenges */}
@@ -174,7 +174,7 @@ export default function BengaluruPage() {
           <p>Pre-pandemic, Bengaluru's office culture was a social lifeline for many — especially those who had relocated from other cities. The shift to remote and hybrid work removed that scaffolding overnight. Now, thousands of people in Koramangala, Indiranagar, HSR Layout, and Whitefield spend their days alone in flats, talking to nobody outside of work calls. The casual friction of office life — the coffee chats, the lunch runs, the post-meeting gossip — is gone, and there is nothing obvious to replace it.</p>
 
           <h3>Startup Burnout Is Real and Underreported</h3>
-          <p>Bengaluru's startup ecosystem is one of the most celebrated in Asia — and one of the most quietly exhausting. The culture rewards hustle and penalises vulnerability. Founders and early employees often carry enormous pressure in silence: the fear of failure, investor expectations, team management stress, and the slow erosion of the original passion that started it all. Many reach out to LeanOn when they feel they cannot admit to anyone in their network how close they are to the edge.</p>
+          <p>Bengaluru's startup ecosystem is one of the most celebrated in Asia — and one of the most quietly exhausting. The culture rewards hustle and penalises vulnerability. Founders and early employees often carry enormous pressure in silence: the fear of failure, investor expectations, team management stress, and the slow erosion of the original passion that started it all. Many reach out to How Was Your Day when they feel they cannot admit to anyone in their network how close they are to the edge.</p>
 
           <h3>The Relocation Experience</h3>
           <p>Bengaluru is one of India's biggest internal migration destinations. People arrive from Tamil Nadu, Andhra Pradesh, Kerala, Karnataka's own smaller cities, and every corner of North India. The early months — navigating a new city, building social circles from scratch, adapting to a different culture and sometimes language — can be profoundly lonely. Even after years, many people describe Bengaluru as a city where you can be very busy but never fully belong.</p>
@@ -183,30 +183,30 @@ export default function BengaluruPage() {
           <p>Back home, loneliness was buffered by family, old friends, and the organic social fabric of a familiar place. In Bengaluru, you might live with flatmates who are strangers, spend weekends running errands, and scroll through Instagram watching everyone else's highlight reel. The contrast between the life you imagined and the life you are actually living can be quietly devastating.</p>
 
           <h3>Career Pressure and Identity Confusion</h3>
-          <p>Bengaluru attracts India's most ambitious young professionals — which means it is also a city where career anxiety runs extremely high. The constant benchmark of what others are achieving, the FOMO of not being at the right company or on the right trajectory, and the deeper question of whether you even want what you have been working so hard for — these are conversations that happen frequently on LeanOn.</p>
+          <p>Bengaluru attracts India's most ambitious young professionals — which means it is also a city where career anxiety runs extremely high. The constant benchmark of what others are achieving, the FOMO of not being at the right company or on the right trajectory, and the deeper question of whether you even want what you have been working so hard for — these are conversations that happen frequently on How Was Your Day.</p>
         </div>
 
-        {/* How LeanOn Works in Bengaluru */}
+        {/* How It Works in Bengaluru */}
         <div className="section">
-          <h2>How LeanOn Works in Bengaluru</h2>
-          <p>LeanOn is peer support — not therapy. That distinction matters. Our listeners are real people who have navigated the same pressures you are facing, chosen for how well they listen without judgment and support without advice-pushing.</p>
+          <h2>How It Works in Bengaluru</h2>
+          <p>How Was Your Day is peer support — not therapy. That distinction matters. Our listeners are real people who have navigated the same pressures you are facing, chosen for how well they listen without judgment and support without advice-pushing.</p>
 
           <h3>Browse and Choose Your Listener</h3>
-          <p>Start by browsing listener profiles at <a href="/browse?city=bengaluru" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. You can filter by topic — loneliness, startup burnout, career confusion, relationships — and read about each listener's personal background before you begin. No cold starts. No awkward first minutes wondering if this person gets it.</p>
+          <p>Start by browsing listener profiles at <a href="/browse?city=bengaluru" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. You can filter by topic — loneliness, startup burnout, career confusion, relationships — and read about each listener's personal background before you begin. No cold starts. No awkward first minutes wondering if this person gets it.</p>
 
           <h3>Start in Minutes</h3>
           <p>Every session starts with a short five-minute window. Use it to gauge the connection before committing. If it feels right, continue. If not, find another listener. Sessions start at ₹160 for 15 minutes — significantly more accessible than therapy and available any time, including late nights when the weight feels heaviest.</p>
 
           <h3>Available When You Need It Most</h3>
-          <p>Loneliness and burnout do not keep business hours. LeanOn listeners go online at different hours, often including late at night when you are staring at the ceiling in your Koramangala flat wondering if any of this is worth it.</p>
+          <p>Loneliness and burnout do not keep business hours. How Was Your Day listeners go online at different hours, often including late at night when you are staring at the ceiling in your Koramangala flat wondering if any of this is worth it.</p>
 
           <h3>Completely Private</h3>
-          <p>Nobody in your professional network, flatmate group, or family needs to know. LeanOn is confidential by design. In a city where professional reputation feels precarious and vulnerability can feel career-limiting, that privacy matters.</p>
+          <p>Nobody in your professional network, flatmate group, or family needs to know. How Was Your Day is confidential by design. In a city where professional reputation feels precarious and vulnerability can feel career-limiting, that privacy matters.</p>
         </div>
 
         {/* What Bengalureans Talk About */}
         <div className="section">
-          <h2>What Bengalureans Talk About on LeanOn</h2>
+          <h2>What Bengalureans Talk About on How Was Your Day</h2>
           <p>Based on the most common themes from Bengaluru users, here is what people are actually carrying:</p>
           <ul>
             <li><strong>Loneliness after relocating</strong> — "I have been here two years and I still do not have real friends."</li>
@@ -275,22 +275,22 @@ export default function BengaluruPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How is relocating to Bengaluru different from other Indian cities?</div>
-            <div className="faq-a">Bengaluru is one of India's biggest internal migration destinations. The cultural mix is unique but can also mean you feel caught between worlds — not fully fitting into the local Kannada culture, yet also no longer part of your hometown community. This in-between feeling is a specific kind of loneliness that LeanOn listeners understand deeply.</div>
+            <div className="faq-a">Bengaluru is one of India's biggest internal migration destinations. The cultural mix is unique but can also mean you feel caught between worlds — not fully fitting into the local Kannada culture, yet also no longer part of your hometown community. This in-between feeling is a specific kind of loneliness that How Was Your Day listeners understand deeply.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What kind of issues do Bengalureans talk to LeanOn listeners about?</div>
+            <div className="faq-q">What kind of issues do Bengalureans talk to How Was Your Day listeners about?</div>
             <div className="faq-a">The most common topics include WFH isolation, startup or corporate burnout, career confusion, loneliness after a breakup or move, and the anxiety of living a life that looks successful from the outside but feels hollow from the inside. Many people also talk about flatmate culture — living with strangers and still feeling profoundly alone.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn peer support different from therapy or counselling?</div>
-            <div className="faq-a">Yes. LeanOn is peer support, not therapy. Our listeners are screened peers who have lived through the experiences they support — not licensed therapists. This makes it more accessible, more affordable (starting at ₹160 for 15 minutes). For clinical mental health concerns, we always recommend professional help. For the day-to-day weight of Bengaluru life, peer support is often exactly what is needed.</div>
+            <div className="faq-q">Is How Was Your Day peer support different from therapy or counselling?</div>
+            <div className="faq-a">Yes. How Was Your Day is peer support, not therapy. Our listeners are screened peers who have lived through the experiences they support — not licensed therapists. This makes it more accessible, more affordable (starting at ₹160 for 15 minutes). For clinical mental health concerns, we always recommend professional help. For the day-to-day weight of Bengaluru life, peer support is often exactly what is needed.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/founder-burnout" className="related-link">Founder Burnout</a>
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
@@ -303,9 +303,9 @@ export default function BengaluruPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

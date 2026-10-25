@@ -4,15 +4,15 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Men Mental Health India — It Takes Courage to Talk | LeanOn',
+  title: 'Men Mental Health India — It Takes Courage to Talk | How Was Your Day',
   description: 'Men in India rarely ask for help. That changes here. Anonymous peer support from ₹160 — talk to a real person, no judgement.',
   keywords: ['men mental health india', 'men asking for help india', 'men depression india', 'men anxiety india', 'men loneliness india', 'boys dont cry india', 'male mental health india'],
-  alternates: { canonical: 'https://www.leanon.app/men-mental-health-india', languages: { 'en-IN': 'https://www.leanon.app/men-mental-health-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/men-mental-health-india', languages: { 'en-IN': 'https://www.howwasyourday.live/men-mental-health-india' } },
   openGraph: {
-    title: 'Men Mental Health India — It Takes Courage to Talk | LeanOn',
+    title: 'Men Mental Health India — It Takes Courage to Talk | How Was Your Day',
     description: 'Men in India rarely ask for help. That changes here. Anonymous peer support from ₹160 — talk to a real person, no judgement.',
-    url: 'https://www.leanon.app/men-mental-health-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/men-mental-health-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Why do not men in India talk about mental health?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Because they are taught not to. "Be strong." "Do not cry." "Handle it." These messages start in childhood and are reinforced throughout life. The result is a generation of men who have no vocabulary for what they are feeling and no practice asking for support. LeanOn is a space where that changes — one conversation at a time.',
+        text: 'Because they are taught not to. "Be strong." "Do not cry." "Handle it." These messages start in childhood and are reinforced throughout life. The result is a generation of men who have no vocabulary for what they are feeling and no practice asking for support. How Was Your Day is a space where that changes — one conversation at a time.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can women listeners understand men\'s problems?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. The core of peer support is empathy and listening — not gender matching. LeanOn has both male and female listeners. You choose who you talk to based on their background and what feels right for your situation.',
+        text: 'Yes. The core of peer support is empathy and listening — not gender matching. How Was Your Day has both male and female listeners. You choose who you talk to based on their background and what feels right for your situation.',
       },
     },
     {
@@ -68,8 +68,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Men Mental Health India', item: 'https://www.leanon.app/men-mental-health-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Men Mental Health India', item: 'https://www.howwasyourday.live/men-mental-health-india' },
   ],
 }
 
@@ -126,7 +126,7 @@ export default function MenMentalHealthIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -154,7 +154,7 @@ export default function MenMentalHealthIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What Men Actually Come to LeanOn to Talk About</h2>
+          <h2>What Men Actually Come to How Was Your Day to Talk About</h2>
           <ul>
             <li><strong>Work pressure</strong> — the expectation to provide, to succeed, to never admit it is too much</li>
             <li><strong>Marriage pressure</strong> — family expectations around when to marry, who to marry, the fear of making the wrong choice</li>
@@ -166,7 +166,7 @@ export default function MenMentalHealthIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>Why LeanOn Works for Men</h2>
+          <h2>Why How Was Your Day Works for Men</h2>
           <ul>
             <li><strong>Anonymous</strong> — no one in your social or professional network knows you are here</li>
             <li><strong>Voice call</strong> — feels more natural than typing out your feelings to a stranger</li>
@@ -193,7 +193,7 @@ export default function MenMentalHealthIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Why do men in India not talk about mental health?</div>
-            <div className="faq-a">Because they are taught not to. &quot;Be strong.&quot; &quot;Do not cry.&quot; &quot;Handle it.&quot; These messages start in childhood and are reinforced throughout life. LeanOn is a space where that changes.</div>
+            <div className="faq-a">Because they are taught not to. &quot;Be strong.&quot; &quot;Do not cry.&quot; &quot;Handle it.&quot; These messages start in childhood and are reinforced throughout life. How Was Your Day is a space where that changes.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What can I talk about?</div>
@@ -201,7 +201,7 @@ export default function MenMentalHealthIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Can women listeners understand men&apos;s problems?</div>
-            <div className="faq-a">Yes. The core of peer support is empathy and listening — not gender matching. LeanOn has both male and female listeners. You choose who you talk to based on their background.</div>
+            <div className="faq-a">Yes. The core of peer support is empathy and listening — not gender matching. How Was Your Day has both male and female listeners. You choose who you talk to based on their background.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is this anonymous?</div>

@@ -1,22 +1,22 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Why LeanOn? Peer Emotional Support vs Therapy | India',
-  description: 'Why choose LeanOn over therapy? Discover the benefits of peer emotional support — affordable, instant, anonymous.',
-  keywords: ['why leanon', 'leanon vs therapy', 'leanon peer support india', 'peer support benefits india', 'alternative to therapy india'],
-  alternates: { canonical: 'https://www.leanon.app/why-leanon' },
-  openGraph: { title: 'Why LeanOn? Peer Emotional Support vs Therapy', description: 'The case for peer support over therapy in India.', url: 'https://www.leanon.app/why-leanon' },
+  title: 'Why How Was Your Day? Peer Emotional Support vs Therapy | India',
+  description: 'Why choose How Was Your Day over therapy? Discover the benefits of peer emotional support — affordable, instant, anonymous.',
+  keywords: ['why howwasyourday', 'howwasyourday vs therapy', 'howwasyourday peer support india', 'peer support benefits india', 'alternative to therapy india'],
+  alternates: { canonical: 'https://www.howwasyourday.live/why-howwasyourday' },
+  openGraph: { title: 'Why How Was Your Day? Peer Emotional Support vs Therapy', description: 'The case for peer support over therapy in India.', url: 'https://www.howwasyourday.live/why-howwasyourday' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Why LeanOn? The Case for Peer Support Over Therapy',
-  author: { '@type': 'Organization', name: 'LeanOn Editorial Team' },
-  publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  headline: 'Why How Was Your Day? The Case for Peer Support Over Therapy',
+  author: { '@type': 'Organization', name: 'How Was Your Day Editorial Team' },
+  publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   datePublished: '2026-01-01',
   dateModified: '2026-05-01',
-  mainEntityOfPage: 'https://www.leanon.app/why-leanon',
+  mainEntityOfPage: 'https://www.howwasyourday.live/why-howwasyourday',
   description: 'Why peer emotional support is the right choice for millions in India who need someone to talk to but cannot access or afford professional therapy.',
 }
 
@@ -35,11 +35,11 @@ const S = `
   .card p{font-size:15px;color:#3A6070;line-height:1.78;margin-bottom:10px;}
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px;}
   .compare-col{background:white;border:1.5px solid var(--border);border-radius:16px;padding:18px;}
-  .compare-col.leanon{border-color:var(--teal);background:rgba(26,143,160,0.04);}
+  .compare-col.howwasyourday{border-color:var(--teal);background:rgba(26,143,160,0.04);}
   .compare-col h3{font-size:14px;font-weight:800;margin-bottom:10px;}
-  .compare-col.leanon h3{color:var(--teal);}
+  .compare-col.howwasyourday h3{color:var(--teal);}
   .compare-col li{font-size:13px;color:var(--gray);margin-bottom:6px;list-style:none;padding-left:4px;line-height:1.5;}
-  .compare-col.leanon li::before{content:"✓ ";color:var(--teal);font-weight:800;}
+  .compare-col.howwasyourday li::before{content:"✓ ";color:var(--teal);font-weight:800;}
   .compare-col.other li::before{content:"✗ ";color:#C7C7CC;font-weight:800;}
   .disclaimer{background:#FFF8F0;border:1.5px solid #FFD9A0;border-radius:14px;padding:14px 16px;margin-bottom:24px;font-size:13px;color:#7A5C00;font-weight:600;line-height:1.6;}
   .cta{text-align:center;background:var(--navy);border-radius:24px;padding:32px;color:white;}
@@ -49,27 +49,27 @@ const S = `
   @media(max-width:640px){.compare-grid{grid-template-columns:1fr;}}
 `
 
-export default function WhyLeanOnPage() {
+export default function WhyHowWasYourDayPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{height:48}} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>
       </nav>
       <div className="page">
         <a href="/" style={{display:'inline-flex',alignItems:'center',gap:6,fontSize:14,fontWeight:700,color:'var(--gray)',marginBottom:28}}>← Back</a>
-        <h1>Why LeanOn? The Case for Peer Emotional Support</h1>
-        <p className="lead">Millions of people in India need someone to talk to right now — but therapy is expensive, stigmatized, and requires a scheduled appointment. LeanOn exists because emotional support shouldn't have a waiting list.</p>
+        <h1>Why How Was Your Day? The Case for Peer Emotional Support</h1>
+        <p className="lead">Millions of people in India need someone to talk to right now — but therapy is expensive, stigmatized, and requires a scheduled appointment. How Was Your Day exists because emotional support shouldn't have a waiting list.</p>
 
         <div className="disclaimer">
-          <strong>Important:</strong> LeanOn provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed mental health professional.
+          <strong>Important:</strong> How Was Your Day provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed mental health professional.
         </div>
 
         <div className="compare-grid">
-          <div className="compare-col leanon">
-            <h3>LeanOn Peer Support</h3>
+          <div className="compare-col howwasyourday">
+            <h3>How Was Your Day Peer Support</h3>
             <ul>
               <li>Listeners often online late at night</li>
               <li>From ₹160 for 15 minutes</li>
@@ -97,23 +97,23 @@ export default function WhyLeanOnPage() {
         <div className="card">
           <h2>Peer support fills a real gap</h2>
           <p>Not every emotional struggle requires clinical intervention. Loneliness, relationship stress, work burnout, grief, and anxiety are things that a trusted human with lived experience can support you through — without the formality of a clinical setting.</p>
-          <p>Research shows that peer support reduces isolation, improves coping, and provides the sense of being understood that no prescription can replicate. LeanOn's listeners have been through what you're going through. That's their qualification.</p>
+          <p>Research shows that peer support reduces isolation, improves coping, and provides the sense of being understood that no prescription can replicate. How Was Your Day's listeners have been through what you're going through. That's their qualification.</p>
         </div>
 
         <div className="card">
           <h2>Accessible for India</h2>
           <p>India has 1 psychologist per 100,000 people. Therapy costs 5–20x what most working-class Indians can afford monthly. Joint family privacy concerns mean many people cannot even make a call at home without being heard.</p>
-          <p>LeanOn is designed for India: text-first for privacy, OTP sign-up with no name required, UPI payments, 12 Indian languages, and pricing that doesn't sting.</p>
+          <p>How Was Your Day is designed for India: text-first for privacy, OTP sign-up with no name required, UPI payments, 12 Indian languages, and pricing that doesn't sting.</p>
         </div>
 
         <div className="card">
-          <h2>When LeanOn is right for you</h2>
-          <p>LeanOn works best when you need emotional connection, a non-judgmental ear, or someone who truly understands your specific situation through lived experience. It's the right choice for day-to-day emotional struggles, loneliness, processing difficult feelings, and getting through a hard night.</p>
+          <h2>When How Was Your Day is right for you</h2>
+          <p>How Was Your Day works best when you need emotional connection, a non-judgmental ear, or someone who truly understands your specific situation through lived experience. It's the right choice for day-to-day emotional struggles, loneliness, processing difficult feelings, and getting through a hard night.</p>
           <p>If you are experiencing a mental health crisis, thoughts of self-harm, or symptoms that significantly impair daily functioning — please also consult a licensed mental health professional. Our listeners can refer you to appropriate resources.</p>
         </div>
 
         <div className="cta">
-          <h2>Try LeanOn today</h2>
+          <h2>Try How Was Your Day today</h2>
           <p>No appointment. No card, no commitment.</p>
           <a href="/browse"><button className="btn">Browse listeners →</button></a>
         </div>

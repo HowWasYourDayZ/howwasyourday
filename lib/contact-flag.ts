@@ -27,7 +27,7 @@ export async function flagContactAttempt(sb: Sb, a: { senderId: string; sessionI
       type: 'contact_attempt',
       description: a.blocked
         ? `Automatic: tried to share contact details (${a.kinds.join(', ')}) in ${a.where === 'session_chat' ? 'a session chat' : 'an offline message'} — BLOCKED, not delivered. Text: "${a.text.slice(0, 300)}"`
-        : `Automatic: may be trying to move off LeanOn (${a.kinds.join(', ')}) in ${a.where === 'session_chat' ? 'a session chat' : 'an offline message'} — delivered, please review. Text: "${a.text.slice(0, 300)}"`,
+        : `Automatic: may be trying to move off How Was Your Day (${a.kinds.join(', ')}) in ${a.where === 'session_chat' ? 'a session chat' : 'an offline message'} — delivered, please review. Text: "${a.text.slice(0, 300)}"`,
       status: 'pending',
     })
     if (error) logger.warn('contact flag insert failed', { error: error.message })

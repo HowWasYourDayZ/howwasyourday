@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Bhopal — Peer Listeners | LeanOn',
+  title: 'Emotional Support in Bhopal — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Bhopal, Madhya Pradesh. Talk anonymously about UPSC stress, student pressure, family expectations. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/bhopal', languages: { 'en-IN': 'https://www.leanon.app/bhopal' } },
-  keywords: 'peer support Bhopal, emotional support Bhopal, UPSC stress Bhopal, student pressure Bhopal MP, talk to someone Bhopal, leanon Bhopal',
+  alternates: { canonical: 'https://www.howwasyourday.live/bhopal', languages: { 'en-IN': 'https://www.howwasyourday.live/bhopal' } },
+  keywords: 'peer support Bhopal, emotional support Bhopal, UPSC stress Bhopal, student pressure Bhopal MP, talk to someone Bhopal, howwasyourday Bhopal',
   openGraph: {
-    title: 'Emotional Support in Bhopal — Peer Listeners | LeanOn',
+    title: 'Emotional Support in Bhopal — Peer Listeners | How Was Your Day',
     description: 'Connect with peer listeners in Bhopal, Madhya Pradesh. Talk anonymously about UPSC stress, student pressure, family expectations. No appointment needed.',
-    url: 'https://www.leanon.app/bhopal',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/bhopal',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -27,13 +27,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What kinds of things do Bhopal users talk about on LeanOn?',
+      name: 'What kinds of things do Bhopal users talk about on How Was Your Day?',
       acceptedAnswer: { '@type': 'Answer', text: 'Common themes include: UPSC and MPPSC preparation stress, the pressure of studying far from home while managing family expectations, the loneliness of the aspirant community despite being surrounded by other aspirants, relationship situations that cannot be discussed openly, family pressure around marriage especially for those whose exam timelines have stretched longer than expected, and the specific weight of living in a city with its own particular history.' },
     },
     {
       '@type': 'Question',
       name: 'Is Bhopal a city where mental health support is accessible?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Mental health support exists in Bhopal but the awareness and accessibility are still limited, particularly for students and young professionals on tight budgets. The cultural stigma around seeking help is also real. LeanOn offers a private, anonymous, and affordable option for people who want to talk to someone real without the barriers of traditional mental health support.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Mental health support exists in Bhopal but the awareness and accessibility are still limited, particularly for students and young professionals on tight budgets. The cultural stigma around seeking help is also real. How Was Your Day offers a private, anonymous, and affordable option for people who want to talk to someone real without the barriers of traditional mental health support.' },
     },
     {
       '@type': 'Question',
@@ -42,8 +42,8 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available in Bhopal?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn is available anywhere in India with a smartphone and internet connection. Sessions start from &#8377;160 for 15 minutes, no appointment, from your phone.' },
+      name: 'Is How Was Your Day available in Bhopal?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is available anywhere in India with a smartphone and internet connection. Sessions start from &#8377;160 for 15 minutes, no appointment, from your phone.' },
     },
   ],
 }
@@ -52,17 +52,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Bhopal', item: 'https://www.leanon.app/bhopal' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Bhopal', item: 'https://www.howwasyourday.live/bhopal' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/bhopal',
+  url: 'https://www.howwasyourday.live/bhopal',
   areaServed: { '@type': 'City', name: 'Bhopal', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -119,7 +119,7 @@ export default function BhopalPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">
@@ -130,7 +130,7 @@ export default function BhopalPage() {
         <div className="hero">
           <p className="tag">Peer Support &middot; Bhopal</p>
           <h1>Peer Support in Bhopal &mdash; Someone to Lean On in <em>the City of Lakes</em></h1>
-          <p className="lead">Bhopal is a city of students and aspirants, carrying UPSC dreams, family expectations, and the quiet weight of lives lived under pressure. LeanOn connects you with peer listeners who understand the Bhopal experience &mdash; a private space completely outside your social world.</p>
+          <p className="lead">Bhopal is a city of students and aspirants, carrying UPSC dreams, family expectations, and the quiet weight of lives lived under pressure. How Was Your Day connects you with peer listeners who understand the Bhopal experience &mdash; a private space completely outside your social world.</p>
         </div>
         <div className="section">
           <h2>Bhopal&apos;s Unique Emotional Pressures</h2>
@@ -142,8 +142,8 @@ export default function BhopalPage() {
           <p>In Bhopal&apos;s largely conservative social fabric, family expectations around career achievement and marriage timing are strong. Young people &mdash; especially those whose exam preparation has stretched beyond the expected timeline &mdash; often carry the dual pressure of their own uncertainty and their family&apos;s growing anxiety about the future.</p>
         </div>
         <div className="section">
-          <h2>How LeanOn Works in Bhopal</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, no appointment, from your phone.</p>
+          <h2>How It Works in Bhopal</h2>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, no appointment, from your phone.</p>
           <p>The listener is a real Indian person, screened for active listening. They have no connection to your coaching centre, your hostel, or your family. Your listener never sees your phone number, and nothing is shared with anyone in your life.</p>
         </div>
         <div className="section">
@@ -156,7 +156,7 @@ export default function BhopalPage() {
           ))}
         </div>
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
+          <p><strong>How Was Your Day is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
           <p>Crisis support: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> (free, 24/7, Government of India).</p>
         </div>
         <div className="cta-card">

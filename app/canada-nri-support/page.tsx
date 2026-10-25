@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for NRIs in Canada — Missing Home, Rebuilding Life | LeanOn',
-  description: 'Being an NRI in Canada means carrying a weight most people around you cannot see. LeanOn connects you with peer listeners who understand what it means to rebuild from scratch abroad.',
+  title: 'Emotional Support for NRIs in Canada — Missing Home, Rebuilding Life | How Was Your Day',
+  description: 'Being an NRI in Canada means carrying a weight most people around you cannot see. How Was Your Day connects you with peer listeners who understand what it means to rebuild from scratch abroad.',
   keywords: [
     'nri support canada', 'emotional support nri canada', 'indian abroad canada support',
     'nri missing india canada', 'nri mental health canada', 'nri loneliness canada',
     'indian diaspora support canada', 'missing india canada', 'nri homesick canada',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada',
-    languages: { 'en-CA': 'https://www.leanon.app/canada' },
+    canonical: 'https://www.howwasyourday.live/canada',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada' },
   },
   openGraph: {
-    title: 'Emotional Support for NRIs in Canada | LeanOn',
-    description: 'Missing home is not weakness. Rebuilding everything from scratch is exhausting. LeanOn peer listeners are here for the hard parts of the NRI journey.',
-    url: 'https://www.leanon.app/canada',
-    siteName: 'LeanOn',
+    title: 'Emotional Support for NRIs in Canada | How Was Your Day',
+    description: 'Missing home is not weakness. Rebuilding everything from scratch is exhausting. How Was Your Day peer listeners are here for the hard parts of the NRI journey.',
+    url: 'https://www.howwasyourday.live/canada',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'How do I deal with guilt about leaving my parents in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Guilt is one of the most common emotions NRIs carry — and one of the least talked about. There is no simple fix for it, but talking about it honestly with someone who truly understands can help you carry it with more compassion for yourself. LeanOn listeners are familiar with this particular kind of pain.',
+        text: 'Guilt is one of the most common emotions NRIs carry — and one of the least talked about. There is no simple fix for it, but talking about it honestly with someone who truly understands can help you carry it with more compassion for yourself. How Was Your Day listeners are familiar with this particular kind of pain.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What if I feel like I made the wrong decision coming to Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That doubt is more common than anyone admits publicly. It does not mean you did make the wrong decision — but the feeling is real and deserves space. A LeanOn listener will hear you out without pushing you toward any conclusion. Just honest, caring presence.',
+        text: 'That doubt is more common than anyone admits publicly. It does not mean you did make the wrong decision — but the feeling is real and deserves space. A How Was Your Day listener will hear you out without pushing you toward any conclusion. Just honest, caring presence.',
       },
     },
     {
@@ -61,10 +61,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available for NRIs in other parts of Canada — not just Toronto?',
+      name: 'Is How Was Your Day available for NRIs in other parts of Canada — not just Toronto?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is fully online and available across all of Canada — Vancouver, Calgary, Ottawa, Montreal, and everywhere in between. Timezone does not matter — listeners are available day and night.',
+        text: 'Yes. How Was Your Day is fully online and available across all of Canada — Vancouver, Calgary, Ottawa, Montreal, and everywhere in between. Timezone does not matter — listeners are available day and night.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'NRI Support Canada', item: 'https://www.leanon.app/canada' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'NRI Support Canada', item: 'https://www.howwasyourday.live/canada' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function CanadaNriSupportPage() {
         <p className="lead">
           Being an NRI in Canada means carrying invisible weight every single day — the homesickness,
           the guilt, the longing for something you cannot quite name. The Canadian dream is real, but so
-          is the cost of it. LeanOn is here for the honest parts.
+          is the cost of it. How Was Your Day is here for the honest parts.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
@@ -174,7 +174,7 @@ export default function CanadaNriSupportPage() {
           <p>The people who tell you to &quot;just focus on the future&quot; have not left behind everything
             they know and love. Missing home is a completely human response to an extraordinary sacrifice.
             You are allowed to feel it.</p>
-          <p>LeanOn listeners do not rush you past the grief. They sit with you in it — and sometimes
+          <p>How Was Your Day listeners do not rush you past the grief. They sit with you in it — and sometimes
             that is exactly what you need before you can move forward.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -190,7 +190,7 @@ export default function CanadaNriSupportPage() {
             <li>I miss being known — where people understand me without explanation</li>
             <li>Success here does not feel like I thought it would</li>
           </ul>
-          <p style={{ marginTop: '12px' }}>These thoughts are safe here. A LeanOn listener will hold them with care.</p>
+          <p style={{ marginTop: '12px' }}>These thoughts are safe here. A How Was Your Day listener will hold them with care.</p>
         </div>
 
         <div className="card">
@@ -225,7 +225,7 @@ export default function CanadaNriSupportPage() {
           </div>
           <div className="faq-item">
             <h3>What if I feel like I made the wrong decision coming to Canada?</h3>
-            <p>That doubt is more common than anyone admits publicly. A LeanOn listener will hear you
+            <p>That doubt is more common than anyone admits publicly. A How Was Your Day listener will hear you
               out without pushing you toward any conclusion. Just honest, caring presence.</p>
           </div>
           <div className="faq-item">
@@ -233,7 +233,7 @@ export default function CanadaNriSupportPage() {
             <p>First 5 minutes free. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn available across all of Canada?</h3>
+            <h3>Is How Was Your Day available across all of Canada?</h3>
             <p>Yes — fully online, available everywhere in Canada — Vancouver, Calgary, Ottawa, Montreal,
               and beyond. Listeners are available day and night.</p>
           </div>
@@ -252,7 +252,7 @@ export default function CanadaNriSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

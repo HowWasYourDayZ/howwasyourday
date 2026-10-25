@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Support for Indians in Birmingham | Handsworth, Soho, Lozells | LeanOn',
+  title: 'Support for Indians in Birmingham | Handsworth, Soho, Lozells | How Was Your Day',
   description: 'Birmingham has one of the UK\'s largest and oldest Indian communities. Handsworth, Soho Road — and still, some things are hard to say out loud. Talk to someone who gets it.',
   keywords: ['indians in birmingham', 'handsworth indian community', 'birmingham indian support', 'soho road birmingham', 'desi support birmingham', 'indian loneliness birmingham uk'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-birmingham' },
-  openGraph: { title: 'Support for Indians in Birmingham | Handsworth, Soho, Lozells | LeanOn', description: 'Birmingham has one of the UK\'s largest and oldest Indian communities. Handsworth, Soho Road — and still, some things are hard to say out loud. Talk to someone who gets it.', url: 'https://www.leanon.app/indians-in-birmingham', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-birmingham' },
+  openGraph: { title: 'Support for Indians in Birmingham | Handsworth, Soho, Lozells | How Was Your Day', description: 'Birmingham has one of the UK\'s largest and oldest Indian communities. Handsworth, Soho Road — and still, some things are hard to say out loud. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/indians-in-birmingham', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Birmingham Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the British Indian diaspora experience — including Birmingham\'s Punjabi and Gujarati communities, the intergenerational pressures of a community that has been here for generations, and the particular dynamics of Handsworth and Soho Road. No explanation needed.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Birmingham Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the British Indian diaspora experience — including Birmingham\'s Punjabi and Gujarati communities, the intergenerational pressures of a community that has been here for generations, and the particular dynamics of Handsworth and Soho Road. No explanation needed.' } },
   { '@type': 'Question', name: 'When is a good time to connect from Birmingham?', acceptedAnswer: { '@type': 'Answer', text: 'UK (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours in summer. 3pm Birmingham = 8:30pm India. Afternoon in Birmingham is Indian evening — a reliable window for listeners.' } },
   { '@type': 'Question', name: 'Is this private from the Birmingham community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the Birmingham Indian network. Nothing is shared.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Birmingham', item: 'https://www.leanon.app/indians-in-birmingham' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Birmingham', item: 'https://www.howwasyourday.live/indians-in-birmingham' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInBirminghamPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Birmingham</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInBirminghamPage() {
           <h2>Handsworth, Soho Road, Lozells: Generations of Community</h2>
           <p>Birmingham&rsquo;s Indian community is one of the oldest and most established in the United Kingdom. The first wave of Punjabi and Gujarati immigrants arrived in the 1950s and 60s, many settling in Handsworth and the Soho Road corridor. Third and fourth generation families now live here. The community has built temples, gurdwaras, community centres, and political representation that few other Indian diaspora communities outside London can match.</p>
           <p>The depth of this community is its great strength — and also the source of particular pressures. When the community has been here for generations, the expectations are layered with history. Your grandparents sacrificed. Your parents built. What are you doing? The community watches with love and judgement intertwined. Mental health struggles, marriage difficulties, identity questions — these things carry stigma in long-established communities that have survived by holding themselves together tightly.</p>
-          <p>LeanOn gives you a real Indian peer listener in India — completely outside the Birmingham community network, completely inside the cultural context. You can say the actual thing. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener in India — completely outside the Birmingham community network, completely inside the cultural context. You can say the actual thing. First 5 minutes free.</p>
         </div>
 
         <div className="section">

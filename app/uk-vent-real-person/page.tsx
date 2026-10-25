@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Vent to a Real Person Online in the UK — Safe, Anonymous, Human | LeanOn',
-  description: 'LeanOn has real human listeners online daily on Indian time in the UK — anonymous, judgment-free, starting with 5 free minutes. No AI, no waiting list. £8 for 15 min.',
+  title: 'Vent to a Real Person Online in the UK — Safe, Anonymous, Human | How Was Your Day',
+  description: 'How Was Your Day has real human listeners online daily on Indian time in the UK — anonymous, judgment-free, starting with 5 free minutes. No AI, no waiting list. £8 for 15 min.',
   keywords: [
     'vent to real person UK', 'someone to vent to online UK', 'anonymous venting UK',
     'talk to someone online UK', 'vent anonymously UK', 'real person to vent to UK',
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     'talk about problems UK',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-vent-real-person',
+    canonical: 'https://www.howwasyourday.live/uk-vent-real-person',
   },
   openGraph: {
-    title: 'Vent to a Real Person Online in the UK — Safe, Anonymous, Human | LeanOn',
-    description: 'Sometimes the very British thing to do is not to say anything. That is the problem. LeanOn — real humans, on Indian time, anonymous, first 5 min free.',
-    url: 'https://www.leanon.app/uk-vent-real-person',
-    siteName: 'LeanOn',
+    title: 'Vent to a Real Person Online in the UK — Safe, Anonymous, Human | How Was Your Day',
+    description: 'Sometimes the very British thing to do is not to say anything. That is the problem. How Was Your Day — real humans, on Indian time, anonymous, first 5 min free.',
+    url: 'https://www.howwasyourday.live/uk-vent-real-person',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn — Anonymous Venting with Real Humans in the UK',
-  description: 'LeanOn lets people in the UK vent to real human peer listeners — private, no appointment needed, no AI, no NHS waiting list. First 5 minutes free, starting at £8 for 15 minutes.',
-  provider: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  name: 'How Was Your Day — Anonymous Venting with Real Humans in the UK',
+  description: 'How Was Your Day lets people in the UK vent to real human peer listeners — private, no appointment needed, no AI, no NHS waiting list. First 5 minutes free, starting at £8 for 15 minutes.',
+  provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'United Kingdom',
   audience: {
@@ -45,10 +45,10 @@ const serviceSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, LeanOn listeners are real humans who genuinely listen, ask questions, and hold space.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, How Was Your Day listeners are real humans who genuinely listen, ask questions, and hold space.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -60,12 +60,12 @@ const faqSchema = {
       name: 'Where can I vent to someone anonymously in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn has real human listeners online daily on Indian time in the UK — anonymous, judgment-free, and starting with 5 free minutes. No AI, just a real person ready to hear you out.',
+        text: 'How Was Your Day has real human listeners online daily on Indian time in the UK — anonymous, judgment-free, and starting with 5 free minutes. No AI, just a real person ready to hear you out.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost in the UK?',
+      name: 'How much does How Was Your Day cost in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'First 5 minutes are free. After that, £8 for 15 minutes, £12 for 30 minutes, or £16 for 45 minutes. No subscription, no insurance, no waiting list.',
@@ -76,7 +76,7 @@ const faqSchema = {
       name: 'Is it safe to vent to a stranger online in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "LeanOn listeners are screened, vetted real humans. Sessions are private. You don't need to share your name, location, or any personal details.",
+        text: "How Was Your Day listeners are screened, vetted real humans. Sessions are private. You don't need to share your name, location, or any personal details.",
       },
     },
     {
@@ -84,12 +84,12 @@ const faqSchema = {
       name: 'Why talk to a real person instead of journalling or talking to AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Being heard by a real human is different — neurologically and emotionally. A LeanOn listener is actually present with you. AI generates responses; humans actually receive you.',
+        text: 'Being heard by a real human is different — neurologically and emotionally. A How Was Your Day listener is actually present with you. AI generates responses; humans actually receive you.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What can I vent about on LeanOn in the UK?',
+      name: 'What can I vent about on How Was Your Day in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Anything: work stress, relationship tension, family issues, loneliness, housing pressure, feeling stuck, grief, anxiety — all of it. You don\'t need a good reason. Feeling heavy is reason enough.',
@@ -102,8 +102,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person — UK', item: 'https://www.leanon.app/uk-vent-real-person' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person — UK', item: 'https://www.howwasyourday.live/uk-vent-real-person' },
   ],
 }
 
@@ -182,7 +182,7 @@ export default function UKVentRealPersonPage() {
 
         <h1>Sometimes the Very British Thing to Do<br />Is Not to Say Anything.<br />That&apos;s the Problem.</h1>
         <p className="lead">
-          LeanOn is a peer support platform where people in the UK can vent to a real human listener —
+          How Was Your Day is a peer support platform where people in the UK can vent to a real human listener —
           anonymously, without judgment, whenever a listener is online (they are in India). No AI. No waiting lists. No stiff
           upper lip required. Just a real person ready to hear you out.
         </p>
@@ -202,13 +202,13 @@ export default function UKVentRealPersonPage() {
             empathy-shaped words — but no one is home. Nothing you say actually reaches anyone.
           </p>
           <p>
-            LeanOn gives you a real human to vent to — someone who has lived through hard things and
+            How Was Your Day gives you a real human to vent to — someone who has lived through hard things and
             is genuinely present with you. Not in months. Now.
           </p>
         </div>
 
         <div className="card">
-          <h2>What people in the UK vent about on LeanOn</h2>
+          <h2>What people in the UK vent about on How Was Your Day</h2>
           <ul className="checklist" style={{ marginTop: '0' }}>
             <li>Work exhaustion — the quiet grind of a job that takes everything</li>
             <li>Relationship tension you haven&apos;t been able to name out loud yet</li>
@@ -222,14 +222,14 @@ export default function UKVentRealPersonPage() {
         </div>
 
         <div className="compare-box">
-          <h2>Journal / AI chatbot vs. LeanOn real human</h2>
+          <h2>Journal / AI chatbot vs. How Was Your Day real human</h2>
           <div className="compare-row">
             <div className="compare-col ai">
               <h3>📓 Journal</h3>
               <p>Words go into a page that cannot receive them. You&apos;re still alone with them after.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>A real person receives what you say and responds — you&apos;re actually heard.</p>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function UKVentRealPersonPage() {
               <p>Generates empathy-shaped text with no one behind it — the loneliness stays</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>Actually present — can be moved by what you share, asks real questions</p>
             </div>
           </div>
@@ -249,7 +249,7 @@ export default function UKVentRealPersonPage() {
               <p>Has never navigated British work culture, family pressure, or London rent</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>Lived experience of the real pressures of life in the UK — gets it without explanation</p>
             </div>
           </div>
@@ -259,7 +259,7 @@ export default function UKVentRealPersonPage() {
               <p>No cost but no real help — hollow relief that fades within hours</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>First 5 min free, then £8 for 15 min — real connection that actually helps</p>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function UKVentRealPersonPage() {
             it a whole thing.
           </p>
           <p>
-            LeanOn has real human listeners in India. Availability follows Indian time, so UK evenings are
+            How Was Your Day has real human listeners in India. Availability follows Indian time, so UK evenings are
             late night there — check who is online now. No appointment, and no office hours to wait for.
           </p>
           <a href="/browse" className="cta-night">Find a listener right now →</a>
@@ -290,26 +290,26 @@ export default function UKVentRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I vent to someone anonymously in the UK?</h3>
-            <p>LeanOn has real human listeners online daily on Indian time in the UK — anonymous, judgment-free,
+            <p>How Was Your Day has real human listeners online daily on Indian time in the UK — anonymous, judgment-free,
               and starting with 5 free minutes. No AI, just a real person ready to hear you out.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost in the UK?</h3>
+            <h3>How much does How Was Your Day cost in the UK?</h3>
             <p>First 5 minutes are free. After that, £8 for 15 minutes, £12 for 30 minutes, or £16
               for 45 minutes. No subscription, no insurance, no waiting list.</p>
           </div>
           <div className="faq-item">
             <h3>Is it safe to vent to a stranger online in the UK?</h3>
-            <p>LeanOn listeners are screened, vetted real humans. Sessions are private. You
+            <p>How Was Your Day listeners are screened, vetted real humans. Sessions are private. You
               don&apos;t need to share your name, location, or any personal details.</p>
           </div>
           <div className="faq-item">
             <h3>Why talk to a real person instead of journalling or talking to AI?</h3>
-            <p>Being heard by a real human is different — neurologically and emotionally. A LeanOn
+            <p>Being heard by a real human is different — neurologically and emotionally. A How Was Your Day
               listener is actually present with you. AI generates responses; humans actually receive you.</p>
           </div>
           <div className="faq-item">
-            <h3>What can I vent about on LeanOn in the UK?</h3>
+            <h3>What can I vent about on How Was Your Day in the UK?</h3>
             <p>Anything: work stress, relationship tension, family issues, loneliness, housing pressure,
               feeling stuck, grief, anxiety — all of it. You don&apos;t need a good reason. Feeling
               heavy is reason enough.</p>
@@ -325,7 +325,7 @@ export default function UKVentRealPersonPage() {
 
         <div className="disclaimer">
           ⚠️ If you&apos;re in crisis or thinking about self-harm, please contact your local emergency services right away. In India: <strong>NIMHANS 080-46110007</strong> · <strong>Tele-MANAS 14416</strong>.<br />
-          LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+          How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
         </div>
       </div>
     </>

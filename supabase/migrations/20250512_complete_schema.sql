@@ -1,5 +1,5 @@
 -- ============================================================
---  LeanOn 2.0 — Complete Schema Migration
+--  How Was Your Day 2.0 — Complete Schema Migration
 --  Run this in Supabase SQL Editor (top to bottom, once).
 --  All statements use IF NOT EXISTS / IF EXISTS so it is
 --  safe to re-run on an existing database.

@@ -1,46 +1,46 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'LeanOn FAQ: Pricing, First Session & Peer Support | India',
-  description: 'How LeanOn works, what a session costs, the free 5-minute introduction, privacy and safety. Compare peer support with therapy and see prices before starting.',
-  alternates: { canonical: 'https://www.leanon.app/faq', languages: { 'en-IN': 'https://www.leanon.app/faq' } },
+  title: 'How Was Your Day FAQ: Pricing, First Session & Peer Support | India',
+  description: 'How the app works, what a session costs, the free 5-minute introduction, privacy and safety. Compare peer support with therapy and see prices before starting.',
+  alternates: { canonical: 'https://www.howwasyourday.live/faq', languages: { 'en-IN': 'https://www.howwasyourday.live/faq' } },
   keywords: [
-    'lean on app FAQ', 'leanon FAQ', 'what is leanon', 'lean on meaning', 'lean on someone',
-    'peer support India FAQ', 'LeanOn how it works', 'leanon pricing', 'leanon privacy',
+    'lean on app FAQ', 'howwasyourday FAQ', 'what is howwasyourday', 'lean on meaning', 'lean on someone',
+    'peer support India FAQ', 'How Was Your Day how it works', 'howwasyourday pricing', 'howwasyourday privacy',
   ],
 }
 
 const faqs = [
   {
-    category: 'About LeanOn',
+    category: 'About How Was Your Day',
     items: [
       {
-        q: 'Who can use LeanOn?',
-        a: 'Adults aged 18 and over, in India or abroad. LeanOn is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or call Tele-MANAS on 14416 (free).',
+        q: 'Who can use How Was Your Day?',
+        a: 'Adults aged 18 and over, in India or abroad. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or call Tele-MANAS on 14416 (free).',
       },
       {
-        q: 'What is LeanOn?',
-        a: 'LeanOn is an online peer-support platform where people can browse screened human listeners for one-to-one text or voice conversations about everyday challenges such as loneliness, work stress, relationship difficulties, grief and overthinking. It is not therapy or a crisis service. A conversation can start when a listener is available; availability varies.',
+        q: 'What is How Was Your Day?',
+        a: 'How Was Your Day is an online peer-support platform where people can browse screened human listeners for one-to-one text or voice conversations about everyday challenges such as loneliness, work stress, relationship difficulties, grief and overthinking. It is not therapy or a crisis service. A conversation can start when a listener is available; availability varies.',
       },
       {
         q: 'What does "lean on" mean?',
-        a: '"Lean on" means having someone you can emotionally rely on — someone in your corner who listens without judgment and supports you through hard times. The phrase comes from the idea of physically leaning on someone for support. LeanOn (the app) is built on that idea: everyone deserves someone to lean on.',
+        a: '"Lean on" means having someone you can emotionally rely on — someone in your corner who listens without judgment and supports you through hard times. The phrase comes from the idea of physically leaning on someone for support. How Was Your Day (the app) is built on that idea: everyone deserves someone to lean on.',
       },
       {
-        q: 'How is LeanOn different from therapy or counselling?',
-        a: 'Listeners on LeanOn are not licensed therapists or clinical counsellors. They are real people with lived experience — people who have navigated the same challenges and found their way through. Peer support is different from therapy, and valuable in its own right: it offers empathy, understanding, and connection. LeanOn is ideal when you need someone who truly gets it, not a clinical diagnosis.',
+        q: 'How is How Was Your Day different from therapy or counselling?',
+        a: 'Listeners on How Was Your Day are not licensed therapists or clinical counsellors. They are real people with lived experience — people who have navigated the same challenges and found their way through. Peer support is different from therapy, and valuable in its own right: it offers empathy, understanding, and connection. How Was Your Day is ideal when you need someone who truly gets it, not a clinical diagnosis.',
       },
       {
-        q: 'Is LeanOn available across India?',
-        a: 'LeanOn is online, so people can browse from anywhere in India, including Bengaluru, Mumbai, Delhi, Chennai, Hyderabad and smaller towns. Whether a conversation can start immediately depends on which listeners are online and available.',
+        q: 'Is How Was Your Day available across India?',
+        a: 'How Was Your Day is online, so people can browse from anywhere in India, including Bengaluru, Mumbai, Delhi, Chennai, Hyderabad and smaller towns. Whether a conversation can start immediately depends on which listeners are online and available.',
       },
       {
         q: 'What topics can I talk about?',
-        a: 'Listeners on LeanOn specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, startup journey, breakups, anxiety, and general emotional support. If you just need someone to lean on with no specific topic, that\'s perfectly fine too.',
+        a: 'Listeners on How Was Your Day specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, startup journey, breakups, anxiety, and general emotional support. If you just need someone to lean on with no specific topic, that\'s perfectly fine too.',
       },
       {
-        q: 'How is LeanOn different from companionship apps like GetCompanion?',
-        a: 'LeanOn is built around peer support: one-to-one conversations with screened listeners who bring relevant lived experience. It is not therapy or a clinical service. The first 5-minute introductory session is free once per account; after that, paid session prices are shown before you start. See the pricing page for the current India and international rates.',
+        q: 'How is How Was Your Day different from companionship apps like GetCompanion?',
+        a: 'How Was Your Day is built around peer support: one-to-one conversations with screened listeners who bring relevant lived experience. It is not therapy or a clinical service. The first 5-minute introductory session is free once per account; after that, paid session prices are shown before you start. See the pricing page for the current India and international rates.',
       },
     ],
   },
@@ -48,12 +48,12 @@ const faqs = [
     category: 'Getting Started',
     items: [
       {
-        q: 'How do I start using LeanOn?',
-        a: 'The quickest way is Talk now at leanon.app/talk: choose text or voice, tap what is on your mind, confirm your phone number with a one-time code, and LeanOn connects you with a screened listener who is online. One introductory session of up to 5 minutes is free per account. You can also browse listener profiles at leanon.app/browse and choose someone yourself.',
+        q: 'How do I start using How Was Your Day?',
+        a: 'The quickest way is Talk now at howwasyourday.live/talk: choose text or voice, tap what is on your mind, confirm your phone number with a one-time code, and How Was Your Day connects you with a screened listener who is online. One introductory session of up to 5 minutes is free per account. You can also browse listener profiles at howwasyourday.live/browse and choose someone yourself.',
       },
       {
-        q: 'Is there a LeanOn app on the Play Store or App Store?',
-        a: 'You do not need to download anything: LeanOn works in any phone or computer browser at www.leanon.app. On Android, open it in Chrome and tap "Add to Home screen" to get an app icon; on iPhone, use Safari\'s Share → "Add to Home Screen". An older Play Store app called "LeanOn" (a 2024 therapist-booking app) is a different, retired product.',
+        q: 'Is there a How Was Your Day app on the Play Store or App Store?',
+        a: 'You do not need to download anything: How Was Your Day works in any phone or computer browser at www.howwasyourday.live. On Android, open it in Chrome and tap "Add to Home screen" to get an app icon; on iPhone, use Safari\'s Share → "Add to Home Screen". An older Play Store app called "How Was Your Day" (a 2024 therapist-booking app) is a different, retired product.',
       },
       {
         q: 'How does pricing work?',
@@ -73,12 +73,12 @@ const faqs = [
     category: 'Pricing & Wallet',
     items: [
       {
-        q: 'How much does LeanOn cost?',
-        a: 'One introductory session of up to 5 minutes is free per account. In India, the total is the selected listener\'s per-minute rate × session length, plus a flat ₹10 platform fee; for example, 15 minutes at ₹10/min costs ₹160 and 30 minutes costs ₹310. Voice calls are ₹5/min more than text when voice pricing is enabled. Outside India, sessions start at US$10 for 15 minutes, US$15 for 30 and US$20 for 45. See leanon.app/pricing for details.',
+        q: 'How much does How Was Your Day cost?',
+        a: 'One introductory session of up to 5 minutes is free per account. In India, the total is the selected listener\'s per-minute rate × session length, plus a flat ₹10 platform fee; for example, 15 minutes at ₹10/min costs ₹160 and 30 minutes costs ₹310. Voice calls are ₹5/min more than text when voice pricing is enabled. Outside India, sessions start at US$10 for 15 minutes, US$15 for 30 and US$20 for 45. See howwasyourday.live/pricing for details.',
       },
       {
         q: 'How does the wallet work?',
-        a: 'You top up your LeanOn wallet with ₹200, ₹500, ₹1,000, or ₹2,000. The session amount is held from your wallet when you start a session and released to the listener when it ends. Unused balance is fully refundable at any time.',
+        a: 'You top up your How Was Your Day wallet with ₹200, ₹500, ₹1,000, or ₹2,000. The session amount is held from your wallet when you start a session and released to the listener when it ends. Unused balance is fully refundable at any time.',
       },
       {
         q: 'Can I get a refund?',
@@ -95,15 +95,15 @@ const faqs = [
     items: [
       {
         q: 'Are my conversations private?',
-        a: 'LeanOn uses your phone number for OTP sign-in, but it is not shown to listeners; you can use a display name. Voice calls are not recorded. Text messages are stored securely and only authorised LeanOn administrators can open them, for example to review a reported or safety-flagged session. Read the Privacy Policy for details, and avoid sharing identifying information you do not want to disclose.',
+        a: 'How Was Your Day uses your phone number for OTP sign-in, but it is not shown to listeners; you can use a display name. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. Read the Privacy Policy for details, and avoid sharing identifying information you do not want to disclose.',
       },
       {
-        q: 'Is LeanOn safe?',
-        a: 'Crisis helplines are shown in every session; if words linked to self-harm appear in a chat, LeanOn shows them prominently, alerts the listener and flags the session for the LeanOn team. You can report a listener from any session, and every report is reviewed by a person. All listeners are screened and approved by LeanOn before they can take sessions.',
+        q: 'Is How Was Your Day safe?',
+        a: 'Crisis helplines are shown in every session; if words linked to self-harm appear in a chat, How Was Your Day shows them prominently, alerts the listener and flags the session for the How Was Your Day team. You can report a listener from any session, and every report is reviewed by a person. All listeners are screened and approved by How Was Your Day before they can take sessions.',
       },
       {
         q: 'What if I\'m in a mental health crisis?',
-        a: 'LeanOn is peer support, not a crisis service. If you are in crisis or having thoughts of self-harm, please call NIMHANS at <a href="tel:08046110007">080-46110007</a> or Tele-MANAS at <a href="tel:14416">14416</a> (free, 24/7, Govt of India).',
+        a: 'How Was Your Day is peer support, not a crisis service. If you are in crisis or having thoughts of self-harm, please call NIMHANS at <a href="tel:08046110007">080-46110007</a> or Tele-MANAS at <a href="tel:14416">14416</a> (free, 24/7, Govt of India).',
       },
     ],
   },
@@ -111,33 +111,33 @@ const faqs = [
     category: 'Indians Abroad (NRI)',
     items: [
       {
-        q: 'Can Indians living in the USA, UK, Canada or Australia use LeanOn?',
-        a: 'Yes. LeanOn has dedicated support for Indians and South Asians living abroad. Whether you are in the USA, UK, Canada, Australia, UAE, Singapore, or anywhere else, you can connect with peer listeners who understand the cultural context — family expectations, homesickness, H-1B visa stress, cultural adjustment, or simply wanting to talk to someone who gets it.',
+        q: 'Can Indians living in the USA, UK, Canada or Australia use How Was Your Day?',
+        a: 'Yes. How Was Your Day has dedicated support for Indians and South Asians living abroad. Whether you are in the USA, UK, Canada, Australia, UAE, Singapore, or anywhere else, you can connect with peer listeners who understand the cultural context — family expectations, homesickness, H-1B visa stress, cultural adjustment, or simply wanting to talk to someone who gets it.',
       },
       {
-        q: 'How much does LeanOn cost for NRIs outside India?',
-        a: 'For people using LeanOn outside India, sessions are priced in US dollars, from US$10 for 15 minutes, US$15 for 30 minutes and US$20 for 45 minutes — text or voice. A listener with a higher own rate costs that rate; the exact price is shown before you book. Your first 5-minute session is always free. Full pricing: leanon.app/pricing.',
+        q: 'How much does How Was Your Day cost for NRIs outside India?',
+        a: 'For people using How Was Your Day outside India, sessions are priced in US dollars, from US$10 for 15 minutes, US$15 for 30 minutes and US$20 for 45 minutes — text or voice. A listener with a higher own rate costs that rate; the exact price is shown before you book. Your first 5-minute session is always free. Full pricing: howwasyourday.live/pricing.',
       },
       {
-        q: 'What can NRIs talk about on LeanOn?',
-        a: 'NRIs on LeanOn most commonly talk about homesickness and missing family, immigration stress (H-1B, visa uncertainty, work permit anxiety), cultural isolation ("fitting in" between two worlds), marriage pressure from family back home, career confusion abroad, loneliness in a new country, and relationship difficulties across distances.',
+        q: 'What can NRIs talk about on How Was Your Day?',
+        a: 'NRIs on How Was Your Day most commonly talk about homesickness and missing family, immigration stress (H-1B, visa uncertainty, work permit anxiety), cultural isolation ("fitting in" between two worlds), marriage pressure from family back home, career confusion abroad, loneliness in a new country, and relationship difficulties across distances.',
       },
       {
-        q: 'Do LeanOn listeners understand NRI cultural experiences?',
-        a: 'Many LeanOn listeners have lived abroad themselves or have close experience with NRI life — immigration stress, being caught between Indian and local culture, long-distance family dynamics. You can read listener bios and filter by topic to find someone whose experience matches yours.',
+        q: 'Do How Was Your Day listeners understand NRI cultural experiences?',
+        a: 'Many How Was Your Day listeners have lived abroad themselves or have close experience with NRI life — immigration stress, being caught between Indian and local culture, long-distance family dynamics. You can read listener bios and filter by topic to find someone whose experience matches yours.',
       },
     ],
   },
   {
-    category: 'Listening on LeanOn',
+    category: 'Listening on How Was Your Day',
     items: [
       {
-        q: 'Is LeanOn a job or a way to earn money?',
-        a: 'No. LeanOn is a peer support service for people who need someone to talk to. It is not a job, a side income or a work-from-home opportunity, and it should not be joined for the money.',
+        q: 'Is How Was Your Day a job or a way to earn money?',
+        a: 'No. How Was Your Day is a peer support service for people who need someone to talk to. It is not a job, a side income or a work-from-home opportunity, and it should not be joined for the money.',
       },
       {
         q: 'Who are the listeners?',
-        a: 'Adults (18+) with lived experience of what they talk about, who want to support others. Every listener applies, passes a screening quiz on boundaries, crisis referral and empathetic listening, completes a live selfie check and is reviewed by LeanOn before taking any session. They are peers, not therapists.',
+        a: 'Adults (18+) with lived experience of what they talk about, who want to support others. Every listener applies, passes a screening quiz on boundaries, crisis referral and empathetic listening, completes a live selfie check and is reviewed by How Was Your Day before taking any session. They are peers, not therapists.',
       },
     ],
   },
@@ -186,7 +186,7 @@ export default function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo" style={{background:'#FF9933',color:'white',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
       </nav>
 
@@ -196,7 +196,7 @@ export default function FAQPage() {
         </div>
 
         <h1>Frequently Asked Questions</h1>
-        <p className="subtitle">Everything you need to know about LeanOn — someone to lean on, anytime.</p>
+        <p className="subtitle">Everything you need to know about How Was Your Day — someone to lean on, anytime.</p>
 
         {faqs.map((cat) => (
           <div key={cat.category} className="cat">

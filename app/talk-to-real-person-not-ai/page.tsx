@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to a Real Person, Not an AI | LeanOn',
-  description: 'LeanOn connects you with real human peer listeners — not AI chatbots. When you\'re lonely or overwhelmed, a real person who has lived through similar experiences is ready to listen. First 5 minutes free.',
+  title: 'Talk to a Real Person, Not an AI | How Was Your Day',
+  description: 'How Was Your Day connects you with real human peer listeners — not AI chatbots. When you\'re lonely or overwhelmed, a real person who has lived through similar experiences is ready to listen. First 5 minutes free.',
   keywords: [
     'talk to real person not ai', 'human vs ai emotional support', 'chatgpt for loneliness',
     'ai chatbot loneliness', 'real person to talk to online', 'human emotional support',
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     'real human listener online',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/talk-to-human-instead-of-chatgpt',
+    canonical: 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt',
   },
   openGraph: {
-    title: 'Talk to a Real Person, Not an AI | LeanOn',
-    description: 'AI predicts words. Humans understand feelings. LeanOn connects you with real peer listeners — people with lived experience —.',
-    url: 'https://www.leanon.app/talk-to-human-instead-of-chatgpt',
-    siteName: 'LeanOn',
+    title: 'Talk to a Real Person, Not an AI | How Was Your Day',
+    description: 'AI predicts words. Humans understand feelings. How Was Your Day connects you with real peer listeners — people with lived experience —.',
+    url: 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn — Real Human Peer Support',
-  description: 'LeanOn connects people feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners who have lived experience — not AI chatbots.',
-  provider: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  name: 'How Was Your Day — Real Human Peer Support',
+  description: 'How Was Your Day connects people feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners who have lived experience — not AI chatbots.',
+  provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'Worldwide',
   audience: {
@@ -44,10 +44,10 @@ const serviceSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, LeanOn listeners are real people who genuinely listen, ask questions, and hold space.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, How Was Your Day listeners are real people who genuinely listen, ask questions, and hold space.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -56,18 +56,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is LeanOn?',
+      name: 'What is How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is a peer support platform that connects you with real human listeners — people with lived experience, not AI chatbots or algorithms. Sessions start at 5 minutes free.',
+        text: 'How Was Your Day is a peer support platform that connects you with real human listeners — people with lived experience, not AI chatbots or algorithms. Sessions start at 5 minutes free.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn an AI chatbot?',
+      name: 'Is How Was Your Day an AI chatbot?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Every listener on LeanOn is a real human being who has applied, been screened and been approved, and who listens without judgment. There is no AI involved in the conversations.',
+        text: 'No. Every listener on How Was Your Day is a real human being who has applied, been screened and been approved, and who listens without judgment. There is no AI involved in the conversations.',
       },
     },
     {
@@ -75,12 +75,12 @@ const faqSchema = {
       name: 'Why talk to a human instead of an AI like ChatGPT?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI cannot truly empathize — it predicts words. A real human listener on LeanOn has lived through similar experiences and can offer genuine understanding, not just statistically likely responses.',
+        text: 'AI cannot truly empathize — it predicts words. A real human listener on How Was Your Day has lived through similar experiences and can offer genuine understanding, not just statistically likely responses.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What can I talk to a LeanOn listener about?',
+      name: 'What can I talk to a How Was Your Day listener about?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Loneliness, relationship stress, anxiety, grief, venting about work or family, feeling lost or empty — any emotional weight you\'re carrying that you need to say out loud to someone who will really hear it.',
@@ -88,10 +88,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from therapy?',
+      name: 'How is How Was Your Day different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support — affordable, anonymous. It is not therapy or clinical mental health care. Think of it as a trusted friend with relevant lived experience, available on demand.',
+        text: 'How Was Your Day is peer support — affordable, anonymous. It is not therapy or clinical mental health care. Think of it as a trusted friend with relevant lived experience, available on demand.',
       },
     },
   ],
@@ -101,8 +101,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person, Not an AI', item: 'https://www.leanon.app/talk-to-human-instead-of-chatgpt' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person, Not an AI', item: 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt' },
   ],
 }
 
@@ -176,7 +176,7 @@ export default function TalkToRealPersonPage() {
 
         <h1>You Don&apos;t Need an Algorithm.<br />You Need a Human Who Gets It.</h1>
         <p className="lead">
-          LeanOn is a peer support platform that connects people feeling lonely, overwhelmed, or emotionally
+          How Was Your Day is a peer support platform that connects people feeling lonely, overwhelmed, or emotionally
           stuck with real human listeners — people with lived experience of the same struggles. Not AI. Not
           chatbots. Real humans.
         </p>
@@ -203,14 +203,14 @@ export default function TalkToRealPersonPage() {
         </div>
 
         <div className="compare-box">
-          <h2>AI chatbot vs. LeanOn real human listener</h2>
+          <h2>AI chatbot vs. How Was Your Day real human listener</h2>
           <div className="compare-row">
             <div className="compare-col ai">
               <h3>🤖 AI Chatbot</h3>
               <p>Generates statistically likely responses based on training data</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>A real person who has felt what you feel and genuinely understands</p>
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function TalkToRealPersonPage() {
               <p>Available but never truly present — no one is actually receiving your words</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>Fully present, undivided attention — a real person is with you in this moment</p>
             </div>
           </div>
@@ -230,7 +230,7 @@ export default function TalkToRealPersonPage() {
               <p>Cannot be changed by your story — your words do not reach anyone</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>Your words actually reach a real person who is moved by what you share</p>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function TalkToRealPersonPage() {
               <p>Free but never fulfilling — the emptiness returns after the conversation ends</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>First 5 min free, then from ₹160 for 15 minutes — real connection that actually helps</p>
             </div>
           </div>
@@ -249,13 +249,13 @@ export default function TalkToRealPersonPage() {
         <div className="card">
           <h2>What real human support looks like</h2>
           <p>
-            A LeanOn listener does not read from a script. They bring their own life — their own experience
+            A How Was Your Day listener does not read from a script. They bring their own life — their own experience
             of heartbreak, uncertainty, grief, or confusion — into the conversation. When you say &quot;I
             feel completely alone even though I&apos;m surrounded by people&quot;, a real listener knows
             exactly what that means. Not because they were trained on text that includes that phrase. Because
             they have felt it.
           </p>
-          <p>What you can expect from a LeanOn session:</p>
+          <p>What you can expect from a How Was Your Day session:</p>
           <ul className="checklist" style={{ marginTop: '12px' }}>
             <li>Someone who actually listens — not just waits to respond</li>
             <li>Questions that help you feel seen and understood</li>
@@ -276,30 +276,30 @@ export default function TalkToRealPersonPage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>What is LeanOn?</h3>
-            <p>LeanOn is a peer support platform that connects you with real human listeners — people with
+            <h3>What is How Was Your Day?</h3>
+            <p>How Was Your Day is a peer support platform that connects you with real human listeners — people with
               lived experience, not AI chatbots or algorithms. Sessions start at 5 minutes free.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn an AI chatbot?</h3>
-            <p>No. Every listener on LeanOn is a real human being who has applied, been reviewed, and
+            <h3>Is How Was Your Day an AI chatbot?</h3>
+            <p>No. Every listener on How Was Your Day is a real human being who has applied, been reviewed, and
               chosen for how well they listen without judgment. There is no AI involved in the conversations.</p>
           </div>
           <div className="faq-item">
             <h3>Why talk to a human instead of an AI like ChatGPT?</h3>
-            <p>AI cannot truly empathize — it predicts words. A real human listener on LeanOn has lived
+            <p>AI cannot truly empathize — it predicts words. A real human listener on How Was Your Day has lived
               through similar experiences and can offer genuine understanding, not just statistically
               likely responses.</p>
           </div>
           <div className="faq-item">
-            <h3>What can I talk to a LeanOn listener about?</h3>
+            <h3>What can I talk to a How Was Your Day listener about?</h3>
             <p>Loneliness, relationship stress, anxiety, grief, venting about work or family, feeling lost
               or empty — any emotional weight you&apos;re carrying that you need to say out loud to someone
               who will really hear it.</p>
           </div>
           <div className="faq-item">
-            <h3>How is LeanOn different from therapy?</h3>
-            <p>LeanOn is peer support — affordable, anonymous. It is not therapy or
+            <h3>How is How Was Your Day different from therapy?</h3>
+            <p>How Was Your Day is peer support — affordable, anonymous. It is not therapy or
               clinical mental health care. Think of it as a trusted friend with relevant lived experience,
               available on demand.</p>
           </div>
@@ -316,7 +316,7 @@ export default function TalkToRealPersonPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

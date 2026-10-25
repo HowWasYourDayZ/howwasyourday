@@ -5,23 +5,23 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'Talk to Someone Free India — First 5 Minutes Free | LeanOn',
+  title: 'Talk to Someone Free India — First 5 Minutes Free | How Was Your Day',
   description: 'First 5-minute session free. No subscription, no commitment. Real peer listeners in India. Start now.',
   keywords: ['talk to someone free India', 'free emotional support India', 'free chat India mental health', 'talk to someone online free India'],
-  alternates: { canonical: 'https://www.leanon.app/talk-to-someone-free-india', languages: { 'en-IN': 'https://www.leanon.app/talk-to-someone-free-india' } },
-  openGraph: { title: 'Talk to Someone Free India — First 5 Minutes Free | LeanOn', description: 'First 5-minute session free. No subscription, no commitment. Real peer listeners in India. Start now.', url: 'https://www.leanon.app/talk-to-someone-free-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-free-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-someone-free-india' } },
+  openGraph: { title: 'Talk to Someone Free India — First 5 Minutes Free | How Was Your Day', description: 'First 5-minute session free. No subscription, no commitment. Real peer listeners in India. Start now.', url: 'https://www.howwasyourday.live/talk-to-someone-free-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    {'@type': 'Question', name: 'Is there really no subscription?', acceptedAnswer: {'@type': 'Answer', text: 'No. LeanOn does not have a subscription. You buy session credits when you want them and use them when you need them. There is no monthly fee and no auto-renewal.'}},
+    {'@type': 'Question', name: 'Is there really no subscription?', acceptedAnswer: {'@type': 'Answer', text: 'No. How Was Your Day does not have a subscription. You buy session credits when you want them and use them when you need them. There is no monthly fee and no auto-renewal.'}},
     {'@type': 'Question', name: 'What happens at the end of the 5 free minutes?', acceptedAnswer: {'@type': 'Answer', text: 'The session pauses and you are prompted to add credits to continue. The listener waits. If you decide not to continue, the session ends and you have paid nothing.'}},
     {'@type': 'Question', name: 'How much does it cost after the free 5 minutes?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. You can extend in 15-minute increments.'}},
     {'@type': 'Question', name: 'Can I use the free trial more than once?', acceptedAnswer: {'@type': 'Answer', text: 'Each session begins with 5 free minutes. You can have as many sessions as you like &mdash; each one starts with the free 5 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Talk to Someone Free India', item: 'https://www.leanon.app/talk-to-someone-free-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Talk to Someone Free India', item: 'https://www.howwasyourday.live/talk-to-someone-free-india' },
 ] }
 
 const S = `
@@ -68,7 +68,7 @@ export default function TalkToSomeoneFreeIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Talk to Someone Free India</span></nav>
         <div className="hero">
@@ -79,7 +79,7 @@ export default function TalkToSomeoneFreeIndiaPage() {
         </div>
         <div className="section">
           <h2>How the Free Session Works</h2>
-          <p>Your first session on LeanOn is 5 free minutes. You browse listeners who are online right now, choose one based on their profile, and start a session. For the first 5 minutes, there is no charge. If you find it useful and want to continue, you top up and continue the session. If not, you end it and pay nothing.</p>
+          <p>Your first session on How Was Your Day is 5 free minutes. You browse listeners who are online right now, choose one based on their profile, and start a session. For the first 5 minutes, there is no charge. If you find it useful and want to continue, you top up and continue the session. If not, you end it and pay nothing.</p>
           <p>There is no subscription, no automatic billing, no commitment. You pay for what you use, when you use it.</p>
         </div>
         <div className="section">

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Love Problem? Talk to a Real Person Who Actually Listens | LeanOn India',
+  title: 'Love Problem? Talk to a Real Person Who Actually Listens | How Was Your Day India',
   description: 'Dealing with a love problem? Talk anonymously to a real peer listener in India. No astrology, no judgment. ₹160/session. First 5 min free.',
   keywords: [
     'love problem solution india', 'love problems help online india', 'relationship problem solution india',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     'talk to someone about love problem india', 'love relationship problem india', 'love problem help india',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/love-problems-india',
-    languages: { 'en-IN': 'https://www.leanon.app/love-problems-india' },
+    canonical: 'https://www.howwasyourday.live/love-problems-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/love-problems-india' },
   },
   openGraph: {
-    title: 'Love Problem? Talk to a Real Person Who Actually Listens | LeanOn India',
+    title: 'Love Problem? Talk to a Real Person Who Actually Listens | How Was Your Day India',
     description: 'Dealing with a love problem? Talk anonymously to a real peer listener in India. No astrology, no judgment. ₹160/session. First 5 min free.',
-    url: 'https://www.leanon.app/love-problems-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/love-problems-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'Can I talk about love problems anonymously?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — completely. LeanOn does not ask for your name, your partner\'s name, or any identifying details. The listener knows nothing about you except what you choose to share in the session itself. Your conversation is private and never shared.',
+        text: 'Yes — completely. How Was Your Day does not ask for your name, your partner\'s name, or any identifying details. The listener knows nothing about you except what you choose to share in the session itself. Your conversation is private and never shared.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'What will the listener tell me to do about my love problem?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Nothing — and that is the point. LeanOn listeners are not coaches or advisors. They are screened and expected to ask open questions and help you hear your own thoughts more clearly. By the end of the session, the clarity you feel will have come from you, not from someone else\'s opinion about your relationship.',
+        text: 'Nothing — and that is the point. How Was Your Day listeners are not coaches or advisors. They are screened and expected to ask open questions and help you hear your own thoughts more clearly. By the end of the session, the clarity you feel will have come from you, not from someone else\'s opinion about your relationship.',
       },
     },
     {
@@ -53,7 +53,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does a love problem session cost on LeanOn?',
+      name: 'How much does a love problem session cost on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'The first 5 minutes of your first session are free. After that, sessions are ₹160 for 15 minutes, ₹300 for 30 minutes, or ₹430 for 45 minutes. There is a flat ₹10 platform fee per paid session. No subscription required.',
@@ -66,8 +66,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Love Problems India', item: 'https://www.leanon.app/love-problems-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Love Problems India', item: 'https://www.howwasyourday.live/love-problems-india' },
   ],
 }
 
@@ -197,7 +197,7 @@ export default function LoveProblemsIndiaPage() {
               <span className="why-icon">🔒</span>
               <div>
                 <strong>Actually private — no family, no friends involved</strong>
-                <p>LeanOn listeners have no connection to your life. They don&apos;t know your partner,
+                <p>How Was Your Day listeners have no connection to your life. They don&apos;t know your partner,
                   your family, or your friends. Nothing you say will circulate back to anyone. That
                   makes it safe to be completely honest — maybe for the first time.</p>
               </div>
@@ -237,13 +237,13 @@ export default function LoveProblemsIndiaPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Can I talk about love problems anonymously?</h3>
-            <p>Yes — completely. LeanOn does not ask for your name, your partner&apos;s name, or any
+            <p>Yes — completely. How Was Your Day does not ask for your name, your partner&apos;s name, or any
               identifying details. The listener knows nothing about you except what you choose to
               share in the session. Your conversation is private and never shared.</p>
           </div>
           <div className="faq-item">
             <h3>What will the listener tell me to do about my love problem?</h3>
-            <p>Nothing — and that is the point. LeanOn listeners are not coaches or advisors. They
+            <p>Nothing — and that is the point. How Was Your Day listeners are not coaches or advisors. They
               are screened and expected to ask open questions and help you hear your own thoughts more clearly.
               By the end of the session, the clarity you feel will have come from you, not from
               someone else&apos;s opinion about your relationship.</p>
@@ -280,7 +280,7 @@ export default function LoveProblemsIndiaPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

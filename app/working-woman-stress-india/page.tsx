@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Working Woman Stress India — You\'re Carrying Too Much | LeanOn',
+  title: 'Working Woman Stress India — You\'re Carrying Too Much | How Was Your Day',
   description: 'Career pressure, home responsibilities, guilt, comparison. Working women in India carry an invisible double shift. Anonymous support from ₹160.',
   keywords: ['working woman stress India', 'working woman burnout India', 'career and family balance India', 'professional woman anxiety India'],
-  alternates: { canonical: 'https://www.leanon.app/working-woman-stress-india', languages: { 'en-IN': 'https://www.leanon.app/working-woman-stress-india' } },
-  openGraph: { title: 'Working Woman Stress India — You\'re Carrying Too Much | LeanOn', description: 'Career pressure, home responsibilities, guilt, comparison. Working women in India carry an invisible double shift. Anonymous support from ₹160.', url: 'https://www.leanon.app/working-woman-stress-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/working-woman-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/working-woman-stress-india' } },
+  openGraph: { title: 'Working Woman Stress India — You\'re Carrying Too Much | How Was Your Day', description: 'Career pressure, home responsibilities, guilt, comparison. Working women in India carry an invisible double shift. Anonymous support from ₹160.', url: 'https://www.howwasyourday.live/working-woman-stress-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is burnout different for working women in India?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. The specific stressors &mdash; the double shift, the guilt, the social comparison, the lack of acknowledgment &mdash; create a particular texture of burnout that is distinct from either general burnout or the working-woman experience in other cultural contexts.'}},
-    {'@type': 'Question', name: 'Can I talk about work AND home stress in one session?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Life does not compartmentalise and neither do LeanOn sessions. You can bring whatever is most pressing &mdash; a difficult day at work, a conflict at home, the general weight of all of it.'}},
+    {'@type': 'Question', name: 'Can I talk about work AND home stress in one session?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Life does not compartmentalise and neither do How Was Your Day sessions. You can bring whatever is most pressing &mdash; a difficult day at work, a conflict at home, the general weight of all of it.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Working Woman Stress India', item: 'https://www.leanon.app/working-woman-stress-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Working Woman Stress India', item: 'https://www.howwasyourday.live/working-woman-stress-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function WorkingWomanStressIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Working Woman Stress India</span></nav>
         <div className="hero">
@@ -81,7 +81,7 @@ export default function WorkingWomanStressIndiaPage() {
         </div>
         <div className="section">
           <h2>Why This Is Hard to Talk About</h2>
-          <p>Because the prevailing narrative is that working women should be grateful for the opportunity. Expressing how hard it is can feel like ingratitude, or like admitting failure, or like giving ammunition to people who said it was not a good idea. LeanOn is a space where you can say how hard it actually is, without any of those consequences.</p>
+          <p>Because the prevailing narrative is that working women should be grateful for the opportunity. Expressing how hard it is can feel like ingratitude, or like admitting failure, or like giving ammunition to people who said it was not a good idea. How Was Your Day is a space where you can say how hard it actually is, without any of those consequences.</p>
           <p>See also: <a href="/support/working-woman-india" style={{color:"#1A8FA0",fontWeight:700}}>Working woman India</a> &mdash; the topic page.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

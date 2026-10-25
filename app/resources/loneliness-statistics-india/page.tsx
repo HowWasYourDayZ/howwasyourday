@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Loneliness Statistics in India 2026 | LeanOn Research',
+  title: 'Loneliness Statistics in India 2026 | How Was Your Day Research',
   description: 'Loneliness and mental health statistics for India, with sources: Meta-Gallup (24% of adults worldwide feel lonely), WHO depression estimates, and India\'s National Mental Health Survey treatment gap — plus what helps.',
-  alternates: { canonical: 'https://www.leanon.app/resources/loneliness-statistics-india' },
+  alternates: { canonical: 'https://www.howwasyourday.live/resources/loneliness-statistics-india' },
   keywords: ['loneliness statistics India', 'India loneliness data', 'loneliness India 2026', 'social isolation India'],
 }
 
@@ -14,8 +14,8 @@ const jsonLd = {
   '@type': 'Article',
   headline: 'Loneliness Statistics in India 2026',
   description: 'Sourced loneliness and mental health statistics for India.',
-  url: 'https://www.leanon.app/resources/loneliness-statistics-india',
-  publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  url: 'https://www.howwasyourday.live/resources/loneliness-statistics-india',
+  publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
 }
 
 const S = `
@@ -53,15 +53,15 @@ h1{font-size:clamp(24px,5vw,36px);font-weight:900;line-height:1.15;margin-bottom
 `
 
 export default function LonelinessStatisticsIndia() {
-  const shareUrl = encodeURIComponent('https://www.leanon.app/resources/loneliness-statistics-india')
-  const shareText = encodeURIComponent('Loneliness and mental health in India — the numbers, with sources. Via LeanOn')
+  const shareUrl = encodeURIComponent('https://www.howwasyourday.live/resources/loneliness-statistics-india')
+  const shareText = encodeURIComponent('Loneliness and mental health in India — the numbers, with sources. Via How Was Your Day')
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo"><button className="btn-nav">Get support</button></a>
       </nav>
       <div className="page">
@@ -120,7 +120,7 @@ export default function LonelinessStatisticsIndia() {
 
         <div className="cta-box">
           <h2>You don&apos;t have to be one of the statistics</h2>
-          <p>Talk to a real peer listener on LeanOn. No appointment needed.</p>
+          <p>Talk to a real peer listener on How Was Your Day. No appointment needed.</p>
           <a href="/browse"><button className="btn">Find a listener →</button></a>
         </div>
       </div>

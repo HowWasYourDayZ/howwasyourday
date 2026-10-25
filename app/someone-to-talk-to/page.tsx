@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need Someone to Talk To? Real Peer Listeners Available Now | LeanOn',
-  description: 'You don\'t need a reason. You don\'t need to be in crisis. You just need to be heard. LeanOn connects you with real people who have been through hard times and come out the other side.',
+  title: 'Need Someone to Talk To? Real Peer Listeners Available Now | How Was Your Day',
+  description: 'You don\'t need a reason. You don\'t need to be in crisis. You just need to be heard. How Was Your Day connects you with real people who have been through hard times and come out the other side.',
   keywords: ['someone to talk to', 'need someone to talk to', 'who can i talk to', 'need someone to talk to online', 'i need someone to talk to', 'someone to listen to me'],
-  alternates: { canonical: 'https://www.leanon.app/someone-to-talk-to' },
-  openGraph: { title: 'Need Someone to Talk To? Real Peer Listeners Available Now | LeanOn', description: 'You don\'t need a reason. You don\'t need to be in crisis. You just need to be heard. LeanOn connects you with real people who have been through hard times and come out the other side.', url: 'https://www.leanon.app/someone-to-talk-to', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/someone-to-talk-to' },
+  openGraph: { title: 'Need Someone to Talk To? Real Peer Listeners Available Now | How Was Your Day', description: 'You don\'t need a reason. You don\'t need to be in crisis. You just need to be heard. How Was Your Day connects you with real people who have been through hard times and come out the other side.', url: 'https://www.howwasyourday.live/someone-to-talk-to', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do I need a specific reason to use LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'No. "I need someone to talk to" is reason enough. You do not need to be in crisis, have a diagnosis, or have a specific event to discuss. If you need to be heard, LeanOn is for you.' } },
-  { '@type': 'Question', name: 'Who are the listeners on LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are real people with lived experience of difficult times — not therapists, not AI, not call center agents. They have applied, been screened, and screened for active listening. They choose to be on the platform because they want to support others through hard moments.' } },
+  { '@type': 'Question', name: 'Do I need a specific reason to use How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. "I need someone to talk to" is reason enough. You do not need to be in crisis, have a diagnosis, or have a specific event to discuss. If you need to be heard, How Was Your Day is for you.' } },
+  { '@type': 'Question', name: 'Who are the listeners on How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are real people with lived experience of difficult times — not therapists, not AI, not call center agents. They have applied, been screened, and screened for active listening. They choose to be on the platform because they want to support others through hard moments.' } },
   { '@type': 'Question', name: 'How quickly can I start talking?', acceptedAnswer: { '@type': 'Answer', text: 'Immediately. Browse listeners who are online right now and start a session. No appointment, no form, no waiting. The first 5 minutes are free.' } },
   { '@type': 'Question', name: 'Is it anonymous?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You sign up with a phone number and first name only — no last name, no photo, no social login. Listeners agree to keep what you share confidential. What you share stays private.' } },
   { '@type': 'Question', name: 'What if I do not know what to say?', acceptedAnswer: { '@type': 'Answer', text: 'That is fine. Many sessions start with "I am not sure where to begin." Your listener will follow your lead. You do not need to have it organized or articulate. Just start.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Need Someone to Talk To?', item: 'https://www.leanon.app/someone-to-talk-to' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Need Someone to Talk To?', item: 'https://www.howwasyourday.live/someone-to-talk-to' },
 ] }
 
 const S = `
@@ -74,13 +74,13 @@ export default function SomeoneToTalkToPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Need Someone to Talk To?</span></nav>
         <div className="hero">
           <p className="badge">Someone to Talk To &middot; Real Listener &middot; No Appointment</p>
           <h1>You just need to be heard. <em>No reason required.</em></h1>
-          <p className="lead">You do not need to be in crisis. You do not need a diagnosis. You do not need to have it figured out. LeanOn connects you with real people who have been through hard things and know what it means to need someone to talk to. First 5 minutes free.</p>
+          <p className="lead">You do not need to be in crisis. You do not need a diagnosis. You do not need to have it figured out. How Was Your Day connects you with real people who have been through hard things and know what it means to need someone to talk to. First 5 minutes free.</p>
           <a href="/browse" className="cta-hero">Find someone to talk to &rarr;</a>
         </div>
         <div className="section">
@@ -92,7 +92,7 @@ export default function SomeoneToTalkToPage() {
         <div className="section">
           <h2>What Talking to a Real Person Actually Does</h2>
           <p>When you say something out loud &mdash; or in text, to a real person who is genuinely listening &mdash; it stops circling inside you. The weight does not always disappear but it changes shape. It becomes something you are processing rather than something that is just pressing.</p>
-          <p>LeanOn listeners are real people who have been through hard things themselves. They are not therapists. They are not AI. They are humans with lived experience who have chosen to be present for other people in difficult moments. They will not give you unsolicited advice or try to fix what you did not ask to be fixed. They will listen.</p>
+          <p>How Was Your Day listeners are real people who have been through hard things themselves. They are not therapists. They are not AI. They are humans with lived experience who have chosen to be present for other people in difficult moments. They will not give you unsolicited advice or try to fix what you did not ask to be fixed. They will listen.</p>
         </div>
         <div className="section">
           <h2>How It Works</h2>

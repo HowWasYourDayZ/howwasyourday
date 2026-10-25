@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'First Winter in Canada — Why Indians Feel So Lonely | LeanOn',
-  description: 'Nothing prepares you for the first Canadian winter — the darkness, the cold, the silence. For Indian newcomers, it can be overwhelming. LeanOn is here when it gets heavy.',
+  title: 'First Winter in Canada — Why Indians Feel So Lonely | How Was Your Day',
+  description: 'Nothing prepares you for the first Canadian winter — the darkness, the cold, the silence. For Indian newcomers, it can be overwhelming. How Was Your Day is here when it gets heavy.',
   keywords: [
     'first winter canada indian', 'winter loneliness canada', 'canadian winter depression indian',
     'winter isolation canada newcomer', 'dark winter canada lonely', 'seasonal loneliness canada',
     'winter canada mental health indian', 'sad winter canada immigrant', 'cold lonely canada winter',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada-winter-loneliness',
-    languages: { 'en-CA': 'https://www.leanon.app/canada-winter-loneliness' },
+    canonical: 'https://www.howwasyourday.live/canada-winter-loneliness',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada-winter-loneliness' },
   },
   openGraph: {
-    title: 'First Winter in Canada — Why Indians Feel So Lonely | LeanOn',
-    description: 'Dark at 4 PM. Minus 20. Nowhere to go. Nobody around. The first Canadian winter is genuinely hard for Indian newcomers. LeanOn peer listeners are here for it.',
-    url: 'https://www.leanon.app/canada-winter-loneliness',
-    siteName: 'LeanOn',
+    title: 'First Winter in Canada — Why Indians Feel So Lonely | How Was Your Day',
+    description: 'Dark at 4 PM. Minus 20. Nowhere to go. Nobody around. The first Canadian winter is genuinely hard for Indian newcomers. How Was Your Day peer listeners are here for it.',
+    url: 'https://www.howwasyourday.live/canada-winter-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -48,12 +48,12 @@ const faqSchema = {
       name: 'What can I do when I feel completely isolated during a Canadian winter?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Reaching out is the most important thing — even when it feels impossible. LeanOn listeners are in India and go online at different hours (availability follows Indian time), including in the middle of a winter evening when everything feels too heavy. You do not need a specific reason to start a conversation. Just starting is enough.',
+        text: 'Reaching out is the most important thing — even when it feels impossible. How Was Your Day listeners are in India and go online at different hours (availability follows Indian time), including in the middle of a winter evening when everything feels too heavy. You do not need a specific reason to start a conversation. Just starting is enough.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a LeanOn session cost?',
+      name: 'How much does a How Was Your Day session cost?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Winter Loneliness Canada', item: 'https://www.leanon.app/canada-winter-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Winter Loneliness Canada', item: 'https://www.howwasyourday.live/canada-winter-loneliness' },
   ],
 }
 
@@ -176,7 +176,7 @@ export default function CanadaWinterLonelinessPage() {
           <h2>❄️ The dark evenings are the hardest part</h2>
           <p>It is 6 PM and already pitch black outside. You have been alone since you got home from work.
             The hours between dinner and sleep stretch out endlessly. This is when the loneliness peaks —
-            and this is exactly when LeanOn listeners are available.</p>
+            and this is exactly when How Was Your Day listeners are available.</p>
           <p>You do not have to wait until morning. You can talk to a real person right now.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -223,7 +223,7 @@ export default function CanadaWinterLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>What can I do when I feel completely isolated during winter?</h3>
-            <p>Reaching out is the most important thing. LeanOn listeners are in India, so availability follows Indian time —
+            <p>Reaching out is the most important thing. How Was Your Day listeners are in India, so availability follows Indian time —
               check who is online now. You do not need a specific reason. Just starting is enough.</p>
           </div>
           <div className="faq-item">
@@ -250,7 +250,7 @@ export default function CanadaWinterLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

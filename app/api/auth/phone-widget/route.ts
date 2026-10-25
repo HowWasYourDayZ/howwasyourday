@@ -10,7 +10,7 @@ import { suspensionStatus } from '@/lib/suspension'
 //
 // WHY THIS EXISTS: India's DLT regime blocks the clean "Supabase generates the
 // OTP, a carrier just delivers it" path (that needs a DLT-registered template,
-// which needs an active GST LeanOn no longer has — see CLAUDE.md). MSG91's only
+// which needs an active GST How Was Your Day no longer has — see CLAUDE.md). MSG91's only
 // no-DLT product is the OTP *Widget*, where MSG91 generates AND verifies the
 // OTP itself and hands the browser a short-lived JWT. Supabase never sees that
 // OTP, so it cannot mint the session the way it does for its own OTPs.
@@ -103,7 +103,7 @@ async function findAuthUserIdByPhone(
   }
 
   // Fallback: scan auth.users. GoTrue's admin SDK has no getUserByPhone, so we
-  // page through listUsers. Fine at LeanOn's scale (~500 users = one page);
+  // page through listUsers. Fine at How Was Your Day's scale (~500 users = one page);
   // guarded so it can never loop unbounded.
   // Compare both the full E.164 bare form AND the legacy 10-digit bare form so
   // returning users whose phone was stored without the country code are found.
@@ -150,7 +150,7 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({}))
   const token = typeof body?.token === 'string' ? body.token : ''
   if (!token) return NextResponse.json({ error: 'Missing verification token.' }, { status: 400 })
-  // LeanOn is 18+ (Terms). The sign-in page asks the user to confirm it; refuse without.
+  // How Was Your Day is 18+ (Terms). The sign-in page asks the user to confirm it; refuse without.
   if (body?.ageConfirmed !== true) {
     return NextResponse.json({ error: 'Please confirm you are 18 or older to continue.', code: 'age_not_confirmed' }, { status: 400 })
   }

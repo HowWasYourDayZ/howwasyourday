@@ -106,9 +106,9 @@ export async function POST(req: NextRequest) {
         // (e.g. unverified sending domain) failed completely silently. Capture
         // and log it loudly — this is the self-harm escalation path.
         const { error: mailErr } = await resend.emails.send({
-          from: process.env.RESEND_FROM || 'LeanOn <onboarding@resend.dev>',
+          from: process.env.RESEND_FROM || 'How Was Your Day <onboarding@resend.dev>',
           to: process.env.ADMIN_EMAIL,
-          subject: '🚨 URGENT: Self-harm risk report on LeanOn',
+          subject: '🚨 URGENT: Self-harm risk report on How Was Your Day',
           html: `
             <p><strong>A self-harm risk report has been submitted.</strong></p>
             <p><strong>Reporter:</strong> ${escHtml(user.id)}</p>

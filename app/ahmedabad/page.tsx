@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Ahmedabad — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Ahmedabad, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/ahmedabad', languages: { 'en-IN': 'https://www.leanon.app/ahmedabad' } },
-  keywords: 'peer support Ahmedabad, emotional support Ahmedabad, loneliness Ahmedabad, business family pressure Ahmedabad, talk to someone Ahmedabad, leanon Ahmedabad',
+  title: 'Emotional Support in Ahmedabad — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Ahmedabad, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/ahmedabad', languages: { 'en-IN': 'https://www.howwasyourday.live/ahmedabad' } },
+  keywords: 'peer support Ahmedabad, emotional support Ahmedabad, loneliness Ahmedabad, business family pressure Ahmedabad, talk to someone Ahmedabad, howwasyourday Ahmedabad',
   openGraph: {
-    title: 'Emotional Support in Ahmedabad — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Ahmedabad, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-    url: 'https://www.leanon.app/ahmedabad',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Ahmedabad — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Ahmedabad, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/ahmedabad',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What are the specific challenges for women in Ahmedabad\'s business families?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Women in Ahmedabad\'s business-family households often carry a dual expectation: support the family enterprise and social standing while also managing the household, and do both without visibly struggling. Personal ambition — a career, a business idea, a different city — is frequently weighed against what is "appropriate" for the family\'s image within the community. Because the community is small and interconnected, this pressure is constant and hard to escape. LeanOn gives women a genuinely anonymous, empathetic space to talk about what they actually want, without it reaching anyone they know.',
+        text: 'Women in Ahmedabad\'s business-family households often carry a dual expectation: support the family enterprise and social standing while also managing the household, and do both without visibly struggling. Personal ambition — a career, a business idea, a different city — is frequently weighed against what is "appropriate" for the family\'s image within the community. Because the community is small and interconnected, this pressure is constant and hard to escape. How Was Your Day gives women a genuinely anonymous, empathetic space to talk about what they actually want, without it reaching anyone they know.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Ahmedabad', item: 'https://www.leanon.app/ahmedabad' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Ahmedabad', item: 'https://www.howwasyourday.live/ahmedabad' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/ahmedabad',
+  url: 'https://www.howwasyourday.live/ahmedabad',
   areaServed: {
     '@type': 'City',
     name: 'Ahmedabad',
@@ -148,7 +148,7 @@ export default function AhmedabadPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function AhmedabadPage() {
         <div className="hero">
           <p className="tag">Peer Support · Ahmedabad</p>
           <h1>Peer Support in Ahmedabad — Someone to Lean On in <em>the City of Business</em></h1>
-          <p className="lead">Ahmedabad is a city built on business — generations of entrepreneurship, family enterprises, and a culture that measures success in balance sheets and reputation. Alongside this drive sits a tightly-knit community where everyone seems to know everyone, and personal struggles rarely stay private. LeanOn connects you with peer listeners who understand the specific weight of carrying a family's business legacy and social standing, and who offer an empathetic space to talk without any of it reaching your community.</p>
+          <p className="lead">Ahmedabad is a city built on business — generations of entrepreneurship, family enterprises, and a culture that measures success in balance sheets and reputation. Alongside this drive sits a tightly-knit community where everyone seems to know everyone, and personal struggles rarely stay private. How Was Your Day connects you with peer listeners who understand the specific weight of carrying a family's business legacy and social standing, and who offer an empathetic space to talk without any of it reaching your community.</p>
         </div>
 
         {/* Ahmedabad's pressures */}
@@ -195,7 +195,7 @@ export default function AhmedabadPage() {
           <p>Many men describe being the person everyone else — parents, siblings, spouse, employees — leans on, with no one they can lean on in return. Being "the strong one" in a business family often means carrying financial stress, family conflict, and personal doubt entirely alone, because there is no clear space in that role for vulnerability. Over time, this suppression shows up as irritability, sleep problems, and quiet withdrawal from the people who need them most.</p>
 
           <h3>A Private Space to Be Honest</h3>
-          <p>LeanOn gives men in Ahmedabad a genuinely private, judgment-free place to say what they are actually carrying — without it reaching their family, their business partners, or their community. Several of our listeners have themselves navigated the pressure of leading a family enterprise while quietly struggling, and they bring real empathy to that specific experience.</p>
+          <p>How Was Your Day gives men in Ahmedabad a genuinely private, judgment-free place to say what they are actually carrying — without it reaching their family, their business partners, or their community. Several of our listeners have themselves navigated the pressure of leading a family enterprise while quietly struggling, and they bring real empathy to that specific experience.</p>
         </div>
 
         {/* Women's loneliness */}
@@ -283,7 +283,7 @@ export default function AhmedabadPage() {
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>
             <a href="/support/relationship-stress" className="related-link">Relationship Stress</a>
@@ -296,9 +296,9 @@ export default function AhmedabadPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

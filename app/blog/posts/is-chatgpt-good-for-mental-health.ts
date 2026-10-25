@@ -4,7 +4,7 @@ export const post = {
   description: 'Millions of people talk to ChatGPT about their feelings. Here is an honest look at what AI can and cannot do for mental health — and what actually fills the gap.',
   date: '2026-09-08',
   readTime: '6 min read',
-  topics: ['ChatGPT mental health', 'AI emotional support', 'mental health India', 'peer support', 'LeanOn'],
+  topics: ['ChatGPT mental health', 'AI emotional support', 'mental health India', 'peer support', 'How Was Your Day'],
   content: `
 <p>The question gets typed into Google — and, increasingly, into ChatGPT itself — millions of times a month: is talking to AI actually good for my mental health? Is this helping me, or am I doing something that looks like help but is not?</p>
 
@@ -34,7 +34,7 @@ export const post = {
 
 <p><strong>AI cannot be accountable.</strong> A peer listener is a real person who showed up for your session and can be evaluated on how that went. There is a relationship — and relationship creates accountability, which creates care. An algorithm has nothing at stake in how your session goes.</p>
 
-<p><strong>The data concern.</strong> Conversations with AI are processed by the company providing the tool. In most cases you cannot guarantee that what you shared in a dark moment is not being used to train future models. With a peer listener on LeanOn, confidentiality is contractual and the data does not go anywhere.</p>
+<p><strong>The data concern.</strong> Conversations with AI are processed by the company providing the tool. In most cases you cannot guarantee that what you shared in a dark moment is not being used to train future models. With a peer listener on How Was Your Day, confidentiality is contractual and the data does not go anywhere.</p>
 
 <h2>The Specific Risk: AI Can Maintain the Illusion of Support</h2>
 
@@ -46,7 +46,7 @@ export const post = {
 
 <p>Use AI for what it is good at: information, structuring thoughts, practical scaffolding, non-judgmental availability when nothing else is accessible. Do not mistake it for the deeper thing: genuine human presence, shared lived experience, and the specific relief of being truly heard by someone who actually knows what it means to be a person in the situation you are in.</p>
 
-<p>The two things are not mutually exclusive. You can use ChatGPT to understand what burnout is and then talk to a LeanOn listener who has burned out themselves and knows what the other side looks like. Both have value. They are just not the same value.</p>
+<p>The two things are not mutually exclusive. You can use ChatGPT to understand what burnout is and then talk to a How Was Your Day listener who has burned out themselves and knows what the other side looks like. Both have value. They are just not the same value.</p>
 
 <p>The question to ask yourself is not &quot;is AI helping?&quot; but &quot;is AI helping with the right thing?&quot; If you are using it to avoid the harder, more vulnerable act of speaking to a real person — that is worth noticing.</p>
 `,

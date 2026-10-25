@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone Online in Oman | LeanOn',
-  description: 'Need a real person to talk to in Oman? LeanOn connects Indian expats in Muscat and across Oman with screened peer listeners in India — in your language. First 5 minutes free.',
+  title: 'Talk to Someone Online in Oman | How Was Your Day',
+  description: 'Need a real person to talk to in Oman? How Was Your Day connects Indian expats in Muscat and across Oman with screened peer listeners in India — in your language. First 5 minutes free.',
   keywords: [
     'talk to someone online oman', 'someone to talk to oman', 'need to talk oman',
     'online chat support oman', 'talk to a person oman', 'emotional support oman indian',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'oman nri talk to someone', 'malayali listener oman', 'hindi listener oman',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/oman-talk-to-someone',
-    languages: { 'en-IN': 'https://www.leanon.app/oman-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/oman-talk-to-someone',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/oman-talk-to-someone' },
   },
   openGraph: {
-    title: 'Talk to Someone Online in Oman — Real Indian Listeners | LeanOn',
-    description: 'Need a real person to talk to in Oman? LeanOn connects Indian expats with peer listeners in India — in your language, with no judgment.',
-    url: 'https://www.leanon.app/oman-talk-to-someone',
-    siteName: 'LeanOn',
+    title: 'Talk to Someone Online in Oman — Real Indian Listeners | How Was Your Day',
+    description: 'Need a real person to talk to in Oman? How Was Your Day connects Indian expats with peer listeners in India — in your language, with no judgment.',
+    url: 'https://www.howwasyourday.live/oman-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Can I talk to someone in Oman right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time. No appointment needed. Browse listeners who are online and start a conversation immediately — the first 5 minutes of your account are free.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time. No appointment needed. Browse listeners who are online and start a conversation immediately — the first 5 minutes of your account are free.',
       },
     },
     {
@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'Are there Indian listeners who understand life in Oman?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn peer listeners are real Indians, many with their own experience of working abroad. They understand the specific emotional landscape of Gulf expat life — the loneliness, the family pressure, the particular weight of being far from home.',
+        text: 'Yes. How Was Your Day peer listeners are real Indians, many with their own experience of working abroad. They understand the specific emotional landscape of Gulf expat life — the loneliness, the family pressure, the particular weight of being far from home.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can I speak in Malayalam, Hindi or Tamil?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn supports twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada and more. Given the large Keralite community in Oman, there are Malayalam-speaking listeners available.',
+        text: 'Yes. How Was Your Day supports twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada and more. Given the large Keralite community in Oman, there are Malayalam-speaking listeners available.',
       },
     },
     {
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'Is this anonymous and private?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Completely. Sessions are anonymous. Your employer, your family, your social circle in Oman will not know. You can use LeanOn with a nickname.',
+        text: 'Completely. Sessions are anonymous. Your employer, your family, your social circle in Oman will not know. You can use How Was Your Day with a nickname.',
       },
     },
   ],
@@ -81,7 +81,7 @@ export default function OmanTalkToSomeonePage() {
         </h1>
 
         <p style={{ fontSize: '1.05rem', color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          Oman has a large and close-knit Indian community — and yet the loneliness of expat life can still feel very real. Whether it is late at night in Muscat when there is nobody to call, or a weight you cannot explain to your family back home, LeanOn gives you a real person to talk to. Anonymous, in your language.
+          Oman has a large and close-knit Indian community — and yet the loneliness of expat life can still feel very real. Whether it is late at night in Muscat when there is nobody to call, or a weight you cannot explain to your family back home, How Was Your Day gives you a real person to talk to. Anonymous, in your language.
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>

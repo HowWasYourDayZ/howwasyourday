@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Immigration Anxiety for Indians in Canada — Talk to Someone | LeanOn',
-  description: 'PR stress, Express Entry uncertainty, PGWP worries, visa delays — immigration anxiety is real and heavy. LeanOn connects you with someone who will actually listen.',
+  title: 'Immigration Anxiety for Indians in Canada — Talk to Someone | How Was Your Day',
+  description: 'PR stress, Express Entry uncertainty, PGWP worries, visa delays — immigration anxiety is real and heavy. How Was Your Day connects you with someone who will actually listen.',
   keywords: [
     'immigration stress indians canada', 'pr anxiety canada', 'express entry stress', 'pgwp anxiety canada',
     'visa stress india canada', 'immigration mental health canada', 'immigration anxiety support canada',
     'pr waiting canada stress', 'canadian immigration depression', 'nri visa worry canada',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada-immigration-stress',
-    languages: { 'en-CA': 'https://www.leanon.app/canada-immigration-stress' },
+    canonical: 'https://www.howwasyourday.live/canada-immigration-stress',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada-immigration-stress' },
   },
   openGraph: {
-    title: 'Immigration Anxiety for Indians in Canada | LeanOn',
-    description: 'Waiting for PR. Watching Express Entry rounds. Wondering if the sacrifice is worth it. LeanOn listeners are here when the uncertainty gets too heavy to carry alone.',
-    url: 'https://www.leanon.app/canada-immigration-stress',
-    siteName: 'LeanOn',
+    title: 'Immigration Anxiety for Indians in Canada | How Was Your Day',
+    description: 'Waiting for PR. Watching Express Entry rounds. Wondering if the sacrifice is worth it. How Was Your Day listeners are here when the uncertainty gets too heavy to carry alone.',
+    url: 'https://www.howwasyourday.live/canada-immigration-stress',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -45,10 +45,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can a LeanOn listener help me with immigration paperwork or legal questions?',
+      name: 'Can a How Was Your Day listener help me with immigration paperwork or legal questions?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners are not immigration lawyers or consultants and cannot advise you on your immigration case. They are screened peer listeners — people who will hear your fears, frustrations, and uncertainty without judgment. For legal questions, please consult a registered RCIC or immigration lawyer.',
+        text: 'How Was Your Day listeners are not immigration lawyers or consultants and cannot advise you on your immigration case. They are screened peer listeners — people who will hear your fears, frustrations, and uncertainty without judgment. For legal questions, please consult a registered RCIC or immigration lawyer.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'What if I want to talk about leaving Canada — giving up on the dream?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is a completely valid thing to talk about. Many people reach a point where they question whether all of this is worth it. A LeanOn listener will not push you toward any particular decision — they will just listen and help you think through what you actually feel.',
+        text: 'That is a completely valid thing to talk about. Many people reach a point where they question whether all of this is worth it. A How Was Your Day listener will not push you toward any particular decision — they will just listen and help you think through what you actually feel.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Immigration Stress Canada', item: 'https://www.leanon.app/canada-immigration-stress' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Immigration Stress Canada', item: 'https://www.howwasyourday.live/canada-immigration-stress' },
   ],
 }
 
@@ -175,7 +175,7 @@ export default function CanadaImmigrationStressPage() {
             life on hold for years, sometimes, while the system moves at its own pace. The mental toll
             of that is real.</p>
           <p>Talking about it — to someone who will not minimise it or give you generic advice — can make
-            the wait more bearable. LeanOn listeners have heard this story before. They understand.</p>
+            the wait more bearable. How Was Your Day listeners have heard this story before. They understand.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
 
@@ -184,7 +184,7 @@ export default function CanadaImmigrationStressPage() {
           <p>You left India for a reason. You sacrificed — relationships, comfort, proximity to family.
             And now you are in a holding pattern, not fully settled, not fully free, not fully sure
             it was the right call.</p>
-          <p>That ambivalence is painful and it is also completely understandable. LeanOn is the space
+          <p>That ambivalence is painful and it is also completely understandable. How Was Your Day is the space
             where you can say it — the doubt, the fear, the grief — without it affecting your visa
             application or your reputation back home.</p>
         </div>
@@ -221,8 +221,8 @@ export default function CanadaImmigrationStressPage() {
               of waiting significantly.</p>
           </div>
           <div className="faq-item">
-            <h3>Can a LeanOn listener help with immigration paperwork?</h3>
-            <p>No — LeanOn listeners are screened peer listeners, not immigration consultants or lawyers.
+            <h3>Can a How Was Your Day listener help with immigration paperwork?</h3>
+            <p>No — How Was Your Day listeners are screened peer listeners, not immigration consultants or lawyers.
               For legal questions, please consult a registered RCIC or immigration lawyer.</p>
           </div>
           <div className="faq-item">
@@ -231,7 +231,7 @@ export default function CanadaImmigrationStressPage() {
           </div>
           <div className="faq-item">
             <h3>What if I want to talk about leaving Canada?</h3>
-            <p>That is a valid thing to talk about. A LeanOn listener will not push you toward any
+            <p>That is a valid thing to talk about. A How Was Your Day listener will not push you toward any
               particular decision — they will just hear what you actually feel.</p>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function CanadaImmigrationStressPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

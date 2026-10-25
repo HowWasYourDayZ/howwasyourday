@@ -4,21 +4,21 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Interfaith Relationship India — Love Across Religions Is Hard. Talk About It. | LeanOn',
+  title: 'Interfaith Relationship India — Love Across Religions Is Hard. Talk About It. | How Was Your Day',
   description: 'Hindu-Muslim. Hindu-Christian. Sikh-Hindu. Love marriages across religions in India carry enormous weight. Talk to someone who won\'t judge. From ₹160.',
   keywords: [
     'interfaith relationship india', 'love across religions india', 'hindu muslim relationship india',
     'inter-caste relationship india', 'love marriage problems india', 'intercaste marriage india',
     'interfaith marriage india', 'religious difference relationship india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/interfaith-relationship-india', languages: { 'en-IN': 'https://www.leanon.app/interfaith-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/interfaith-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/interfaith-relationship-india' } },
   openGraph: {
-    title: 'Interfaith Relationship India — Love Across Religions Is Hard. Talk About It. | LeanOn',
+    title: 'Interfaith Relationship India — Love Across Religions Is Hard. Talk About It. | How Was Your Day',
     description: 'Hindu-Muslim. Hindu-Christian. Sikh-Hindu. Love marriages across religions in India carry enormous weight. Talk to someone who won\'t judge. From ₹160.',
-    url: 'https://www.leanon.app/interfaith-relationship-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/interfaith-relationship-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Interfaith Relationship India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Interfaith Relationship India' }],
   },
 }
 
@@ -28,8 +28,8 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn appropriate for relationship problems?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Relationship difficulty is one of the most common reasons people come to LeanOn. A peer listener can hold the complexity of your specific situation without taking sides, without having opinions about your choices, and without the social consequences that come with confiding in people who know you or your partner.' },
+      name: 'Is How Was Your Day appropriate for relationship problems?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Relationship difficulty is one of the most common reasons people come to How Was Your Day. A peer listener can hold the complexity of your specific situation without taking sides, without having opinions about your choices, and without the social consequences that come with confiding in people who know you or your partner.' },
     },
     {
       '@type': 'Question',
@@ -44,7 +44,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if my partner doesn\'t know I\'m using this?',
-      acceptedAnswer: { '@type': 'Answer', text: 'That is entirely your decision. Many people use LeanOn without their partners knowing &mdash; it is a private space for your own processing, not a couples service. You do not need your partner&apos;s knowledge or consent to talk about your own experience.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'That is entirely your decision. Many people use How Was Your Day without their partners knowing &mdash; it is a private space for your own processing, not a couples service. You do not need your partner&apos;s knowledge or consent to talk about your own experience.' },
     },
   ],
 }
@@ -53,8 +53,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Interfaith Relationship India', item: 'https://www.leanon.app/interfaith-relationship-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Interfaith Relationship India', item: 'https://www.howwasyourday.live/interfaith-relationship-india' },
   ],
 }
 
@@ -105,7 +105,7 @@ export default function InterfaithRelationshipIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">
@@ -134,7 +134,7 @@ export default function InterfaithRelationshipIndiaPage() {
         <div className="section">
           <h2>Why You Can&apos;t Talk to Family or Most Friends About This</h2>
           <p>Everyone has a position. Your parents have feelings about your choice of partner. Their parents have feelings. Your friends are often aligned with one side. Even the most supportive people in your life have opinions that complicate what you can say to them honestly.</p>
-          <p>What you need is someone with no position. Someone who hears the whole complicated thing &mdash; the love, the frustration, the fear, the occasional doubt &mdash; without forming a view on what you should do. A LeanOn listener has no stake in your relationship. They will not tell you to leave or to stay. They will hold the complexity with you.</p>
+          <p>What you need is someone with no position. Someone who hears the whole complicated thing &mdash; the love, the frustration, the fear, the occasional doubt &mdash; without forming a view on what you should do. A How Was Your Day listener has no stake in your relationship. They will not tell you to leave or to stay. They will hold the complexity with you.</p>
         </div>
         <div className="section">
           <h2>Frequently Asked Questions</h2>

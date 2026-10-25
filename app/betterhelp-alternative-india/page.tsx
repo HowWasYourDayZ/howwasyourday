@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'BetterHelp Alternative India — Human Support, Indian Prices | LeanOn',
-  description: 'BetterHelp costs $280/month. LeanOn peer sessions start at ₹160. Real human listeners, Indian context.',
+  title: 'BetterHelp Alternative India — Human Support, Indian Prices | How Was Your Day',
+  description: 'BetterHelp costs $280/month. How Was Your Day peer sessions start at ₹160. Real human listeners, Indian context.',
   keywords: ['betterhelp alternative india', '7 cups alternative india', 'replika alternative india', 'woebot alternative india', 'talkspace alternative india', 'online therapy alternative india', 'best online counselling app india', 'therapy app india', 'online therapy india'],
-  alternates: { canonical: 'https://www.leanon.app/betterhelp-alternative-india', languages: { 'en-IN': 'https://www.leanon.app/betterhelp-alternative-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/betterhelp-alternative-india', languages: { 'en-IN': 'https://www.howwasyourday.live/betterhelp-alternative-india' } },
   openGraph: {
-    title: 'BetterHelp Alternative India — Human Support, Indian Prices | LeanOn',
-    description: 'BetterHelp costs $280/month. LeanOn peer sessions start at ₹160. Real human listeners, Indian context.',
-    url: 'https://www.leanon.app/betterhelp-alternative-india',
-    siteName: 'LeanOn',
+    title: 'BetterHelp Alternative India — Human Support, Indian Prices | How Was Your Day',
+    description: 'BetterHelp costs $280/month. How Was Your Day peer sessions start at ₹160. Real human listeners, Indian context.',
+    url: 'https://www.howwasyourday.live/betterhelp-alternative-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -22,26 +22,26 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn like BetterHelp?',
+      name: 'Is How Was Your Day like BetterHelp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn and BetterHelp both provide online emotional support, but they are quite different. BetterHelp connects you with licensed US therapists via subscription (~$280/month). LeanOn connects you with screened Indian peer listeners via pay-per-session (from ₹160). LeanOn is peer support, not licensed therapy. If you need clinical treatment, see a professional. If you need a real human conversation without the ₹20,000/month price tag, LeanOn is built for you.',
+        text: 'How Was Your Day and BetterHelp both provide online emotional support, but they are quite different. BetterHelp connects you with licensed US therapists via subscription (~$280/month). How Was Your Day connects you with screened Indian peer listeners via pay-per-session (from ₹160). How Was Your Day is peer support, not licensed therapy. If you need clinical treatment, see a professional. If you need a real human conversation without the ₹20,000/month price tag, How Was Your Day is built for you.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is 7 Cups and how does LeanOn compare?',
+      name: 'What is 7 Cups and how does How Was Your Day compare?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '7 Cups offers free peer listening by volunteers alongside paid professional therapy. LeanOn offers paid peer listening by screened Indian listeners with lived experience — the key difference is the cultural context and the quality of the listener training. LeanOn listeners understand Indian family dynamics, work culture, and social pressures. 7 Cups listeners are mostly Western.',
+        text: '7 Cups offers free peer listening by volunteers alongside paid professional therapy. How Was Your Day offers paid peer listening by screened Indian listeners with lived experience — the key difference is the cultural context and the quality of the listener training. How Was Your Day listeners understand Indian family dynamics, work culture, and social pressures. 7 Cups listeners are mostly Western.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is there a free option on LeanOn?',
+      name: 'Is there a free option on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5-minute LeanOn session is free — you try before you commit. Sessions after that start at ₹160. There is no monthly subscription or free tier beyond the trial window.',
+        text: 'Your first 5-minute How Was Your Day session is free — you try before you commit. Sessions after that start at ₹160. There is no monthly subscription or free tier beyond the trial window.',
       },
     },
     {
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'BetterHelp Alternative India', item: 'https://www.leanon.app/betterhelp-alternative-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'BetterHelp Alternative India', item: 'https://www.howwasyourday.live/betterhelp-alternative-india' },
   ],
 }
 
@@ -130,7 +130,7 @@ export default function BetterhelpAlternativeIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -143,7 +143,7 @@ export default function BetterhelpAlternativeIndiaPage() {
         <div className="hero">
           <p className="tag">BetterHelp Alternative · India · From ₹160</p>
           <h1>You deserve real human support — <em>not a ₹20,000/month subscription</em></h1>
-          <p className="lead">BetterHelp costs $280/month. Talkspace is similar. Neither understands Indian family dynamics, Indian work culture, or Indian emotional context. LeanOn peer sessions start at ₹160 — real humans, Indian context, pay per session.</p>
+          <p className="lead">BetterHelp costs $280/month. Talkspace is similar. Neither understands Indian family dynamics, Indian work culture, or Indian emotional context. How Was Your Day peer sessions start at ₹160 — real humans, Indian context, pay per session.</p>
         </div>
 
         <div className="section">
@@ -190,7 +190,7 @@ export default function BetterhelpAlternativeIndiaPage() {
                   <td>No</td>
                 </tr>
                 <tr className="highlight-row">
-                  <td className="col-label">LeanOn</td>
+                  <td className="col-label">How Was Your Day</td>
                   <td>Peer listeners (screened)</td>
                   <td>₹160/session</td>
                   <td>Yes</td>
@@ -211,7 +211,7 @@ export default function BetterhelpAlternativeIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What Is Different About LeanOn</h2>
+          <h2>What Is Different About How Was Your Day</h2>
           <ul>
             <li><strong>Pay per session</strong> — no subscription, use when you need it, from ₹160</li>
             <li><strong>Indian listeners</strong> — who understand joint family dynamics, Indian work pressure, arranged marriage stress, and the specific loneliness of Indian cities</li>
@@ -233,16 +233,16 @@ export default function BetterhelpAlternativeIndiaPage() {
         <div className="section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn like BetterHelp?</div>
-            <div className="faq-a">Both provide online emotional support, but they are different. BetterHelp connects you with licensed US therapists via subscription (~$280/month). LeanOn connects you with screened Indian peer listeners via pay-per-session (from ₹160). LeanOn is peer support, not licensed therapy.</div>
+            <div className="faq-q">Is How Was Your Day like BetterHelp?</div>
+            <div className="faq-a">Both provide online emotional support, but they are different. BetterHelp connects you with licensed US therapists via subscription (~$280/month). How Was Your Day connects you with screened Indian peer listeners via pay-per-session (from ₹160). How Was Your Day is peer support, not licensed therapy.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What is 7 Cups and how does LeanOn compare?</div>
-            <div className="faq-a">7 Cups offers free peer listening by volunteers. LeanOn offers paid peer listening by screened Indian listeners with lived experience. The key differences are cultural context and listener quality. LeanOn listeners understand Indian family dynamics and social pressures.</div>
+            <div className="faq-q">What is 7 Cups and how does How Was Your Day compare?</div>
+            <div className="faq-a">7 Cups offers free peer listening by volunteers. How Was Your Day offers paid peer listening by screened Indian listeners with lived experience. The key differences are cultural context and listener quality. How Was Your Day listeners understand Indian family dynamics and social pressures.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is there a free option on LeanOn?</div>
-            <div className="faq-a">Your first 5-minute LeanOn session is free — you try before you commit. Sessions after that start at ₹160. There is no monthly subscription.</div>
+            <div className="faq-q">Is there a free option on How Was Your Day?</div>
+            <div className="faq-a">Your first 5-minute How Was Your Day session is free — you try before you commit. Sessions after that start at ₹160. There is no monthly subscription.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Why does BetterHelp cost so much in India?</div>

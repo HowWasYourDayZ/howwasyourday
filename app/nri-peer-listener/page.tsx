@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Peer Listener | A Real Human Who Gets the Immigrant Experience | LeanOn',
+  title: 'NRI Peer Listener | A Real Human Who Gets the Immigrant Experience | How Was Your Day',
   description: 'A peer listener for NRIs — someone who has actually lived the immigrant experience and can listen without needing it explained. Book a session anytime.',
   keywords: ['nri peer listener', 'nri listener online', 'peer listener for nri', 'indian listener abroad', 'nri support listener', 'talk to peer nri'],
-  alternates: { canonical: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  openGraph: { title: 'NRI Peer Listener | A Real Human Who Gets the Immigrant Experience | LeanOn', description: 'A peer listener for NRIs — someone who has actually lived the immigrant experience and can listen without needing it explained. Book a session anytime.', url: 'https://www.leanon.app/indian-emotional-support-abroad', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  openGraph: { title: 'NRI Peer Listener | A Real Human Who Gets the Immigrant Experience | How Was Your Day', description: 'A peer listener for NRIs — someone who has actually lived the immigrant experience and can listen without needing it explained. Book a session anytime.', url: 'https://www.howwasyourday.live/indian-emotional-support-abroad', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'What exactly is a peer listener?', acceptedAnswer: { '@type': 'Answer', text: 'A peer listener is someone who has lived through experiences similar to yours and is screened and expected to listen with empathy. Unlike a professional, they bring lived experience rather than clinical knowledge. For NRIs, that means someone who already understands the immigrant world — no explanation required.' } },
   { '@type': 'Question', name: 'How is a peer listener different from a friend?', acceptedAnswer: { '@type': 'Answer', text: 'A friend has their own life, their own history with you, and sometimes their own opinions about what you should do. A peer listener has none of that. They are there solely to listen to you — no agenda, no judgment, no feedback you didn\'t ask for. That neutrality is the point.' } },
-  { '@type': 'Question', name: 'Do NRI peer listeners have specific lived experience abroad?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are Indian and many have direct experience with life abroad or with close family who have lived abroad. You can browse profiles to find someone whose specific experience matches what you want to talk about.' } },
+  { '@type': 'Question', name: 'Do NRI peer listeners have specific lived experience abroad?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are Indian and many have direct experience with life abroad or with close family who have lived abroad. You can browse profiles to find someone whose specific experience matches what you want to talk about.' } },
   { '@type': 'Question', name: 'Can I talk about anything or is it limited to certain topics?', acceptedAnswer: { '@type': 'Answer', text: 'You can talk about anything that is weighing on you — loneliness, relationships, family pressure, marriage, career anxiety, homesickness, identity. There are no required topics and no judgment about what you bring.' } },
   { '@type': 'Question', name: 'How much does a session with an NRI peer listener cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Peer Listener', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Peer Listener', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriPeerListenerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Peer Listener</span></nav>
         <div className="hero">
           <p className="badge">NRI Peer Listener &middot; Indian Immigrant Life &middot; Lived Experience</p>
           <h1>An NRI Peer Listener — Someone Who <em>Needs No Explanation</em></h1>
           <p className="lead">You should not have to explain why Diwali away from home is hard. Or why the visa anxiety keeps you up at night. Or why success abroad still comes with an ache. A peer listener for NRIs already carries that context. They are there to listen — not advise, not fix, not judge. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Find a peer listener &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Find a peer listener &rarr;</a>
         </div>
 
         <div className="section">
@@ -95,11 +95,11 @@ export default function NriPeerListenerPage() {
         <div className="section">
           <h2>The Specific NRI Lived Experience Listeners Bring</h2>
           <p>The weight of being the family&rsquo;s hope abroad. The loneliness that hides behind a full calendar. The marriage pressure that follows you across continents. The relationship strain of building a life together in a foreign country. The identity question that immigrant life makes unavoidable — who are you when you are neither fully here nor fully there?</p>
-          <p>LeanOn peer listeners have been through versions of these things. When you bring them, they meet them with recognition, not analysis. That recognition — the simple experience of being understood without having to explain — is often what shifts something in a conversation.</p>
+          <p>How Was Your Day peer listeners have been through versions of these things. When you bring them, they meet them with recognition, not analysis. That recognition — the simple experience of being understood without having to explain — is often what shifts something in a conversation.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Someone who already understands.</h2><p>Real NRI peer listener. No preamble needed. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a peer listener &rarr;</a></div>
+        <div className="cta-card"><h2>Someone who already understands.</h2><p>Real NRI peer listener. No preamble needed. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a peer listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-mental-health">NRI mental health &rarr;</a>

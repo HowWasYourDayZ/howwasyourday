@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Lucknow — Peer Listeners | LeanOn',
+  title: 'Emotional Support in Lucknow — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Lucknow, India. Talk anonymously about family pressure, UPSC stress, relationship challenges. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/lucknow', languages: { 'en-IN': 'https://www.leanon.app/lucknow' } },
-  keywords: 'peer support Lucknow, emotional support Lucknow, UPSC stress Lucknow, family pressure Lucknow UP, talk to someone Lucknow, leanon Lucknow',
+  alternates: { canonical: 'https://www.howwasyourday.live/lucknow', languages: { 'en-IN': 'https://www.howwasyourday.live/lucknow' } },
+  keywords: 'peer support Lucknow, emotional support Lucknow, UPSC stress Lucknow, family pressure Lucknow UP, talk to someone Lucknow, howwasyourday Lucknow',
   openGraph: {
-    title: 'Emotional Support in Lucknow — Peer Listeners | LeanOn',
+    title: 'Emotional Support in Lucknow — Peer Listeners | How Was Your Day',
     description: 'Connect with peer listeners in Lucknow, India. Talk anonymously about family pressure, UPSC stress, relationship challenges. No appointment needed.',
-    url: 'https://www.leanon.app/lucknow',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/lucknow',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -32,13 +32,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What kinds of things do Lucknow users talk about on LeanOn?',
+      name: 'What kinds of things do Lucknow users talk about on How Was Your Day?',
       acceptedAnswer: { '@type': 'Answer', text: 'Common themes from Lucknow users include: UPSC and competitive exam stress, family pressure around marriage especially for women in their mid-20s, the experience of returning to Lucknow after studying or working elsewhere and feeling caught between two worlds, relationship situations that cannot be discussed openly within the family, and the loneliness of navigating modern life within traditional social structures.' },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available to people outside major metros?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn is available anywhere in India with a smartphone and internet connection. You do not need to be in a metro city. Many users are in tier-2 and tier-3 cities and towns where mental health support is even less accessible than in metros.' },
+      name: 'Is How Was Your Day available to people outside major metros?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is available anywhere in India with a smartphone and internet connection. You do not need to be in a metro city. Many users are in tier-2 and tier-3 cities and towns where mental health support is even less accessible than in metros.' },
     },
     {
       '@type': 'Question',
@@ -52,17 +52,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Lucknow', item: 'https://www.leanon.app/lucknow' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Lucknow', item: 'https://www.howwasyourday.live/lucknow' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/lucknow',
+  url: 'https://www.howwasyourday.live/lucknow',
   areaServed: { '@type': 'City', name: 'Lucknow', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -119,7 +119,7 @@ export default function LucknowPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">
@@ -130,7 +130,7 @@ export default function LucknowPage() {
         <div className="hero">
           <p className="tag">Peer Support &middot; Lucknow</p>
           <h1>Peer Support in Lucknow &mdash; Someone to Lean On in <em>the City of Nawabs</em></h1>
-          <p className="lead">Lucknow carries the weight of tradition alongside modern ambition. Family expectations, UPSC dreams, marriage timelines, career pressure &mdash; and a social culture where admitting struggle is still difficult. LeanOn connects you with peer listeners who understand the Lucknow experience.</p>
+          <p className="lead">Lucknow carries the weight of tradition alongside modern ambition. Family expectations, UPSC dreams, marriage timelines, career pressure &mdash; and a social culture where admitting struggle is still difficult. How Was Your Day connects you with peer listeners who understand the Lucknow experience.</p>
         </div>
         <div className="section">
           <h2>Lucknow&apos;s Unique Emotional Pressures</h2>
@@ -141,11 +141,11 @@ export default function LucknowPage() {
           <h3>Migration and Return</h3>
           <p>Many people from Lucknow spend years in Delhi, Mumbai, or abroad, and then return. The return can be disorienting: you have changed, the city has partly changed, and the social expectations have not. You are back in the family orbit, back in the social comparison, and often feeling caught between the person you became and the person your family expects.</p>
           <h3>Awadhi Culture and the Difficulty of Expressing Struggle</h3>
-          <p>Lucknow&apos;s Tehzeeb &mdash; its cultural tradition of grace, politeness, and propriety &mdash; is beautiful. It is also, at times, a barrier to honest self-expression. The social expectation of composure makes it harder to say &ldquo;I am struggling&rdquo; without feeling like you are violating something important. LeanOn offers a space completely outside that social fabric, where composure is not required.</p>
+          <p>Lucknow&apos;s Tehzeeb &mdash; its cultural tradition of grace, politeness, and propriety &mdash; is beautiful. It is also, at times, a barrier to honest self-expression. The social expectation of composure makes it harder to say &ldquo;I am struggling&rdquo; without feeling like you are violating something important. How Was Your Day offers a space completely outside that social fabric, where composure is not required.</p>
         </div>
         <div className="section">
-          <h2>How LeanOn Works in Lucknow</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at ₹160 for 15 minutes, available any time, from your phone.</p>
+          <h2>How It Works in Lucknow</h2>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at ₹160 for 15 minutes, available any time, from your phone.</p>
           <p>The listener is a real Indian person, screened for active listening. They have no connection to your social or family network. Your listener never sees your phone number, and nothing is shared with anyone in your life.</p>
         </div>
         <div className="section">
@@ -158,7 +158,7 @@ export default function LucknowPage() {
           ))}
         </div>
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
+          <p><strong>How Was Your Day is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
           <p>Crisis support: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> (free, 24/7, Government of India).</p>
         </div>
         <div className="cta-card">

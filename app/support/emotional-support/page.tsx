@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Online Emotional Support India — Talk to a Peer Listener | LeanOn',
+  title: 'Online Emotional Support India — Talk to a Peer Listener | How Was Your Day',
   description: 'Get online emotional support from screened peer listeners in India. Anonymous, affordable.',
-  alternates: { canonical: 'https://www.leanon.app/support/emotional-support', languages: { 'en-IN': 'https://www.leanon.app/support/emotional-support' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-support', languages: { 'en-IN': 'https://www.howwasyourday.live/support/emotional-support' } },
   openGraph: {
-    title: 'Online Emotional Support India — Talk to a Peer Listener | LeanOn',
+    title: 'Online Emotional Support India — Talk to a Peer Listener | How Was Your Day',
     description: 'Get online emotional support from screened peer listeners in India. Anonymous, affordable.',
-    url: 'https://www.leanon.app/support/emotional-support',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/emotional-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -29,7 +29,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How does online emotional support work on LeanOn?',
+      name: 'How does online emotional support work on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'You browse peer listeners, pick someone whose lived experience resonates with yours, and start a session via text or voice. The listener is a real person who has been through similar challenges and is screened and expected to offer empathetic, non-judgmental support. There is no booking required, and a short trial session is available for new users.',
@@ -45,10 +45,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is emotional support on LeanOn confidential?',
+      name: 'Is emotional support on How Was Your Day confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. All sessions are completely private. You can use a pseudonym and your real name is never shared. LeanOn does not share your conversation content with anyone. You are in control of how much you share and with whom.',
+        text: 'Yes. All sessions are completely private. You can use a pseudonym and your real name is never shared. How Was Your Day does not share your conversation content with anyone. You are in control of how much you share and with whom.',
       },
     },
     {
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Emotional Support', item: 'https://www.leanon.app/support/emotional-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Emotional Support', item: 'https://www.howwasyourday.live/support/emotional-support' },
   ],
 }
 
@@ -133,7 +133,7 @@ export default function EmotionalSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -148,7 +148,7 @@ export default function EmotionalSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Emotional Support</p>
           <h1>Online Emotional Support in India — <em>Real People</em>, Real Understanding</h1>
-          <p className="lead">When you need emotional support, you need to feel genuinely heard — not advised, not fixed, just understood. LeanOn connects you with peer listeners across India who have been through hard times and know what it means to need someone in your corner.</p>
+          <p className="lead">When you need emotional support, you need to feel genuinely heard — not advised, not fixed, just understood. How Was Your Day connects you with peer listeners across India who have been through hard times and know what it means to need someone in your corner.</p>
         </div>
 
         {/* What Is Emotional Support */}
@@ -163,7 +163,7 @@ export default function EmotionalSupportPage() {
           <p>In India, that gap is particularly wide. Cultural norms around emotional expression, the expectation of self-reliance, and the stigma around mental health struggles make it genuinely hard to say &quot;I am not okay and I need someone to talk to.&quot; Friends may not know how to hold that. Family may make it worse. Colleagues are not appropriate. And therapy can feel too formal, too expensive, or too clinical for what you actually need.</p>
 
           <h3>What Real Emotional Support Feels Like</h3>
-          <p>You know you have received emotional support when you finish a conversation feeling lighter — not because your situation has changed, but because you feel less alone in it. When someone has really listened, reflected back your experience, and let you know that your feelings make sense. That experience is what LeanOn is built around.</p>
+          <p>You know you have received emotional support when you finish a conversation feeling lighter — not because your situation has changed, but because you feel less alone in it. When someone has really listened, reflected back your experience, and let you know that your feelings make sense. That experience is what How Was Your Day is built around.</p>
         </div>
 
         {/* Why Online Emotional Support Works */}
@@ -183,11 +183,11 @@ export default function EmotionalSupportPage() {
 
         {/* What to Expect from a Peer Listener */}
         <div className="section">
-          <h2>What to Expect from a Peer Listener on LeanOn</h2>
-          <p>LeanOn listeners are real people who have personally navigated the kinds of challenges you might be facing — loneliness, anxiety, burnout, relationship stress, grief, or simply the feeling that life is too much right now. They are not therapists, but they understand from lived experience what it is like to need support.</p>
+          <h2>What to Expect from a Peer Listener on How Was Your Day</h2>
+          <p>How Was Your Day listeners are real people who have personally navigated the kinds of challenges you might be facing — loneliness, anxiety, burnout, relationship stress, grief, or simply the feeling that life is too much right now. They are not therapists, but they understand from lived experience what it is like to need support.</p>
 
           <h3>Active Listening Without Interruption</h3>
-          <p>Your listener&apos;s job is to hear you fully — not to wait for a pause so they can offer their opinion, but to genuinely follow what you are saying and reflect it back. Many people describe a LeanOn session as the first time they have been truly listened to without interruption or judgment.</p>
+          <p>Your listener&apos;s job is to hear you fully — not to wait for a pause so they can offer their opinion, but to genuinely follow what you are saying and reflect it back. Many people describe a How Was Your Day session as the first time they have been truly listened to without interruption or judgment.</p>
 
           <h3>Validation, Not Fixing</h3>
           <p>Listeners are not there to solve your problems or tell you what to do. They are there to make you feel that your feelings are understandable and valid — because they are. That validation alone is often profoundly relieving.</p>
@@ -273,7 +273,7 @@ export default function EmotionalSupportPage() {
             <div className="faq-a">Emotional support is the experience of feeling genuinely heard, understood, and less alone. It is about having someone acknowledge your feelings as real and valid rather than rushing to fix things. Research shows it is one of the most powerful factors in resilience and mental wellbeing.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How does online emotional support work on LeanOn?</div>
+            <div className="faq-q">How does online emotional support work on How Was Your Day?</div>
             <div className="faq-a">You browse peer listeners, pick someone whose lived experience resonates with yours, and start a session via text or voice. The listener is a real person screened for empathetic support. There is no booking required, and a short trial session is available for new users.</div>
           </div>
           <div className="faq-item">
@@ -281,8 +281,8 @@ export default function EmotionalSupportPage() {
             <div className="faq-a">Research shows that online peer support can be just as effective as in-person support for many people. The key factor is feeling genuinely heard and understood — which is fully possible through text or voice. Many people find it easier to open up online due to reduced social pressure.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is emotional support on LeanOn confidential?</div>
-            <div className="faq-a">Yes. All sessions are completely private. You can use a pseudonym and your real name is never shared. LeanOn does not share your conversation content with anyone.</div>
+            <div className="faq-q">Is emotional support on How Was Your Day confidential?</div>
+            <div className="faq-a">Yes. All sessions are completely private. You can use a pseudonym and your real name is never shared. How Was Your Day does not share your conversation content with anyone.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How is emotional support different from therapy?</div>
@@ -292,14 +292,14 @@ export default function EmotionalSupportPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>Peer support is not a substitute for professional mental health care.</strong> LeanOn listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
+          <p><strong>Peer support is not a substitute for professional mental health care.</strong> How Was Your Day listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
           <p><strong>Crisis helplines in India:</strong> NIMHANS — <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:700}}>080-46110007</a> &nbsp;|&nbsp; Tele-MANAS — <a href="tel:14416" style={{color:'#7A5020',fontWeight:700}}>14416</a> (free · 24/7 · Govt of India)</p>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support topics on LeanOn:</p>
+          <p>Explore more peer support topics on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>

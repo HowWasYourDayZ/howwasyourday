@@ -1,14 +1,14 @@
 {
-  "appId": "com.leanon.app",
-  "appName": "LeanOn",
+  "appId": "app.howwasyourday",
+  "appName": "How Was Your Day",
   "webDir": "www",
   "server": {
-    "url": "https://www.leanon.app",
+    "url": "https://www.howwasyourday.live",
     "androidScheme": "https",
-    "allowNavigation": ["www.leanon.app", "leanon.app", "*.razorpay.com", "*.msg91.com", "*.agora.io"]
+    "allowNavigation": ["www.howwasyourday.live", "howwasyourday.live", "*.razorpay.com", "*.msg91.com", "*.agora.io"]
   },
   "android": {
-    "appendUserAgent": "LeanOnApp/android",
+    "appendUserAgent": "HowWasYourDayApp/android",
     "allowMixedContent": false,
     "captureInput": true,
     "webContentsDebuggingEnabled": false

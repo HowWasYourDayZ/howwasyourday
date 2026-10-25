@@ -6,5 +6,5 @@ export type ToastType = 'info' | 'success' | 'error' | 'warning'
 
 export function showToast(message: string, type: ToastType = 'info') {
   if (typeof window === 'undefined') return
-  window.dispatchEvent(new CustomEvent('leanon:toast', { detail: { message, type } }))
+  window.dispatchEvent(new CustomEvent('howwasyourday:toast', { detail: { message, type } }))
 }

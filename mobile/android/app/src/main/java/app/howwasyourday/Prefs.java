@@ -1,4 +1,4 @@
-package app.leanon;
+package app.howwasyourday;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,7 +10,7 @@ final class Prefs {
     static final String LAST_PUSH_AT = "last_push_at";
 
     static SharedPreferences get(Context c) {
-        return c.getApplicationContext().getSharedPreferences("leanon", Context.MODE_PRIVATE);
+        return c.getApplicationContext().getSharedPreferences("howwasyourday", Context.MODE_PRIVATE);
     }
     private Prefs() { }
 }

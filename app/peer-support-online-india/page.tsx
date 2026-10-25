@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support Online India — Talk to Someone Who\'s Been There | LeanOn',
+  title: 'Peer Support Online India — Talk to Someone Who\'s Been There | How Was Your Day',
   description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. First 5 min free.',
   keywords: ['peer support online india', 'peer support app india', 'peer support mental health india', 'peer support india', 'online peer support india'],
-  alternates: { canonical: 'https://www.leanon.app/peer-support-online-india', languages: { 'en-IN': 'https://www.leanon.app/peer-support-online-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-support-online-india', languages: { 'en-IN': 'https://www.howwasyourday.live/peer-support-online-india' } },
   openGraph: {
-    title: 'Peer Support Online India — Talk to Someone Who\'s Been There | LeanOn',
+    title: 'Peer Support Online India — Talk to Someone Who\'s Been There | How Was Your Day',
     description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. First 5 min free.',
-    url: 'https://www.leanon.app/peer-support-online-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/peer-support-online-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,15 +38,15 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn\'s peer support different from a helpline?',
+      name: 'How is How Was Your Day\'s peer support different from a helpline?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Crisis helplines are staffed by volunteers and designed for acute emergencies — they are lifesaving resources for moments of immediate danger. LeanOn is different: it is for the weeks before a crisis, the sustained emotional weight that builds up when you have nowhere to put it. Conversations on LeanOn are longer, more personal, and more like talking to a friend who happens to understand your situation. You choose your listener based on their experience and availability, and you can return to the same person across sessions.',
+        text: 'Crisis helplines are staffed by volunteers and designed for acute emergencies — they are lifesaving resources for moments of immediate danger. How Was Your Day is different: it is for the weeks before a crisis, the sustained emotional weight that builds up when you have nowhere to put it. Conversations on How Was Your Day are longer, more personal, and more like talking to a friend who happens to understand your situation. You choose your listener based on their experience and availability, and you can return to the same person across sessions.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is peer support free on LeanOn?',
+      name: 'Is peer support free on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'New users get a free 5-minute trial session. After that, paid sessions start at around ₹160 for 15 minutes, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. That is a fraction of what a private therapy session costs in India, and there is no appointment.',
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Can peer support help with depression or anxiety?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer support is not a clinical treatment for depression or anxiety, and LeanOn does not claim otherwise. However, for many people the weight of daily low mood, anxious thinking, or emotional exhaustion eases significantly when they can talk to someone who has been there — someone who does not minimise it or rush to fix it, but simply stays present and listens. If you are managing a diagnosed mental health condition, peer support works best alongside professional care, not instead of it. If you are unsure whether what you are experiencing needs clinical attention, speaking to a doctor or licensed counsellor is the right first step.',
+        text: 'Peer support is not a clinical treatment for depression or anxiety, and How Was Your Day does not claim otherwise. However, for many people the weight of daily low mood, anxious thinking, or emotional exhaustion eases significantly when they can talk to someone who has been there — someone who does not minimise it or rush to fix it, but simply stays present and listens. If you are managing a diagnosed mental health condition, peer support works best alongside professional care, not instead of it. If you are unsure whether what you are experiencing needs clinical attention, speaking to a doctor or licensed counsellor is the right first step.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Peer Support Online India', item: 'https://www.leanon.app/peer-support-online-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Peer Support Online India', item: 'https://www.howwasyourday.live/peer-support-online-india' },
   ],
 }
 
@@ -139,7 +139,7 @@ export default function PeerSupportOnlineIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -187,15 +187,15 @@ export default function PeerSupportOnlineIndiaPage() {
           <p>A therapist is trained and expected to stay clinically neutral. That neutrality is valuable in treatment. But sometimes it creates distance at the exact moment you need closeness. A peer listener has been there. They bring warmth alongside skill, and they are not trying to be your professional — they are trying to be the person you needed when you were where they were.</p>
 
           <h3>Peer Support Without an Appointment</h3>
-          <p>The people who need to talk rarely need to talk at 11am on a Tuesday. They need to talk at 11pm on a Sunday, or at 6am before a meeting that has kept them up all night. Peer support on LeanOn is available at those hours — no appointment, no waitlist, no requirement to explain yourself before the conversation starts.</p>
+          <p>The people who need to talk rarely need to talk at 11am on a Tuesday. They need to talk at 11pm on a Sunday, or at 6am before a meeting that has kept them up all night. Peer support on How Was Your Day is available at those hours — no appointment, no waitlist, no requirement to explain yourself before the conversation starts.</p>
         </div>
 
-        {/* How LeanOn does it */}
+        {/* How the app does it */}
         <div className="section">
-          <h2>How LeanOn Does Peer Support</h2>
+          <h2>How the app Does Peer Support</h2>
 
           <h3>Screened Peer Listeners</h3>
-          <p>Every listener on LeanOn is a real person who has lived through something relevant to the conversations they take. They are reviewed through LeanOn&apos;s screening process — application review, identity verification, and an assessment on active listening, boundaries and when to refer to professional help — before they are made available. They are not therapists, and we are transparent about that. But they are not random volunteers either.</p>
+          <p>Every listener on How Was Your Day is a real person who has lived through something relevant to the conversations they take. They are reviewed through How Was Your Day&apos;s screening process — application review, identity verification, and an assessment on active listening, boundaries and when to refer to professional help — before they are made available. They are not therapists, and we are transparent about that. But they are not random volunteers either.</p>
 
           <h3>Private Conversations</h3>
           <p>You sign up with a phone number and a first name. No last name, no photo of you, no social account required. Nothing you say is shared with anyone in your life. The conversation stays between you and your listener.</p>
@@ -204,13 +204,13 @@ export default function PeerSupportOnlineIndiaPage() {
           <p>Listeners are available in the middle of the night, over weekends, on public holidays. Whether you are in Mumbai, Bengaluru, a small town in UP, or anywhere else in India — if you have a phone and data, peer support is available.</p>
 
           <h3>Affordable</h3>
-          <p>A 15-minute session on LeanOn costs around ₹160. New users get a free 5-minute trial to find out whether the listener they chose actually understands them before committing to a longer session. There are no subscription traps, no membership fees, no automatic renewals.</p>
+          <p>A 15-minute session on How Was Your Day costs around ₹160. New users get a free 5-minute trial to find out whether the listener they chose actually understands them before committing to a longer session. There are no subscription traps, no membership fees, no automatic renewals.</p>
         </div>
 
         {/* Who it's for */}
         <div className="section">
           <h2>Who Peer Support Is For</h2>
-          <p>Peer support on LeanOn is used by a wide range of people. Here are some of the most common situations:</p>
+          <p>Peer support on How Was Your Day is used by a wide range of people. Here are some of the most common situations:</p>
           <ul>
             <li><strong>Working professionals</strong> after a bad week, a difficult manager, a project that went wrong, or the slow burnout of a job that used to feel meaningful</li>
             <li><strong>Students</strong> under pressure from entrance exams, family expectations, career uncertainty, and the social performance of appearing fine</li>
@@ -235,7 +235,7 @@ export default function PeerSupportOnlineIndiaPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="col-label">LeanOn peer support</td>
+                  <td className="col-label">How Was Your Day peer support</td>
                   <td>Lived-experience listening, warmth, privacy, ₹160/session, no appointment</td>
                   <td>Clinical diagnosis or treatment</td>
                 </tr>
@@ -293,7 +293,7 @@ export default function PeerSupportOnlineIndiaPage() {
 
         {/* Topics */}
         <div style={{marginBottom:24}}>
-          <p style={{fontSize:16,fontWeight:800,color:'var(--navy)',marginBottom:14}}>Topics available on LeanOn</p>
+          <p style={{fontSize:16,fontWeight:800,color:'var(--navy)',marginBottom:14}}>Topics available on How Was Your Day</p>
           <div className="pill-row">
             {['Loneliness 🌙','Anxiety 😰','Burnout 🔥','Grief 🌿','Breakup 💔','Career 🧭','Student pressure 📚','LGBTQ+ 🌈','Parenting 👶','Startup stress 🚀','Relationships 💬','Just talk ☕'].map(t => (
               <div key={t} className="pill">{t}</div>
@@ -323,16 +323,16 @@ export default function PeerSupportOnlineIndiaPage() {
             <div className="faq-a">No. Therapy is delivered by a licensed mental health professional — a psychologist, psychiatrist, or counsellor — who can diagnose conditions and provide clinical treatment. Peer support is delivered by a screened person with lived experience, and focuses on empathy, listening, and emotional connection rather than diagnosis or treatment. Peer support is not a replacement for therapy when therapy is needed, but for everyday emotional overwhelm, burnout, relationship stress, and the weight of hard weeks, peer support is often exactly what helps — and it is far more accessible and affordable.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How is LeanOn&apos;s peer support different from a helpline?</div>
-            <div className="faq-a">Crisis helplines are staffed by volunteers and designed for acute emergencies — they are lifesaving resources for moments of immediate danger. LeanOn is different: it is for the weeks before a crisis, the sustained emotional weight that builds up when you have nowhere to put it. Conversations on LeanOn are longer, more personal, and more like talking to a friend who happens to understand your situation. You choose your listener based on their experience and availability, and you can return to the same person across sessions.</div>
+            <div className="faq-q">How is How Was Your Day&apos;s peer support different from a helpline?</div>
+            <div className="faq-a">Crisis helplines are staffed by volunteers and designed for acute emergencies — they are lifesaving resources for moments of immediate danger. How Was Your Day is different: it is for the weeks before a crisis, the sustained emotional weight that builds up when you have nowhere to put it. Conversations on How Was Your Day are longer, more personal, and more like talking to a friend who happens to understand your situation. You choose your listener based on their experience and availability, and you can return to the same person across sessions.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is peer support free on LeanOn?</div>
+            <div className="faq-q">Is peer support free on How Was Your Day?</div>
             <div className="faq-a">New users get a free 5-minute trial session. After that, paid sessions start at around ₹160 for 15 minutes, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. That is a fraction of what a private therapy session costs in India, and there is no appointment.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support help with depression or anxiety?</div>
-            <div className="faq-a">Peer support is not a clinical treatment for depression or anxiety, and LeanOn does not claim otherwise. However, for many people the weight of daily low mood, anxious thinking, or emotional exhaustion eases significantly when they can talk to someone who has been there — someone who does not minimise it or rush to fix it, but simply stays present and listens. If you are managing a diagnosed mental health condition, peer support works best alongside professional care, not instead of it. If you are unsure whether what you are experiencing needs clinical attention, speaking to a doctor or licensed counsellor is the right first step.</div>
+            <div className="faq-a">Peer support is not a clinical treatment for depression or anxiety, and How Was Your Day does not claim otherwise. However, for many people the weight of daily low mood, anxious thinking, or emotional exhaustion eases significantly when they can talk to someone who has been there — someone who does not minimise it or rush to fix it, but simply stays present and listens. If you are managing a diagnosed mental health condition, peer support works best alongside professional care, not instead of it. If you are unsure whether what you are experiencing needs clinical attention, speaking to a doctor or licensed counsellor is the right first step.</div>
           </div>
         </div>
 

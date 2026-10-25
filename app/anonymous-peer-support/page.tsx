@@ -3,18 +3,18 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Anonymous Peer Support India — LeanOn | Talk Anonymously',
+  title: 'Anonymous Peer Support India — How Was Your Day | Talk Anonymously',
   description: 'Anonymous peer support in India. Talk to someone who understands — without sharing your name, identity, or details. Private, safe.',
-  alternates: { canonical: 'https://www.leanon.app/anonymous-peer-support' },
+  alternates: { canonical: 'https://www.howwasyourday.live/anonymous-peer-support' },
   keywords: ['anonymous peer support India', 'anonymous emotional support India', 'talk anonymously India', 'anonymous listener India'],
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Anonymous Peer Support India — LeanOn',
+  name: 'Anonymous Peer Support India — How Was Your Day',
   description: 'Anonymous peer support for India — private, safe, human.',
-  url: 'https://www.leanon.app/anonymous-peer-support',
+  url: 'https://www.howwasyourday.live/anonymous-peer-support',
 }
 
 const S = `
@@ -49,20 +49,20 @@ export default function AnonymousPeerSupport() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
       <div className="page">
-        <a href="/" className="back">← LeanOn Home</a>
-        <h1><span>Anonymous</span> Peer Support India — LeanOn</h1>
+        <a href="/" className="back">← How Was Your Day Home</a>
+        <h1><span>Anonymous</span> Peer Support India — How Was Your Day</h1>
         <p className="lead">
-          Talk to someone who understands — without sharing your identity. LeanOn is India&apos;s most private peer support platform, designed for a country where stigma is real and family privacy matters.
+          Talk to someone who understands — without sharing your identity. How Was Your Day is India&apos;s most private peer support platform, designed for a country where stigma is real and family privacy matters.
         </p>
 
         <div className="section">
           <h2>Why anonymous support matters in India</h2>
           <p>In India, mental health struggles carry real stigma. In joint families, walls are thin. In workplaces, vulnerability can cost you. In friend groups, gossip travels. Many people who desperately need to talk to someone feel they simply cannot — because the risk to their reputation, relationships, or career is too high.</p>
-          <p>LeanOn was built for this reality. You can join with just your phone number, use any first name you choose, and talk about anything without fear of judgment or disclosure. Your listener only knows your chosen first name. Nothing else.</p>
+          <p>How Was Your Day was built for this reality. You can join with just your phone number, use any first name you choose, and talk about anything without fear of judgment or disclosure. Your listener only knows your chosen first name. Nothing else.</p>
         </div>
 
         <div className="section">
-          <h2>How LeanOn protects your anonymity</h2>
+          <h2>How the app protects your anonymity</h2>
           <div className="privacy-list">
             {[
               { icon: '📱', text: 'Sign up with just your mobile number — no email, no full name, no social login' },
@@ -82,7 +82,7 @@ export default function AnonymousPeerSupport() {
 
         <div className="section">
           <h2>What can you talk about anonymously?</h2>
-          <p>LeanOn listeners specialise in topics that people in India are most hesitant to discuss openly: loneliness in joint families, anxiety at work, career confusion and comparison, relationship struggles and breakups, grief and loss, student exam pressure, startup burnout, and simply feeling stuck.</p>
+          <p>How Was Your Day listeners specialise in topics that people in India are most hesitant to discuss openly: loneliness in joint families, anxiety at work, career confusion and comparison, relationship struggles and breakups, grief and loss, student exam pressure, startup burnout, and simply feeling stuck.</p>
           <p>You can also just talk — about anything, or nothing specific. Sometimes the most valuable thing is simply having someone present who is not judging you.</p>
         </div>
 

@@ -59,12 +59,12 @@ export async function createUpiPayout(opts: {
         // instead of failing — it fires automatically after the next top-up.
         queue_if_low_balance: true,
         reference_id: opts.referenceId.slice(0, 40),
-        narration: 'LeanOn listener payout',
+        narration: 'How Was Your Day listener payout',
         fund_account: {
           account_type: 'vpa',
           vpa: { address: opts.upiId },
           contact: {
-            name: opts.name.slice(0, 50) || 'LeanOn Listener',
+            name: opts.name.slice(0, 50) || 'How Was Your Day Listener',
             type: 'vendor',
             reference_id: opts.userId.slice(0, 40),
           },

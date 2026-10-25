@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Someone to Talk to in Canada — Real Human, Not a Chatbot | LeanOn',
-  description: 'You do not want a chatbot. You want a real person to actually listen. LeanOn connects Indians in Canada with screened human peer listeners — no appointment; availability follows Indian time.',
+  title: 'Someone to Talk to in Canada — Real Human, Not a Chatbot | How Was Your Day',
+  description: 'You do not want a chatbot. You want a real person to actually listen. How Was Your Day connects Indians in Canada with screened human peer listeners — no appointment; availability follows Indian time.',
   keywords: [
     'someone to talk to canada', 'real person to talk to canada', 'not a chatbot canada',
     'human listener canada', 'talk to someone canada indian', 'emotional support canada human',
     'peer listener canada', 'someone who listens canada', 'need to talk canada',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada-talk-to-someone',
-    languages: { 'en-CA': 'https://www.leanon.app/canada-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/canada-talk-to-someone',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada-talk-to-someone' },
   },
   openGraph: {
-    title: 'Someone to Talk to in Canada — Real Human, Not a Chatbot | LeanOn',
-    description: 'When you need to talk, you need a real person. LeanOn peer listeners are online daily on Indian time — warm, screened, and genuinely present.',
-    url: 'https://www.leanon.app/canada-talk-to-someone',
-    siteName: 'LeanOn',
+    title: 'Someone to Talk to in Canada — Real Human, Not a Chatbot | How Was Your Day',
+    description: 'When you need to talk, you need a real person. How Was Your Day peer listeners are online daily on Indian time — warm, screened, and genuinely present.',
+    url: 'https://www.howwasyourday.live/canada-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -29,10 +29,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Are LeanOn listeners real humans or AI?',
+      name: 'Are How Was Your Day listeners real humans or AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Real humans — every single one. LeanOn listeners are screened peer supporters, not AI, not bots, not scripts. When you connect with a listener, there is a real person on the other end giving you their genuine attention.',
+        text: 'Real humans — every single one. How Was Your Day listeners are screened peer supporters, not AI, not bots, not scripts. When you connect with a listener, there is a real person on the other end giving you their genuine attention.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'What do I talk about? I do not have one specific problem.',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You do not need a specific problem. Many people come to LeanOn just because they are feeling heavy, or lonely, or overwhelmed without being able to name why. That is a completely valid reason to reach out. You can just start talking and see where it goes.',
+        text: 'You do not need a specific problem. Many people come to How Was Your Day just because they are feeling heavy, or lonely, or overwhelmed without being able to name why. That is a completely valid reason to reach out. You can just start talking and see where it goes.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'How is a peer listener different from a therapist?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A therapist is a licensed mental health professional who can diagnose and treat. A LeanOn peer listener is a trained human who listens deeply, asks thoughtful questions, and holds space for you — without diagnosis or clinical treatment. Think of it as warm human connection, available on demand.',
+        text: 'A therapist is a licensed mental health professional who can diagnose and treat. A How Was Your Day peer listener is a trained human who listens deeply, asks thoughtful questions, and holds space for you — without diagnosis or clinical treatment. Think of it as warm human connection, available on demand.',
       },
     },
     {
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Canada', item: 'https://www.leanon.app/canada-talk-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Canada', item: 'https://www.howwasyourday.live/canada-talk-to-someone' },
   ],
 }
 
@@ -151,7 +151,7 @@ export default function CanadaTalkToSomeonePage() {
         <h1>You Want a Real Human.<br />Not Another App That Pretends to Listen.</h1>
         <p className="lead">
           AI chatbots are everywhere. They are fast, always available, and completely hollow when
-          you actually need to feel heard. LeanOn is different — every listener is a real, screened human being who is genuinely present in your conversation. There is no script. No algorithm.
+          you actually need to feel heard. How Was Your Day is different — every listener is a real, screened human being who is genuinely present in your conversation. There is no script. No algorithm.
           Just a person listening.
         </p>
 
@@ -180,7 +180,7 @@ export default function CanadaTalkToSomeonePage() {
         </div>
 
         <div className="card">
-          <h2>Who talks to LeanOn listeners in Canada</h2>
+          <h2>Who talks to How Was Your Day listeners in Canada</h2>
           <ul className="checklist">
             <li>Indian newcomers who have been holding everything together and need to just let it out</li>
             <li>Students away from home for the first time, overwhelmed and lonely</li>
@@ -212,8 +212,8 @@ export default function CanadaTalkToSomeonePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>Are LeanOn listeners real humans or AI?</h3>
-            <p>Real humans — every single one. LeanOn listeners are screened peer supporters. When you
+            <h3>Are How Was Your Day listeners real humans or AI?</h3>
+            <p>Real humans — every single one. How Was Your Day listeners are screened peer supporters. When you
               connect, there is a real person on the other end giving you their genuine attention.</p>
           </div>
           <div className="faq-item">
@@ -223,7 +223,7 @@ export default function CanadaTalkToSomeonePage() {
           </div>
           <div className="faq-item">
             <h3>How is a peer listener different from a therapist?</h3>
-            <p>A therapist is a licensed professional who can diagnose and treat. A LeanOn peer listener
+            <p>A therapist is a licensed professional who can diagnose and treat. A How Was Your Day peer listener
               listens deeply and holds space — without diagnosis or treatment. Warm human connection,
               available on demand.</p>
           </div>
@@ -251,7 +251,7 @@ export default function CanadaTalkToSomeonePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

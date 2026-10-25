@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy Listener for Indians in Canada | LeanOn',
-  description: 'Sometimes you need someone who truly gets the Indian experience — the guilt, the pressure, the homesickness. LeanOn empathy listeners understand your world without explanation.',
+  title: 'Empathy Listener for Indians in Canada | How Was Your Day',
+  description: 'Sometimes you need someone who truly gets the Indian experience — the guilt, the pressure, the homesickness. How Was Your Day empathy listeners understand your world without explanation.',
   keywords: [
     'empathy listener canada indian', 'someone who understands indians canada', 'cultural empathy support canada',
     'indian emotional support canada', 'south asian listener canada', 'understood in canada indian',
     'desi empathy canada', 'peer listener india canada', 'emotional validation canada nri',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada-empathy-listener',
-    languages: { 'en-CA': 'https://www.leanon.app/canada-empathy-listener' },
+    canonical: 'https://www.howwasyourday.live/canada-empathy-listener',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada-empathy-listener' },
   },
   openGraph: {
-    title: 'Empathy Listener for Indians in Canada | LeanOn',
-    description: 'You should not have to translate your culture before someone can understand your pain. LeanOn listeners get it — the pressure, the guilt, the longing.',
-    url: 'https://www.leanon.app/canada-empathy-listener',
-    siteName: 'LeanOn',
+    title: 'Empathy Listener for Indians in Canada | How Was Your Day',
+    description: 'You should not have to translate your culture before someone can understand your pain. How Was Your Day listeners get it — the pressure, the guilt, the longing.',
+    url: 'https://www.howwasyourday.live/canada-empathy-listener',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -37,10 +37,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How is a LeanOn listener different from talking to a friend?',
+      name: 'How is a How Was Your Day listener different from talking to a friend?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Friends are wonderful, but they have their own worries and their own stake in your story. A LeanOn listener has no agenda, no shared history to protect, and no community to repeat things to. Their only job in that moment is to hear you fully.',
+        text: 'Friends are wonderful, but they have their own worries and their own stake in your story. A How Was Your Day listener has no agenda, no shared history to protect, and no community to repeat things to. Their only job in that moment is to hear you fully.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'Will the listener understand Indian culture without me having to explain everything?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners are themselves Indian or South Asian and deeply familiar with the cultural context — the family pressure, the guilt of being far from parents, the concept of putting family before self. You should not have to translate your world before being understood.',
+        text: 'Many How Was Your Day listeners are themselves Indian or South Asian and deeply familiar with the cultural context — the family pressure, the guilt of being far from parents, the concept of putting family before self. You should not have to translate your world before being understood.',
       },
     },
     {
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Canada', item: 'https://www.leanon.app/canada-empathy-listener' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Canada', item: 'https://www.howwasyourday.live/canada-empathy-listener' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function CanadaEmpathyListenerPage() {
         <p className="lead">
           Talking to someone who does not share your background means constantly translating yourself —
           your family dynamics, your guilt, your homesickness — before you can even get to the actual thing
-          you wanted to talk about. LeanOn listeners get the Indian experience. You can just talk.
+          you wanted to talk about. How Was Your Day listeners get the Indian experience. You can just talk.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
@@ -171,7 +171,7 @@ export default function CanadaEmpathyListenerPage() {
 
         <div className="night-box">
           <h2>🤝 Being truly heard is rarer than it sounds</h2>
-          <p>Most people listen to respond. A LeanOn empathy listener listens to understand. There is a
+          <p>Most people listen to respond. A How Was Your Day empathy listener listens to understand. There is a
             real difference — you can feel it within the first minute of a session.</p>
           <p>No advice unless you ask. No rush toward solutions. Just presence, attention, and the
             feeling that someone is actually with you in this moment.</p>
@@ -214,13 +214,13 @@ export default function CanadaEmpathyListenerPage() {
               you. They reflect back what they understand, ask thoughtful questions, and make you feel genuinely seen.</p>
           </div>
           <div className="faq-item">
-            <h3>How is a LeanOn listener different from talking to a friend?</h3>
-            <p>Friends have their own stake in your story. A LeanOn listener has no agenda, no shared history,
+            <h3>How is a How Was Your Day listener different from talking to a friend?</h3>
+            <p>Friends have their own stake in your story. A How Was Your Day listener has no agenda, no shared history,
               and no community to repeat things to. Their only job is to hear you fully.</p>
           </div>
           <div className="faq-item">
             <h3>Will the listener understand Indian culture?</h3>
-            <p>Many LeanOn listeners are themselves Indian or South Asian — familiar with family pressure, guilt
+            <p>Many How Was Your Day listeners are themselves Indian or South Asian — familiar with family pressure, guilt
               about being far from parents, and the cultural tightrope of life abroad. No translation needed.</p>
           </div>
           <div className="faq-item">
@@ -247,7 +247,7 @@ export default function CanadaEmpathyListenerPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

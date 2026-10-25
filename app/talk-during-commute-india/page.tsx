@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone During Your Commute | LeanOn',
+  title: 'Talk to Someone During Your Commute | How Was Your Day',
   description: "Your commute is 20–45 minutes. That's enough time to process last night, reset from a fight, or vent before the workday starts. Real peer listener, ₹160.",
   keywords: [
     'talk to someone during commute india',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'process feelings during commute india',
     'support during morning commute india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/talk-during-commute-india', languages: { 'en-IN': 'https://www.leanon.app/talk-during-commute-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-during-commute-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-during-commute-india' } },
   openGraph: {
-    title: 'Talk to Someone During Your Commute | LeanOn',
+    title: 'Talk to Someone During Your Commute | How Was Your Day',
     description: "Your commute is 20–45 minutes. That's enough time to process last night, reset from a fight, or vent before the workday starts. Real peer listener, ₹160.",
-    url: 'https://www.leanon.app/talk-during-commute-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/talk-during-commute-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Talk During Commute' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Talk During Commute' }],
   },
 }
 
@@ -33,12 +33,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can I really do a session during a commute?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn sessions are voice calls. Earphones in, speak freely, and the listener receives it in real time. Many people find the commute is actually the best time for this &mdash; you are already alone, you are already going over the morning in your head, and you have nowhere to be for the next 20 to 40 minutes. The commute is a natural vent window.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day sessions are voice calls. Earphones in, speak freely, and the listener receives it in real time. Many people find the commute is actually the best time for this &mdash; you are already alone, you are already going over the morning in your head, and you have nowhere to be for the next 20 to 40 minutes. The commute is a natural vent window.' },
     },
     {
       '@type': 'Question',
       name: 'Is it a phone call?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes, it is a voice call through the LeanOn app. Not a video call &mdash; voice only. You do not need to be at a desk or be visible. It works exactly like a phone call. You book, the connection is made, and you talk.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, it is a voice call through the How Was Your Day app. Not a video call &mdash; voice only. You do not need to be at a desk or be visible. It works exactly like a phone call. You book, the connection is made, and you talk.' },
     },
     {
       '@type': 'Question',
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk During Commute India', item: 'https://www.leanon.app/talk-during-commute-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk During Commute India', item: 'https://www.howwasyourday.live/talk-during-commute-india' },
   ],
 }
 
@@ -115,7 +115,7 @@ export default function TalkDuringCommuteIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -132,7 +132,7 @@ export default function TalkDuringCommuteIndiaPage() {
         <div className="hero">
           <p className="badge">Voice Call &middot; 15 Minutes &middot; No Appointment &middot; From &#x20b9;160</p>
           <h1>Your commute is 40 minutes. <em>That&apos;s enough time to reset.</em></h1>
-          <p className="lead">You&apos;re already alone in the car or on the metro. You&apos;re already going over it in your head. LeanOn sessions are voice calls &mdash; you can use that 40 minutes to actually process it instead of just ruminating.</p>
+          <p className="lead">You&apos;re already alone in the car or on the metro. You&apos;re already going over it in your head. How Was Your Day sessions are voice calls &mdash; you can use that 40 minutes to actually process it instead of just ruminating.</p>
           <a href="/browse" className="cta-hero">Start your session &#x2192;</a>
         </div>
 
@@ -161,7 +161,7 @@ export default function TalkDuringCommuteIndiaPage() {
 
         <div className="section">
           <h2>Voice Calls, Not Chat</h2>
-          <p>LeanOn is a voice platform, not a text chat. This is deliberate. Voice moves emotion in a way that text does not. When you speak something out loud to another person, the brain processes it differently than when you type it. The relief is more complete.</p>
+          <p>How Was Your Day is a voice platform, not a text chat. This is deliberate. Voice moves emotion in a way that text does not. When you speak something out loud to another person, the brain processes it differently than when you type it. The relief is more complete.</p>
           <p>The commute is perfect for this precisely because you are not at a desk trying to type. You can speak naturally, the way you would to a friend in the passenger seat &mdash; except this friend has no stake in the outcome and no opinion about your partner.</p>
         </div>
 

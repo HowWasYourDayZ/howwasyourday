@@ -1,10 +1,10 @@
 export const post = {
   slug: 'earn-money-listening-online-india',
   title: 'How to Earn Money by Listening to People Online in India',
-  description: 'If you have empathy and lived experience, your ability to listen is worth real money. Here is how peer listeners in India earn ₹300–₹800/hour on LeanOn — from home, on their own schedule.',
+  description: 'If you have empathy and lived experience, your ability to listen is worth real money. Here is how peer listeners in India earn ₹300–₹800/hour on How Was Your Day — from home, on their own schedule.',
   date: '2026-09-08',
   readTime: '6 min read',
-  topics: ['earn money online India', 'work from home India', 'listener income', 'peer support', 'LeanOn'],
+  topics: ['earn money online India', 'work from home India', 'listener income', 'peer support', 'How Was Your Day'],
   content: `
 <p>Most &quot;earn from home&quot; opportunities in India ask you to sell something, do data entry, or take surveys for ₹2 each. This one is different. It asks you to do something you may already be doing for free: listen.</p>
 
@@ -18,7 +18,7 @@ export const post = {
 
 <h2>How Much Can You Actually Earn?</h2>
 
-<p>Listeners on LeanOn set their own rate — typically ₹100–₹300 per 15-minute session. A listener charging ₹200 per 15-minute session and taking four sessions in an hour earns ₹800 for that hour.</p>
+<p>Listeners on How Was Your Day set their own rate — typically ₹100–₹300 per 15-minute session. A listener charging ₹200 per 15-minute session and taking four sessions in an hour earns ₹800 for that hour.</p>
 
 <p>Most active listeners do not run four back-to-back sessions. A realistic picture:</p>
 
@@ -45,7 +45,7 @@ export const post = {
 
 <h2>What the Work Actually Looks Like</h2>
 
-<p>You set your availability in the LeanOn app. When a seeker books a session with you, you receive a notification. The session happens over the app — no need to share your phone number, social media, or personal details.</p>
+<p>You set your availability in the How Was Your Day app. When a seeker books a session with you, you receive a notification. The session happens over the app — no need to share your phone number, social media, or personal details.</p>
 
 <p>Sessions are typically 15, 30, or 45 minutes. You choose the topics you support based on your own experience — you are never assigned a session outside your selected areas. You can turn your availability on or off any time.</p>
 
@@ -53,13 +53,13 @@ export const post = {
 
 <h2>The Application Process</h2>
 
-<p>LeanOn does not accept every applicant. The quality of seekers&apos; experiences depends on the quality of listeners, so the bar is real.</p>
+<p>How Was Your Day does not accept every applicant. The quality of seekers&apos; experiences depends on the quality of listeners, so the bar is real.</p>
 
 <p>The process:</p>
 
 <ol>
 <li><strong>Apply</strong> — share your lived experience, the topics you are qualified to support, and why you want to do this work. Be specific and honest. Generic applications do not pass.</li>
-<li><strong>Review</strong> — the LeanOn team reviews your application, typically within a few days.</li>
+<li><strong>Review</strong> — the How Was Your Day team reviews your application, typically within a few days.</li>
 <li><strong>Screening</strong> — every applicant answers questions on active listening, boundaries and crisis referral, and verifies their identity with a private selfie. This is not optional and it is not cosmetic — it is what separates peer listeners from well-meaning amateurs.</li>
 <li><strong>Go live</strong> — set your rate, fill in your profile, set your availability, and start taking sessions.</li>
 </ol>
@@ -72,7 +72,7 @@ export const post = {
 
 <h2>How to Start</h2>
 
-<p>Apply at <a href="/become-listener">leanon.app/become-listener</a>. The application takes about ten minutes. If you are accepted, you can be earning within a week.</p>
+<p>Apply at <a href="/become-listener">howwasyourday.live/become-listener</a>. The application takes about ten minutes. If you are accepted, you can be earning within a week.</p>
 
 <p>The people searching for someone to talk to right now are looking for someone who has been where they are. If that person is you, this is a straightforward exchange: you offer what you have earned through difficulty, and you get paid for it.</p>
 `,

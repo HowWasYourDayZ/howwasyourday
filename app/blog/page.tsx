@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { post as lonelinessPost } from './posts/loneliness-in-india'
 import { post as burnoutPost } from './posts/burnout-recovery-india'
 import { post as peerSupportPost } from './posts/how-peer-support-works'
-import { post as leanOnMeanPost } from './posts/what-does-lean-on-mean'
+import { post as howWasYourDayMeanPost } from './posts/what-does-lean-on-mean'
 import { post as lonelinessAtNightPost } from './posts/loneliness-at-night'
 import { post as emotionalBurnoutPost } from './posts/emotional-burnout'
 import { post as anonymousSupportPost } from './posts/anonymous-support-india'
@@ -20,7 +20,7 @@ import { post as overthinkingNightPost } from './posts/how-to-stop-overthinking-
 import { post as noOneToTalkToPost } from './posts/no-one-to-talk-to'
 import { post as therapyCostPost } from './posts/therapy-cost-india'
 import { post as astrologerTalkPost } from './posts/why-people-call-astrologers-to-talk'
-import { post as someoneToLeanOnPost } from './posts/what-it-means-to-have-someone-to-lean-on'
+import { post as someoneToHowWasYourDayPost } from './posts/what-it-means-to-have-someone-to-lean-on'
 import { post as chatgptVsHumanPost } from './posts/chatgpt-vs-human-listener'
 import { post as feelEmptyPost } from './posts/feel-empty-inside-india'
 import { post as feelFailurePost } from './posts/feel-like-a-failure-india'
@@ -73,32 +73,32 @@ const allPosts = [
   chatgptMentalHealthPost, cantAffordTherapyPost, familyPressurePost, lonelinessNewCityPost,
   signsNeedTalkPost, gettingItOffChestPost, badMorningResetPost, ventingStrangerPost,
   emotionalResetWorkdayPost, hateJobPost, am2LonelinessPost, feelFailurePost, feelEmptyPost,
-  chatgptVsHumanPost, someoneToLeanOnPost, astrologerTalkPost,
+  chatgptVsHumanPost, someoneToHowWasYourDayPost, astrologerTalkPost,
   therapyCostPost, noOneToTalkToPost, overthinkingNightPost, onlineEmotionalSupportGuidePost,
   whatIsPeerSupportPost, empathyPost, womenLonelinessPost, mensMentalHealthPost,
   affordableTherapyPost, founderBurnoutPost, lonelinessJointFamilyPost, jointFamilyPost,
   peerVsTherapyPost, anonymousSupportPost, emotionalBurnoutPost, lonelinessAtNightPost,
-  leanOnMeanPost, peerSupportPost, burnoutPost, lonelinessPost,
+  howWasYourDayMeanPost, peerSupportPost, burnoutPost, lonelinessPost,
   morningFightPost, ventingRelationshipPost, talkWorkdayPost,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 export const metadata: Metadata = {
-  title: 'Mental Health Blog India — Loneliness, Anxiety, Family Pressure & Peer Support | LeanOn',
+  title: 'Mental Health Blog India — Loneliness, Anxiety, Family Pressure & Peer Support | How Was Your Day',
   description: 'Honest, practical articles about emotional health in India — loneliness, burnout, family pressure, therapy costs, career anxiety, venting, and peer support. Written for real Indian lives.',
   keywords: [
     'mental health blog India', 'emotional wellness India', 'peer support blog India',
     'loneliness India blog', 'therapy alternative India', 'family pressure India',
-    'career anxiety India', 'burnout India', 'anxiety blog India', 'leanon blog',
+    'career anxiety India', 'burnout India', 'anxiety blog India', 'howwasyourday blog',
     'emotional support India articles', 'mental health articles India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/blog', languages: { 'en-IN': 'https://www.leanon.app/blog' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/blog', languages: { 'en-IN': 'https://www.howwasyourday.live/blog' } },
   openGraph: {
-    title: 'Mental Health Blog India — Loneliness, Anxiety, Family Pressure & Peer Support | LeanOn',
+    title: 'Mental Health Blog India — Loneliness, Anxiety, Family Pressure & Peer Support | How Was Your Day',
     description: 'Honest, practical articles about emotional health in India.',
-    url: 'https://www.leanon.app/blog',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/blog',
+    siteName: 'How Was Your Day',
     type: 'website',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn Blog — Mental Health India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day Blog — Mental Health India' }],
   },
 }
 
@@ -106,22 +106,22 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.leanon.app/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.howwasyourday.live/blog' },
   ],
 }
 
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'LeanOn Mental Health Blog — India',
+  name: 'How Was Your Day Mental Health Blog — India',
   description: 'Articles on emotional wellness, peer support, loneliness, anxiety, and mental health in India.',
-  url: 'https://www.leanon.app/blog',
+  url: 'https://www.howwasyourday.live/blog',
   numberOfItems: allPosts.length,
   itemListElement: allPosts.map((p, i) => ({
     '@type': 'ListItem',
     position: i + 1,
-    url: `https://www.leanon.app/blog/${p.slug}`,
+    url: `https://www.howwasyourday.live/blog/${p.slug}`,
     name: p.title,
   })),
 }
@@ -180,7 +180,7 @@ export default function BlogIndexPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 

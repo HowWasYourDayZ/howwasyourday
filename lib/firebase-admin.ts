@@ -47,7 +47,7 @@ export type WebPushMessage = {
 
 export type WebPushResult = { ok: true } | { ok: false; code: string; tokenDead: boolean }
 
-// Every token LeanOn stores is a WEB push token (browser / installed PWA / the
+// Every token How Was Your Day stores is a WEB push token (browser / installed PWA / the
 // Play Store TWA, which runs Chrome). For those, FCM ignores the `android` and
 // `apns` blocks — only `webpush` applies. The old sender set only
 // android.priority=high, so pushes went out at NORMAL urgency: on a phone in
@@ -90,9 +90,9 @@ export async function sendWebPush(token: string, msg: WebPushMessage): Promise<W
   }
 }
 
-// The LeanOn Android app (mobile/, Capacitor) registers a NATIVE FCM token
+// The How Was Your Day Android app (mobile/, Capacitor) registers a NATIVE FCM token
 // (push_tokens.user_agent starts with NATIVE_ANDROID_MARK). Its
-// LeanOnMessagingService builds the alert itself from `data` — a session
+// HowWasYourDayMessagingService builds the alert itself from `data` — a session
 // request rings like a phone call — so this is data-only too, but with
 // android.priority high (webpush headers mean nothing to a native token).
 export const NATIVE_ANDROID_MARK = 'native:android'

@@ -4,8 +4,8 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: "Can't Afford Therapy in India? Here Are Real Alternatives That Actually Help | LeanOn",
-  description: 'Therapy costs ₹1,500–₹5,000 per session in India. If that is out of reach, here are affordable alternatives — including LeanOn peer support from ₹160.',
+  title: "Can't Afford Therapy in India? Here Are Real Alternatives That Actually Help | How Was Your Day",
+  description: 'Therapy costs ₹1,500–₹5,000 per session in India. If that is out of reach, here are affordable alternatives — including How Was Your Day peer support from ₹160.',
   keywords: [
     'cant afford therapy India', 'therapy too expensive India', 'affordable mental health India',
     'cheap therapy India', 'therapy alternative India', 'free mental health support India',
@@ -14,16 +14,16 @@ export const metadata: Metadata = {
     'mental health affordable India',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/cant-afford-therapy-india',
-    languages: { 'en-IN': 'https://www.leanon.app/cant-afford-therapy-india' },
+    canonical: 'https://www.howwasyourday.live/cant-afford-therapy-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/cant-afford-therapy-india' },
   },
   openGraph: {
-    title: "Can't Afford Therapy in India? Here Are Real Alternatives That Actually Help | LeanOn",
-    description: 'Therapy costs ₹1,500–₹5,000 per session in India. If that is out of reach, here are affordable alternatives — including LeanOn peer support from ₹160.',
-    url: 'https://www.leanon.app/cant-afford-therapy-india',
-    siteName: 'LeanOn',
+    title: "Can't Afford Therapy in India? Here Are Real Alternatives That Actually Help | How Was Your Day",
+    description: 'Therapy costs ₹1,500–₹5,000 per session in India. If that is out of reach, here are affordable alternatives — including How Was Your Day peer support from ₹160.',
+    url: 'https://www.howwasyourday.live/cant-afford-therapy-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: "LeanOn — Affordable Therapy Alternatives India" }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: "How Was Your Day — Affordable Therapy Alternatives India" }],
   },
 }
 
@@ -33,10 +33,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How much does peer support cost on LeanOn vs therapy?',
+      name: 'How much does peer support cost on How Was Your Day vs therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A session with a licensed therapist in India costs ₹1,500–₹5,000. A peer support session on LeanOn costs ₹160 for 15 minutes, ₹249 for 30 minutes, or ₹329 for 45 minutes. New users get a free 5-minute trial. The difference is significant: what you would spend on a single therapy session buys you several months of regular peer support on LeanOn.',
+        text: 'A session with a licensed therapist in India costs ₹1,500–₹5,000. A peer support session on How Was Your Day costs ₹160 for 15 minutes, ₹249 for 30 minutes, or ₹329 for 45 minutes. New users get a free 5-minute trial. The difference is significant: what you would spend on a single therapy session buys you several months of regular peer support on How Was Your Day.',
       },
     },
     {
@@ -60,20 +60,20 @@ const faqSchema = {
       name: 'Can I use peer support while also seeing a therapist?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. Many LeanOn users see a therapist monthly and use peer support in between sessions — when something comes up that they do not want to wait weeks to process. Peer support and therapy serve different but complementary functions. Your therapist works on patterns and clinical frameworks; a LeanOn listener helps you process what is happening right now.',
+        text: 'Absolutely. Many How Was Your Day users see a therapist monthly and use peer support in between sessions — when something comes up that they do not want to wait weeks to process. Peer support and therapy serve different but complementary functions. Your therapist works on patterns and clinical frameworks; a How Was Your Day listener helps you process what is happening right now.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn covered by insurance?',
+      name: 'Is How Was Your Day covered by insurance?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Not currently. LeanOn is peer support, not a clinical service, and is not covered by health insurance. However, because sessions start at ₹160, most people find that LeanOn is affordable without insurance coverage — unlike therapy, where the absence of coverage is the barrier.',
+        text: 'Not currently. How Was Your Day is peer support, not a clinical service, and is not covered by health insurance. However, because sessions start at ₹160, most people find that How Was Your Day is affordable without insurance coverage — unlike therapy, where the absence of coverage is the barrier.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is there a free option on LeanOn?',
+      name: 'Is there a free option on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'New users receive a free 5-minute trial session to experience the platform before committing to a paid session. This is enough time to find out if the format and the specific listener feel right for you. Beyond that, paid sessions start at ₹160 for 15 minutes.',
@@ -86,8 +86,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: "Can't Afford Therapy India", item: 'https://www.leanon.app/cant-afford-therapy-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: "Can't Afford Therapy India", item: 'https://www.howwasyourday.live/cant-afford-therapy-india' },
   ],
 }
 
@@ -146,7 +146,7 @@ export default function CantAffordTherapyIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -217,7 +217,7 @@ export default function CantAffordTherapyIndiaPage() {
 
         <div className="section">
           <h2>What Peer Support Is and What It Costs</h2>
-          <p>LeanOn connects you with peer listeners — real people with lived experience of emotional difficulty, screened for active listening and peer support frameworks. They are not therapists. They are also not just someone who is willing to talk to you. The training and vetting process matters.</p>
+          <p>How Was Your Day connects you with peer listeners — real people with lived experience of emotional difficulty, screened for active listening and peer support frameworks. They are not therapists. They are also not just someone who is willing to talk to you. The training and vetting process matters.</p>
 
           <h3>What You Get in a Session</h3>
           <ul>
@@ -254,7 +254,7 @@ export default function CantAffordTherapyIndiaPage() {
           </ul>
 
           <h3>When You Need Something More</h3>
-          <p>If you are experiencing severe depression that prevents you from functioning, panic attacks, intrusive thoughts about harming yourself, trauma responses, or symptoms that have been present for months and are worsening — please seek a licensed mental health professional. Government psychiatric services at district and state hospitals provide free or low-cost care. LeanOn is not a substitute for clinical treatment in these cases.</p>
+          <p>If you are experiencing severe depression that prevents you from functioning, panic attacks, intrusive thoughts about harming yourself, trauma responses, or symptoms that have been present for months and are worsening — please seek a licensed mental health professional. Government psychiatric services at district and state hospitals provide free or low-cost care. How Was Your Day is not a substitute for clinical treatment in these cases.</p>
 
           <p>For most people, most of the time, the issue is not that severe — but it is real, and it deserves support. That is the gap peer support fills.</p>
         </div>

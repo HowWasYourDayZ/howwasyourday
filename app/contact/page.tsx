@@ -72,7 +72,7 @@ export default function ContactPage() {
     <>
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <div style={{display:'flex',gap:8,alignItems:'center'}}>
           <a href="/auth?mode=listener"><button className="btn-nav-ghost">Listener login</button></a>
           <a href="/auth"><button className="btn-nav">Sign in</button></a>

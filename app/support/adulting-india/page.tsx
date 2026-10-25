@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Adulting in India Is Hard — The Loneliness Nobody Prepared You For | LeanOn',
+  title: 'Adulting in India Is Hard — The Loneliness Nobody Prepared You For | How Was Your Day',
   description: 'Job pressure, marriage pressure, financial pressure, family expectations — all at once. Nobody told you adulting in India would feel this lonely. Talk to someone who gets it.',
   keywords: [
     'adulting India hard', 'adulting loneliness India', 'life pressure 20s India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'young adult stress India', 'life overwhelming India', 'Indian adult loneliness',
     'everything is too much India', 'job marriage pressure India', 'adulthood India struggles',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/adulting-india', languages: { 'en-IN': 'https://www.leanon.app/support/adulting-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/adulting-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/adulting-india' } },
   openGraph: {
-    title: 'Adulting in India Is Hard | LeanOn',
+    title: 'Adulting in India Is Hard | How Was Your Day',
     description: 'Job pressure, marriage pressure, money, family expectations — all at once. Nobody prepared you for this.',
-    url: 'https://www.leanon.app/support/adulting-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/adulting-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Adulting India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Adulting India' }],
   },
 }
 
@@ -61,10 +61,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn for young adults specifically?',
+      name: 'Is How Was Your Day for young adults specifically?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is for anyone who needs to be heard — there is no age restriction. Many of our listeners and seekers are in their 20s and 30s, navigating exactly the pressures described here. You do not need a dramatic reason to use LeanOn. You can come because you are feeling lonely, because adulting is heavy, because you want to talk to someone who will not give you advice or judge you. That is enough.',
+        text: 'How Was Your Day is for anyone who needs to be heard — there is no age restriction. Many of our listeners and seekers are in their 20s and 30s, navigating exactly the pressures described here. You do not need a dramatic reason to use How Was Your Day. You can come because you are feeling lonely, because adulting is heavy, because you want to talk to someone who will not give you advice or judge you. That is enough.',
       },
     },
   ],
@@ -74,9 +74,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/browse' },
-    { '@type': 'ListItem', position: 3, name: 'Adulting India', item: 'https://www.leanon.app/support/adulting-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/browse' },
+    { '@type': 'ListItem', position: 3, name: 'Adulting India', item: 'https://www.howwasyourday.live/support/adulting-india' },
   ],
 }
 
@@ -137,7 +137,7 @@ export default function AdultingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 
@@ -191,7 +191,7 @@ export default function AdultingIndiaPage() {
         </p>
         <p>
           That gap — between what you show and what you are carrying — is one of the reasons
-          people use LeanOn. Not because they are in crisis. Just because they needed to say
+          people use How Was Your Day. Not because they are in crisis. Just because they needed to say
           what is actually going on to someone who would listen.
         </p>
 

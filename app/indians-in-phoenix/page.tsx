@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Phoenix | Chandler, Tempe, Scottsdale | LeanOn',
+  title: 'Emotional Support for Indians in Phoenix | Chandler, Tempe, Scottsdale | How Was Your Day',
   description: 'Chandler, Tempe, Scottsdale — Phoenix is growing fast as an Indian hub. Hot summers, new city, finding your people. Talk to a peer listener in India who understands.',
   keywords: ['indians in phoenix', 'chandler indian community', 'tempe indian support', 'scottsdale indian', 'phoenix indian mental health', 'desi support arizona'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-phoenix' },
-  openGraph: { title: 'Emotional Support for Indians in Phoenix | Chandler, Tempe, Scottsdale | LeanOn', description: 'Chandler, Tempe, Scottsdale — Phoenix is growing fast as an Indian hub. Hot summers, new city, finding your people. Talk to a peer listener in India who understands.', url: 'https://www.leanon.app/indians-in-phoenix', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-phoenix' },
+  openGraph: { title: 'Emotional Support for Indians in Phoenix | Chandler, Tempe, Scottsdale | How Was Your Day', description: 'Chandler, Tempe, Scottsdale — Phoenix is growing fast as an Indian hub. Hot summers, new city, finding your people. Talk to a peer listener in India who understands.', url: 'https://www.howwasyourday.live/indians-in-phoenix', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand Indian life in Phoenix?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience — including the Phoenix Indian experience of being in a fast-growing, newly-forming community where people are still building their networks, and the particular isolation of a car-dependent desert city.' } },
+  { '@type': 'Question', name: 'Do listeners understand Indian life in Phoenix?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the Phoenix Indian experience of being in a fast-growing, newly-forming community where people are still building their networks, and the particular isolation of a car-dependent desert city.' } },
   { '@type': 'Question', name: 'What time works to connect from Phoenix?', acceptedAnswer: { '@type': 'Answer', text: 'Phoenix (MST, no daylight saving) is 11.5 hours behind IST in winter and 12.5 hours behind in summer (when the rest of the US is on daylight saving). 8am Phoenix = 8:30–9:30pm India depending on season. Early mornings work well.' } },
   { '@type': 'Question', name: 'Is this private from my Phoenix community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your Chandler or Scottsdale community, your employer, or family back in India.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Phoenix', item: 'https://www.leanon.app/indians-in-phoenix' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Phoenix', item: 'https://www.howwasyourday.live/indians-in-phoenix' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInPhoenixPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Phoenix</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInPhoenixPage() {
           <h2>Chandler, Tempe, Scottsdale: Phoenix&rsquo;s Emerging Indian Hub</h2>
           <p>The Greater Phoenix area — particularly Chandler, Tempe, Gilbert, and Scottsdale — has seen rapid growth in its Indian tech worker population. Intel&rsquo;s semiconductor fabs in Chandler, the Taiwan Semiconductor Manufacturing Company (TSMC) facilities, and the broader tech expansion in the East Valley have brought thousands of Indian engineers and their families to Arizona in the past few years.</p>
           <p>Phoenix is hot, sprawling, and car-dependent. Unlike the Bay Area or Dallas, the Indian community infrastructure is still catching up. The temple exists, the Indian grocery stores are there, and the community is forming — but for many new arrivals, the sense of deep community that takes years to build is not yet present. You might be in a new subdivision in Gilbert with Indian neighbours on one side but still feel profoundly alone in your first year or two.</p>
-          <p>LeanOn bridges that gap. A real Indian peer listener in India, with no appointment, before your Phoenix community fully forms. First 5 minutes free.</p>
+          <p>How Was Your Day bridges that gap. A real Indian peer listener in India, with no appointment, before your Phoenix community fully forms. First 5 minutes free.</p>
         </div>
 
         <div className="section">

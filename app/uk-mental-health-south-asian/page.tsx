@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Mental Health Support for South Asians in the UK | LeanOn',
-  description: 'Talking about mental health is still taboo in many South Asian families. LeanOn makes it safe — peer listeners who understand your culture, your language, and the pressure to stay strong.',
+  title: 'Mental Health Support for South Asians in the UK | How Was Your Day',
+  description: 'Talking about mental health is still taboo in many South Asian families. How Was Your Day makes it safe — peer listeners who understand your culture, your language, and the pressure to stay strong.',
   keywords: [
     'south asian mental health uk', 'indian mental health uk', 'desi mental health support uk',
     'mental health stigma south asian uk', 'british indian mental health', 'uk nri therapy alternative',
     'cultural mental health support uk', 'south asian therapy uk', 'breaking mental health stigma uk',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-mental-health-south-asian',
-    languages: { 'en-GB': 'https://www.leanon.app/uk-mental-health-south-asian' },
+    canonical: 'https://www.howwasyourday.live/uk-mental-health-south-asian',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk-mental-health-south-asian' },
   },
   openGraph: {
     title: 'Mental Health Support for South Asians in the UK',
     description: 'Breaking the taboo around mental health in South Asian communities in the UK. Peer listeners who understand your culture, online daily on Indian time.',
-    url: 'https://www.leanon.app/uk-mental-health-south-asian',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/uk-mental-health-south-asian',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -37,10 +37,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a substitute for therapy or professional mental health care?',
+      name: 'Is How Was Your Day a substitute for therapy or professional mental health care?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support — real humans who listen without judgment. It is not therapy and listeners are not mental health professionals. Think of it as the kind of support you might get from a wise, caring friend who has time for you. If you need professional help, your GP can refer you to NHS mental health services.',
+        text: 'No. How Was Your Day is peer support — real humans who listen without judgment. It is not therapy and listeners are not mental health professionals. Think of it as the kind of support you might get from a wise, caring friend who has time for you. If you need professional help, your GP can refer you to NHS mental health services.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What if I am not ready for therapy but I know I need to talk to someone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is often exactly the right first step. It is lower-stakes than therapy — no diagnosis, no clinical framework, no waiting lists. Just a real conversation with a real person who will not judge you. Many people find that talking to a peer listener helps them get clear on what they are actually feeling, and sometimes that is all they needed.',
+        text: 'How Was Your Day is often exactly the right first step. It is lower-stakes than therapy — no diagnosis, no clinical framework, no waiting lists. Just a real conversation with a real person who will not judge you. Many people find that talking to a peer listener helps them get clear on what they are actually feeling, and sometimes that is all they needed.',
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'My family would be upset if they knew I was seeking mental health support. Will this be private?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn sessions are completely private. No one in your family or community will know you used the app. You can also use a nickname if that helps you feel safer.',
+        text: 'Yes. How Was Your Day sessions are completely private. No one in your family or community will know you used the app. You can also use a nickname if that helps you feel safer.',
       },
     },
     {
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'South Asian Mental Health UK', item: 'https://www.leanon.app/uk-mental-health-south-asian' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'South Asian Mental Health UK', item: 'https://www.howwasyourday.live/uk-mental-health-south-asian' },
   ],
 }
 
@@ -172,7 +172,7 @@ export default function UkMentalHealthSouthAsianPage() {
 
         <div className="night-box">
           <h2>🤫 You do not have to pretend here</h2>
-          <p>LeanOn gives you a space where you do not need to manage anyone&apos;s reaction to how you feel.
+          <p>How Was Your Day gives you a space where you do not need to manage anyone&apos;s reaction to how you feel.
             No parents to worry. No community to judge. No reputation to maintain.</p>
           <p>Just a real conversation with someone who understands where you are coming from — and will not
             tell you to just stay strong.</p>
@@ -182,7 +182,7 @@ export default function UkMentalHealthSouthAsianPage() {
         <div className="card">
           <h2>Peer support — a softer first step than therapy</h2>
           <p>Therapy is valuable — but for many South Asians, it still feels like a big step. The waiting
-            lists, the clinical setting, the fear of a diagnosis. LeanOn peer support is different: it is
+            lists, the clinical setting, the fear of a diagnosis. How Was Your Day peer support is different: it is
             just a conversation. Real, warm, and private. No clinical framework, no labels.</p>
           <p>For a lot of people, it is exactly the right first step — and sometimes it is all they needed.</p>
         </div>
@@ -214,13 +214,13 @@ export default function UkMentalHealthSouthAsianPage() {
               changing, but it is still a real barrier for many people.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn a substitute for therapy?</h3>
-            <p>No. LeanOn is peer support — not therapy. Think of it as support from a wise, caring person
+            <h3>Is How Was Your Day a substitute for therapy?</h3>
+            <p>No. How Was Your Day is peer support — not therapy. Think of it as support from a wise, caring person
               who has time for you. If you need professional help, your GP can refer you to NHS mental health
               services.</p>
           </div>
           <div className="faq-item">
-            <h3>I am not ready for therapy but I need to talk to someone. Is LeanOn right for me?</h3>
+            <h3>I am not ready for therapy but I need to talk to someone. Is How Was Your Day right for me?</h3>
             <p>Often yes. It is lower-stakes — no diagnosis, no waiting lists, no clinical framework. Many
               people find that a peer conversation helps them get clarity on what they are actually feeling.</p>
           </div>
@@ -248,7 +248,7 @@ export default function UkMentalHealthSouthAsianPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

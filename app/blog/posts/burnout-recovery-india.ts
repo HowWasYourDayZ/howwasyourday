@@ -50,7 +50,7 @@ export const post = {
 
 <p><strong>Change the conditions.</strong> Long-term recovery almost always requires changing the conditions that produced the burnout. This might mean changing jobs, changing roles, changing working patterns, changing relationships, or all of the above. People who return to identical conditions after recovering from burnout tend to burn out again.</p>
 
-<p><strong>Talk to someone who has been through it.</strong> One of the most consistently valuable parts of burnout recovery, as reported by people who have gone through it, is talking to someone else who has. Not a therapist (though this is also valuable) — a peer. Someone who knows what it felt like from the inside. Who can say &quot;yes, that is what it was like for me too&quot; without pathologising or prescribing. This is the experience that LeanOn&apos;s burned-out listeners can offer.</p>
+<p><strong>Talk to someone who has been through it.</strong> One of the most consistently valuable parts of burnout recovery, as reported by people who have gone through it, is talking to someone else who has. Not a therapist (though this is also valuable) — a peer. Someone who knows what it felt like from the inside. Who can say &quot;yes, that is what it was like for me too&quot; without pathologising or prescribing. This is the experience that How Was Your Day&apos;s burned-out listeners can offer.</p>
 
 <h2>The Recovery That Is Not About Productivity</h2>
 
@@ -70,6 +70,6 @@ export const post = {
 
 <p>Do not make the burnout mean something about who you are. You burned out because you cared — about something enough to give more than you had. That is information about the conditions you were in, not your character.</p>
 
-<p>And if you need to talk to someone who has been through it: <a href="/browse">that is what LeanOn is for</a>.</p>
+<p>And if you need to talk to someone who has been through it: <a href="/browse">that is what How Was Your Day is for</a>.</p>
   `.trim(),
 }

@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone Online in UAE & Dubai | LeanOn',
-  description: 'Need a real person to talk to in the UAE or Dubai? LeanOn connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Malayalam and more. First 5 minutes free.',
+  title: 'Talk to Someone Online in UAE & Dubai | How Was Your Day',
+  description: 'Need a real person to talk to in the UAE or Dubai? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Malayalam and more. First 5 minutes free.',
   keywords: [
     'talk to someone online UAE', 'someone to talk to dubai', 'need to talk UAE',
     'online chat support dubai', 'talk to a person UAE', 'emotional support online UAE',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'someone to talk to UAE 24 hours',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uae-talk-to-someone',
-    languages: { 'en-IN': 'https://www.leanon.app/uae-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/uae-talk-to-someone',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/uae-talk-to-someone' },
   },
   openGraph: {
-    title: 'Talk to Someone Online in UAE & Dubai — Real Indian Listeners | LeanOn',
-    description: 'Need a real person to talk to in the UAE? LeanOn connects Indian expats with peer listeners in India — in your language, with no judgment.',
-    url: 'https://www.leanon.app/uae-talk-to-someone',
-    siteName: 'LeanOn',
+    title: 'Talk to Someone Online in UAE & Dubai — Real Indian Listeners | How Was Your Day',
+    description: 'Need a real person to talk to in the UAE? How Was Your Day connects Indian expats with peer listeners in India — in your language, with no judgment.',
+    url: 'https://www.howwasyourday.live/uae-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'Can I talk to someone in the UAE right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time — check who is online now. No appointment needed, no waiting list. Browse listeners who are online and start talking immediately — the first 5 minutes are free.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now. No appointment needed, no waiting list. Browse listeners who are online and start talking immediately — the first 5 minutes are free.',
       },
     },
     {
@@ -44,7 +44,7 @@ const faqSchema = {
       name: 'Are there Indian listeners who understand life in Dubai or Abu Dhabi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn peer listeners are real Indians, many with their own experience of living and working abroad. They understand Gulf expat life — the loneliness, the family pressure, the social performance of "doing well," and the particular weight of being far from home.',
+        text: 'Yes. How Was Your Day peer listeners are real Indians, many with their own experience of living and working abroad. They understand Gulf expat life — the loneliness, the family pressure, the social performance of "doing well," and the particular weight of being far from home.',
       },
     },
     {
@@ -52,7 +52,7 @@ const faqSchema = {
       name: 'Can I speak in Hindi, Tamil, Malayalam or Telugu?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn supports twelve Indian languages. The UAE has very large Malayali, Tamil, Telugu, Hindi, and Gujarati communities — listeners in all these languages are available.',
+        text: 'Yes. How Was Your Day supports twelve Indian languages. The UAE has very large Malayali, Tamil, Telugu, Hindi, and Gujarati communities — listeners in all these languages are available.',
       },
     },
     {
@@ -60,7 +60,7 @@ const faqSchema = {
       name: 'Is it private and anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Completely. Sessions are anonymous. Your employer, your family, and your social circle in the UAE will not know. You can use LeanOn with a nickname.',
+        text: 'Completely. Sessions are anonymous. Your employer, your family, and your social circle in the UAE will not know. You can use How Was Your Day with a nickname.',
       },
     },
     {
@@ -91,7 +91,7 @@ export default function UAETalkToSomeonePage() {
         </h1>
 
         <p style={{ fontSize: '1.05rem', color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          The UAE has one of the largest Indian communities in the world — and yet the loneliness that comes with expat life can still feel very real, very late at night, when there is nobody to call who truly understands. LeanOn gives you a screened Indian peer listener who gets the Dubai and Abu Dhabi experience from the inside. Private, in your language, with no appointment — UAE evenings overlap Indian evenings.
+          The UAE has one of the largest Indian communities in the world — and yet the loneliness that comes with expat life can still feel very real, very late at night, when there is nobody to call who truly understands. How Was Your Day gives you a screened Indian peer listener who gets the Dubai and Abu Dhabi experience from the inside. Private, in your language, with no appointment — UAE evenings overlap Indian evenings.
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>

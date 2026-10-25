@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Loneliness Support for Indians in Kuwait | LeanOn',
-  description: 'Feeling lonely and isolated in Kuwait? LeanOn connects Indian expats with a screened Indian peer listener — in your language, any time, starting with a free 5-minute trial.',
+  title: 'Loneliness Support for Indians in Kuwait | How Was Your Day',
+  description: 'Feeling lonely and isolated in Kuwait? How Was Your Day connects Indian expats with a screened Indian peer listener — in your language, any time, starting with a free 5-minute trial.',
   keywords: [
     'loneliness support Kuwait Indian', 'lonely in Kuwait Indian', 'Indian expat Kuwait lonely',
     'emotional support Kuwait Indians', 'talk to someone Kuwait', 'Kuwait NRI loneliness',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'Kuwait Indian mental health', 'missing home Kuwait Indian', 'no one to talk to Kuwait',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/kuwait-loneliness',
-    languages: { 'en-IN': 'https://www.leanon.app/kuwait-loneliness' },
+    canonical: 'https://www.howwasyourday.live/kuwait-loneliness',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/kuwait-loneliness' },
   },
   openGraph: {
     title: 'Loneliness Support for Indians in Kuwait — Talk to an Indian Listener',
-    description: 'Isolated in Kuwait and missing home? LeanOn peer listeners understand the expat experience and speak your language. First 5 minutes free.',
-    url: 'https://www.leanon.app/kuwait-loneliness',
-    siteName: 'LeanOn',
+    description: 'Isolated in Kuwait and missing home? How Was Your Day peer listeners understand the expat experience and speak your language. First 5 minutes free.',
+    url: 'https://www.howwasyourday.live/kuwait-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,7 +38,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost from Kuwait?',
+      name: 'How much does How Was Your Day cost from Kuwait?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions are KD 4 for 15 minutes, KD 5 for 30 minutes, and KD 7 for 45 minutes. Your first session always starts with a free 5-minute trial.',
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk to a listener in Malayalam, Hindi, or my regional language?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. There are significant Malayali and Hindi-speaking communities in Kuwait, and LeanOn has listeners in both these languages and many more — Tamil, Telugu, Kannada, Bengali, and others. Check a listener\'s profile for their languages.',
+        text: 'Yes. There are significant Malayali and Hindi-speaking communities in Kuwait, and How Was Your Day has listeners in both these languages and many more — Tamil, Telugu, Kannada, Bengali, and others. Check a listener\'s profile for their languages.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'I feel guilty feeling lonely because I chose to come here for a better life. Is that normal?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Very normal, and very common among Gulf workers. The feeling that you are not "allowed" to complain because you chose to migrate — and because others depend on you — is one of the most painful layers of expat loneliness. LeanOn listeners understand this deeply. You are allowed to feel what you feel.',
+        text: 'Very normal, and very common among Gulf workers. The feeling that you are not "allowed" to complain because you chose to migrate — and because others depend on you — is one of the most painful layers of expat loneliness. How Was Your Day listeners understand this deeply. You are allowed to feel what you feel.',
       },
     },
     {
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Kuwait Loneliness Support', item: 'https://www.leanon.app/kuwait-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Kuwait Loneliness Support', item: 'https://www.howwasyourday.live/kuwait-loneliness' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function KuwaitLonelinessPage() {
         <p className="lead">
           Kuwait is home to hundreds of thousands of Indian workers — yet so many of them describe
           a deep, quiet loneliness. Far from family, in a country with strict social and movement
-          rules, missing the warmth of home. LeanOn connects you with an Indian peer listener who
+          rules, missing the warmth of home. How Was Your Day connects you with an Indian peer listener who
           speaks your language and understands your world.
         </p>
 
@@ -174,7 +174,7 @@ export default function KuwaitLonelinessPage() {
 
         <div className="night-box">
           <h2>🌙 Alone in Kuwait City tonight?</h2>
-          <p>LeanOn listeners are based in India, so availability follows Indian time. The time difference between Kuwait and India is small —
+          <p>How Was Your Day listeners are based in India, so availability follows Indian time. The time difference between Kuwait and India is small —
             which means Indian listeners are awake and ready whenever you need to talk, day or night.</p>
           <p>First 5 minutes are completely free. No card needed to start.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
@@ -182,7 +182,7 @@ export default function KuwaitLonelinessPage() {
 
         <div className="card">
           <h2>Talk in your language — Hindi, Malayalam, Tamil and more</h2>
-          <p>Kuwait has a large Malayali community, and Hindi speakers from across India. LeanOn listeners
+          <p>Kuwait has a large Malayali community, and Hindi speakers from across India. How Was Your Day listeners
             speak Malayalam, Hindi, Tamil, Telugu, Kannada, Bengali, and other Indian languages. Talking in
             your mother tongue makes it easier to express the things that are hardest to say.</p>
         </div>
@@ -213,19 +213,19 @@ export default function KuwaitLonelinessPage() {
               to build a life outside work all make Kuwait uniquely isolating for many Indian workers.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost from Kuwait?</h3>
+            <h3>How much does How Was Your Day cost from Kuwait?</h3>
             <p>KD 4 for 15 minutes, KD 5 for 30 minutes, KD 7 for 45 minutes. First 5 minutes are free.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk in Malayalam, Hindi, or my regional language?</h3>
-            <p>Yes. LeanOn has listeners in Malayalam, Hindi, Tamil, Telugu, Kannada, Bengali, and more.
+            <p>Yes. How Was Your Day has listeners in Malayalam, Hindi, Tamil, Telugu, Kannada, Bengali, and more.
               Check a listener&apos;s profile to find one who speaks your language.</p>
           </div>
           <div className="faq-item">
             <h3>I feel guilty for feeling lonely. Is that normal?</h3>
             <p>Very normal and very common. The feeling that you&apos;re not &quot;allowed&quot; to struggle because you
               chose to come here is one of the most painful layers of Gulf loneliness. You are allowed to feel
-              what you feel. LeanOn listeners understand this deeply.</p>
+              what you feel. How Was Your Day listeners understand this deeply.</p>
           </div>
           <div className="faq-item">
             <h3>Are sessions confidential — will my employer know?</h3>
@@ -247,7 +247,7 @@ export default function KuwaitLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

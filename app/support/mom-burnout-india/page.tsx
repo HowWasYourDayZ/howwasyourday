@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Mom Burnout India — You Love Your Child. You Are Also Exhausted. | LeanOn',
+  title: 'Mom Burnout India — You Love Your Child. You Are Also Exhausted. | How Was Your Day',
   description: 'Maternal burnout is real and it is not talked about enough in India. Loving your child and being completely burnt out are not contradictions. Talk to someone who understands both.',
   keywords: [
     'mom burnout India', 'maternal burnout India', 'mother burnout India',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'touched out mom India', 'no break as a mother India', 'husband not helping with baby India',
     'mother struggling India', 'mommy burnout India', 'need a break from parenting India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/mom-burnout-india', languages: { 'en-IN': 'https://www.leanon.app/support/mom-burnout-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/mom-burnout-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/mom-burnout-india' } },
   openGraph: {
-    title: 'Mom Burnout India — You Love Your Child. You Are Also Exhausted. | LeanOn',
+    title: 'Mom Burnout India — You Love Your Child. You Are Also Exhausted. | How Was Your Day',
     description: 'Maternal burnout in India. Loving your child and being completely burnt out are not contradictions.',
-    url: 'https://www.leanon.app/support/mom-burnout-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/mom-burnout-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Mom Burnout India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Mom Burnout India' }],
   },
 }
 
@@ -49,15 +49,15 @@ const faqSchema = {
       name: 'My husband is not helping. How do I cope?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The short, honest answer: it is very hard, and there is no fix that does not involve either the situation changing or your needs being otherwise met. What can help is not carrying the experience alone. Naming — even to a neutral person — what you are actually doing, what you are not receiving, and how you feel is a form of relief. It is also a step toward clarity about what you need and how to advocate for it. LeanOn peer listeners are not relationship coaches, but they can listen without judgment while you figure out what you are carrying and what you need.',
+        text: 'The short, honest answer: it is very hard, and there is no fix that does not involve either the situation changing or your needs being otherwise met. What can help is not carrying the experience alone. Naming — even to a neutral person — what you are actually doing, what you are not receiving, and how you feel is a form of relief. It is also a step toward clarity about what you need and how to advocate for it. How Was Your Day peer listeners are not relationship coaches, but they can listen without judgment while you figure out what you are carrying and what you need.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is it safe to talk about parenting struggles on LeanOn?',
+      name: 'Is it safe to talk about parenting struggles on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — completely. Listeners agree to keep what you share confidential. You do not need to share your real name. What you share in a session stays there. Many people find that the anonymity of LeanOn is specifically what makes it possible to say the things they cannot say to family or friends — including the messy, ambivalent, exhausted parts of parenting that feel too vulnerable to share with people who know your child.',
+        text: 'Yes — completely. Listeners agree to keep what you share confidential. You do not need to share your real name. What you share in a session stays there. Many people find that the anonymity of How Was Your Day is specifically what makes it possible to say the things they cannot say to family or friends — including the messy, ambivalent, exhausted parts of parenting that feel too vulnerable to share with people who know your child.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'What if I just need to vent about being a mother — not get advice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is exactly what LeanOn is for. Not therapy, not advice, not a to-do list for improving your situation. Just a real person who listens while you say what you actually feel, without making it about themselves or telling you what to do. Sometimes the most useful thing is simply to say it out loud to someone who receives it without judgment.',
+        text: 'That is exactly what How Was Your Day is for. Not therapy, not advice, not a to-do list for improving your situation. Just a real person who listens while you say what you actually feel, without making it about themselves or telling you what to do. Sometimes the most useful thing is simply to say it out loud to someone who receives it without judgment.',
       },
     },
   ],
@@ -75,9 +75,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.leanon.app/for-women' },
-    { '@type': 'ListItem', position: 3, name: 'Mom Burnout India', item: 'https://www.leanon.app/support/mom-burnout-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.howwasyourday.live/for-women' },
+    { '@type': 'ListItem', position: 3, name: 'Mom Burnout India', item: 'https://www.howwasyourday.live/support/mom-burnout-india' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function MomBurnoutIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 

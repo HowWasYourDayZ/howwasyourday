@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const dynamic = 'force-static'
-export const alt = 'LeanOn — Peer Emotional Support, India. Someone to lean on, anytime.'
+export const alt = 'How Was Your Day — Peer Emotional Support, India. Someone to lean on, anytime.'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -27,7 +27,7 @@ export default function OgImage() {
           Someone to lean on, anytime.
         </div>
         <div style={{ display: 'flex', fontSize: 26, fontWeight: 500, color: 'rgba(255,255,255,0.75)', marginTop: 28 }}>
-          Peer emotional support · India · Anonymous · leanon.app
+          Peer emotional support · India · Anonymous · howwasyourday.live
         </div>
         <div
           style={{

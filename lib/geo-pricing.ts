@@ -4,9 +4,9 @@ import { PLATFORM_FEE, sessionRatePerMin } from '@/lib/constants'
 //
 // Phase 2 (now, 2026-09-14): actual billing at flat USD rates for NRI users.
 //   Razorpay processes in INR (no multi-currency setup needed). "We do the
-//   conversion" — LeanOn stores pre-defined INR equivalents; the seeker's
+//   conversion" — How Was Your Day stores pre-defined INR equivalents; the seeker's
 //   Indian/foreign bank card sees the INR charge and does FX at market rate.
-//   Listener still earns their configured rate minus the service fee. LeanOn keeps
+//   Listener still earns their configured rate minus the service fee. How Was Your Day keeps
 //   the NRI margin = flat_price − listener_earnings − ₹10 platform fee.
 //
 // Rate: approximate mid-market rate stored here. Update quarterly.

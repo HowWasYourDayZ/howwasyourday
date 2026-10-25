@@ -4,7 +4,7 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Pay for a Private Conversation with a Human Listener in India | LeanOn',
+  title: 'Pay for a Private Conversation with a Human Listener in India | How Was Your Day',
   description: 'Pay to talk to a real peer listener in India. One free 5-minute introduction per account; prices depend on listener rate, with a 15-minute example at ₹160.',
   keywords: [
     'pay to talk to someone online india', 'pay per minute chat india', 'paid chat online india',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'online listener india', 'peer support india', 'pay for emotional support india',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/pay-to-talk-online-india',
-    languages: { 'en-IN': 'https://www.leanon.app/pay-to-talk-online-india' },
+    canonical: 'https://www.howwasyourday.live/pay-to-talk-online-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/pay-to-talk-online-india' },
   },
   openGraph: {
-    title: 'Pay to Talk to a Real Person Online | LeanOn',
+    title: 'Pay to Talk to a Real Person Online | How Was Your Day',
     description: 'Pay to talk to a real peer listener in India. One free 5-minute introduction per account; prices depend on listener rate, with a 15-minute example at ₹160.',
-    url: 'https://www.leanon.app/pay-to-talk-online-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/pay-to-talk-online-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -33,15 +33,15 @@ const faqSchema = {
       name: 'Is it worth paying to talk to someone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Whether paying is worthwhile depends on what you need. LeanOn is for people who want a real person to listen, not an AI response or an astrology prediction. One introductory session of up to 5 minutes is free per account. Paid sessions are priced by the selected listener’s rate and duration, plus a flat ₹10 platform fee; the price is shown before you start.',
+        text: 'Whether paying is worthwhile depends on what you need. How Was Your Day is for people who want a real person to listen, not an AI response or an astrology prediction. One introductory session of up to 5 minutes is free per account. Paid sessions are priced by the selected listener’s rate and duration, plus a flat ₹10 platform fee; the price is shown before you start.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does it cost per minute to talk on LeanOn?',
+      name: 'How much does it cost per minute to talk on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In India, the session total is the selected listener’s per-minute rate × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; another listener rate changes the total. One introductory session of up to 5 minutes is free per account. See https://www.leanon.app/pricing for current details.',
+        text: 'In India, the session total is the selected listener’s per-minute rate × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; another listener rate changes the total. One introductory session of up to 5 minutes is free per account. See https://www.howwasyourday.live/pricing for current details.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is it anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn uses phone OTP for sign-in, but your phone number is not shown to listeners; you can use a display name. This does not mean you are anonymous to the platform. Read the Privacy Policy for details about data handling, safety checks and your choices.',
+        text: 'How Was Your Day uses phone OTP for sign-in, but your phone number is not shown to listeners; you can use a display name. This does not mean you are anonymous to the platform. Read the Privacy Policy for details about data handling, safety checks and your choices.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What can I talk about?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Anything that is on your mind — relationship stress, family pressure, work anxiety, loneliness, confusion, grief, or just needing to vent. LeanOn listeners are screened and expected to hold space without judging or advising. You do not need a big reason to reach out.',
+        text: 'Anything that is on your mind — relationship stress, family pressure, work anxiety, loneliness, confusion, grief, or just needing to vent. How Was Your Day listeners are screened and expected to hold space without judging or advising. You do not need a big reason to reach out.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Pay to Talk Online India', item: 'https://www.leanon.app/pay-to-talk-online-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Pay to Talk Online India', item: 'https://www.howwasyourday.live/pay-to-talk-online-india' },
   ],
 }
 
@@ -157,7 +157,7 @@ export default function PayToTalkOnlineIndiaPage() {
         <h1>Affordable, Private Conversations with a Human Listener in India</h1>
         <p style={{ fontSize: 20, fontWeight: 800, color: '#FF9933', margin: '-6px 0 14px' }}>Pay per minute to talk to a real person who listens — choose who, by text or voice.</p>
         <p className="lead">
-          If you want a real person to listen rather than an AI response or a prediction, LeanOn offers one-to-one conversations with screened peer listeners. It is peer support, not therapy or clinical care. Your first introductory session of up to 5 minutes is free once per account; check the displayed price before starting a paid session.
+          If you want a real person to listen rather than an AI response or a prediction, How Was Your Day offers one-to-one conversations with screened peer listeners. It is peer support, not therapy or clinical care. Your first introductory session of up to 5 minutes is free once per account; check the displayed price before starting a paid session.
         </p>
 
         <a href="/talk?src=seo" className="cta-hero">Try your free 5-minute introduction →</a>
@@ -171,10 +171,10 @@ export default function PayToTalkOnlineIndiaPage() {
             on the other end who will listen without judgment.
           </p>
           <p>
-            Paying for a conversation is a personal choice. LeanOn serves a different need from astrology or prediction services: a real peer listener focused on hearing you out, without making predictions or providing clinical treatment.
+            Paying for a conversation is a personal choice. How Was Your Day serves a different need from astrology or prediction services: a real peer listener focused on hearing you out, without making predictions or providing clinical treatment.
           </p>
           <p>
-            LeanOn focuses on a real, screened peer listener. Browse the live directory to see who is currently available; a session begins when a listener accepts your request.
+            How Was Your Day focuses on a real, screened peer listener. Browse the live directory to see who is currently available; a session begins when a listener accepts your request.
           </p>
         </div>
 
@@ -187,7 +187,7 @@ export default function PayToTalkOnlineIndiaPage() {
               <div className="detail">Service and pricing depend on the platform</div>
             </div>
             <div className="price-box us">
-              <div className="label">LeanOn</div>
+              <div className="label">How Was Your Day</div>
               <div className="amount">₹160 example</div>
               <div className="detail">Example: 15 min at ₹10/min + ₹10 platform fee<br />Peer listener, not clinical care</div>
               <div className="free-badge">First 5 min free once/account</div>
@@ -201,7 +201,7 @@ export default function PayToTalkOnlineIndiaPage() {
             <li>
               <div>
                 <strong>Real people, not AI</strong>
-                <p>Every listener on LeanOn is a human being. No bots, no scripts, no auto-responses.</p>
+                <p>Every listener on How Was Your Day is a human being. No bots, no scripts, no auto-responses.</p>
               </div>
             </li>
             <li>
@@ -221,12 +221,12 @@ export default function PayToTalkOnlineIndiaPage() {
         </div>
 
         <div className="card">
-          <h2>LeanOn vs paid chat apps in India</h2>
+          <h2>How Was Your Day vs paid chat apps in India</h2>
           <table className="compare-table">
             <thead>
               <tr>
                 <th>What you get</th>
-                <th>LeanOn</th>
+                <th>How Was Your Day</th>
                 <th>AstroTalk / chat apps</th>
               </tr>
             </thead>
@@ -285,7 +285,7 @@ export default function PayToTalkOnlineIndiaPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Is it worth paying to talk to someone?</h3>
-            <p>Whether paying is worthwhile depends on what you need. LeanOn is for people who want a real person to listen, not an AI response or prediction. One introductory session of up to 5 minutes is free per account. Paid sessions are priced according to the selected listener’s rate and duration, plus a flat ₹10 platform fee; you see the price before starting.</p>
+            <p>Whether paying is worthwhile depends on what you need. How Was Your Day is for people who want a real person to listen, not an AI response or prediction. One introductory session of up to 5 minutes is free per account. Paid sessions are priced according to the selected listener’s rate and duration, plus a flat ₹10 platform fee; you see the price before starting.</p>
           </div>
           <div className="faq-item">
             <h3>How much does it cost per minute?</h3>
@@ -314,7 +314,7 @@ export default function PayToTalkOnlineIndiaPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for emergency mental health care.
+            How Was Your Day is peer support — not a substitute for emergency mental health care.
           </p>
         </div>
       </div>

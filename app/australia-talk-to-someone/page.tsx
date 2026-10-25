@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone Online in Australia | Indian Expat Support | LeanOn',
-  description: 'Need a real person to talk to in Australia? LeanOn connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Telugu, Malayalam and more. First 5 minutes free.',
+  title: 'Talk to Someone Online in Australia | Indian Expat Support | How Was Your Day',
+  description: 'Need a real person to talk to in Australia? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Telugu, Malayalam and more. First 5 minutes free.',
   keywords: [
     'talk to someone online australia', 'someone to talk to australia indian', 'need to talk australia expat',
     'online chat support australia indian', 'emotional support australia indian',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'Indian expat mental health australia',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/australia-talk-to-someone',
-    languages: { 'en-AU': 'https://www.leanon.app/australia-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/australia-talk-to-someone',
+    languages: { 'en-AU': 'https://www.howwasyourday.live/australia-talk-to-someone' },
   },
   openGraph: {
-    title: 'Talk to Someone Online in Australia — Real Indian Peer Listeners | LeanOn',
-    description: 'Need a real person to talk to in Australia? LeanOn connects Indian expats with peer listeners in India — in your language, anonymously.',
-    url: 'https://www.leanon.app/australia-talk-to-someone',
-    siteName: 'LeanOn',
+    title: 'Talk to Someone Online in Australia — Real Indian Peer Listeners | How Was Your Day',
+    description: 'Need a real person to talk to in Australia? How Was Your Day connects Indian expats with peer listeners in India — in your language, anonymously.',
+    url: 'https://www.howwasyourday.live/australia-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'Can I talk to someone in Australia right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time — check who is online now. No appointment, no waiting list. The first 5 minutes of your account are free. Browse who is online and start a conversation immediately.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now. No appointment, no waiting list. The first 5 minutes of your account are free. Browse who is online and start a conversation immediately.',
       },
     },
     {
@@ -44,7 +44,7 @@ const faqSchema = {
       name: 'Are there Indian peer listeners who understand expat life in Australia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn peer listeners are real Indians, many with their own experience of moving abroad. They understand the emotional landscape of immigrating — the initial excitement that gives way to loneliness, the gap between how it looks to people back home and how it actually feels, the pressure of building a life in a new country without your support network nearby.',
+        text: 'Yes. How Was Your Day peer listeners are real Indians, many with their own experience of moving abroad. They understand the emotional landscape of immigrating — the initial excitement that gives way to loneliness, the gap between how it looks to people back home and how it actually feels, the pressure of building a life in a new country without your support network nearby.',
       },
     },
     {
@@ -52,15 +52,15 @@ const faqSchema = {
       name: 'Can I speak in Hindi, Tamil, Telugu or Gujarati?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn supports twelve Indian languages including Hindi, Tamil, Telugu, Malayalam, Kannada, Gujarati, Marathi, Bengali, and Punjabi. You can filter listeners by language.',
+        text: 'Yes. How Was Your Day supports twelve Indian languages including Hindi, Tamil, Telugu, Malayalam, Kannada, Gujarati, Marathi, Bengali, and Punjabi. You can filter listeners by language.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn different from Australian mental health services like Beyond Blue?',
+      name: 'Is How Was Your Day different from Australian mental health services like Beyond Blue?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Beyond Blue and similar services are crisis-oriented and clinical. LeanOn is peer support — not for mental health emergencies, but for the everyday emotional weight that does not quite meet a clinical threshold but is still real: loneliness, homesickness, relationship problems, the exhaustion of starting over in a new country. There is no waitlist and no clinical notes.',
+        text: 'Yes. Beyond Blue and similar services are crisis-oriented and clinical. How Was Your Day is peer support — not for mental health emergencies, but for the everyday emotional weight that does not quite meet a clinical threshold but is still real: loneliness, homesickness, relationship problems, the exhaustion of starting over in a new country. There is no waitlist and no clinical notes.',
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: 'Is it anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Private. You can use LeanOn with a nickname. Your employer, your family, your social circle in Australia will not know.',
+        text: 'Private. You can use How Was Your Day with a nickname. Your employer, your family, your social circle in Australia will not know.',
       },
     },
   ],
@@ -91,7 +91,7 @@ export default function AustraliaTalkToSomeonePage() {
         </h1>
 
         <p style={{ fontSize: '1.05rem', color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          Australia has a large and growing Indian community — Melbourne, Sydney, Brisbane, Perth. The professional opportunities are real. So is the loneliness that can set in when the excitement of the move wears off and you realise the people who actually know you are ten thousand kilometres away. LeanOn gives you a real Indian peer listener who understands this from the inside. Private, in your language, with no appointment (availability follows Indian time).
+          Australia has a large and growing Indian community — Melbourne, Sydney, Brisbane, Perth. The professional opportunities are real. So is the loneliness that can set in when the excitement of the move wears off and you realise the people who actually know you are ten thousand kilometres away. How Was Your Day gives you a real Indian peer listener who understands this from the inside. Private, in your language, with no appointment (availability follows Indian time).
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>

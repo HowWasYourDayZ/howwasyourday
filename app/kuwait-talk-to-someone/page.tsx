@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone Online in Kuwait | LeanOn',
-  description: 'Need a real person to talk to in Kuwait? LeanOn connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Malayalam and more. First 5 minutes free.',
+  title: 'Talk to Someone Online in Kuwait | How Was Your Day',
+  description: 'Need a real person to talk to in Kuwait? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Malayalam and more. First 5 minutes free.',
   keywords: [
     'talk to someone online kuwait', 'someone to talk to kuwait', 'need to talk kuwait',
     'online chat support kuwait', 'talk to a person kuwait', 'emotional support online kuwait',
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     'hindi listener kuwait', 'talk to someone kuwait night',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/kuwait-talk-to-someone',
-    languages: { 'en-IN': 'https://www.leanon.app/kuwait-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/kuwait-talk-to-someone',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/kuwait-talk-to-someone' },
   },
   openGraph: {
-    title: 'Talk to Someone Online in Kuwait — Real Indian Listeners | LeanOn',
-    description: 'Need a real person to talk to in Kuwait? LeanOn connects Indian expats with peer listeners in India — in your language, with no judgment.',
-    url: 'https://www.leanon.app/kuwait-talk-to-someone',
-    siteName: 'LeanOn',
+    title: 'Talk to Someone Online in Kuwait — Real Indian Listeners | How Was Your Day',
+    description: 'Need a real person to talk to in Kuwait? How Was Your Day connects Indian expats with peer listeners in India — in your language, with no judgment.',
+    url: 'https://www.howwasyourday.live/kuwait-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -35,7 +35,7 @@ const faqSchema = {
       name: 'Can I talk to someone in Kuwait right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time — check who is online now. No appointment needed, no waiting list. Browse listeners who are online now and start a conversation immediately.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now. No appointment needed, no waiting list. Browse listeners who are online now and start a conversation immediately.',
       },
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       name: 'Can I talk to an Indian listener who understands life in Kuwait?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many LeanOn listeners are Indians with their own experience of living and working abroad — they understand expat loneliness, the pressure of sending money home, working in the Gulf, and the specific emotional weight that comes with living far from family.',
+        text: 'Yes. Many How Was Your Day listeners are Indians with their own experience of living and working abroad — they understand expat loneliness, the pressure of sending money home, working in the Gulf, and the specific emotional weight that comes with living far from family.',
       },
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'Is there a Malayalam or Hindi speaker I can talk to?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has listeners in twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada, and more. You can filter listeners by the language you are most comfortable in.',
+        text: 'Yes. How Was Your Day has listeners in twelve Indian languages including Malayalam, Hindi, Tamil, Telugu, Kannada, and more. You can filter listeners by the language you are most comfortable in.',
       },
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'Is it confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Completely. Sessions are anonymous. Your employer, your family, and anyone in Kuwait will not know. You can use LeanOn without giving your real name.',
+        text: 'Completely. Sessions are anonymous. Your employer, your family, and anyone in Kuwait will not know. You can use How Was Your Day without giving your real name.',
       },
     },
     {
@@ -90,14 +90,14 @@ export default function KuwaitTalkToSomeonePage() {
         </h1>
 
         <p style={{ fontSize: '1.05rem', color: '#444', lineHeight: 1.7, marginBottom: 32 }}>
-          Kuwait can be isolating — especially late at night when there is nobody to call, or when what you are carrying is too heavy to explain to your family back home. LeanOn connects you with screened Indian peer listeners who understand the Gulf expat experience. Anonymous, online daily on Indian time, in your language.
+          Kuwait can be isolating — especially late at night when there is nobody to call, or when what you are carrying is too heavy to explain to your family back home. How Was Your Day connects you with screened Indian peer listeners who understand the Gulf expat experience. Anonymous, online daily on Indian time, in your language.
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>
           Browse listeners — first 5 min free
         </a>
 
-        <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 12 }}>Why LeanOn for Indians in Kuwait?</h2>
+        <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 12 }}>Why How Was Your Day for Indians in Kuwait?</h2>
         <ul style={{ lineHeight: 2, paddingLeft: 20, color: '#333', marginBottom: 32 }}>
           <li>Listeners who understand Gulf expat life — not just generic support</li>
           <li>Malayalam, Hindi, Tamil, Telugu and 9 more Indian languages</li>
@@ -108,7 +108,7 @@ export default function KuwaitTalkToSomeonePage() {
 
         <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 12 }}>What People Talk About</h2>
         <p style={{ color: '#444', lineHeight: 1.7, marginBottom: 8 }}>
-          There is no minimum seriousness for reaching out. People talk to LeanOn listeners about loneliness, homesickness, job stress, relationship problems, family pressure back home, the feeling of not quite fitting in, the particular weight of being far from the people who know you. All of it is valid.
+          There is no minimum seriousness for reaching out. People talk to How Was Your Day listeners about loneliness, homesickness, job stress, relationship problems, family pressure back home, the feeling of not quite fitting in, the particular weight of being far from the people who know you. All of it is valid.
         </p>
         <ul style={{ lineHeight: 2, paddingLeft: 20, color: '#333', marginBottom: 40 }}>
           <li>Missing home and family while living in Kuwait</li>

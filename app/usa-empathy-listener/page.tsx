@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy Listener for Indians in the USA — Someone Who Actually Gets It | LeanOn',
-  description: 'Finding someone who truly understands the Indian-American experience is rare. LeanOn peer listeners are warm, non-judgmental, and know the cultural context — no explaining needed.',
+  title: 'Empathy Listener for Indians in the USA — Someone Who Actually Gets It | How Was Your Day',
+  description: 'Finding someone who truly understands the Indian-American experience is rare. How Was Your Day peer listeners are warm, non-judgmental, and know the cultural context — no explaining needed.',
   keywords: [
     'empathy listener usa indian', 'empathetic listener nri', 'someone who understands indian american',
     'peer listener usa indian', 'emotional support indian usa', 'non judgmental listener usa',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'desi empathy support america', 'understanding listener for indians usa',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-empathy-listener',
-    languages: { 'en-US': 'https://www.leanon.app/usa-empathy-listener' },
+    canonical: 'https://www.howwasyourday.live/usa-empathy-listener',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa-empathy-listener' },
   },
   openGraph: {
     title: 'Empathy Listener for Indians in the USA — Someone Who Actually Gets It',
-    description: 'No explaining the cultural weight. No blank looks when you mention izzat or visa status. LeanOn peer listeners are warm, Indian-context aware, and need no appointment.',
-    url: 'https://www.leanon.app/usa-empathy-listener',
-    siteName: 'LeanOn',
+    description: 'No explaining the cultural weight. No blank looks when you mention izzat or visa status. How Was Your Day peer listeners are warm, Indian-context aware, and need no appointment.',
+    url: 'https://www.howwasyourday.live/usa-empathy-listener',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,15 +41,15 @@ const faqSchema = {
       name: 'Why is it important to have a listener who understands Indian culture?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'When your struggles are rooted in cultural context — family honour, visa dependency, the pressure of being the first one abroad, the model minority myth — a listener who does not share that context will spend most of the session asking you to explain it. LeanOn listeners already know. You can skip straight to what you actually feel.',
+        text: 'When your struggles are rooted in cultural context — family honour, visa dependency, the pressure of being the first one abroad, the model minority myth — a listener who does not share that context will spend most of the session asking you to explain it. How Was Your Day listeners already know. You can skip straight to what you actually feel.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How are LeanOn listeners chosen for sensitive topics?',
+      name: 'How are How Was Your Day listeners chosen for sensitive topics?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners are screened, not clinically trained: a written application about their lived experience, a quiz on handling difficult conversations and a manual review by LeanOn. They are chosen for their ability to hold space for grief, anxiety, shame and relationship pain without judgment.',
+        text: 'How Was Your Day listeners are screened, not clinically trained: a written application about their lived experience, a quiz on handling difficult conversations and a manual review by How Was Your Day. They are chosen for their ability to hold space for grief, anxiety, shame and relationship pain without judgment.',
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn confidential?',
+      name: 'Is How Was Your Day confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. Your conversations are private. You can also choose to remain anonymous when you start. What you share stays between you and your listener.',
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy Listener USA', item: 'https://www.leanon.app/usa-empathy-listener' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy Listener USA', item: 'https://www.howwasyourday.live/usa-empathy-listener' },
   ],
 }
 
@@ -153,13 +153,13 @@ export default function UsaEmpathyListenerPage() {
         <p className="lead">
           You have tried talking to American friends. They sympathise but they do not really understand
           the visa anxiety, the family expectations, the guilt, the cultural weight you carry.
-          LeanOn listeners are different. They already know the context. You can start from the middle of the story.
+          How Was Your Day listeners are different. They already know the context. You can start from the middle of the story.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
 
         <div className="card">
-          <h2>What makes a LeanOn listener different</h2>
+          <h2>What makes a How Was Your Day listener different</h2>
           <ul className="checklist">
             <li>They understand what an H-1B is and why losing your job is not just a job loss.</li>
             <li>They know the family pressure to succeed that comes with being sent abroad.</li>
@@ -174,13 +174,13 @@ export default function UsaEmpathyListenerPage() {
           <h2>💙 Empathy is not something you schedule six weeks from now</h2>
           <p>Therapy waitlists are long. Your friends are busy. The moment you need to be heard does not
             always arrive at a convenient time.</p>
-          <p>LeanOn listeners are in India, so availability follows Indian time — US evenings are Indian
+          <p>How Was Your Day listeners are in India, so availability follows Indian time — US evenings are Indian
             mornings, when listeners are often online. No appointment needed.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
 
         <div className="card">
-          <h2>What a session with a LeanOn listener actually feels like</h2>
+          <h2>What a session with a How Was Your Day listener actually feels like</h2>
           <p>You open the app. You browse a few listener profiles. You pick someone who feels right.
             You start talking — maybe haltingly at first, maybe in a rush — and they are just there with you.
             Asking gentle questions. Reflecting back what they hear. Not rushing to fix anything.</p>
@@ -190,7 +190,7 @@ export default function UsaEmpathyListenerPage() {
         </div>
 
         <div className="card">
-          <h2>Who uses LeanOn from the USA?</h2>
+          <h2>Who uses How Was Your Day from the USA?</h2>
           <ul className="checklist">
             <li>H-1B workers carrying quiet anxiety about their job and visa every single day</li>
             <li>Students far from home, overwhelmed and unsure who to call</li>
@@ -218,11 +218,11 @@ export default function UsaEmpathyListenerPage() {
             <h3>Why is it important to have a listener who understands Indian culture?</h3>
             <p>When your struggles are rooted in cultural context — family honour, visa dependency, the model
               minority myth — a listener who does not share that context will spend half the session asking you
-              to explain it. LeanOn listeners already know.</p>
+              to explain it. How Was Your Day listeners already know.</p>
           </div>
           <div className="faq-item">
-            <h3>How are LeanOn listeners chosen for sensitive topics?</h3>
-            <p>LeanOn listeners are screened, not clinically trained: a written application about their lived experience, a quiz on handling difficult conversations and a manual review by LeanOn. They are chosen for their ability to hold space for grief, anxiety, shame and relationship pain without judgment.</p>
+            <h3>How are How Was Your Day listeners chosen for sensitive topics?</h3>
+            <p>How Was Your Day listeners are screened, not clinically trained: a written application about their lived experience, a quiz on handling difficult conversations and a manual review by How Was Your Day. They are chosen for their ability to hold space for grief, anxiety, shame and relationship pain without judgment.</p>
           </div>
           <div className="faq-item">
             <h3>What does a session cost from the USA?</h3>
@@ -230,7 +230,7 @@ export default function UsaEmpathyListenerPage() {
               5 minutes free — one free session per account. No subscription required.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn confidential?</h3>
+            <h3>Is How Was Your Day confidential?</h3>
             <p>Yes. Your conversations are private. You can also choose to remain anonymous when you start.
               What you share stays between you and your listener.</p>
           </div>
@@ -249,7 +249,7 @@ export default function UsaEmpathyListenerPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

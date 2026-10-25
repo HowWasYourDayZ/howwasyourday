@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy Friend India — Talk to Someone Who Actually Listens | LeanOn',
+  title: 'Empathy Friend India — Talk to Someone Who Actually Listens | How Was Your Day',
   description: 'Find an empathetic listener online in India. Real people, screened for active listening, available from ₹160. Not a therapist. Not a bot. A human.',
   keywords: ['empathy friend india', 'empathetic listener online india', 'compassionate listener online india', 'screened listener india', 'non-judgmental support india', 'online peer support india', 'peer mentoring india', 'community support india'],
-  alternates: { canonical: 'https://www.leanon.app/empathy-friend-india', languages: { 'en-IN': 'https://www.leanon.app/empathy-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/empathy-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/empathy-friend-india' } },
   openGraph: {
-    title: 'Empathy Friend India — Talk to Someone Who Actually Listens | LeanOn',
+    title: 'Empathy Friend India — Talk to Someone Who Actually Listens | How Was Your Day',
     description: 'Find an empathetic listener online in India. Real people, screened for active listening, available from ₹160. Not a therapist. Not a bot. A human.',
-    url: 'https://www.leanon.app/empathy-friend-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/empathy-friend-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'What is an empathy friend?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'An empathy friend is someone who listens without judgment, reflects back what you are saying without trying to fix or advise, and creates a space where you feel genuinely heard. On LeanOn, peer listeners are screened for active listening and empathetic presence — they hold space rather than jumping to solutions.',
+        text: 'An empathy friend is someone who listens without judgment, reflects back what you are saying without trying to fix or advise, and creates a space where you feel genuinely heard. On How Was Your Day, peer listeners are screened for active listening and empathetic presence — they hold space rather than jumping to solutions.',
       },
     },
     {
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'How do I find an empathetic listener online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Browse listener profiles at leanon.app/browse. Each listener shows their areas of lived experience, their approach, and their availability. Choose someone whose background resonates with what you are going through. Your first 5-minute session is free, so you can assess the connection before committing.',
+        text: 'Browse listener profiles at howwasyourday.live/browse. Each listener shows their areas of lived experience, their approach, and their availability. Choose someone whose background resonates with what you are going through. Your first 5-minute session is free, so you can assess the connection before committing.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'What is active listening?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Active listening is the practice of fully focusing on what someone is saying — not planning your response, not judging, not advising — and reflecting back what you hear to let them know they have been understood. LeanOn listeners are specifically screened for this skill. The result is a conversation where you feel heard rather than managed.',
+        text: 'Active listening is the practice of fully focusing on what someone is saying — not planning your response, not judging, not advising — and reflecting back what you hear to let them know they have been understood. How Was Your Day listeners are specifically screened for this skill. The result is a conversation where you feel heard rather than managed.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is this therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support, not therapy. Listeners are not licensed mental health professionals. They are real people with lived experience who are screened and expected to listen, hold space, and support — not to diagnose or treat. If you need clinical care, please see a qualified professional.',
+        text: 'No. How Was Your Day is peer support, not therapy. Listeners are not licensed mental health professionals. They are real people with lived experience who are screened and expected to listen, hold space, and support — not to diagnose or treat. If you need clinical care, please see a qualified professional.',
       },
     },
     {
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy Friend India', item: 'https://www.leanon.app/empathy-friend-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy Friend India', item: 'https://www.howwasyourday.live/empathy-friend-india' },
   ],
 }
 
@@ -129,7 +129,7 @@ export default function EmpathyFriendIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -154,19 +154,19 @@ export default function EmpathyFriendIndiaPage() {
             <li><strong>Hold space</strong> — they are present with you in the difficulty, not trying to rush you out of it</li>
             <li><strong>Do not judge</strong> — whatever you say, they will not flinch or think less of you</li>
           </ul>
-          <p>That kind of attention — full, patient, non-reactive — is rarer than it should be. LeanOn trains listeners specifically in this.</p>
+          <p>That kind of attention — full, patient, non-reactive — is rarer than it should be. How Was Your Day trains listeners specifically in this.</p>
         </div>
 
         <div className="section">
-          <h2>How LeanOn Listeners Are Different</h2>
+          <h2>How the app Listeners Are Different</h2>
           <h3>Screened for Active Listening</h3>
-          <p>Active listening is a specific set of skills — presence, reflection, asking questions that open rather than close. Every LeanOn listener is assessed on these skills as part of the screening process before they take sessions.</p>
+          <p>Active listening is a specific set of skills — presence, reflection, asking questions that open rather than close. Every How Was Your Day listener is assessed on these skills as part of the screening process before they take sessions.</p>
           <h3>Peer-Lived Experience</h3>
-          <p>LeanOn listeners are not professionals who learned about emotional difficulty from textbooks. They have lived through something similar to what you are carrying. When they say &quot;I understand&quot;, they mean it.</p>
+          <p>How Was Your Day listeners are not professionals who learned about emotional difficulty from textbooks. They have lived through something similar to what you are carrying. When they say &quot;I understand&quot;, they mean it.</p>
           <h3>Indian Context</h3>
           <p>They understand joint family pressure, Indian work culture, the specific weight of parent expectations, and what it is like to navigate life in India. Not a Western therapist who has to be explained the context.</p>
           <h3>Voice Call, Not Chat</h3>
-          <p>There is a reason conversations feel different when they are spoken — tone, pauses, the warmth of a human voice. LeanOn sessions are voice calls, not chat windows.</p>
+          <p>There is a reason conversations feel different when they are spoken — tone, pauses, the warmth of a human voice. How Was Your Day sessions are voice calls, not chat windows.</p>
         </div>
 
         <div className="section">
@@ -209,19 +209,19 @@ export default function EmpathyFriendIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">What is an empathy friend?</div>
-            <div className="faq-a">An empathy friend is someone who listens without judgment, reflects back what you are saying without trying to fix or advise, and creates a space where you feel genuinely heard. On LeanOn, peer listeners are screened for active listening and empathetic presence.</div>
+            <div className="faq-a">An empathy friend is someone who listens without judgment, reflects back what you are saying without trying to fix or advise, and creates a space where you feel genuinely heard. On How Was Your Day, peer listeners are screened for active listening and empathetic presence.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I find an empathetic listener online in India?</div>
-            <div className="faq-a">Browse listener profiles at leanon.app/browse. Each listener shows their areas of lived experience and availability. Your first 5-minute session is free, so you can assess the connection before committing.</div>
+            <div className="faq-a">Browse listener profiles at howwasyourday.live/browse. Each listener shows their areas of lived experience and availability. Your first 5-minute session is free, so you can assess the connection before committing.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is active listening?</div>
-            <div className="faq-a">Active listening is the practice of fully focusing on what someone is saying — not planning your response, not judging, not advising — and reflecting back what you hear. LeanOn listeners are specifically screened for this skill.</div>
+            <div className="faq-a">Active listening is the practice of fully focusing on what someone is saying — not planning your response, not judging, not advising — and reflecting back what you hear. How Was Your Day listeners are specifically screened for this skill.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is this therapy?</div>
-            <div className="faq-a">No. LeanOn is peer support, not therapy. Listeners are not licensed mental health professionals. They are real people with lived experience, chosen for how well they listen and hold space. If you need clinical care, please see a qualified professional.</div>
+            <div className="faq-a">No. How Was Your Day is peer support, not therapy. Listeners are not licensed mental health professionals. They are real people with lived experience, chosen for how well they listen and hold space. If you need clinical care, please see a qualified professional.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What if the listener does not understand my problem?</div>

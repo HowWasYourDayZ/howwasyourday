@@ -5,7 +5,7 @@ export const post = {
   readTime: '6 min read',
   description: 'Everything you need to know about peer counselling in India — how it works, how much it costs, and how it differs from therapy and coaching.',
   keywords: ['peer counselling India', 'peer counselling cost India', 'peer counsellor India', 'online peer counselling India'],
-  topics: ['peer support', 'peer counselling', 'mental health India', 'LeanOn'],
+  topics: ['peer support', 'peer counselling', 'mental health India', 'How Was Your Day'],
   content: `
 <p>The word "counselling" gets used to describe a wide range of things in India. A school counsellor. A career counsellor. A marriage counsellor. A therapist who calls themselves a counsellor. And increasingly, peer counselling — which is a different category from all of these, and one that is worth understanding clearly.</p>
 
@@ -41,7 +41,7 @@ export const post = {
 
 <p><strong>iCall (TISS):</strong> ₹200–₹500 per session. Subsidised by TISS. Staffed by trained counsellors, not peers. Requires booking.</p>
 
-<p><strong>Peer counselling on LeanOn:</strong> Around ₹160 per session. Your first 5-minute session is free, so you can talk to someone and decide whether it feels like the right fit before committing. There are no subscription fees and no automatic renewals. Pay per session.</p>
+<p><strong>Peer counselling on How Was Your Day:</strong> Around ₹160 per session. Your first 5-minute session is free, so you can talk to someone and decide whether it feels like the right fit before committing. There are no subscription fees and no automatic renewals. Pay per session.</p>
 
 <p>The cost difference is significant. ₹160 for peer support versus ₹2,500+ for a private therapy session means peer counselling is genuinely accessible to people for whom clinical therapy is not a realistic option.</p>
 
@@ -63,7 +63,7 @@ export const post = {
 
 <h2>Where to Find Peer Counselling in India</h2>
 
-<p>The main online peer counselling option across India is <a href="/peer-counselling-india">LeanOn</a>. It offers screened peer listeners across a range of lived experience areas, with no appointment needed. Sessions cost approximately ₹160, and the first 5 minutes are free.</p>
+<p>The main online peer counselling option across India is <a href="/peer-counselling-india">How Was Your Day</a>. It offers screened peer listeners across a range of lived experience areas, with no appointment needed. Sessions cost approximately ₹160, and the first 5 minutes are free.</p>
 
 <p>If you need professional counselling — licensed, clinical, structured — iCall (run by TISS) is the most affordable option, starting at around ₹200. Private therapists and online platforms like YourDOST are available at higher price points.</p>
 
@@ -75,8 +75,8 @@ export const post = {
 
 <p>It is not the right choice for diagnosed mental health conditions that require clinical intervention, medication, or structured psychotherapy. Those need professional care.</p>
 
-<p>If you are unsure which you need, a good first step is to talk to a peer listener and see how it feels. The first 5 minutes on LeanOn are free, which means you can try it without commitment and get a sense of whether the connection is what you need before going further.</p>
+<p>If you are unsure which you need, a good first step is to talk to a peer listener and see how it feels. The first 5 minutes on How Was Your Day are free, which means you can try it without commitment and get a sense of whether the connection is what you need before going further.</p>
 
-<p><a href="/browse">Browse LeanOn peer listeners here</a>.</p>
+<p><a href="/browse">Browse How Was Your Day peer listeners here</a>.</p>
 `,
 }

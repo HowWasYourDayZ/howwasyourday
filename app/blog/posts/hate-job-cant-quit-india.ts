@@ -4,7 +4,7 @@ export const post = {
   description: 'Trapped in a job you hate but can\'t leave for financial, family, or visa reasons? You are not alone. Here is what actually helps when quitting is not an option right now.',
   date: '2026-09-08',
   readTime: '7 min read',
-  topics: ['work stress India', 'career India', 'burnout', 'mental health India', 'LeanOn'],
+  topics: ['work stress India', 'career India', 'burnout', 'mental health India', 'How Was Your Day'],
   content: `
 <p>The trap has a very specific feeling. You get up in the morning and the first thought is the job. Not in an excited way. In the way you think about something you dread. You do the commute, you sit through the meetings, you complete the tasks — and underneath all of it, a part of you is silently screaming.</p>
 
@@ -44,7 +44,7 @@ export const post = {
 
 <p><strong>Build the exit while you are in.</strong> Use the time you are staying to build what the exit requires: savings, network, skill, portfolio, applications. Not frantically — that creates more anxiety. But deliberately. The trap feels less like a trap when you are actively building the door.</p>
 
-<p><strong>Find someone to say it out loud to.</strong> The specific damage of hating your job in silence is that the feelings have no outlet. You cannot tell your colleagues. You cannot always tell your family (they might panic). You definitely cannot tell your manager. So the feelings accumulate. A peer listener on LeanOn — particularly one who has navigated their own career dead end — is a place to say &quot;I am miserable at work and I do not know what to do&quot; without managing anyone else&apos;s reaction to it. That externalisation, by itself, reliably reduces the pressure.</p>
+<p><strong>Find someone to say it out loud to.</strong> The specific damage of hating your job in silence is that the feelings have no outlet. You cannot tell your colleagues. You cannot always tell your family (they might panic). You definitely cannot tell your manager. So the feelings accumulate. A peer listener on How Was Your Day — particularly one who has navigated their own career dead end — is a place to say &quot;I am miserable at work and I do not know what to do&quot; without managing anyone else&apos;s reaction to it. That externalisation, by itself, reliably reduces the pressure.</p>
 
 <h2>When It Becomes a Mental Health Issue</h2>
 

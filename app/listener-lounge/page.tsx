@@ -536,7 +536,7 @@ export default function ListenerLoungePage() {
 
       {/* Permanent rules strip */}
       <div className="lounge-rules">
-        <p>🔒 <strong>Share learning, not identities.</strong> Never post a seeker&apos;s name, contact details, session quotes, or anything identifying. Messages are visible to all LeanOn listeners and may be reviewed by LeanOn moderators.</p>
+        <p>🔒 <strong>Share learning, not identities.</strong> Never post a seeker&apos;s name, contact details, session quotes, or anything identifying. Messages are visible to all How Was Your Day listeners and may be reviewed by How Was Your Day moderators.</p>
       </div>
 
       {/* Messages */}

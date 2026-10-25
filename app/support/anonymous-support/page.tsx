@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Anonymous Emotional Support India | LeanOn Peer Listeners',
+  title: 'Anonymous Emotional Support India | How Was Your Day Peer Listeners',
   description: 'Private emotional support from screened peer listeners — they never see your number. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/support/anonymous-support', languages: { 'en-IN': 'https://www.leanon.app/support/anonymous-support' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/anonymous-support', languages: { 'en-IN': 'https://www.howwasyourday.live/support/anonymous-support' } },
   openGraph: {
-    title: 'Anonymous Emotional Support India | LeanOn Peer Listeners',
+    title: 'Anonymous Emotional Support India | How Was Your Day Peer Listeners',
     description: 'Private emotional support from screened peer listeners — they never see your number. No appointment needed.',
-    url: 'https://www.leanon.app/support/anonymous-support',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/anonymous-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -21,10 +21,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous?',
+      name: 'Is How Was Your Day anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Anonymous to your listener, not to LeanOn. You sign in with a verified phone number, but the listener sees only the name you choose — never your number. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised LeanOn administrators if a session is reported or flagged for safety. You can use a pseudonym.',
+        text: 'Anonymous to your listener, not to How Was Your Day. You sign in with a verified phone number, but the listener sees only the name you choose — never your number. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised How Was Your Day administrators if a session is reported or flagged for safety. You can use a pseudonym.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Does anonymous support actually help?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For many people, yes. Research on peer support suggests that feeling heard by someone who understands can help with everyday distress, and some people find it easier to open up when the listener does not know them. This is general research, not a measured outcome of LeanOn, and peer support is not a replacement for professional care.',
+        text: 'For many people, yes. Research on peer support suggests that feeling heard by someone who understands can help with everyday distress, and some people find it easier to open up when the listener does not know them. This is general research, not a measured outcome of How Was Your Day, and peer support is not a replacement for professional care.',
       },
     },
     {
@@ -53,10 +53,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How does LeanOn protect my data?',
+      name: 'How does How Was Your Day protect my data?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn keeps your phone number (for sign-in), session details, wallet records and text messages. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised LeanOn administrators if a session is reported or flagged for safety. Full details are in our Privacy Policy at leanon.app/privacy.',
+        text: 'How Was Your Day keeps your phone number (for sign-in), session details, wallet records and text messages. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised How Was Your Day administrators if a session is reported or flagged for safety. Full details are in our Privacy Policy at howwasyourday.live/privacy.',
       },
     },
   ],
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Anonymous Support', item: 'https://www.leanon.app/support/anonymous-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Anonymous Support', item: 'https://www.howwasyourday.live/support/anonymous-support' },
   ],
 }
 
@@ -134,7 +134,7 @@ export default function AnonymousSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -150,22 +150,22 @@ export default function AnonymousSupportPage() {
           <div className="privacy-badge">Your identity stays private — always</div>
           <p className="tag">Peer Support · Anonymous Emotional Support India</p>
           <h1>Anonymous Emotional Support in India — Be Heard <em>Without Fear</em></h1>
-          <p className="lead">You should not have to choose between getting support and protecting your privacy. On LeanOn, you connect with real peer listeners using only the name you choose — no last name, no photo, no personal details shared.</p>
+          <p className="lead">You should not have to choose between getting support and protecting your privacy. On How Was Your Day, you connect with real peer listeners using only the name you choose — no last name, no photo, no personal details shared.</p>
         </div>
 
         {/* What Anonymous Support Means */}
         <div className="section">
           <h2>What Anonymous Support Means</h2>
-          <p>Anonymous support means you can open up fully without fear of judgment, social consequences, or your information reaching the wrong people. When you use LeanOn, listeners know you by your first name only — or by a pseudonym if you prefer. Your phone number, your identity, and your conversation content are never shared or disclosed.</p>
+          <p>Anonymous support means you can open up fully without fear of judgment, social consequences, or your information reaching the wrong people. When you use How Was Your Day, listeners know you by your first name only — or by a pseudonym if you prefer. Your phone number, your identity, and your conversation content are never shared or disclosed.</p>
 
           <h3>Not Hiding — Creating Safety</h3>
           <p>Anonymity in peer support is not about secrecy for its own sake. It is about creating the conditions for genuine honesty. Many people find they can speak far more truthfully — and receive far more from a conversation — when they are not managing how they are perceived by someone who knows them in real life. That freedom is the point.</p>
 
           <h3>Being Fully Honest for the First Time</h3>
-          <p>For many LeanOn users, an anonymous session is the first time they have ever said out loud what they have been carrying inside. The things you cannot tell your partner, your parents, or your closest friends — the shame, the fear, the confusion — can finally be spoken, heard, and acknowledged. That experience alone is often profoundly relieving.</p>
+          <p>For many How Was Your Day users, an anonymous session is the first time they have ever said out loud what they have been carrying inside. The things you cannot tell your partner, your parents, or your closest friends — the shame, the fear, the confusion — can finally be spoken, heard, and acknowledged. That experience alone is often profoundly relieving.</p>
 
           <h3>No Permanent Record That Can Be Used Against You</h3>
-          <p>In Indian social contexts, vulnerability can be weaponised — used to challenge someone&apos;s competence, their fitness as a partner, or their standing in a family. Anonymous support removes that risk. What you share stays between you and your listener — it is not shared with anyone in your life. Text is stored securely and only opened by authorised LeanOn staff if a session is reported.</p>
+          <p>In Indian social contexts, vulnerability can be weaponised — used to challenge someone&apos;s competence, their fitness as a partner, or their standing in a family. Anonymous support removes that risk. What you share stays between you and your listener — it is not shared with anyone in your life. Text is stored securely and only opened by authorised How Was Your Day staff if a session is reported.</p>
         </div>
 
         {/* Why Anonymity Matters in India */}
@@ -183,19 +183,19 @@ export default function AnonymousSupportPage() {
           <p>Many professionals in India worry about what colleagues or employers might think if they learned they were seeking mental health support. This concern is particularly acute in high-pressure industries — tech, finance, consulting, startups — where the culture often demands constant resilience. Anonymous peer support means you can seek help without any professional consequences.</p>
         </div>
 
-        {/* How LeanOn Protects Your Privacy */}
+        {/* How the app Protects Your Privacy */}
         <div className="section">
-          <h2>How LeanOn Protects Your Privacy</h2>
-          <p>LeanOn was built with privacy as a design principle, not an afterthought. Here is exactly what your listener sees, and what LeanOn keeps:</p>
+          <h2>How the app Protects Your Privacy</h2>
+          <p>How Was Your Day was built with privacy as a design principle, not an afterthought. Here is exactly what your listener sees, and what How Was Your Day keeps:</p>
 
           <h3>First Name Only</h3>
           <p>When you create an account and join a session, only the name you choose to use is visible to your listener. No last name, no profile photo, no location, no workplace — nothing that identifies you beyond what you choose to share yourself.</p>
 
           <h3>Phone Number Authentication Without Exposure</h3>
-          <p>LeanOn uses phone number OTP for authentication — a necessary step to maintain platform integrity. Your phone number is never shown to listeners.</p>
+          <p>How Was Your Day uses phone number OTP for authentication — a necessary step to maintain platform integrity. Your phone number is never shown to listeners.</p>
 
           <h3>What Is Stored</h3>
-          <p>Voice calls are not recorded. Text messages are stored securely so a session can be reviewed if it is reported or flagged for safety; only authorised LeanOn administrators can open them, and they are not shared with third parties. For full details, see our <a href="/privacy" style={{color:'var(--teal)',fontWeight:700}}>privacy policy</a>.</p>
+          <p>Voice calls are not recorded. Text messages are stored securely so a session can be reviewed if it is reported or flagged for safety; only authorised How Was Your Day administrators can open them, and they are not shared with third parties. For full details, see our <a href="/privacy" style={{color:'var(--teal)',fontWeight:700}}>privacy policy</a>.</p>
 
           <h3>Voice Calls</h3>
           <p>In a voice session your listener hears you but does not see your phone number or contact details, and calls are not recorded. If you would rather not use your voice, choose text.</p>
@@ -220,7 +220,7 @@ export default function AnonymousSupportPage() {
         {/* Is Anonymous Support Effective? */}
         <div className="section">
           <h2>Is Anonymous Support Effective?</h2>
-          <p>This is a fair and important question. For many people, talking to someone who does not know them makes it easier to open up. General research on peer support is encouraging, but it is not a measured outcome of LeanOn, and peer support does not replace professional care.</p>
+          <p>This is a fair and important question. For many people, talking to someone who does not know them makes it easier to open up. General research on peer support is encouraging, but it is not a measured outcome of How Was Your Day, and peer support does not replace professional care.</p>
 
           <h3>Anonymity Increases Honest Disclosure</h3>
           <p>Research in psychology and online communication suggests that people often disclose more when they feel less exposed. When people feel genuinely safe — not managing how they are perceived — they share more fully and more accurately. That honesty is the raw material that makes emotional support work.</p>
@@ -278,8 +278,8 @@ export default function AnonymousSupportPage() {
         <div className="section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn anonymous?</div>
-            <div className="faq-a">Anonymous to your listener, not to LeanOn. You sign in with a verified phone number, but the listener sees only the name you choose — never your number. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised LeanOn administrators if a session is reported or flagged for safety. You can use a pseudonym.</div>
+            <div className="faq-q">Is How Was Your Day anonymous?</div>
+            <div className="faq-a">Anonymous to your listener, not to How Was Your Day. You sign in with a verified phone number, but the listener sees only the name you choose — never your number. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised How Was Your Day administrators if a session is reported or flagged for safety. You can use a pseudonym.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Why do people seek anonymous support in India?</div>
@@ -287,28 +287,28 @@ export default function AnonymousSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Does anonymous support actually help?</div>
-            <div className="faq-a">For many people, yes. Research on peer support suggests that feeling heard by someone who understands can help with everyday distress, and some people find it easier to open up when the listener does not know them. This is general research, not a measured outcome of LeanOn, and peer support is not a replacement for professional care.</div>
+            <div className="faq-a">For many people, yes. Research on peer support suggests that feeling heard by someone who understands can help with everyday distress, and some people find it easier to open up when the listener does not know them. This is general research, not a measured outcome of How Was Your Day, and peer support is not a replacement for professional care.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What does my listener know in a voice call?</div>
             <div className="faq-a">They hear your voice, but they do not see your phone number or contact details, and voice calls are not recorded. If you would rather not use your voice, choose text.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How does LeanOn protect my data?</div>
-            <div className="faq-a">LeanOn keeps your phone number (for sign-in), session details, wallet records and text messages. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised LeanOn administrators if a session is reported or flagged for safety. Full details are in our Privacy Policy at leanon.app/privacy.</div>
+            <div className="faq-q">How does How Was Your Day protect my data?</div>
+            <div className="faq-a">How Was Your Day keeps your phone number (for sign-in), session details, wallet records and text messages. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised How Was Your Day administrators if a session is reported or flagged for safety. Full details are in our Privacy Policy at howwasyourday.live/privacy.</div>
           </div>
         </div>
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>Peer support is not a substitute for professional mental health care.</strong> LeanOn listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
+          <p><strong>Peer support is not a substitute for professional mental health care.</strong> How Was Your Day listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
           <p><strong>Crisis helplines in India:</strong> NIMHANS — <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:700}}>080-46110007</a> &nbsp;|&nbsp; Tele-MANAS — <a href="tel:14416" style={{color:'#7A5020',fontWeight:700}}>14416</a> (free · 24/7 · Govt of India)</p>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support options on LeanOn:</p>
+          <p>Explore more peer support options on How Was Your Day:</p>
           <div className="related">
             <a href="/support/someone-to-talk-to" className="related-link">Someone to Talk To</a>
             <a href="/support/emotional-support" className="related-link">Emotional Support</a>

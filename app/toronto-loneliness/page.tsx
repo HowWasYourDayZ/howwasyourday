@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Lonely in Toronto — The Most Isolating City for New Immigrants | LeanOn',
-  description: 'Toronto is huge, diverse, and full of Indians — and somehow still one of the loneliest cities for new immigrants. You are not alone in feeling this way. LeanOn is here.',
+  title: 'Lonely in Toronto — The Most Isolating City for New Immigrants | How Was Your Day',
+  description: 'Toronto is huge, diverse, and full of Indians — and somehow still one of the loneliest cities for new immigrants. You are not alone in feeling this way. How Was Your Day is here.',
   keywords: [
     'lonely in toronto', 'toronto loneliness indian', 'new immigrant toronto lonely',
     'south asian loneliness toronto', 'desi toronto isolation', 'toronto social isolation',
     'indian toronto no friends', 'moving to toronto lonely', 'toronto newcomer loneliness',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/toronto-loneliness',
-    languages: { 'en-CA': 'https://www.leanon.app/toronto-loneliness' },
+    canonical: 'https://www.howwasyourday.live/toronto-loneliness',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/toronto-loneliness' },
   },
   openGraph: {
-    title: 'Lonely in Toronto — Why New Immigrants Feel So Isolated | LeanOn',
-    description: 'Toronto can make you feel very alone, very fast. LeanOn peer listeners are in India (availability follows Indian time) — for the evenings, the weekends, the moments when the city feels too big.',
-    url: 'https://www.leanon.app/toronto-loneliness',
-    siteName: 'LeanOn',
+    title: 'Lonely in Toronto — Why New Immigrants Feel So Isolated | How Was Your Day',
+    description: 'Toronto can make you feel very alone, very fast. How Was Your Day peer listeners are in India (availability follows Indian time) — for the evenings, the weekends, the moments when the city feels too big.',
+    url: 'https://www.howwasyourday.live/toronto-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -45,10 +45,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How can a LeanOn listener help with Toronto loneliness?',
+      name: 'How can a How Was Your Day listener help with Toronto loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A LeanOn session gives you something Toronto often withholds — someone\'s full, unhurried attention. Talking through what you are feeling with a real person who genuinely listens can break the cycle of isolation, even just for that hour.',
+        text: 'A How Was Your Day session gives you something Toronto often withholds — someone\'s full, unhurried attention. Talking through what you are feeling with a real person who genuinely listens can break the cycle of isolation, even just for that hour.',
       },
     },
     {
@@ -61,10 +61,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn if I live outside Toronto — like Brampton or Mississauga?',
+      name: 'Can I use How Was Your Day if I live outside Toronto — like Brampton or Mississauga?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. LeanOn is fully online and available anywhere in Canada. Whether you are in Brampton, Mississauga, Scarborough, or anywhere else in the GTA, you can connect with a listener anytime.',
+        text: 'Absolutely. How Was Your Day is fully online and available anywhere in Canada. Whether you are in Brampton, Mississauga, Scarborough, or anywhere else in the GTA, you can connect with a listener anytime.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Toronto Loneliness', item: 'https://www.leanon.app/toronto-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Toronto Loneliness', item: 'https://www.howwasyourday.live/toronto-loneliness' },
   ],
 }
 
@@ -176,7 +176,7 @@ export default function TorontoLonelinessPage() {
           <p>Back in India, connection happened naturally — neighbours, chai with colleagues, family dropping
             by. In Toronto, everything is scheduled, everyone is busy, and relationships take months to build.
             For someone new to the city, this can feel profoundly cold.</p>
-          <p>LeanOn gives you what the city does not — someone available right now, no scheduling, no awkward
+          <p>How Was Your Day gives you what the city does not — someone available right now, no scheduling, no awkward
             small talk. Just a real conversation when you need one.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -186,7 +186,7 @@ export default function TorontoLonelinessPage() {
           <p>There is a particular shame that comes with admitting you are lonely in a place you chose to
             come to. You cannot say it back home because your family will worry. You cannot say it to
             Canadian acquaintances because it sounds like a complaint.</p>
-          <p>LeanOn is the place where you can say it without any of that. A listener who will not judge,
+          <p>How Was Your Day is the place where you can say it without any of that. A listener who will not judge,
             will not panic, and will not tell you to look on the bright side. Just someone to be with you
             in it for a little while.</p>
         </div>
@@ -204,7 +204,7 @@ export default function TorontoLonelinessPage() {
 
         <div className="cta">
           <h2>Someone is ready to listen right now</h2>
-          <p>Toronto may be busy. LeanOn is not.</p>
+          <p>Toronto may be busy. How Was Your Day is not.</p>
           <a href="/browse" className="btn-white">Browse listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -224,8 +224,8 @@ export default function TorontoLonelinessPage() {
               profoundly alone.</p>
           </div>
           <div className="faq-item">
-            <h3>How can a LeanOn listener help?</h3>
-            <p>A LeanOn session gives you something Toronto often withholds — someone&apos;s full, unhurried
+            <h3>How can a How Was Your Day listener help?</h3>
+            <p>A How Was Your Day session gives you something Toronto often withholds — someone&apos;s full, unhurried
               attention. Talking through what you are feeling with a real person who genuinely listens can
               break the cycle of isolation.</p>
           </div>
@@ -234,8 +234,8 @@ export default function TorontoLonelinessPage() {
             <p>First 5 minutes free. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I use LeanOn if I live in Brampton or Mississauga?</h3>
-            <p>Absolutely. LeanOn is fully online and available anywhere in Canada — Brampton, Mississauga,
+            <h3>Can I use How Was Your Day if I live in Brampton or Mississauga?</h3>
+            <p>Absolutely. How Was Your Day is fully online and available anywhere in Canada — Brampton, Mississauga,
               Scarborough, or anywhere else in the GTA or beyond.</p>
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function TorontoLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

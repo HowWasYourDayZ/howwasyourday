@@ -3,8 +3,8 @@ import ReadyToTalkLanding, { type ReadyToTalkLandingData } from '@/app/component
 
 const data: ReadyToTalkLandingData = {
   "canonical": "/talk-to-someone-after-relationship-fight",
-  "title": "Talk to Someone After a Relationship Fight | LeanOn",
-  "description": "Had a fight with your partner and need someone to talk to? LeanOn offers private one-to-one peer support for relationship stress, breakups and difficult conversations.",
+  "title": "Talk to Someone After a Relationship Fight | How Was Your Day",
+  "description": "Had a fight with your partner and need someone to talk to? How Was Your Day offers private one-to-one peer support for relationship stress, breakups and difficult conversations.",
   "keywords": [
     "talk to someone after relationship fight",
     "Talk to Someone After a Relationship Fight",
@@ -14,11 +14,11 @@ const data: ReadyToTalkLandingData = {
   ],
   "eyebrow": "Human conversation · Ready to talk",
   "h1": "Had a relationship fight and need someone to talk to?",
-  "intro": "After an argument, it can be hard to know whether you want advice, distance, reassurance or simply a place to say what happened. LeanOn gives you a private conversation with a real peer listener.",
+  "intro": "After an argument, it can be hard to know whether you want advice, distance, reassurance or simply a place to say what happened. How Was Your Day gives you a private conversation with a real peer listener.",
   "problemTitle": "Right after a fight, you may not want another opinion",
   "problem": [
     "You may be angry, hurt, confused, guilty or exhausted. Calling a friend can help, but sometimes you do not want someone in your social circle taking sides or remembering every detail later.",
-    "A peer conversation can give you space to put the whole story into words before deciding what you want to do next. LeanOn is for that conversation — not for deciding who was right."
+    "A peer conversation can give you space to put the whole story into words before deciding what you want to do next. How Was Your Day is for that conversation — not for deciding who was right."
   ],
   "humanTitle": "Why talking to another person can help",
   "human": [
@@ -27,9 +27,9 @@ const data: ReadyToTalkLandingData = {
     "Perspective, not verdicts — The point is to listen and help you reflect, not declare a winner.",
     "Someone outside the relationship — A listener is not your partner, family member or mutual friend."
   ],
-  "whyTitle": "Why LeanOn fits this moment",
+  "whyTitle": "Why How Was Your Day fits this moment",
   "why": [
-    "LeanOn is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
+    "How Was Your Day is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
     "You choose a listener rather than receiving a generic response. The goal is a human conversation where you can talk, vent, reflect or simply not feel alone for a while.",
     "You can start without committing to a long programme: one free 5-minute introduction is available per account, followed by paid time only if you choose to continue."
   ],
@@ -44,7 +44,7 @@ const data: ReadyToTalkLandingData = {
   ],
   "faq": [
     {
-      "q": "Can I talk about my relationship on LeanOn?",
+      "q": "Can I talk about my relationship on How Was Your Day?",
       "a": "Yes. Relationship stress, arguments, breakups and difficult conversations are within everyday peer support."
     },
     {
@@ -76,6 +76,6 @@ const data: ReadyToTalkLandingData = {
   ]
 }
 
-export const metadata: Metadata = { title: data.title, description: data.description, keywords: data.keywords, alternates: { canonical: 'https://www.leanon.app'+data.canonical }, openGraph: { title: data.title, description: data.description, url: 'https://www.leanon.app'+data.canonical, siteName: 'LeanOn', type: 'website' } }
+export const metadata: Metadata = { title: data.title, description: data.description, keywords: data.keywords, alternates: { canonical: 'https://www.howwasyourday.live'+data.canonical }, openGraph: { title: data.title, description: data.description, url: 'https://www.howwasyourday.live'+data.canonical, siteName: 'How Was Your Day', type: 'website' } }
 
 export default function Page() { return <ReadyToTalkLanding data={data} /> }

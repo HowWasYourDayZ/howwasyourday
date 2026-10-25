@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Florida | Orlando, Tampa, Miami | LeanOn',
+  title: 'Emotional Support for Indians in Florida | Orlando, Tampa, Miami | How Was Your Day',
   description: 'Orlando, Tampa, Jacksonville — Florida\'s Indian community is growing fast. The sunshine is great. The loneliness less visible. Talk to someone who gets it.',
   keywords: ['indians in florida', 'orlando indian support', 'tampa indian community', 'florida indian mental health', 'desi support florida', 'indian loneliness florida'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-florida' },
-  openGraph: { title: 'Emotional Support for Indians in Florida | Orlando, Tampa, Miami | LeanOn', description: 'Orlando, Tampa, Jacksonville — Florida\'s Indian community is growing fast. The sunshine is great. The loneliness less visible. Talk to someone who gets it.', url: 'https://www.leanon.app/indians-in-florida', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-florida' },
+  openGraph: { title: 'Emotional Support for Indians in Florida | Orlando, Tampa, Miami | How Was Your Day', description: 'Orlando, Tampa, Jacksonville — Florida\'s Indian community is growing fast. The sunshine is great. The loneliness less visible. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/indians-in-florida', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand Indian life in Florida?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience — including the Florida Indian experience of being in a fast-growing but still-forming community, new arrivals still building connections, and the specific isolation that warm weather and suburban sprawl can create.' } },
+  { '@type': 'Question', name: 'Do listeners understand Indian life in Florida?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the Florida Indian experience of being in a fast-growing but still-forming community, new arrivals still building connections, and the specific isolation that warm weather and suburban sprawl can create.' } },
   { '@type': 'Question', name: 'What time works to connect from Florida?', acceptedAnswer: { '@type': 'Answer', text: 'Florida (EST) is 10.5 hours behind IST. 8am Florida = 6:30pm India. Early Florida mornings before work align with Indian evenings — a reliable window for finding listeners online.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private — phone number and first name only. Nothing is shared with your community, family, or employer.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Florida', item: 'https://www.leanon.app/indians-in-florida' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Florida', item: 'https://www.howwasyourday.live/indians-in-florida' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInFloridaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Florida</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInFloridaPage() {
           <h2>Florida&rsquo;s Indian Community: Growing Fast, Still Finding Itself</h2>
           <p>Florida has seen dramatic growth in its Indian population over the past decade. Orlando draws Indian tech workers and healthcare professionals. Tampa has a substantial and growing desi community in its suburbs. Jacksonville, Boca Raton, and the South Florida corridor all have significant and expanding Indian presences. The state is sunny, affordable compared to the coasts, and increasingly popular as a relocation destination for Indians from more expensive metros.</p>
           <p>But rapid growth means the community infrastructure is still forming in many parts of Florida. New arrivals may not yet have found their people — the temple, the cricket club, the Saturday language class for children. The car-dependent sprawl of Florida suburbs can compound isolation. And unlike the tight-knit communities of New Jersey or Atlanta, in many Florida cities you can be Indian and genuinely alone.</p>
-          <p>LeanOn connects you with a real Indian peer listener in India — someone who understands the NRI experience fully even before the Florida community solidifies around you. First 5 minutes free.</p>
+          <p>How Was Your Day connects you with a real Indian peer listener in India — someone who understands the NRI experience fully even before the Florida community solidifies around you. First 5 minutes free.</p>
         </div>
 
         <div className="section">

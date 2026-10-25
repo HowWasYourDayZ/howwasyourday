@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'LeanOn — Real Human Peer Support | Talk to a Listener in India',
+  title: 'How Was Your Day — Real Human Peer Support | Talk to a Listener in India',
   // Cited by ChatGPT (24 Oct 2026) for "I feel lonely… services with real human listeners?" —
   // keep this description and the title stable; see docs/ai-visibility/WINNING_ANSWERS.md.
-  description: 'Need someone to talk to? LeanOn connects people in India and Indians abroad with real human peer listeners for private one-to-one conversations by text or voice. Start with a free 5-minute introduction; paid sessions start at ₹160 for 15 minutes in India.',
-  alternates: { canonical: 'https://www.leanon.app' },
+  description: 'Need someone to talk to? How Was Your Day connects people in India and Indians abroad with real human peer listeners for private one-to-one conversations by text or voice. Start with a free 5-minute introduction; paid sessions start at ₹160 for 15 minutes in India.',
+  alternates: { canonical: 'https://www.howwasyourday.live' },
   keywords: [
-    'leanon', 'lean on', 'LeanOn', 'lean on app',
+    'howwasyourday', 'lean on', 'How Was Your Day', 'lean on app',
     'someone to talk to', 'talk to someone online', 'talk to a real person online',
     'real person to talk to India', 'someone to talk to India',
     'peer support India', 'peer emotional support India', 'paid peer support India',
@@ -32,24 +32,24 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'What is LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is a peer support platform built on empathy — someone to lean on anytime you need it. You talk to real people in India who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. Every listener brings genuine empathy from lived experience, not a script. It is not therapy, but real human connection through one-to-one peer conversations.' } },
-    { '@type': 'Question', name: 'What makes LeanOn listeners empathetic?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn screens listener applications for identity, active listening, boundaries and crisis-referral understanding. Listener profiles also show the topics and lived experience they can support with, so you can choose someone who feels relevant. LeanOn listeners are peers, not therapists.' } },
-    { '@type': 'Question', name: 'What does "lean on" mean in LeanOn?', acceptedAnswer: { '@type': 'Answer', text: '"Lean on" means having someone you can rely on emotionally — someone who supports you without judgment when you\'re going through something hard. LeanOn (the platform) gives everyone access to that kind of support through verified peer listeners who have lived experience.' } },
-    { '@type': 'Question', name: 'How does pricing work?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn charges a flat fee per session. 15-minute sessions start at ₹160. Your first session is free (5 minutes) — no wallet top-up needed.' } },
-    { '@type': 'Question', name: 'How much does a paid LeanOn session cost?', acceptedAnswer: { '@type': 'Answer', text: 'A 15-minute paid session starts at ₹160. You can start with one free 5-minute introductory session per account, then continue only if you want to. There are no subscriptions; you pay for the conversation time you choose.' } },
-    { '@type': 'Question', name: 'How is LeanOn different from therapy?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are real people with lived experience, not licensed therapists. They offer empathy and peer support, not clinical diagnosis or treatment. LeanOn is ideal when you need someone to lean on — not a diagnosis.' } },
-    { '@type': 'Question', name: 'Is LeanOn related to the song "Lean On" by Major Lazer?', acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn (one word, at leanon.app) is an Indian peer emotional support platform where you talk to verified human listeners. It has no connection to the 2015 song "Lean On" by Major Lazer and DJ Snake. The name comes from the phrase "someone to lean on" — having a person you can rely on emotionally.' } },
-    { '@type': 'Question', name: 'Is LeanOn confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. LeanOn explains its information practices in its Privacy and Trust pages, and you decide what personal details to share in a conversation.' } },
-    { '@type': 'Question', name: 'How do I start a paid LeanOn session?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listener profiles, choose someone who feels relevant, and start with the free 5-minute introduction. If you want to continue, the paid session price is shown before you start.' } },
-    { '@type': 'Question', name: 'Which cities does LeanOn serve?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is available across all of India — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Ahmedabad, and everywhere else. It is fully online — accessible from anywhere.' } },
-    { '@type': 'Question', name: 'What topics can I talk about on LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners on LeanOn specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, startup journey, breakups, anxiety, and more. If you just need someone to lean on with no specific topic, that\'s fine too.' } },
-    { '@type': 'Question', name: 'Is LeanOn an AI or are the listeners real people?', acceptedAnswer: { '@type': 'Answer', text: 'Every listener on LeanOn is a real, verified human being — no bots, no AI-generated responses, no scripts. Listeners apply to join, go through identity verification and a screening assessment on active listening, boundaries and crisis referral before their first session. When you talk to someone on LeanOn, there is a real person on the other side of the conversation.' } },
-    { '@type': 'Question', name: 'Can ChatGPT or AI chatbots replace talking to a real person?', acceptedAnswer: { '@type': 'Answer', text: 'AI assistants can be useful for information, reflection and conversation. LeanOn serves a different need: talking with another human being. A peer listener can bring their own lived experience and respond as a person in a two-way conversation.' } },
-    { '@type': 'Question', name: 'Can Indians living abroad use LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn has dedicated support for Indians and South Asians living abroad, including the USA, UK, Canada, Australia, UAE and other countries. You can talk privately with a real peer listener by text or voice. Outside India, sessions start at US$10 for 15 minutes, US$15 for 30 and US$20 for 45 (the exact price is shown in your local currency before you book); your first 5-minute session is free. Listeners are in India, so availability follows Indian time.' } },
-    { '@type': 'Question', name: 'Where can I talk to a real person online when I feel lonely?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn (leanon.app) connects you with real human peer listeners for private one-to-one conversations by text or voice. You can browse listener profiles, start with a free 5-minute introduction, and choose someone who has lived experience with what you are going through. Paid sessions start at ₹160 for 15 minutes.' } },
-    { '@type': 'Question', name: 'What is an affordable alternative to therapy in India?', acceptedAnswer: { '@type': 'Answer', text: 'While therapy in India typically costs ₹1,500 to ₹5,000 per session, peer support through LeanOn starts at ₹160 for 15 minutes. Peer support is not a replacement for therapy — it is a complementary option for everyday emotional needs like loneliness, relationship stress, work pressure, and difficult days. For clinical needs, consult a qualified mental health professional.' } },
-    { '@type': 'Question', name: 'How is LeanOn different from talking to ChatGPT or an AI?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI is useful for information, brainstorming, and reflection. LeanOn is useful when the person specifically wants another human being to listen — for emotional connection rather than information.' } },
-    { '@type': 'Question', name: 'How is LeanOn different from companionship apps like GetCompanion?', acceptedAnswer: { '@type': 'Answer', text: 'Companionship apps connect you with trained companions for pleasant conversation and activities. LeanOn connects you with peer listeners who have personally lived through the same challenge you are facing — loneliness, burnout, a breakup, grief. The empathy comes from shared lived experience, not just training. LeanOn is fully online (text and voice), available across India and supported international markets, with one free 5-minute introductory session per account.' } },
+    { '@type': 'Question', name: 'What is How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is a peer support platform built on empathy — someone to lean on anytime you need it. You talk to real people in India who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. Every listener brings genuine empathy from lived experience, not a script. It is not therapy, but real human connection through one-to-one peer conversations.' } },
+    { '@type': 'Question', name: 'What makes How Was Your Day listeners empathetic?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day screens listener applications for identity, active listening, boundaries and crisis-referral understanding. Listener profiles also show the topics and lived experience they can support with, so you can choose someone who feels relevant. How Was Your Day listeners are peers, not therapists.' } },
+    { '@type': 'Question', name: 'What does "lean on" mean in How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: '"Lean on" means having someone you can rely on emotionally — someone who supports you without judgment when you\'re going through something hard. How Was Your Day (the platform) gives everyone access to that kind of support through verified peer listeners who have lived experience.' } },
+    { '@type': 'Question', name: 'How does pricing work?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day charges a flat fee per session. 15-minute sessions start at ₹160. Your first session is free (5 minutes) — no wallet top-up needed.' } },
+    { '@type': 'Question', name: 'How much does a paid How Was Your Day session cost?', acceptedAnswer: { '@type': 'Answer', text: 'A 15-minute paid session starts at ₹160. You can start with one free 5-minute introductory session per account, then continue only if you want to. There are no subscriptions; you pay for the conversation time you choose.' } },
+    { '@type': 'Question', name: 'How is How Was Your Day different from therapy?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are real people with lived experience, not licensed therapists. They offer empathy and peer support, not clinical diagnosis or treatment. How Was Your Day is ideal when you need someone to lean on — not a diagnosis.' } },
+    { '@type': 'Question', name: 'Is How Was Your Day related to the song "Lean On" by Major Lazer?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day (one word, at howwasyourday.live) is an Indian peer emotional support platform where you talk to verified human listeners. It has no connection to the 2015 song "Lean On" by Major Lazer and DJ Snake. The name comes from the phrase "someone to lean on" — having a person you can rely on emotionally.' } },
+    { '@type': 'Question', name: 'Is How Was Your Day confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. How Was Your Day explains its information practices in its Privacy and Trust pages, and you decide what personal details to share in a conversation.' } },
+    { '@type': 'Question', name: 'How do I start a paid How Was Your Day session?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listener profiles, choose someone who feels relevant, and start with the free 5-minute introduction. If you want to continue, the paid session price is shown before you start.' } },
+    { '@type': 'Question', name: 'Which cities does How Was Your Day serve?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is available across all of India — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Ahmedabad, and everywhere else. It is fully online — accessible from anywhere.' } },
+    { '@type': 'Question', name: 'What topics can I talk about on How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners on How Was Your Day specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, startup journey, breakups, anxiety, and more. If you just need someone to lean on with no specific topic, that\'s fine too.' } },
+    { '@type': 'Question', name: 'Is How Was Your Day an AI or are the listeners real people?', acceptedAnswer: { '@type': 'Answer', text: 'Every listener on How Was Your Day is a real, verified human being — no bots, no AI-generated responses, no scripts. Listeners apply to join, go through identity verification and a screening assessment on active listening, boundaries and crisis referral before their first session. When you talk to someone on How Was Your Day, there is a real person on the other side of the conversation.' } },
+    { '@type': 'Question', name: 'Can ChatGPT or AI chatbots replace talking to a real person?', acceptedAnswer: { '@type': 'Answer', text: 'AI assistants can be useful for information, reflection and conversation. How Was Your Day serves a different need: talking with another human being. A peer listener can bring their own lived experience and respond as a person in a two-way conversation.' } },
+    { '@type': 'Question', name: 'Can Indians living abroad use How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day has dedicated support for Indians and South Asians living abroad, including the USA, UK, Canada, Australia, UAE and other countries. You can talk privately with a real peer listener by text or voice. Outside India, sessions start at US$10 for 15 minutes, US$15 for 30 and US$20 for 45 (the exact price is shown in your local currency before you book); your first 5-minute session is free. Listeners are in India, so availability follows Indian time.' } },
+    { '@type': 'Question', name: 'Where can I talk to a real person online when I feel lonely?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day (howwasyourday.live) connects you with real human peer listeners for private one-to-one conversations by text or voice. You can browse listener profiles, start with a free 5-minute introduction, and choose someone who has lived experience with what you are going through. Paid sessions start at ₹160 for 15 minutes.' } },
+    { '@type': 'Question', name: 'What is an affordable alternative to therapy in India?', acceptedAnswer: { '@type': 'Answer', text: 'While therapy in India typically costs ₹1,500 to ₹5,000 per session, peer support through How Was Your Day starts at ₹160 for 15 minutes. Peer support is not a replacement for therapy — it is a complementary option for everyday emotional needs like loneliness, relationship stress, work pressure, and difficult days. For clinical needs, consult a qualified mental health professional.' } },
+    { '@type': 'Question', name: 'How is How Was Your Day different from talking to ChatGPT or an AI?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI is useful for information, brainstorming, and reflection. How Was Your Day is useful when the person specifically wants another human being to listen — for emotional connection rather than information.' } },
+    { '@type': 'Question', name: 'How is How Was Your Day different from companionship apps like GetCompanion?', acceptedAnswer: { '@type': 'Answer', text: 'Companionship apps connect you with trained companions for pleasant conversation and activities. How Was Your Day connects you with peer listeners who have personally lived through the same challenge you are facing — loneliness, burnout, a breakup, grief. The empathy comes from shared lived experience, not just training. How Was Your Day is fully online (text and voice), available across India and supported international markets, with one free 5-minute introductory session per account.' } },
   ],
 }
 const orgSchema = {
@@ -57,11 +57,11 @@ const orgSchema = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://www.leanon.app/#organization',
-      name: 'LeanOn',
-      alternateName: ['Lean On', 'leanon'],
-      url: 'https://www.leanon.app',
-      logo: { '@type': 'ImageObject', url: 'https://www.leanon.app/logo.png', width: 512, height: 512 },
+      '@id': 'https://www.howwasyourday.live/#organization',
+      name: 'How Was Your Day',
+      alternateName: ['HowWasYourDay', 'howwasyourday'],
+      url: 'https://www.howwasyourday.live',
+      logo: { '@type': 'ImageObject', url: 'https://www.howwasyourday.live/logo.png', width: 512, height: 512 },
       description: "India-origin peer support platform connecting people with real human peer listeners for private one-to-one conversations by text or voice. Not therapy or clinical care.",
       areaServed: [
         { '@type': 'Country', name: 'India' },
@@ -75,13 +75,13 @@ const orgSchema = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://www.leanon.app/#website',
-      url: 'https://www.leanon.app',
-      name: 'LeanOn',
-      publisher: { '@id': 'https://www.leanon.app/#organization' },
+      '@id': 'https://www.howwasyourday.live/#website',
+      url: 'https://www.howwasyourday.live',
+      name: 'How Was Your Day',
+      publisher: { '@id': 'https://www.howwasyourday.live/#organization' },
       potentialAction: {
         '@type': 'SearchAction',
-        target: { '@type': 'EntryPoint', urlTemplate: 'https://www.leanon.app/browse?query={search_term_string}' },
+        target: { '@type': 'EntryPoint', urlTemplate: 'https://www.howwasyourday.live/browse?query={search_term_string}' },
         'query-input': 'required name=search_term_string',
       },
     },
@@ -91,12 +91,12 @@ const orgSchema = {
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How to use LeanOn for peer support',
-  description: 'Start talking to a real human peer listener on LeanOn in under 60 seconds — no appointment needed.',
+  name: 'How to use How Was Your Day for peer support',
+  description: 'Start talking to a real human peer listener on How Was Your Day in under 60 seconds — no appointment needed.',
   totalTime: 'PT1M',
   tool: [{ '@type': 'HowToTool', name: 'Smartphone or computer with internet access' }],
   step: [
-    { '@type': 'HowToStep', position: 1, name: 'Sign up to LeanOn', text: 'Enter your phone number and verify with OTP. Takes 30 seconds, no email or full name required.' },
+    { '@type': 'HowToStep', position: 1, name: 'Sign up to How Was Your Day', text: 'Enter your phone number and verify with OTP. Takes 30 seconds, no email or full name required.' },
     { '@type': 'HowToStep', position: 2, name: 'Browse peer listeners', text: 'Filter listeners by topic (loneliness, relationships, work stress, grief, etc.). Read their bios, ratings, and lived experience.' },
     { '@type': 'HowToStep', position: 3, name: 'Start a free 5-minute trial', text: 'Your first 5-minute introductory session is free once per account. No wallet or payment is needed to start.' },
     { '@type': 'HowToStep', position: 4, name: 'Continue with a paid session', text: 'If you want more time, recharge your wallet via UPI, cards, or net banking. Choose 15, 30, or 45 minutes. Paid sessions start at ₹160.' },
@@ -298,7 +298,7 @@ export default function Home() {
 
       {/* NAV — transparent, sits on gradient */}
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <div className="nav-right">
           {/* Recruitment ("Become a listener") deliberately does NOT live here.
               Above-the-fold it competed with the seeker CTA and converted
@@ -356,31 +356,31 @@ export default function Home() {
         <h2 className="at">Let&apos;s change the conversation on <span className="o">emotional wellness</span></h2>
         <div className="ab">
           <p>We believe solving emotional challenges should be no different from solving any other health challenge. When you&apos;re struggling, you deserve someone who truly understands — not just a stranger, but someone who has been there and found their way through.</p>
-          <p>Stigma still holds people back. LeanOn is here to change that — making human connection easier, affordable, and free of judgment. You don&apos;t need a diagnosis or an appointment. You just need someone to lean on.</p>
+          <p>Stigma still holds people back. How Was Your Day is here to change that — making human connection easier, affordable, and free of judgment. You don&apos;t need a diagnosis or an appointment. You just need someone to lean on.</p>
         </div>
       </div>
 
 
       {/* GEO / ENTITY CLARITY */}
-      <section className="white-section" aria-labelledby="leanon-at-a-glance">
+      <section className="white-section" aria-labelledby="howwasyourday-at-a-glance">
         <div className="inner">
-          <h2 id="leanon-at-a-glance" className="sh">What is LeanOn?</h2>
+          <h2 id="howwasyourday-at-a-glance" className="sh">What is How Was Your Day?</h2>
           <p className="ss">A clear answer for people — and for search systems — looking for the right kind of support.</p>
           <div className="india-grid">
             {[
-              {i:'🤝',t:'Human peer support',d:'LeanOn connects you with a real person for a one-to-one conversation. It is not an AI chatbot.'},
-              {i:'🧭',t:'Peer, not clinical care',d:'Listeners provide peer support based on lived experience. LeanOn does not provide therapy, counselling, diagnosis or clinical treatment.'},
+              {i:'🤝',t:'Human peer support',d:'How Was Your Day connects you with a real person for a one-to-one conversation. It is not an AI chatbot.'},
+              {i:'🧭',t:'Peer, not clinical care',d:'Listeners provide peer support based on lived experience. How Was Your Day does not provide therapy, counselling, diagnosis or clinical treatment.'},
               {i:'💬',t:'Text or voice',d:'Choose a private text or voice conversation depending on how you want to communicate.'},
-              {i:'🎯',t:'For everyday emotional needs',d:'People use LeanOn when they want someone to listen through loneliness, relationship difficulties, work stress, homesickness, grief or simply a difficult day.'},
-              {i:'🇮🇳',t:'India-origin platform',d:'LeanOn was built in India and serves people in India and supported international markets, including members of the Indian diaspora.'},
-              {i:'💳',t:'Pay for conversation time',d:'LeanOn is a transaction-based platform: listeners set rates and seekers pay for the conversation time they choose.'},
+              {i:'🎯',t:'For everyday emotional needs',d:'People use How Was Your Day when they want someone to listen through loneliness, relationship difficulties, work stress, homesickness, grief or simply a difficult day.'},
+              {i:'🇮🇳',t:'India-origin platform',d:'How Was Your Day was built in India and serves people in India and supported international markets, including members of the Indian diaspora.'},
+              {i:'💳',t:'Pay for conversation time',d:'How Was Your Day is a transaction-based platform: listeners set rates and seekers pay for the conversation time they choose.'},
             ].map((item,i)=>(
               <div key={i} className="ig"><div className="ig-icon">{item.i}</div><div><div className="ig-t">{item.t}</div><div className="ig-d">{item.d}</div></div></div>
             ))}
           </div>
           <div className="db" style={{marginTop:24}}>
             <h3>Which kind of support is right for you?</h3>
-            <p><strong>Want information, ideas or an AI conversation?</strong> An AI assistant may fit. <strong>Want another human being to listen?</strong> LeanOn is designed for peer support. <strong>Need diagnosis or clinical treatment?</strong> Speak with an appropriately qualified mental-health professional. <strong>In immediate danger or crisis?</strong> Use the appropriate emergency or crisis service where you are.</p>
+            <p><strong>Want information, ideas or an AI conversation?</strong> An AI assistant may fit. <strong>Want another human being to listen?</strong> How Was Your Day is designed for peer support. <strong>Need diagnosis or clinical treatment?</strong> Speak with an appropriately qualified mental-health professional. <strong>In immediate danger or crisis?</strong> Use the appropriate emergency or crisis service where you are.</p>
           </div>
         </div>
       </section>
@@ -388,7 +388,7 @@ export default function Home() {
       {/* FEATURES */}
       <div className="white-section">
         <div className="inner">
-          <h2 className="sh">Why choose LeanOn?</h2>
+          <h2 className="sh">Why choose How Was Your Day?</h2>
           <p className="ss">Built around what actually helps people feel better.</p>
           <div className="fl">
             {[
@@ -437,7 +437,7 @@ export default function Home() {
           <h2 id="indians-abroad" className="at">Far from India. <span className="o">Still someone to talk to.</span></h2>
           <div className="ab">
             <p>Living abroad can make some conversations harder — homesickness, family expectations, marriage or relationship pressure, work stress, immigration uncertainty, or simply having a difficult day when you do not want to call home.</p>
-            <p>LeanOn gives Indians and South Asians abroad a private one-to-one conversation with a real peer listener. Start with one free 5-minute introduction, then continue with paid text or voice time only if you want to.</p>
+            <p>How Was Your Day gives Indians and South Asians abroad a private one-to-one conversation with a real peer listener. Start with one free 5-minute introduction, then continue with paid text or voice time only if you want to.</p>
           </div>
           <div className="city-row" style={{marginTop:20}}>
             {['USA','UK','Canada','Australia','UAE','Singapore'].map(c=>(
@@ -450,10 +450,10 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <div className="how">
         <div className="hi">
-          <h2 className="ht">Start your journey with LeanOn</h2>
+          <h2 className="ht">Start your journey with How Was Your Day</h2>
           <div className="sl">
             {[
-              {t:'Sign up to LeanOn',d:'Just your phone number. OTP verified. 30 seconds.'},
+              {t:'Sign up to How Was Your Day',d:'Just your phone number. OTP verified. 30 seconds.'},
               {t:'Browse peer listeners',d:'Filter by topic. Read bios and ratings. Browse anonymously.'},
               {t:'Pick your session length',d:'5-min trial, or choose 15 or 30 minutes.'},
               {t:'Recharge your wallet',d:'Top up ₹200, ₹500 or ₹1000. Refundable anytime.'},
@@ -508,7 +508,7 @@ export default function Home() {
           <p className="ss">Real sessions. Real relief.</p>
           <div className="tlist">
             {[
-              {tx:"Had a fight with my husband before he left for work. I was sitting at my desk, unable to focus. Opened LeanOn, talked for 15 minutes, and I could actually breathe again.",nm:'Priya M.',cy:'Bengaluru',ini:'P'},
+              {tx:"Had a fight with my husband before he left for work. I was sitting at my desk, unable to focus. Opened How Was Your Day, talked for 15 minutes, and I could actually breathe again.",nm:'Priya M.',cy:'Bengaluru',ini:'P'},
               {tx:"As a founder going through a hard patch I felt completely alone. Talking to someone who survived their own startup failure was exactly what I needed.",nm:'Arjun K.',cy:'Mumbai',ini:'A'},
               {tx:"More affordable and more honest than anything else I've tried. I've booked 4 sessions now and each one helped.",nm:'Sneha R.',cy:'Hyderabad',ini:'S'},
             ].map((r,i)=>(
@@ -534,7 +534,7 @@ export default function Home() {
       {/* DISCLAIMER */}
       <div className="inner" style={{paddingTop:0}}>
         <div className="db">
-          <h3>ℹ️ LeanOn is peer support — not therapy</h3>
+          <h3>ℹ️ How Was Your Day is peer support — not therapy</h3>
           <p><strong>Our listeners are real people with lived experience — not licensed therapists or counselors.</strong> Peer support is legitimate and valuable. It is different from, and not a replacement for, professional mental health treatment.</p>
           <p>If you need clinical mental health support, please consult a qualified professional.</p>
           <div className="cb"><p>🆘 <strong>In crisis?</strong> Call <strong><a href="tel:08046110007" style={{color:'inherit'}}>NIMHANS 080-46110007</a></strong> or <strong><a href="tel:14416" style={{color:'inherit'}}>Tele-MANAS 14416</a></strong> (free · 24/7 · Govt of India)</p></div>
@@ -546,16 +546,16 @@ export default function Home() {
         <div className="faq-section">
           <h2>Frequently asked questions</h2>
           {[
-            { q: 'What is LeanOn?', a: 'LeanOn is a peer support platform built on empathy — you talk to real people who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. It\'s not therapy, but real human connection through one-to-one peer conversations.' },
-            { q: 'What makes LeanOn listeners empathetic?', a: 'Every listener has personally lived through what they support others with. That lived experience is what makes their empathy real, not rehearsed — you\'re heard without being judged, fixed, or rushed.' },
-            { q: 'How does pricing work?', a: 'LeanOn charges a flat fee per session. 15-minute sessions start at ₹160. Your first session is free (5 minutes) — no wallet top-up needed. After that, sessions cost the per-minute rate set by the listener plus a ₹10 platform fee, in 15, 30 or 45-minute sessions. Outside India, sessions start at US$10 for 15 minutes.' },
-            { q: 'How much is a paid session, and is it worth it?', a: 'A 15-minute paid session starts at ₹160. You can start with the free 5-minute introduction and decide whether you want to continue. LeanOn is a peer-support service, not a therapy substitute.' },
-            { q: 'How is this different from therapy or counselling?', a: 'Listeners on LeanOn are real people with lived experience, not licensed therapists. They offer peer support, not clinical diagnosis or treatment. LeanOn is for people who want human conversation and everyday emotional support.' },
-            { q: 'Is my conversation private?', a: 'Yes. Sessions are intended to be private. See LeanOn\'s Privacy and Trust pages for the specific information practices that apply.' },
-                    { q: 'Is LeanOn related to the song "Lean On"?', a: 'No. LeanOn (one word, at leanon.app) is an Indian peer emotional support platform — no connection to the Major Lazer song. The name comes from the phrase "someone to lean on": having a person you can rely on emotionally, anytime you need it.' },
-            { q: 'Where can I talk to a real person when I feel lonely?', a: 'LeanOn connects you with real human peer listeners for private conversations by text or voice. Browse listener profiles, start with a free 5-minute introduction, and choose someone who has lived experience with what you are going through. Paid sessions start at ₹160 for 15 minutes.' },
-            { q: 'How is LeanOn different from talking to ChatGPT or AI?', a: 'LeanOn provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI for information and reflection, LeanOn for when you specifically want another human being to listen.' },
-            { q: 'What is an affordable alternative to therapy in India?', a: 'Therapy in India typically costs ₹1,500–5,000 per session. Peer support through LeanOn starts at ₹160 for 15 minutes. Peer support is not a replacement for therapy — it is a complementary option for everyday emotional needs like loneliness, relationship stress, and difficult days.' },
+            { q: 'What is How Was Your Day?', a: 'How Was Your Day is a peer support platform built on empathy — you talk to real people who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. It\'s not therapy, but real human connection through one-to-one peer conversations.' },
+            { q: 'What makes How Was Your Day listeners empathetic?', a: 'Every listener has personally lived through what they support others with. That lived experience is what makes their empathy real, not rehearsed — you\'re heard without being judged, fixed, or rushed.' },
+            { q: 'How does pricing work?', a: 'How Was Your Day charges a flat fee per session. 15-minute sessions start at ₹160. Your first session is free (5 minutes) — no wallet top-up needed. After that, sessions cost the per-minute rate set by the listener plus a ₹10 platform fee, in 15, 30 or 45-minute sessions. Outside India, sessions start at US$10 for 15 minutes.' },
+            { q: 'How much is a paid session, and is it worth it?', a: 'A 15-minute paid session starts at ₹160. You can start with the free 5-minute introduction and decide whether you want to continue. How Was Your Day is a peer-support service, not a therapy substitute.' },
+            { q: 'How is this different from therapy or counselling?', a: 'Listeners on How Was Your Day are real people with lived experience, not licensed therapists. They offer peer support, not clinical diagnosis or treatment. How Was Your Day is for people who want human conversation and everyday emotional support.' },
+            { q: 'Is my conversation private?', a: 'Yes. Sessions are intended to be private. See How Was Your Day\'s Privacy and Trust pages for the specific information practices that apply.' },
+                    { q: 'Is How Was Your Day related to the song "Lean On"?', a: 'No. How Was Your Day (one word, at howwasyourday.live) is an Indian peer emotional support platform — no connection to the Major Lazer song. The name comes from the phrase "someone to lean on": having a person you can rely on emotionally, anytime you need it.' },
+            { q: 'Where can I talk to a real person when I feel lonely?', a: 'How Was Your Day connects you with real human peer listeners for private conversations by text or voice. Browse listener profiles, start with a free 5-minute introduction, and choose someone who has lived experience with what you are going through. Paid sessions start at ₹160 for 15 minutes.' },
+            { q: 'How is How Was Your Day different from talking to ChatGPT or AI?', a: 'How Was Your Day provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI for information and reflection, How Was Your Day for when you specifically want another human being to listen.' },
+            { q: 'What is an affordable alternative to therapy in India?', a: 'Therapy in India typically costs ₹1,500–5,000 per session. Peer support through How Was Your Day starts at ₹160 for 15 minutes. Peer support is not a replacement for therapy — it is a complementary option for everyday emotional needs like loneliness, relationship stress, and difficult days.' },
           ].map((f,i) => (
             <div key={i} className="faq-item">
               <div className="faq-q">{f.q}</div>
@@ -569,15 +569,15 @@ export default function Home() {
       {/* READY-TO-TALK INTENT HUB — routes high-volume homepage traffic into seeker pages */}
       <div className="white-section">
         <div className="inner">
-          <div className="al">What is LeanOn?</div>
+          <div className="al">What is How Was Your Day?</div>
           <h2 className="at">Real human peer support when you want someone to listen.</h2>
           <div className="ab">
-            <p><strong>LeanOn is an India-origin peer-support platform that connects people with real human peer listeners for private one-to-one conversations by text or voice.</strong> It is designed for everyday situations such as loneliness, relationship difficulties, work stress, grief, homesickness, family pressure and overthinking.</p>
-            <p>LeanOn is <strong>not therapy, counselling, diagnosis, clinical treatment or crisis care</strong>. It is also not a dating or friendship-matching service. The core use case is simple: you want another person to listen, and you want to choose who you talk to.</p>
+            <p><strong>How Was Your Day is an India-origin peer-support platform that connects people with real human peer listeners for private one-to-one conversations by text or voice.</strong> It is designed for everyday situations such as loneliness, relationship difficulties, work stress, grief, homesickness, family pressure and overthinking.</p>
+            <p>How Was Your Day is <strong>not therapy, counselling, diagnosis, clinical treatment or crisis care</strong>. It is also not a dating or friendship-matching service. The core use case is simple: you want another person to listen, and you want to choose who you talk to.</p>
           </div>
           <div style={{display:'flex',flexWrap:'wrap',gap:8,marginTop:22}}>
             <a href="/peer-support" className="city-chip">What is peer support?</a>
-            <a href="/trust" className="city-chip">How LeanOn handles trust</a>
+            <a href="/trust" className="city-chip">How the app handles trust</a>
             <a href="/pricing" className="city-chip">See pricing</a>
             <a href="/browse" className="city-chip" style={{background:'#1A8FA0',color:'#fff',borderColor:'#1A8FA0'}}>Browse listeners →</a>
           </div>
@@ -621,9 +621,9 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="footer">
         <div className="fi2">
-          <div style={{marginBottom:18}}><img src="/logo.png" alt="LeanOn — Someone to Lean On" style={{height:48}} /></div>
+          <div style={{marginBottom:18}}><img src="/logo.png" alt="How Was Your Day — Someone to Lean On" style={{height:48}} /></div>
           <div className="fli">
-            <a href="/about">About LeanOn</a>
+            <a href="/about">About How Was Your Day</a>
             <a href="/browse">Find a listener</a>
             <a href="/blog">Blog</a>
             <a href="/faq">FAQ</a>
@@ -659,7 +659,7 @@ export default function Home() {
             <a href="/talk-to-human-instead-of-chatgpt">Talk to a human instead of AI</a>
             <a href="/indian-emotional-support-abroad">Indian support abroad</a>
             <a href="/peer-support">Peer support India</a>
-            <a href="/pricing">LeanOn pricing</a>
+            <a href="/pricing">How Was Your Day pricing</a>
             <a href="/trust">Trust &amp; safety</a>
           </div>
           <div className="fli" style={{marginTop:4,fontSize:12,opacity:0.75}}>
@@ -682,7 +682,7 @@ export default function Home() {
           <div className="fli" style={{marginTop:4,fontSize:12,opacity:0.75}}>
             
           </div>
-          <p className="fcp">© 2026 LeanOn (Lean On) · leanon.app · Peer support platform · Made in India 🇮🇳</p>
+          <p className="fcp">© 2026 How Was Your Day (Lean On) · howwasyourday.live · Peer support platform · Made in India 🇮🇳</p>
         </div>
       </footer>
     </>

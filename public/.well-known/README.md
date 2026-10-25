@@ -1,18 +1,18 @@
 # Digital Asset Links — TWA verification
 
 > Current process: `docs/PLAY_STORE_STEP_BY_STEP.md`. The new Play app is
-> **`app.leanon`** (PWABuilder). `app.leanon.therapy` is the retired 2024 therapist
+> **`app.howwasyourday`** (PWABuilder). `app.howwasyourday.therapy` is the retired 2024 therapist
 > app. Fingerprints: the PWABuilder key + the Play app signing key from
 > Play Console → App integrity.
 
 `assetlinks.json` is what removes the browser URL bar from the Android TWA
-(Trusted Web Activity) wrapper and proves leanon.app owns the Play Store app.
+(Trusted Web Activity) wrapper and proves howwasyourday.live owns the Play Store app.
 
 ## Before the app works without a URL bar, fill in TWO placeholders:
 
-1. **`package_name`** — currently `app.leanon.twa`. Set this to the exact
+1. **`package_name`** — currently `app.howwasyourday.twa`. Set this to the exact
    Android package id you choose in PWABuilder / Play Console. Once the app is
-   published you CANNOT change it, so pick deliberately (e.g. `app.leanon.twa`).
+   published you CANNOT change it, so pick deliberately (e.g. `app.howwasyourday.twa`).
 
 2. **`sha256_cert_fingerprints`** — currently the `REPLACE_WITH...` placeholder.
    Paste the SHA-256 fingerprint of the signing key. Get it from:
@@ -27,7 +27,7 @@
 
 ## After editing
 Commit, push to `main`, let Vercel deploy, then verify it is live and public at:
-  https://www.leanon.app/.well-known/assetlinks.json
+  https://www.howwasyourday.live/.well-known/assetlinks.json
 
 Google fetches this URL directly — it must return HTTP 200 with
 `Content-Type: application/json` and no auth/redirect. (Vercel serves files

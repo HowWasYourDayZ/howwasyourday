@@ -3,52 +3,52 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Glossary — Peer Support Terms | LeanOn',
-  description: 'Definitions of peer support terms used on LeanOn: lean on, peer support, peer listener, emotional support, peer counselling, and more. Your guide to understanding emotional wellness.',
-  alternates: { canonical: 'https://www.leanon.app/glossary' },
+  title: 'Glossary — Peer Support Terms | How Was Your Day',
+  description: 'Definitions of peer support terms used on How Was Your Day: lean on, peer support, peer listener, emotional support, peer counselling, and more. Your guide to understanding emotional wellness.',
+  alternates: { canonical: 'https://www.howwasyourday.live/glossary' },
   keywords: ['lean on meaning', 'peer support definition', 'what is peer support', 'peer listener meaning', 'emotional support definition'],
 }
 
 const definedTermSchema = {
   '@context': 'https://schema.org',
   '@type': 'DefinedTermSet',
-  name: 'LeanOn Peer Support Glossary',
-  url: 'https://www.leanon.app/glossary',
+  name: 'How Was Your Day Peer Support Glossary',
+  url: 'https://www.howwasyourday.live/glossary',
   hasDefinedTerm: [
     {
       '@type': 'DefinedTerm',
       name: 'Lean On',
-      description: 'To "lean on" someone means to rely on them emotionally — to draw support, comfort, or strength from another person during a difficult time. LeanOn (the platform) is named after this concept: giving everyone access to someone to lean on.',
-      url: 'https://www.leanon.app/glossary#lean-on',
-      inDefinedTermSet: 'https://www.leanon.app/glossary',
+      description: 'To "lean on" someone means to rely on them emotionally — to draw support, comfort, or strength from another person during a difficult time. How Was Your Day (the platform) is named after this concept: giving everyone access to someone to lean on.',
+      url: 'https://www.howwasyourday.live/glossary#lean-on',
+      inDefinedTermSet: 'https://www.howwasyourday.live/glossary',
     },
     {
       '@type': 'DefinedTerm',
       name: 'Peer Support',
       description: 'Peer support is emotional and social support given by a person who has lived experience of a similar challenge. Unlike professional therapy, peer support is based on shared experience, empathy, and mutual understanding rather than clinical expertise.',
-      url: 'https://www.leanon.app/glossary#peer-support',
-      inDefinedTermSet: 'https://www.leanon.app/glossary',
+      url: 'https://www.howwasyourday.live/glossary#peer-support',
+      inDefinedTermSet: 'https://www.howwasyourday.live/glossary',
     },
     {
       '@type': 'DefinedTerm',
       name: 'Peer Listener',
-      description: 'A peer listener is a screened individual who provides emotional support based on their own lived experience. On LeanOn, peer listeners are verified real people who have personally navigated challenges like loneliness, burnout, grief, or anxiety.',
-      url: 'https://www.leanon.app/glossary#peer-listener',
-      inDefinedTermSet: 'https://www.leanon.app/glossary',
+      description: 'A peer listener is a screened individual who provides emotional support based on their own lived experience. On How Was Your Day, peer listeners are verified real people who have personally navigated challenges like loneliness, burnout, grief, or anxiety.',
+      url: 'https://www.howwasyourday.live/glossary#peer-listener',
+      inDefinedTermSet: 'https://www.howwasyourday.live/glossary',
     },
     {
       '@type': 'DefinedTerm',
       name: 'Emotional Support',
       description: 'Emotional support is the provision of empathy, caring, and understanding to someone experiencing stress or difficulty. It focuses on the person\'s feelings rather than problem-solving, and helps them feel less alone.',
-      url: 'https://www.leanon.app/glossary#emotional-support',
-      inDefinedTermSet: 'https://www.leanon.app/glossary',
+      url: 'https://www.howwasyourday.live/glossary#emotional-support',
+      inDefinedTermSet: 'https://www.howwasyourday.live/glossary',
     },
     {
       '@type': 'DefinedTerm',
       name: 'Peer Counselling',
       description: 'Peer counselling is a form of support where individuals with similar life experiences provide guidance, support, and understanding to one another. It is distinct from professional counselling — peer counsellors are not licensed clinicians.',
-      url: 'https://www.leanon.app/glossary#peer-counselling',
-      inDefinedTermSet: 'https://www.leanon.app/glossary',
+      url: 'https://www.howwasyourday.live/glossary#peer-counselling',
+      inDefinedTermSet: 'https://www.howwasyourday.live/glossary',
     },
   ],
 }
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Glossary', item: 'https://www.leanon.app/glossary' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Glossary', item: 'https://www.howwasyourday.live/glossary' },
   ],
 }
 
@@ -69,8 +69,8 @@ const terms = [
     partOfSpeech: 'verb / phrase',
     definition: 'To "lean on" someone means to rely on them emotionally — to draw support, comfort, or strength from another person during a difficult time. The phrase comes from the physical act of leaning on someone for balance or rest.',
     example: '"I don\'t know what I would have done without her. She was always someone I could lean on."',
-    related: 'emotional support, peer support, LeanOn',
-    detail: 'The concept of leaning on others is central to human resilience. Research suggests that social support — having people to lean on — is one of the strongest predictors of wellbeing and recovery from adversity. LeanOn (the platform) is named after this idea: making it possible for anyone to find someone to lean on, at any time.',
+    related: 'emotional support, peer support, How Was Your Day',
+    detail: 'The concept of leaning on others is central to human resilience. Research suggests that social support — having people to lean on — is one of the strongest predictors of wellbeing and recovery from adversity. How Was Your Day (the platform) is named after this idea: making it possible for anyone to find someone to lean on, at any time.',
   },
   {
     id: 'peer-support',
@@ -85,7 +85,7 @@ const terms = [
     id: 'peer-listener',
     term: 'Peer Listener',
     partOfSpeech: 'noun',
-    definition: 'A person who provides emotional support through active listening, based on their own lived experience of challenges similar to the person they are supporting. On LeanOn, peer listeners are verified real people, not bots or therapists.',
+    definition: 'A person who provides emotional support through active listening, based on their own lived experience of challenges similar to the person they are supporting. On How Was Your Day, peer listeners are verified real people, not bots or therapists.',
     example: '"My peer listener had been through a difficult divorce too. She didn\'t give me advice — she just listened and understood."',
     related: 'peer support, active listening, lived experience',
     detail: 'Active listening — giving full attention, withholding judgment, and reflecting what the person is saying — is the core skill of peer listening. It is more than just hearing words; it is understanding the emotion and experience behind them.',
@@ -147,7 +147,7 @@ export default function GlossaryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo" style={{background:'#FF9933',color:'#fff',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
       </nav>
 

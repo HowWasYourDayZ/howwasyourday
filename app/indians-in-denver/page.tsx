@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Denver Colorado | Peer Support for the Mile High City | LeanOn',
+  title: 'Indians in Denver Colorado | Peer Support for the Mile High City | How Was Your Day',
   description: "Denver's Indian community is smaller but growing — tech, medical, students. The altitude and isolation are both real. Talk to someone who understands.",
   keywords: ['indians in denver', 'indian community colorado', 'nri denver', 'south asian colorado', 'desi denver', 'indian colorado'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-denver' },
-  openGraph: { title: 'Indians in Denver Colorado | Peer Support for the Mile High City | LeanOn', description: "Denver's Indian community is smaller but growing — tech, medical, students. The altitude and isolation are both real. Talk to someone who understands.", url: 'https://www.leanon.app/indians-in-denver', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-denver' },
+  openGraph: { title: 'Indians in Denver Colorado | Peer Support for the Mile High City | How Was Your Day', description: "Denver's Indian community is smaller but growing — tech, medical, students. The altitude and isolation are both real. Talk to someone who understands.", url: 'https://www.howwasyourday.live/indians-in-denver', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand the Denver Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the NRI experience, including the specific dynamics of Denver — the smaller Indian community, the outdoor-focused culture that can feel alienating, and the altitude effects that genuinely affect mood and energy, especially in the first year.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Denver Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific dynamics of Denver — the smaller Indian community, the outdoor-focused culture that can feel alienating, and the altitude effects that genuinely affect mood and energy, especially in the first year.' } },
   { '@type': 'Question', name: 'What time can I connect from Denver?', acceptedAnswer: { '@type': 'Answer', text: 'Denver (MST) is 12.5 hours behind IST. 7am Denver = 7:30pm India. Early mornings work well — Indian listeners are available in their evening before your day starts.' } },
-  { '@type': 'Question', name: 'Is the session confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. LeanOn is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, or anyone in your Denver network.' } },
+  { '@type': 'Question', name: 'Is the session confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. How Was Your Day is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, or anyone in your Denver network.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'I feel out of place in Denver\'s outdoor culture. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. The cultural mismatch of Indian sensibility in an outdoorsy, hiking-and-skiing city — where the default bonding activity requires equipment you don\'t own and a physical culture you didn\'t grow up with — is something listeners can hold without judgment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Denver', item: 'https://www.leanon.app/indians-in-denver' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Denver', item: 'https://www.howwasyourday.live/indians-in-denver' },
 ] }
 
 const S = `
@@ -70,38 +70,38 @@ export default function IndiansInDenverPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Denver</span></nav>
         <div className="hero">
           <p className="badge">Indians in Denver &middot; Colorado &middot; Mile High City</p>
           <h1>5,280 feet above sea level. <em>Feeling it in more ways than one.</em></h1>
           <p className="lead">Denver&rsquo;s Indian community is growing — tech workers, medical professionals, students at CU Denver and DU. The city is beautiful and the lifestyle is appealing on paper. But the smaller Indian community, the outdoor-focused culture, and the altitude that genuinely affects your mood in the first year all compound the usual NRI loneliness. Talk to someone who gets it. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>Denver&rsquo;s Indian Community: Small, Growing, and Spread Out</h2>
           <p>Denver&rsquo;s Indian community is concentrated in the tech sector — Oracle, Lockheed Martin, Arrow Electronics, and a growing startup scene — and the medical world around UCHealth and Children&rsquo;s Hospital Colorado. The suburbs of Aurora and Centennial have the largest Indian residential populations. Greenwood Village and the Denver Tech Center employ thousands of Indian professionals. The University of Denver and CU Denver have modest Indian student communities.</p>
           <p>The Indian community infrastructure in Denver is present but thinner than in larger metros. There are temples and Indian grocery stores and cultural events. But the critical mass that makes Indian community feel effortless — the accidental meetings, the deep bench of people who just understand — is harder to find in Denver than in New Jersey or the Bay Area. You have to work harder to maintain Indian social connection, and many Indians in Denver describe feeling more isolated than they expected in such an outwardly welcoming city.</p>
-          <p>LeanOn listeners are based in India, available without appointment, and understand the Denver Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India, available without appointment, and understand the Denver Indian experience. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>The Outdoor Culture Mismatch</h2>
           <p>Denver has a very particular cultural identity built around the outdoors — hiking, skiing, mountain biking, camping. These activities are the social glue of the city. The way Indians in New Jersey bond over cricket and potlucks and Diwali, Denverites bond over 14er hikes and ski passes. For Indian immigrants who didn&rsquo;t grow up with these activities, this creates a real social gap. You are not opposed to nature — you are simply not from a culture that treats REI membership as a personality trait.</p>
-          <p>The Indian engineer at a Denver tech company whose colleagues talk about their weekend ski trips, and who spends that energy wondering whether they&rsquo;ll ever feel like they belong here. The Indian medical professional who moved to Colorado for the quality of life and finds that the quality of life requires gear, skills, and a social fluency they don&rsquo;t have. The cultural mismatch is not about personality — it is structural. LeanOn exists for exactly this conversation.</p>
+          <p>The Indian engineer at a Denver tech company whose colleagues talk about their weekend ski trips, and who spends that energy wondering whether they&rsquo;ll ever feel like they belong here. The Indian medical professional who moved to Colorado for the quality of life and finds that the quality of life requires gear, skills, and a social fluency they don&rsquo;t have. The cultural mismatch is not about personality — it is structural. How Was Your Day exists for exactly this conversation.</p>
           <p>Denver (MST) is 12.5 hours behind IST. 7am Denver = 7:30pm India. Before your morning, Indian listeners are available. From US$10.</p>
         </div>
 
         <div className="section">
           <h2>The Altitude Is Real (And It Affects Your Mood)</h2>
           <p>High altitude genuinely affects mood. Denver at 5,280 feet — and the Front Range at higher elevations — has well-documented effects on newcomers: lower oxygen availability, disrupted sleep in the first months, and a baseline fatigue that takes time to adjust to. Research suggests altitude can affect serotonin regulation, which may worsen low mood in people already predisposed. For Indian immigrants who are already navigating the emotional weight of transplant loneliness, the altitude adds a physiological layer that is often invisible and unacknowledged.</p>
-          <p>If you moved to Denver and felt inexplicably flat or anxious for longer than you expected, you are not imagining it — and it is not just homesickness. Talking about it with someone who understands the full picture — the altitude, the transplant experience, the cultural mismatch, the smaller Indian community — is what LeanOn is for. No appointment needed.</p>
+          <p>If you moved to Denver and felt inexplicably flat or anxious for longer than you expected, you are not imagining it — and it is not just homesickness. Talking about it with someone who understands the full picture — the altitude, the transplant experience, the cultural mismatch, the smaller Indian community — is what How Was Your Day is for. No appointment needed.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Mile High City. The loneliness is real at any altitude.</h2><p>Real Indian peer listener. Understands the Denver Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Mile High City. The loneliness is real at any altitude.</h2><p>Real Indian peer listener. Understands the Denver Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Empty Inside? Peer Support for Numbness & Emptiness | LeanOn',
+  title: 'Feeling Empty Inside? Peer Support for Numbness & Emptiness | How Was Your Day',
   description: 'Feeling emotionally empty, numb, or like nothing makes you happy anymore? Talk to a peer listener in India who has been there. Anonymous.',
   keywords: ['feeling empty inside India', 'feel numb emotionally India', 'nothing makes me happy anymore', 'emotional numbness India', 'I feel empty what to do', 'why do I feel empty India', 'feel hollow inside India', 'anhedonia India', 'feel detached from life India', 'emotionally disconnected India', 'why do I feel nothing India', 'empty feeling in chest India', 'peer support for emptiness India', 'talk to someone about feeling empty', 'feeling empty in relationship India'],
-  alternates: { canonical: 'https://www.leanon.app/support/feeling-empty', languages: { 'en-IN': 'https://www.leanon.app/support/feeling-empty' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/feeling-empty', languages: { 'en-IN': 'https://www.howwasyourday.live/support/feeling-empty' } },
   openGraph: {
-    title: 'Feeling Empty Inside? Peer Support for Numbness & Emptiness | LeanOn',
+    title: 'Feeling Empty Inside? Peer Support for Numbness & Emptiness | How Was Your Day',
     description: 'Feeling emotionally empty, numb, or like nothing makes you happy anymore? Talk to a peer listener in India who has been there. Anonymous.',
-    url: 'https://www.leanon.app/support/feeling-empty',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/feeling-empty',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn peer support for feeling empty' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day peer support for feeling empty' }],
   },
 }
 
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'How do I stop feeling empty inside?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'There is no one-size fix, but certain things consistently help: speaking the feeling out loud to someone who can actually hear it (not just process your words), reconnecting with small sensory experiences (food, movement, music), re-examining whether the life you are living is the one you actually chose, and giving yourself permission to feel lost rather than forcing yourself to feel fine. Peer listeners on LeanOn have navigated this — talking to one is often a useful first step.',
+        text: 'There is no one-size fix, but certain things consistently help: speaking the feeling out loud to someone who can actually hear it (not just process your words), reconnecting with small sensory experiences (food, movement, music), re-examining whether the life you are living is the one you actually chose, and giving yourself permission to feel lost rather than forcing yourself to feel fine. Peer listeners on How Was Your Day have navigated this — talking to one is often a useful first step.',
       },
     },
     {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'How can a peer listener help with feeling empty?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A peer listener on LeanOn has personally navigated periods of emptiness — whether after burnout, grief, or simply a long stretch of feeling nothing. They will not try to diagnose you or fix you. They will sit with you in it, reflect it back, and help you articulate what might be underneath. For many people, being heard is the first crack in the numbness.',
+        text: 'A peer listener on How Was Your Day has personally navigated periods of emptiness — whether after burnout, grief, or simply a long stretch of feeling nothing. They will not try to diagnose you or fix you. They will sit with you in it, reflect it back, and help you articulate what might be underneath. For many people, being heard is the first crack in the numbness.',
       },
     },
   ],
@@ -76,9 +76,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Feeling Empty', item: 'https://www.leanon.app/support/feeling-empty' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Feeling Empty', item: 'https://www.howwasyourday.live/support/feeling-empty' },
   ],
 }
 
@@ -139,7 +139,7 @@ export default function FeelingEmptyPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -157,7 +157,7 @@ export default function FeelingEmptyPage() {
         <div className="hero">
           <p className="tag">Peer Support · Emotional Emptiness</p>
           <h1>Feeling <em>Empty Inside</em> Is More Common Than Anyone Admits</h1>
-          <p className="lead">That hollow, grey flatness — going through the motions while feeling nothing — is one of the least-talked-about emotional experiences in India. LeanOn connects you with peer listeners who have personally navigated emotional emptiness and numbness.</p>
+          <p className="lead">That hollow, grey flatness — going through the motions while feeling nothing — is one of the least-talked-about emotional experiences in India. How Was Your Day connects you with peer listeners who have personally navigated emotional emptiness and numbness.</p>
         </div>
 
         <div className="section">
@@ -215,7 +215,7 @@ export default function FeelingEmptyPage() {
           <p>The route back from emotional numbness is often through the senses. Not big interventions — small ones. The taste of something you genuinely enjoy. A walk in air that is not air-conditioned. Music played at actual volume. Physical movement that makes the body tired in a good way. These small reconnections with physical reality can gradually thaw the emotional freeze, not all at once, but incrementally.</p>
 
           <h3>Peer Support</h3>
-          <p>LeanOn peer listeners have personally navigated emotional emptiness and numbness — through burnout, grief, or long periods of suppression. Talking to someone who has been on the other side of the same flatness offers something different from therapy or advice: recognition. The sense that someone genuinely knows what this feels like. That alone is often the first crack in the wall.</p>
+          <p>How Was Your Day peer listeners have personally navigated emotional emptiness and numbness — through burnout, grief, or long periods of suppression. Talking to someone who has been on the other side of the same flatness offers something different from therapy or advice: recognition. The sense that someone genuinely knows what this feels like. That alone is often the first crack in the wall.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Have Navigated Emptiness</h2>
@@ -254,7 +254,7 @@ export default function FeelingEmptyPage() {
           <p>A peer listener who has personally navigated emptiness may be online right now. No appointments, no waitlists. Start with a free trial session.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">You don't have to feel this alone — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -270,7 +270,7 @@ export default function FeelingEmptyPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Emotional emptiness often travels with other experiences. Explore more peer support on LeanOn:</p>
+          <p>Emotional emptiness often travels with other experiences. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness</a>
             <a href="/support/founder-burnout" className="related-link">Founder Burnout</a>

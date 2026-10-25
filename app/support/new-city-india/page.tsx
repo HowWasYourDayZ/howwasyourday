@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in a New City in India — You Are Not the Only One | LeanOn',
+  title: 'Feeling Lonely in a New City in India — You Are Not the Only One | How Was Your Day',
   description: 'Moving to Bangalore, Mumbai, Hyderabad, or Pune for work and feeling alone? The loneliness of being new to a city in India is real and specific. Talk to someone who gets it.',
   keywords: [
     'lonely new city India', 'moving to Bangalore loneliness', 'new to Mumbai lonely',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'new city friends India', 'alone in new city India', 'relocating India emotional support',
     'work relocation loneliness India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/new-city-india', languages: { 'en-IN': 'https://www.leanon.app/support/new-city-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/new-city-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/new-city-india' } },
   openGraph: {
-    title: 'Feeling Lonely in a New City in India — You Are Not the Only One | LeanOn',
+    title: 'Feeling Lonely in a New City in India — You Are Not the Only One | How Was Your Day',
     description: 'Moving to Bangalore, Mumbai, Hyderabad, or Pune for work and feeling alone? Talk to someone who gets it.',
-    url: 'https://www.leanon.app/support/new-city-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/new-city-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Emotional Support for New City Loneliness India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Emotional Support for New City Loneliness India' }],
   },
 }
 
@@ -64,9 +64,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Lonely in a New City', item: 'https://www.leanon.app/support/new-city-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Lonely in a New City', item: 'https://www.howwasyourday.live/support/new-city-india' },
   ],
 }
 
@@ -125,7 +125,7 @@ export default function NewCityIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -143,7 +143,7 @@ export default function NewCityIndiaPage() {
         <div className="hero">
           <p className="badge">New City · Relocation · Peer Support</p>
           <h1>Feeling Lonely in a New City in India — <em>You Are Not the Only One</em></h1>
-          <p className="lead">You moved to Bengaluru, Mumbai, Hyderabad, or Pune for a job. The weekdays are manageable. But Friday evening arrives and the absence hits hard. This loneliness is real, specific, and more common than you think. Someone on LeanOn gets it.</p>
+          <p className="lead">You moved to Bengaluru, Mumbai, Hyderabad, or Pune for a job. The weekdays are manageable. But Friday evening arrives and the absence hits hard. This loneliness is real, specific, and more common than you think. Someone on How Was Your Day gets it.</p>
           <a href="/browse?topic=loneliness" className="cta-hero">Talk to someone who understands →</a>
         </div>
 
@@ -181,14 +181,14 @@ export default function NewCityIndiaPage() {
         <div className="section">
           <h2>Finding Someone to Talk to When You&apos;re New</h2>
           <p>The irony of new-city loneliness is that it is hard to talk about precisely because you have fewer people to talk to. The people in your life who would normally hear this — close friends from college, family — are not present in the way you need. Phone calls help but they do not fully substitute for someone who is here, in the same reality as you.</p>
-          <p>LeanOn listeners understand this experience firsthand — many have navigated the exact loneliness of relocating to a metro for work in India. They know what Bengaluru on a Saturday alone feels like. They know the WhatsApp calls home that leave you more homesick. They know the colleague relationship that is warm but not close. You do not have to explain any of it.</p>
+          <p>How Was Your Day listeners understand this experience firsthand — many have navigated the exact loneliness of relocating to a metro for work in India. They know what Bengaluru on a Saturday alone feels like. They know the WhatsApp calls home that leave you more homesick. They know the colleague relationship that is warm but not close. You do not have to explain any of it.</p>
           <p>A session is not therapy and it is not a substitute for real friendships. But it is a real person listening to a real experience, and sometimes that is the thing that makes the next week more manageable.</p>
           <div className="how-steps" style={{marginTop:20}}>
             <div className="step">
               <div className="step-num">1</div>
               <div className="step-body">
                 <h3>Browse listeners who get it</h3>
-                <p>Many listeners on LeanOn have personally relocated for work and carried new-city loneliness themselves.</p>
+                <p>Many listeners on How Was Your Day have personally relocated for work and carried new-city loneliness themselves.</p>
               </div>
             </div>
             <div className="step">

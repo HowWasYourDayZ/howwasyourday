@@ -1,5 +1,5 @@
 /**
- * LeanOn.app — Authenticated End-to-End Journeys
+ * How Was Your Day — Authenticated End-to-End Journeys
  *
  * These tests log in for real and exercise the seeker / listener / admin
  * flows end to end against a live deployment (production or preview).

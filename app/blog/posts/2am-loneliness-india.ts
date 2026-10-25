@@ -4,7 +4,7 @@ export const post = {
   description: 'The 2 AM feeling is real, specific, and more common than anyone admits. Here is why it hits so hard — and how to get through it without waiting for morning.',
   date: '2026-09-08',
   readTime: '6 min read',
-  topics: ['loneliness India', 'night anxiety', 'mental health India', 'someone to talk to', 'LeanOn'],
+  topics: ['loneliness India', 'night anxiety', 'mental health India', 'someone to talk to', 'How Was Your Day'],
   content: `
 <p>You know the feeling. It is somewhere between midnight and 3 AM, and the quiet has stopped being peaceful. You are lying in the dark — or sitting with your phone — and the weight of everything you have been carrying all day has finally gotten heavy enough that you cannot pretend it is not there.</p>
 
@@ -38,7 +38,7 @@ export const post = {
 
 <p><strong>Write it down.</strong> Not to analyse it. Not to find solutions. Just to move it from inside your head to outside. The act of externalising thought — putting it somewhere other than your own circling mind — consistently reduces its weight. You are not solving anything. You are just letting it land somewhere other than you.</p>
 
-<p><strong>Talk to someone.</strong> This is the one that consistently works, and the one that is hardest to access at 2 AM. LeanOn listeners go online at different hours — some of them are night people by disposition, and they understand what it means to need a voice in the dark. A 15-minute conversation at 2 AM is often worth more than two hours of solo spiralling. Something about saying the thing out loud, to a real person who hears it, breaks the loop in a way nothing else does.</p>
+<p><strong>Talk to someone.</strong> This is the one that consistently works, and the one that is hardest to access at 2 AM. How Was Your Day listeners go online at different hours — some of them are night people by disposition, and they understand what it means to need a voice in the dark. A 15-minute conversation at 2 AM is often worth more than two hours of solo spiralling. Something about saying the thing out loud, to a real person who hears it, breaks the loop in a way nothing else does.</p>
 
 <p><strong>Lower the bar for what &quot;okay&quot; looks like tonight.</strong> You do not have to be fine by morning. You do not have to have figured anything out. The only goal is to get through this night. That is all. And that is achievable.</p>
 

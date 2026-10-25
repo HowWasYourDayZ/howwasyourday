@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
     fcm_token = body.fcm_token
-    // The LeanOn Android app (mobile/) sends its native FCM token with this kind.
+    // The How Was Your Day Android app (mobile/) sends its native FCM token with this kind.
     fromApp = body.kind === 'android_app'
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 })

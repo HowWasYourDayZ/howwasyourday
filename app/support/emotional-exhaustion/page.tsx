@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Exhaustion & Being Emotionally Drained | LeanOn India',
+  title: 'Emotional Exhaustion & Being Emotionally Drained | How Was Your Day India',
   description: 'Feeling emotionally drained, tired of everything, or like you have nothing left to give? Talk to a peer listener in India who has been through emotional exhaustion. Anonymous, no appointment.',
   keywords: ['emotional exhaustion India', 'emotionally drained India', 'nothing left to give India', 'tired of everything India', 'emotionally tired India', 'compassion fatigue India', 'feeling emotionally depleted India', 'too tired to feel India', 'emotionally burnt out India', 'emotional fatigue India', 'I am exhausted emotionally India', 'how to recover from emotional exhaustion India', 'mental tiredness India', 'emotionally overwhelmed India', 'support for emotional exhaustion India'],
-  alternates: { canonical: 'https://www.leanon.app/support/emotional-exhaustion', languages: { 'en-IN': 'https://www.leanon.app/support/emotional-exhaustion' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-exhaustion', languages: { 'en-IN': 'https://www.howwasyourday.live/support/emotional-exhaustion' } },
   openGraph: {
-    title: 'Emotional Exhaustion & Being Emotionally Drained | LeanOn India',
+    title: 'Emotional Exhaustion & Being Emotionally Drained | How Was Your Day India',
     description: 'Feeling emotionally drained, tired of everything, or like you have nothing left to give? Talk to a peer listener in India who has been through emotional exhaustion. Anonymous, no appointment.',
-    url: 'https://www.leanon.app/support/emotional-exhaustion',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/emotional-exhaustion',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn peer support for emotional exhaustion' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day peer support for emotional exhaustion' }],
   },
 }
 
@@ -76,9 +76,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Emotional Exhaustion', item: 'https://www.leanon.app/support/emotional-exhaustion' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Emotional Exhaustion', item: 'https://www.howwasyourday.live/support/emotional-exhaustion' },
   ],
 }
 
@@ -139,7 +139,7 @@ export default function EmotionalExhaustionPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -157,7 +157,7 @@ export default function EmotionalExhaustionPage() {
         <div className="hero">
           <p className="tag">Peer Support · Emotional Exhaustion</p>
           <h1>Emotionally <em>Drained</em> and Nothing Left to Give?</h1>
-          <p className="lead">Emotional exhaustion is not the same as being tired. Sleep does not fix it. It is the depletion of your capacity to feel, respond, and engage — the result of carrying too much for too long without being held. LeanOn peer listeners know this territory.</p>
+          <p className="lead">Emotional exhaustion is not the same as being tired. Sleep does not fix it. It is the depletion of your capacity to feel, respond, and engage — the result of carrying too much for too long without being held. How Was Your Day peer listeners know this territory.</p>
         </div>
 
         <div className="section">
@@ -210,7 +210,7 @@ export default function EmotionalExhaustionPage() {
           <p>For the people who are chronically in the giving role — the caretakers, the fixers, the strong ones, the first-responders in their social networks — the most restorative thing is often the simplest: being in the receiving role. Having someone hold space for you. Not managing anyone. Not performing competence. Not reassuring anyone that you are fine.</p>
 
           <h3>The Specific Value of the Receiving Role</h3>
-          <p>A LeanOn peer listener session reverses the usual dynamic for people who are emotionally exhausted from giving. In that session, you are the one who is heard. The listener&apos;s attention is entirely on you. You do not have to look after anyone. You do not have to be useful. You do not have to seem strong. You can arrive depleted and simply speak about what you have been carrying — and have someone receive it without requiring anything back from you. For many chronic caretakers, this experience is genuinely unfamiliar. And often, that unfamiliarity is itself a signal of how much is needed.</p>
+          <p>A How Was Your Day peer listener session reverses the usual dynamic for people who are emotionally exhausted from giving. In that session, you are the one who is heard. The listener&apos;s attention is entirely on you. You do not have to look after anyone. You do not have to be useful. You do not have to seem strong. You can arrive depleted and simply speak about what you have been carrying — and have someone receive it without requiring anything back from you. For many chronic caretakers, this experience is genuinely unfamiliar. And often, that unfamiliarity is itself a signal of how much is needed.</p>
 
           <h3>The First Step</h3>
           <p>Recovery from emotional exhaustion begins somewhere. Often it begins with naming it — saying, even if only to yourself: I am depleted. I have nothing left. I need to be held. Speaking that to another person who can hear it without fixing it is often the first real step toward replenishment. You cannot recover from something you are not allowed to acknowledge. The acknowledgment is where it starts.</p>
@@ -252,7 +252,7 @@ export default function EmotionalExhaustionPage() {
           <p>You have been giving for too long. Come be in the receiving role for a while. A peer listener may be online right now — no judgment, no appointments.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Rest your mind — talk to someone — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -268,7 +268,7 @@ export default function EmotionalExhaustionPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Emotional exhaustion often connects with other experiences. Explore more peer support on LeanOn:</p>
+          <p>Emotional exhaustion often connects with other experiences. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/founder-burnout" className="related-link">Founder Burnout</a>
             <a href="/support/loneliness" className="related-link">Loneliness</a>

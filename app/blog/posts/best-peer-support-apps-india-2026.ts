@@ -3,13 +3,13 @@ export const post = {
   title: 'Best Peer Support Apps in India (2026) — Honest Comparison',
   date: '2026-09-11',
   readTime: '7 min read',
-  description: 'A clear comparison of peer support apps in India in 2026: LeanOn, YourDOST, iCall, Wysa, and what each is actually good for.',
+  description: 'A clear comparison of peer support apps in India in 2026: How Was Your Day, YourDOST, iCall, Wysa, and what each is actually good for.',
   keywords: ['best peer support app India', 'peer support apps India 2026', 'peer support platform India review', 'mental health app India comparison'],
-  topics: ['peer support', 'mental health India', 'LeanOn', 'app comparison'],
+  topics: ['peer support', 'mental health India', 'How Was Your Day', 'app comparison'],
   content: `
 <p>I have spent time looking at what peer support and mental health support apps exist in India right now, because the landscape is genuinely confusing. Everything calls itself a "mental wellness app" or a "peer support platform" — and the differences between them matter a lot if you are actually trying to decide which one to use.</p>
 
-<p>This is an honest comparison. I am going to tell you what each app is, what it is actually good for, and who it is the right fit for. I will be clear when LeanOn is not the right choice, because that matters too.</p>
+<p>This is an honest comparison. I am going to tell you what each app is, what it is actually good for, and who it is the right fit for. I will be clear when How Was Your Day is not the right choice, because that matters too.</p>
 
 <h2>What to Look for in a Peer Support App</h2>
 
@@ -23,15 +23,15 @@ export const post = {
 <li><strong>Cost?</strong> Mental health support in India is already out of reach for most people because of cost. The price point is a real consideration.</li>
 </ul>
 
-<h2>LeanOn</h2>
+<h2>How Was Your Day</h2>
 
-<p><strong>What it is:</strong> A peer support platform connecting people with screened peer listeners — real humans who have lived experience in the emotional area they support people through. Every LeanOn listener has personally been through something relevant to the conversations they take. They are screened for active listening and supportive conversation. They are not licensed therapists.</p>
+<p><strong>What it is:</strong> A peer support platform connecting people with screened peer listeners — real humans who have lived experience in the emotional area they support people through. Every How Was Your Day listener has personally been through something relevant to the conversations they take. They are screened for active listening and supportive conversation. They are not licensed therapists.</p>
 
 <p><strong>Cost:</strong> Around ₹160/session. Your first 5-minute session is free, so you can get a sense of whether the connection feels right before committing.</p>
 
 <p><strong>Pros:</strong> Real humans, not AI. Private — first name only, no last name, no photo. No appointment needed. Pay per session, no subscription trap. The lived-experience angle is the most meaningful differentiator: when someone says "I've been through something like that," they mean it.</p>
 
-<p><strong>Cons:</strong> Not a substitute for clinical care. If you need a diagnosis, medication, or structured psychotherapy, LeanOn is not the right tool. It is also not a crisis service — if you are in immediate danger, please call NIMHANS (080-46110007) or Tele-MANAS (14416).</p>
+<p><strong>Cons:</strong> Not a substitute for clinical care. If you need a diagnosis, medication, or structured psychotherapy, How Was Your Day is not the right tool. It is also not a crisis service — if you are in immediate danger, please call NIMHANS (080-46110007) or Tele-MANAS (14416).</p>
 
 <p><strong>Best for:</strong> Someone who needs to talk to a real person right now. Relationship stress, family pressure, burnout, loneliness, the weight of a hard week. People who cannot afford private therapy but want something more human than an AI chatbot.</p>
 
@@ -76,7 +76,7 @@ export const post = {
 <p>None of these apps is right for every situation. Here is a simple guide:</p>
 
 <ul>
-<li><strong>Need to talk to a real human, right now, affordably?</strong> LeanOn.</li>
+<li><strong>Need to talk to a real human, right now, affordably?</strong> How Was Your Day.</li>
 <li><strong>Need licensed professional counselling on a budget?</strong> iCall (TISS).</li>
 <li><strong>Need licensed professional counselling and willing to pay more?</strong> YourDOST or a private therapist.</li>
 <li><strong>Want a free AI coping tool to supplement other support?</strong> Wysa.</li>
@@ -85,6 +85,6 @@ export const post = {
 
 <p>The mental health gap in India is real. Therapy is out of reach for most people. AI responses are not the same as being heard. Peer support from a real person with lived experience is not perfect, but for the everyday emotional weight that most people are carrying — loneliness, burnout, relationship stress, family pressure, the general heaviness of a hard season — it is often exactly the right tool.</p>
 
-<p>If that is what you are looking for, <a href="/browse">browse LeanOn peer listeners here</a>. First 5 minutes are free.</p>
+<p>If that is what you are looking for, <a href="/browse">browse How Was Your Day peer listeners here</a>. First 5 minutes are free.</p>
 `,
 }

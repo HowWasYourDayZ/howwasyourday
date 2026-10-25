@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Get It Off Your Chest India — Say What\'s Been Building Up | LeanOn',
+  title: 'Get It Off Your Chest India — Say What\'s Been Building Up | How Was Your Day',
   description: 'That thing you\'ve been carrying. The thing you haven\'t told anyone. Say it to someone real — anonymous, no judgment, from ₹160.',
   keywords: [
     'get it off your chest india', 'say what I cant say india', 'speak your mind india',
     'let it out india', 'no one to confide in india', 'too personal to share india',
     'emotional release india', 'private problem india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/blog/getting-it-off-your-chest', languages: { 'en-IN': 'https://www.leanon.app/blog/getting-it-off-your-chest' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/blog/getting-it-off-your-chest', languages: { 'en-IN': 'https://www.howwasyourday.live/blog/getting-it-off-your-chest' } },
   openGraph: {
-    title: 'Get It Off Your Chest India — Say What\'s Been Building Up | LeanOn',
+    title: 'Get It Off Your Chest India — Say What\'s Been Building Up | How Was Your Day',
     description: 'That thing you\'ve been carrying. The thing you haven\'t told anyone. Say it to someone real — anonymous, no judgment, from ₹160.',
-    url: 'https://www.leanon.app/blog/getting-it-off-your-chest',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/blog/getting-it-off-your-chest',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Get It Off Your Chest India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Get It Off Your Chest India' }],
   },
 }
 
@@ -33,22 +33,22 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can I say anything?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Within reason, yes. You can say things that are unfair, that are angry, that are confused, that you are not proud of, that you have been too ashamed to say out loud before. LeanOn listeners are screened and expected to receive these without judgment. If something you say raises a concern about your safety, the listener will gently mention professional resources, but they will not otherwise react with alarm or judgment.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Within reason, yes. You can say things that are unfair, that are angry, that are confused, that you are not proud of, that you have been too ashamed to say out loud before. How Was Your Day listeners are screened and expected to receive these without judgment. If something you say raises a concern about your safety, the listener will gently mention professional resources, but they will not otherwise react with alarm or judgment.' },
     },
     {
       '@type': 'Question',
       name: 'Is it private?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The listener sees only the name you choose, never your phone number. Voice calls are not recorded; text is stored securely and only opened by authorised LeanOn staff if a session is reported. The listener is bound by confidentiality and has no connection to your social or professional life.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The listener sees only the name you choose, never your phone number. Voice calls are not recorded; text is stored securely and only opened by authorised How Was Your Day staff if a session is reported. The listener is bound by confidentiality and has no connection to your social or professional life.' },
     },
     {
       '@type': 'Question',
       name: 'What if I start crying?',
-      acceptedAnswer: { '@type': 'Answer', text: 'That is completely fine. You do not need to compose yourself. Crying is part of the release. A LeanOn listener will not be alarmed, will not rush you through it, will not try to stop it. They will hold the space for as long as you need.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'That is completely fine. You do not need to compose yourself. Crying is part of the release. A How Was Your Day listener will not be alarmed, will not rush you through it, will not try to stop it. They will hold the space for as long as you need.' },
     },
     {
       '@type': 'Question',
       name: 'What if what I\'m carrying sounds trivial?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Nothing that has been building inside you is trivial. The weight you feel is real regardless of how the situation would look to an outside observer. LeanOn listeners understand that the significance of something is measured by its effect on you, not by any external standard of what is "worth" feeling bad about.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Nothing that has been building inside you is trivial. The weight you feel is real regardless of how the situation would look to an outside observer. How Was Your Day listeners understand that the significance of something is measured by its effect on you, not by any external standard of what is "worth" feeling bad about.' },
     },
   ],
 }
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Get It Off Your Chest India', item: 'https://www.leanon.app/blog/getting-it-off-your-chest' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Get It Off Your Chest India', item: 'https://www.howwasyourday.live/blog/getting-it-off-your-chest' },
   ],
 }
 
@@ -112,7 +112,7 @@ export default function GetItOffYourChestIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -133,7 +133,7 @@ export default function GetItOffYourChestIndiaPage() {
           <h2>What &ldquo;Getting It Off Your Chest&rdquo; Does</h2>
           <p>There is a weight to unsaid things. Not metaphorically &mdash; physiologically. Things you are holding in stay in your system as activation. They require ongoing effort to contain. They bleed into how you sleep, how you respond to people, how much patience you have, how clearly you can think.</p>
           <p>When you say the thing &mdash; when you move it from inside to outside, to a real person who receives it &mdash; something shifts. The weight redistributes. The pressure reduces. You can breathe. You can think. The thing that was occupying background processing in your mind finally has somewhere to go.</p>
-          <p>This is not a theory. It is what people consistently describe after a LeanOn session: relief. A physical sensation of something lifting. Clarity about what they actually feel, separate from the pressure of holding it.</p>
+          <p>This is not a theory. It is what people consistently describe after a How Was Your Day session: relief. A physical sensation of something lifting. Clarity about what they actually feel, separate from the pressure of holding it.</p>
         </div>
 
         <div className="section">
@@ -155,7 +155,7 @@ export default function GetItOffYourChestIndiaPage() {
           <h2>The Anonymity That Makes It Possible</h2>
           <p>In most conversations, you are editing yourself before you speak. You are calculating the impact on the relationship, the risk of being judged, the way the person might use what you say later. This calculation happens automatically, usually below the surface &mdash; but it shapes what you actually say, often dramatically.</p>
           <p>When there is no social cost &mdash; when the person you are talking to has no connection to your life, and what you say stays completely within the session &mdash; the editing stops. The true version comes out. The thing you have been holding finally has a shape that is not constrained by who is listening.</p>
-          <p>That is the anonymity of LeanOn. Not just a technical feature &mdash; a condition that makes honesty possible.</p>
+          <p>That is the anonymity of How Was Your Day. Not just a technical feature &mdash; a condition that makes honesty possible.</p>
         </div>
 
         <div className="section">

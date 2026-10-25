@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Quarter Life Crisis India — Feeling Lost in Your 20s? | LeanOn',
+  title: 'Quarter Life Crisis India — Feeling Lost in Your 20s? | How Was Your Day',
   description: 'You\'re in your 20s. It\'s supposed to be the best time of your life. So why does it feel like drowning? Talk to someone who gets it. From ₹160.',
   keywords: [
     'quarter life crisis india', '20s anxiety india', 'quarter life crisis meaning',
     'what to do with my life india', 'lost in your 20s india',
     'life direction india', 'feeling lost 20s india', 'early 20s confusion india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/quarter-life-crisis-india', languages: { 'en-IN': 'https://www.leanon.app/quarter-life-crisis-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/quarter-life-crisis-india', languages: { 'en-IN': 'https://www.howwasyourday.live/quarter-life-crisis-india' } },
   openGraph: {
-    title: 'Quarter Life Crisis India — Feeling Lost in Your 20s? | LeanOn',
+    title: 'Quarter Life Crisis India — Feeling Lost in Your 20s? | How Was Your Day',
     description: 'You\'re in your 20s. It\'s supposed to be the best time of your life. So why does it feel like drowning? Talk to someone who gets it. From ₹160.',
-    url: 'https://www.leanon.app/quarter-life-crisis-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/quarter-life-crisis-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Quarter Life Crisis India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Quarter Life Crisis India' }],
   },
 }
 
@@ -38,7 +38,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Who do I talk to about feeling lost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not your parents &mdash; they are often invested in the direction you took and will feel defensive. Not most friends &mdash; they are in the same comparison dynamic and conversations often spiral into competitive anxiety. A LeanOn peer listener is a clean space: they have no stake in your trajectory, no opinion about the choices you have made, no investment in a particular outcome. They can hold the confusion without trying to resolve it too quickly.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Not your parents &mdash; they are often invested in the direction you took and will feel defensive. Not most friends &mdash; they are in the same comparison dynamic and conversations often spiral into competitive anxiety. A How Was Your Day peer listener is a clean space: they have no stake in your trajectory, no opinion about the choices you have made, no investment in a particular outcome. They can hold the confusion without trying to resolve it too quickly.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Quarter Life Crisis India', item: 'https://www.leanon.app/quarter-life-crisis-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Quarter Life Crisis India', item: 'https://www.howwasyourday.live/quarter-life-crisis-india' },
   ],
 }
 
@@ -112,7 +112,7 @@ export default function QuarterLifeCrisisIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 

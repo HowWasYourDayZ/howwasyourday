@@ -14,14 +14,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resource = RESOURCES.find(r => r.slug === params.slug)
   if (!resource) return { title: 'Resource not found' }
   return {
-    title: `${resource.title} | LeanOn Resources`,
+    title: `${resource.title} | How Was Your Day Resources`,
     description: resource.description,
-    alternates: { canonical: `https://www.leanon.app/resources/${resource.slug}` },
+    alternates: { canonical: `https://www.howwasyourday.live/resources/${resource.slug}` },
     openGraph: {
       title: resource.title,
       description: resource.description,
-      url: `https://www.leanon.app/resources/${resource.slug}`,
-      siteName: 'LeanOn',
+      url: `https://www.howwasyourday.live/resources/${resource.slug}`,
+      siteName: 'How Was Your Day',
     },
   }
 }
@@ -83,14 +83,14 @@ export default function ResourcePage({ params }: Props) {
     '@type': 'Article',
     headline: resource.title,
     description: resource.description,
-    url: `https://www.leanon.app/resources/${resource.slug}`,
-    publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
-    author: { '@type': 'Organization', name: 'LeanOn Team' },
+    url: `https://www.howwasyourday.live/resources/${resource.slug}`,
+    publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
+    author: { '@type': 'Organization', name: 'How Was Your Day Team' },
   }
 
   const paragraphs = resource.content.split('\n\n').filter(Boolean)
-  const shareUrl = encodeURIComponent(`https://www.leanon.app/resources/${resource.slug}`)
-  const shareText = encodeURIComponent(resource.title + ' — via LeanOn')
+  const shareUrl = encodeURIComponent(`https://www.howwasyourday.live/resources/${resource.slug}`)
+  const shareText = encodeURIComponent(resource.title + ' — via How Was Your Day')
 
   return (
     <>
@@ -98,7 +98,7 @@ export default function ResourcePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo"><button className="btn-nav">Get support</button></a>
       </nav>
       <div className="page">
@@ -126,7 +126,7 @@ export default function ResourcePage({ params }: Props) {
         </div>
 
         <div className="cta-box">
-          <h2>Talk to a LeanOn peer listener —</h2>
+          <h2>Talk to a How Was Your Day peer listener —</h2>
           <p>Real humans with lived experience. No appointment needed. Private. Start when a listener is online.</p>
           <a href="/browse"><button className="btn">Find a listener →</button></a>
         </div>

@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Loneliness in the USA | The Quiet Isolation of Indian Life in America | LeanOn',
+  title: 'NRI Loneliness in the USA | The Quiet Isolation of Indian Life in America | How Was Your Day',
   description: 'The loneliness of being Indian in America is different — it\'s not just missing home. It\'s the immigrant weight, the performance, the unsaid. Talk to someone who gets it.',
   keywords: ['nri loneliness usa', 'indian loneliness america', 'lonely indian in usa', 'nri isolation america', 'immigrant loneliness india usa', 'missing india usa', 'nri homesickness america'],
-  alternates: { canonical: 'https://www.leanon.app/usa-loneliness' },
-  openGraph: { title: 'NRI Loneliness in the USA | The Quiet Isolation of Indian Life in America | LeanOn', description: 'The loneliness of being Indian in America is different — it\'s not just missing home. It\'s the immigrant weight, the performance, the unsaid. Talk to someone who gets it.', url: 'https://www.leanon.app/usa-loneliness', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/usa-loneliness' },
+  openGraph: { title: 'NRI Loneliness in the USA | The Quiet Isolation of Indian Life in America | How Was Your Day', description: 'The loneliness of being Indian in America is different — it\'s not just missing home. It\'s the immigrant weight, the performance, the unsaid. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/usa-loneliness', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Is NRI loneliness in America a real thing or am I being ungrateful?', acceptedAnswer: { '@type': 'Answer', text: 'It is completely real. The loneliness of immigrant life is not ingratitude — it is the genuine human cost of building a life far from everything that was familiar. You can have a good life in America and still feel lonely. The two are not incompatible.' } },
   { '@type': 'Question', name: 'What does NRI loneliness in America feel like?', acceptedAnswer: { '@type': 'Answer', text: 'It often feels like a low-grade, persistent sense that something is missing. It is not always acute. It shows up at Diwali away from home, at family occasions you miss, in conversations where you feel like a stranger, in the gap between the life you show people and the life you actually feel.' } },
-  { '@type': 'Question', name: 'Will a listener understand this even if I can\'t describe it clearly?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are Indian and many have direct experience with family abroad or with dual cultural identity. You don\'t need to describe it clearly — they already know the shape of it.' } },
+  { '@type': 'Question', name: 'Will a listener understand this even if I can\'t describe it clearly?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are Indian and many have direct experience with family abroad or with dual cultural identity. You don\'t need to describe it clearly — they already know the shape of it.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, community, or employer.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Loneliness USA', item: 'https://www.leanon.app/usa-loneliness' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Loneliness USA', item: 'https://www.howwasyourday.live/usa-loneliness' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function NriLonelinessUsaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Loneliness USA</span></nav>
         <div className="hero">
@@ -89,7 +89,7 @@ export default function NriLonelinessUsaPage() {
 
         <div className="section">
           <h2>Why It&rsquo;s Harder to Name Than It Looks</h2>
-          <p>NRI loneliness is particularly hard to name because it comes wrapped in privilege. You chose to come here. You have a good job. You live in a better house than most. Your children go to excellent schools. The people who sacrificed to get you here would be confused and hurt to hear that you feel lonely. The guilt of feeling lonely in the middle of a good life is one of the most common things Indian peer listeners at LeanOn hear.</p>
+          <p>NRI loneliness is particularly hard to name because it comes wrapped in privilege. You chose to come here. You have a good job. You live in a better house than most. Your children go to excellent schools. The people who sacrificed to get you here would be confused and hurt to hear that you feel lonely. The guilt of feeling lonely in the middle of a good life is one of the most common things Indian peer listeners at How Was Your Day hear.</p>
           <p>The thing that helps is simply being heard by someone who gets it — without the guilt, without the gratitude calculation, without having to justify the feeling. A real Indian peer listener, in India. Anonymous. Private. First 5 minutes free — one free session per account.</p>
         </div>
 

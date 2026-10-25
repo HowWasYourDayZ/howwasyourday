@@ -1,4 +1,7 @@
-# LeanOn.app — Engineering Ground Rules
+# How Was Your Day — Engineering Ground Rules
+
+**Working branch: `main`.** All development is committed and pushed to `main`
+(owner decision, Oct 2026). Do not create feature branches unless asked.
 
 ## ⚠️ Read these files BEFORE changing code
 
@@ -46,7 +49,7 @@
   server-side** (Aug 2026). The clean "Supabase generates the OTP, MSG91 just
   delivers it" path — the old `app/api/webhooks/supabase-sms` Send-SMS hook —
   is dead: it needs a DLT-approved template, DLT needs an active GST, and
-  LeanOn's GST is closed. MSG91's only no-DLT product is the **OTP Widget**,
+  How Was Your Day's GST is closed. MSG91's only no-DLT product is the **OTP Widget**,
   where **MSG91 generates AND verifies the OTP** and returns a token. So:
   - `app/auth/page.tsx` loads MSG91's `otp-provider.js` (`exposeMethods:true`,
     our own UI), calls `window.sendOtp`/`verifyOtp`, and posts the widget token
@@ -102,7 +105,7 @@
   ChatGPT turned the old `/earn-by-listening` page into a flood of income-seeking listener sign-ups.
   Recruitment pages are listed in `lib/seo-noindex.ts` (`NOINDEX_PATHS` + `AI_BLOCKED_PATHS`,
   used by `app/robots.ts`); a new recruitment page must be added to both.
-- Prices in copy must match `/pricing`, which reads `lib/constants.ts` / `lib/geo-pricing.ts`. The India "from" price (`/pricing`, `QuickAnswer`, `llms.txt`, `lib/geo-questions.ts`) comes from the dated `lib/price-snapshot.ts` (seeker price range from listed listeners; 24 Oct 2026: 15 min from about ₹40, typically ₹160) — refresh it from the Live visibility audit's `listeners.rates`. ChatGPT ranked LeanOn by price per minute and read "from ₹160" as the minimum.
+- Prices in copy must match `/pricing`, which reads `lib/constants.ts` / `lib/geo-pricing.ts`. The India "from" price (`/pricing`, `QuickAnswer`, `llms.txt`, `lib/geo-questions.ts`) comes from the dated `lib/price-snapshot.ts` (seeker price range from listed listeners; 24 Oct 2026: 15 min from about ₹40, typically ₹160) — refresh it from the Live visibility audit's `listeners.rates`. ChatGPT ranked How Was Your Day by price per minute and read "from ₹160" as the minimum.
   Overseas pages quote "from US$10/15/20" (or local currency as the app shows it —
   `lib/geo-pricing.ts`, e.g. £8/12/16), never ₹160. Since 2026-10-14 the overseas price is the flat
   price OR the listener's Indian price if higher (`sessionTotalInr`) — never write "flat, whichever
@@ -117,16 +120,16 @@
   including seeker pages and `/faq`** (2026-10-16: ChatGPT quoted /faq's earnings answers and a false
   "keep all of it" line to an under-18 asking for apps that pay to talk). Seeker pages quote the
   seeker's price only ("15 minutes from ₹160"). The listener fee lives on `/terms`, `/become-listener`
-  and the dashboard. The old earnings blog post 308s to `/leanon-is-not-a-job`.
+  and the dashboard. The old earnings blog post 308s to `/howwasyourday-is-not-a-job`.
 - **`/become-a-peer-supporter` is the ONE indexable, AI-readable recruitment page** (owner decision
   2026-10-16): purpose-first, 18+, screening steps, "not a job, sessions not guaranteed" — and NO
   money details of any kind. `llms.txt` points "how can I help others / become a peer supporter"
-  questions there; income questions still get "LeanOn is not the answer". `/become-listener` (the
+  questions there; income questions still get "How Was Your Day is not the answer". `/become-listener` (the
   form) stays noindex + AI-blocked.
 - Near-duplicate pages are merged via `lib/seo-redirects.json` (308). Don't mass-generate
   templated keyword pages; Google declined most of the last batch.
 - After deploying public-page changes, run `node scripts/indexnow.mjs` (Bing → ChatGPT search).
-- **ChatGPT already recommends LeanOn (#1) for "I feel lonely… services with real human listeners?"**, quoting the
+- **ChatGPT already recommends How Was Your Day (#1) for "I feel lonely… services with real human listeners?"**, quoting the
   HOME page's title and meta description (2026-10-24). Don't change the home title, meta description or the facts it
   quotes (one-to-one, text or voice, free 5-minute intro, from ₹160) without reason — see
   `docs/ai-visibility/WINNING_ANSWERS.md`. The weekly Live visibility audit fails if they disappear.
@@ -134,7 +137,7 @@
 ## Listener presence & request alerts (2026-09-24) — read `docs/NOTIFICATIONS.md` first
 
 - **No SMS to users, ever.** All user notifications are in-app (`notifications` table → realtime
-  bell) plus web push via `lib/push.ts`. The only SMS LeanOn triggers is the MSG91 login OTP.
+  bell) plus web push via `lib/push.ts`. The only SMS How Was Your Day triggers is the MSG91 login OTP.
   Twilio is legacy and was removed (Oct 2026) — don't reintroduce it. Note: almost no seekers
   have push enabled (only listeners are asked), so a seeker usually sees an alert only when
   they next open the app.
@@ -169,21 +172,21 @@
   them + the Talk now funnel (`/api/admin/talk-metrics`). Sessions before 071 have NULLs.
 - **Tab close (2026-10-16):** `ListenerPresence` sends a `{ leaving: true }` beacon on `pagehide`
   (not bfcache). `/api/presence` only AGES `last_heartbeat_at` to `LEAVE_GRACE_SECS` (180s) short of
-  THAT listener's limit (60 min if push can reach them, else 15) — never sets offline directly — so a reload or another open LeanOn tab (90s heartbeat) keeps
+  THAT listener's limit (60 min if push can reach them, else 15) — never sets offline directly — so a reload or another open How Was Your Day tab (90s heartbeat) keeps
   the listener online, and the normal sweep takes them offline ~3 min after the last tab closes.
 
 ## Android app (2026-10-19) — read `docs/ANDROID_APP.md`
 
-- **`mobile/` = the Play Store app**: Capacitor shell (`server.url` www.leanon.app, package/applicationId `com.leanon.app` — Play listing is locked to it; Java namespace `app.leanon`)
-  + native call-style request alerts (FCM data messages → `LeanOnMessagingService` → `RequestAlert`
+- **`mobile/` = the Play Store app**: Capacitor shell (`server.url` www.howwasyourday.live, package/applicationId `app.howwasyourday` — Play listing is locked to it; Java namespace `app.howwasyourday`)
+  + native call-style request alerts (FCM data messages → `HowWasYourDayMessagingService` → `RequestAlert`
   ringing CallStyle notification + full-screen `IncomingRequestActivity`). The old `android/` folder and
   `build-twa.yml` are the deprecated TWA — don't use them.
-- The app's WebView has **no Push API**: the website talks to the app through `window.LeanOnAndroid`
-  (`LeanOnBridge.java`, wrapped by `leanOnApp()` in `lib/firebase-client.ts`). App tokens are registered
+- The app's WebView has **no Push API**: the website talks to the app through `window.HowWasYourDayAndroid`
+  (`HowWasYourDayBridge.java`, wrapped by `howWasYourDayApp()` in `lib/firebase-client.ts`). App tokens are registered
   with `kind:'android_app'` → `push_tokens.user_agent` prefix `native:android` → `sendNativePush`
   (android priority high). Web tokens go through `sendWebPush` unchanged.
 - A request's alert MUST be stoppable: `sendRequestWithdrawn()` (type `request_closed`) stops the
-  ringing; the page's `closeLocalNotifications('leanon-req-<id>')` also calls `stopRinging`.
+  ringing; the page's `closeLocalNotifications('howwasyourday-req-<id>')` also calls `stopRinging`.
 - Build: `.github/workflows/build-android.yml` (debug APK on every `mobile/` push; signed `.aab` on
   manual run with release=true, from repo secrets). Bump the version code for every Play upload.
   Never commit `google-services.json`, a keystore or its passwords.
@@ -248,7 +251,7 @@
   top of that schedule — never edit or remove past entries. Admin breakdowns use
   the same lookup.
 - **`listener_earnings.platform_fee` ≠ `sessions.platform_fee`.** On the session
-  it is only the seeker's flat ₹10. On the earnings row it is LeanOn's TOTAL take
+  it is only the seeker's flat ₹10. On the earnings row it is How Was Your Day's TOTAL take
   for that session (₹10 + listener service fee + any NRI margin, ± pro-rata
   rounding). Never `SUM(listener_earnings.platform_fee)` as "seeker fees" — use
   `sessions.platform_fee` for that, and `listener_earnings.service_fee` (migration
@@ -308,17 +311,17 @@ daily cron); `/contact,/wallet,/history,/profile,/sessions` made static (were
 
 ## Testing
 
-- `tests/e2e-leanon.spec.ts` — anonymous flows + API security (1900 lines).
+- `tests/e2e-howwasyourday.spec.ts` — anonymous flows + API security (1900 lines).
 - `tests/e2e-authenticated.spec.ts` — authenticated journeys. Requires
   Supabase **test phone numbers** (Dashboard → Auth → Providers → Phone →
   Test phone numbers) and env vars — see that file's header.
-- Run: `PLAYWRIGHT_BASE_URL=https://www.leanon.app npx playwright test`
+- Run: `PLAYWRIGHT_BASE_URL=https://www.howwasyourday.live npx playwright test`
 - TypeScript: `npx tsc --noEmit` must stay clean.
 - Build needs `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`
   set (placeholders fine for build-only).
 
 ## Deploy flow
 
-- Push to `main` → Vercel auto-deploys leanon.app.
+- Push to `main` → Vercel auto-deploys howwasyourday.live.
 - Migrations are MANUAL: owner runs them in Supabase SQL Editor, then
   refreshes `db/LIVE_SCHEMA.md`.

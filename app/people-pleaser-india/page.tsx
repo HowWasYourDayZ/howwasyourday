@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'People Pleaser India — Exhausted from Saying Yes | LeanOn',
+  title: 'People Pleaser India — Exhausted from Saying Yes | How Was Your Day',
   description: 'You say yes to everything. You can\'t disappoint anyone. You\'ve forgotten what you actually want. Talk anonymously from ₹160.',
   keywords: ['people pleaser India', 'people pleasing India', 'can\'t say no India', 'approval seeking India', 'people pleasing exhaustion India'],
-  alternates: { canonical: 'https://www.leanon.app/people-pleaser-india', languages: { 'en-IN': 'https://www.leanon.app/people-pleaser-india' } },
-  openGraph: { title: 'People Pleaser India — Exhausted from Saying Yes | LeanOn', description: 'You say yes to everything. You can\'t disappoint anyone. You\'ve forgotten what you actually want. Talk anonymously from ₹160.', url: 'https://www.leanon.app/people-pleaser-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/people-pleaser-india', languages: { 'en-IN': 'https://www.howwasyourday.live/people-pleaser-india' } },
+  openGraph: { title: 'People Pleaser India — Exhausted from Saying Yes | How Was Your Day', description: 'You say yes to everything. You can\'t disappoint anyone. You\'ve forgotten what you actually want. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/people-pleaser-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -17,8 +17,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'People Pleaser India', item: 'https://www.leanon.app/people-pleaser-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'People Pleaser India', item: 'https://www.howwasyourday.live/people-pleaser-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function PeoplePleaseIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>People Pleaser India</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function PeoplePleaseIndiaPage() {
         <div className="section">
           <h2>Why It Is Hard to Change</h2>
           <p>Because changing the pattern feels like being selfish. You have spent years with a definition of a good person that includes never saying no. Saying no &mdash; even once, even about something small &mdash; activates enormous guilt. That guilt is not evidence that you are doing something wrong. It is evidence of how deeply the pattern is embedded.</p>
-          <p>A LeanOn listener will not tell you to just start saying no. They will listen to what the pattern has cost you and help you see it clearly, at whatever pace feels right.</p>
+          <p>A How Was Your Day listener will not tell you to just start saying no. They will listen to what the pattern has cost you and help you see it clearly, at whatever pace feels right.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>You matter too. Let someone help you remember that.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

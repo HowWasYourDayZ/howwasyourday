@@ -4,7 +4,7 @@ export const post = {
   description: 'Why overthinking gets worse at night, how to tell rumination from problem-solving, and practical things that actually help when your mind will not switch off.',
   date: '2026-08-11',
   readTime: '8 min read',
-  topics: ['overthinking', 'anxiety', 'loneliness', 'mental health India', 'LeanOn'],
+  topics: ['overthinking', 'anxiety', 'loneliness', 'mental health India', 'How Was Your Day'],
   content: `
 <p>It is somewhere between 1am and 3am. The house is quiet. Your phone is at eleven percent. And your mind is running the same three minutes of a conversation from last Tuesday for what feels like the fortieth time — except now it has also picked up your job, your parents, your money, and something embarrassing you said in 2019.</p>
 
@@ -84,11 +84,11 @@ export const post = {
 
 <p>This is why having <strong>someone to talk to at night</strong> is not a soft, optional comfort. It is one of the most reliable interrupts there is.</p>
 
-<h2>Where LeanOn Fits</h2>
+<h2>Where How Was Your Day Fits</h2>
 
 <p>The obvious problem is that 2am is exactly when nobody is available. Friends are asleep, and you do not want to wake them for something you cannot even explain properly. Therapists have office hours. So you stay in the loop by default, not by choice.</p>
 
-<p>LeanOn exists for that gap. It is a <strong>peer support India</strong> platform where you can talk to verified peer listeners — people with lived experience of the same things, chosen for how well they listen without judgment — at the hours when overthinking actually peaks. Not clinicians in role, not friends with opinions and history with your family, but people who have been through their own version of this and can offer real, empathetic understanding of it.</p>
+<p>How Was Your Day exists for that gap. It is a <strong>peer support India</strong> platform where you can talk to verified peer listeners — people with lived experience of the same things, chosen for how well they listen without judgment — at the hours when overthinking actually peaks. Not clinicians in role, not friends with opinions and history with your family, but people who have been through their own version of this and can offer real, empathetic understanding of it.</p>
 
 <p>It is anonymous, which matters in a culture where the fear of being discussed is often the thing keeping you awake. You can say the thought you would never say to anyone who knows your parents. And you can find out what it feels like with a short trial session before deciding anything.</p>
 

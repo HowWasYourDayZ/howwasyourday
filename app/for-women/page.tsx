@@ -4,7 +4,7 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'A Safe Online Service for Women in India Who Just Need Someone to Listen | LeanOn',
+  title: 'A Safe Online Service for Women in India Who Just Need Someone to Listen | How Was Your Day',
   description: 'A safe, private place for women in India to talk about marriage, relationships, in-laws, motherhood and stress. Choose a woman listener, use any name, text or voice. Listeners never see your number. First 5 minutes free.',
   keywords: [
     'emotional support for women India', 'women mental health India', 'support for women India',
@@ -16,19 +16,19 @@ export const metadata: Metadata = {
     'talk to a woman listener', 'female listener India', 'safe app for women to talk India',
     'women relationship problems India', 'married women talk to someone India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/for-women', languages: { 'en-IN': 'https://www.leanon.app/for-women' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/for-women', languages: { 'en-IN': 'https://www.howwasyourday.live/for-women' } },
   openGraph: {
-    title: 'Emotional Support for Women India | LeanOn',
+    title: 'Emotional Support for Women India | How Was Your Day',
     description: 'For women who carry everything and still feel like they are not doing enough. Talk to someone who understands.',
-    url: 'https://www.leanon.app/for-women',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/for-women',
+    siteName: 'How Was Your Day',
     type: 'website',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Emotional Support for Women India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Emotional Support for Women India' }],
   },
 }
 
 const directQuestion = "Is there a safe online service for women in India who just need someone to listen?"
-const directAnswer = "LeanOn lets adults in India request one-to-one text or voice conversations with screened peer listeners about marital loneliness, family pressure, parenting and work stress. You can choose a woman listener on Browse, use any name, and listeners never see your phone number. It offers non-clinical peer support, not therapy or couples counselling. One introductory session of up to five minutes is free per account; paid prices and listener availability vary."
+const directAnswer = "How Was Your Day lets adults in India request one-to-one text or voice conversations with screened peer listeners about marital loneliness, family pressure, parenting and work stress. You can choose a woman listener on Browse, use any name, and listeners never see your phone number. It offers non-clinical peer support, not therapy or couples counselling. One introductory session of up to five minutes is free per account; paid prices and listener availability vary."
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Is there a safe app in India where a woman can talk to someone privately?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn (www.leanon.app) is a peer support app where you talk one-to-one, by text or voice, with a screened listener in India. You use any first name you like, the listener never sees your phone number, and phone numbers, emails and social media handles are blocked in chat, so nobody can pull you onto WhatsApp or Instagram. The first 5 minutes are free; after that a 15-minute session starts at ₹160.',
+        text: 'Yes. How Was Your Day (www.howwasyourday.live) is a peer support app where you talk one-to-one, by text or voice, with a screened listener in India. You use any first name you like, the listener never sees your phone number, and phone numbers, emails and social media handles are blocked in chat, so nobody can pull you onto WhatsApp or Instagram. The first 5 minutes are free; after that a 15-minute session starts at ₹160.',
       },
     },
     {
@@ -56,12 +56,12 @@ const faqSchema = {
       name: 'Will my husband, in-laws or family find out?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Nobody is told. Your listener sees only the name you choose — not your phone number — and never meets anyone in your life. Voice calls are not recorded. Text chats are stored securely and opened only by authorised LeanOn staff if a report is reviewed. If others use your phone, remember the LeanOn app or browser history shows like any other, so use your own phone if you can.',
+        text: 'Nobody is told. Your listener sees only the name you choose — not your phone number — and never meets anyone in your life. Voice calls are not recorded. Text chats are stored securely and opened only by authorised How Was Your Day staff if a report is reviewed. If others use your phone, remember the How Was Your Day app or browser history shows like any other, so use your own phone if you can.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What do women usually talk about on LeanOn?',
+      name: 'What do women usually talk about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Feeling alone inside a marriage, a husband who does not listen, in-law pressure, fights that keep repeating, doubts about an arranged marriage, motherhood exhaustion, career breaks, family pressure to marry, and simply having nobody who asks how you are doing.',
@@ -69,10 +69,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn therapy or marriage counselling?',
+      name: 'Is How Was Your Day therapy or marriage counselling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn listeners are screened peers, not therapists or counsellors. They listen and help you think things through; they do not diagnose, give legal advice, or tell you to stay or leave. If you need therapy or couples counselling, LeanOn can sit alongside it, not replace it.',
+        text: 'No. How Was Your Day listeners are screened peers, not therapists or counsellors. They listen and help you think things through; they do not diagnose, give legal advice, or tell you to stay or leave. If you need therapy or couples counselling, How Was Your Day can sit alongside it, not replace it.',
       },
     },
     {
@@ -80,7 +80,7 @@ const faqSchema = {
       name: 'What if I am not safe at home?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are in danger, contact the police or local emergency services first. If you are in emotional crisis or thinking of harming yourself, call Tele-MANAS on 14416 or NIMHANS on 080-46110007 (free). LeanOn is for talking things through, not for emergencies.',
+        text: 'If you are in danger, contact the police or local emergency services first. If you are in emotional crisis or thinking of harming yourself, call Tele-MANAS on 14416 or NIMHANS on 080-46110007 (free). How Was Your Day is for talking things through, not for emergencies.',
       },
     },
   ],
@@ -90,8 +90,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.leanon.app/for-women' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.howwasyourday.live/for-women' },
   ],
 }
 
@@ -176,7 +176,7 @@ export default function ForWomenPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -192,7 +192,7 @@ export default function ForWomenPage() {
         <p className="lead">
           You manage the child, the house, the career, the family relationships, the finances, and the emotional labour
           of everyone around you. You do it well. And somewhere in the middle of all of that, you stopped being asked
-          how you are doing. LeanOn is a real person who will actually listen — just to you, just about you, for once.
+          how you are doing. How Was Your Day is a real person who will actually listen — just to you, just about you, for once.
         </p>
 
         <QuickAnswer question={directQuestion} answer={directAnswer} />
@@ -222,11 +222,11 @@ export default function ForWomenPage() {
         <div className="situations">
           <div className="sit"><div className="sit-icon">🏠</div><div className="sit-body"><h3>If you are at home all day</h3><p>Many homemakers talk in the quiet hours — after lunch, or once children are asleep. A 15-minute text session works without anyone hearing you, and you can stop at any time.</p></div></div>
           <div className="sit"><div className="sit-icon">💼</div><div className="sit-body"><h3>If you are a working mother</h3><p>There is no appointment, so you can use a lunch break or the commute. Choose 15 minutes if that is all you have; unused minutes go back to your wallet if you end early.</p></div></div>
-          <div className="sit"><div className="sit-icon">📱</div><div className="sit-body"><h3>If you share a phone or home</h3><p>Use text if you cannot speak freely. LeanOn appears in your browser history or app list like any other app, so use your own phone if you can. Listeners never see your number, and LeanOn never contacts your family.</p></div></div>
+          <div className="sit"><div className="sit-icon">📱</div><div className="sit-body"><h3>If you share a phone or home</h3><p>Use text if you cannot speak freely. How Was Your Day appears in your browser history or app list like any other app, so use your own phone if you can. Listeners never see your number, and How Was Your Day never contacts your family.</p></div></div>
           <div className="sit"><div className="sit-icon">🙋‍♀️</div><div className="sit-body"><h3>How to choose a woman listener</h3><p>Open <a href="/browse" style={{color:'var(--teal)',fontWeight:800}}>Browse</a>, read the profiles (first name, photo, languages, topics) and request the listener you want. Talk now picks whoever is online first, so use Browse if you would prefer a woman. A session starts when she accepts.</p></div></div>
         </div>
 
-        <h2>What Women Talk About on LeanOn</h2>
+        <h2>What Women Talk About on How Was Your Day</h2>
         <div className="topics-grid">
           {topics.map((t) => (
             <a key={t.slug} href={t.slug} className="topic-card">
@@ -244,7 +244,7 @@ export default function ForWomenPage() {
           than you have.
         </p>
         <p>
-          LeanOn is not therapy. It is screened peer support — real people who have lived through their own hard
+          How Was Your Day is not therapy. It is screened peer support — real people who have lived through their own hard
           seasons and learned to listen without fixing, without judging, and without making it about themselves.
           Sessions start at ₹160 for 15 minutes. The first 5-minute session free.
         </p>
@@ -283,7 +283,7 @@ export default function ForWomenPage() {
           <p>Browse screened peer listeners, choose a woman if you prefer, and talk by text or voice. Your number stays private.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse Listeners</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works</button></a>
           </div>
           <p className="price-note">First 5 minutes free · Sessions from ₹160 · No appointment needed</p>
         </div>

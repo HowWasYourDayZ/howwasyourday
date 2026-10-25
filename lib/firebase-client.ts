@@ -32,12 +32,12 @@ export const firebaseConfigured = Boolean(
   FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.projectId && FIREBASE_CONFIG.appId && VAPID_KEY
 )
 
-// ── Inside the LeanOn Android app (mobile/, Capacitor) ───────────────────────
+// ── Inside the How Was Your Day Android app (mobile/, Capacitor) ───────────────────────
 // The app's WebView has no Push API, so web push can't work there. Instead the
-// app exposes window.LeanOnAndroid (mobile/android/.../LeanOnBridge.java): a
+// app exposes window.HowWasYourDayAndroid (mobile/android/.../HowWasYourDayBridge.java): a
 // NATIVE FCM token whose alerts ring like a phone call. Everything below falls
 // back to the browser path when this object is absent.
-type LeanOnAndroid = {
+type HowWasYourDayAndroid = {
   isApp(): boolean
   notificationStatus(): 'granted' | 'denied' | 'prompt'
   requestNotifications(): void
@@ -48,14 +48,14 @@ type LeanOnAndroid = {
   stopRinging(sessionId: string): void
   lastPushAt(): number
 }
-export function leanOnApp(): LeanOnAndroid | null {
+export function howWasYourDayApp(): HowWasYourDayAndroid | null {
   if (typeof window === 'undefined') return null
-  const a = (window as Window & { LeanOnAndroid?: LeanOnAndroid }).LeanOnAndroid
+  const a = (window as Window & { HowWasYourDayAndroid?: HowWasYourDayAndroid }).HowWasYourDayAndroid
   try { return a && a.isApp() ? a : null } catch { return null }
 }
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms))
 
-async function registerInApp(app: LeanOnAndroid): Promise<boolean> {
+async function registerInApp(app: HowWasYourDayAndroid): Promise<boolean> {
   try {
     if (app.notificationStatus() !== 'granted') {
       app.requestNotifications()
@@ -82,7 +82,7 @@ async function registerInApp(app: LeanOnAndroid): Promise<boolean> {
 // True when this device will get request alerts without asking (permission
 // already granted) — the browser's Notification.permission, or the app's.
 export function alertsAlreadyAllowed(): boolean {
-  const app = leanOnApp()
+  const app = howWasYourDayApp()
   if (app) { try { return app.notificationStatus() === 'granted' } catch { return false } }
   return typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted'
 }
@@ -125,7 +125,7 @@ function fail(reason: string): false {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         reason,
-        permission: leanOnApp() ? `app:${leanOnApp()!.notificationStatus()}` : typeof Notification !== 'undefined' ? Notification.permission : 'n/a',
+        permission: howWasYourDayApp() ? `app:${howWasYourDayApp()!.notificationStatus()}` : typeof Notification !== 'undefined' ? Notification.permission : 'n/a',
         standalone: isStandalone(),
       }),
     }).catch(() => {})
@@ -135,7 +135,7 @@ function fail(reason: string): false {
 
 export async function registerPushNotifications(): Promise<boolean> {
   if (typeof window === 'undefined') return false
-  const app = leanOnApp()
+  const app = howWasYourDayApp()
   if (app) {
     if (inFlight) return inFlight
     inFlight = registerInApp(app)
@@ -179,7 +179,7 @@ async function doRegister(): Promise<boolean> {
     // itself has notifications switched off in the phone's settings.
     if (permission !== 'granted') return fail(`permission_${permission}`)
 
-    // The ONE LeanOn service worker (public/sw.js) — the same file
+    // The ONE How Was Your Day service worker (public/sw.js) — the same file
     // ServiceWorkerRegister installs on every page load. Registering a
     // different script at scope "/" (the old /firebase-messaging-sw.js) made
     // the two replace each other and silently dropped the push handler.
@@ -217,7 +217,7 @@ export type AlertStatus =
   | 'not_configured'  // Firebase env vars missing on this deploy
   | 'unsupported'     // browser has no Push API
   | 'ios_install'     // iPhone/iPad Safari: push only works from the home-screen app
-  | 'denied'          // listener (or the OS) blocked notifications for LeanOn
+  | 'denied'          // listener (or the OS) blocked notifications for How Was Your Day
   | 'prompt'          // not asked yet
   | 'granted'
 
@@ -235,7 +235,7 @@ function isStandalone(): boolean {
 // the dashboard so a silent failure is no longer invisible.
 export function getAlertStatus(): AlertStatus {
   if (typeof window === 'undefined') return 'unsupported'
-  const app = leanOnApp()
+  const app = howWasYourDayApp()
   if (app) { try { return app.notificationStatus() } catch { return 'unsupported' } }
   if (!firebaseConfigured) return 'not_configured'
   if (isIos() && !isStandalone()) return 'ios_install'
@@ -278,8 +278,8 @@ export async function showLocalNotification(title: string, opts: { body: string;
 // or expired, so a stale one can't send the listener to an empty dashboard.
 export async function closeLocalNotifications(tag: string) {
   // In the app, also stop the native ringing for this request.
-  const m = /^leanon-req-(.+)$/.exec(tag)
-  if (m) { try { leanOnApp()?.stopRinging(m[1]) } catch { /* ignore */ } }
+  const m = /^howwasyourday-req-(.+)$/.exec(tag)
+  if (m) { try { howWasYourDayApp()?.stopRinging(m[1]) } catch { /* ignore */ } }
   try {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return
     const reg = await navigator.serviceWorker.getRegistration('/')
@@ -292,7 +292,7 @@ export async function closeLocalNotifications(tag: string) {
 // 'shown' = displayed, 'refused' = arrived but the browser wouldn't display it,
 // 'none' = nothing arrived within `ms`. Start it BEFORE sending the test.
 export function waitForTestPush(ms: number): Promise<'shown' | 'refused' | 'none'> {
-  const app = leanOnApp()
+  const app = howWasYourDayApp()
   if (app) {
     // The app's notification service records when a push arrived.
     const before = app.lastPushAt()
@@ -304,7 +304,7 @@ export function waitForTestPush(ms: number): Promise<'shown' | 'refused' | 'none
   return new Promise(resolve => {
     if (typeof navigator === 'undefined' || !('serviceWorker' in navigator)) return resolve('none')
     const onMsg = (e: MessageEvent) => {
-      if (e.data?.type === 'leanon-test-push-received') { cleanup(); resolve(e.data.shown === false ? 'refused' : 'shown') }
+      if (e.data?.type === 'howwasyourday-test-push-received') { cleanup(); resolve(e.data.shown === false ? 'refused' : 'shown') }
     }
     const timer = setTimeout(() => { cleanup(); resolve('none') }, ms)
     function cleanup() { clearTimeout(timer); navigator.serviceWorker.removeEventListener('message', onMsg) }
@@ -318,7 +318,7 @@ export function getDeviceKind(): DeviceKind {
   if (typeof window === 'undefined') return 'desktop'
   const ua = navigator.userAgent
   if (isIos()) return 'iphone'
-  if (/Android/i.test(ua)) return (leanOnApp() || isStandalone()) ? 'android_app' : 'android_chrome'
+  if (/Android/i.test(ua)) return (howWasYourDayApp() || isStandalone()) ? 'android_app' : 'android_chrome'
   if (/Mobi/i.test(ua)) return 'other_mobile'
   return 'desktop'
 }

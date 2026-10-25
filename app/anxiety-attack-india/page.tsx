@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Anxiety Attack India — Talk Someone Through It | LeanOn',
+  title: 'Anxiety Attack India — Talk Someone Through It | How Was Your Day',
   description: 'Heart racing, can\'t breathe, doom feeling. Anxiety attacks are terrifying. After it passes, you need to talk. Anonymous support from ₹160.',
   keywords: ['anxiety attack India', 'anxiety attack support India', 'panic anxiety India', 'what to do after anxiety attack India'],
-  alternates: { canonical: 'https://www.leanon.app/anxiety-attack-india', languages: { 'en-IN': 'https://www.leanon.app/anxiety-attack-india' } },
-  openGraph: { title: 'Anxiety Attack India — Talk Someone Through It | LeanOn', description: 'Heart racing, can\'t breathe, doom feeling. Anxiety attacks are terrifying. After it passes, you need to talk. Anonymous support from ₹160.', url: 'https://www.leanon.app/anxiety-attack-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/anxiety-attack-india', languages: { 'en-IN': 'https://www.howwasyourday.live/anxiety-attack-india' } },
+  openGraph: { title: 'Anxiety Attack India — Talk Someone Through It | How Was Your Day', description: 'Heart racing, can\'t breathe, doom feeling. Anxiety attacks are terrifying. After it passes, you need to talk. Anonymous support from ₹160.', url: 'https://www.howwasyourday.live/anxiety-attack-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -18,8 +18,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Anxiety Attack India', item: 'https://www.leanon.app/anxiety-attack-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Anxiety Attack India', item: 'https://www.howwasyourday.live/anxiety-attack-india' },
 ] }
 
 const S = `
@@ -66,7 +66,7 @@ export default function AnxietyAttackIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Anxiety Attack India</span></nav>
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
@@ -85,7 +85,7 @@ export default function AnxietyAttackIndiaPage() {
         </div>
         <div className="section">
           <h2>When to Seek Professional Help</h2>
-          <p>If anxiety attacks are frequent, significantly impacting your daily functioning, or increasing in intensity over time, please consider speaking to a mental health professional. LeanOn peer support is for processing the emotional weight of anxiety &mdash; it is not a substitute for clinical care.</p>
+          <p>If anxiety attacks are frequent, significantly impacting your daily functioning, or increasing in intensity over time, please consider speaking to a mental health professional. How Was Your Day peer support is for processing the emotional weight of anxiety &mdash; it is not a substitute for clinical care.</p>
           <p>In an immediate crisis, please call NIMHANS on 080-46110007 or Tele-MANAS on 14416. Both are free and 24/7.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

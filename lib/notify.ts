@@ -9,7 +9,7 @@ function getResend(): Resend | null {
   return new Resend(process.env.RESEND_API_KEY)
 }
 
-const FROM = () => process.env.RESEND_FROM || 'LeanOn <onboarding@resend.dev>'
+const FROM = () => process.env.RESEND_FROM || 'How Was Your Day <onboarding@resend.dev>'
 
 // Escape user-supplied values before interpolating into email HTML.
 // User names are user-controlled (set in profile) — without this a name like
@@ -51,14 +51,14 @@ export async function notifySessionComplete(opts: {
     await send({
       from: FROM(),
       to: seekerEmail,
-      subject: `Your LeanOn session with ${esc(listenerName)} is complete`,
+      subject: `Your How Was Your Day session with ${esc(listenerName)} is complete`,
       html: `
         <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-          <img src="https://leanon.app/logo.png" alt="LeanOn" style="height:40px;margin-bottom:20px;" />
+          <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
           <h2 style="color:#0F4867;">Your session is complete 🙏</h2>
           <p style="color:#5A7A8A;">You just had a ${esc(durationMins)}-min ${esc(sessionType)} session with <strong>${esc(listenerName)}</strong>.</p>
           <p style="color:#5A7A8A;">We hope it helped. You can rate your session and book again anytime.</p>
-          <a href="https://leanon.app/sessions" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View my sessions →</a>
+          <a href="https://howwasyourday.live/sessions" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View my sessions →</a>
           <p style="font-size:12px;color:#8AAAB8;margin-top:24px;">In crisis? Call Tele-MANAS 14416 (free, 24/7).</p>
         </div>
       `,
@@ -73,11 +73,11 @@ export async function notifySessionComplete(opts: {
       subject: `Session complete — ₹${listenerEarning} credited to your wallet`,
       html: `
         <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-          <img src="https://leanon.app/logo.png" alt="LeanOn" style="height:40px;margin-bottom:20px;" />
+          <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
           <h2 style="color:#0F4867;">Great session, ${esc(listenerName)}! 🎉</h2>
           <p style="color:#5A7A8A;">Your ${esc(durationMins)}-min ${esc(sessionType)} session is complete.</p>
-          <p style="color:#5A7A8A;"><strong>₹${listenerEarning} has been credited to your LeanOn wallet.</strong></p>
-          <a href="https://leanon.app/dashboard" style="display:inline-block;background:#1A8FA0;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View dashboard →</a>
+          <p style="color:#5A7A8A;"><strong>₹${listenerEarning} has been credited to your How Was Your Day wallet.</strong></p>
+          <a href="https://howwasyourday.live/dashboard" style="display:inline-block;background:#1A8FA0;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View dashboard →</a>
         </div>
       `,
     })
@@ -95,14 +95,14 @@ export async function notifyWalletRecharge(opts: {
   await send({
     from: FROM(),
     to: userEmail,
-    subject: `₹${amount} added to your LeanOn wallet`,
+    subject: `₹${amount} added to your How Was Your Day wallet`,
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-        <img src="https://leanon.app/logo.png" alt="LeanOn" style="height:40px;margin-bottom:20px;" />
+        <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
         <h2 style="color:#0F4867;">Wallet topped up! 💰</h2>
-        <p style="color:#5A7A8A;">Hi ${esc(userName || 'there')}, <strong>₹${amount} has been added to your LeanOn wallet.</strong></p>
+        <p style="color:#5A7A8A;">Hi ${esc(userName || 'there')}, <strong>₹${amount} has been added to your How Was Your Day wallet.</strong></p>
         <p style="color:#5A7A8A;">You're all set to book a session. Browse available listeners now.</p>
-        <a href="https://leanon.app/browse" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">Browse listeners →</a>
+        <a href="https://howwasyourday.live/browse" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">Browse listeners →</a>
       </div>
     `,
   })
@@ -122,7 +122,7 @@ export async function notifyPayoutRequested(opts: {
     subject: `Payout of ₹${amount} requested — we'll process it in 3 business days`,
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-        <img src="https://leanon.app/logo.png" alt="LeanOn" style="height:40px;margin-bottom:20px;" />
+        <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
         <h2 style="color:#0F4867;">Payout request received 🏦</h2>
         <p style="color:#5A7A8A;">Hi ${esc(listenerName)}, your request to withdraw <strong>₹${amount}</strong> has been received.</p>
         <p style="color:#5A7A8A;">We'll transfer it to your registered bank account within <strong>3 business days</strong>.</p>

@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Existential Crisis India — What\'s the Point? You\'re Not Alone. | LeanOn',
+  title: 'Existential Crisis India — What\'s the Point? You\'re Not Alone. | How Was Your Day',
   description: 'Questioning everything — your job, your relationships, your purpose? Existential crisis hits hard in India. Talk to someone real. From ₹160.',
   keywords: [
     'existential crisis india', 'what is the point india', 'meaning of life india',
     'identity crisis india', 'life purpose india', 'existential dread india',
     'why am I here india', 'questioning everything india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/existential-crisis-india', languages: { 'en-IN': 'https://www.leanon.app/existential-crisis-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/existential-crisis-india', languages: { 'en-IN': 'https://www.howwasyourday.live/existential-crisis-india' } },
   openGraph: {
-    title: 'Existential Crisis India — What\'s the Point? You\'re Not Alone. | LeanOn',
+    title: 'Existential Crisis India — What\'s the Point? You\'re Not Alone. | How Was Your Day',
     description: 'Questioning everything — your job, your relationships, your purpose? Existential crisis hits hard in India. Talk to someone real. From ₹160.',
-    url: 'https://www.leanon.app/existential-crisis-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/existential-crisis-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Existential Crisis India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Existential Crisis India' }],
   },
 }
 
@@ -43,7 +43,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will talking help?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not by answering the questions. But by reducing the isolation of carrying them. Existential crisis is particularly lonely because most people in your life will either panic, offer platitudes, or try to argue you out of the questions. A LeanOn listener will do none of these things. They will be with you in the questions. That alone changes the experience significantly.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Not by answering the questions. But by reducing the isolation of carrying them. Existential crisis is particularly lonely because most people in your life will either panic, offer platitudes, or try to argue you out of the questions. A How Was Your Day listener will do none of these things. They will be with you in the questions. That alone changes the experience significantly.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Existential Crisis India', item: 'https://www.leanon.app/existential-crisis-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Existential Crisis India', item: 'https://www.howwasyourday.live/existential-crisis-india' },
   ],
 }
 
@@ -110,7 +110,7 @@ export default function ExistentialCrisisIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -154,7 +154,7 @@ export default function ExistentialCrisisIndiaPage() {
 
         <div className="section">
           <h2>Why a Peer Listener Helps</h2>
-          <p>A LeanOn peer listener who has navigated their own existential questions can hold the uncertainty without flinching. They are not invested in a particular answer. They do not need you to resolve the questions quickly. They can be present with you in the questions &mdash; which is, for existential crises, the most valuable kind of support there is.</p>
+          <p>A How Was Your Day peer listener who has navigated their own existential questions can hold the uncertainty without flinching. They are not invested in a particular answer. They do not need you to resolve the questions quickly. They can be present with you in the questions &mdash; which is, for existential crises, the most valuable kind of support there is.</p>
           <p>You are not looking to be argued out of the questions. You are looking for someone to share the weight of them with. That is precisely what peer support offers.</p>
         </div>
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Tarot Card Reader Alternative India — Real Human Support Instead | LeanOn',
+  title: 'Tarot Card Reader Alternative India — Real Human Support Instead | How Was Your Day',
   description: 'Thinking of calling a tarot reader for emotional support? You need a real human peer listener — not predictions. Anonymous, from ₹160.',
   keywords: [
     'tarot reader alternative india', 'tarot card reader india emotional support',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     'online pandit alternative india', 'jyotish alternative india',
     'vedic astrologer alternative india', 'tarot alternative india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/tarot-alternative-india', languages: { 'en-IN': 'https://www.leanon.app/tarot-alternative-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/tarot-alternative-india', languages: { 'en-IN': 'https://www.howwasyourday.live/tarot-alternative-india' } },
   openGraph: {
-    title: 'Tarot Card Reader Alternative India — Real Human Support Instead | LeanOn',
+    title: 'Tarot Card Reader Alternative India — Real Human Support Instead | How Was Your Day',
     description: 'Thinking of calling a tarot reader for emotional support? You need a real human peer listener — not predictions. Anonymous, from ₹160.',
-    url: 'https://www.leanon.app/tarot-alternative-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/tarot-alternative-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Tarot Alternative India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Tarot Alternative India' }],
   },
 }
 
@@ -28,13 +28,13 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn like a tarot reader?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn listeners do not give predictions, read cards, or interpret signs. They listen to what you are going through, reflect it back, and support you in processing it. The experience is similar to a good conversation with someone who understands &mdash; not a reading session.' },
+      name: 'Is How Was Your Day like a tarot reader?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners do not give predictions, read cards, or interpret signs. They listen to what you are going through, reflect it back, and support you in processing it. The experience is similar to a good conversation with someone who understands &mdash; not a reading session.' },
     },
     {
       '@type': 'Question',
       name: 'Does it give predictions?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn does not make predictions about your future. What it does offer is a real human who is fully present with your present &mdash; what you are carrying now, how you are feeling now, what you need right now. That is often more useful than a prediction.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day does not make predictions about your future. What it does offer is a real human who is fully present with your present &mdash; what you are carrying now, how you are feeling now, what you need right now. That is often more useful than a prediction.' },
     },
     {
       '@type': 'Question',
@@ -44,12 +44,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is it anonymous?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. A listener sees only the name you choose. No social connection, no profile visible to others, and what you say is never shared outside LeanOn.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. A listener sees only the name you choose. No social connection, no profile visible to others, and what you say is never shared outside How Was Your Day.' },
     },
     {
       '@type': 'Question',
       name: 'What if I believe in astrology?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is not anti-astrology. Many people who use LeanOn also consult astrologers. The point is simply that when you need emotional support &mdash; to be heard, to process something heavy, to feel understood &mdash; a peer listener provides that more directly than a reading. You can believe in both.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is not anti-astrology. Many people who use How Was Your Day also consult astrologers. The point is simply that when you need emotional support &mdash; to be heard, to process something heavy, to feel understood &mdash; a peer listener provides that more directly than a reading. You can believe in both.' },
     },
   ],
 }
@@ -58,8 +58,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Tarot Alternative India', item: 'https://www.leanon.app/tarot-alternative-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Tarot Alternative India', item: 'https://www.howwasyourday.live/tarot-alternative-india' },
   ],
 }
 
@@ -118,7 +118,7 @@ export default function TarotAlternativeIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -131,7 +131,7 @@ export default function TarotAlternativeIndiaPage() {
         <div className="hero">
           <p className="badge">Real Support &middot; No Predictions &middot; From &#8377;160</p>
           <h1>You&apos;re not really looking for a tarot reading. <em>You&apos;re looking for someone to talk to.</em></h1>
-          <p className="lead">Most people who call tarot readers or astrologers aren&apos;t looking for predictions. They&apos;re carrying something heavy and want to say it to someone &mdash; anyone &mdash; who will listen and not judge. That&apos;s exactly what LeanOn does, without the mysticism.</p>
+          <p className="lead">Most people who call tarot readers or astrologers aren&apos;t looking for predictions. They&apos;re carrying something heavy and want to say it to someone &mdash; anyone &mdash; who will listen and not judge. That&apos;s exactly what How Was Your Day does, without the mysticism.</p>
           <a href="/browse" className="cta-hero">Find a listener &rarr;</a>
         </div>
 
@@ -151,15 +151,15 @@ export default function TarotAlternativeIndiaPage() {
             <li>The relief of saying difficult things to someone with no stake in the outcome</li>
             <li>The comfort of someone saying &ldquo;this makes sense, you are not crazy&rdquo;</li>
           </ul>
-          <p>A peer listener on LeanOn provides all of this, without the prediction layer. The conversation is yours entirely. No framework is imposed. The listener hears what you say and reflects it back &mdash; giving you a clearer picture of your own situation through the process of being genuinely heard.</p>
+          <p>A peer listener on How Was Your Day provides all of this, without the prediction layer. The conversation is yours entirely. No framework is imposed. The listener hears what you say and reflects it back &mdash; giving you a clearer picture of your own situation through the process of being genuinely heard.</p>
         </div>
 
         <div className="section">
-          <h2>Comparison: Tarot Reader vs LeanOn</h2>
+          <h2>Comparison: Tarot Reader vs How Was Your Day</h2>
           <div style={{overflowX:'auto'}}>
             <table className="compare-table">
               <thead>
-                <tr><th>Dimension</th><th>Tarot Reader</th><th>LeanOn Peer Listener</th></tr>
+                <tr><th>Dimension</th><th>Tarot Reader</th><th>How Was Your Day Peer Listener</th></tr>
               </thead>
               <tbody>
                 <tr><td>Cost</td><td>&#8377;500&ndash;2,000 per session</td><td>From &#8377;160 for 15 minutes</td></tr>

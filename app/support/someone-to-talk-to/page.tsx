@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Someone to Talk To in India | Peer Support & Pricing | LeanOn',
+  title: 'Someone to Talk To in India | Peer Support & Pricing | How Was Your Day',
   description: 'Talk one-to-one with a screened peer listener about loneliness, work stress or relationship difficulties. One free 5-minute introduction per account; example: 15 minutes at ₹10/min costs ₹160 including the ₹10 platform fee.',
-  alternates: { canonical: 'https://www.leanon.app/support/someone-to-talk-to', languages: { 'en-IN': 'https://www.leanon.app/support/someone-to-talk-to' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/someone-to-talk-to', languages: { 'en-IN': 'https://www.howwasyourday.live/support/someone-to-talk-to' } },
   openGraph: {
-    title: 'Someone to Talk To in India | LeanOn Peer Listeners',
+    title: 'Someone to Talk To in India | How Was Your Day Peer Listeners',
     description: 'Browse real peer-listener profiles and availability. One free 5-minute introduction per account; clear pay-per-session pricing, with no subscription.',
-    url: 'https://www.leanon.app/support/someone-to-talk-to',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/someone-to-talk-to',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -53,7 +53,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How quickly can I talk to someone on LeanOn?',
+      name: 'How quickly can I talk to someone on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sign in with phone OTP, browse the live listener directory and send a request to an available listener. There is no advance appointment, but an immediate start depends on who is online and accepts. One 5-minute introductory session is free per account. Paid India sessions are priced at the selected listener rate × minutes plus a ₹10 platform fee; a 15-minute session at ₹10/min costs ₹160. Exact prices are shown before you begin.',
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Someone to Talk To', item: 'https://www.leanon.app/support/someone-to-talk-to' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Someone to Talk To', item: 'https://www.howwasyourday.live/support/someone-to-talk-to' },
   ],
 }
 
@@ -133,7 +133,7 @@ export default function SomeoneToTalkToPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -148,7 +148,7 @@ export default function SomeoneToTalkToPage() {
         <div className="hero">
           <p className="tag">Peer Support · Someone to Talk To India</p>
           <h1>Need Someone to Talk To? <em>Real Peer Listeners</em> in India</h1>
-          <p className="lead">Sometimes you need to say it out loud to another human being. LeanOn lets you browse screened peer listeners for one-to-one text or voice conversations about relationship stress, family pressure, work, loneliness or a difficult day. No advance appointment is needed; a conversation starts when an available listener accepts.</p>
+          <p className="lead">Sometimes you need to say it out loud to another human being. How Was Your Day lets you browse screened peer listeners for one-to-one text or voice conversations about relationship stress, family pressure, work, loneliness or a difficult day. No advance appointment is needed; a conversation starts when an available listener accepts.</p>
         </div>
 
         {/* Why It's Hard to Find Someone to Talk To */}
@@ -166,28 +166,28 @@ export default function SomeoneToTalkToPage() {
           <p>In Indian social contexts, what you share with people who know you stays with them — and changes how they see you, sometimes permanently. Admitting that you are struggling, scared, or confused can feel like it carries a real social cost. The concern is not irrational, and it stops millions of people from ever saying out loud what they most need to say.</p>
 
           <h3>Not Knowing Where to Turn</h3>
-          <p>Therapy is often too expensive, too clinical, or too far away. Helplines can feel impersonal. Apps full of breathing exercises miss the point. What you actually want is a real human conversation — and that is exactly what LeanOn provides.</p>
+          <p>Therapy is often too expensive, too clinical, or too far away. Helplines can feel impersonal. Apps full of breathing exercises miss the point. What you actually want is a real human conversation — and that is exactly what How Was Your Day provides.</p>
         </div>
 
         {/* What a Peer Listener Offers */}
         <div className="section">
           <h2>What a Peer Listener Offers</h2>
-          <p>A LeanOn peer listener is a real person — not a bot, not a professional following a protocol — who has been through difficult experiences themselves and signed up specifically to be present for others going through hard times.</p>
+          <p>A How Was Your Day peer listener is a real person — not a bot, not a professional following a protocol — who has been through difficult experiences themselves and signed up specifically to be present for others going through hard times.</p>
 
           <h3>Someone Who Has Actually Been There</h3>
-          <p>The difference between being heard by someone who understands from lived experience versus someone who simply has sympathy is profound. LeanOn listeners are selected based on personal experience with the challenges they support. When they say &quot;I understand&quot; — they mean it in the most literal sense possible.</p>
+          <p>The difference between being heard by someone who understands from lived experience versus someone who simply has sympathy is profound. How Was Your Day listeners are selected based on personal experience with the challenges they support. When they say &quot;I understand&quot; — they mean it in the most literal sense possible.</p>
 
           <h3>Complete Freedom to Be Honest</h3>
           <p>Because the listener has no stake in your life — no shared history, no social consequence, no opinion to protect — you can say exactly what you feel without editing yourself. That level of honesty can feel easier when the listener is outside your personal circle. For many people it is the first time they have ever said out loud what they have been carrying inside.</p>
 
           <h3>Present and Fully Attentive</h3>
-          <p>In a LeanOn session, the listener&apos;s sole role is to be present with you. No distractions, no split attention, no rushing to their own thoughts. Just focused, full attention on what you are sharing — which is something most of us rarely experience even from the people closest to us.</p>
+          <p>In a How Was Your Day session, the listener&apos;s sole role is to be present with you. No distractions, no split attention, no rushing to their own thoughts. Just focused, full attention on what you are sharing — which is something most of us rarely experience even from the people closest to us.</p>
         </div>
 
         {/* Common Topics */}
         <div className="section">
           <h2>Common Topics People Talk About</h2>
-          <p>There is no topic too small and no threshold of severity required. People talk to LeanOn listeners about:</p>
+          <p>There is no topic too small and no threshold of severity required. People talk to How Was Your Day listeners about:</p>
           <ul>
             <li>Loneliness and feeling disconnected, even when surrounded by people</li>
             <li>Relationship stress — with partners, parents, siblings, or friends</li>
@@ -210,10 +210,10 @@ export default function SomeoneToTalkToPage() {
           <p>A therapist is a licensed professional who works within a clinical framework — diagnosing conditions, applying evidence-based interventions, and tracking therapeutic progress over time. That structure is exactly right for people who need clinical care. But many people do not need treatment. They need to be heard by someone who has been through something similar and come out the other side.</p>
 
           <h3>Accessibility and Affordability</h3>
-          <p>Clinical therapy and peer support are different services, so price is not a like-for-like comparison. On LeanOn, one 5-minute introductory session is free per account. In India, a paid session costs the selected listener&apos;s per-minute rate multiplied by the session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Check <a href="/pricing" style={{color:'var(--teal)',fontWeight:700}}>current pricing</a>; the exact price is displayed before you start.</p>
+          <p>Clinical therapy and peer support are different services, so price is not a like-for-like comparison. On How Was Your Day, one 5-minute introductory session is free per account. In India, a paid session costs the selected listener&apos;s per-minute rate multiplied by the session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Check <a href="/pricing" style={{color:'var(--teal)',fontWeight:700}}>current pricing</a>; the exact price is displayed before you start.</p>
 
           <h3>Complementary, Not Competing</h3>
-          <p>Many people use peer support alongside therapy — as a way to process between clinical sessions, access support when a therapist is not available, or take a meaningful first step before they are ready for formal treatment. LeanOn listeners are screened and expected to recognise when someone might benefit from professional care and will gently say so when that appears to be the case.</p>
+          <p>Many people use peer support alongside therapy — as a way to process between clinical sessions, access support when a therapist is not available, or take a meaningful first step before they are ready for formal treatment. How Was Your Day listeners are screened and expected to recognise when someone might benefit from professional care and will gently say so when that appears to be the case.</p>
         </div>
 
         {/* Getting Started */}
@@ -272,21 +272,21 @@ export default function SomeoneToTalkToPage() {
             <div className="faq-a">Therapy is clinical — licensed professionals, diagnosis, and structured treatment. Peer support is human — real people with lived experience, screened for listening without judgment. Peer support is especially useful when you need to be heard rather than treated, and it is far more accessible and affordable as a first step.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How quickly can I talk to someone on LeanOn?</div>
+            <div className="faq-q">How quickly can I talk to someone on How Was Your Day?</div>
             <div className="faq-a">Sign in with phone OTP, browse the live listener directory and send a request to an available listener. There is no advance appointment, but an immediate start depends on who is online and accepts. One 5-minute introductory session is free per account. Paid prices are shown before you start.</div>
           </div>
         </div>
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>Peer support is not a substitute for professional mental health care.</strong> LeanOn listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
+          <p><strong>Peer support is not a substitute for professional mental health care.</strong> How Was Your Day listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
           <p><strong>Crisis helplines in India:</strong> NIMHANS — <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:700}}>080-46110007</a> &nbsp;|&nbsp; Tele-MANAS — <a href="tel:14416" style={{color:'#7A5020',fontWeight:700}}>14416</a> (free · 24/7 · Govt of India)</p>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support on LeanOn:</p>
+          <p>Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/emotional-support" className="related-link">Emotional Support</a>
             <a href="/support/anonymous-support" className="related-link">Anonymous Support</a>

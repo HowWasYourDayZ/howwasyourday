@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Growing Up Hard in India — Emotional Support for Childhood Trauma | LeanOn',
+  title: 'Growing Up Hard in India — Emotional Support for Childhood Trauma | How Was Your Day',
   description: 'A difficult teenage years — absent parent, bad company, early responsibilities — leaves marks that show up decades later. You don\'t have to understand it to talk about it.',
   keywords: [
     'childhood trauma India', 'teenage trauma India', 'absent father India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'dysfunctional family India', 'emotional neglect childhood India', 'processing childhood India',
     'family trauma India', 'adolescent trauma India support',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/childhood-trauma-india', languages: { 'en-IN': 'https://www.leanon.app/support/childhood-trauma-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/childhood-trauma-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/childhood-trauma-india' } },
   openGraph: {
-    title: 'Growing Up Hard in India — Emotional Support for Childhood Trauma | LeanOn',
+    title: 'Growing Up Hard in India — Emotional Support for Childhood Trauma | How Was Your Day',
     description: 'Difficult teenage years leave marks that show up decades later. You don\'t need a diagnosis to deserve support.',
-    url: 'https://www.leanon.app/support/childhood-trauma-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/childhood-trauma-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Childhood Trauma Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Childhood Trauma Support India' }],
   },
 }
 
@@ -30,7 +30,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Do I need a therapist for childhood trauma or can peer support help?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Both can be valuable, and they serve different purposes. A therapist — particularly one trained in trauma-informed care — can help you process what happened at a deeper structural level over time. Peer support through LeanOn is different: it is a real person who has also carried difficult experiences, listening without judgment, helping you feel less alone in what you are carrying. For many people, peer support is the first place they have ever spoken these things out loud — and that first speaking matters enormously. If professional therapy is accessible to you, pursue it alongside peer support. If it is not currently accessible, peer support is not nothing.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Both can be valuable, and they serve different purposes. A therapist — particularly one trained in trauma-informed care — can help you process what happened at a deeper structural level over time. Peer support through How Was Your Day is different: it is a real person who has also carried difficult experiences, listening without judgment, helping you feel less alone in what you are carrying. For many people, peer support is the first place they have ever spoken these things out loud — and that first speaking matters enormously. If professional therapy is accessible to you, pursue it alongside peer support. If it is not currently accessible, peer support is not nothing.' },
     },
     {
       '@type': 'Question',
@@ -40,7 +40,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'I love my family — can I still talk about what happened?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Loving your family and naming what was hard about growing up are not mutually exclusive. In fact, the coexistence of love and grief about a family is one of the most common and least-discussed experiences people carry. You can love a parent who was absent and also grieve the absence. You can be grateful for what your family provided and also hold the pain of what was missing. You do not have to resolve this contradiction before you are allowed to talk about it. A LeanOn listener will not ask you to choose between love and honesty.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Loving your family and naming what was hard about growing up are not mutually exclusive. In fact, the coexistence of love and grief about a family is one of the most common and least-discussed experiences people carry. You can love a parent who was absent and also grieve the absence. You can be grateful for what your family provided and also hold the pain of what was missing. You do not have to resolve this contradiction before you are allowed to talk about it. A How Was Your Day listener will not ask you to choose between love and honesty.' },
     },
     {
       '@type': 'Question',
@@ -64,9 +64,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Childhood Trauma India', item: 'https://www.leanon.app/support/childhood-trauma-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Childhood Trauma India', item: 'https://www.howwasyourday.live/support/childhood-trauma-india' },
   ],
 }
 
@@ -125,7 +125,7 @@ export default function ChildhoodTraumaIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -181,14 +181,14 @@ export default function ChildhoodTraumaIndiaPage() {
           <h2>You Don&apos;t Need a Diagnosis to Deserve Support</h2>
           <p>Mental health support in India is still largely framed around acute illness — depression, anxiety disorders, serious psychiatric conditions. The idea that you might need support simply because you had a difficult adolescence that you have never had space to process is not well understood culturally, and many people find themselves unable to justify seeking help because they do not have a diagnosis, because things are not &quot;bad enough,&quot; because they are functioning.</p>
           <p>But support is not for crises only. Support is for the ordinary, invisible weight of having grown up hard — of having had experiences that shaped you in ways you are still discovering. You do not need to be falling apart to deserve someone to talk to. The threshold is simply: something in your history is affecting your present, and you have never had space to say it out loud.</p>
-          <p>LeanOn listeners are not therapists. But they are people who have navigated their own difficult histories — who understand from the inside what it means to carry something from your past that you have never fully named. That understanding is not nothing. It is often the first thing that makes speaking possible.</p>
+          <p>How Was Your Day listeners are not therapists. But they are people who have navigated their own difficult histories — who understand from the inside what it means to carry something from your past that you have never fully named. That understanding is not nothing. It is often the first thing that makes speaking possible.</p>
         </div>
 
         <div className="section">
           <h2>A Space to Say the Real Version</h2>
           <p>Most of us have never told the real version of our childhood to another person. We have the official version — the one we give when asked, that focuses on what was good, that protects the family, that does not invite too many follow-up questions. And then there is the real version — the texture of what it actually felt like, the specific moments, the things we absorbed and never said, the grief we are still carrying for the child we were.</p>
           <p>The real version deserves to be spoken. Not because speaking it fixes everything — it does not — but because carrying an untold story in silence, for years, is its own kind of weight. Language changes things. Being heard changes things. The experience of saying &quot;this is what it was actually like&quot; to someone who does not need you to protect their feelings, who does not have a stake in the family narrative, who simply receives it — that is different from anything most people have had access to.</p>
-          <p>A session on LeanOn is anonymous. The listener has no connection to your family. You can say the real version, and they will hold it carefully and with respect.</p>
+          <p>A session on How Was Your Day is anonymous. The listener has no connection to your family. You can say the real version, and they will hold it carefully and with respect.</p>
         </div>
 
         <div className="section">

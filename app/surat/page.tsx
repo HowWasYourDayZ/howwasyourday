@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Surat — Peer Listeners | LeanOn',
+  title: 'Emotional Support in Surat — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Surat, Gujarat. Talk anonymously about business pressure, family expectations, diamond industry stress. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/surat', languages: { 'en-IN': 'https://www.leanon.app/surat' } },
-  keywords: 'peer support Surat, emotional support Surat, business stress Surat Gujarat, family pressure Surat, talk to someone Surat, leanon Surat',
+  alternates: { canonical: 'https://www.howwasyourday.live/surat', languages: { 'en-IN': 'https://www.howwasyourday.live/surat' } },
+  keywords: 'peer support Surat, emotional support Surat, business stress Surat Gujarat, family pressure Surat, talk to someone Surat, howwasyourday Surat',
   openGraph: {
-    title: 'Emotional Support in Surat — Peer Listeners | LeanOn',
+    title: 'Emotional Support in Surat — Peer Listeners | How Was Your Day',
     description: 'Connect with peer listeners in Surat, Gujarat. Talk anonymously about business pressure, family expectations, diamond industry stress. No appointment needed.',
-    url: 'https://www.leanon.app/surat',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/surat',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -27,13 +27,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What kinds of things do Surat users talk about on LeanOn?',
+      name: 'What kinds of things do Surat users talk about on How Was Your Day?',
       acceptedAnswer: { '@type': 'Answer', text: 'Common themes include: the pressure of running or working in a family business, the stress of the diamond or textile trade and its volatility, family expectations around marriage especially for those who have achieved financial stability, the difficulty of setting personal boundaries in tightly knit Gujarati community structures, and the loneliness of high-performance working life.' },
     },
     {
       '@type': 'Question',
       name: 'Is Surat a city where mental health support is accessible?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Mental health awareness is growing in Surat, but the culture around admitting struggle remains difficult. In a community where resilience and hustle are deeply valued, saying "I am struggling emotionally" can feel like weakness. LeanOn offers a space completely outside the community network, where you can be honest without any social consequence.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Mental health awareness is growing in Surat, but the culture around admitting struggle remains difficult. In a community where resilience and hustle are deeply valued, saying "I am struggling emotionally" can feel like weakness. How Was Your Day offers a space completely outside the community network, where you can be honest without any social consequence.' },
     },
     {
       '@type': 'Question',
@@ -42,8 +42,8 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available for people in Surat?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn is available anywhere in India with a smartphone and internet connection. You do not need to travel to Mumbai or another metro. Sessions start from &#8377;160 for 15 minutes, any time, from your phone.' },
+      name: 'Is How Was Your Day available for people in Surat?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is available anywhere in India with a smartphone and internet connection. You do not need to travel to Mumbai or another metro. Sessions start from &#8377;160 for 15 minutes, any time, from your phone.' },
     },
   ],
 }
@@ -52,17 +52,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Surat', item: 'https://www.leanon.app/surat' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Surat', item: 'https://www.howwasyourday.live/surat' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/surat',
+  url: 'https://www.howwasyourday.live/surat',
   areaServed: { '@type': 'City', name: 'Surat', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -119,7 +119,7 @@ export default function SuratPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">
@@ -130,7 +130,7 @@ export default function SuratPage() {
         <div className="hero">
           <p className="tag">Peer Support &middot; Surat</p>
           <h1>Peer Support in Surat &mdash; Someone to Lean On in <em>the Diamond City</em></h1>
-          <p className="lead">Surat runs on hustle. Business pressure, family expectations around success, the Gujarati culture of resilience that makes it hard to admit when the weight is too much. LeanOn connects you with peer listeners who understand what it means to carry that weight quietly.</p>
+          <p className="lead">Surat runs on hustle. Business pressure, family expectations around success, the Gujarati culture of resilience that makes it hard to admit when the weight is too much. How Was Your Day connects you with peer listeners who understand what it means to carry that weight quietly.</p>
         </div>
         <div className="section">
           <h2>Surat&apos;s Unique Emotional Pressures</h2>
@@ -144,8 +144,8 @@ export default function SuratPage() {
           <p>In Surat&apos;s social fabric, marriage readiness is often linked to a financial threshold. Young professionals &mdash; men especially &mdash; feel the pressure to reach a certain level of business success before they are considered suitable matches. For women, the timing pressures are different but equally real. Both face a social clock that runs alongside the business calendar.</p>
         </div>
         <div className="section">
-          <h2>How LeanOn Works in Surat</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, no appointment, from your phone.</p>
+          <h2>How It Works in Surat</h2>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, no appointment, from your phone.</p>
           <p>The listener is a real Indian person, screened for active listening. They have no connection to your business network, your family, or your community. Your listener never sees your phone number, and nothing is shared with anyone in your life.</p>
         </div>
         <div className="section">
@@ -158,7 +158,7 @@ export default function SuratPage() {
           ))}
         </div>
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
+          <p><strong>How Was Your Day is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
           <p>Crisis support: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> (free, 24/7, Government of India).</p>
         </div>
         <div className="cta-card">

@@ -3,23 +3,23 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Having a Bad Day? Talk to Someone Right Now | LeanOn India',
+  title: 'Having a Bad Day? Talk to Someone Right Now | How Was Your Day India',
   description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. First 5 minutes free.',
   keywords: ['bad day India', 'having a bad day India', 'everything went wrong India', 'just want to vent India', 'talk to someone bad day India'],
-  alternates: { canonical: 'https://www.leanon.app/bad-day-india', languages: { 'en-IN': 'https://www.leanon.app/bad-day-india' } },
-  openGraph: { title: 'Having a Bad Day? Talk to Someone Right Now | LeanOn India', description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. First 5 minutes free.', url: 'https://www.leanon.app/bad-day-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/bad-day-india', languages: { 'en-IN': 'https://www.howwasyourday.live/bad-day-india' } },
+  openGraph: { title: 'Having a Bad Day? Talk to Someone Right Now | How Was Your Day India', description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. First 5 minutes free.', url: 'https://www.howwasyourday.live/bad-day-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    {'@type': 'Question', name: 'Do I need a specific reason to use LeanOn?', acceptedAnswer: {'@type': 'Answer', text: 'No. "I had a bad day and I need to talk to someone" is reason enough.'}},
+    {'@type': 'Question', name: 'Do I need a specific reason to use How Was Your Day?', acceptedAnswer: {'@type': 'Answer', text: 'No. "I had a bad day and I need to talk to someone" is reason enough.'}},
     {'@type': 'Question', name: 'How quickly can I start a session?', acceptedAnswer: {'@type': 'Answer', text: 'Immediately. Browse listeners who are online right now and start a session. No appointment, no form, no assessment. The first 5 minutes are free.'}},
     {'@type': 'Question', name: 'What if I can\'t afford it?', acceptedAnswer: {'@type': 'Answer', text: 'Your first 5-minute session is free with no charge. Sessions start at ₹160 if you continue beyond that. There is no subscription.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Having a Bad Day? Talk to Someone Right Now', item: 'https://www.leanon.app/bad-day-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Having a Bad Day? Talk to Someone Right Now', item: 'https://www.howwasyourday.live/bad-day-india' },
 ] }
 
 const S = `
@@ -66,7 +66,7 @@ export default function BadDayIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Having a Bad Day? Talk to Someone Right Now</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function BadDayIndiaPage() {
         </div>
         <div className="section">
           <h2>No Appointment, No Commitment</h2>
-          <p>You do not need to be in crisis. You do not need to have a serious mental health issue. You just need to talk. There is no appointment on LeanOn &mdash; browse listeners who are online, start a session, the first 5 minutes are free. If it helps, continue. If not, you stop and pay nothing.</p>
+          <p>You do not need to be in crisis. You do not need to have a serious mental health issue. You just need to talk. There is no appointment on How Was Your Day &mdash; browse listeners who are online, start a session, the first 5 minutes are free. If it helps, continue. If not, you stop and pay nothing.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>Start talking. Right now.</h2><p>Real person. No judgment. First 5 minutes free. From ₹160.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

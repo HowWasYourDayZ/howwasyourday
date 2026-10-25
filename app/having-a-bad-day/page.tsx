@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Having a Bad Day? Talk It Out With a Real Listener | LeanOn India',
-  description: 'When the day has gone sideways and you need someone to hear you — LeanOn connects you with a real peer listener in India in minutes. Private, no appointment.',
+  title: 'Having a Bad Day? Talk It Out With a Real Listener | How Was Your Day India',
+  description: 'When the day has gone sideways and you need someone to hear you — How Was Your Day connects you with a real peer listener in India in minutes. Private, no appointment.',
   keywords: [
     'having a bad day India', 'bad day what to do India',
     'my day is going terrible India', 'bad day at work India',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'I am having a terrible day India', 'bad day quick support India',
     'reset after a bad morning India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/having-a-bad-day', languages: { 'en-IN': 'https://www.leanon.app/having-a-bad-day' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/having-a-bad-day', languages: { 'en-IN': 'https://www.howwasyourday.live/having-a-bad-day' } },
   openGraph: {
-    title: 'Having a Bad Day? Talk It Out With a Real Listener | LeanOn India',
-    description: 'When the day has gone sideways and you need someone to hear you — LeanOn connects you with a real peer listener in India in minutes. Private, no appointment.',
-    url: 'https://www.leanon.app/having-a-bad-day',
-    siteName: 'LeanOn',
+    title: 'Having a Bad Day? Talk It Out With a Real Listener | How Was Your Day India',
+    description: 'When the day has gone sideways and you need someone to hear you — How Was Your Day connects you with a real peer listener in India in minutes. Private, no appointment.',
+    url: 'https://www.howwasyourday.live/having-a-bad-day',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Having a Bad Day' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Having a Bad Day' }],
   },
 }
 
@@ -33,7 +33,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What should I do when I\'m having a really bad day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The most effective thing — backed by both research and the experience of most people who try it — is to say it out loud to another person before it compounds. Not to analyse it. Not to fix it. Just to get it outside your head and into the world where it stops circling. A 15-minute conversation with a peer listener on LeanOn often turns a day that was going to be a write-off into one where you can actually function.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The most effective thing — backed by both research and the experience of most people who try it — is to say it out loud to another person before it compounds. Not to analyse it. Not to fix it. Just to get it outside your head and into the world where it stops circling. A 15-minute conversation with a peer listener on How Was Your Day often turns a day that was going to be a write-off into one where you can actually function.' },
     },
     {
       '@type': 'Question',
@@ -58,7 +58,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How fast can I talk to someone when my day is going badly?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Within minutes. Browse online listeners on LeanOn, pick one, book. If you are at lunch or have 15 minutes between meetings, that is enough time to connect and get the thing out that is sitting on your chest.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Within minutes. Browse online listeners on How Was Your Day, pick one, book. If you are at lunch or have 15 minutes between meetings, that is enough time to connect and get the thing out that is sitting on your chest.' },
     },
   ],
 }
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Having a Bad Day', item: 'https://www.leanon.app/having-a-bad-day' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Having a Bad Day', item: 'https://www.howwasyourday.live/having-a-bad-day' },
   ],
 }
 
@@ -132,7 +132,7 @@ export default function HavingABadDayPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -164,7 +164,7 @@ export default function HavingABadDayPage() {
           <h2>What Actually Resets a Bad Day</h2>
           <p>Not productivity tips. Not taking a walk. Not deep breathing, though none of those are wrong. What actually interrupts the accumulation cycle is expression — getting the original thing out, spoken, received, outside of you.</p>
           <p>When you say what happened to a real person who is genuinely listening, the loop closes. The nervous system gets the signal that it has been processed. The pressure drops. The subsequent events of the day stop piling onto the original trigger — because the original trigger is no longer sitting there, unresolved, underneath everything.</p>
-          <p>A 15-minute conversation with a peer listener on LeanOn does not fix the situation. But it often turns a day that was going to be a complete write-off into one where you can actually function through the afternoon.</p>
+          <p>A 15-minute conversation with a peer listener on How Was Your Day does not fix the situation. But it often turns a day that was going to be a complete write-off into one where you can actually function through the afternoon.</p>
         </div>
 
         <div className="section">

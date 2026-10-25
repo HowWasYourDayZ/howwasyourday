@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Lonely in London — You\'re Not the Only One | LeanOn',
+  title: 'Lonely in London — You\'re Not the Only One | How Was Your Day',
   description: 'London has 9 million people and some of the highest loneliness rates in the world. If you are an Indian living in London and feel completely alone, you are in good — and large — company.',
   keywords: [
     'lonely in london', 'london loneliness', 'indian lonely london', 'south asian london loneliness',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     'indian community london isolated', 'london social isolation',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/london-loneliness',
-    languages: { 'en-GB': 'https://www.leanon.app/london-loneliness' },
+    canonical: 'https://www.howwasyourday.live/london-loneliness',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/london-loneliness' },
   },
   openGraph: {
     title: 'Lonely in London — You\'re Not the Only One',
-    description: 'Nine million people, and you feel completely alone. LeanOn connects you with a real Indian peer listener, anytime.',
-    url: 'https://www.leanon.app/london-loneliness',
-    siteName: 'LeanOn',
+    description: 'Nine million people, and you feel completely alone. How Was Your Day connects you with a real Indian peer listener, anytime.',
+    url: 'https://www.howwasyourday.live/london-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -53,7 +53,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can I talk to a LeanOn listener just because I feel lonely?',
+      name: 'Can I talk to a How Was Your Day listener just because I feel lonely?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes, always. Feeling lonely is one of the most common and legitimate reasons to reach out. You do not need a bigger story. "I live in London and I feel completely alone" is more than enough.',
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Lonely in London', item: 'https://www.leanon.app/london-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Lonely in London', item: 'https://www.howwasyourday.live/london-loneliness' },
   ],
 }
 
@@ -174,7 +174,7 @@ export default function LondonLonelinessPage() {
           <h2>🌆 After the commute, the silence is loudest</h2>
           <p>You come home to your flat, close the door, and the city disappears. Just you and
             the hum of London outside the window. For a lot of Indians in London, this is when
-            the loneliness peaks — and when LeanOn listeners are available.</p>
+            the loneliness peaks — and when How Was Your Day listeners are available.</p>
           <p>You can talk to a real person right now. No waiting, no appointment.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -184,7 +184,7 @@ export default function LondonLonelinessPage() {
           <p>There are large Indian communities across London — Southall, Wembley, Harrow, East Ham.
             But community does not automatically mean connection. Sometimes the pressure within the
             community to appear successful and happy makes the loneliness feel even more unspeakable.</p>
-          <p>LeanOn gives you a private, anonymous space to say how you actually feel — no community
+          <p>How Was Your Day gives you a private, anonymous space to say how you actually feel — no community
             politics, no judgment from anyone who knows your family.</p>
         </div>
 
@@ -247,7 +247,7 @@ export default function LondonLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

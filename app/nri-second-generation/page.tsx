@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Second Generation NRI Identity | The In-Between Feeling | LeanOn',
+  title: 'Second Generation NRI Identity | The In-Between Feeling | How Was Your Day',
   description: "Born or raised abroad to Indian parents — you're Indian enough for the West to see you as foreign, and too Western for India to see you as Indian. Talk to someone who gets the in-between.",
   keywords: ['second generation nri', 'abcd identity', 'british indian identity', 'desi identity crisis', 'indian american identity', 'desi abroad second gen', 'coconut identity'],
-  alternates: { canonical: 'https://www.leanon.app/nri-second-generation' },
-  openGraph: { title: 'Second Generation NRI Identity | The In-Between Feeling | LeanOn', description: "Born or raised abroad to Indian parents — you're Indian enough for the West to see you as foreign, and too Western for India to see you as Indian. Talk to someone who gets the in-between.", url: 'https://www.leanon.app/nri-second-generation', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-second-generation' },
+  openGraph: { title: 'Second Generation NRI Identity | The In-Between Feeling | How Was Your Day', description: "Born or raised abroad to Indian parents — you're Indian enough for the West to see you as foreign, and too Western for India to see you as Indian. Talk to someone who gets the in-between.", url: 'https://www.howwasyourday.live/nri-second-generation', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand second generation identity?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners understand the NRI experience broadly and are selected to hold the in-between identity — the ABCD/BBCD experience, the cultural code-switching, the sense of not fully belonging to either the Western world you grew up in or the Indian world your parents come from.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand second generation identity?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners understand the NRI experience broadly and are selected to hold the in-between identity — the ABCD/BBCD experience, the cultural code-switching, the sense of not fully belonging to either the Western world you grew up in or the Indian world your parents come from.' } },
   { '@type': 'Question', name: 'I feel like a fraud at Indian community events. Is that normal?', acceptedAnswer: { '@type': 'Answer', text: 'Very normal. Many second-generation Indians describe feeling like performers at their own community\'s events — going through motions of Indian identity that feel both genuine and hollow. Listeners can hold this complexity without trying to resolve it for you.' } },
   { '@type': 'Question', name: 'I don\'t speak my parents\' mother tongue well. I feel guilty about it. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and you won\'t be judged. The language guilt — feeling like you\'ve failed your heritage by not speaking Tamil, Gujarati, Telugu, Punjabi, Hindi fluently — is one of the most common things second-generation Indians carry. Sessions are conducted in English.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Second Generation NRI', item: 'https://www.leanon.app/nri-second-generation' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Second Generation NRI', item: 'https://www.howwasyourday.live/nri-second-generation' },
 ] }
 
 const S = `
@@ -70,38 +70,38 @@ export default function NriSecondGenerationPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Second Generation NRI</span></nav>
         <div className="hero">
           <p className="badge">Second Generation &middot; ABCD &middot; BBCD &middot; In-Between Identity</p>
           <h1>Too Indian for here. <em>Too Western for there.</em></h1>
           <p className="lead">You grew up with dal and Disney simultaneously. You can code-switch between your parents&rsquo; world and your friends&rsquo; world in a single breath. And somewhere in the middle of all that fluency, you lost the thread of who you actually are. The second-generation identity struggle is real, and it doesn&rsquo;t have an easy answer. Talk to someone who won&rsquo;t try to give you one. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>ABCD, BBCD, and the In-Between That Has No Name</h2>
           <p>American Born Confused Desi. British Born Confused Desi. The terms exist because the experience is common enough to need a name — but the name itself is reductive. You are not confused. You are navigating two complete cultural systems simultaneously, and doing it well enough that neither world fully sees the work it takes. The American or British world sees an Indian. The Indian world — India, the community, the temple — sees an American or a Brit. Neither sees you.</p>
           <p>The second-generation Indian experience is marked by a specific kind of exhaustion: the constant translation. Translating yourself to your Western friends who want to understand your Indian identity but can&rsquo;t quite get there. Translating yourself to your Indian relatives who find your Western sensibilities puzzling or threatening. Being the bridge — the one who explains India to the West and the West to India — without anyone asking you how the bridging feels.</p>
-          <p>LeanOn listeners are based in India and understand the Indian side of this equation from the inside. They can hold the complexity without reducing it. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India and understand the Indian side of this equation from the inside. They can hold the complexity without reducing it. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>The Fraudulence of Indian Events and the Guilt of Not Being Indian Enough</h2>
           <p>The second-generation Indian at the Diwali party who goes through the motions — wears the kurta, says the right things, eats the mithai — and feels, privately, like a performer. Not because they don&rsquo;t care about their Indian identity. Because the specific version of Indianness being performed at the event doesn&rsquo;t quite match the version they carry inside. The version that includes Drake and cricket. The version that is Gujarati at home and something harder to name everywhere else.</p>
           <p>The guilt about not speaking the mother tongue fluently. The guilt about not knowing the Ramayana as well as you should. The guilt about eating beef sometimes, or drinking alcohol, or choosing a partner your parents wouldn&rsquo;t have chosen. The guilt about not going to India often enough, not calling the grandparents enough, not caring enough about the things your parents sacrificed to preserve. Second-generation Indian guilt is a very specific weight, and it rarely gets talked about directly — because talking about it requires admitting something to people who would take it personally.</p>
-          <p>LeanOn is outside all of that. Anonymous. No judgment. A space to say the thing you can&rsquo;t say at the Diwali party.</p>
+          <p>How Was Your Day is outside all of that. Anonymous. No judgment. A space to say the thing you can&rsquo;t say at the Diwali party.</p>
         </div>
 
         <div className="section">
           <h2>When You Visit India and Feel Foreign There Too</h2>
           <p>For many second-generation Indians, the most disorienting experience is visiting India and feeling like a tourist in the country they were told was home. The cousins who grew up there treat you differently — with curiosity, sometimes with a slight condescension, as though your Western upbringing made you less authentic. The city feels familiar in your bones and foreign in your daily habits. The food, the pace, the sounds — everything is recognisable and nothing is quite right for you.</p>
-          <p>This can produce a grief that is hard to name: the loss of a home you were never quite native to. The sense that your India exists only in your parents&rsquo; stories and your own nostalgia — a nostalgic country you inherited but never lived in. LeanOn listeners are in India. They don&rsquo;t see you as a tourist. They understand you as someone who carries India without living it. From US$10.</p>
+          <p>This can produce a grief that is hard to name: the loss of a home you were never quite native to. The sense that your India exists only in your parents&rsquo; stories and your own nostalgia — a nostalgic country you inherited but never lived in. How Was Your Day listeners are in India. They don&rsquo;t see you as a tourist. They understand you as someone who carries India without living it. From US$10.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Both worlds are yours. Talk to someone who gets that.</h2><p>Real Indian peer listener. Understands second-generation identity. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Both worlds are yours. Talk to someone who gets that.</h2><p>Real Indian peer listener. Understands second-generation identity. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-identity-crisis">NRI identity crisis &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

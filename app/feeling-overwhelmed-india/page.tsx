@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Overwhelmed? You\'re Not Broken — You Just Need to Be Heard | LeanOn',
+  title: 'Feeling Overwhelmed? You\'re Not Broken — You Just Need to Be Heard | How Was Your Day',
   description: 'Feeling overwhelmed, exhausted, or like you can\'t cope? Talk to a real peer listener — anonymous, no judgment. First 5 min free.',
   keywords: [
     'feeling overwhelmed India', 'overwhelmed and don\'t know why India',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'too much to handle India', 'feeling overwhelmed support India',
     'talk to someone when overwhelmed India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/feeling-overwhelmed-india', languages: { 'en-IN': 'https://www.leanon.app/feeling-overwhelmed-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-overwhelmed-india', languages: { 'en-IN': 'https://www.howwasyourday.live/feeling-overwhelmed-india' } },
   openGraph: {
-    title: 'Feeling Overwhelmed? You\'re Not Broken — You Just Need to Be Heard | LeanOn',
+    title: 'Feeling Overwhelmed? You\'re Not Broken — You Just Need to Be Heard | How Was Your Day',
     description: 'Feeling overwhelmed, exhausted, or like you can\'t cope? Talk to a real peer listener — anonymous, no judgment. First 5 min free.',
-    url: 'https://www.leanon.app/feeling-overwhelmed-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/feeling-overwhelmed-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Feeling Overwhelmed' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Feeling Overwhelmed' }],
   },
 }
 
@@ -33,17 +33,17 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can I talk to someone if I\'m overwhelmed but not in crisis?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely — you do not need to be in crisis to talk to someone. Overwhelm is one of the most common reasons people reach out to peer listeners on LeanOn. You do not need a dramatic reason or a single identifiable cause. Feeling like too much is piling up — that is a completely valid reason to reach out. Many people find the most useful conversations happen before things become a crisis, not after.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely — you do not need to be in crisis to talk to someone. Overwhelm is one of the most common reasons people reach out to peer listeners on How Was Your Day. You do not need a dramatic reason or a single identifiable cause. Feeling like too much is piling up — that is a completely valid reason to reach out. Many people find the most useful conversations happen before things become a crisis, not after.' },
     },
     {
       '@type': 'Question',
       name: 'What if I can\'t explain why I\'m overwhelmed?',
-      acceptedAnswer: { '@type': 'Answer', text: 'That is more common than you might think — and it is completely fine. Overwhelm often does not have one clean cause. It is the accumulation of many small things over time. You do not need to know the reason, and you do not need to arrive with an explanation. You can say "I don\'t even know where to start" — and that is a fine place to start. Listeners on LeanOn are screened and expected to sit with ambiguity and help you find the shape of what you\'re carrying.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'That is more common than you might think — and it is completely fine. Overwhelm often does not have one clean cause. It is the accumulation of many small things over time. You do not need to know the reason, and you do not need to arrive with an explanation. You can say "I don\'t even know where to start" — and that is a fine place to start. Listeners on How Was Your Day are screened and expected to sit with ambiguity and help you find the shape of what you\'re carrying.' },
     },
     {
       '@type': 'Question',
       name: 'Is it confidential?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions on LeanOn are private — you do not need to share your name, your job, your location, or any identifying information. Your listener never sees your phone number, and nothing is shared with anyone in your life. Listeners are bound by a strict confidentiality commitment and are not connected to your employer, your family, or any institution. You can say anything without consequence.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions on How Was Your Day are private — you do not need to share your name, your job, your location, or any identifying information. Your listener never sees your phone number, and nothing is shared with anyone in your life. Listeners are bound by a strict confidentiality commitment and are not connected to your employer, your family, or any institution. You can say anything without consequence.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Feeling Overwhelmed', item: 'https://www.leanon.app/feeling-overwhelmed-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Feeling Overwhelmed', item: 'https://www.howwasyourday.live/feeling-overwhelmed-india' },
   ],
 }
 
@@ -118,7 +118,7 @@ export default function FeelingOverwhelmedPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -173,7 +173,7 @@ export default function FeelingOverwhelmedPage() {
           <h2>You Don&apos;t Need to Have It Figured Out to Start Talking</h2>
           <p>One of the things that stops people from reaching out is the feeling that they do not have a clear enough reason. That they need to have a coherent story, a specific problem, a reason that justifies taking up someone&apos;s time.</p>
           <p>You do not.</p>
-          <p>It is completely fine to start a session with &quot;I don&apos;t even know where to begin.&quot; That sentence is a beginning. Listeners on LeanOn are there for exactly this — not to rush you toward a point, not to ask you to explain yourself, but to sit with you in the not-knowing and let the shape of what you are carrying emerge at its own pace.</p>
+          <p>It is completely fine to start a session with &quot;I don&apos;t even know where to begin.&quot; That sentence is a beginning. Listeners on How Was Your Day are there for exactly this — not to rush you toward a point, not to ask you to explain yourself, but to sit with you in the not-knowing and let the shape of what you are carrying emerge at its own pace.</p>
           <p>You do not need to arrive with clarity. You just need to arrive.</p>
         </div>
 

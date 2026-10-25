@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Online Counseling India — Affordable Emotional Support Without a Therapist | LeanOn',
-  description: 'Looking for online counseling in India? LeanOn connects you with peer listeners from ₹160 per 15-minute session — screened, confidential, no appointment, no therapist fees.',
+  title: 'Online Counseling India — Affordable Emotional Support Without a Therapist | How Was Your Day',
+  description: 'Looking for online counseling in India? How Was Your Day connects you with peer listeners from ₹160 per 15-minute session — screened, confidential, no appointment, no therapist fees.',
   keywords: [
     'online counseling India', 'online counselling India', 'affordable online counseling India',
     'emotional support online India', 'talk to someone online India', 'online therapy India cheap',
@@ -13,16 +13,16 @@ export const metadata: Metadata = {
     'counseling without therapist India', 'online support India mental health',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/online-counseling-india',
-    languages: { 'en-IN': 'https://www.leanon.app/online-counseling-india' },
+    canonical: 'https://www.howwasyourday.live/online-counseling-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/online-counseling-india' },
   },
   openGraph: {
-    title: 'Online Counseling India — Affordable Emotional Support Without a Therapist | LeanOn',
-    description: 'Looking for online counseling in India? LeanOn connects you with peer listeners from ₹160 per 15-minute session — screened, confidential, no appointment, no therapist fees.',
-    url: 'https://www.leanon.app/online-counseling-india',
-    siteName: 'LeanOn',
+    title: 'Online Counseling India — Affordable Emotional Support Without a Therapist | How Was Your Day',
+    description: 'Looking for online counseling in India? How Was Your Day connects you with peer listeners from ₹160 per 15-minute session — screened, confidential, no appointment, no therapist fees.',
+    url: 'https://www.howwasyourday.live/online-counseling-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Affordable Online Counseling India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Affordable Online Counseling India' }],
   },
 }
 
@@ -32,18 +32,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn a substitute for therapy?',
+      name: 'Is How Was Your Day a substitute for therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No, and we are honest about that. LeanOn is peer support — real humans with lived experience, screened for listening. It is not therapy, does not involve diagnosis, and does not replace professional mental health treatment. If you are dealing with a clinical condition like severe depression, OCD, or trauma, please see a licensed therapist. LeanOn fills the large gap between "I need to talk to someone" and "I need clinical intervention" — a gap that most people fall into most of the time.',
+        text: 'No, and we are honest about that. How Was Your Day is peer support — real humans with lived experience, screened for listening. It is not therapy, does not involve diagnosis, and does not replace professional mental health treatment. If you are dealing with a clinical condition like severe depression, OCD, or trauma, please see a licensed therapist. How Was Your Day fills the large gap between "I need to talk to someone" and "I need clinical intervention" — a gap that most people fall into most of the time.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a session cost on LeanOn?',
+      name: 'How much does a session cost on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions on LeanOn start at ₹160 for 15 minutes. Longer sessions are ₹249 for 30 minutes and ₹329 for 45 minutes. New users get a free 5-minute trial. Compare this to ₹1,500–₹5,000 for a single therapy session, and you start to see why thousands of people have chosen LeanOn as their first step toward getting emotional support.',
+        text: 'Sessions on How Was Your Day start at ₹160 for 15 minutes. Longer sessions are ₹249 for 30 minutes and ₹329 for 45 minutes. New users get a free 5-minute trial. Compare this to ₹1,500–₹5,000 for a single therapy session, and you start to see why thousands of people have chosen How Was Your Day as their first step toward getting emotional support.',
       },
     },
     {
@@ -56,10 +56,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Will anyone know I used LeanOn?',
+      name: 'Will anyone know I used How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. You can use LeanOn without sharing your real name. There is no formal record of your sessions, no diagnosis, no file that follows you. Listeners agree not to share what they hear. Your privacy is treated seriously — LeanOn is designed from the ground up to be a space where you can speak freely without any social or professional consequences.',
+        text: 'No. You can use How Was Your Day without sharing your real name. There is no formal record of your sessions, no diagnosis, no file that follows you. Listeners agree not to share what they hear. Your privacy is treated seriously — How Was Your Day is designed from the ground up to be a space where you can speak freely without any social or professional consequences.',
       },
     },
     {
@@ -85,8 +85,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Online Counseling India', item: 'https://www.leanon.app/online-counseling-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Online Counseling India', item: 'https://www.howwasyourday.live/online-counseling-india' },
   ],
 }
 
@@ -145,7 +145,7 @@ export default function OnlineCounselingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function OnlineCounselingIndiaPage() {
         <div className="hero">
           <p className="badge">Peer Support · No Appointment · Private</p>
           <h1>Online Counseling India — <em>Without the ₹5,000 Fee</em></h1>
-          <p className="lead">Most people searching for online counseling in India are not looking for a diagnosis. They need someone to talk to — real, screened, confidential, and affordable. LeanOn is that: peer listeners with no appointment, from ₹160 for 15 minutes.</p>
+          <p className="lead">Most people searching for online counseling in India are not looking for a diagnosis. They need someone to talk to — real, screened, confidential, and affordable. How Was Your Day is that: peer listeners with no appointment, from ₹160 for 15 minutes.</p>
           <a href="/browse" className="cta-hero">Browse listeners now →</a>
         </div>
 
@@ -177,7 +177,7 @@ export default function OnlineCounselingIndiaPage() {
             <li>A friendship or relationship that is quietly deteriorating</li>
             <li>The particular loneliness of not having anyone to talk to about any of this</li>
           </ul>
-          <p>LeanOn is built for exactly this. Not instead of therapy — alongside it, or as a first step toward it, or as the thing that fills the space where therapy is not accessible or appropriate.</p>
+          <p>How Was Your Day is built for exactly this. Not instead of therapy — alongside it, or as a first step toward it, or as the thing that fills the space where therapy is not accessible or appropriate.</p>
         </div>
 
         <div className="section">
@@ -191,8 +191,8 @@ export default function OnlineCounselingIndiaPage() {
           <h3>Wait Times Make It Worse</h3>
           <p>The therapist-to-population ratio in India is approximately 1 per 100,000 people — one of the lowest in the world. Good therapists have waitlists. The idea of getting help &quot;now&quot; — when you actually need it — is largely theoretical in the public mental health system. Private therapists are faster but expensive.</p>
 
-          <h3>What LeanOn Costs Instead</h3>
-          <p>A 15-minute peer support session on LeanOn costs ₹160. A 30-minute session is ₹249. A 45-minute session is ₹329. New users get a free 5-minute trial. You do not need insurance, a referral, a prescription, or an appointment. You open the app, browse who is online right now, and start talking.</p>
+          <h3>What How Was Your Day Costs Instead</h3>
+          <p>A 15-minute peer support session on How Was Your Day costs ₹160. A 30-minute session is ₹249. A 45-minute session is ₹329. New users get a free 5-minute trial. You do not need insurance, a referral, a prescription, or an appointment. You open the app, browse who is online right now, and start talking.</p>
         </div>
 
         <div className="section">
@@ -217,24 +217,24 @@ export default function OnlineCounselingIndiaPage() {
             <li>Contact anyone else about what you share</li>
           </ul>
 
-          <p>The distinction matters because it clarifies what LeanOn is for: the vast middle ground where most people live most of the time — not in crisis, not needing clinical intervention, but carrying something heavy and needing someone to share the weight with.</p>
+          <p>The distinction matters because it clarifies what How Was Your Day is for: the vast middle ground where most people live most of the time — not in crisis, not needing clinical intervention, but carrying something heavy and needing someone to share the weight with.</p>
         </div>
 
         <div className="section">
-          <h2>Who Uses LeanOn Instead of Traditional Counseling</h2>
-          <p>LeanOn users are not a narrow demographic. They are engineers and homemakers, students and managers, people in metros and people in smaller cities. What they share is a need that traditional counseling either cannot reach or does not fit.</p>
+          <h2>Who Uses How Was Your Day Instead of Traditional Counseling</h2>
+          <p>How Was Your Day users are not a narrow demographic. They are engineers and homemakers, students and managers, people in metros and people in smaller cities. What they share is a need that traditional counseling either cannot reach or does not fit.</p>
 
           <h3>People Who Cannot Afford Regular Therapy</h3>
-          <p>For many users, LeanOn is the only form of emotional support they have access to. At ₹160 for a session, it is within reach for someone earning a modest salary. For people who genuinely cannot afford therapy, this is not a compromise — it is the option that actually exists.</p>
+          <p>For many users, How Was Your Day is the only form of emotional support they have access to. At ₹160 for a session, it is within reach for someone earning a modest salary. For people who genuinely cannot afford therapy, this is not a compromise — it is the option that actually exists.</p>
 
           <h3>People Who Do Not Want a Formal Record</h3>
-          <p>In India, seeking mental health support still carries stigma in many contexts. People worry about records that could affect employment, relationships, or family dynamics. LeanOn is anonymous, generates no formal records, and requires no identification that links your real identity to what you share.</p>
+          <p>In India, seeking mental health support still carries stigma in many contexts. People worry about records that could affect employment, relationships, or family dynamics. How Was Your Day is anonymous, generates no formal records, and requires no identification that links your real identity to what you share.</p>
 
           <h3>People Between Therapy Sessions</h3>
-          <p>Some users see a therapist monthly but need support in between. LeanOn fills the gap — a place to process what has come up between sessions without waiting for the next appointment.</p>
+          <p>Some users see a therapist monthly but need support in between. How Was Your Day fills the gap — a place to process what has come up between sessions without waiting for the next appointment.</p>
 
           <h3>People Who Are Not Sure If They Need Therapy</h3>
-          <p>Many people come to LeanOn because they are not sure if what they are experiencing warrants therapy. Talking to a peer listener often helps clarify this. Sometimes you leave feeling like you just needed to vent. Other times, the conversation reveals something deeper that a professional should help with. Either outcome is useful.</p>
+          <p>Many people come to How Was Your Day because they are not sure if what they are experiencing warrants therapy. Talking to a peer listener often helps clarify this. Sometimes you leave feeling like you just needed to vent. Other times, the conversation reveals something deeper that a professional should help with. Either outcome is useful.</p>
         </div>
 
         <div className="section">

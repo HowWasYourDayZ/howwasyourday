@@ -1,7 +1,7 @@
 export const post = {
   slug: 'housewife-mental-health-india-guide',
   title: 'The Hidden Mental Health Crisis Among Indian Housewives',
-  author: 'LeanOn Team',
+  author: 'How Was Your Day Team',
   date: '2026-09-12',
   readTime: '6 min read',
   description: 'Indian housewives are among the most emotionally isolated people in the country. This is what that isolation actually looks like, and why it is a public health issue that goes largely unaddressed.',
@@ -26,7 +26,7 @@ export const post = {
 <p>The social network, when it exists, is often not emotionally safe. Friends and relatives are connected to the same family systems that are often the source of the stress. Confiding means risking gossip, judgment, or the information reaching the wrong people.</p>
 
 <h2>What Support Actually Looks Like</h2>
-<p>LeanOn is designed with these barriers in mind. Sessions are voice calls, available from a phone, during any gap in the day &mdash; during school hours, after the household has settled for the night, whenever a moment of privacy exists. The cost is &#8377;160 for 15 minutes. No family oversight and no social network connection; your listener never sees your phone number.</p>
+<p>How Was Your Day is designed with these barriers in mind. Sessions are voice calls, available from a phone, during any gap in the day &mdash; during school hours, after the household has settled for the night, whenever a moment of privacy exists. The cost is &#8377;160 for 15 minutes. No family oversight and no social network connection; your listener never sees your phone number.</p>
 <p>For housewives who have not had a conversation about how they actually feel in years &mdash; if ever &mdash; the experience of being genuinely heard, without judgment, without the conversation being used against them, without anyone in their life knowing it happened, is often described as profound relief.</p>
 <p>That relief is available. It is not weakness to access it. It is the most ordinary human thing in the world &mdash; needing to be heard.</p>
 `,

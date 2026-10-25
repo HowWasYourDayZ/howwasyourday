@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for NRIs in the USA — Talk to Someone Indian | LeanOn',
-  description: 'Being an NRI in the USA means carrying a unique emotional weight — homesickness, guilt, expectations, isolation. LeanOn connects you with Indian peer listeners who truly understand.',
+  title: 'Emotional Support for NRIs in the USA — Talk to Someone Indian | How Was Your Day',
+  description: 'Being an NRI in the USA means carrying a unique emotional weight — homesickness, guilt, expectations, isolation. How Was Your Day connects you with Indian peer listeners who truly understand.',
   keywords: [
     'nri emotional support usa', 'nri support america', 'indian nri usa talk to someone',
     'nri homesickness support', 'nri mental health usa', 'nri loneliness america',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'nri feeling alone usa', 'emotional support indian community usa',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa',
-    languages: { 'en-US': 'https://www.leanon.app/usa' },
+    canonical: 'https://www.howwasyourday.live/usa',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa' },
   },
   openGraph: {
     title: 'Emotional Support for NRIs in the USA — Talk to Someone Indian',
-    description: 'The NRI emotional experience is specific and heavy. LeanOn peer listeners are Indian, they understand the context, and they are available whenever you need to talk.',
-    url: 'https://www.leanon.app/usa',
-    siteName: 'LeanOn',
+    description: 'The NRI emotional experience is specific and heavy. How Was Your Day peer listeners are Indian, they understand the context, and they are available whenever you need to talk.',
+    url: 'https://www.howwasyourday.live/usa',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -49,12 +49,12 @@ const faqSchema = {
       name: 'Can I talk about missing India and feeling homesick?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. Homesickness is one of the most underacknowledged forms of grief. Missing the food, the festivals, the spontaneous family visits, the warmth of Indian social life — these are real losses. A LeanOn listener will hear them as the genuine sadness they are, not minimise them as "you chose to go."',
+        text: 'Absolutely. Homesickness is one of the most underacknowledged forms of grief. Missing the food, the festivals, the spontaneous family visits, the warmth of Indian social life — these are real losses. A How Was Your Day listener will hear them as the genuine sadness they are, not minimise them as "you chose to go."',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn from any US time zone?',
+      name: 'Can I use How Was Your Day from any US time zone?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. Listeners are based in India, so availability follows Indian time. US late evenings fall in the Indian morning and midday, when listeners are often online; US daytime is late night in India, when fewer are. Check who is online now before you start.',
@@ -62,7 +62,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does a LeanOn session cost in the USA?',
+      name: 'How much does a How Was Your Day session cost in the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free — far more accessible than $200/hour therapy sessions.',
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'NRI Support USA', item: 'https://www.leanon.app/usa' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'NRI Support USA', item: 'https://www.howwasyourday.live/usa' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function UsaNriSupportPage() {
         <p className="lead">
           The NRI experience is full of things nobody warned you about: missing your parents growing old,
           the guilt of every festival you miss, the isolation of suburbs where nobody just drops by, the
-          pressure to be the family&apos;s shining success story. LeanOn is the space where you can say all of this
+          pressure to be the family&apos;s shining success story. How Was Your Day is the space where you can say all of this
           to someone who actually understands.
         </p>
 
@@ -175,7 +175,7 @@ export default function UsaNriSupportPage() {
           <h2>🌙 When India is sleeping and the quiet gets too loud</h2>
           <p>It is 11 PM in California. India is in the morning rush. You cannot call home right now.
             Your American friends are asleep. You are alone with everything you are feeling.</p>
-          <p>LeanOn listeners are available on Indian time — including 11 PM on the West Coast
+          <p>How Was Your Day listeners are available on Indian time — including 11 PM on the West Coast
             or 2 AM on the East Coast. You do not have to wait until morning.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
@@ -186,7 +186,7 @@ export default function UsaNriSupportPage() {
             but they will spend a significant portion of your session trying to understand what
             it means to have left India, what an H-1B actually is, why missing a cousin&apos;s wedding
             is not just &quot;FOMO.&quot;</p>
-          <p>LeanOn listeners are Indian. Many are NRIs themselves or have family abroad. You skip
+          <p>How Was Your Day listeners are Indian. Many are NRIs themselves or have family abroad. You skip
             the explanations and go straight to what you actually feel. Sessions start at
             <strong> $10 for 15 minutes</strong>, with your first 5-minute session free.</p>
         </div>
@@ -196,7 +196,7 @@ export default function UsaNriSupportPage() {
           <p>Missing India is not a sign that you made the wrong decision or that you are ungrateful.
             It is grief — the grief of a whole life, a whole country, a whole version of yourself
             that you left behind. That grief is legitimate and it deserves to be held gently, not dismissed.</p>
-          <p>Talk to a LeanOn listener who will not tell you to &quot;focus on the good things here.&quot;
+          <p>Talk to a How Was Your Day listener who will not tell you to &quot;focus on the good things here.&quot;
             They will just let you miss India for a little while, out loud, with someone who gets it.</p>
         </div>
 
@@ -222,15 +222,15 @@ export default function UsaNriSupportPage() {
           </div>
           <div className="faq-item">
             <h3>Can I talk about missing India and feeling homesick?</h3>
-            <p>Absolutely. Homesickness is an underacknowledged form of grief. A LeanOn listener will
+            <p>Absolutely. Homesickness is an underacknowledged form of grief. A How Was Your Day listener will
               hear it as the genuine sadness it is — not minimise it as &quot;you chose to go.&quot;</p>
           </div>
           <div className="faq-item">
-            <h3>Can I use LeanOn from any US time zone?</h3>
+            <h3>Can I use How Was Your Day from any US time zone?</h3>
             <p>Yes. Listeners are based in India, so availability follows Indian time. US late evenings fall in the Indian morning and midday, when listeners are often online; US daytime is late night in India, when fewer are. Check who is online now before you start.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does a LeanOn session cost in the USA?</h3>
+            <h3>How much does a How Was Your Day session cost in the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first
               5 minutes free — one free session per account.</p>
           </div>
@@ -249,7 +249,7 @@ export default function UsaNriSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

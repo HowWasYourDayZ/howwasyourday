@@ -5,21 +5,21 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'Paid Friend India — A Real Person Who Actually Listens | LeanOn',
-  description: 'Sometimes you just need a friend who listens without judgment. LeanOn peer listeners are real people, not therapists — real conversations from ₹160.',
+  title: 'Paid Friend India — A Real Person Who Actually Listens | How Was Your Day',
+  description: 'Sometimes you just need a friend who listens without judgment. How Was Your Day peer listeners are real people, not therapists — real conversations from ₹160.',
   keywords: [
     'paid friend india', 'rent a friend india', 'friend for hire india',
     'friendship support india', 'online friend india', 'talk like a friend india',
     'paid listener india', 'someone to talk to india', 'friend who listens india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/paid-friend-india', languages: { 'en-IN': 'https://www.leanon.app/paid-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/paid-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/paid-friend-india' } },
   openGraph: {
-    title: 'Paid Friend India — A Real Person Who Actually Listens | LeanOn',
-    description: 'Sometimes you just need a friend who listens without judgment. LeanOn peer listeners are real people, not therapists — real conversations from ₹160.',
-    url: 'https://www.leanon.app/paid-friend-india',
-    siteName: 'LeanOn',
+    title: 'Paid Friend India — A Real Person Who Actually Listens | How Was Your Day',
+    description: 'Sometimes you just need a friend who listens without judgment. How Was Your Day peer listeners are real people, not therapists — real conversations from ₹160.',
+    url: 'https://www.howwasyourday.live/paid-friend-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Paid Friend India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Paid Friend India' }],
   },
 }
 
@@ -30,7 +30,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is a paid friend the same as a therapist?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. A therapist is a licensed professional who diagnoses and treats mental health conditions. A peer listener on LeanOn is a real person with lived experience who listens, empathises, and holds space. There is no diagnosis, no clinical framework, no treatment plan. It is much closer to a good friend conversation than a therapy session. LeanOn is not a substitute for therapy when clinical care is needed.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. A therapist is a licensed professional who diagnoses and treats mental health conditions. A peer listener on How Was Your Day is a real person with lived experience who listens, empathises, and holds space. There is no diagnosis, no clinical framework, no treatment plan. It is much closer to a good friend conversation than a therapy session. How Was Your Day is not a substitute for therapy when clinical care is needed.' },
     },
     {
       '@type': 'Question',
@@ -59,8 +59,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Paid Friend India', item: 'https://www.leanon.app/paid-friend-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Paid Friend India', item: 'https://www.howwasyourday.live/paid-friend-india' },
   ],
 }
 
@@ -119,7 +119,7 @@ export default function PaidFriendIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -136,7 +136,7 @@ export default function PaidFriendIndiaPage() {
         <div className="hero">
           <p className="badge">Peer Support &middot; India &middot; From &#8377;160</p>
           <h1>Not a therapist. Not a bot. <em>Someone who actually listens</em> &mdash; like a friend.</h1>
-          <p className="lead">A good friend would listen without judgment, without unsolicited advice, without making it about themselves. LeanOn listeners are screened and expected to be exactly that &mdash; available when your actual friends can&apos;t be.</p>
+          <p className="lead">A good friend would listen without judgment, without unsolicited advice, without making it about themselves. How Was Your Day listeners are screened and expected to be exactly that &mdash; available when your actual friends can&apos;t be.</p>
           <a href="/browse" className="cta-hero">Find a listener &rarr;</a>
         </div>
 
@@ -144,7 +144,7 @@ export default function PaidFriendIndiaPage() {
           <h2>What Is a Paid Friend?</h2>
           <p>The concept of paying someone to listen &mdash; or to spend time with you &mdash; is not new. In Japan, the &ldquo;rent-a-friend&rdquo; industry has existed for decades, with people hiring &ldquo;client partners&rdquo; to accompany them to events, provide company, or simply listen. The industry is enormous and mainstream there.</p>
           <p>In India, the concept is arriving in a different form. Not companionship for events, but emotional support through conversation. The need is the same: a real human being, without agenda, who will give you their full attention and genuinely hear you.</p>
-          <p>LeanOn is not &ldquo;rent a friend&rdquo; in the companionship sense. It is peer emotional support &mdash; a screened listener who holds space for your experience without judging, steering, or advising. Closer to the best version of a friend who actually listens than to a therapist or a companion service.</p>
+          <p>How Was Your Day is not &ldquo;rent a friend&rdquo; in the companionship sense. It is peer emotional support &mdash; a screened listener who holds space for your experience without judging, steering, or advising. Closer to the best version of a friend who actually listens than to a therapist or a companion service.</p>
         </div>
 
         <div className="section">
@@ -165,7 +165,7 @@ export default function PaidFriendIndiaPage() {
           <div style={{overflowX:'auto'}}>
             <table className="compare-table">
               <thead>
-                <tr><th>Dimension</th><th>Therapist / Counsellor</th><th>LeanOn Peer Listener</th></tr>
+                <tr><th>Dimension</th><th>Therapist / Counsellor</th><th>How Was Your Day Peer Listener</th></tr>
               </thead>
               <tbody>
                 <tr><td>Training</td><td>Licensed mental health professional</td><td>Trained peer with lived experience</td></tr>
@@ -177,11 +177,11 @@ export default function PaidFriendIndiaPage() {
               </tbody>
             </table>
           </div>
-          <p>If you are experiencing symptoms of a clinical mental health condition &mdash; persistent low mood, significant anxiety, trauma responses, suicidal thoughts &mdash; please seek professional help. LeanOn is not a substitute for clinical care.</p>
+          <p>If you are experiencing symptoms of a clinical mental health condition &mdash; persistent low mood, significant anxiety, trauma responses, suicidal thoughts &mdash; please seek professional help. How Was Your Day is not a substitute for clinical care.</p>
         </div>
 
         <div className="section">
-          <h2>What a LeanOn Session Feels Like</h2>
+          <h2>What a How Was Your Day Session Feels Like</h2>
           <p>You browse listener profiles and choose someone whose background resonates. You start a voice call. The listener is a real Indian person &mdash; they understand your context, your cultural references, the specific weight of the situations you&apos;re navigating.</p>
           <p>You talk. They listen. Not passively &mdash; they reflect back what they hear, ask questions that go deeper, track the feeling underneath the words. They do not advise unless you ask. They do not judge. They do not make it about themselves.</p>
           <p>Your first 5-minute session is free. If the connection is right, you continue. If not, you can end the session and choose someone else. No penalties, no awkwardness.</p>

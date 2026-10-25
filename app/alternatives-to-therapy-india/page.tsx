@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Therapy vs Peer Support: Do I Need Therapy or Someone to Talk To? | LeanOn',
-  description: 'Not sure whether you need therapy or simply someone to talk to? Learn the difference between therapy, counselling, peer support and everyday emotional support, and where LeanOn fits.',
+  title: 'Therapy vs Peer Support: Do I Need Therapy or Someone to Talk To? | How Was Your Day',
+  description: 'Not sure whether you need therapy or simply someone to talk to? Learn the difference between therapy, counselling, peer support and everyday emotional support, and where How Was Your Day fits.',
   keywords: [
     'do I need therapy or someone to talk to',
     'therapy vs peer support',
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     'peer support instead of therapy india',
     'everyday emotional support',
   ],
-  alternates: { canonical: 'https://www.leanon.app/alternatives-to-therapy-india' },
+  alternates: { canonical: 'https://www.howwasyourday.live/alternatives-to-therapy-india' },
   openGraph: {
-    title: 'Therapy vs Peer Support: Do I Need Therapy or Someone to Talk To? | LeanOn',
-    description: 'A practical guide to the difference between clinical care and everyday human support. LeanOn is peer support, not therapy.',
-    url: 'https://www.leanon.app/alternatives-to-therapy-india',
-    siteName: 'LeanOn',
+    title: 'Therapy vs Peer Support: Do I Need Therapy or Someone to Talk To? | How Was Your Day',
+    description: 'A practical guide to the difference between clinical care and everyday human support. How Was Your Day is peer support, not therapy.',
+    url: 'https://www.howwasyourday.live/alternatives-to-therapy-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -30,7 +30,7 @@ const faqs = [
   ['What is the difference between therapy and peer support?', 'Therapy is clinical care delivered by a qualified professional and can involve assessment, diagnosis and treatment. Peer support is non-clinical support from someone with relevant lived experience who is screened and expected to listen and support without diagnosing or treating.'],
   ['Is counselling the same as peer support?', 'No. Counselling may refer to professional mental-health support provided by a qualified counsellor. Peer support is non-clinical and based on lived experience, listening and mutual understanding.'],
   ['Can I talk to someone instead of therapy?', 'If what you need is ordinary human connection or a place to talk through everyday emotional stress, you can choose peer support. But peer support should not be used as a substitute for professional care when you need clinical assessment or treatment.'],
-  ['What if I do not want therapy but need support?', 'You can explore non-clinical options such as talking with trusted people, peer support, community groups or other forms of emotional support. LeanOn is one peer-support option for people who want a private conversation with a real person.'],
+  ['What if I do not want therapy but need support?', 'You can explore non-clinical options such as talking with trusted people, peer support, community groups or other forms of emotional support. How Was Your Day is one peer-support option for people who want a private conversation with a real person.'],
   ['Is peer support an affordable alternative to therapy?', 'Peer support can cost less than many private therapy sessions, but it is not an equivalent service. It provides a different kind of support: human conversation and lived experience rather than clinical assessment or treatment.'],
 ]
 
@@ -41,8 +41,8 @@ const jsonLd = {
       '@type': 'WebPage',
       name: metadata.title,
       description: metadata.description,
-      url: 'https://www.leanon.app/alternatives-to-therapy-india',
-      isPartOf: { '@type': 'WebSite', name: 'LeanOn', url: 'https://www.leanon.app' },
+      url: 'https://www.howwasyourday.live/alternatives-to-therapy-india',
+      isPartOf: { '@type': 'WebSite', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
       about: [
         { '@type': 'Thing', name: 'Therapy' },
         { '@type': 'Thing', name: 'Peer support' },
@@ -60,8 +60,8 @@ const jsonLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' },
-        { '@type': 'ListItem', position: 2, name: 'Therapy vs Peer Support', item: 'https://www.leanon.app/alternatives-to-therapy-india' },
+        { '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' },
+        { '@type': 'ListItem', position: 2, name: 'Therapy vs Peer Support', item: 'https://www.howwasyourday.live/alternatives-to-therapy-india' },
       ],
     },
   ],
@@ -113,7 +113,7 @@ export default function AlternativesToTherapyPage() {
 
         <section className="mt-8 rounded-3xl bg-[#0F4867] p-7 text-white sm:p-9">
           <h2 className="mb-4 text-2xl font-black">What if you do not want therapy but need support?</h2>
-          <p className="leading-7 text-white/85">You can want support without wanting therapy. Peer support is one non-clinical option: you talk with a screened person who brings lived experience rather than providing diagnosis or treatment. LeanOn provides this kind of one-to-one conversation by text or voice.</p>
+          <p className="leading-7 text-white/85">You can want support without wanting therapy. Peer support is one non-clinical option: you talk with a screened person who brings lived experience rather than providing diagnosis or treatment. How Was Your Day provides this kind of one-to-one conversation by text or voice.</p>
           <a href="/browse" className="mt-6 inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Browse peer listeners →</a>
         </section>
 
@@ -142,7 +142,7 @@ export default function AlternativesToTherapyPage() {
           </div>
         </section>
 
-        <p className="mt-10 text-xs leading-6 text-slate-500">LeanOn provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, contact an appropriate local emergency or crisis service.</p>
+        <p className="mt-10 text-xs leading-6 text-slate-500">How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, contact an appropriate local emergency or crisis service.</p>
       </div>
     </main>
   )

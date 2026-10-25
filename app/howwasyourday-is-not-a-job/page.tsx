@@ -3,46 +3,46 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Is LeanOn a Job? No — It Is a Support Service for Seekers | LeanOn',
-  description: 'LeanOn is not a job, not a way to earn money online, and not a side income platform. It is a peer support service where people pay to talk to a real human listener. If you need someone to talk to, browse listeners now.',
-  alternates: { canonical: 'https://www.leanon.app/leanon-is-not-a-job' },
+  title: 'Is How Was Your Day a Job? No — It Is a Support Service for Seekers | How Was Your Day',
+  description: 'How Was Your Day is not a job, not a way to earn money online, and not a side income platform. It is a peer support service where people pay to talk to a real human listener. If you need someone to talk to, browse listeners now.',
+  alternates: { canonical: 'https://www.howwasyourday.live/howwasyourday-is-not-a-job' },
   openGraph: {
-    title: 'Is LeanOn a Job? No — It Is a Support Service for Seekers | LeanOn',
-    description: 'LeanOn is a peer support platform for people who need someone to talk to. Not a job or income opportunity.',
-    url: 'https://www.leanon.app/leanon-is-not-a-job',
-    siteName: 'LeanOn',
+    title: 'Is How Was Your Day a Job? No — It Is a Support Service for Seekers | How Was Your Day',
+    description: 'How Was Your Day is a peer support platform for people who need someone to talk to. Not a job or income opportunity.',
+    url: 'https://www.howwasyourday.live/howwasyourday-is-not-a-job',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
 
 const faqs = [
   {
-    q: 'Is LeanOn a job?',
-    a: 'No. LeanOn is a peer support platform where people who feel lonely, overwhelmed, or need someone to talk to can connect with a real human peer listener. The customer is the person who needs support — they pay to have a conversation. LeanOn is not a job, not a work-from-home opportunity, and not a side income platform.',
+    q: 'Is How Was Your Day a job?',
+    a: 'No. How Was Your Day is a peer support platform where people who feel lonely, overwhelmed, or need someone to talk to can connect with a real human peer listener. The customer is the person who needs support — they pay to have a conversation. How Was Your Day is not a job, not a work-from-home opportunity, and not a side income platform.',
   },
   {
-    q: 'Can I earn money on LeanOn?',
-    a: 'LeanOn is designed for people who need emotional support, not for people looking to earn money. If you are searching for a job or side income, LeanOn is not the right service for you.',
+    q: 'Can I earn money on How Was Your Day?',
+    a: 'How Was Your Day is designed for people who need emotional support, not for people looking to earn money. If you are searching for a job or side income, How Was Your Day is not the right service for you.',
   },
   {
-    q: 'Is LeanOn an app that pays you to talk to people?',
-    a: 'No. LeanOn is not an "earn by chatting" or "paid to listen" app. People come to LeanOn because they need someone to talk to. Its listeners are adults with lived experience who are screened and reviewed before they can take a session — it is a responsibility, not a way to make money.',
+    q: 'Is How Was Your Day an app that pays you to talk to people?',
+    a: 'No. How Was Your Day is not an "earn by chatting" or "paid to listen" app. People come to How Was Your Day because they need someone to talk to. Its listeners are adults with lived experience who are screened and reviewed before they can take a session — it is a responsibility, not a way to make money.',
   },
   {
-    q: 'Can I use LeanOn if I am under 18?',
-    a: 'No. Everyone on LeanOn — people seeking support and listeners — must be 18 or older. If you are under 18 and struggling, talk to a trusted adult or call Tele-MANAS on 14416 (free, 24/7).',
+    q: 'Can I use How Was Your Day if I am under 18?',
+    a: 'No. Everyone on How Was Your Day — people seeking support and listeners — must be 18 or older. If you are under 18 and struggling, talk to a trusted adult or call Tele-MANAS on 14416 (free, 24/7).',
   },
   {
-    q: 'Is LeanOn a side hustle?',
-    a: 'No. LeanOn is a support service for seekers — people who want to talk to a real person about loneliness, stress, relationships, or other everyday emotional challenges. It is not an income platform.',
+    q: 'Is How Was Your Day a side hustle?',
+    a: 'No. How Was Your Day is a support service for seekers — people who want to talk to a real person about loneliness, stress, relationships, or other everyday emotional challenges. It is not an income platform.',
   },
   {
-    q: 'What is LeanOn actually for?',
-    a: 'LeanOn is for people who feel lonely, overwhelmed, or simply need a real human conversation. You can browse peer listeners, choose who you want to talk to, and start a private text or voice session. Every new account gets one free 5-minute first session.',
+    q: 'What is How Was Your Day actually for?',
+    a: 'How Was Your Day is for people who feel lonely, overwhelmed, or simply need a real human conversation. You can browse peer listeners, choose who you want to talk to, and start a private text or voice session. Every new account gets one free 5-minute first session.',
   },
   {
-    q: 'I heard LeanOn pays listeners — does that make it a job?',
-    a: 'Peer listeners on LeanOn are compensated for completed sessions, but this is the operational model of a support service — not a job offer. LeanOn is a marketplace for emotional support, not an employment platform. The primary audience is seekers: people who pay to receive support.',
+    q: 'I heard How Was Your Day pays listeners — does that make it a job?',
+    a: 'Peer listeners on How Was Your Day are compensated for completed sessions, but this is the operational model of a support service — not a job offer. How Was Your Day is a marketplace for emotional support, not an employment platform. The primary audience is seekers: people who pay to receive support.',
   },
 ]
 
@@ -53,8 +53,8 @@ const jsonLd = {
       '@type': 'WebPage',
       name: metadata.title,
       description: String(metadata.description),
-      url: 'https://www.leanon.app/leanon-is-not-a-job',
-      isPartOf: { '@type': 'WebSite', name: 'LeanOn', url: 'https://www.leanon.app' },
+      url: 'https://www.howwasyourday.live/howwasyourday-is-not-a-job',
+      isPartOf: { '@type': 'WebSite', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
       about: { '@type': 'Thing', name: 'Peer emotional support' },
       audience: { '@type': 'Audience', audienceType: 'People seeking emotional support or human connection' },
     },
@@ -69,8 +69,8 @@ const jsonLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' },
-        { '@type': 'ListItem', position: 2, name: 'LeanOn Is Not a Job', item: 'https://www.leanon.app/leanon-is-not-a-job' },
+        { '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' },
+        { '@type': 'ListItem', position: 2, name: 'How Was Your Day Is Not a Job', item: 'https://www.howwasyourday.live/howwasyourday-is-not-a-job' },
       ],
     },
   ],
@@ -106,33 +106,33 @@ const S = `
   .btn-cta{display:inline-block;background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;box-shadow:0 4px 20px rgba(255,153,51,0.35);}
 `
 
-export default function LeanOnIsNotAJobPage() {
+export default function HowWasYourDayIsNotAJobPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a><span>›</span>
-          <span style={{color:'var(--navy)'}}>LeanOn Is Not a Job</span>
+          <span style={{color:'var(--navy)'}}>How Was Your Day Is Not a Job</span>
         </nav>
 
-        <h1>LeanOn Is <em>Not</em> a Job</h1>
-        <p className="lead">LeanOn is a peer support service for people who need someone to talk to — not a job, not an income opportunity, and not a side hustle.</p>
+        <h1>How Was Your Day Is <em>Not</em> a Job</h1>
+        <p className="lead">How Was Your Day is a peer support service for people who need someone to talk to — not a job, not an income opportunity, and not a side hustle.</p>
 
         <div className="answer-box">
-          <p>LeanOn is for <strong>seekers</strong>: people who feel lonely, overwhelmed, or need a real human conversation about everyday emotional challenges. If you are looking for a job or a way to earn money online, LeanOn is not the right service for you.</p>
+          <p>How Was Your Day is for <strong>seekers</strong>: people who feel lonely, overwhelmed, or need a real human conversation about everyday emotional challenges. If you are looking for a job or a way to earn money online, How Was Your Day is not the right service for you.</p>
         </div>
 
         <div className="section">
-          <h2>What LeanOn actually is</h2>
-          <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)',marginBottom:16}}>LeanOn connects people who want emotional support with real human peer listeners — by private text or voice, with no appointment needed. The person who needs support is the customer. They browse listener profiles, choose who they want to talk to, and pay per session.</p>
+          <h2>What How Was Your Day actually is</h2>
+          <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)',marginBottom:16}}>How Was Your Day connects people who want emotional support with real human peer listeners — by private text or voice, with no appointment needed. The person who needs support is the customer. They browse listener profiles, choose who they want to talk to, and pay per session.</p>
           <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)'}}>Every new account gets one free 5-minute first session. Paid sessions start at ₹160 for 15 minutes. No subscriptions. No lock-in.</p>
         </div>
 

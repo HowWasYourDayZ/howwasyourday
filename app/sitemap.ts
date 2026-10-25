@@ -7,7 +7,7 @@ import SEO_REDIRECTS from '@/lib/seo-redirects.json'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://www.leanon.app'
+  const base = 'https://www.howwasyourday.live'
   const d = (s: string) => new Date(s)
   // The sitemap is force-static, so this evaluates at BUILD time — i.e. the
   // deploy date. Using the build date instead of a hardcoded string means the
@@ -80,10 +80,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/what-it-means-to-have-someone-to-lean-on`,    lastModified: d(CONTENT_UPDATED),        changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/blog/paid-friend-vs-peer-support-india`, lastModified: d('2026-09-12'), changeFrequency: 'monthly', priority: 0.9 },
     // Brand + authority pages
-    { url: `${base}/leanon`,                           lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/howwasyourday`,                           lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/emotional-support`,                lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.9 },
     // Long-tail SEO pages
-    { url: `${base}/leanon-app-mental-health`,         lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/howwasyourday-app-mental-health`,         lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/anonymous-peer-support`,           lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/need-someone-to-talk-to-india`,    lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.85 },
     // High-commercial-intent seeker pages (Round 4). Priority 0.95 — these are
@@ -190,10 +190,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/support/childhood-trauma-india`,      lastModified: d(CONTENT_UPDATED),        changeFrequency: 'monthly', priority: 0.93 },
     { url: `${base}/i-need-professional-help-india`,      lastModified: d('2026-10-24'),        changeFrequency: 'monthly', priority: 0.97 },
     // New SEO pages (Items 18-21)
-    { url: `${base}/why-leanon`,                       lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/why-howwasyourday`,                       lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/talk`,                             lastModified: d('2026-10-24'), changeFrequency: 'weekly',  priority: 1.0 },
-    { url: `${base}/how-leanon-works`,                 lastModified: d('2026-10-16'), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/is-leanon-safe`,                   lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/how-it-works`,                 lastModified: d('2026-10-16'), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/is-howwasyourday-safe`,                   lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/anonymous-support-online`,         lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/someone-to-talk-to-at-night`,      lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/online-emotional-support-india`,   lastModified: d('2026-05-01'), changeFrequency: 'monthly', priority: 0.9 },
@@ -217,7 +217,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // clinical vocabulary; often the first touchpoint in the funnel
     { url: `${base}/talk-about-my-problems-online`,    lastModified: d('2026-10-24'),        changeFrequency: 'weekly',  priority: 0.95 },
     { url: `${base}/peer-support-online-india`,        lastModified: d('2026-10-24'),        changeFrequency: 'monthly', priority: 0.95 },
-    // Peer support keyword cluster (Round 8) — "peer support" has no LeanOn
+    // Peer support keyword cluster (Round 8) — "peer support" has no How Was Your Day
     // result on Google; highest-priority SEO gap. Also targets AI citation.
     { url: `${base}/peer-support`,                     lastModified: d('2026-10-23'),        changeFrequency: 'monthly', priority: 0.97 },
     { url: `${base}/peer-counselling-india`,           lastModified: d('2026-10-24'),        changeFrequency: 'monthly', priority: 0.97 },
@@ -527,10 +527,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Authoritative guide + disambiguation pages
     { url: `${base}/peer-support-india-guide`,          lastModified: d('2026-10-24'), changeFrequency: 'monthly', priority: 0.90 },
-    { url: `${base}/is-leanon-worth-it`,                lastModified: d('2026-10-17'), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/is-howwasyourday-worth-it`,                lastModified: d('2026-10-17'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/peer-support-alongside-therapy`,    lastModified: d('2026-10-16'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/become-a-peer-supporter`,           lastModified: d(CONTENT_UPDATED), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${base}/leanon-is-not-a-job`,              lastModified: d(CONTENT_UPDATED), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/howwasyourday-is-not-a-job`,              lastModified: d(CONTENT_UPDATED), changeFrequency: 'monthly', priority: 0.85 },
 
     // AI alternative pages missing from sitemap
     { url: `${base}/ai-companion-alternative`,        lastModified: d(CONTENT_UPDATED), changeFrequency: 'monthly', priority: 0.95 },

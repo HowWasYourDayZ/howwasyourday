@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Best Mental Health App India 2026 — Honest Comparison | LeanOn',
-  description: 'Which mental health app is best in India? We compare LeanOn, Amaha, YourDOST, Wysa, and others across cost, anonymity, and Indian context.',
+  title: 'Best Mental Health App India 2026 — Honest Comparison | How Was Your Day',
+  description: 'Which mental health app is best in India? We compare How Was Your Day, Amaha, YourDOST, Wysa, and others across cost, anonymity, and Indian context.',
   keywords: ['best mental health app india', 'best online counselling app india', 'best therapy app india', 'mental wellness app india', 'online therapy india', 'therapy app india', 'best mental health platform india'],
-  alternates: { canonical: 'https://www.leanon.app/best-mental-health-app-india', languages: { 'en-IN': 'https://www.leanon.app/best-mental-health-app-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/best-mental-health-app-india', languages: { 'en-IN': 'https://www.howwasyourday.live/best-mental-health-app-india' } },
   openGraph: {
-    title: 'Best Mental Health App India 2026 — Honest Comparison | LeanOn',
-    description: 'Which mental health app is best in India? We compare LeanOn, Amaha, YourDOST, Wysa, and others across cost, anonymity, and Indian context.',
-    url: 'https://www.leanon.app/best-mental-health-app-india',
-    siteName: 'LeanOn',
+    title: 'Best Mental Health App India 2026 — Honest Comparison | How Was Your Day',
+    description: 'Which mental health app is best in India? We compare How Was Your Day, Amaha, YourDOST, Wysa, and others across cost, anonymity, and Indian context.',
+    url: 'https://www.howwasyourday.live/best-mental-health-app-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'Which is the best free mental health app in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For AI-based self-help tools: Wysa is the best free option in India. For human peer support: LeanOn offers a free 5-minute trial on every session. For professional counselling on a budget: iCall (TISS) offers subsidised sessions. There is no single "best free app" — it depends on what you need.',
+        text: 'For AI-based self-help tools: Wysa is the best free option in India. For human peer support: How Was Your Day offers a free 5-minute trial on every session. For professional counselling on a budget: iCall (TISS) offers subsidised sessions. There is no single "best free app" — it depends on what you need.',
       },
     },
     {
@@ -38,10 +38,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous?',
+      name: 'Is How Was Your Day anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn requires only a phone number and a first name. No last name, no photo, no social account. Sessions are confidential and cannot be linked to your real identity.',
+        text: 'Yes. How Was Your Day requires only a phone number and a first name. No last name, no photo, no social account. Sessions are confidential and cannot be linked to your real identity.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I trust these apps with my data?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn takes privacy seriously — see our privacy policy at leanon.app/privacy. The platform collects minimal data (phone number, first name, session metadata) and does not share personal information. Sessions are confidential by design.',
+        text: 'How Was Your Day takes privacy seriously — see our privacy policy at howwasyourday.live/privacy. The platform collects minimal data (phone number, first name, session metadata) and does not share personal information. Sessions are confidential by design.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What if I need medication?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you need medication, you need a psychiatrist — a licensed medical doctor specialising in mental health. None of the apps in this comparison can prescribe medication. Apps like Amaha can connect you with psychiatrists for clinical consultation. LeanOn is peer support and does not provide medical advice.',
+        text: 'If you need medication, you need a psychiatrist — a licensed medical doctor specialising in mental health. None of the apps in this comparison can prescribe medication. Apps like Amaha can connect you with psychiatrists for clinical consultation. How Was Your Day is peer support and does not provide medical advice.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Best Mental Health App India', item: 'https://www.leanon.app/best-mental-health-app-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Best Mental Health App India', item: 'https://www.howwasyourday.live/best-mental-health-app-india' },
   ],
 }
 
@@ -134,7 +134,7 @@ export default function BestMentalHealthAppIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -177,7 +177,7 @@ export default function BestMentalHealthAppIndiaPage() {
               </thead>
               <tbody>
                 <tr className="highlight-row">
-                  <td className="col-label">LeanOn</td>
+                  <td className="col-label">How Was Your Day</td>
                   <td>Peer support</td>
                   <td>₹160/session</td>
                   <td>Yes</td>
@@ -234,14 +234,14 @@ export default function BestMentalHealthAppIndiaPage() {
           <ul className="routing-list">
             <li><strong>Clinical or psychiatric needs, willing to pay more</strong> → Amaha</li>
             <li><strong>Affordable professional counselling</strong> → iCall (TISS)</li>
-            <li><strong>Real human peer conversation, pay per session, anonymous</strong> → <a href="/browse">LeanOn</a></li>
+            <li><strong>Real human peer conversation, pay per session, anonymous</strong> → <a href="/browse">How Was Your Day</a></li>
             <li><strong>AI self-help tools, free</strong> → Wysa</li>
             <li><strong>Crisis</strong> → NIMHANS 080-46110007 or Tele-MANAS 14416 — free, 24/7, Government of India</li>
           </ul>
         </div>
 
         <div className="cta-card">
-          <h2>Try LeanOn — Human Peer Support from ₹160</h2>
+          <h2>Try How Was Your Day — Human Peer Support from ₹160</h2>
           <p>Real listeners, Indian context, anonymous, pay per session. First 5 minutes free.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse listeners →</button></a>
@@ -253,23 +253,23 @@ export default function BestMentalHealthAppIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">Which is the best free mental health app in India?</div>
-            <div className="faq-a">For AI-based self-help: Wysa is the best free option. For human peer support: LeanOn offers a free 5-minute trial on every session. For professional counselling on a budget: iCall (TISS) offers subsidised sessions.</div>
+            <div className="faq-a">For AI-based self-help: Wysa is the best free option. For human peer support: How Was Your Day offers a free 5-minute trial on every session. For professional counselling on a budget: iCall (TISS) offers subsidised sessions.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between a peer listener and a therapist?</div>
             <div className="faq-a">A therapist is a licensed professional who can diagnose and treat conditions. A peer listener is a real person with lived experience, chosen for how well they listen and provide human support — not to diagnose. Therapists are for clinical needs. Peer listeners are for the emotional weight most people carry.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn anonymous?</div>
-            <div className="faq-a">Yes. LeanOn requires only a phone number and a first name. No last name, no photo, no social account. Sessions are confidential.</div>
+            <div className="faq-q">Is How Was Your Day anonymous?</div>
+            <div className="faq-a">Yes. How Was Your Day requires only a phone number and a first name. No last name, no photo, no social account. Sessions are confidential.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I trust these apps with my data?</div>
-            <div className="faq-a">LeanOn takes privacy seriously. The platform collects minimal data (phone number, first name, session metadata) and does not share personal information. See leanon.app/privacy.</div>
+            <div className="faq-a">How Was Your Day takes privacy seriously. The platform collects minimal data (phone number, first name, session metadata) and does not share personal information. See howwasyourday.live/privacy.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I need medication?</div>
-            <div className="faq-a">If you need medication, you need a psychiatrist — a licensed medical doctor. None of the apps in this comparison can prescribe medication. Apps like Amaha can connect you with psychiatrists. LeanOn is peer support and does not provide medical advice.</div>
+            <div className="faq-a">If you need medication, you need a psychiatrist — a licensed medical doctor. None of the apps in this comparison can prescribe medication. Apps like Amaha can connect you with psychiatrists. How Was Your Day is peer support and does not provide medical advice.</div>
           </div>
         </div>
 

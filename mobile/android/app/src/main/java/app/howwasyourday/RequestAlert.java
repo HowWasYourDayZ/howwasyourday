@@ -1,4 +1,4 @@
-package app.leanon;
+package app.howwasyourday;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -20,7 +20,7 @@ import androidx.core.app.Person;
 // phone, Answer / Not now) until the listener acts, the server says it was
 // withdrawn (type 'request_closed'), or its TTL runs out.
 final class RequestAlert {
-    static final String ORIGIN = "https://www.leanon.app";
+    static final String ORIGIN = "https://www.howwasyourday.live";
     static final String CH_REQUEST = "session_requests_v1";
     static final String CH_GENERAL = "general_v1";
 
@@ -40,7 +40,7 @@ final class RequestAlert {
         nm.createNotificationChannel(req);
 
         NotificationChannel gen = new NotificationChannel(CH_GENERAL, "Updates", NotificationManager.IMPORTANCE_HIGH);
-        gen.setDescription("Session updates and messages from LeanOn.");
+        gen.setDescription("Session updates and messages from How Was Your Day.");
         nm.createNotificationChannel(gen);
     }
 
@@ -71,7 +71,7 @@ final class RequestAlert {
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         PendingIntent fullPi = PendingIntent.getActivity(c, idFor(sessionId) + 2, full, flags);
 
-        Person caller = new Person.Builder().setName(title == null || title.isEmpty() ? "LeanOn — new request" : title).setImportant(true).build();
+        Person caller = new Person.Builder().setName(title == null || title.isEmpty() ? "How Was Your Day — new request" : title).setImportant(true).build();
         NotificationCompat.Builder b = new NotificationCompat.Builder(c, CH_REQUEST)
             .setSmallIcon(R.mipmap.ic_launcher)
             .setContentTitle(title)

@@ -5,24 +5,24 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'GetCompanion Alternative — LeanOn | Peer Support Without the Middleman',
-  description: 'GetCompanion charges for companionship. LeanOn connects you with real peer listeners who have lived through what you\'re facing — ₹160/session, free 5-min trial, no "Happiness Executive" label.',
+  title: 'GetCompanion Alternative — How Was Your Day | Peer Support Without the Middleman',
+  description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — ₹160/session, free 5-min trial, no "Happiness Executive" label.',
   keywords: [
-    'getcompanion alternative', 'alternative to getcompanion', 'getcompanion vs leanon',
+    'getcompanion alternative', 'alternative to getcompanion', 'getcompanion vs howwasyourday',
     'companionship app india', 'paid companionship alternative', 'loneliness support india',
     'someone to talk to india', 'peer support india', 'emotional support india',
     'happiness executive alternative', 'affordable emotional support india',
     'talk to real person india', 'human connection india',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/getcompanion-alternative',
-    languages: { 'en-IN': 'https://www.leanon.app/getcompanion-alternative' },
+    canonical: 'https://www.howwasyourday.live/getcompanion-alternative',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/getcompanion-alternative' },
   },
   openGraph: {
-    title: 'GetCompanion Alternative — LeanOn | Peer Support Without the Middleman',
-    description: 'GetCompanion charges for companionship. LeanOn connects you with real peer listeners who have lived through what you\'re facing — ₹160/session, free 5-min trial.',
-    url: 'https://www.leanon.app/getcompanion-alternative',
-    siteName: 'LeanOn',
+    title: 'GetCompanion Alternative — How Was Your Day | Peer Support Without the Middleman',
+    description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — ₹160/session, free 5-min trial.',
+    url: 'https://www.howwasyourday.live/getcompanion-alternative',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -33,18 +33,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from GetCompanion?',
+      name: 'How is How Was Your Day different from GetCompanion?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'GetCompanion connects you with "Happiness Executives" for paid companionship — conversations, walks, meals, hospital visits. LeanOn connects you with peer listeners who have personally lived through what you are facing: loneliness, burnout, grief, breakups, anxiety, and more. The difference is lived experience. A LeanOn listener does not just keep you company — they understand what you are going through because they have been there themselves.',
+        text: 'GetCompanion connects you with "Happiness Executives" for paid companionship — conversations, walks, meals, hospital visits. How Was Your Day connects you with peer listeners who have personally lived through what you are facing: loneliness, burnout, grief, breakups, anxiety, and more. The difference is lived experience. A How Was Your Day listener does not just keep you company — they understand what you are going through because they have been there themselves.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn cheaper than GetCompanion?',
+      name: 'Is How Was Your Day cheaper than GetCompanion?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn sessions start at ₹160 for 15 minutes, and your very first 5-minute session is completely free (one per account) — no wallet top-up needed. Both platforms use per-minute billing from a wallet, but LeanOn\'s free trial lets you find the right listener before spending anything.',
+        text: 'How Was Your Day sessions start at ₹160 for 15 minutes, and your very first 5-minute session is completely free (one per account) — no wallet top-up needed. Both platforms use per-minute billing from a wallet, but How Was Your Day\'s free trial lets you find the right listener before spending anything.',
       },
     },
     {
@@ -52,7 +52,7 @@ const faqSchema = {
       name: 'Do I need to meet someone in person?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is fully online — text chat or voice call from anywhere in India or abroad. You never need to meet anyone in person or share your location. This makes it accessible whether you are in Mumbai, a small town, or living abroad as an NRI.',
+        text: 'No. How Was Your Day is fully online — text chat or voice call from anywhere in India or abroad. You never need to meet anyone in person or share your location. This makes it accessible whether you are in Mumbai, a small town, or living abroad as an NRI.',
       },
     },
     {
@@ -60,15 +60,15 @@ const faqSchema = {
       name: 'What is the difference between a "Happiness Executive" and a peer listener?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A Happiness Executive on GetCompanion is trained in empathetic conversation and companionship skills. A peer listener on LeanOn has lived through the same challenge you are facing — loneliness, a breakup, work burnout, grief — and found their way through it. The empathy comes from personal experience, not just training. That shared understanding is what makes peer support different from paid companionship.',
+        text: 'A Happiness Executive on GetCompanion is trained in empathetic conversation and companionship skills. A peer listener on How Was Your Day has lived through the same challenge you are facing — loneliness, a breakup, work burnout, grief — and found their way through it. The empathy comes from personal experience, not just training. That shared understanding is what makes peer support different from paid companionship.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn if I am an Indian living abroad?',
+      name: 'Can I use How Was Your Day if I am an Indian living abroad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has dedicated support for Indians and South Asians living in the USA, UK, Canada, Australia, UAE, Oman, Kuwait, Singapore, and Malaysia. You can talk with a peer listener who understands the cultural context — homesickness, family pressure from India, visa stress, cultural adjustment — by text or voice, at any hour.',
+        text: 'Yes. How Was Your Day has dedicated support for Indians and South Asians living in the USA, UK, Canada, Australia, UAE, Oman, Kuwait, Singapore, and Malaysia. You can talk with a peer listener who understands the cultural context — homesickness, family pressure from India, visa stress, cultural adjustment — by text or voice, at any hour.',
       },
     },
   ],
@@ -78,8 +78,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'GetCompanion Alternative', item: 'https://www.leanon.app/getcompanion-alternative' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'GetCompanion Alternative', item: 'https://www.howwasyourday.live/getcompanion-alternative' },
   ],
 }
 
@@ -154,10 +154,10 @@ export default function GetCompanionAlternativePage() {
           <a href="/">Home</a><span>&rsaquo;</span>GetCompanion Alternative
         </div>
 
-        <h1>Looking for a GetCompanion Alternative? Try LeanOn</h1>
+        <h1>Looking for a GetCompanion Alternative? Try How Was Your Day</h1>
         <p className="lead">
           GetCompanion offers paid companionship with trained &ldquo;Happiness Executives.&rdquo;
-          LeanOn offers something different: peer listeners who have personally lived through what
+          How Was Your Day offers something different: peer listeners who have personally lived through what
           you are going through. They are not just keeping you company &mdash; they understand
           your loneliness, burnout, or heartbreak because they have been there themselves.
         </p>
@@ -167,7 +167,7 @@ export default function GetCompanionAlternativePage() {
         <div className="card">
           <h2>Companionship vs lived-experience peer support</h2>
           <p>
-            Both GetCompanion and LeanOn exist because millions of people in India need someone
+            Both GetCompanion and How Was Your Day exist because millions of people in India need someone
             to talk to &mdash; someone who listens without judgment. The difference is in <em>who</em> you
             talk to and <em>why</em> they understand.
           </p>
@@ -177,7 +177,7 @@ export default function GetCompanionAlternativePage() {
             companionship as a service: someone pleasant to spend time with.
           </p>
           <p>
-            LeanOn connects you with peer listeners who have personally navigated the same challenge
+            How Was Your Day connects you with peer listeners who have personally navigated the same challenge
             you are facing. A listener who helps with breakup pain has been through a breakup. A
             listener who supports work burnout has lived through burnout. That shared experience
             means the empathy is not just trained &mdash; it is real.
@@ -185,13 +185,13 @@ export default function GetCompanionAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>GetCompanion vs LeanOn &mdash; what actually differs</h2>
+          <h2>GetCompanion vs How Was Your Day &mdash; what actually differs</h2>
           <table className="compare-table">
             <thead>
               <tr>
                 <th>Feature</th>
                 <th>GetCompanion</th>
-                <th>LeanOn</th>
+                <th>How Was Your Day</th>
               </tr>
             </thead>
             <tbody>
@@ -240,7 +240,7 @@ export default function GetCompanionAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>When LeanOn is the better fit</h2>
+          <h2>When How Was Your Day is the better fit</h2>
           <p>
             <strong>You want someone who actually gets it.</strong> Not just pleasant conversation &mdash;
             you want to talk to someone who has navigated loneliness, a toxic workplace, a breakup, or
@@ -249,22 +249,22 @@ export default function GetCompanionAlternativePage() {
           </p>
           <p>
             <strong>You are not in Gurugram.</strong> GetCompanion&apos;s in-person services are limited
-            to Gurugram. LeanOn is fully online &mdash; accessible from any city in India, or from abroad
+            to Gurugram. How Was Your Day is fully online &mdash; accessible from any city in India, or from abroad
             if you are an NRI dealing with homesickness or cultural isolation.
           </p>
           <p>
-            <strong>You want to try before you pay.</strong> LeanOn gives you one free 5-minute session
+            <strong>You want to try before you pay.</strong> How Was Your Day gives you one free 5-minute session
             (one per account). No wallet top-up, no commitment.
           </p>
           <p>
             <strong>You prefer text over meeting a stranger.</strong> Some people find it easier to
-            open up over text than face-to-face. LeanOn&apos;s text and voice sessions let you share
+            open up over text than face-to-face. How Was Your Day&apos;s text and voice sessions let you share
             at your own pace, from the privacy of your own space.
           </p>
         </div>
 
         <div className="card">
-          <h2>How LeanOn works &mdash; 3 simple steps</h2>
+          <h2>How the app works &mdash; 3 simple steps</h2>
           <ul className="steps">
             <li>
               <div>
@@ -297,32 +297,32 @@ export default function GetCompanionAlternativePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>How is LeanOn different from GetCompanion?</h3>
+            <h3>How is How Was Your Day different from GetCompanion?</h3>
             <p>GetCompanion connects you with trained Happiness Executives for paid companionship.
-              LeanOn connects you with peer listeners who have personally lived through what you are
-              facing. The difference is lived experience &mdash; a LeanOn listener understands your
+              How Was Your Day connects you with peer listeners who have personally lived through what you are
+              facing. The difference is lived experience &mdash; a How Was Your Day listener understands your
               challenge because they have navigated it themselves.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn cheaper than GetCompanion?</h3>
-            <p>LeanOn sessions start at &#8377;160 for 15 minutes. Your first 5-minute session
+            <h3>Is How Was Your Day cheaper than GetCompanion?</h3>
+            <p>How Was Your Day sessions start at &#8377;160 for 15 minutes. Your first 5-minute session
               is free (one per account) &mdash; no wallet top-up needed. Both platforms use
-              per-minute billing, but LeanOn&apos;s free trial lets you try it first.</p>
+              per-minute billing, but How Was Your Day&apos;s free trial lets you try it first.</p>
           </div>
           <div className="faq-item">
             <h3>Do I need to meet someone in person?</h3>
-            <p>No. LeanOn is fully online &mdash; text chat or voice call from anywhere. You never
+            <p>No. How Was Your Day is fully online &mdash; text chat or voice call from anywhere. You never
               need to share your location or meet anyone face-to-face.</p>
           </div>
           <div className="faq-item">
             <h3>What is the difference between a Happiness Executive and a peer listener?</h3>
-            <p>A Happiness Executive is trained in empathetic conversation. A LeanOn peer listener
+            <p>A Happiness Executive is trained in empathetic conversation. A How Was Your Day peer listener
               has lived through the same challenge you are facing and found their way through it.
               The empathy comes from personal experience, not just training.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I use LeanOn from outside India?</h3>
-            <p>Yes. LeanOn supports Indians and South Asians in the USA, UK, Canada, Australia,
+            <h3>Can I use How Was Your Day from outside India?</h3>
+            <p>Yes. How Was Your Day supports Indians and South Asians in the USA, UK, Canada, Australia,
               UAE, Oman, Kuwait, Singapore, and Malaysia. Talk to a peer listener who understands
               homesickness, family pressure, and cultural adjustment.</p>
           </div>
@@ -339,7 +339,7 @@ export default function GetCompanionAlternativePage() {
           <p>If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support &mdash; not a substitute for emergency mental health care.
+            How Was Your Day is peer support &mdash; not a substitute for emergency mental health care.
           </p>
         </div>
       </div>

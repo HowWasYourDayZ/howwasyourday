@@ -1,9 +1,9 @@
-// Read-only live audit of www.leanon.app (run from GitHub Actions, which can
+// Read-only live audit of www.howwasyourday.live (run from GitHub Actions, which can
 // reach the site). Prints one JSON report. No writes, no logins.
 //   node scripts/live-audit.mjs
 import { readFileSync } from 'fs'
 
-const BASE = 'https://www.leanon.app'
+const BASE = 'https://www.howwasyourday.live'
 const UAS = {
   browser: 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Mobile Safari/537.36',
   googlebot: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
@@ -13,7 +13,7 @@ const UAS = {
   'chatgpt-user': 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot',
   perplexitybot: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot',
 }
-const KEY_PAGES = ['/', '/talk', '/browse', '/pricing', '/answers', '/trust', '/faq', '/terms', '/privacy', '/is-leanon-worth-it',
+const KEY_PAGES = ['/', '/talk', '/browse', '/pricing', '/answers', '/trust', '/faq', '/terms', '/privacy', '/is-howwasyourday-worth-it',
   '/for-women', '/marriage-problems-india', '/relationship-support-real-person', '/relationship-emotional-support-guide-india',
   '/support/loneliness', '/peer-support', '/delete-account', '/llms.txt', '/become-a-peer-supporter', '/become-listener']
 const geoUrls = [...new Set([...readFileSync('lib/geo-questions.ts', 'utf8').matchAll(/url: '([^']+)'/g)].map(m => m[1]))]

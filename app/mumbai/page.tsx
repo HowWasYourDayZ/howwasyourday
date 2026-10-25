@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Mumbai — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Mumbai, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/mumbai', languages: { 'en-IN': 'https://www.leanon.app/mumbai' } },
-  keywords: 'peer support Mumbai, emotional support Mumbai, loneliness Mumbai, relationship stress Mumbai, talk to someone Mumbai, leanon Mumbai',
+  title: 'Emotional Support in Mumbai — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Mumbai, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/mumbai', languages: { 'en-IN': 'https://www.howwasyourday.live/mumbai' } },
+  keywords: 'peer support Mumbai, emotional support Mumbai, loneliness Mumbai, relationship stress Mumbai, talk to someone Mumbai, howwasyourday Mumbai',
   openGraph: {
-    title: 'Emotional Support in Mumbai — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Mumbai, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-    url: 'https://www.leanon.app/mumbai',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Mumbai — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Mumbai, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/mumbai',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available in the middle of the night for Mumbai users?',
+      name: 'Is How Was Your Day available in the middle of the night for Mumbai users?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Often, yes. LeanOn listeners go online at different hours, including late at night. Mumbai\'s night owls, late-shift workers, and anyone who finds that their hardest feelings surface after midnight can connect with a peer listener any time. Sessions start at ₹160 for 15 minutes — no appointment, no waiting.',
+        text: 'Often, yes. How Was Your Day listeners go online at different hours, including late at night. Mumbai\'s night owls, late-shift workers, and anyone who finds that their hardest feelings surface after midnight can connect with a peer listener any time. Sessions start at ₹160 for 15 minutes — no appointment, no waiting.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Mumbai', item: 'https://www.leanon.app/mumbai' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Mumbai', item: 'https://www.howwasyourday.live/mumbai' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/mumbai',
+  url: 'https://www.howwasyourday.live/mumbai',
   areaServed: {
     '@type': 'City',
     name: 'Mumbai',
@@ -148,7 +148,7 @@ export default function MumbaiPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function MumbaiPage() {
         <div className="hero">
           <p className="tag">Peer Support · Mumbai</p>
           <h1>Peer Support in Mumbai — Because Mumbai's <em>Grind Gets to Everyone</em></h1>
-          <p className="lead">Mumbai never slows down — and neither do the pressures that come with living here. The commutes, the cost of living, the relentless competition, and the loneliness of a city that is too busy to notice you. LeanOn connects you with peer listeners who have been through it and come out the other side.</p>
+          <p className="lead">Mumbai never slows down — and neither do the pressures that come with living here. The commutes, the cost of living, the relentless competition, and the loneliness of a city that is too busy to notice you. How Was Your Day connects you with peer listeners who have been through it and come out the other side.</p>
         </div>
 
         {/* Mumbai's unique emotional pressures */}
@@ -186,22 +186,22 @@ export default function MumbaiPage() {
           <p>Romantic relationships in Mumbai face unique pressures. Couples are often exhausted when they finally see each other. Space is limited — many couples live with families or in shared flats, making privacy scarce. The financial pressure of starting a life together in a city this expensive creates arguments and resentment. And the ambition that brought people to Mumbai can pull them in directions that strain even strong partnerships.</p>
         </div>
 
-        {/* How LeanOn Helps Mumbai */}
+        {/* How the app Helps Mumbai */}
         <div className="section">
-          <h2>How LeanOn Helps Mumbai Residents</h2>
-          <p>LeanOn is peer support — not therapy. Real people, who have navigated real Mumbai pressures, available to listen without judgment and support without lecturing.</p>
+          <h2>How the app Helps Mumbai Residents</h2>
+          <p>How Was Your Day is peer support — not therapy. Real people, who have navigated real Mumbai pressures, available to listen without judgment and support without lecturing.</p>
 
           <h3>Talk to Someone Who Understands Mumbai</h3>
           <p>Our listeners include people who have spent years in Mumbai — who know what the Virar Fast does to your soul, what it feels like to turn 30 in a 1-BHK in Malad still wondering when real life starts, what it means to build a career in a city that rewards aggression and punishes sensitivity. That shared context matters more than any certificate.</p>
 
           <h3>No Commute Required</h3>
-          <p>You have enough commuting to do. LeanOn sessions happen entirely on your phone or laptop. Talk from your office bathroom, your commute home, your bedroom after midnight. Support is available wherever you are, whenever you need it.</p>
+          <p>You have enough commuting to do. How Was Your Day sessions happen entirely on your phone or laptop. Talk from your office bathroom, your commute home, your bedroom after midnight. Support is available wherever you are, whenever you need it.</p>
 
           <h3>Affordable and Accessible</h3>
-          <p>Therapy in Mumbai can cost ₹2,000 to ₹5,000 per session — and there are waitlists. LeanOn starts at ₹160 for 15 minutes, with no appointment. For the kind of emotional support that most Mumbaikars need most of the time — a caring human who listens without judgment — peer support is often the right tool.</p>
+          <p>Therapy in Mumbai can cost ₹2,000 to ₹5,000 per session — and there are waitlists. How Was Your Day starts at ₹160 for 15 minutes, with no appointment. For the kind of emotional support that most Mumbaikars need most of the time — a caring human who listens without judgment — peer support is often the right tool.</p>
 
           <h3>Private and Confidential</h3>
-          <p>In Mumbai's social and professional circles, vulnerability can feel like a liability. LeanOn is completely private. Your conversations stay between you and your listener. No one in your network will know unless you choose to tell them.</p>
+          <p>In Mumbai's social and professional circles, vulnerability can feel like a liability. How Was Your Day is completely private. Your conversations stay between you and your listener. No one in your network will know unless you choose to tell them.</p>
         </div>
 
         {/* Listener cards */}
@@ -266,15 +266,15 @@ export default function MumbaiPage() {
             <div className="faq-a">Yes. Mumbai life puts enormous strain on relationships — couples rarely have enough time together, long-distance arrangements are common, and the city's competitiveness can breed comparison and resentment. Talking to a peer listener who has navigated relationship stress in a high-pressure urban environment can help you process feelings and gain perspective.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn available in the middle of the night for Mumbai users?</div>
-            <div className="faq-a">Often, yes. LeanOn listeners go online at different hours, including late at night. Mumbai's night owls, late-shift workers, and anyone who finds that their hardest feelings surface after midnight can connect with a peer listener any time. Sessions start at ₹160 for 15 minutes — no appointment, no waiting.</div>
+            <div className="faq-q">Is How Was Your Day available in the middle of the night for Mumbai users?</div>
+            <div className="faq-a">Often, yes. How Was Your Day listeners go online at different hours, including late at night. Mumbai's night owls, late-shift workers, and anyone who finds that their hardest feelings surface after midnight can connect with a peer listener any time. Sessions start at ₹160 for 15 minutes — no appointment, no waiting.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/relationship-stress" className="related-link">Relationship Stress</a>
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
@@ -287,9 +287,9 @@ export default function MumbaiPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

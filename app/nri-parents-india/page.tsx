@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Guilt About Parents in India | The Distance You Can\'t Fix | LeanOn',
+  title: 'NRI Guilt About Parents in India | The Distance You Can\'t Fix | How Was Your Day',
   description: 'You left for a better life. But your parents are aging in India and you\'re not there. That guilt — and the helplessness of distance — is a real weight to carry.',
   keywords: ['nri guilt parents', 'nri aging parents', 'indian parents alone', 'nri missing family india', 'nri parent care', 'guilty nri', 'missing parents india abroad'],
-  alternates: { canonical: 'https://www.leanon.app/nri-parents-india' },
-  openGraph: { title: 'NRI Guilt About Parents in India | The Distance You Can\'t Fix | LeanOn', description: 'You left for a better life. But your parents are aging in India and you\'re not there. That guilt — and the helplessness of distance — is a real weight to carry.', url: 'https://www.leanon.app/nri-parents-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-parents-india' },
+  openGraph: { title: 'NRI Guilt About Parents in India | The Distance You Can\'t Fix | How Was Your Day', description: 'You left for a better life. But your parents are aging in India and you\'re not there. That guilt — and the helplessness of distance — is a real weight to carry.', url: 'https://www.howwasyourday.live/nri-parents-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Guilt About Parents', item: 'https://www.leanon.app/nri-parents-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Guilt About Parents', item: 'https://www.howwasyourday.live/nri-parents-india' },
 ] }
 
 const S = `
@@ -70,38 +70,38 @@ export default function NriParentsIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Guilt About Parents</span></nav>
         <div className="hero">
           <p className="badge">NRI Guilt &middot; Aging Parents &middot; The Distance</p>
           <h1>Your parents are aging in India. <em>And you cannot fix the distance.</em></h1>
           <p className="lead">You left for a better life — and you got it. But your parents are in India, and they are getting older, and you are not there. Not for the small daily things, not for the health scares, sometimes not even for the big ones. The guilt of that distance is a real and heavy thing to carry. You are not alone in it. Talk to someone who understands. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Video Call Grief</h2>
           <p>There is a specific kind of grief that NRIs carry that does not have a common name — the grief of watching your parents age on a screen. You notice it between visits: the hair that has greyed more, the way your father moves a little more slowly, your mother&rsquo;s hearing that has gotten worse. You see it in two-inch increments on a phone screen, and there is nothing you can do about it except call more often, which helps but does not fix the fundamental thing.</p>
           <p>The video call is both a gift and a reminder. You can see them, which is something. And you can see them, which means you can see exactly what you are missing — the daily presence, the ability to be there when something goes wrong, the possibility of an ordinary afternoon that does not require an 8,000-mile flight.</p>
-          <p>This grief is real. It accumulates between visits. It sits underneath your daily life — in the morning call, in the news about a health issue managed by a sibling or a neighbour because you were not there. LeanOn listeners have heard this from hundreds of NRIs and they understand the specific texture of it without needing an explanation. First 5 minutes free.</p>
+          <p>This grief is real. It accumulates between visits. It sits underneath your daily life — in the morning call, in the news about a health issue managed by a sibling or a neighbour because you were not there. How Was Your Day listeners have heard this from hundreds of NRIs and they understand the specific texture of it without needing an explanation. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>The Health Scare You Were Not There For</h2>
           <p>At some point in most NRI lives, there is a health event involving a parent that becomes the embodiment of the cost of distance. A fall. A hospital admission. A diagnosis. And you are in San Jose or London, unable to do anything but book a flight and wait and worry. Sometimes you make it in time. Sometimes you don&rsquo;t. Either way, the experience changes something.</p>
           <p>The helplessness of that moment — of being 8,000 miles away when someone you love needs care — is one of the most painful experiences an NRI can carry. It is not something that resolves easily. It resurfaces at unexpected times. And it is very hard to speak about, because the people around you in your daily life cannot fully understand it, and the people who could understand it — your family — are the ones you most need to protect from the full weight of your feelings.</p>
-          <p>LeanOn is a space to speak it honestly. Not to solve it. Just to say it out loud to someone who will hear it as the real thing it is.</p>
+          <p>How Was Your Day is a space to speak it honestly. Not to solve it. Just to say it out loud to someone who will hear it as the real thing it is.</p>
         </div>
 
         <div className="section">
           <h2>You Are Not Alone in This</h2>
           <p>NRI guilt about parents is one of the most universal experiences in the Indian diaspora and one of the least spoken. Every NRI community gathering has people carrying it. The WhatsApp group with siblings coordinating care from different continents. The annual visit that never feels long enough. The birthday you miss because the timing never works perfectly with the work calendar.</p>
-          <p>You chose this life. Your parents, in many cases, encouraged it or actively facilitated it. And none of that makes the guilt easier. The choice that gave you a good life came with a cost, and you are the one who lives with that cost every day. A LeanOn peer listener will hold that with you — not with solutions, not with reassurance that you are a good child, just with genuine presence and the understanding that comes from having heard this many times from people who are not wrong to feel it.</p>
+          <p>You chose this life. Your parents, in many cases, encouraged it or actively facilitated it. And none of that makes the guilt easier. The choice that gave you a good life came with a cost, and you are the one who lives with that cost every day. A How Was Your Day peer listener will hold that with you — not with solutions, not with reassurance that you are a good child, just with genuine presence and the understanding that comes from having heard this many times from people who are not wrong to feel it.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The distance you cannot fix deserves to be spoken.</h2><p>Real peer listener. No platitudes. Just genuine hearing. First 5 minutes free. Sessions from ₹160.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The distance you cannot fix deserves to be spoken.</h2><p>Real peer listener. No platitudes. Just genuine hearing. First 5 minutes free. Sessions from ₹160.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-burnout">NRI burnout &rarr;</a>

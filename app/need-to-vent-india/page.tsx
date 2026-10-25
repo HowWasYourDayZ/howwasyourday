@@ -4,22 +4,22 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Vent India — Someone to Listen Right Now | LeanOn',
+  title: 'Need to Vent India — Someone to Listen Right Now | How Was Your Day',
   description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. First 5 minutes free.',
   keywords: ['need to vent India', 'want to vent India', 'vent out India', 'vent to someone India', 'just need to vent India'],
-  alternates: { canonical: 'https://www.leanon.app/need-to-vent-india', languages: { 'en-IN': 'https://www.leanon.app/need-to-vent-india' } },
-  openGraph: { title: 'Need to Vent India — Someone to Listen Right Now | LeanOn', description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. First 5 minutes free.', url: 'https://www.leanon.app/need-to-vent-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/need-to-vent-india', languages: { 'en-IN': 'https://www.howwasyourday.live/need-to-vent-india' } },
+  openGraph: { title: 'Need to Vent India — Someone to Listen Right Now | How Was Your Day', description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. First 5 minutes free.', url: 'https://www.howwasyourday.live/need-to-vent-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    {'@type': 'Question', name: 'Is it okay to just vent without wanting advice?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Many sessions on LeanOn are exactly this &mdash; someone needed to say what they were carrying and be heard. No advice, no solutions. Just genuine listening. That is a complete and valuable use of peer support.'}},
+    {'@type': 'Question', name: 'Is it okay to just vent without wanting advice?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Many sessions on How Was Your Day are exactly this &mdash; someone needed to say what they were carrying and be heard. No advice, no solutions. Just genuine listening. That is a complete and valuable use of peer support.'}},
     {'@type': 'Question', name: 'How is this different from just talking to a friend?', acceptedAnswer: {'@type': 'Answer', text: 'Friends have their own responses, their own tiredness, their own opinions. A screened listener\'s job is to receive what you are saying fully, without their own stuff getting in the way. The result feels different &mdash; more received, less managed.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Need to Vent India', item: 'https://www.leanon.app/need-to-vent-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Need to Vent India', item: 'https://www.howwasyourday.live/need-to-vent-india' },
 ] }
 
 const S = `
@@ -66,7 +66,7 @@ export default function NeedToVentIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Need to Vent India</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function NeedToVentIndiaPage() {
         </div>
         <div className="section">
           <h2>No Advice Unless You Want It</h2>
-          <p>LeanOn listeners follow your lead. If you want to vent, they listen. If you want to think through a decision, they help you think. If you want both, you say so. The session belongs to you.</p>
+          <p>How Was Your Day listeners follow your lead. If you want to vent, they listen. If you want to think through a decision, they help you think. If you want both, you say so. The session belongs to you.</p>
           <p>See also: <a href="/support/need-to-vent" style={{color:"#1A8FA0",fontWeight:700}}>Need to vent</a> &mdash; the topic page.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

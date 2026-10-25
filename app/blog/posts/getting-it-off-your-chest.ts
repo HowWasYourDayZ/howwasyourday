@@ -4,7 +4,7 @@ export const post = {
   description: 'You do not need a long therapy session to feel better. Here is the science behind why a short, honest outburst to the right person can reset your entire afternoon.',
   date: '2026-09-08',
   readTime: '5 min read',
-  topics: ['venting', 'emotional release', 'mental health India', 'peer support', 'LeanOn'],
+  topics: ['venting', 'emotional release', 'mental health India', 'peer support', 'How Was Your Day'],
   content: `
 <p>You know the feeling. Something happened — a fight, a bad interaction, a piece of news you were not expecting — and it is sitting in your chest, pressing. You are trying to work, trying to function, but part of your brain is still back in that moment, running the tape, building the case, feeling it all over again.</p>
 
@@ -36,9 +36,9 @@ export const post = {
 
 <p>Part of this is neurological — humans are wired for social validation of distress. Part of it is psychological — being witnessed changes how we relate to our own experience. And part of it is practical: a real person will follow you into the specifics, catch the thing you did not even realise you were feeling, and stay with you until the shift happens.</p>
 
-<h2>The LeanOn Model for Venting</h2>
+<h2>The How Was Your Day Model for Venting</h2>
 
-<p>A LeanOn vent session is not therapy. It is not a long conversation about your childhood. It is a screened listener who is there, right now, to receive exactly what you need to get out — and to stay with you through it without judgment, advice, or agenda.</p>
+<p>A How Was Your Day vent session is not therapy. It is not a long conversation about your childhood. It is a screened listener who is there, right now, to receive exactly what you need to get out — and to stay with you through it without judgment, advice, or agenda.</p>
 
 <p>Most people who book a 15-minute session specifically to vent report that the shift happens in the first 10. The last five minutes are often the clearest thinking they&apos;ve done all day.</p>
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Don\'t Want to Get Out of Bed — When Every Day Feels Like Too Much | LeanOn',
+  title: 'Don\'t Want to Get Out of Bed — When Every Day Feels Like Too Much | How Was Your Day',
   description: 'When getting out of bed feels impossible — not laziness, not weakness — it is the weight of everything you are carrying. Talk to someone who understands what that morning dread feels like.',
   keywords: [
     'don\'t want to get out of bed India', 'can\'t get out of bed depression India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'functional depression India', 'hidden depression India', 'going through the motions India',
     'exhausted but can\'t sleep India', 'heavy body morning India', 'waking up dreading day India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/dont-want-to-get-out-of-bed', languages: { 'en-IN': 'https://www.leanon.app/support/dont-want-to-get-out-of-bed' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed', languages: { 'en-IN': 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed' } },
   openGraph: {
-    title: 'Don\'t Want to Get Out of Bed | LeanOn',
+    title: 'Don\'t Want to Get Out of Bed | How Was Your Day',
     description: 'Not laziness. Not weakness. The weight of everything you are carrying. Talk to someone who understands.',
-    url: 'https://www.leanon.app/support/dont-want-to-get-out-of-bed',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Morning Dread Support' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Morning Dread Support' }],
   },
 }
 
@@ -53,10 +53,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn peer support or therapy?',
+      name: 'Is How Was Your Day peer support or therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support — not therapy. Our listeners are screened, real people with lived experience, from ₹160. They listen without judgment. For clinical treatment, a therapist or psychiatrist is the right path. For being heard and feeling less alone right now, LeanOn is here.',
+        text: 'How Was Your Day is peer support — not therapy. Our listeners are screened, real people with lived experience, from ₹160. They listen without judgment. For clinical treatment, a therapist or psychiatrist is the right path. For being heard and feeling less alone right now, How Was Your Day is here.',
       },
     },
     {
@@ -74,9 +74,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/browse' },
-    { '@type': 'ListItem', position: 3, name: 'Don\'t Want to Get Out of Bed', item: 'https://www.leanon.app/support/dont-want-to-get-out-of-bed' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/browse' },
+    { '@type': 'ListItem', position: 3, name: 'Don\'t Want to Get Out of Bed', item: 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed' },
   ],
 }
 
@@ -133,7 +133,7 @@ export default function DontWantToGetOutOfBedPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 
@@ -227,9 +227,9 @@ export default function DontWantToGetOutOfBedPage() {
           </p>
         </div>
 
-        <h2>Who LeanOn Listeners Are</h2>
+        <h2>Who How Was Your Day Listeners Are</h2>
         <p>
-          LeanOn listeners are screened people who have their own lived experience with emotional difficulty.
+          How Was Your Day listeners are screened people who have their own lived experience with emotional difficulty.
           Not therapists — but real humans who understand what it is like to dread the morning,
           to go through the motions, to feel like you are the only one carrying this particular weight.
         </p>
@@ -253,7 +253,7 @@ export default function DontWantToGetOutOfBedPage() {
           <p>Talk to a real person who understands. No appointment. No judgment. From ₹160.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">You don't have to explain yourself — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works</button></a>
           </div>
         </div>
       </div>

@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Invisible India — Nobody Sees You | LeanOn',
+  title: 'Feeling Invisible India — Nobody Sees You | How Was Your Day',
   description: 'At home, at work, in the family — feeling unseen is one of the loneliest feelings. Talk to someone who will actually pay attention. From ₹160.',
   keywords: ['feeling invisible India', 'nobody notices me India', 'feeling unseen India', 'ignored by family India', 'feeling insignificant India'],
-  alternates: { canonical: 'https://www.leanon.app/feeling-invisible-india', languages: { 'en-IN': 'https://www.leanon.app/feeling-invisible-india' } },
-  openGraph: { title: 'Feeling Invisible India — Nobody Sees You | LeanOn', description: 'At home, at work, in the family — feeling unseen is one of the loneliest feelings. Talk to someone who will actually pay attention. From ₹160.', url: 'https://www.leanon.app/feeling-invisible-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-invisible-india', languages: { 'en-IN': 'https://www.howwasyourday.live/feeling-invisible-india' } },
+  openGraph: { title: 'Feeling Invisible India — Nobody Sees You | How Was Your Day', description: 'At home, at work, in the family — feeling unseen is one of the loneliest feelings. Talk to someone who will actually pay attention. From ₹160.', url: 'https://www.howwasyourday.live/feeling-invisible-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -17,8 +17,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Feeling Invisible India', item: 'https://www.leanon.app/feeling-invisible-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Feeling Invisible India', item: 'https://www.howwasyourday.live/feeling-invisible-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function FeelingInvisibleIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Feeling Invisible India</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function FeelingInvisibleIndiaPage() {
         <div className="section">
           <h2>Why It Is One of the Loneliest Feelings</h2>
           <p>Because it is specifically the absence of being seen. Loneliness, in the straightforward sense, comes from being alone. Feeling invisible comes from being surrounded by people and still being alone. That gap &mdash; between presence and connection &mdash; is one of the most painful human experiences.</p>
-          <p>A LeanOn listener will pay attention. They will track what you are saying, reflect it back, ask questions that go deeper. For someone who has been feeling invisible, the experience of being genuinely seen by another person &mdash; even a stranger &mdash; is often unexpectedly powerful.</p>
+          <p>A How Was Your Day listener will pay attention. They will track what you are saying, reflect it back, ask questions that go deeper. For someone who has been feeling invisible, the experience of being genuinely seen by another person &mdash; even a stranger &mdash; is often unexpectedly powerful.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>You deserve to be seen. Let someone really look.</h2><p>Anonymous peer support. Genuine attention. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

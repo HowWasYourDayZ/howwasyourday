@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Dallas-Plano-Frisco | LeanOn',
+  title: 'Emotional Support for Indians in Dallas-Plano-Frisco | How Was Your Day',
   description: 'Plano, Frisco, Irving — DFW\'s booming Indian community is one of America\'s fastest growing. But fast growth and real belonging are different things. Talk to someone who gets it.',
   keywords: ['indians in dallas support', 'plano indian community', 'frisco indian support', 'irving texas indian', 'dfw indian mental health', 'desi support dallas'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-dallas' },
-  openGraph: { title: 'Emotional Support for Indians in Dallas-Plano-Frisco | LeanOn', description: 'Plano, Frisco, Irving — DFW\'s booming Indian community is one of America\'s fastest growing. But fast growth and real belonging are different things. Talk to someone who gets it.', url: 'https://www.leanon.app/indians-in-dallas', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-dallas' },
+  openGraph: { title: 'Emotional Support for Indians in Dallas-Plano-Frisco | How Was Your Day', description: 'Plano, Frisco, Irving — DFW\'s booming Indian community is one of America\'s fastest growing. But fast growth and real belonging are different things. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/indians-in-dallas', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the DFW Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience in American tech hubs like the DFW corridor. You don\'t need to explain the Plano or Frisco Indian community, the H-1B pressure, or what it means to be surrounded by community but still feel alone.' } },
+  { '@type': 'Question', name: 'Do listeners understand the DFW Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience in American tech hubs like the DFW corridor. You don\'t need to explain the Plano or Frisco Indian community, the H-1B pressure, or what it means to be surrounded by community but still feel alone.' } },
   { '@type': 'Question', name: 'What time works best to connect from Dallas?', acceptedAnswer: { '@type': 'Answer', text: 'Dallas (CST) is 11.5 hours behind IST. 7am Dallas = 6:30pm India. Your early morning before work is India\'s evening — a reliable window when listeners are available. No appointment needed.' } },
   { '@type': 'Question', name: 'Is this confidential from my Plano or Frisco community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — only a phone number and first name are required. Nothing is shared with anyone in your community. Listeners are in India, outside your network entirely.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. Sessions start from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Dallas', item: 'https://www.leanon.app/indians-in-dallas' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Dallas', item: 'https://www.howwasyourday.live/indians-in-dallas' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInDallasPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Dallas</span></nav>
         <div className="hero">
@@ -83,14 +83,14 @@ export default function IndiansInDallasPage() {
           <h2>Plano, Frisco, Irving: The Performance Capital of Indian America</h2>
           <p>The DFW Indian corridor — from Irving and Coppell through Plano, Allen, and up into Frisco — has grown at a remarkable pace. Technology companies have relocated headquarters here. Indian families have followed. There are temples off Legacy Drive, cricket leagues, Navratri celebrations that fill convention centres. The community infrastructure is real.</p>
           <p>And underneath it, a particular kind of exhaustion. Everyone in Frisco is doing well. Everyone has a good job. Everyone&rsquo;s kids are in the gifted program. The community gathers for Diwali, for cricket, for Holi — and there is an unspoken agreement that what is shared is the highlight reel. The actual weight of immigration, of H-1B anxiety, of marriages under strain, of identity — that goes unspoken.</p>
-          <p>LeanOn is built for exactly this. A real Indian peer listener in India — outside your Plano network entirely — who understands the cultural context without you having to explain it. First 5 minutes free.</p>
+          <p>How Was Your Day is built for exactly this. A real Indian peer listener in India — outside your Plano network entirely — who understands the cultural context without you having to explain it. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>The Exhaustion of Success Nobody Named</h2>
           <p>Indian tech workers in DFW often carry a very specific weight: the pressure of having a good life that doesn&rsquo;t feel as good as it looks. The visa tied to the job. The family in India who are proud but dependent. The marriage that started one way and has drifted. The children who are assimilating in ways that are both wonderful and quietly grieving.</p>
           <p>None of this fits into the community WhatsApp group. It&rsquo;s not for your parents to hear. It&rsquo;s not something your Plano friends — also performing success — can receive without judgment. Dallas (CST) is 11.5 hours behind IST. 7am Dallas is 6:30pm in India — your early morning is their evening. Listeners are available. No appointment needed.</p>
-          <p>You don&rsquo;t have to be in crisis to talk to someone. You can just be tired. A real Indian listener who has heard similar stories, who won&rsquo;t gossip, and who genuinely wants to understand — that is what LeanOn offers.</p>
+          <p>You don&rsquo;t have to be in crisis to talk to someone. You can just be tired. A real Indian listener who has heard similar stories, who won&rsquo;t gossip, and who genuinely wants to understand — that is what How Was Your Day offers.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

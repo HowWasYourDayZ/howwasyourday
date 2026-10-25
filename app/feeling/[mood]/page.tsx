@@ -4,10 +4,10 @@ import { FEELINGS, getFeeling } from '@/lib/feelings-data'
 
 export const dynamic = 'force-static'
 
-// ── Mood pages: LeanOn's structural answer to the daily-horoscope SEO engine ──
+// ── Mood pages: How Was Your Day's structural answer to the daily-horoscope SEO engine ──
 //
 // AstroTalk's organic moat is 12 zodiac-sign pages people return to daily.
-// LeanOn cannot (and should not) do horoscopes — but the same MECHANIC works
+// How Was Your Day cannot (and should not) do horoscopes — but the same MECHANIC works
 // honestly here: a person in distress types their FEELING into Google
 // ("why do I feel numb", "feeling overwhelmed today", "can't sleep anxious").
 // Each feeling gets its own indexable, genuinely useful page that ends in a
@@ -24,7 +24,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { mood: string } }): Promise<Metadata> {
   const f = getFeeling(params.mood)
   if (!f) return {}
-  const url = `https://www.leanon.app/feeling/${f.slug}`
+  const url = `https://www.howwasyourday.live/feeling/${f.slug}`
   return {
     title: f.metaTitle,
     description: f.metaDescription,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: { mood: string } })
       title: f.metaTitle,
       description: f.metaDescription,
       url,
-      siteName: 'LeanOn',
+      siteName: 'How Was Your Day',
       type: 'article',
     },
   }
@@ -84,7 +84,7 @@ export default function FeelingPage({ params }: { params: { mood: string } }) {
   const f = getFeeling(params.mood)
   if (!f) notFound()
 
-  const url = `https://www.leanon.app/feeling/${f.slug}`
+  const url = `https://www.howwasyourday.live/feeling/${f.slug}`
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -100,8 +100,8 @@ export default function FeelingPage({ params }: { params: { mood: string } }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-      { '@type': 'ListItem', position: 2, name: 'Daily check-in', item: 'https://www.leanon.app/daily-check-in' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+      { '@type': 'ListItem', position: 2, name: 'Daily check-in', item: 'https://www.howwasyourday.live/daily-check-in' },
       { '@type': 'ListItem', position: 3, name: f.label, item: url },
     ],
   }
@@ -113,7 +113,7 @@ export default function FeelingPage({ params }: { params: { mood: string } }) {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -180,9 +180,9 @@ export default function FeelingPage({ params }: { params: { mood: string } }) {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

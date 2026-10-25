@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Nagpur — Peer Listeners | LeanOn',
+  title: 'Emotional Support in Nagpur — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Nagpur, Maharashtra. Talk anonymously about career pressure, family expectations, civil services stress. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/nagpur', languages: { 'en-IN': 'https://www.leanon.app/nagpur' } },
-  keywords: 'peer support Nagpur, emotional support Nagpur, civil services stress Nagpur, family pressure Nagpur Maharashtra, talk to someone Nagpur, leanon Nagpur',
+  alternates: { canonical: 'https://www.howwasyourday.live/nagpur', languages: { 'en-IN': 'https://www.howwasyourday.live/nagpur' } },
+  keywords: 'peer support Nagpur, emotional support Nagpur, civil services stress Nagpur, family pressure Nagpur Maharashtra, talk to someone Nagpur, howwasyourday Nagpur',
   openGraph: {
-    title: 'Emotional Support in Nagpur — Peer Listeners | LeanOn',
+    title: 'Emotional Support in Nagpur — Peer Listeners | How Was Your Day',
     description: 'Connect with peer listeners in Nagpur, Maharashtra. Talk anonymously about career pressure, family expectations, civil services stress. No appointment needed.',
-    url: 'https://www.leanon.app/nagpur',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/nagpur',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -32,7 +32,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What do Nagpur users talk about on LeanOn?',
+      name: 'What do Nagpur users talk about on How Was Your Day?',
       acceptedAnswer: { '@type': 'Answer', text: 'Common themes include: UPSC and MPSC preparation stress, the pressure of working in or aspiring toward law and government positions, family expectations around marriage especially in more conservative family networks, the experience of being in a city that is growing but still feels smaller than Mumbai or Pune, and relationship situations that are difficult to discuss within tight community structures.' },
     },
     {
@@ -42,8 +42,8 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available in Nagpur?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn is available anywhere in India with a smartphone and internet connection. Sessions start from &#8377;160 for 15 minutes, no appointment.' },
+      name: 'Is How Was Your Day available in Nagpur?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is available anywhere in India with a smartphone and internet connection. Sessions start from &#8377;160 for 15 minutes, no appointment.' },
     },
   ],
 }
@@ -52,17 +52,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Nagpur', item: 'https://www.leanon.app/nagpur' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Nagpur', item: 'https://www.howwasyourday.live/nagpur' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/nagpur',
+  url: 'https://www.howwasyourday.live/nagpur',
   areaServed: { '@type': 'City', name: 'Nagpur', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -119,7 +119,7 @@ export default function NagpurPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">
@@ -130,7 +130,7 @@ export default function NagpurPage() {
         <div className="hero">
           <p className="tag">Peer Support &middot; Nagpur</p>
           <h1>Peer Support in Nagpur &mdash; Someone to Lean On in <em>the Orange City</em></h1>
-          <p className="lead">Nagpur carries the ambition of a city that punches above its weight &mdash; legal capital, winter capital, civil services hub. The pressure to succeed here is real, the family expectations are strong, and the culture of admitting struggle is still evolving. LeanOn is a space completely outside that pressure.</p>
+          <p className="lead">Nagpur carries the ambition of a city that punches above its weight &mdash; legal capital, winter capital, civil services hub. The pressure to succeed here is real, the family expectations are strong, and the culture of admitting struggle is still evolving. How Was Your Day is a space completely outside that pressure.</p>
         </div>
         <div className="section">
           <h2>Nagpur&apos;s Unique Emotional Pressures</h2>
@@ -142,8 +142,8 @@ export default function NagpurPage() {
           <p>Nagpur is not quite a metro but not quite a smaller city either. Many people who grew up here have spent time in Mumbai, Pune, or elsewhere, and returning &mdash; or staying &mdash; brings its own disorientation. The city is changing but the social structures have not changed at the same pace. That gap creates a particular kind of pressure.</p>
         </div>
         <div className="section">
-          <h2>How LeanOn Works in Nagpur</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, no appointment, from your phone.</p>
+          <h2>How It Works in Nagpur</h2>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, no appointment, from your phone.</p>
           <p>The listener is a real Indian person, screened for active listening. They have no connection to your family or your social network. Your listener never sees your phone number, and nothing is shared with anyone in your life.</p>
         </div>
         <div className="section">
@@ -156,7 +156,7 @@ export default function NagpurPage() {
           ))}
         </div>
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
+          <p><strong>How Was Your Day is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
           <p>Crisis support: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> (free, 24/7, Government of India).</p>
         </div>
         <div className="cta-card">

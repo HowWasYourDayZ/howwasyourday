@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Tamil NRI Support Online | Talk to Someone Who Gets It | LeanOn',
+  title: 'Tamil NRI Support Online | Talk to Someone Who Gets It | How Was Your Day',
   description: 'Tamil NRIs in UK, USA, Canada, Australia — the homesickness, family pressure, and identity weight are real. Talk to Tamil listeners who understand.',
   keywords: ['tamil nri support', 'tamil diaspora loneliness', 'tamils abroad', 'nri tamil uk', 'nri tamil usa', 'tamil people abroad', 'talk to tamil person online'],
-  alternates: { canonical: 'https://www.leanon.app/tamil-nri-support' },
-  openGraph: { title: 'Tamil NRI Support Online | Talk to Someone Who Gets It | LeanOn', description: 'Tamil NRIs in UK, USA, Canada, Australia — the homesickness, family pressure, and identity weight are real. Talk to Tamil listeners who understand.', url: 'https://www.leanon.app/tamil-nri-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/tamil-nri-support' },
+  openGraph: { title: 'Tamil NRI Support Online | Talk to Someone Who Gets It | How Was Your Day', description: 'Tamil NRIs in UK, USA, Canada, Australia — the homesickness, family pressure, and identity weight are real. Talk to Tamil listeners who understand.', url: 'https://www.howwasyourday.live/tamil-nri-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Can I talk in Tamil?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many LeanOn listeners speak Tamil. When you start browsing, you can look for Tamil-speaking listeners and mention your language preference at the start of the session.' } },
+  { '@type': 'Question', name: 'Can I talk in Tamil?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many How Was Your Day listeners speak Tamil. When you start browsing, you can look for Tamil-speaking listeners and mention your language preference at the start of the session.' } },
   { '@type': 'Question', name: 'Do listeners understand the pressure from Chennai or Coimbatore families specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Tamil listeners understand the regional dynamics — the weight of family reputation, arranged marriage expectations, caste conversations that follow you abroad, and the particular brand of Tamil pride that comes with being from a family that worked hard to send you.' } },
   { '@type': 'Question', name: 'Is this completely confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your family, your community, and your colleagues will never know. Nothing is shared or stored beyond the session.' } },
   { '@type': 'Question', name: 'I am in the UK or USA. What time can I call?', acceptedAnswer: { '@type': 'Answer', text: 'India listeners are active evenings IST (6pm–11pm). From the UK (BST), that is 1:30pm–6:30pm. From the US East Coast, that is 8:30am–1:30pm. From the West Coast, 5:30am–10:30am. Morning sessions in the US often work well.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Tamil NRI Support', item: 'https://www.leanon.app/tamil-nri-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Tamil NRI Support', item: 'https://www.howwasyourday.live/tamil-nri-support' },
 ] }
 
 const S = `
@@ -70,38 +70,38 @@ export default function TamilNriSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Tamil NRI Support</span></nav>
         <div className="hero">
           <p className="badge">Tamil NRI &middot; Diaspora Support &middot; Peer Listening</p>
           <h1>You carry Tamil pride abroad. <em>But who carries you?</em></h1>
           <p className="lead">The Tamil diaspora spans the UK, USA, Canada, Singapore, and Australia. Wherever you landed, you brought with you the weight of family expectations from Chennai or Coimbatore, the pressure to represent your culture well, and the quiet loneliness of being between two worlds. Talk to a Tamil peer listener who understands without explanation. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Tamil Abroad Experience Nobody Fully Articulates</h2>
           <p>Tamil families have one of the highest rates of overseas migration in India. You are part of a diaspora that spans generations — some of you are first-generation immigrants carrying the full weight of your family&rsquo;s hopes, others are second-generation carrying the confusion of belonging fully to neither place. Both are lonely in different ways, and both are real.</p>
           <p>There is the pressure to be &ldquo;settled abroad&rdquo; — a performance that begins before you even leave. Every call home is a status update. Every visit back is scrutinised. The &ldquo;nalla irukkiya?&rdquo; (are you doing well?) from your relatives is not just a greeting — it is a check on whether the sacrifice and the sending-away was worth it. You say yes. You are usually not entirely telling the truth.</p>
-          <p>And then there is the Tamil identity itself: the language pride, the Carnatic music you miss, Pongal celebrated in a cold flat, the caste conversations that follow you abroad even when you thought you had left them behind. LeanOn listeners understand this specific weight. You do not have to explain it. First 5 minutes free.</p>
+          <p>And then there is the Tamil identity itself: the language pride, the Carnatic music you miss, Pongal celebrated in a cold flat, the caste conversations that follow you abroad even when you thought you had left them behind. How Was Your Day listeners understand this specific weight. You do not have to explain it. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>Between First-Gen and Second-Gen</h2>
           <p>If you are first-generation Tamil abroad, the loneliness is often about what you left. If you are second-generation, it is often about not being fully accepted in either place — too Tamil for your English friends, not Tamil enough for your grandparents. Both are real experiences that deserve space.</p>
           <p>Arranged marriage pressure in Tamil families is its own category of stress abroad — the deadlines that start arriving around 25, the WhatsApp matrimonial groups, the distant relatives who treat your relationship status as community property. Managing this from 8,000 miles away, without the normal pressure-release valves of community and family proximity, is exhausting.</p>
-          <p>LeanOn peer listeners understand the Tamil social fabric — not just the loneliness of being far, but the specific cultural pressures that come with being Tamil and abroad. They will listen without judgment to the things you cannot say to your parents or your Tamil community friends, because those conversations carry too much weight to be honest.</p>
+          <p>How Was Your Day peer listeners understand the Tamil social fabric — not just the loneliness of being far, but the specific cultural pressures that come with being Tamil and abroad. They will listen without judgment to the things you cannot say to your parents or your Tamil community friends, because those conversations carry too much weight to be honest.</p>
         </div>
 
         <div className="section">
           <h2>This Is Not a Helpline. It Is a Real Conversation.</h2>
-          <p>LeanOn listeners are not volunteers reading scripts. They are real people with lived experience — some have family abroad, some have navigated dual identity themselves, all have been chosen for their ability to listen without advising, judging, or redirecting. You talk. They hear you. That is the whole thing.</p>
+          <p>How Was Your Day listeners are not volunteers reading scripts. They are real people with lived experience — some have family abroad, some have navigated dual identity themselves, all have been chosen for their ability to listen without advising, judging, or redirecting. You talk. They hear you. That is the whole thing.</p>
           <p>Sessions are anonymous. Phone number and first name only. Your community in Wembley or Scarborough or Sunnyvale will never know. The conversation is between you and your listener, and it stays there.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You don&rsquo;t have to explain yourself to a Tamil listener.</h2><p>They already know the shape of it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You don&rsquo;t have to explain yourself to a Tamil listener.</h2><p>They already know the shape of it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

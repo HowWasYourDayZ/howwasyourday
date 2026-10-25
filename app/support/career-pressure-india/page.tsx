@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Career Pressure in India — Emotional Support When Work Feels Like Everything | LeanOn',
+  title: 'Career Pressure in India — Emotional Support When Work Feels Like Everything | How Was Your Day',
   description: 'In India, career is identity. When it is going wrong, everything feels like it is going wrong. Talk to someone who gets the pressure — the IIT culture, the salary bar, the family expectations.',
   keywords: [
     'career pressure India', 'work stress India', 'job pressure India', 'career anxiety India',
@@ -13,16 +13,16 @@ export const metadata: Metadata = {
     'performance pressure India',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/support/career-pressure-india',
-    languages: { 'en-IN': 'https://www.leanon.app/support/career-pressure-india' },
+    canonical: 'https://www.howwasyourday.live/support/career-pressure-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/support/career-pressure-india' },
   },
   openGraph: {
-    title: 'Career Pressure in India — Emotional Support When Work Feels Like Everything | LeanOn',
+    title: 'Career Pressure in India — Emotional Support When Work Feels Like Everything | How Was Your Day',
     description: 'In India, career is identity. When it is going wrong, everything feels like it is going wrong. Talk to someone who gets the pressure — the IIT culture, the salary bar, the family expectations.',
-    url: 'https://www.leanon.app/support/career-pressure-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/career-pressure-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Career Pressure Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Career Pressure Support India' }],
   },
 }
 
@@ -51,7 +51,7 @@ const faqSchema = {
       name: "What if I want to switch careers but my family won't support it?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "This is one of the most common and most painful situations that people bring to LeanOn — wanting to make a change that feels true to you but knowing it will create conflict with the people whose approval matters most. A listener will not tell you what to do. But they will give you space to fully feel and express both sides: what you want, and what it will cost. That kind of honest processing is often exactly what you need before you can make any kind of decision.",
+        text: "This is one of the most common and most painful situations that people bring to How Was Your Day — wanting to make a change that feels true to you but knowing it will create conflict with the people whose approval matters most. A listener will not tell you what to do. But they will give you space to fully feel and express both sides: what you want, and what it will cost. That kind of honest processing is often exactly what you need before you can make any kind of decision.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "I'm embarrassed about where I am in my career. Will the listener judge me?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "No. Listeners on LeanOn have personally navigated careers that did not go according to plan, comparison with peers who appeared to be ahead, the specific shame of falling short of what was expected. They understand this from the inside. There is no career stage that is too humble, too stuck, or too complicated to bring to a session. The embarrassment itself is something you can talk about.",
+        text: "No. Listeners on How Was Your Day have personally navigated careers that did not go according to plan, comparison with peers who appeared to be ahead, the specific shame of falling short of what was expected. They understand this from the inside. There is no career stage that is too humble, too stuck, or too complicated to bring to a session. The embarrassment itself is something you can talk about.",
       },
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = {
       name: 'What if I am doing well but still feel terrible?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "This is more common than you might think — the experience of meeting external benchmarks and still feeling empty, anxious, or lost. In Indian culture, where career success is so closely tied to identity and worth, doing well on paper can coexist with profound unhappiness. The mismatch between what looks like success and what feels like your life is something many LeanOn listeners have experienced personally. You are not ungrateful. You are human.",
+        text: "This is more common than you might think — the experience of meeting external benchmarks and still feeling empty, anxious, or lost. In Indian culture, where career success is so closely tied to identity and worth, doing well on paper can coexist with profound unhappiness. The mismatch between what looks like success and what feels like your life is something many How Was Your Day listeners have experienced personally. You are not ungrateful. You are human.",
       },
     },
   ],
@@ -85,9 +85,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Career Pressure India', item: 'https://www.leanon.app/support/career-pressure-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Career Pressure India', item: 'https://www.howwasyourday.live/support/career-pressure-india' },
   ],
 }
 
@@ -146,7 +146,7 @@ export default function CareerPressureIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -219,7 +219,7 @@ export default function CareerPressureIndiaPage() {
           <p>The people most affected by your career — your parents, your partner, your close friends — are also the people least able to receive the full truth of how you are feeling about it. Not because they do not care, but because they are invested.</p>
           <p>Your parents may hear your career struggle as an invitation to intensify advice, pressure, or worry. Your partner may hear it as a financial concern. Your peers may hear it as competition. The people closest to you often respond to your career difficulty by trying to solve it — because seeing you struggle is uncomfortable for them too.</p>
           <p>What you actually need is different: a space to say how it feels without the information being used to fix, advise, or worry. A space where your struggle does not become someone else&apos;s emergency. A space where you can be honest about how complicated and confusing the whole thing is without having to manage the other person&apos;s reaction to what you are saying.</p>
-          <p>That is what a conversation with a LeanOn peer listener provides. Someone outside your social system. Someone with no stake in your career outcome. Someone who can hold what you are saying without it triggering their own anxiety or agenda.</p>
+          <p>That is what a conversation with a How Was Your Day peer listener provides. Someone outside your social system. Someone with no stake in your career outcome. Someone who can hold what you are saying without it triggering their own anxiety or agenda.</p>
         </div>
 
         <div className="section">

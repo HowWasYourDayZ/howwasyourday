@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Emotional Support | Someone to Talk to When It All Gets Heavy | LeanOn',
+  title: 'NRI Emotional Support | Someone to Talk to When It All Gets Heavy | How Was Your Day',
   description: 'NRI emotional support from peers who understand — not a helpline, not a professional, just a real human who has been through the same immigrant weight.',
   keywords: ['nri emotional support', 'emotional support for nri', 'indian immigrant emotional support', 'nri support online', 'desi emotional support', 'nri help'],
-  alternates: { canonical: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  openGraph: { title: 'NRI Emotional Support | Someone to Talk to When It All Gets Heavy | LeanOn', description: 'NRI emotional support from peers who understand — not a helpline, not a professional, just a real human who has been through the same immigrant weight.', url: 'https://www.leanon.app/indian-emotional-support-abroad', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  openGraph: { title: 'NRI Emotional Support | Someone to Talk to When It All Gets Heavy | How Was Your Day', description: 'NRI emotional support from peers who understand — not a helpline, not a professional, just a real human who has been through the same immigrant weight.', url: 'https://www.howwasyourday.live/indian-emotional-support-abroad', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Emotional Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Emotional Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
 ] }
 
 const S = `
@@ -70,37 +70,37 @@ export default function NriEmotionalSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Emotional Support</span></nav>
         <div className="hero">
           <p className="badge">NRI Emotional Support &middot; Indian Immigrant Life &middot; Peer Listener</p>
           <h1>NRI Emotional Support — <em>Not a Helpline. A Human.</em></h1>
           <p className="lead">Success abroad doesn&rsquo;t mean okay inside. The homesickness, the isolation, the performance of being fine — it builds up. And when it does, you need more than a hotline or a list of coping tips. You need a real human who already understands the immigrant weight. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Emotional Toll of NRI Life That Nobody Talks About</h2>
           <p>You are doing well. From the outside, everything looks right — the job, the salary, the apartment, the visa. Your parents are proud. Your relatives ask for advice on how to get abroad. Your Instagram tells one story. Your 2 AM tells another.</p>
           <p>The emotional toll of NRI life is invisible because it hides behind success. The homesickness isn&rsquo;t dramatic — it shows up at ordinary moments, when you smell something that reminds you of home, when your parents call and you have to perform &ldquo;fine&rdquo; for thirty minutes. The loneliness is not poverty-loneliness — it&rsquo;s abundance-loneliness, the kind that comes when you have everything your generation worked for and still feel an unexplainable absence.</p>
-          <p>These things are real. They deserve to be heard, not managed. A peer listener at LeanOn already knows this terrain — they will not need you to justify the feeling before they listen to it.</p>
+          <p>These things are real. They deserve to be heard, not managed. A peer listener at How Was Your Day already knows this terrain — they will not need you to justify the feeling before they listen to it.</p>
         </div>
 
         <div className="section">
           <h2>Why NRIs Don&rsquo;t Seek Support</h2>
           <p>The immigrant community carries a specific version of the mental health stigma: &ldquo;what will people think.&rdquo; Add to that the guilt of the immigrant who chose to leave, the pressure not to disappoint the people who sacrificed, the performance of competence that immigration requires — and you have a profile that makes it almost impossible to say &ldquo;I am not okay&rdquo; to anyone in your actual life.</p>
-          <p>You cannot say it to your parents — they will worry and feel responsible. You cannot say it to your Indian friends abroad — everyone is performing fine together. You cannot say it to your colleagues — it might affect how they see your competence. LeanOn exists for the feeling that has nowhere to go. Anonymous. Peer. Already understands.</p>
+          <p>You cannot say it to your parents — they will worry and feel responsible. You cannot say it to your Indian friends abroad — everyone is performing fine together. You cannot say it to your colleagues — it might affect how they see your competence. How Was Your Day exists for the feeling that has nowhere to go. Anonymous. Peer. Already understands.</p>
         </div>
 
         <div className="section">
           <h2>What Emotional Support from a Peer Actually Looks Like</h2>
           <p>It looks like someone listening without trying to solve you. Asking the questions that help you hear yourself think. Not steering you toward a decision. Not telling you what you should feel or whether your feeling is proportionate. Just — there. Present. Not judging. Not advising unless you ask.</p>
-          <p>That is enough. Sometimes that is everything. The thing that shifts is not the situation; it is the feeling of being witnessed by someone who already understands the context. That is what LeanOn peer listeners do.</p>
+          <p>That is enough. Sometimes that is everything. The thing that shifts is not the situation; it is the feeling of being witnessed by someone who already understands the context. That is what How Was Your Day peer listeners do.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The weight you have been carrying quietly.</h2><p>Real peer listener. Understands NRI life. No judgment. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The weight you have been carrying quietly.</h2><p>Real peer listener. Understands NRI life. No judgment. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-mental-health">NRI mental health &rarr;</a>

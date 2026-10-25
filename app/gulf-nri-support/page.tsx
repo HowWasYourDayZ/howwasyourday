@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Gulf NRIs — Talk to Someone Indian | LeanOn',
-  description: 'Gulf NRIs carry a unique emotional weight — far from family, building a future, often alone. LeanOn connects you with a screened Indian peer listener in your language, any time.',
+  title: 'Emotional Support for Gulf NRIs — Talk to Someone Indian | How Was Your Day',
+  description: 'Gulf NRIs carry a unique emotional weight — far from family, building a future, often alone. How Was Your Day connects you with a screened Indian peer listener in your language, any time.',
   keywords: [
     'Gulf NRI emotional support', 'NRI support Gulf', 'Indian expat Gulf support',
     'talk to someone Indian Gulf', 'Gulf NRI mental health', 'NRI loneliness Gulf',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'Gulf NRI talk to someone', 'South Asian expat support Gulf',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/gulf-nri-support',
-    languages: { 'en-IN': 'https://www.leanon.app/gulf-nri-support' },
+    canonical: 'https://www.howwasyourday.live/gulf-nri-support',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/gulf-nri-support' },
   },
   openGraph: {
     title: 'Emotional Support for Gulf NRIs — Talk to Someone Indian, Any Time',
-    description: 'Building a life in the Gulf while holding everything together back home. LeanOn peer listeners understand exactly what that feels like. First 5 minutes free.',
-    url: 'https://www.leanon.app/gulf-nri-support',
-    siteName: 'LeanOn',
+    description: 'Building a life in the Gulf while holding everything together back home. How Was Your Day peer listeners understand exactly what that feels like. First 5 minutes free.',
+    url: 'https://www.howwasyourday.live/gulf-nri-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -39,10 +39,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn only for people in crisis?',
+      name: 'Is How Was Your Day only for people in crisis?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Not at all. LeanOn is for anyone who wants to talk — whether you are in a difficult moment or just feeling the weight of ordinary life. You do not need to be in crisis to deserve support. Most LeanOn users are people living full lives who simply need a real conversation with someone who listens.',
+        text: 'Not at all. How Was Your Day is for anyone who wants to talk — whether you are in a difficult moment or just feeling the weight of ordinary life. You do not need to be in crisis to deserve support. Most How Was Your Day users are people living full lives who simply need a real conversation with someone who listens.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can Indian listeners really understand the Gulf NRI experience?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners are Indians themselves who have personal experience with migration, family pressure, and the specific stresses of building a life far from home. Even those who have not lived abroad understand the cultural context deeply — the expectations, the sacrifices, and what it means to carry the family\'s hopes on your shoulders.',
+        text: 'Many How Was Your Day listeners are Indians themselves who have personal experience with migration, family pressure, and the specific stresses of building a life far from home. Even those who have not lived abroad understand the cultural context deeply — the expectations, the sacrifices, and what it means to carry the family\'s hopes on your shoulders.',
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'I am in Saudi Arabia / Qatar / Bahrain — is LeanOn available there too?',
+      name: 'I am in Saudi Arabia / Qatar / Bahrain — is How Was Your Day available there too?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is available anywhere with internet access. Whether you are in Riyadh, Doha, Manama, or anywhere else in the Gulf, you can connect with an Indian listener any time.',
+        text: 'Yes. How Was Your Day is available anywhere with internet access. Whether you are in Riyadh, Doha, Manama, or anywhere else in the Gulf, you can connect with an Indian listener any time.',
       },
     },
   ],
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Gulf NRI Emotional Support', item: 'https://www.leanon.app/gulf-nri-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Gulf NRI Emotional Support', item: 'https://www.howwasyourday.live/gulf-nri-support' },
   ],
 }
 
@@ -154,7 +154,7 @@ export default function GulfNriSupportPage() {
         <p className="lead">
           More than eight million Indians live and work across the Gulf — in the UAE, Saudi Arabia,
           Kuwait, Qatar, Oman, and Bahrain. You send money home. You keep the family running.
-          You stay strong. But who is there for you? LeanOn is.
+          You stay strong. But who is there for you? How Was Your Day is.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
@@ -175,7 +175,7 @@ export default function GulfNriSupportPage() {
 
         <div className="night-box">
           <h2>🌙 Across the Gulf — someone is always awake to listen</h2>
-          <p>Whether you are in Dubai, Riyadh, Kuwait City, Muscat, Doha, or Manama — LeanOn
+          <p>Whether you are in Dubai, Riyadh, Kuwait City, Muscat, Doha, or Manama — How Was Your Day
             listeners are online daily on Indian time. No appointments. Talk in your language when someone is online.</p>
           <p>First 5 minutes free — one free session per account. Start right now.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
@@ -183,7 +183,7 @@ export default function GulfNriSupportPage() {
 
         <div className="card">
           <h2>An Indian listener who understands without being told</h2>
-          <p>You do not have to explain what it means to be the one who left. A LeanOn listener
+          <p>You do not have to explain what it means to be the one who left. A How Was Your Day listener
             already understands the weight of immigration, the pressure of family expectations, and
             the specific mix of pride and loneliness that comes with NRI life.</p>
           <p>Talk in Hindi, Malayalam, Tamil, Telugu, Kannada, Gujarati, Bengali, or any Indian
@@ -216,8 +216,8 @@ export default function GulfNriSupportPage() {
               missing family milestones — and rarely having anyone nearby to receive any of it.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn only for people in crisis?</h3>
-            <p>Not at all. LeanOn is for anyone who wants a real conversation. You do not need to be in
+            <h3>Is How Was Your Day only for people in crisis?</h3>
+            <p>Not at all. How Was Your Day is for anyone who wants a real conversation. You do not need to be in
               crisis to deserve support — most users are simply living full lives who need to be heard.</p>
           </div>
           <div className="faq-item">
@@ -230,8 +230,8 @@ export default function GulfNriSupportPage() {
             <p>UAE: AED 37/55/74. Kuwait: KD 4/5/7. Oman: OMR 4/6/8 for 15/30/45 min. First 5 min free.</p>
           </div>
           <div className="faq-item">
-            <h3>I am in Saudi Arabia or Qatar — is LeanOn available there?</h3>
-            <p>Yes. LeanOn works anywhere with internet. Whether in Riyadh, Doha, Manama, or anywhere else
+            <h3>I am in Saudi Arabia or Qatar — is How Was Your Day available there?</h3>
+            <p>Yes. How Was Your Day works anywhere with internet. Whether in Riyadh, Doha, Manama, or anywhere else
               in the Gulf, you can connect with an Indian listener any time.</p>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function GulfNriSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

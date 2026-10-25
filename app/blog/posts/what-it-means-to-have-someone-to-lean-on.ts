@@ -4,7 +4,7 @@ export const post = {
   description: 'Having someone to lean on is not the same as having people around you. What it actually means, why it gets harder in adult India, and how to build it.',
   date: '2026-08-13',
   readTime: '8 min read',
-  topics: ['someone to lean on', 'loneliness', 'emotional support', 'empathy', 'LeanOn'],
+  topics: ['someone to lean on', 'loneliness', 'emotional support', 'empathy', 'How Was Your Day'],
   content: `
 <p>Think about what the phrase actually describes. To lean on something is to shift part of your weight onto it — a doorframe, a railing, a wall at the end of a very long day. You do not become the wall, and you do not stay there forever. You transfer some of the load for as long as you need to, then straighten up again. Having <strong>someone to lean on</strong> is the human version, and the mechanics are almost identical.</p>
 
@@ -66,9 +66,9 @@ export const post = {
 
 <p><strong>Find someone who has actually lived it.</strong> There is a specific, underrated relief in talking to a person who has been through the same thing — the burnout, the breakup, the move to a city where you knew nobody, the family that will not let you decide anything. You skip the explaining. You do not have to persuade them it is serious. That kind of empathy is not a technique picked up in a workshop; it comes from recognition, and it lands completely differently.</p>
 
-<h2>Where LeanOn Comes In</h2>
+<h2>Where How Was Your Day Comes In</h2>
 
-<p>LeanOn is named for this exact phrase, because this exact gap is what it was built for — the distance between having people and having <strong>someone to lean on</strong>.</p>
+<p>How Was Your Day is named for this exact phrase, because this exact gap is what it was built for — the distance between having people and having <strong>someone to lean on</strong>.</p>
 
 <p>Our listeners are verified peers. Not therapists, and not AI. They are real people who have been through their own difficult stretches — loneliness, burnout, family pressure, heartbreak, starting over somewhere they knew nobody — and who are chosen for how well they listen with empathy rather than racing toward a solution. You can <a href="/browse">browse peer listeners</a> and choose someone whose experience resembles your own. That matching is the point of <strong>peer support in India</strong>: not an expert explaining your life back to you, but a person who has stood where you are standing.</p>
 

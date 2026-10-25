@@ -3,23 +3,23 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone in Hindi Online | Peer Support in Hindi | LeanOn',
-  description: 'Need to talk to someone in Hindi? LeanOn listeners speak Hindi and understand the Indian emotional context. No appointment. First 5 minutes free.',
+  title: 'Talk to Someone in Hindi Online | Peer Support in Hindi | How Was Your Day',
+  description: 'Need to talk to someone in Hindi? How Was Your Day listeners speak Hindi and understand the Indian emotional context. No appointment. First 5 minutes free.',
   keywords: ['talk to someone in hindi', 'hindi emotional support', 'hindi peer support', 'speak hindi online support', 'hindi speaking listener', 'hindi mental health support online', 'apni baat karo hindi mein'],
-  alternates: { canonical: 'https://www.leanon.app/talk-to-someone-hindi' },
-  openGraph: { title: 'Talk to Someone in Hindi Online | Peer Support in Hindi | LeanOn', description: 'Need to talk to someone in Hindi? LeanOn listeners speak Hindi and understand the Indian emotional context. No appointment. First 5 minutes free.', url: 'https://www.leanon.app/talk-to-someone-hindi', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-hindi' },
+  openGraph: { title: 'Talk to Someone in Hindi Online | Peer Support in Hindi | How Was Your Day', description: 'Need to talk to someone in Hindi? How Was Your Day listeners speak Hindi and understand the Indian emotional context. No appointment. First 5 minutes free.', url: 'https://www.howwasyourday.live/talk-to-someone-hindi', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Are all listeners fluent in Hindi?', acceptedAnswer: { '@type': 'Answer', text: 'Most are. Hindi is the primary language of many listeners. When booking, you can note your language preference and your listener will communicate with you in Hindi.' } },
   { '@type': 'Question', name: 'Can I mix Hindi and English (Hinglish)?', acceptedAnswer: { '@type': 'Answer', text: 'Of course. Listeners are completely comfortable with Hinglish — most conversations naturally mix both. Say what feels natural. There is no pressure to stay in one language.' } },
-  { '@type': 'Question', name: 'I\'m abroad — is this available for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn works globally. Listeners are India-based but serve anyone with a phone number, wherever you are — UK, USA, Canada, UAE, Australia, or anywhere else Indians live and work.' } },
+  { '@type': 'Question', name: 'I\'m abroad — is this available for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day works globally. Listeners are India-based but serve anyone with a phone number, wherever you are — UK, USA, Canada, UAE, Australia, or anywhere else Indians live and work.' } },
   { '@type': 'Question', name: 'Is it free?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. If the connection feels right, paid sessions start from ₹160 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Talk to Someone in Hindi Online', item: 'https://www.leanon.app/talk-to-someone-hindi' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Talk to Someone in Hindi Online', item: 'https://www.howwasyourday.live/talk-to-someone-hindi' },
 ] }
 
 const S = `
@@ -68,7 +68,7 @@ export default function TalkToSomeoneHindiPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Talk to Someone in Hindi Online</span></nav>
         <div className="hero">

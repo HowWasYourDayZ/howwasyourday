@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Vancouver | Surrey, Burnaby | LeanOn',
+  title: 'Emotional Support for Indians in Vancouver | Surrey, Burnaby | How Was Your Day',
   description: 'Surrey, Burnaby, Abbotsford — BC has Canada\'s second-largest South Asian community. Beautiful province. Hard to talk about what\'s actually going on. First 5 min free.',
   keywords: ['indians in vancouver', 'surrey bc indian support', 'burnaby indian community', 'abbotsford indian', 'vancouver indian mental health', 'desi support bc', 'punjabi support surrey'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-vancouver' },
-  openGraph: { title: 'Emotional Support for Indians in Vancouver | Surrey, Burnaby | LeanOn', description: 'Surrey, Burnaby, Abbotsford — BC has Canada\'s second-largest South Asian community. Beautiful province. Hard to talk about what\'s actually going on. First 5 min free.', url: 'https://www.leanon.app/indians-in-vancouver', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-vancouver' },
+  openGraph: { title: 'Emotional Support for Indians in Vancouver | Surrey, Burnaby | How Was Your Day', description: 'Surrey, Burnaby, Abbotsford — BC has Canada\'s second-largest South Asian community. Beautiful province. Hard to talk about what\'s actually going on. First 5 min free.', url: 'https://www.howwasyourday.live/indians-in-vancouver', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Surrey and BC Punjabi community?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the Punjabi diaspora experience — including the specific BC Punjabi community, the pressure of the community in Surrey, and the identity weight of immigrant life in Canada. No explanation needed.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Surrey and BC Punjabi community?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the Punjabi diaspora experience — including the specific BC Punjabi community, the pressure of the community in Surrey, and the identity weight of immigrant life in Canada. No explanation needed.' } },
   { '@type': 'Question', name: 'When can I connect from Vancouver?', acceptedAnswer: { '@type': 'Answer', text: 'Vancouver (PST/PDT) is 13.5 hours behind IST. 8am Vancouver = 9:30pm India. Early mornings in Vancouver are late Indian evenings — still workable. 6am Vancouver = 7:30pm India, a stronger window.' } },
   { '@type': 'Question', name: 'Is this private from the Surrey community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the Surrey or BC Indian community. Nothing is shared.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Vancouver', item: 'https://www.leanon.app/indians-in-vancouver' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Vancouver', item: 'https://www.howwasyourday.live/indians-in-vancouver' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInVancouverPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Vancouver</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInVancouverPage() {
           <h2>Surrey, Burnaby, Abbotsford: BC&rsquo;s Punjabi Heartland</h2>
           <p>British Columbia has one of the world&rsquo;s most remarkable concentrations of Punjabi Canadians — Surrey&rsquo;s Punjabi community is extraordinary in its scale and density. The gurdwaras of Surrey and Abbotsford are among the largest outside of India. The Punjabi Market on Main Street in Vancouver is one of the most famous South Asian commercial corridors in North America. Burnaby, Langley, and Delta all have significant Indian communities.</p>
           <p>The BC Indian community — predominantly Punjabi, with significant Gujarati and South Indian communities — is one that has built real institutions here. But size and institutions don&rsquo;t dissolve the specific weight of immigrant life. The community pressure in Surrey can be as intense as anywhere: the family hierarchy, the expectations around marriage and career, the gossip network that makes it difficult to say anything true within the community.</p>
-          <p>LeanOn is a space completely outside the Surrey and BC community networks — where a real Indian peer listener in India can hear you without it going anywhere. First 5 minutes free.</p>
+          <p>How Was Your Day is a space completely outside the Surrey and BC community networks — where a real Indian peer listener in India can hear you without it going anywhere. First 5 minutes free.</p>
         </div>
 
         <div className="section">

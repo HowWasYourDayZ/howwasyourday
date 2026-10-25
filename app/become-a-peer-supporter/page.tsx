@@ -9,25 +9,25 @@ export const dynamic = 'force-static'
 // /terms and the dashboard. Keep it that way: any money detail here turns it
 // back into an "apps that pay you to talk" answer (see CLAUDE.md SEO rules).
 
-const URL = 'https://www.leanon.app/become-a-peer-supporter'
+const URL = 'https://www.howwasyourday.live/become-a-peer-supporter'
 
 export const metadata: Metadata = {
-  title: 'Become a Peer Supporter — Use What You Have Been Through to Help Others | LeanOn',
-  description: 'Been through something hard and want to help others through it? LeanOn peer supporters listen one to one, by text or voice. 18+, lived experience, written application, screening quiz, selfie check and review. Not a job.',
+  title: 'Become a Peer Supporter — Use What You Have Been Through to Help Others | How Was Your Day',
+  description: 'Been through something hard and want to help others through it? How Was Your Day peer supporters listen one to one, by text or voice. 18+, lived experience, written application, screening quiz, selfie check and review. Not a job.',
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Become a peer supporter on LeanOn',
+    title: 'Become a peer supporter on How Was Your Day',
     description: 'For adults who have been through something hard and want to listen to others going through it now. Screened, not trained as therapists. Not a job.',
     url: URL,
-    siteName: 'LeanOn',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
 
 const faqs = [
   {
-    q: 'What does a LeanOn peer supporter do?',
+    q: 'What does a How Was Your Day peer supporter do?',
     a: 'Listens. Someone who feels lonely, stressed, heartbroken or stuck talks to you one to one, by text or voice, and you listen without judging, fixing or advising. You are a peer who has been through something similar — not a therapist or counsellor, and you never give medical advice.',
   },
   {
@@ -36,15 +36,15 @@ const faqs = [
   },
   {
     q: 'How are peer supporters selected?',
-    a: 'Everyone goes through the same steps: a written application about your lived experience and the topics you can support, a screening quiz on boundaries, crisis referral and empathetic responses, a live selfie check to confirm you are a real person, and a manual review by LeanOn. Not every application is approved. There is no training programme — you are screened.',
+    a: 'Everyone goes through the same steps: a written application about your lived experience and the topics you can support, a screening quiz on boundaries, crisis referral and empathetic responses, a live selfie check to confirm you are a real person, and a manual review by How Was Your Day. Not every application is approved. There is no training programme — you are screened.',
   },
   {
     q: 'Is this a job or a way to earn money?',
-    a: 'No. LeanOn is a support service for people who need someone to talk to. Peer supporters are compensated for completed sessions, but sessions are never guaranteed and most supporters have only a few. If you are looking for income, a side hustle or work from home, LeanOn is not the right place.',
+    a: 'No. How Was Your Day is a support service for people who need someone to talk to. Peer supporters are compensated for completed sessions, but sessions are never guaranteed and most supporters have only a few. If you are looking for income, a side hustle or work from home, How Was Your Day is not the right place.',
   },
   {
     q: 'What happens if someone is in crisis?',
-    a: 'Peer supporters are not crisis counsellors. If someone may be in danger, you point them to Tele-MANAS (14416, free, 24/7) or NIMHANS (080-46110007) and can flag the session to LeanOn.',
+    a: 'Peer supporters are not crisis counsellors. If someone may be in danger, you point them to Tele-MANAS (14416, free, 24/7) or NIMHANS (080-46110007) and can flag the session to How Was Your Day.',
   },
   {
     q: 'How much time does it take?',
@@ -57,10 +57,10 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'WebPage',
-      name: 'Become a peer supporter on LeanOn',
+      name: 'Become a peer supporter on How Was Your Day',
       description: String(metadata.description),
       url: URL,
-      isPartOf: { '@type': 'WebSite', name: 'LeanOn', url: 'https://www.leanon.app' },
+      isPartOf: { '@type': 'WebSite', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
       audience: { '@type': 'Audience', audienceType: 'Adults with lived experience who want to support others emotionally' },
     },
     {
@@ -70,7 +70,7 @@ const jsonLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' },
+        { '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' },
         { '@type': 'ListItem', position: 2, name: 'Become a peer supporter', item: URL },
       ],
     },
@@ -117,13 +117,13 @@ export default function BecomeAPeerSupporterPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
       </nav>
 
       <main className="page">
         <h1>Been through something hard? <em>Help someone going through it now.</em></h1>
         <p className="lead">
-          LeanOn peer supporters are ordinary adults who listen — one to one, by text or voice — to people who feel lonely,
+          How Was Your Day peer supporters are ordinary adults who listen — one to one, by text or voice — to people who feel lonely,
           stressed or stuck. What you bring is lived experience and the patience to listen without judging.
         </p>
 
@@ -139,7 +139,7 @@ export default function BecomeAPeerSupporterPage() {
           <li><span><b>Written application</b> — your lived experience, the topics you can support and the languages you speak.</span></li>
           <li><span><b>Screening quiz</b> — boundaries, crisis referral, no medical advice, empathetic responses.</span></li>
           <li><span><b>Live selfie check</b> — so every supporter is a verified real person.</span></li>
-          <li><span><b>Review by LeanOn</b> — not every application is approved. There is no training programme; you are screened.</span></li>
+          <li><span><b>Review by How Was Your Day</b> — not every application is approved. There is no training programme; you are screened.</span></li>
         </ol>
 
         <p className="note">

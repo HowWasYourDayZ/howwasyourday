@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Support for Indians in UAE | LeanOn',
+  title: 'Relationship Support for Indians in UAE | How Was Your Day',
   description: 'Long-distance marriages, cultural pressure, partner conflicts — Indian expats in the UAE carry unique relationship strains. Talk to an Indian peer listener who understands, in your language.',
   keywords: [
     'relationship support UAE Indian', 'marriage problems UAE', 'long distance marriage UAE India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'Indian listener relationship UAE', 'marriage strain expat UAE', 'family pressure marriage UAE',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uae-relationship-advice',
-    languages: { 'en-IN': 'https://www.leanon.app/uae-relationship-advice' },
+    canonical: 'https://www.howwasyourday.live/uae-relationship-advice',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/uae-relationship-advice' },
   },
   openGraph: {
     title: 'Relationship Support for Indians in UAE — Talk to Someone Who Understands',
-    description: 'Distance, cultural pressure, and unspoken resentments — relationship struggles for Indian expats in the UAE are real. LeanOn peer listeners are here to help you work through it.',
-    url: 'https://www.leanon.app/uae-relationship-advice',
-    siteName: 'LeanOn',
+    description: 'Distance, cultural pressure, and unspoken resentments — relationship struggles for Indian expats in the UAE are real. How Was Your Day peer listeners are here to help you work through it.',
+    url: 'https://www.howwasyourday.live/uae-relationship-advice',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,10 +38,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a counselling service or a therapy service?',
+      name: 'Is How Was Your Day a counselling service or a therapy service?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support — screened listeners who give you a safe, non-judgmental space to talk. They are not therapists or counsellors, but sometimes what you need most is not a clinical session — it is someone to truly hear you out and help you think clearly.',
+        text: 'How Was Your Day is peer support — screened listeners who give you a safe, non-judgmental space to talk. They are not therapists or counsellors, but sometimes what you need most is not a clinical session — it is someone to truly hear you out and help you think clearly.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk about my marriage problems without being judged?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. LeanOn listeners are screened and expected to listen without judgment, without taking sides, and without moralising. Your marriage, your choices, your pain — all of it is held with respect and care.',
+        text: 'Absolutely. How Was Your Day listeners are screened and expected to listen without judgment, without taking sides, and without moralising. Your marriage, your choices, your pain — all of it is held with respect and care.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'My family arranged my marriage and I feel trapped. Can I talk about that?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, and many people do. LeanOn listeners understand the complex dynamics of Indian families and arranged marriages. You can speak openly about pressure from in-laws, mismatched expectations, or feeling unheard — without fear of judgment or your conversation reaching anyone you know.',
+        text: 'Yes, and many people do. How Was Your Day listeners understand the complex dynamics of Indian families and arranged marriages. You can speak openly about pressure from in-laws, mismatched expectations, or feeling unheard — without fear of judgment or your conversation reaching anyone you know.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Support UAE', item: 'https://www.leanon.app/uae-relationship-advice' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Support UAE', item: 'https://www.howwasyourday.live/uae-relationship-advice' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function UAERelationshipAdvicePage() {
         <p className="lead">
           Relationship struggles for Indian expats in the UAE run deeper than most people admit.
           Long-distance strains, cultural pressures, in-law expectations, financial disagreements —
-          and no one nearby you can really talk to. LeanOn gives you a safe, private space to say
+          and no one nearby you can really talk to. How Was Your Day gives you a safe, private space to say
           what you have been holding in.
         </p>
 
@@ -176,14 +176,14 @@ export default function UAERelationshipAdvicePage() {
           <h2>💬 After a difficult call home, who do you talk to?</h2>
           <p>The hardest moments often come right after hanging up — the argument still unresolved,
             the silence in the flat too loud, no one nearby who understands the full picture.</p>
-          <p>LeanOn listeners are based in India, so availability follows Indian time. Talk through what just happened with someone who
+          <p>How Was Your Day listeners are based in India, so availability follows Indian time. Talk through what just happened with someone who
             will listen without taking sides and without judgment.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
         </div>
 
         <div className="card">
-          <h2>What you can talk about with a LeanOn listener</h2>
-          <p>LeanOn is not therapy — it is something equally valuable: a real human being who will
+          <h2>What you can talk about with a How Was Your Day listener</h2>
+          <p>How Was Your Day is not therapy — it is something equally valuable: a real human being who will
             truly listen. You can talk about:</p>
           <ul className="checklist">
             <li>Long-distance marriage and growing apart</li>
@@ -221,13 +221,13 @@ export default function UAERelationshipAdvicePage() {
               put unique pressure on relationships that would be hard enough to navigate even face to face.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn a counselling or therapy service?</h3>
-            <p>LeanOn is peer support — screened listeners who give you a safe, non-judgmental space to talk.
+            <h3>Is How Was Your Day a counselling or therapy service?</h3>
+            <p>How Was Your Day is peer support — screened listeners who give you a safe, non-judgmental space to talk.
               Not therapists, but sometimes what you need most is someone to truly hear you out.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk about my marriage without being judged?</h3>
-            <p>Absolutely. LeanOn listeners listen without judgment, without taking sides, and without moralising.
+            <p>Absolutely. How Was Your Day listeners listen without judgment, without taking sides, and without moralising.
               Your relationship and your pain are held with complete respect.</p>
           </div>
           <div className="faq-item">
@@ -236,7 +236,7 @@ export default function UAERelationshipAdvicePage() {
           </div>
           <div className="faq-item">
             <h3>Can I talk about pressure from an arranged marriage or in-laws?</h3>
-            <p>Yes. LeanOn listeners understand Indian family dynamics deeply. You can speak openly about
+            <p>Yes. How Was Your Day listeners understand Indian family dynamics deeply. You can speak openly about
               in-law pressure, mismatched expectations, or feeling trapped — without fear of judgment.</p>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function UAERelationshipAdvicePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

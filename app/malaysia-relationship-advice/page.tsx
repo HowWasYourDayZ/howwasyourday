@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Support for Indians in Malaysia | LeanOn',
+  title: 'Relationship Support for Indians in Malaysia | How Was Your Day',
   description: 'Relationship struggles as an Indian in Malaysia — long-distance, cultural expectations, partner conflicts abroad. Talk to an Indian listener who understands your world.',
   keywords: [
     'relationship advice malaysia indian', 'relationship support malaysia',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'tamil relationship advice malaysia', 'south asian relationship support malaysia',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/malaysia-relationship-advice',
-    languages: { 'en-MY': 'https://www.leanon.app/malaysia-relationship-advice' },
+    canonical: 'https://www.howwasyourday.live/malaysia-relationship-advice',
+    languages: { 'en-MY': 'https://www.howwasyourday.live/malaysia-relationship-advice' },
   },
   openGraph: {
-    title: 'Relationship Support for Indians in Malaysia — Talk It Through | LeanOn',
-    description: 'Relationship pain is heavier when you are far from home. LeanOn connects Indians in Malaysia with peer listeners who understand the cultural and expat context without you having to explain it.',
-    url: 'https://www.leanon.app/malaysia-relationship-advice',
-    siteName: 'LeanOn',
+    title: 'Relationship Support for Indians in Malaysia — Talk It Through | How Was Your Day',
+    description: 'Relationship pain is heavier when you are far from home. How Was Your Day connects Indians in Malaysia with peer listeners who understand the cultural and expat context without you having to explain it.',
+    url: 'https://www.howwasyourday.live/malaysia-relationship-advice',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'Can I talk about my relationship problems in Tamil or Hindi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has listeners who speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Relationship issues are often easier to process in your first language — many nuances simply do not translate.',
+        text: 'Yes. How Was Your Day has listeners who speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Relationship issues are often easier to process in your first language — many nuances simply do not translate.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Is it okay to talk about my family\'s pressure on my relationship?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. Family pressure on relationships is one of the most common things people bring to LeanOn. Your listener will not judge your family or tell you what to do — they will help you untangle your own feelings so you can decide what YOU want.',
+        text: 'Absolutely. Family pressure on relationships is one of the most common things people bring to How Was Your Day. Your listener will not judge your family or tell you what to do — they will help you untangle your own feelings so you can decide what YOU want.',
       },
     },
     {
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Advice Malaysia', item: 'https://www.leanon.app/malaysia-relationship-advice' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Advice Malaysia', item: 'https://www.howwasyourday.live/malaysia-relationship-advice' },
   ],
 }
 
@@ -158,7 +158,7 @@ export default function MalaysiaRelationshipAdvicePage() {
         <p className="lead">
           Being in a relationship as an Indian in Malaysia means carrying the weight of two worlds —
           the expectations from back home, the pressures of expat life, and a partner who may be
-          navigating all of it differently than you. LeanOn is a safe space to talk it through without
+          navigating all of it differently than you. How Was Your Day is a safe space to talk it through without
           judgment.
         </p>
 
@@ -180,7 +180,7 @@ export default function MalaysiaRelationshipAdvicePage() {
           <h2>💬 A space with no stake in the outcome</h2>
           <p>The hardest thing about processing relationship problems is finding someone with no agenda.
             Your friends have opinions. Your family has expectations. Your partner is the subject.</p>
-          <p>A LeanOn listener is completely outside your circle. They hear your side fully, without
+          <p>A How Was Your Day listener is completely outside your circle. They hear your side fully, without
             judgment, without picking a side, without telling anyone else. That changes what you
             are willing to say.</p>
           <a href="/browse" className="cta-night">Talk it through now →</a>
@@ -188,7 +188,7 @@ export default function MalaysiaRelationshipAdvicePage() {
 
         <div className="card">
           <h2>Talk in your language — Tamil, Hindi, or more</h2>
-          <p>Many Indians in Malaysia speak Tamil as their primary emotional language. LeanOn has
+          <p>Many Indians in Malaysia speak Tamil as their primary emotional language. How Was Your Day has
             Tamil-speaking listeners available at all hours. You can also talk in Hindi, Telugu,
             Malayalam, Kannada, Bengali, or English.</p>
           <p>Some things are just easier to say in the language you first learned to feel in.</p>
@@ -232,13 +232,13 @@ export default function MalaysiaRelationshipAdvicePage() {
           </div>
           <div className="faq-item">
             <h3>Can I talk about my relationship problems in Tamil or Hindi?</h3>
-            <p>Yes. LeanOn has listeners who speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and
+            <p>Yes. How Was Your Day has listeners who speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and
               English. Relationship issues are often easier to process in your first language.</p>
           </div>
           <div className="faq-item">
             <h3>Is it okay to talk about family pressure on my relationship?</h3>
             <p>Absolutely. Family pressure on relationships is one of the most common things people bring
-              to LeanOn. Your listener will not judge your family — they will help you untangle your
+              to How Was Your Day. Your listener will not judge your family — they will help you untangle your
               own feelings so you can decide what YOU want.</p>
           </div>
           <div className="faq-item">
@@ -267,7 +267,7 @@ export default function MalaysiaRelationshipAdvicePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

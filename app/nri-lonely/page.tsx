@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Lonely | The Specific Loneliness of Indian Life Abroad | LeanOn',
+  title: 'NRI Lonely | The Specific Loneliness of Indian Life Abroad | How Was Your Day',
   description: 'NRI loneliness isn\'t just missing home. It\'s the performance of being fine, the absence of people who knew you before, and the loneliness you can\'t admit to people at home.',
   keywords: ['nri lonely', 'nri loneliness', 'nri feeling lonely', 'lonely nri', 'nri isolation', 'indian feeling lonely abroad', 'lonely indian abroad'],
-  alternates: { canonical: 'https://www.leanon.app/nri-lonely' },
-  openGraph: { title: 'NRI Lonely | The Specific Loneliness of Indian Life Abroad | LeanOn', description: 'NRI loneliness isn\'t just missing home. It\'s the performance of being fine, the absence of people who knew you before, and the loneliness you can\'t admit to people at home.', url: 'https://www.leanon.app/nri-lonely', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-lonely' },
+  openGraph: { title: 'NRI Lonely | The Specific Loneliness of Indian Life Abroad | How Was Your Day', description: 'NRI loneliness isn\'t just missing home. It\'s the performance of being fine, the absence of people who knew you before, and the loneliness you can\'t admit to people at home.', url: 'https://www.howwasyourday.live/nri-lonely', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Lonely', item: 'https://www.leanon.app/nri-lonely' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Lonely', item: 'https://www.howwasyourday.live/nri-lonely' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriLonelyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Lonely</span></nav>
         <div className="hero">
           <p className="badge">NRI Loneliness &middot; Indian Immigrant Life &middot; Peer Support</p>
           <h1>NRI Lonely — <em>The Kind You Can&rsquo;t Explain to People Back Home</em></h1>
           <p className="lead">You can&rsquo;t explain it to people in India — they think your life is perfect. You can&rsquo;t explain it to colleagues abroad — they don&rsquo;t understand the context. You are lonely in both directions at once. That is the specific shape of NRI loneliness. And it deserves to be named — not managed, not solved. Just heard. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone who understands &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone who understands &rarr;</a>
         </div>
 
         <div className="section">
@@ -94,12 +94,12 @@ export default function NriLonelyPage() {
         </div>
 
         <div className="section">
-          <h2>Why LeanOn Helps</h2>
+          <h2>Why How Was Your Day Helps</h2>
           <p>Not a helpline. Not a professional. A peer listener who already understands the shape of the loneliness before you describe it. You do not need to justify it, explain the immigrant context, or perform fine. You can just say what it actually is. That recognition — being heard by someone who already knows the terrain — is often what shifts something. Not fixed. Just lighter.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The loneliness that has nowhere to go.</h2><p>Real peer listener. Already understands the NRI world. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The loneliness that has nowhere to go.</h2><p>Real peer listener. Already understands the NRI world. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>

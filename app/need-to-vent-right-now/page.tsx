@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Vent Right Now? Talk to a Real Person in 2 Minutes | LeanOn',
-  description: 'Something happened and you need to get it off your chest RIGHT NOW. LeanOn connects you with a real listener in India within minutes — no appointment, private, no appointment.',
+  title: 'Need to Vent Right Now? Talk to a Real Person in 2 Minutes | How Was Your Day',
+  description: 'Something happened and you need to get it off your chest RIGHT NOW. How Was Your Day connects you with a real listener in India within minutes — no appointment, private, no appointment.',
   keywords: [
     'need to vent right now', 'need to vent online India',
     'someone to vent to right now', 'I need to rant right now India',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'vent anonymously online India', 'need to talk about something that just happened',
     'quick emotional support India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/need-to-vent-right-now', languages: { 'en-IN': 'https://www.leanon.app/need-to-vent-right-now' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/need-to-vent-right-now', languages: { 'en-IN': 'https://www.howwasyourday.live/need-to-vent-right-now' } },
   openGraph: {
-    title: 'Need to Vent Right Now? Talk to a Real Person in 2 Minutes | LeanOn',
-    description: 'Something happened and you need to get it off your chest RIGHT NOW. LeanOn connects you with a real listener in India within minutes — no appointment, private, no appointment.',
-    url: 'https://www.leanon.app/need-to-vent-right-now',
-    siteName: 'LeanOn',
+    title: 'Need to Vent Right Now? Talk to a Real Person in 2 Minutes | How Was Your Day',
+    description: 'Something happened and you need to get it off your chest RIGHT NOW. How Was Your Day connects you with a real listener in India within minutes — no appointment, private, no appointment.',
+    url: 'https://www.howwasyourday.live/need-to-vent-right-now',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Vent Right Now' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Vent Right Now' }],
   },
 }
 
@@ -32,8 +32,8 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How quickly can I start venting to someone on LeanOn?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Usually within minutes when a listener is online. Open LeanOn, browse listeners who are online, and book a session. There is no appointment, no intake form, no waiting room. If a listener is online, you can start within 2 minutes. Many people connect within the time it takes to make a coffee.' },
+      name: 'How quickly can I start venting to someone on How Was Your Day?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Usually within minutes when a listener is online. Open How Was Your Day, browse listeners who are online, and book a session. There is no appointment, no intake form, no waiting room. If a listener is online, you can start within 2 minutes. Many people connect within the time it takes to make a coffee.' },
     },
     {
       '@type': 'Question',
@@ -48,7 +48,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will the listener tell me what to do or just listen?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Only what you ask for. Peer listeners on LeanOn are screened and expected to listen without advising, fixing, or judging. If you open with \'I just need to vent, I don\'t want advice\' — that is what you will get. Your lead, your pace.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Only what you ask for. Peer listeners on How Was Your Day are screened and expected to listen without advising, fixing, or judging. If you open with \'I just need to vent, I don\'t want advice\' — that is what you will get. Your lead, your pace.' },
     },
     {
       '@type': 'Question',
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Need to Vent Right Now', item: 'https://www.leanon.app/need-to-vent-right-now' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Need to Vent Right Now', item: 'https://www.howwasyourday.live/need-to-vent-right-now' },
   ],
 }
 
@@ -127,7 +127,7 @@ export default function NeedToVentRightNowPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -162,8 +162,8 @@ export default function NeedToVentRightNowPage() {
         </div>
 
         <div className="section">
-          <h2>Who Books a Vent Session on LeanOn</h2>
-          <p>Real people, in the middle of real days. These are the kinds of things that bring someone to LeanOn at 10 AM or 1 PM:</p>
+          <h2>Who Books a Vent Session on How Was Your Day</h2>
+          <p>Real people, in the middle of real days. These are the kinds of things that bring someone to How Was Your Day at 10 AM or 1 PM:</p>
           <ul>
             <li>&ldquo;Just had a fight with my husband before I left for work and I&apos;ve been holding it since 8 AM&rdquo;</li>
             <li>&ldquo;My manager said something in the team meeting that made me feel two inches tall&rdquo;</li>
@@ -180,7 +180,7 @@ export default function NeedToVentRightNowPage() {
             <div className="step">
               <div className="step-num">1</div>
               <div className="step-body">
-                <h3>Open LeanOn</h3>
+                <h3>Open How Was Your Day</h3>
                 <p>Browse listeners who are online right now. Each profile shows what they are there for.</p>
               </div>
             </div>

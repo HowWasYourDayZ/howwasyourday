@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Crying for No Reason India — Talk to Someone | LeanOn',
+  title: 'Crying for No Reason India — Talk to Someone | How Was Your Day',
   description: 'Random crying, tears at your desk, no idea why. You\'re not broken — you\'re carrying something. Talk anonymously from ₹160.',
   keywords: ['crying for no reason India', 'randomly crying India', 'crying without reason India', 'unexplained tears India', 'why am I crying India'],
-  alternates: { canonical: 'https://www.leanon.app/crying-for-no-reason-india', languages: { 'en-IN': 'https://www.leanon.app/crying-for-no-reason-india' } },
-  openGraph: { title: 'Crying for No Reason India — Talk to Someone | LeanOn', description: 'Random crying, tears at your desk, no idea why. You\'re not broken — you\'re carrying something. Talk anonymously from ₹160.', url: 'https://www.leanon.app/crying-for-no-reason-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/crying-for-no-reason-india', languages: { 'en-IN': 'https://www.howwasyourday.live/crying-for-no-reason-india' } },
+  openGraph: { title: 'Crying for No Reason India — Talk to Someone | How Was Your Day', description: 'Random crying, tears at your desk, no idea why. You\'re not broken — you\'re carrying something. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/crying-for-no-reason-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is crying for no reason a sign of depression?', acceptedAnswer: {'@type': 'Answer', text: 'Sometimes. Unexplained crying is one symptom of depression, but it is also a symptom of anxiety, emotional exhaustion, grief, and unprocessed stress. You cannot diagnose yourself from a single symptom. What matters is the broader pattern &mdash; how you are generally, whether you feel functional, whether things feel hopeless or just temporarily heavy.'}},
-    {'@type': 'Question', name: 'Should I be worried?', acceptedAnswer: {'@type': 'Answer', text: 'Not necessarily. But it is worth paying attention to. If it is happening frequently and you genuinely do not know why, something is asking for your attention. LeanOn is a good first step &mdash; a conversation that helps you begin to identify what you are actually carrying.'}},
+    {'@type': 'Question', name: 'Should I be worried?', acceptedAnswer: {'@type': 'Answer', text: 'Not necessarily. But it is worth paying attention to. If it is happening frequently and you genuinely do not know why, something is asking for your attention. How Was Your Day is a good first step &mdash; a conversation that helps you begin to identify what you are actually carrying.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Crying for No Reason India', item: 'https://www.leanon.app/crying-for-no-reason-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Crying for No Reason India', item: 'https://www.howwasyourday.live/crying-for-no-reason-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function CryingForNoReasonIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Crying for No Reason India</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function CryingForNoReasonIndiaPage() {
         <div className="section">
           <h2>What To Do With It</h2>
           <p>The most useful thing is not to push it down again. Something is trying to surface. A conversation with someone who will listen without trying to fix it or explain it away can help you find out what it is.</p>
-          <p>LeanOn listeners are screened and expected to hold space for exactly this kind of conversation &mdash; where you do not know where to start, where the feelings are not yet formed into words, where you just need someone present while you figure out what is actually happening.</p>
+          <p>How Was Your Day listeners are screened and expected to hold space for exactly this kind of conversation &mdash; where you do not know where to start, where the feelings are not yet formed into words, where you just need someone present while you figure out what is actually happening.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>Something is asking for your attention. Let someone help you hear it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

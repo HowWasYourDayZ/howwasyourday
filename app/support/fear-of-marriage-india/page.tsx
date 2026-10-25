@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Fear of Marriage India — When Your Parents\' Marriage Is the Reason | LeanOn',
+  title: 'Fear of Marriage India — When Your Parents\' Marriage Is the Reason | How Was Your Day',
   description: 'You don\'t trust marriage because you have seen what it produces up close. Parents who fought, who were unfaithful, who were visibly unhappy. That shapes you. This page is for that.',
   keywords: [
     'fear of marriage India', 'don\'t trust marriage India', 'parents bad marriage India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'childhood marriage trauma India', 'marriage phobia India', 'gamophobia India',
     'don\'t believe in marriage India', 'marriage is not for me India', 'avoiding marriage India fear',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/fear-of-marriage-india', languages: { 'en-IN': 'https://www.leanon.app/support/fear-of-marriage-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/fear-of-marriage-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/fear-of-marriage-india' } },
   openGraph: {
-    title: 'Fear of Marriage India — When Your Parents\' Marriage Is the Reason | LeanOn',
+    title: 'Fear of Marriage India — When Your Parents\' Marriage Is the Reason | How Was Your Day',
     description: 'You grew up watching a marriage that hurt you to witness. Now you don\'t want one. That makes sense.',
-    url: 'https://www.leanon.app/support/fear-of-marriage-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/fear-of-marriage-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Fear of Marriage India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Fear of Marriage India' }],
   },
 }
 
@@ -74,9 +74,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/browse' },
-    { '@type': 'ListItem', position: 3, name: 'Fear of Marriage India', item: 'https://www.leanon.app/support/fear-of-marriage-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/browse' },
+    { '@type': 'ListItem', position: 3, name: 'Fear of Marriage India', item: 'https://www.howwasyourday.live/support/fear-of-marriage-india' },
   ],
 }
 
@@ -139,7 +139,7 @@ export default function FearOfMarriageIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 

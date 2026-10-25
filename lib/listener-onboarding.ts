@@ -110,10 +110,10 @@ export const SCREENING_QUIZ: ReadonlyArray<{ id: string; q: string; options: rea
   },
   {
     id: 'contact',
-    q: 'A seeker asks for your phone number or Instagram to talk outside LeanOn.',
+    q: 'A seeker asks for your phone number or Instagram to talk outside How Was Your Day.',
     options: [
       'Share it — they seem genuine',
-      'Politely decline; all conversations stay on LeanOn',
+      'Politely decline; all conversations stay on How Was Your Day',
       'Share it only if they pay extra',
       'Ignore the message and end the session',
     ],
@@ -264,7 +264,7 @@ export function parseOnboarding(body: Record<string, unknown>):
   // Indian scripts use several characters per word — 300 words can pass 4000.
   if (why.length > 9000) return { error: 'Your answer is too long.' }
   const heard_from = pick(HEARD_FROM, body.heard_from)
-  if (!heard_from) return { error: 'Please tell us how you heard about LeanOn.' }
+  if (!heard_from) return { error: 'Please tell us how you heard about How Was Your Day.' }
   const li = typeof body.linkedin_url === 'string' ? body.linkedin_url.trim() : ''
   if (li && !isValidLinkedIn(li)) return { error: 'Please enter a valid LinkedIn profile URL (linkedin.com/in/…), or leave it blank.' }
 

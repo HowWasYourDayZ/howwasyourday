@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { post as lonelinessPost } from '../posts/loneliness-in-india'
 import { post as burnoutPost } from '../posts/burnout-recovery-india'
 import { post as peerSupportPost } from '../posts/how-peer-support-works'
-import { post as leanOnMeanPost } from '../posts/what-does-lean-on-mean'
+import { post as howWasYourDayMeanPost } from '../posts/what-does-lean-on-mean'
 import { post as lonelinessAtNightPost } from '../posts/loneliness-at-night'
 import { post as emotionalBurnoutPost } from '../posts/emotional-burnout'
 import { post as anonymousSupportPost } from '../posts/anonymous-support-india'
@@ -22,7 +22,7 @@ import { post as overthinkingNightPost } from '../posts/how-to-stop-overthinking
 import { post as noOneToTalkToPost } from '../posts/no-one-to-talk-to'
 import { post as therapyCostPost } from '../posts/therapy-cost-india'
 import { post as astrologerTalkPost } from '../posts/why-people-call-astrologers-to-talk'
-import { post as someoneToLeanOnPost } from '../posts/what-it-means-to-have-someone-to-lean-on'
+import { post as someoneToHowWasYourDayPost } from '../posts/what-it-means-to-have-someone-to-lean-on'
 import { post as chatgptVsHumanPost } from '../posts/chatgpt-vs-human-listener'
 import { post as earnListeningPost } from '../posts/earn-money-listening-online-india'
 import { post as feelEmptyPost } from '../posts/feel-empty-inside-india'
@@ -74,11 +74,11 @@ export const dynamic = 'force-static'
 const allPosts = [
   empathyMeaningPost, quarterLifePost, tarotAstrologyPost, housewifeGuidePost, divorceRecoveryPost, strangerConvPost, rantVsVentPost, claudeGeminiPost, aiChatbotNriPost,
   
-  lonelinessPost, burnoutPost, peerSupportPost, leanOnMeanPost, lonelinessAtNightPost,
+  lonelinessPost, burnoutPost, peerSupportPost, howWasYourDayMeanPost, lonelinessAtNightPost,
   emotionalBurnoutPost, anonymousSupportPost, peerVsTherapyPost, jointFamilyPost,
   lonelinessJointFamilyPost, founderBurnoutPost, affordableTherapyPost, mensMentalHealthPost, womenLonelinessPost,
   empathyPost, whatIsPeerSupportPost, onlineEmotionalSupportGuidePost, astrologerTalkPost,
-  someoneToLeanOnPost,
+  someoneToHowWasYourDayPost,
   overthinkingNightPost, noOneToTalkToPost, therapyCostPost,
   chatgptVsHumanPost, earnListeningPost,
   feelEmptyPost, feelFailurePost, am2LonelinessPost, hateJobPost, chatgptMentalHealthPost,
@@ -105,15 +105,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = getPost(params.slug)
   if (!post) return {}
   return {
-    title: `${post.title} | LeanOn Blog`,
+    title: `${post.title} | How Was Your Day Blog`,
     description: post.description,
-    alternates: { canonical: `https://www.leanon.app/blog/${post.slug}` },
+    alternates: { canonical: `https://www.howwasyourday.live/blog/${post.slug}` },
     robots: post.slug === 'earn-money-listening-online-india' ? { index: false, follow: true } : undefined,
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://www.leanon.app/blog/${post.slug}`,
-      siteName: 'LeanOn',
+      url: `https://www.howwasyourday.live/blog/${post.slug}`,
+      siteName: 'How Was Your Day',
       type: 'article',
       publishedTime: post.date,
     },
@@ -194,19 +194,19 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { '@type': 'Organization', name: 'LeanOn' },
-    publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
-    url: `https://www.leanon.app/blog/${post.slug}`,
-    mainEntityOfPage: `https://www.leanon.app/blog/${post.slug}`,
+    author: { '@type': 'Organization', name: 'How Was Your Day' },
+    publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
+    url: `https://www.howwasyourday.live/blog/${post.slug}`,
+    mainEntityOfPage: `https://www.howwasyourday.live/blog/${post.slug}`,
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.leanon.app/blog' },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.leanon.app/blog/${post.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.howwasyourday.live/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.howwasyourday.live/blog/${post.slug}` },
     ],
   }
 
@@ -217,7 +217,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 

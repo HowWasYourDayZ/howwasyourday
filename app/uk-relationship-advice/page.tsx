@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Support for Indians in the UK | LeanOn',
+  title: 'Relationship Support for Indians in the UK | How Was Your Day',
   description: 'Cultural mismatch, family pressure, long-distance heartbreak, arranged marriage struggles — relationship stress for Indians in the UK is real. Talk to someone who understands.',
   keywords: [
     'relationship advice indians uk', 'south asian relationship support uk', 'arranged marriage uk',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     'long distance relationship india uk', 'cultural mismatch relationship uk', 'desi relationship support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-relationship-advice',
-    languages: { 'en-GB': 'https://www.leanon.app/uk-relationship-advice' },
+    canonical: 'https://www.howwasyourday.live/uk-relationship-advice',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk-relationship-advice' },
   },
   openGraph: {
     title: 'Relationship Support for Indians in the UK — Talk to Someone Who Gets It',
-    description: 'Cultural mismatch, family pressure, arranged marriage stress — relationship struggles for South Asians in the UK are unique. LeanOn listeners understand.',
-    url: 'https://www.leanon.app/uk-relationship-advice',
-    siteName: 'LeanOn',
+    description: 'Cultural mismatch, family pressure, arranged marriage stress — relationship struggles for South Asians in the UK are unique. How Was Your Day listeners understand.',
+    url: 'https://www.howwasyourday.live/uk-relationship-advice',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What if my family would never approve of who I am with?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'This is one of the most painful and common struggles for South Asians in the UK. The fear of disappointing your family, combined with a genuine connection with someone they might not accept, creates a weight that is hard to carry alone. LeanOn listeners will not tell you what to do — but they will make sure you do not have to carry that weight in silence.',
+        text: 'This is one of the most painful and common struggles for South Asians in the UK. The fear of disappointing your family, combined with a genuine connection with someone they might not accept, creates a weight that is hard to carry alone. How Was Your Day listeners will not tell you what to do — but they will make sure you do not have to carry that weight in silence.',
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'Can I talk about an arranged marriage situation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many LeanOn users navigate arranged marriage situations — from family pressure to get married, to conflict with a proposed match, to already being in an arranged marriage and feeling unseen. Listeners understand this context and will never impose a particular view on your choices.',
+        text: 'Yes. Many How Was Your Day users navigate arranged marriage situations — from family pressure to get married, to conflict with a proposed match, to already being in an arranged marriage and feeling unseen. Listeners understand this context and will never impose a particular view on your choices.',
       },
     },
     {
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Support UK', item: 'https://www.leanon.app/uk-relationship-advice' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Support UK', item: 'https://www.howwasyourday.live/uk-relationship-advice' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function UkRelationshipAdvicePage() {
         <p className="lead">
           Relationships are complicated anywhere. But as an Indian in the UK, there is a whole other layer —
           family expectations back home, cultural norms that do not match where you live, and a longing
-          to be understood by both sides. LeanOn listeners have heard it all, and they will not judge any of it.
+          to be understood by both sides. How Was Your Day listeners have heard it all, and they will not judge any of it.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
@@ -176,13 +176,13 @@ export default function UkRelationshipAdvicePage() {
           <p>Sometimes the most helpful thing is not someone telling you what to do. It is someone
             listening without an agenda — who is not your mum, your friend who knows your ex,
             or someone with a strong opinion about what you should do next.</p>
-          <p>LeanOn listeners are screened and expected to give you space to think out loud without steering you anywhere.</p>
+          <p>How Was Your Day listeners are screened and expected to give you space to think out loud without steering you anywhere.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
 
         <div className="card">
           <h2>This is not couples counselling — it is a real conversation</h2>
-          <p>LeanOn listeners are screened Indians who understand the South Asian relationship context.
+          <p>How Was Your Day listeners are screened Indians who understand the South Asian relationship context.
             They are not therapists or relationship coaches. They are people who will sit with you,
             hear your side, and make you feel less alone in whatever you are working through.</p>
           <p>Sessions are private. No one from your community will know you spoke to anyone.</p>
@@ -221,7 +221,7 @@ export default function UkRelationshipAdvicePage() {
           </div>
           <div className="faq-item">
             <h3>What if my family would never approve of who I am with?</h3>
-            <p>This is one of the most painful struggles for South Asians in the UK. LeanOn listeners will not
+            <p>This is one of the most painful struggles for South Asians in the UK. How Was Your Day listeners will not
               tell you what to do — but they will make sure you do not carry that weight in silence.</p>
           </div>
           <div className="faq-item">
@@ -248,7 +248,7 @@ export default function UkRelationshipAdvicePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

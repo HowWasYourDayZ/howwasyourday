@@ -4,7 +4,7 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Just Had a Fight? Someone to Talk to Right Now in India | LeanOn',
+  title: 'Just Had a Fight? Someone to Talk to Right Now in India | How Was Your Day',
   description: 'Had a fight with your partner, parent, or colleague and you\'re still reeling? Talk to a real peer listener in India right now — anonymous, no judgment, no advice unless you want it.',
   keywords: [
     'just had a fight India', 'had a fight with husband India',
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     'fight with parents India', 'I had a big fight India',
     'someone to talk to after argument India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/just-had-a-fight', languages: { 'en-IN': 'https://www.leanon.app/just-had-a-fight' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/just-had-a-fight', languages: { 'en-IN': 'https://www.howwasyourday.live/just-had-a-fight' } },
   openGraph: {
-    title: 'Just Had a Fight? Someone to Talk to Right Now in India | LeanOn',
+    title: 'Just Had a Fight? Someone to Talk to Right Now in India | How Was Your Day',
     description: 'Had a fight with your partner, parent, or colleague and you\'re still reeling? Talk to a real peer listener in India right now — anonymous, no judgment, no advice unless you want it.',
-    url: 'https://www.leanon.app/just-had-a-fight',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/just-had-a-fight',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Just Had a Fight' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Just Had a Fight' }],
   },
 }
 
@@ -44,12 +44,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Who should I talk to after a fight with my partner?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not your mutual friends — they have loyalties and opinions. Not your parents — they will worry or take sides, and you may regret what you told them later. Not your colleagues — professional boundary. A peer listener on LeanOn is a clean space: they have no connection to anyone in the situation, no opinion about who is right, and no interest beyond hearing you. That is exactly what you need in the immediate aftermath.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Not your mutual friends — they have loyalties and opinions. Not your parents — they will worry or take sides, and you may regret what you told them later. Not your colleagues — professional boundary. A peer listener on How Was Your Day is a clean space: they have no connection to anyone in the situation, no opinion about who is right, and no interest beyond hearing you. That is exactly what you need in the immediate aftermath.' },
     },
     {
       '@type': 'Question',
       name: 'Is it okay to vent about my partner or family member to a stranger?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — and it is more appropriate than venting to people who know them. A peer listener on LeanOn is bound by confidentiality and has no connection to your life. You can say exactly what happened, exactly how you feel about it, without editing, without consequences. Many people find that saying it to someone completely neutral helps them figure out how they actually feel, separate from who is right or wrong.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — and it is more appropriate than venting to people who know them. A peer listener on How Was Your Day is bound by confidentiality and has no connection to your life. You can say exactly what happened, exactly how you feel about it, without editing, without consequences. Many people find that saying it to someone completely neutral helps them figure out how they actually feel, separate from who is right or wrong.' },
     },
     {
       '@type': 'Question',
@@ -68,8 +68,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Just Had a Fight', item: 'https://www.leanon.app/just-had-a-fight' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Just Had a Fight', item: 'https://www.howwasyourday.live/just-had-a-fight' },
   ],
 }
 
@@ -128,7 +128,7 @@ export default function JustHadAFightPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -154,7 +154,7 @@ export default function JustHadAFightPage() {
           <h2>Why You Can&apos;t Tell Anyone Else</h2>
           <p>Think through who you would normally call. Your partner — they are the other party. Your mutual friends — they have loyalties, they will form opinions, and you will have to manage those opinions on top of everything else. Your family — they will worry, they will take sides, and they will remember this conversation for years in ways that may not help you.</p>
           <p>Your colleagues — professional consequences. Your manager — not a chance. And the people who are close enough to hear it without judgment are often too close to the situation to be clean about it.</p>
-          <p>A peer listener on LeanOn has no connection to your life. No opinion about the person you just fought with. No interest in anything except hearing you. That is the clean option — and right now, that is exactly what you need.</p>
+          <p>A peer listener on How Was Your Day has no connection to your life. No opinion about the person you just fought with. No interest in anything except hearing you. That is the clean option — and right now, that is exactly what you need.</p>
         </div>
 
         <div className="section">
@@ -172,7 +172,7 @@ export default function JustHadAFightPage() {
         </div>
 
         <div className="section">
-          <h2>Common Fights That Bring People to LeanOn</h2>
+          <h2>Common Fights That Bring People to How Was Your Day</h2>
           <p>These are the kinds of situations that land people on this page at 9 AM or noon on a Tuesday:</p>
           <ul>
             <li>&ldquo;Fight with my husband before he left for work and we haven&apos;t spoken since&rdquo;</li>

@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in Your Marriage? Talk to Someone | LeanOn India',
+  title: 'Feeling Lonely in Your Marriage? Talk to Someone | How Was Your Day India',
   description: 'Lonely in your marriage? Talk anonymously to a peer listener who has felt it too. Private, judgment-free emotional support in India. No appointment needed.',
   keywords: 'lonely in marriage, emotional loneliness marriage India, feeling alone in relationship, married but lonely, talk to someone about marriage, marriage loneliness support India, anonymous emotional support for married people',
-  alternates: { canonical: 'https://www.leanon.app/support/marriage-loneliness', languages: { 'en-IN': 'https://www.leanon.app/support/marriage-loneliness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/marriage-loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/marriage-loneliness' } },
   openGraph: {
-    title: 'Feeling Lonely in Your Marriage? Talk to Someone | LeanOn India',
+    title: 'Feeling Lonely in Your Marriage? Talk to Someone | How Was Your Day India',
     description: 'Lonely in your marriage? Talk anonymously to a peer listener who has felt it too. Private, judgment-free emotional support in India. No appointment needed.',
-    url: 'https://www.leanon.app/support/marriage-loneliness',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/marriage-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -49,15 +49,15 @@ const faqSchema = {
       name: 'Does talking to a stranger actually help?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Often it helps precisely because they are a stranger. A LeanOn listener has no stake in your marriage, no relationship with your family, and nothing to gain from any outcome. That makes it possible to say the sentence you have never said out loud, without managing how anyone else feels or worrying who will hear about it later. Being heard by someone empathetic does not fix a marriage, but it can lift a great deal of the weight you have been carrying alone.',
+        text: 'Often it helps precisely because they are a stranger. A How Was Your Day listener has no stake in your marriage, no relationship with your family, and nothing to gain from any outcome. That makes it possible to say the sentence you have never said out loud, without managing how anyone else feels or worrying who will hear about it later. Being heard by someone empathetic does not fix a marriage, but it can lift a great deal of the weight you have been carrying alone.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn peer support cost?',
+      name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. LeanOn is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.',
       },
     },
   ],
@@ -67,9 +67,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Marriage Loneliness', item: 'https://www.leanon.app/support/marriage-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Marriage Loneliness', item: 'https://www.howwasyourday.live/support/marriage-loneliness' },
   ],
 }
 
@@ -130,7 +130,7 @@ export default function MarriageLonelinessSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -149,7 +149,7 @@ export default function MarriageLonelinessSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Loneliness in Marriage</p>
           <h1>You Can Be Married and Still Feel <em>Alone</em></h1>
-          <p className="lead">Some of the deepest loneliness happens inside a marriage, not outside one. If you have been carrying a quiet ache that you cannot explain to family or mutual friends, LeanOn gives you a completely private space to say it out loud — to a peer listener who has felt something similar and will simply listen.</p>
+          <p className="lead">Some of the deepest loneliness happens inside a marriage, not outside one. If you have been carrying a quiet ache that you cannot explain to family or mutual friends, How Was Your Day gives you a completely private space to say it out loud — to a peer listener who has felt something similar and will simply listen.</p>
         </div>
 
         {/* Understanding */}
@@ -173,11 +173,11 @@ export default function MarriageLonelinessSupportPage() {
           <p>Marriage here is rarely private. Parents, siblings and in-laws are woven into it, and mutual friends belong to both of you. A sentence said in confidence can reach a family WhatsApp group by evening. Add log kya kahenge, the fear of being seen as ungrateful, and the worry that being honest is disloyal, and most people conclude that silence is the safest option. The silence protects everyone else, and leaves you alone with it.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
           <p>Not sure whether what you feel is loneliness? <a href="/support/married-but-lonely" style={{color:'#1A8FA0',fontWeight:800}}>Read the signs of being married but lonely →</a></p>
-          <h2>How LeanOn Helps</h2>
-          <p>LeanOn is peer support — real people who have lived through hard things, listening to other real people. Here is what that looks like when the thing you are carrying is loneliness inside your marriage:</p>
+          <h2>How the app Helps</h2>
+          <p>How Was Your Day is peer support — real people who have lived through hard things, listening to other real people. Here is what that looks like when the thing you are carrying is loneliness inside your marriage:</p>
 
           <h3>A Space Completely Outside Your Social and Family Circle</h3>
           <p>Your listener does not know your spouse, your parents, your in-laws, your colleagues or your neighbours, and never will. Nothing you say travels. There is no one to run into at a wedding, no risk of a well-meaning relative bringing it up later. For many people, this is the first place where the words can leave their body safely.</p>
@@ -189,16 +189,16 @@ export default function MarriageLonelinessSupportPage() {
           <p>Our listeners are not reading from a script. Many have sat with this same quiet distance in their own marriages, through early adjustment years, through the exhaustion of small children, through seasons where the conversation shrank to logistics. That lived experience is what makes their empathy feel real rather than performed.</p>
 
           <h3>Being Heard Without Anyone Taking Sides</h3>
-          <p>Friends and family, however loving, tend to take a position. They defend your partner, or they turn against them, and either way you end up managing their reaction instead of your own feelings. A LeanOn listener does neither. They do not judge your spouse, they do not tell you what your marriage should look like, and they do not hand you a plan. They stay with you while you say the true thing, which is often exactly what has been missing.</p>
+          <p>Friends and family, however loving, tend to take a position. They defend your partner, or they turn against them, and either way you end up managing their reaction instead of your own feelings. A How Was Your Day listener does neither. They do not judge your spouse, they do not tell you what your marriage should look like, and they do not hand you a plan. They stay with you while you say the true thing, which is often exactly what has been missing.</p>
         </div>
 
         {/* Boundaries */}
         <div className="section">
-          <h2>What LeanOn Is Not</h2>
+          <h2>What How Was Your Day Is Not</h2>
           <p>We want to be completely honest with you about this, because your marriage matters too much for vague promises.</p>
 
-          <h3>LeanOn Is Not Couples Counselling or Marriage Therapy</h3>
-          <p>We do not do joint sessions, mediation, or structured marital work. Our listeners are screened peers, not licensed therapists or marriage counsellors, and a LeanOn session is not a substitute for either. What we offer is one hour of the week where you are the one being listened to.</p>
+          <h3>How Was Your Day Is Not Couples Counselling or Marriage Therapy</h3>
+          <p>We do not do joint sessions, mediation, or structured marital work. Our listeners are screened peers, not licensed therapists or marriage counsellors, and a How Was Your Day session is not a substitute for either. What we offer is one hour of the week where you are the one being listened to.</p>
 
           <h3>Our Listeners Do Not Give Relationship Advice or Take Sides</h3>
           <p>No listener will tell you to stay, to leave, to confront, or to compromise. They will not diagnose your partner from one side of the story, and they will never suggest what you should do about your marriage. Those decisions are yours, and they deserve far more context than any stranger has. What a listener offers is empathetic attention while you think out loud.</p>
@@ -245,7 +245,7 @@ export default function MarriageLonelinessSupportPage() {
           <p>Talk to a peer listener who understands loneliness inside a marriage. Private and outside your circle. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -266,18 +266,18 @@ export default function MarriageLonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Does talking to a stranger actually help?</div>
-            <div className="faq-a">Often it helps precisely because they are a stranger. A LeanOn listener has no stake in your marriage, no relationship with your family, and nothing to gain from any outcome. That makes it possible to say the sentence you have never said out loud, without managing how anyone else feels or worrying who will hear about it later. Being heard by someone empathetic does not fix a marriage, but it can lift a great deal of the weight you have been carrying alone.</div>
+            <div className="faq-a">Often it helps precisely because they are a stranger. A How Was Your Day listener has no stake in your marriage, no relationship with your family, and nothing to gain from any outcome. That makes it possible to say the sentence you have never said out loud, without managing how anyone else feels or worrying who will hear about it later. Being heard by someone empathetic does not fix a marriage, but it can lift a great deal of the weight you have been carrying alone.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn peer support cost?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. LeanOn is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.</div>
+            <div className="faq-q">How much does How Was Your Day peer support cost?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Loneliness inside a marriage rarely travels alone. Explore more peer support on LeanOn:</p>
+          <p>Loneliness inside a marriage rarely travels alone. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
             <a href="/support/relationship-stress" className="related-link">Relationship Stress</a>

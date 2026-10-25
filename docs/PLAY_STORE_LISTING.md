@@ -1,7 +1,7 @@
-# LeanOn — Google Play Store listing copy
+# How Was Your Day — Google Play Store listing copy
 
 Ready-to-paste copy for the Play Console listing. Written with a deliberate
-**human, real-time service** framing throughout — this is what keeps LeanOn on
+**human, real-time service** framing throughout — this is what keeps How Was Your Day on
 the safe side of Google Play's payments policy (real-world services delivered
 by a person are exempt from mandatory Google Play Billing; digital goods /
 in-app currency are not). Never describe the wallet as "coins", "credits",
@@ -15,11 +15,11 @@ Tele-MANAS only; peer-support-not-therapy disclaimer included; no owner name.
 
 ## App title  (max 30 characters)
 
-**LeanOn — Peer Support**   (21 chars)
+**How Was Your Day — Peer Support**   (21 chars)
 
 Alternatives if you want more keyword weight:
-- `LeanOn: Talk to a Listener`   (26 chars)
-- `LeanOn: Emotional Support`   (25 chars)
+- `How Was Your Day: Talk to a Listener`   (26 chars)
+- `How Was Your Day: Emotional Support`   (25 chars)
 
 ---
 
@@ -34,7 +34,7 @@ Alternative:
 
 ## Full description  (max 4000 characters)
 
-Some nights feel heavier than others. When there's no one to call, LeanOn
+Some nights feel heavier than others. When there's no one to call, How Was Your Day
 connects you with a real person who has been through what you're facing —
 a verified peer listener, available any hour, over private text or voice.
 
@@ -42,7 +42,7 @@ This is not a chatbot, and it is not therapy. It's a human being who listens,
 without judgment, for as long as you need.
 
 WHO YOU TALK TO
-Every LeanOn listener is a real, verified person with lived experience of the
+Every How Was Your Day listener is a real, verified person with lived experience of the
 things people carry — loneliness, anxiety, burnout, grief, breakups, career
 stress, student pressure, family expectations. They're trained in active,
 compassionate listening. No scripts. No bots. No advice you didn't ask for.
@@ -82,12 +82,12 @@ WHAT PEOPLE COME HERE FOR
 - Or no reason at all — sometimes you just need to talk
 
 YOUR PRIVACY
-Sessions are private and confidential. LeanOn never shares your personal
+Sessions are private and confidential. How Was Your Day never shares your personal
 details or the contents of your conversations. You stay anonymous to your
 listener beyond a first name.
 
 IMPORTANT — PEER SUPPORT, NOT THERAPY
-LeanOn listeners are real people with lived experience, not licensed
+How Was Your Day listeners are real people with lived experience, not licensed
 therapists or counselors. Peer support is genuine and valuable, and it is
 different from — not a replacement for — professional mental health treatment.
 If you need clinical care, please consult a qualified professional.
@@ -117,7 +117,7 @@ You don't have to carry it alone. Someone is ready to listen.
 
 ## Data safety form — key answers
 - Collects phone number (account) — yes, for sign-in.
-- Payment info handled by Razorpay (processor) — not stored by LeanOn.
+- Payment info handled by Razorpay (processor) — not stored by How Was Your Day.
 - No data sold. Conversation content not shared.
 - Data encrypted in transit.
 

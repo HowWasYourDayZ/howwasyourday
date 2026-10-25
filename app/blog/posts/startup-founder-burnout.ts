@@ -62,9 +62,9 @@ export const post = {
 
 <p>Peer support — from people who have been through similar things and come out the other side — offers something different from coaching. It offers the specific comfort of being understood by someone who has been where you are. Not told what to do. Not optimised. Just understood.</p>
 
-<p>This is why platforms like <strong>LeanOn</strong> are particularly well-suited to <strong>founder burnout India</strong> situations. The supporters on LeanOn are not coaches or therapists. They are people who have navigated difficult experiences — including professional burnout, loss, career collapse — and screened to offer the kind of genuine peer understanding that burned-out founders most need.</p>
+<p>This is why platforms like <strong>How Was Your Day</strong> are particularly well-suited to <strong>founder burnout India</strong> situations. The supporters on How Was Your Day are not coaches or therapists. They are people who have navigated difficult experiences — including professional burnout, loss, career collapse — and screened to offer the kind of genuine peer understanding that burned-out founders most need.</p>
 
-<h2>The LeanOn Startup Support Network</h2>
+<h2>The How Was Your Day Startup Support Network</h2>
 
 <p>If you are a founder in India who is experiencing burnout — or who is starting to recognise the early warning signs — here is what is available to you.</p>
 
@@ -74,6 +74,6 @@ export const post = {
 
 <p>When you are a founder, you spend so much energy holding everyone else up. You <strong>lean on</strong> no one, because you have decided — or been taught — that your job is to be leaned on. But that is not sustainable. You are not an infrastructure item. You are a person, with a nervous system that needs regulation, with a heart that needs connection, with a mind that cannot run indefinitely at full capacity without rest and support.</p>
 
-<p>You are allowed to <strong>lean on</strong> someone. Even founders. Especially founders. And finding that someone — whether through LeanOn or through any other means — is not a sign that you are failing. It is the act of a person who wants to keep going.</p>
+<p>You are allowed to <strong>lean on</strong> someone. Even founders. Especially founders. And finding that someone — whether through How Was Your Day or through any other means — is not a sign that you are failing. It is the act of a person who wants to keep going.</p>
   `.trim(),
 }

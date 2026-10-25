@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Issues for Indians in the Gulf | LeanOn',
+  title: 'Relationship Issues for Indians in the Gulf | How Was Your Day',
   description: 'Marriage strain, long-distance pressure, family expectations, longing for home — Indian relationships in the Gulf carry unique weight. Talk to an Indian listener who truly understands.',
   keywords: [
     'relationship issues Gulf Indian', 'Gulf NRI marriage problems', 'long distance marriage Gulf',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'NRI relationship problems Gulf', 'Indian listener relationship Gulf',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/gulf-relationship-support',
-    languages: { 'en-IN': 'https://www.leanon.app/gulf-relationship-support' },
+    canonical: 'https://www.howwasyourday.live/gulf-relationship-support',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/gulf-relationship-support' },
   },
   openGraph: {
     title: 'Relationship Support for Indians in the Gulf — Talk to Someone Who Gets It',
-    description: 'Distance, family pressure, longing for home — relationships for Gulf NRIs carry unique strain. LeanOn peer listeners understand the Indian relationship context deeply.',
-    url: 'https://www.leanon.app/gulf-relationship-support',
-    siteName: 'LeanOn',
+    description: 'Distance, family pressure, longing for home — relationships for Gulf NRIs carry unique strain. How Was Your Day peer listeners understand the Indian relationship context deeply.',
+    url: 'https://www.howwasyourday.live/gulf-relationship-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'Can I talk about family pressure around my marriage or relationship?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are deeply familiar with the Indian family system — in-law pressure, extended family involvement in marital decisions, the expectations around when to have children, property, career choices. You can speak openly without judgment and without your conversation reaching anyone you know.',
+        text: 'Yes. How Was Your Day listeners are deeply familiar with the Indian family system — in-law pressure, extended family involvement in marital decisions, the expectations around when to have children, property, career choices. You can speak openly without judgment and without your conversation reaching anyone you know.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'I feel like I am drifting apart from my spouse but cannot say it. What do I do?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Starting by saying it to a LeanOn listener is a powerful first step. You do not need to know what to do next — just articulating what you are feeling, to someone who will truly listen, helps you understand it better and releases some of the pressure. Many people find clarity through conversation that they could not find through thinking alone.',
+        text: 'Starting by saying it to a How Was Your Day listener is a powerful first step. You do not need to know what to do next — just articulating what you are feeling, to someone who will truly listen, helps you understand it better and releases some of the pressure. Many people find clarity through conversation that they could not find through thinking alone.',
       },
     },
     {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'Is this confidential — will my spouse or family find out?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Completely confidential. LeanOn is anonymous — you can use any name. Your spouse, family, and anyone you know will never find out you used LeanOn. You can speak freely about anything.',
+        text: 'Completely confidential. How Was Your Day is anonymous — you can use any name. Your spouse, family, and anyone you know will never find out you used How Was Your Day. You can speak freely about anything.',
       },
     },
   ],
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Gulf Relationship Support', item: 'https://www.leanon.app/gulf-relationship-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Gulf Relationship Support', item: 'https://www.howwasyourday.live/gulf-relationship-support' },
   ],
 }
 
@@ -154,7 +154,7 @@ export default function GulfRelationshipSupportPage() {
         <p className="lead">
           Indian relationships in the Gulf carry a weight that most people never fully put into words.
           The distance, the longing, the unspoken resentments, the family pressures from thousands of
-          kilometres away. LeanOn gives you a private space to talk through all of it — with an Indian
+          kilometres away. How Was Your Day gives you a private space to talk through all of it — with an Indian
           listener who truly understands.
         </p>
 
@@ -178,7 +178,7 @@ export default function GulfRelationshipSupportPage() {
           <h2>💬 After a difficult call, who do you turn to?</h2>
           <p>The moments after a hard conversation with your partner or family are often the loneliest.
             The argument still unresolved. The flat too quiet. No one nearby who understands the full story.</p>
-          <p>LeanOn listeners are based in India, so availability follows Indian time — to hear you out, without taking sides, in your language.</p>
+          <p>How Was Your Day listeners are based in India, so availability follows Indian time — to hear you out, without taking sides, in your language.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
         </div>
 
@@ -187,7 +187,7 @@ export default function GulfRelationshipSupportPage() {
           <p>Indian relationships rarely happen between just two people. In-laws, parents, siblings, and
             extended family all have opinions — and from the Gulf, managing those opinions while building
             your own life feels impossible.</p>
-          <p>LeanOn listeners understand the Indian family system deeply: the weight of arranged marriage
+          <p>How Was Your Day listeners understand the Indian family system deeply: the weight of arranged marriage
             expectations, the pressure around children and timelines, the guilt of not being physically
             present during family crises. You can speak openly about all of it.</p>
         </div>
@@ -219,12 +219,12 @@ export default function GulfRelationshipSupportPage() {
           </div>
           <div className="faq-item">
             <h3>Can I talk about family pressure around my marriage?</h3>
-            <p>Yes. LeanOn listeners understand Indian family dynamics deeply — in-law pressure, extended family
+            <p>Yes. How Was Your Day listeners understand Indian family dynamics deeply — in-law pressure, extended family
               involvement, and cultural expectations around marriage. Speak openly without judgment.</p>
           </div>
           <div className="faq-item">
             <h3>I feel like I am drifting apart from my spouse but cannot say it. What do I do?</h3>
-            <p>Saying it to a LeanOn listener is a powerful first step. You do not need to know what to do
+            <p>Saying it to a How Was Your Day listener is a powerful first step. You do not need to know what to do
               next — just articulating what you feel releases pressure and often brings clarity.</p>
           </div>
           <div className="faq-item">
@@ -233,8 +233,8 @@ export default function GulfRelationshipSupportPage() {
           </div>
           <div className="faq-item">
             <h3>Will my spouse or family find out I talked to a listener?</h3>
-            <p>No. LeanOn is private. Your spouse, family, and anyone you know will never know
-              you used LeanOn. You can speak freely about anything.</p>
+            <p>No. How Was Your Day is private. Your spouse, family, and anyone you know will never know
+              you used How Was Your Day. You can speak freely about anything.</p>
           </div>
         </div>
 
@@ -251,7 +251,7 @@ export default function GulfRelationshipSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

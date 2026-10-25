@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Partner Had an Affair — Emotional Support India | LeanOn',
+  title: 'Partner Had an Affair — Emotional Support India | How Was Your Day',
   description: 'Betrayal is one of the hardest things to process. You need to talk — not to a therapist yet, to a real person who will just listen. From ₹160.',
   keywords: [
     'affair recovery India', 'partner affair India', 'husband affair India',
     'infidelity emotional recovery India', 'betrayal trauma India',
     'wife affair India', 'recovering from cheating India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/affair-recovery-india', languages: { 'en-IN': 'https://www.leanon.app/affair-recovery-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/affair-recovery-india', languages: { 'en-IN': 'https://www.howwasyourday.live/affair-recovery-india' } },
   openGraph: {
-    title: 'Partner Had an Affair — Emotional Support India | LeanOn',
+    title: 'Partner Had an Affair — Emotional Support India | How Was Your Day',
     description: 'Betrayal is one of the hardest things to process. You need to talk — not to a therapist yet, to a real person who will just listen. From ₹160.',
-    url: 'https://www.leanon.app/affair-recovery-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/affair-recovery-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Affair Recovery India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Affair Recovery India' }],
   },
 }
 
@@ -42,7 +42,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous?',
+      name: 'Is How Was Your Day anonymous?',
       acceptedAnswer: { '@type': 'Answer', text: 'Yes. You use a first name. The listener is bound by confidentiality. Nothing leaves the session. Given how sensitive this topic is — and how interconnected Indian social networks can be — anonymity is one of the most important features.' },
     },
     {
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Affair Recovery India', item: 'https://www.leanon.app/affair-recovery-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Affair Recovery India', item: 'https://www.howwasyourday.live/affair-recovery-india' },
   ],
 }
 
@@ -107,7 +107,7 @@ export default function AffairRecoveryIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

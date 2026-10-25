@@ -165,7 +165,7 @@ export default function ListenerStatusPage() {
 
           {status === 'approved' && SHOW_LISTENER_GROWTH_NOTICE && (
             <div style={{marginBottom:16,background:'rgba(255,153,51,0.08)',border:'1.5px solid rgba(255,153,51,0.25)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'#7A5200',lineHeight:1.6,fontWeight:500,textAlign:'left'}}>
-              <strong style={{fontWeight:800}}>One thing to know:</strong> LeanOn is a growing platform. Your first session request might take a few days — session volume depends on how many seekers are online. Keep your availability on and we&apos;ll notify you the moment someone books.
+              <strong style={{fontWeight:800}}>One thing to know:</strong> How Was Your Day is a growing platform. Your first session request might take a few days — session volume depends on how many seekers are online. Keep your availability on and we&apos;ll notify you the moment someone books.
             </div>
           )}
           {status === 'approved' && (

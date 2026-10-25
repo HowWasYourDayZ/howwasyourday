@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in San Jose | Peer Support for the Silicon Valley Community | LeanOn',
+  title: 'Indians in San Jose | Peer Support for the Silicon Valley Community | How Was Your Day',
   description: "San Jose has one of the largest Indian populations in America. But tech success doesn't cure loneliness. Talk to someone who understands the Bay Area Indian experience.",
   keywords: ['indians in san jose', 'indian community san jose', 'south bay indians', 'silicon valley indian support', 'san jose nri', 'desi san jose'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-san-jose' },
-  openGraph: { title: 'Indians in San Jose | Peer Support for the Silicon Valley Community | LeanOn', description: "San Jose has one of the largest Indian populations in America. But tech success doesn't cure loneliness. Talk to someone who understands the Bay Area Indian experience.", url: 'https://www.leanon.app/indians-in-san-jose', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-san-jose' },
+  openGraph: { title: 'Indians in San Jose | Peer Support for the Silicon Valley Community | How Was Your Day', description: "San Jose has one of the largest Indian populations in America. But tech success doesn't cure loneliness. Talk to someone who understands the Bay Area Indian experience.", url: 'https://www.howwasyourday.live/indians-in-san-jose', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand the Silicon Valley Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and are screened and expected to understand the NRI experience — including the specific pressures of Bay Area tech life: H1B anxiety, layoff fear, the overachiever identity, and the loneliness that comes with working 60-hour weeks in a city that measures you by your company and title.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Silicon Valley Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and are screened and expected to understand the NRI experience — including the specific pressures of Bay Area tech life: H1B anxiety, layoff fear, the overachiever identity, and the loneliness that comes with working 60-hour weeks in a city that measures you by your company and title.' } },
   { '@type': 'Question', name: 'What timezone does San Jose connect from?', acceptedAnswer: { '@type': 'Answer', text: 'San Jose (PST) is 13.5 hours behind IST. 7am San Jose = 8:30pm India. Before your morning standup, Indian listeners are available in their evening. Early mornings before work are a good time to connect.' } },
-  { '@type': 'Question', name: 'Will my employer or colleagues know I used LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn is private — phone number and first name only. Nothing is shared with your company, your manager, your HR department, or anyone in your Bay Area community.' } },
+  { '@type': 'Question', name: 'Will my employer or colleagues know I used How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day is private — phone number and first name only. Nothing is shared with your company, your manager, your HR department, or anyone in your Bay Area community.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
   { '@type': 'Question', name: 'Is this different from talking to a friend or family in India?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners are screened and expected to listen without judgment and without advice unless you ask. Unlike family, they won\'t worry about you, tell others, or try to fix your situation. You can say exactly what\'s on your mind.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in San Jose', item: 'https://www.leanon.app/indians-in-san-jose' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in San Jose', item: 'https://www.howwasyourday.live/indians-in-san-jose' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function IndiansInSanJosePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in San Jose</span></nav>
         <div className="hero">
           <p className="badge">Indians in San Jose &middot; Silicon Valley &middot; South Bay</p>
           <h1>100,000 Indians in the Valley. <em>Still lonely.</em></h1>
           <p className="lead">San Jose has one of the largest Indian populations in America — Milpitas, Sunnyvale, Cupertino, Fremont. The zip codes, the companies, the potlucks — the community infrastructure is real. And yet so many Bay Area Indians describe a specific, exhausting loneliness: surrounded by other Indians who are all too busy to really talk. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The South Bay Indian Community: Scale Without Connection</h2>
           <p>The Indian community in the South Bay is extraordinary in its size. San Jose, Milpitas, Sunnyvale, Cupertino, Fremont, Santa Clara — these are cities where you can live an almost entirely Indian-facing life. Indian grocery stores, temples, cultural associations, cricket leagues, Diwali events that fill convention halls. On paper, you are never alone.</p>
           <p>And yet the specific loneliness of Bay Area Indians is something that doesn&rsquo;t show up in the census data. Everyone here is optimizing — their career, their H1B timeline, their green card queue position, their kids&rsquo; school district. The conversations are about stock options, home prices, and school rankings. The deeper conversations — about what you actually feel, what you actually fear, what you miss about India that you&rsquo;ve never said out loud — those happen less often than you&rsquo;d expect in a city with 100,000 Indians.</p>
-          <p>LeanOn listeners are Indians based in India who have been chosen for their ability to hold space for exactly this. Not advice. Not a tech bro response. Real listening from someone who understands the NRI experience from the inside. First 5 minutes free, no appointment.</p>
+          <p>How Was Your Day listeners are Indians based in India who have been chosen for their ability to hold space for exactly this. Not advice. Not a tech bro response. Real listening from someone who understands the NRI experience from the inside. First 5 minutes free, no appointment.</p>
         </div>
 
         <div className="section">
@@ -97,11 +97,11 @@ export default function IndiansInSanJosePage() {
         <div className="section">
           <h2>The Immigrant Overachiever and the Permission to Not Be Okay</h2>
           <p>One of the hardest parts of the Bay Area Indian experience is the complete absence of permission to struggle. You are here because you were exceptional. Your family sacrificed for this. You got the visa, the offer letter, the apartment in Cupertino. To say &ldquo;I&rsquo;m not okay&rdquo; feels like ingratitude — like you are failing the story everyone told about you.</p>
-          <p>But exceptionalism and emotional need are not opposites. The specific pressure of being a high-performing Indian immigrant in Silicon Valley — the visa precarity, the performance reviews, the parents in India who think you have the perfect life, the colleagues who have no frame of reference for what you carry — creates a weight that doesn&rsquo;t respond to promotion or pay rise. LeanOn exists for exactly this. Real peer listener, real conversation. From US$10.</p>
+          <p>But exceptionalism and emotional need are not opposites. The specific pressure of being a high-performing Indian immigrant in Silicon Valley — the visa precarity, the performance reviews, the parents in India who think you have the perfect life, the colleagues who have no frame of reference for what you carry — creates a weight that doesn&rsquo;t respond to promotion or pay rise. How Was Your Day exists for exactly this. Real peer listener, real conversation. From US$10.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The Valley is full of Indians. Talk to one who will actually listen.</h2><p>Real peer listener based in India. Understands the Silicon Valley Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The Valley is full of Indians. Talk to one who will actually listen.</h2><p>Real peer listener based in India. Understands the Silicon Valley Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

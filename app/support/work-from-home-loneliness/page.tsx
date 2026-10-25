@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support for Work-From-Home Loneliness in India | LeanOn',
+  title: 'Peer Support for Work-From-Home Loneliness in India | How Was Your Day',
   description: 'Feeling isolated working from home? Talk to a peer listener who understands WFH loneliness. Empathetic support in India.',
-  alternates: { canonical: 'https://www.leanon.app/support/work-from-home-loneliness', languages: { 'en-IN': 'https://www.leanon.app/support/work-from-home-loneliness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/work-from-home-loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/work-from-home-loneliness' } },
   openGraph: {
-    title: 'Peer Support for Work-From-Home Loneliness in India | LeanOn',
+    title: 'Peer Support for Work-From-Home Loneliness in India | How Was Your Day',
     description: 'Feeling isolated working from home? Talk to a peer listener who understands WFH loneliness. Empathetic support in India.',
-    url: 'https://www.leanon.app/support/work-from-home-loneliness',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/work-from-home-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -48,15 +48,15 @@ const faqSchema = {
       name: 'How does empathetic peer support help remote workers feel less alone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn peer listeners offer empathetic, judgment-free conversation that does not require you to perform the way work meetings do. Many listeners have lived through remote-work isolation themselves, so they understand what it feels like to go silent for hours and then crave real human connection.',
+        text: 'How Was Your Day peer listeners offer empathetic, judgment-free conversation that does not require you to perform the way work meetings do. Many listeners have lived through remote-work isolation themselves, so they understand what it feels like to go silent for hours and then crave real human connection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn peer support cost?',
+      name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.',
       },
     },
   ],
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Work From Home Loneliness', item: 'https://www.leanon.app/support/work-from-home-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Work From Home Loneliness', item: 'https://www.howwasyourday.live/support/work-from-home-loneliness' },
   ],
 }
 
@@ -129,7 +129,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -148,7 +148,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Work-From-Home Loneliness</p>
           <h1>Working From Home Shouldn&apos;t Mean Feeling <em>Invisible</em></h1>
-          <p className="lead">Millions of Indians now work from bedrooms, PGs, and one-BHKs across the country — productive, professional, and profoundly alone. LeanOn connects you with peer listeners who understand what it&apos;s like to go an entire day without a real conversation, and who offer empathetic, judgment-free support whenever the silence gets too loud.</p>
+          <p className="lead">Millions of Indians now work from bedrooms, PGs, and one-BHKs across the country — productive, professional, and profoundly alone. How Was Your Day connects you with peer listeners who understand what it&apos;s like to go an entire day without a real conversation, and who offer empathetic, judgment-free support whenever the silence gets too loud.</p>
         </div>
 
         {/* Understanding WFH loneliness */}
@@ -169,22 +169,22 @@ export default function WorkFromHomeLonelinessSupportPage() {
           <p>When your bedroom is also your office, the boundaries blur in both directions — it becomes hard to switch off from work, and just as hard to feel truly off duty and social once the laptop closes. This blur hits hardest for people who relocated to a city specifically for a job they now do entirely alone at home, with no office, no friend circle, and no clear line between working and living.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps With WFH Loneliness</h2>
-          <p>LeanOn is not therapy, and we are honest about that. We are peer support — real humans talking to real humans, with empathy for exactly what remote work isolation feels like. Here is how we help:</p>
+          <h2>How the app Helps With WFH Loneliness</h2>
+          <p>How Was Your Day is not therapy, and we are honest about that. We are peer support — real humans talking to real humans, with empathy for exactly what remote work isolation feels like. Here is how we help:</p>
 
           <h3>Listeners Who&apos;ve Lived Remote-Work Isolation</h3>
           <p>Our listeners include people who have personally gone through WFH isolation — freelancers who went months without a real conversation, and employees who relocated for a fully-remote role and knew nobody in the city. They bring genuine empathy, not a script.</p>
 
           <h3>Available During Your Work-Day Breaks</h3>
-          <p>You don&apos;t have to wait until the weekend. LeanOn listeners are available during a quick break between calls, or in the evening after a silent day of video calls when the quiet finally catches up with you.</p>
+          <p>You don&apos;t have to wait until the weekend. How Was Your Day listeners are available during a quick break between calls, or in the evening after a silent day of video calls when the quiet finally catches up with you.</p>
 
           <h3>Empathetic Conversation, No Performance Required</h3>
-          <p>Work meetings ask you to be &quot;on&quot; — camera ready, articulate, upbeat. A conversation with a LeanOn listener asks nothing of the sort. It is empathetic, unhurried, and judgment-free, with no need to perform the way you do for a manager or a client.</p>
+          <p>Work meetings ask you to be &quot;on&quot; — camera ready, articulate, upbeat. A conversation with a How Was Your Day listener asks nothing of the sort. It is empathetic, unhurried, and judgment-free, with no need to perform the way you do for a manager or a client.</p>
 
           <h3>A Human Connection That Isn&apos;t Another Screen Obligation</h3>
-          <p>We know the last thing a burnt-out remote worker wants is one more screen-based obligation. LeanOn is designed to feel like the opposite of that — a genuine human connection point, not another item on your video-call calendar.</p>
+          <p>We know the last thing a burnt-out remote worker wants is one more screen-based obligation. How Was Your Day is designed to feel like the opposite of that — a genuine human connection point, not another item on your video-call calendar.</p>
         </div>
 
         {/* Listener cards */}
@@ -225,7 +225,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
           <p>Talk to a peer listener who truly understands work-from-home isolation. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Someone is here — start free now →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -246,18 +246,18 @@ export default function WorkFromHomeLonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does empathetic peer support help remote workers feel less alone?</div>
-            <div className="faq-a">LeanOn peer listeners offer empathetic, judgment-free conversation that doesn&apos;t require you to perform the way work meetings do. Many listeners have lived through remote-work isolation themselves and understand exactly what it feels like.</div>
+            <div className="faq-a">How Was Your Day peer listeners offer empathetic, judgment-free conversation that doesn&apos;t require you to perform the way work meetings do. Many listeners have lived through remote-work isolation themselves and understand exactly what it feels like.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn peer support cost?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.</div>
+            <div className="faq-q">How much does How Was Your Day peer support cost?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>WFH loneliness often overlaps with other challenges. Explore more peer support on LeanOn:</p>
+          <p>WFH loneliness often overlaps with other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
             <a href="/support/social-anxiety" className="related-link">Social Anxiety</a>

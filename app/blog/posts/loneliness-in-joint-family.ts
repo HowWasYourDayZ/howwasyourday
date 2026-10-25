@@ -56,7 +56,7 @@ export const post = {
 
 <h2>Anonymous Support: The Solution Joint Families Need</h2>
 
-<p>The logic of peer support platforms like <strong>LeanOn</strong> is particularly well-suited to joint family situations. When you connect with someone on LeanOn, you are connecting with a person who has no relationship to your family, no stake in your family&apos;s reputation, no history with any of the people involved in your situation. They are outside the system.</p>
+<p>The logic of peer support platforms like <strong>How Was Your Day</strong> is particularly well-suited to joint family situations. When you connect with someone on How Was Your Day, you are connecting with a person who has no relationship to your family, no stake in your family&apos;s reputation, no history with any of the people involved in your situation. They are outside the system.</p>
 
 <p>This outside-ness is transformative. You can say things you could never say inside the family. You can name the loneliness without someone dismissing it. You can describe the exhaustion without someone telling you to be grateful. You can be honest about your ambivalence — about loving your family and also being diminished by the way you live within it — without that honesty being weaponised.</p>
 
@@ -72,11 +72,11 @@ export const post = {
 
 <p><strong>You are not alone in this experience.</strong> Across Bengaluru, Mumbai, Delhi, and every other Indian city, there are millions of people living versions of this same reality. The loneliness feels personal and specific, but it is structural — it is the product of a system that does not have good mechanisms for individual emotional care.</p>
 
-<p><strong>Talking to someone outside helps.</strong> Whether that is a trusted friend in another city, a support professional, or a peer supporter on a platform like <strong>leanon</strong> — someone to talk to India who is outside your immediate situation can offer a kind of support that no one inside it can.</p>
+<p><strong>Talking to someone outside helps.</strong> Whether that is a trusted friend in another city, a support professional, or a peer supporter on a platform like <strong>howwasyourday</strong> — someone to talk to India who is outside your immediate situation can offer a kind of support that no one inside it can.</p>
 
 <p><strong>You do not have to choose between your family and your wellbeing.</strong> Finding support outside the family is not a rejection of the family. It is the act of taking care of yourself so that you can continue to be present within it — rather than slowly hollowing out under the weight of unmet emotional needs.</p>
 
-<p>If you are ready to find that support, <a href="/browse">browse supporters on LeanOn</a> who understand joint family dynamics, loneliness, and the particular pressures of Indian family life. Or <a href="/auth">create an account</a> and start a conversation. You deserve to have somewhere to put down what you have been carrying alone.</p>
+<p>If you are ready to find that support, <a href="/browse">browse supporters on How Was Your Day</a> who understand joint family dynamics, loneliness, and the particular pressures of Indian family life. Or <a href="/auth">create an account</a> and start a conversation. You deserve to have somewhere to put down what you have been carrying alone.</p>
 
 <p><strong>Anonymous emotional support India</strong> — it exists, it works, and it is available to you right now. You do not have to be lonely in a crowd any longer.</p>
   `.trim(),

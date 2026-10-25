@@ -1,4 +1,4 @@
-package app.leanon;
+package app.howwasyourday;
 
 import androidx.annotation.NonNull;
 
@@ -7,10 +7,10 @@ import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.Map;
 
-// Receives LeanOn's data-only, high-priority FCM messages (lib/push.ts →
+// Receives How Was Your Day's data-only, high-priority FCM messages (lib/push.ts →
 // sendNativePush). Data-only means this runs even when the app is closed, so the
 // app — not the system tray — decides how a request rings.
-public class LeanOnMessagingService extends FirebaseMessagingService {
+public class HowWasYourDayMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NonNull RemoteMessage message) {
         Map<String, String> d = message.getData();
@@ -32,7 +32,7 @@ public class LeanOnMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onNewToken(@NonNull String token) {
-        // Saved here; the website re-registers it with LeanOn the next time it opens.
+        // Saved here; the website re-registers it with How Was Your Day the next time it opens.
         Prefs.get(this).edit().putString(Prefs.PUSH_TOKEN, token).apply();
     }
 }

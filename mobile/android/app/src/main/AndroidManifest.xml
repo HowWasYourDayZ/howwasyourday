@@ -38,8 +38,8 @@
         <!-- "Not now" on the ringing alert. -->
         <receiver android:name=".RequestActionReceiver" android:exported="false" />
 
-        <!-- LeanOn's data-only FCM messages (lib/push.ts sendNativePush). -->
-        <service android:name=".LeanOnMessagingService" android:exported="false">
+        <!-- How Was Your Day's data-only FCM messages (lib/push.ts sendNativePush). -->
+        <service android:name=".HowWasYourDayMessagingService" android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

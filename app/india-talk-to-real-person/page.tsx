@@ -4,8 +4,8 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to a Real Person in India — Not an AI Chatbot | LeanOn',
-  description: 'LeanOn connects you with real Indian peer listeners — humans with genuine lived experience of Indian life, loneliness, family pressure, and relationship stress. First 5 minutes free.',
+  title: 'Talk to a Real Person in India — Not an AI Chatbot | How Was Your Day',
+  description: 'How Was Your Day connects you with real Indian peer listeners — humans with genuine lived experience of Indian life, loneliness, family pressure, and relationship stress. First 5 minutes free.',
   keywords: [
     'real person to talk to in India', 'koi baat sunne wala', 'loneliness help India real person',
     'talk to someone in India', 'human listener India', 'not AI chatbot India',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'Indian peer support platform', 'real human support India',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/india-talk-to-real-person',
-    languages: { 'en-IN': 'https://www.leanon.app/india-talk-to-real-person' },
+    canonical: 'https://www.howwasyourday.live/india-talk-to-real-person',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/india-talk-to-real-person' },
   },
   openGraph: {
-    title: 'Talk to a Real Person in India — Not an AI Chatbot | LeanOn',
+    title: 'Talk to a Real Person in India — Not an AI Chatbot | How Was Your Day',
     description: 'Real Indian peer listeners with no appointment — humans who understand Indian life, loneliness, family pressure, and relationship stress. First 5 minutes free.',
-    url: 'https://www.leanon.app/india-talk-to-real-person',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/india-talk-to-real-person',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn Peer Support — India',
-  description: 'LeanOn is an Indian peer support platform that connects people with real human listeners — screened, vetted individuals with lived experience of Indian life, with no appointment.',
+  name: 'How Was Your Day Peer Support — India',
+  description: 'How Was Your Day is an Indian peer support platform that connects people with real human listeners — screened, vetted individuals with lived experience of Indian life, with no appointment.',
   provider: {
     '@type': 'Organization',
-    name: 'LeanOn',
-    url: 'https://www.leanon.app',
+    name: 'How Was Your Day',
+    url: 'https://www.howwasyourday.live',
   },
   areaServed: 'India',
   audience: {
@@ -51,10 +51,10 @@ const serviceSchema = {
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is an Indian peer support platform connecting people with real human listeners — not AI — with no appointment.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is an Indian peer support platform connecting people with real human listeners — not AI — with no appointment.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'Where can I find a real person to talk to in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. First 5 minutes free.',
+        text: 'How Was Your Day is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. First 5 minutes free.',
       },
     },
     {
@@ -74,20 +74,20 @@ const faqSchema = {
       name: 'Is there a human alternative to AI chatbots in India for emotional support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — LeanOn connects Indians with real peer listeners, with no appointment. Unlike AI, LeanOn listeners have lived through the pressures of Indian life: career expectations, family dynamics, loneliness in metros, and more.',
+        text: 'Yes — How Was Your Day connects Indians with real peer listeners, with no appointment. Unlike AI, How Was Your Day listeners have lived through the pressures of Indian life: career expectations, family dynamics, loneliness in metros, and more.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I talk to someone in Hindi on LeanOn?',
+      name: 'Can I talk to someone in Hindi on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional languages. You can filter by language when browsing.',
+        text: 'Yes. Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional languages. You can filter by language when browsing.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn affordable in India?',
+      name: 'Is How Was Your Day affordable in India?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions start at ₹160 for 15 minutes with the first 5 minutes free. Prices depend on the listener and are shown before you start.',
@@ -95,7 +95,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What kind of problems can I talk about on LeanOn in India?',
+      name: 'What kind of problems can I talk about on How Was Your Day in India?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Loneliness in a new city, family pressure, career stress, arranged marriage anxiety, feeling misunderstood, relationship struggles, grief — any emotional weight specific to the Indian experience.',
@@ -108,8 +108,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person India', item: 'https://www.leanon.app/india-talk-to-real-person' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person India', item: 'https://www.howwasyourday.live/india-talk-to-real-person' },
   ],
 }
 
@@ -200,7 +200,7 @@ export default function IndiaTalkToRealPersonPage() {
 
         <h1>India Has Enough Screens. You Need a Real Voice.</h1>
         <p className="lead">
-          LeanOn is an Indian peer support platform that connects you with real human listeners — people
+          How Was Your Day is an Indian peer support platform that connects you with real human listeners — people
           with genuine lived experience of Indian life. Not an AI. Not a bot. A real person who
           understands what it actually feels like to live here.
         </p>
@@ -212,7 +212,7 @@ export default function IndiaTalkToRealPersonPage() {
           <h2>What makes a real human different from an AI</h2>
           <p>
             When you type your pain into ChatGPT or Gemini, a language model predicts what to say next.
-            When you talk to a LeanOn listener, a real Indian human being — someone who has felt loneliness,
+            When you talk to a How Was Your Day listener, a real Indian human being — someone who has felt loneliness,
             family pressure, career anxiety, or heartbreak — actually receives what you said.
           </p>
           <p>
@@ -222,14 +222,14 @@ export default function IndiaTalkToRealPersonPage() {
         </div>
 
         <div className="compare-box">
-          <h2>AI chatbot vs LeanOn real Indian listener</h2>
+          <h2>AI chatbot vs How Was Your Day real Indian listener</h2>
           <div className="compare-row">
             <div className="compare-col ai">
               <h3>🤖 AI chatbot</h3>
               <p>Generates text based on patterns. Has never felt loneliness, family pressure, or rejection. Responses feel helpful but hollow — no one is actually there.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn real listener</h3>
+              <h3>💙 How Was Your Day real listener</h3>
               <p>A real Indian human who has applied, been screened and been approved. They have lived through the pressures of Indian life and genuinely want to hear you.</p>
             </div>
           </div>
@@ -262,7 +262,7 @@ export default function IndiaTalkToRealPersonPage() {
         <div className="night-box">
           <h2>🌙 It is 2 AM and you need a real voice</h2>
           <p>
-            At 2 AM, ChatGPT is available. But so is LeanOn — except on LeanOn, there is an actual
+            At 2 AM, ChatGPT is available. But so is How Was Your Day — except on How Was Your Day, there is an actual
             person on the other side. A real Indian human who is awake, present, and ready to listen.
           </p>
           <p>
@@ -274,7 +274,7 @@ export default function IndiaTalkToRealPersonPage() {
         <div className="card">
           <h2>Multilingual listeners — your language, your comfort</h2>
           <p>
-            Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, Marathi,
+            Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, Marathi,
             and other regional languages. You can filter by language when browsing listeners.
           </p>
           <p>
@@ -306,22 +306,22 @@ export default function IndiaTalkToRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I find a real person to talk to in India?</h3>
-            <p>LeanOn is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. First 5 minutes free.</p>
+            <p>How Was Your Day is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. First 5 minutes free.</p>
           </div>
           <div className="faq-item">
             <h3>Is there a human alternative to AI chatbots in India for emotional support?</h3>
-            <p>Yes — LeanOn connects Indians with real peer listeners, with no appointment. Unlike AI, LeanOn listeners have lived through the pressures of Indian life: career expectations, family dynamics, loneliness in metros, and more.</p>
+            <p>Yes — How Was Your Day connects Indians with real peer listeners, with no appointment. Unlike AI, How Was Your Day listeners have lived through the pressures of Indian life: career expectations, family dynamics, loneliness in metros, and more.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I talk to someone in Hindi on LeanOn?</h3>
-            <p>Yes. Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional languages. You can filter by language when browsing.</p>
+            <h3>Can I talk to someone in Hindi on How Was Your Day?</h3>
+            <p>Yes. Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Bengali, and other regional languages. You can filter by language when browsing.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn affordable in India?</h3>
+            <h3>Is How Was Your Day affordable in India?</h3>
             <p>Sessions start at ₹160 for 15 minutes with the first 5 minutes free. Prices depend on the listener and are shown before you start.</p>
           </div>
           <div className="faq-item">
-            <h3>What kind of problems can I talk about on LeanOn in India?</h3>
+            <h3>What kind of problems can I talk about on How Was Your Day in India?</h3>
             <p>Loneliness in a new city, family pressure, career stress, arranged marriage anxiety, feeling misunderstood, relationship struggles, grief — any emotional weight specific to the Indian experience.</p>
           </div>
         </div>
@@ -337,7 +337,7 @@ export default function IndiaTalkToRealPersonPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

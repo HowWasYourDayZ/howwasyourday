@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indian Student Abroad | The Loneliness No One Warns You About | LeanOn',
+  title: 'Indian Student Abroad | The Loneliness No One Warns You About | How Was Your Day',
   description: 'You came to study and built a life. But the isolation of being an Indian student abroad is real — and no one back home quite understands. Talk to someone who does.',
   keywords: ['indian student abroad support', 'nri student loneliness', 'indian student uk usa canada', 'international student india', 'desi student abroad', 'indian studying abroad'],
-  alternates: { canonical: 'https://www.leanon.app/nri-student-support' },
-  openGraph: { title: 'Indian Student Abroad | The Loneliness No One Warns You About | LeanOn', description: 'You came to study and built a life. But the isolation of being an Indian student abroad is real — and no one back home quite understands. Talk to someone who does.', url: 'https://www.leanon.app/nri-student-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-student-support' },
+  openGraph: { title: 'Indian Student Abroad | The Loneliness No One Warns You About | How Was Your Day', description: 'You came to study and built a life. But the isolation of being an Indian student abroad is real — and no one back home quite understands. Talk to someone who does.', url: 'https://www.howwasyourday.live/nri-student-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Is this for students or only working NRIs?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is for anyone navigating the emotional weight of being Indian abroad — students very much included. The loneliness, financial pressure, culture shock, and isolation of being an Indian student abroad is a real and distinct experience that listeners understand.' } },
+  { '@type': 'Question', name: 'Is this for students or only working NRIs?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is for anyone navigating the emotional weight of being Indian abroad — students very much included. The loneliness, financial pressure, culture shock, and isolation of being an Indian student abroad is a real and distinct experience that listeners understand.' } },
   { '@type': 'Question', name: 'My parents call every day to check on my grades. I cannot talk to them honestly. Is this for me?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. The dynamic where your parents are your primary support but also your primary source of pressure — and where honest communication becomes impossible as a result — is one of the most common things Indian students abroad talk about with listeners. You can say things here you cannot say on those calls.' } },
   { '@type': 'Question', name: 'I am struggling to make friends across cultural gaps. Is that something listeners understand?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Making genuine friendships when you come from a different cultural background, when social scripts are different, when the reference points do not overlap — this is a specific, real form of isolation. Listeners understand it from the inside.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your family, your university, and your Indian student community will never know. Sessions are anonymous — phone number and first name only.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indian Student Abroad', item: 'https://www.leanon.app/nri-student-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indian Student Abroad', item: 'https://www.howwasyourday.live/nri-student-support' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriStudentSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indian Student Abroad</span></nav>
         <div className="hero">
           <p className="badge">Indian Student Abroad &middot; Desi Student &middot; International Isolation</p>
           <h1>Everyone back home thinks you are having <em>the time of your life.</em></h1>
           <p className="lead">You came to study. The gap between what everyone imagines — the adventure, the freedom, the opportunity — and what studying abroad actually feels like in the first winter, in the first lonely semester, in the first time you miss your parents so badly it hurts — that gap is enormous. And nobody warned you about it. Talk to someone who has heard it and gets it. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -90,17 +90,17 @@ export default function NriStudentSupportPage() {
         <div className="section">
           <h2>The Parents Who Call Every Day</h2>
           <p>Indian parents who send a child abroad for education typically invest everything — financially, emotionally, and in terms of family reputation. The daily calls are love. They are also pressure. The need to report that you are fine, that you are studying, that the money is worth it — this becomes a performance that takes real energy to maintain when you are actually struggling.</p>
-          <p>The person you most want to talk to honestly is the person you are least able to be honest with. Because their anxiety about your wellbeing is the thing that stops you from expressing your actual wellbeing. This is a specific and isolating dynamic that LeanOn listeners understand completely. A session with a peer listener is a space where you can say what you cannot say on the evening call home.</p>
+          <p>The person you most want to talk to honestly is the person you are least able to be honest with. Because their anxiety about your wellbeing is the thing that stops you from expressing your actual wellbeing. This is a specific and isolating dynamic that How Was Your Day listeners understand completely. A session with a peer listener is a space where you can say what you cannot say on the evening call home.</p>
         </div>
 
         <div className="section">
           <h2>Making Friends Across Culture Gaps</h2>
           <p>Making genuine friendships as an Indian student abroad is harder than anyone tells you. The social scripts are different. The reference points do not overlap. The British or Canadian or American students have existing friend groups from home, from school, from contexts you have not shared. The Indian student community can be a lifeline, but it can also be a bubble that keeps you from engaging with your new country — and sometimes it carries its own pressures and dynamics.</p>
-          <p>The loneliness of being genuinely unseen socially — of being in a room full of people and feeling like an observer rather than a participant — is one of the most common things Indian students abroad experience and rarely name. LeanOn listeners have heard this from hundreds of students and understand the specific texture of it.</p>
+          <p>The loneliness of being genuinely unseen socially — of being in a room full of people and feeling like an observer rather than a participant — is one of the most common things Indian students abroad experience and rarely name. How Was Your Day listeners have heard this from hundreds of students and understand the specific texture of it.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The loneliness nobody warned you about deserves to be heard.</h2><p>Real peer listener. Student-friendly pricing. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The loneliness nobody warned you about deserves to be heard.</h2><p>Real peer listener. Student-friendly pricing. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-student-uk">Indian student UK &rarr;</a>
           <a href="/indian-student-canada">Indian student Canada &rarr;</a>

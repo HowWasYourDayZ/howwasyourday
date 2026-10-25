@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Anger Management India — Talk Before It Explodes | LeanOn',
+  title: 'Anger Management India — Talk Before It Explodes | How Was Your Day',
   description: 'Anger building up? Sometimes talking it through before it erupts is all you need. Anonymous peer support from ₹160.',
   keywords: ['anger management india', 'anger issues india', 'panic attack support india', 'emotional regulation india', 'controlling anger india', 'anger counselling india'],
-  alternates: { canonical: 'https://www.leanon.app/anger-management-india', languages: { 'en-IN': 'https://www.leanon.app/anger-management-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/anger-management-india', languages: { 'en-IN': 'https://www.howwasyourday.live/anger-management-india' } },
   openGraph: {
-    title: 'Anger Management India — Talk Before It Explodes | LeanOn',
+    title: 'Anger Management India — Talk Before It Explodes | How Was Your Day',
     description: 'Anger building up? Sometimes talking it through before it erupts is all you need. Anonymous peer support from ₹160.',
-    url: 'https://www.leanon.app/anger-management-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/anger-management-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What if I say something awful?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners are screened and expected to hold space without reactivity. They will not judge you for what you say in a session — that is the point. You can express the actual version of how you feel, not the acceptable summary.',
+        text: 'How Was Your Day listeners are screened and expected to hold space without reactivity. They will not judge you for what you say in a session — that is the point. You can express the actual version of how you feel, not the acceptable summary.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Is this anger management therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support, not clinical anger management therapy. Clinical anger management is a structured programme delivered by a licensed professional. LeanOn provides a real human conversation — a space to process before the explosion, not a clinical intervention.',
+        text: 'No. How Was Your Day is peer support, not clinical anger management therapy. Clinical anger management is a structured programme delivered by a licensed professional. How Was Your Day provides a real human conversation — a space to process before the explosion, not a clinical intervention.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Anger Management India', item: 'https://www.leanon.app/anger-management-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Anger Management India', item: 'https://www.howwasyourday.live/anger-management-india' },
   ],
 }
 
@@ -123,7 +123,7 @@ export default function AngerManagementIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -153,7 +153,7 @@ export default function AngerManagementIndiaPage() {
             <li><strong>Shame</strong> — about something you did, about how you were treated, about your situation</li>
             <li><strong>Hurt</strong> — by someone who should have done better, by a situation that is not fair</li>
           </ul>
-          <p>When you talk to a LeanOn listener, they are not managing your anger — they are helping you slow down enough to find what is actually there.</p>
+          <p>When you talk to a How Was Your Day listener, they are not managing your anger — they are helping you slow down enough to find what is actually there.</p>
         </div>
 
         <div className="section">
@@ -187,11 +187,11 @@ export default function AngerManagementIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I say something awful?</div>
-            <div className="faq-a">LeanOn listeners are screened and expected to hold space without reactivity. They will not judge you for what you say in a session. You can express the actual version of how you feel.</div>
+            <div className="faq-a">How Was Your Day listeners are screened and expected to hold space without reactivity. They will not judge you for what you say in a session. You can express the actual version of how you feel.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is this anger management therapy?</div>
-            <div className="faq-a">No. LeanOn is peer support, not clinical anger management therapy. Clinical anger management is a structured programme by a licensed professional. LeanOn provides a real human conversation — a space to process before the explosion.</div>
+            <div className="faq-a">No. How Was Your Day is peer support, not clinical anger management therapy. Clinical anger management is a structured programme by a licensed professional. How Was Your Day provides a real human conversation — a space to process before the explosion.</div>
           </div>
         </div>
 

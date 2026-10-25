@@ -56,13 +56,13 @@ export const post = {
 
 <p><strong>Genuine community ethos.</strong> The best platforms have a genuine culture of care — not just a product. Look for evidence that the people building the platform care about the users, not just the metrics.</p>
 
-<h2>LeanOn&apos;s Approach to Anonymity and Safety</h2>
+<h2>How Was Your Day&apos;s Approach to Anonymity and Safety</h2>
 
-<p>LeanOn was built with the specific context of India in mind — including the reality that many people who need support will only seek it if they can do so without social risk.</p>
+<p>How Was Your Day was built with the specific context of India in mind — including the reality that many people who need support will only seek it if they can do so without social risk.</p>
 
-<p>On LeanOn, users and listeners connect on a first-name-only basis. No personal information is shared between them — no last names, no contact details, no social media handles. The conversation stays within the platform. What is said in the session stays there.</p>
+<p>On How Was Your Day, users and listeners connect on a first-name-only basis. No personal information is shared between them — no last names, no contact details, no social media handles. The conversation stays within the platform. What is said in the session stays there.</p>
 
-<p>Every listener on LeanOn has gone through a verification and training process. They are real people — not bots, not actors — who have navigated their own difficult experiences and chosen to offer support to others. They are screened for active listening, emotional boundaries, and when to encourage professional support. They are not therapists, and LeanOn does not position them as such. They are peers who understand what it is to struggle, who know how to listen without judgment, and who show up reliably.</p>
+<p>Every listener on How Was Your Day has gone through a verification and training process. They are real people — not bots, not actors — who have navigated their own difficult experiences and chosen to offer support to others. They are screened for active listening, emotional boundaries, and when to encourage professional support. They are not therapists, and How Was Your Day does not position them as such. They are peers who understand what it is to struggle, who know how to listen without judgment, and who show up reliably.</p>
 
 <p>The platform is designed so that people can speak honestly — about loneliness, anxiety, relationship difficulty, grief, burnout, the pressure of family expectations — without any of that information reaching their real-world social circle. The anonymity is not a loophole. It is a feature. It is the design principle that makes honest support possible.</p>
 
@@ -72,7 +72,7 @@ export const post = {
 
 <p>That decision is worth making. You do not have to be in crisis. You do not have to be certain that what you are feeling is "bad enough" to warrant support. If you are struggling and you do not have a safe place to be honest about it, that is reason enough.</p>
 
-<p>LeanOn&apos;s listeners are there without judgment, without any stake in your social world, and without requiring you to be anything other than honest. <a href="/browse">Browse the available listeners</a>, pick someone who feels right, and say whatever is actually true. That is all it takes to begin.</p>
+<p>How Was Your Day&apos;s listeners are there without judgment, without any stake in your social world, and without requiring you to be anything other than honest. <a href="/browse">Browse the available listeners</a>, pick someone who feels right, and say whatever is actually true. That is all it takes to begin.</p>
 
 <p>Millions of people in India are looking for exactly what you might be looking for. The silence around that search is part of the problem. You do not have to be part of the silence.</p>
   `.trim(),

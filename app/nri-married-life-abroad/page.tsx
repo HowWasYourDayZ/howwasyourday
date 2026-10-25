@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Married Life Abroad | The Hidden Weight of Building a Life Together Far from Home | LeanOn',
+  title: 'NRI Married Life Abroad | The Hidden Weight of Building a Life Together Far from Home | How Was Your Day',
   description: 'NRI married life abroad looks perfect from outside. Inside, it\'s two people trying to hold a marriage together in a foreign country, often without family support. Talk to someone.',
   keywords: ['nri married life', 'nri couple abroad', 'nri married couple', 'indian married life abroad', 'nri family life', 'nri couple support'],
-  alternates: { canonical: 'https://www.leanon.app/nri-married-life-abroad' },
-  openGraph: { title: 'NRI Married Life Abroad | The Hidden Weight of Building a Life Together Far from Home | LeanOn', description: 'NRI married life abroad looks perfect from outside. Inside, it\'s two people trying to hold a marriage together in a foreign country, often without family support. Talk to someone.', url: 'https://www.leanon.app/nri-married-life-abroad', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-married-life-abroad' },
+  openGraph: { title: 'NRI Married Life Abroad | The Hidden Weight of Building a Life Together Far from Home | How Was Your Day', description: 'NRI married life abroad looks perfect from outside. Inside, it\'s two people trying to hold a marriage together in a foreign country, often without family support. Talk to someone.', url: 'https://www.howwasyourday.live/nri-married-life-abroad', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Married Life Abroad', item: 'https://www.leanon.app/nri-married-life-abroad' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Married Life Abroad', item: 'https://www.howwasyourday.live/nri-married-life-abroad' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriMarriedLifeAbroadPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Married Life Abroad</span></nav>
         <div className="hero">
           <p className="badge">NRI Married Life &middot; Indian Couple Abroad &middot; Peer Support</p>
           <h1>NRI Married Life Abroad — <em>Beautiful from Outside. Heavy Inside.</em></h1>
           <p className="lead">Both working. No grandparents for childcare. Two people carrying each other&rsquo;s immigration anxiety. The Instagram life and the Sunday evening silence. NRI married life is not the version in the family WhatsApp group — it is two people trying to hold everything together without a support network within reach. Talk to someone who understands. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -98,7 +98,7 @@ export default function NriMarriedLifeAbroadPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The heaviness that doesn&rsquo;t show on the outside.</h2><p>Real peer listener. Understands NRI married life from the inside. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The heaviness that doesn&rsquo;t show on the outside.</h2><p>Real peer listener. Understands NRI married life from the inside. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

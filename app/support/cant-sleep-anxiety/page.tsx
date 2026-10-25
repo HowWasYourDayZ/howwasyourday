@@ -4,17 +4,17 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: "Can't Sleep Because of Anxiety? Peer Support India | LeanOn",
+  title: "Can't Sleep Because of Anxiety? Peer Support India | How Was Your Day",
   description: "Lying awake with racing thoughts, anxiety, or overthinking? Talk to a peer listener in India who knows that 2 AM feeling. Anonymous support.",
   keywords: ["can't sleep anxiety India", "insomnia anxiety India", "lying awake overthinking India", "racing thoughts at night India", "2am anxiety India", "sleep anxiety India", "I can't sleep what do I do India", "anxiety at night India", "midnight anxiety India", "overthinking at night India", "sleep problems anxiety India", "can't sleep worry India", "wake up anxious India", "night time anxiety India", "talk to someone at night India"],
-  alternates: { canonical: 'https://www.leanon.app/support/cant-sleep-anxiety', languages: { 'en-IN': 'https://www.leanon.app/support/cant-sleep-anxiety' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/cant-sleep-anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/cant-sleep-anxiety' } },
   openGraph: {
-    title: "Can't Sleep Because of Anxiety? Peer Support India | LeanOn",
+    title: "Can't Sleep Because of Anxiety? Peer Support India | How Was Your Day",
     description: "Lying awake with racing thoughts, anxiety, or overthinking? Talk to a peer listener in India who knows that 2 AM feeling. Anonymous support.",
-    url: 'https://www.leanon.app/support/cant-sleep-anxiety',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/cant-sleep-anxiety',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn peer support for sleep anxiety' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day peer support for sleep anxiety' }],
   },
 }
 
@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'What should I do if I can\'t sleep and feel really low at 2 AM?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'First: you are not alone in being awake and feeling this right now. Millions of people in India are awake at 2 AM with racing thoughts. Second: do not try to force sleep — it does not work and creates more anxiety. Get up, do something calming (not a screen), or open LeanOn and talk to someone. Peer listeners are available through the night. Sometimes the thing that breaks the spiral is simply saying what you are thinking out loud to another person.',
+        text: 'First: you are not alone in being awake and feeling this right now. Millions of people in India are awake at 2 AM with racing thoughts. Second: do not try to force sleep — it does not work and creates more anxiety. Get up, do something calming (not a screen), or open How Was Your Day and talk to someone. Peer listeners are available through the night. Sometimes the thing that breaks the spiral is simply saying what you are thinking out loud to another person.',
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to someone at night in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session and listeners are often online late at night. New users get a free 5-minute trial. For the cost of a coffee, you can have a real conversation with someone who has personally navigated what you are going through — and who is awake right now.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session and listeners are often online late at night. New users get a free 5-minute trial. For the cost of a coffee, you can have a real conversation with someone who has personally navigated what you are going through — and who is awake right now.',
       },
     },
   ],
@@ -77,9 +77,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: "Can't Sleep Anxiety", item: 'https://www.leanon.app/support/cant-sleep-anxiety' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: "Can't Sleep Anxiety", item: 'https://www.howwasyourday.live/support/cant-sleep-anxiety' },
   ],
 }
 
@@ -140,7 +140,7 @@ export default function CantSleepAnxietyPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -158,7 +158,7 @@ export default function CantSleepAnxietyPage() {
         <div className="hero">
           <p className="tag">Peer Support · Sleep &amp; Anxiety</p>
           <h1>Lying Awake at <em>2 AM</em> With Racing Thoughts?</h1>
-          <p className="lead">You are not alone. Millions of people in India are awake right now, spiraling in the dark. LeanOn peer listeners are available through the night — real people who know the 2 AM feeling and are ready to talk.</p>
+          <p className="lead">You are not alone. Millions of people in India are awake right now, spiraling in the dark. How Was Your Day peer listeners are available through the night — real people who know the 2 AM feeling and are ready to talk.</p>
         </div>
 
         <GeoQuickAnswer path="/support/cant-sleep-anxiety" />
@@ -220,7 +220,7 @@ export default function CantSleepAnxietyPage() {
           <p>Consider speaking to a doctor or mental health professional if: sleep disruption has lasted more than three weeks; you are regularly sleeping fewer than five hours; the sleep anxiety is significantly affecting your ability to function during the day; or the nighttime thoughts include self-harm or not wanting to be here. These are signals that something more than peer support is needed. Peer support is for processing and connection — it is not a substitute for medical evaluation.</p>
 
           <h3>The Role of Peer Support</h3>
-          <p>LeanOn is not a clinical service. What it offers is specific and valuable: a real person, available at 2 AM, who has personally navigated anxious nights and knows what the spiral feels like. Sometimes that is exactly what you need — not a diagnosis, not a technique, but a voice on the other end that says: I know this. You are not alone. Let&apos;s talk through it.</p>
+          <p>How Was Your Day is not a clinical service. What it offers is specific and valuable: a real person, available at 2 AM, who has personally navigated anxious nights and knows what the spiral feels like. Sometimes that is exactly what you need — not a diagnosis, not a technique, but a voice on the other end that says: I know this. You are not alone. Let&apos;s talk through it.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Available Through the Night</h2>
@@ -256,10 +256,10 @@ export default function CantSleepAnxietyPage() {
 
         <div className="cta-card">
           <h2>Someone Is Awake Right Now</h2>
-          <p>LeanOn listeners go online at different hours, including late at night. Talk to someone who knows the 2 AM feeling. Start with a free trial session.</p>
+          <p>How Was Your Day listeners go online at different hours, including late at night. Talk to someone who knows the 2 AM feeling. Start with a free trial session.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Someone is up too — start free now →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -275,7 +275,7 @@ export default function CantSleepAnxietyPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Sleep anxiety often connects with other experiences. Explore more peer support on LeanOn:</p>
+          <p>Sleep anxiety often connects with other experiences. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>
             <a href="/support/overthinking" className="related-link">Overthinking</a>

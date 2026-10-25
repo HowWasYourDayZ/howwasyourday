@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in India? Peer Support & Human Conversation | LeanOn',
-  description: 'Feeling lonely in India? Learn about ways to seek connection and how non-clinical peer support works. LeanOn offers one-to-one text or voice conversations with screened peer listeners; one introductory session up to 5 minutes is free per account. Availability varies.',
+  title: 'Feeling Lonely in India? Peer Support & Human Conversation | How Was Your Day',
+  description: 'Feeling lonely in India? Learn about ways to seek connection and how non-clinical peer support works. How Was Your Day offers one-to-one text or voice conversations with screened peer listeners; one introductory session up to 5 minutes is free per account. Availability varies.',
   keywords: ['feeling lonely in india', 'loneliness india', 'i feel lonely india', 'lonely in india', 'loneliness support india', 'how to deal with loneliness india'],
-  alternates: { canonical: 'https://www.leanon.app/feeling-lonely-in-india' },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-lonely-in-india' },
 }
 
 const S = `
@@ -33,7 +33,7 @@ export default function FeelingLonelyInIndiaPage() {
     <>
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{height:48}} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>
       </nav>
       <div className="page">
@@ -42,7 +42,7 @@ export default function FeelingLonelyInIndiaPage() {
         <p className="lead">Loneliness can happen in a new city, at work, at home or even when surrounded by people. If you feel disconnected, you are not failing. There are different ways to seek connection, including talking with someone outside your usual circle.</p>
 
         <div className="disclaimer">
-          LeanOn provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
+          How Was Your Day provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
         </div>
 
         <div className="card">
@@ -59,12 +59,12 @@ export default function FeelingLonelyInIndiaPage() {
         <div className="card">
           <h2>What helps with loneliness</h2>
           <p>People experience loneliness differently. Some find it helpful to talk with someone who listens without immediately trying to solve the problem. A conversation is one possible source of connection; experiences vary, and it is not a treatment for a mental-health condition.</p>
-          <p>LeanOn listeners bring varied lived experiences and are screened for listening ability and boundaries. You can review profiles to see the experiences and topics they mention. They are peer supporters, not therapists, and do not provide clinical treatment.</p>
+          <p>How Was Your Day listeners bring varied lived experiences and are screened for listening ability and boundaries. You can review profiles to see the experiences and topics they mention. They are peer supporters, not therapists, and do not provide clinical treatment.</p>
         </div>
 
         <div className="card">
           <h2>Taking the first step</h2>
-          <p>Reaching out can feel difficult when you are lonely. LeanOn lets adults request a one-to-one text or voice conversation with a screened peer listener. Your account uses a verified phone number, but listeners do not see it; you can choose a display name. One introductory session up to 5 minutes is free per account, and availability depends on who is online.</p>
+          <p>Reaching out can feel difficult when you are lonely. How Was Your Day lets adults request a one-to-one text or voice conversation with a screened peer listener. Your account uses a verified phone number, but listeners do not see it; you can choose a display name. One introductory session up to 5 minutes is free per account, and availability depends on who is online.</p>
           <p>You do not need to have everything organised before starting a conversation. You can say that you have been feeling lonely or unsure where to begin, and let the listener know what kind of support you want.</p>
         </div>
 

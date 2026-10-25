@@ -1,14 +1,14 @@
 export const post = {
   slug: 'empathy-in-peer-support',
   title: 'What Is Empathy? Why It\'s the Beating Heart of Peer Support',
-  description: 'What empathy really means, how it differs from sympathy or advice, and how LeanOn brings genuine empathy to peer support in India.',
+  description: 'What empathy really means, how it differs from sympathy or advice, and how How Was Your Day brings genuine empathy to peer support in India.',
   date: '2026-07-08',
   readTime: '8 min read',
-  topics: ['empathy', 'peer support', 'active listening', 'mental health India', 'LeanOn'],
+  topics: ['empathy', 'peer support', 'active listening', 'mental health India', 'How Was Your Day'],
   content: `
 <p>If you have ever tried to comfort someone and heard yourself say &quot;at least it&apos;s not worse,&quot; or &quot;everything happens for a reason,&quot; or &quot;have you tried not thinking about it&quot; — and watched their face close up a little — you have already run into the difference between sympathy and empathy, even without a word for it. Empathy is one of those words used constantly and understood loosely. Everyone agrees it matters. Few people could say precisely what it is, or why it is so much harder to offer well than it sounds.</p>
 
-<p>This piece takes empathy seriously — not as a soft, decorative virtue, but as a specific, learnable way of being with another person. Offered well, it is one of the most healing things one human being can give another, and it is the entire foundation of what a real <strong>peer support India</strong> platform like LeanOn is trying to build.</p>
+<p>This piece takes empathy seriously — not as a soft, decorative virtue, but as a specific, learnable way of being with another person. Offered well, it is one of the most healing things one human being can give another, and it is the entire foundation of what a real <strong>peer support India</strong> platform like How Was Your Day is trying to build.</p>
 
 <h2>What Empathy Actually Is</h2>
 
@@ -69,18 +69,18 @@ export const post = {
 
 <p>This is precisely the gap a genuine <strong>peer support India</strong> model is meant to fill — not by replacing family or community, but by offering a space where being understood is the default, not the exception.</p>
 
-<h2>How LeanOn Is Built Around This</h2>
+<h2>How the app Is Built Around This</h2>
 
-<p>LeanOn exists because this kind of listening should not be this hard to find. The platform rests on a simple premise: people who have lived through something difficult are uniquely positioned to offer real empathy to someone facing something similar today, and that deserves to be structured and trustworthy, not left to chance.</p>
+<p>How Was Your Day exists because this kind of listening should not be this hard to find. The platform rests on a simple premise: people who have lived through something difficult are uniquely positioned to offer real empathy to someone facing something similar today, and that deserves to be structured and trustworthy, not left to chance.</p>
 
-<p>Every listener on LeanOn brings their own lived experience with them, and is there specifically to listen — not to diagnose, redirect, or perform concern. When you <a href="/browse">browse peer listeners</a>, you can see the experiences each person has actually navigated, so you can find someone whose understanding is grounded in something close to your own reality — anxiety, work burnout, a difficult breakup, loneliness after moving cities, or grief.</p>
+<p>Every listener on How Was Your Day brings their own lived experience with them, and is there specifically to listen — not to diagnose, redirect, or perform concern. When you <a href="/browse">browse peer listeners</a>, you can see the experiences each person has actually navigated, so you can find someone whose understanding is grounded in something close to your own reality — anxiety, work burnout, a difficult breakup, loneliness after moving cities, or grief.</p>
 
-<p>This is also why LeanOn is careful about what it asks its listeners to be. An <strong>empathetic listener India</strong> can genuinely trust is not simply someone who means well — it takes training to hold cognitive and affective empathy together: understanding accurately, staying present emotionally, and never sliding into advice, fixing, or distant sympathy. Good intentions alone do not reliably produce good listening; the skill has to be built on purpose. If you have been through something hard and have found you can offer other people that same steady, non-judgmental presence, you can <a href="/become-listener">become a listener</a> and turn what you went through into something that helps someone else feel less alone.</p>
+<p>This is also why How Was Your Day is careful about what it asks its listeners to be. An <strong>empathetic listener India</strong> can genuinely trust is not simply someone who means well — it takes training to hold cognitive and affective empathy together: understanding accurately, staying present emotionally, and never sliding into advice, fixing, or distant sympathy. Good intentions alone do not reliably produce good listening; the skill has to be built on purpose. If you have been through something hard and have found you can offer other people that same steady, non-judgmental presence, you can <a href="/become-listener">become a listener</a> and turn what you went through into something that helps someone else feel less alone.</p>
 
 <h2>Empathy Is a Practice, Not Just a Feeling</h2>
 
 <p>It is often talked about as though it is something you either have or do not — a fixed trait, like being an introvert or a morning person. It is not. It is a practice: habits of attention, patience, and restraint that can be learned and strengthened deliberately. Every time you resist the urge to jump straight to advice, every time you stay in someone else&apos;s discomfort instead of rushing to smooth it over, every time you listen for what is actually being said instead of what you expect to hear — you are practising it.</p>
 
-<p>The word deserves to be used more, not less — not as a soft, decorative value, but as a precise description of a powerful, learnable way of being with another person. If that is what you need right now, someone to be with you in it rather than someone to fix it, <a href="/faq">learn more</a> about how LeanOn works, or go ahead and find someone to talk to today.</p>
+<p>The word deserves to be used more, not less — not as a soft, decorative value, but as a precise description of a powerful, learnable way of being with another person. If that is what you need right now, someone to be with you in it rather than someone to fix it, <a href="/faq">learn more</a> about how How Was Your Day works, or go ahead and find someone to talk to today.</p>
   `.trim(),
 }

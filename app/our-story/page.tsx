@@ -1,30 +1,30 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Our Story | LeanOn — Peer Support for India',
-  description: 'The story of LeanOn — why we built India\'s peer emotional support platform and what drives us to make meaningful connection accessible to everyone.',
-  keywords: ['leanon story', 'about leanon', 'leanon founding', 'peer support india mission'],
-  alternates: { canonical: 'https://www.leanon.app/our-story' },
+  title: 'Our Story | How Was Your Day — Peer Support for India',
+  description: 'The story of How Was Your Day — why we built India\'s peer emotional support platform and what drives us to make meaningful connection accessible to everyone.',
+  keywords: ['howwasyourday story', 'about howwasyourday', 'howwasyourday founding', 'peer support india mission'],
+  alternates: { canonical: 'https://www.howwasyourday.live/our-story' },
 }
 
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://www.leanon.app/#organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
+  '@id': 'https://www.howwasyourday.live/#organization',
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
   foundingDate: '2024',
   foundingLocation: { '@type': 'Place', name: 'India' },
-  description: 'LeanOn is India\'s peer emotional support platform connecting people with verified peer listeners who have lived through loneliness, burnout, grief, and more.',
+  description: 'How Was Your Day is India\'s peer emotional support platform connecting people with verified peer listeners who have lived through loneliness, burnout, grief, and more.',
   areaServed: { '@type': 'Country', name: 'India' },
 }
 
 const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Our Story — Why We Built LeanOn',
-  author: { '@type': 'Organization', name: 'LeanOn Editorial Team' },
-  publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  headline: 'Our Story — Why We Built How Was Your Day',
+  author: { '@type': 'Organization', name: 'How Was Your Day Editorial Team' },
+  publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   datePublished: '2024-01-01',
   dateModified: '2026-05-01',
 }
@@ -55,19 +55,19 @@ export default function OurStoryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{height:48}} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>
       </nav>
       <div className="page">
         <a href="/" style={{display:'inline-flex',alignItems:'center',gap:6,fontSize:14,fontWeight:700,color:'var(--gray)',marginBottom:28}}>← Back</a>
         <h1>Our Story</h1>
-        <p className="lead">LeanOn was built because someone needed it and it didn&apos;t exist yet. This is the story of why we built it — and what we believe about the power of being truly heard.</p>
+        <p className="lead">How Was Your Day was built because someone needed it and it didn&apos;t exist yet. This is the story of why we built it — and what we believe about the power of being truly heard.</p>
 
         <div className="card">
           <h2>The moment that started it all</h2>
-          <p>LeanOn was founded by someone who went through a profoundly difficult period — the kind where you know you need to talk to someone, but all the available options feel wrong. Therapy felt like a clinical label. Helplines felt scripted. Friends didn&apos;t have the bandwidth. Family didn&apos;t understand.</p>
+          <p>How Was Your Day was founded by someone who went through a profoundly difficult period — the kind where you know you need to talk to someone, but all the available options feel wrong. Therapy felt like a clinical label. Helplines felt scripted. Friends didn&apos;t have the bandwidth. Family didn&apos;t understand.</p>
           <p>What was missing was simple: a real human who had been through something similar and could just sit with you in it. Not advise. Not diagnose. Just listen — and understand from lived experience.</p>
-          <p>LeanOn was built to create that space. Scaled. Accessible. For India.</p>
+          <p>How Was Your Day was built to create that space. Scaled. Accessible. For India.</p>
         </div>
 
         <div className="card">
@@ -77,19 +77,19 @@ export default function OurStoryPage() {
         </div>
 
         <div className="card">
-          <h2>How we built LeanOn</h2>
-          <p>LeanOn launched with a simple idea: connect people who are struggling with people who have been through the same thing and found their way through. We built a listener verification and screening process, and a platform designed for Indian privacy constraints — text-first, OTP-only, 12 languages.</p>
+          <h2>How we built How Was Your Day</h2>
+          <p>How Was Your Day launched with a simple idea: connect people who are struggling with people who have been through the same thing and found their way through. We built a listener verification and screening process, and a platform designed for Indian privacy constraints — text-first, OTP-only, 12 languages.</p>
           <p>Every decision we make is anchored in one question: does this make it easier for someone to feel genuinely heard? From our pricing to our anonymity features to our crisis protocols — that question guides everything.</p>
         </div>
 
         <div className="card">
           <h2>Where we are today</h2>
-          <p>LeanOn has facilitated thousands of peer support sessions across India. Our listeners include people who have survived burnout, rebuilt after breakups, processed grief, navigated the pressure of being the &ldquo;successful&rdquo; one in the family, and found their way through anxiety and loneliness.</p>
+          <p>How Was Your Day has facilitated thousands of peer support sessions across India. Our listeners include people who have survived burnout, rebuilt after breakups, processed grief, navigated the pressure of being the &ldquo;successful&rdquo; one in the family, and found their way through anxiety and loneliness.</p>
           <p>We are growing. We are learning. And we are deeply committed to the idea that no one in India should feel alone because support was too expensive, too stigmatized, or too hard to reach.</p>
         </div>
 
         <div className="cta">
-          <h2>Be part of the LeanOn story</h2>
+          <h2>Be part of the How Was Your Day story</h2>
           <p>As a seeker looking for support, or a listener wanting to give back — you belong here.</p>
           <a href="/browse"><button className="btn">Start now →</button></a>
         </div>

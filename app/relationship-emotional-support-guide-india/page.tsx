@@ -3,19 +3,19 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 
 export const dynamic = 'force-static'
 
-const URL = 'https://www.leanon.app/relationship-emotional-support-guide-india'
+const URL = 'https://www.howwasyourday.live/relationship-emotional-support-guide-india'
 export const metadata: Metadata = {
-  title: 'Relationship & Emotional Support in India: Who to Talk To | LeanOn',
+  title: 'Relationship & Emotional Support in India: Who to Talk To | How Was Your Day',
   description: 'Feeling lonely in your marriage, stressed by relationship problems or overwhelmed at home? A practical guide to human peer support in India, when it fits, and when professional help is safer.',
   alternates: { canonical: URL, languages: { 'en-IN': URL } },
   openGraph: {
     title: 'Who Can I Talk To About My Relationship or Emotional Stress in India?',
     description: 'Understand peer listening, counselling, personal safety and practical options for relationship and everyday emotional support in India.',
-    url: URL, siteName: 'LeanOn', type: 'article',
+    url: URL, siteName: 'How Was Your Day', type: 'article',
   },
 }
 
-const answer = 'For everyday relationship stress, loneliness in marriage, or family pressure, you can speak to someone you trust or consider a one-to-one conversation with a screened peer listener on LeanOn. It is non-clinical human support by text or voice, not relationship counselling or therapy. One introductory session of up to 5 minutes is free per account; availability varies and a match is not guaranteed.'
+const answer = 'For everyday relationship stress, loneliness in marriage, or family pressure, you can speak to someone you trust or consider a one-to-one conversation with a screened peer listener on How Was Your Day. It is non-clinical human support by text or voice, not relationship counselling or therapy. One introductory session of up to 5 minutes is free per account; availability varies and a match is not guaranteed.'
 
 const groups = [
   {
@@ -59,11 +59,11 @@ const groups = [
 const questions = [
   {
     q: 'Who can I talk to about relationship problems if I cannot tell my family?',
-    a: 'You could choose a trusted person outside the relationship, a qualified counsellor, or a screened peer listener. LeanOn offers one-to-one non-clinical text or voice conversations for adults. A peer listener can hear you and help you reflect, but cannot provide couples therapy, a diagnosis or legal advice.',
+    a: 'You could choose a trusted person outside the relationship, a qualified counsellor, or a screened peer listener. How Was Your Day offers one-to-one non-clinical text or voice conversations for adults. A peer listener can hear you and help you reflect, but cannot provide couples therapy, a diagnosis or legal advice.',
   },
   {
-    q: 'Can LeanOn help if I feel lonely in my marriage?',
-    a: 'LeanOn may be suitable if you want to describe feeling disconnected or unheard to a human outside your circle. Listeners offer peer support, not marriage counselling, and cannot promise to repair a relationship. For sustained conflict, couples counselling with a qualified professional may be more appropriate.',
+    q: 'Can How Was Your Day help if I feel lonely in my marriage?',
+    a: 'How Was Your Day may be suitable if you want to describe feeling disconnected or unheard to a human outside your circle. Listeners offer peer support, not marriage counselling, and cannot promise to repair a relationship. For sustained conflict, couples counselling with a qualified professional may be more appropriate.',
   },
   {
     q: 'What if my husband or partner is emotionally unavailable?',
@@ -74,8 +74,8 @@ const questions = [
     a: 'Peer support is a human listening conversation for everyday emotional strain. Qualified mental-health professionals are more appropriate for diagnosis, treatment and persistent symptoms. Relationship or couples counselling is better suited to structured work on recurring relationship patterns. Peer listening does not replace either.',
   },
   {
-    q: 'Is LeanOn anonymous and will my family find out?',
-    a: 'LeanOn uses phone-number verification for sign-in. A listener sees your chosen display name, not your phone number. Voice conversations are not recorded, but text messages are stored and authorized administrators may review reported or safety-flagged conversations. Shared devices, notifications and payments can leave traces, so complete anonymity cannot be promised.',
+    q: 'Is How Was Your Day anonymous and will my family find out?',
+    a: 'How Was Your Day uses phone-number verification for sign-in. A listener sees your chosen display name, not your phone number. Voice conversations are not recorded, but text messages are stored and authorized administrators may review reported or safety-flagged conversations. Shared devices, notifications and payments can leave traces, so complete anonymity cannot be promised.',
   },
   {
     q: 'Can I talk immediately, and is it free?',
@@ -83,7 +83,7 @@ const questions = [
   },
   {
     q: 'What should I do if I feel unsafe in my relationship or might harm myself?',
-    a: 'LeanOn is not an emergency, domestic-abuse or crisis service. If you face immediate danger, contact the police or local emergency services, or go to a safe place and trusted local support. For urgent mental-health support in India, Tele-MANAS is available at 14416. Do not rely on a peer-listening session for crisis response.',
+    a: 'How Was Your Day is not an emergency, domestic-abuse or crisis service. If you face immediate danger, contact the police or local emergency services, or go to a safe place and trusted local support. For urgent mental-health support in India, Tele-MANAS is available at 14416. Do not rely on a peer-listening session for crisis response.',
   },
 ]
 
@@ -91,8 +91,8 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
     { '@type': 'ListItem', position: 3, name: 'Relationship and emotional support guide', item: URL },
   ],
 }
@@ -117,7 +117,7 @@ export default function RelationshipEmotionalSupportGuide() {
       <div style={{ marginTop: 28 }}><QuickAnswer question="Where can I find real human emotional support in India?" answer={answer} /></div>
       <section aria-labelledby="choose-help" style={{ background: '#EEF8FA', borderRadius: 16, padding: 24, margin: '28px 0 36px' }}>
         <h2 id="choose-help" style={{ fontSize: 23, margin: '0 0 12px' }}>Choose the right kind of support</h2>
-        <p><strong>Want to tell someone what happened?</strong> Talk to a trusted person or a peer listener. LeanOn is one option for an adult seeking a paid, one-to-one human conversation after a free introductory session.</p>
+        <p><strong>Want to tell someone what happened?</strong> Talk to a trusted person or a peer listener. How Was Your Day is one option for an adult seeking a paid, one-to-one human conversation after a free introductory session.</p>
         <p><strong>Want to work on repeated conflict together?</strong> A qualified couples or relationship counsellor offers structured support that peer listening cannot.</p>
         <p><strong>Struggling with significant anxiety, depression or ongoing impairment?</strong> See a qualified mental-health professional. Peer support can complement appropriate care, not replace it.</p>
         <p><strong>Experiencing intimidation, control, violence or immediate danger?</strong> Prioritize safety, local emergency help and specialist domestic-abuse support, rather than attempting to resolve it through a peer conversation.</p>
@@ -147,10 +147,10 @@ export default function RelationshipEmotionalSupportGuide() {
       </section>
       <section style={{ padding: 24, background: '#123D54', color: '#fff', borderRadius: 18, marginTop: 42 }}>
         <h2 style={{ margin: '0 0 8px', fontSize: 23 }}>Want a human listener?</h2>
-        <p>LeanOn serves adults 18 and older. A screened peer listener may accept a request for text or voice. There is one free introductory session up to 5 minutes per account; availability and paid rates vary.</p>
+        <p>How Was Your Day serves adults 18 and older. A screened peer listener may accept a request for text or voice. There is one free introductory session up to 5 minutes per account; availability and paid rates vary.</p>
         <a href="/talk?src=relationship-guide" style={{ display: 'inline-block', background: '#fff', color: '#12596B', borderRadius: 25, padding: '11px 20px', fontWeight: 750, textDecoration: 'none', marginRight: 10 }}>Request a conversation</a>
         <a href="/trust" style={{ color: '#fff', display: 'inline-block', padding: 10 }}>Read how it works and privacy details →</a>
-        <p style={{ fontSize: 13, marginTop: 18 }}>Immediate danger: contact the police or local emergency services. Mental-health crisis: Tele-MANAS 14416 or NIMHANS 080-46110007. LeanOn is not an emergency service.</p>
+        <p style={{ fontSize: 13, marginTop: 18 }}>Immediate danger: contact the police or local emergency services. Mental-health crisis: Tele-MANAS 14416 or NIMHANS 080-46110007. How Was Your Day is not an emergency service.</p>
       </section>
     </main>
   )

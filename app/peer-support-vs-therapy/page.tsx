@@ -4,11 +4,11 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support vs Therapy — What Is the Difference? | LeanOn',
+  title: 'Peer Support vs Therapy — What Is the Difference? | How Was Your Day',
   description: 'Peer support vs therapy explained clearly: lived experience, empathy and listening compared with professional counselling and clinical treatment. Learn when each type of support fits.',
   keywords: ['peer support vs therapy', 'peer support and therapy', 'peer support vs psychotherapy', 'peer support vs counselling', 'therapy alternative', 'mental health support', 'emotional support'],
-  alternates: { canonical: 'https://www.leanon.app/peer-support-vs-therapy' },
-  openGraph: { title: 'Peer Support vs Therapy — What Is the Difference? | LeanOn', description: 'A practical comparison of peer support, counselling and therapy — what each provides, what each does not, and how they can complement one another.', url: 'https://www.leanon.app/peer-support-vs-therapy', siteName: 'LeanOn', type: 'website' },
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-support-vs-therapy' },
+  openGraph: { title: 'Peer Support vs Therapy — What Is the Difference? | How Was Your Day', description: 'A practical comparison of peer support, counselling and therapy — what each provides, what each does not, and how they can complement one another.', url: 'https://www.howwasyourday.live/peer-support-vs-therapy', siteName: 'How Was Your Day', type: 'website' },
 }
 
 const faq = {
@@ -32,7 +32,7 @@ const rows = [
 export default function PeerSupportVsTherapyPage() {
   return <main style={s.page}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}} />
-    <nav style={s.nav}><a href="/" style={s.logo}>LeanOn</a><a href="/browse" style={s.navCta}>Find peer support</a></nav>
+    <nav style={s.nav}><a href="/" style={s.logo}>How Was Your Day</a><a href="/browse" style={s.navCta}>Find peer support</a></nav>
     <div style={s.wrap}>
       <p style={s.kicker}>PEER SUPPORT · THERAPY · COUNSELLING · MENTAL HEALTH SUPPORT</p>
       <h1 style={s.h1}>Peer support vs therapy: different tools for different needs.</h1>
@@ -40,7 +40,7 @@ export default function PeerSupportVsTherapyPage() {
 
       <GeoQuickAnswer path="/peer-support-vs-therapy" />
 
-      <section style={s.note}><strong>LeanOn provides peer support.</strong><span>LeanOn does not diagnose, prescribe, provide psychotherapy or claim to replace licensed mental-health care.</span></section>
+      <section style={s.note}><strong>How Was Your Day provides peer support.</strong><span>How Was Your Day does not diagnose, prescribe, provide psychotherapy or claim to replace licensed mental-health care.</span></section>
 
       <Section title="Peer support vs therapy at a glance"><div style={{overflowX:'auto'}}><table style={s.table}><thead><tr><th style={s.th}>Area</th><th style={s.th}>Peer support</th><th style={s.th}>Therapy</th></tr></thead><tbody>{rows.map(r=><tr key={r[0]}>{r.map((x,i)=><td key={i} style={s.td}>{x}</td>)}</tr>)}</tbody></table></div></Section>
 
@@ -54,7 +54,7 @@ export default function PeerSupportVsTherapyPage() {
 
       <Section title="Can you use peer support and therapy together?"><p>Yes. They can serve different roles. A therapist can provide structured clinical work, while peer support can provide additional human connection between appointments or during everyday moments when someone wants to talk.</p><p>The important boundary is clarity: peer support should remain peer support, and clinical needs should be taken to appropriately qualified professionals.</p></Section>
 
-      <section style={s.cta}><h2 style={s.ctaH2}>Looking for someone to talk to?</h2><p style={s.ctaP}>If what you need is human connection and a listening ear, browse LeanOn peer listeners.</p><a href="/browse" style={s.button}>Browse peer listeners →</a></section>
+      <section style={s.cta}><h2 style={s.ctaH2}>Looking for someone to talk to?</h2><p style={s.ctaP}>If what you need is human connection and a listening ear, browse How Was Your Day peer listeners.</p><a href="/browse" style={s.button}>Browse peer listeners →</a></section>
 
       <Section title="Keep exploring"><div style={s.links}>{[['/mental-health-support','Mental health support'],['/peer-support-vs-counselling','Peer support vs counselling'],['/empathy','Empathy'],['/active-listening','Active listening'],['/human-connection','Human connection'],['/support/emotional-support','Emotional support'],['/support/loneliness','Loneliness support'],['/talk-to-someone-right-now','Talk to someone now']].map(([href,label])=><a key={href} href={href} style={s.linkCard}>{label} →</a>)}</div></Section>
     </div>

@@ -4,14 +4,14 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Breakup & Heartbreak Support in India | Talk to Someone Who Gets It | LeanOn',
+  title: 'Breakup & Heartbreak Support in India | Talk to Someone Who Gets It | How Was Your Day',
   description: "Can't stop thinking about your breakup? Talk privately to a real peer listener in India who has been through heartbreak — text or voice, online now. First 5 minutes free.",
-  alternates: { canonical: 'https://www.leanon.app/support/breakup' },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/breakup' },
   openGraph: {
-    title: 'Breakup Support — LeanOn',
+    title: 'Breakup Support — How Was Your Day',
     description: 'Talk to someone who has survived heartbreak and rebuilt their life. Real peer support for breakups, divorce, and relationship pain.',
-    url: 'https://www.leanon.app/support/breakup',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/breakup',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I can't stop thinking about my breakup \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking it out with someone who has been through heartbreak helps more than replaying it alone. LeanOn connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Your first 5 minutes are free. It is peer support, not therapy." } },
+    { '@type': 'Question', name: "I can't stop thinking about my breakup \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking it out with someone who has been through heartbreak helps more than replaying it alone. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Your first 5 minutes are free. It is peer support, not therapy." } },
     {
       '@type': 'Question',
       name: 'How long does breakup pain typically last?',
@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'How do I cope with a breakup when I cannot tell my family?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. This can make breakup pain significantly harder to process. LeanOn offers completely private peer support where you can talk openly about relationships your family may not know about.',
+        text: 'In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. This can make breakup pain significantly harder to process. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can peer support help after a divorce?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Divorce involves layers of loss — the relationship, the identity, the shared life, often custody arrangements, and social stigma (especially in India). LeanOn listeners who have been through divorce understand these specific dimensions and can offer genuine peer support through the process.',
+        text: 'Yes. Divorce involves layers of loss — the relationship, the identity, the shared life, often custody arrangements, and social stigma (especially in India). How Was Your Day listeners who have been through divorce understand these specific dimensions and can offer genuine peer support through the process.',
       },
     },
     {
@@ -68,9 +68,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Breakup & Heartbreak', item: 'https://www.leanon.app/support/breakup' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Breakup & Heartbreak', item: 'https://www.howwasyourday.live/support/breakup' },
   ],
 }
 
@@ -130,7 +130,7 @@ export default function BreakupSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -144,12 +144,12 @@ export default function BreakupSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Breakup & Heartbreak</p>
           <h1>Heartbreak Is Real. <em>So Is Recovery.</em></h1>
-          <p className="lead">A breakup can feel like the floor has disappeared. Whether you are recovering from a long-term relationship, a divorce, or a first heartbreak, LeanOn connects you with peer listeners who have been through it — and rebuilt.</p>
-          <QuickAnswer question={"I can't stop thinking about my breakup \u2014 who can I talk to?"} answer={"Talking it out with someone who has been through heartbreak helps more than replaying it alone. LeanOn connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Your first 5 minutes are free. It is peer support, not therapy."} />
+          <p className="lead">A breakup can feel like the floor has disappeared. Whether you are recovering from a long-term relationship, a divorce, or a first heartbreak, How Was Your Day connects you with peer listeners who have been through it — and rebuilt.</p>
+          <QuickAnswer question={"I can't stop thinking about my breakup \u2014 who can I talk to?"} answer={"Talking it out with someone who has been through heartbreak helps more than replaying it alone. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Your first 5 minutes are free. It is peer support, not therapy."} />
         </div>
 
         <div className="notice">
-          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). LeanOn is peer support and cannot replace crisis intervention.
+          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support and cannot replace crisis intervention.
         </div>
 
         <div className="section">
@@ -173,19 +173,19 @@ export default function BreakupSupportPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Helps After a Breakup</h2>
+          <h2>How the app Helps After a Breakup</h2>
 
           <h3>A Private Space to Grieve</h3>
-          <p>LeanOn is completely private. No one in your life needs to know you are using it. This is especially important for people navigating secret relationships, relationships their family disapproved of, or the social stigma of divorce.</p>
+          <p>How Was Your Day is completely private. No one in your life needs to know you are using it. This is especially important for people navigating secret relationships, relationships their family disapproved of, or the social stigma of divorce.</p>
 
           <h3>Listeners Who Have Survived Heartbreak</h3>
           <p>Our listeners with breakup expertise have genuinely been through it — they know the specific pain of finding their stuff at your door, the agony of seeing their social media posts, the grief that hits on the anniversary of your first date. This is not theoretical empathy.</p>
 
           <h3>No Judgment About Relationship Choices</h3>
-          <p>LeanOn listeners do not judge your relationship choices — whether it was an inter-caste relationship your family never approved of, a marriage that &quot;should have worked,&quot; or a situationship that everyone told you was not real. Your feelings are valid regardless of anyone else&apos;s opinion of the relationship.</p>
+          <p>How Was Your Day listeners do not judge your relationship choices — whether it was an inter-caste relationship your family never approved of, a marriage that &quot;should have worked,&quot; or a situationship that everyone told you was not real. Your feelings are valid regardless of anyone else&apos;s opinion of the relationship.</p>
 
           <h3>Support Through the Long Tail of Recovery</h3>
-          <p>Breakup recovery is not linear. There will be bad days months after you thought you were over it. LeanOn is available whenever those waves hit — so you have somewhere to go without feeling like you are burdening your friends again.</p>
+          <p>Breakup recovery is not linear. There will be bad days months after you thought you were over it. How Was Your Day is available whenever those waves hit — so you have somewhere to go without feeling like you are burdening your friends again.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Understand Heartbreak</h2>
@@ -224,7 +224,7 @@ export default function BreakupSupportPage() {
           <p>Connect with a peer listener who has been through heartbreak and found their way back.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk about it — first 5 min are free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -240,11 +240,11 @@ export default function BreakupSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I cope with a breakup when I cannot tell my family?</div>
-            <div className="faq-a">In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. LeanOn offers completely private peer support where you can talk openly about relationships your family may not know about.</div>
+            <div className="faq-a">In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support help after a divorce?</div>
-            <div className="faq-a">Yes. Divorce involves layers of loss — the relationship, the identity, the shared life, often custody arrangements, and social stigma. LeanOn listeners who have been through divorce understand these specific dimensions and can offer genuine peer support through the process.</div>
+            <div className="faq-a">Yes. Divorce involves layers of loss — the relationship, the identity, the shared life, often custody arrangements, and social stigma. How Was Your Day listeners who have been through divorce understand these specific dimensions and can offer genuine peer support through the process.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is co-parenting stress and how does peer support help?</div>
@@ -254,7 +254,7 @@ export default function BreakupSupportPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Heartbreak often brings other challenges. Explore more peer support on LeanOn:</p>
+          <p>Heartbreak often brings other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness</a>
             <a href="/support/anxiety" className="related-link">Anxiety</a>

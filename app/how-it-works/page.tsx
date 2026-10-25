@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { PLATFORM_FEE, VOICE_RATE_PREMIUM, FREE_SESSION_MINS, VOICE_PRICING_ENABLED } from '@/lib/constants'
 import { NRI_USD_PRICES } from '@/lib/geo-pricing'
 
-// The canonical, factual description of LeanOn — what it is, who it is (and is
+// The canonical, factual description of How Was Your Day — what it is, who it is (and is
 // not) for, how listeners are chosen, pricing, availability, privacy and
 // safety. Written for people AND for AI assistants/search engines, so every
 // sentence must stay literally true: prices come from lib/constants.ts and
@@ -15,22 +15,22 @@ const EXAMPLE_RATE = 10
 const ex15 = EXAMPLE_RATE * 15 + PLATFORM_FEE
 
 export const metadata: Metadata = {
-  title: 'How LeanOn Works — Paid Peer Support, Explained Honestly',
-  description: `What LeanOn is, who it helps, how listeners are screened, what a session costs (first ${FREE_SESSION_MINS} minutes free, then from ₹${ex15} for 15 minutes in India), privacy, safety, and what LeanOn is not.`,
-  keywords: ['how leanon works', 'what is leanon', 'paid peer support india', 'talk to someone online india', 'online emotional support india', 'relationship support online', 'peer support vs therapy'],
-  alternates: { canonical: 'https://www.leanon.app/how-leanon-works' },
+  title: 'How It Works — Paid Peer Support, Explained Honestly',
+  description: `What How Was Your Day is, who it helps, how listeners are screened, what a session costs (first ${FREE_SESSION_MINS} minutes free, then from ₹${ex15} for 15 minutes in India), privacy, safety, and what How Was Your Day is not.`,
+  keywords: ['how howwasyourday works', 'what is howwasyourday', 'paid peer support india', 'talk to someone online india', 'online emotional support india', 'relationship support online', 'peer support vs therapy'],
+  alternates: { canonical: 'https://www.howwasyourday.live/how-it-works' },
 }
 
 const FAQ: { q: string; a: string }[] = [
-  { q: 'What is LeanOn?', a: 'LeanOn (leanon.app) is an online peer-support service from India. You talk privately, one to one, by text or voice, with a screened peer listener: an ordinary person with lived experience who listens without judgment. It is paid per session, with your first 5 minutes free.' },
-  { q: 'Is LeanOn therapy?', a: 'No. LeanOn is peer support, not therapy, counselling, diagnosis or medical care. Listeners are not psychologists, psychiatrists or licensed counsellors and do not give medical or clinical advice. For a mental health condition, please see a qualified professional.' },
-  { q: 'Who is LeanOn for?', a: 'Adults (18+) who want to talk something through with a real person: relationship trouble, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day. It also suits Indians living abroad who want someone who understands the Indian context.' },
-  { q: 'Who is LeanOn not for?', a: 'Anyone in immediate danger or thinking about suicide or self-harm should call NIMHANS (080-46110007) or Tele-MANAS (14416), free in India, or local emergency services. LeanOn is also not the right place for a diagnosis, medication, or treatment of a mental health condition.' },
-  { q: 'How are LeanOn listeners chosen?', a: 'Every listener applies with a written application about their lived experience and why they want to listen, completes a screening quiz on handling difficult conversations, takes a live verification selfie, and is reviewed manually by LeanOn before they can take any session. Listeners are screened, not clinically trained, and agree to a code of conduct: confidentiality, no judgment, and no medical advice.' },
-  { q: 'How much does LeanOn cost?', a: `Your first ${FREE_SESSION_MINS}-minute session is free (once per account). After that, in India each listener sets a per-minute rate and a session costs rate × minutes + a flat ₹${PLATFORM_FEE} fee — for example ₹${ex15} for 15 minutes with a ₹${EXAMPLE_RATE}/min listener.${VOICE_PRICING_ENABLED ? ` Voice calls cost ₹${VOICE_RATE_PREMIUM}/min more than text.` : ''} Outside India, sessions start at US$${NRI_USD_PRICES[15]} for 15 minutes, US$${NRI_USD_PRICES[30]} for 30 and US$${NRI_USD_PRICES[45]} for 45. You always see the price before you start.` },
+  { q: 'What is How Was Your Day?', a: 'How Was Your Day (howwasyourday.live) is an online peer-support service from India. You talk privately, one to one, by text or voice, with a screened peer listener: an ordinary person with lived experience who listens without judgment. It is paid per session, with your first 5 minutes free.' },
+  { q: 'Is How Was Your Day therapy?', a: 'No. How Was Your Day is peer support, not therapy, counselling, diagnosis or medical care. Listeners are not psychologists, psychiatrists or licensed counsellors and do not give medical or clinical advice. For a mental health condition, please see a qualified professional.' },
+  { q: 'Who is How Was Your Day for?', a: 'Adults (18+) who want to talk something through with a real person: relationship trouble, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day. It also suits Indians living abroad who want someone who understands the Indian context.' },
+  { q: 'Who is How Was Your Day not for?', a: 'Anyone in immediate danger or thinking about suicide or self-harm should call NIMHANS (080-46110007) or Tele-MANAS (14416), free in India, or local emergency services. How Was Your Day is also not the right place for a diagnosis, medication, or treatment of a mental health condition.' },
+  { q: 'How are How Was Your Day listeners chosen?', a: 'Every listener applies with a written application about their lived experience and why they want to listen, completes a screening quiz on handling difficult conversations, takes a live verification selfie, and is reviewed manually by How Was Your Day before they can take any session. Listeners are screened, not clinically trained, and agree to a code of conduct: confidentiality, no judgment, and no medical advice.' },
+  { q: 'How much does How Was Your Day cost?', a: `Your first ${FREE_SESSION_MINS}-minute session is free (once per account). After that, in India each listener sets a per-minute rate and a session costs rate × minutes + a flat ₹${PLATFORM_FEE} fee — for example ₹${ex15} for 15 minutes with a ₹${EXAMPLE_RATE}/min listener.${VOICE_PRICING_ENABLED ? ` Voice calls cost ₹${VOICE_RATE_PREMIUM}/min more than text.` : ''} Outside India, sessions start at US$${NRI_USD_PRICES[15]} for 15 minutes, US$${NRI_USD_PRICES[30]} for 30 and US$${NRI_USD_PRICES[45]} for 45. You always see the price before you start.` },
   { q: 'Do I pay if I end early or nobody answers?', a: 'If no listener accepts your request, the amount held is returned to your wallet in full. If you end a session early, you pay only for the minutes used, and nothing if it lasted under a minute.' },
   { q: 'When are listeners available?', a: 'Listeners are based in India and go online when they choose, so availability follows Indian time and is usually best in the evenings (IST). You can see who is online right now, or use Talk now to be connected with whoever is free.' },
-  { q: 'Is it private?', a: 'A listener sees only the name you choose — never your phone number. Voice calls are not recorded. Text messages are stored securely; only authorised LeanOn administrators can open them, for example to review a reported or safety-flagged session. LeanOn does not sell your data or share conversations outside LeanOn.' },
+  { q: 'Is it private?', a: 'A listener sees only the name you choose — never your phone number. Voice calls are not recorded. Text messages are stored securely; only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. How Was Your Day does not sell your data or share conversations outside How Was Your Day.' },
 ]
 
 const faqJsonLd = {
@@ -42,13 +42,13 @@ const faqJsonLd = {
 const howToJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How to talk to a peer listener on LeanOn',
-  description: 'Get one-to-one peer emotional support on LeanOn, by text or voice.',
+  name: 'How to talk to a peer listener on How Was Your Day',
+  description: 'Get one-to-one peer emotional support on How Was Your Day, by text or voice.',
   step: [
-    { '@type': 'HowToStep', position: 1, name: 'Tell us what it is about, or choose someone', text: 'Use Talk now (pick a topic and text or voice, and LeanOn connects you with a listener who is free) or browse listeners by topic and language.' },
+    { '@type': 'HowToStep', position: 1, name: 'Tell us what it is about, or choose someone', text: 'Use Talk now (pick a topic and text or voice, and How Was Your Day connects you with a listener who is free) or browse listeners by topic and language.' },
     { '@type': 'HowToStep', position: 2, name: 'Confirm your phone number', text: 'Sign in with a one-time code sent to your mobile number. Indian and several overseas numbers are supported. No email or full name needed.' },
     { '@type': 'HowToStep', position: 3, name: `Talk free for ${FREE_SESSION_MINS} minutes`, text: `Your first ${FREE_SESSION_MINS}-minute session is free, by text or voice.` },
-    { '@type': 'HowToStep', position: 4, name: 'Continue if it helps', text: `Book 15, 30 or 45 minutes from your LeanOn wallet. In India from ₹${ex15} for 15 minutes; abroad from US$${NRI_USD_PRICES[15]}.` },
+    { '@type': 'HowToStep', position: 4, name: 'Continue if it helps', text: `Book 15, 30 or 45 minutes from your How Was Your Day wallet. In India from ₹${ex15} for 15 minutes; abroad from US$${NRI_USD_PRICES[15]}.` },
   ],
 }
 
@@ -89,18 +89,18 @@ export default function HowItWorksPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{ height: 48 }} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{ height: 48 }} /></a>
         <a href="/talk"><button className="btn" style={{ fontSize: 13, padding: '8px 18px', margin: 0 }}>Talk now</button></a>
       </nav>
       <main className="page">
-        <h1>How LeanOn works</h1>
+        <h1>How the app works</h1>
         <p className="lead">
-          LeanOn is an online peer-support service from India. You talk privately, one to one, by text or voice, with a
+          How Was Your Day is an online peer-support service from India. You talk privately, one to one, by text or voice, with a
           screened peer listener — a real person with lived experience who listens without judging you. It is paid per
           session, and your first {FREE_SESSION_MINS} minutes are free.
         </p>
 
-        <div className="note">LeanOn is peer support — not therapy, counselling, diagnosis or medical care. Listeners are not licensed professionals.</div>
+        <div className="note">How Was Your Day is peer support — not therapy, counselling, diagnosis or medical care. Listeners are not licensed professionals.</div>
 
         <div className="two">
           <section className="sec">
@@ -127,7 +127,7 @@ export default function HowItWorksPage() {
         <section className="sec">
           <h2>How a session works</h2>
           <ul>
-            <li><strong>Talk now:</strong> pick what it is about and choose text or voice. LeanOn asks a listener who is free right now and, if they cannot answer within about 30 seconds, asks the next one. <a href="/talk">Talk now →</a></li>
+            <li><strong>Talk now:</strong> pick what it is about and choose text or voice. How Was Your Day asks a listener who is free right now and, if they cannot answer within about 30 seconds, asks the next one. <a href="/talk">Talk now →</a></li>
             <li><strong>Or choose someone yourself:</strong> browse listeners by topic, language, age group and who is online. <a href="/browse">See listeners →</a></li>
             <li>Sign in with a one-time code sent to your phone. Indian and several overseas numbers work. No email or full name needed.</li>
             <li>Sessions are 5 (free), 15, 30 or 45 minutes. You can switch a voice call to text during the session.</li>
@@ -140,8 +140,8 @@ export default function HowItWorksPage() {
           <ul>
             <li>writes an application about their lived experience and why they want to listen;</li>
             <li>completes a screening quiz on how to respond in difficult conversations;</li>
-            <li>takes a live verification selfie, checked by LeanOn and never shown publicly;</li>
-            <li>is reviewed manually by LeanOn — many are asked to fix something or turned down;</li>
+            <li>takes a live verification selfie, checked by How Was Your Day and never shown publicly;</li>
+            <li>is reviewed manually by How Was Your Day — many are asked to fix something or turned down;</li>
             <li>agrees to a code of conduct: confidentiality, no judgment, no medical or clinical advice.</li>
           </ul>
           <p>Listeners are screened, not clinically trained. Seekers can rate every session, and a listener who is reported can be suspended.</p>
@@ -153,7 +153,7 @@ export default function HowItWorksPage() {
             <li>Your first {FREE_SESSION_MINS}-minute session is free — once per account.</li>
             <li>In India, each listener sets a per-minute rate. A session costs <strong>rate × minutes + ₹{PLATFORM_FEE}</strong>: for example ₹{ex15} for 15 minutes with a ₹{EXAMPLE_RATE}/min listener.{VOICE_PRICING_ENABLED ? ` Voice calls are ₹${VOICE_RATE_PREMIUM}/min more than text.` : ''}</li>
             <li>Outside India, sessions start at US${NRI_USD_PRICES[15]} for 15 minutes, US${NRI_USD_PRICES[30]} for 30 and US${NRI_USD_PRICES[45]} for 45, billed in Indian rupees and shown in your currency.</li>
-            <li>You pay from a LeanOn wallet. If nobody accepts your request, the full amount comes back. If you end early, you pay only for the minutes used — nothing if it lasted under a minute.</li>
+            <li>You pay from a How Was Your Day wallet. If nobody accepts your request, the full amount comes back. If you end early, you pay only for the minutes used — nothing if it lasted under a minute.</li>
           </ul>
           <p>Full details: <a href="/pricing">Pricing</a>.</p>
         </section>
@@ -167,15 +167,15 @@ export default function HowItWorksPage() {
           <h2>Privacy and safety</h2>
           <ul>
             <li>A listener sees only the name you choose — never your phone number.</li>
-            <li>Voice calls are not recorded. Text messages are stored securely; only authorised LeanOn administrators can open them, for example to review a reported or safety-flagged session.</li>
-            <li>If words linked to self-harm appear in a chat, LeanOn shows crisis helplines, alerts the listener and flags the session for review.</li>
-            <li>You can report a listener from any session; every report is reviewed by a person. LeanOn does not sell your data.</li>
+            <li>Voice calls are not recorded. Text messages are stored securely; only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session.</li>
+            <li>If words linked to self-harm appear in a chat, How Was Your Day shows crisis helplines, alerts the listener and flags the session for review.</li>
+            <li>You can report a listener from any session; every report is reviewed by a person. How Was Your Day does not sell your data.</li>
           </ul>
           <p>More: <a href="/trust">Trust &amp; safety</a> · <a href="/privacy">Privacy policy</a> · <a href="/terms">Terms</a></p>
         </section>
 
         <div className="crisis">
-          <strong>In a crisis or thinking about self-harm?</strong> Please call <a href="tel:14416">Tele-MANAS: 14416</a> (free, all India, 24/7, Government of India) or <a href="tel:08046110007">NIMHANS: 080-46110007</a>, or your local emergency number. LeanOn listeners are not crisis counsellors.
+          <strong>In a crisis or thinking about self-harm?</strong> Please call <a href="tel:14416">Tele-MANAS: 14416</a> (free, all India, 24/7, Government of India) or <a href="tel:08046110007">NIMHANS: 080-46110007</a>, or your local emergency number. How Was Your Day listeners are not crisis counsellors.
         </div>
 
         <section className="sec faq">

@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Get Paid to Chat India — Become a Peer Listener on LeanOn',
-  description: 'Earn ₹8–25 per minute providing real emotional support to people in India. LeanOn is a vetted peer support platform — not a random chat app. Apply to become a listener.',
-  alternates: { canonical: 'https://www.leanon.app/get-paid-to-chat-india' },
+  title: 'Get Paid to Chat India — Become a Peer Listener on How Was Your Day',
+  description: 'Earn ₹8–25 per minute providing real emotional support to people in India. How Was Your Day is a vetted peer support platform — not a random chat app. Apply to become a listener.',
+  alternates: { canonical: 'https://www.howwasyourday.live/get-paid-to-chat-india' },
   keywords: ['get paid to chat India', 'peer listener India', 'emotional support work from home India', 'become a peer counsellor India', 'earn money helping people India'],
   robots: { index: false, follow: true },
 }
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Get Paid to Chat India — Become a Peer Listener on LeanOn',
+  name: 'Get Paid to Chat India — Become a Peer Listener on How Was Your Day',
   description: 'A vetted peer support platform where empathetic listeners earn ₹8–25 per minute providing real emotional support.',
-  url: 'https://www.leanon.app/get-paid-to-chat-india',
+  url: 'https://www.howwasyourday.live/get-paid-to-chat-india',
 }
 
 const S = `
@@ -61,10 +61,10 @@ export default function GetPaidToChatIndia() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
       <div className="page">
-        <a href="/" className="back">← LeanOn Home</a>
+        <a href="/" className="back">← How Was Your Day Home</a>
         <h1>Get <span>Paid to Listen</span> — Peer Support Work in India</h1>
         <p className="lead">
-          LeanOn pays empathetic people to provide real emotional support. Not a chat gig. Not a quick side hustle. A vetted platform for people who genuinely want to help others through hard times.
+          How Was Your Day pays empathetic people to provide real emotional support. Not a chat gig. Not a quick side hustle. A vetted platform for people who genuinely want to help others through hard times.
         </p>
 
         <div className="earn-card">
@@ -74,7 +74,7 @@ export default function GetPaidToChatIndia() {
         </div>
 
         <div className="not-box">
-          <h2>Let&apos;s be upfront — LeanOn is not:</h2>
+          <h2>Let&apos;s be upfront — How Was Your Day is not:</h2>
           <div className="not-list">
             {[
               { icon: '✗', text: 'An anonymous chat app where anyone can sign up and start earning' },
@@ -88,7 +88,7 @@ export default function GetPaidToChatIndia() {
         </div>
 
         <div className="section">
-          <h2>What a LeanOn listener actually does</h2>
+          <h2>What a How Was Your Day listener actually does</h2>
           <p>A listener is a screened peer supporter — someone who uses their own lived experience to hold space for people going through loneliness, grief, anxiety, burnout, relationship pain, or career confusion. The core skill is empathy: truly hearing someone, without judgement, without rushing to fix.</p>
           <p>Every application is personally reviewed. We look for emotional maturity, a genuine desire to help, and the ability to hold a difficult conversation with care. This is meaningful, skilled work — and we pay for it accordingly.</p>
           <p>Sessions are 5 to 45 minutes. You set your own hours and your own rate. Earnings are credited to your wallet after each session and paid out via UPI.</p>
@@ -129,7 +129,7 @@ export default function GetPaidToChatIndia() {
         <div className="section">
           <h2>Earnings</h2>
           <p>At ₹10/min, a 30-minute text chat earns you ₹180 and a 30-minute voice call (priced ₹5/min higher) earns ₹270. Three text sessions a day is ~₹540 — roughly ₹16,000/month, around your existing schedule. Experienced listeners charge ₹20–25/min, taking home ₹360+ per 30-minute session.</p>
-          <p>Payouts are processed via UPI within 3 business days. You keep 60% of your rate on every paid session; LeanOn&apos;s 40% service fee supports the work of bringing seekers to LeanOn, secure payments, verification, safety and support.</p>
+          <p>Payouts are processed via UPI within 3 business days. You keep 60% of your rate on every paid session; How Was Your Day&apos;s 40% service fee supports the work of bringing seekers to How Was Your Day, secure payments, verification, safety and support.</p>
         </div>
 
         <div className="cta-box">

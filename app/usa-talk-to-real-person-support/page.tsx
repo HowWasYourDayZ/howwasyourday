@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to a Real Person About Your Problems — Not an AI | LeanOn US',
-  description: 'LeanOn connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time). First 5 minutes free. From $10 for 15 min.',
+  title: 'Talk to a Real Person About Your Problems — Not an AI | How Was Your Day US',
+  description: 'How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time). First 5 minutes free. From $10 for 15 min.',
   keywords: [
     'real person to talk to about loneliness USA', 'human support not AI USA',
     'affordable emotional support real person', 'talk to someone about loneliness US',
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     'someone to talk to online USA', 'not AI emotional support', 'human connection online USA',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-talk-to-real-person-support',
+    canonical: 'https://www.howwasyourday.live/usa-talk-to-real-person-support',
   },
   openGraph: {
-    title: 'Talk to a Real Person About Your Problems — Not an AI | LeanOn US',
-    description: 'America has no shortage of apps. You need a real human. LeanOn connects you with vetted human peer listeners — online daily on Indian time, first 5 min free.',
-    url: 'https://www.leanon.app/usa-talk-to-real-person-support',
-    siteName: 'LeanOn',
+    title: 'Talk to a Real Person About Your Problems — Not an AI | How Was Your Day US',
+    description: 'America has no shortage of apps. You need a real human. How Was Your Day connects you with vetted human peer listeners — online daily on Indian time, first 5 min free.',
+    url: 'https://www.howwasyourday.live/usa-talk-to-real-person-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn — Real Human Peer Support for the United States',
-  description: 'LeanOn connects people in the United States feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners — not AI chatbots. Listeners online daily (Indian time) with first 5 minutes free.',
-  provider: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  name: 'How Was Your Day — Real Human Peer Support for the United States',
+  description: 'How Was Your Day connects people in the United States feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners — not AI chatbots. Listeners online daily (Indian time) with first 5 minutes free.',
+  provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'United States',
   audience: {
@@ -45,10 +45,10 @@ const serviceSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, LeanOn listeners are real humans who genuinely listen, ask questions, and hold space.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is a peer support platform that connects people with real human listeners — people with lived experience of loneliness, relationship struggles, grief, and life transitions. Unlike AI chatbots, How Was Your Day listeners are real humans who genuinely listen, ask questions, and hold space.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -60,15 +60,15 @@ const faqSchema = {
       name: 'Where can I talk to a real person about loneliness in the US?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time) from $10 for 15 minutes, with the first 5 minutes completely free.',
+        text: 'How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time) from $10 for 15 minutes, with the first 5 minutes completely free.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a real person or AI?',
+      name: 'Is How Was Your Day a real person or AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every listener on LeanOn is a real human being who has applied, been screened and been approved, and who listens without judgment. There is no AI involved — only genuine human connection.',
+        text: 'Every listener on How Was Your Day is a real human being who has applied, been screened and been approved, and who listens without judgment. There is no AI involved — only genuine human connection.',
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       name: "What's a good alternative to therapy in the US for everyday emotional support?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "LeanOn peer support is affordable (starting at $10), online daily on Indian time, and doesn't require insurance or appointments. It's not therapy — it's a real human who listens, which is often exactly what you need.",
+        text: "How Was Your Day peer support is affordable (starting at $10), online daily on Indian time, and doesn't require insurance or appointments. It's not therapy — it's a real human who listens, which is often exactly what you need.",
       },
     },
     {
@@ -84,15 +84,15 @@ const faqSchema = {
       name: 'Can I talk to someone about loneliness in the US at night?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time — check who is online now and early morning when loneliness tends to peak. Start a free session any time.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now and early morning when loneliness tends to peak. Start a free session any time.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from ChatGPT for emotional support?',
+      name: 'How is How Was Your Day different from ChatGPT for emotional support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "LeanOn listeners are real humans who have lived through loss, loneliness, and life's hard moments. They bring genuine empathy — not predicted responses. When they say 'I understand', they mean it.",
+        text: "How Was Your Day listeners are real humans who have lived through loss, loneliness, and life's hard moments. They bring genuine empathy — not predicted responses. When they say 'I understand', they mean it.",
       },
     },
   ],
@@ -102,8 +102,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person — US', item: 'https://www.leanon.app/usa-talk-to-real-person-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to a Real Person — US', item: 'https://www.howwasyourday.live/usa-talk-to-real-person-support' },
   ],
 }
 
@@ -182,7 +182,7 @@ export default function USATalkToRealPersonPage() {
 
         <h1>America Has No Shortage of Apps.<br />You Need a Real Human.</h1>
         <p className="lead">
-          LeanOn is a peer support platform that connects Americans feeling lonely, overwhelmed, or
+          How Was Your Day is a peer support platform that connects Americans feeling lonely, overwhelmed, or
           emotionally stuck with real human listeners — people with lived experience, not AI. Not chatbots.
           Not algorithms. A real person who is actually there, online daily on Indian time across the United States.
         </p>
@@ -203,20 +203,20 @@ export default function USATalkToRealPersonPage() {
           </p>
           <p>
             Therapy is the right answer for many people — but therapy waitlists in the US can run
-            6–12 weeks, and cost $150–$300 per session without insurance. LeanOn fills the gap: a real
+            6–12 weeks, and cost $150–$300 per session without insurance. How Was Your Day fills the gap: a real
             human, today, for $10.
           </p>
         </div>
 
         <div className="compare-box">
-          <h2>AI chatbot vs. LeanOn real human listener</h2>
+          <h2>AI chatbot vs. How Was Your Day real human listener</h2>
           <div className="compare-row">
             <div className="compare-col ai">
               <h3>🤖 AI Chatbot (ChatGPT, Gemini)</h3>
               <p>Predicts statistically likely words — no one is actually reading what you write</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>A real American who has felt what you feel and genuinely understands</p>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function USATalkToRealPersonPage() {
               <p>Free but hollow — the loneliness returns because no one was actually there</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>First 5 min free, then from $10 for 15 min — real connection that actually helps</p>
             </div>
           </div>
@@ -236,7 +236,7 @@ export default function USATalkToRealPersonPage() {
               <p>Has never experienced loneliness, loss, or the specific weight of American work culture</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>Lived experience of the same struggles — when they say &quot;I get it&quot;, they mean it</p>
             </div>
           </div>
@@ -246,21 +246,21 @@ export default function USATalkToRealPersonPage() {
               <p>No insurance, but also no real listening — just word prediction at scale</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn Real Human</h3>
+              <h3>💙 How Was Your Day Real Human</h3>
               <p>No insurance needed, no appointments — anonymous</p>
             </div>
           </div>
         </div>
 
         <div className="card">
-          <h2>What LeanOn is — in plain English</h2>
+          <h2>What How Was Your Day is — in plain English</h2>
           <p>
-            LeanOn is a peer support platform. Every listener is a real human being who has applied,
+            How Was Your Day is a peer support platform. Every listener is a real human being who has applied,
             been reviewed, and chosen for how well they listen without judgment. They are not therapists. They are
             not AI. They are people — with lives, with experience of hard things — who choose to be
             present for others.
           </p>
-          <p>What you get in a LeanOn session:</p>
+          <p>What you get in a How Was Your Day session:</p>
           <ul className="checklist" style={{ marginTop: '12px' }}>
             <li>A real person who is fully present and undivided in their attention</li>
             <li>No advice unless you ask for it — just listening and presence</li>
@@ -278,7 +278,7 @@ export default function USATalkToRealPersonPage() {
             hour. Therapy is weeks away. You&apos;ve already tried ChatGPT and it felt worse, not better.
           </p>
           <p>
-            LeanOn&apos;s listeners are real humans in India, so availability follows Indian time — check
+            How Was Your Day&apos;s listeners are real humans in India, so availability follows Indian time — check
             who is online now. No appointment, and no office hours to wait for.
           </p>
           <a href="/browse" className="cta-night">Find a listener right now →</a>
@@ -295,28 +295,28 @@ export default function USATalkToRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I talk to a real person about loneliness in the US?</h3>
-            <p>LeanOn connects Americans with real peer listeners — humans with lived experience, not AI
+            <p>How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI
               chatbots. Listeners online daily (Indian time) from $10 for 15 minutes, with the first 5 minutes completely free.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn a real person or AI?</h3>
-            <p>Every listener on LeanOn is a real human being who has applied, been screened and been approved
+            <h3>Is How Was Your Day a real person or AI?</h3>
+            <p>Every listener on How Was Your Day is a real human being who has applied, been screened and been approved
               to listen without judgment. There is no AI involved — only genuine human connection.</p>
           </div>
           <div className="faq-item">
             <h3>What&apos;s a good alternative to therapy in the US for everyday emotional support?</h3>
-            <p>LeanOn peer support is affordable (starting at $10), online daily on Indian time, and doesn&apos;t require
+            <p>How Was Your Day peer support is affordable (starting at $10), online daily on Indian time, and doesn&apos;t require
               insurance or appointments. It&apos;s not therapy — it&apos;s a real human who listens, which
               is often exactly what you need.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to someone about loneliness in the US at night?</h3>
-            <p>Yes. LeanOn listeners are based in India, so availability follows Indian time — check who is online now and early morning when
+            <p>Yes. How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now and early morning when
               loneliness tends to peak. Start a free session any time.</p>
           </div>
           <div className="faq-item">
-            <h3>How is LeanOn different from ChatGPT for emotional support?</h3>
-            <p>LeanOn listeners are real humans who have lived through loss, loneliness, and life&apos;s
+            <h3>How is How Was Your Day different from ChatGPT for emotional support?</h3>
+            <p>How Was Your Day listeners are real humans who have lived through loss, loneliness, and life&apos;s
               hard moments. They bring genuine empathy — not predicted responses. When they say
               &quot;I understand&quot;, they mean it.</p>
           </div>
@@ -331,7 +331,7 @@ export default function USATalkToRealPersonPage() {
 
         <div className="disclaimer">
           ⚠️ If you&apos;re in crisis or experiencing suicidal thoughts, please contact your local emergency services right away. In India: <strong>NIMHANS 080-46110007</strong> · <strong>Tele-MANAS 14416</strong>.<br />
-          LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+          How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
         </div>
       </div>
     </>

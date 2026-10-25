@@ -241,7 +241,7 @@ function WalletPageInner() {
         key:         process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount:      orderAmountPaise ?? selected * 100,
         currency:    'INR',
-        name:        'LeanOn',
+        name:        'How Was Your Day',
         description: 'Wallet recharge',
         order_id:    orderId,
         prefill:     {},

@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Atlanta | Alpharetta, Johns Creek | LeanOn',
+  title: 'Emotional Support for Indians in Atlanta | Alpharetta, Johns Creek | How Was Your Day',
   description: 'Alpharetta, Johns Creek, Duluth — Atlanta\'s Indian community is one of America\'s closest-knit. But community and connection aren\'t the same thing. Talk to someone who gets it.',
   keywords: ['indians in atlanta support', 'alpharetta indian community', 'johns creek indian support', 'duluth georgia indian', 'atlanta indian mental health', 'desi support atlanta'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-atlanta' },
-  openGraph: { title: 'Emotional Support for Indians in Atlanta | Alpharetta, Johns Creek | LeanOn', description: 'Alpharetta, Johns Creek, Duluth — Atlanta\'s Indian community is one of America\'s closest-knit. But community and connection aren\'t the same thing. Talk to someone who gets it.', url: 'https://www.leanon.app/indians-in-atlanta', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-atlanta' },
+  openGraph: { title: 'Emotional Support for Indians in Atlanta | Alpharetta, Johns Creek | How Was Your Day', description: 'Alpharetta, Johns Creek, Duluth — Atlanta\'s Indian community is one of America\'s closest-knit. But community and connection aren\'t the same thing. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/indians-in-atlanta', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Atlanta Indian community experience?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience including the close-knit community dynamics of places like Alpharetta and Johns Creek. You don\'t need to explain what it feels like when the community is both support and pressure.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Atlanta Indian community experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience including the close-knit community dynamics of places like Alpharetta and Johns Creek. You don\'t need to explain what it feels like when the community is both support and pressure.' } },
   { '@type': 'Question', name: 'What time zone works for talking from Atlanta?', acceptedAnswer: { '@type': 'Answer', text: 'Atlanta (EST) is 10.5 hours behind IST. 8am Atlanta = 6:30pm India. Your morning before work aligns with Indian evenings — a natural window when many listeners are available.' } },
   { '@type': 'Question', name: 'Will anyone in my community find out?', acceptedAnswer: { '@type': 'Answer', text: 'No. Sessions are private — only a phone number and first name. Listeners are in India, outside your Atlanta network. Nothing is shared with your community, family, or employer.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. Sessions start from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Atlanta', item: 'https://www.leanon.app/indians-in-atlanta' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Atlanta', item: 'https://www.howwasyourday.live/indians-in-atlanta' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInAtlantaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Atlanta</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInAtlantaPage() {
           <h2>When the Community Is Both Comfort and Pressure</h2>
           <p>The Atlanta Indian community — concentrated in Alpharetta, Johns Creek, Duluth, Suwanee, and Sugar Hill — is one of the most tightly woven Indian diaspora communities in America. The BAPS temple in Lilburn draws thousands. The Navratri celebrations in Alpharetta fill convention halls. The community infrastructure is genuinely remarkable.</p>
           <p>And precisely because it is so tight-knit, it can also be suffocating. Gossip travels fast. Everyone knows which families are struggling, which marriages are strained, whose children didn&rsquo;t make the gifted program. The social surveillance — done with warmth and genuine concern — means there are things you simply cannot say inside the community.</p>
-          <p>LeanOn gives you a real Indian peer listener who is completely outside this network. Based in India, understanding everything about the culture, but with no connection to your Atlanta circle. You can say the actual thing. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener who is completely outside this network. Based in India, understanding everything about the culture, but with no connection to your Atlanta circle. You can say the actual thing. First 5 minutes free.</p>
         </div>
 
         <div className="section">

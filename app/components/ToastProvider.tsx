@@ -21,8 +21,8 @@ export default function ToastProvider() {
       setToasts(p => [...p, { id, message, type }])
       setTimeout(() => setToasts(p => p.filter(t => t.id !== id)), 3500)
     }
-    window.addEventListener('leanon:toast', handler)
-    return () => window.removeEventListener('leanon:toast', handler)
+    window.addEventListener('howwasyourday:toast', handler)
+    return () => window.removeEventListener('howwasyourday:toast', handler)
   }, [])
 
   if (toasts.length === 0) return null

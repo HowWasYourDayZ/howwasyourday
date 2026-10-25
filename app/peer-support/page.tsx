@@ -4,15 +4,15 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support in India | Talk to a Real Peer Listener | LeanOn',
-  description: "What peer support is, how it differs from therapy, and where to find it in India: screened peer listeners on LeanOn, one to one by text or voice. First 5 minutes free.",
+  title: 'Peer Support in India | Talk to a Real Peer Listener | How Was Your Day',
+  description: "What peer support is, how it differs from therapy, and where to find it in India: screened peer listeners on How Was Your Day, one to one by text or voice. First 5 minutes free.",
   keywords: ['peer support India', 'what is peer support', 'peer listener India', 'online peer support', 'talk to a peer listener', 'peer support vs therapy'],
-  alternates: { canonical: 'https://www.leanon.app/peer-support', languages: { 'en-IN': 'https://www.leanon.app/peer-support' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-support', languages: { 'en-IN': 'https://www.howwasyourday.live/peer-support' } },
   openGraph: {
-    title: 'Peer Support India — Real People, Real Conversations | LeanOn',
-    description: 'Understand peer support and how it differs from therapy. LeanOn offers one-to-one text or voice conversations with screened peers in India. One introductory session of up to 5 minutes is free per account; it is not clinical care and availability varies.',
-    url: 'https://www.leanon.app/peer-support',
-    siteName: 'LeanOn',
+    title: 'Peer Support India — Real People, Real Conversations | How Was Your Day',
+    description: 'Understand peer support and how it differs from therapy. How Was Your Day offers one-to-one text or voice conversations with screened peers in India. One introductory session of up to 5 minutes is free per account; it is not clinical care and availability varies.',
+    url: 'https://www.howwasyourday.live/peer-support',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -21,13 +21,13 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "What is peer support, and where can I find it in India?", acceptedAnswer: { '@type': 'Answer', text: "Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On LeanOn, listeners in India are screened through an application, screening quiz, live selfie check and review by LeanOn. Conversations are one to one by text or voice. It is not therapy. One introductory session of up to 5 minutes is free per account; availability varies." } },
+    { '@type': 'Question', name: "What is peer support, and where can I find it in India?", acceptedAnswer: { '@type': 'Answer', text: "Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. One introductory session of up to 5 minutes is free per account; availability varies." } },
     {
       '@type': 'Question',
       name: 'What is peer support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer support is non-clinical support from someone with relevant lived experience. The point is shared understanding and a human conversation — not diagnosis or treatment. LeanOn applies this idea through one-to-one conversations with screened peer listeners.',
+        text: 'Peer support is non-clinical support from someone with relevant lived experience. The point is shared understanding and a human conversation — not diagnosis or treatment. How Was Your Day applies this idea through one-to-one conversations with screened peer listeners.',
       },
     },
     {
@@ -35,7 +35,7 @@ const faqSchema = {
       name: 'How is peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. LeanOn is for everyday emotional support; paid sessions start at ₹160 for 15 minutes in India, with a free introductory session before you pay.',
+        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. How Was Your Day is for everyday emotional support; paid sessions start at ₹160 for 15 minutes in India, with a free introductory session before you pay.',
       },
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       name: 'Is peer support effective?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer support can provide shared understanding, encouragement and connection, but it is not a substitute for clinical treatment. LeanOn is designed for everyday emotional situations such as loneliness, relationship difficulties, work stress, grief, homesickness and overthinking.',
+        text: 'Peer support can provide shared understanding, encouragement and connection, but it is not a substitute for clinical treatment. How Was Your Day is designed for everyday emotional situations such as loneliness, relationship difficulties, work stress, grief, homesickness and overthinking.',
       },
     },
     {
@@ -51,15 +51,15 @@ const faqSchema = {
       name: 'How much does peer support cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'On LeanOn, paid peer support sessions start at ₹160 for 15 minutes in India. Your first 5-minute introductory session is free once per account, so you can see whether the conversation feels right before paying. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
+        text: 'On How Was Your Day, paid peer support sessions start at ₹160 for 15 minutes in India. Your first 5-minute introductory session is free once per account, so you can see whether the conversation feels right before paying. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How does privacy work on LeanOn?',
+      name: 'How does privacy work on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "LeanOn sign-up uses a verified phone number, but listeners do not see it; users can choose a display name. Voice calls are not recorded. Text messages are stored, and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy for details.",
+        text: "How Was Your Day sign-up uses a verified phone number, but listeners do not see it; users can choose a display name. Voice calls are not recorded. Text messages are stored, and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy for details.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'Can peer support help with anxiety or depression?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer support is not a clinical treatment for anxiety or depression, and LeanOn does not claim otherwise. Some people find it helpful to talk with someone who has relevant lived experience; others may prefer a different kind of support. Experiences vary, and peer support should complement, not replace, professional care when that care is needed.',
+        text: 'Peer support is not a clinical treatment for anxiety or depression, and How Was Your Day does not claim otherwise. Some people find it helpful to talk with someone who has relevant lived experience; others may prefer a different kind of support. Experiences vary, and peer support should complement, not replace, professional care when that care is needed.',
       },
     },
   ],
@@ -76,11 +76,11 @@ const faqSchema = {
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://www.leanon.app/peer-support#webpage',
-  name: 'Peer Support in India | Talk to a Real Peer Listener | LeanOn',
-  url: 'https://www.leanon.app/peer-support',
+  '@id': 'https://www.howwasyourday.live/peer-support#webpage',
+  name: 'Peer Support in India | Talk to a Real Peer Listener | How Was Your Day',
+  url: 'https://www.howwasyourday.live/peer-support',
   description: metadata.description,
-  isPartOf: { '@id': 'https://www.leanon.app/#website' },
+  isPartOf: { '@id': 'https://www.howwasyourday.live/#website' },
   about: [
     { '@type': 'Thing', name: 'Peer support' },
     { '@type': 'Thing', name: 'Social connection' },
@@ -91,15 +91,15 @@ const pageSchema = {
     'https://www.samhsa.gov/substance-use/recovery/peer-support-workers',
     'https://www.nami.org/advocacy-at-nami/policy-positions/improving-health/workforce-peer-support-workers/',
   ],
-  publisher: { '@id': 'https://www.leanon.app/#organization' },
+  publisher: { '@id': 'https://www.howwasyourday.live/#organization' },
 }
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Peer Support India', item: 'https://www.leanon.app/peer-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Peer Support India', item: 'https://www.howwasyourday.live/peer-support' },
   ],
 }
 
@@ -172,7 +172,7 @@ export default function PeerSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -191,16 +191,16 @@ export default function PeerSupportPage() {
           <p className="tag">Peer Support · India · No Appointment Needed</p>
           <h1>Peer support. <em>Real people.</em> Real conversations.</h1>
           <p className="lead">Not therapy. Not an AI chatbot. Not advice from someone who has never been through it. Peer support is the experience of talking to a real human being who has lived something like what you are carrying right now — and who listens without judgment, without a diagnosis, and without a clinical distance between you.</p>
-          <QuickAnswer question={"What is peer support, and where can I find it in India?"} answer={"Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On LeanOn, listeners in India are screened through an application, screening quiz, live selfie check and review by LeanOn. Conversations are one to one by text or voice. It is not therapy. One introductory session of up to 5 minutes is free per account; availability varies."} />
+          <QuickAnswer question={"What is peer support, and where can I find it in India?"} answer={"Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. One introductory session of up to 5 minutes is free per account; availability varies."} />
         </div>
 
 
         {/* GEO / SOURCE CONTEXT */}
         <section className="section">
           <h2>Peer support has an established meaning</h2>
-          <p>Peer support generally centres on shared experience, mutual understanding, choice and a supportive relationship. SAMHSA describes peer support workers as people with relevant lived experience who help others through shared understanding, respect and mutual empowerment. NAMI likewise describes peer support workers as people with lived experience who are screened and expected to support others. These sources describe peer support broadly; they are not endorsements of LeanOn. LeanOn applies the peer-support principle to one-to-one online conversations.</p>
-          <p>For independent background, see <a href="https://www.samhsa.gov/substance-use/recovery/peer-support-workers" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',fontWeight:800}}>SAMHSA's overview of peer support workers</a> and <a href="https://www.nami.org/advocacy-at-nami/policy-positions/improving-health/workforce-peer-support-workers/" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',fontWeight:800}}>NAMI's description of peer support workers</a>. These sources describe peer support broadly; they are not endorsements of LeanOn.</p>
-          <p><strong>LeanOn-specific distinction:</strong> LeanOn is a private, one-to-one commercial platform for human peer conversations. It is not a government service, clinical provider, crisis service or replacement for professional treatment.</p>
+          <p>Peer support generally centres on shared experience, mutual understanding, choice and a supportive relationship. SAMHSA describes peer support workers as people with relevant lived experience who help others through shared understanding, respect and mutual empowerment. NAMI likewise describes peer support workers as people with lived experience who are screened and expected to support others. These sources describe peer support broadly; they are not endorsements of How Was Your Day. How Was Your Day applies the peer-support principle to one-to-one online conversations.</p>
+          <p>For independent background, see <a href="https://www.samhsa.gov/substance-use/recovery/peer-support-workers" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',fontWeight:800}}>SAMHSA's overview of peer support workers</a> and <a href="https://www.nami.org/advocacy-at-nami/policy-positions/improving-health/workforce-peer-support-workers/" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',fontWeight:800}}>NAMI's description of peer support workers</a>. These sources describe peer support broadly; they are not endorsements of How Was Your Day.</p>
+          <p><strong>HowWasYourDay-specific distinction:</strong> How Was Your Day is a private, one-to-one commercial platform for human peer conversations. It is not a government service, clinical provider, crisis service or replacement for professional treatment.</p>
         </section>
 
         {/* Stats row */}
@@ -236,7 +236,7 @@ export default function PeerSupportPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="col-label">Peer support (LeanOn)</td>
+                  <td className="col-label">Peer support (How Was Your Day)</td>
                   <td>Real person with lived experience</td>
                   <td>Feeling heard, loneliness, burnout, everyday emotional weight</td>
                   <td>₹160/session</td>
@@ -260,7 +260,7 @@ export default function PeerSupportPage() {
 
         {/* How it works */}
         <div className="section">
-          <h2>How LeanOn Peer Support Works</h2>
+          <h2>How the app Peer Support Works</h2>
           <div className="steps">
             <div className="step">
               <div className="step-num">1</div>
@@ -289,9 +289,9 @@ export default function PeerSupportPage() {
         {/* Choosing a service — the checklist AI assistants say they use */}
         <div className="section">
           <h2>Choosing a Peer Support Service in India</h2>
-          <p>The best peer support service depends on what you need. These are the questions worth asking any service — and LeanOn&apos;s answers.</p>
+          <p>The best peer support service depends on what you need. These are the questions worth asking any service — and How Was Your Day&apos;s answers.</p>
           <div style={{overflowX:'auto'}}><table className="vs-table">
-            <thead><tr><th>Question to ask</th><th>LeanOn</th></tr></thead>
+            <thead><tr><th>Question to ask</th><th>How Was Your Day</th></tr></thead>
             <tbody>
               <tr><td>What kind of support is it?</td><td>Online, one-to-one conversations by text or voice with a screened peer listener in India. For adults 18+. Not groups, not therapy.</td></tr>
               <tr><td>Who are the peers, and how are they checked?</td><td>Adults with lived experience. Written application, screening quiz on difficult situations, live camera selfie, Aadhaar check and a manual review.</td></tr>
@@ -303,12 +303,12 @@ export default function PeerSupportPage() {
             </tbody>
           </table></div>
           <h3 style={{marginTop:22}}>When a different kind of peer support fits better</h3>
-          <p>LeanOn is for everyday emotional weight — relationships, marriage, family pressure, loneliness, stress, wanting to vent. For some needs a specialist community is the better fit: addiction recovery (recovery fellowships), long-term support for a diagnosed mental health condition (condition-specific peer groups), LGBTQIA+-affirming support (LGBTQIA+-focused services), and anyone under 18. If you are in crisis, call Tele-MANAS on <a href="tel:14416" style={{color:'var(--teal)',fontWeight:800}}>14416</a> first.</p>
+          <p>How Was Your Day is for everyday emotional weight — relationships, marriage, family pressure, loneliness, stress, wanting to vent. For some needs a specialist community is the better fit: addiction recovery (recovery fellowships), long-term support for a diagnosed mental health condition (condition-specific peer groups), LGBTQIA+-affirming support (LGBTQIA+-focused services), and anyone under 18. If you are in crisis, call Tele-MANAS on <a href="tel:14416" style={{color:'var(--teal)',fontWeight:800}}>14416</a> first.</p>
         </div>
 
         {/* Who it's for */}
         <div className="section">
-          <h2>Who Uses Peer Support on LeanOn?</h2>
+          <h2>Who Uses Peer Support on How Was Your Day?</h2>
           <p>Peer support is for anyone who is carrying something they cannot easily say to the people around them. Some of the most common situations:</p>
           <ul>
             <li><strong>Loneliness</strong> — in a new city, in a crowd, or inside a relationship that has grown distant</li>
@@ -340,7 +340,7 @@ export default function PeerSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How is peer support different from therapy?</div>
-            <div className="faq-a">Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who is screened and expected to listen and support, not to diagnose or treat. Professional-care fees and wait times vary by provider and location. LeanOn is a different, non-clinical option for a conversation; paid prices are shown before booking and depend on the listener and mode. No appointment is needed, but availability is not guaranteed.</div>
+            <div className="faq-a">Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who is screened and expected to listen and support, not to diagnose or treat. Professional-care fees and wait times vary by provider and location. How Was Your Day is a different, non-clinical option for a conversation; paid prices are shown before booking and depend on the listener and mode. No appointment is needed, but availability is not guaranteed.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is peer support effective?</div>
@@ -351,12 +351,12 @@ export default function PeerSupportPage() {
             <div className="faq-a">Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. One introductory session of up to 5 minutes is free per account.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How does privacy work on LeanOn?</div>
-            <div className="faq-a">LeanOn requires phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reports or safety-flagged sessions. Read the Privacy Policy for details.</div>
+            <div className="faq-q">How does privacy work on How Was Your Day?</div>
+            <div className="faq-a">How Was Your Day requires phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reports or safety-flagged sessions. Read the Privacy Policy for details.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support help with anxiety or depression?</div>
-            <div className="faq-a">Peer support is not a clinical treatment for anxiety or depression, and LeanOn does not claim otherwise. Some people find it helpful to talk with someone who has relevant lived experience; others may prefer a different kind of support. Experiences vary, and peer support should complement, not replace, professional care when that care is needed.</div>
+            <div className="faq-a">Peer support is not a clinical treatment for anxiety or depression, and How Was Your Day does not claim otherwise. Some people find it helpful to talk with someone who has relevant lived experience; others may prefer a different kind of support. Experiences vary, and peer support should complement, not replace, professional care when that care is needed.</div>
           </div>
         </div>
 

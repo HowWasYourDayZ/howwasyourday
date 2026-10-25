@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Support for Indians in the USA — Cultural Drift, Long-Distance & More | LeanOn',
+  title: 'Relationship Support for Indians in the USA — Cultural Drift, Long-Distance & More | How Was Your Day',
   description: 'Moving to the USA puts enormous strain on Indian relationships. Cultural drift, arranged vs love marriage tensions, long-distance stress — talk to a peer listener who truly understands.',
   keywords: [
     'relationship advice indians usa', 'nri relationship problems', 'indian couple usa counseling',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'cultural drift indian couple usa', 'indian american relationship help',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-relationship-advice',
-    languages: { 'en-US': 'https://www.leanon.app/usa-relationship-advice' },
+    canonical: 'https://www.howwasyourday.live/usa-relationship-advice',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa-relationship-advice' },
   },
   openGraph: {
     title: 'Relationship Support for Indians in the USA — Cultural Drift, Long-Distance & More',
-    description: 'Indian relationships in America face unique pressures. LeanOn peer listeners understand the cultural weight — no explaining needed.',
-    url: 'https://www.leanon.app/usa-relationship-advice',
-    siteName: 'LeanOn',
+    description: 'Indian relationships in America face unique pressures. How Was Your Day peer listeners understand the cultural weight — no explaining needed.',
+    url: 'https://www.howwasyourday.live/usa-relationship-advice',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,10 +38,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can a LeanOn listener help with arranged marriage tensions in the USA?',
+      name: 'Can a How Was Your Day listener help with arranged marriage tensions in the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many LeanOn listeners are familiar with the nuances of arranged marriage — the family pressure, the adjustment period, the gap between expectations and reality. They will listen without judgment and help you think through what you are feeling.',
+        text: 'Yes. Many How Was Your Day listeners are familiar with the nuances of arranged marriage — the family pressure, the adjustment period, the gap between expectations and reality. They will listen without judgment and help you think through what you are feeling.',
       },
     },
     {
@@ -49,15 +49,15 @@ const faqSchema = {
       name: 'What if my partner and I are growing apart culturally?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cultural drift is one of the most common but least talked-about relationship challenges for Indians in the USA. A LeanOn listener can help you process your feelings and figure out what you actually need — whether that is a conversation with your partner, some perspective, or just to be heard.',
+        text: 'Cultural drift is one of the most common but least talked-about relationship challenges for Indians in the USA. A How Was Your Day listener can help you process your feelings and figure out what you actually need — whether that is a conversation with your partner, some perspective, or just to be heard.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a replacement for couples therapy?',
+      name: 'Is How Was Your Day a replacement for couples therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support, not professional therapy. But for many people, it is a first safe step — a place to untangle your thoughts before (or instead of) more formal counseling. Sessions start at $10 for 15 minutes, with your first 5 minutes free.',
+        text: 'How Was Your Day is peer support, not professional therapy. But for many people, it is a first safe step — a place to untangle your thoughts before (or instead of) more formal counseling. Sessions start at $10 for 15 minutes, with your first 5 minutes free.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Can I talk about my long-distance relationship with someone in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. The India-USA long-distance dynamic — time zones, family pressure, guilt, uncertainty about the future — is something LeanOn listeners understand deeply. You do not need to explain the context. They already get it.',
+        text: 'Absolutely. The India-USA long-distance dynamic — time zones, family pressure, guilt, uncertainty about the future — is something How Was Your Day listeners understand deeply. You do not need to explain the context. They already get it.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Support USA', item: 'https://www.leanon.app/usa-relationship-advice' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Support USA', item: 'https://www.howwasyourday.live/usa-relationship-advice' },
   ],
 }
 
@@ -174,7 +174,7 @@ export default function UsaRelationshipAdvicePage() {
           <h2>💬 You need to say it out loud to someone</h2>
           <p>Sometimes you just need to talk through what you are feeling — not get advice, not fix anything,
             just say it out loud to someone who will not judge you and will not tell your family.</p>
-          <p>LeanOn listeners are that person. Warm, Indian-context aware, and completely confidential.</p>
+          <p>How Was Your Day listeners are that person. Warm, Indian-context aware, and completely confidential.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
 
@@ -183,7 +183,7 @@ export default function UsaRelationshipAdvicePage() {
           <p>American culture is loud about individual choice, freedom, and &quot;following your heart.&quot;
             You are trying to build a marriage that honours your family, your culture, and your own needs
             — and those things sometimes point in different directions.</p>
-          <p>LeanOn listeners understand this tension without needing it explained. Many have navigated it
+          <p>How Was Your Day listeners understand this tension without needing it explained. Many have navigated it
             themselves or with people close to them. They are not here to tell you what to do — they are
             here to help you figure out what you actually need.</p>
         </div>
@@ -193,7 +193,7 @@ export default function UsaRelationshipAdvicePage() {
           <p>If you are on an H-1B with a partner still waiting in India, you already know how brutal the
             time zone gap is. Calls at odd hours, visa delays, the constant question of &quot;when will this end?&quot;
             — it wears you down in ways that are hard to explain to people who have not lived it.</p>
-          <p>Talk to a LeanOn listener who has been there. Not to solve it — just to feel less alone in it.</p>
+          <p>Talk to a How Was Your Day listener who has been there. Not to solve it — just to feel less alone in it.</p>
         </div>
 
         <div className="cta">
@@ -211,24 +211,24 @@ export default function UsaRelationshipAdvicePage() {
               support system, and pressure to appear successful — and small cracks become real fractures.</p>
           </div>
           <div className="faq-item">
-            <h3>Can a LeanOn listener help with arranged marriage tensions in the USA?</h3>
-            <p>Yes. Many LeanOn listeners understand the nuances of arranged marriage — the family pressure, the
+            <h3>Can a How Was Your Day listener help with arranged marriage tensions in the USA?</h3>
+            <p>Yes. Many How Was Your Day listeners understand the nuances of arranged marriage — the family pressure, the
               adjustment period, the gap between expectations and reality. They will listen without judgment.</p>
           </div>
           <div className="faq-item">
             <h3>What if my partner and I are growing apart culturally?</h3>
             <p>Cultural drift is one of the most common but least talked-about challenges for Indians in the USA.
-              A LeanOn listener can help you process your feelings and figure out what you actually need.</p>
+              A How Was Your Day listener can help you process your feelings and figure out what you actually need.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn a replacement for couples therapy?</h3>
-            <p>LeanOn is peer support, not professional therapy. But for many people it is a first safe step —
+            <h3>Is How Was Your Day a replacement for couples therapy?</h3>
+            <p>How Was Your Day is peer support, not professional therapy. But for many people it is a first safe step —
               a place to untangle your thoughts. Sessions start at $10 for 15 minutes, first 5 minutes free.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk about my long-distance relationship with someone in India?</h3>
             <p>Absolutely. The India-USA long-distance dynamic — time zones, family pressure, guilt, uncertainty
-              about the future — is something LeanOn listeners understand deeply. No background explanation needed.</p>
+              about the future — is something How Was Your Day listeners understand deeply. No background explanation needed.</p>
           </div>
         </div>
 
@@ -245,7 +245,7 @@ export default function UsaRelationshipAdvicePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

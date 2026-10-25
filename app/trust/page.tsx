@@ -4,9 +4,9 @@ import { SERVICE_DESCRIPTION } from '@/lib/service-facts'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Trust & Safety | LeanOn — Anonymous Peer Support India',
-  description: 'How LeanOn keeps you safe: privacy, how listeners are screened, safety checks during sessions, reporting, and crisis helplines. Peer support, not therapy.',
-  alternates: { canonical: 'https://www.leanon.app/trust' },
+  title: 'Trust & Safety | How Was Your Day — Anonymous Peer Support India',
+  description: 'How the app keeps you safe: privacy, how listeners are screened, safety checks during sessions, reporting, and crisis helplines. Peer support, not therapy.',
+  alternates: { canonical: 'https://www.howwasyourday.live/trust' },
 }
 
 const S = `
@@ -43,18 +43,18 @@ h1{font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1.15;margin-bottom
 const trustSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://www.leanon.app/trust#webpage',
-  name: 'LeanOn Trust & Safety',
-  url: 'https://www.leanon.app/trust',
+  '@id': 'https://www.howwasyourday.live/trust#webpage',
+  name: 'How Was Your Day Trust & Safety',
+  url: 'https://www.howwasyourday.live/trust',
   description: metadata.description,
-  isPartOf: { '@id': 'https://www.leanon.app/#website' },
+  isPartOf: { '@id': 'https://www.howwasyourday.live/#website' },
   about: [
     { '@type': 'Thing', name: 'Peer support safety' },
     { '@type': 'Thing', name: 'Listener verification' },
     { '@type': 'Thing', name: 'Privacy' },
     { '@type': 'Thing', name: 'Crisis escalation' }
   ],
-  mainEntity: { '@id': 'https://www.leanon.app/#organization' }
+  mainEntity: { '@id': 'https://www.howwasyourday.live/#organization' }
 }
 
 export default function TrustPage() {
@@ -63,7 +63,7 @@ export default function TrustPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trustSchema) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">
@@ -71,49 +71,49 @@ export default function TrustPage() {
         <div className="hero">
           <p className="tag">Trust &amp; Safety</p>
           <h1>Your safety is our top priority</h1>
-          <p className="lead">LeanOn is built on trust. Every decision we make — from how you sign up to how we vet listeners — is designed to keep you safe, private, and in control.</p>
+          <p className="lead">How Was Your Day is built on trust. Every decision we make — from how you sign up to how we vet listeners — is designed to keep you safe, private, and in control.</p>
         </div>
 
         <div className="section">
-          <h2>LeanOn in one paragraph</h2>
+          <h2>How Was Your Day in one paragraph</h2>
           <p>{SERVICE_DESCRIPTION}</p>
         </div>
 
         <div className="section">
           <h2>🔒 Your privacy</h2>
-          <p>LeanOn was designed for privacy from the ground up. Here is exactly what we collect and what we don&apos;t:</p>
+          <p>How Was Your Day was designed for privacy from the ground up. Here is exactly what we collect and what we don&apos;t:</p>
           <ul>
             <li>Sign up with just your mobile number — no full name, no email required</li>
             <li>A listener sees only the name you choose — a first name or a nickname is fine</li>
             <li>No profile photos required for seekers</li>
-            <li>Text messages are stored securely so a session can be reviewed if it is reported or flagged for safety. Only authorised LeanOn administrators can open them</li>
+            <li>Text messages are stored securely so a session can be reviewed if it is reported or flagged for safety. Only authorised How Was Your Day administrators can open them</li>
             <li>Voice calls are not recorded</li>
-            <li>We never share your conversations with anyone outside LeanOn</li>
+            <li>We never share your conversations with anyone outside How Was Your Day</li>
           </ul>
-          <p>You are in control of your identity on LeanOn. We built text-first specifically so that people in joint households can use the platform privately.</p>
+          <p>You are in control of your identity on How Was Your Day. We built text-first specifically so that people in joint households can use the platform privately.</p>
         </div>
 
         <div className="section">
           <h2>🛡️ Listener vetting</h2>
-          <p>Every listener is screened and approved by LeanOn before they can accept a single session:</p>
+          <p>Every listener is screened and approved by How Was Your Day before they can accept a single session:</p>
           <ul>
             <li>A written application about who they are, what they have lived through and why they want to listen</li>
             <li>A screening quiz on how to respond in difficult conversations</li>
-            <li>A live verification selfie (camera only), checked by LeanOn and never shown publicly</li>
+            <li>A live verification selfie (camera only), checked by How Was Your Day and never shown publicly</li>
             <li>Manual review of every application — many are asked to fix something or are turned down</li>
-            <li>Agreement to LeanOn&apos;s code of conduct: confidentiality, no judgement, and no medical or clinical advice</li>
+            <li>Agreement to How Was Your Day&apos;s code of conduct: confidentiality, no judgement, and no medical or clinical advice</li>
             <li>Profile photos are reviewed before they go live, and reported listeners can be suspended</li>
           </ul>
-          <p>Listeners are peer supporters, not therapists, and LeanOn does not claim otherwise. They are screened — not clinically trained — for empathy, reliability and lived experience.</p>
+          <p>Listeners are peer supporters, not therapists, and How Was Your Day does not claim otherwise. They are screened — not clinically trained — for empathy, reliability and lived experience.</p>
         </div>
 
         <div className="section">
           <h2>🧭 Safety checks during a session</h2>
           <ul>
-            <li>If words linked to self-harm or suicide appear in a chat, LeanOn immediately shows crisis helplines (NIMHANS, Tele-MANAS)</li>
-            <li>The listener is told to take extra care, and the session is flagged for the LeanOn team to review</li>
+            <li>If words linked to self-harm or suicide appear in a chat, How Was Your Day immediately shows crisis helplines (NIMHANS, Tele-MANAS)</li>
+            <li>The listener is told to take extra care, and the session is flagged for the How Was Your Day team to review</li>
             <li>Helpline numbers are shown in every session, not only when something is flagged</li>
-            <li>Anything you report is reviewed by a person at LeanOn</li>
+            <li>Anything you report is reviewed by a person at How Was Your Day</li>
           </ul>
         </div>
 
@@ -124,7 +124,7 @@ export default function TrustPage() {
             <li>Database access is controlled by Row Level Security — users can only access their own data</li>
             <li>Payment data is never stored on our servers — handled entirely by Razorpay (PCI DSS compliant)</li>
             <li>We do not sell your data to third parties, ever</li>
-            <li>You can request deletion of your account and data at any time via contact@leanon.app</li>
+            <li>You can request deletion of your account and data at any time via contact@howwasyourday.live</li>
           </ul>
         </div>
 
@@ -135,13 +135,13 @@ export default function TrustPage() {
             <li>Use &ldquo;Report an issue with this session&rdquo; when the session ends, or write to us through the <a href="/contact">contact form</a></li>
             <li>End the session at any time — you pay only for the minutes used, and nothing if it lasted under a minute</li>
             <li>You never have to talk to the same listener again — you choose who you book</li>
-            <li>A person at LeanOn reviews every report</li>
+            <li>A person at How Was Your Day reviews every report</li>
           </ul>
         </div>
 
         <div className="crisis-box">
           <h3>🆘 In a mental health crisis?</h3>
-          <p>LeanOn peer listeners are not crisis counsellors. If you are in immediate danger or having thoughts of self-harm:<br/><br/>
+          <p>How Was Your Day peer listeners are not crisis counsellors. If you are in immediate danger or having thoughts of self-harm:<br/><br/>
           Call <strong><a href="tel:08046110007">NIMHANS: 080-46110007</a></strong> (Bengaluru, 24/7)<br/>
           Call <strong><a href="tel:14416">Tele-MANAS: 14416</a></strong> (free · all India · 24/7 · Govt of India)<br/><br/>
           These are free, confidential, and available around the clock.

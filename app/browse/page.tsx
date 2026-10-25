@@ -13,7 +13,7 @@ import { showToast } from '@/lib/toast'
 import Avatar from '@/app/components/Avatar'
 
 // Post-login welcome banner / onboarding modal
-// New users (leanon_welcome_new in sessionStorage) see a full-screen overlay
+// New users (howwasyourday_welcome_new in sessionStorage) see a full-screen overlay
 // that explains the free trial and pushes them to pick a listener.
 // Returning but un-onboarded users see the original thin strip.
 function WelcomeBanner({
@@ -34,18 +34,18 @@ function WelcomeBanner({
   const [intentTopic, setIntentTopic] = useState<string | null>(null)
 
   useEffect(() => {
-    const newUser = sessionStorage.getItem('leanon_welcome_new')
-    const onboarded = localStorage.getItem('leanon_onboarded')
+    const newUser = sessionStorage.getItem('howwasyourday_welcome_new')
+    const onboarded = localStorage.getItem('howwasyourday_onboarded')
     if (newUser) {
       setIsNew(true)
       setShow(true)
-      sessionStorage.removeItem('leanon_welcome_new')
+      sessionStorage.removeItem('howwasyourday_welcome_new')
       // Read topic intent that auth/page.tsx may have left behind.
-      // The browse page already cleared leanon_last_topic on mount, so read
-      // leanon_intent_topic instead — a separate key set only for this purpose.
+      // The browse page already cleared howwasyourday_last_topic on mount, so read
+      // howwasyourday_intent_topic instead — a separate key set only for this purpose.
       try {
-        const t = sessionStorage.getItem('leanon_intent_topic')
-        if (t) { setIntentTopic(t); sessionStorage.removeItem('leanon_intent_topic') }
+        const t = sessionStorage.getItem('howwasyourday_intent_topic')
+        if (t) { setIntentTopic(t); sessionStorage.removeItem('howwasyourday_intent_topic') }
       } catch { /* ignore */ }
     } else if (!onboarded) {
       setShow(true)
@@ -57,7 +57,7 @@ function WelcomeBanner({
   if (isNew) {
     const dismiss = () => {
       setShow(false)
-      localStorage.setItem('leanon_onboarded', '1')
+      localStorage.setItem('howwasyourday_onboarded', '1')
       onDismiss?.(intentTopic)
       // Scroll to the listener grid after a brief paint delay
       setTimeout(() => {
@@ -129,7 +129,7 @@ function WelcomeBanner({
             : 'Pick a topic, then someone you’d feel comfortable talking to.'}
         </p>
       </div>
-      <button aria-label="Dismiss" onClick={() => { setShow(false); localStorage.setItem('leanon_onboarded','1') }} style={{background:'none',border:'none',color:'white',cursor:'pointer',width:44,height:44,flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center'}}><X size={20} aria-hidden /></button>
+      <button aria-label="Dismiss" onClick={() => { setShow(false); localStorage.setItem('howwasyourday_onboarded','1') }} style={{background:'none',border:'none',color:'white',cursor:'pointer',width:44,height:44,flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center'}}><X size={20} aria-hidden /></button>
     </div>
   )
 }
@@ -419,9 +419,9 @@ function BrowseContent() {
       // the query param). Only restore once — clear it so it doesn't persist
       // across unrelated visits.
       try {
-        const saved = sessionStorage.getItem('leanon_last_topic')
+        const saved = sessionStorage.getItem('howwasyourday_last_topic')
         if (saved) {
-          sessionStorage.removeItem('leanon_last_topic')
+          sessionStorage.removeItem('howwasyourday_last_topic')
           if (TAGS.some(t => t.id === saved)) setTag(saved)
         }
       } catch { /* sessionStorage unavailable */ }
@@ -432,7 +432,7 @@ function BrowseContent() {
       setTag(mapped)
       // Persist topic intent so it survives the auth redirect (auth drops
       // query params when the redirect isn't set explicitly).
-      try { sessionStorage.setItem('leanon_last_topic', mapped) } catch { /* ignore */ }
+      try { sessionStorage.setItem('howwasyourday_last_topic', mapped) } catch { /* ignore */ }
     }
   }, [])
 
@@ -486,7 +486,7 @@ function BrowseContent() {
     // page waits up to 5 s even when the change is known instantly.
     let bc: BroadcastChannel | null = null
     try {
-      bc = new BroadcastChannel('leanon-availability')
+      bc = new BroadcastChannel('howwasyourday-availability')
       bc.onmessage = (e: MessageEvent<{ user_id: string; is_available: boolean }>) => {
         const { user_id, is_available } = e.data || {}
         if (typeof user_id !== 'string' || typeof is_available !== 'boolean') return

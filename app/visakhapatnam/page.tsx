@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Visakhapatnam — Peer Listeners | LeanOn',
+  title: 'Emotional Support in Visakhapatnam — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Visakhapatnam (Vizag), Andhra Pradesh. Talk anonymously about career pressure, family expectations, work stress. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/visakhapatnam', languages: { 'en-IN': 'https://www.leanon.app/visakhapatnam' } },
-  keywords: 'peer support Visakhapatnam, emotional support Vizag, work stress Visakhapatnam Andhra, family pressure Vizag, talk to someone Visakhapatnam, leanon Vizag',
+  alternates: { canonical: 'https://www.howwasyourday.live/visakhapatnam', languages: { 'en-IN': 'https://www.howwasyourday.live/visakhapatnam' } },
+  keywords: 'peer support Visakhapatnam, emotional support Vizag, work stress Visakhapatnam Andhra, family pressure Vizag, talk to someone Visakhapatnam, howwasyourday Vizag',
   openGraph: {
-    title: 'Emotional Support in Visakhapatnam — Peer Listeners | LeanOn',
+    title: 'Emotional Support in Visakhapatnam — Peer Listeners | How Was Your Day',
     description: 'Connect with peer listeners in Visakhapatnam (Vizag), Andhra Pradesh. Talk anonymously about career pressure, family expectations, work stress. No appointment needed.',
-    url: 'https://www.leanon.app/visakhapatnam',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/visakhapatnam',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -27,13 +27,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What do Vizag users talk about on LeanOn?',
+      name: 'What do Vizag users talk about on How Was Your Day?',
       acceptedAnswer: { '@type': 'Answer', text: 'Common themes include: the pressure of the pharma and IT sectors in the city, the expectations of Telugu families around career achievement and marriage timing, the experience of being in a city that feels like it is between identities &mdash; not quite Hyderabad, not quite a smaller town &mdash; and relationship situations that are difficult to navigate within close-knit community structures.' },
     },
     {
       '@type': 'Question',
-      name: 'Is the naval and defence sector presence relevant to LeanOn users?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Vizag has a significant naval and defence establishment, and the families of service personnel carry a specific kind of stress &mdash; long separations, uncertainty, the social pressures of living within tight institutional communities. These are things that are hard to discuss openly within those communities themselves, and LeanOn offers a completely private space outside them.' },
+      name: 'Is the naval and defence sector presence relevant to How Was Your Day users?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Vizag has a significant naval and defence establishment, and the families of service personnel carry a specific kind of stress &mdash; long separations, uncertainty, the social pressures of living within tight institutional communities. These are things that are hard to discuss openly within those communities themselves, and How Was Your Day offers a completely private space outside them.' },
     },
     {
       '@type': 'Question',
@@ -42,8 +42,8 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn available in Visakhapatnam?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn is available anywhere in India with a smartphone and internet connection. Sessions start from &#8377;160 for 15 minutes, available any time, from your phone.' },
+      name: 'Is How Was Your Day available in Visakhapatnam?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is available anywhere in India with a smartphone and internet connection. Sessions start from &#8377;160 for 15 minutes, available any time, from your phone.' },
     },
   ],
 }
@@ -52,17 +52,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Visakhapatnam', item: 'https://www.leanon.app/visakhapatnam' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Visakhapatnam', item: 'https://www.howwasyourday.live/visakhapatnam' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/visakhapatnam',
+  url: 'https://www.howwasyourday.live/visakhapatnam',
   areaServed: { '@type': 'City', name: 'Visakhapatnam', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -119,7 +119,7 @@ export default function VisakhapatnamPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">
@@ -130,7 +130,7 @@ export default function VisakhapatnamPage() {
         <div className="hero">
           <p className="tag">Peer Support &middot; Visakhapatnam</p>
           <h1>Peer Support in Vizag &mdash; Someone to Lean On in <em>the City of Destiny</em></h1>
-          <p className="lead">Visakhapatnam is a city on the move &mdash; port, pharma, IT, Navy. The ambition is real and so is the pressure. Strong Telugu family values, tight community networks, high career expectations. LeanOn is a completely private space outside all of it.</p>
+          <p className="lead">Visakhapatnam is a city on the move &mdash; port, pharma, IT, Navy. The ambition is real and so is the pressure. Strong Telugu family values, tight community networks, high career expectations. How Was Your Day is a completely private space outside all of it.</p>
         </div>
         <div className="section">
           <h2>Vizag&apos;s Unique Emotional Pressures</h2>
@@ -141,11 +141,11 @@ export default function VisakhapatnamPage() {
           <h3>Naval and Defence Families</h3>
           <p>Visakhapatnam&apos;s significant naval base and defence establishment means a portion of the city lives within institutional structures that carry their own emotional weight. Long deployments, the stress of uncertain postings, the particular isolation of living within a closed community &mdash; these are experiences that rarely get talked about outside the family, if at all.</p>
           <h3>The Question of Staying or Leaving</h3>
-          <p>Vizag occupies an interesting position for many of its residents &mdash; it is good enough to stay in but the pull toward Hyderabad, Bengaluru, or abroad is real. For those who stay, there is sometimes the quiet question of whether that was the right call. For those who return, the re-entry has its own complicated feelings. LeanOn is a space to say all of that honestly.</p>
+          <p>Vizag occupies an interesting position for many of its residents &mdash; it is good enough to stay in but the pull toward Hyderabad, Bengaluru, or abroad is real. For those who stay, there is sometimes the quiet question of whether that was the right call. For those who return, the re-entry has its own complicated feelings. How Was Your Day is a space to say all of that honestly.</p>
         </div>
         <div className="section">
-          <h2>How LeanOn Works in Visakhapatnam</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, available any time, from your phone.</p>
+          <h2>How It Works in Visakhapatnam</h2>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose a listener whose background resonates with your situation. Start a session &mdash; the first 5 minutes are free. Sessions start at &#8377;160 for 15 minutes, available any time, from your phone.</p>
           <p>The listener is a real Indian person, screened for active listening. They have no connection to your family, your employer, or your community. Your listener never sees your phone number, and nothing is shared with anyone in your life.</p>
         </div>
         <div className="section">
@@ -158,7 +158,7 @@ export default function VisakhapatnamPage() {
           ))}
         </div>
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
+          <p><strong>How Was Your Day is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
           <p>Crisis support: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> (free, 24/7, Government of India).</p>
         </div>
         <div className="cta-card">

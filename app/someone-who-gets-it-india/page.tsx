@@ -3,21 +3,21 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Someone Who Gets It — Talk to a Person Who\'s Been There | LeanOn',
-  description: 'You\'re not looking for advice. You want someone who gets it — who\'s been through it. LeanOn listeners bring lived experience, not a script. From ₹160.',
+  title: 'Someone Who Gets It — Talk to a Person Who\'s Been There | How Was Your Day',
+  description: 'You\'re not looking for advice. You want someone who gets it — who\'s been through it. How Was Your Day listeners bring lived experience, not a script. From ₹160.',
   keywords: [
     'someone who gets it india', 'someone who understands india', 'someone who understands me india',
     'person who gets it india', 'lived experience support india', 'peer who understands india',
     'someone who has been there india', 'real understanding india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/someone-who-gets-it-india', languages: { 'en-IN': 'https://www.leanon.app/someone-who-gets-it-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/someone-who-gets-it-india', languages: { 'en-IN': 'https://www.howwasyourday.live/someone-who-gets-it-india' } },
   openGraph: {
-    title: 'Someone Who Gets It — Talk to a Person Who\'s Been There | LeanOn',
-    description: 'You\'re not looking for advice. You want someone who gets it — who\'s been through it. LeanOn listeners bring lived experience, not a script. From ₹160.',
-    url: 'https://www.leanon.app/someone-who-gets-it-india',
-    siteName: 'LeanOn',
+    title: 'Someone Who Gets It — Talk to a Person Who\'s Been There | How Was Your Day',
+    description: 'You\'re not looking for advice. You want someone who gets it — who\'s been through it. How Was Your Day listeners bring lived experience, not a script. From ₹160.',
+    url: 'https://www.howwasyourday.live/someone-who-gets-it-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Someone Who Gets It India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Someone Who Gets It India' }],
   },
 }
 
@@ -28,7 +28,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do listeners have lived experience?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are real people who have been through the kinds of situations they support. They are not professionals trained from textbooks. They have navigated relationship breakdowns, career confusion, family pressure, loneliness, grief, burnout. Their support comes from personal experience as well as training in active listening &mdash; which is why it feels different from clinical or advice-based support.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are real people who have been through the kinds of situations they support. They are not professionals trained from textbooks. They have navigated relationship breakdowns, career confusion, family pressure, loneliness, grief, burnout. Their support comes from personal experience as well as training in active listening &mdash; which is why it feels different from clinical or advice-based support.' },
     },
     {
       '@type': 'Question',
@@ -38,7 +38,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is this different from therapy?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. A therapist is trained in clinical methods and treats diagnosed conditions. A LeanOn peer listener supports through shared experience and trained listening &mdash; not clinical frameworks. The conversation is more human, less structured, and often more immediately useful for the everyday emotional weight that does not rise to the level of clinical care.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. A therapist is trained in clinical methods and treats diagnosed conditions. A How Was Your Day peer listener supports through shared experience and trained listening &mdash; not clinical frameworks. The conversation is more human, less structured, and often more immediately useful for the everyday emotional weight that does not rise to the level of clinical care.' },
     },
     {
       '@type': 'Question',
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Someone Who Gets It India', item: 'https://www.leanon.app/someone-who-gets-it-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Someone Who Gets It India', item: 'https://www.howwasyourday.live/someone-who-gets-it-india' },
   ],
 }
 
@@ -112,7 +112,7 @@ export default function SomeoneWhoGetsItIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -125,7 +125,7 @@ export default function SomeoneWhoGetsItIndiaPage() {
         <div className="hero">
           <p className="badge">Lived Experience &middot; Real Understanding &middot; India</p>
           <h1>You don&apos;t want advice. <em>You want someone who&apos;s been there.</em></h1>
-          <p className="lead">There&apos;s a difference between someone who says &ldquo;I understand&rdquo; and someone who actually does. LeanOn listeners have lived through what you&apos;re going through &mdash; loneliness, relationship pain, work pressure, family weight. They get it.</p>
+          <p className="lead">There&apos;s a difference between someone who says &ldquo;I understand&rdquo; and someone who actually does. How Was Your Day listeners have lived through what you&apos;re going through &mdash; loneliness, relationship pain, work pressure, family weight. They get it.</p>
           <a href="/browse" className="cta-hero">Find someone who gets it &rarr;</a>
         </div>
 
@@ -143,8 +143,8 @@ export default function SomeoneWhoGetsItIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Matches Lived Experience to Your Situation</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Each profile describes the listener&apos;s background and areas of lived experience. You can see what they have been through, what they know from the inside, and how they approach support.</p>
+          <h2>How the app Matches Lived Experience to Your Situation</h2>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Each profile describes the listener&apos;s background and areas of lived experience. You can see what they have been through, what they know from the inside, and how they approach support.</p>
           <p>If you are going through a divorce, look for someone who has navigated their own. If you are stuck in career confusion in your late 20s, look for someone who has been there and come out the other side. If you are dealing with family pressure around marriage, look for someone who understands that specific weight.</p>
           <p>Your first 5-minute session is free. If the connection does not feel right, try someone else. You are choosing until you find the person who actually gets it.</p>
         </div>

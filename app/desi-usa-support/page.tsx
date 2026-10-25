@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Support for the Desi Community in the USA — When No One Understands | LeanOn',
-  description: 'The desi experience in America has a specific emotional weight. Community pressure, identity tensions, work culture shock, homesickness — LeanOn peer listeners are desi and they get it.',
+  title: 'Support for the Desi Community in the USA — When No One Understands | How Was Your Day',
+  description: 'The desi experience in America has a specific emotional weight. Community pressure, identity tensions, work culture shock, homesickness — How Was Your Day peer listeners are desi and they get it.',
   keywords: [
     'desi support usa', 'desi community usa emotional support', 'south asian support usa',
     'desi american mental health', 'desi usa loneliness', 'desi peer support america',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'desi emotional health usa', 'desi american talk to someone',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa',
-    languages: { 'en-US': 'https://www.leanon.app/usa' },
+    canonical: 'https://www.howwasyourday.live/usa',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa' },
   },
   openGraph: {
     title: 'Support for the Desi Community in the USA — When No One Understands',
-    description: 'The desi emotional experience in America is specific. LeanOn peer listeners are from the community — no explaining, no blank looks, just warmth and understanding.',
-    url: 'https://www.leanon.app/usa',
-    siteName: 'LeanOn',
+    description: 'The desi emotional experience in America is specific. How Was Your Day peer listeners are from the community — no explaining, no blank looks, just warmth and understanding.',
+    url: 'https://www.howwasyourday.live/usa',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'What makes emotional support for desis in the USA different?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The desi community in America navigates pressures that most mainstream mental health support does not understand: the model minority expectation, family honour, the guilt of leaving India, the community judgment about life choices, the pressure to succeed visibly. LeanOn listeners know this context because many of them live it.',
+        text: 'The desi community in America navigates pressures that most mainstream mental health support does not understand: the model minority expectation, family honour, the guilt of leaving India, the community judgment about life choices, the pressure to succeed visibly. How Was Your Day listeners know this context because many of them live it.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Can I talk to a desi listener who speaks Hindi or my regional language?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Punjabi, Bengali, and other South Asian languages. Filter by language when you browse.',
+        text: 'Yes. Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Punjabi, Bengali, and other South Asian languages. Filter by language when you browse.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What if I feel pressure from the desi community itself?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Community can be a source of belonging and a source of pressure — sometimes both at once. If you are feeling judged, compared, or suffocated by community expectations, that is completely valid and worth talking about. A LeanOn listener is outside your community and completely confidential.',
+        text: 'Community can be a source of belonging and a source of pressure — sometimes both at once. If you are feeling judged, compared, or suffocated by community expectations, that is completely valid and worth talking about. A How Was Your Day listener is outside your community and completely confidential.',
       },
     },
     {
@@ -57,12 +57,12 @@ const faqSchema = {
       name: 'Is it okay to talk about things my family would not understand?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is precisely what LeanOn is for. Career doubts. Identity questions. Relationship choices that your family would disapprove of. Feelings about religion, culture, marriage. Whatever it is that you cannot say at the family dinner table — you can say it here.',
+        text: 'That is precisely what How Was Your Day is for. Career doubts. Identity questions. Relationship choices that your family would disapprove of. Feelings about religion, culture, marriage. Whatever it is that you cannot say at the family dinner table — you can say it here.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a LeanOn session cost from the USA?',
+      name: 'How much does a How Was Your Day session cost from the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. No subscription required.',
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Desi Support USA', item: 'https://www.leanon.app/usa' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Desi Support USA', item: 'https://www.howwasyourday.live/usa' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function DesiUsaSupportPage() {
         <p className="lead">
           You live between two worlds — the America you navigated your way into and the India that shaped
           everything about you. The pressures are specific. The loneliness is specific. The cultural weight
-          is something that most mainstream support simply does not understand. LeanOn listeners are from
+          is something that most mainstream support simply does not understand. How Was Your Day listeners are from
           the community. No explaining needed.
         </p>
 
@@ -176,14 +176,14 @@ export default function DesiUsaSupportPage() {
           <p>Being surrounded by desis is not always the same as being supported by them. Community events,
             WhatsApp aunty groups, the constant awareness of what people will say — sometimes the community
             itself is a source of stress, not relief.</p>
-          <p>A LeanOn listener is outside your community. Completely confidential. A space to say the
+          <p>A How Was Your Day listener is outside your community. Completely confidential. A space to say the
             things you cannot say in the community without it getting back to someone.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
 
         <div className="card">
           <h2>For South Asians — not just Indians</h2>
-          <p>LeanOn serves the broader South Asian community in the USA — Indians, Pakistanis, Bangladeshis,
+          <p>How Was Your Day serves the broader South Asian community in the USA — Indians, Pakistanis, Bangladeshis,
             Sri Lankans, Nepalis. The specific pressures of migration, family, identity, and the in-between
             are shared across the community. You will find listeners who understand your specific background.</p>
         </div>
@@ -211,26 +211,26 @@ export default function DesiUsaSupportPage() {
           <div className="faq-item">
             <h3>What makes emotional support for desis in the USA different?</h3>
             <p>The desi community navigates pressures mainstream mental health support often misses — model
-              minority expectations, family honour, community judgment. LeanOn listeners know this context
+              minority expectations, family honour, community judgment. How Was Your Day listeners know this context
               because many of them live it.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to a desi listener who speaks my language?</h3>
-            <p>Yes. Many LeanOn listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Punjabi, Bengali,
+            <p>Yes. Many How Was Your Day listeners speak Hindi, Telugu, Tamil, Kannada, Malayalam, Punjabi, Bengali,
               and other South Asian languages. Filter by language when you browse.</p>
           </div>
           <div className="faq-item">
             <h3>What if I feel pressure from the desi community itself?</h3>
-            <p>Community can be both belonging and pressure. A LeanOn listener is outside your community
+            <p>Community can be both belonging and pressure. A How Was Your Day listener is outside your community
               and completely confidential — a space to say what you cannot say inside it.</p>
           </div>
           <div className="faq-item">
             <h3>Is it okay to talk about things my family would not understand?</h3>
-            <p>That is precisely what LeanOn is for. Whatever you cannot say at the family dinner table —
+            <p>That is precisely what How Was Your Day is for. Whatever you cannot say at the family dinner table —
               career doubts, identity questions, relationship choices — you can say it here.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does a LeanOn session cost from the USA?</h3>
+            <h3>How much does a How Was Your Day session cost from the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. First 5
               minutes are always free. No subscription required.</p>
           </div>
@@ -249,7 +249,7 @@ export default function DesiUsaSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

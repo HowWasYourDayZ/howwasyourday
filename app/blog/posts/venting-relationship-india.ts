@@ -1,7 +1,7 @@
 export const post = {
   slug: 'venting-relationship-india',
   title: "Venting About Your Relationship Isn't Weakness — It's How You Stay Sane",
-  author: 'LeanOn Team',
+  author: 'How Was Your Day Team',
   date: '2026-09-12',
   readTime: '6 min read',
   description: "There's a reason you keep needing to vent about your relationship. It's not because something is wrong with you.",
@@ -46,9 +46,9 @@ export const post = {
 
 <p>Venting to the right person is not disloyalty to your relationship. It is maintenance. The same way a pressure valve is not a sign that the system is failing &mdash; it is the feature that keeps the system running.</p>
 
-<h2>The LeanOn Model</h2>
+<h2>The How Was Your Day Model</h2>
 
-<p>A peer listener on LeanOn is a real person with no connection to your life. No loyalty, no history, no stake in what you decide or how the situation resolves. You can say the full version &mdash; unedited, unsoftened &mdash; and have it received without social consequence.</p>
+<p>A peer listener on How Was Your Day is a real person with no connection to your life. No loyalty, no history, no stake in what you decide or how the situation resolves. You can say the full version &mdash; unedited, unsoftened &mdash; and have it received without social consequence.</p>
 
 <p>They will not advise unless you ask. They will not take sides. They will not remember it the next time they see your partner at a family function, because there is no next time. There is just the session, the expression, and the relief of having said it.</p>
 

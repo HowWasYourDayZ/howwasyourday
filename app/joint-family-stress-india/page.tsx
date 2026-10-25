@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Joint Family Stress India — Anonymous Support | LeanOn',
+  title: 'Joint Family Stress India — Anonymous Support | How Was Your Day',
   description: 'No privacy, constant interference, family politics. Joint family stress is uniquely Indian. Talk anonymously from ₹160.',
   keywords: ['joint family stress India', 'joint family problems India', 'joint family conflict India', 'living with in-laws India', 'no privacy joint family India'],
-  alternates: { canonical: 'https://www.leanon.app/joint-family-stress-india', languages: { 'en-IN': 'https://www.leanon.app/joint-family-stress-india' } },
-  openGraph: { title: 'Joint Family Stress India — Anonymous Support | LeanOn', description: 'No privacy, constant interference, family politics. Joint family stress is uniquely Indian. Talk anonymously from ₹160.', url: 'https://www.leanon.app/joint-family-stress-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/joint-family-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/joint-family-stress-india' } },
+  openGraph: { title: 'Joint Family Stress India — Anonymous Support | How Was Your Day', description: 'No privacy, constant interference, family politics. Joint family stress is uniquely Indian. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/joint-family-stress-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is joint family stress a real mental health issue?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. The absence of private space, the constant negotiation, and the dual loyalty demands of joint family living are recognized contributors to anxiety, depression, and relationship stress. The fact that it is culturally common does not make it psychologically cost-free.'}},
-    {'@type': 'Question', name: 'How do I talk about this without seeming ungrateful?', acceptedAnswer: {'@type': 'Answer', text: 'To a LeanOn listener, you do not need to manage how you come across. You can say exactly what is happening and how it makes you feel, without framing it carefully or softening it for the listener\'s benefit. That freedom is one of the most valuable things about neutral peer support.'}},
+    {'@type': 'Question', name: 'How do I talk about this without seeming ungrateful?', acceptedAnswer: {'@type': 'Answer', text: 'To a How Was Your Day listener, you do not need to manage how you come across. You can say exactly what is happening and how it makes you feel, without framing it carefully or softening it for the listener\'s benefit. That freedom is one of the most valuable things about neutral peer support.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Joint Family Stress India', item: 'https://www.leanon.app/joint-family-stress-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Joint Family Stress India', item: 'https://www.howwasyourday.live/joint-family-stress-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function JointFamilyStressIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Joint Family Stress India</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function JointFamilyStressIndiaPage() {
         <div className="section">
           <h2>Who You Cannot Tell</h2>
           <p>You cannot tell your partner because they are inside the same system. You cannot tell your family of origin because it will become a conflict between the two families. You cannot tell friends because word travels. You need a neutral space where what you say stays there.</p>
-          <p>That is exactly what LeanOn provides.</p>
+          <p>That is exactly what How Was Your Day provides.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>You can love your family and need space from them at the same time.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

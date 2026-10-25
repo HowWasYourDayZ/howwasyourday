@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Online Emotional Support India | Talk to a Peer Listener | LeanOn',
+  title: 'Online Emotional Support India | Talk to a Peer Listener | How Was Your Day',
   description: 'Get online emotional support in India. Talk to verified peer listeners who have lived through what you\'re facing. Anonymous, no appointment.',
   keywords: ['online emotional support india', 'emotional support online india', 'peer emotional support india', 'talk to someone online india'],
-  alternates: { canonical: 'https://www.leanon.app/online-emotional-support-india' },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-emotional-support-india' },
 }
 
 const S = `
@@ -35,26 +35,26 @@ export default function OnlineEmotionalSupportIndiaPage() {
     <>
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{height:48}} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>
       </nav>
       <div className="page">
         <a href="/" style={{display:'inline-flex',alignItems:'center',gap:6,fontSize:14,fontWeight:700,color:'var(--gray)',marginBottom:28}}>← Back</a>
-        <h1>Online Emotional Support India — LeanOn</h1>
-        <p className="lead">India needs more ways to get emotional support — not just in metros, not just for those who can afford private therapy. LeanOn makes peer emotional support accessible, affordable, and available everywhere in India.</p>
+        <h1>Online Emotional Support India — How Was Your Day</h1>
+        <p className="lead">India needs more ways to get emotional support — not just in metros, not just for those who can afford private therapy. How Was Your Day makes peer emotional support accessible, affordable, and available everywhere in India.</p>
 
         <div className="disclaimer">
-          LeanOn provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
+          How Was Your Day provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
         </div>
 
         <div className="card">
           <h2>What is online emotional support?</h2>
           <p>Online emotional support is a structured conversation with a screened peer listener who has personal experience with what you&apos;re going through. Unlike advice-giving or prescribing, peer emotional support focuses on active listening, empathy, and helping you feel genuinely heard.</p>
-          <p>On LeanOn, you can connect with listeners who have personally experienced loneliness, anxiety, burnout, grief, relationship breakdowns, and more. Their understanding comes from lived experience, not a textbook.</p>
+          <p>On How Was Your Day, you can connect with listeners who have personally experienced loneliness, anxiety, burnout, grief, relationship breakdowns, and more. Their understanding comes from lived experience, not a textbook.</p>
         </div>
 
         <div style={{marginBottom:24}}>
-          <p style={{fontSize:16,fontWeight:800,color:'var(--navy)',marginBottom:14}}>Topics available on LeanOn</p>
+          <p style={{fontSize:16,fontWeight:800,color:'var(--navy)',marginBottom:14}}>Topics available on How Was Your Day</p>
           <div className="topics-grid">
             {['Loneliness 🌙','Anxiety 😰','Burnout 🔥','Grief 🌿','Breakup 💔','Career 🧭','Students 📚','LGBTQ+ 🌈','Parenting 👶','Startup 🚀','Relationships 💬','Just talk ☕'].map(t => (
               <div key={t} className="topic">{t}</div>
@@ -64,7 +64,7 @@ export default function OnlineEmotionalSupportIndiaPage() {
 
         <div className="card">
           <h2>Built for India&apos;s unique needs</h2>
-          <p>India has unique emotional support needs: the pressure of joint family expectations, the stigma around mental health, the cost barrier to professional help, and the privacy challenges of living in shared spaces. LeanOn is designed with all of this in mind.</p>
+          <p>India has unique emotional support needs: the pressure of joint family expectations, the stigma around mental health, the cost barrier to professional help, and the privacy challenges of living in shared spaces. How Was Your Day is designed with all of this in mind.</p>
           <p>Text-first conversations for privacy. OTP sign-up — no full name required. Support in 12 Indian languages. UPI payments. Listeners from across India who understand regional and cultural context.</p>
         </div>
 

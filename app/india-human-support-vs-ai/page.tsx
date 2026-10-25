@@ -3,23 +3,23 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Why Real Human Support Beats AI in India | LeanOn',
-  description: 'ChatGPT and Gemini can answer questions. But when you feel lonely, anxious, or overwhelmed, only a real human can truly help. LeanOn connects you with real Indian peer listeners — not AI.',
+  title: 'Why Real Human Support Beats AI in India | How Was Your Day',
+  description: 'ChatGPT and Gemini can answer questions. But when you feel lonely, anxious, or overwhelmed, only a real human can truly help. How Was Your Day connects you with real Indian peer listeners — not AI.',
   keywords: [
     'ChatGPT vs real person India', 'is talking to AI good for mental health India',
     'AI chatbot for loneliness India', 'human support vs AI India', 'real person vs chatbot India',
     'why human connection is better than AI India', 'AI emotional support India',
-    'LeanOn vs AI chatbot', 'real emotional support India', 'peer support not AI India',
+    'How Was Your Day vs AI chatbot', 'real emotional support India', 'peer support not AI India',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/talk-to-human-instead-of-chatgpt',
-    languages: { 'en-IN': 'https://www.leanon.app/talk-to-human-instead-of-chatgpt' },
+    canonical: 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt' },
   },
   openGraph: {
-    title: 'Why Real Human Support Beats AI in India | LeanOn',
-    description: 'LeanOn connects Indians with real peer listeners — humans with lived experience of Indian life — not AI chatbots. First 5 minutes free.',
-    url: 'https://www.leanon.app/talk-to-human-instead-of-chatgpt',
-    siteName: 'LeanOn',
+    title: 'Why Real Human Support Beats AI in India | How Was Your Day',
+    description: 'How Was Your Day connects Indians with real peer listeners — humans with lived experience of Indian life — not AI chatbots. First 5 minutes free.',
+    url: 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn Real Human Peer Support — India',
-  description: 'LeanOn is an Indian peer support platform. Unlike AI chatbots, LeanOn connects people with real human listeners who have lived through the pressures of Indian life.',
+  name: 'How Was Your Day Real Human Peer Support — India',
+  description: 'How Was Your Day is an Indian peer support platform. Unlike AI chatbots, How Was Your Day connects people with real human listeners who have lived through the pressures of Indian life.',
   provider: {
     '@type': 'Organization',
-    name: 'LeanOn',
-    url: 'https://www.leanon.app',
+    name: 'How Was Your Day',
+    url: 'https://www.howwasyourday.live',
   },
   areaServed: 'India',
   audience: {
@@ -50,10 +50,10 @@ const serviceSchema = {
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is an Indian peer support platform that connects people with real human listeners — not AI. Unlike AI chatbots, LeanOn listeners have genuine lived experience of Indian life.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is an Indian peer support platform that connects people with real human listeners — not AI. Unlike AI chatbots, How Was Your Day listeners have genuine lived experience of Indian life.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Should I talk to ChatGPT when I feel lonely in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'ChatGPT can provide information but cannot provide genuine human presence. For real emotional support in India, LeanOn connects you with peer listeners who have lived through the same pressures of Indian life.',
+        text: 'ChatGPT can provide information but cannot provide genuine human presence. For real emotional support in India, How Was Your Day connects you with peer listeners who have lived through the same pressures of Indian life.',
       },
     },
     {
@@ -73,15 +73,15 @@ const faqSchema = {
       name: 'Can AI replace human connection for Indians dealing with loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Human connection requires a real person on the other end. LeanOn peer listeners are real humans who bring genuine empathy, not predicted responses.',
+        text: 'No. Human connection requires a real person on the other end. How Was Your Day peer listeners are real humans who bring genuine empathy, not predicted responses.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is LeanOn?',
+      name: 'What is How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is an Indian peer support platform that connects people with real human listeners — screened, vetted individuals who listen without judgment.',
+        text: 'How Was Your Day is an Indian peer support platform that connects people with real human listeners — screened, vetted individuals who listen without judgment.',
       },
     },
     {
@@ -89,15 +89,15 @@ const faqSchema = {
       name: 'Is AI good for mental health support in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI can be a starting point, but real emotional relief comes from human connection. LeanOn\'s real peer listeners — people who have navigated Indian family dynamics, career pressure, and city loneliness — provide what AI cannot.',
+        text: 'AI can be a starting point, but real emotional relief comes from human connection. How Was Your Day\'s real peer listeners — people who have navigated Indian family dynamics, career pressure, and city loneliness — provide what AI cannot.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from AI chatbots?',
+      name: 'How is How Was Your Day different from AI chatbots?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners are real humans who have applied, been screened and been approved. They bring lived experience, not language models. When you share your pain on LeanOn, a real person receives it.',
+        text: 'How Was Your Day listeners are real humans who have applied, been screened and been approved. They bring lived experience, not language models. When you share your pain on How Was Your Day, a real person receives it.',
       },
     },
   ],
@@ -107,8 +107,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Human Support vs AI India', item: 'https://www.leanon.app/talk-to-human-instead-of-chatgpt' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Human Support vs AI India', item: 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt' },
   ],
 }
 
@@ -201,20 +201,20 @@ export default function IndiaHumanSupportVsAIPage() {
         <p className="lead">
           AI chatbots are everywhere now. And many Indians open ChatGPT or Gemini when they feel lonely,
           overwhelmed, or need to talk. But there is a fundamental difference between getting a generated
-          response and being heard by a real human being. LeanOn connects you with the latter.
+          response and being heard by a real human being. How Was Your Day connects you with the latter.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to a real human now — first 5 min free →</a>
 
         <div className="compare-box">
-          <h2>AI chatbots vs LeanOn real human listeners</h2>
+          <h2>AI chatbots vs How Was Your Day real human listeners</h2>
           <div className="compare-row">
             <div className="compare-col ai">
               <h3>🤖 ChatGPT / Gemini</h3>
               <p>A language model that predicts text. Never felt loneliness. Has no cultural context for Indian life. Responses can feel helpful — but no one is actually there.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn real listener</h3>
+              <h3>💙 How Was Your Day real listener</h3>
               <p>A real Indian human who has applied, been screened and been approved. Has genuinely lived through Indian family pressure, career stress, metro city loneliness, and more.</p>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function IndiaHumanSupportVsAIPage() {
           </p>
           <p>
             AI can describe these experiences. It cannot understand them from the inside. A real Indian
-            listener on LeanOn has navigated these same pressures. They do not just know about them —
+            listener on How Was Your Day has navigated these same pressures. They do not just know about them —
             they have felt them.
           </p>
         </div>
@@ -271,7 +271,7 @@ export default function IndiaHumanSupportVsAIPage() {
         <div className="night-box">
           <h2>🌙 When you open ChatGPT at 2 AM</h2>
           <p>
-            You open it because you need someone. But what you get is a language model. On LeanOn,
+            You open it because you need someone. But what you get is a language model. On How Was Your Day,
             there is an actual human being — awake, present, and genuinely listening — available
             at the same 2 AM moment.
           </p>
@@ -283,11 +283,11 @@ export default function IndiaHumanSupportVsAIPage() {
         </div>
 
         <div className="card">
-          <h2>What is LeanOn?</h2>
+          <h2>What is How Was Your Day?</h2>
           <p>
-            LeanOn is an Indian peer support platform that connects people with real human listeners —
+            How Was Your Day is an Indian peer support platform that connects people with real human listeners —
             screened, vetted individuals who listen without judgment and
-            internationally. Unlike AI chatbots, LeanOn listeners are real humans with genuine lived
+            internationally. Unlike AI chatbots, How Was Your Day listeners are real humans with genuine lived
             experience of Indian life.
           </p>
           <p>
@@ -307,23 +307,23 @@ export default function IndiaHumanSupportVsAIPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Should I talk to ChatGPT when I feel lonely in India?</h3>
-            <p>ChatGPT can provide information but cannot provide genuine human presence. For real emotional support in India, LeanOn connects you with peer listeners who have lived through the same pressures of Indian life.</p>
+            <p>ChatGPT can provide information but cannot provide genuine human presence. For real emotional support in India, How Was Your Day connects you with peer listeners who have lived through the same pressures of Indian life.</p>
           </div>
           <div className="faq-item">
             <h3>Can AI replace human connection for Indians dealing with loneliness?</h3>
-            <p>No. Human connection requires a real person on the other end. LeanOn peer listeners are real humans who bring genuine empathy, not predicted responses.</p>
+            <p>No. Human connection requires a real person on the other end. How Was Your Day peer listeners are real humans who bring genuine empathy, not predicted responses.</p>
           </div>
           <div className="faq-item">
-            <h3>What is LeanOn?</h3>
-            <p>LeanOn is an Indian peer support platform that connects people with real human listeners — screened, vetted individuals who listen without judgment.</p>
+            <h3>What is How Was Your Day?</h3>
+            <p>How Was Your Day is an Indian peer support platform that connects people with real human listeners — screened, vetted individuals who listen without judgment.</p>
           </div>
           <div className="faq-item">
             <h3>Is AI good for mental health support in India?</h3>
-            <p>AI can be a starting point, but real emotional relief comes from human connection. LeanOn&apos;s real peer listeners — people who have navigated Indian family dynamics, career pressure, and city loneliness — provide what AI cannot.</p>
+            <p>AI can be a starting point, but real emotional relief comes from human connection. How Was Your Day&apos;s real peer listeners — people who have navigated Indian family dynamics, career pressure, and city loneliness — provide what AI cannot.</p>
           </div>
           <div className="faq-item">
-            <h3>How is LeanOn different from AI chatbots?</h3>
-            <p>LeanOn listeners are real humans who have applied, been screened and been approved. They bring lived experience, not language models. When you share your pain on LeanOn, a real person receives it.</p>
+            <h3>How is How Was Your Day different from AI chatbots?</h3>
+            <p>How Was Your Day listeners are real humans who have applied, been screened and been approved. They bring lived experience, not language models. When you share your pain on How Was Your Day, a real person receives it.</p>
           </div>
         </div>
 
@@ -338,7 +338,7 @@ export default function IndiaHumanSupportVsAIPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

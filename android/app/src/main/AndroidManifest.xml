@@ -24,7 +24,7 @@
 
             <meta-data
                 android:name="android.support.customtabs.trusted.DEFAULT_URL"
-                android:value="https://www.leanon.app"/>
+                android:value="https://www.howwasyourday.live"/>
             <meta-data
                 android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
                 android:resource="@color/colorPrimary"/>
@@ -44,12 +44,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
-            <!-- Handle https://www.leanon.app links (required for TWA verification) -->
+            <!-- Handle https://www.howwasyourday.live links (required for TWA verification) -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="https" android:host="www.leanon.app"/>
+                <data android:scheme="https" android:host="www.howwasyourday.live"/>
             </intent-filter>
         </activity>
 

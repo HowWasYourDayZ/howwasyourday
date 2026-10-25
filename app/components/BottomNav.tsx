@@ -32,11 +32,11 @@ export default function BottomNav() {
     pathname.startsWith('/admin/') ||
     pathname === '/trust' ||
     pathname === '/press' ||
-    pathname === '/leanon' ||
+    pathname === '/howwasyourday' ||
     pathname.startsWith('/resources') ||
     pathname.startsWith('/support/') ||
     pathname === '/support' ||
-    pathname.startsWith('/leanon-app-mental-health') ||
+    pathname.startsWith('/howwasyourday-app-mental-health') ||
     pathname.startsWith('/anonymous-peer-support') ||
     pathname.startsWith('/need-someone-to-talk-to-india') ||
     pathname.startsWith('/get-paid-to-chat-india') ||
@@ -54,9 +54,9 @@ export default function BottomNav() {
     pathname.startsWith('/feeling-lonely-in-india') ||
     pathname.startsWith('/online-emotional-support-india') ||
     pathname.startsWith('/our-story') ||
-    pathname.startsWith('/why-leanon') ||
-    pathname.startsWith('/how-leanon-works') ||
-    pathname.startsWith('/is-leanon-safe') ||
+    pathname.startsWith('/why-howwasyourday') ||
+    pathname.startsWith('/how-it-works') ||
+    pathname.startsWith('/is-howwasyourday-safe') ||
     // SEO / marketing landing pages — these are seeker-acquisition pages
     // and must not show the authenticated app nav bar
     pathname.startsWith('/astrotalk-alternative') ||

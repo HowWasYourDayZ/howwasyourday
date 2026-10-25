@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Rant? Someone to Talk to in the USA — H-1B Stress, Work Pressure & More | LeanOn',
+  title: 'Need to Rant? Someone to Talk to in the USA — H-1B Stress, Work Pressure & More | How Was Your Day',
   description: 'Sometimes you just need to vent. H-1B anxiety, American work culture, impossible expectations — talk to a real Indian listener in the USA who gets it without needing the whole backstory.',
   keywords: [
     'rant to someone usa indian', 'vent to someone usa', 'need to talk to someone usa',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'nri vent talk', 'indian american vent support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-rant-to-someone',
-    languages: { 'en-US': 'https://www.leanon.app/usa-rant-to-someone' },
+    canonical: 'https://www.howwasyourday.live/usa-rant-to-someone',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa-rant-to-someone' },
   },
   openGraph: {
     title: 'Need to Rant? Someone to Talk to in the USA',
-    description: 'H-1B anxiety. Toxic work culture. Impossible expectations. Sometimes you just need to say it all out loud to someone who gets it. That is what LeanOn is for.',
-    url: 'https://www.leanon.app/usa-rant-to-someone',
-    siteName: 'LeanOn',
+    description: 'H-1B anxiety. Toxic work culture. Impossible expectations. Sometimes you just need to say it all out loud to someone who gets it. That is what How Was Your Day is for.',
+    url: 'https://www.howwasyourday.live/usa-rant-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -30,10 +30,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Can I just rant to a LeanOn listener without wanting advice?',
+      name: 'Can I just rant to a How Was Your Day listener without wanting advice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. You can tell a listener upfront: "I just need to vent, please do not give advice." LeanOn listeners are screened and expected to hold space, not fix problems. Sometimes being heard without being judged is exactly what you need.',
+        text: 'Absolutely. You can tell a listener upfront: "I just need to vent, please do not give advice." How Was Your Day listeners are screened and expected to hold space, not fix problems. Sometimes being heard without being judged is exactly what you need.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Is it okay to complain about American work culture to a listener?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, completely. The performative positivity, the hustle culture, the cold professionalism, the way no one actually checks in on you — LeanOn listeners understand the culture shock. You can say exactly what you feel without softening it.',
+        text: 'Yes, completely. The performative positivity, the hustle culture, the cold professionalism, the way no one actually checks in on you — How Was Your Day listeners understand the culture shock. You can say exactly what you feel without softening it.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What if my H-1B anxiety feels overwhelming right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'H-1B anxiety is real and it is serious — the knowledge that a layoff email could end your right to stay in the country is an enormous psychological burden. A LeanOn listener can hold space for that fear while you work through what it means for you.',
+        text: 'H-1B anxiety is real and it is serious — the knowledge that a layoff email could end your right to stay in the country is an enormous psychological burden. A How Was Your Day listener can hold space for that fear while you work through what it means for you.',
       },
     },
     {
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Rant to Someone USA', item: 'https://www.leanon.app/usa-rant-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Rant to Someone USA', item: 'https://www.howwasyourday.live/usa-rant-to-someone' },
   ],
 }
 
@@ -154,7 +154,7 @@ export default function UsaRantToSomeonePage() {
           Some days you are not looking for solutions. You just need to vent. About the layoff rumours.
           About American hustle culture. About the visa limbo. About the family back home who does not
           understand your life here. About everything that has been building up for months.
-          LeanOn listeners are here exactly for this.
+          How Was Your Day listeners are here exactly for this.
         </p>
 
         <a href="/browse" className="cta-hero">Start venting now — first 5 min free →</a>
@@ -176,17 +176,17 @@ export default function UsaRantToSomeonePage() {
           <p>Imagine your entire life in the USA — your apartment, your friends, your plans —
             depending on a single sponsorship letter from your employer. Every week of layoff news
             is a week of quiet dread that most Americans around you simply cannot understand.</p>
-          <p>A LeanOn listener will not tell you &quot;it will be fine.&quot; They will just be present
+          <p>A How Was Your Day listener will not tell you &quot;it will be fine.&quot; They will just be present
             with you while you say everything you have been holding in.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
 
         <div className="card">
-          <h2>Why venting to a LeanOn listener is different</h2>
+          <h2>Why venting to a How Was Your Day listener is different</h2>
           <p>Your friends are tired of the same conversation. Your family back home will just worry.
             Your colleagues cannot know what you are really going through. And therapy has a six-week
             waitlist and costs $200 an hour.</p>
-          <p>LeanOn listeners are in India (availability follows Indian time), from $10 for 15 minutes. You tell them upfront:
+          <p>How Was Your Day listeners are in India (availability follows Indian time), from $10 for 15 minutes. You tell them upfront:
             &quot;I just want to rant, no advice.&quot; They will listen — fully, attentively, without judgment.
             And sometimes that is all you need.</p>
         </div>
@@ -208,18 +208,18 @@ export default function UsaRantToSomeonePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>Can I just rant to a LeanOn listener without wanting advice?</h3>
+            <h3>Can I just rant to a How Was Your Day listener without wanting advice?</h3>
             <p>Absolutely. You can tell a listener upfront: &quot;I just need to vent, please do not give advice.&quot;
-              LeanOn listeners are screened and expected to hold space, not fix problems.</p>
+              How Was Your Day listeners are screened and expected to hold space, not fix problems.</p>
           </div>
           <div className="faq-item">
             <h3>Is it okay to complain about American work culture?</h3>
             <p>Yes, completely. The performative positivity, the hustle culture, the cold professionalism —
-              LeanOn listeners understand the culture shock. You can say exactly what you feel without softening it.</p>
+              How Was Your Day listeners understand the culture shock. You can say exactly what you feel without softening it.</p>
           </div>
           <div className="faq-item">
             <h3>What if my H-1B anxiety feels overwhelming right now?</h3>
-            <p>H-1B anxiety is real and serious. A LeanOn listener can hold space for that fear while you
+            <p>H-1B anxiety is real and serious. A How Was Your Day listener can hold space for that fear while you
               work through what it means for you — without judgment or unsolicited optimism.</p>
           </div>
           <div className="faq-item">
@@ -247,7 +247,7 @@ export default function UsaRantToSomeonePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

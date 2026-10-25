@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'About LeanOn | Peer Support & Human Connection Platform',
-  description: 'Learn what LeanOn is, how peer support works, who LeanOn is for, and how to contact the team for media or partnership enquiries.',
-  alternates: { canonical: 'https://www.leanon.app/press' },
+  title: 'About How Was Your Day | Peer Support & Human Connection Platform',
+  description: 'Learn what How Was Your Day is, how peer support works, who How Was Your Day is for, and how to contact the team for media or partnership enquiries.',
+  alternates: { canonical: 'https://www.howwasyourday.live/press' },
   openGraph: {
-    title: 'About LeanOn | Peer Support & Human Connection Platform',
-    description: 'Factual information about LeanOn, its peer-support model, privacy approach and human-conversation service.',
-    url: 'https://www.leanon.app/press',
-    siteName: 'LeanOn',
+    title: 'About How Was Your Day | Peer Support & Human Connection Platform',
+    description: 'Factual information about How Was Your Day, its peer-support model, privacy approach and human-conversation service.',
+    url: 'https://www.howwasyourday.live/press',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  '@id': 'https://www.leanon.app/press#webpage',
-  name: 'About LeanOn',
-  url: 'https://www.leanon.app/press',
+  '@id': 'https://www.howwasyourday.live/press#webpage',
+  name: 'About How Was Your Day',
+  url: 'https://www.howwasyourday.live/press',
   description: metadata.description,
-  isPartOf: { '@id': 'https://www.leanon.app/#website' },
-  about: { '@id': 'https://www.leanon.app/#organization' },
+  isPartOf: { '@id': 'https://www.howwasyourday.live/#website' },
+  about: { '@id': 'https://www.howwasyourday.live/#organization' },
 }
 
 const S = `
@@ -64,26 +64,26 @@ export default function PressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
       <main className="page">
-        <a href="/" className="back">← Back to LeanOn</a>
+        <a href="/" className="back">← Back to How Was Your Day</a>
 
         <header className="hero">
           <p className="tag">About · Media · Partnerships</p>
-          <h1>What is LeanOn?</h1>
-          <p className="lead">LeanOn is an India-origin peer-support platform connecting people with real human listeners for private one-to-one conversations by text or voice. It is designed for everyday emotional support and human connection — not therapy or clinical treatment.</p>
+          <h1>What is How Was Your Day?</h1>
+          <p className="lead">How Was Your Day is an India-origin peer-support platform connecting people with real human listeners for private one-to-one conversations by text or voice. It is designed for everyday emotional support and human connection — not therapy or clinical treatment.</p>
         </header>
 
         <section className="section">
-          <h2>LeanOn in one sentence</h2>
-          <p>When someone wants another human being to listen, LeanOn lets them browse peer listeners, choose a relevant profile and start a conversation without an appointment.</p>
+          <h2>How Was Your Day in one sentence</h2>
+          <p>When someone wants another human being to listen, How Was Your Day lets them browse peer listeners, choose a relevant profile and start a conversation without an appointment.</p>
         </section>
 
         <section className="section">
-          <h2>What LeanOn provides</h2>
+          <h2>What How Was Your Day provides</h2>
           <div className="fact-grid">
             <div className="fact"><strong>Human conversation</strong><span>Sessions are with real peer listeners, not AI-generated characters or chatbots.</span></div>
             <div className="fact"><strong>Peer support</strong><span>Listeners support conversations from lived experience. They do not diagnose or provide clinical treatment.</span></div>
@@ -93,8 +93,8 @@ export default function PressPage() {
         </section>
 
         <section className="section">
-          <h2>Who uses LeanOn?</h2>
-          <p>LeanOn is intended for people who want a private human conversation around everyday experiences such as loneliness, relationship difficulties, family pressure, work stress, homesickness, grief, overthinking or simply having a difficult day.</p>
+          <h2>Who uses How Was Your Day?</h2>
+          <p>How Was Your Day is intended for people who want a private human conversation around everyday experiences such as loneliness, relationship difficulties, family pressure, work stress, homesickness, grief, overthinking or simply having a difficult day.</p>
           <p>It is not a replacement for professional mental-health care. People seeking diagnosis, treatment or other clinical care should speak with an appropriately qualified professional.</p>
         </section>
 
@@ -111,18 +111,18 @@ export default function PressPage() {
 
         <section className="section">
           <h2>Privacy and safety</h2>
-          <p>LeanOn provides privacy controls, listener verification, reporting and blocking tools, and safety escalation mechanisms. See the <a href="/trust" style={{color:'var(--teal)',fontWeight:800}}>Trust &amp; Safety page</a> for the current product approach and the <a href="/privacy" style={{color:'var(--teal)',fontWeight:800}}>Privacy Policy</a> for data-handling details.</p>
+          <p>How Was Your Day provides privacy controls, listener verification, reporting and blocking tools, and safety escalation mechanisms. See the <a href="/trust" style={{color:'var(--teal)',fontWeight:800}}>Trust &amp; Safety page</a> for the current product approach and the <a href="/privacy" style={{color:'var(--teal)',fontWeight:800}}>Privacy Policy</a> for data-handling details.</p>
         </section>
 
         <section className="section">
           <h2>Media and partnership enquiries</h2>
-          <p>For factual product information, interviews, media enquiries or partnership discussions, contact <a href="mailto:contact@leanon.app" style={{color:'var(--teal)',fontWeight:800}}>contact@leanon.app</a>.</p>
+          <p>For factual product information, interviews, media enquiries or partnership discussions, contact <a href="mailto:contact@howwasyourday.live" style={{color:'var(--teal)',fontWeight:800}}>contact@howwasyourday.live</a>.</p>
           <p>For the most current description of the service, please use the live product pages rather than relying on historical usage figures or promotional claims.</p>
         </section>
 
         <section className="cta">
           <h2>Looking for someone to talk to?</h2>
-          <p>Browse peer listeners and see who is available. LeanOn is for human conversation, not clinical treatment.</p>
+          <p>Browse peer listeners and see who is available. How Was Your Day is for human conversation, not clinical treatment.</p>
           <a href="/browse" className="btn">Browse peer listeners →</a>
         </section>
       </main>

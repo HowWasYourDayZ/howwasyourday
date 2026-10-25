@@ -659,14 +659,14 @@ function SessionContent() {
   // it stays quiet during a session but must alert again once it has ended.
   useEffect(() => {
     const live = !ended && sessionStatus !== 'cancelled'
-    const w = window as Window & { __leanonSessionLive?: boolean }
-    w.__leanonSessionLive = live
-    window.dispatchEvent(new CustomEvent('leanon:session-live', { detail: live }))
+    const w = window as Window & { __howwasyourdaySessionLive?: boolean }
+    w.__howwasyourdaySessionLive = live
+    window.dispatchEvent(new CustomEvent('howwasyourday:session-live', { detail: live }))
   }, [ended, sessionStatus])
   useEffect(() => () => {
     // Leaving the page: the next /session page starts as live until it reports.
-    delete (window as Window & { __leanonSessionLive?: boolean }).__leanonSessionLive
-    window.dispatchEvent(new CustomEvent('leanon:session-live', { detail: true }))
+    delete (window as Window & { __howwasyourdaySessionLive?: boolean }).__howwasyourdaySessionLive
+    window.dispatchEvent(new CustomEvent('howwasyourday:session-live', { detail: true }))
   }, [])
 
   // Back button guard — intercept popstate (Item 17)
@@ -1309,9 +1309,9 @@ function SessionContent() {
         peerEndedRef.current = true
         setEnded(true)
       } else if (res?.status === 422 && body?.error === 'contact_blocked') {
-        // Phone / social media / email / link — not allowed on LeanOn. The draft
+        // Phone / social media / email / link — not allowed on How Was Your Day. The draft
         // stays in the box so they can edit it.
-        showToast(body.message || 'Contact details can\'t be shared on LeanOn.', 'warning')
+        showToast(body.message || 'Contact details can\'t be shared on How Was Your Day.', 'warning')
       } else if (res?.status === 429) {
         showToast('You\'re sending very fast — wait a few seconds and tap send again.', 'warning')
       } else if (res?.status === 401) {

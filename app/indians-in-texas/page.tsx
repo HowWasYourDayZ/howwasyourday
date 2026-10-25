@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Texas | Houston, Dallas, Austin | LeanOn',
+  title: 'Emotional Support for Indians in Texas | Houston, Dallas, Austin | How Was Your Day',
   description: 'Texas is home to 400,000+ Indians — and many feel quietly alone in it. Talk to a peer listener in India who understands the Texas Indian experience. First 5 min free.',
   keywords: ['indians in texas support', 'indian community texas', 'texas indian mental health', 'desi support texas', 'houston dallas austin indian support', 'nri texas'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-texas' },
-  openGraph: { title: 'Emotional Support for Indians in Texas | Houston, Dallas, Austin | LeanOn', description: 'Texas is home to 400,000+ Indians — and many feel quietly alone in it. Talk to a peer listener in India who understands the Texas Indian experience. First 5 min free.', url: 'https://www.leanon.app/indians-in-texas', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-texas' },
+  openGraph: { title: 'Emotional Support for Indians in Texas | Houston, Dallas, Austin | How Was Your Day', description: 'Texas is home to 400,000+ Indians — and many feel quietly alone in it. Talk to a peer listener in India who understands the Texas Indian experience. First 5 min free.', url: 'https://www.howwasyourday.live/indians-in-texas', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Texas Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience in American metros including the Texas corridor — Houston\'s energy sector, Dallas tech, Austin startups. You don\'t need to explain the context.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Texas Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience in American metros including the Texas corridor — Houston\'s energy sector, Dallas tech, Austin startups. You don\'t need to explain the context.' } },
   { '@type': 'Question', name: 'What time works to connect from Texas?', acceptedAnswer: { '@type': 'Answer', text: 'Texas (CST/CDT) is 11–11.5 hours behind IST. 7am in Houston or Dallas = 6:30pm in India. Early Texas morning aligns well with Indian evenings when listeners are active.' } },
   { '@type': 'Question', name: 'Is my session completely confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are anonymous — only a phone number and first name required. Nothing leaves the session. Your community, employer, and family won\'t know.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Texas', item: 'https://www.leanon.app/indians-in-texas' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Texas', item: 'https://www.howwasyourday.live/indians-in-texas' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInTexasPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Texas</span></nav>
         <div className="hero">
@@ -83,13 +83,13 @@ export default function IndiansInTexasPage() {
           <h2>Texas: Four Cities, One Shared Weight</h2>
           <p>Texas has become one of the most important Indian diaspora states in America. Houston&rsquo;s Indian community in Sugar Land, Katy, and Pearland is one of the largest in the country. The DFW corridor — Plano, Frisco, Irving, Coppell — has seen explosive growth as tech companies expand their Texas footprints. Austin&rsquo;s startup scene draws younger Indian professionals. San Antonio has a quieter but growing community.</p>
           <p>What unites them is not just geography but a particular kind of experience: arriving somewhere vast and promising, building a real life, surrounding yourself with community — and still feeling a gap between what you have and what you need. The community events are great. The temple is there. The cricket league runs. And underneath all of it, some things go unsaid.</p>
-          <p>LeanOn offers a real Indian peer listener in India — someone completely outside the Texas Indian community network who still understands everything about it. You don&rsquo;t have to explain what it means to be the successful Indian in a family that sacrificed for you. They already know.</p>
+          <p>How Was Your Day offers a real Indian peer listener in India — someone completely outside the Texas Indian community network who still understands everything about it. You don&rsquo;t have to explain what it means to be the successful Indian in a family that sacrificed for you. They already know.</p>
         </div>
 
         <div className="section">
           <h2>Talking Across Time Zones: Texas to India</h2>
           <p>Texas (CST/CDT) sits 11 to 11.5 hours behind IST. This creates a natural bridge. Your 7am in Houston or Dallas is 6:30pm in India — a good evening window when Indian listeners are available and winding down their day. Even 6am Texas is comfortable India evening time.</p>
-          <p>If you&rsquo;re in Austin working late in the startup grind, or sitting in your Frisco house after the kids are in bed, or driving home from the Houston Medical Center — India is awake and available. LeanOn listeners don&rsquo;t require appointments. Browse who is online and start a session when the moment feels right.</p>
+          <p>If you&rsquo;re in Austin working late in the startup grind, or sitting in your Frisco house after the kids are in bed, or driving home from the Houston Medical Center — India is awake and available. How Was Your Day listeners don&rsquo;t require appointments. Browse who is online and start a session when the moment feels right.</p>
           <p>The sessions are text-based, anonymous, and fully private. No one in your Texas community, your workplace, or your family back home will know. Your first 5-minute session is free.</p>
         </div>
 

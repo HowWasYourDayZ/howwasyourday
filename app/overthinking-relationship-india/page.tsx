@@ -4,17 +4,17 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Overthinking Your Relationship? Talk It Out Anonymously | LeanOn India',
+  title: 'Overthinking Your Relationship? Talk It Out Anonymously | How Was Your Day India',
   description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 15-minute conversation can break the loop. From ₹160.',
   keywords: ['overthinking relationship India', 'relationship anxiety India', 'overanalysing relationship India', 'obsessive thoughts about relationship India', 'relationship overthinking India'],
-  alternates: { canonical: 'https://www.leanon.app/overthinking-relationship-india', languages: { 'en-IN': 'https://www.leanon.app/overthinking-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/overthinking-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/overthinking-relationship-india' } },
   openGraph: {
-    title: 'Overthinking Your Relationship? Talk It Out Anonymously | LeanOn India',
+    title: 'Overthinking Your Relationship? Talk It Out Anonymously | How Was Your Day India',
     description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 15-minute conversation can break the loop. From ₹160.',
-    url: 'https://www.leanon.app/overthinking-relationship-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/overthinking-relationship-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }],
   },
 }
 
@@ -35,7 +35,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can peer support help with relationship anxiety generally?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Relationship anxiety — the persistent worry that something is wrong, that you will be abandoned, that you are not enough — is one of the most common topics on LeanOn. Listeners are screened and expected to hold this kind of conversation without either dismissing the anxiety or amplifying it.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Relationship anxiety — the persistent worry that something is wrong, that you will be abandoned, that you are not enough — is one of the most common topics on How Was Your Day. Listeners are screened and expected to hold this kind of conversation without either dismissing the anxiety or amplifying it.' },
     },
     {
       '@type': 'Question',
@@ -49,8 +49,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Overthinking Your Relationship? Talk It Out Anonymously', item: 'https://www.leanon.app/overthinking-relationship-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Overthinking Your Relationship? Talk It Out Anonymously', item: 'https://www.howwasyourday.live/overthinking-relationship-india' },
   ],
 }
 
@@ -103,7 +103,7 @@ export default function OverthinkinRelationshipIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

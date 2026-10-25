@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Toronto | Mississauga, Brampton | LeanOn',
+  title: 'Emotional Support for Indians in Toronto | Mississauga, Brampton | How Was Your Day',
   description: 'Toronto has Canada\'s largest South Asian population. Mississauga, Brampton, Scarborough — community everywhere. And still the loneliness finds a way in.',
   keywords: ['indians in toronto', 'mississauga indian support', 'brampton indian toronto', 'scarborough indian community', 'toronto indian mental health', 'desi support toronto', 'south asian support toronto'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-toronto' },
-  openGraph: { title: 'Emotional Support for Indians in Toronto | Mississauga, Brampton | LeanOn', description: 'Toronto has Canada\'s largest South Asian population. Mississauga, Brampton, Scarborough — community everywhere. And still the loneliness finds a way in.', url: 'https://www.leanon.app/indians-in-toronto', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-toronto' },
+  openGraph: { title: 'Emotional Support for Indians in Toronto | Mississauga, Brampton | How Was Your Day', description: 'Toronto has Canada\'s largest South Asian population. Mississauga, Brampton, Scarborough — community everywhere. And still the loneliness finds a way in.', url: 'https://www.howwasyourday.live/indians-in-toronto', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Toronto Indian community experience?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience — including the Brampton and Mississauga Punjabi community, the Scarborough Tamil and Gujarati communities, and the specific weight of Canadian immigrant life. No explanation needed.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Toronto Indian community experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the Brampton and Mississauga Punjabi community, the Scarborough Tamil and Gujarati communities, and the specific weight of Canadian immigrant life. No explanation needed.' } },
   { '@type': 'Question', name: 'When can I connect from Toronto?', acceptedAnswer: { '@type': 'Answer', text: 'Toronto (EST) is 10.5 hours behind IST. 8am Toronto = 6:30pm India. Your morning before work is India\'s evening — a reliable window for listeners. No appointment needed.' } },
   { '@type': 'Question', name: 'Is this private from my Brampton or Mississauga community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the GTA Indian community. Nothing is shared with anyone.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Toronto', item: 'https://www.leanon.app/indians-in-toronto' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Toronto', item: 'https://www.howwasyourday.live/indians-in-toronto' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInTorontoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Toronto</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInTorontoPage() {
           <h2>Brampton, Mississauga, Scarborough: The GTA&rsquo;s Indian World</h2>
           <p>The Greater Toronto Area has the largest South Asian population in Canada — and one of the largest in the world outside South Asia. Brampton has become one of the most recognisably South Asian cities anywhere in the world outside the subcontinent. Mississauga&rsquo;s Square One area has an enormous Punjabi and Gujarati community. Scarborough has a large Tamil and South Indian presence. The Sikh gurdwaras of Brampton draw thousands on weekends. The mandirs of Mississauga are packed for Navratri.</p>
           <p>The community is real, warm, and enveloping. And like all dense diaspora communities, it brings its own pressures. Brampton&rsquo;s Punjabi community is famously tight-knit — and tight-knit means everyone knows your business. The social comparison. The rishta pressure on the unmarried. The expectations on the new immigrant still finding their feet in a Canadian job market that doesn&rsquo;t always recognise their credentials from India.</p>
-          <p>LeanOn gives you a real Indian peer listener in India — completely outside the GTA community network — to say the things the community network doesn&rsquo;t have space for. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener in India — completely outside the GTA community network — to say the things the community network doesn&rsquo;t have space for. First 5 minutes free.</p>
         </div>
 
         <div className="section">

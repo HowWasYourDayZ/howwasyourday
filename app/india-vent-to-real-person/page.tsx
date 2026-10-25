@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Vent to a Real Person in India — Safe, Anonymous, Human | LeanOn',
-  description: 'LeanOn has real human listeners in India. Vent about anything — family, relationships, work stress, loneliness. Sessions are anonymous. First 5 minutes free.',
+  title: 'Vent to a Real Person in India — Safe, Anonymous, Human | How Was Your Day',
+  description: 'How Was Your Day has real human listeners in India. Vent about anything — family, relationships, work stress, loneliness. Sessions are anonymous. First 5 minutes free.',
   keywords: [
     'vent to someone in India', 'kisi se baat karni hai', 'I want to vent India',
     'koi baat sunne wala India', 'vent online India', 'talk to someone anonymously India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'anonymous venting India', 'someone to listen India',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/india-vent-to-real-person',
-    languages: { 'en-IN': 'https://www.leanon.app/india-vent-to-real-person' },
+    canonical: 'https://www.howwasyourday.live/india-vent-to-real-person',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/india-vent-to-real-person' },
   },
   openGraph: {
-    title: 'Vent to a Real Person in India — Safe, Anonymous, Human | LeanOn',
+    title: 'Vent to a Real Person in India — Safe, Anonymous, Human | How Was Your Day',
     description: 'Real human listeners in India. Vent about anything, anonymously. First 5 minutes free.',
-    url: 'https://www.leanon.app/india-vent-to-real-person',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/india-vent-to-real-person',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn Peer Venting & Emotional Support — India',
-  description: 'LeanOn connects people in India with real human listeners for anonymous, judgment-free venting and emotional support. No appointment needed.',
+  name: 'How Was Your Day Peer Venting & Emotional Support — India',
+  description: 'How Was Your Day connects people in India with real human listeners for anonymous, judgment-free venting and emotional support. No appointment needed.',
   provider: {
     '@type': 'Organization',
-    name: 'LeanOn',
-    url: 'https://www.leanon.app',
+    name: 'How Was Your Day',
+    url: 'https://www.howwasyourday.live',
   },
   areaServed: 'India',
   audience: {
@@ -50,10 +50,10 @@ const serviceSchema = {
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is an Indian peer support platform connecting people with real human listeners — not AI — for venting, emotional support, and genuine connection.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is an Indian peer support platform connecting people with real human listeners — not AI — for venting, emotional support, and genuine connection.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Where can I vent to someone in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. First 5 minutes are free.',
+        text: 'How Was Your Day has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. First 5 minutes are free.',
       },
     },
     {
@@ -73,7 +73,7 @@ const faqSchema = {
       name: 'Is it okay to vent to a stranger online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are screened, vetted humans who hold space without judgment. Sessions are anonymous — you don\'t need to share your real name or location.',
+        text: 'Yes. How Was Your Day listeners are screened, vetted humans who hold space without judgment. Sessions are anonymous — you don\'t need to share your real name or location.',
       },
     },
     {
@@ -81,20 +81,20 @@ const faqSchema = {
       name: 'What happens when I vent to an AI vs a real person?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'When you vent to an AI like ChatGPT, no one truly receives what you said. On LeanOn, a real Indian human listener is present — they are genuinely hearing you, and that is what makes venting feel like relief.',
+        text: 'When you vent to an AI like ChatGPT, no one truly receives what you said. On How Was Your Day, a real Indian human listener is present — they are genuinely hearing you, and that is what makes venting feel like relief.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I vent in Hindi on LeanOn?',
+      name: 'Can I vent in Hindi on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners speak Hindi and other Indian languages. When browsing, filter by language to find a listener who speaks your preferred language.',
+        text: 'Many How Was Your Day listeners speak Hindi and other Indian languages. When browsing, filter by language to find a listener who speaks your preferred language.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does it cost to vent on LeanOn in India?',
+      name: 'How much does it cost to vent on How Was Your Day in India?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5 minutes are completely free. After that, sessions start at ₹160 for 15 minutes, ₹310 for 30 minutes or ₹460 for 45 minutes (with a ₹10/min listener; prices vary by listener).',
@@ -107,8 +107,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person India', item: 'https://www.leanon.app/india-vent-to-real-person' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Vent to a Real Person India', item: 'https://www.howwasyourday.live/india-vent-to-real-person' },
   ],
 }
 
@@ -194,7 +194,7 @@ export default function IndiaVentToRealPersonPage() {
         <p className="hindi-sub">Say It. Someone Is Listening.</p>
         <p className="lead">
           Sometimes you do not need advice. You do not need solutions. You just need to say it — to
-          someone who is actually there, actually present, actually human. LeanOn connects you with
+          someone who is actually there, actually present, actually human. How Was Your Day connects you with
           real Indian listeners, with no appointment.
         </p>
 
@@ -218,7 +218,7 @@ export default function IndiaVentToRealPersonPage() {
         <div className="card">
           <h2>What real venting actually feels like</h2>
           <p>
-            When you type to an AI, you get a response. When you vent to a LeanOn listener, something
+            When you type to an AI, you get a response. When you vent to a How Was Your Day listener, something
             shifts. A real human being — who has felt loneliness, family tension, and heartbreak
             themselves — receives what you said and holds it. They are not scanning for keywords.
             They are actually listening.
@@ -233,7 +233,7 @@ export default function IndiaVentToRealPersonPage() {
           <h2>🌙 3 AM and you cannot sleep?</h2>
           <p>
             The heaviest feelings arrive late. When the distraction stops and the quiet becomes too loud.
-            LeanOn listeners are — including right now, at whatever hour you are reading this.
+            How Was Your Day listeners are — including right now, at whatever hour you are reading this.
           </p>
           <p>
             You do not have to carry it until morning. A real person is awake and ready to listen.
@@ -245,10 +245,10 @@ export default function IndiaVentToRealPersonPage() {
           <h2>Anonymous and judgment-free</h2>
           <p>
             You do not need to share your real name. You do not need to explain who you are or where
-            you are from. LeanOn sessions are private — your privacy is protected.
+            you are from. How Was Your Day sessions are private — your privacy is protected.
           </p>
           <p>
-            LeanOn listeners are screened and expected to hold space without judgment. No advice unless you ask for it.
+            How Was Your Day listeners are screened and expected to hold space without judgment. No advice unless you ask for it.
             No &quot;but have you tried&quot;. Just someone fully present with what you are feeling.
           </p>
         </div>
@@ -261,7 +261,7 @@ export default function IndiaVentToRealPersonPage() {
             witness, no actual human being on the other side.
           </p>
           <p>
-            On LeanOn, a real Indian person is present. They are genuinely hearing you. And that difference
+            On How Was Your Day, a real Indian person is present. They are genuinely hearing you. And that difference
             — of being truly received by another human — is what makes venting actually feel like relief.
           </p>
         </div>
@@ -288,22 +288,22 @@ export default function IndiaVentToRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I vent to someone in India?</h3>
-            <p>LeanOn has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. First 5 minutes are free.</p>
+            <p>How Was Your Day has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. First 5 minutes are free.</p>
           </div>
           <div className="faq-item">
             <h3>Is it okay to vent to a stranger online in India?</h3>
-            <p>Yes. LeanOn listeners are screened, vetted humans who hold space without judgment. Sessions are anonymous — you don&apos;t need to share your real name or location.</p>
+            <p>Yes. How Was Your Day listeners are screened, vetted humans who hold space without judgment. Sessions are anonymous — you don&apos;t need to share your real name or location.</p>
           </div>
           <div className="faq-item">
             <h3>What happens when I vent to an AI vs a real person?</h3>
-            <p>When you vent to an AI like ChatGPT, no one truly receives what you said. On LeanOn, a real Indian human listener is present — they are genuinely hearing you, and that is what makes venting feel like relief.</p>
+            <p>When you vent to an AI like ChatGPT, no one truly receives what you said. On How Was Your Day, a real Indian human listener is present — they are genuinely hearing you, and that is what makes venting feel like relief.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I vent in Hindi on LeanOn?</h3>
-            <p>Many LeanOn listeners speak Hindi and other Indian languages. When browsing, filter by language to find a listener who speaks your preferred language.</p>
+            <h3>Can I vent in Hindi on How Was Your Day?</h3>
+            <p>Many How Was Your Day listeners speak Hindi and other Indian languages. When browsing, filter by language to find a listener who speaks your preferred language.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does it cost to vent on LeanOn in India?</h3>
+            <h3>How much does it cost to vent on How Was Your Day in India?</h3>
             <p>Your first 5 minutes are completely free. After that, sessions start at ₹160 for 15 minutes, ₹310 for 30 minutes or ₹460 for 45 minutes (with a ₹10/min listener; prices vary by listener).</p>
           </div>
         </div>
@@ -319,7 +319,7 @@ export default function IndiaVentToRealPersonPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

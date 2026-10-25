@@ -3,11 +3,11 @@
 // Run after a deploy that changes public pages:
 //   node scripts/indexnow.mjs            → every URL in the live sitemaps + noindexed/redirected ones
 //   node scripts/indexnow.mjs /pricing /faq   → just these paths
-// The key file public/558002b252dcc5aa4ac94d43c11834b7.txt must be live on www.leanon.app.
+// The key file public/558002b252dcc5aa4ac94d43c11834b7.txt must be live on www.howwasyourday.live.
 import { readFileSync } from 'fs'
 import { execSync } from 'child_process'
 
-const HOST = 'www.leanon.app'
+const HOST = 'www.howwasyourday.live'
 const KEY = '558002b252dcc5aa4ac94d43c11834b7'
 const SITEMAPS = ['sitemap.xml', 'country-sitemap.xml', 'nri-sitemap.xml']
 

@@ -1,7 +1,7 @@
 export const post = {
   slug: 'empathy-meaning-india',
   title: 'What Empathy Actually Means (And Why It\'s So Rare in Indian Conversations)',
-  author: 'LeanOn Team',
+  author: 'How Was Your Day Team',
   date: '2026-09-12',
   readTime: '5 min read',
   description: 'Empathy is talked about a lot in India right now. But what does it actually mean, and why does it feel so absent in the conversations that matter most?',
@@ -39,7 +39,7 @@ export const post = {
 
 <h2>Why Empathy Is the Foundation of Real Support</h2>
 <p>Research on what helps people through difficult experiences consistently finds that feeling understood is more important than receiving good advice. The act of being truly heard &mdash; not evaluated, not redirected, not minimised &mdash; produces measurable relief. It is not a soft thing. It is a fundamental human need.</p>
-<p>This is why peer listeners at LeanOn are chosen specifically for empathetic listening rather than advice-giving or problem-solving. The listener's job is not to have the answer. It is to understand &mdash; fully, without judgment &mdash; what it is like to be you, inside this experience.</p>
+<p>This is why peer listeners at How Was Your Day are chosen specifically for empathetic listening rather than advice-giving or problem-solving. The listener's job is not to have the answer. It is to understand &mdash; fully, without judgment &mdash; what it is like to be you, inside this experience.</p>
 <p>That kind of understanding is rarer than it should be in most people's lives. When it is available, the difference is significant.</p>
 `,
 }

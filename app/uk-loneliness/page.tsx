@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in the UK? You\'re Not the Only One. | LeanOn',
-  description: 'Living in the UK but feeling completely alone — far from family, grey skies, no one who really gets it. LeanOn connects you with a real Indian peer listener, online daily on Indian time.',
+  title: 'Feeling Lonely in the UK? You\'re Not the Only One. | How Was Your Day',
+  description: 'Living in the UK but feeling completely alone — far from family, grey skies, no one who really gets it. How Was Your Day connects you with a real Indian peer listener, online daily on Indian time.',
   keywords: [
     'feeling lonely in the uk', 'loneliness uk indians', 'lonely in uk nri', 'south asian loneliness uk',
     'indian living in uk lonely', 'missing family uk', 'uk loneliness support', 'talk to someone uk',
     'lonely in britain', 'nri loneliness uk', 'emotional support uk indians',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-loneliness',
-    languages: { 'en-GB': 'https://www.leanon.app/uk-loneliness' },
+    canonical: 'https://www.howwasyourday.live/uk-loneliness',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk-loneliness' },
   },
   openGraph: {
     title: 'Feeling Lonely in the UK — Talk to Someone Who Understands',
-    description: 'Grey skies, far from home, no one who really gets it. LeanOn peer listeners are online daily on Indian time — real humans, not bots.',
-    url: 'https://www.leanon.app/uk-loneliness',
-    siteName: 'LeanOn',
+    description: 'Grey skies, far from home, no one who really gets it. How Was Your Day peer listeners are online daily on Indian time — real humans, not bots.',
+    url: 'https://www.howwasyourday.live/uk-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -53,7 +53,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does a session with a LeanOn listener cost from the UK?',
+      name: 'How much does a session with a How Was Your Day listener cost from the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5 minutes are completely free — no card needed upfront. After that, paid sessions are £8 for 15 minutes, £12 for 30 minutes, or £16 for 45 minutes. All listeners are screened Indians who understand the NRI experience.',
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'Can I talk to a listener who understands the Indian and UK experience?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are Indians — many are NRIs themselves or understand the NRI context deeply. You can browse listener profiles and choose someone whose background resonates with yours.',
+        text: 'Yes. How Was Your Day listeners are Indians — many are NRIs themselves or understand the NRI context deeply. You can browse listener profiles and choose someone whose background resonates with yours.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Loneliness Support UK', item: 'https://www.leanon.app/uk-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Loneliness Support UK', item: 'https://www.howwasyourday.live/uk-loneliness' },
   ],
 }
 
@@ -174,15 +174,15 @@ export default function UkLonelinessPage() {
         <div className="night-box">
           <h2>🌧️ When winter nights feel the heaviest</h2>
           <p>November in the UK. Dark by 4 PM. You are in your flat, heating on, and the silence is
-            deafening. This is when loneliness peaks — and when LeanOn listeners are most available.</p>
+            deafening. This is when loneliness peaks — and when How Was Your Day listeners are most available.</p>
           <p>You do not have to wait until morning. You can talk to a real person right now.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
 
         <div className="card">
-          <h2>What makes LeanOn different from just calling a friend</h2>
+          <h2>What makes How Was Your Day different from just calling a friend</h2>
           <p>Friends are wonderful — but they have their own lives, their own problems, and their own opinions
-            about what you should do. A LeanOn listener is different. They are there only for you, in that
+            about what you should do. A How Was Your Day listener is different. They are there only for you, in that
             moment. No agenda. No advice unless you want it. No judgment.</p>
           <p>They are also Indian, which means you do not have to translate the feeling of being an NRI.
             They already understand the weight of it.</p>
@@ -233,7 +233,7 @@ export default function UkLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>Can I talk to a listener who understands NRI life?</h3>
-            <p>Yes. LeanOn listeners are Indians — many are NRIs themselves. You can browse profiles and
+            <p>Yes. How Was Your Day listeners are Indians — many are NRIs themselves. You can browse profiles and
               choose someone whose background resonates with yours.</p>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function UkLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

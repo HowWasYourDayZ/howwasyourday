@@ -1,4 +1,4 @@
-package app.leanon;
+package app.howwasyourday;
 
 import android.Manifest;
 import android.app.Activity;
@@ -14,14 +14,14 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 
-// window.LeanOnAndroid — what www.leanon.app (lib/firebase-client.ts) uses when it
+// window.HowWasYourDayAndroid — what www.howwasyourday.live (lib/firebase-client.ts) uses when it
 // runs inside the app. Synchronous on purpose: the dashboard reads the alert
 // status during render. Exposes nothing sensitive (an FCM token is not a secret;
-// it only lets LeanOn's server, which holds the Firebase key, message this phone).
-public class LeanOnBridge {
+// it only lets How Was Your Day's server, which holds the Firebase key, message this phone).
+public class HowWasYourDayBridge {
     private final Activity activity;
 
-    LeanOnBridge(Activity activity) { this.activity = activity; }
+    HowWasYourDayBridge(Activity activity) { this.activity = activity; }
 
     @JavascriptInterface public boolean isApp() { return true; }
 
@@ -43,7 +43,7 @@ public class LeanOnBridge {
         return enabled ? "granted" : "denied";
     }
 
-    // Shows Android's permission prompt, or opens LeanOn's notification settings
+    // Shows Android's permission prompt, or opens How Was Your Day's notification settings
     // when the listener blocked it earlier. The page polls notificationStatus().
     @JavascriptInterface public void requestNotifications() {
         activity.runOnUiThread(() -> {
@@ -53,12 +53,12 @@ public class LeanOnBridge {
                 ActivityCompat.requestPermissions(activity, new String[]{ Manifest.permission.POST_NOTIFICATIONS }, 4711);
             }
         });
-        LeanOnNativePlugin.refreshPushToken(activity.getApplicationContext());
+        HowWasYourDayNativePlugin.refreshPushToken(activity.getApplicationContext());
     }
 
     @JavascriptInterface public String pushToken() {
         String t = Prefs.get(activity).getString(Prefs.PUSH_TOKEN, "");
-        if (t == null || t.isEmpty()) LeanOnNativePlugin.refreshPushToken(activity.getApplicationContext());
+        if (t == null || t.isEmpty()) HowWasYourDayNativePlugin.refreshPushToken(activity.getApplicationContext());
         return t == null ? "" : t;
     }
 

@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Desi Support Online for Indians in the USA | Talk to Someone Who Gets It | LeanOn',
-  description: 'In New Jersey, Bay Area, or Houston? LeanOn connects desi Americans with peer listeners in India who understand the ABD/ABCD experience and the pressure of it all.',
+  title: 'Desi Support Online for Indians in the USA | Talk to Someone Who Gets It | How Was Your Day',
+  description: 'In New Jersey, Bay Area, or Houston? How Was Your Day connects desi Americans with peer listeners in India who understand the ABD/ABCD experience and the pressure of it all.',
   keywords: ['desi support usa', 'indian support america', 'abcd mental health', 'desi mental health usa', 'indian american emotional support', 'talk to someone indian usa', 'nri support america', 'new jersey indian support'],
-  alternates: { canonical: 'https://www.leanon.app/usa' },
-  openGraph: { title: 'Desi Support Online for Indians in the USA | Talk to Someone Who Gets It | LeanOn', description: 'In New Jersey, Bay Area, or Houston? LeanOn connects desi Americans with peer listeners in India who understand the ABD/ABCD experience and the pressure of it all.', url: 'https://www.leanon.app/usa', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/usa' },
+  openGraph: { title: 'Desi Support Online for Indians in the USA | Talk to Someone Who Gets It | How Was Your Day', description: 'In New Jersey, Bay Area, or Houston? How Was Your Day connects desi Americans with peer listeners in India who understand the ABD/ABCD experience and the pressure of it all.', url: 'https://www.howwasyourday.live/usa', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,8 +19,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Desi Support for Indians in the USA', item: 'https://www.leanon.app/usa' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Desi Support for Indians in the USA', item: 'https://www.howwasyourday.live/usa' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function DesiSupportUsaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Desi Support for Indians in the USA</span></nav>
         <div className="hero">
@@ -82,7 +82,7 @@ export default function DesiSupportUsaPage() {
           <h2>What desi Americans carry that nobody else sees</h2>
           <p>The model minority myth is not a compliment &mdash; it is a trap. The assumption that Indian-Americans are fine, doing well, succeeding on schedule means there is no room to not be fine. You are supposed to be the proof that immigration worked. Saying otherwise feels like a betrayal of everyone who sacrificed to get you here.</p>
           <p>The H-1B anxiety has no equivalent in the American experience. Your job is also your legal right to be in the country. When the job is stressful, the whole structure becomes unstable. The marriage pressure arrives on its own timeline, independent of whether you have figured out who you want to be first. You are &ldquo;too American&rdquo; for aunties back in India and not Indian enough for the ABCD jokes from American-born peers.</p>
-          <p>The weight of your parents&rsquo; sacrifice is real and heavy. It makes it hard to say you are struggling without feeling ungrateful. It makes it hard to make choices that prioritise your own wellbeing when their choices were always for yours. LeanOn listeners understand this without needing it explained.</p>
+          <p>The weight of your parents&rsquo; sacrifice is real and heavy. It makes it hard to say you are struggling without feeling ungrateful. It makes it hard to make choices that prioritise your own wellbeing when their choices were always for yours. How Was Your Day listeners understand this without needing it explained.</p>
         </div>
         <div className="section">
           <h2>Listeners who speak your language &mdash; literally and culturally</h2>

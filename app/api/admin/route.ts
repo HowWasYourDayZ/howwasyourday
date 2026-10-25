@@ -242,7 +242,7 @@ export async function POST(req: NextRequest) {
     if (razorpayxEnabled() && pr.upi_id && (pr.upi_id as string).includes('@')) {
       const { data: userRow } = await admin.from('users').select('name').eq('id', pr.user_id).single()
       const result = await createUpiPayout({
-        name:        (userRow?.name as string) ?? 'LeanOn Listener',
+        name:        (userRow?.name as string) ?? 'How Was Your Day Listener',
         upiId:       pr.upi_id as string,
         amountInr:   Number(pr.amount),
         referenceId: id,
@@ -436,7 +436,7 @@ export async function POST(req: NextRequest) {
     }).then(() => {}, (e) => logger.error('reject_refund: ledger insert failed (audit gap)', { id, error: String(e) }))
     await admin.from('notifications').insert({
       user_id: rr.user_id, type: 'system', title: 'Refund request declined',
-      body: `Your refund request was declined and ₹${rr.amount} is back in your LeanOn wallet.`,
+      body: `Your refund request was declined and ₹${rr.amount} is back in your How Was Your Day wallet.`,
       action_url: '/wallet',
     }).then(() => {}, () => {})
 

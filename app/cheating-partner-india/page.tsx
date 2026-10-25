@@ -4,21 +4,21 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'My Partner Is Cheating — Who Do I Talk To? | LeanOn India',
+  title: 'My Partner Is Cheating — Who Do I Talk To? | How Was Your Day India',
   description: 'Found out your partner is cheating? You need someone neutral, not your mother or friends. Anonymous peer support from ₹160.',
   keywords: [
     'cheating partner India', 'husband cheating India', 'wife cheating India',
     'infidelity support India', 'partner cheating what to do India',
     'discovered affair India', 'betrayal support India', 'cheating spouse India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/cheating-partner-india', languages: { 'en-IN': 'https://www.leanon.app/cheating-partner-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/cheating-partner-india', languages: { 'en-IN': 'https://www.howwasyourday.live/cheating-partner-india' } },
   openGraph: {
-    title: 'My Partner Is Cheating — Who Do I Talk To? | LeanOn India',
+    title: 'My Partner Is Cheating — Who Do I Talk To? | How Was Your Day India',
     description: 'Found out your partner is cheating? You need someone neutral, not your mother or friends. Anonymous peer support from ₹160.',
-    url: 'https://www.leanon.app/cheating-partner-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/cheating-partner-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Cheating Partner India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Cheating Partner India' }],
   },
 }
 
@@ -29,7 +29,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'I just found out my partner is cheating. What should I do first?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The first hours are the hardest. You do not need to make any decisions right now. You do not need to confront, leave, or forgive. You just need to get through the next few hours. The most important thing is to talk to someone who has no stake in the outcome — not your mother, not mutual friends, not your partner. A neutral listener lets you process what you are feeling without anyone pushing you toward a conclusion. That is exactly what LeanOn is for.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The first hours are the hardest. You do not need to make any decisions right now. You do not need to confront, leave, or forgive. You just need to get through the next few hours. The most important thing is to talk to someone who has no stake in the outcome — not your mother, not mutual friends, not your partner. A neutral listener lets you process what you are feeling without anyone pushing you toward a conclusion. That is exactly what How Was Your Day is for.' },
     },
     {
       '@type': 'Question',
@@ -38,13 +38,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a place to get advice about whether to leave?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn listeners do not give advice about what you should do. They give you a space to hear yourself think. Most people who are dealing with infidelity are not ready for advice — they are in shock, they are cycling through emotions, and they need to speak out loud before they can even figure out what they want. Listeners help you reach clarity by listening, not by directing.' },
+      name: 'Is How Was Your Day a place to get advice about whether to leave?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners do not give advice about what you should do. They give you a space to hear yourself think. Most people who are dealing with infidelity are not ready for advice — they are in shock, they are cycling through emotions, and they need to speak out loud before they can even figure out what they want. Listeners help you reach clarity by listening, not by directing.' },
     },
     {
       '@type': 'Question',
       name: 'Will it stay anonymous?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. You sign up with a first name and phone number. Listeners agree to keep what you share confidential. Nobody in your life will know you talked to anyone. This is especially important in India, where social networks are dense and word travels fast. LeanOn is the place you can say the thing you cannot say anywhere else.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. You sign up with a first name and phone number. Listeners agree to keep what you share confidential. Nobody in your life will know you talked to anyone. This is especially important in India, where social networks are dense and word travels fast. How Was Your Day is the place you can say the thing you cannot say anywhere else.' },
     },
     {
       '@type': 'Question',
@@ -63,8 +63,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Cheating Partner India', item: 'https://www.leanon.app/cheating-partner-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Cheating Partner India', item: 'https://www.howwasyourday.live/cheating-partner-india' },
   ],
 }
 
@@ -118,7 +118,7 @@ export default function CheatingPartnerIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -156,7 +156,7 @@ export default function CheatingPartnerIndiaPage() {
 
         <div className="section">
           <h2>What a Neutral Listener Offers</h2>
-          <p>A LeanOn listener has no stake in what you decide. They are not going to tell you to leave or to stay. They are not going to tell you how they would feel in your situation. They are going to listen while you figure out what you are actually feeling underneath the shock.</p>
+          <p>A How Was Your Day listener has no stake in what you decide. They are not going to tell you to leave or to stay. They are not going to tell you how they would feel in your situation. They are going to listen while you figure out what you are actually feeling underneath the shock.</p>
           <p>They are screened and expected to hold space for complexity. For the part of you that is furious and the part that still loves them. For the grief and the anger at the same time. They do not rush you to resolution. They just stay present with wherever you are.</p>
           <p>After that conversation, most people describe feeling less alone. More able to think. Like something has shifted slightly, even though nothing external has changed. That is the function of being genuinely heard.</p>
         </div>

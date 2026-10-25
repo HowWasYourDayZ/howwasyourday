@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Frustration India — Say It Before It Becomes Something Bigger | LeanOn',
+  title: 'Relationship Frustration India — Say It Before It Becomes Something Bigger | How Was Your Day',
   description: 'The frustration keeps building. Same patterns, same arguments, nothing changes. Talk to someone real before it turns into a bigger fight. From ₹160.',
   keywords: [
     'relationship frustration india',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'vent relationship frustration india',
     'same argument again india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/relationship-frustration-india', languages: { 'en-IN': 'https://www.leanon.app/relationship-frustration-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/relationship-frustration-india', languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-frustration-india' } },
   openGraph: {
-    title: 'Relationship Frustration India — Say It Before It Becomes Something Bigger | LeanOn',
+    title: 'Relationship Frustration India — Say It Before It Becomes Something Bigger | How Was Your Day',
     description: 'The frustration keeps building. Same patterns, same arguments, nothing changes. Talk to someone real before it turns into a bigger fight. From ₹160.',
-    url: 'https://www.leanon.app/relationship-frustration-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/relationship-frustration-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Relationship Frustration' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Relationship Frustration' }],
   },
 }
 
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Frustration India', item: 'https://www.leanon.app/relationship-frustration-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Frustration India', item: 'https://www.howwasyourday.live/relationship-frustration-india' },
   ],
 }
 
@@ -115,7 +115,7 @@ export default function RelationshipFrustrationIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -145,7 +145,7 @@ export default function RelationshipFrustrationIndiaPage() {
 
         <div className="section">
           <h2>Common Frustrations People Bring</h2>
-          <p>These are the kinds of things that bring people to LeanOn during the workday:</p>
+          <p>These are the kinds of things that bring people to How Was Your Day during the workday:</p>
           <ul>
             <li>&ldquo;He doesn&apos;t notice the things that matter to me.&rdquo;</li>
             <li>&ldquo;She dismisses what I say. I can&apos;t finish a sentence.&rdquo;</li>
@@ -165,7 +165,7 @@ export default function RelationshipFrustrationIndiaPage() {
 
         <div className="section">
           <h2>What Talking to a Neutral Person Does</h2>
-          <p>A peer listener on LeanOn is not in your relationship. They have no loyalty to your partner, no history with either of you, and no stake in whether you stay or leave or resolve anything. They will not get defensive when you say something negative about your partner. They will not tell you what you should do.</p>
+          <p>A peer listener on How Was Your Day is not in your relationship. They have no loyalty to your partner, no history with either of you, and no stake in whether you stay or leave or resolve anything. They will not get defensive when you say something negative about your partner. They will not tell you what you should do.</p>
           <p>What they will do is hear it. They will reflect back what you said, confirm that they understand, and ask clarifying questions. They will not manage their own reaction while you are talking. That alone &mdash; being heard without someone else&apos;s reaction landing on top of your words &mdash; is often enough to reduce the pressure significantly.</p>
           <p>You can do this on your commute, in fifteen minutes at your desk, during your lunch break. It does not require an appointment or a long afternoon.</p>
         </div>

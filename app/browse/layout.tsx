@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Browse Peer Listeners | LeanOn — Talk to a Real Person',
+  title: 'Browse Peer Listeners | How Was Your Day — Talk to a Real Person',
   description: 'Browse verified peer listeners in India. Filter by topic, availability, and language. Start with a free 5-minute session — no appointment needed.',
   keywords: [
     'peer listener India', 'talk to a real person online India', 'online emotional support India',
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     'talk to someone 2am India', 'human listener online India', 'peer support near me India',
     'Indians abroad emotional support', 'NRI talk to someone',
   ],
-  alternates: { canonical: 'https://www.leanon.app/browse', languages: { 'en-IN': 'https://www.leanon.app/browse' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/browse', languages: { 'en-IN': 'https://www.howwasyourday.live/browse' } },
   openGraph: {
-    title: 'Browse Peer Listeners | LeanOn — Talk to a Real Person',
+    title: 'Browse Peer Listeners | How Was Your Day — Talk to a Real Person',
     description: 'Browse verified peer listeners in India. Filter by topic, availability, and language. Start with a free 5-minute session — no appointment needed.',
-    url: 'https://www.leanon.app/browse',
+    url: 'https://www.howwasyourday.live/browse',
     type: 'website',
   },
 }
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn Peer Listener Directory',
+  name: 'How Was Your Day Peer Listener Directory',
   description: 'Browse and connect with real, verified peer listeners for private one-to-one text or voice conversations on loneliness, burnout, relationships, grief, anxiety, and more.',
-  url: 'https://www.leanon.app/browse',
+  url: 'https://www.howwasyourday.live/browse',
   serviceType: 'Peer emotional support',
   provider: {
     '@type': 'Organization',
-    name: 'LeanOn',
-    url: 'https://www.leanon.app',
+    name: 'How Was Your Day',
+    url: 'https://www.howwasyourday.live',
   },
   areaServed: [
     { '@type': 'Country', name: 'India' },
@@ -110,8 +110,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Browse Listeners', item: 'https://www.leanon.app/browse' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Browse Listeners', item: 'https://www.howwasyourday.live/browse' },
   ],
 }
 

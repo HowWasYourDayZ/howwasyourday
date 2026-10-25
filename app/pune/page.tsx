@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Pune — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Pune, India. No appointment needed. Talk anonymously in Marathi, Hindi, or English about stress, loneliness, and student life on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/pune', languages: { 'en-IN': 'https://www.leanon.app/pune' } },
-  keywords: 'peer support Pune, emotional support Pune, loneliness Pune, student stress Pune, talk to someone Pune, Marathi emotional support, leanon Pune',
+  title: 'Emotional Support in Pune — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Pune, India. No appointment needed. Talk anonymously in Marathi, Hindi, or English about stress, loneliness, and student life on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/pune', languages: { 'en-IN': 'https://www.howwasyourday.live/pune' } },
+  keywords: 'peer support Pune, emotional support Pune, loneliness Pune, student stress Pune, talk to someone Pune, Marathi emotional support, howwasyourday Pune',
   openGraph: {
-    title: 'Emotional Support in Pune — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Pune, India. No appointment needed. Talk anonymously on LeanOn.',
-    url: 'https://www.leanon.app/pune',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Pune — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Pune, India. No appointment needed. Talk anonymously on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/pune',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -25,31 +25,31 @@ const faqSchema = {
       name: 'Why is loneliness so common among students and young professionals in Pune?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pune hosts one of India\'s largest student and young-migrant populations. Hundreds of thousands of people move here for college or a first job, leaving their entire support system behind. Hostels, PGs, and flatshares are full of people — yet genuinely close friendships take years to build. The result is a city full of young people who are surrounded by others and profoundly alone. LeanOn gives them someone to talk to honestly, with no appointment.',
+        text: 'Pune hosts one of India\'s largest student and young-migrant populations. Hundreds of thousands of people move here for college or a first job, leaving their entire support system behind. Hostels, PGs, and flatshares are full of people — yet genuinely close friendships take years to build. The result is a city full of young people who are surrounded by others and profoundly alone. How Was Your Day gives them someone to talk to honestly, with no appointment.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I talk to a listener in Marathi or Hindi on LeanOn?',
+      name: 'Can I talk to a listener in Marathi or Hindi on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has peer listeners who speak Marathi, Hindi, and English. You can filter by language on the browse page and have your session in whichever language feels most natural.',
+        text: 'Yes. How Was Your Day has peer listeners who speak Marathi, Hindi, and English. You can filter by language on the browse page and have your session in whichever language feels most natural.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn useful for IT professionals in Hinjewadi and Magarpatta?',
+      name: 'Is How Was Your Day useful for IT professionals in Hinjewadi and Magarpatta?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Long commutes, project deadlines, layoff anxiety, and living far from family are everyday realities for Pune\'s IT workforce. Many of LeanOn\'s listeners have lived through exactly this and offer judgment-free, completely private conversations from around ₹160 for 15 minutes — with one free 5-minute trial per account to start.',
+        text: 'Yes. Long commutes, project deadlines, layoff anxiety, and living far from family are everyday realities for Pune\'s IT workforce. Many of How Was Your Day\'s listeners have lived through exactly this and offer judgment-free, completely private conversations from around ₹160 for 15 minutes — with one free 5-minute trial per account to start.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous?',
+      name: 'Is How Was Your Day anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, completely. Only the name you choose (a first name or nickname is fine) is shown to a listener — no phone number, no photo, no surname. Nobody in your college, office, or family can discover that you use LeanOn.',
+        text: 'Yes, completely. Only the name you choose (a first name or nickname is fine) is shown to a listener — no phone number, no photo, no surname. Nobody in your college, office, or family can discover that you use How Was Your Day.',
       },
     },
   ],
@@ -59,17 +59,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Pune', item: 'https://www.leanon.app/pune' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Pune', item: 'https://www.howwasyourday.live/pune' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/pune',
+  url: 'https://www.howwasyourday.live/pune',
   areaServed: { '@type': 'City', name: 'Pune', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -128,7 +128,7 @@ export default function PunePage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -141,7 +141,7 @@ export default function PunePage() {
         <div className="hero">
           <p className="tag">Peer Support · Pune</p>
           <h1>Peer Support in Pune — For a City of <em>Students and New Starts</em></h1>
-          <p className="lead">Pune is where India comes to begin: first college, first job, first time living away from home. It is also where loneliness quietly peaks — surrounded by lakhs of people your age, yet with no one who truly knows you. LeanOn connects you with peer listeners who have lived exactly that.</p>
+          <p className="lead">Pune is where India comes to begin: first college, first job, first time living away from home. It is also where loneliness quietly peaks — surrounded by lakhs of people your age, yet with no one who truly knows you. How Was Your Day connects you with peer listeners who have lived exactly that.</p>
         </div>
 
         <div className="section">
@@ -149,7 +149,7 @@ export default function PunePage() {
           <p>Pune wears many identities — Oxford of the East, IT hub, cultural capital of Maharashtra — and each one carries its own emotional weight.</p>
 
           <h3>The Student City&apos;s Hidden Loneliness</h3>
-          <p>Hundreds of thousands of students move to Pune every year for engineering, medicine, design, and management. They leave behind home food, mother tongues, and the people who knew them their whole lives. Hostel rooms and PGs are crowded, but real connection takes years. Exam pressure, placement anxiety, and the fear of disappointing parents back home pile on top. Many students describe 2 AM as the loneliest hour — which is exactly when LeanOn listeners are still available.</p>
+          <p>Hundreds of thousands of students move to Pune every year for engineering, medicine, design, and management. They leave behind home food, mother tongues, and the people who knew them their whole lives. Hostel rooms and PGs are crowded, but real connection takes years. Exam pressure, placement anxiety, and the fear of disappointing parents back home pile on top. Many students describe 2 AM as the loneliest hour — which is exactly when How Was Your Day listeners are still available.</p>
 
           <h3>First Jobs, First Burnout</h3>
           <p>Pune&apos;s IT belt — Hinjewadi, Magarpatta, Kharadi — runs on young professionals in their first decade of work. Long commutes, project pressure, appraisal cycles, layoff news, and the strange isolation of moving to a new city for a job. Many earn well, send money home, and still feel empty in ways they can&apos;t explain to their families.</p>
@@ -159,12 +159,12 @@ export default function PunePage() {
         </div>
 
         <div className="section">
-          <h2>Who Uses LeanOn in Pune</h2>
+          <h2>Who Uses How Was Your Day in Pune</h2>
           <h3>Students Before Exams and Placements</h3>
           <p>The pressure of competitive exams and placement season is intense and isolating. Talking to a listener who has been through it — and come out the other side — brings perspective no coaching class provides.</p>
 
           <h3>Young Professionals Far From Home</h3>
-          <p>When the workday ends and the flat is quiet, the distance from home feels longest. LeanOn listeners are available for a 15-minute conversation whenever the silence gets loud.</p>
+          <p>When the workday ends and the flat is quiet, the distance from home feels longest. How Was Your Day listeners are available for a 15-minute conversation whenever the silence gets loud.</p>
 
           <h3>Anyone Navigating a New Beginning</h3>
           <p>New city, new job, new relationship, new breakup. Pune is a city of transitions, and transitions are exactly when having someone to lean on matters most.</p>
@@ -186,22 +186,22 @@ export default function PunePage() {
             <div className="faq-a">Pune hosts one of India&apos;s largest student and young-migrant populations. People move here leaving their entire support system behind. Hostels and PGs are full of people — yet genuinely close friendships take years to build. The result is a city full of young people who are surrounded by others and profoundly alone.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Can I talk to a listener in Marathi or Hindi on LeanOn?</div>
-            <div className="faq-a">Yes. LeanOn has peer listeners who speak Marathi, Hindi, and English. Filter by language on the browse page and have your session in whichever language feels most natural.</div>
+            <div className="faq-q">Can I talk to a listener in Marathi or Hindi on How Was Your Day?</div>
+            <div className="faq-a">Yes. How Was Your Day has peer listeners who speak Marathi, Hindi, and English. Filter by language on the browse page and have your session in whichever language feels most natural.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn useful for IT professionals in Hinjewadi and Magarpatta?</div>
-            <div className="faq-a">Yes. Long commutes, project deadlines, layoff anxiety, and living far from family are everyday realities for Pune&apos;s IT workforce. Many LeanOn listeners have lived exactly this. Sessions are private, judgment-free, and start with one free 5-minute trial per account.</div>
+            <div className="faq-q">Is How Was Your Day useful for IT professionals in Hinjewadi and Magarpatta?</div>
+            <div className="faq-a">Yes. Long commutes, project deadlines, layoff anxiety, and living far from family are everyday realities for Pune&apos;s IT workforce. Many How Was Your Day listeners have lived exactly this. Sessions are private, judgment-free, and start with one free 5-minute trial per account.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn anonymous?</div>
-            <div className="faq-a">Yes, completely. Only the name you choose is shown to a listener — no phone number, photo, or surname. Nobody in your college, office, or family can discover that you use LeanOn.</div>
+            <div className="faq-q">Is How Was Your Day anonymous?</div>
+            <div className="faq-a">Yes, completely. Only the name you choose is shown to a listener — no phone number, photo, or surname. Nobody in your college, office, or family can discover that you use How Was Your Day.</div>
           </div>
         </div>
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/student-stress" className="related-link">Student Stress</a>
             <a href="/support/loneliness" className="related-link">Loneliness</a>
@@ -213,9 +213,9 @@ export default function PunePage() {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

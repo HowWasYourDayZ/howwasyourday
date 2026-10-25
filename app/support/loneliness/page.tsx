@@ -4,14 +4,14 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support for Loneliness in India | LeanOn',
-  description: "Feeling lonely and looking for someone to talk to? LeanOn offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
-  alternates: { canonical: 'https://www.leanon.app/support/loneliness', languages: { 'en-IN': 'https://www.leanon.app/support/loneliness' } },
+  title: 'Peer Support for Loneliness in India | How Was Your Day',
+  description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
+  alternates: { canonical: 'https://www.howwasyourday.live/support/loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/loneliness' } },
   openGraph: {
-    title: 'Peer Support for Loneliness in India | LeanOn',
-    description: "Feeling lonely and looking for someone to talk to? LeanOn offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
-    url: 'https://www.leanon.app/support/loneliness',
-    siteName: 'LeanOn',
+    title: 'Peer Support for Loneliness in India | How Was Your Day',
+    description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
+    url: 'https://www.howwasyourday.live/support/loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "What can I do when I feel lonely and have no one to talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking with another person is one way some people seek connection when they feel lonely. LeanOn lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. One introductory session up to 5 minutes is free per account; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed." } },
+    { '@type': 'Question', name: "What can I do when I feel lonely and have no one to talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking with another person is one way some people seek connection when they feel lonely. How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. One introductory session up to 5 minutes is free per account; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed." } },
     {
       '@type': 'Question',
       name: 'Is feeling lonely normal in India even when surrounded by people?',
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'How can a peer listener help with loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners bring varied lived experiences and are screened for listening ability and boundaries. You can review profiles and choose someone whose experience seems relevant. A peer conversation may help some people feel heard, but experiences vary and it is not a treatment for a mental-health condition.',
+        text: 'How Was Your Day listeners bring varied lived experiences and are screened for listening ability and boundaries. You can review profiles and choose someone whose experience seems relevant. A peer conversation may help some people feel heard, but experiences vary and it is not a treatment for a mental-health condition.',
       },
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn peer support cost?',
+      name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.',
@@ -68,9 +68,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Loneliness', item: 'https://www.leanon.app/support/loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Loneliness', item: 'https://www.howwasyourday.live/support/loneliness' },
   ],
 }
 
@@ -131,7 +131,7 @@ export default function LonelinessSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -150,8 +150,8 @@ export default function LonelinessSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Loneliness</p>
           <h1>You Are Not Alone in Feeling <em>Alone</em></h1>
-          <p className="lead">Loneliness can happen in a new city, in a busy workplace, at home or even when surrounded by people. LeanOn offers non-clinical one-to-one conversations with screened peer listeners for adults who want a human conversation. It is not therapy, and availability depends on who is online.</p>
-          <QuickAnswer question={"What can I do when I feel lonely and have no one to talk to?"} answer={"Talking with another person is one way some people seek connection when they feel lonely. LeanOn lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. One introductory session up to 5 minutes is free per account; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed."} />
+          <p className="lead">Loneliness can happen in a new city, in a busy workplace, at home or even when surrounded by people. How Was Your Day offers non-clinical one-to-one conversations with screened peer listeners for adults who want a human conversation. It is not therapy, and availability depends on who is online.</p>
+          <QuickAnswer question={"What can I do when I feel lonely and have no one to talk to?"} answer={"Talking with another person is one way some people seek connection when they feel lonely. How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. One introductory session up to 5 minutes is free per account; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed."} />
         </div>
 
         {/* What is loneliness */}
@@ -175,19 +175,19 @@ export default function LonelinessSupportPage() {
           <p>A quieter but equally real form of loneliness comes from living in a joint family where you can&apos;t speak openly. When your emotions and struggles must stay hidden for the sake of family harmony, you can feel utterly alone even in a house of ten people.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps With Loneliness</h2>
-          <p>LeanOn is not therapy, and we are honest about that. We are peer support — real humans talking to real humans. Here is how we help:</p>
+          <h2>How the app Helps With Loneliness</h2>
+          <p>How Was Your Day is not therapy, and we are honest about that. We are peer support — real humans talking to real humans. Here is how we help:</p>
 
           <h3>Someone Who Has Actually Been There</h3>
-          <p>LeanOn listeners bring varied lived experiences and are screened for listening ability and boundaries. Review profiles to see the experiences and topics they mention; listeners are peer supporters, not therapists.</p>
+          <p>How Was Your Day listeners bring varied lived experiences and are screened for listening ability and boundaries. Review profiles to see the experiences and topics they mention; listeners are peer supporters, not therapists.</p>
 
           <h3>Available When Loneliness Peaks</h3>
-          <p>Some people notice loneliness more at night or on weekends. LeanOn does not guarantee 24/7 listener availability; check the current list or request a conversation, which starts when a listener accepts.</p>
+          <p>Some people notice loneliness more at night or on weekends. How Was Your Day does not guarantee 24/7 listener availability; check the current list or request a conversation, which starts when a listener accepts.</p>
 
           <h3>Private and Judgment-Free</h3>
-          <p>Some people find it easier to talk outside their usual circle. LeanOn listeners do not see your phone number, and you can choose a display name. Voice calls are not recorded, but text messages are stored and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy and share only what feels comfortable.</p>
+          <p>Some people find it easier to talk outside their usual circle. How Was Your Day listeners do not see your phone number, and you can choose a display name. Voice calls are not recorded, but text messages are stored and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy and share only what feels comfortable.</p>
 
           <h3>A First Step Towards Connection</h3>
           <p>Talking about loneliness may help some people clarify what they are feeling or what kind of connection they want. Experiences vary; peer support is not treatment and does not replace professional help when it is needed.</p>
@@ -231,7 +231,7 @@ export default function LonelinessSupportPage() {
           <p>Talk with a screened peer listener about loneliness. No appointment is needed, but availability varies and a session starts when a listener accepts your request.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Request a conversation — first 5 minutes free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -244,7 +244,7 @@ export default function LonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How can a peer listener help with loneliness?</div>
-            <div className="faq-a">LeanOn listeners bring varied lived experiences and are screened for listening ability and boundaries. You can review profiles and choose someone whose experience seems relevant. A peer conversation may help some people feel heard, but experiences vary and it is not a treatment for a mental-health condition.</div>
+            <div className="faq-a">How Was Your Day listeners bring varied lived experiences and are screened for listening ability and boundaries. You can review profiles and choose someone whose experience seems relevant. A peer conversation may help some people feel heard, but experiences vary and it is not a treatment for a mental-health condition.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between loneliness and social anxiety?</div>
@@ -255,7 +255,7 @@ export default function LonelinessSupportPage() {
             <div className="faq-a">Yes. Millions of Indians working from home have reported increased loneliness, especially those living alone or far from family. The loss of casual office interactions has had a surprisingly large impact on mental wellbeing.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn peer support cost?</div>
+            <div className="faq-q">How much does How Was Your Day peer support cost?</div>
             <div className="faq-a">One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.</div>
           </div>
         </div>
@@ -263,7 +263,7 @@ export default function LonelinessSupportPage() {
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Loneliness often travels with other challenges. Explore more peer support on LeanOn:</p>
+          <p>Loneliness often travels with other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>
             <a href="/support/breakup" className="related-link">Breakup & Heartbreak</a>

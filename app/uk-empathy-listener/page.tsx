@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy Listening for South Asians in the UK | LeanOn',
-  description: 'Feeling unheard? Talk to someone who understands your culture, your language, and what it means to be South Asian in the UK. LeanOn empathy listeners are online daily on Indian time.',
+  title: 'Empathy Listening for South Asians in the UK | How Was Your Day',
+  description: 'Feeling unheard? Talk to someone who understands your culture, your language, and what it means to be South Asian in the UK. How Was Your Day empathy listeners are online daily on Indian time.',
   keywords: [
     'empathy listener uk south asian', 'someone who understands me uk', 'feeling unheard uk',
     'south asian listener uk', 'talk in hindi uk', 'cultural empathy support uk',
     'indian empathy listener uk', 'understood uk south asian', 'desi listener uk',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-empathy-listener',
-    languages: { 'en-GB': 'https://www.leanon.app/uk-empathy-listener' },
+    canonical: 'https://www.howwasyourday.live/uk-empathy-listener',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk-empathy-listener' },
   },
   openGraph: {
     title: 'Empathy Listening for South Asians in the UK — Be Heard',
     description: 'Feeling unheard? Talk to someone who understands your culture and what it means to be South Asian in the UK.',
-    url: 'https://www.leanon.app/uk-empathy-listener',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/uk-empathy-listener',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'What is empathy listening and why does it matter?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Empathy listening means being fully present with someone — not planning your next response, not looking for solutions, not thinking about something else. Just genuinely taking in what the other person is saying and reflecting it back so they feel seen. It is rarer than it sounds, and it is what LeanOn listeners are selected to do.',
+        text: 'Empathy listening means being fully present with someone — not planning your next response, not looking for solutions, not thinking about something else. Just genuinely taking in what the other person is saying and reflecting it back so they feel seen. It is rarer than it sounds, and it is what How Was Your Day listeners are selected to do.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Why does it matter that the listener understands South Asian culture?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'So much of what you carry as a South Asian in the UK is shaped by culture — family pressure, the taboo around showing weakness, the pressure to succeed and be grateful because you worked so hard to get here, the guilt of having left. A listener who does not share that cultural context will miss what is actually being said. LeanOn listeners understand it from the inside.',
+        text: 'So much of what you carry as a South Asian in the UK is shaped by culture — family pressure, the taboo around showing weakness, the pressure to succeed and be grateful because you worked so hard to get here, the guilt of having left. A listener who does not share that cultural context will miss what is actually being said. How Was Your Day listeners understand it from the inside.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'Can I talk to a listener in Hindi or another South Asian language?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners speak Hindi, Punjabi, Gujarati, Tamil, Telugu, Kannada, Bengali, and other languages. You can check language availability on listener profiles when browsing.',
+        text: 'Many How Was Your Day listeners speak Hindi, Punjabi, Gujarati, Tamil, Telugu, Kannada, Bengali, and other languages. You can check language availability on listener profiles when browsing.',
       },
     },
     {
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy Listener UK', item: 'https://www.leanon.app/uk-empathy-listener' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy Listener UK', item: 'https://www.howwasyourday.live/uk-empathy-listener' },
   ],
 }
 
@@ -176,13 +176,13 @@ export default function UkEmpathyListenerPage() {
           <p>There is a particular kind of relief that comes from saying something out loud and having
             someone truly receive it. Not respond to it with a solution. Not reframe it. Just hear it,
             acknowledge it, and hold space for how it actually feels.</p>
-          <p>That is what LeanOn empathy listeners are screened and expected to do.</p>
+          <p>That is what How Was Your Day empathy listeners are screened and expected to do.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
 
         <div className="card">
           <h2>Talk in your own language if you want</h2>
-          <p>Many LeanOn listeners speak Hindi, Punjabi, Gujarati, Tamil, Telugu, Kannada, Bengali, and other
+          <p>Many How Was Your Day listeners speak Hindi, Punjabi, Gujarati, Tamil, Telugu, Kannada, Bengali, and other
             South Asian languages. Sometimes the feeling comes out more naturally in the language you grew up
             speaking.</p>
           <p>Browse listener profiles to find someone whose language and background resonate with yours.</p>
@@ -211,7 +211,7 @@ export default function UkEmpathyListenerPage() {
             <h3>What is empathy listening?</h3>
             <p>Empathy listening means being fully present — not planning your next response, not looking for
               solutions. Just genuinely taking in what you are saying and reflecting it back so you feel seen.
-              It is rarer than it sounds, and it is what LeanOn listeners are selected to do.</p>
+              It is rarer than it sounds, and it is what How Was Your Day listeners are selected to do.</p>
           </div>
           <div className="faq-item">
             <h3>Why does it matter that the listener understands South Asian culture?</h3>
@@ -248,7 +248,7 @@ export default function UkEmpathyListenerPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

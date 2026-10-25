@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Use — LeanOn',
-  description: 'LeanOn terms of use. Read our terms governing use of the peer support platform, sessions, wallet, payments, and listener services.',
-  alternates: { canonical: 'https://www.leanon.app/terms' },
+  title: 'Terms of Use — How Was Your Day',
+  description: 'How Was Your Day terms of use. Read our terms governing use of the peer support platform, sessions, wallet, payments, and listener services.',
+  alternates: { canonical: 'https://www.howwasyourday.live/terms' },
 }
 
 const S = `
@@ -29,25 +29,25 @@ export default function TermsPage() {
     <>
       <style>{S}</style>
       <div className="page">
-        <a href="/" className="back">← Back to LeanOn</a>
+        <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Terms of Use</h1>
         <p className="updated">Last updated: October 23, 2026</p>
 
         <div className="warning-box">
-          <p>⚠️ LeanOn is a peer support platform only. It is NOT a mental health service, therapy platform, or medical service. Listeners are not licensed therapists, psychologists, or counselors unless an individual profile explicitly states a relevant qualification. If you are in crisis or immediate danger, contact an appropriate local emergency or crisis service where you are.</p>
+          <p>⚠️ How Was Your Day is a peer support platform only. It is NOT a mental health service, therapy platform, or medical service. Listeners are not licensed therapists, psychologists, or counselors unless an individual profile explicitly states a relevant qualification. If you are in crisis or immediate danger, contact an appropriate local emergency or crisis service where you are.</p>
         </div>
 
-        <h2>1. What LeanOn is</h2>
-        <p>LeanOn is a marketplace connecting people who seek emotional peer support ("Seekers") with people who offer it based on lived experience ("Listeners"). Sessions are peer conversations, not clinical consultations.</p>
+        <h2>1. What How Was Your Day is</h2>
+        <p>How Was Your Day is a marketplace connecting people who seek emotional peer support ("Seekers") with people who offer it based on lived experience ("Listeners"). Sessions are peer conversations, not clinical consultations.</p>
 
-        <h2>2. Who can use LeanOn</h2>
+        <h2>2. Who can use How Was Your Day</h2>
         <ul>
-          <li>You must be 18 years or older to use LeanOn</li>
-          <li>You must be located in a country or territory where LeanOn is currently offered</li>
+          <li>You must be 18 years or older to use How Was Your Day</li>
+          <li>You must be located in a country or territory where How Was Your Day is currently offered</li>
           <li>You must provide a valid mobile number and any other information required to create an account</li>
           <li>Country availability, payment methods, and other product features may vary by market</li>
         </ul>
-        <p>Current public country experiences include India, the United States, United Kingdom, Canada, Australia, United Arab Emirates, Oman, Kuwait, Singapore and Malaysia. LeanOn may change supported markets from time to time.</p>
+        <p>Current public country experiences include India, the United States, United Kingdom, Canada, Australia, United Arab Emirates, Oman, Kuwait, Singapore and Malaysia. How Was Your Day may change supported markets from time to time.</p>
 
         <h2>3. Prohibited conduct</h2>
         <ul>
@@ -60,8 +60,8 @@ export default function TermsPage() {
         </ul>
 
         <h2>4. Listener responsibilities</h2>
-        <p>Listeners confirm they are sharing personal lived experience only and are not providing clinical, medical, or professional advice unless a specific service and qualification is explicitly presented and permitted by LeanOn. Listeners must not misrepresent their qualifications.</p>
-        <p>Listeners must keep everything a seeker shares confidential. They must not record, screenshot, copy or repeat it to anyone, and must not try to identify, find or contact a seeker outside LeanOn. Breaking this leads to removal from the platform.</p>
+        <p>Listeners confirm they are sharing personal lived experience only and are not providing clinical, medical, or professional advice unless a specific service and qualification is explicitly presented and permitted by How Was Your Day. Listeners must not misrepresent their qualifications.</p>
+        <p>Listeners must keep everything a seeker shares confidential. They must not record, screenshot, copy or repeat it to anyone, and must not try to identify, find or contact a seeker outside How Was Your Day. Breaking this leads to removal from the platform.</p>
 
         <h2>5. Payments and refunds</h2>
         <ul>
@@ -69,15 +69,15 @@ export default function TermsPage() {
           <li>Unused wallet balance is refundable subject to the current refund process and applicable payment rules</li>
           <li>Completed sessions are generally non-refundable unless a safety, billing, or platform error requires an adjustment</li>
           <li>Any platform fee and applicable taxes are shown before a paid session is started</li>
-          <li>From 24 September 2026, LeanOn applies a 40% service fee on listener earnings (previously 15%), deducted at session settlement; sessions completed before that date are unaffected. The listener's net settlement is shown in the listener dashboard</li>
+          <li>From 24 September 2026, How Was Your Day applies a 40% service fee on listener earnings (previously 15%), deducted at session settlement; sessions completed before that date are unaffected. The listener's net settlement is shown in the listener dashboard</li>
           <li>Prices and currency presentation may vary by market and are determined by the checkout experience</li>
         </ul>
 
         <h2>6. Content moderation</h2>
-        <p>LeanOn uses AI-assisted moderation and human safety processes. Sessions that violate these terms may be terminated without refund. Repeat violations may result in permanent account suspension.</p>
+        <p>How Was Your Day uses AI-assisted moderation and human safety processes. Sessions that violate these terms may be terminated without refund. Repeat violations may result in permanent account suspension.</p>
 
         <h2>7. Limitation of liability</h2>
-        <p>LeanOn is not liable for the advice or content shared by listeners. We do not guarantee outcomes from peer support sessions. We are a platform, not a healthcare provider.</p>
+        <p>How Was Your Day is not liable for the advice or content shared by listeners. We do not guarantee outcomes from peer support sessions. We are a platform, not a healthcare provider.</p>
 
         <h2>8. Governing law</h2>
         <p>These terms are governed by the laws of India. Disputes will be subject to the jurisdiction of courts in Bengaluru, Karnataka, subject to applicable law.</p>

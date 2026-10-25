@@ -4,7 +4,7 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Dealing With Family Pressure in India — Emotional Support When You Can\'t Talk to Them | LeanOn',
+  title: 'Dealing With Family Pressure in India — Emotional Support When You Can\'t Talk to Them | How Was Your Day',
   description: "Family pressure about marriage or career? Talk privately to a real peer listener in India who gets it — text or voice, your number never shown. First 5 minutes free.",
   keywords: [
     'family pressure India', 'Indian family expectations', 'parents pressure India',
@@ -14,16 +14,16 @@ export const metadata: Metadata = {
     'parent pressure mental health India',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/support/family-pressure-india',
-    languages: { 'en-IN': 'https://www.leanon.app/support/family-pressure-india' },
+    canonical: 'https://www.howwasyourday.live/support/family-pressure-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/support/family-pressure-india' },
   },
   openGraph: {
-    title: 'Dealing With Family Pressure in India — Emotional Support When You Can\'t Talk to Them | LeanOn',
+    title: 'Dealing With Family Pressure in India — Emotional Support When You Can\'t Talk to Them | How Was Your Day',
     description: "Family pressure about marriage or career? Talk privately to a real peer listener in India who gets it — text or voice, your number never shown. First 5 minutes free.",
-    url: 'https://www.leanon.app/support/family-pressure-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/family-pressure-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Family Pressure Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Family Pressure Support India' }],
   },
 }
 
@@ -31,13 +31,13 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "My family is pressuring me about marriage or career \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When you can't say it at home, saying it to someone neutral helps. LeanOn connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "My family is pressuring me about marriage or career \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When you can't say it at home, saying it to someone neutral helps. How Was Your Day connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Your first 5 minutes are free." } },
     {
       '@type': 'Question',
       name: 'Will the listener judge my family or take sides?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Peer listeners on LeanOn are screened and expected to be present with you — not to evaluate your family or render a verdict on who is right. You can share honestly about what your family is doing and how it is making you feel, and your listener will hold space for that without turning it into a trial. Many listeners have personally navigated complicated family dynamics in India and will understand the nuance.',
+        text: 'No. Peer listeners on How Was Your Day are screened and expected to be present with you — not to evaluate your family or render a verdict on who is right. You can share honestly about what your family is doing and how it is making you feel, and your listener will hold space for that without turning it into a trial. Many listeners have personally navigated complicated family dynamics in India and will understand the nuance.',
       },
     },
     {
@@ -45,7 +45,7 @@ const faqSchema = {
       name: 'What if I feel guilty talking about my family?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'This is extremely common — especially in Indian families where loyalty is deeply valued. Talking about your struggles with family pressure is not a betrayal. You are not sharing your family\'s secrets with the world; you are processing your own emotional experience in a confidential space. The guilt itself is something you can bring to the conversation. Many LeanOn listeners have navigated this exact tension.',
+        text: 'This is extremely common — especially in Indian families where loyalty is deeply valued. Talking about your struggles with family pressure is not a betrayal. You are not sharing your family\'s secrets with the world; you are processing your own emotional experience in a confidential space. The guilt itself is something you can bring to the conversation. Many How Was Your Day listeners have navigated this exact tension.',
       },
     },
     {
@@ -53,7 +53,7 @@ const faqSchema = {
       name: 'What if I\'m the one causing my family stress?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Bring that too. Many people come to LeanOn carrying guilt about the pressure they feel they are putting on their family — for not meeting expectations, for choices they have made, for the tension their situation is creating at home. A peer listener will not tell you whether you are right or wrong. They will help you process what you are feeling, including the complexity of being both affected by and affecting the people you love.',
+        text: 'Bring that too. Many people come to How Was Your Day carrying guilt about the pressure they feel they are putting on their family — for not meeting expectations, for choices they have made, for the tension their situation is creating at home. A peer listener will not tell you whether you are right or wrong. They will help you process what you are feeling, including the complexity of being both affected by and affecting the people you love.',
       },
     },
     {
@@ -61,7 +61,7 @@ const faqSchema = {
       name: 'Is this relevant if I live abroad and my family is in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Very much so. Some of the most intense family pressure experiences happen across distance — the WhatsApp calls about marriage timelines, the financial expectations from abroad, the guilt about not being present for aging parents, the pressure to return home. LeanOn listeners understand this experience specifically. Distance does not reduce Indian family pressure; it often amplifies it with an added layer of guilt and disconnection.',
+        text: 'Very much so. Some of the most intense family pressure experiences happen across distance — the WhatsApp calls about marriage timelines, the financial expectations from abroad, the guilt about not being present for aging parents, the pressure to return home. How Was Your Day listeners understand this experience specifically. Distance does not reduce Indian family pressure; it often amplifies it with an added layer of guilt and disconnection.',
       },
     },
     {
@@ -69,7 +69,7 @@ const faqSchema = {
       name: 'What kinds of family issues do people bring?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The most common are: pressure about career choices (especially deviation from engineering/medicine/MBA), marriage pressure (age, caste, timing), financial expectations (being the breadwinner, remitting money abroad), conflict between personal values and family values, not being able to express emotions at home, feeling unseen or unheard in a joint family, and the grief of a relationship with a parent that is loving but also controlling. All of these are legitimate and all of them can be held in a LeanOn session.',
+        text: 'The most common are: pressure about career choices (especially deviation from engineering/medicine/MBA), marriage pressure (age, caste, timing), financial expectations (being the breadwinner, remitting money abroad), conflict between personal values and family values, not being able to express emotions at home, feeling unseen or unheard in a joint family, and the grief of a relationship with a parent that is loving but also controlling. All of these are legitimate and all of them can be held in a How Was Your Day session.',
       },
     },
     {
@@ -77,7 +77,7 @@ const faqSchema = {
       name: 'How is this different from complaining to a friend?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A friend who knows your family brings their own history with them — opinions, previous conversations, positions they have already taken. A LeanOn listener has no history with your family, no stake in the situation, and no opinion about what you should do. They also maintain complete confidentiality, which means nothing you say will circulate back to the people involved. This is the specific value of talking to someone outside your social circle: genuine objectivity, genuine privacy.',
+        text: 'A friend who knows your family brings their own history with them — opinions, previous conversations, positions they have already taken. A How Was Your Day listener has no history with your family, no stake in the situation, and no opinion about what you should do. They also maintain complete confidentiality, which means nothing you say will circulate back to the people involved. This is the specific value of talking to someone outside your social circle: genuine objectivity, genuine privacy.',
       },
     },
   ],
@@ -87,9 +87,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Family Pressure India', item: 'https://www.leanon.app/support/family-pressure-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Family Pressure India', item: 'https://www.howwasyourday.live/support/family-pressure-india' },
   ],
 }
 
@@ -148,7 +148,7 @@ export default function FamilyPressureIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -166,8 +166,8 @@ export default function FamilyPressureIndiaPage() {
         <div className="hero">
           <p className="badge">Peer Support · Family Pressure · India</p>
           <h1>When the Pressure Comes From <em>The People You Love</em></h1>
-          <p className="lead">Indian family expectations around career, marriage, and money can feel like a weight you carry everywhere. The hardest part: you cannot vent to the people who are the source of it. LeanOn gives you a space outside all of that — anonymous, confidential, and genuinely understanding of the Indian family dynamic.</p>
-          <QuickAnswer question={"My family is pressuring me about marriage or career \u2014 who can I talk to?"} answer={"When you can't say it at home, saying it to someone neutral helps. LeanOn connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Your first 5 minutes are free."} />
+          <p className="lead">Indian family expectations around career, marriage, and money can feel like a weight you carry everywhere. The hardest part: you cannot vent to the people who are the source of it. How Was Your Day gives you a space outside all of that — anonymous, confidential, and genuinely understanding of the Indian family dynamic.</p>
+          <QuickAnswer question={"My family is pressuring me about marriage or career \u2014 who can I talk to?"} answer={"When you can't say it at home, saying it to someone neutral helps. How Was Your Day connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Your first 5 minutes are free."} />
           <a href="/browse?topic=relationships" className="cta-hero">Find a listener →</a>
         </div>
 
@@ -216,7 +216,7 @@ export default function FamilyPressureIndiaPage() {
         <div className="section">
           <h2>Finding a Space Outside the System</h2>
           <p>What you need — and what is genuinely hard to find — is a space that is completely outside the system of relationships that creates the pressure. Not a friend who knows your family. Not a relative with their own stake in the situation. Not a therapist who might have their own cultural frameworks that do not apply to your specific family dynamic.</p>
-          <p>LeanOn peer listeners are screened and expected to hold complexity without resolving it into simple verdicts. They understand, from lived experience, what Indian family dynamics actually feel like from the inside — not as an academic concept but as something they have personally navigated.</p>
+          <p>How Was Your Day peer listeners are screened and expected to hold complexity without resolving it into simple verdicts. They understand, from lived experience, what Indian family dynamics actually feel like from the inside — not as an academic concept but as something they have personally navigated.</p>
           <p>Many listeners have their own experiences with:</p>
           <ul>
             <li>Career pressure and the terror of deviating from the expected path</li>
@@ -229,7 +229,7 @@ export default function FamilyPressureIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What a Conversation on LeanOn Looks Like</h2>
+          <h2>What a Conversation on How Was Your Day Looks Like</h2>
           <p>A session does not have to be structured or have a clear goal. You can start with whatever is most present for you right now. Some people start with:</p>
           <ul>
             <li>&quot;My parents called again about marriage and I just need to say how I actually feel about it.&quot;</li>

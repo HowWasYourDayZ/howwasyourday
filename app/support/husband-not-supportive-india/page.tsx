@@ -4,7 +4,7 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'My Husband Doesn\'t Support Me Emotionally — What Are My Options? | LeanOn',
+  title: 'My Husband Doesn\'t Support Me Emotionally — What Are My Options? | How Was Your Day',
   description: 'When your husband has stopped showing up — emotionally, financially, or both. The particular exhaustion of managing everything while the person who was supposed to be your partner has checked out.',
   keywords: [
     'husband not supportive India', 'husband not helping India', 'unsupportive husband India',
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     'husband not involved India', 'marriage breakdown India', 'coping without husband support India',
     'managing alone in marriage India', 'husband financial withdrawal India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/husband-not-supportive-india', languages: { 'en-IN': 'https://www.leanon.app/support/husband-not-supportive-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/husband-not-supportive-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/husband-not-supportive-india' } },
   openGraph: {
-    title: 'Husband Not Supportive India | LeanOn',
+    title: 'Husband Not Supportive India | How Was Your Day',
     description: 'Emotional and financial withdrawal in marriage. The exhaustion of managing everything while your partner has checked out.',
-    url: 'https://www.leanon.app/support/husband-not-supportive-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/husband-not-supportive-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Unsupportive Husband India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Unsupportive Husband India' }],
   },
 }
 
@@ -58,15 +58,15 @@ const faqSchema = {
       name: 'Should I stay or leave a marriage where my husband is not supportive?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'This is genuinely one of the hardest decisions a person can face, and it is not one that can be answered by a peer support platform. LeanOn listeners are not relationship advisors and will not tell you what to do. What a peer listener can offer is a space to hear yourself clearly — to say what you are experiencing, what you need, what you are afraid of — which is often the first step in finding your own answer to that question.',
+        text: 'This is genuinely one of the hardest decisions a person can face, and it is not one that can be answered by a peer support platform. How Was Your Day listeners are not relationship advisors and will not tell you what to do. What a peer listener can offer is a space to hear yourself clearly — to say what you are experiencing, what you need, what you are afraid of — which is often the first step in finding your own answer to that question.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn marriage counselling?',
+      name: 'Is How Was Your Day marriage counselling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support for individuals. It is a space for you to be heard — not a couples intervention, not relationship coaching, not a space where your husband\'s perspective is also weighed. If couples counselling is something you want to pursue, a qualified relationship therapist is the right resource. LeanOn is for your experience, your weight, your needs — which matter independently of the marriage.',
+        text: 'No. How Was Your Day is peer support for individuals. It is a space for you to be heard — not a couples intervention, not relationship coaching, not a space where your husband\'s perspective is also weighed. If couples counselling is something you want to pursue, a qualified relationship therapist is the right resource. How Was Your Day is for your experience, your weight, your needs — which matter independently of the marriage.',
       },
     },
   ],
@@ -76,9 +76,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.leanon.app/for-women' },
-    { '@type': 'ListItem', position: 3, name: 'Husband Not Supportive India', item: 'https://www.leanon.app/support/husband-not-supportive-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'For Women', item: 'https://www.howwasyourday.live/for-women' },
+    { '@type': 'ListItem', position: 3, name: 'Husband Not Supportive India', item: 'https://www.howwasyourday.live/support/husband-not-supportive-india' },
   ],
 }
 
@@ -134,7 +134,7 @@ export default function HusbandNotSupportiveIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 

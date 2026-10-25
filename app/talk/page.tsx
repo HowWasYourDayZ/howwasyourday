@@ -2,7 +2,7 @@
 
 // /talk — "Talk now": the match-first way in, for people who don't want to pick
 // from a catalogue. Two taps (what's on your mind, text or voice), phone login
-// only after that, then LeanOn connects them to the best listener online now
+// only after that, then How Was Your Day connects them to the best listener online now
 // and moves on to the next one automatically if nobody answers in
 // TALK_TRY_SECS. /browse is unchanged and stays the way to choose someone.
 //
@@ -28,7 +28,7 @@ type Phase =
   | { k: 'wallet'; need: number; priceLabel: string }
   | { k: 'error'; message: string }
 
-const CHOICE_KEY = 'leanon_talk_choice'
+const CHOICE_KEY = 'howwasyourday_talk_choice'
 
 // A fresh id per search (admin metrics only — never trusted for anything else).
 function newSearchId(): string {
@@ -46,7 +46,7 @@ function track(event: string, params: Record<string, string | number> = {}) {
 
 // Entry point (home, float, footer, seo…), kept through the login round trip
 // so Analytics can tie a match back to where the visitor came from.
-const SRC_KEY = 'leanon_talk_src'
+const SRC_KEY = 'howwasyourday_talk_src'
 function readSrc(): string {
   try { return sessionStorage.getItem(SRC_KEY) || 'direct' } catch { return 'direct' }
 }
@@ -163,7 +163,7 @@ function TalkInner() {
     const r = await fetchCandidates()
     if (!r.ok) {
       if (r.status === 401) { router.push('/auth?redirect=' + encodeURIComponent('/talk?go=1')); return false }
-      setPhase({ k: 'error', message: 'Could not reach LeanOn. Check your connection and try again.' })
+      setPhase({ k: 'error', message: 'Could not reach How Was Your Day. Check your connection and try again.' })
       return false
     }
     if (!meta.current.free && queue.current.length > 0 && r.walletBalance < queue.current[0].priceInr) {

@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Founder Burnout Support India | Talk to Someone Who Gets Startup Stress | LeanOn',
+  title: 'Founder Burnout Support India | Talk to Someone Who Gets Startup Stress | How Was Your Day',
   description: 'Startup stress, fundraising rejection, imposter syndrome as a founder? Connect with peer listeners who have lived through founder burnout. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/support/founder-burnout' },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/founder-burnout' },
   openGraph: {
-    title: 'Founder Burnout Support — LeanOn',
+    title: 'Founder Burnout Support — How Was Your Day',
     description: 'Peer support for founders navigating startup stress, team conflicts, fundraising rejection, and imposter syndrome. Real conversations, real relief.',
-    url: 'https://www.leanon.app/support/founder-burnout',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/founder-burnout',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'Why do founders in India find it hard to talk about mental health?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Several factors make this particularly difficult: the culture of projecting confidence to investors, teams, and the ecosystem; social media that glorifies hustle and hides struggle; the belief that vulnerability signals weakness or that admitting difficulties will affect fundraising; and the isolation of the founder role itself. LeanOn offers a private space outside the startup ecosystem where founders can be completely honest.',
+        text: 'Several factors make this particularly difficult: the culture of projecting confidence to investors, teams, and the ecosystem; social media that glorifies hustle and hides struggle; the belief that vulnerability signals weakness or that admitting difficulties will affect fundraising; and the isolation of the founder role itself. How Was Your Day offers a private space outside the startup ecosystem where founders can be completely honest.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'How do I deal with fundraising rejection without losing my mind?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Fundraising rejection is one of the most demoralising experiences a founder faces — especially when it comes after months of pitching. The key is to separate rejection of the pitch from rejection of you as a person, maintain perspective through relationships outside the startup world, and have at least one person you can vent to honestly. LeanOn listeners who have been through fundraising rounds can help you process rejection without the pressure of maintaining a front.',
+        text: 'Fundraising rejection is one of the most demoralising experiences a founder faces — especially when it comes after months of pitching. The key is to separate rejection of the pitch from rejection of you as a person, maintain perspective through relationships outside the startup world, and have at least one person you can vent to honestly. How Was Your Day listeners who have been through fundraising rounds can help you process rejection without the pressure of maintaining a front.',
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'Can peer support replace founder therapy or coaching?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — peer support is a complement, not a replacement. A good founder therapist or executive coach can provide structured clinical or professional support. LeanOn peer support offers something different: on-demand conversations with people who have lived through founder burnout themselves, available when you need to vent at 11 PM after a bad board call, not just in your next scheduled session.',
+        text: 'No — peer support is a complement, not a replacement. A good founder therapist or executive coach can provide structured clinical or professional support. How Was Your Day peer support offers something different: on-demand conversations with people who have lived through founder burnout themselves, available when you need to vent at 11 PM after a bad board call, not just in your next scheduled session.',
       },
     },
   ],
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Founder Burnout', item: 'https://www.leanon.app/support/founder-burnout' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Founder Burnout', item: 'https://www.howwasyourday.live/support/founder-burnout' },
   ],
 }
 
@@ -132,7 +132,7 @@ export default function FounderBurnoutSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -146,11 +146,11 @@ export default function FounderBurnoutSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Founder Burnout</p>
           <h1>Building a Startup Is Hard. <em>Burning Out Is Harder.</em></h1>
-          <p className="lead">Behind every founder story shared on LinkedIn is a human being who is often exhausted, scared, and carrying far more than they let on. LeanOn connects you with peer listeners who have been through startup stress — and are honest about what it actually felt like.</p>
+          <p className="lead">Behind every founder story shared on LinkedIn is a human being who is often exhausted, scared, and carrying far more than they let on. How Was Your Day connects you with peer listeners who have been through startup stress — and are honest about what it actually felt like.</p>
         </div>
 
         <div className="notice">
-          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). LeanOn is peer support and cannot replace crisis intervention.
+          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support and cannot replace crisis intervention.
         </div>
 
         <div className="section">
@@ -181,19 +181,19 @@ export default function FounderBurnoutSupportPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Helps Founders</h2>
+          <h2>How the app Helps Founders</h2>
 
           <h3>Completely Outside Your Ecosystem</h3>
-          <p>LeanOn listeners are not investors, advisors, or ecosystem contacts. There is no reputational risk. No version of what you say will reach your investors or team. You can be completely honest about your fear, your doubt, your exhaustion — without any professional consequences.</p>
+          <p>How Was Your Day listeners are not investors, advisors, or ecosystem contacts. There is no reputational risk. No version of what you say will reach your investors or team. You can be completely honest about your fear, your doubt, your exhaustion — without any professional consequences.</p>
 
           <h3>Founders Who Have Been Through It</h3>
           <p>Some of our listeners have been through the specific experience of running a startup — the failed fundraise, the key hire who quit, the product pivot that felt like starting over. They understand the context without needing it explained.</p>
 
           <h3>Available During Startup Hours</h3>
-          <p>Founder stress peaks at unusual times — Sunday evenings before a Monday board call, 11 PM after a difficult investor meeting, the hour after you let someone go. LeanOn is available whenever you need to talk.</p>
+          <p>Founder stress peaks at unusual times — Sunday evenings before a Monday board call, 11 PM after a difficult investor meeting, the hour after you let someone go. How Was Your Day is available whenever you need to talk.</p>
 
           <h3>Not Advice — Presence</h3>
-          <p>Founders get unsolicited advice constantly. LeanOn listeners know the difference between helping someone think through a problem and the far more valuable work of simply being fully present while someone else articulates what they are actually feeling.</p>
+          <p>Founders get unsolicited advice constantly. How Was Your Day listeners know the difference between helping someone think through a problem and the far more valuable work of simply being fully present while someone else articulates what they are actually feeling.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Understand Startup Stress</h2>
@@ -232,7 +232,7 @@ export default function FounderBurnoutSupportPage() {
           <p>Talk to someone who has been in the trenches of building a startup and came out the other side. No appointment needed.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to a listener who gets founders — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -244,11 +244,11 @@ export default function FounderBurnoutSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Why do founders in India find it hard to talk about mental health?</div>
-            <div className="faq-a">The culture of projecting confidence to investors, teams, and the ecosystem makes this particularly difficult. Social media glorifies hustle and hides struggle. Many founders believe vulnerability signals weakness. LeanOn offers a private space outside the startup ecosystem where founders can be completely honest.</div>
+            <div className="faq-a">The culture of projecting confidence to investors, teams, and the ecosystem makes this particularly difficult. Social media glorifies hustle and hides struggle. Many founders believe vulnerability signals weakness. How Was Your Day offers a private space outside the startup ecosystem where founders can be completely honest.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I deal with fundraising rejection without losing my mind?</div>
-            <div className="faq-a">The key is to separate rejection of the pitch from rejection of you as a person, maintain perspective through relationships outside the startup world, and have at least one person you can vent to honestly. LeanOn listeners who have been through fundraising rounds can help you process rejection without maintaining a front.</div>
+            <div className="faq-a">The key is to separate rejection of the pitch from rejection of you as a person, maintain perspective through relationships outside the startup world, and have at least one person you can vent to honestly. How Was Your Day listeners who have been through fundraising rounds can help you process rejection without maintaining a front.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is imposter syndrome normal for founders?</div>
@@ -256,13 +256,13 @@ export default function FounderBurnoutSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support replace founder therapy or coaching?</div>
-            <div className="faq-a">No — peer support is a complement, not a replacement. LeanOn offers something different: on-demand conversations with people who have lived through founder burnout themselves, available when you need to vent after a bad board call, not just in your next scheduled session.</div>
+            <div className="faq-a">No — peer support is a complement, not a replacement. How Was Your Day offers something different: on-demand conversations with people who have lived through founder burnout themselves, available when you need to vent after a bad board call, not just in your next scheduled session.</div>
           </div>
         </div>
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Founder burnout often overlaps with other challenges. Explore more peer support on LeanOn:</p>
+          <p>Founder burnout often overlaps with other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/anxiety" className="related-link">Anxiety</a>
             <a href="/support/loneliness" className="related-link">Loneliness</a>

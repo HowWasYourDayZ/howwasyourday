@@ -4,7 +4,7 @@ export const post = {
   description: 'If you feel like you have no one to talk to, you are not broken and you are not alone. Why this happens to capable people in India — and what actually helps.',
   date: '2026-08-11',
   readTime: '8 min read',
-  topics: ['loneliness', 'emotional support', 'empathy', 'mental health India', 'LeanOn'],
+  topics: ['loneliness', 'emotional support', 'empathy', 'mental health India', 'How Was Your Day'],
   content: `
 <p>If you have arrived here after typing something like &quot;I have <strong>no one to talk to</strong>&quot; into a search bar, first: that took something. People do not search for that sentence casually. They search for it at 1am, or in a bathroom at work, or in the ten minutes between finishing dinner and going back into a room full of people. Wherever you are reading this from, you are not exaggerating and you are not being dramatic.</p>
 
@@ -62,9 +62,9 @@ export const post = {
 
 <p>And then there is the specific, physical relief of saying a thing out loud that has only ever lived inside your head. People are consistently surprised by it. The sentence you have been dreading takes four seconds to say, the sky does not fall, and something in your chest unclenches slightly. That is not a small thing. That is frequently the whole thing.</p>
 
-<h2>Where LeanOn Comes In</h2>
+<h2>Where How Was Your Day Comes In</h2>
 
-<p>LeanOn exists for exactly the gap this piece has been describing — the space between having people and having <strong>someone to talk to</strong>.</p>
+<p>How Was Your Day exists for exactly the gap this piece has been describing — the space between having people and having <strong>someone to talk to</strong>.</p>
 
 <p>Our listeners are verified peers, not therapists and not AI. They are real people who have lived through their own difficult stretches — loneliness, burnout, family pressure, heartbreak, moving to a city where they knew nobody — and who are chosen for how well they listen with empathy rather than advice. You can <a href="/browse">browse peer listeners</a> and pick someone whose experience actually resembles yours.</p>
 

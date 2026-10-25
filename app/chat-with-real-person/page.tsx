@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Chat with a Real Person in India — Not a Bot | LeanOn',
-  description: 'Tired of AI chatbots? Talk to a real human listener on LeanOn. No scripts, no algorithms — just genuine empathy from someone who has lived it. No appointment needed.',
+  title: 'Chat with a Real Person in India — Not a Bot | How Was Your Day',
+  description: 'Tired of AI chatbots? Talk to a real human listener on How Was Your Day. No scripts, no algorithms — just genuine empathy from someone who has lived it. No appointment needed.',
   keywords: 'chat with real person online India, talk to real human not AI, real person to talk to online India, human chat not chatbot India, AI alternative human connection, tired of AI chatbot, ChatGPT alternative India, human listener not bot, real human emotional support India, talk to actual human online, not a bot chat India, genuine human conversation online, chatbot replacement India, real person chat app India, human connection app India',
-  alternates: { canonical: 'https://www.leanon.app/chat-with-real-person', languages: { 'en-IN': 'https://www.leanon.app/chat-with-real-person' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/chat-with-real-person', languages: { 'en-IN': 'https://www.howwasyourday.live/chat-with-real-person' } },
   openGraph: {
-    title: 'Chat with a Real Person in India — Not a Bot | LeanOn',
-    description: 'Tired of AI chatbots? Talk to a real human listener on LeanOn. No scripts, no algorithms — just genuine empathy from someone who has lived it. No appointment needed.',
-    url: 'https://www.leanon.app/chat-with-real-person',
-    siteName: 'LeanOn',
+    title: 'Chat with a Real Person in India — Not a Bot | How Was Your Day',
+    description: 'Tired of AI chatbots? Talk to a real human listener on How Was Your Day. No scripts, no algorithms — just genuine empathy from someone who has lived it. No appointment needed.',
+    url: 'https://www.howwasyourday.live/chat-with-real-person',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'What is the difference between talking to an AI and talking to a real person?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI like ChatGPT generates responses based on patterns in text data. It has never felt lonely, anxious, or heartbroken. A real peer listener on LeanOn has actually been through what you are going through — they have sat in the same silence at 2 AM, questioned the same things, and come out the other side. That lived experience is something no algorithm can replicate. When a listener says "I understand," they mean it.',
+        text: 'AI like ChatGPT generates responses based on patterns in text data. It has never felt lonely, anxious, or heartbroken. A real peer listener on How Was Your Day has actually been through what you are going through — they have sat in the same silence at 2 AM, questioned the same things, and come out the other side. That lived experience is something no algorithm can replicate. When a listener says "I understand," they mean it.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Why do people feel lonely even after talking to AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Because connection requires two-way vulnerability, not just a response. When you share something painful with an AI, you are essentially talking to a mirror that reflects plausible words back. There is no one on the other side. Human loneliness is healed by human presence — a real voice, real warmth, real shared experience. That is what LeanOn provides.',
+        text: 'Because connection requires two-way vulnerability, not just a response. When you share something painful with an AI, you are essentially talking to a mirror that reflects plausible words back. There is no one on the other side. Human loneliness is healed by human presence — a real voice, real warmth, real shared experience. That is what How Was Your Day provides.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is talking to a real person online safe and anonymous in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. On LeanOn, you do not need to share your name, city, or any personal details. Listeners are verified, screened, and agree to keep what you share confidential. Sessions are private by design. You can talk about anything — your family, your relationship, your darkest thoughts — without fear of judgment or disclosure.',
+        text: 'Yes. On How Was Your Day, you do not need to share your name, city, or any personal details. Listeners are verified, screened, and agree to keep what you share confidential. Sessions are private by design. You can talk about anything — your family, your relationship, your darkest thoughts — without fear of judgment or disclosure.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How do I find a real human to talk to online in India right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Open LeanOn, browse listeners by language or topic, and start a session. No appointment, no waitlist. Many listeners are online right now — including late at night when talking to a real person matters most.',
+        text: 'Open How Was Your Day, browse listeners by language or topic, and start a session. No appointment, no waitlist. Many listeners are online right now — including late at night when talking to a real person matters most.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to a real person online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session. New users get a free 5-minute trial. It is significantly more affordable than therapy and no appointment — no insurance, no waitlist, no prescription needed.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session. New users get a free 5-minute trial. It is significantly more affordable than therapy and no appointment — no insurance, no waitlist, no prescription needed.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Chat with a Real Person', item: 'https://www.leanon.app/chat-with-real-person' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Chat with a Real Person', item: 'https://www.howwasyourday.live/chat-with-real-person' },
   ],
 }
 
@@ -140,7 +140,7 @@ export default function ChatWithRealPersonPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -159,7 +159,7 @@ export default function ChatWithRealPersonPage() {
           <p className="tag">Human Connection · Not AI</p>
           <div className="badge">100% Human. 0% AI.</div>
           <h1>Talk to a <em>Real Person</em> — Not a Chatbot</h1>
-          <p className="lead">LeanOn connects you with verified peer listeners in India who have personally been through what you are facing. No scripts. No algorithms. Just genuine human empathy.</p>
+          <p className="lead">How Was Your Day connects you with verified peer listeners in India who have personally been through what you are facing. No scripts. No algorithms. Just genuine human empathy.</p>
           <div className="hero-cta">
             <a href="/browse"><button className="btn-primary" style={{fontFamily:'Nunito,sans-serif'}}>Browse Real Listeners →</button></a>
           </div>
@@ -168,7 +168,7 @@ export default function ChatWithRealPersonPage() {
         {/* What makes a human different */}
         <div className="section">
           <h2>What Makes a Real Human Different?</h2>
-          <p>Some people use AI for emotional conversations and later decide they want human-to-human support. LeanOn is designed for that distinct need. Here is what that something is.</p>
+          <p>Some people use AI for emotional conversations and later decide they want human-to-human support. How Was Your Day is designed for that distinct need. Here is what that something is.</p>
         </div>
 
         <div className="cards-grid">
@@ -186,12 +186,12 @@ export default function ChatWithRealPersonPage() {
             {
               icon: '🔁',
               title: 'Continuity vs Reset',
-              body: 'Your listener on LeanOn remembers your story — the context, the names, the details that matter. Most AI chats reset every single session, making you start over each time.',
+              body: 'Your listener on How Was Your Day remembers your story — the context, the names, the details that matter. Most AI chats reset every single session, making you start over each time.',
             },
             {
               icon: '🔒',
               title: 'Confidential vs Data-Trained',
-              body: 'What you share with a LeanOn listener stays private and is never used to train a model. Your pain is not a data point. It is a conversation with a real person who cares.',
+              body: 'What you share with a How Was Your Day listener stays private and is never used to train a model. Your pain is not a data point. It is a conversation with a real person who cares.',
             },
           ].map((c, i) => (
             <div key={i} className="card">
@@ -202,10 +202,10 @@ export default function ChatWithRealPersonPage() {
           ))}
         </div>
 
-        {/* Why people come to LeanOn */}
+        {/* Why people come to How Was Your Day */}
         <div className="section">
-          <h2>Who Talks to a Real Person on LeanOn?</h2>
-          <p>People come to LeanOn for many reasons. These are the most common:</p>
+          <h2>Who Talks to a Real Person on How Was Your Day?</h2>
+          <p>People come to How Was Your Day for many reasons. These are the most common:</p>
           <div className="scenario-list">
             <div className="scenario">&ldquo;I&apos;ve been chatting with AI for weeks but it doesn&apos;t actually make me feel better — I still feel completely alone.&rdquo;</div>
             <div className="scenario">&ldquo;I want someone who has personally been through loneliness, anxiety, or grief — not something that just knows about it from reading.&rdquo;</div>
@@ -220,21 +220,21 @@ export default function ChatWithRealPersonPage() {
           <h2>Why AI Cannot Replace Human Connection</h2>
 
           <h3>AI Has Never Sat With You at 2 AM</h3>
-          <p>The moment you type &ldquo;I feel so alone and I don&apos;t know why&rdquo; into an AI — it returns something grammatically empathetic, contextually plausible, and emotionally hollow. It has never sat in that 2 AM silence. It has never felt the particular weight of loneliness in a city where you know no one. Your LeanOn listener has. And that makes their &ldquo;I understand&rdquo; mean something completely different.</p>
+          <p>The moment you type &ldquo;I feel so alone and I don&apos;t know why&rdquo; into an AI — it returns something grammatically empathetic, contextually plausible, and emotionally hollow. It has never sat in that 2 AM silence. It has never felt the particular weight of loneliness in a city where you know no one. Your How Was Your Day listener has. And that makes their &ldquo;I understand&rdquo; mean something completely different.</p>
 
           <h3>Connection Requires Someone On the Other Side</h3>
           <p>Human loneliness is not a problem that better text prediction can solve. It is the ache of not being seen, known, or felt by another human being. When you talk to an AI, there is no one on the other side receiving your pain — there is only an algorithm outputting a response. That structural absence is why many people feel lonelier after AI conversations, not less.</p>
 
           <h3>Lived Experience vs Statistical Knowledge</h3>
-          <p>An AI trained on the internet knows everything about grief — the stages, the research, the coping strategies. But it has never lost someone. A peer listener on LeanOn who has personally navigated grief brings something the AI cannot: the credibility of having been there and the hard-won wisdom of having come through. That is irreplaceable.</p>
+          <p>An AI trained on the internet knows everything about grief — the stages, the research, the coping strategies. But it has never lost someone. A peer listener on How Was Your Day who has personally navigated grief brings something the AI cannot: the credibility of having been there and the hard-won wisdom of having come through. That is irreplaceable.</p>
 
           <h3>Memory, Context, and Being Truly Known</h3>
           <p>One of the most healing aspects of being understood is continuity — the feeling that someone knows your history and holds it with care. AI resets. Listeners remember. That difference accumulates into something that matters deeply over multiple conversations.</p>
         </div>
 
-        {/* How LeanOn works */}
+        {/* How the app works */}
         <div className="section">
-          <h2>How to Talk to a Real Person on LeanOn</h2>
+          <h2>How to Talk to a Real Person on How Was Your Day</h2>
 
           <h3>Step 1: Browse Verified Listeners</h3>
           <p>See listener profiles, their lived experience, the topics they support, and their availability. Every listener is a real, verified person — their profile reflects genuine experience, not a generated bio.</p>
@@ -273,14 +273,14 @@ export default function ChatWithRealPersonPage() {
         {/* Related */}
         <div className="section">
           <h2>Related Pages</h2>
-          <p>Looking for more ways to connect with real humans on LeanOn?</p>
+          <p>Looking for more ways to connect with real humans on How Was Your Day?</p>
           <div className="related">
             <a href="/ai-chatbot-alternative" className="related-link">AI Chatbot Alternative</a>
             <a href="/anonymous-peer-support" className="related-link">Anonymous Support</a>
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>
-            <a href="/how-leanon-works" className="related-link">How LeanOn Works</a>
-            <a href="/is-leanon-safe" className="related-link">Is LeanOn Safe?</a>
+            <a href="/how-it-works" className="related-link">How It Works</a>
+            <a href="/is-howwasyourday-safe" className="related-link">Is How Was Your Day Safe?</a>
             <a href="/alternatives-to-therapy-india" className="related-link">Therapy Alternatives</a>
             <a href="/browse" className="related-link">Browse All Listeners</a>
           </div>

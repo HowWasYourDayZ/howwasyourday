@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Peer Support Online | Talk to an NRI Who Has Been Through It | LeanOn',
+  title: 'NRI Peer Support Online | Talk to an NRI Who Has Been Through It | How Was Your Day',
   description: 'NRI peer support from people who\'ve actually lived the immigrant experience — not professionals, real peers. Available now, no appointment.',
   keywords: ['nri peer support', 'nri peer support online', 'nri peer listener', 'nri peer counselling', 'indian immigrant peer support', 'desi peer support'],
-  alternates: { canonical: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  openGraph: { title: 'NRI Peer Support Online | Talk to an NRI Who Has Been Through It | LeanOn', description: 'NRI peer support from people who\'ve actually lived the immigrant experience — not professionals, real peers. Available now, no appointment.', url: 'https://www.leanon.app/indian-emotional-support-abroad', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  openGraph: { title: 'NRI Peer Support Online | Talk to an NRI Who Has Been Through It | How Was Your Day', description: 'NRI peer support from people who\'ve actually lived the immigrant experience — not professionals, real peers. Available now, no appointment.', url: 'https://www.howwasyourday.live/indian-emotional-support-abroad', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'What is NRI peer support?', acceptedAnswer: { '@type': 'Answer', text: 'NRI peer support means talking to another Indian person who has personally experienced the immigrant life — the visa stress, the homesickness, the cultural in-between. Not a professional, not a coach. A real peer who has been through it and listens without judgment.' } },
   { '@type': 'Question', name: 'How is talking to a peer listener different from talking to a friend?', acceptedAnswer: { '@type': 'Answer', text: 'A friend has their own life, their own opinions, and sometimes their own stake in what you do. A peer listener has none of that. They are there only to listen, ask the right questions, and help you think through what you\'re carrying. No agenda, no advice you didn\'t ask for.' } },
-  { '@type': 'Question', name: 'Are LeanOn listeners trained?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners go through a selection and orientation process and are guided on active listening and empathetic engagement. They are not counsellors — they are skilled peers with lived experience. That distinction is the point.' } },
-  { '@type': 'Question', name: 'How do I start a session?', acceptedAnswer: { '@type': 'Answer', text: 'Browse available listeners at leanon.app/browse, pick someone whose profile resonates, and start a session. First 5 minutes are free. No appointment needed.' } },
-  { '@type': 'Question', name: 'How much does NRI peer support cost on LeanOn?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. There is no subscription or commitment.' } },
+  { '@type': 'Question', name: 'Are How Was Your Day listeners trained?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners go through a selection and orientation process and are guided on active listening and empathetic engagement. They are not counsellors — they are skilled peers with lived experience. That distinction is the point.' } },
+  { '@type': 'Question', name: 'How do I start a session?', acceptedAnswer: { '@type': 'Answer', text: 'Browse available listeners at howwasyourday.live/browse, pick someone whose profile resonates, and start a session. First 5 minutes are free. No appointment needed.' } },
+  { '@type': 'Question', name: 'How much does NRI peer support cost on How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. There is no subscription or commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Peer Support Online', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Peer Support Online', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriPeerSupportOnlinePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Peer Support Online</span></nav>
         <div className="hero">
           <p className="badge">NRI Peer Support &middot; Indian Immigrant Life &middot; Lived Experience</p>
           <h1>NRI Peer Support — From Someone Who <em>Has Actually Been There</em></h1>
-          <p className="lead">A professional has read about the immigrant experience. A peer has lived it. They know the joint family pressure, the visa anxiety, the 2 AM homesickness — not because they studied it, but because they went through it too. That&rsquo;s who listens to you on LeanOn. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to a peer now &rarr;</a>
+          <p className="lead">A professional has read about the immigrant experience. A peer has lived it. They know the joint family pressure, the visa anxiety, the 2 AM homesickness — not because they studied it, but because they went through it too. That&rsquo;s who listens to you on How Was Your Day. First 5 minutes free.</p>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to a peer now &rarr;</a>
         </div>
 
         <div className="section">
@@ -88,8 +88,8 @@ export default function NriPeerSupportOnlinePage() {
         </div>
 
         <div className="section">
-          <h2>Who Are LeanOn&rsquo;s Peer Listeners?</h2>
-          <p>LeanOn listeners are everyday Indians with lived experience in the situations you are navigating. Not counsellors, not coaches, not professionals with degrees in immigrant psychology. Real people who moved abroad and came back, or who have close family abroad and understand the dynamics deeply. People who struggled, felt the loneliness, navigated the marriage pressure, came through the career anxiety.</p>
+          <h2>Who Are How Was Your Day&rsquo;s Peer Listeners?</h2>
+          <p>How Was Your Day listeners are everyday Indians with lived experience in the situations you are navigating. Not counsellors, not coaches, not professionals with degrees in immigrant psychology. Real people who moved abroad and came back, or who have close family abroad and understand the dynamics deeply. People who struggled, felt the loneliness, navigated the marriage pressure, came through the career anxiety.</p>
           <p>They are there to listen — not to give you advice you didn&rsquo;t ask for, not to push you toward a particular decision, not to fix you. Just to hear what you are carrying, ask the right questions, and make you feel a little less alone in it. That&rsquo;s it. That&rsquo;s the whole job.</p>
         </div>
 
@@ -100,7 +100,7 @@ export default function NriPeerSupportOnlinePage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>No preamble needed. They already know.</h2><p>Real NRI peer listener. Lived experience. No appointment. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a peer listener &rarr;</a></div>
+        <div className="cta-card"><h2>No preamble needed. They already know.</h2><p>Real NRI peer listener. Lived experience. No appointment. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a peer listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-mental-health">NRI mental health &rarr;</a>

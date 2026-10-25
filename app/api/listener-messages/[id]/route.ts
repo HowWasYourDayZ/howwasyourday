@@ -63,7 +63,7 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
 // who left this offline message. This is deliberately NOT a reply: the listener
 // cannot send free text. It only notifies the seeker (in-app + FCM + SMS) that
 // the listener is around, and links them to the listener's profile to start a
-// LIVE session. Keeps LeanOn a live-session platform, not an async messenger.
+// LIVE session. Keeps How Was Your Day a live-session platform, not an async messenger.
 //
 // Guard: the listener must actually be online, or the "available now" ping would
 // be a lie. Rate-limited to once per INVITE_COOLDOWN_MS per thread.
@@ -145,9 +145,9 @@ export async function POST(_req: NextRequest, { params }: { params: { id: string
     // 2) Push (every device) — reach the seeker even if they've left the app.
     await sendPushToUser(admin, thread.seeker_id as string, {
       title: `${listenerName} is available now`,
-      body: 'Tap to start a live session on LeanOn.',
+      body: 'Tap to start a live session on How Was Your Day.',
       url: `/listener/${thread.listener_id}`,
-      tag: `leanon-avail-${thread.listener_id}`,
+      tag: `howwasyourday-avail-${thread.listener_id}`,
       ttlSecs: 60 * 60,
       data: { type: 'listener_available', listenerId: String(thread.listener_id) },
     }).catch(e => logger.error('invite push failed (non-critical):', { error: String(e) }))

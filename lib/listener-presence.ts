@@ -8,7 +8,7 @@ type Sb = ReturnType<typeof createAdminClient>
 // ── Listener presence: who counts as online ──────────────────────────────────
 //
 // History (see PROJECT.md §8.2.3): a listener's browser stamps
-// listener_profiles.last_heartbeat_at every 60–90s while LeanOn is open, and
+// listener_profiles.last_heartbeat_at every 60–90s while How Was Your Day is open, and
 // the sweep below (run on every /api/listeners load) takes a listener offline
 // once that stamp is too old. Phones pause background tabs, so a listener who
 // switched to WhatsApp stopped heart-beating and was swept offline after 15
@@ -16,7 +16,7 @@ type Sb = ReturnType<typeof createAdminClient>
 //
 // AWAY MODE (2026-09-24; off 2026-10-16; back on 2026-10-19 with a 60-minute
 // window instead of 4 hours — see step 3 of the sweep): a listener whose device can receive push alerts can
-// still be reached with LeanOn in the background, so they stay online for up
+// still be reached with How Was Your Day in the background, so they stay online for up
 // to AWAY_WITH_ALERTS_MINS without heartbeats. Two guards keep this from
 // bringing back "ghost online" listeners:
 //   • no push device → the original 15-minute rule, unchanged;
@@ -156,7 +156,7 @@ export async function recordMissedRequest(sb: Sb, args: { listenerId: string; se
     const { data: flipped } = await flip.select('user_id').maybeSingle()
     if (!flipped) return
     const body = away
-      ? 'A seeker requested a session while LeanOn was in the background and it went unanswered, so we set you offline. Go online again when you’re ready.'
+      ? 'A seeker requested a session while How Was Your Day was in the background and it went unanswered, so we set you offline. Go online again when you’re ready.'
       : 'Two requests in a row went unanswered, so we set you offline. Go online again when you’re ready.'
     logger.info('listener auto-offline after missed request', { listenerId, sessionId, away, secondInARow })
     await sb.from('notifications').insert({
@@ -165,7 +165,7 @@ export async function recordMissedRequest(sb: Sb, args: { listenerId: string; se
     }).then(() => {}, () => {})
     await sendPushToUser(sb, listenerId, {
       title: 'You missed a request — you’re now offline',
-      body, url: '/dashboard', tag: 'leanon-auto-offline', ttlSecs: 6 * 60 * 60,
+      body, url: '/dashboard', tag: 'howwasyourday-auto-offline', ttlSecs: 6 * 60 * 60,
       data: { type: 'auto_offline' },
     })
   } catch (e) {

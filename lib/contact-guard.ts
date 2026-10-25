@@ -1,7 +1,7 @@
 // Contact-detail guard for chat (2026-10-20, redesigned the same day).
 //
 // Terms §3 forbid sharing phone / email / social media and moving a
-// conversation off LeanOn — for safety (no record, no protection) and because
+// conversation off How Was Your Day — for safety (no record, no protection) and because
 // competitors pose as seekers to recruit listeners (2026-10-20: a "college
 // student survey" ended with a listener's Instagram handle).
 //
@@ -9,7 +9,7 @@
 //   • BLOCK only when an actual contact DETAIL is in the message: a phone
 //     number, an email address, a link to a messaging / social app, or a
 //     handle given as a handle. Without the detail nobody can be reached
-//     off LeanOn, so this is enough to stop the move.
+//     off How Was Your Day, so this is enough to stop the move.
 //   • FLAG (deliver, record for admin) everything that only HINTS at it:
 //     "text me on my ig", "lets talk on whatsapp", "insta id do", a website
 //     address, a number that might be a phone, a word that might be a handle.
@@ -23,9 +23,9 @@ export type ContactCheck = { block: ContactKind[]; flag: ContactKind[] }
 
 // ── Shared pieces ────────────────────────────────────────────────────────────
 
-// Fine to share: LeanOn's crisis lines, plus well-known helplines a seeker may
+// Fine to share: How Was Your Day's crisis lines, plus well-known helplines a seeker may
 // mention having called (iCall, Vandrevala, AASRA, Sneha). Allowing a mention in
-// chat is NOT LeanOn listing them (CLAUDE.md: LeanOn itself shows only
+// chat is NOT How Was Your Day listing them (CLAUDE.md: How Was Your Day itself shows only
 // Tele-MANAS and NIMHANS). Any 1800 toll-free number is fine too.
 const ALLOWED_NUMBERS = new Set(['14416', '08046110007', '8046110007', '918046110007',
   '9152987821', '919152987821', '9999666555', '919999666555', '9820466726', '919820466726', '04424640050', '4424640050'])
@@ -103,11 +103,11 @@ const RE_URL = /\bhttps?:\/\/\S+|\bwww\.[a-z0-9-]+\.\S+/i
 const RE_DOMAIN_STRONG = /(?:^|\s)(?:[a-z0-9-]{2,}\.)+(?:com|net|org|io|app|xyz|ly|gg|info|site|online|store|page)(?:\/\S*)?(?=\s|$|[),.!?])/gi
 const RE_DOMAIN_WEAK = /(?:^|\s)[a-z0-9-]{4,}\.(?:in|co\.in|co|me|live|chat|club|link)(?:\/\S*)?(?=\s*$|\/)/gi
 const RE_DOMAIN_VISIT = /\b(?:check\s?out|visit|go\s+to|search|google|site|website|link)\b[\s\S]{0,12}\b[a-z0-9-]{3,}\.(?:in|co\.in|co|me|live|chat|club|link)\b/i
-const isLeanOn = (s: string) => /^\s*(https?:\/\/)?(www\.)?leanon\.app(\/|$|\s)/i.test(s + ' ')
+const isHowWasYourDay = (s: string) => /^\s*(https?:\/\/)?(www\.)?howwasyourday\.app(\/|$|\s)/i.test(s + ' ')
 // Content people share in a conversation (a song, a video, an article, a
 // government site) — not a way to reach anyone, so not even flagged.
 const CONTENT_SITE = /^\s*(?:https?:\/\/)?(?:www\.|m\.)?(?:[a-z0-9-]+\.)*(?:youtube\.com|youtu\.be|spotify\.com|open\.spotify\.com|music\.apple\.com|gaana\.com|jiosaavn\.com|wikipedia\.org|google\.com|bbc\.com|bbc\.co\.uk|ndtv\.com|thehindu\.com|indianexpress\.com|timesofindia\.indiatimes\.com|hindustantimes\.com|who\.int|nimhans\.ac\.in|gov\.in|nic\.in|ac\.in|edu|imdb\.com|netflix\.com|amazon\.in|flipkart\.com)(?:[\/?#]|\s|$)/i
-const benign = (s: string) => isLeanOn(s) || CONTENT_SITE.test(s + ' ')
+const benign = (s: string) => isHowWasYourDay(s) || CONTENT_SITE.test(s + ' ')
 
 // ── Handles ──────────────────────────────────────────────────────────────────
 
@@ -151,7 +151,7 @@ const HINTS: RegExp[] = [
   new RegExp(String.raw`\b(?:let'?s|lets|can\s+we|shall\s+we|chalo|we\s+can)\b[\s\S]{0,15}\b(?:talk|chat|connect|baat|continue|move)\b[\s\S]{0,15}\b(?:on|pe|par|in|to)\s+${PLATFORM}\b`, 'i'),
   new RegExp(String.raw`\b${PLATFORM}\b\s*(?:pe|par)?\s*(?:aao|aaja|aa\s?jao|aa\s?jaao|milo|(?:baat|msg|message|text|call|dm|add|follow)\s+(?:karo|kro|kar\s+lo|karein|karenge)|karo|kro)\b`, 'i'),
   /\b(?:dm|inbox)\s+(?:me|kar(?:o|do)?|kro)\b/i,
-  /\b(?:talk|chat|connect|baat)\b[\s\S]{0,20}\b(?:somewhere\s+else|outside\s+(?:leanon|here|this)|other\s+(?:app|platform)|free\s+(?:app|platform))\b/i,
+  /\b(?:talk|chat|connect|baat)\b[\s\S]{0,20}\b(?:somewhere\s+else|outside\s+(?:howwasyourday|here|this)|other\s+(?:app|platform)|free\s+(?:app|platform))\b/i,
 ]
 
 // Someone describing what happened ("HE used to call me on whatsapp", "WO insta pe
@@ -230,6 +230,6 @@ export function detectContact(input: string): ContactKind[] {
 
 export function contactBlockedMessage(isListener: boolean): string {
   return isListener
-    ? 'Contact details (phone, social media, email, links) can’t be shared on LeanOn — it breaks the listener rules you agreed to, and the message was not sent. If someone asks to talk outside LeanOn, politely decline: it is often someone recruiting listeners for another app.'
-    : 'For your safety, contact details (phone, social media, email, links) can’t be shared on LeanOn, so this message was not sent. Please keep the conversation here.'
+    ? 'Contact details (phone, social media, email, links) can’t be shared on How Was Your Day — it breaks the listener rules you agreed to, and the message was not sent. If someone asks to talk outside How Was Your Day, politely decline: it is often someone recruiting listeners for another app.'
+    : 'For your safety, contact details (phone, social media, email, links) can’t be shared on How Was Your Day, so this message was not sent. Please keep the conversation here.'
 }

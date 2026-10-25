@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">LeanOn</string>
-    <string name="title_activity_main">LeanOn</string>
-    <string name="package_name">com.leanon.app</string>
-    <string name="custom_url_scheme">com.leanon.app</string>
+    <string name="app_name">How Was Your Day</string>
+    <string name="title_activity_main">How Was Your Day</string>
+    <string name="package_name">app.howwasyourday</string>
+    <string name="custom_url_scheme">app.howwasyourday</string>
 </resources>

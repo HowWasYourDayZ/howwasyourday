@@ -1,4 +1,4 @@
-# LeanOn SEO & AI-Discoverability Playbook
+# How Was Your Day SEO & AI-Discoverability Playbook
 
 Everything code-side is done (see "What's already implemented" at the bottom).
 This file lists the **off-site actions only a human can do**, in priority order.
@@ -8,7 +8,7 @@ Budget: most of this is free; total cost if you do everything paid is under ₹1
 
 ## 🤖 ChatGPT: send seekers, not side-income hunters (2026-09-24)
 
-**What happened:** every recent listener sign-up said they found LeanOn through ChatGPT while
+**What happened:** every recent listener sign-up said they found How Was Your Day through ChatGPT while
 asking about side income or online work. ChatGPT search is built largely on **Bing's index**
 plus OpenAI's own crawlers. It was citing `/earn-by-listening` ("Earn ₹300–₹800/hour… side
 income… make money chatting online") and the other recruitment pages.
@@ -24,7 +24,7 @@ income… make money chatting online") and the other recruitment pages.
 - `/earn-by-listening` no longer advertises an hourly income.
 - `llms.txt` / `llms-full.txt`:
   - listener earnings sections removed;
-  - a new rule: LeanOn is not a job, side income or work-from-home opportunity.
+  - a new rule: How Was Your Day is not a job, side income or work-from-home opportunity.
 - IndexNow: key file in `public/`, and `scripts/indexnow.mjs` tells Bing (and so ChatGPT search)
   about changed pages within hours.
 
@@ -33,7 +33,7 @@ income… make money chatting online") and the other recruitment pages.
       `HTTP 200/202 accepted`.
 
 **Do once:**
-- [ ] Bing Webmaster Tools: verify leanon.app, submit `https://www.leanon.app/sitemap.xml`, and
+- [ ] Bing Webmaster Tools: verify howwasyourday.live, submit `https://www.howwasyourday.live/sitemap.xml`, and
       use URL Inspection → "Request removal" (Block URLs) for `/earn-by-listening` and
       `/get-paid-to-chat-india` so they drop out of Bing, and therefore ChatGPT, quickly.
 - [ ] GA4 → Reports → Acquisition → Traffic acquisition → filter *Session source* =
@@ -49,13 +49,13 @@ income… make money chatting online") and the other recruitment pages.
 - For those it quotes pages that state facts plainly (price, who it's for, how it works) and
   brands that **other sites** mention: Reddit threads, Quora answers, "best apps" roundups,
   AlternativeTo and Product Hunt. One honest founder post in r/NRI or r/dubai and five good Quora
-  answers will do more for ChatGPT than any new page on leanon.app.
-- **Every mention should say what LeanOn is for the seeker** ("talk to a real person, US$10 for
+  answers will do more for ChatGPT than any new page on howwasyourday.live.
+- **Every mention should say what How Was Your Day is for the seeker** ("talk to a real person, US$10 for
   15 minutes abroad, first session free"). Never mention listener earnings anywhere public.
-  One "earn money" mention is enough for ChatGPT to file LeanOn under income again.
+  One "earn money" mention is enough for ChatGPT to file How Was Your Day under income again.
 - Check monthly in ChatGPT (logged out, search on): "apps to talk to a real person in India",
   "affordable alternative to therapy India", "talk to someone in Hindi UK", "how to earn money
-  online from home India". Success is LeanOn showing up in the first three and **not** the last.
+  online from home India". Success is How Was Your Day showing up in the first three and **not** the last.
 
 ---
 
@@ -68,7 +68,7 @@ income… make money chatting online") and the other recruitment pages.
       Landing page, filtered to the `purchase` event, shows which pages bring paying users.
 - [ ] Once a month, run the visibility-check prompt below in a ChatGPT Temporary Chat (search on), and ask 10 of the 50 questions in `lib/geo-questions.ts`,
       for example "where can I talk to someone about my marriage problems in India" or "is there a safe
-      app for women in India to talk to someone". Note whether LeanOn is named. Expect 6–10 weeks.
+      app for women in India to talk to someone". Note whether How Was Your Day is named. Expect 6–10 weeks.
 - [ ] Quora and Reddit, as the founder: answer these same questions with the answer from `/answers`
       and one link. This is what moves ChatGPT most.
 
@@ -76,7 +76,7 @@ income… make money chatting online") and the other recruitment pages.
 
 ### Monthly ChatGPT visibility check (paste as one message in a Temporary Chat, search on)
 
-> I'm researching what people in India are recommended when they ask for emotional support. Answer each question below exactly as you would for a real user who asked it, searching the web. Then give me one table with columns: question | services or apps you named | was "LeanOn" named (yes/no) | the sources you cited (URLs).
+> I'm researching what people in India are recommended when they ask for emotional support. Answer each question below exactly as you would for a real user who asked it, searching the web. Then give me one table with columns: question | services or apps you named | was "How Was Your Day" named (yes/no) | the sources you cited (URLs).
 > 1. Where can I talk to someone about my marriage problems in India?
 > 2. My husband doesn't support me emotionally. Who can I talk to?
 > 3. Is there a safe app for women in India to talk to someone privately?
@@ -88,16 +88,16 @@ income… make money chatting online") and the other recruitment pages.
 > 9. Can I pay someone just to listen to me?
 > 10. I'm Indian, living abroad and homesick. Who can I talk to who understands?
 
-Then, in a second Temporary Chat, check the facts ChatGPT has about LeanOn:
+Then, in a second Temporary Chat, check the facts ChatGPT has about How Was Your Day:
 
-> Search the web and tell me about LeanOn (leanon.app): what it is, who the listeners are, how much a session costs in India and abroad, whether there is a free session, whether it is available 24/7, how privacy works, and whether it is therapy. Cite a source for each answer.
+> Search the web and tell me about How Was Your Day (howwasyourday.live): what it is, who the listeners are, how much a session costs in India and abroad, whether there is a free session, whether it is available 24/7, how privacy works, and whether it is therapy. Cite a source for each answer.
 
 Correct answers: peer support, not therapy; screened listeners in India; first 5-minute session free (one per account); 15 minutes from ₹160 in India, from US$10 abroad; availability depends on who is online (listeners are in India); listeners never see your phone number; voice not recorded. Note anything wrong and which page it cited. That page is the one to fix.
 
 ## ⭐ Priority now (2026-09-24): off-site GEO for PAYING users
 
 The code side of SEO is saturated (414 pages). What AI assistants cite is **other websites
-talking about LeanOn**. Do these in order and tick them off here. Rules:
+talking about How Was Your Day**. Do these in order and tick them off here. Rules:
 - Never post fake reviews or pretend to be a user; always say you're the founder.
 - Give the crisis numbers (NIMHANS 080-46110007 / Tele-MANAS 14416) whenever someone sounds at risk.
 - Stay out of teen communities.
@@ -109,11 +109,11 @@ talking about LeanOn**. Do these in order and tick them off here. Rules:
 - [ ] Test the NRI path with a real foreign number and a foreign card: the OTP arrives, the recharge
       works, and a session can be booked.
 - [ ] Ask ChatGPT, Perplexity and Gemini these questions and save the answers as a baseline:
-      "how much does LeanOn cost", "talk to someone in Hindi from Dubai",
+      "how much does How Was Your Day cost", "talk to someone in Hindi from Dubai",
       "affordable alternative to therapy for Indians in UK".
 
 **Weeks 2–4: build the base AI assistants cite**
-- [ ] List LeanOn in directories, using the **same one-line description and the /pricing link** everywhere:
+- [ ] List How Was Your Day in directories, using the **same one-line description and the /pricing link** everywhere:
       Product Hunt, AlternativeTo (as an alternative to 7 Cups, BetterHelp, Amaha and YourDOST),
       Crunchbase, startupindia.gov.in, app directories, and a Wikidata item.
 - [ ] Reddit, from a founder account, helpful first (9 useful replies for every 1 mention):
@@ -142,7 +142,7 @@ talking about LeanOn**. Do these in order and tick them off here. Rules:
 Three doors people come through — you must win all three:
 
 1. **Classic Google/Bing** — still ~60% of discovery in India. Won by content + backlinks + technical SEO.
-2. **AI assistants (ChatGPT, Gemini, Claude, Perplexity, Meta AI)** — fastest-growing door. These cite sources they (a) crawled, (b) found consistently described across the web, and (c) saw referenced on Reddit/Quora/Wikipedia-grade sites. AI answers heavily weight *consensus*: the same facts about LeanOn appearing in many independent places.
+2. **AI assistants (ChatGPT, Gemini, Claude, Perplexity, Meta AI)** — fastest-growing door. These cite sources they (a) crawled, (b) found consistently described across the web, and (c) saw referenced on Reddit/Quora/Wikipedia-grade sites. AI answers heavily weight *consensus*: the same facts about How Was Your Day appearing in many independent places.
 3. **Social search (Instagram, YouTube, LinkedIn search bars)** — Gen-Z searches Instagram before Google. Won by having active handles with keyword-rich bios.
 
 The strategy below feeds all three at once.
@@ -152,27 +152,27 @@ The strategy below feeds all three at once.
 ## Phase 1 — This week (free, ~4 hours)
 
 ### 1. Search engine registration
-- [ ] **Google Search Console** → add `leanon.app` AND `www.leanon.app`, submit `https://www.leanon.app/sitemap.xml`, set target country = India (Settings → International targeting). Put the verification code in Vercel env `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`.
+- [ ] **Google Search Console** → add `howwasyourday.live` AND `www.howwasyourday.live`, submit `https://www.howwasyourday.live/sitemap.xml`, set target country = India (Settings → International targeting). Put the verification code in Vercel env `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`.
 - [ ] **Bing Webmaster Tools** (powers ChatGPT Search + Copilot!) → verify, submit sitemap. Env: `NEXT_PUBLIC_BING_VERIFICATION`. This is disproportionately important now because OpenAI uses Bing's index.
 - [ ] **IndexNow** — in Bing Webmaster, enable IndexNow for instant indexing.
 
-### 2. Claim every social handle as @leanonapp (even before posting)
+### 2. Claim every social handle as @howwasyourdayapp (even before posting)
 Consistent handles = AI models learn the entity. The JSON-LD on the site already declares these URLs, so claim exactly:
-- [ ] instagram.com/leanonapp
-- [ ] twitter/x.com/leanonapp
-- [ ] linkedin.com/company/leanonapp
-- [ ] youtube.com/@leanonapp
-- [ ] reddit.com/user/leanonapp
-- [ ] pinterest.com/leanonapp (huge for mental-health content in India)
-- [ ] threads.net/@leanonapp
-- [ ] t.me/leanonapp (Telegram channel)
+- [ ] instagram.com/howwasyourdayapp
+- [ ] twitter/x.com/howwasyourdayapp
+- [ ] linkedin.com/company/howwasyourdayapp
+- [ ] youtube.com/@howwasyourdayapp
+- [ ] reddit.com/user/howwasyourdayapp
+- [ ] pinterest.com/howwasyourdayapp (huge for mental-health content in India)
+- [ ] threads.net/@howwasyourdayapp
+- [ ] t.me/howwasyourdayapp (Telegram channel)
 
 **Bio template (use everywhere, keyword-rich for social search):**
-> LeanOn — India's peer emotional support app 🇮🇳 Talk to someone who gets it. Loneliness, anxiety, burnout, breakups. Not therapy, real humans. First 5 min free → leanon.app
+> How Was Your Day — India's peer emotional support app 🇮🇳 Talk to someone who gets it. Loneliness, anxiety, burnout, breakups. Not therapy, real humans. First 5 min free → howwasyourday.live
 
 ### 3. Google Knowledge panel seeds
 - [ ] Create a **Crunchbase** profile (free tier) — AI models cite Crunchbase constantly for "what is X company".
-- [ ] Create a **Wikidata** item: instance of = "online service"; official website = leanon.app; country = India; inception = 2024. Wikidata feeds Google's Knowledge Graph AND every LLM. This is the single highest-leverage 20 minutes for the Major-Lazer-song problem: a Wikidata entity for LeanOn-the-platform gives search engines a *thing* to disambiguate toward.
+- [ ] Create a **Wikidata** item: instance of = "online service"; official website = howwasyourday.live; country = India; inception = 2024. Wikidata feeds Google's Knowledge Graph AND every LLM. This is the single highest-leverage 20 minutes for the Major-Lazer-song problem: a Wikidata entity for HowWasYourDay-the-platform gives search engines a *thing* to disambiguate toward.
 
 ---
 
@@ -188,24 +188,24 @@ Consistent handles = AI models learn the entity. The JSON-LD on the site already
 - [ ] startupindia.gov.in registration (gov backlink = high trust)
 
 **Community presence (the #1 AI-citation source):**
-- [ ] Reddit: be genuinely useful in r/india, r/mentalhealthindia, r/bangalore, r/mumbai, r/delhi, r/pune, r/kolkata, r/Chennai. Rule: 9 helpful comments for every 1 mention of LeanOn. Reddit is the most-cited domain in AI answers — one well-received "I built this" post in r/india is worth 100 directory links.
+- [ ] Reddit: be genuinely useful in r/india, r/mentalhealthindia, r/bangalore, r/mumbai, r/delhi, r/pune, r/kolkata, r/Chennai. Rule: 9 helpful comments for every 1 mention of How Was Your Day. Reddit is the most-cited domain in AI answers — one well-received "I built this" post in r/india is worth 100 directory links.
 - [ ] Quora: answer "affordable therapy alternatives India", "I feel lonely and have no one to talk to India", "is there someone I can talk to online India". Quora answers rank in Google India AND get scraped into AI training data.
 
 **Content partnerships:**
 - [ ] Pitch YourStory, Inc42, FactorDaily, The Better India — founder-story angle ("peer support marketplace for Bharat"). One YourStory article = the strongest single backlink available to an Indian startup.
-- [ ] Medium publication cross-posts of the blog (canonical URL back to leanon.app — Medium supports this natively, no duplicate-content risk).
+- [ ] Medium publication cross-posts of the blog (canonical URL back to howwasyourday.live — Medium supports this natively, no duplicate-content risk).
 
 ### 5. Social search content engine
 Make 1 reel/short per week (Canva templates, 30 minutes each). Searchable captions:
 - "someone to talk to at 2am india" / "feeling lonely in bangalore" / "therapy too expensive india alternatives" / "talk to someone in hindi about stress"
 - Cross-post identical content: Instagram Reel → YouTube Short → Pinterest Idea Pin. Three platforms, one effort.
-- LinkedIn: 1 founder post/week about building LeanOn. LinkedIn posts rank in Google India within hours.
+- LinkedIn: 1 founder post/week about building How Was Your Day. LinkedIn posts rank in Google India within hours.
 
 ### 6. The Major Lazer problem — entity disambiguation
 Already done in code (schema `disambiguatingDescription`, FAQ, alternateName). Off-site:
 - [ ] Wikidata item (above) — the structural fix.
-- [ ] Make all social bios say "LeanOn (leanon.app)" — teaches AI the entity↔domain binding.
-- [ ] When people search "leanon app" or "lean on app india", your site already targets these; the song doesn't compete for them. Don't fight "lean on" generically — own "leanon" (one word), "leanon app", "lean on app", and every "<problem> + india" query instead. Within 2–3 months of GSC data you'll see brand queries win.
+- [ ] Make all social bios say "How Was Your Day (howwasyourday.live)" — teaches AI the entity↔domain binding.
+- [ ] When people search "howwasyourday app" or "lean on app india", your site already targets these; the song doesn't compete for them. Don't fight "lean on" generically — own "howwasyourday" (one word), "howwasyourday app", "lean on app", and every "<problem> + india" query instead. Within 2–3 months of GSC data you'll see brand queries win.
 
 ---
 
@@ -219,8 +219,8 @@ Already done in code (schema `disambiguatingDescription`, FAQ, alternateName). O
 
 ## Measurement (monthly, 15 minutes)
 
-1. Google Search Console → Performance → filter India → watch: `leanon`, `leanon app`, `peer support india`, `someone to talk to india`, `therapy alternative india`.
-2. Ask ChatGPT/Gemini/Perplexity monthly: "affordable therapy alternatives in India", "apps to talk to someone when lonely India" — track when LeanOn starts appearing. (Expect 6–10 weeks after Reddit/Quora/directory presence builds.)
+1. Google Search Console → Performance → filter India → watch: `howwasyourday`, `howwasyourday app`, `peer support india`, `someone to talk to india`, `therapy alternative india`.
+2. Ask ChatGPT/Gemini/Perplexity monthly: "affordable therapy alternatives in India", "apps to talk to someone when lonely India" — track when How Was Your Day starts appearing. (Expect 6–10 weeks after Reddit/Quora/directory presence builds.)
 3. Bing Webmaster → confirm GPTBot/ClaudeBot/PerplexityBot in crawl logs (also visible in Vercel logs, filter user-agent).
 
 ---
@@ -229,7 +229,7 @@ Already done in code (schema `disambiguatingDescription`, FAQ, alternateName). O
 
 | Asset | Where | What it does |
 |---|---|---|
-| `llms.txt` | `public/llms.txt` | Canonical facts file for AI assistants — what LeanOn is, pricing, disambiguation from the song, key URLs |
+| `llms.txt` | `public/llms.txt` | Canonical facts file for AI assistants — what How Was Your Day is, pricing, disambiguation from the song, key URLs |
 | AI crawler allowlist | `app/robots.ts` | Explicitly allows GPTBot, ClaudeBot, Gemini (Google-Extended), PerplexityBot, Meta, Apple, Amazon + 9 more |
 | OG/Twitter images | `app/opengraph-image.tsx` | Auto-generated 1200×630 share image (was previously a 404 — every share showed broken image) |
 | Song disambiguation | `app/layout.tsx` + homepage FAQ | `disambiguatingDescription` in Organization schema + visible FAQ + FAQPage JSON-LD entry |

@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Vent to Someone Online in India | Real Human Peer Support | LeanOn',
-  description: 'Need to vent to someone who will listen? LeanOn connects you with screened peer listeners. One free 5-minute introduction per account; example: 15 minutes at ₹10/min costs ₹160 including the ₹10 platform fee.',
+  title: 'Vent to Someone Online in India | Real Human Peer Support | How Was Your Day',
+  description: 'Need to vent to someone who will listen? How Was Your Day connects you with screened peer listeners. One free 5-minute introduction per account; example: 15 minutes at ₹10/min costs ₹160 including the ₹10 platform fee.',
   keywords: [
     'vent to someone online India', 'online venting India',
     'talk to someone to vent India', 'vent online anonymously India',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'anonymous vent online India', 'no judgment venting India',
     'online emotional outlet India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/vent-to-someone-online', languages: { 'en-IN': 'https://www.leanon.app/vent-to-someone-online' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/vent-to-someone-online', languages: { 'en-IN': 'https://www.howwasyourday.live/vent-to-someone-online' } },
   openGraph: {
-    title: 'Vent to Someone Online in India | Real Human Peer Support | LeanOn',
-    description: 'Need to vent to someone who will listen? LeanOn connects you with screened peer listeners. One free 5-minute introduction per account; example: 15 minutes at ₹10/min costs ₹160 including the ₹10 platform fee.',
-    url: 'https://www.leanon.app/vent-to-someone-online',
-    siteName: 'LeanOn',
+    title: 'Vent to Someone Online in India | Real Human Peer Support | How Was Your Day',
+    description: 'Need to vent to someone who will listen? How Was Your Day connects you with screened peer listeners. One free 5-minute introduction per account; example: 15 minutes at ₹10/min costs ₹160 including the ₹10 platform fee.',
+    url: 'https://www.howwasyourday.live/vent-to-someone-online',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Vent to Someone Online' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Vent to Someone Online' }],
   },
 }
 
@@ -33,17 +33,17 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What is online venting and does it work?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Online venting means expressing what is frustrating, upsetting or overwhelming you to another person through text or voice. Some people find it helpful to put thoughts into words and feel heard, although it does not solve every problem or replace professional care when that is needed. LeanOn connects people with screened peer listeners for everyday emotional support, not clinical treatment.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Online venting means expressing what is frustrating, upsetting or overwhelming you to another person through text or voice. Some people find it helpful to put thoughts into words and feel heard, although it does not solve every problem or replace professional care when that is needed. How Was Your Day connects people with screened peer listeners for everyday emotional support, not clinical treatment.' },
     },
     {
       '@type': 'Question',
       name: 'Why vent to a stranger online instead of a friend?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A listener is outside your family, workplace and friend group, which can make it easier to talk about a sensitive situation. LeanOn listeners are screened peers who aim to listen without judgment. You can use a display name, but sign-in still requires a phone number; read the Privacy Policy and avoid sharing details you are not comfortable disclosing.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A listener is outside your family, workplace and friend group, which can make it easier to talk about a sensitive situation. How Was Your Day listeners are screened peers who aim to listen without judgment. You can use a display name, but sign-in still requires a phone number; read the Privacy Policy and avoid sharing details you are not comfortable disclosing.' },
     },
     {
       '@type': 'Question',
       name: 'Is venting online in India safe and private?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn uses phone OTP for sign-in, but your phone number is not shown to listeners; you can use a display name. Voice calls are not recorded. Text messages are stored securely and only authorised LeanOn administrators can open them, for example to review a reported or safety-flagged session. Review the Privacy Policy for details and avoid sharing identifying details you do not want to disclose.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day uses phone OTP for sign-in, but your phone number is not shown to listeners; you can use a display name. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. Review the Privacy Policy for details and avoid sharing identifying details you do not want to disclose.' },
     },
     {
       '@type': 'Question',
@@ -57,13 +57,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What makes LeanOn different from just texting a friend to vent?',
+      name: 'What makes How Was Your Day different from just texting a friend to vent?',
       acceptedAnswer: { '@type': 'Answer', text: 'Three things: confidentiality (your listener has no connection to your life and no interest in sharing what you say), no social debt (you are not creating a situation where someone now worries about you, has an opinion, or expects an update), and practised presence (listeners are practised in actually receiving what you say without redirecting, one-upping, or immediately solving).' },
     },
     {
       '@type': 'Question',
-      name: 'How much does a vent session cost on LeanOn?',
-      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session of up to 5 minutes is free per account. In India, paid sessions are priced at the selected listener’s per-minute rate multiplied by the duration, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. The exact price is shown before you start; see https://www.leanon.app/pricing.' },
+      name: 'How much does a vent session cost on How Was Your Day?',
+      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session of up to 5 minutes is free per account. In India, paid sessions are priced at the selected listener’s per-minute rate multiplied by the duration, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. The exact price is shown before you start; see https://www.howwasyourday.live/pricing.' },
     },
     {
       '@type': 'Question',
@@ -77,8 +77,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Vent to Someone Online', item: 'https://www.leanon.app/vent-to-someone-online' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Vent to Someone Online', item: 'https://www.howwasyourday.live/vent-to-someone-online' },
   ],
 }
 
@@ -137,7 +137,7 @@ export default function VentToSomeoneOnlinePage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -160,7 +160,7 @@ export default function VentToSomeoneOnlinePage() {
 
         <div className="section">
           <h2>Quick answer: vent to someone online in India</h2>
-          <p>LeanOn connects you with screened peer listeners for one-to-one text or voice conversations. One introductory session of up to 5 minutes is free per account. In India, paid sessions are charged at the selected listener&apos;s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Availability depends on which listeners are online and accept your request.</p>
+          <p>How Was Your Day connects you with screened peer listeners for one-to-one text or voice conversations. One introductory session of up to 5 minutes is free per account. In India, paid sessions are charged at the selected listener&apos;s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Availability depends on which listeners are online and accept your request.</p>
           <p><a href="/pricing" style={{color:'var(--teal)',fontWeight:800}}>See current pricing</a> · <a href="/trust" style={{color:'var(--teal)',fontWeight:800}}>Read about trust and safety</a> · <a href="/browse" style={{color:'var(--teal)',fontWeight:800}}>Browse real listeners</a></p>
         </div>
 
@@ -168,13 +168,13 @@ export default function VentToSomeoneOnlinePage() {
           <h2>The Problem With Venting to People You Know</h2>
           <p>The moment you tell a friend something difficult, you have taken on a second job: managing their reaction. They worry. They have opinions. They may share it with someone else. They might say something that makes you regret telling them. They will bring it up again later at a moment you do not expect.</p>
           <p>Even the best people in your life are not clean receivers. They are filters — their own histories, biases, and emotional investments shape what they hear and how they respond. Sometimes that is valuable. Often, when you just need to get something out, it is an obstacle.</p>
-          <p>A peer listener on LeanOn has no connection to your life. No stake in the outcome. No opinion about who is right. No risk of it going further. That is a different kind of space — and sometimes it is exactly the kind you need.</p>
+          <p>A peer listener on How Was Your Day has no connection to your life. No stake in the outcome. No opinion about who is right. No risk of it going further. That is a different kind of space — and sometimes it is exactly the kind you need.</p>
         </div>
 
         <div className="section">
           <h2>What Actually Happens When You Vent to a Listener</h2>
           <p>Putting a problem into words can help some people organise what happened and decide what they need next. Other times, you may simply want someone to hear you before you decide what to do. Responses differ from person to person, and venting is not a treatment or a guarantee that distress will go away.</p>
-          <p>A LeanOn peer listener offers a focused human conversation. You can explain the situation in your own words, ask to be heard without advice, or think aloud about what might help. If you need clinical assessment or treatment, a qualified mental health professional is the right support.</p>
+          <p>A How Was Your Day peer listener offers a focused human conversation. You can explain the situation in your own words, ask to be heard without advice, or think aloud about what might help. If you need clinical assessment or treatment, a qualified mental health professional is the right support.</p>
         </div>
 
         <div className="section">

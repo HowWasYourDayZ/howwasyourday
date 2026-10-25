@@ -2,18 +2,18 @@ import type { Metadata } from 'next'
 import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 
 export const metadata: Metadata = {
-  title: 'Is LeanOn Safe? Screening, Privacy & Trust Explained',
-  description: 'Is LeanOn safe? Learn about LeanOn\'s privacy protections, anonymity features, verified listeners, reporting system, and crisis resources.',
-  keywords: ['is leanon safe', 'leanon privacy', 'leanon anonymity', 'leanon safety', 'peer support safety india'],
-  alternates: { canonical: 'https://www.leanon.app/is-leanon-safe' },
+  title: 'Is How Was Your Day Safe? Screening, Privacy & Trust Explained',
+  description: 'Is How Was Your Day safe? Learn about How Was Your Day\'s privacy protections, anonymity features, verified listeners, reporting system, and crisis resources.',
+  keywords: ['is howwasyourday safe', 'howwasyourday privacy', 'howwasyourday anonymity', 'howwasyourday safety', 'peer support safety india'],
+  alternates: { canonical: 'https://www.howwasyourday.live/is-howwasyourday-safe' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Is LeanOn Safe? Screening, Privacy & Trust',
-  author: { '@type': 'Organization', name: 'LeanOn Editorial Team' },
-  publisher: { '@type': 'Organization', name: 'LeanOn', url: 'https://www.leanon.app' },
+  headline: 'Is How Was Your Day Safe? Screening, Privacy & Trust',
+  author: { '@type': 'Organization', name: 'How Was Your Day Editorial Team' },
+  publisher: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   datePublished: '2026-01-01',
   dateModified: '2026-05-01',
 }
@@ -48,22 +48,22 @@ const S = `
   @media(max-width:640px){.safety-grid{grid-template-columns:1fr;}}
 `
 
-export default function IsLeanOnSafePage() {
+export default function IsHowWasYourDaySafePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{height:48}} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>
       </nav>
       <div className="page">
         <a href="/" style={{display:'inline-flex',alignItems:'center',gap:6,fontSize:14,fontWeight:700,color:'var(--gray)',marginBottom:28}}>← Back</a>
-        <h1>Is LeanOn Safe? Screening, Privacy & Trust</h1>
-        <p className="lead">Your safety and privacy are the foundation of everything we build at LeanOn. Here is exactly how we protect you.</p>
+        <h1>Is How Was Your Day Safe? Screening, Privacy & Trust</h1>
+        <p className="lead">Your safety and privacy are the foundation of everything we build at How Was Your Day. Here is exactly how we protect you.</p>
 
         <div className="disclaimer">
-          LeanOn provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
+          How Was Your Day provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
         </div>
 
         <div className="safety-grid">
@@ -71,7 +71,7 @@ export default function IsLeanOnSafePage() {
             { icon: '🔒', title: 'No full name required', desc: 'Sign up with just your mobile number. You control what name you share.' },
             { icon: '🤫', title: 'Conversations are private', desc: 'Your sessions are never shared, sold, or used for advertising.' },
             { icon: '✓', title: 'Verified listeners', desc: 'Every listener is manually reviewed for lived experience and empathy before approval.' },
-            { icon: '🚫', title: 'Report', desc: 'Report a listener after any session. Every report is reviewed by the LeanOn team, and listeners can be suspended.' },
+            { icon: '🚫', title: 'Report', desc: 'Report a listener after any session. Every report is reviewed by the How Was Your Day team, and listeners can be suspended.' },
             { icon: '🗑️', title: 'Data deletion', desc: 'You can request full account and data deletion at any time via our support channel.' },
             { icon: '📵', title: 'No data sold', desc: 'We do not sell, share, or broker any user data with third parties. Ever.' },
           ].map((s, i) => (
@@ -83,10 +83,10 @@ export default function IsLeanOnSafePage() {
           ))}
         </div>
 
-        <GeoQuickAnswer path="/is-leanon-safe" />
+        <GeoQuickAnswer path="/is-howwasyourday-safe" />
         <div className="card">
           <h2>Our listener verification process</h2>
-          <p>Every listener on LeanOn is a real person who has applied, shared their lived experience, and been approved by our team. We check for empathy, genuine experience, and adherence to our Code of Conduct. Listeners who violate our terms are removed immediately.</p>
+          <p>Every listener on How Was Your Day is a real person who has applied, shared their lived experience, and been approved by our team. We check for empathy, genuine experience, and adherence to our Code of Conduct. Listeners who violate our terms are removed immediately.</p>
           <p>Before going live, every applicant verifies their identity with a private camera selfie and answers screening questions on active listening, boundaries, crisis referral and our Code of Conduct. Their answers are reviewed alongside the rest of their application.</p>
         </div>
 

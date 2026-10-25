@@ -3,8 +3,8 @@ import ReadyToTalkLanding, { type ReadyToTalkLandingData } from '@/app/component
 
 const data: ReadyToTalkLandingData = {
   "canonical": "/someone-to-talk-to-when-lonely",
-  "title": "Someone to Talk to When You're Lonely | LeanOn",
-  "description": "Feeling lonely and want someone to talk to? LeanOn connects you with real peer listeners for private one-to-one conversations. Start with a free 5-minute introduction.",
+  "title": "Someone to Talk to When You're Lonely | How Was Your Day",
+  "description": "Feeling lonely and want someone to talk to? How Was Your Day connects you with real peer listeners for private one-to-one conversations. Start with a free 5-minute introduction.",
   "keywords": [
     "someone to talk to when lonely",
     "Someone to Talk to When You're Lonely",
@@ -14,7 +14,7 @@ const data: ReadyToTalkLandingData = {
   ],
   "eyebrow": "Human conversation · Ready to talk",
   "h1": "Lonely right now? Find someone to talk to.",
-  "intro": "Loneliness does not always mean you have nobody around. Sometimes it means you want one person who will actually listen. LeanOn gives you a private way to start that human conversation.",
+  "intro": "Loneliness does not always mean you have nobody around. Sometimes it means you want one person who will actually listen. How Was Your Day gives you a private way to start that human conversation.",
   "problemTitle": "You can be surrounded by people and still feel alone",
   "problem": [
     "You can have a partner, family, colleagues and a full contact list and still reach a moment when you do not know who you can honestly talk to. Loneliness is often about the quality of connection, not simply the number of people around you.",
@@ -27,9 +27,9 @@ const data: ReadyToTalkLandingData = {
     "Shared experience — You can choose a listener whose profile includes experiences relevant to yours.",
     "Connection without social history — Sometimes a person outside your everyday circle is easier to talk to."
   ],
-  "whyTitle": "Why LeanOn fits this moment",
+  "whyTitle": "Why How Was Your Day fits this moment",
   "why": [
-    "LeanOn is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
+    "How Was Your Day is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
     "You choose a listener rather than receiving a generic response. The goal is a human conversation where you can talk, vent, reflect or simply not feel alone for a while.",
     "You can start without committing to a long programme: one free 5-minute introduction is available per account, followed by paid time only if you choose to continue."
   ],
@@ -44,12 +44,12 @@ const data: ReadyToTalkLandingData = {
   ],
   "faq": [
     {
-      "q": "Is LeanOn therapy?",
-      "a": "No. LeanOn is peer support and human connection. It is not a substitute for qualified mental-health professionals or clinical treatment."
+      "q": "Is How Was Your Day therapy?",
+      "a": "No. How Was Your Day is peer support and human connection. It is not a substitute for qualified mental-health professionals or clinical treatment."
     },
     {
       "q": "Can I talk by text instead of voice?",
-      "a": "Yes. LeanOn supports one-to-one text or voice conversations, depending on what is available with the listener you choose."
+      "a": "Yes. How Was Your Day supports one-to-one text or voice conversations, depending on what is available with the listener you choose."
     },
     {
       "q": "How much does it cost?",
@@ -84,6 +84,6 @@ const data: ReadyToTalkLandingData = {
   ]
 }
 
-export const metadata: Metadata = { title: data.title, description: data.description, keywords: data.keywords, alternates: { canonical: 'https://www.leanon.app'+data.canonical }, openGraph: { title: data.title, description: data.description, url: 'https://www.leanon.app'+data.canonical, siteName: 'LeanOn', type: 'website' } }
+export const metadata: Metadata = { title: data.title, description: data.description, keywords: data.keywords, alternates: { canonical: 'https://www.howwasyourday.live'+data.canonical }, openGraph: { title: data.title, description: data.description, url: 'https://www.howwasyourday.live'+data.canonical, siteName: 'How Was Your Day', type: 'website' } }
 
 export default function Page() { return <ReadyToTalkLanding data={data} /> }

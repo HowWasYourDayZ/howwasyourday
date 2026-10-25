@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Lost Your Job? Emotional Support India | LeanOn',
+  title: 'Lost Your Job? Emotional Support India | How Was Your Day',
   description: 'Layoff, resignation, being let go — the emotional side of job loss is real. Talk anonymously from ₹160. Not career advice — just someone to listen.',
   keywords: ['job loss support India', 'lost my job India', 'layoff emotional support India', 'fired from job support India', 'job loss depression India', 'redundancy support India'],
-  alternates: { canonical: 'https://www.leanon.app/job-loss-support-india', languages: { 'en-IN': 'https://www.leanon.app/job-loss-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/job-loss-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/job-loss-support-india' } },
   openGraph: {
-    title: 'Lost Your Job? Emotional Support India | LeanOn',
+    title: 'Lost Your Job? Emotional Support India | How Was Your Day',
     description: 'Layoff, resignation, being let go — the emotional side of job loss is real. Talk anonymously from ₹160. Not career advice — just someone to listen.',
-    url: 'https://www.leanon.app/job-loss-support-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/job-loss-support-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }],
   },
 }
 
@@ -22,7 +22,7 @@ const faqSchema = {
   '@type': 'FAQPage',
   mainEntity: [
     {'@type': 'Question', name: 'Is it normal to feel depressed after a job loss?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Job loss is a major life disruption and a genuine grief event &mdash; you are mourning an identity, a structure, a set of relationships, and a version of the future you expected. Feeling low, unmotivated, anxious about the future, or confused about your sense of self are all normal responses. These do not mean something is permanently wrong with you.'}},
-    {'@type': 'Question', name: 'Can a peer listener help if I need career advice?', acceptedAnswer: {'@type': 'Answer', text: 'LeanOn is not a career advice service. But if what you need right now is someone to listen to the emotional side of what you are going through &mdash; the shame, the confusion, the fear about what comes next &mdash; peer support is exactly right for that.'}},
+    {'@type': 'Question', name: 'Can a peer listener help if I need career advice?', acceptedAnswer: {'@type': 'Answer', text: 'How Was Your Day is not a career advice service. But if what you need right now is someone to listen to the emotional side of what you are going through &mdash; the shame, the confusion, the fear about what comes next &mdash; peer support is exactly right for that.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free. No subscription.'}}
   ],
 }
@@ -31,8 +31,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Lost Your Job? Emotional Support India', item: 'https://www.leanon.app/job-loss-support-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Lost Your Job? Emotional Support India', item: 'https://www.howwasyourday.live/job-loss-support-india' },
   ],
 }
 
@@ -83,7 +83,7 @@ export default function JobLossSupportIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">
@@ -105,7 +105,7 @@ export default function JobLossSupportIndiaPage() {
         <div className="section">
           <h2>The Shame That Nobody Talks About</h2>
           <p>Job loss in India carries shame that is disproportionate to its actual meaning. Layoffs happen to entire industries. Companies make financial decisions. But internally, and in many Indian families, job loss feels personal. It feels like failure. And it is extremely hard to talk about.</p>
-          <p>LeanOn is a space where you can say exactly how bad this feels, without having to manage anyone else's reaction to it.</p>
+          <p>How Was Your Day is a space where you can say exactly how bad this feels, without having to manage anyone else's reaction to it.</p>
         </div>
         <div className="section">
           <h2>Frequently Asked Questions</h2>

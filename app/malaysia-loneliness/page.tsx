@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Loneliness Support for Indians in Malaysia | LeanOn',
-  description: 'Feeling lonely as an Indian in Malaysia — missing home, navigating a new culture, no one who truly gets it. LeanOn connects you with real Indian listeners who understand your world.',
+  title: 'Loneliness Support for Indians in Malaysia | How Was Your Day',
+  description: 'Feeling lonely as an Indian in Malaysia — missing home, navigating a new culture, no one who truly gets it. How Was Your Day connects you with real Indian listeners who understand your world.',
   keywords: [
     'loneliness support malaysia indian', 'feeling lonely malaysia', 'indian expat lonely malaysia',
     'missing home malaysia', 'nri lonely malaysia', 'isolation malaysia indian',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'south asian loneliness malaysia', 'tamil lonely malaysia', 'no friends malaysia expat',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/malaysia-loneliness',
-    languages: { 'en-MY': 'https://www.leanon.app/malaysia-loneliness' },
+    canonical: 'https://www.howwasyourday.live/malaysia-loneliness',
+    languages: { 'en-MY': 'https://www.howwasyourday.live/malaysia-loneliness' },
   },
   openGraph: {
-    title: 'Loneliness Support for Indians in Malaysia — LeanOn',
-    description: 'Navigating life in Malaysia as an Indian expat can be isolating. LeanOn connects you with real Indian peer listeners on Indian time — in your language, with your context understood.',
-    url: 'https://www.leanon.app/malaysia-loneliness',
-    siteName: 'LeanOn',
+    title: 'Loneliness Support for Indians in Malaysia — How Was Your Day',
+    description: 'Navigating life in Malaysia as an Indian expat can be isolating. How Was Your Day connects you with real Indian peer listeners on Indian time — in your language, with your context understood.',
+    url: 'https://www.howwasyourday.live/malaysia-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'How do I deal with feeling homesick in Malaysia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Talking about it helps. LeanOn connects you with Indian peer listeners who understand the homesickness that comes with being far from your people. A 15 or 30-minute conversation in Hindi, Tamil, or Telugu can ease the weight of missing home considerably.',
+        text: 'Talking about it helps. How Was Your Day connects you with Indian peer listeners who understand the homesickness that comes with being far from your people. A 15 or 30-minute conversation in Hindi, Tamil, or Telugu can ease the weight of missing home considerably.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk to someone in Tamil from Malaysia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has Tamil-speaking listeners online daily on Indian time. You can also find listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Sessions start from RM 45 for 15 minutes, with the first 5 minutes free.',
+        text: 'Yes. How Was Your Day has Tamil-speaking listeners online daily on Indian time. You can also find listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Sessions start from RM 45 for 15 minutes, with the first 5 minutes free.',
       },
     },
     {
@@ -57,12 +57,12 @@ const faqSchema = {
       name: 'What if I feel lonely even in a place with many Indians like Malaysia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'This is one of the most common forms of expat loneliness. Proximity to your community does not guarantee feeling understood. Surface-level familiarity without real intimacy can actually make the loneliness feel sharper. LeanOn gives you space for honest, deep conversation.',
+        text: 'This is one of the most common forms of expat loneliness. Proximity to your community does not guarantee feeling understood. Surface-level familiarity without real intimacy can actually make the loneliness feel sharper. How Was Your Day gives you space for honest, deep conversation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn confidential?',
+      name: 'Is How Was Your Day confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. Sessions are anonymous by default. Your listener does not know your real name or location unless you choose to share. Everything stays private between you and your listener.',
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Loneliness Support Malaysia', item: 'https://www.leanon.app/malaysia-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Loneliness Support Malaysia', item: 'https://www.howwasyourday.live/malaysia-loneliness' },
   ],
 }
 
@@ -157,7 +157,7 @@ export default function MalaysiaLonelinessPage() {
         <p className="lead">
           Malaysia&apos;s Indian community is large and visible — but community is not the same as
           connection. If you came here from India recently, or if you have been here for years but
-          still feel like something is missing, you are not alone in that feeling. LeanOn connects
+          still feel like something is missing, you are not alone in that feeling. How Was Your Day connects
           you with real Indian listeners who understand this specific kind of loneliness.
         </p>
 
@@ -182,17 +182,17 @@ export default function MalaysiaLonelinessPage() {
           <p>Late night in Kuala Lumpur. The office is long over. WhatsApp is quiet. Everyone back home
             is in their own routines. The flat is silent and you are not quite sure what to do with
             the emptiness.</p>
-          <p>LeanOn listeners are online right now — Indian, warm, non-judgmental. You can start talking
+          <p>How Was Your Day listeners are online right now — Indian, warm, non-judgmental. You can start talking
             any time you need to.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
 
         <div className="card">
           <h2>Talk in Tamil, Hindi, or any Indian language</h2>
-          <p>Many Indians in Malaysia are Tamil-speaking — and LeanOn has Tamil listeners available
+          <p>Many Indians in Malaysia are Tamil-speaking — and How Was Your Day has Tamil listeners available
             (availability follows Indian time). You can also talk in Hindi, Telugu, Malayalam, Kannada, Bengali, or English.</p>
           <p>Being heard in your mother tongue does something that a translated conversation cannot.
-            LeanOn listeners get that.</p>
+            How Was Your Day listeners get that.</p>
         </div>
 
         <div className="card">
@@ -232,23 +232,23 @@ export default function MalaysiaLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How do I deal with feeling homesick in Malaysia?</h3>
-            <p>Talking about it helps. LeanOn connects you with Indian peer listeners who understand
+            <p>Talking about it helps. How Was Your Day connects you with Indian peer listeners who understand
               the homesickness that comes with being far from your people. A 15 or 30-minute conversation
               in your language can ease the weight considerably.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to someone in Tamil from Malaysia?</h3>
-            <p>Yes. LeanOn has Tamil-speaking listeners online daily on Indian time. Sessions start from RM 45 for
+            <p>Yes. How Was Your Day has Tamil-speaking listeners online daily on Indian time. Sessions start from RM 45 for
               15 minutes, with the first 5 minutes free.</p>
           </div>
           <div className="faq-item">
             <h3>What if I feel lonely even in a place with many Indians?</h3>
             <p>Proximity to community does not guarantee feeling understood. Surface-level familiarity
-              without real intimacy can make the loneliness feel sharper. LeanOn gives you space for
+              without real intimacy can make the loneliness feel sharper. How Was Your Day gives you space for
               honest, deep conversation.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn confidential?</h3>
+            <h3>Is How Was Your Day confidential?</h3>
             <p>Yes. Sessions are anonymous by default. Your listener does not know your real name or
               location unless you choose to share. Everything stays private.</p>
           </div>
@@ -267,7 +267,7 @@ export default function MalaysiaLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

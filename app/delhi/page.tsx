@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Delhi — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Delhi, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/delhi', languages: { 'en-IN': 'https://www.leanon.app/delhi' } },
-  keywords: 'peer support Delhi, emotional support Delhi, loneliness Delhi, career expectations Delhi, family pressure Delhi, talk to someone Delhi, leanon Delhi',
+  title: 'Emotional Support in Delhi — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Delhi, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/delhi', languages: { 'en-IN': 'https://www.howwasyourday.live/delhi' } },
+  keywords: 'peer support Delhi, emotional support Delhi, loneliness Delhi, career expectations Delhi, family pressure Delhi, talk to someone Delhi, howwasyourday Delhi',
   openGraph: {
-    title: 'Emotional Support in Delhi — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Delhi, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on LeanOn.',
-    url: 'https://www.leanon.app/delhi',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Delhi — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Delhi, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/delhi',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Is loneliness common among women in Delhi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, and it is a specific kind of loneliness. Many women in Delhi navigate intense social monitoring — from family, neighbours, and social circles. The result can be a profound inability to be honest about their inner lives, relationships, or ambitions. Even highly educated, professionally successful women describe feeling alone because there is no one they can speak to freely without social consequences. LeanOn offers that space: anonymous, judgment-free, and completely private.',
+        text: 'Yes, and it is a specific kind of loneliness. Many women in Delhi navigate intense social monitoring — from family, neighbours, and social circles. The result can be a profound inability to be honest about their inner lives, relationships, or ambitions. Even highly educated, professionally successful women describe feeling alone because there is no one they can speak to freely without social consequences. How Was Your Day offers that space: anonymous, judgment-free, and completely private.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What does men\'s mental health look like in Delhi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Delhi\'s masculine culture makes emotional expression particularly difficult for men. The expectation to be strong, decisive, and unaffected is pervasive. Men in Delhi often carry relationship stress, career anxiety, and family pressure with no outlet, because talking about feelings is seen as a sign of weakness. This suppression has real consequences — on physical health, relationships, and overall wellbeing. LeanOn provides a completely private space where men can be honest without any social cost.',
+        text: 'Delhi\'s masculine culture makes emotional expression particularly difficult for men. The expectation to be strong, decisive, and unaffected is pervasive. Men in Delhi often carry relationship stress, career anxiety, and family pressure with no outlet, because talking about feelings is seen as a sign of weakness. This suppression has real consequences — on physical health, relationships, and overall wellbeing. How Was Your Day provides a completely private space where men can be honest without any social cost.',
       },
     },
     {
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Delhi', item: 'https://www.leanon.app/delhi' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Delhi', item: 'https://www.howwasyourday.live/delhi' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/delhi',
+  url: 'https://www.howwasyourday.live/delhi',
   areaServed: {
     '@type': 'City',
     name: 'Delhi',
@@ -148,7 +148,7 @@ export default function DelhiPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function DelhiPage() {
         <div className="hero">
           <p className="tag">Peer Support · Delhi</p>
           <h1>Peer Support in Delhi — Someone to Lean On in <em>the Capital</em></h1>
-          <p className="lead">Delhi is a city of enormous ambition and equally enormous expectations — on your career, your family obligations, your relationships, and your very identity. LeanOn connects you with peer listeners who understand the specific weight of living in India's capital, and how to carry it without breaking.</p>
+          <p className="lead">Delhi is a city of enormous ambition and equally enormous expectations — on your career, your family obligations, your relationships, and your very identity. How Was Your Day connects you with peer listeners who understand the specific weight of living in India's capital, and how to carry it without breaking.</p>
         </div>
 
         {/* Delhi's pressures */}
@@ -192,7 +192,7 @@ export default function DelhiPage() {
           <p>This expectation of stoicism has real consequences. Men in Delhi often carry relationship stress, career anxiety, family pressure, and identity confusion with no outlet — because talking about feelings has been socially coded as weakness. Over time, this suppression manifests as irritability, withdrawal, physical health problems, and relationship breakdown.</p>
 
           <h3>A Private Space to Be Honest</h3>
-          <p>LeanOn offers something genuinely rare for men in Delhi: a completely private, judgment-free space to say what you are actually feeling. No one in your social or professional network will know. No one will think less of you. Many male users describe their first LeanOn session as the first time they have ever been honest about how they are really doing — and the relief that brings.</p>
+          <p>How Was Your Day offers something genuinely rare for men in Delhi: a completely private, judgment-free space to say what you are actually feeling. No one in your social or professional network will know. No one will think less of you. Many male users describe their first How Was Your Day session as the first time they have ever been honest about how they are really doing — and the relief that brings.</p>
 
           <h3>Peer Listeners Who Understand</h3>
           <p>Several of our male listeners have themselves navigated Delhi's particular version of masculine pressure — the expectation to suppress, achieve, and never ask for help. They understand the dynamic from the inside, which makes the conversation feel different from therapy or advice.</p>
@@ -210,7 +210,7 @@ export default function DelhiPage() {
           <p>Delhi has a significant population of highly educated, professionally successful women — many of whom describe feeling profoundly alone. Their professional peers are colleagues, not confidants. Their family members do not understand their world. Their friends are navigating their own impossible pressures. The result is a loneliness that is hard to name because externally, everything looks fine.</p>
 
           <h3>A Space to Be Fully Honest</h3>
-          <p>LeanOn's female listeners have navigated their own versions of this experience — the pressure to be appropriate, the loneliness of performed happiness, the exhaustion of managing family expectations while also building a career and a self. Talking to someone who understands that particular texture of experience makes a real difference.</p>
+          <p>How Was Your Day's female listeners have navigated their own versions of this experience — the pressure to be appropriate, the loneliness of performed happiness, the exhaustion of managing family expectations while also building a career and a self. Talking to someone who understands that particular texture of experience makes a real difference.</p>
         </div>
 
         {/* Listener cards */}
@@ -283,7 +283,7 @@ export default function DelhiPage() {
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>
             <a href="/support/relationship-stress" className="related-link">Relationship Stress</a>
@@ -296,9 +296,9 @@ export default function DelhiPage() {
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

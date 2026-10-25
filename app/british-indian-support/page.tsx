@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Support for British Indians — The In-Between Feeling | LeanOn',
-  description: 'Too Indian for Britain, too British for India. The in-between identity of British Indians is real and often lonely. LeanOn offers a space to talk about belonging, identity, and dual culture.',
+  title: 'Support for British Indians — The In-Between Feeling | How Was Your Day',
+  description: 'Too Indian for Britain, too British for India. The in-between identity of British Indians is real and often lonely. How Was Your Day offers a space to talk about belonging, identity, and dual culture.',
   keywords: [
     'british indian identity support', 'british indian mental health', 'dual identity british indian',
     'british indian belonging', 'second generation indian uk', 'british desi identity',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'british indian emotional support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/british-indian-support',
-    languages: { 'en-GB': 'https://www.leanon.app/british-indian-support' },
+    canonical: 'https://www.howwasyourday.live/british-indian-support',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/british-indian-support' },
   },
   openGraph: {
     title: 'Support for British Indians — The In-Between Feeling',
-    description: 'Too Indian for Britain, too British for India. LeanOn is a space to talk about dual identity, belonging, and the in-between life.',
-    url: 'https://www.leanon.app/british-indian-support',
-    siteName: 'LeanOn',
+    description: 'Too Indian for Britain, too British for India. How Was Your Day is a space to talk about dual identity, belonging, and the in-between life.',
+    url: 'https://www.howwasyourday.live/british-indian-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -54,7 +54,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can I talk about racism and microaggressions on LeanOn?',
+      name: 'Can I talk about racism and microaggressions on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. Carrying racial microaggressions alone is exhausting — the constant low-level friction, the comments you are not sure how to respond to, the situations where you question whether what happened was actually what it looked like. Listeners are screened and expected to hold space for this without minimising it or over-dramatising it.',
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'British Indian Support', item: 'https://www.leanon.app/british-indian-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'British Indian Support', item: 'https://www.howwasyourday.live/british-indian-support' },
   ],
 }
 
@@ -174,7 +174,7 @@ export default function BritishIndianSupportPage() {
 
         <div className="night-box">
           <h2>🪞 You deserve a space that holds all of you</h2>
-          <p>LeanOn listeners understand what it means to navigate dual identity. You do not need to
+          <p>How Was Your Day listeners understand what it means to navigate dual identity. You do not need to
             choose a version of yourself for this conversation. You can be contradictory, confused,
             and honest — all at the same time.</p>
           <p>That is not just allowed here. It is expected.</p>
@@ -186,7 +186,7 @@ export default function BritishIndianSupportPage() {
           <p>A comment about your name. An assumption about your background. A joke that was &ldquo;not meant
             that way.&rdquo; The exhaustion of constantly assessing whether something was racist, and then the
             secondary exhaustion of deciding whether to say something.</p>
-          <p>LeanOn listeners will not minimise it or over-dramatise it. They will simply hold space
+          <p>How Was Your Day listeners will not minimise it or over-dramatise it. They will simply hold space
             for what it actually cost you.</p>
         </div>
 
@@ -248,7 +248,7 @@ export default function BritishIndianSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Anonymous Emotional Support Online India | LeanOn',
-  description: 'Get anonymous emotional support online in India. No real name required, no judgement, no appointment. Real peer listeners on LeanOn.',
+  title: 'Anonymous Emotional Support Online India | How Was Your Day',
+  description: 'Get anonymous emotional support online in India. No real name required, no judgement, no appointment. Real peer listeners on How Was Your Day.',
   keywords: ['anonymous emotional support online india', 'anonymous support india', 'anonymous peer support', 'anonymous chat india', 'emotional support anonymously'],
-  alternates: { canonical: 'https://www.leanon.app/anonymous-support-online' },
+  alternates: { canonical: 'https://www.howwasyourday.live/anonymous-support-online' },
 }
 
 const S = `
@@ -32,33 +32,33 @@ export default function AnonymousSupportPage() {
     <>
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" style={{height:48}} /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>
       </nav>
       <div className="page">
         <a href="/" style={{display:'inline-flex',alignItems:'center',gap:6,fontSize:14,fontWeight:700,color:'var(--gray)',marginBottom:28}}>← Back</a>
         <h1>Anonymous Emotional Support Online — India</h1>
-        <p className="lead">Sometimes you need to talk to someone without anyone knowing it was you. LeanOn is built for exactly that — anonymous peer emotional support, available any time you need it.</p>
+        <p className="lead">Sometimes you need to talk to someone without anyone knowing it was you. How Was Your Day is built for exactly that — anonymous peer emotional support, available any time you need it.</p>
 
         <div className="disclaimer">
-          LeanOn provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
+          How Was Your Day provides peer emotional support, not professional therapy or clinical treatment. If you need clinical mental health care, please consult a licensed professional.
         </div>
 
         <div className="card">
-          <h2>How LeanOn protects your anonymity</h2>
+          <h2>How the app protects your anonymity</h2>
           <p>You sign up with just your mobile number — no full name, no email, no social login. You can use a first name or even a nickname. Your sessions are private and never shared. We don't sell your data or use your conversations for advertising.</p>
-          <p>For people in joint families, shared workspaces, or small towns where privacy is especially important — LeanOn's text-first approach means you can talk without anyone hearing. No voice by default. Full control in your hands.</p>
+          <p>For people in joint families, shared workspaces, or small towns where privacy is especially important — How Was Your Day's text-first approach means you can talk without anyone hearing. No voice by default. Full control in your hands.</p>
         </div>
 
         <div className="card">
           <h2>Why anonymous support works</h2>
           <p>Research on mental health helplines and peer support platforms consistently shows that anonymity increases honest disclosure. When you know your words won't be traced back to you, you can say what you actually feel — not what you think is appropriate.</p>
-          <p>LeanOn listeners are screened and expected to create a non-judgmental space where you can be completely honest. They won't tell your family, your employer, or your doctor. What you share stays between you and your listener.</p>
+          <p>How Was Your Day listeners are screened and expected to create a non-judgmental space where you can be completely honest. They won't tell your family, your employer, or your doctor. What you share stays between you and your listener.</p>
         </div>
 
         <div className="card">
-          <h2>Who uses anonymous support on LeanOn</h2>
-          <p>People across India use LeanOn anonymously for loneliness, relationship struggles, workplace stress, burnout, grief, and anxiety. Many live in joint families where private conversations are difficult. Others work in high-pressure environments where admitting struggle feels risky. Some simply need to say things they can't say to anyone they know.</p>
+          <h2>Who uses anonymous support on How Was Your Day</h2>
+          <p>People across India use How Was Your Day anonymously for loneliness, relationship struggles, workplace stress, burnout, grief, and anxiety. Many live in joint families where private conversations are difficult. Others work in high-pressure environments where admitting struggle feels risky. Some simply need to say things they can't say to anyone they know.</p>
           <p>You don't need a reason. You just need a moment to breathe and be heard.</p>
         </div>
 

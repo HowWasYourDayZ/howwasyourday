@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Burnout | When the Dream Abroad Stops Feeling Worth It | LeanOn',
+  title: 'NRI Burnout | When the Dream Abroad Stops Feeling Worth It | How Was Your Day',
   description: 'You did everything right. Got the visa, the job, the apartment. Now you feel empty. NRI burnout is real — talk to someone who understands why.',
   keywords: ['nri burnout', 'immigrant burnout', 'nri exhaustion', 'nri overwhelm', 'indian professional burnout abroad', 'desi burnout'],
-  alternates: { canonical: 'https://www.leanon.app/nri-burnout' },
-  openGraph: { title: 'NRI Burnout | When the Dream Abroad Stops Feeling Worth It | LeanOn', description: 'You did everything right. Got the visa, the job, the apartment. Now you feel empty. NRI burnout is real — talk to someone who understands why.', url: 'https://www.leanon.app/nri-burnout', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-burnout' },
+  openGraph: { title: 'NRI Burnout | When the Dream Abroad Stops Feeling Worth It | How Was Your Day', description: 'You did everything right. Got the visa, the job, the apartment. Now you feel empty. NRI burnout is real — talk to someone who understands why.', url: 'https://www.howwasyourday.live/nri-burnout', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Burnout', item: 'https://www.leanon.app/nri-burnout' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Burnout', item: 'https://www.howwasyourday.live/nri-burnout' },
 ] }
 
 const S = `
@@ -70,38 +70,38 @@ export default function NriBurnoutPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Burnout</span></nav>
         <div className="hero">
           <p className="badge">NRI Burnout &middot; Immigrant Exhaustion &middot; The Hollow Dream</p>
           <h1>You did everything right. <em>So why does it feel like nothing?</em></h1>
           <p className="lead">The visa. The job. The apartment in a city that was supposed to be the goal. You built the thing you worked for — and now you are running on empty in a way you cannot explain to anyone back home because they think you are living the dream. NRI burnout is real. Talk to someone who understands why the dream does not always deliver the peace. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Immigrant Ambition That Never Turns Off</h2>
           <p>Indian immigrants — particularly those who came for education or professional opportunity — typically carry a specific kind of drive that does not have an off switch. The ambition that got you the degree, the visa, the job: it is the same drive that now keeps you working evenings and weekends even after you have achieved the original goal, because there is always a new goal, because rest feels dangerous, because the immigrant without a safety net cannot afford to slow down.</p>
           <p>At some point — usually after years, sometimes after a decade — the drive starts to feel less like motivation and more like a treadmill. You are tired in a deep way. Not just work tired. Tired of the performance, tired of the proving, tired of the relentless forward motion with no clear destination. This is NRI burnout — and it is different from standard work exhaustion because it carries the additional weight of displacement, suppressed grief, and the guilt of not enjoying the life you worked so hard to build.</p>
-          <p>LeanOn listeners understand this from the inside. Not as a productivity problem to be solved, but as a human experience to be heard. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand this from the inside. Not as a productivity problem to be solved, but as a human experience to be heard. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>The Return Fantasy — When You Wish You Could Undo the Move</h2>
           <p>One of the most commonly suppressed NRI experiences is the return fantasy — the recurring thought that you want to go back. Back to India. Back to the life before the visa. Back to where your support network exists, where food tastes right, where you do not have to code-switch every single day.</p>
           <p>This thought carries enormous shame for many NRIs. You are supposed to be grateful. The people who sacrificed to get you here would be devastated to hear it. Your friends who never got the opportunity would find it incomprehensible. And so you push it down, and it comes back, and you push it down again.</p>
-          <p>LeanOn is a place where you can say this out loud to someone who will hear it without horror, without disappointment, and without telling you what you should do. It is not weakness. It is a human response to long-term displacement, and it deserves to be spoken.</p>
+          <p>How Was Your Day is a place where you can say this out loud to someone who will hear it without horror, without disappointment, and without telling you what you should do. It is not weakness. It is a human response to long-term displacement, and it deserves to be spoken.</p>
         </div>
 
         <div className="section">
           <h2>Suppressed Grief and the No-Safety-Net Life</h2>
           <p>Immigrants live without the safety net that most people take for granted. No parents around the corner. No childhood friends nearby. No support system that does not require a flight to access. When difficult things happen — an illness, a loss, a relationship ending — you navigate it largely alone, while appearing to be fine because the people who need to believe you are fine are watching on a video call from India.</p>
-          <p>The accumulated weight of years of this — of absorbing difficulty without adequate support, of performing okay-ness for the benefit of family at home — is a real thing. It does not always feel like grief because it is spread across time, but it accumulates. LeanOn peer listeners understand this specific weight. Real listening, no advice, no performance required. First 5 minutes free.</p>
+          <p>The accumulated weight of years of this — of absorbing difficulty without adequate support, of performing okay-ness for the benefit of family at home — is a real thing. It does not always feel like grief because it is spread across time, but it accumulates. How Was Your Day peer listeners understand this specific weight. Real listening, no advice, no performance required. First 5 minutes free.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The dream that stopped feeling like one.</h2><p>Real peer listener. No judgment. No productivity tips. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The dream that stopped feeling like one.</h2><p>Real peer listener. No judgment. No productivity tips. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-workplace-stress">NRI workplace stress &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

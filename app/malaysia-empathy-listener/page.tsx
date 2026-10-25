@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy Listener for Indians in Malaysia | LeanOn',
-  description: 'Feeling unheard in Malaysia? LeanOn connects Indian expats with screened empathy listeners who speak Tamil, Hindi, and more — and understand your cultural world from the inside.',
+  title: 'Empathy Listener for Indians in Malaysia | How Was Your Day',
+  description: 'Feeling unheard in Malaysia? How Was Your Day connects Indian expats with screened empathy listeners who speak Tamil, Hindi, and more — and understand your cultural world from the inside.',
   keywords: [
     'empathy listener malaysia', 'feel heard malaysia', 'someone who understands malaysia indian',
     'active listener malaysia', 'emotional support malaysia expat', 'feeling unheard malaysia',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'talk to someone who understands malaysia',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/malaysia-empathy-listener',
-    languages: { 'en-MY': 'https://www.leanon.app/malaysia-empathy-listener' },
+    canonical: 'https://www.howwasyourday.live/malaysia-empathy-listener',
+    languages: { 'en-MY': 'https://www.howwasyourday.live/malaysia-empathy-listener' },
   },
   openGraph: {
-    title: 'Empathy Listener for Indians in Malaysia — Feel Truly Heard | LeanOn',
-    description: 'Feeling unheard is exhausting. LeanOn connects Indian expats in Malaysia with screened peer listeners who give you their full, undivided attention — in Tamil, Hindi, or your language.',
-    url: 'https://www.leanon.app/malaysia-empathy-listener',
-    siteName: 'LeanOn',
+    title: 'Empathy Listener for Indians in Malaysia — Feel Truly Heard | How Was Your Day',
+    description: 'Feeling unheard is exhausting. How Was Your Day connects Indian expats in Malaysia with screened peer listeners who give you their full, undivided attention — in Tamil, Hindi, or your language.',
+    url: 'https://www.howwasyourday.live/malaysia-empathy-listener',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'What makes an empathy listener different from a regular conversation partner?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'An empathy listener\'s entire purpose is to understand your experience — not to respond, not to advise, not to share their own perspective. LeanOn listeners are screened for active listening, reflective questioning, and validating your emotions without judgment. You feel heard at a depth that most conversations never reach.',
+        text: 'An empathy listener\'s entire purpose is to understand your experience — not to respond, not to advise, not to share their own perspective. How Was Your Day listeners are screened for active listening, reflective questioning, and validating your emotions without judgment. You feel heard at a depth that most conversations never reach.',
       },
     },
     {
@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'Why is it hard to feel truly understood in Malaysia as an Indian?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Malaysia has a significant Indian community, but that does not automatically mean deep mutual understanding. The Malaysian Indian experience and the experience of someone who grew up in India are different in important ways. And within the Indian community, social hierarchies and tight networks can make honest vulnerability difficult. LeanOn listeners are outside all of that.',
+        text: 'Malaysia has a significant Indian community, but that does not automatically mean deep mutual understanding. The Malaysian Indian experience and the experience of someone who grew up in India are different in important ways. And within the Indian community, social hierarchies and tight networks can make honest vulnerability difficult. How Was Your Day listeners are outside all of that.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Can I talk to a Tamil-speaking empathy listener?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has Tamil-speaking empathy listeners online daily on Indian time. You can also find listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Browse listener profiles to find the right match.',
+        text: 'Yes. How Was Your Day has Tamil-speaking empathy listeners online daily on Indian time. You can also find listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Browse listener profiles to find the right match.',
       },
     },
     {
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Malaysia', item: 'https://www.leanon.app/malaysia-empathy-listener' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Malaysia', item: 'https://www.howwasyourday.live/malaysia-empathy-listener' },
   ],
 }
 
@@ -158,7 +158,7 @@ export default function MalaysiaEmpathyListenerPage() {
         <p className="lead">
           Not someone who hears you and immediately pivots to advice. Not someone who relates everything
           back to themselves. Someone who sits with you in your experience and makes you feel that your
-          feelings make complete sense. LeanOn empathy listeners are exactly that — screened Indian
+          feelings make complete sense. How Was Your Day empathy listeners are exactly that — screened Indian
           peers who are here only to understand you.
         </p>
 
@@ -183,7 +183,7 @@ export default function MalaysiaEmpathyListenerPage() {
           <p>There is a particular relief that comes from feeling truly understood. Not just heard.
             Understood. Your listener reflects back what you said and something in you relaxes —
             because finally, someone gets it.</p>
-          <p>LeanOn empathy listeners are screened and expected to create exactly this experience. One conversation
+          <p>How Was Your Day empathy listeners are screened and expected to create exactly this experience. One conversation
             can shift how you carry something that has felt heavy for a long time.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
@@ -193,7 +193,7 @@ export default function MalaysiaEmpathyListenerPage() {
           <p>As an Indian in Malaysia, part of feeling unheard is the constant need to explain your
             context — the family dynamics, the cultural expectations, the particular weight of being
             the one who left India.</p>
-          <p>LeanOn listeners are from India. They grew up with the same context. You will not need
+          <p>How Was Your Day listeners are from India. They grew up with the same context. You will not need
             to explain why something is hard — they will already know.</p>
         </div>
 
@@ -229,18 +229,18 @@ export default function MalaysiaEmpathyListenerPage() {
           <div className="faq-item">
             <h3>What makes an empathy listener different from a regular conversation partner?</h3>
             <p>An empathy listener&apos;s entire purpose is to understand your experience — not to respond
-              or advise. LeanOn listeners are screened for active listening and reflective questioning.
+              or advise. How Was Your Day listeners are screened for active listening and reflective questioning.
               You feel heard at a depth that most conversations never reach.</p>
           </div>
           <div className="faq-item">
             <h3>Why is it hard to feel truly understood in Malaysia as an Indian?</h3>
             <p>Malaysia has a significant Indian community, but that does not automatically mean deep
               mutual understanding. Within tight networks, honest vulnerability can be difficult.
-              LeanOn listeners are outside all of that — completely safe.</p>
+              How Was Your Day listeners are outside all of that — completely safe.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to a Tamil-speaking empathy listener?</h3>
-            <p>Yes. LeanOn has Tamil-speaking empathy listeners online daily on Indian time. You can also find
+            <p>Yes. How Was Your Day has Tamil-speaking empathy listeners online daily on Indian time. You can also find
               listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English.</p>
           </div>
           <div className="faq-item">
@@ -269,7 +269,7 @@ export default function MalaysiaEmpathyListenerPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

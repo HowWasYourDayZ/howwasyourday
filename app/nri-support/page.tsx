@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Support for NRIs & Indians Abroad | Talk to Someone Who Gets It | LeanOn',
-  description: 'Feeling disconnected abroad? LeanOn connects you with Indian peer listeners who understand the NRI experience — family pressure, cultural isolation, and the longing for home.',
+  title: 'Support for NRIs & Indians Abroad | Talk to Someone Who Gets It | How Was Your Day',
+  description: 'Feeling disconnected abroad? How Was Your Day connects you with Indian peer listeners who understand the NRI experience — family pressure, cultural isolation, and the longing for home.',
   keywords: ['nri support', 'indian support abroad', 'talk to someone indian', 'nri emotional support', 'indian diaspora support', 'nri loneliness', 'indian abroad support'],
-  alternates: { canonical: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  openGraph: { title: 'Support for NRIs & Indians Abroad | Talk to Someone Who Gets It | LeanOn', description: 'Feeling disconnected abroad? LeanOn connects you with Indian peer listeners who understand the NRI experience — family pressure, cultural isolation, and the longing for home.', url: 'https://www.leanon.app/indian-emotional-support-abroad', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  openGraph: { title: 'Support for NRIs & Indians Abroad | Talk to Someone Who Gets It | How Was Your Day', description: 'Feeling disconnected abroad? How Was Your Day connects you with Indian peer listeners who understand the NRI experience — family pressure, cultural isolation, and the longing for home.', url: 'https://www.howwasyourday.live/indian-emotional-support-abroad', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'What is NRI peer support?', acceptedAnswer: { '@type': 'Answer', text: 'NRI peer support means talking to a real Indian person — not a therapist, not an AI — who understands the specific pressures of living abroad: dual identity, family expectations from afar, cultural loneliness, visa anxiety. LeanOn listeners have lived experience with these exact pressures.' } },
-  { '@type': 'Question', name: 'Do listeners understand the NRI or diaspora experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and many have personal experience with family emigrating, siblings abroad, or their own experience navigating between cultures. You do not have to explain what it means to feel like a different person in two different worlds.' } },
-  { '@type': 'Question', name: 'What time zone are listeners in?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are India-based (IST — UTC+5:30). This works naturally for diaspora users: India evening (7pm–11pm IST) is US East Coast morning (8:30am–12:30pm EST) and UK evening (2:30pm–6:30pm GMT). If you have a quiet moment before your workday, Indian listeners are likely available.' } },
+  { '@type': 'Question', name: 'What is NRI peer support?', acceptedAnswer: { '@type': 'Answer', text: 'NRI peer support means talking to a real Indian person — not a therapist, not an AI — who understands the specific pressures of living abroad: dual identity, family expectations from afar, cultural loneliness, visa anxiety. How Was Your Day listeners have lived experience with these exact pressures.' } },
+  { '@type': 'Question', name: 'Do listeners understand the NRI or diaspora experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and many have personal experience with family emigrating, siblings abroad, or their own experience navigating between cultures. You do not have to explain what it means to feel like a different person in two different worlds.' } },
+  { '@type': 'Question', name: 'What time zone are listeners in?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are India-based (IST — UTC+5:30). This works naturally for diaspora users: India evening (7pm–11pm IST) is US East Coast morning (8:30am–12:30pm EST) and UK evening (2:30pm–6:30pm GMT). If you have a quiet moment before your workday, Indian listeners are likely available.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are anonymous. You sign up with only a phone number and first name — no last name, no photo, no social login. Listeners agree to keep what you share confidential. Nothing from your session is shared with your family, your employer, or anyone in India.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Your first 5-minute session is free — you can stop after those 5 minutes and pay nothing. There is no subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Support for NRIs & Indians Abroad', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Support for NRIs & Indians Abroad', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function NriSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Support for NRIs &amp; Indians Abroad</span></nav>
         <div className="hero">
@@ -82,16 +82,16 @@ export default function NriSupportPage() {
           <h2>The Things You Cannot Say in the WhatsApp Group</h2>
           <p>You moved abroad and everyone back home thinks you made it. The assumption is that distance equals success equals happiness. Telling your parents you are lonely feels ungrateful. Telling your friends back home feels like complaining about a life they would trade theirs for. So you say nothing.</p>
           <p>But the loneliness is real. The identity confusion is real. The low-grade grief of missing every wedding, every festival, every casual Sunday at home &mdash; it accumulates. Living between two cultures means you are never fully at ease in either. Your Indian self feels muted abroad; your abroad-self feels like a stranger at home.</p>
-          <p>LeanOn listeners are Indian, based in India, and many have direct experience with family members abroad or have themselves navigated dual cultures. You do not have to explain what Diwali away from home feels like. They already know.</p>
+          <p>How Was Your Day listeners are Indian, based in India, and many have direct experience with family members abroad or have themselves navigated dual cultures. You do not have to explain what Diwali away from home feels like. They already know.</p>
         </div>
         <div className="section">
           <h2>Timing That Actually Works For You</h2>
-          <p>LeanOn listeners are based in India (IST). This creates a natural overlap that works for diaspora users: when India is in the evening (7pm&ndash;11pm IST), the US East Coast is in the morning (8:30am&ndash;12:30pm EST), the UK is in the evening (2:30pm&ndash;6:30pm GMT), and the Gulf is in the late afternoon.</p>
+          <p>How Was Your Day listeners are based in India (IST). This creates a natural overlap that works for diaspora users: when India is in the evening (7pm&ndash;11pm IST), the US East Coast is in the morning (8:30am&ndash;12:30pm EST), the UK is in the evening (2:30pm&ndash;6:30pm GMT), and the Gulf is in the late afternoon.</p>
           <p>If you have a quiet moment before your workday starts, or on a Sunday morning when the silence is heaviest, Indian listeners are very likely to be available. No appointment needed. Browse who is online right now and start a session.</p>
         </div>
         <div className="section">
           <h2>What NRI Peer Support Is (and Is Not)</h2>
-          <p>LeanOn is peer support &mdash; not a helpline, not a therapist, not a chatbot. Listeners are real people with lived experience. They will not give you advice about your visa or your marriage. They will listen while you say the things you have been carrying. Sometimes being heard by someone who understands is what shifts something.</p>
+          <p>How Was Your Day is peer support &mdash; not a helpline, not a therapist, not a chatbot. Listeners are real people with lived experience. They will not give you advice about your visa or your marriage. They will listen while you say the things you have been carrying. Sometimes being heard by someone who understands is what shifts something.</p>
           <p>Sessions are text-based and anonymous. You sign up with only a phone number and first name. Nothing is shared with your family, your employer, or anyone back home. Your first 5-minute session is free.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Walk-In Counselling India — No Appointment, Talk Now | LeanOn',
-  description: 'No waiting list. No appointment. No scheduling. LeanOn peer support needs no appointment — like walk-in counselling but from your phone. From ₹160.',
+  title: 'Walk-In Counselling India — No Appointment, Talk Now | How Was Your Day',
+  description: 'No waiting list. No appointment. No scheduling. How Was Your Day peer support needs no appointment — like walk-in counselling but from your phone. From ₹160.',
   keywords: [
     'walk-in counselling india', 'counselling without appointment india',
     'counselling without waiting list india', 'same day counselling india',
     'instant counselling india', '24 hour counselling india',
     'immediate emotional support india', 'counselling now india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/walk-in-counselling-india', languages: { 'en-IN': 'https://www.leanon.app/walk-in-counselling-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/walk-in-counselling-india', languages: { 'en-IN': 'https://www.howwasyourday.live/walk-in-counselling-india' } },
   openGraph: {
-    title: 'Walk-In Counselling India — No Appointment, Talk Now | LeanOn',
-    description: 'No waiting list. No appointment. No scheduling. LeanOn peer support needs no appointment — like walk-in counselling but from your phone. From ₹160.',
-    url: 'https://www.leanon.app/walk-in-counselling-india',
-    siteName: 'LeanOn',
+    title: 'Walk-In Counselling India — No Appointment, Talk Now | How Was Your Day',
+    description: 'No waiting list. No appointment. No scheduling. How Was Your Day peer support needs no appointment — like walk-in counselling but from your phone. From ₹160.',
+    url: 'https://www.howwasyourday.live/walk-in-counselling-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Walk-In Counselling India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Walk-In Counselling India' }],
   },
 }
 
@@ -29,17 +29,17 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is this walk-in counselling?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is peer support, not clinical counselling. But it offers the same core quality that makes walk-in counselling valuable: immediate access, no prior appointment, available when you need it. The support comes from screened peer listeners rather than licensed counsellors &mdash; which makes it appropriate for processing everyday emotional weight, not for clinical assessment or treatment.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is peer support, not clinical counselling. But it offers the same core quality that makes walk-in counselling valuable: immediate access, no prior appointment, available when you need it. The support comes from screened peer listeners rather than licensed counsellors &mdash; which makes it appropriate for processing everyday emotional weight, not for clinical assessment or treatment.' },
     },
     {
       '@type': 'Question',
       name: 'How fast can I get a session?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Most people are in a session within 3 minutes of deciding to start. Browse available listeners at leanon.app/browse, choose one, and start. There is no scheduling, no intake form, no waiting room. You talk with whichever available listener accepts.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Most people are in a session within 3 minutes of deciding to start. Browse available listeners at howwasyourday.live/browse, choose one, and start. There is no scheduling, no intake form, no waiting room. You talk with whichever available listener accepts.' },
     },
     {
       '@type': 'Question',
       name: 'Is it the same as seeing a professional?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn listeners are screened peers, not licensed professionals. They listen, empathise, and support &mdash; they do not assess, diagnose, or treat. For clinical mental health conditions, please see a qualified professional. For the day-to-day emotional weight that most people carry, peer support is often exactly what is needed.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners are screened peers, not licensed professionals. They listen, empathise, and support &mdash; they do not assess, diagnose, or treat. For clinical mental health conditions, please see a qualified professional. For the day-to-day emotional weight that most people carry, peer support is often exactly what is needed.' },
     },
     {
       '@type': 'Question',
@@ -49,7 +49,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if no listener is online?',
-      acceptedAnswer: { '@type': 'Answer', text: 'LeanOn has listeners available across different time slots, including late nights and early mornings. If no listener is available at the exact moment you need one, you can browse and book for the next available slot, which is typically within a few hours.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day has listeners available across different time slots, including late nights and early mornings. If no listener is available at the exact moment you need one, you can browse and book for the next available slot, which is typically within a few hours.' },
     },
   ],
 }
@@ -58,8 +58,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Walk-In Counselling India', item: 'https://www.leanon.app/walk-in-counselling-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Walk-In Counselling India', item: 'https://www.howwasyourday.live/walk-in-counselling-india' },
   ],
 }
 
@@ -118,7 +118,7 @@ export default function WalkInCounsellingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -135,7 +135,7 @@ export default function WalkInCounsellingIndiaPage() {
         <div className="hero">
           <p className="badge">No Appointment &middot; India</p>
           <h1>Walk-in counselling. <em>Except you don&apos;t even have to walk anywhere.</em></h1>
-          <p className="lead">Traditional counselling has waiting lists of weeks. Walk-in clinics have queues. LeanOn is instant &mdash; browse listeners, start a session, talk now. No appointment, no waiting, available across India.</p>
+          <p className="lead">Traditional counselling has waiting lists of weeks. Walk-in clinics have queues. How Was Your Day is instant &mdash; browse listeners, start a session, talk now. No appointment, no waiting, available across India.</p>
           <a href="/browse" className="cta-hero">Talk now &rarr;</a>
         </div>
 
@@ -153,13 +153,13 @@ export default function WalkInCounsellingIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Works as Walk-In Support</h2>
+          <h2>How It Works as Walk-In Support</h2>
           <div className="steps">
             <div className="step">
               <div className="step-num">1</div>
               <div className="step-body">
                 <h3>Browse</h3>
-                <p>Go to leanon.app/browse. See which listeners are available right now. Read their profiles in 60 seconds.</p>
+                <p>Go to howwasyourday.live/browse. See which listeners are available right now. Read their profiles in 60 seconds.</p>
               </div>
             </div>
             <div className="step">
@@ -181,8 +181,8 @@ export default function WalkInCounsellingIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>Who Uses LeanOn as Walk-In Support</h2>
-          <p>The situations that send people to LeanOn at unexpected hours:</p>
+          <h2>Who Uses How Was Your Day as Walk-In Support</h2>
+          <p>The situations that send people to How Was Your Day at unexpected hours:</p>
           <ul>
             <li>A fight with a partner or family member before the workday starts</li>
             <li>Anxiety that peaks on the commute to work</li>

@@ -2,7 +2,7 @@
 -- Lets a listener send a bounded, ONE-WAY "I'm available now" invite to a
 -- seeker who left them an offline message (listener_messages). The invite only
 -- notifies the seeker to come start a LIVE session — it never opens a freeform
--- reply thread, so LeanOn stays a live-session platform, not an async chat app.
+-- reply thread, so How Was Your Day stays a live-session platform, not an async chat app.
 --
 -- last_invited_at records when the seeker was last pinged for this thread, so
 -- both the manual invite button AND the auto-ping on going-online can enforce a

@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Homesick as an NRI | Missing India from Abroad | LeanOn',
+  title: 'Homesick as an NRI | Missing India from Abroad | How Was Your Day',
   description: 'Missing India isn\'t weakness — it\'s one of the least-talked-about parts of immigrant life. Talk to a peer listener who understands what home means and why its absence hurts.',
   keywords: ['nri homesick', 'missing india from abroad', 'homesickness nri', 'indian homesickness uk usa canada', 'missing home india', 'nri missing family india'],
-  alternates: { canonical: 'https://www.leanon.app/nri-homesick' },
-  openGraph: { title: 'Homesick as an NRI | Missing India from Abroad | LeanOn', description: 'Missing India isn\'t weakness — it\'s one of the least-talked-about parts of immigrant life. Talk to a peer listener who understands what home means and why its absence hurts.', url: 'https://www.leanon.app/nri-homesick', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-homesick' },
+  openGraph: { title: 'Homesick as an NRI | Missing India from Abroad | How Was Your Day', description: 'Missing India isn\'t weakness — it\'s one of the least-talked-about parts of immigrant life. Talk to a peer listener who understands what home means and why its absence hurts.', url: 'https://www.howwasyourday.live/nri-homesick', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Is it normal to still miss India after years abroad?', acceptedAnswer: { '@type': 'Answer', text: 'Completely normal. Homesickness for India doesn\'t follow a neat timeline. People who have been abroad for 10 or 20 years still feel it at particular moments — a smell, a festival, a family occasion, a song. The duration of absence doesn\'t make the feeling smaller.' } },
-  { '@type': 'Question', name: 'What do people miss most about India?', acceptedAnswer: { '@type': 'Answer', text: 'Different things for different people: the food, the chaos, the extended family, the way people talk, the festivals, the ease of being in a place where you are the default, the everyday things that are invisible until they are gone. Listeners at LeanOn understand all of this without needing it catalogued.' } },
-  { '@type': 'Question', name: 'Will talking to someone help with homesickness?', acceptedAnswer: { '@type': 'Answer', text: 'Being heard by someone who truly understands often helps. Not because the homesickness disappears, but because carrying it alone is harder than carrying it with someone who gets it. LeanOn listeners are in India — they are from the place you miss.' } },
+  { '@type': 'Question', name: 'What do people miss most about India?', acceptedAnswer: { '@type': 'Answer', text: 'Different things for different people: the food, the chaos, the extended family, the way people talk, the festivals, the ease of being in a place where you are the default, the everyday things that are invisible until they are gone. Listeners at How Was Your Day understand all of this without needing it catalogued.' } },
+  { '@type': 'Question', name: 'Will talking to someone help with homesickness?', acceptedAnswer: { '@type': 'Answer', text: 'Being heard by someone who truly understands often helps. Not because the homesickness disappears, but because carrying it alone is harder than carrying it with someone who gets it. How Was Your Day listeners are in India — they are from the place you miss.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Homesick', item: 'https://www.leanon.app/nri-homesick' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Homesick', item: 'https://www.howwasyourday.live/nri-homesick' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function NriHomesickPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Homesick</span></nav>
         <div className="hero">
@@ -83,13 +83,13 @@ export default function NriHomesickPage() {
           <h2>What Missing India Actually Feels Like</h2>
           <p>Homesickness for India is not always the dramatic, acute missing of early weeks after arriving. More often it is quieter and more persistent — a background ache that surfaces at particular moments. The Diwali weekend when you are in Houston or Fremont and the community event is wonderful but it is not your family&rsquo;s home. The Sunday morning when you would normally have gone to your parents&rsquo; house for breakfast. The smell of rain on dry earth that reminds you of somewhere specific.</p>
           <p>It surfaces at difficult life moments too — when you are unwell and there is no one to bring you chai and sit with you. When something goes wrong and you want comfort that geography makes impossible. When your parents are getting older and you are watching it through a screen. These moments land differently than general loneliness.</p>
-          <p>LeanOn listeners are in India. They are from the place you miss. They know what you mean without you having to explain it. The chai, the chaos, the family Sunday — they understand the specific texture of what you are missing. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are in India. They are from the place you miss. They know what you mean without you having to explain it. The chai, the chaos, the family Sunday — they understand the specific texture of what you are missing. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>The Guilt That Comes with Homesickness</h2>
           <p>One of the hardest parts of NRI homesickness is the guilt that comes with it. You chose to come here. You were given the opportunity. Your parents sacrificed. To tell them you are homesick feels ungrateful — and it would worry them. So the homesickness goes underground, carried quietly, felt but not named.</p>
-          <p>A real Indian peer listener at LeanOn can receive this without the guilt. They will not tell you that you should be grateful, or that it gets easier, or that you will adjust. They will simply hear what you are missing and why it hurts. Sometimes that is enough. Sessions are anonymous, private, and the first 5-minute session free.</p>
+          <p>A real Indian peer listener at How Was Your Day can receive this without the guilt. They will not tell you that you should be grateful, or that it gets easier, or that you will adjust. They will simply hear what you are missing and why it hurts. Sometimes that is enough. Sessions are anonymous, private, and the first 5-minute session free.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

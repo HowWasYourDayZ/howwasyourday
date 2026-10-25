@@ -1,10 +1,10 @@
-// LeanOn service worker — deliberately NON-CACHING, and the ONLY service worker.
+// How Was Your Day service worker — deliberately NON-CACHING, and the ONLY service worker.
 //
 // Jobs:
 //  1. Satisfy Chrome's PWA-installability requirement (a fetch handler), which
 //     is what makes the site installable / wrappable as the Play Store TWA.
 //  2. Show push notifications (session requests to listeners, "listener is
-//     available" to seekers) — including when no LeanOn tab is open.
+//     available" to seekers) — including when no How Was Your Day tab is open.
 //
 // WHY PUSH LIVES HERE (2026-09-24): there used to be a SECOND worker,
 // /firebase-messaging-sw.js, registered at the same scope "/". A scope holds
@@ -15,7 +15,7 @@
 // Now lib/firebase-client.ts registers THIS file too, and
 // /firebase-messaging-sw.js just imports it for old registrations.
 //
-// It does NOT cache anything. LeanOn is a real-time human-support app:
+// It does NOT cache anything. How Was Your Day is a real-time human-support app:
 // sessions, wallet balance, listener availability and OTP all MUST hit the
 // network every time. A caching SW here would resurface exactly the kind of
 // stale-state bugs (offline-looking listeners, stale balance) we work hard to
@@ -48,11 +48,11 @@ self.addEventListener('fetch', (event) => {
         () =>
           new Response(
             '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
-              '<title>Offline · LeanOn</title>' +
+              '<title>Offline · How Was Your Day</title>' +
               '<div style="font-family:system-ui,sans-serif;max-width:420px;margin:16vh auto;padding:0 24px;text-align:center;color:#0F4867">' +
               '<div style="font-size:44px;margin-bottom:12px">🌙</div>' +
               '<h1 style="font-size:20px;margin:0 0 8px">You\'re offline</h1>' +
-              '<p style="font-size:15px;color:#5A7A8A;line-height:1.6;margin:0">Reconnect to reach your listener. LeanOn needs a live connection for sessions.</p>' +
+              '<p style="font-size:15px;color:#5A7A8A;line-height:1.6;margin:0">Reconnect to reach your listener. How Was Your Day needs a live connection for sessions.</p>' +
               '</div>',
             { headers: { 'Content-Type': 'text/html; charset=utf-8' } }
           )
@@ -72,7 +72,7 @@ self.addEventListener('push', (event) => {
   try { payload = event.data ? event.data.json() : {} } catch { payload = {} }
   const data = payload.data || {}
   const n = payload.notification || {}
-  const title = data.title || n.title || 'LeanOn'
+  const title = data.title || n.title || 'How Was Your Day'
   const isRequest = data.type === 'session_request'
   // 'request_closed' replaces a withdrawn request's alert (same tag): no sound,
   // no buzz, and it clears itself a few seconds later (see below).
@@ -81,7 +81,7 @@ self.addEventListener('push', (event) => {
     body: data.body || n.body || 'You have a new notification.',
     icon: '/icon-192.png',
     badge: '/icon-192.png',
-    tag: data.tag || 'leanon-notification',
+    tag: data.tag || 'howwasyourday-notification',
     // renotify: a second request must buzz again even if an older notification
     // with a similar tag is still in the tray.
     renotify: !isClosed,
@@ -95,7 +95,7 @@ self.addEventListener('push', (event) => {
   event.waitUntil((async () => {
     let shown = true
     try { await self.registration.showNotification(title, options) } catch { shown = false }
-    // Test alerts: tell open LeanOn pages the push reached this browser, so the
+    // Test alerts: tell open How Was Your Day pages the push reached this browser, so the
     // dashboard can say "arrived, but your computer/phone hid the banner"
     // instead of a vague "not arriving" (notification muted at the OS level).
     if (isClosed && shown) {
@@ -105,12 +105,12 @@ self.addEventListener('push', (event) => {
     }
     if (data.type === 'test') {
       const wins = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
-      wins.forEach((w) => w.postMessage({ type: 'leanon-test-push-received', shown }))
+      wins.forEach((w) => w.postMessage({ type: 'howwasyourday-test-push-received', shown }))
     }
   })())
 })
 
-// Tap → focus an open LeanOn window and move it to the target page, or open a
+// Tap → focus an open How Was Your Day window and move it to the target page, or open a
 // new one. Session requests go to /dashboard, where the accept modal lives.
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
@@ -120,7 +120,7 @@ self.addEventListener('notificationclick', (event) => {
       .filter((c) => c.url.indexOf(self.location.origin) === 0)
     const isRequest = event.notification.data && event.notification.data.type === 'session_request'
     const inSessionPage = (w) => new URL(w.url).pathname.indexOf('/session/') === 0
-    // Prefer a window already on the target page, then any LeanOn window. For a
+    // Prefer a window already on the target page, then any How Was Your Day window. For a
     // new request, never use a session page: it can't show the accept popup, and
     // the only window being an old session page made the tap do nothing.
     const candidates = isRequest ? list.filter((w) => !inSessionPage(w)) : list

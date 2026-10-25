@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for NRIs in the UK — Talk to Someone Indian | LeanOn',
-  description: 'Missing home. Carrying the NRI pressure alone. Video calls not enough. LeanOn connects NRIs in the UK with Indian peer listeners who understand life abroad, online daily on Indian time.',
+  title: 'Emotional Support for NRIs in the UK — Talk to Someone Indian | How Was Your Day',
+  description: 'Missing home. Carrying the NRI pressure alone. Video calls not enough. How Was Your Day connects NRIs in the UK with Indian peer listeners who understand life abroad, online daily on Indian time.',
   keywords: [
     'nri support uk', 'emotional support nri uk', 'indian abroad uk support', 'nri loneliness uk',
     'missing home uk', 'nri mental health uk', 'talk to someone indian uk', 'indian listener uk',
     'nri emotional wellbeing uk', 'overseas indian support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk',
-    languages: { 'en-GB': 'https://www.leanon.app/uk' },
+    canonical: 'https://www.howwasyourday.live/uk',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk' },
   },
   openGraph: {
     title: 'Emotional Support for NRIs in the UK — Talk to Someone Indian',
-    description: 'Missing home, carrying NRI pressure alone, video calls not enough. LeanOn connects you with Indian peer listeners in India.',
-    url: 'https://www.leanon.app/uk',
-    siteName: 'LeanOn',
+    description: 'Missing home, carrying NRI pressure alone, video calls not enough. How Was Your Day connects you with Indian peer listeners in India.',
+    url: 'https://www.howwasyourday.live/uk',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -29,10 +29,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What kind of support does LeanOn offer NRIs in the UK?',
+      name: 'What kind of support does How Was Your Day offer NRIs in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn connects you with screened Indian listeners who are online daily on Indian time for real conversations. You can talk about anything — missing home, work stress, relationship pressures, loneliness, identity confusion, or simply the unnamed heaviness that comes with being far from where you grew up. Sessions are private and judgment-free.',
+        text: 'How Was Your Day connects you with screened Indian listeners who are online daily on Indian time for real conversations. You can talk about anything — missing home, work stress, relationship pressures, loneliness, identity confusion, or simply the unnamed heaviness that comes with being far from where you grew up. Sessions are private and judgment-free.',
       },
     },
     {
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'NRI Support UK', item: 'https://www.leanon.app/uk' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'NRI Support UK', item: 'https://www.howwasyourday.live/uk' },
   ],
 }
 
@@ -168,21 +168,21 @@ export default function UkNriSupportPage() {
             <li>The pressure to send money home, even when you are stretched</li>
             <li>Feeling like you cannot show vulnerability to anyone — because you are &ldquo;the one who made it&rdquo;</li>
           </ul>
-          <p style={{ marginTop: '12px' }}>All of this deserves space. LeanOn gives you that space.</p>
+          <p style={{ marginTop: '12px' }}>All of this deserves space. How Was Your Day gives you that space.</p>
         </div>
 
         <div className="night-box">
           <h2>📞 Video calls help — but they are not enough</h2>
           <p>Seeing your family&apos;s faces on a screen is a gift. But it does not replace being there.
             Sometimes after a call you feel worse — the bittersweet ache of proximity without presence.</p>
-          <p>A LeanOn listener is not a replacement for home either. But they are a real human who will
+          <p>A How Was Your Day listener is not a replacement for home either. But they are a real human who will
             listen to exactly what it feels like to be where you are.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
 
         <div className="card">
           <h2>A listener who speaks your NRI language</h2>
-          <p>LeanOn listeners are Indians — many are NRIs themselves or understand the NRI context deeply.
+          <p>How Was Your Day listeners are Indians — many are NRIs themselves or understand the NRI context deeply.
             You will not need to explain what it means to be the child your family sacrificed for, or the
             pressure of being abroad, or the loneliness that does not quite fit any word in English.</p>
           <p>They already know. And they are there to listen.</p>
@@ -208,7 +208,7 @@ export default function UkNriSupportPage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>What kind of support does LeanOn offer NRIs?</h3>
+            <h3>What kind of support does How Was Your Day offer NRIs?</h3>
             <p>You can talk about anything — missing home, work stress, relationship pressures, loneliness,
               identity, or simply the unnamed heaviness that comes with being far from where you grew up.
               Sessions are private and judgment-free.</p>
@@ -248,7 +248,7 @@ export default function UkNriSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

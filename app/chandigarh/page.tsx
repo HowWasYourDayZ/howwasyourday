@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Chandigarh — Peer Listeners | LeanOn',
+  title: 'Emotional Support in Chandigarh — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Chandigarh. Family pressure, UPSC and engineering culture, Punjab/Haryana youth, joint family dynamics. From ₹160.',
-  alternates: { canonical: 'https://www.leanon.app/chandigarh', languages: { 'en-IN': 'https://www.leanon.app/chandigarh' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/chandigarh', languages: { 'en-IN': 'https://www.howwasyourday.live/chandigarh' } },
   keywords: 'peer support Chandigarh, emotional support Chandigarh, family pressure Chandigarh, marriage pressure Punjab Haryana, UPSC stress Chandigarh, talk to someone Chandigarh',
   openGraph: {
-    title: 'Emotional Support in Chandigarh — Peer Listeners | LeanOn',
+    title: 'Emotional Support in Chandigarh — Peer Listeners | How Was Your Day',
     description: 'Connect with peer listeners in Chandigarh. Family pressure, UPSC and engineering culture, Punjab/Haryana youth, joint family dynamics. From ₹160.',
-    url: 'https://www.leanon.app/chandigarh',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/chandigarh',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -46,7 +46,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What do Chandigarh users talk about on LeanOn?',
+      name: 'What do Chandigarh users talk about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Common topics include family and marriage pressure, career uncertainty (UPSC vs private sector vs abroad), the specific loneliness of feeling different from what your family expects, identity questions, and the stress of living up to the image of a successful Chandigarh family.',
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn peer support different from therapy?',
+      name: 'Is How Was Your Day peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and private. For clinical mental health concerns, professional help is always recommended.',
+        text: 'Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and private. For clinical mental health concerns, professional help is always recommended.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Chandigarh', item: 'https://www.leanon.app/chandigarh' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Chandigarh', item: 'https://www.howwasyourday.live/chandigarh' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/chandigarh',
+  url: 'https://www.howwasyourday.live/chandigarh',
   areaServed: { '@type': 'City', name: 'Chandigarh', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -144,7 +144,7 @@ export default function ChandigarhPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -157,7 +157,7 @@ export default function ChandigarhPage() {
         <div className="hero">
           <p className="tag">Peer Support · Chandigarh · Punjab / Haryana</p>
           <h1>Peer Support in Chandigarh — Someone to Talk to When <em>Family Pressure Gets Heavy</em></h1>
-          <p className="lead">Chandigarh is one of India&apos;s most liveable cities — clean, educated, prosperous. It is also a city where expectations run high, family opinions run deep, and young people often carry enormous pressure quietly. LeanOn connects you with someone who understands.</p>
+          <p className="lead">Chandigarh is one of India&apos;s most liveable cities — clean, educated, prosperous. It is also a city where expectations run high, family opinions run deep, and young people often carry enormous pressure quietly. How Was Your Day connects you with someone who understands.</p>
         </div>
 
         <div className="section">
@@ -173,7 +173,7 @@ export default function ChandigarhPage() {
         </div>
 
         <div className="section">
-          <h2>What Chandigarh Users Talk About on LeanOn</h2>
+          <h2>What Chandigarh Users Talk About on How Was Your Day</h2>
           <ul>
             <li><strong>Family and marriage pressure</strong> — the timeline, the expectations, the conversations you cannot have at home</li>
             <li><strong>Career uncertainty</strong> — UPSC vs private sector, staying vs going abroad, the guilt of choosing differently</li>
@@ -207,12 +207,12 @@ export default function ChandigarhPage() {
             <div className="faq-a">Joint families provide warmth and support, but also create specific pressures: constant visibility, reduced privacy, family decisions made collectively, opinions from multiple family members simultaneously.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What do Chandigarh users talk about on LeanOn?</div>
+            <div className="faq-q">What do Chandigarh users talk about on How Was Your Day?</div>
             <div className="faq-a">Common topics include family and marriage pressure, career uncertainty (UPSC vs private sector), identity questions, joint family friction, and the loneliness of feeling different from family expectations.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn peer support different from therapy?</div>
-            <div className="faq-a">Yes. LeanOn is peer support, not therapy. Listeners are screened peers — not licensed therapists. Accessible from ₹160 for 15 minutes, anonymous.</div>
+            <div className="faq-q">Is How Was Your Day peer support different from therapy?</div>
+            <div className="faq-a">Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers — not licensed therapists. Accessible from ₹160 for 15 minutes, anonymous.</div>
           </div>
         </div>
 
@@ -229,9 +229,9 @@ export default function ChandigarhPage() {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals.</p>
         </div>
       </div>
     </>

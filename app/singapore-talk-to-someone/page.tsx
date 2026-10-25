@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone Online in Singapore | LeanOn',
-  description: 'Need a real person to talk to in Singapore? LeanOn connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Telugu, and more. First 5 minutes free.',
+  title: 'Talk to Someone Online in Singapore | How Was Your Day',
+  description: 'Need a real person to talk to in Singapore? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Telugu, and more. First 5 minutes free.',
   keywords: [
     'talk to someone online singapore', 'someone to talk to singapore', 'need to talk singapore',
     'online chat support singapore', 'talk to a person singapore', 'emotional support online singapore',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'online listener singapore', 'indian expat support singapore',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/singapore-talk-to-someone',
-    languages: { 'en-SG': 'https://www.leanon.app/singapore-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/singapore-talk-to-someone',
+    languages: { 'en-SG': 'https://www.howwasyourday.live/singapore-talk-to-someone' },
   },
   openGraph: {
-    title: 'Talk to Someone Online in Singapore — Real Indian Listeners | LeanOn',
-    description: 'Need a real person to talk to? LeanOn connects Indian expats in Singapore with peer listeners in India — in your language, with your cultural context understood.',
-    url: 'https://www.leanon.app/singapore-talk-to-someone',
-    siteName: 'LeanOn',
+    title: 'Talk to Someone Online in Singapore — Real Indian Listeners | How Was Your Day',
+    description: 'Need a real person to talk to? How Was Your Day connects Indian expats in Singapore with peer listeners in India — in your language, with your cultural context understood.',
+    url: 'https://www.howwasyourday.live/singapore-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Can I talk to someone in Singapore right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time. You can start a session whenever a listener is online — no appointment, no waiting list. Just browse available listeners and start talking.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time. You can start a session whenever a listener is online — no appointment, no waiting list. Just browse available listeners and start talking.',
       },
     },
     {
@@ -42,15 +42,15 @@ const faqSchema = {
       name: 'Do I need to have a specific problem to talk to someone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. You can reach out because you feel low, because you are bored and lonely, because something small is bothering you, or simply because you miss having a real conversation. LeanOn is for exactly these moments when you just want a human connection.',
+        text: 'No. You can reach out because you feel low, because you are bored and lonely, because something small is bothering you, or simply because you miss having a real conversation. How Was Your Day is for exactly these moments when you just want a human connection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are LeanOn listeners real people or AI?',
+      name: 'Are How Was Your Day listeners real people or AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Real people. Every LeanOn listener is a screened human peer supporter — not a chatbot. They go through a vetting and training process before they are allowed on the platform.',
+        text: 'Real people. Every How Was Your Day listener is a screened human peer supporter — not a chatbot. They go through a vetting and training process before they are allowed on the platform.',
       },
     },
     {
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'What language can I talk in?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. You can filter by language when browsing. Many listeners are also comfortable with a mix of languages in the same conversation.',
+        text: 'How Was Your Day listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. You can filter by language when browsing. Many listeners are also comfortable with a mix of languages in the same conversation.',
       },
     },
     {
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Singapore', item: 'https://www.leanon.app/singapore-talk-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to Someone Singapore', item: 'https://www.howwasyourday.live/singapore-talk-to-someone' },
   ],
 }
 
@@ -157,7 +157,7 @@ export default function SingaporeTalkToSomeonePage() {
         <h1>Sometimes You Just Need<br />a Real Person to Talk To.</h1>
         <p className="lead">
           You do not need a reason, a crisis, or a perfectly formed problem. You just need someone
-          to connect with — a real human being who will listen. LeanOn makes that possible, any time,
+          to connect with — a real human being who will listen. How Was Your Day makes that possible, any time,
           from Singapore, in your language.
         </p>
 
@@ -181,13 +181,13 @@ export default function SingaporeTalkToSomeonePage() {
           <p>2 AM in Singapore. The messages back home are going unanswered because everyone is asleep.
             You are awake and you want to talk — not to scroll, not to watch something, but to actually
             have a conversation with a real person.</p>
-          <p>LeanOn listeners are online right now. Indian, warm, screened, ready.</p>
+          <p>How Was Your Day listeners are online right now. Indian, warm, screened, ready.</p>
           <a href="/browse" className="cta-night">Find someone to talk to →</a>
         </div>
 
         <div className="card">
-          <h2>Why LeanOn is different from chatbots or apps</h2>
-          <p>LeanOn is not AI. Every single listener on the platform is a real, screened human being who
+          <h2>Why How Was Your Day is different from chatbots or apps</h2>
+          <p>How Was Your Day is not AI. Every single listener on the platform is a real, screened human being who
             chose to do this work. They are from India. They have lived experience. They understand your
             cultural background and the specific texture of Indian expat life.</p>
           <p>You can talk in Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, or English — whatever
@@ -225,7 +225,7 @@ export default function SingaporeTalkToSomeonePage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Can I talk to someone in Singapore right now?</h3>
-            <p>Yes. LeanOn listeners are based in India, so availability follows Indian time. No appointment, no waiting list. Just browse
+            <p>Yes. How Was Your Day listeners are based in India, so availability follows Indian time. No appointment, no waiting list. Just browse
               available listeners and start talking.</p>
           </div>
           <div className="faq-item">
@@ -234,8 +234,8 @@ export default function SingaporeTalkToSomeonePage() {
               is bothering you, or simply because you miss having a real conversation.</p>
           </div>
           <div className="faq-item">
-            <h3>Are LeanOn listeners real people or AI?</h3>
-            <p>Real people. Every LeanOn listener is a screened human peer supporter — not a chatbot.
+            <h3>Are How Was Your Day listeners real people or AI?</h3>
+            <p>Real people. Every How Was Your Day listener is a screened human peer supporter — not a chatbot.
               They go through vetting and training before joining the platform.</p>
           </div>
           <div className="faq-item">
@@ -263,7 +263,7 @@ export default function SingaporeTalkToSomeonePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

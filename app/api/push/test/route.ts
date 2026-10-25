@@ -18,10 +18,10 @@ export async function POST() {
 
   const sb = createAdminClient()
   const r = await sendPushToUser(sb, user.id, {
-    title: 'LeanOn test alert 🔔',
+    title: 'How Was Your Day test alert 🔔',
     body: 'Alerts are working on this device. Real requests look like this.',
     url: '/dashboard',
-    tag: `leanon-test-${Date.now()}`,
+    tag: `howwasyourday-test-${Date.now()}`,
     ttlSecs: 120,
     urgent: true,
     data: { type: 'test' },

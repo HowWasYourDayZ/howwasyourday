@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Teen Mental Health India — You Don\'t Have to Figure It Out Alone | LeanOn',
+  title: 'Teen Mental Health India — You Don\'t Have to Figure It Out Alone | How Was Your Day',
   description: 'Class 12 pressure. Parent expectations. Social anxiety. It\'s a lot. Talk to someone who gets it — anonymous peer support from ₹160.',
   keywords: ['teen mental health india', 'adolescent mental health india', 'teenager anxiety india', 'teen depression india', 'student mental health india class 12', 'board exam stress india', 'teen peer support india'],
-  alternates: { canonical: 'https://www.leanon.app/teen-mental-health-india', languages: { 'en-IN': 'https://www.leanon.app/teen-mental-health-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/teen-mental-health-india', languages: { 'en-IN': 'https://www.howwasyourday.live/teen-mental-health-india' } },
   openGraph: {
-    title: 'Teen Mental Health India — You Don\'t Have to Figure It Out Alone | LeanOn',
+    title: 'Teen Mental Health India — You Don\'t Have to Figure It Out Alone | How Was Your Day',
     description: 'Class 12 pressure. Parent expectations. Social anxiety. It\'s a lot. Talk to someone who gets it — anonymous peer support from ₹160.',
-    url: 'https://www.leanon.app/teen-mental-health-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/teen-mental-health-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -22,10 +22,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is LeanOn safe for teenagers?',
+      name: 'Is How Was Your Day safe for teenagers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is designed to be safe and anonymous. Listeners are screened, sessions are confidential, and there is no sharing of information with parents or schools. For anyone in crisis, LeanOn always refers to professional helplines: NIMHANS (080-46110007) and Tele-MANAS (14416).',
+        text: 'Yes. How Was Your Day is designed to be safe and anonymous. Listeners are screened, sessions are confidential, and there is no sharing of information with parents or schools. For anyone in crisis, How Was Your Day always refers to professional helplines: NIMHANS (080-46110007) and Tele-MANAS (14416).',
       },
     },
     {
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'Will my parents know?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn requires only a phone number and a first name. Sessions are private and confidential. No notifications are sent to parents or guardians. What you share stays between you and your listener.',
+        text: 'No. How Was Your Day requires only a phone number and a first name. Sessions are private and confidential. No notifications are sent to parents or guardians. What you share stays between you and your listener.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is this like therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support — a real human conversation with someone who has been through something similar. It is not clinical therapy. For clinical mental health needs, please see a professional. For the everyday pressure and confusion of being a teenager in India, peer support is often exactly what helps.',
+        text: 'No. How Was Your Day is peer support — a real human conversation with someone who has been through something similar. It is not clinical therapy. For clinical mental health needs, please see a professional. For the everyday pressure and confusion of being a teenager in India, peer support is often exactly what helps.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Can I talk about feeling like a failure?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — this is one of the most common things students come to LeanOn to talk about. The feeling that you are not enough, that you are letting your parents down, that everyone else has it together. You are not alone in this, and you do not have to carry it alone.',
+        text: 'Yes — this is one of the most common things students come to How Was Your Day to talk about. The feeling that you are not enough, that you are letting your parents down, that everyone else has it together. You are not alone in this, and you do not have to carry it alone.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Teen Mental Health India', item: 'https://www.leanon.app/teen-mental-health-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Teen Mental Health India', item: 'https://www.howwasyourday.live/teen-mental-health-india' },
   ],
 }
 
@@ -126,7 +126,7 @@ export default function TeenMentalHealthIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -158,7 +158,7 @@ export default function TeenMentalHealthIndiaPage() {
         <div className="section">
           <h2>Why Parents Are Not Always the Answer</h2>
           <p>Parents love you. But talking to them sometimes adds pressure rather than releasing it. They worry. They react. Their anxiety becomes your anxiety. They might give advice when you just needed to be heard. None of that is wrong — they care. But sometimes you need a space where care does not come with pressure attached.</p>
-          <p>LeanOn is that space. Anonymous, confidential, no one in your family knows you are here.</p>
+          <p>How Was Your Day is that space. Anonymous, confidential, no one in your family knows you are here.</p>
         </div>
 
         <div className="parent-note">
@@ -178,12 +178,12 @@ export default function TeenMentalHealthIndiaPage() {
         <div className="section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn safe for teenagers?</div>
-            <div className="faq-a">Yes. LeanOn is anonymous and confidential. Listeners are screened, sessions are private, and no information is shared with parents or schools. For anyone in crisis, LeanOn always refers to NIMHANS (080-46110007) and Tele-MANAS (14416).</div>
+            <div className="faq-q">Is How Was Your Day safe for teenagers?</div>
+            <div className="faq-a">Yes. How Was Your Day is anonymous and confidential. Listeners are screened, sessions are private, and no information is shared with parents or schools. For anyone in crisis, How Was Your Day always refers to NIMHANS (080-46110007) and Tele-MANAS (14416).</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Will my parents know?</div>
-            <div className="faq-a">No. LeanOn requires only a phone number and a first name. Sessions are private. No notifications are sent to parents or guardians. What you share stays between you and your listener.</div>
+            <div className="faq-a">No. How Was Your Day requires only a phone number and a first name. Sessions are private. No notifications are sent to parents or guardians. What you share stays between you and your listener.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What can I talk about?</div>
@@ -191,11 +191,11 @@ export default function TeenMentalHealthIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is this like therapy?</div>
-            <div className="faq-a">No. LeanOn is peer support — a real human conversation with someone who has been through something similar. Not clinical therapy. For clinical mental health needs, please see a professional.</div>
+            <div className="faq-a">No. How Was Your Day is peer support — a real human conversation with someone who has been through something similar. Not clinical therapy. For clinical mental health needs, please see a professional.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I talk about feeling like a failure?</div>
-            <div className="faq-a">Yes — this is one of the most common things students come to LeanOn to talk about. The feeling that you are not enough, that you are letting your parents down. You are not alone in this.</div>
+            <div className="faq-a">Yes — this is one of the most common things students come to How Was Your Day to talk about. The feeling that you are not enough, that you are letting your parents down. You are not alone in this.</div>
           </div>
         </div>
 

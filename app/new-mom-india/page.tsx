@@ -4,22 +4,22 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'New Mom India — When It\'s Not All Joy | LeanOn',
+  title: 'New Mom India — When It\'s Not All Joy | How Was Your Day',
   description: 'Sleep deprivation, identity shift, isolation, pressure to be happy. New motherhood is hard. Talk anonymously from ₹160.',
   keywords: ['new mom India', 'new mother stress India', 'first time mom anxiety India', 'new baby overwhelming India'],
-  alternates: { canonical: 'https://www.leanon.app/new-mom-india', languages: { 'en-IN': 'https://www.leanon.app/new-mom-india' } },
-  openGraph: { title: 'New Mom India — When It\'s Not All Joy | LeanOn', description: 'Sleep deprivation, identity shift, isolation, pressure to be happy. New motherhood is hard. Talk anonymously from ₹160.', url: 'https://www.leanon.app/new-mom-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/new-mom-india', languages: { 'en-IN': 'https://www.howwasyourday.live/new-mom-india' } },
+  openGraph: { title: 'New Mom India — When It\'s Not All Joy | How Was Your Day', description: 'Sleep deprivation, identity shift, isolation, pressure to be happy. New motherhood is hard. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/new-mom-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is it normal to struggle as a new mom?', acceptedAnswer: {'@type': 'Answer', text: 'Extremely normal. The combination of sleep deprivation, hormonal shift, identity change, and social pressure to appear grateful is genuinely very hard. The fact that others appear to be coping does not mean they actually are.'}},
-    {'@type': 'Question', name: 'Can I talk about struggling with motherhood without feeling judged?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. A LeanOn listener will not respond with "but you should be grateful" or "it gets better." They will listen to what you are actually experiencing.'}},
+    {'@type': 'Question', name: 'Can I talk about struggling with motherhood without feeling judged?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. A How Was Your Day listener will not respond with "but you should be grateful" or "it gets better." They will listen to what you are actually experiencing.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'New Mom India', item: 'https://www.leanon.app/new-mom-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'New Mom India', item: 'https://www.howwasyourday.live/new-mom-india' },
 ] }
 
 const S = `
@@ -66,7 +66,7 @@ export default function NewMomIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>New Mom India</span></nav>
         <div className="hero">
@@ -84,7 +84,7 @@ export default function NewMomIndiaPage() {
         <div className="section">
           <h2>This Is Not Postpartum Depression Necessarily</h2>
           <p>Postpartum depression is a clinical condition that requires professional support &mdash; if you are experiencing it, please speak to a doctor. But much of what new mothers feel in India does not reach clinical threshold: it is the ordinary distress of an enormous transition that comes with no preparation, no acknowledgment, and no room to express anything other than gratitude.</p>
-          <p>LeanOn is for that gap &mdash; the space between clinical need and just-needing-to-talk. See also: <a href="/support/postpartum-india" style={{color:"#1A8FA0",fontWeight:700}}>Postpartum support India</a>.</p>
+          <p>How Was Your Day is for that gap &mdash; the space between clinical need and just-needing-to-talk. See also: <a href="/support/postpartum-india" style={{color:"#1A8FA0",fontWeight:700}}>Postpartum support India</a>.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>New motherhood is hard. You are allowed to say that.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

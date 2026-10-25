@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Spouse Abroad | When You Moved for Love and Feel Lost | LeanOn',
+  title: 'NRI Spouse Abroad | When You Moved for Love and Feel Lost | How Was Your Day',
   description: "You came to a new country for your partner's visa or career. Now you're isolated, dependent, and searching for identity. Talk to a listener who understands.",
   keywords: ['nri spouse support', 'dependent visa spouse', 'h4 visa support', 'nri wife abroad', 'nri husband abroad', 'spouse visa nri', 'indian spouse abroad'],
-  alternates: { canonical: 'https://www.leanon.app/nri-spouse-support' },
-  openGraph: { title: 'NRI Spouse Abroad | When You Moved for Love and Feel Lost | LeanOn', description: "You came to a new country for your partner's visa or career. Now you're isolated, dependent, and searching for identity. Talk to a listener who understands.", url: 'https://www.leanon.app/nri-spouse-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-spouse-support' },
+  openGraph: { title: 'NRI Spouse Abroad | When You Moved for Love and Feel Lost | How Was Your Day', description: "You came to a new country for your partner's visa or career. Now you're isolated, dependent, and searching for identity. Talk to a listener who understands.", url: 'https://www.howwasyourday.live/nri-spouse-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand the dependent spouse experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Listeners are screened and expected to understand the NRI experience, including the specific weight of being a dependent visa spouse — the identity loss, the career disruption, the isolation of a new country with no independent network, and the complex emotional dynamic of being entirely dependent on one person.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand the dependent spouse experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Listeners are screened and expected to understand the NRI experience, including the specific weight of being a dependent visa spouse — the identity loss, the career disruption, the isolation of a new country with no independent network, and the complex emotional dynamic of being entirely dependent on one person.' } },
   { '@type': 'Question', name: 'I feel resentful toward my partner even though I love them. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and this is one of the most common experiences listeners hear from dependent spouses. Love and resentment can coexist — the resentment of having given up your career, your city, your friends for someone else\'s opportunity, even when you made the choice willingly. Listeners hold this without judgment.' } },
   { '@type': 'Question', name: 'I don\'t have work authorisation in this country. Does that affect what I can talk about?', acceptedAnswer: { '@type': 'Answer', text: 'No — you can talk about anything. The specific anxiety of not having work authorisation, of having your identity tied to your partner\'s visa status, of waiting for an EAD card or a work permit, is something listeners understand and can hold.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Spouse Support', item: 'https://www.leanon.app/nri-spouse-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Spouse Support', item: 'https://www.howwasyourday.live/nri-spouse-support' },
 ] }
 
 const S = `
@@ -70,20 +70,20 @@ export default function NriSpouseSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Spouse Support</span></nav>
         <div className="hero">
           <p className="badge">NRI Spouse &middot; Dependent Visa &middot; H4 &middot; Identity Abroad</p>
           <h1>You moved for love. <em>Now you&rsquo;re not sure who you are.</em></h1>
           <p className="lead">The dependent visa spouse experience is one of the most isolating in the NRI world — and one of the least talked about. You didn&rsquo;t come for your own opportunity. You came because you love someone who did. And now you are in a foreign country with no career, no independent social network, and an identity that used to be yours and now feels borrowed. Talk to someone who understands. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The H4 Visa, UK Dependent, Canada Spouse: What the Papers Don&rsquo;t Say</h2>
           <p>The H4 visa — the dependent visa for H1B spouses — is one of the most personally costly immigration statuses in the world. You are authorised to live in America. You are not, for most H4 holders, authorised to work. The EAD (Employment Authorisation Document) for H4 holders is available only under specific conditions, takes months to process, and is subject to policy changes that can leave you with work one year and without it the next. Your entire professional identity — your career, your qualifications, your sense of what you contribute — is placed on hold by a document you did not apply for.</p>
-          <p>The UK dependent visa and Canadian spousal open work permit have their own variations, but the emotional structure is similar: you are in this country because of someone else&rsquo;s visa, someone else&rsquo;s job, someone else&rsquo;s decision to stay. Even when you agreed to the move, even when you were excited about it, the downstream reality — the loneliness, the dependence, the loss of professional identity — is different from what you imagined. LeanOn is for exactly this space. First 5 minutes free.</p>
+          <p>The UK dependent visa and Canadian spousal open work permit have their own variations, but the emotional structure is similar: you are in this country because of someone else&rsquo;s visa, someone else&rsquo;s job, someone else&rsquo;s decision to stay. Even when you agreed to the move, even when you were excited about it, the downstream reality — the loneliness, the dependence, the loss of professional identity — is different from what you imagined. How Was Your Day is for exactly this space. First 5 minutes free.</p>
         </div>
 
         <div className="section">
@@ -95,11 +95,11 @@ export default function NriSpouseSupportPage() {
         <div className="section">
           <h2>The Hidden Resentment That Lives Next to Love</h2>
           <p>The hardest part of the dependent spouse experience to admit is the resentment. You love your partner. You are proud of what they have achieved. And there is also, sitting right next to that love, a quiet resentment at the life you gave up for their opportunity. The city you left. The career you paused or abandoned. The friends you no longer see. The version of yourself that existed before this move, who feels increasingly like a stranger.</p>
-          <p>This resentment is not the same as wanting to leave. It is not a sign that the marriage is failing. It is the natural response to a structural imbalance — one person&rsquo;s life was built around, and the other person&rsquo;s life was given over. Indian culture is not particularly good at naming this honestly. LeanOn is a space to name it. A listener who understands the structure, who will not tell you to be grateful, who can hold both the love and the resentment simultaneously. From US$10.</p>
+          <p>This resentment is not the same as wanting to leave. It is not a sign that the marriage is failing. It is the natural response to a structural imbalance — one person&rsquo;s life was built around, and the other person&rsquo;s life was given over. Indian culture is not particularly good at naming this honestly. How Was Your Day is a space to name it. A listener who understands the structure, who will not tell you to be grateful, who can hold both the love and the resentment simultaneously. From US$10.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You moved for love. Your feelings matter too.</h2><p>Real Indian peer listener. Understands the dependent spouse experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You moved for love. Your feelings matter too.</h2><p>Real Indian peer listener. Understands the dependent spouse experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

@@ -200,23 +200,23 @@ const BIRTH_YEARS = Array.from(
   (_, i) => CURRENT_YEAR - MIN_LISTENER_AGE - i,
 )
 
-const NO_INCOME_ACK_KEY = 'leanon_listener_noincome_ack'
+const NO_INCOME_ACK_KEY = 'howwasyourday_listener_noincome_ack'
 
 // Same message in every language listeners can choose (lib/constants LANGUAGES).
 // Kept short and literal on purpose.
 const NO_INCOME_NOTICE: { lang: string; code: string; rtl?: boolean; text: string }[] = [
-  { lang: 'English', code: 'en', text: 'LeanOn is new. Very few people use it yet. You may get few or no sessions. There is no salary, no minimum and no guaranteed income. LeanOn is not a job.' },
-  { lang: 'हिंदी (Hindi)', code: 'hi', text: 'LeanOn नया है। अभी बहुत कम लोग इसका इस्तेमाल करते हैं। ऐसा हो सकता है कि आपको बहुत कम सेशन मिलें, या एक भी न मिले। कोई वेतन, न्यूनतम या गारंटीड कमाई नहीं है। LeanOn नौकरी नहीं है।' },
-  { lang: 'தமிழ் (Tamil)', code: 'ta', text: 'LeanOn புதியது. இப்போது மிகச் சிலரே இதைப் பயன்படுத்துகின்றனர். உங்களுக்கு மிகக் குறைவான அமர்வுகளே கிடைக்கலாம், அல்லது ஒன்றுமே கிடைக்காமல் போகலாம். சம்பளம், குறைந்தபட்ச வருமானம் அல்லது உத்தரவாத வருமானம் எதுவும் இல்லை. LeanOn ஒரு வேலை அல்ல.' },
-  { lang: 'తెలుగు (Telugu)', code: 'te', text: 'LeanOn కొత్తది. ఇప్పుడు చాలా తక్కువ మంది మాత్రమే దీన్ని వాడుతున్నారు. మీకు చాలా తక్కువ సెషన్లు రావచ్చు, లేదా ఒక్కటి కూడా రాకపోవచ్చు. జీతం, కనీస ఆదాయం లేదా హామీ ఆదాయం ఏదీ లేదు. LeanOn ఉద్యోగం కాదు.' },
-  { lang: 'ಕನ್ನಡ (Kannada)', code: 'kn', text: 'LeanOn ಹೊಸದು. ಈಗ ತುಂಬಾ ಕಡಿಮೆ ಜನರು ಮಾತ್ರ ಇದನ್ನು ಬಳಸುತ್ತಿದ್ದಾರೆ. ನಿಮಗೆ ತುಂಬಾ ಕಡಿಮೆ ಸೆಷನ್‌ಗಳು ಸಿಗಬಹುದು ಅಥವಾ ಒಂದೂ ಸಿಗದಿರಬಹುದು. ಸಂಬಳ, ಕನಿಷ್ಠ ಆದಾಯ ಅಥವಾ ಖಚಿತ ಆದಾಯ ಇಲ್ಲ. LeanOn ಉದ್ಯೋಗವಲ್ಲ.' },
-  { lang: 'മലയാളം (Malayalam)', code: 'ml', text: 'LeanOn പുതിയതാണ്. ഇപ്പോൾ വളരെ കുറച്ചു പേർ മാത്രമേ ഇത് ഉപയോഗിക്കുന്നുള്ളൂ. നിങ്ങൾക്ക് വളരെ കുറച്ച് സെഷനുകൾ മാത്രം ലഭിച്ചേക്കാം, അല്ലെങ്കിൽ ഒന്നും ലഭിക്കാതിരിക്കാം. ശമ്പളമോ മിനിമം വരുമാനമോ ഉറപ്പുള്ള വരുമാനമോ ഇല്ല. LeanOn ഒരു ജോലിയല്ല.' },
-  { lang: 'मराठी (Marathi)', code: 'mr', text: 'LeanOn नवीन आहे. सध्या खूप कमी लोक ते वापरतात. तुम्हाला खूप कमी सेशन मिळू शकतात, किंवा एकही मिळणार नाही, असेही होऊ शकते. पगार, किमान किंवा खात्रीशीर उत्पन्न नाही. LeanOn ही नोकरी नाही.' },
-  { lang: 'বাংলা (Bengali)', code: 'bn', text: 'LeanOn নতুন। এখন খুব কম মানুষ এটি ব্যবহার করেন। আপনি খুব কম সেশন পেতে পারেন, বা একটিও না-ও পেতে পারেন। কোনো বেতন, ন্যূনতম বা নিশ্চিত আয় নেই। LeanOn কোনো চাকরি নয়।' },
-  { lang: 'ગુજરાતી (Gujarati)', code: 'gu', text: 'LeanOn નવું છે. હાલમાં બહુ ઓછા લોકો તેનો ઉપયોગ કરે છે. તમને બહુ ઓછા સેશન મળે અથવા એક પણ ન મળે એવું બની શકે. કોઈ પગાર, ન્યૂનતમ કે ગેરંટીવાળી કમાણી નથી. LeanOn નોકરી નથી.' },
-  { lang: 'ਪੰਜਾਬੀ (Punjabi)', code: 'pa', text: 'LeanOn ਨਵਾਂ ਹੈ। ਹਾਲੇ ਬਹੁਤ ਘੱਟ ਲੋਕ ਇਸਨੂੰ ਵਰਤਦੇ ਹਨ। ਤੁਹਾਨੂੰ ਬਹੁਤ ਘੱਟ ਸੈਸ਼ਨ ਮਿਲ ਸਕਦੇ ਹਨ, ਜਾਂ ਇੱਕ ਵੀ ਨਹੀਂ। ਕੋਈ ਤਨਖਾਹ, ਘੱਟੋ-ਘੱਟ ਜਾਂ ਪੱਕੀ ਆਮਦਨ ਨਹੀਂ ਹੈ। LeanOn ਨੌਕਰੀ ਨਹੀਂ ਹੈ।' },
-  { lang: 'ଓଡ଼ିଆ (Odia)', code: 'or', text: 'LeanOn ନୂଆ। ଏବେ ବହୁତ କମ୍ ଲୋକ ଏହାକୁ ବ୍ୟବହାର କରନ୍ତି। ଆପଣ ବହୁତ କମ୍ ସେସନ୍ ପାଇପାରନ୍ତି, କିମ୍ବା ଗୋଟିଏ ବି ନ ମିଳିପାରେ। କୌଣସି ଦରମା, ସର୍ବନିମ୍ନ କିମ୍ବା ନିଶ୍ଚିତ ଆୟ ନାହିଁ। LeanOn ଚାକିରି ନୁହେଁ।' },
-  { lang: 'اردو (Urdu)', code: 'ur', rtl: true, text: 'LeanOn نیا ہے۔ ابھی بہت کم لوگ اسے استعمال کرتے ہیں۔ ہو سکتا ہے آپ کو بہت کم سیشن ملیں، یا ایک بھی نہ ملے۔ کوئی تنخواہ، کم از کم یا یقینی آمدنی نہیں ہے۔ LeanOn نوکری نہیں ہے۔' },
+  { lang: 'English', code: 'en', text: 'How Was Your Day is new. Very few people use it yet. You may get few or no sessions. There is no salary, no minimum and no guaranteed income. How Was Your Day is not a job.' },
+  { lang: 'हिंदी (Hindi)', code: 'hi', text: 'How Was Your Day नया है। अभी बहुत कम लोग इसका इस्तेमाल करते हैं। ऐसा हो सकता है कि आपको बहुत कम सेशन मिलें, या एक भी न मिले। कोई वेतन, न्यूनतम या गारंटीड कमाई नहीं है। How Was Your Day नौकरी नहीं है।' },
+  { lang: 'தமிழ் (Tamil)', code: 'ta', text: 'How Was Your Day புதியது. இப்போது மிகச் சிலரே இதைப் பயன்படுத்துகின்றனர். உங்களுக்கு மிகக் குறைவான அமர்வுகளே கிடைக்கலாம், அல்லது ஒன்றுமே கிடைக்காமல் போகலாம். சம்பளம், குறைந்தபட்ச வருமானம் அல்லது உத்தரவாத வருமானம் எதுவும் இல்லை. How Was Your Day ஒரு வேலை அல்ல.' },
+  { lang: 'తెలుగు (Telugu)', code: 'te', text: 'How Was Your Day కొత్తది. ఇప్పుడు చాలా తక్కువ మంది మాత్రమే దీన్ని వాడుతున్నారు. మీకు చాలా తక్కువ సెషన్లు రావచ్చు, లేదా ఒక్కటి కూడా రాకపోవచ్చు. జీతం, కనీస ఆదాయం లేదా హామీ ఆదాయం ఏదీ లేదు. How Was Your Day ఉద్యోగం కాదు.' },
+  { lang: 'ಕನ್ನಡ (Kannada)', code: 'kn', text: 'How Was Your Day ಹೊಸದು. ಈಗ ತುಂಬಾ ಕಡಿಮೆ ಜನರು ಮಾತ್ರ ಇದನ್ನು ಬಳಸುತ್ತಿದ್ದಾರೆ. ನಿಮಗೆ ತುಂಬಾ ಕಡಿಮೆ ಸೆಷನ್‌ಗಳು ಸಿಗಬಹುದು ಅಥವಾ ಒಂದೂ ಸಿಗದಿರಬಹುದು. ಸಂಬಳ, ಕನಿಷ್ಠ ಆದಾಯ ಅಥವಾ ಖಚಿತ ಆದಾಯ ಇಲ್ಲ. How Was Your Day ಉದ್ಯೋಗವಲ್ಲ.' },
+  { lang: 'മലയാളം (Malayalam)', code: 'ml', text: 'How Was Your Day പുതിയതാണ്. ഇപ്പോൾ വളരെ കുറച്ചു പേർ മാത്രമേ ഇത് ഉപയോഗിക്കുന്നുള്ളൂ. നിങ്ങൾക്ക് വളരെ കുറച്ച് സെഷനുകൾ മാത്രം ലഭിച്ചേക്കാം, അല്ലെങ്കിൽ ഒന്നും ലഭിക്കാതിരിക്കാം. ശമ്പളമോ മിനിമം വരുമാനമോ ഉറപ്പുള്ള വരുമാനമോ ഇല്ല. How Was Your Day ഒരു ജോലിയല്ല.' },
+  { lang: 'मराठी (Marathi)', code: 'mr', text: 'How Was Your Day नवीन आहे. सध्या खूप कमी लोक ते वापरतात. तुम्हाला खूप कमी सेशन मिळू शकतात, किंवा एकही मिळणार नाही, असेही होऊ शकते. पगार, किमान किंवा खात्रीशीर उत्पन्न नाही. How Was Your Day ही नोकरी नाही.' },
+  { lang: 'বাংলা (Bengali)', code: 'bn', text: 'How Was Your Day নতুন। এখন খুব কম মানুষ এটি ব্যবহার করেন। আপনি খুব কম সেশন পেতে পারেন, বা একটিও না-ও পেতে পারেন। কোনো বেতন, ন্যূনতম বা নিশ্চিত আয় নেই। How Was Your Day কোনো চাকরি নয়।' },
+  { lang: 'ગુજરાતી (Gujarati)', code: 'gu', text: 'How Was Your Day નવું છે. હાલમાં બહુ ઓછા લોકો તેનો ઉપયોગ કરે છે. તમને બહુ ઓછા સેશન મળે અથવા એક પણ ન મળે એવું બની શકે. કોઈ પગાર, ન્યૂનતમ કે ગેરંટીવાળી કમાણી નથી. How Was Your Day નોકરી નથી.' },
+  { lang: 'ਪੰਜਾਬੀ (Punjabi)', code: 'pa', text: 'How Was Your Day ਨਵਾਂ ਹੈ। ਹਾਲੇ ਬਹੁਤ ਘੱਟ ਲੋਕ ਇਸਨੂੰ ਵਰਤਦੇ ਹਨ। ਤੁਹਾਨੂੰ ਬਹੁਤ ਘੱਟ ਸੈਸ਼ਨ ਮਿਲ ਸਕਦੇ ਹਨ, ਜਾਂ ਇੱਕ ਵੀ ਨਹੀਂ। ਕੋਈ ਤਨਖਾਹ, ਘੱਟੋ-ਘੱਟ ਜਾਂ ਪੱਕੀ ਆਮਦਨ ਨਹੀਂ ਹੈ। How Was Your Day ਨੌਕਰੀ ਨਹੀਂ ਹੈ।' },
+  { lang: 'ଓଡ଼ିଆ (Odia)', code: 'or', text: 'How Was Your Day ନୂଆ। ଏବେ ବହୁତ କମ୍ ଲୋକ ଏହାକୁ ବ୍ୟବହାର କରନ୍ତି। ଆପଣ ବହୁତ କମ୍ ସେସନ୍ ପାଇପାରନ୍ତି, କିମ୍ବା ଗୋଟିଏ ବି ନ ମିଳିପାରେ। କୌଣସି ଦରମା, ସର୍ବନିମ୍ନ କିମ୍ବା ନିଶ୍ଚିତ ଆୟ ନାହିଁ। How Was Your Day ଚାକିରି ନୁହେଁ।' },
+  { lang: 'اردو (Urdu)', code: 'ur', rtl: true, text: 'How Was Your Day نیا ہے۔ ابھی بہت کم لوگ اسے استعمال کرتے ہیں۔ ہو سکتا ہے آپ کو بہت کم سیشن ملیں، یا ایک بھی نہ ملے۔ کوئی تنخواہ، کم از کم یا یقینی آمدنی نہیں ہے۔ How Was Your Day نوکری نہیں ہے۔' },
 ]
 
 export default function BecomeListenerPage() {
@@ -286,7 +286,7 @@ export default function BecomeListenerPage() {
   // auth redirect so the landing page is not shown again on return.
   const [agreementChecked, setAgreementChecked] = useState(false)
   const [showLanding, setShowLanding] = useState(false)
-  // Page 2 of sign-up: "LeanOn is new — no guaranteed earnings — not a job",
+  // Page 2 of sign-up: "How Was Your Day is new — no guaranteed earnings — not a job",
   // acknowledged before sign-in.
   const [showNoIncome, setShowNoIncome] = useState(false)
   const [noIncomeChecked, setNoIncomeChecked] = useState(false)
@@ -419,7 +419,7 @@ export default function BecomeListenerPage() {
         let agreed = false
         let noIncomeAck = false
         try {
-          agreed = sessionStorage.getItem('leanon_listener_agreed') === '1'
+          agreed = sessionStorage.getItem('howwasyourday_listener_agreed') === '1'
           noIncomeAck = sessionStorage.getItem(NO_INCOME_ACK_KEY) === '1'
         } catch { /* private mode */ }
         if (!agreed || !noIncomeAck) {
@@ -498,7 +498,7 @@ export default function BecomeListenerPage() {
     if (priorExp.length === 0) fe.priorExp = 'Select your listening experience (or "None yet")'
     const wc = wordCount(why)
     if (wc < WHY_MIN_WORDS || wc > WHY_MAX_WORDS) fe.why = `Write ${WHY_MIN_WORDS}–${WHY_MAX_WORDS} words (currently ${wc} — emoji and punctuation don't count)`
-    if (!heardFrom) fe.heardFrom = 'Tell us how you heard about LeanOn'
+    if (!heardFrom) fe.heardFrom = 'Tell us how you heard about How Was Your Day'
     if (linkedin.trim() && !isValidLinkedIn(linkedin)) fe.linkedin = 'Enter a LinkedIn profile URL (linkedin.com/in/…) or leave blank'
     if (SCREENING_QUIZ.some(q => quiz[q.id] === undefined)) fe.quiz = 'Please answer every situation question'
     return fe
@@ -722,7 +722,7 @@ export default function BecomeListenerPage() {
           <button className="back" onClick={() => { setShowNoIncome(false); setShowLanding(true); window.scrollTo(0, 0) }} aria-label="Back">←</button>
         </div>
         <div className="hero-card" style={{marginBottom:16}}>
-          <h1>LeanOn is not a job 🙏</h1>
+          <h1>How Was Your Day is not a job 🙏</h1>
           <p>Please read this in your language before you continue.</p>
         </div>
         <div style={{background:'white',border:'1.5px solid var(--border)',borderRadius:20,padding:'6px 18px',marginBottom:16}}>
@@ -744,7 +744,7 @@ export default function BecomeListenerPage() {
         >
           <div style={{width:22,height:22,border:`2px solid ${noIncomeChecked ? 'var(--orange)' : 'var(--border)'}`,background:noIncomeChecked ? 'var(--orange)' : 'white',color:'white',borderRadius:6,flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',fontSize:14,marginTop:2}}>{noIncomeChecked ? '✓' : ''}</div>
           <div style={{fontSize:13,color:'var(--navy)',fontWeight:700,lineHeight:1.6}}>
-            I understand that LeanOn is new, I may get few or no sessions, there is no minimum or guaranteed income, and LeanOn is not a job.
+            I understand that How Was Your Day is new, I may get few or no sessions, there is no minimum or guaranteed income, and How Was Your Day is not a job.
           </div>
         </div>
         <button
@@ -791,19 +791,19 @@ export default function BecomeListenerPage() {
 
         <div className="hero-card" style={{marginBottom:20}}>
           <h1>Before you apply 🎧</h1>
-          <p>Read this carefully. LeanOn listeners make a real difference — but this role is not for everyone.</p>
+          <p>Read this carefully. How Was Your Day listeners make a real difference — but this role is not for everyone.</p>
         </div>
 
         <div role="note" style={{background:'#FFF1F0',border:'2px solid #FF8A80',borderRadius:20,padding:'18px 20px',marginBottom:16}}>
           <div style={{fontSize:16,fontWeight:900,color:'#B3261E',marginBottom:6}}>⚠️ Please read first</div>
           <div style={{fontSize:14,color:'#5A2420',fontWeight:700,lineHeight:1.6}}>
-            LeanOn is very new and has very few users right now. You may get few or no sessions.
-            There is <u>no minimum and no guaranteed income</u>. <strong>LeanOn is not a job.</strong>
+            How Was Your Day is very new and has very few users right now. You may get few or no sessions.
+            There is <u>no minimum and no guaranteed income</u>. <strong>How Was Your Day is not a job.</strong>
           </div>
         </div>
 
         <div className="landing-section">
-          <h2>What LeanOn is</h2>
+          <h2>What How Was Your Day is</h2>
           {[
             ['💙', 'A peer support platform. Seekers want someone to truly listen — not advise, not fix, not redirect.'],
             ['🎧', 'Active listening and empathy are your only tools. Reflect back what you hear. Hold space. Be present.'],
@@ -815,7 +815,7 @@ export default function BecomeListenerPage() {
         </div>
 
         <div className="not-section">
-          <h2>What LeanOn is NOT</h2>
+          <h2>What How Was Your Day is NOT</h2>
           {[
             ['✗', 'Not a therapy or counselling service. Do not diagnose, prescribe, or give clinical advice.'],
             ['✗', 'Not a sex chat, adult, or entertainment platform. Any such behaviour results in a permanent ban.'],
@@ -828,10 +828,10 @@ export default function BecomeListenerPage() {
         </div>
 
         <div className="identity-section">
-          <h2>Your identity on LeanOn</h2>
+          <h2>Your identity on How Was Your Day</h2>
           {[
             ['👤', 'Seekers see: your real first name, your approved display photo, your bio, your education and your listed topics.'],
-            ['🔒', 'Only LeanOn sees (kept private): your Aadhaar number, your bank/UPI details, your screening answers, and your camera selfie, which is used only to verify your identity and is never shown to seekers.'],
+            ['🔒', 'Only How Was Your Day sees (kept private): your Aadhaar number, your bank/UPI details, your screening answers, and your camera selfie, which is used only to verify your identity and is never shown to seekers.'],
             ['📋', 'You cannot use a fake name, avatar, or stock photo. Every profile is reviewed before going live.'],
           ].map(([icon, text], i) => (
             <div key={i} className="landing-row"><span className="landing-icon">{icon}</span><span>{text}</span></div>
@@ -848,7 +848,7 @@ export default function BecomeListenerPage() {
         >
           <div className="agree-check">{agreementChecked ? '✓' : ''}</div>
           <div className="agree-text">
-            I have read and understood the above. I am applying because I genuinely want to support people — not for easy money. I will keep everything seekers share with me confidential and never contact them outside LeanOn. I agree to LeanOn&apos;s <a href="/terms" onClick={e => e.stopPropagation()} style={{color:'var(--teal)'}}>Terms of Service</a> and <a href="/privacy" onClick={e => e.stopPropagation()} style={{color:'var(--teal)'}}>Privacy Policy</a>.
+            I have read and understood the above. I am applying because I genuinely want to support people — not for easy money. I will keep everything seekers share with me confidential and never contact them outside How Was Your Day. I agree to How Was Your Day&apos;s <a href="/terms" onClick={e => e.stopPropagation()} style={{color:'var(--teal)'}}>Terms of Service</a> and <a href="/privacy" onClick={e => e.stopPropagation()} style={{color:'var(--teal)'}}>Privacy Policy</a>.
           </div>
         </div>
 
@@ -856,7 +856,7 @@ export default function BecomeListenerPage() {
           className="btn"
           disabled={!agreementChecked}
           onClick={() => {
-            try { sessionStorage.setItem('leanon_listener_agreed', '1') } catch { /* private mode */ }
+            try { sessionStorage.setItem('howwasyourday_listener_agreed', '1') } catch { /* private mode */ }
             setShowLanding(false)
             setShowNoIncome(true)
             window.scrollTo(0, 0)
@@ -945,7 +945,7 @@ export default function BecomeListenerPage() {
         <div className="success">
           <div className="success-icon">🎉</div>
           <h2>Application submitted!</h2>
-          <p>We&apos;ll review your profile within 24 hours and let you know in the LeanOn app. Once approved, your profile goes live for seekers.</p>
+          <p>We&apos;ll review your profile within 24 hours and let you know in the How Was Your Day app. Once approved, your profile goes live for seekers.</p>
           <a href="/become-listener/status"><button className="btn" style={{marginTop:28}}>Check application status →</button></a>
         </div>
       </div>
@@ -970,16 +970,16 @@ export default function BecomeListenerPage() {
 
         {step === 1 && (
           <div className="hero-card">
-            <h1>Apply to be a LeanOn listener 🎧</h1>
+            <h1>Apply to be a How Was Your Day listener 🎧</h1>
             <p>Three short steps: your public profile, your background, then payment details. Every application is reviewed before anyone goes live.</p>
-            <p style={{marginTop:10}}><strong>How payment works:</strong> you earn when seekers book paid sessions with you. You set your own rate and keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of it on every paid session. LeanOn&apos;s {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}% service fee supports the work of bringing seekers to LeanOn, secure payments, verification, safety and support — so you can focus on listening.</p>
+            <p style={{marginTop:10}}><strong>How payment works:</strong> you earn when seekers book paid sessions with you. You set your own rate and keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of it on every paid session. How Was Your Day&apos;s {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}% service fee supports the work of bringing seekers to How Was Your Day, secure payments, verification, safety and support — so you can focus on listening.</p>
             <div className="earn-row">
               <div className="earn-item"><div className="amount">₹{MIN_LISTENER_RATE}+</div><div className="label">per minute (you choose)</div></div>
               <div className="earn-item"><div className="amount">{Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}%</div><div className="label">of your rate you keep on paid sessions</div></div>
             </div>
             {SHOW_LISTENER_GROWTH_NOTICE && (
               <div style={{marginTop:16,background:'rgba(255,153,51,0.13)',border:'1.5px solid rgba(255,153,51,0.35)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'rgba(255,220,140,0.95)',lineHeight:1.6,fontWeight:500}}>
-                <strong style={{fontWeight:800}}>Honest note:</strong> LeanOn is a growing platform. How much you earn depends entirely on how many seekers are using LeanOn when you&apos;re online. Early listeners focus on building their profile and first few ratings — volume grows as the platform does. We don&apos;t promise a specific income.
+                <strong style={{fontWeight:800}}>Honest note:</strong> How Was Your Day is a growing platform. How much you earn depends entirely on how many seekers are using How Was Your Day when you&apos;re online. Early listeners focus on building their profile and first few ratings — volume grows as the platform does. We don&apos;t promise a specific income.
               </div>
             )}
           </div>
@@ -1105,7 +1105,7 @@ export default function BecomeListenerPage() {
 
             <label className="lbl" style={{marginTop:14}}>2. Verification selfie <span style={{fontWeight:500,color:'var(--gray)'}}>— private, never shown to anyone</span></label>
             <p style={{fontSize:12,color:'var(--gray)',marginBottom:10,lineHeight:1.5}}>
-              🔒 Take a live selfie with your camera. Only the LeanOn team sees it, to confirm your display photo is really you.
+              🔒 Take a live selfie with your camera. Only the How Was Your Day team sees it, to confirm your display photo is really you.
             </p>
             <SelfieCapture
               preview={selfiePreview || null}
@@ -1171,7 +1171,7 @@ export default function BecomeListenerPage() {
                 <li>Listen actively and reflect back what you hear. Don&apos;t lecture or fix.</li>
                 <li>Keep boundaries: no off-platform contact, no flirting, and end sessions on time.</li>
                 <li>If a seeker mentions self-harm or suicide, share NIMHANS (080-46110007) or Tele-MANAS (14416) and encourage them to call.</li>
-                <li>Follow LeanOn&apos;s code of conduct. Never give medical or clinical advice.</li>
+                <li>Follow How Was Your Day&apos;s code of conduct. Never give medical or clinical advice.</li>
               </ul>
               <p style={{fontSize:12,marginTop:8,opacity:0.85}}>The screening questions in the next step check these.</p>
             </div>
@@ -1182,11 +1182,11 @@ export default function BecomeListenerPage() {
           </div>
         )}
 
-        {/* STEP 2: Background & screening (private — only the LeanOn team sees this) */}
+        {/* STEP 2: Background & screening (private — only the How Was Your Day team sees this) */}
         {step === 2 && (
           <div className={shaking ? 'shake' : ''}>
             <div className="section-title">Your background</div>
-            <p className="section-sub">🔒 Private — only the LeanOn team sees this, except your education, which appears on your profile.</p>
+            <p className="section-sub">🔒 Private — only the How Was Your Day team sees this, except your education, which appears on your profile.</p>
 
             {step2Errors.length > 0 && (
               <div className="errors-list">
@@ -1265,7 +1265,7 @@ export default function BecomeListenerPage() {
             )})()}
             {fieldErrors.why && <span className="field-err">{fieldErrors.why}</span>}
 
-            <label className="lbl">How did you hear about LeanOn?</label>
+            <label className="lbl">How did you hear about How Was Your Day?</label>
             <select className={`input${fieldErrors.heardFrom ? ' err' : ''}`} value={heardFrom} onChange={e => { setHeardFrom(e.target.value); setFieldErrors(f => ({...f, heardFrom: ''})) }}>
               <option value="">Select…</option>
               {HEARD_FROM.map(o => <option key={o.id} value={o.id}>{o.label}</option>)}
@@ -1411,7 +1411,7 @@ export default function BecomeListenerPage() {
             <div className="fee-box">
               <h3>What you take home from a 15-min text chat</h3>
               <div className="fee-row"><span className="label">Session value (15 min at ₹{rateNum}/min)</span><span className="value">₹{gross15.toLocaleString('en-IN')}</span></div>
-              <div className="fee-row"><span className="label">LeanOn service fee ({Math.round(LISTENER_SERVICE_FEE_RATE * 100)}%) — seekers, payments, safety &amp; support</span><span className="value">− ₹{serviceFee15.toLocaleString('en-IN')}</span></div>
+              <div className="fee-row"><span className="label">How Was Your Day service fee ({Math.round(LISTENER_SERVICE_FEE_RATE * 100)}%) — seekers, payments, safety &amp; support</span><span className="value">− ₹{serviceFee15.toLocaleString('en-IN')}</span></div>
               <div className="fee-row highlight"><span className="label">You take home</span><span className="value">₹{earn15.toLocaleString('en-IN')} ✓</span></div>
             </div>
 
@@ -1480,7 +1480,7 @@ export default function BecomeListenerPage() {
             </p>
 
             <div className="disclaimer">
-              <p>⚠️ <strong>Important:</strong> LeanOn is a peer support platform. By applying, you confirm you are sharing personal lived experience only — not providing clinical advice, therapy, or counseling of any kind.</p>
+              <p>⚠️ <strong>Important:</strong> How Was Your Day is a peer support platform. By applying, you confirm you are sharing personal lived experience only — not providing clinical advice, therapy, or counseling of any kind.</p>
             </div>
             {error && <div className="error-box">{error}</div>}
             <button className="btn" onClick={submit} disabled={loading}>

@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "app.leanon.therapy",
+      "package_name": "app.howwasyourday.therapy",
       "sha256_cert_fingerprints": [
         "25:AA:B1:86:5D:B5:B1:06:91:EB:FE:AE:FE:89:13:BB:F6:D4:48:79:16:DB:47:D4:09:D7:08:72:FD:54:D2:21",
         "PLAY_APP_SIGNING_FINGERPRINT_REPLACE_ME"

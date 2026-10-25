@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Chicago | Schaumburg, Naperville | LeanOn',
+  title: 'Emotional Support for Indians in Chicago | Schaumburg, Naperville | How Was Your Day',
   description: 'Schaumburg, Naperville, Skokie — Chicago\'s Indian diaspora is large and tightly connected. But community watching and real support are different. Talk to someone who gets it.',
   keywords: ['indians in chicago', 'schaumburg indian community', 'naperville indian support', 'chicago indian mental health', 'illinois desi support', 'indian loneliness chicago'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-chicago' },
-  openGraph: { title: 'Emotional Support for Indians in Chicago | Schaumburg, Naperville | LeanOn', description: 'Schaumburg, Naperville, Skokie — Chicago\'s Indian diaspora is large and tightly connected. But community watching and real support are different. Talk to someone who gets it.', url: 'https://www.leanon.app/indians-in-chicago', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-chicago' },
+  openGraph: { title: 'Emotional Support for Indians in Chicago | Schaumburg, Naperville | How Was Your Day', description: 'Schaumburg, Naperville, Skokie — Chicago\'s Indian diaspora is large and tightly connected. But community watching and real support are different. Talk to someone who gets it.', url: 'https://www.howwasyourday.live/indians-in-chicago', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand what Indian life in Chicago is like?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience in American Midwest metros. The Chicago Indian experience — the Schaumburg and Naperville communities, the Midwest winters, the community dynamics — doesn\'t need explaining. They already know.' } },
+  { '@type': 'Question', name: 'Do listeners understand what Indian life in Chicago is like?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience in American Midwest metros. The Chicago Indian experience — the Schaumburg and Naperville communities, the Midwest winters, the community dynamics — doesn\'t need explaining. They already know.' } },
   { '@type': 'Question', name: 'When can I connect from Chicago?', acceptedAnswer: { '@type': 'Answer', text: 'Chicago (CST) is 11.5 hours behind IST. 8am Chicago = 7:30pm India. Your early morning before the commute is Indian evening — a reliable window for finding a listener. No appointment needed.' } },
   { '@type': 'Question', name: 'Is this private from my Schaumburg or Naperville community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely private. Sessions are anonymous — phone number and first name only. Listeners are in India, with no connection to the Chicago Indian network. Nothing is shared with anyone.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Chicago', item: 'https://www.leanon.app/indians-in-chicago' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Chicago', item: 'https://www.howwasyourday.live/indians-in-chicago' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInChicagoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Chicago</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInChicagoPage() {
           <h2>Schaumburg, Naperville, Skokie: The Chicago Indian Triangle</h2>
           <p>Chicago&rsquo;s Indian community is concentrated in a triangle running from Skokie and Devon Avenue on the North Side — home to one of the most famous South Asian commercial strips in America — out to Schaumburg in the northwest suburbs and Naperville and Lisle to the southwest. The Devon Avenue corridor has been an Indian cultural hub since the 1970s. The suburbs have grown dramatically as the community has prospered.</p>
           <p>What marks Chicago Indian community life is a particular warmth combined with a particular watchfulness. The community is deeply interconnected — you will meet the same families at the mandir on Sunday and at the cricket club on Saturday and at the Diwali party next month. This closeness is genuinely supportive. It is also the reason that certain things simply cannot be said inside it. Marriages under strain. Mental health struggles. The question of whether this life is really what you wanted.</p>
-          <p>LeanOn gives you a real Indian peer listener in India — outside the Chicago network, inside the culture — to say those things. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener in India — outside the Chicago network, inside the culture — to say those things. First 5 minutes free.</p>
         </div>
 
         <div className="section">

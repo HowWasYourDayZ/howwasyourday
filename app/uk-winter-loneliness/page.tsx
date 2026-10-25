@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Winter Loneliness in the UK — When the Dark Sets In | LeanOn',
-  description: 'Short days, grey skies, SAD, and the particular isolation of a UK winter as an Indian far from home. LeanOn peer listeners are online daily on Indian time — including the long dark evenings of November.',
+  title: 'Winter Loneliness in the UK — When the Dark Sets In | How Was Your Day',
+  description: 'Short days, grey skies, SAD, and the particular isolation of a UK winter as an Indian far from home. How Was Your Day peer listeners are online daily on Indian time — including the long dark evenings of November.',
   keywords: [
     'winter loneliness uk', 'sad seasonal affective disorder uk indians', 'uk winter depression',
     'november blues uk', 'winter isolation uk south asian', 'dark evenings uk loneliness',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'winter emotional support uk',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-winter-loneliness',
-    languages: { 'en-GB': 'https://www.leanon.app/uk-winter-loneliness' },
+    canonical: 'https://www.howwasyourday.live/uk-winter-loneliness',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk-winter-loneliness' },
   },
   openGraph: {
     title: 'Winter Loneliness in the UK — When the Dark Sets In',
-    description: 'Short days, grey skies, and the isolation of a UK winter far from home. LeanOn peer listeners are online daily on Indian time.',
-    url: 'https://www.leanon.app/uk-winter-loneliness',
-    siteName: 'LeanOn',
+    description: 'Short days, grey skies, and the isolation of a UK winter far from home. How Was Your Day peer listeners are online daily on Indian time.',
+    url: 'https://www.howwasyourday.live/uk-winter-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is it SAD or just regular sadness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The distinction matters less than you might think. If you are feeling low, disconnected, or finding it hard to get through the days in winter — that is real and it deserves support, regardless of whether it has a clinical label. LeanOn is not a diagnostic service; it is a space to talk about how you are actually feeling.',
+        text: 'The distinction matters less than you might think. If you are feeling low, disconnected, or finding it hard to get through the days in winter — that is real and it deserves support, regardless of whether it has a clinical label. How Was Your Day is not a diagnostic service; it is a space to talk about how you are actually feeling.',
       },
     },
     {
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Winter Loneliness UK', item: 'https://www.leanon.app/uk-winter-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Winter Loneliness UK', item: 'https://www.howwasyourday.live/uk-winter-loneliness' },
   ],
 }
 
@@ -175,7 +175,7 @@ export default function UkWinterLonelinessPage() {
           <h2>🕯️ The long evenings do not have to be so solitary</h2>
           <p>There is something uniquely isolating about a dark Tuesday in November when it has been raining
             for three days and the flat feels too small and too quiet. You do not have to just sit with it.</p>
-          <p>LeanOn listeners are real humans in India — warm conversations, no appointment (availability follows Indian time).</p>
+          <p>How Was Your Day listeners are real humans in India — warm conversations, no appointment (availability follows Indian time).</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
 
@@ -183,7 +183,7 @@ export default function UkWinterLonelinessPage() {
           <h2>Is it SAD or is it something deeper?</h2>
           <p>The distinction matters less than you might think. If you are feeling low, disconnected, or
             struggling to get through the winter days — that is real and it deserves support.</p>
-          <p>LeanOn is not a diagnostic service. It is a space to talk about how you are actually feeling,
+          <p>How Was Your Day is not a diagnostic service. It is a space to talk about how you are actually feeling,
             with someone who will not brush it off or compare it to something worse.</p>
         </div>
 
@@ -248,7 +248,7 @@ export default function UkWinterLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

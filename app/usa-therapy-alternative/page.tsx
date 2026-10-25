@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Affordable Therapy Alternative for Indians in the USA — LeanOn Peer Listeners',
-  description: 'Therapy in the USA costs $200/hr with a 6-week waitlist. LeanOn peer listeners start at $10 for 15 minutes, need no appointment, and understand the Indian cultural context without explanation.',
+  title: 'Affordable Therapy Alternative for Indians in the USA — How Was Your Day Peer Listeners',
+  description: 'Therapy in the USA costs $200/hr with a 6-week waitlist. How Was Your Day peer listeners start at $10 for 15 minutes, need no appointment, and understand the Indian cultural context without explanation.',
   keywords: [
     'therapy alternative indians usa', 'affordable therapy usa indian', 'cheap therapy alternative usa',
     'therapy too expensive usa', 'peer support instead of therapy usa', 'mental health support indians usa',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'cheap emotional support indian usa', 'low cost therapy alternative usa',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/usa-therapy-alternative',
-    languages: { 'en-US': 'https://www.leanon.app/usa-therapy-alternative' },
+    canonical: 'https://www.howwasyourday.live/usa-therapy-alternative',
+    languages: { 'en-US': 'https://www.howwasyourday.live/usa-therapy-alternative' },
   },
   openGraph: {
-    title: 'Affordable Therapy Alternative for Indians in the USA — LeanOn Peer Listeners',
-    description: 'Therapy is $200/hr with a 6-week wait. LeanOn starts at $10 for 15 minutes, with no appointment and listeners who understand the Indian experience without needing it explained.',
-    url: 'https://www.leanon.app/usa-therapy-alternative',
-    siteName: 'LeanOn',
+    title: 'Affordable Therapy Alternative for Indians in the USA — How Was Your Day Peer Listeners',
+    description: 'Therapy is $200/hr with a 6-week wait. How Was Your Day starts at $10 for 15 minutes, with no appointment and listeners who understand the Indian experience without needing it explained.',
+    url: 'https://www.howwasyourday.live/usa-therapy-alternative',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,10 +38,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a replacement for therapy?',
+      name: 'Is How Was Your Day a replacement for therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support, not professional therapy. Peer listeners are not licensed clinicians and do not diagnose or treat mental health conditions. However, for many people dealing with loneliness, relationship stress, work anxiety, cultural identity issues, or just needing to vent — peer support is genuinely helpful and accessible.',
+        text: 'How Was Your Day is peer support, not professional therapy. Peer listeners are not licensed clinicians and do not diagnose or treat mental health conditions. However, for many people dealing with loneliness, relationship stress, work anxiety, cultural identity issues, or just needing to vent — peer support is genuinely helpful and accessible.',
       },
     },
     {
@@ -54,18 +54,18 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost compared to therapy in the USA?',
+      name: 'How much does How Was Your Day cost compared to therapy in the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A single therapy session in the USA can cost $150-$250. LeanOn sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. That is over 10 times more affordable per minute than most therapy options.',
+        text: 'A single therapy session in the USA can cost $150-$250. How Was Your Day sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. That is over 10 times more affordable per minute than most therapy options.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why should Indians in the USA use LeanOn specifically?',
+      name: 'Why should Indians in the USA use How Was Your Day specifically?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners are Indian and understand the NRI experience — H-1B stress, family expectations, cultural displacement, homesickness — without needing it explained. American therapists, however well-meaning, often lack this cultural fluency. With LeanOn you spend your session on your feelings, not explaining the background.',
+        text: 'Many How Was Your Day listeners are Indian and understand the NRI experience — H-1B stress, family expectations, cultural displacement, homesickness — without needing it explained. American therapists, however well-meaning, often lack this cultural fluency. With How Was Your Day you spend your session on your feelings, not explaining the background.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Therapy Alternative USA', item: 'https://www.leanon.app/usa-therapy-alternative' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Therapy Alternative USA', item: 'https://www.howwasyourday.live/usa-therapy-alternative' },
   ],
 }
 
@@ -149,11 +149,11 @@ export default function UsaTherapyAlternativePage() {
           <a href="/">Home</a><span>›</span>Therapy Alternative USA
         </div>
 
-        <h1>Therapy is $200 an Hour and Six Weeks Away.<br />LeanOn Is From $10, With No Appointment.</h1>
+        <h1>Therapy is $200 an Hour and Six Weeks Away.<br />How Was Your Day Is From $10, With No Appointment.</h1>
         <p className="lead">
           You know you need to talk to someone. You looked into therapy — $200 a session, three-week waitlist,
           and a therapist who has never heard of an H-1B and will need the whole cultural backstory before
-          you can get to how you actually feel. LeanOn peer listeners are Indian, need no appointment, and cost a fraction
+          you can get to how you actually feel. How Was Your Day peer listeners are Indian, need no appointment, and cost a fraction
           of the cost.
         </p>
 
@@ -181,8 +181,8 @@ export default function UsaTherapyAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>What LeanOn offers that therapy often cannot</h2>
-          <p>LeanOn listeners are available <strong>right now</strong> — not in six weeks.
+          <h2>What How Was Your Day offers that therapy often cannot</h2>
+          <p>How Was Your Day listeners are available <strong>right now</strong> — not in six weeks.
             Many are Indian and understand the NRI experience without needing it explained.
             Sessions start at <strong>$10 for 15 minutes</strong>, <strong>$15 for 30 minutes</strong>,
             and <strong>$20 for 45 minutes</strong> — with your first 5-minute session free.</p>
@@ -192,7 +192,7 @@ export default function UsaTherapyAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>When LeanOn is the right choice</h2>
+          <h2>When How Was Your Day is the right choice</h2>
           <ul className="checklist">
             <li>You need to talk to someone today, not in six weeks.</li>
             <li>You want a listener who understands Indian culture without a 10-minute explanation.</li>
@@ -200,7 +200,7 @@ export default function UsaTherapyAlternativePage() {
             <li>You want an affordable option that does not require insurance or a referral.</li>
             <li>You want to try talking to someone before committing to formal therapy.</li>
           </ul>
-          <p style={{ marginTop: '12px' }}>If you are in crisis or need clinical mental health treatment, please reach out to a licensed professional. LeanOn is here for the vast space of human struggle that falls short of that threshold.</p>
+          <p style={{ marginTop: '12px' }}>If you are in crisis or need clinical mental health treatment, please reach out to a licensed professional. How Was Your Day is here for the vast space of human struggle that falls short of that threshold.</p>
         </div>
 
         <div className="cta">
@@ -219,8 +219,8 @@ export default function UsaTherapyAlternativePage() {
               this is a genuine barrier.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn a replacement for therapy?</h3>
-            <p>LeanOn is peer support, not professional therapy. Peer listeners are not licensed clinicians.
+            <h3>Is How Was Your Day a replacement for therapy?</h3>
+            <p>How Was Your Day is peer support, not professional therapy. Peer listeners are not licensed clinicians.
               However, for loneliness, relationship stress, work anxiety, and cultural identity issues —
               peer support is genuinely helpful and accessible.</p>
           </div>
@@ -231,13 +231,13 @@ export default function UsaTherapyAlternativePage() {
               with loneliness, emotional regulation, and general wellbeing.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost compared to therapy in the USA?</h3>
-            <p>A therapy session costs $150-$250. LeanOn sessions start at $10 for 15 minutes, $15 for 30 minutes,
+            <h3>How much does How Was Your Day cost compared to therapy in the USA?</h3>
+            <p>A therapy session costs $150-$250. How Was Your Day sessions start at $10 for 15 minutes, $15 for 30 minutes,
               and $20 for 45 minutes — with the first 5-minute session free.</p>
           </div>
           <div className="faq-item">
-            <h3>Why should Indians in the USA use LeanOn specifically?</h3>
-            <p>Many LeanOn listeners are Indian and understand the NRI experience without it being explained.
+            <h3>Why should Indians in the USA use How Was Your Day specifically?</h3>
+            <p>Many How Was Your Day listeners are Indian and understand the NRI experience without it being explained.
               You spend your session on your feelings, not explaining the cultural background.</p>
           </div>
         </div>
@@ -255,7 +255,7 @@ export default function UsaTherapyAlternativePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

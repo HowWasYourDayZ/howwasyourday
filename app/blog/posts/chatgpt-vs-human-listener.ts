@@ -4,7 +4,7 @@ export const post = {
   description: 'AI chatbots are impressive — but they have never felt lonely, heartbroken, or anxious. Here is what a real human peer listener offers that no AI ever can.',
   date: '2026-09-08',
   readTime: '7 min read',
-  topics: ['mental health India', 'AI chatbot alternative', 'human connection', 'peer support', 'LeanOn'],
+  topics: ['mental health India', 'AI chatbot alternative', 'human connection', 'peer support', 'How Was Your Day'],
   content: `
 <p>At some point in the past two years, a large number of people started doing something quietly remarkable: opening a chatbot window late at night and typing out things they had never said to another person. Things about loneliness. About their marriage. About how they were not sure they wanted to keep going. About feeling like a failure in ways they could not explain to anyone who knew them.</p>
 
@@ -32,7 +32,7 @@ export const post = {
 
 <p><strong>AI does not remember you.</strong> Most chatbot sessions reset. Even in interfaces that preserve history, the model does not carry forward a felt sense of who you are — it retrieves tokens. The person who listened to you describe your marriage three weeks ago and understood its particular texture and history is not there when you come back. You explain yourself again from scratch. Over time, this is its own kind of exhausting loneliness: being perpetually met as a stranger.</p>
 
-<p><strong>AI is accountable to nobody for what it says to you.</strong> A peer listener on LeanOn is a real person who applied to be there, went through identity verification and screening, and showed up for a session they are accountable for. If they say something that misses you entirely, there is a real relationship to repair or to end. They have something at stake. Stakes create presence. An algorithm has no stake in your wellbeing — only in generating a plausible next token.</p>
+<p><strong>AI is accountable to nobody for what it says to you.</strong> A peer listener on How Was Your Day is a real person who applied to be there, went through identity verification and screening, and showed up for a session they are accountable for. If they say something that misses you entirely, there is a real relationship to repair or to end. They have something at stake. Stakes create presence. An algorithm has no stake in your wellbeing — only in generating a plausible next token.</p>
 
 <p><strong>AI can make you feel more alone.</strong> This is the part that surprises people. Many users describe a specific feeling after extended AI conversations about difficult things: a hollowness, a sense of having poured out something real into something that did not actually receive it. The words were processed. Nothing was held. This can make the original loneliness feel worse, not better — because now it has a shape and a name and is still unreceived.</p>
 
@@ -46,7 +46,7 @@ export const post = {
 
 <h2>What Peer Listening Actually Is</h2>
 
-<p>A peer listener on LeanOn is not a therapist. They are not trying to diagnose you, fix you, or deliver clinical interventions. What they offer is something more fundamental: they have been through something like what you are going through, they were chosen for their ability to listen actively rather than perform listening, and they show up for your session as a full human being rather than a response generator.</p>
+<p>A peer listener on How Was Your Day is not a therapist. They are not trying to diagnose you, fix you, or deliver clinical interventions. What they offer is something more fundamental: they have been through something like what you are going through, they were chosen for their ability to listen actively rather than perform listening, and they show up for your session as a full human being rather than a response generator.</p>
 
 <p>They have sat with the specific texture of grief that comes from losing a parent while being far from home. They have navigated the particular loneliness of success — the kind nobody believes in. They have been the person in the marriage who smiles at dinner parties while something is quietly dying. They know these things not from a dataset but from their life.</p>
 
@@ -58,6 +58,6 @@ export const post = {
 
 <p>What you are noticing is the irreducible thing: the need to be heard by someone who actually knows what it is to be a person, who has felt the specific weight of the kinds of things you are carrying, and who is genuinely there when you speak.</p>
 
-<p>That is what LeanOn is for.</p>
+<p>That is what How Was Your Day is for.</p>
 `,
 }

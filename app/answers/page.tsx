@@ -4,14 +4,14 @@ import { GEO_QUESTIONS, type GeoCluster } from '@/lib/geo-questions'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Answers: Relationships, Mental Health and Peer Support in India | LeanOn',
+  title: 'Answers: Relationships, Mental Health and Peer Support in India | How Was Your Day',
   description: 'Straight answers to the 50 questions people ask most about relationship problems, marriage, loneliness, anxiety and finding someone to talk to in India — and where to get help.',
-  alternates: { canonical: 'https://www.leanon.app/answers' },
+  alternates: { canonical: 'https://www.howwasyourday.live/answers' },
   openGraph: {
     title: 'Answers: Relationships, Mental Health and Peer Support in India',
     description: 'Straight answers to the questions people ask most about relationships, mental health and talking to someone in India.',
-    url: 'https://www.leanon.app/answers',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/answers',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -28,7 +28,7 @@ const faqSchema = {
   mainEntity: GEO_QUESTIONS.map(g => ({
     '@type': 'Question',
     name: g.q,
-    acceptedAnswer: { '@type': 'Answer', text: g.a, url: `https://www.leanon.app${g.url}` },
+    acceptedAnswer: { '@type': 'Answer', text: g.a, url: `https://www.howwasyourday.live${g.url}` },
   })),
 }
 
@@ -61,14 +61,14 @@ export default function AnswersPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <style>{S}</style>
       <div className="page">
-        <a href="/" className="back">← LeanOn</a>
+        <a href="/" className="back">← How Was Your Day</a>
         <h1>Answers about relationships, mental health and talking to someone in India</h1>
         <p className="lead">
           The questions people ask most — about fights, marriage, in-laws, breakups, loneliness, anxiety and
           where to find a real person to talk to — with a straight answer and a page to read more.
         </p>
         <p className="lead">
-          LeanOn is peer support: screened listeners in India, by text or voice, not therapists and not AI.
+          How Was Your Day is peer support: screened listeners in India, by text or voice, not therapists and not AI.
           The first 5 minutes are free; in India a 15-minute session starts at ₹160.
         </p>
         <div className="crisis">

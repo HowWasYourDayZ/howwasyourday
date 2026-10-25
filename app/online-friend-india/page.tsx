@@ -5,21 +5,21 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'Online Friend India — Real Connection, No Strings | LeanOn',
-  description: 'Looking for someone to connect with online in India — not a therapist, not a stranger, just someone real to talk to. LeanOn peer listeners, from ₹160.',
+  title: 'Online Friend India — Real Connection, No Strings | How Was Your Day',
+  description: 'Looking for someone to connect with online in India — not a therapist, not a stranger, just someone real to talk to. How Was Your Day peer listeners, from ₹160.',
   keywords: [
     'online friend india', 'make online friends india', 'find a friend online india',
     'online connection india', 'someone to talk to online india', 'real conversation online india',
     'online peer support india', 'chat with real person india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/online-friend-india', languages: { 'en-IN': 'https://www.leanon.app/online-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/online-friend-india' } },
   openGraph: {
-    title: 'Online Friend India — Real Connection, No Strings | LeanOn',
-    description: 'Looking for someone to connect with online in India — not a therapist, not a stranger, just someone real to talk to. LeanOn peer listeners, from ₹160.',
-    url: 'https://www.leanon.app/online-friend-india',
-    siteName: 'LeanOn',
+    title: 'Online Friend India — Real Connection, No Strings | How Was Your Day',
+    description: 'Looking for someone to connect with online in India — not a therapist, not a stranger, just someone real to talk to. How Was Your Day peer listeners, from ₹160.',
+    url: 'https://www.howwasyourday.live/online-friend-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Online Friend India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Online Friend India' }],
   },
 }
 
@@ -39,8 +39,8 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn just to chat with someone?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. You do not need to be in crisis or have a specific problem to start a session. Some people use LeanOn simply because they want a real conversation and their current circumstances &mdash; new city, remote work, limited social circle &mdash; make that hard to find. The listener is there to be present with whatever you bring.' },
+      name: 'Can I use How Was Your Day just to chat with someone?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. You do not need to be in crisis or have a specific problem to start a session. Some people use How Was Your Day simply because they want a real conversation and their current circumstances &mdash; new city, remote work, limited social circle &mdash; make that hard to find. The listener is there to be present with whatever you bring.' },
     },
     {
       '@type': 'Question',
@@ -50,7 +50,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if I want to talk to the same person again?',
-      acceptedAnswer: { '@type': 'Answer', text: 'You can. If you find a listener you connect with, you can return to them. You can browse their profile and see when they are available. Many LeanOn users build an ongoing relationship with a listener they trust over time.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'You can. If you find a listener you connect with, you can return to them. You can browse their profile and see when they are available. Many How Was Your Day users build an ongoing relationship with a listener they trust over time.' },
     },
   ],
 }
@@ -59,8 +59,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Online Friend India', item: 'https://www.leanon.app/online-friend-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Online Friend India', item: 'https://www.howwasyourday.live/online-friend-india' },
   ],
 }
 
@@ -114,7 +114,7 @@ export default function OnlineFriendIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -132,7 +132,7 @@ export default function OnlineFriendIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What Online Friendship Looks Like on LeanOn</h2>
+          <h2>What Online Friendship Looks Like on How Was Your Day</h2>
           <p>A 1:1 voice call with a real Indian person. Your choice of listener, based on their background and what you need. The first 5 minutes are free, so you know the connection before committing.</p>
           <p>The listener is screened for active listening &mdash; they are not there to talk about themselves, not there to advise, not there to steer. They are there to hear you. Fully. Without the social dynamics that make honest conversation so hard with people you know.</p>
         </div>
@@ -147,12 +147,12 @@ export default function OnlineFriendIndiaPage() {
           <h2>Different From Social Apps</h2>
           <p>Social media creates connection at the surface. You see highlights. You perform a version of yourself. You get likes, which feel like connection but are not. The algorithm optimises for engagement, which means anxiety and comparison, not genuine human warmth.</p>
           <p>Dating apps optimise for romantic potential, which creates a different kind of performance. Networking apps optimise for professional utility. Every existing online social surface has an agenda that makes genuine, unfiltered connection difficult.</p>
-          <p>LeanOn removes all of that. No swipes. No algorithms. No profile to perform. Just a real conversation with a real person who is specifically there to listen to you, not to get anything from you.</p>
+          <p>How Was Your Day removes all of that. No swipes. No algorithms. No profile to perform. Just a real conversation with a real person who is specifically there to listen to you, not to get anything from you.</p>
         </div>
 
         <div className="section">
           <h2>How to Find the Right Listener for You</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>leanon.app/browse</a>. Each profile shows the listener&apos;s background, what they have lived through, and what topics they can support. If you are going through something specific &mdash; career confusion, relationship difficulty, loneliness after a move &mdash; look for someone who has navigated something similar.</p>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Each profile shows the listener&apos;s background, what they have lived through, and what topics they can support. If you are going through something specific &mdash; career confusion, relationship difficulty, loneliness after a move &mdash; look for someone who has navigated something similar.</p>
           <p>Your first 5-minute session is free. Use them to assess the connection. If it feels right, continue. If not, there is no penalty for ending the session and trying someone else.</p>
         </div>
 

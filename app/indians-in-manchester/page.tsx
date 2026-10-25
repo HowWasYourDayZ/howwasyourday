@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Manchester | Peer Support for the North of England\'s Indian Community | LeanOn',
+  title: 'Indians in Manchester | Peer Support for the North of England\'s Indian Community | How Was Your Day',
   description: "Manchester and the North of England have a significant Indian community. But the northern cold and distance from London's larger Indian hubs has its own loneliness.",
   keywords: ['indians in manchester', 'indian community manchester', 'nri manchester', 'south asian manchester', 'british indians manchester', 'desi manchester'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-manchester' },
-  openGraph: { title: 'Indians in Manchester | Peer Support for the North of England\'s Indian Community | LeanOn', description: "Manchester and the North of England have a significant Indian community. But the northern cold and distance from London's larger Indian hubs has its own loneliness.", url: 'https://www.leanon.app/indians-in-manchester', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-manchester' },
+  openGraph: { title: 'Indians in Manchester | Peer Support for the North of England\'s Indian Community | How Was Your Day', description: "Manchester and the North of England have a significant Indian community. But the northern cold and distance from London's larger Indian hubs has its own loneliness.", url: 'https://www.howwasyourday.live/indians-in-manchester', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand the Manchester Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the NRI experience, including the British Indian context — the north-south divide within the British Indian community, the Rusholme and Bolton communities, the specific dynamics of being Indian in a northern English city with its own distinct culture.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Manchester Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the British Indian context — the north-south divide within the British Indian community, the Rusholme and Bolton communities, the specific dynamics of being Indian in a northern English city with its own distinct culture.' } },
   { '@type': 'Question', name: 'What time can I connect from Manchester?', acceptedAnswer: { '@type': 'Answer', text: 'Manchester (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours behind in summer. 2pm Manchester in winter = 7:30pm India. Afternoons or early evenings are good times to connect.' } },
-  { '@type': 'Question', name: 'Is this different from talking to my family or British Indian friends?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are outside your Manchester social circle entirely. They don\'t know your family, your community, or your workplace. You can say what you actually feel without worrying about word getting back to anyone.' } },
+  { '@type': 'Question', name: 'Is this different from talking to my family or British Indian friends?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are outside your Manchester social circle entirely. They don\'t know your family, your community, or your workplace. You can say what you actually feel without worrying about word getting back to anyone.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
-  { '@type': 'Question', name: 'I feel caught between the British Indian community and British mainstream culture. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the core experiences LeanOn was built for. The in-between identity of the British Indian — not fully belonging to either world, navigating both with exhausting fluency — is something listeners understand and can hold without judgment.' } },
+  { '@type': 'Question', name: 'I feel caught between the British Indian community and British mainstream culture. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the core experiences How Was Your Day was built for. The in-between identity of the British Indian — not fully belonging to either world, navigating both with exhausting fluency — is something listeners understand and can hold without judgment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Manchester', item: 'https://www.leanon.app/indians-in-manchester' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Manchester', item: 'https://www.howwasyourday.live/indians-in-manchester' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function IndiansInManchesterPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Manchester</span></nav>
         <div className="hero">
           <p className="badge">Indians in Manchester &middot; North of England &middot; Rusholme &middot; Bolton</p>
           <h1>Rusholme curry mile. <em>The rain doesn&rsquo;t stop either.</em></h1>
           <p className="lead">Manchester has a substantial Indian and South Asian community — Rusholme, Bolton, Oldham, Burnley. But the North of England carries a particular loneliness for Indian immigrants: the distance from London&rsquo;s larger Indian hubs, the northern chill that goes beyond weather, and the in-between identity of being British Indian in a city that is proudly not London. Talk to someone who understands. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>Rusholme, Bolton, Oldham: The Northern Indian Community</h2>
           <p>Manchester&rsquo;s Indian and South Asian community is one of the oldest and most established in England — Rusholme&rsquo;s curry mile is famous, and Bolton, Oldham, and Burnley have significant South Asian communities that go back generations. The Manchester University and University of Salford Indian student populations add a newer layer. The city&rsquo;s NHS hospitals and GP practices have large Indian medical professional communities.</p>
           <p>But Manchester is not London. London&rsquo;s Indian community — Wembley, Southall, East Ham — has a scale and infrastructure that Manchester&rsquo;s simply doesn&rsquo;t match. The British Indian experience in Manchester has a particular character: more working-class roots, more industrial city history, more of the grit that comes with a northern English city that has been through hard decades. The Indian professional who moved to Manchester for the university or the NHS and finds themselves in a community that is real but different from what they imagined.</p>
-          <p>LeanOn listeners understand the British Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand the British Indian experience. First 5 minutes free.</p>
         </div>
 
         <div className="section">
@@ -97,11 +97,11 @@ export default function IndiansInManchesterPage() {
         <div className="section">
           <h2>The Grit of Northern England and What It Asks of Indian Immigrants</h2>
           <p>Manchester has a particular cultural identity — direct, unsentimental, proud of its working-class roots, its music scene, its football. This is a city that values authenticity and is suspicious of pretension. For Indian immigrants, this can be both welcoming and alienating. Welcoming because the directness means less code-switching than in more formal English cities. Alienating because the cultural references are very specific to a northern English world — the Hacienda, the Industrial Revolution, the rivalry with Liverpool — that Indian immigrants don&rsquo;t share.</p>
-          <p>The Indian student at Manchester University who loves the city but never quite feels part of it. The Indian NHS doctor who has been in the North West for six years and whose colleagues are warm and whose life is full and who has a quiet, persistent feeling of not belonging. LeanOn is for exactly this: a real Indian listener, anonymous, available in the afternoon before India&rsquo;s evening ends, no appointment needed.</p>
+          <p>The Indian student at Manchester University who loves the city but never quite feels part of it. The Indian NHS doctor who has been in the North West for six years and whose colleagues are warm and whose life is full and who has a quiet, persistent feeling of not belonging. How Was Your Day is for exactly this: a real Indian listener, anonymous, available in the afternoon before India&rsquo;s evening ends, no appointment needed.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Northern England, Indian roots. Talk to someone who holds both.</h2><p>Real Indian peer listener. Understands the British Indian experience in the North. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Northern England, Indian roots. Talk to someone who holds both.</h2><p>Real Indian peer listener. Understands the British Indian experience in the North. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

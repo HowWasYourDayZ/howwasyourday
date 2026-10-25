@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Wellness India — Build the Habit of Being Heard | LeanOn',
+  title: 'Emotional Wellness India — Build the Habit of Being Heard | How Was Your Day',
   description: 'Emotional wellness isn\'t a goal. It\'s a practice. Start with being heard. Real peer conversations from ₹160.',
   keywords: ['emotional wellness india', 'emotional intelligence india', 'emotional health india', 'mindfulness support india', 'self-help india', 'emotional wellbeing india', 'emotional fitness india'],
-  alternates: { canonical: 'https://www.leanon.app/emotional-wellness-india', languages: { 'en-IN': 'https://www.leanon.app/emotional-wellness-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/emotional-wellness-india', languages: { 'en-IN': 'https://www.howwasyourday.live/emotional-wellness-india' } },
   openGraph: {
-    title: 'Emotional Wellness India — Build the Habit of Being Heard | LeanOn',
+    title: 'Emotional Wellness India — Build the Habit of Being Heard | How Was Your Day',
     description: 'Emotional wellness isn\'t a goal. It\'s a practice. Start with being heard. Real peer conversations from ₹160.',
-    url: 'https://www.leanon.app/emotional-wellness-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/emotional-wellness-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -41,15 +41,15 @@ const faqSchema = {
       name: 'Is this therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is peer support — real human conversations, not clinical therapy. It is suitable for building emotional wellness habits and processing day-to-day emotional weight. For clinical mental health conditions, please see a licensed professional.',
+        text: 'No. How Was Your Day is peer support — real human conversations, not clinical therapy. It is suitable for building emotional wellness habits and processing day-to-day emotional weight. For clinical mental health conditions, please see a licensed professional.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I use LeanOn for regular check-ins, not just crises?',
+      name: 'Can I use How Was Your Day for regular check-ins, not just crises?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — and this is one of the most valuable ways to use it. Regular emotional processing is more effective than crisis-only intervention. Many people use LeanOn for weekly or monthly check-ins to stay emotionally current rather than waiting until things become overwhelming.',
+        text: 'Yes — and this is one of the most valuable ways to use it. Regular emotional processing is more effective than crisis-only intervention. Many people use How Was Your Day for weekly or monthly check-ins to stay emotionally current rather than waiting until things become overwhelming.',
       },
     },
     {
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Emotional Wellness India', item: 'https://www.leanon.app/emotional-wellness-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Emotional Wellness India', item: 'https://www.howwasyourday.live/emotional-wellness-india' },
   ],
 }
 
@@ -123,7 +123,7 @@ export default function EmotionalWellnessIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -149,18 +149,18 @@ export default function EmotionalWellnessIndiaPage() {
             <li>Processing as you go rather than accumulating until things explode</li>
             <li>Having a place to bring the hard things before they become crises</li>
           </ul>
-          <p>Regular peer conversations on LeanOn support all of this — not just in crisis moments, but as an ongoing practice.</p>
+          <p>Regular peer conversations on How Was Your Day support all of this — not just in crisis moments, but as an ongoing practice.</p>
         </div>
 
         <div className="section">
           <h2>Emotional Intelligence: The Practice</h2>
           <p>Emotional intelligence — the skill of naming what you feel, understanding why, and communicating it — is built through practice, not acquired through reading. Conversation is one of the most effective practice environments: when you articulate what you are feeling to someone who reflects it back without judgment, you build the vocabulary and the habit.</p>
-          <p>LeanOn peer sessions are not just support. They are practice. Every conversation where you say something true and feel heard is a small act of emotional fitness.</p>
+          <p>How Was Your Day peer sessions are not just support. They are practice. Every conversation where you say something true and feel heard is a small act of emotional fitness.</p>
         </div>
 
         <div className="section">
-          <h2>LeanOn as a Wellness Practice</h2>
-          <p>Most people use LeanOn in moments of acute stress. But the most effective use is regular — weekly or monthly check-ins that keep you emotionally current rather than waiting until you are overwhelmed.</p>
+          <h2>How Was Your Day as a Wellness Practice</h2>
+          <p>Most people use How Was Your Day in moments of acute stress. But the most effective use is regular — weekly or monthly check-ins that keep you emotionally current rather than waiting until you are overwhelmed.</p>
           <p>Think of it like exercise: occasional intense sessions are less effective than regular moderate ones. The same is true of emotional processing.</p>
         </div>
 
@@ -185,11 +185,11 @@ export default function EmotionalWellnessIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is this therapy?</div>
-            <div className="faq-a">No. LeanOn is peer support — real human conversations, not clinical therapy. Suitable for building emotional wellness habits. For clinical conditions, please see a licensed professional.</div>
+            <div className="faq-a">No. How Was Your Day is peer support — real human conversations, not clinical therapy. Suitable for building emotional wellness habits. For clinical conditions, please see a licensed professional.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Can I use LeanOn for regular check-ins, not just crises?</div>
-            <div className="faq-a">Yes — and this is one of the most valuable ways to use it. Regular emotional processing is more effective than crisis-only intervention. Many people use LeanOn for weekly or monthly check-ins.</div>
+            <div className="faq-q">Can I use How Was Your Day for regular check-ins, not just crises?</div>
+            <div className="faq-a">Yes — and this is one of the most valuable ways to use it. Regular emotional processing is more effective than crisis-only intervention. Many people use How Was Your Day for weekly or monthly check-ins.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is emotional health?</div>

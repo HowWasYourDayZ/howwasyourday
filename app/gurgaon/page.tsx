@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Gurgaon — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Gurgaon (Gurugram). Corporate burnout, startup stress, transient loneliness. Talk anonymously on LeanOn from ₹160.',
-  alternates: { canonical: 'https://www.leanon.app/gurgaon', languages: { 'en-IN': 'https://www.leanon.app/gurgaon' } },
-  keywords: 'peer support Gurgaon, emotional support Gurugram, corporate burnout Gurgaon, loneliness Gurgaon, startup stress Gurugram, talk to someone Gurgaon, leanon Gurgaon',
+  title: 'Emotional Support in Gurgaon — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Gurgaon (Gurugram). Corporate burnout, startup stress, transient loneliness. Talk anonymously on How Was Your Day from ₹160.',
+  alternates: { canonical: 'https://www.howwasyourday.live/gurgaon', languages: { 'en-IN': 'https://www.howwasyourday.live/gurgaon' } },
+  keywords: 'peer support Gurgaon, emotional support Gurugram, corporate burnout Gurgaon, loneliness Gurgaon, startup stress Gurugram, talk to someone Gurgaon, howwasyourday Gurgaon',
   openGraph: {
-    title: 'Emotional Support in Gurgaon — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Gurgaon (Gurugram). Corporate burnout, startup stress, transient loneliness. Talk anonymously on LeanOn from ₹160.',
-    url: 'https://www.leanon.app/gurgaon',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Gurgaon — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Gurgaon (Gurugram). Corporate burnout, startup stress, transient loneliness. Talk anonymously on How Was Your Day from ₹160.',
+    url: 'https://www.howwasyourday.live/gurgaon',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -46,7 +46,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What do Gurgaon users talk about on LeanOn?',
+      name: 'What do Gurgaon users talk about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Common topics include professional burnout and identity (what am I outside of my job?), weekend loneliness, the fear of failing in a city where success is the only narrative, relationship stress in a transient city, and the specific pressure of finance and tech sector career anxiety.',
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn peer support different from therapy?',
+      name: 'Is How Was Your Day peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and private. For clinical mental health concerns, professional help is always recommended.',
+        text: 'Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers — not licensed therapists. More accessible (from ₹160 for 15 minutes), and private. For clinical mental health concerns, professional help is always recommended.',
       },
     },
   ],
@@ -67,17 +67,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Gurgaon', item: 'https://www.leanon.app/gurgaon' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Gurgaon', item: 'https://www.howwasyourday.live/gurgaon' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/gurgaon',
+  url: 'https://www.howwasyourday.live/gurgaon',
   areaServed: { '@type': 'City', name: 'Gurugram', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -144,7 +144,7 @@ export default function GurgaonPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -173,7 +173,7 @@ export default function GurgaonPage() {
         </div>
 
         <div className="section">
-          <h2>What Gurgaon Users Talk About on LeanOn</h2>
+          <h2>What Gurgaon Users Talk About on How Was Your Day</h2>
           <ul>
             <li><strong>Professional burnout</strong> — the specific exhaustion of a city where work is always the answer</li>
             <li><strong>Identity beyond the job</strong> — &quot;who am I when I am not working?&quot;</li>
@@ -207,12 +207,12 @@ export default function GurgaonPage() {
             <div className="faq-a">The work week is full, but the weekends can feel empty. Without hometown roots or childhood friends, many people find the weekend more isolating than the work week.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What do Gurgaon users talk about on LeanOn?</div>
+            <div className="faq-q">What do Gurgaon users talk about on How Was Your Day?</div>
             <div className="faq-a">Common topics include professional burnout, identity beyond the job, transient loneliness, finance and startup anxiety, and relationship stress in a city of long work weeks.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn peer support different from therapy?</div>
-            <div className="faq-a">Yes. LeanOn is peer support, not therapy. Listeners are screened peers — not licensed therapists. Accessible from ₹160 for 15 minutes, anonymous.</div>
+            <div className="faq-q">Is How Was Your Day peer support different from therapy?</div>
+            <div className="faq-a">Yes. How Was Your Day is peer support, not therapy. Listeners are screened peers — not licensed therapists. Accessible from ₹160 for 15 minutes, anonymous.</div>
           </div>
         </div>
 
@@ -229,9 +229,9 @@ export default function GurgaonPage() {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals.</p>
         </div>
       </div>
     </>

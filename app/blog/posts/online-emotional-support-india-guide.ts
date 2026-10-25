@@ -4,7 +4,7 @@ export const post = {
   description: 'A complete guide to finding online emotional support in India — helplines, therapy platforms, wellness apps, and empathetic peer support — and how to choose the right one.',
   date: '2026-07-08',
   readTime: '10 min read',
-  topics: ['emotional support', 'online support', 'mental health India', 'empathy', 'LeanOn'],
+  topics: ['emotional support', 'online support', 'mental health India', 'empathy', 'How Was Your Day'],
   content: `
 <p>If you have typed some version of &quot;I need someone to talk to&quot; into a search bar late at night, you already know how confusing the results can be. Crisis helplines sit next to therapy apps, which sit next to AI chatbots, which sit next to peer support platforms — all promising, in slightly different language, to help you feel less alone. This guide exists to make that landscape legible: what each option actually is, who it is for, and how to choose well depending on what you are carrying right now.</p>
 
@@ -40,7 +40,7 @@ export const post = {
 
 <h3>Anonymous Peer Support Platforms</h3>
 
-<p>This is where platforms like <strong>LeanOn</strong> sit. Peer support connects you with another human being — not a licensed clinician, not an algorithm — who has personally lived through something similar to what you are facing, and who has been chosen for their ability to listen with genuine empathy rather than to diagnose or advise. The relationship is human-to-human, judgment-free, and usually anonymous. It is not a replacement for therapy when therapy is clinically needed, but for the very common, very real experience of needing someone to talk to, it offers something neither a helpline (built for emergencies) nor a chatbot (incapable of real empathy) can.</p>
+<p>This is where platforms like <strong>How Was Your Day</strong> sit. Peer support connects you with another human being — not a licensed clinician, not an algorithm — who has personally lived through something similar to what you are facing, and who has been chosen for their ability to listen with genuine empathy rather than to diagnose or advise. The relationship is human-to-human, judgment-free, and usually anonymous. It is not a replacement for therapy when therapy is clinically needed, but for the very common, very real experience of needing someone to talk to, it offers something neither a helpline (built for emergencies) nor a chatbot (incapable of real empathy) can.</p>
 
 <h3>Informal Support: Friends, Family, Online Communities</h3>
 
@@ -77,17 +77,17 @@ export const post = {
 
 <p>Before trusting any platform with something personal, check for a few basics: is there a verification process for whoever you will be talking to, so you know they are who they say they are? Is there a clear crisis protocol — what happens if a conversation reveals a genuine emergency? And how is your data handled? In India, the <strong>DPDP Act, 2023</strong> sets legal standards for how personal data must be protected; a platform that takes privacy seriously should be able to speak clearly to how it complies.</p>
 
-<h2>How LeanOn Fits Into This Landscape</h2>
+<h2>How the app Fits Into This Landscape</h2>
 
-<p>LeanOn is built specifically for the everyday-support layer of this landscape — the very large, very real category of need that sits between &quot;I am fine&quot; and &quot;I need clinical treatment.&quot; It connects you one-on-one, by text chat or voice call, with a verified peer listener who has personally lived through loneliness, anxiety, burnout, grief, breakups, or family pressure, and who has been screened for <strong>empathetic listener India</strong> practices — genuine, active, judgment-free listening, not scripted responses.</p>
+<p>How Was Your Day is built specifically for the everyday-support layer of this landscape — the very large, very real category of need that sits between &quot;I am fine&quot; and &quot;I need clinical treatment.&quot; It connects you one-on-one, by text chat or voice call, with a verified peer listener who has personally lived through loneliness, anxiety, burnout, grief, breakups, or family pressure, and who has been screened for <strong>empathetic listener India</strong> practices — genuine, active, judgment-free listening, not scripted responses.</p>
 
 <p>Every session is anonymous by default. Listeners are manually verified. A short trial session is available for new users, so you can find the right listener before committing to a longer session. After that, sessions cost the per-minute rate set by the listener (15 minutes at ₹10/min = ₹160), a fraction of typical therapy costs, in 12 Indian languages.</p>
 
 <h3>Having a Good First Session</h3>
 
-<p>If you are trying LeanOn or any peer support platform for the first time, it helps to know: you do not need a polished explanation of what is wrong. You can start with &quot;I don't really know how to say this&quot; and let the conversation unfold from there. A good listener will meet you exactly where you are — that is what genuine empathy looks like in practice.</p>
+<p>If you are trying How Was Your Day or any peer support platform for the first time, it helps to know: you do not need a polished explanation of what is wrong. You can start with &quot;I don't really know how to say this&quot; and let the conversation unfold from there. A good listener will meet you exactly where you are — that is what genuine empathy looks like in practice.</p>
 
-<p>Whatever kind of support you are looking for tonight, know that reaching out itself is the hardest part, and you have already done something difficult by getting this far. If you want to <a href="/browse">browse peer listeners</a> and find someone whose experience resonates with yours, or want to understand <a href="/is-leanon-safe">how privacy and safety work</a> on the platform, those are good next steps. And if you have lived through something difficult and want to offer that same empathy to someone else, you can <a href="/become-listener">become a listener</a> yourself.</p>
+<p>Whatever kind of support you are looking for tonight, know that reaching out itself is the hardest part, and you have already done something difficult by getting this far. If you want to <a href="/browse">browse peer listeners</a> and find someone whose experience resonates with yours, or want to understand <a href="/is-howwasyourday-safe">how privacy and safety work</a> on the platform, those are good next steps. And if you have lived through something difficult and want to offer that same empathy to someone else, you can <a href="/become-listener">become a listener</a> yourself.</p>
 
 <p>You do not have to figure out the entire mental health landscape before you are allowed to ask for help. Start with what is available to you right now, and adjust as you learn what actually helps. For more on how sessions work and what to expect, <a href="/faq">check the FAQ</a>.</p>
   `.trim(),

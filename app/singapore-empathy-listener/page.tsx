@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy Listening for Indians in Singapore | LeanOn',
-  description: 'Feeling unheard in Singapore? LeanOn connects Indian expats with screened empathy listeners who speak your language, understand your cultural context, and give you their full, undivided attention.',
+  title: 'Empathy Listening for Indians in Singapore | How Was Your Day',
+  description: 'Feeling unheard in Singapore? How Was Your Day connects Indian expats with screened empathy listeners who speak your language, understand your cultural context, and give you their full, undivided attention.',
   keywords: [
     'empathy listener singapore', 'feel heard singapore', 'someone who understands singapore indian',
     'active listener singapore', 'emotional support singapore expat', 'feeling unheard singapore',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'talk to someone who understands singapore', 'south asian empathy listener singapore',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/singapore-empathy-listener',
-    languages: { 'en-SG': 'https://www.leanon.app/singapore-empathy-listener' },
+    canonical: 'https://www.howwasyourday.live/singapore-empathy-listener',
+    languages: { 'en-SG': 'https://www.howwasyourday.live/singapore-empathy-listener' },
   },
   openGraph: {
-    title: 'Empathy Listening for Indians in Singapore — Feel Truly Heard | LeanOn',
-    description: 'Feeling unheard is one of the deepest forms of loneliness. LeanOn empathy listeners are screened Indian peers who give you their full attention — in your language, without judgment.',
-    url: 'https://www.leanon.app/singapore-empathy-listener',
-    siteName: 'LeanOn',
+    title: 'Empathy Listening for Indians in Singapore — Feel Truly Heard | How Was Your Day',
+    description: 'Feeling unheard is one of the deepest forms of loneliness. How Was Your Day empathy listeners are screened Indian peers who give you their full attention — in your language, without judgment.',
+    url: 'https://www.howwasyourday.live/singapore-empathy-listener',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'What is empathy listening and how is it different from regular conversation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Empathy listening means the listener\'s whole focus is on understanding your experience — not waiting for their turn to speak, not thinking about advice, not half-distracted. LeanOn listeners are specifically screened for active listening, reflective questioning, and creating space where you feel genuinely understood, not just heard.',
+        text: 'Empathy listening means the listener\'s whole focus is on understanding your experience — not waiting for their turn to speak, not thinking about advice, not half-distracted. How Was Your Day listeners are specifically screened for active listening, reflective questioning, and creating space where you feel genuinely understood, not just heard.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Why do I feel unheard even when I talk to people in Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Most conversations are transactional — people listen to respond, not to understand. In a work-focused culture like Singapore, deep emotional conversations are rare. LeanOn listeners are specifically there to break that pattern and give you the undivided, empathetic attention most people almost never receive.',
+        text: 'Most conversations are transactional — people listen to respond, not to understand. In a work-focused culture like Singapore, deep emotional conversations are rare. How Was Your Day listeners are specifically there to break that pattern and give you the undivided, empathetic attention most people almost never receive.',
       },
     },
     {
@@ -49,15 +49,15 @@ const faqSchema = {
       name: 'Can I talk to an Indian listener who understands my cultural background?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are from India and understand the cultural context — family dynamics, social pressures, the weight of expectations, the particular loneliness of being far from home. You will not have to explain why something is hard; they will already understand.',
+        text: 'Yes. How Was Your Day listeners are from India and understand the cultural context — family dynamics, social pressures, the weight of expectations, the particular loneliness of being far from home. You will not have to explain why something is hard; they will already understand.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What languages do LeanOn listeners speak?',
+      name: 'What languages do How Was Your Day listeners speak?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. You can filter by language when browsing listener profiles. Being heard in your mother tongue adds an extra layer of comfort.',
+        text: 'How Was Your Day listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. You can filter by language when browsing listener profiles. Being heard in your mother tongue adds an extra layer of comfort.',
       },
     },
     {
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Singapore', item: 'https://www.leanon.app/singapore-empathy-listener' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy Listener Singapore', item: 'https://www.howwasyourday.live/singapore-empathy-listener' },
   ],
 }
 
@@ -156,7 +156,7 @@ export default function SingaporeEmpathyListenerPage() {
         <h1>You Want Someone Who Truly Listens.<br />Not Just Hears.</h1>
         <p className="lead">
           Feeling unheard is one of the loneliest experiences there is. You speak, people respond —
-          but you still leave the conversation feeling unseen. LeanOn empathy listeners are screened Indian peers, based in India, who do one thing exceptionally well: give you their full, genuine
+          but you still leave the conversation feeling unseen. How Was Your Day empathy listeners are screened Indian peers, based in India, who do one thing exceptionally well: give you their full, genuine
           attention.
         </p>
 
@@ -168,7 +168,7 @@ export default function SingaporeEmpathyListenerPage() {
             mid-sentence. They offer solutions before you have finished explaining the problem. They
             relate everything back to themselves.</p>
           <p>Empathy listening is different. It means the listener&apos;s whole focus is on understanding
-            your experience — not just the facts, but how it feels to be you right now. LeanOn listeners
+            your experience — not just the facts, but how it feels to be you right now. How Was Your Day listeners
             are screened specifically for this.</p>
           <ul className="checklist">
             <li>They ask questions to understand deeper, not to redirect the conversation.</li>
@@ -184,7 +184,7 @@ export default function SingaporeEmpathyListenerPage() {
           <p>When someone truly listens to you — without an agenda, without distraction — something
             shifts. The thing that felt impossibly tangled starts to clear. You feel less alone in it.
             You often know what to do next without anyone having to tell you.</p>
-          <p>That is what LeanOn empathy listeners make possible. Try it once and feel the difference.</p>
+          <p>That is what How Was Your Day empathy listeners make possible. Try it once and feel the difference.</p>
           <a href="/browse" className="cta-night">Find a listener now →</a>
         </div>
 
@@ -193,7 +193,7 @@ export default function SingaporeEmpathyListenerPage() {
           <p>One of the hardest parts of living in Singapore as an Indian is constantly having to explain
             your context to people who did not grow up with the same pressures — family expectations,
             community judgment, the particular guilt of being the one who left.</p>
-          <p>LeanOn listeners are Indian. They grew up with the same context. You will not need to
+          <p>How Was Your Day listeners are Indian. They grew up with the same context. You will not need to
             translate your experience. They will understand it the way only someone from the same
             background can.</p>
         </div>
@@ -230,23 +230,23 @@ export default function SingaporeEmpathyListenerPage() {
           <div className="faq-item">
             <h3>What is empathy listening and how is it different from regular conversation?</h3>
             <p>Empathy listening means the listener&apos;s whole focus is on understanding your experience —
-              not waiting for their turn, not thinking about advice. LeanOn listeners are screened for active
+              not waiting for their turn, not thinking about advice. How Was Your Day listeners are screened for active
               listening, reflective questioning, and creating space where you feel genuinely understood.</p>
           </div>
           <div className="faq-item">
             <h3>Why do I feel unheard even when I talk to people in Singapore?</h3>
             <p>Most conversations are transactional — people listen to respond. In a work-focused culture
-              like Singapore, deep emotional conversations are rare. LeanOn listeners break that pattern
+              like Singapore, deep emotional conversations are rare. How Was Your Day listeners break that pattern
               and give you the undivided, empathetic attention most people almost never receive.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to an Indian listener who understands my cultural background?</h3>
-            <p>Yes. LeanOn listeners are from India and understand cultural context — family dynamics,
+            <p>Yes. How Was Your Day listeners are from India and understand cultural context — family dynamics,
               social pressures, the weight of expectations, the loneliness of being far from home.
               You will not have to explain why something is hard.</p>
           </div>
           <div className="faq-item">
-            <h3>What languages do LeanOn listeners speak?</h3>
+            <h3>What languages do How Was Your Day listeners speak?</h3>
             <p>Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. You can filter by language
               when browsing. Being heard in your mother tongue adds an extra layer of comfort.</p>
           </div>
@@ -270,7 +270,7 @@ export default function SingaporeEmpathyListenerPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

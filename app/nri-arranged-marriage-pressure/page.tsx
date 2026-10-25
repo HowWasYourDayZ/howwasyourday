@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Arranged Marriage Pressure | When Your Parents Won\'t Stop Asking | LeanOn',
+  title: 'NRI Arranged Marriage Pressure | When Your Parents Won\'t Stop Asking | How Was Your Day',
   description: 'Arranged marriage pressure when you\'re an NRI is different — you\'re juggling parents in India, Indian community abroad, and your own values. Talk to someone who has been through it.',
   keywords: ['nri arranged marriage pressure', 'arranged marriage nri abroad', 'nri rishta pressure', 'indian marriage pressure abroad', 'nri marriage stress', 'arranged marriage pressure uk usa canada'],
-  alternates: { canonical: 'https://www.leanon.app/nri-arranged-marriage-pressure' },
-  openGraph: { title: 'NRI Arranged Marriage Pressure | When Your Parents Won\'t Stop Asking | LeanOn', description: 'Arranged marriage pressure when you\'re an NRI is different — you\'re juggling parents in India, Indian community abroad, and your own values. Talk to someone who has been through it.', url: 'https://www.leanon.app/nri-arranged-marriage-pressure', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-arranged-marriage-pressure' },
+  openGraph: { title: 'NRI Arranged Marriage Pressure | When Your Parents Won\'t Stop Asking | How Was Your Day', description: 'Arranged marriage pressure when you\'re an NRI is different — you\'re juggling parents in India, Indian community abroad, and your own values. Talk to someone who has been through it.', url: 'https://www.howwasyourday.live/nri-arranged-marriage-pressure', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Will a listener tell me what to do about my parents?', acceptedAnswer: { '@type': 'Answer', text: 'No. Peer listeners do not give advice unless you specifically ask for it. They are there to help you think through what you are feeling and what you want — not to push you toward a particular choice. This is your decision. They are just here to listen.' } },
-  { '@type': 'Question', name: 'Do listeners understand arranged marriage dynamics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are Indian and most have direct experience with arranged marriage dynamics — either in their own families or personally. They understand rishta culture, bio-data, the family pressure involved, and the specific weight it carries when you are an NRI navigating expectations from two continents.' } },
+  { '@type': 'Question', name: 'Do listeners understand arranged marriage dynamics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are Indian and most have direct experience with arranged marriage dynamics — either in their own families or personally. They understand rishta culture, bio-data, the family pressure involved, and the specific weight it carries when you are an NRI navigating expectations from two continents.' } },
   { '@type': 'Question', name: 'Can I talk about this anonymously?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private — only your phone number and first name are used. Nothing goes back to your family, your community, or anyone in your life. You can say exactly what you actually feel without it going anywhere.' } },
   { '@type': 'Question', name: 'Can I talk at any time or do I need to book?', acceptedAnswer: { '@type': 'Answer', text: 'No appointment needed. Browse available listeners and start a session when you need one. First 5 minutes are free.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Arranged Marriage Pressure', item: 'https://www.leanon.app/nri-arranged-marriage-pressure' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Arranged Marriage Pressure', item: 'https://www.howwasyourday.live/nri-arranged-marriage-pressure' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriArrangedMarriagePressurePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Arranged Marriage Pressure</span></nav>
         <div className="hero">
           <p className="badge">NRI Marriage Pressure &middot; Arranged Marriage &middot; Indian Abroad</p>
           <h1>NRI Arranged Marriage Pressure — <em>The Squeeze from Two Worlds</em></h1>
           <p className="lead">Parents in India sending profiles. Aunties abroad monitoring your &ldquo;eligibility.&rdquo; The bio-data WhatsApp chain at every family event. You are an adult with a life, a career, and your own idea of what you want — and somehow that still gets lost in the noise. Talk to someone who has been squeezed by the same two worlds. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -95,11 +95,11 @@ export default function NriArrangedMarriagePressurePage() {
         <div className="section">
           <h2>What You Actually Need</h2>
           <p>Not a strategy for handling your parents. Not tips on how to push back or how to set limits. Just space — private, anonymous, with someone who already understands the dynamics — to say &ldquo;I am exhausted by this.&rdquo; To name what the pressure feels like without editing it for your parents&rsquo; feelings or your friends&rsquo; opinions. To hear yourself say it out loud and feel like someone received it without turning it into advice.</p>
-          <p>That is what LeanOn peer listeners offer. They already know the shape of this pressure. They will not need it explained and they will not report back to your mother.</p>
+          <p>That is what How Was Your Day peer listeners offer. They already know the shape of this pressure. They will not need it explained and they will not report back to your mother.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The exhaustion that doesn&rsquo;t fit in a family call.</h2><p>Real peer listener. Understands the NRI arranged marriage squeeze. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The exhaustion that doesn&rsquo;t fit in a family call.</h2><p>Real peer listener. Understands the NRI arranged marriage squeeze. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/arranged-marriage-nri">Arranged marriage NRI &rarr;</a>
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>

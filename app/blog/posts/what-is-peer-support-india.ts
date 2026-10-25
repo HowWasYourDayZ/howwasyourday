@@ -4,7 +4,7 @@ export const post = {
   description: 'A complete guide to peer support and peer counselling in India — what it means, where it came from, and why empathetic listening matters.',
   date: '2026-07-08',
   readTime: '9 min read',
-  topics: ['peer support', 'peer counselling', 'mental health India', 'empathy', 'LeanOn'],
+  topics: ['peer support', 'peer counselling', 'mental health India', 'empathy', 'How Was Your Day'],
   content: `
 <p>If you have ever searched online for &quot;someone to talk to&quot; late at night, you have probably come across the phrase &quot;peer support&quot; somewhere in the results. It is a term showing up more and more in India — in app descriptions, in wellness articles, in conversations about mental health that are finally happening more openly than before. But what does it actually mean? Is it the same as therapy? Is it just a nicer word for venting to a friend? And why is it gaining ground specifically now, in this country?</p>
 
@@ -68,7 +68,7 @@ export const post = {
 
 <p><strong>One-on-one peer support</strong> connects one person seeking support with one peer listener, often for a sustained relationship. This format allows the deepest sense of being personally understood, because the conversation is not divided among a group, and trust can build over repeated interactions.</p>
 
-<p>This is where LeanOn&apos;s model sits. Rather than a group format or a single crisis call, LeanOn is built around one-on-one conversations with a peer listener you choose — someone whose lived experience resonates with what you are going through, whether that is loneliness, burnout, a breakup, or the strain of a joint family. You can <a href="/browse">browse peer listeners</a> and pick someone based on what they have actually been through, rather than being routed to whoever is available.</p>
+<p>This is where How Was Your Day&apos;s model sits. Rather than a group format or a single crisis call, How Was Your Day is built around one-on-one conversations with a peer listener you choose — someone whose lived experience resonates with what you are going through, whether that is loneliness, burnout, a breakup, or the strain of a joint family. You can <a href="/browse">browse peer listeners</a> and pick someone based on what they have actually been through, rather than being routed to whoever is available.</p>
 
 <h2>Who Benefits Most From Peer Support in the Indian Context</h2>
 
@@ -85,15 +85,15 @@ export const post = {
 
 <p>What connects all of these groups is not a shared diagnosis or crisis. It is the ordinary, widespread need to be heard by someone who will not judge, will not gossip, and will not need the situation explained in advance.</p>
 
-<h2>How LeanOn Structures Peer Support</h2>
+<h2>How the app Structures Peer Support</h2>
 
-<p>LeanOn was built with these gaps in mind. A few things define how it works.</p>
+<p>How Was Your Day was built with these gaps in mind. A few things define how it works.</p>
 
-<p><strong>Verified listeners with lived experience.</strong> Listeners on LeanOn go through an application and review process, and share the experiences that shape their understanding, so you can choose someone whose background genuinely connects with yours.</p>
+<p><strong>Verified listeners with lived experience.</strong> Listeners on How Was Your Day go through an application and review process, and share the experiences that shape their understanding, so you can choose someone whose background genuinely connects with yours.</p>
 
 <p><strong>Anonymous by default.</strong> You do not need to reveal your identity to open up — this matters in a culture where the fear of being recognised or talked about often keeps people from being honest, even with those who care about them.</p>
 
-<p><strong>No appointment.</strong> Emotional difficulty does not keep office hours. A 3am spiral, a panic before a difficult family conversation, a wave of loneliness on a quiet weeknight — LeanOn&apos;s listeners are reachable when these moments actually happen, not only within a scheduled appointment window.</p>
+<p><strong>No appointment.</strong> Emotional difficulty does not keep office hours. A 3am spiral, a panic before a difficult family conversation, a wave of loneliness on a quiet weeknight — How Was Your Day&apos;s listeners are reachable when these moments actually happen, not only within a scheduled appointment window.</p>
 
 <p><strong>Affordable, pay-per-minute pricing.</strong> Rather than committing to an expensive session up front, you pay only for the time you actually use, making support financially accessible for far more people, including students and those early in their careers.</p>
 
@@ -103,6 +103,6 @@ export const post = {
 
 <p>Peer support is not a replacement for professional care when clinical care is genuinely needed. But for the vast, ordinary stretch of emotional life that falls short of a crisis and yet still deserves real attention — the loneliness, the burnout, the family tension, the quiet weight of a hard week — peer support offers something both simple and rare: a human being who understands, without judgment, because they have been there.</p>
 
-<p>If you are curious how the model works in practice, LeanOn&apos;s <a href="/faq">FAQ</a> walks through the details. Or skip straight to it and <a href="/browse">browse peer listeners</a> to find someone whose experience matches yours. You do not need a diagnosis to deserve to be heard, and you do not need to be in crisis to deserve support.</p>
+<p>If you are curious how the model works in practice, How Was Your Day&apos;s <a href="/faq">FAQ</a> walks through the details. Or skip straight to it and <a href="/browse">browse peer listeners</a> to find someone whose experience matches yours. You do not need a diagnosis to deserve to be heard, and you do not need to be in crisis to deserve support.</p>
   `.trim(),
 }

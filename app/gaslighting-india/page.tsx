@@ -4,17 +4,17 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support | LeanOn',
+  title: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support | How Was Your Day',
   description: 'Being told you\'re too sensitive, imagining things, overreacting. Gaslighting makes you doubt your own reality. Talk to someone who will validate what you\'re experiencing. From ₹160.',
   keywords: ['gaslighting India', 'am I being gaslighted India', 'gaslighting in marriage India', 'gaslighting partner India', 'gaslighting signs India', 'psychological manipulation India'],
-  alternates: { canonical: 'https://www.leanon.app/gaslighting-india', languages: { 'en-IN': 'https://www.leanon.app/gaslighting-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/gaslighting-india', languages: { 'en-IN': 'https://www.howwasyourday.live/gaslighting-india' } },
   openGraph: {
-    title: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support | LeanOn',
+    title: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support | How Was Your Day',
     description: 'Being told you\'re too sensitive, imagining things, overreacting. Gaslighting makes you doubt your own reality. Talk to someone who will validate what you\'re experiencing. From ₹160.',
-    url: 'https://www.leanon.app/gaslighting-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/gaslighting-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }],
   },
 }
 
@@ -49,8 +49,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support', item: 'https://www.leanon.app/gaslighting-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support', item: 'https://www.howwasyourday.live/gaslighting-india' },
   ],
 }
 
@@ -103,7 +103,7 @@ export default function GaslightingIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

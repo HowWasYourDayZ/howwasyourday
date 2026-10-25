@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Anxiety — When Worry About Your Relationship Becomes Its Own Problem | LeanOn',
+  title: 'Relationship Anxiety — When Worry About Your Relationship Becomes Its Own Problem | How Was Your Day',
   description: 'Constantly checking if they are okay with you, overanalysing messages, scared of losing them — relationship anxiety is exhausting. Talk to someone who understands.',
   keywords: [
     'relationship anxiety India', 'anxious in relationship India', 'fear of losing partner India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'scared partner will leave India', 'insecure in relationship India',
     'jealousy anxiety relationship India', 'emotional support relationship India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/relationship-anxiety', languages: { 'en-IN': 'https://www.leanon.app/support/relationship-anxiety' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/relationship-anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/relationship-anxiety' } },
   openGraph: {
-    title: 'Relationship Anxiety — When Worry About Your Relationship Becomes Its Own Problem | LeanOn',
+    title: 'Relationship Anxiety — When Worry About Your Relationship Becomes Its Own Problem | How Was Your Day',
     description: 'Overanalysing messages, needing reassurance, scared of losing them — relationship anxiety is exhausting. Talk to someone who understands.',
-    url: 'https://www.leanon.app/support/relationship-anxiety',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/relationship-anxiety',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Relationship Anxiety Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Relationship Anxiety Support India' }],
   },
 }
 
@@ -40,7 +40,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if my partner does not know I feel this way?',
-      acceptedAnswer: { '@type': 'Answer', text: 'That is very common. Many people with relationship anxiety hide it from their partner because they are scared the anxiety itself will damage the relationship. A LeanOn session is a safe place to say what you have not been able to say to anyone — including the feelings you are too scared to name out loud. The listener holds it confidentially.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'That is very common. Many people with relationship anxiety hide it from their partner because they are scared the anxiety itself will damage the relationship. A How Was Your Day session is a safe place to say what you have not been able to say to anyone — including the feelings you are too scared to name out loud. The listener holds it confidentially.' },
     },
     {
       '@type': 'Question',
@@ -55,7 +55,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can peer support help with attachment issues?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Peer support is not therapy and does not treat attachment disorders. But talking about your experience with someone who understands can reduce the isolation that makes anxiety worse, help you process specific situations, and make you feel less like something is fundamentally broken with you. For deeper work on attachment patterns, a therapist is a better fit — and a LeanOn listener can be a supportive space alongside that.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Peer support is not therapy and does not treat attachment disorders. But talking about your experience with someone who understands can reduce the isolation that makes anxiety worse, help you process specific situations, and make you feel less like something is fundamentally broken with you. For deeper work on attachment patterns, a therapist is a better fit — and a How Was Your Day listener can be a supportive space alongside that.' },
     },
   ],
 }
@@ -64,9 +64,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Relationship Anxiety', item: 'https://www.leanon.app/support/relationship-anxiety' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Relationship Anxiety', item: 'https://www.howwasyourday.live/support/relationship-anxiety' },
   ],
 }
 
@@ -125,7 +125,7 @@ export default function RelationshipAnxietyPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -187,7 +187,7 @@ export default function RelationshipAnxietyPage() {
         <div className="section">
           <h2>You Do Not Have to Process This Alone</h2>
           <p>Relationship anxiety is one of the loneliest experiences there is — because the one person you would normally talk to is the person the anxiety is about. You are carrying something heavy in a room that the other person is also in, and you cannot put it down in front of them.</p>
-          <p>LeanOn gives you somewhere outside the room. A listener who has heard relationship anxiety before — who will not be surprised by the irrationality of the fear, will not judge the jealousy, will not tell you what to do — just receive what you have been carrying and help you feel less alone in it.</p>
+          <p>How Was Your Day gives you somewhere outside the room. A listener who has heard relationship anxiety before — who will not be surprised by the irrationality of the fear, will not judge the jealousy, will not tell you what to do — just receive what you have been carrying and help you feel less alone in it.</p>
           <p>Sessions are anonymous. Your partner will not know. Your listener never sees your phone number, and nothing is shared with anyone in your life. You can start by saying "I have been feeling anxious about my relationship and I just need to say some of it out loud" — that is enough to begin.</p>
         </div>
 

@@ -4,14 +4,14 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Grief & Loss Peer Support India | LeanOn',
+  title: 'Grief & Loss Peer Support India | How Was Your Day',
   description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. First 5 minutes free.",
-  alternates: { canonical: 'https://www.leanon.app/support/grief', languages: { 'en-IN': 'https://www.leanon.app/support/grief' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/grief', languages: { 'en-IN': 'https://www.howwasyourday.live/support/grief' } },
   openGraph: {
-    title: 'Grief & Loss Peer Support India | LeanOn',
+    title: 'Grief & Loss Peer Support India | How Was Your Day',
     description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. First 5 minutes free.",
-    url: 'https://www.leanon.app/support/grief',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/grief',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I lost someone and have no one to talk to \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Grief can feel very lonely, especially when people around you expect you to move on. LeanOn connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Your first 5 minutes are free. It is peer support, not grief therapy." } },
+    { '@type': 'Question', name: "I lost someone and have no one to talk to \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Grief can feel very lonely, especially when people around you expect you to move on. How Was Your Day connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Your first 5 minutes are free. It is peer support, not grief therapy." } },
     {
       '@type': 'Question',
       name: 'What is the difference between normal grief and complicated grief?',
@@ -68,9 +68,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Grief', item: 'https://www.leanon.app/support/grief' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Grief', item: 'https://www.howwasyourday.live/support/grief' },
   ],
 }
 
@@ -130,7 +130,7 @@ export default function GriefSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -148,8 +148,8 @@ export default function GriefSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Grief & Loss</p>
           <h1>Grief Is Not a Problem to Solve. <em>It Is Love With Nowhere to Go.</em></h1>
-          <p className="lead">Losing someone — or something — you loved deeply is one of the most painful human experiences. LeanOn connects you with peer listeners who have been through loss themselves and understand what it means to carry grief while continuing to live.</p>
-          <QuickAnswer question={"I lost someone and have no one to talk to \u2014 where can I go?"} answer={"Grief can feel very lonely, especially when people around you expect you to move on. LeanOn connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Your first 5 minutes are free. It is peer support, not grief therapy."} />
+          <p className="lead">Losing someone — or something — you loved deeply is one of the most painful human experiences. How Was Your Day connects you with peer listeners who have been through loss themselves and understand what it means to carry grief while continuing to live.</p>
+          <QuickAnswer question={"I lost someone and have no one to talk to \u2014 where can I go?"} answer={"Grief can feel very lonely, especially when people around you expect you to move on. How Was Your Day connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Your first 5 minutes are free. It is peer support, not grief therapy."} />
         </div>
 
         <div className="section">
@@ -175,19 +175,19 @@ export default function GriefSupportPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Supports Grief</h2>
+          <h2>How the app Supports Grief</h2>
 
           <h3>Listeners Who Know Loss From the Inside</h3>
-          <p>Every LeanOn listener who supports people through grief has personally experienced significant loss. They know what it is like to wake up and for one moment forget — and then remember. They know the ambush of grief in the middle of a normal day. They know this because they have lived it.</p>
+          <p>Every How Was Your Day listener who supports people through grief has personally experienced significant loss. They know what it is like to wake up and for one moment forget — and then remember. They know the ambush of grief in the middle of a normal day. They know this because they have lived it.</p>
 
           <h3>No Pressure to Feel Better</h3>
-          <p>One of the most painful things about grief is the social pressure to recover on someone else&apos;s timeline. Family members become impatient. Friends want the &quot;old you&quot; back. LeanOn listeners understand that grief has its own timeline and will never rush you or minimise what you are carrying.</p>
+          <p>One of the most painful things about grief is the social pressure to recover on someone else&apos;s timeline. Family members become impatient. Friends want the &quot;old you&quot; back. How Was Your Day listeners understand that grief has its own timeline and will never rush you or minimise what you are carrying.</p>
 
           <h3>Available at Night and on Hard Days</h3>
-          <p>Grief tends to be hardest at anniversaries, on holidays, on days that would have been significant, and at night. LeanOn listeners go online at different hours, including late at night, so when the grief wave hits at 2 AM or on what would have been their birthday, you have somewhere to go.</p>
+          <p>Grief tends to be hardest at anniversaries, on holidays, on days that would have been significant, and at night. How Was Your Day listeners go online at different hours, including late at night, so when the grief wave hits at 2 AM or on what would have been their birthday, you have somewhere to go.</p>
 
           <h3>Private Space to Grieve Openly</h3>
-          <p>Indian cultural contexts can make open grief complex — expectations to be strong, religious frameworks that prescribe certain expressions of mourning, family dynamics where you feel you must hold others together. LeanOn gives you a completely private space to grieve without any of those pressures.</p>
+          <p>Indian cultural contexts can make open grief complex — expectations to be strong, religious frameworks that prescribe certain expressions of mourning, family dynamics where you feel you must hold others together. How Was Your Day gives you a completely private space to grieve without any of those pressures.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Understand Grief</h2>
@@ -226,7 +226,7 @@ export default function GriefSupportPage() {
           <p>Talk to someone who knows loss from the inside. No pressure, no timeline, no judgment.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who will sit with you — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -256,7 +256,7 @@ export default function GriefSupportPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Grief often brings other challenges. Explore more peer support on LeanOn:</p>
+          <p>Grief often brings other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness</a>
             <a href="/support/anxiety" className="related-link">Anxiety</a>

@@ -4,21 +4,21 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Divorce Support India — Process It With Someone Real | LeanOn',
+  title: 'Divorce Support India — Process It With Someone Real | How Was Your Day',
   description: 'Going through a divorce in India? The emotional weight is enormous. Talk to a real peer listener who gets the Indian context — anonymous, from ₹160.',
   keywords: [
     'divorce support india', 'divorce coping india', 'going through divorce india',
     'divorce emotional support india', 'separation support india',
     'divorce help india', 'divorce recovery india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/divorce-support-india', languages: { 'en-IN': 'https://www.leanon.app/divorce-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/divorce-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/divorce-support-india' } },
   openGraph: {
-    title: 'Divorce Support India — Process It With Someone Real | LeanOn',
+    title: 'Divorce Support India — Process It With Someone Real | How Was Your Day',
     description: 'Going through a divorce in India? The emotional weight is enormous. Talk to a real peer listener who gets the Indian context — anonymous, from ₹160.',
-    url: 'https://www.leanon.app/divorce-support-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/divorce-support-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Divorce Support India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Divorce Support India' }],
   },
 }
 
@@ -44,7 +44,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will the listener take sides?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. A LeanOn listener has no stake in the outcome. They will not take your side or your spouse&apos;s side. They will hold space for your experience of the situation, which is different from validating a position. You will feel heard without the listener fuelling anything.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. A How Was Your Day listener has no stake in the outcome. They will not take your side or your spouse&apos;s side. They will hold space for your experience of the situation, which is different from validating a position. You will feel heard without the listener fuelling anything.' },
     },
     {
       '@type': 'Question',
@@ -58,8 +58,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Divorce Support India', item: 'https://www.leanon.app/divorce-support-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Divorce Support India', item: 'https://www.howwasyourday.live/divorce-support-india' },
   ],
 }
 
@@ -112,7 +112,7 @@ export default function DivorceSupportIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">
@@ -151,7 +151,7 @@ export default function DivorceSupportIndiaPage() {
         <div className="section">
           <h2>Who You Can&apos;t Talk To</h2>
           <p>Family will panic or will have decided whose fault it is. Friends will have opinions. Mutual friends have loyalties to both sides. Colleagues do not need to know. The lawyer only hears the legal facts. The therapist, if you can afford one and find one with availability, is still many weeks away.</p>
-          <p>What is missing is a neutral person who has no stake in the outcome &mdash; who can hear the whole complicated thing without forming a position, without advising you on what to do, without making it about anything other than your experience of it. That is a LeanOn peer listener.</p>
+          <p>What is missing is a neutral person who has no stake in the outcome &mdash; who can hear the whole complicated thing without forming a position, without advising you on what to do, without making it about anything other than your experience of it. That is a How Was Your Day peer listener.</p>
         </div>
         <div className="section">
           <h2>Frequently Asked Questions</h2>

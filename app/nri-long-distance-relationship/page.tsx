@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Long-Distance Relationship with Partner in India | LeanOn',
+  title: 'NRI Long-Distance Relationship with Partner in India | How Was Your Day',
   description: 'Your partner is in India. You\'re abroad. The visa, the waiting, the calls that never feel like enough. Talk to a peer listener who understands the NRI long-distance experience.',
   keywords: ['nri long distance relationship', 'india abroad relationship', 'nri partner in india', 'waiting for spouse visa nri', 'nri long distance marriage', 'india us relationship problems'],
-  alternates: { canonical: 'https://www.leanon.app/nri-long-distance-relationship' },
-  openGraph: { title: 'NRI Long-Distance Relationship with Partner in India | LeanOn', description: 'Your partner is in India. You\'re abroad. The visa, the waiting, the calls that never feel like enough. Talk to a peer listener who understands the NRI long-distance experience.', url: 'https://www.leanon.app/nri-long-distance-relationship', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-long-distance-relationship' },
+  openGraph: { title: 'NRI Long-Distance Relationship with Partner in India | How Was Your Day', description: 'Your partner is in India. You\'re abroad. The visa, the waiting, the calls that never feel like enough. Talk to a peer listener who understands the NRI long-distance experience.', url: 'https://www.howwasyourday.live/nri-long-distance-relationship', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'What makes NRI long-distance relationships different from other long-distance situations?', acceptedAnswer: { '@type': 'Answer', text: 'NRI long-distance is typically not a choice — it is a visa process, often years long. You are building a life in a country your partner hasn\'t arrived in yet. They are waiting in a world you\'ve already left. There is no clear end date, just uncertainty. That specific kind of limbo is what peer listeners at LeanOn understand well.' } },
+  { '@type': 'Question', name: 'What makes NRI long-distance relationships different from other long-distance situations?', acceptedAnswer: { '@type': 'Answer', text: 'NRI long-distance is typically not a choice — it is a visa process, often years long. You are building a life in a country your partner hasn\'t arrived in yet. They are waiting in a world you\'ve already left. There is no clear end date, just uncertainty. That specific kind of limbo is what peer listeners at How Was Your Day understand well.' } },
   { '@type': 'Question', name: 'What if I\'m feeling guilty about my partner waiting?', acceptedAnswer: { '@type': 'Answer', text: 'Guilt is one of the most common things people carry in this situation — guilt for leaving, guilt for the waiting, guilt for the times you feel resentment about the sacrifice. A peer listener can hold this with you without judgement.' } },
   { '@type': 'Question', name: 'What if the relationship is starting to struggle under the distance?', acceptedAnswer: { '@type': 'Answer', text: 'That happens. Long-distance strains the best relationships. A peer listener won\'t give you relationship advice, but they will hear what you\'re going through and help you feel less alone in it.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are anonymous — phone number and first name only. Nothing is shared with your partner, family, or anyone else.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Long-Distance Relationship', item: 'https://www.leanon.app/nri-long-distance-relationship' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Long-Distance Relationship', item: 'https://www.howwasyourday.live/nri-long-distance-relationship' },
 ] }
 
 const S = `
@@ -70,7 +70,7 @@ export default function NriLongDistanceRelationshipPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Long-Distance Relationship</span></nav>
         <div className="hero">
@@ -84,13 +84,13 @@ export default function NriLongDistanceRelationshipPage() {
           <h2>The NRI Long-Distance Limbo</h2>
           <p>The NRI long-distance relationship is different from other long-distance situations in one crucial way: it is not chosen. Nobody wanted the visa to take this long. Nobody planned to spend their first years of marriage in different countries. But the H-1B spousal visa queue can be years long. The UK spouse visa process has its own delays and costs. Canadian PR processes create their own timelines. You are waiting on bureaucracy for the most intimate part of your life.</p>
           <p>In the meantime: you are building a life abroad — a home, a routine, a social circle — in a place your partner has not yet experienced. Your partner is living in a world you have partly left — familiar family and friends, but the growing distance of someone whose daily life has become radically different from yours. The calls are wonderful and also insufficient. You can video-call but you cannot have Sunday morning together.</p>
-          <p>This kind of pain is real and largely unacknowledged. It doesn&rsquo;t show up in the happy couple photos. It is the private loneliness of loving someone across an ocean and a bureaucratic queue. LeanOn is for exactly this. First 5 minutes free.</p>
+          <p>This kind of pain is real and largely unacknowledged. It doesn&rsquo;t show up in the happy couple photos. It is the private loneliness of loving someone across an ocean and a bureaucratic queue. How Was Your Day is for exactly this. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>What Goes Unsaid in the Long-Distance</h2>
           <p>The things that go unsaid in NRI long-distance relationships are heavy. The guilt of the person who left. The resentment — sometimes — of the person waiting. The fear that you are growing apart, becoming different people who inhabit different worlds. The loneliness of your daily life that you can&rsquo;t quite share with your partner on a call because the context is too complex. The small things that go unwitnessed.</p>
-          <p>There is nobody to say these things to. Your parents don&rsquo;t want to hear it. Your friends abroad don&rsquo;t understand. Your partner doesn&rsquo;t need to hear you struggling when they are also struggling. A real Indian peer listener at LeanOn — in India, which is where your partner is — understands the situation from the inside. Sessions are anonymous, private, and always begin with 5 free minutes.</p>
+          <p>There is nobody to say these things to. Your parents don&rsquo;t want to hear it. Your friends abroad don&rsquo;t understand. Your partner doesn&rsquo;t need to hear you struggling when they are also struggling. A real Indian peer listener at How Was Your Day — in India, which is where your partner is — understands the situation from the inside. Sessions are anonymous, private, and always begin with 5 free minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

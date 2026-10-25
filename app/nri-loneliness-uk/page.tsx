@@ -3,23 +3,23 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indian Loneliness in the UK | Talk to Someone Who Understands | LeanOn',
-  description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, LeanOn connects you with peer listeners in India who understand. First 5 min free.',
+  title: 'Indian Loneliness in the UK | Talk to Someone Who Understands | How Was Your Day',
+  description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, How Was Your Day connects you with peer listeners in India who understand. First 5 min free.',
   keywords: ['indian loneliness uk', 'nri loneliness uk', 'lonely indian in london', 'feeling alone uk indian', 'british indian loneliness', 'desi loneliness uk', 'indian isolation britain'],
-  alternates: { canonical: 'https://www.leanon.app/nri-loneliness-uk' },
-  openGraph: { title: 'Indian Loneliness in the UK | Talk to Someone Who Understands | LeanOn', description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, LeanOn connects you with peer listeners in India who understand. First 5 min free.', url: 'https://www.leanon.app/nri-loneliness-uk', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-loneliness-uk' },
+  openGraph: { title: 'Indian Loneliness in the UK | Talk to Someone Who Understands | How Was Your Day', description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, How Was Your Day connects you with peer listeners in India who understand. First 5 min free.', url: 'https://www.howwasyourday.live/nri-loneliness-uk', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'I grew up here. Is LeanOn still relevant for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. British-Indian loneliness is often deeper precisely because it is less visible — you have language, community, a career, but still carry an unnameable weight. Our listeners understand the hyphenated identity and the specific exhaustion that comes with it.' } },
+  { '@type': 'Question', name: 'I grew up here. Is How Was Your Day still relevant for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. British-Indian loneliness is often deeper precisely because it is less visible — you have language, community, a career, but still carry an unnameable weight. Our listeners understand the hyphenated identity and the specific exhaustion that comes with it.' } },
   { '@type': 'Question', name: 'I don\'t want to talk about Indian stuff. Can I just vent about life?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Many callers just want to vent — work, relationships, exhaustion. The India connection just means you never have to explain context you did not ask for. Say what you need to say.' } },
   { '@type': 'Question', name: 'Is this confidential from my community in the UK?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Anonymous phone number only. No social login. No one in your gurdwara, mandir, or office knows. Listeners agree to keep what you share confidential.' } },
   { '@type': 'Question', name: 'What are good times to call from the UK?', acceptedAnswer: { '@type': 'Answer', text: 'Indian listeners are active evenings IST. That is lunchtime to early afternoon UK time: 12:30pm–5:30pm GMT (winter) or 1:30pm–6:30pm BST (summer). A lunchtime call works perfectly.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Indian Loneliness in the UK', item: 'https://www.leanon.app/nri-loneliness-uk' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Indian Loneliness in the UK', item: 'https://www.howwasyourday.live/nri-loneliness-uk' },
 ] }
 
 const S = `
@@ -68,7 +68,7 @@ export default function NriLonelinessUkPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indian Loneliness in the UK</span></nav>
         <div className="hero">
@@ -81,17 +81,17 @@ export default function NriLonelinessUkPage() {
           <h2>The specific loneliness of Indians in the UK</h2>
           <p>It is not the same as ordinary loneliness. You can be surrounded by people &mdash; colleagues, flatmates, friends from university &mdash; and still feel the particular weight of being Indian here. The hyphenated identity carries its own gravity. Every room you enter, you are carrying the full story of your family&rsquo;s migration, their sacrifice, the expectation that you will represent it well &mdash; and none of that is visible to anyone else.</p>
           <p>The subtle racism that is never named is exhausting in a specific way. The comments that pass too fast to address. The moments where you are the interesting person, the diverse hire, the one who brings the food to the office potluck. Never simply a colleague. The loneliness of that is real even when everything else about your life is good.</p>
-          <p>And then there is the exhaustion of always explaining. Your food, your family structure, your relationship with your parents, your marriage timeline. You have spent years translating yourself into a format that makes sense to people who did not grow up in the same context. LeanOn listeners already have the context. You can skip the translation and say the actual thing.</p>
+          <p>And then there is the exhaustion of always explaining. Your food, your family structure, your relationship with your parents, your marriage timeline. You have spent years translating yourself into a format that makes sense to people who did not grow up in the same context. How Was Your Day listeners already have the context. You can skip the translation and say the actual thing.</p>
         </div>
         <div className="section">
           <h2>Second generation vs first generation &mdash; both lonely differently</h2>
           <p><strong>First generation:</strong> You miss home in a way that is active and present. You left people and places that are fixed in your memory at the moment of leaving, while time continues there without you. You have built a life here but there is a part of you that is always slightly elsewhere. The loneliness is the gap between where your body is and where your sense of home still lives.</p>
           <p><strong>Second generation:</strong> The loneliness is more abstract but not less real. You grew up here, this is home, and yet you are still sometimes made to feel like a guest. You visit India and are too British. You are in Birmingham or Leicester and are sometimes too Indian. Neither world fully claims you. The loneliness is the gap between belonging everywhere in theory and feeling fully at ease nowhere in practice.</p>
-          <p>Both forms are real. Both are worth talking about. LeanOn listeners have heard both &mdash; often from people who were surprised to find that putting it into words with someone who understood changed something.</p>
+          <p>Both forms are real. Both are worth talking about. How Was Your Day listeners have heard both &mdash; often from people who were surprised to find that putting it into words with someone who understood changed something.</p>
         </div>
         <div className="section">
           <h2>A real conversation, no appointment needed</h2>
-          <p>LeanOn listeners are India-based and active in the evenings IST &mdash; which is lunchtime to early afternoon in the UK. UK to India is 4.5 hours ahead in BST and 5.5 hours in GMT. A 1pm call in London is 5:30pm or 6:30pm in India. Evening calls from the UK land at peak listener availability in India.</p>
+          <p>How Was Your Day listeners are India-based and active in the evenings IST &mdash; which is lunchtime to early afternoon in the UK. UK to India is 4.5 hours ahead in BST and 5.5 hours in GMT. A 1pm call in London is 5:30pm or 6:30pm in India. Evening calls from the UK land at peak listener availability in India.</p>
           <p>No appointment. No waiting list. Private &mdash; a phone number is all you need. Browse who is online now and start a session. The first 5 minutes are free.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

@@ -4,7 +4,7 @@ export const post = {
   description: 'You moved to Bangalore, Mumbai, or Hyderabad for work. The job is fine. But on Friday evening, something heavy arrives. Here is what is actually happening — and what helps.',
   date: '2026-09-09',
   readTime: '6 min read',
-  topics: ['loneliness India', 'new city India', 'Bangalore loneliness', 'mental health India', 'LeanOn'],
+  topics: ['loneliness India', 'new city India', 'Bangalore loneliness', 'mental health India', 'How Was Your Day'],
   content: `
 <p>Monday to Friday is manageable. Work fills it. The commute, the meetings, the lunch with colleagues, the evening chai at the desk — there is enough structure that you do not have to notice. The problem arrives on Friday evening when the office empties and there is nowhere particular to go.</p>
 
@@ -44,7 +44,7 @@ export const post = {
 
 <p><strong>Lower the bar for quality of contact.</strong> The WhatsApp call where nothing much is said still matters. The colleague you have lunch with and whose name you barely know is still a form of contact. Loneliness is not only the absence of deep friendship — it is also the absence of ambient human contact. Actively create more of the ambient kind while the deep kind grows slowly.</p>
 
-<p><strong>Talk to someone about it.</strong> The specific thing about new-city loneliness is that it is embarrassing in a way that makes it hard to name. Everyone else seems to be handling it. You do not want to seem like the person who cannot cope with independence. So it goes unspoken, which makes it heavier. A LeanOn listener — someone outside your life, who will not think less of you for struggling with something almost everyone in your position struggles with — is a place to say the actual thing. Friday evening at 7 PM, when the week has ended and the weekend stretches out empty, is not a crisis. It is a real feeling that deserves to be named.</p>
+<p><strong>Talk to someone about it.</strong> The specific thing about new-city loneliness is that it is embarrassing in a way that makes it hard to name. Everyone else seems to be handling it. You do not want to seem like the person who cannot cope with independence. So it goes unspoken, which makes it heavier. A How Was Your Day listener — someone outside your life, who will not think less of you for struggling with something almost everyone in your position struggles with — is a place to say the actual thing. Friday evening at 7 PM, when the week has ended and the weekend stretches out empty, is not a crisis. It is a real feeling that deserves to be named.</p>
 
 <h2>The City Eventually Becomes Yours</h2>
 

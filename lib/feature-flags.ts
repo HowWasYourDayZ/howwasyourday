@@ -4,7 +4,7 @@
  */
 
 /**
- * Shows an honest "LeanOn is growing" notice to listeners explaining that
+ * Shows an honest "How Was Your Day is growing" notice to listeners explaining that
  * session volume depends on user traffic and earnings are variable.
  * Appears on: become-listener hero, become-listener/status (approved state),
  * and the listener dashboard empty state.
@@ -35,7 +35,7 @@ export const SHOW_LISTENER_PRICING_UPDATE_NOTICE = true
 
 /**
  * Shows the new listener onboarding landing page on /become-listener:
- * an informational screen explaining what LeanOn is and is NOT, with an
+ * an informational screen explaining what How Was Your Day is and is NOT, with an
  * agreement checkbox the applicant must accept before proceeding to auth
  * and the application form.
  * Set to false to revert to the original behaviour (immediate auth redirect).

@@ -16,7 +16,7 @@ In peer support, active listening is the foundation of everything. When you feel
 
 The core elements of active listening include: giving undivided attention (putting away your phone, making eye contact, removing mental distractions), using verbal and non-verbal cues to show you're present (nodding, "mm-hmm", brief responses like "I see" or "that makes sense"), reflecting back what you hear ("So what I'm understanding is..."), asking open questions that invite deeper sharing ("How did that make you feel?" rather than "Did that upset you?"), and resisting the urge to offer advice unless explicitly asked.
 
-In India, active listening is particularly valuable because cultural norms often discourage emotional expression. Many people have never had the experience of being truly listened to without judgment. When LeanOn listeners practice active listening, they often give seekers something genuinely new — the experience of being heard without being fixed, judged, or redirected.
+In India, active listening is particularly valuable because cultural norms often discourage emotional expression. Many people have never had the experience of being truly listened to without judgment. When How Was Your Day listeners practice active listening, they often give seekers something genuinely new — the experience of being heard without being fixed, judged, or redirected.
 
 If you want to practice active listening, start small. In your next conversation, resist the urge to share your own story when someone shares theirs. Instead, ask one follow-up question. Notice how the quality of the conversation changes.`,
   },
@@ -32,7 +32,7 @@ Biologically, cortisol (the body's natural stress hormone) follows a circadian r
 
 For many people in India — particularly those who have moved to new cities for work, those in joint families who feel emotionally isolated even in crowded homes, and students far from home — nighttime loneliness is a daily reality.
 
-What helps? First, naming it: "I am feeling lonely right now" rather than spiraling into "nobody cares about me." Second, connection — even asynchronous. Sending a voice note to a friend, messaging someone you care about. Third, gentle physical activity like a short walk. Fourth, talking to someone who understands — this is exactly what LeanOn is for. Our listeners are often most active in the evening and late at night, when seekers need them most.
+What helps? First, naming it: "I am feeling lonely right now" rather than spiraling into "nobody cares about me." Second, connection — even asynchronous. Sending a voice note to a friend, messaging someone you care about. Third, gentle physical activity like a short walk. Fourth, talking to someone who understands — this is exactly what How Was Your Day is for. Our listeners are often most active in the evening and late at night, when seekers need them most.
 
 You are not weak for feeling this way. You are human.`,
   },
@@ -46,11 +46,11 @@ The defining feature of peer support is mutuality: the supporter is not a profes
 
 Peer support has been shown to reduce feelings of isolation, improve coping skills, increase hope, and reduce stigma around seeking help. These benefits are particularly pronounced for people from communities where professional mental health care carries significant stigma — which describes much of India.
 
-In practice, peer support can take many forms: self-help groups, one-on-one conversations, community forums, and increasingly, structured platforms like LeanOn that connect seekers with screened peer supporters.
+In practice, peer support can take many forms: self-help groups, one-on-one conversations, community forums, and increasingly, structured platforms like How Was Your Day that connect seekers with screened peer supporters.
 
-At LeanOn, peer support means talking to a verified listener who has personal experience with what you're going through — whether that's loneliness, burnout, grief, anxiety, a breakup, or career confusion. They are not there to fix you or tell you what to do. They are there to listen, to understand, and to sit with you in whatever you are going through.
+At How Was Your Day, peer support means talking to a verified listener who has personal experience with what you're going through — whether that's loneliness, burnout, grief, anxiety, a breakup, or career confusion. They are not there to fix you or tell you what to do. They are there to listen, to understand, and to sit with you in whatever you are going through.
 
-The results are often profound. Many LeanOn seekers report that talking to a peer listener gave them something they had not experienced before: the feeling of being truly understood.`,
+The results are often profound. Many How Was Your Day seekers report that talking to a peer listener gave them something they had not experienced before: the feeling of being truly understood.`,
   },
   {
     slug: 'signs-of-burnout',
@@ -64,7 +64,7 @@ Burnout progresses through stages. Early warning signs include mild fatigue, red
 
 In India, burnout is particularly common among IT professionals, startup founders, healthcare workers, and students facing competitive exam pressure. The culture of long hours and the stigma around admitting vulnerability makes it harder to recognise and address.
 
-What helps? The first step is naming it — distinguishing burnout from simple tiredness. The second is rest that is genuinely restorative: not passive consumption, but activities that fill you up. The third is talking about it — with someone who understands, ideally someone who has been through their own burnout. This is where peer support can be transformative. Many LeanOn listeners have personal experience with burnout recovery and can offer the kind of understanding that is hard to find elsewhere.`,
+What helps? The first step is naming it — distinguishing burnout from simple tiredness. The second is rest that is genuinely restorative: not passive consumption, but activities that fill you up. The third is talking about it — with someone who understands, ideally someone who has been through their own burnout. This is where peer support can be transformative. Many How Was Your Day listeners have personal experience with burnout recovery and can offer the kind of understanding that is hard to find elsewhere.`,
   },
   {
     slug: 'how-to-talk-about-feelings',
@@ -82,7 +82,7 @@ Choose the right time and person. Not every feeling needs to be shared, and not 
 
 Start small. If talking about deep feelings feels overwhelming, start with something small. Mention a frustration at work. Share that you're feeling tired. Practice the skill in low-stakes situations and build from there.
 
-On LeanOn, our listeners are screened for this specifically in active listening and are comfortable sitting with difficult emotions. Many seekers find that talking to a LeanOn listener is the first time they have ever fully articulated what they're going through.`,
+On How Was Your Day, our listeners are screened for this specifically in active listening and are comfortable sitting with difficult emotions. Many seekers find that talking to a How Was Your Day listener is the first time they have ever fully articulated what they're going through.`,
   },
   {
     slug: 'anxiety-vs-stress',
@@ -96,9 +96,9 @@ Anxiety, by contrast, is often not tied to a specific external trigger. It is a 
 
 In India, the distinction matters because the sources of support differ. Stress often responds well to practical changes: better time management, delegation, rest, and peer conversations about the pressures involved. Anxiety, particularly when it is persistent or severe, may benefit from professional support alongside peer connection.
 
-LeanOn peer listeners are not therapists and don't provide clinical treatment. But they can offer something invaluable for both stress and anxiety: the experience of being truly heard by someone who has been through similar pressures. Many LeanOn listeners specialise in work stress, student pressure, and anxiety — and bring genuine lived experience to those conversations.
+How Was Your Day peer listeners are not therapists and don't provide clinical treatment. But they can offer something invaluable for both stress and anxiety: the experience of being truly heard by someone who has been through similar pressures. Many How Was Your Day listeners specialise in work stress, student pressure, and anxiety — and bring genuine lived experience to those conversations.
 
-If your anxiety is severe or significantly impacting your life, please also consider speaking with a mental health professional. LeanOn and professional care work well together.`,
+If your anxiety is severe or significantly impacting your life, please also consider speaking with a mental health professional. How Was Your Day and professional care work well together.`,
   },
   {
     slug: 'supporting-a-grieving-friend',
@@ -112,9 +112,9 @@ What to avoid: "Everything happens for a reason", "They're in a better place now
 
 What actually helps: Showing up physically when possible. Practical help without being asked — bringing food, helping with logistics, handling tasks that feel overwhelming in grief. Using the name of the person who died. Asking "Tell me about them" and listening without interruption. Checking in weeks and months later, when most people have stopped, and the isolation of grief often deepens.
 
-For seekers on LeanOn who are grieving, our peer listeners with lived experience of loss offer something rare: the kind of understanding that comes only from having lost someone yourself. They know that grief is not linear, that it doesn't end, and that the only path through it is through it — not around it.
+For seekers on How Was Your Day who are grieving, our peer listeners with lived experience of loss offer something rare: the kind of understanding that comes only from having lost someone yourself. They know that grief is not linear, that it doesn't end, and that the only path through it is through it — not around it.
 
-If you are grieving and struggling to talk to those around you, know that there is someone on LeanOn who understands and is here for exactly this.`,
+If you are grieving and struggling to talk to those around you, know that there is someone on How Was Your Day who understands and is here for exactly this.`,
   },
   {
     slug: 'emotional-burnout',
@@ -130,7 +130,7 @@ In India, emotional burnout is widespread but rarely named. The expectation that
 
 Recovery from emotional burnout requires intentional restoration of emotional resources. This means creating boundaries — not just physical but emotional — around how much you give. It means making space for your own emotional experience, not just others'. It means replenishing through activities that genuinely restore you: rest, creative expression, time in nature, honest conversations.
 
-Talking to someone outside your immediate circle — a peer listener on LeanOn, for instance — can be particularly valuable for emotional burnout because it provides connection without the expectation that you will also support them in return. It is a space where you can simply receive.`,
+Talking to someone outside your immediate circle — a peer listener on How Was Your Day, for instance — can be particularly valuable for emotional burnout because it provides connection without the expectation that you will also support them in return. It is a space where you can simply receive.`,
   },
   {
     slug: 'loneliness-statistics-india',
@@ -146,9 +146,9 @@ Paradoxically, India's density doesn't protect against loneliness. Joint family 
 
 Loneliness has real health consequences: it affects sleep quality, immune function, cardiovascular health, and cognitive decline. The impact is comparable to smoking 15 cigarettes a day.
 
-What helps? Community connection — which is increasingly hard to find in modern India. Professional support when needed. And peer support platforms like LeanOn, which provide the experience of genuine human connection to people who need it most, available anywhere in India, with no appointment.
+What helps? Community connection — which is increasingly hard to find in modern India. Professional support when needed. And peer support platforms like How Was Your Day, which provide the experience of genuine human connection to people who need it most, available anywhere in India, with no appointment.
 
-LeanOn is not a solution to the structural causes of loneliness — but it is real human connection for the moments when it matters most.`,
+How Was Your Day is not a solution to the structural causes of loneliness — but it is real human connection for the moments when it matters most.`,
   },
   {
     slug: 'benefits-of-talking-to-a-stranger',
@@ -162,23 +162,23 @@ With a stranger who has no existing relationship with you and no future relation
 
 A 2021 study at the University of Chicago found that people consistently underestimated how good conversations with strangers would feel — and overestimated how awkward they would be. When given the opportunity to have a genuine conversation with a stranger, participants reported high levels of connection and felt meaningfully better afterward.
 
-The therapeutic effect is amplified when the stranger has lived experience relevant to your situation. A peer listener on LeanOn who has been through their own burnout, grief, or relationship difficulty brings something that no therapist or close friend can fully replicate: the knowledge that comes from having been exactly where you are.
+The therapeutic effect is amplified when the stranger has lived experience relevant to your situation. A peer listener on How Was Your Day who has been through their own burnout, grief, or relationship difficulty brings something that no therapist or close friend can fully replicate: the knowledge that comes from having been exactly where you are.
 
-This is why LeanOn exists. It harnesses the psychological benefit of the stranger conversation — freedom from relational stakes — while pairing it with the empathic power of shared lived experience.`,
+This is why How Was Your Day exists. It harnesses the psychological benefit of the stranger conversation — freedom from relational stakes — while pairing it with the empathic power of shared lived experience.`,
   },
   {
     slug: 'how-to-find-a-listener',
-    title: 'How to Find the Right Listener for You on LeanOn',
+    title: 'How to Find the Right Listener for You on How Was Your Day',
     description: 'Finding the right peer listener makes all the difference. Here\'s how to choose, what to look for, and how to make the most of your first session.',
-    content: `Finding the right peer listener is an important step — and LeanOn makes it straightforward. Here's how to approach it.
+    content: `Finding the right peer listener is an important step — and How Was Your Day makes it straightforward. Here's how to approach it.
 
-Start with your topic. LeanOn listeners specialise in different areas based on their own lived experience. Browse by topic — loneliness, anxiety, burnout, grief, relationships, career confusion, student stress, or "just need to talk." Finding someone who has been through what you're facing increases the likelihood of genuine understanding.
+Start with your topic. How Was Your Day listeners specialise in different areas based on their own lived experience. Browse by topic — loneliness, anxiety, burnout, grief, relationships, career confusion, student stress, or "just need to talk." Finding someone who has been through what you're facing increases the likelihood of genuine understanding.
 
 Read the bio carefully. A listener's bio is a window into who they are and what they bring. Look for specificity: someone who describes a concrete experience (surviving their first startup failure, navigating the loss of a parent, moving to a new city alone) is likely to bring genuine depth to the conversation. Generic bios are less informative.
 
 Check ratings and session count. Experienced listeners with higher ratings have demonstrated their effectiveness across many sessions. This doesn't mean new listeners aren't good — but if you want reliability, a listener with 50+ sessions and a 4.5+ rating is a strong choice.
 
-Consider session type. If privacy is paramount, text chat is ideal. If you want the warmth of a real voice, choose voice call. Both are fully supported on LeanOn.
+Consider session type. If privacy is paramount, text chat is ideal. If you want the warmth of a real voice, choose voice call. Both are fully supported on How Was Your Day.
 
 Start with the free 5-minute trial. This is the best way to assess fit. In five minutes, you'll have a good sense of whether this listener's style works for you. There is no obligation to continue if it doesn't feel right.
 
@@ -196,11 +196,11 @@ Unlike therapy, peer counselling does not involve clinical diagnosis, evidence-b
 
 Research supports the effectiveness of peer counselling for a range of challenges including loneliness, anxiety, depression, substance recovery, grief, chronic illness adjustment, and transitions like job loss or relationship breakdown. Studies have found that peer counselling can be as effective as professional therapy for mild to moderate emotional difficulties — and significantly more accessible, affordable, and destigmatised.
 
-In India, where professional mental health services are chronically underprovided and heavily stigmatised, peer counselling fills a critical gap. Estimates suggest that India has fewer than 1 psychiatrist per 100,000 people. Against this backdrop, peer support — including platforms like LeanOn — represents a scalable, culturally appropriate way to extend meaningful support to millions of people who would otherwise receive none.
+In India, where professional mental health services are chronically underprovided and heavily stigmatised, peer counselling fills a critical gap. Estimates suggest that India has fewer than 1 psychiatrist per 100,000 people. Against this backdrop, peer support — including platforms like How Was Your Day — represents a scalable, culturally appropriate way to extend meaningful support to millions of people who would otherwise receive none.
 
-LeanOn peer listeners are not counsellors in the clinical sense. They do not use evidence-based protocols or provide diagnoses. But they offer something equally valuable: the authentic understanding that comes from lived experience, in a format that is immediately accessible, deeply private, and genuinely affordable.
+How Was Your Day peer listeners are not counsellors in the clinical sense. They do not use evidence-based protocols or provide diagnoses. But they offer something equally valuable: the authentic understanding that comes from lived experience, in a format that is immediately accessible, deeply private, and genuinely affordable.
 
-For most people who come to LeanOn, the goal is not to be counselled. It is to be heard. And that is something peer support delivers exceptionally well.`,
+For most people who come to How Was Your Day, the goal is not to be counselled. It is to be heard. And that is something peer support delivers exceptionally well.`,
   },
   {
     slug: 'coping-with-breakup',
@@ -214,7 +214,7 @@ What actually helps? Feeling the feelings, not suppressing them. Crying is not p
 
 What doesn't help: immediately dating again to numb the pain (pain deferred, not resolved), catastrophising about never finding love again, or staying connected through social media monitoring. The brain needs a period of reduced exposure to begin detaching from the neurological bond.
 
-Talking about it matters. Many people in India find that their support network is limited for breakup grief: friends get tired of the same conversation, family may be judgmental, and the culture discourages public displays of romantic pain. A LeanOn listener who has been through their own breakup brings something invaluable: the experience of having survived it and found themselves on the other side.
+Talking about it matters. Many people in India find that their support network is limited for breakup grief: friends get tired of the same conversation, family may be judgmental, and the culture discourages public displays of romantic pain. A How Was Your Day listener who has been through their own breakup brings something invaluable: the experience of having survived it and found themselves on the other side.
 
 You will not always feel this way. But you don't have to go through the worst of it alone.`,
   },
@@ -232,7 +232,7 @@ Research on remote work loneliness shows consistently elevated rates of loneline
 
 What helps? Intentional connection is the key phrase. Unlike the incidental connection of the physical office, remote connection must be deliberately created. This means: scheduling regular video calls that are explicitly social (not just work-focused), finding communities (clubs, sports, interest groups) that provide in-person connection outside work, creating a clear physical and temporal boundary between work and non-work, and being honest about loneliness — which is the first step to addressing it.
 
-For many people working remotely in India, LeanOn offers an accessible form of human connection during the day: a real conversation with someone who understands. It doesn't replace the social structures of the office, but it provides meaningful human contact when it's needed most.`,
+For many people working remotely in India, How Was Your Day offers an accessible form of human connection during the day: a real conversation with someone who understands. It doesn't replace the social structures of the office, but it provides meaningful human contact when it's needed most.`,
   },
   {
     slug: 'loneliness-in-joint-families',
@@ -246,7 +246,7 @@ Younger members of joint families — particularly women who have married into h
 
 The privacy constraints of joint family life also affect help-seeking. You cannot have a difficult phone call without being heard. You cannot show that you are struggling without it becoming family news. The very density of the joint family — its apparent generosity — can make genuine emotional support harder to access.
 
-LeanOn was designed with this reality in mind. Text-first, completely private, with no appointment, requiring only a phone — it provides a space where someone in a joint family can have an honest conversation about how they are actually feeling, without the consequences that such honesty might carry within the family system.
+How Was Your Day was designed with this reality in mind. Text-first, completely private, with no appointment, requiring only a phone — it provides a space where someone in a joint family can have an honest conversation about how they are actually feeling, without the consequences that such honesty might carry within the family system.
 
 You are not alone in feeling alone inside your family.`,
   },
@@ -262,7 +262,7 @@ The physiological impact of chronic exam stress is real. Sustained high cortisol
 
 What genuinely helps? Adequate sleep is non-negotiable — research suggests that sleep consolidates learning more effectively than additional hours of study. Regular physical movement, even short walks, reduces cortisol and improves cognitive performance. Study breaks are not a luxury: they are neurologically essential. And emotional processing — talking about the pressure, the fear, the loneliness of preparation — matters more than most students allow themselves to acknowledge.
 
-Many students in India who use LeanOn do so during exam seasons, seeking a space to talk about the pressure they are under without burdening their family (who are often deeply invested in the outcome) or their peers (who are in the same competitive situation). A listener who has been through their own exam experience brings genuine understanding — and the reminder that you are more than your results.`,
+Many students in India who use How Was Your Day do so during exam seasons, seeking a space to talk about the pressure they are under without burdening their family (who are often deeply invested in the outcome) or their peers (who are in the same competitive situation). A listener who has been through their own exam experience brings genuine understanding — and the reminder that you are more than your results.`,
   },
   {
     slug: 'career-confusion-in-your-20s',
@@ -276,7 +276,7 @@ What is actually helpful? First, distinguishing between what you want (often unc
 
 Third — and this is rarely said explicitly — giving yourself permission to not have it figured out. Most people over 30 will tell you that their career path was not a coherent plan but a series of semi-random opportunities, accidents, and course-corrections. The 20s are for experimentation, not certainty.
 
-For many young Indians, career confusion is compounded by the absence of honest conversations about it. Family pressure to pursue conventional paths, peer comparison on social media, and the cultural stigma of "wasting" your education make it hard to admit confusion. LeanOn peer listeners — many of whom have navigated their own career pivots and confusion — provide a space for those honest conversations.`,
+For many young Indians, career confusion is compounded by the absence of honest conversations about it. Family pressure to pursue conventional paths, peer comparison on social media, and the cultural stigma of "wasting" your education make it hard to admit confusion. How Was Your Day peer listeners — many of whom have navigated their own career pivots and confusion — provide a space for those honest conversations.`,
   },
   {
     slug: 'midnight-anxiety',
@@ -292,7 +292,7 @@ What doesn't help: lying in bed fighting the anxiety. The effort of trying to sl
 
 What actually helps: getting up briefly when anxiety is severe, rather than staying in bed fighting it. Doing something calming — a brief walk, reading something genuinely absorbing, gentle stretching — and returning to bed when sleepiness returns. Progressive muscle relaxation and controlled breathing (4-7-8 breathing or box breathing) activate the parasympathetic nervous system and physiologically counteract the stress response.
 
-For persistent midnight anxiety, talking about what is driving it — in the daytime, when you have more cognitive resources — is the most effective approach. Many LeanOn listeners are available late at night for exactly these moments. Sometimes the most helpful thing is simply not being alone in the 2 AM quiet.`,
+For persistent midnight anxiety, talking about what is driving it — in the daytime, when you have more cognitive resources — is the most effective approach. Many How Was Your Day listeners are available late at night for exactly these moments. Sometimes the most helpful thing is simply not being alone in the 2 AM quiet.`,
   },
   {
     slug: 'digital-detox-mental-health',
@@ -308,7 +308,7 @@ A digital detox — a structured period of reduced or eliminated screen use — 
 
 Practical approaches to digital wellbeing: turn off non-essential notifications, create phone-free zones in your home (particularly the bedroom), replace passive scrolling with intentional connection (call someone instead of liking their post), and notice how you feel after different types of screen time. Use that information to make choices that serve your actual wellbeing.
 
-LeanOn is designed to facilitate genuine human connection — the kind that benefits mental health — rather than passive consumption. A 15-minute conversation with a peer listener produces something qualitatively different from 15 minutes of scrolling.`,
+How Was Your Day is designed to facilitate genuine human connection — the kind that benefits mental health — rather than passive consumption. A 15-minute conversation with a peer listener produces something qualitatively different from 15 minutes of scrolling.`,
   },
   {
     slug: 'feeling-unheard',
@@ -322,7 +322,7 @@ Several specific behaviors produce the experience of being unheard. The immediat
 
 The experience of feeling chronically unheard has real psychological consequences. It reinforces the belief that your inner world is not worth sharing — that you should keep things to yourself. Over time, this can produce a kind of emotional closure that makes genuine connection increasingly hard.
 
-Finding someone who genuinely listens — who is fully present, who doesn't rush to fix or minimize, who is interested in understanding your experience rather than managing it — can be transformative. This is what LeanOn peer listeners are chosen and motivated to provide. Many seekers report that a session with a LeanOn listener was the first time they had ever felt truly heard.`,
+Finding someone who genuinely listens — who is fully present, who doesn't rush to fix or minimize, who is interested in understanding your experience rather than managing it — can be transformative. This is what How Was Your Day peer listeners are chosen and motivated to provide. Many seekers report that a session with a How Was Your Day listener was the first time they had ever felt truly heard.`,
   },
   {
     slug: 'emotional-intelligence',
@@ -336,7 +336,7 @@ High EQ is not about always feeling good or suppressing negative emotions. It is
 
 How to develop emotional intelligence: Start with awareness. Keep an emotion journal — note what you feel throughout the day, what triggered it, how intense it was. This builds the self-awareness that is the foundation of EQ. Expand your emotional vocabulary. Name your emotions with more specificity than "bad" or "good". Practice pausing before reacting in emotionally charged situations — the gap between stimulus and response is where emotional intelligence operates. Seek feedback on how your emotional expressions land with others.
 
-Conversations with LeanOn peer listeners naturally develop emotional intelligence: the practice of articulating your internal experience, having it reflected back, and gaining a new perspective on your emotional patterns is exactly the kind of experience that builds EQ over time.`,
+Conversations with How Was Your Day peer listeners naturally develop emotional intelligence: the practice of articulating your internal experience, having it reflected back, and gaining a new perspective on your emotional patterns is exactly the kind of experience that builds EQ over time.`,
   },
   {
     slug: 'how-to-be-vulnerable',
@@ -352,7 +352,7 @@ How to practice vulnerability: Start small. Share something that is true and sli
 
 The other crucial element: vulnerability is not oversharing. It is not dumping your emotional experience on others regardless of context or relationship. It is the intentional, courageous act of showing your real self to someone who has the capacity and care to receive it.
 
-LeanOn peer listeners provide a uniquely safe container for vulnerability practice: an anonymous space, a person with no existing relationship with you and no stakes in the outcome, and someone who is specifically there to receive what you bring. For many seekers, a LeanOn session is where they first practice saying the thing they have never been able to say.`,
+How Was Your Day peer listeners provide a uniquely safe container for vulnerability practice: an anonymous space, a person with no existing relationship with you and no stakes in the outcome, and someone who is specifically there to receive what you bring. For many seekers, a How Was Your Day session is where they first practice saying the thing they have never been able to say.`,
   },
   {
     slug: 'asking-for-help',
@@ -368,7 +368,7 @@ The act of asking also has a significant cognitive benefit: it moves the problem
 
 How to ask for help: be specific about what you need. "I need someone to listen without trying to fix it" is a clear, actionable request that makes it easy for others to help effectively. Be honest about your state: "I'm really struggling with this" signals that this is not casual conversation but a genuine need. And choose the right person — someone who has shown that they can hold difficult things without judgment.
 
-If the people in your life feel like the wrong choice, LeanOn exists for exactly this reason. Sometimes the safest place to practice asking for help is somewhere the stakes feel lower.`,
+If the people in your life feel like the wrong choice, How Was Your Day exists for exactly this reason. Sometimes the safest place to practice asking for help is somewhere the stakes feel lower.`,
   },
   {
     slug: 'self-compassion',
@@ -384,7 +384,7 @@ In India, where self-criticism is often framed as a virtue ("you need to be hard
 
 The practice of self-compassion: When you notice self-criticism arising, pause. Ask: if a good friend told me what I'm telling myself, what would I say to them? Apply that same response to yourself. Notice the resistance — that is where the work is.
 
-Many seekers find that LeanOn sessions help develop self-compassion. Hearing your own experience reflected back by someone who responds with warmth and understanding — rather than judgment — can begin to shift the internal narrative.`,
+Many seekers find that How Was Your Day sessions help develop self-compassion. Hearing your own experience reflected back by someone who responds with warmth and understanding — rather than judgment — can begin to shift the internal narrative.`,
   },
   {
     slug: 'active-vs-passive-listening',
@@ -400,7 +400,7 @@ Passive listening responds. Active listening receives.
 
 The reason this distinction matters practically: most people in our lives are passive listeners, not because they don't care, but because genuine active listening is cognitively demanding and requires real practice. When you find someone who actively listens — truly attends to your experience rather than waiting for their turn to speak — the experience can be startling in its depth.
 
-LeanOn peer listeners are specifically screened for active listening. It is the foundation of everything they do.`,
+How Was Your Day peer listeners are specifically screened for active listening. It is the foundation of everything they do.`,
   },
   {
     slug: 'building-emotional-resilience',
@@ -414,7 +414,7 @@ What resilience is not: it is not the absence of pain, the suppression of emotio
 
 How to build resilience: build relationships before you need them. A network of supportive connections is the most reliable predictor of resilience, and it takes time to build. Practice emotional regulation — develop the habit of naming and processing emotions rather than avoiding or ruminating. Cultivate self-compassion — the ability to be kind to yourself when you are struggling is one of the most powerful resilience resources. Seek meaning in difficulty — not toxic positivity ("everything happens for a reason") but honest meaning-making: "What have I learned? What am I capable of that I didn't know before?"
 
-Talking to a peer listener on LeanOn — someone who has navigated their own adversity and found resilience — can be a genuinely powerful contribution to your own resilience journey.`,
+Talking to a peer listener on How Was Your Day — someone who has navigated their own adversity and found resilience — can be a genuinely powerful contribution to your own resilience journey.`,
   },
   {
     slug: 'loneliness-in-old-age-india',
@@ -430,7 +430,7 @@ In India, the elderly face unique barriers to addressing loneliness: cultural no
 
 What helps? Regular, meaningful social contact — not just proximity, but conversation with genuine depth. Intergenerational programs. Community centers and senior groups where meaningful activity and social connection occur together.
 
-For elderly people who are comfortable with technology, LeanOn provides accessible human connection — available from home, requiring only a phone, in multiple Indian languages. A peer listener who understands the experience of aging, loss, and the particular loneliness of this life stage can provide something deeply valuable.
+For elderly people who are comfortable with technology, How Was Your Day provides accessible human connection — available from home, requiring only a phone, in multiple Indian languages. A peer listener who understands the experience of aging, loss, and the particular loneliness of this life stage can provide something deeply valuable.
 
 The loneliness of India's elderly is a public health crisis we are only beginning to name.`,
   },
@@ -448,7 +448,7 @@ Research shows that men are significantly more likely than women to resort to ha
 
 What breaks the cycle? It starts with permission — the cultural permission to admit that you are struggling, to need connection, to ask for support. This is where the stigma does its most damage: by convincing men that the need itself is the problem.
 
-Many men come to LeanOn precisely because it offers something rare: a completely private space to say what they actually feel, without the social cost that would come with admitting the same thing to people in their life. The anonymity is the point.`,
+Many men come to How Was Your Day precisely because it offers something rare: a completely private space to say what they actually feel, without the social cost that would come with admitting the same thing to people in their life. The anonymity is the point.`,
   },
   {
     slug: 'expat-loneliness-india',
@@ -464,7 +464,7 @@ For Indians abroad, the loneliness is compounded by distance from family, the pr
 
 What helps? Building community intentionally — finding groups (cultural, interest-based, professional) that provide regular contact. Staying connected with home without becoming trapped in comparison. And having honest conversations about the experience of displacement — not performing adjustment for the benefit of those who supported your move.
 
-LeanOn peer listeners who have navigated their own experience of migration and expat life can provide something uniquely valuable: the understanding that comes from having been exactly where you are.`,
+How Was Your Day peer listeners who have navigated their own experience of migration and expat life can provide something uniquely valuable: the understanding that comes from having been exactly where you are.`,
   },
   {
     slug: 'midnight-crisis-support',
@@ -480,7 +480,7 @@ Name what's happening. Try to articulate, even just to yourself, what you are ex
 
 Move your body. Get out of bed. Walk around your room. Splash cold water on your face. Physical movement disrupts the mental loop and activates the body in ways that can reduce panic.
 
-Reach out. Text someone even if you don't expect an immediate reply. Writing the message itself has value. And if you need someone right now — someone who may be awake and ready to listen — LeanOn peer listeners go online at different hours, often late at night.
+Reach out. Text someone even if you don't expect an immediate reply. Writing the message itself has value. And if you need someone right now — someone who may be awake and ready to listen — How Was Your Day peer listeners go online at different hours, often late at night.
 
 Breathe deliberately. Box breathing (4 counts in, 4 hold, 4 out, 4 hold) activates the parasympathetic nervous system and physiologically reduces the stress response within minutes.
 

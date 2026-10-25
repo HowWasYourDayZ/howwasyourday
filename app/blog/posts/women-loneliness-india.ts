@@ -62,21 +62,21 @@ export const post = {
 
 <p>When a woman talks to another woman who has been through a similar transition — who has felt the grief of leaving her own family after marriage, who has navigated the invisible load, who knows what it is to be at the centre of a family and somehow invisible within it — something different happens than when she talks to someone who has only ever observed this from outside. She does not have to explain the basic premises. She does not have to justify why it is hard. She is simply understood.</p>
 
-<p>This is the core of what <strong>peer support women</strong> on platforms like <strong>LeanOn</strong> makes possible. Not a therapist analysing your experience. Not a friend who means well but does not quite get it. A peer — a woman who has been there, who has come through, who is chosen for their ability to listen with genuine understanding and without judgment.</p>
+<p>This is the core of what <strong>peer support women</strong> on platforms like <strong>How Was Your Day</strong> makes possible. Not a therapist analysing your experience. Not a friend who means well but does not quite get it. A peer — a woman who has been there, who has come through, who is chosen for their ability to listen with genuine understanding and without judgment.</p>
 
-<p>The <a href="/support/loneliness">loneliness</a> and <a href="/support/relationship-stress">relationship stress</a> that so many Indian women carry quietly have somewhere to go on LeanOn. And having somewhere to put it — having someone who truly receives it — changes something. Not the circumstances, not immediately. But the experience of carrying it alone shifts. And that shift, for many women, is where recovery begins.</p>
+<p>The <a href="/support/loneliness">loneliness</a> and <a href="/support/relationship-stress">relationship stress</a> that so many Indian women carry quietly have somewhere to go on How Was Your Day. And having somewhere to put it — having someone who truly receives it — changes something. Not the circumstances, not immediately. But the experience of carrying it alone shifts. And that shift, for many women, is where recovery begins.</p>
 
-<h2>Finding Your People on LeanOn</h2>
+<h2>Finding Your People on How Was Your Day</h2>
 
 <p>You do not have to keep carrying this alone. The loneliness you feel — real, specific, and valid — does not have to be permanent.</p>
 
 <p>What helps is connection that actually meets you where you are. Not advice about how to manage better. Not pressure to be grateful for what you have. Not the performance of being okay. Just someone who is genuinely present with your experience, who can hold what you are carrying alongside you without flinching or redirecting.</p>
 
-<p>That is what <strong>emotional support women India</strong> looks like when it works. And it is available to you on LeanOn.</p>
+<p>That is what <strong>emotional support women India</strong> looks like when it works. And it is available to you on How Was Your Day.</p>
 
-<p>You can <a href="/browse">browse peer supporters on LeanOn</a> — women who have navigated loneliness, marriage transitions, invisible load, career pressure, and the particular texture of Indian women&apos;s lives — and find someone who resonates. You can <a href="/auth">create an account</a> and begin a conversation that is entirely private, entirely yours, entirely free from the family system that may be part of what you need space from.</p>
+<p>You can <a href="/browse">browse peer supporters on How Was Your Day</a> — women who have navigated loneliness, marriage transitions, invisible load, career pressure, and the particular texture of Indian women&apos;s lives — and find someone who resonates. You can <a href="/auth">create an account</a> and begin a conversation that is entirely private, entirely yours, entirely free from the family system that may be part of what you need space from.</p>
 
-<p>The word &quot;<strong>leanon</strong>&quot; means something specific: to allow your weight to rest on someone else, temporarily, while you find your footing. To stop holding everything up alone for a moment. To let someone be present with you in the difficulty rather than managing through it in isolation.</p>
+<p>The word &quot;<strong>howwasyourday</strong>&quot; means something specific: to allow your weight to rest on someone else, temporarily, while you find your footing. To stop holding everything up alone for a moment. To let someone be present with you in the difficulty rather than managing through it in isolation.</p>
 
 <p>You have spent a long time holding things up. You are allowed to lean. And there are people here who genuinely want to help you carry it — not to fix it, not to judge it, but to be present with it alongside you. That presence is what turns loneliness into something else. And it is closer than you think.</p>
   `.trim(),

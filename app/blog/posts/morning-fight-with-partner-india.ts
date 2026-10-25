@@ -1,7 +1,7 @@
 export const post = {
   slug: 'morning-fight-with-partner-india',
   title: 'Morning Fight With Your Partner — Why It Ruins the Whole Day (And What Helps)',
-  author: 'LeanOn Team',
+  author: 'How Was Your Day Team',
   date: '2026-09-12',
   readTime: '5 min read',
   description: "A morning fight doesn't just disappear. Here's why it stays with you all day — and the one thing that actually helps before the day gets going.",
@@ -10,7 +10,7 @@ export const post = {
   content: `
 <p>You had the fight before 8am. Maybe it started over something small &mdash; something said over tea, a disagreement about the kids, something that has been building for weeks and finally came out before one of you had to leave. By 9am you are sitting at your desk, the conversation is running on loop in your head, and you are theoretically supposed to be working.</p>
 
-<p>The morning fight is one of the most common things that brings people to LeanOn. And there is a reason it is particularly hard to shake.</p>
+<p>The morning fight is one of the most common things that brings people to How Was Your Day. And there is a reason it is particularly hard to shake.</p>
 
 <h2>Why the Morning Fight Is Different</h2>
 
@@ -44,7 +44,7 @@ export const post = {
 
 <p>What is missing is a clean, neutral space to say what happened and have it witnessed. Not to get advice. Not to get validation. Not to build a case. Just to say it to someone who is not inside the story.</p>
 
-<p>That is what a 15-minute session on LeanOn does. You say what happened. The listener receives it &mdash; reflects it back, confirms they understand, creates space for more if needed. They do not advise, take sides, or tell you what you should do. The pressure releases. The loop quiets. You can show up for the rest of the day from a less activated state.</p>
+<p>That is what a 15-minute session on How Was Your Day does. You say what happened. The listener receives it &mdash; reflects it back, confirms they understand, creates space for more if needed. They do not advise, take sides, or tell you what you should do. The pressure releases. The loop quiets. You can show up for the rest of the day from a less activated state.</p>
 
 <p>You can do this during your commute. In fifteen minutes at your desk before the inbox. During your first coffee. The session fits into the natural rhythm of the morning &mdash; it does not require a special block of time or a long afternoon.</p>
 

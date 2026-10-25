@@ -1,10 +1,10 @@
-# Builds the LeanOn Android app (mobile/ — Capacitor shell around www.leanon.app
+# Builds the How Was Your Day Android app (mobile/ — Capacitor shell around www.howwasyourday.live
 # with native call-style request alerts). See docs/ANDROID_APP.md.
 #   - Every push that changes mobile/**: a DEBUG APK (compile check + a test
-#     build you can install on a phone). Artifact: leanon-debug-apk.
+#     build you can install on a phone). Artifact: howwasyourday-debug-apk.
 #   - Manually (Actions → "Build Android app" → Run workflow, release = true):
 #     a SIGNED release bundle (.aab) for Google Play. Needs the repository
-#     secrets listed in docs/ANDROID_APP.md. Artifact: leanon-release-aab.
+#     secrets listed in docs/ANDROID_APP.md. Artifact: howwasyourday-release-aab.
 name: Build Android app
 
 on:
@@ -59,7 +59,7 @@ jobs:
         run: chmod +x gradlew && ./gradlew --no-daemon assembleDebug
       - uses: actions/upload-artifact@v4
         with:
-          name: leanon-debug-apk
+          name: howwasyourday-debug-apk
           path: mobile/android/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 14
 
@@ -68,20 +68,20 @@ jobs:
         working-directory: mobile/android
         env:
           KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          LEANON_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          LEANON_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          LEANON_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-          LEANON_VERSION_CODE: ${{ inputs.version_code }}
-          LEANON_VERSION_NAME: ${{ inputs.version_name }}
+          HOWWASYOURDAY_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          HOWWASYOURDAY_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          HOWWASYOURDAY_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          HOWWASYOURDAY_VERSION_CODE: ${{ inputs.version_code }}
+          HOWWASYOURDAY_VERSION_NAME: ${{ inputs.version_name }}
         run: |
           if [ -z "$KEYSTORE_B64" ]; then echo "::error::ANDROID_KEYSTORE_BASE64 secret missing"; exit 1; fi
           echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
-          export LEANON_KEYSTORE_FILE="$RUNNER_TEMP/upload.jks"
+          export HOWWASYOURDAY_KEYSTORE_FILE="$RUNNER_TEMP/upload.jks"
           ./gradlew --no-daemon bundleRelease
           rm -f "$RUNNER_TEMP/upload.jks"
       - uses: actions/upload-artifact@v4
         if: github.event_name == 'workflow_dispatch' && inputs.release
         with:
-          name: leanon-release-aab
+          name: howwasyourday-release-aab
           path: mobile/android/app/build/outputs/bundle/release/app-release.aab
           retention-days: 30

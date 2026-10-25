@@ -4,15 +4,15 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Long-Distance Relationship Loneliness — Talk It Through | LeanOn',
+  title: 'Long-Distance Relationship Loneliness — Talk It Through | How Was Your Day',
   description: 'Missing your partner across cities or time zones? Talk to a peer listener anonymously. No appointment. Empathetic support for LDR loneliness.',
-  alternates: { canonical: 'https://www.leanon.app/support/long-distance-relationship', languages: { 'en-IN': 'https://www.leanon.app/support/long-distance-relationship' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/long-distance-relationship', languages: { 'en-IN': 'https://www.howwasyourday.live/support/long-distance-relationship' } },
   keywords: 'long distance relationship loneliness India, LDR loneliness, missing partner abroad, long distance relationship stress, talk to someone long distance relationship',
   openGraph: {
-    title: 'Long-Distance Relationship Loneliness — Talk It Through | LeanOn',
+    title: 'Long-Distance Relationship Loneliness — Talk It Through | How Was Your Day',
     description: 'Missing your partner across cities or time zones? Talk to a peer listener anonymously. No appointment. Empathetic support for LDR loneliness.',
-    url: 'https://www.leanon.app/support/long-distance-relationship',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/long-distance-relationship',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -55,10 +55,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn peer support cost?',
+      name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.',
       },
     },
   ],
@@ -68,9 +68,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Long-Distance Relationship', item: 'https://www.leanon.app/support/long-distance-relationship' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Long-Distance Relationship', item: 'https://www.howwasyourday.live/support/long-distance-relationship' },
   ],
 }
 
@@ -131,7 +131,7 @@ export default function LongDistanceRelationshipSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -150,7 +150,7 @@ export default function LongDistanceRelationshipSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Long-Distance Relationships</p>
           <h1>Loving Someone Far Away Can Still Feel <em>Lonely</em></h1>
-          <p className="lead">Whether your partner moved abroad for work or you are separated by cities for a job, the ache of a long-distance relationship is real — even when the relationship itself is solid. LeanOn connects you with peer listeners who have lived through their own long-distance stretches and understand this specific kind of loneliness.</p>
+          <p className="lead">Whether your partner moved abroad for work or you are separated by cities for a job, the ache of a long-distance relationship is real — even when the relationship itself is solid. How Was Your Day connects you with peer listeners who have lived through their own long-distance stretches and understand this specific kind of loneliness.</p>
         </div>
 
         {/* Understanding */}
@@ -175,22 +175,22 @@ export default function LongDistanceRelationshipSupportPage() {
           <p>It is rarely the anniversaries or the video calls on festivals that hurt the most. It is wanting to tell them about something small right when it happens, or wishing they were there for an ordinary Tuesday evening — the small, unremarkable togetherness that distance quietly takes away.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps</h2>
-          <p>LeanOn is not couples counselling and we do not offer relationship advice. We are peer support for how you are feeling — a space that is entirely yours, separate from the relationship itself.</p>
+          <h2>How the app Helps</h2>
+          <p>How Was Your Day is not couples counselling and we do not offer relationship advice. We are peer support for how you are feeling — a space that is entirely yours, separate from the relationship itself.</p>
 
           <h3>Somewhere to Put What You Don&apos;t Want on Their Plate</h3>
-          <p>When contact time with your partner is limited, a LeanOn listener gives you somewhere to process the hard parts of your day without it costing your partner anything. That way, the time you do get together can stay about connection, not damage control.</p>
+          <p>When contact time with your partner is limited, a How Was Your Day listener gives you somewhere to process the hard parts of your day without it costing your partner anything. That way, the time you do get together can stay about connection, not damage control.</p>
 
           <h3>Listeners Who Have Lived This Themselves</h3>
           <p>Our listeners have navigated their own long-distance relationships — partners abroad, cities apart, long engagements across time zones. They bring genuine, empathetic understanding of this specific texture of loneliness, not generic relationship talk.</p>
 
           <h3>Available Regardless of Your Time Zone</h3>
-          <p>Whether you are up at odd hours waiting for your partner&apos;s call, or it is a quiet weekday afternoon while they sleep on the other side of the world, LeanOn listeners go online at different hours, so you can often find someone when the loneliness actually shows up.</p>
+          <p>Whether you are up at odd hours waiting for your partner&apos;s call, or it is a quiet weekday afternoon while they sleep on the other side of the world, How Was Your Day listeners go online at different hours, so you can often find someone when the loneliness actually shows up.</p>
 
           <h3>Anonymous and Separate From Your Shared World</h3>
-          <p>A LeanOn conversation is completely separate from your partner&apos;s world and your shared social circle. You can be fully honest about how you feel without it reaching your partner, your families, or anyone you both know.</p>
+          <p>A How Was Your Day conversation is completely separate from your partner&apos;s world and your shared social circle. You can be fully honest about how you feel without it reaching your partner, your families, or anyone you both know.</p>
         </div>
 
         {/* Listener cards */}
@@ -231,7 +231,7 @@ export default function LongDistanceRelationshipSupportPage() {
           <p>Talk to a peer listener who has been through their own long-distance relationship and offers empathetic, judgment-free support. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands distance — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -255,15 +255,15 @@ export default function LongDistanceRelationshipSupportPage() {
             <div className="faq-a">When contact time is limited and precious, many people hold back a hard day so it does not eat into the little time they get, or because the timing never lines up when it is actually happening. A peer listener gives you somewhere to put that weight down without it costing your partner anything, so what limited time you do get together can stay lighter.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn peer support cost?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.</div>
+            <div className="faq-q">How much does How Was Your Day peer support cost?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Long-distance loneliness often overlaps with other emotional challenges. Explore more peer support on LeanOn:</p>
+          <p>Long-distance loneliness often overlaps with other emotional challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/relationship-stress" className="related-link">Relationship Stress</a>
             <a href="/support/marriage-loneliness" className="related-link">Marriage Loneliness</a>

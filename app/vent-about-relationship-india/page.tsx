@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Vent About Your Relationship — Say It to Someone Real | LeanOn',
+  title: 'Vent About Your Relationship — Say It to Someone Real | How Was Your Day',
   description: 'Need to vent about your relationship — not get advice, just say it? Real peer listener in India, private, no appointment. 15 minutes from ₹160.',
   keywords: [
     'need to vent about relationship india',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'relationship vent session india',
     'say it out loud relationship india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/vent-about-relationship-india', languages: { 'en-IN': 'https://www.leanon.app/vent-about-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/vent-about-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/vent-about-relationship-india' } },
   openGraph: {
-    title: 'Vent About Your Relationship — Say It to Someone Real | LeanOn',
+    title: 'Vent About Your Relationship — Say It to Someone Real | How Was Your Day',
     description: 'Need to vent about your relationship — not get advice, just say it? Real peer listener in India, private, no appointment. 15 minutes from ₹160.',
-    url: 'https://www.leanon.app/vent-about-relationship-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/vent-about-relationship-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Vent About Your Relationship' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Vent About Your Relationship' }],
   },
 }
 
@@ -38,7 +38,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will the listener give me advice about my relationship?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not unless you ask. Peer listeners on LeanOn are screened and expected to listen and reflect — not to advise, judge, or tell you what to do. If you open with "I just need to say this, I don\'t want advice," that is exactly what you will get. The default mode is receive and reflect, not fix and recommend.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Not unless you ask. Peer listeners on How Was Your Day are screened and expected to listen and reflect — not to advise, judge, or tell you what to do. If you open with "I just need to say this, I don\'t want advice," that is exactly what you will get. The default mode is receive and reflect, not fix and recommend.' },
     },
     {
       '@type': 'Question',
@@ -48,7 +48,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How long does a vent session take?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Most people find 15 minutes is enough to say what has been building up and feel the pressure reduce. LeanOn offers 15, 30, and 45 minute sessions. You do not need to fill a full hour. The 15-minute session is specifically for this — say it, feel lighter, get on with your day.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Most people find 15 minutes is enough to say what has been building up and feel the pressure reduce. How Was Your Day offers 15, 30, and 45 minute sessions. You do not need to fill a full hour. The 15-minute session is specifically for this — say it, feel lighter, get on with your day.' },
     },
     {
       '@type': 'Question',
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Vent About Your Relationship', item: 'https://www.leanon.app/vent-about-relationship-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Vent About Your Relationship', item: 'https://www.howwasyourday.live/vent-about-relationship-india' },
   ],
 }
 
@@ -115,7 +115,7 @@ export default function VentAboutRelationshipIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -145,7 +145,7 @@ export default function VentAboutRelationshipIndiaPage() {
 
         <div className="section">
           <h2>What People Vent About</h2>
-          <p>These are the kinds of things that bring people to LeanOn on a Tuesday morning or during a lunch break:</p>
+          <p>These are the kinds of things that bring people to How Was Your Day on a Tuesday morning or during a lunch break:</p>
           <ul>
             <li>&ldquo;He doesn&apos;t listen. I&apos;ve said the same thing ten times.&rdquo;</li>
             <li>&ldquo;She keeps bringing up the same thing. It never ends.&rdquo;</li>
@@ -161,7 +161,7 @@ export default function VentAboutRelationshipIndiaPage() {
           <h2>Why You Can&apos;t Vent to Your Usual People</h2>
           <p>Think about who you would normally call. Your closest friend &mdash; they know your partner, they have opinions, they will remember what you told them the next time they see you both. Your sister &mdash; family loyalty means she either takes your side too hard, or tries too hard to stay neutral. Either way, you are now managing her reaction on top of your own feelings.</p>
           <p>The people who are close enough to actually hear it are also the people who are inside the story. They have a stake in the outcome. They will form opinions about your partner that will not disappear even if the situation resolves. And you will carry the knowledge that you told them.</p>
-          <p>A peer listener on LeanOn has no connection to anyone in your life. No loyalty, no history, no stake. You can say exactly what happened and exactly how you feel about it &mdash; without editing, without managing their reaction, without it going anywhere.</p>
+          <p>A peer listener on How Was Your Day has no connection to anyone in your life. No loyalty, no history, no stake. You can say exactly what happened and exactly how you feel about it &mdash; without editing, without managing their reaction, without it going anywhere.</p>
         </div>
 
         <div className="section">

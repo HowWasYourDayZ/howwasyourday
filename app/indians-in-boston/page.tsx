@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Boston | Cambridge, Burlington | LeanOn',
+  title: 'Emotional Support for Indians in Boston | Cambridge, Burlington | How Was Your Day',
   description: 'Cambridge, Burlington, Lexington — Boston\'s Indian community is educated, driven, and often quietly overwhelmed. Talk to a peer listener in India who gets it.',
   keywords: ['indians in boston', 'cambridge indian community', 'boston indian mental health', 'desi support boston', 'indian loneliness boston', 'mit harvard indian support'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-boston' },
-  openGraph: { title: 'Emotional Support for Indians in Boston | Cambridge, Burlington | LeanOn', description: 'Cambridge, Burlington, Lexington — Boston\'s Indian community is educated, driven, and often quietly overwhelmed. Talk to a peer listener in India who gets it.', url: 'https://www.leanon.app/indians-in-boston', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-boston' },
+  openGraph: { title: 'Emotional Support for Indians in Boston | Cambridge, Burlington | How Was Your Day', description: 'Cambridge, Burlington, Lexington — Boston\'s Indian community is educated, driven, and often quietly overwhelmed. Talk to a peer listener in India who gets it.', url: 'https://www.howwasyourday.live/indians-in-boston', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Boston Indian academic and professional experience?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI experience — including the specific weight of Boston\'s Indian community: the academic pressure of Cambridge, the PhD and postdoc experience, the residency grind, the high-achieving culture that leaves little room to say "I\'m not okay".' } },
+  { '@type': 'Question', name: 'Do listeners understand the Boston Indian academic and professional experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the specific weight of Boston\'s Indian community: the academic pressure of Cambridge, the PhD and postdoc experience, the residency grind, the high-achieving culture that leaves little room to say "I\'m not okay".' } },
   { '@type': 'Question', name: 'When can I connect from Boston?', acceptedAnswer: { '@type': 'Answer', text: 'Boston (EST) is 10.5 hours behind IST. 8am Boston = 6:30pm India. Before your lab meeting or your morning clinic round, India is in the evening and listeners are available.' } },
   { '@type': 'Question', name: 'Is this confidential from my department or colleagues?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing reaches your supervisor, your research group, your hospital, or your Boston community.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Boston', item: 'https://www.leanon.app/indians-in-boston' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Boston', item: 'https://www.howwasyourday.live/indians-in-boston' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInBostonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Boston</span></nav>
         <div className="hero">

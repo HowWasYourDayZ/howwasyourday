@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 // Linked from the Google Play listing (Data safety → Delete account URL).
 // Must stay true to what app/api/account/route.ts scrubUserData() actually does.
 export const metadata: Metadata = {
-  title: 'Delete your LeanOn account',
-  description: 'How to delete your LeanOn account and what data is deleted or kept.',
-  alternates: { canonical: 'https://www.leanon.app/delete-account' },
+  title: 'Delete your How Was Your Day account',
+  description: 'How to delete your How Was Your Day account and what data is deleted or kept.',
+  alternates: { canonical: 'https://www.howwasyourday.live/delete-account' },
 }
 
 const S = `
@@ -31,18 +31,18 @@ export default function DeleteAccountPage() {
     <>
       <style>{S}</style>
       <div className="page">
-        <a href="/" className="back">← Back to LeanOn</a>
-        <h1>Delete your LeanOn account</h1>
-        <p className="updated">LeanOn (leanon.app, Android app &ldquo;LeanOn&rdquo;) · Last updated: October 2026</p>
+        <a href="/" className="back">← Back to How Was Your Day</a>
+        <h1>Delete your How Was Your Day account</h1>
+        <p className="updated">How Was Your Day (howwasyourday.live, Android app &ldquo;How Was Your Day&rdquo;) · Last updated: October 2026</p>
 
         <h2>Delete it in the app</h2>
         <ol className="steps">
-          <li>Open the LeanOn app or www.leanon.app and sign in with your phone number.</li>
+          <li>Open the How Was Your Day app or www.howwasyourday.live and sign in with your phone number.</li>
           <li>Tap <strong>Profile</strong>.</li>
           <li>Scroll down and tap <strong>Delete account</strong>.</li>
           <li>Type <strong>DELETE</strong> and confirm. Your account is deleted straight away and you are signed out on every device.</li>
         </ol>
-        <p>If you still have money in your LeanOn wallet, or a payout or refund on its way, the app asks you to withdraw or receive it first, so no money is lost. An account can&apos;t be deleted during a session.</p>
+        <p>If you still have money in your How Was Your Day wallet, or a payout or refund on its way, the app asks you to withdraw or receive it first, so no money is lost. An account can&apos;t be deleted during a session.</p>
 
         <h2>Can&apos;t sign in?</h2>
         <p>Send a deletion request through the <a href="/contact">contact form</a> with the phone number on your account. We delete the account within 30 days.</p>
@@ -62,7 +62,7 @@ export default function DeleteAccountPage() {
           <li><strong>Messages from past sessions and any safety reports</strong>, kept to investigate abuse and keep the community safe.</li>
           <li><strong>Your display name and a disabled marker of your phone number</strong>. These stay on the records above and are used only to stop removed accounts from re-registering and to prevent fraud. They are not shown to other users.</li>
         </ul>
-        <p>Your deleted account no longer appears anywhere on LeanOn. Read more in our <a href="/privacy">Privacy Policy</a>.</p>
+        <p>Your deleted account no longer appears anywhere on How Was Your Day. Read more in our <a href="/privacy">Privacy Policy</a>.</p>
       </div>
     </>
   )

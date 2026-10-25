@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Empathy India — Be Truly Heard, Not Just Listened To | LeanOn',
-  description: 'Empathy is more than listening. It\'s feeling understood. Find an empathetic peer on LeanOn — real people, real understanding, from ₹160.',
+  title: 'Empathy India — Be Truly Heard, Not Just Listened To | How Was Your Day',
+  description: 'Empathy is more than listening. It\'s feeling understood. Find an empathetic peer on How Was Your Day — real people, real understanding, from ₹160.',
   keywords: [
     'empathy india', 'empathy meaning india', 'what is empathy india',
     'empathic support india', 'empathy vs sympathy india', 'find empathetic person india',
     'lack of empathy partner india', 'empathy in relationships india',
     'empathetic listener india', 'emotional support empathy india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/empathy-india', languages: { 'en-IN': 'https://www.leanon.app/empathy-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/empathy-india', languages: { 'en-IN': 'https://www.howwasyourday.live/empathy-india' } },
   openGraph: {
-    title: 'Empathy India — Be Truly Heard, Not Just Listened To | LeanOn',
-    description: 'Empathy is more than listening. It\'s feeling understood. Find an empathetic peer on LeanOn — real people, real understanding, from ₹160.',
-    url: 'https://www.leanon.app/empathy-india',
-    siteName: 'LeanOn',
+    title: 'Empathy India — Be Truly Heard, Not Just Listened To | How Was Your Day',
+    description: 'Empathy is more than listening. It\'s feeling understood. Find an empathetic peer on How Was Your Day — real people, real understanding, from ₹160.',
+    url: 'https://www.howwasyourday.live/empathy-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Empathy India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Empathy India' }],
   },
 }
 
@@ -34,7 +34,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can empathy be learned?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Empathy has both an innate component (some people naturally find it easier) and a learned one. Active listening, perspective-taking exercises, and genuine curiosity about other people\'s inner lives all build empathic capacity over time. LeanOn listeners are specifically screened for these skills, which is why conversations with them feel different from most conversations you\'ve had.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Empathy has both an innate component (some people naturally find it easier) and a learned one. Active listening, perspective-taking exercises, and genuine curiosity about other people\'s inner lives all build empathic capacity over time. How Was Your Day listeners are specifically screened for these skills, which is why conversations with them feel different from most conversations you\'ve had.' },
     },
     {
       '@type': 'Question',
@@ -48,13 +48,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn cheaper than a therapist?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Significantly. A private therapist in India typically charges ₹1,500–5,000 per session. LeanOn peer sessions start at ₹160 for 15 minutes, and your first 5-minute session is free. LeanOn is not therapy — listeners are screened peers, not licensed professionals — but for the everyday need to be heard without judgment, it is accessible, immediate, and effective.' },
+      name: 'Is How Was Your Day cheaper than a therapist?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Significantly. A private therapist in India typically charges ₹1,500–5,000 per session. How Was Your Day peer sessions start at ₹160 for 15 minutes, and your first 5-minute session is free. How Was Your Day is not therapy — listeners are screened peers, not licensed professionals — but for the everyday need to be heard without judgment, it is accessible, immediate, and effective.' },
     },
     {
       '@type': 'Question',
       name: 'When do I most need empathy?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The moments when you most need empathy are the ones where you have already tried talking to people in your life and still feel unheard — after a fight, when you\'re overwhelmed by something you can\'t explain, when words won\'t come out right, when you feel like you\'re performing okay for everyone around you but collapsing inside. These are exactly the moments LeanOn is built for.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The moments when you most need empathy are the ones where you have already tried talking to people in your life and still feel unheard — after a fight, when you\'re overwhelmed by something you can\'t explain, when words won\'t come out right, when you feel like you\'re performing okay for everyone around you but collapsing inside. These are exactly the moments How Was Your Day is built for.' },
     },
   ],
 }
@@ -63,8 +63,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Empathy India', item: 'https://www.leanon.app/empathy-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Empathy India', item: 'https://www.howwasyourday.live/empathy-india' },
   ],
 }
 
@@ -118,7 +118,7 @@ export default function EmpathyIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -135,7 +135,7 @@ export default function EmpathyIndiaPage() {
         <div className="hero">
           <p className="badge">Empathy &middot; Peer Support &middot; India</p>
           <h1>Empathy isn&apos;t a word. It&apos;s a feeling. <em>You&apos;ll know it when you find it.</em></h1>
-          <p className="lead">You&apos;ve talked to people who listened but didn&apos;t really get it. Empathy is different &mdash; it&apos;s when someone feels with you, not just for you. That&apos;s what every LeanOn listener is screened and expected to offer.</p>
+          <p className="lead">You&apos;ve talked to people who listened but didn&apos;t really get it. Empathy is different &mdash; it&apos;s when someone feels with you, not just for you. That&apos;s what every How Was Your Day listener is screened and expected to offer.</p>
           <a href="/browse" className="cta-hero">Find an empathetic listener &rarr;</a>
         </div>
 
@@ -156,7 +156,7 @@ export default function EmpathyIndiaPage() {
           <h2>Why Empathy Is So Rare in the People Around Us</h2>
           <p>The people who love you are not withholding empathy because they don&apos;t care. They&apos;re withholding it because sitting with someone&apos;s pain, without trying to fix it or make it stop, is genuinely uncomfortable. Most people&apos;s instinct when someone they love is suffering is to make the suffering stop. Advice-giving is how they do that.</p>
           <p>There is also a cultural dimension in India. The culture broadly values practical action, hierarchical wisdom, and problem-solving. Sitting with someone and reflecting their feelings back without steering them towards a solution can feel passive, even unhelpful. This is not a moral failing &mdash; it is a different model of care.</p>
-          <p>The result is that most Indians grow up without ever experiencing what a truly empathetic conversation feels like. When they finally have one &mdash; which is often the first session on LeanOn &mdash; they describe it as something they didn&apos;t know existed.</p>
+          <p>The result is that most Indians grow up without ever experiencing what a truly empathetic conversation feels like. When they finally have one &mdash; which is often the first session on How Was Your Day &mdash; they describe it as something they didn&apos;t know existed.</p>
         </div>
 
         <div className="section">
@@ -167,8 +167,8 @@ export default function EmpathyIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What LeanOn Listeners Are Chosen For</h2>
-          <p>LeanOn listeners are screened, not clinically trained. Every application is reviewed for the skills that make empathy possible:</p>
+          <h2>What How Was Your Day Listeners Are Chosen For</h2>
+          <p>How Was Your Day listeners are screened, not clinically trained. Every application is reviewed for the skills that make empathy possible:</p>
           <ul>
             <li><strong>Active listening:</strong> Not planning the response while the other person is talking. Fully receiving what is being said before responding.</li>
             <li><strong>Reflecting back:</strong> Articulating what the speaker seems to be feeling, not just what they said. Checking the understanding.</li>
@@ -176,7 +176,7 @@ export default function EmpathyIndiaPage() {
             <li><strong>Genuine curiosity:</strong> Asking questions that invite depth rather than questions that confirm the listener&apos;s existing interpretation.</li>
             <li><strong>Holding uncertainty:</strong> Being comfortable with unresolved situations, with &ldquo;I don&apos;t know,&rdquo; with the space where solutions do not exist.</li>
           </ul>
-          <p>These skills are teachable. LeanOn listeners practise them specifically, which is why a conversation with a LeanOn listener often feels different from conversations with people who care about you but haven&apos;t been screened for this way.</p>
+          <p>These skills are teachable. How Was Your Day listeners practise them specifically, which is why a conversation with a How Was Your Day listener often feels different from conversations with people who care about you but haven&apos;t been screened for this way.</p>
         </div>
 
         <div className="section">

@@ -3,18 +3,18 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need Someone to Talk To in India? LeanOn — Real Humans',
-  description: 'Need someone to talk to in India? LeanOn connects you with real peer listeners who understand. Anonymous, affordable, no appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/need-someone-to-talk-to-india' },
+  title: 'Need Someone to Talk To in India? How Was Your Day — Real Humans',
+  description: 'Need someone to talk to in India? How Was Your Day connects you with real peer listeners who understand. Anonymous, affordable, no appointment needed.',
+  alternates: { canonical: 'https://www.howwasyourday.live/need-someone-to-talk-to-india' },
   keywords: ['need someone to talk to India', 'someone to talk to India', 'peer listener India'],
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Need Someone to Talk To in India? — LeanOn',
+  name: 'Need Someone to Talk To in India? — How Was Your Day',
   description: 'Real human peer support in India —.',
-  url: 'https://www.leanon.app/need-someone-to-talk-to-india',
+  url: 'https://www.howwasyourday.live/need-someone-to-talk-to-india',
 }
 
 const S = `
@@ -49,10 +49,10 @@ export default function NeedSomeoneToTalkToIndia() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{S}</style>
       <div className="page">
-        <a href="/" className="back">← LeanOn Home</a>
+        <a href="/" className="back">← How Was Your Day Home</a>
         <h1>Need <span>Someone to Talk To</span> in India?</h1>
         <p className="lead">
-          You&apos;re not alone — even if it feels that way right now. LeanOn connects you with real peer listeners in India who have been through what you&apos;re going through. No appointment needed.
+          You&apos;re not alone — even if it feels that way right now. How Was Your Day connects you with real peer listeners in India who have been through what you&apos;re going through. No appointment needed.
         </p>
 
         <div className="crisis-box">
@@ -62,12 +62,12 @@ export default function NeedSomeoneToTalkToIndia() {
         <div className="section">
           <h2>You deserve someone who truly understands</h2>
           <p>In India, it&apos;s often hard to find someone to talk to — really talk to. Family members may not understand or may judge you. Friends get tired of hearing about the same problems. Therapy feels too clinical or is simply too expensive. And at 2 AM when the feelings are worst, there&apos;s often no one available at all.</p>
-          <p>LeanOn changes this. Our peer listeners go online at different hours — and they genuinely understand. Not because they have a degree, but because they have lived through something similar.</p>
+          <p>How Was Your Day changes this. Our peer listeners go online at different hours — and they genuinely understand. Not because they have a degree, but because they have lived through something similar.</p>
         </div>
 
         <div className="section">
-          <h2>When do people reach out on LeanOn?</h2>
-          <p>There is no wrong time or wrong reason to need someone to talk to. People connect with LeanOn listeners:</p>
+          <h2>When do people reach out on How Was Your Day?</h2>
+          <p>There is no wrong time or wrong reason to need someone to talk to. People connect with How Was Your Day listeners:</p>
           <div className="times">
             {['Late at night', 'After a fight', 'During exam season', 'After job loss', 'When grieving', 'Work burnout', 'Loneliness', 'Breakup', '2 AM anxiety', 'Career crisis', 'Moving to new city', 'Just to vent'].map(t => (
               <span key={t} className="time-pill">{t}</span>
@@ -84,8 +84,8 @@ export default function NeedSomeoneToTalkToIndia() {
         </div>
 
         <div className="section">
-          <h2>What makes LeanOn different</h2>
-          <p>LeanOn listeners are not therapists — and that is often exactly why they are more helpful for day-to-day emotional struggles. They have lived through what you&apos;re going through. They are not constrained by clinical detachment. They are present, empathetic, and non-judgmental in a way that is hard to find elsewhere.</p>
+          <h2>What makes How Was Your Day different</h2>
+          <p>How Was Your Day listeners are not therapists — and that is often exactly why they are more helpful for day-to-day emotional struggles. They have lived through what you&apos;re going through. They are not constrained by clinical detachment. They are present, empathetic, and non-judgmental in a way that is hard to find elsewhere.</p>
           <p>The platform is designed for India: anonymous, text-first for privacy in joint homes, available in 12 Indian languages, and priced so that cost is never a barrier.</p>
         </div>
 

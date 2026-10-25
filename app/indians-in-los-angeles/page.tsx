@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Indians in Los Angeles | Peer Support for the Desi LA Community | LeanOn',
+  title: 'Indians in Los Angeles | Peer Support for the Desi LA Community | How Was Your Day',
   description: "LA's Indian community — Artesia, Cerritos, Culver City — is large but often isolated. Talk to someone who understands what it means to be Indian in LA.",
   keywords: ['indians in los angeles', 'indian community la', 'desi la', 'south asian la', 'indian in california', 'artesia indian community', 'cerritos indians'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-los-angeles' },
-  openGraph: { title: 'Indians in Los Angeles | Peer Support for the Desi LA Community | LeanOn', description: "LA's Indian community — Artesia, Cerritos, Culver City — is large but often isolated. Talk to someone who understands what it means to be Indian in LA.", url: 'https://www.leanon.app/indians-in-los-angeles', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-los-angeles' },
+  openGraph: { title: 'Indians in Los Angeles | Peer Support for the Desi LA Community | How Was Your Day', description: "LA's Indian community — Artesia, Cerritos, Culver City — is large but often isolated. Talk to someone who understands what it means to be Indian in LA.", url: 'https://www.howwasyourday.live/indians-in-los-angeles', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do LeanOn listeners understand what it means to be Indian in LA?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are based in India and understand the NRI experience broadly — including the specific dynamics of LA Indian life: the cultural mismatch of Indian values in a city built around reinvention, the Artesia and Cerritos community dynamics, the entertainment industry adjacent Indian experience, and the economic range within the LA Indian community.' } },
+  { '@type': 'Question', name: 'Do How Was Your Day listeners understand what it means to be Indian in LA?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience broadly — including the specific dynamics of LA Indian life: the cultural mismatch of Indian values in a city built around reinvention, the Artesia and Cerritos community dynamics, the entertainment industry adjacent Indian experience, and the economic range within the LA Indian community.' } },
   { '@type': 'Question', name: 'What time can I call from Los Angeles?', acceptedAnswer: { '@type': 'Answer', text: 'Los Angeles (PST) is 13.5 hours behind IST. 7am in LA = 8:30pm in India. Early mornings, before the commute, Indian listeners are in their evening and available. Weekend mornings also work well.' } },
-  { '@type': 'Question', name: 'Is it confidential from my community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. LeanOn uses phone number and first name only. Sessions are private and nothing is shared with your Artesia temple community, your Cerritos family network, or anyone else in your LA circle.' } },
+  { '@type': 'Question', name: 'Is it confidential from my community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. How Was Your Day uses phone number and first name only. Sessions are private and nothing is shared with your Artesia temple community, your Cerritos family network, or anyone else in your LA circle.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
-  { '@type': 'Question', name: 'I feel like I don\'t fully belong to either world — Indian or American. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common things LeanOn listeners hear from NRIs. The in-between feeling — too Indian for LA, too LA for India — is real, and listeners are screened and expected to hold that complexity without trying to resolve it or give you an answer.' } },
+  { '@type': 'Question', name: 'I feel like I don\'t fully belong to either world — Indian or American. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common things How Was Your Day listeners hear from NRIs. The in-between feeling — too Indian for LA, too LA for India — is real, and listeners are screened and expected to hold that complexity without trying to resolve it or give you an answer.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Los Angeles', item: 'https://www.leanon.app/indians-in-los-angeles' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Los Angeles', item: 'https://www.howwasyourday.live/indians-in-los-angeles' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function IndiansInLosAngelesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Los Angeles</span></nav>
         <div className="hero">
           <p className="badge">Indians in Los Angeles &middot; Artesia &middot; Cerritos &middot; South Bay</p>
           <h1>Little India in Artesia. <em>Big loneliness everywhere else.</em></h1>
           <p className="lead">Los Angeles has one of America&rsquo;s most culturally rich Indian communities — and one of its most isolating cities. From Little India in Artesia to Silicon Beach in Culver City, LA Indians navigate enormous cultural distance in a city that runs on reinvention. Talk to someone who understands what it really means to be Indian in LA. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>Artesia, Cerritos, Culver City: The LA Indian Landscape</h2>
           <p>Artesia&rsquo;s Pioneer Boulevard — Little India — is one of the most concentrated Indian commercial corridors in America. Cerritos has a large and established South Asian community. Torrance, Irvine, and the South Bay have growing Indian professional populations. And Silicon Beach — Culver City, Playa Vista, Santa Monica — has pulled in a newer wave of Indian tech and entertainment workers who live very differently from the Artesia old-timers.</p>
           <p>LA&rsquo;s Indian community is one of the most economically diverse in America. From Indian restaurant workers and cab drivers to Bollywood-adjacent creative types in West Hollywood to fintech engineers in Venice Beach to Gujarati business owners in Cerritos who have been here for thirty years — the LA Indian community is not one community. It is many, often invisible to each other.</p>
-          <p>What unites them is the specific dissonance of being Indian in the most un-Indian of American cities. LA is a city of surfaces, reinvention, and individualism. Indian culture is about depth, continuity, and community. The friction between these two worlds is something LeanOn listeners understand.</p>
+          <p>What unites them is the specific dissonance of being Indian in the most un-Indian of American cities. LA is a city of surfaces, reinvention, and individualism. Indian culture is about depth, continuity, and community. The friction between these two worlds is something How Was Your Day listeners understand.</p>
         </div>
 
         <div className="section">
@@ -97,11 +97,11 @@ export default function IndiansInLosAngelesPage() {
         <div className="section">
           <h2>The Specific Loneliness of Indian LA</h2>
           <p>Indian loneliness in LA has a particular flavour. It&rsquo;s not the grey Midwestern isolation of missing sunshine. It&rsquo;s the paradox of being surrounded by glamour and feeling completely unseen. The Indian engineer at a tech company in Santa Monica who goes to rooftop parties and has no one to call when something hard happens. The Indian woman in Culver City whose American colleagues are warm and friendly and with whom she shares nothing real.</p>
-          <p>It&rsquo;s also the community pressure of the Artesia-Cerritos network — aunties who know your parents, temple politics, the weight of a tight-knit community that sees everything. Both extremes — complete social isolation and suffocating social monitoring — produce the same result: nowhere to actually talk. LeanOn is that somewhere. Anonymous, judgment-free, with someone who understands both sides.</p>
+          <p>It&rsquo;s also the community pressure of the Artesia-Cerritos network — aunties who know your parents, temple politics, the weight of a tight-knit community that sees everything. Both extremes — complete social isolation and suffocating social monitoring — produce the same result: nowhere to actually talk. How Was Your Day is that somewhere. Anonymous, judgment-free, with someone who understands both sides.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>In a city of millions, talk to one person who actually listens.</h2><p>Real Indian peer listener. Understands the desi LA experience — from Artesia to Silicon Beach. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>In a city of millions, talk to one person who actually listens.</h2><p>Real Indian peer listener. Understands the desi LA experience — from Artesia to Silicon Beach. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in Houston | LeanOn',
+  title: 'Emotional Support for Indians in Houston | How Was Your Day',
   description: 'Sugar Land, Katy, Pearland — Houston\'s Indian community is huge but loneliness hits differently here. Talk to a peer listener in India who understands. First 5 min free.',
   keywords: ['indians in houston support', 'indian community houston', 'sugar land indian support', 'katy texas indian', 'indian loneliness houston', 'desi support houston texas'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-houston' },
-  openGraph: { title: 'Emotional Support for Indians in Houston | LeanOn', description: 'Sugar Land, Katy, Pearland — Houston\'s Indian community is huge but loneliness hits differently here. Talk to a peer listener in India who understands. First 5 min free.', url: 'https://www.leanon.app/indians-in-houston', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-houston' },
+  openGraph: { title: 'Emotional Support for Indians in Houston | How Was Your Day', description: 'Sugar Land, Katy, Pearland — Houston\'s Indian community is huge but loneliness hits differently here. Talk to a peer listener in India who understands. First 5 min free.', url: 'https://www.howwasyourday.live/indians-in-houston', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Can I talk to someone who understands Houston\'s Indian community specifically?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and are familiar with the NRI experience including the Houston and Texas context — the tech corridors, the Sugar Land and Katy communities, the pressure of immigrant life in America. You don\'t need to explain the background.' } },
+  { '@type': 'Question', name: 'Can I talk to someone who understands Houston\'s Indian community specifically?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and are familiar with the NRI experience including the Houston and Texas context — the tech corridors, the Sugar Land and Katy communities, the pressure of immigrant life in America. You don\'t need to explain the background.' } },
   { '@type': 'Question', name: 'What time does it work to call from Houston?', acceptedAnswer: { '@type': 'Answer', text: 'Houston (CST) is 11.5 hours behind IST. 8am Houston = 7:30pm India. This means your early morning before work aligns with Indian evenings — a good window when many listeners are available.' } },
   { '@type': 'Question', name: 'Is this confidential — no one in my community will know?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. You sign up with only a phone number and first name. Nothing is shared with anyone in your community, your employer, or family back in India.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. Paid sessions start from US$10 for 15 minutes. There is no subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Houston', item: 'https://www.leanon.app/indians-in-houston' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Houston', item: 'https://www.howwasyourday.live/indians-in-houston' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInHoustonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Houston</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInHoustonPage() {
           <h2>Houston&rsquo;s Indian Community: Big Numbers, Hidden Loneliness</h2>
           <p>The Houston metro area is home to well over 200,000 people of Indian origin. Sugar Land — with its Diwali celebrations in Town Square, its rows of Indian restaurants on Eldridge and First Colony, its cricket league and its temple — can feel like a small India. Katy and Pearland have followed. If you live here, you are surrounded by people who look like you, eat what you eat, and speak your language.</p>
           <p>And yet. The community can also be a pressure cooker. Everyone knows everyone. The uncles and aunties compare salaries at Diwali gatherings. Your kids&rsquo; schools, your house size, your job title — all of it circulates. You can be in the middle of the biggest Indian community in Texas and feel like you can&rsquo;t say a true word out loud, because everything gets back to someone.</p>
-          <p>LeanOn gives you access to a real Indian peer listener — someone based in India, outside your community network entirely, who still completely understands the cultural context. No explaining required. No gossip risk. Just someone genuinely listening.</p>
+          <p>How Was Your Day gives you access to a real Indian peer listener — someone based in India, outside your community network entirely, who still completely understands the cultural context. No explaining required. No gossip risk. Just someone genuinely listening.</p>
         </div>
 
         <div className="section">

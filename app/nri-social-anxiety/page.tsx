@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Social Anxiety | When Every Social Situation Feels Like a Test | LeanOn',
+  title: 'NRI Social Anxiety | When Every Social Situation Feels Like a Test | How Was Your Day',
   description: "For NRIs, social anxiety isn't just nerves — it's navigating culture, accent, belonging, and what people think of you. Talk to a listener who understands the layers.",
   keywords: ['nri social anxiety', 'indian immigrant social anxiety', 'accent anxiety nri', 'social anxiety indian abroad', 'desi social anxiety', 'immigrant anxiety'],
-  alternates: { canonical: 'https://www.leanon.app/nri-social-anxiety' },
-  openGraph: { title: 'NRI Social Anxiety | When Every Social Situation Feels Like a Test | LeanOn', description: "For NRIs, social anxiety isn't just nerves — it's navigating culture, accent, belonging, and what people think of you. Talk to a listener who understands the layers.", url: 'https://www.leanon.app/nri-social-anxiety', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-social-anxiety' },
+  openGraph: { title: 'NRI Social Anxiety | When Every Social Situation Feels Like a Test | How Was Your Day', description: "For NRIs, social anxiety isn't just nerves — it's navigating culture, accent, belonging, and what people think of you. Talk to a listener who understands the layers.", url: 'https://www.howwasyourday.live/nri-social-anxiety', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Is LeanOn a substitute for professional support for social anxiety?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is peer support — not a substitute for professional help. If social anxiety is significantly affecting your daily life, professional support is worth exploring. LeanOn is a space to be heard by someone who understands the NRI-specific layers without judgment, which can be a valuable complement to professional support or a first step toward it.' } },
+  { '@type': 'Question', name: 'Is How Was Your Day a substitute for professional support for social anxiety?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is peer support — not a substitute for professional help. If social anxiety is significantly affecting your daily life, professional support is worth exploring. How Was Your Day is a space to be heard by someone who understands the NRI-specific layers without judgment, which can be a valuable complement to professional support or a first step toward it.' } },
   { '@type': 'Question', name: 'Can listeners understand accent anxiety specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Accent anxiety — the fear of being judged, mimicked, or dismissed because of how you speak — is something many NRIs carry, and listeners understand it as a real and specific burden, not a trivial vanity.' } },
   { '@type': 'Question', name: 'I\'m exhausted by always being "the Indian one" in every room. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. The exhaustion of being the representative of your entire country — answering questions about India, being the diversity in every team photo, having your food and culture treated as curiosity — is a real weight. Listeners are screened and expected to hold this without minimising it.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Social Anxiety', item: 'https://www.leanon.app/nri-social-anxiety' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Social Anxiety', item: 'https://www.howwasyourday.live/nri-social-anxiety' },
 ] }
 
 const S = `
@@ -70,37 +70,37 @@ export default function NriSocialAnxietyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Social Anxiety</span></nav>
         <div className="hero">
           <p className="badge">NRI Social Anxiety &middot; Accent &middot; Belonging &middot; Identity</p>
           <h1>It&rsquo;s not just nerves. <em>It&rsquo;s everything at once.</em></h1>
           <p className="lead">For Indian immigrants, social anxiety carries layers that most people don&rsquo;t see. It&rsquo;s the accent you&rsquo;re monitoring while you speak. The cultural reference you missed and don&rsquo;t want to ask about. The way you&rsquo;re always calculating whether this room is safe for who you are. It&rsquo;s exhausting in a way that &ldquo;just be yourself&rdquo; doesn&rsquo;t fix. Talk to a listener who understands the layers. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>What NRI Social Anxiety Actually Looks Like</h2>
           <p>Social anxiety for NRIs is not the same as social anxiety in the abstract. There are layers. The standard layer — the worry about being judged, the difficulty speaking up in groups, the over-analysis of everything you said after the fact — and then the NRI layer on top: the accent you are monitoring in real time, the cultural references you don&rsquo;t get and don&rsquo;t ask about because you don&rsquo;t want to seem like you don&rsquo;t belong, the way your name is slightly wrong in someone else&rsquo;s mouth, the question &ldquo;where are you originally from?&rdquo; that comes after you thought you had arrived somewhere socially.</p>
           <p>The NRI who practises sentences in their head before saying them in a meeting — not because they don&rsquo;t know what to say but because they are running an accent check simultaneously. The Indian professional who goes to a work social event and manages their presentation so carefully for two hours that they come home exhausted from something that was supposed to be fun. The international student who is technically fluent in English and still feels like they are operating in a second language because the social code is different.</p>
-          <p>LeanOn listeners understand this specific kind of social exhaustion. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand this specific kind of social exhaustion. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>Being &ldquo;The Indian One&rdquo; in Every Room</h2>
           <p>One of the most draining aspects of NRI social life is the experience of perpetual representativeness. You are not just yourself in a room — you are India&rsquo;s representative. Someone will ask you about the food, about the festivals, about whether it&rsquo;s really as dirty as they&rsquo;ve heard, about the Modi situation, about the caste system, about whether you can speak Hindi (and what about the other Indian languages?). You answer, and you answer well, because you are good at this. And then you go home and wonder why you feel so hollow.</p>
-          <p>The exhaustion of representativeness is real and rarely acknowledged. It is not dramatic — no single conversation is terrible. It is cumulative. It is the thousandth time you have been the Indian in the room, and the weight of all those explanations, all those performances of cultural ambassador, sits in your body as a low-grade depletion. LeanOn is a space where you do not have to explain India. You can just be the person you are that day, with whatever you actually feel. No performance required.</p>
+          <p>The exhaustion of representativeness is real and rarely acknowledged. It is not dramatic — no single conversation is terrible. It is cumulative. It is the thousandth time you have been the Indian in the room, and the weight of all those explanations, all those performances of cultural ambassador, sits in your body as a low-grade depletion. How Was Your Day is a space where you do not have to explain India. You can just be the person you are that day, with whatever you actually feel. No performance required.</p>
         </div>
 
         <div className="section">
           <h2>When Family Events Are the Hardest Rooms</h2>
           <p>Something many NRIs find surprising: Indian community events — temple, family gatherings, desi parties — can produce more anxiety than the Western social world they navigated all week. The stakes feel higher. The judgment feels more personal. Being found wanting by your own community cuts differently than being misread by a Western colleague.</p>
-          <p>The NRI at the Indian family gathering who is hyper-aware of their marital status, their career status, their children&rsquo;s grades, their parents&rsquo; opinion, their accent (which has shifted), their language (which has weakened), their weight, their complexion. The specific social pressure of Indian community events for NRIs is something that Indian culture both produces and rarely names. LeanOn is the space to name it. Anonymous, from US$10.</p>
+          <p>The NRI at the Indian family gathering who is hyper-aware of their marital status, their career status, their children&rsquo;s grades, their parents&rsquo; opinion, their accent (which has shifted), their language (which has weakened), their weight, their complexion. The specific social pressure of Indian community events for NRIs is something that Indian culture both produces and rarely names. How Was Your Day is the space to name it. Anonymous, from US$10.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Talk to someone who already understands before you even start.</h2><p>Real Indian peer listener. No cultural explanation required. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Talk to someone who already understands before you even start.</h2><p>Real Indian peer listener. No cultural explanation required. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-anxiety-abroad">NRI anxiety abroad &rarr;</a>
           <a href="/nri-identity-crisis">NRI identity crisis &rarr;</a>

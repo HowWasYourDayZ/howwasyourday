@@ -4,23 +4,23 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Can\'t Communicate With Your Partner India | LeanOn',
+  title: 'Can\'t Communicate With Your Partner India | How Was Your Day',
   description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. First 5 minutes free.",
   keywords: ['communication problems relationship India', 'can\'t talk to partner India', 'partner doesn\'t listen India', 'communication issues marriage India'],
-  alternates: { canonical: 'https://www.leanon.app/communication-problems-relationship-india', languages: { 'en-IN': 'https://www.leanon.app/communication-problems-relationship-india' } },
-  openGraph: { title: 'Can\'t Communicate With Your Partner India | LeanOn', description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. First 5 minutes free.", url: 'https://www.leanon.app/communication-problems-relationship-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/communication-problems-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/communication-problems-relationship-india' } },
+  openGraph: { title: 'Can\'t Communicate With Your Partner India | How Was Your Day', description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. First 5 minutes free.", url: 'https://www.howwasyourday.live/communication-problems-relationship-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: "We keep fighting and can't talk to each other \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. LeanOn connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Your first 5 minutes are free." } },
-    {'@type': 'Question', name: 'Is communication breakdown a sign the relationship is over?', acceptedAnswer: {'@type': 'Answer', text: 'Not necessarily. Many relationships with severe communication breakdown have been repaired. But the repair usually requires both people to want it and some structured help. LeanOn is a useful first step: processing your own experience of the breakdown before attempting to bridge it.'}},
+    { '@type': 'Question', name: "We keep fighting and can't talk to each other \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. How Was Your Day connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Your first 5 minutes are free." } },
+    {'@type': 'Question', name: 'Is communication breakdown a sign the relationship is over?', acceptedAnswer: {'@type': 'Answer', text: 'Not necessarily. Many relationships with severe communication breakdown have been repaired. But the repair usually requires both people to want it and some structured help. How Was Your Day is a useful first step: processing your own experience of the breakdown before attempting to bridge it.'}},
     {'@type': 'Question', name: 'Can one person\'s communication changing help the relationship?', acceptedAnswer: {'@type': 'Answer', text: 'Often yes. When one person in a communication breakdown starts approaching conversations differently &mdash; less defensively, more curiously &mdash; it changes the dynamic even without the other person consciously changing.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Can\'t Communicate With Your Partner India', item: 'https://www.leanon.app/communication-problems-relationship-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Can\'t Communicate With Your Partner India', item: 'https://www.howwasyourday.live/communication-problems-relationship-india' },
 ] }
 
 const S = `
@@ -67,14 +67,14 @@ export default function CommunicationProblemsRelationshipIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Can't Communicate With Your Partner India</span></nav>
         <div className="hero">
           <p className="badge">Communication Problems · Relationship · India</p>
           <h1>Every conversation becomes a fight. You feel unheard. They feel unheard. <em>The gap keeps growing.</em></h1>
           <p className="lead">Communication breakdown in a relationship is one of the most common sources of relationship pain. Talk anonymously from ₹160.</p>
-          <QuickAnswer question={"We keep fighting and can't talk to each other \u2014 who can I talk to?"} answer={"When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. LeanOn connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Your first 5 minutes are free."} />
+          <QuickAnswer question={"We keep fighting and can't talk to each other \u2014 who can I talk to?"} answer={"When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. How Was Your Day connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Your first 5 minutes are free."} />
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">

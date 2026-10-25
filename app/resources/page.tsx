@@ -4,9 +4,9 @@ import { RESOURCES } from '@/lib/resources-data'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Mental Health Resources & Guides | LeanOn',
-  description: 'Mental health resources, guides, and articles for India. Active listening, loneliness, burnout, peer support, anxiety, grief and more. From LeanOn — India\'s peer support platform.',
-  alternates: { canonical: 'https://www.leanon.app/resources' },
+  title: 'Mental Health Resources & Guides | How Was Your Day',
+  description: 'Mental health resources, guides, and articles for India. Active listening, loneliness, burnout, peer support, anxiety, grief and more. From How Was Your Day — India\'s peer support platform.',
+  alternates: { canonical: 'https://www.howwasyourday.live/resources' },
 }
 
 const S = `
@@ -42,7 +42,7 @@ export default function ResourcesIndex() {
     <>
       <style>{S}</style>
       <nav>
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo"><button className="btn-nav">Get support</button></a>
       </nav>
       <div className="page">

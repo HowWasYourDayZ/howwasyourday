@@ -9,18 +9,18 @@ export const dynamic = 'force-static'
 // internal-linking hub that passes authority to all eight /feeling/* pages.
 
 export const metadata: Metadata = {
-  title: 'Daily Check-In — How Are You Feeling Today? | LeanOn',
+  title: 'Daily Check-In — How Are You Feeling Today? | How Was Your Day',
   description: 'Name how you feel today and read something honest about it — lonely, anxious, overwhelmed, numb, burnt out. Then talk to someone who has felt it too. No appointment needed.',
   keywords: 'daily check in mental health, how am I feeling today, mood check in India, emotional check in, name your feeling',
   alternates: {
-    canonical: 'https://www.leanon.app/daily-check-in',
-    languages: { 'en-IN': 'https://www.leanon.app/daily-check-in' },
+    canonical: 'https://www.howwasyourday.live/daily-check-in',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/daily-check-in' },
   },
   openGraph: {
-    title: 'Daily Check-In — How Are You Feeling Today? | LeanOn',
+    title: 'Daily Check-In — How Are You Feeling Today? | How Was Your Day',
     description: 'Name how you feel today, understand it, and talk to someone who has felt the same. No appointment needed.',
-    url: 'https://www.leanon.app/daily-check-in',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/daily-check-in',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -29,8 +29,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Daily check-in', item: 'https://www.leanon.app/daily-check-in' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Daily check-in', item: 'https://www.howwasyourday.live/daily-check-in' },
   ],
 }
 
@@ -44,7 +44,7 @@ const itemListSchema = {
     '@type': 'ListItem',
     position: i + 1,
     name: f.label,
-    url: `https://www.leanon.app/feeling/${f.slug}`,
+    url: `https://www.howwasyourday.live/feeling/${f.slug}`,
   })),
 }
 
@@ -86,7 +86,7 @@ export default function DailyCheckInPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -122,7 +122,7 @@ export default function DailyCheckInPage() {
           <p>
             That is all this page is for. No score, no streak, no diagnosis — just a name for
             today, something honest to read about it, and the option to talk to a real person
-            who has been in the same place. LeanOn listeners are verified peers with genuine
+            who has been in the same place. How Was Your Day listeners are verified peers with genuine
             lived experience, not therapists and not AI.
           </p>
         </div>

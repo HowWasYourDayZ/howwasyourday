@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 34
-    namespace "app.leanon.therapy"
+    namespace "app.howwasyourday.therapy"
 
     defaultConfig {
-        applicationId "app.leanon.therapy"
+        applicationId "app.howwasyourday.therapy"
         minSdkVersion 21
         targetSdkVersion 34
         // Version injected by CI via -PversionCode / -PversionName flags
@@ -15,9 +15,9 @@ android {
 
     signingConfigs {
         release {
-            keyAlias     'leanon'
+            keyAlias     'howwasyourday'
             keyPassword  System.getenv('KEY_PASSWORD')  ?: ''
-            storeFile    file('../../leanon-keystore.jks')
+            storeFile    file('../../howwasyourday-keystore.jks')
             storePassword System.getenv('KEYSTORE_PASSWORD') ?: ''
         }
     }

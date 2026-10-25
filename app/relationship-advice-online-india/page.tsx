@@ -4,28 +4,28 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Problems Online India — Talk to a Peer Listener | LeanOn',
-  description: 'Talk through relationship stress with a screened peer listener in India by text or voice. LeanOn offers non-clinical peer support, not professional relationship counselling or therapy. One introductory session up to 5 minutes is free per account; availability varies.',
+  title: 'Relationship Problems Online India — Talk to a Peer Listener | How Was Your Day',
+  description: 'Talk through relationship stress with a screened peer listener in India by text or voice. How Was Your Day offers non-clinical peer support, not professional relationship counselling or therapy. One introductory session up to 5 minutes is free per account; availability varies.',
   keywords: [
     'relationship advice online india', 'relationship problems india', 'talk about relationship issues india',
     'partner problems india', 'breakup support india', 'peer support relationship problems india',
     'talk to someone about relationship india', 'marriage problems india', 'relationship support online',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/relationship-advice-online-india',
-    languages: { 'en-IN': 'https://www.leanon.app/relationship-advice-online-india' },
+    canonical: 'https://www.howwasyourday.live/relationship-advice-online-india',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-advice-online-india' },
   },
   openGraph: {
-    title: 'Relationship Problems Online India — Human Peer Support | LeanOn',
+    title: 'Relationship Problems Online India — Human Peer Support | How Was Your Day',
     description: 'Talk with a screened peer listener about relationship stress. Listeners do not see your phone number; you can choose a display name. Availability varies. Not therapy or professional counselling.',
-    url: 'https://www.leanon.app/relationship-advice-online-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/relationship-advice-online-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
 
 const DIRECT_QUESTION = "Where can I get relationship advice online in India from a real person?"
-const DIRECT_ANSWER = "LeanOn connects adults with a screened peer listener in India for a one-to-one text or voice conversation about relationship stress. One introductory session of up to 5 minutes is free per account. It is peer support, not professional relationship counselling, couples therapy or legal advice; availability varies, and a match is not guaranteed."
+const DIRECT_ANSWER = "How Was Your Day connects adults with a screened peer listener in India for a one-to-one text or voice conversation about relationship stress. One introductory session of up to 5 minutes is free per account. It is peer support, not professional relationship counselling, couples therapy or legal advice; availability varies, and a match is not guaranteed."
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -37,7 +37,7 @@ const faqSchema = {
       name: 'How do I get relationship advice online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn lets you talk with a screened peer listener about relationship problems. One introductory session of up to 5 minutes is free per account. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.',
+        text: 'How Was Your Day lets you talk with a screened peer listener about relationship problems. One introductory session of up to 5 minutes is free per account. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.',
       },
     },
     {
@@ -45,7 +45,7 @@ const faqSchema = {
       name: 'Is it safe to talk about my relationship problems online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Review the Privacy Policy for details.',
+        text: 'How Was Your Day uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Review the Privacy Policy for details.',
       },
     },
     {
@@ -53,7 +53,7 @@ const faqSchema = {
       name: 'Can a peer listener help with serious relationship problems like divorce or abuse?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A peer listener may offer a non-clinical conversation, but cannot assess risk or provide specialist domestic-abuse support. If you feel unsafe or are experiencing abuse, prioritise immediate safety and contact an appropriate local specialist service or emergency service. LeanOn is not an emergency service.',
+        text: 'A peer listener may offer a non-clinical conversation, but cannot assess risk or provide specialist domestic-abuse support. If you feel unsafe or are experiencing abuse, prioritise immediate safety and contact an appropriate local specialist service or emergency service. How Was Your Day is not an emergency service.',
       },
     },
     {
@@ -66,10 +66,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn better than searching for a relationship counsellor?',
+      name: 'Is How Was Your Day better than searching for a relationship counsellor?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn may suit you if you want a non-clinical conversation with a peer listener. It is not a substitute for a qualified relationship counsellor or mental-health professional. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability is not guaranteed.',
+        text: 'How Was Your Day may suit you if you want a non-clinical conversation with a peer listener. It is not a substitute for a qualified relationship counsellor or mental-health professional. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability is not guaranteed.',
       },
     },
   ],
@@ -79,8 +79,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Problems Online India', item: 'https://www.leanon.app/relationship-advice-online-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Problems Online India', item: 'https://www.howwasyourday.live/relationship-advice-online-india' },
   ],
 }
 
@@ -153,7 +153,7 @@ export default function RelationshipAdvicePage() {
 
         <h1>Relationship Problems?<br />Talk to Someone Who Will Actually Listen</h1>
         <p className="lead">
-          Relationship stress can be hard to discuss with people you know. LeanOn offers a one-to-one conversation with a screened peer listener by text or voice. It is non-clinical peer support, not professional relationship advice, couples therapy or legal advice.
+          Relationship stress can be hard to discuss with people you know. How Was Your Day offers a one-to-one conversation with a screened peer listener by text or voice. It is non-clinical peer support, not professional relationship advice, couples therapy or legal advice.
         </p>
 
         <QuickAnswer question={DIRECT_QUESTION} answer={DIRECT_ANSWER} />
@@ -165,7 +165,7 @@ export default function RelationshipAdvicePage() {
           <p>Whether you&apos;re fighting with your partner, dealing with a breakup, confused about a situationship,
             or feeling disconnected in a marriage — these feelings deserve to be heard. Not judged, not fixed,
             just heard.</p>
-          <p>LeanOn connects you with screened peer listeners who are expected to listen without judgement. They are not therapists, and they do not provide professional relationship counselling or decide what you should do.</p>
+          <p>How Was Your Day connects you with screened peer listeners who are expected to listen without judgement. They are not therapists, and they do not provide professional relationship counselling or decide what you should do.</p>
         </div>
 
         <div className="card">
@@ -222,13 +222,13 @@ export default function RelationshipAdvicePage() {
           <h2>Why not just talk to a friend?</h2>
           <p>Friends mean well, but they also have opinions, history, and emotions of their own. They may side
             with your partner, tell your mutual friends, or feel awkward next time they see you both.</p>
-          <p>LeanOn listeners are screened and expected to be neutral. They have no stake in the outcome. Their only job is
+          <p>How Was Your Day listeners are screened and expected to be neutral. They have no stake in the outcome. Their only job is
             to help you feel heard — and that changes everything.</p>
         </div>
 
         <div className="card">
           <h2>A different kind of support—not therapy</h2>
-          <p>Professional-care fees and wait times vary by provider, service and location. LeanOn is a different, non-clinical option for conversation, not a cheaper replacement for treatment. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual prices vary by listener and mode and are shown before booking. Availability depends on who is online.</p>
+          <p>Professional-care fees and wait times vary by provider, service and location. How Was Your Day is a different, non-clinical option for conversation, not a cheaper replacement for treatment. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual prices vary by listener and mode and are shown before booking. Availability depends on who is online.</p>
           <p>If you need diagnosis, treatment, medication guidance or specialist relationship support, speak with a qualified professional.</p>
         </div>
 
@@ -243,23 +243,23 @@ export default function RelationshipAdvicePage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>How do I get relationship advice online in India?</h3>
-            <p>LeanOn lets you talk with a screened peer listener about relationship problems. One introductory session of up to 5 minutes is free per account. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.</p>
+            <p>How Was Your Day lets you talk with a screened peer listener about relationship problems. One introductory session of up to 5 minutes is free per account. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.</p>
           </div>
           <div className="faq-item">
             <h3>Is it safe to talk about my relationship problems online?</h3>
-            <p>LeanOn uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Review the Privacy Policy for details.</p>
+            <p>How Was Your Day uses phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reported or safety-flagged sessions. Review the Privacy Policy for details.</p>
           </div>
           <div className="faq-item">
             <h3>What kinds of relationship issues can I talk about?</h3>
             <p>Common topics include arguments, breakups, long-distance struggles, trust concerns, marriage or family pressure, and feeling lonely in a relationship. Peer support is non-clinical and is not a substitute for professional help when needed.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn better than searching for a relationship counsellor?</h3>
-            <p>LeanOn may suit you if you want a non-clinical conversation with a peer listener. It is not a substitute for a qualified relationship counsellor or mental-health professional. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability is not guaranteed.</p>
+            <h3>Is How Was Your Day better than searching for a relationship counsellor?</h3>
+            <p>How Was Your Day may suit you if you want a non-clinical conversation with a peer listener. It is not a substitute for a qualified relationship counsellor or mental-health professional. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability is not guaranteed.</p>
           </div>
           <div className="faq-item">
             <h3>Can a peer listener help with serious problems like domestic abuse?</h3>
-            <p>A peer listener may offer a non-clinical conversation, but cannot assess risk or provide specialist domestic-abuse support. If you feel unsafe or are experiencing abuse, prioritise immediate safety and contact an appropriate local specialist service or emergency service. LeanOn is not an emergency service.</p>
+            <p>A peer listener may offer a non-clinical conversation, but cannot assess risk or provide specialist domestic-abuse support. If you feel unsafe or are experiencing abuse, prioritise immediate safety and contact an appropriate local specialist service or emergency service. How Was Your Day is not an emergency service.</p>
           </div>
         </div>
 
@@ -276,7 +276,7 @@ export default function RelationshipAdvicePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

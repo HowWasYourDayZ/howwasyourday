@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'UPSC Stress India — Talk to Someone Who Gets the Pressure | LeanOn',
+  title: 'UPSC Stress India — Talk to Someone Who Gets the Pressure | How Was Your Day',
   description: 'Years of preparation, family expectations, uncertainty, isolation. UPSC stress is unlike any other. Anonymous peer support from ₹160.',
   keywords: ['UPSC stress India', 'UPSC depression India', 'UPSC aspirant mental health', 'civil services stress India', 'IAS preparation mental health India'],
-  alternates: { canonical: 'https://www.leanon.app/upsc-stress-india', languages: { 'en-IN': 'https://www.leanon.app/upsc-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/upsc-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/upsc-stress-india' } },
   openGraph: {
-    title: 'UPSC Stress India — Talk to Someone Who Gets the Pressure | LeanOn',
+    title: 'UPSC Stress India — Talk to Someone Who Gets the Pressure | How Was Your Day',
     description: 'Years of preparation, family expectations, uncertainty, isolation. UPSC stress is unlike any other. Anonymous peer support from ₹160.',
-    url: 'https://www.leanon.app/upsc-stress-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/upsc-stress-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }],
   },
 }
 
@@ -23,7 +23,7 @@ const faqSchema = {
   mainEntity: [
     {'@type': 'Question', name: 'Is UPSC stress actually serious?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Studies on UPSC aspirants consistently find high rates of anxiety, depression, and burnout. The combination of indefinite timeline, social pressure, financial sacrifice, and identity investment creates a genuinely high-risk psychological environment. The fact that it is common does not make it less serious.'}},
     {'@type': 'Question', name: 'How does talking to a peer help with UPSC stress?', acceptedAnswer: {'@type': 'Answer', text: 'A peer listener who has navigated similar pressure understands the specific texture of what you are carrying. They are not going to tell you to just relax or to have a backup plan. They will listen to the actual weight of it and reflect back what they hear. That is often the relief that disciplined practice and preparation cannot provide.'}},
-    {'@type': 'Question', name: 'Does LeanOn have listeners who understand UPSC?', acceptedAnswer: {'@type': 'Answer', text: 'LeanOn listeners come from diverse backgrounds including people who have navigated competitive exam stress, career uncertainty, and family pressure. The platform does not match on specific exam type, but the emotional content &mdash; uncertainty, sacrifice, pressure &mdash; is something many listeners understand deeply.'}},
+    {'@type': 'Question', name: 'Does How Was Your Day have listeners who understand UPSC?', acceptedAnswer: {'@type': 'Answer', text: 'How Was Your Day listeners come from diverse backgrounds including people who have navigated competitive exam stress, career uncertainty, and family pressure. The platform does not match on specific exam type, but the emotional content &mdash; uncertainty, sacrifice, pressure &mdash; is something many listeners understand deeply.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
   ],
 }
@@ -32,8 +32,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'UPSC Stress India', item: 'https://www.leanon.app/upsc-stress-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'UPSC Stress India', item: 'https://www.howwasyourday.live/upsc-stress-india' },
   ],
 }
 
@@ -84,7 +84,7 @@ export default function UPSCStressIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">
@@ -106,7 +106,7 @@ export default function UPSCStressIndiaPage() {
         <div className="section">
           <h2>The Silence Around UPSC Mental Health</h2>
           <p>UPSC aspirants do not tend to talk about their mental health. The culture of the community values discipline and stoicism. Admitting that you are struggling feels like admitting you are not cut out for it. There are very few spaces where you can say that it is genuinely hard &mdash; not just the syllabus, but the years of uncertainty, the identity built entirely around one goal, the fear of what happens if it does not work out.</p>
-          <p>LeanOn is one of those spaces. Anonymous, non-judgmental, and specifically useful for people who are carrying something they cannot say to anyone in their preparation circle.</p>
+          <p>How Was Your Day is one of those spaces. Anonymous, non-judgmental, and specifically useful for people who are carrying something they cannot say to anyone in their preparation circle.</p>
         </div>
         <div className="section">
           <h2>Frequently Asked Questions</h2>

@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Gujarati NRI Support | Talk to Someone Who Understands Your World | LeanOn',
-  description: 'Gujaratis abroad carry unique pressures — business family expectations, patels abroad, the drive to succeed. LeanOn listeners understand the Gujarati NRI experience.',
+  title: 'Gujarati NRI Support | Talk to Someone Who Understands Your World | How Was Your Day',
+  description: 'Gujaratis abroad carry unique pressures — business family expectations, patels abroad, the drive to succeed. How Was Your Day listeners understand the Gujarati NRI experience.',
   keywords: ['gujarati nri support', 'gujarati diaspora', 'nri gujarati uk', 'gujarati in usa', 'gujarati abroad', 'talk to gujarati online'],
-  alternates: { canonical: 'https://www.leanon.app/gujarati-nri-support' },
-  openGraph: { title: 'Gujarati NRI Support | Talk to Someone Who Understands Your World | LeanOn', description: 'Gujaratis abroad carry unique pressures — business family expectations, patels abroad, the drive to succeed. LeanOn listeners understand the Gujarati NRI experience.', url: 'https://www.leanon.app/gujarati-nri-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/gujarati-nri-support' },
+  openGraph: { title: 'Gujarati NRI Support | Talk to Someone Who Understands Your World | How Was Your Day', description: 'Gujaratis abroad carry unique pressures — business family expectations, patels abroad, the drive to succeed. How Was Your Day listeners understand the Gujarati NRI experience.', url: 'https://www.howwasyourday.live/gujarati-nri-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Can I talk in Gujarati?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several LeanOn listeners speak Gujarati and Hindi. Mention your language preference when you begin your session and your listener will accommodate you.' } },
+  { '@type': 'Question', name: 'Can I talk in Gujarati?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several How Was Your Day listeners speak Gujarati and Hindi. Mention your language preference when you begin your session and your listener will accommodate you.' } },
   { '@type': 'Question', name: 'Do listeners understand the Patel community pressure specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Patel community carries specific expectations — family business involvement, arranged marriage within community, the reputation weight of the Patel name abroad. Listeners understand this without needing it explained.' } },
   { '@type': 'Question', name: 'Is this confidential from my community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Gujarati community in Leicester, Harrow, or Houston will never know. Sessions use only your phone number and first name. Nothing is shared.' } },
-  { '@type': 'Question', name: 'What if my family pressure is about the family business?', acceptedAnswer: { '@type': 'Answer', text: 'Business family pressure — the expectation to join or grow the family enterprise, the conflict between your own career ambitions and family duty — is something LeanOn listeners hear often. You can talk about it without being judged or advised.' } },
+  { '@type': 'Question', name: 'What if my family pressure is about the family business?', acceptedAnswer: { '@type': 'Answer', text: 'Business family pressure — the expectation to join or grow the family enterprise, the conflict between your own career ambitions and family duty — is something How Was Your Day listeners hear often. You can talk about it without being judged or advised.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Your first 5-minute session is free. No subscription. Pay only if the session feels right after the first 5 minutes.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Gujarati NRI Support', item: 'https://www.leanon.app/gujarati-nri-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Gujarati NRI Support', item: 'https://www.howwasyourday.live/gujarati-nri-support' },
 ] }
 
 const S = `
@@ -70,37 +70,37 @@ export default function GujaratiNriSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Gujarati NRI Support</span></nav>
         <div className="hero">
           <p className="badge">Gujarati NRI &middot; UK &amp; USA &middot; Diaspora Support</p>
           <h1>You built something incredible abroad. <em>And you are still carrying it alone.</em></h1>
           <p className="lead">Gujaratis have one of the most established diasporas in the world — Leicester, Harrow, Houston, New Jersey. The community is strong. The expectations are stronger. Business family pressure, arranged marriage within the community, the drive to succeed that never quite turns off. Talk to a Gujarati peer listener who understands the weight behind the accomplishment. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Gujarati NRI Pressure Nobody Names</h2>
           <p>The Gujarati business community abroad is legendary — from the corner shops that became retail empires to the motels that built a community identity. But behind the entrepreneurial success narrative is the individual human being who carries the weight of that legacy. The expectation that you will work in the family business, grow it, not disgrace the family name — this does not pause because you moved to Leicester or Houston.</p>
           <p>Patel community identity specifically comes with a particular set of expectations. Marriage within the community is not just preferred — it is assumed. The matrimonial networks are active and intrusive. And the reputation of your family in the broader Patel community is always silently present in decisions that should feel personal. This is a real weight, and it is one most Gujaratis abroad carry without being able to articulate it to people outside the community.</p>
-          <p>LeanOn listeners understand the Gujarati social fabric. They understand what it means to feel the eyes of the community even from thousands of miles away. You do not have to explain the structure — just talk about what it feels like from where you are. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand the Gujarati social fabric. They understand what it means to feel the eyes of the community even from thousands of miles away. You do not have to explain the structure — just talk about what it feels like from where you are. First 5 minutes free.</p>
         </div>
 
         <div className="section">
           <h2>Navratri, Diwali, and the Homesickness That Goes Unacknowledged</h2>
           <p>Gujarati NRIs celebrate. The garba events in Leicester are famous. The Diwali community gatherings are large and warm. And yet there is something that is always slightly off — a feeling that the celebration is a replica of something that exists fully only back home. You can love the community event and still feel the specific ache of the original being so far away.</p>
-          <p>This kind of homesickness is hard to name because it comes packaged in community warmth. You are not alone in the room. But you are alone in the feeling. LeanOn is a space to name that feeling without dismissing it.</p>
+          <p>This kind of homesickness is hard to name because it comes packaged in community warmth. You are not alone in the room. But you are alone in the feeling. How Was Your Day is a space to name that feeling without dismissing it.</p>
         </div>
 
         <div className="section">
           <h2>Your Ambitions vs. What the Family Needs</h2>
           <p>One of the most common things Gujarati NRIs carry is the tension between their own ambitions and what the family expects. You may have come abroad with a plan that was entirely your own — a career, a lifestyle, a sense of self — and found that the family plan has a different trajectory in mind. This tension rarely gets spoken directly. It lives in loaded conversations at family gatherings, in the way certain topics are avoided on calls home.</p>
-          <p>LeanOn peer listeners offer a space where you can speak this tension directly, without consequence. The conversation goes nowhere. The listener does not know your family. The goal is simply to let you say the things that need to be said out loud to someone who will actually hear them.</p>
+          <p>How Was Your Day peer listeners offer a space where you can speak this tension directly, without consequence. The conversation goes nowhere. The listener does not know your family. The goal is simply to let you say the things that need to be said out loud to someone who will actually hear them.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Someone who understands the Gujarati weight abroad.</h2><p>No judgment. No advice. Just a real listener who gets it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Someone who understands the Gujarati weight abroad.</h2><p>No judgment. No advice. Just a real listener who gets it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

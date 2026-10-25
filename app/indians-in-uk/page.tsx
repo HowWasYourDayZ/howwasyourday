@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in the UK | Talk to Someone Who Gets It | LeanOn',
-  description: 'In London, Birmingham, or Leicester? LeanOn connects you with peer listeners in India who understand the British Indian experience — caught between two worlds.',
+  title: 'Emotional Support for Indians in the UK | Talk to Someone Who Gets It | How Was Your Day',
+  description: 'In London, Birmingham, or Leicester? How Was Your Day connects you with peer listeners in India who understand the British Indian experience — caught between two worlds.',
   keywords: ['indians in uk support', 'british indian mental health', 'indian support london', 'desi support uk', 'indian loneliness uk', 'talk to someone indian uk', 'british indian emotional support'],
-  alternates: { canonical: 'https://www.leanon.app/uk' },
-  openGraph: { title: 'Emotional Support for Indians in the UK | Talk to Someone Who Gets It | LeanOn', description: 'In London, Birmingham, or Leicester? LeanOn connects you with peer listeners in India who understand the British Indian experience — caught between two worlds.', url: 'https://www.leanon.app/uk', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/uk' },
+  openGraph: { title: 'Emotional Support for Indians in the UK | Talk to Someone Who Gets It | How Was Your Day', description: 'In London, Birmingham, or Leicester? How Was Your Day connects you with peer listeners in India who understand the British Indian experience — caught between two worlds.', url: 'https://www.howwasyourday.live/uk', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,8 +19,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Emotional Support for Indians in the UK', item: 'https://www.leanon.app/uk' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Emotional Support for Indians in the UK', item: 'https://www.howwasyourday.live/uk' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInUkPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Emotional Support for Indians in the UK</span></nav>
         <div className="hero">
@@ -86,7 +86,7 @@ export default function IndiansInUkPage() {
         </div>
         <div className="section">
           <h2>Listeners who get the British Indian world</h2>
-          <p>LeanOn listeners are India-based. Many grew up with siblings or cousins in the UK or have direct experience navigating the gap between Indian expectations and Western life. They understand Diwali in December when the office goes on as normal. They understand the arranged marriage pressure that arrives on schedule regardless of whether you are ready. They understand the difference between being Indian &mdash; which you are &mdash; and feeling fully Indian when you visit, which is not always the case.</p>
+          <p>How Was Your Day listeners are India-based. Many grew up with siblings or cousins in the UK or have direct experience navigating the gap between Indian expectations and Western life. They understand Diwali in December when the office goes on as normal. They understand the arranged marriage pressure that arrives on schedule regardless of whether you are ready. They understand the difference between being Indian &mdash; which you are &mdash; and feeling fully Indian when you visit, which is not always the case.</p>
           <p>They will not judge you for having built a life that does not quite fit either world. They have heard versions of this from hundreds of British Indians. The relief of not having to explain the context before getting to the actual thing you want to say is real.</p>
         </div>
         <div className="section">

@@ -16,11 +16,11 @@ export default function robots(): MetadataRoute.Robots {
       ...AI_CRAWLERS.map(userAgent=>({userAgent,allow:'/',disallow:[...PRIVATE, ...AI_BLOCKED_PATHS]})),
     ],
     sitemap: [
-      'https://www.leanon.app/sitemap.xml',
-      'https://www.leanon.app/country-sitemap.xml',
-      'https://www.leanon.app/nri-sitemap.xml',
-      'https://www.leanon.app/seo-sitemap.xml',
+      'https://www.howwasyourday.live/sitemap.xml',
+      'https://www.howwasyourday.live/country-sitemap.xml',
+      'https://www.howwasyourday.live/nri-sitemap.xml',
+      'https://www.howwasyourday.live/seo-sitemap.xml',
     ],
-    host:'https://www.leanon.app',
+    host:'https://www.howwasyourday.live',
   }
 }

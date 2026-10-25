@@ -3,17 +3,17 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Financial Anxiety India — Talk to Someone About Money Stress | LeanOn',
+  title: 'Financial Anxiety India — Talk to Someone About Money Stress | How Was Your Day',
   description: 'EMI pressure, job insecurity, debt stress, family financial expectations. Money anxiety is real. Talk anonymously from ₹160.',
   keywords: ['financial anxiety India', 'money stress India', 'EMI stress India', 'financial pressure India', 'debt anxiety India', 'job insecurity anxiety India'],
-  alternates: { canonical: 'https://www.leanon.app/financial-anxiety-india', languages: { 'en-IN': 'https://www.leanon.app/financial-anxiety-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/financial-anxiety-india', languages: { 'en-IN': 'https://www.howwasyourday.live/financial-anxiety-india' } },
   openGraph: {
-    title: 'Financial Anxiety India — Talk to Someone About Money Stress | LeanOn',
+    title: 'Financial Anxiety India — Talk to Someone About Money Stress | How Was Your Day',
     description: 'EMI pressure, job insecurity, debt stress, family financial expectations. Money anxiety is real. Talk anonymously from ₹160.',
-    url: 'https://www.leanon.app/financial-anxiety-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/financial-anxiety-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }],
   },
 }
 
@@ -23,7 +23,7 @@ const faqSchema = {
   mainEntity: [
     {'@type': 'Question', name: 'Is financial anxiety different from other anxiety?', acceptedAnswer: {'@type': 'Answer', text: 'In some ways, yes. Most anxiety is about uncertain threats. Financial anxiety is often about very concrete, quantified reality. But the emotional experience &mdash; the racing thoughts, the dread, the inability to stop thinking about it &mdash; is the same anxiety mechanism. And the relief of talking about it with someone who listens without judgment applies equally.'}},
     {'@type': 'Question', name: 'Can talking help if the money problem has not actually changed?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. The anxiety exists separately from the financial situation, even if it is caused by it. Reducing the emotional weight of the anxiety creates more internal space to think clearly about the actual situation. People often find that after talking, they can think more practically about what to do &mdash; because the emotional noise has reduced.'}},
-    {'@type': 'Question', name: 'Is this a financial advice service?', acceptedAnswer: {'@type': 'Answer', text: 'No. LeanOn listeners are not financial advisors. They are screened peer listeners who will hold space for whatever you are carrying. If you need financial planning, you need a different kind of professional. If you need someone to talk to about what the financial stress is doing to you, LeanOn is exactly right.'}},
+    {'@type': 'Question', name: 'Is this a financial advice service?', acceptedAnswer: {'@type': 'Answer', text: 'No. How Was Your Day listeners are not financial advisors. They are screened peer listeners who will hold space for whatever you are carrying. If you need financial planning, you need a different kind of professional. If you need someone to talk to about what the financial stress is doing to you, How Was Your Day is exactly right.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
   ],
 }
@@ -32,8 +32,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Financial Anxiety India', item: 'https://www.leanon.app/financial-anxiety-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Financial Anxiety India', item: 'https://www.howwasyourday.live/financial-anxiety-india' },
   ],
 }
 
@@ -84,7 +84,7 @@ export default function FinancialAnxietyIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
       <div className="page">

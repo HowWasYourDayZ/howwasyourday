@@ -3,22 +3,22 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Support for the Desi Community in Canada — When No One Understands You | LeanOn',
-  description: 'Being desi in Canada means navigating two worlds at once — and sometimes feeling fully at home in neither. LeanOn is peer support built with the South Asian experience in mind.',
+  title: 'Support for the Desi Community in Canada — When No One Understands You | How Was Your Day',
+  description: 'Being desi in Canada means navigating two worlds at once — and sometimes feeling fully at home in neither. How Was Your Day is peer support built with the South Asian experience in mind.',
   keywords: [
     'desi support canada', 'south asian support canada', 'desi community canada mental health',
     'indian community canada loneliness', 'desi mental health canada', 'south asian isolation canada',
     'desi canada emotional support', 'brown community canada support', 'desi loneliness canada',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada',
-    languages: { 'en-CA': 'https://www.leanon.app/canada' },
+    canonical: 'https://www.howwasyourday.live/canada',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada' },
   },
   openGraph: {
-    title: 'Support for the Desi Community in Canada | LeanOn',
-    description: 'Being desi in Canada is a particular kind of in-between. LeanOn peer listeners understand both worlds — and will not ask you to explain your culture before being heard.',
-    url: 'https://www.leanon.app/canada',
-    siteName: 'LeanOn',
+    title: 'Support for the Desi Community in Canada | How Was Your Day',
+    description: 'Being desi in Canada is a particular kind of in-between. How Was Your Day peer listeners understand both worlds — and will not ask you to explain your culture before being heard.',
+    url: 'https://www.howwasyourday.live/canada',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -37,10 +37,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn built for South Asians specifically?',
+      name: 'Is How Was Your Day built for South Asians specifically?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is for anyone who needs to be heard — but it was built in India and has a deep understanding of the South Asian emotional experience. Many listeners are themselves Indian or South Asian, and understand the specific pressures of desi life in a Western country without needing them explained.',
+        text: 'How Was Your Day is for anyone who needs to be heard — but it was built in India and has a deep understanding of the South Asian emotional experience. Many listeners are themselves Indian or South Asian, and understand the specific pressures of desi life in a Western country without needing them explained.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What does it mean to feel like you belong in neither world?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many desi Canadians describe feeling too Western for India and too Indian for Canada. This in-between is a real and painful form of cultural isolation — you cannot fully be yourself in either context. LeanOn is a space where you do not have to choose.',
+        text: 'Many desi Canadians describe feeling too Western for India and too Indian for Canada. This in-between is a real and painful form of cultural isolation — you cannot fully be yourself in either context. How Was Your Day is a space where you do not have to choose.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'Can I talk in Hindi or other Indian languages?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many LeanOn listeners speak Hindi, Punjabi, Tamil, Telugu, Kannada, Malayalam, Bengali, and other languages. Check a listener\'s profile for their languages — you can filter when browsing.',
+        text: 'Many How Was Your Day listeners speak Hindi, Punjabi, Tamil, Telugu, Kannada, Malayalam, Bengali, and other languages. Check a listener\'s profile for their languages — you can filter when browsing.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Desi Community Support Canada', item: 'https://www.leanon.app/canada' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Desi Community Support Canada', item: 'https://www.howwasyourday.live/canada' },
   ],
 }
 
@@ -148,11 +148,11 @@ export default function DesiCanadaSupportPage() {
           <a href="/">Home</a><span>›</span>Desi Community Support Canada
         </div>
 
-        <h1>Too Indian for Canada.<br />Too Canadian for India.<br />Just Right for LeanOn.</h1>
+        <h1>Too Indian for Canada.<br />Too Canadian for India.<br />Just Right for How Was Your Day.</h1>
         <p className="lead">
           Being desi in Canada is a particular kind of in-between. You belong to two worlds and
           sometimes feel at home in neither. The pressure, the expectations, the cultural tightrope —
-          and nobody around you who fully understands all of it. LeanOn listeners get it.
+          and nobody around you who fully understands all of it. How Was Your Day listeners get it.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
@@ -173,7 +173,7 @@ export default function DesiCanadaSupportPage() {
           <h2>🫂 You should not have to explain your culture to be heard</h2>
           <p>The hardest part of opening up in a new country is sometimes having to translate your
             entire cultural context before you can even get to the actual thing you wanted to say.
-            LeanOn listeners — many of whom are South Asian themselves — already understand that context.</p>
+            How Was Your Day listeners — many of whom are South Asian themselves — already understand that context.</p>
           <p>You can just talk. About the real thing. Without the preamble.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -183,7 +183,7 @@ export default function DesiCanadaSupportPage() {
           <p>Many South Asians were raised in cultures where talking about your feelings openly was
             either discouraged or simply not done. &quot;Log kya kahenge&quot; — what will people say — shapes
             how much we share even with the people closest to us.</p>
-          <p>LeanOn gives you a space completely outside that web of expectations. Anonymous, private,
+          <p>How Was Your Day gives you a space completely outside that web of expectations. Anonymous, private,
             and entirely yours. You can say the thing you would never say to your family, your friends,
             or your colleagues back home.</p>
         </div>
@@ -215,15 +215,15 @@ export default function DesiCanadaSupportPage() {
               individualism, and many desi people carry heavy weight with nowhere to put it down.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn built for South Asians specifically?</h3>
-            <p>LeanOn is for anyone who needs to be heard, but it was built in India and has deep
+            <h3>Is How Was Your Day built for South Asians specifically?</h3>
+            <p>How Was Your Day is for anyone who needs to be heard, but it was built in India and has deep
               understanding of the South Asian emotional experience. Many listeners are Indian or South
               Asian and understand desi life in a Western country without needing it explained.</p>
           </div>
           <div className="faq-item">
             <h3>What does it mean to feel like you belong in neither world?</h3>
             <p>Many desi Canadians describe feeling too Western for India and too Indian for Canada. This
-              in-between is a real and painful form of cultural isolation. LeanOn is a space where you
+              in-between is a real and painful form of cultural isolation. How Was Your Day is a space where you
               do not have to choose.</p>
           </div>
           <div className="faq-item">
@@ -232,7 +232,7 @@ export default function DesiCanadaSupportPage() {
           </div>
           <div className="faq-item">
             <h3>Can I talk in Hindi or other Indian languages?</h3>
-            <p>Yes. Many LeanOn listeners speak Hindi, Punjabi, Tamil, Telugu, Kannada, Malayalam,
+            <p>Yes. Many How Was Your Day listeners speak Hindi, Punjabi, Tamil, Telugu, Kannada, Malayalam,
               Bengali, and other languages. Check a listener&apos;s profile for their languages.</p>
           </div>
         </div>
@@ -250,7 +250,7 @@ export default function DesiCanadaSupportPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

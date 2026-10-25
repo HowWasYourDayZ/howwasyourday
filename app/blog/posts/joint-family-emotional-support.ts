@@ -36,7 +36,7 @@ export const post = {
 
 <p>This is one of the reasons <strong>anonymous support</strong> and digital platforms that offer <strong>private emotional support India</strong> have become increasingly appealing. A text-based or audio conversation that happens through a phone, with earphones in, in a bathroom or on a balcony, provides a degree of privacy that the physical environment cannot. For many people in joint families, their phone is the only truly private space they have.</p>
 
-<p>LeanOn is built with this reality in mind. Sessions are private. You sign up with a phone OTP — no full name required. The conversations you have do not leave the platform. There is no digital trace that can be found by a curious family member. The <a href="/support/anonymous-support">anonymous support</a> structure is not an afterthought; it is designed for exactly this kind of situation.</p>
+<p>How Was Your Day is built with this reality in mind. Sessions are private. You sign up with a phone OTP — no full name required. The conversations you have do not leave the platform. There is no digital trace that can be found by a curious family member. The <a href="/support/anonymous-support">anonymous support</a> structure is not an afterthought; it is designed for exactly this kind of situation.</p>
 
 <h2>The Judgment Problem</h2>
 
@@ -76,13 +76,13 @@ export const post = {
 
 <p><strong>Privacy by design.</strong> For people in joint families, the structural privacy of the support matters as much as the relational privacy. The platform has to be built in a way that genuinely protects your information — not just in policy, but in practice.</p>
 
-<h2>LeanOn: Built for India&apos;s Reality</h2>
+<h2>How Was Your Day: Built for India&apos;s Reality</h2>
 
-<p>LeanOn was built with the specific emotional landscape of India in mind — including the particular challenges of joint family life. The platform understands that asking for help in India is complicated. That privacy is scarce. That judgment is close. That the people who most need support are often the least able to access it through conventional channels.</p>
+<p>How Was Your Day was built with the specific emotional landscape of India in mind — including the particular challenges of joint family life. The platform understands that asking for help in India is complicated. That privacy is scarce. That judgment is close. That the people who most need support are often the least able to access it through conventional channels.</p>
 
 <p>The privacy architecture is intentional. You sign up with a phone OTP — no full name required. Your sessions are private. There is no trail that family members can find. You choose who you speak to, and you can <a href="/browse">browse peer listeners</a> to find someone whose background and experience resonate with your situation.</p>
 
-<p>The peer listeners on LeanOn are not strangers with no context. They are people who have been through their own difficulties — navigated their own family pressures, their own moments of loneliness in crowded households, their own struggle to be heard — and who have chosen to offer that understanding to others. When you connect with a peer listener, you are not speaking to a service. You are speaking to a person who has been somewhere near where you are, who is not going to judge you, and whose words will stay within the conversation.</p>
+<p>The peer listeners on How Was Your Day are not strangers with no context. They are people who have been through their own difficulties — navigated their own family pressures, their own moments of loneliness in crowded households, their own struggle to be heard — and who have chosen to offer that understanding to others. When you connect with a peer listener, you are not speaking to a service. You are speaking to a person who has been somewhere near where you are, who is not going to judge you, and whose words will stay within the conversation.</p>
 
 <p>If you are in a joint family and you are carrying something that you cannot put down but also cannot share with the people around you — you are not alone in that situation. Millions of people in India are in exactly the same place. The option to find <strong>private emotional support India</strong> has not always existed. It does now.</p>
 

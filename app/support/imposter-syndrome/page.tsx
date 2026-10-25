@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support for Imposter Syndrome in India | LeanOn',
+  title: 'Peer Support for Imposter Syndrome in India | How Was Your Day',
   description: 'Feel like a fraud despite your success? Talk to a peer listener who understands imposter syndrome. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/support/imposter-syndrome', languages: { 'en-IN': 'https://www.leanon.app/support/imposter-syndrome' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/imposter-syndrome', languages: { 'en-IN': 'https://www.howwasyourday.live/support/imposter-syndrome' } },
   openGraph: {
-    title: 'Peer Support for Imposter Syndrome in India | LeanOn',
+    title: 'Peer Support for Imposter Syndrome in India | How Was Your Day',
     description: 'Feel like a fraud despite your success? Talk to a peer listener who understands imposter syndrome. No appointment needed.',
-    url: 'https://www.leanon.app/support/imposter-syndrome',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/imposter-syndrome',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -48,15 +48,15 @@ const faqSchema = {
       name: 'How can a peer listener help with imposter syndrome?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners who have personally struggled with imposter syndrome in tech, corporate, and academic settings offer an empathetic, judgment-free space to voice self-doubt out loud — without it affecting your professional reputation the way venting to a colleague or manager might. Hearing from someone who felt exactly the same and moved past it can be deeply reassuring.',
+        text: 'How Was Your Day listeners who have personally struggled with imposter syndrome in tech, corporate, and academic settings offer an empathetic, judgment-free space to voice self-doubt out loud — without it affecting your professional reputation the way venting to a colleague or manager might. Hearing from someone who felt exactly the same and moved past it can be deeply reassuring.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn peer support cost?',
+      name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview when self-doubt tends to peak.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview when self-doubt tends to peak.',
       },
     },
   ],
@@ -66,9 +66,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Imposter Syndrome', item: 'https://www.leanon.app/support/imposter-syndrome' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Imposter Syndrome', item: 'https://www.howwasyourday.live/support/imposter-syndrome' },
   ],
 }
 
@@ -129,7 +129,7 @@ export default function ImposterSyndromeSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -148,7 +148,7 @@ export default function ImposterSyndromeSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Imposter Syndrome</p>
           <h1>You Earned Your Seat at the Table — Imposter Syndrome <em>Lies</em></h1>
-          <p className="lead">That nagging feeling that you are a fraud who got lucky — even after years of hard work and real achievement — is one of the most common experiences among high-achieving Indian professionals and students. LeanOn connects you with peer listeners who have personally battled imposter syndrome in top companies, campuses, and careers, and come out the other side.</p>
+          <p className="lead">That nagging feeling that you are a fraud who got lucky — even after years of hard work and real achievement — is one of the most common experiences among high-achieving Indian professionals and students. How Was Your Day connects you with peer listeners who have personally battled imposter syndrome in top companies, campuses, and careers, and come out the other side.</p>
         </div>
 
         {/* Understanding imposter syndrome */}
@@ -172,22 +172,22 @@ export default function ImposterSyndromeSupportPage() {
           <p>From board exam percentages to JEE and NEET All India Ranks, Indian students grow up being reduced to a number and compared constantly — to siblings, cousins, classmates. This wires many people to tie their entire sense of worth to relative ranking, so even after landing a dream job or degree, the habit of chronic self-doubt does not simply switch off.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps With Imposter Syndrome</h2>
-          <p>LeanOn is not therapy, and we are honest about that. We are peer support — real humans who have faced the same inner critic, talking to real humans. Here is how we help:</p>
+          <h2>How the app Helps With Imposter Syndrome</h2>
+          <p>How Was Your Day is not therapy, and we are honest about that. We are peer support — real humans who have faced the same inner critic, talking to real humans. Here is how we help:</p>
 
           <h3>Listeners Who Have Lived It</h3>
           <p>Our listeners include engineers, product managers, consultants, and graduate students who have personally battled imposter syndrome in top companies and elite campuses. They are not reciting theory — they know exactly what it feels like to sit in a meeting convinced you are about to be exposed.</p>
 
           <h3>A Space to Voice Self-Doubt Safely</h3>
-          <p>Admitting self-doubt to a colleague or manager carries real risk in a competitive workplace — it can shape how you are perceived for years. LeanOn offers a private, empathetic space to say the quiet part out loud, without any impact on your professional reputation.</p>
+          <p>Admitting self-doubt to a colleague or manager carries real risk in a competitive workplace — it can shape how you are perceived for years. How Was Your Day offers a private, empathetic space to say the quiet part out loud, without any impact on your professional reputation.</p>
 
           <h3>Hope From Someone Who Has Been There</h3>
           <p>Generic advice like &quot;just believe in yourself&quot; rarely helps. What does help is hearing, with empathy, from someone who felt exactly the same fraudulence and found their way past it — because it makes the possibility of moving forward feel real, not theoretical.</p>
 
           <h3>Before Your Big Moment</h3>
-          <p>Performance reviews, promotion interviews, board exams, campus placements — the moments that matter most are often when imposter syndrome is loudest. LeanOn listeners are available for a judgment-free conversation right before those high-stakes moments, when you need steadying the most.</p>
+          <p>Performance reviews, promotion interviews, board exams, campus placements — the moments that matter most are often when imposter syndrome is loudest. How Was Your Day listeners are available for a judgment-free conversation right before those high-stakes moments, when you need steadying the most.</p>
         </div>
 
         {/* Listener cards */}
@@ -228,7 +228,7 @@ export default function ImposterSyndromeSupportPage() {
           <p>Talk to a peer listener who truly understands imposter syndrome. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">You belong here — talk to someone — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -252,15 +252,15 @@ export default function ImposterSyndromeSupportPage() {
             <div className="faq-a">Listeners who have personally struggled with imposter syndrome in tech, corporate, and academic settings offer an empathetic, judgment-free space to voice self-doubt out loud — without it affecting your professional reputation. Hearing from someone who felt exactly the same and moved past it can be deeply reassuring.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn peer support cost?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview.</div>
+            <div className="faq-q">How much does How Was Your Day peer support cost?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Imposter syndrome often travels with other challenges. Explore more peer support on LeanOn:</p>
+          <p>Imposter syndrome often travels with other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>
             <a href="/support/social-anxiety" className="related-link">Social Anxiety</a>

@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in UAE? You\'re Not Alone | LeanOn',
-  description: 'Millions of Indians in the UAE feel isolated — far from family, friends, and the familiar. LeanOn connects you with an Indian peer listener who understands your world, in your language.',
+  title: 'Feeling Lonely in UAE? You\'re Not Alone | How Was Your Day',
+  description: 'Millions of Indians in the UAE feel isolated — far from family, friends, and the familiar. How Was Your Day connects you with an Indian peer listener who understands your world, in your language.',
   keywords: [
     'feeling lonely in UAE', 'lonely in UAE Indian', 'loneliness support UAE', 'NRI loneliness UAE',
     'Indian expat lonely UAE', 'isolation UAE Indian worker', 'missing home UAE', 'talk to someone UAE',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'no one to talk to UAE', 'Indian listener UAE', 'peer support UAE',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uae-loneliness',
-    languages: { 'en-IN': 'https://www.leanon.app/uae-loneliness' },
+    canonical: 'https://www.howwasyourday.live/uae-loneliness',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/uae-loneliness' },
   },
   openGraph: {
     title: 'Feeling Lonely in UAE? Talk to an Indian Listener — First 5 Min Free',
-    description: 'Far from home, missing family, and carrying it all alone? LeanOn peer listeners understand the UAE expat experience. Talk now, in your language.',
-    url: 'https://www.leanon.app/uae-loneliness',
-    siteName: 'LeanOn',
+    description: 'Far from home, missing family, and carrying it all alone? How Was Your Day peer listeners understand the UAE expat experience. Talk now, in your language.',
+    url: 'https://www.howwasyourday.live/uae-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -38,10 +38,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Who are LeanOn listeners — are they Indian?',
+      name: 'Who are How Was Your Day listeners — are they Indian?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are screened Indian peer supporters. They understand the NRI experience, speak Hindi, Tamil, Telugu, Malayalam, Kannada, and other Indian languages, and can relate to the pressures of living abroad as an Indian.',
+        text: 'Yes. How Was Your Day listeners are screened Indian peer supporters. They understand the NRI experience, speak Hindi, Tamil, Telugu, Malayalam, Kannada, and other Indian languages, and can relate to the pressures of living abroad as an Indian.',
       },
     },
     {
@@ -54,10 +54,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn confidential? Can my employer or family find out?',
+      name: 'Is How Was Your Day confidential? Can my employer or family find out?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Completely confidential. LeanOn is anonymous — you do not need to use your real name. Sessions are private and your employer, visa sponsor, or family will never know. You can speak freely.',
+        text: 'Completely confidential. How Was Your Day is anonymous — you do not need to use your real name. Sessions are private and your employer, visa sponsor, or family will never know. You can speak freely.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Can I talk to a listener in the middle of the night from UAE?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India, so availability follows Indian time. The UAE–India time difference (IST is 1.5 hours ahead of UAE time) means Indian listeners are awake and available even during UAE night hours. You are never left alone with your thoughts.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time. The UAE–India time difference (IST is 1.5 hours ahead of UAE time) means Indian listeners are awake and available even during UAE night hours. You are never left alone with your thoughts.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Loneliness Support UAE', item: 'https://www.leanon.app/uae-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Loneliness Support UAE', item: 'https://www.howwasyourday.live/uae-loneliness' },
   ],
 }
 
@@ -152,7 +152,7 @@ export default function UAELonelinessPage() {
         <h1>You Came to Build a Life Here.<br />But the Loneliness Wasn&apos;t Part of the Plan.</h1>
         <p className="lead">
           The UAE is home to over three million Indians — yet so many of them feel invisible and alone.
-          Long shifts, small rooms, calls home that never feel like enough. LeanOn connects you with an
+          Long shifts, small rooms, calls home that never feel like enough. How Was Your Day connects you with an
           Indian peer listener who actually gets it, in your own language.
         </p>
 
@@ -175,7 +175,7 @@ export default function UAELonelinessPage() {
         <div className="night-box">
           <h2>🌙 Alone at night in Dubai, Abu Dhabi, or Sharjah?</h2>
           <p>After the workday ends, the loneliness can hit hardest. No family nearby. No one to just sit
-            with. LeanOn listeners are based in India, so availability follows Indian time — including late UAE nights when India is still awake
+            with. How Was Your Day listeners are based in India, so availability follows Indian time — including late UAE nights when India is still awake
             and our listeners are ready.</p>
           <p>Start talking right now. First 5 minutes are free, no questions asked.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
@@ -186,7 +186,7 @@ export default function UAELonelinessPage() {
           <p>There is something irreplaceable about talking to someone who comes from the same place as you —
             who understands the pressure of izzat, the weight of family expectations, the specific kind of
             homesickness that comes with being an Indian abroad.</p>
-          <p>LeanOn listeners speak Hindi, Malayalam, Tamil, Telugu, Kannada, Bengali, and more. You do not
+          <p>How Was Your Day listeners speak Hindi, Malayalam, Tamil, Telugu, Kannada, Bengali, and more. You do not
             have to explain your culture. You just talk, and they understand.</p>
         </div>
 
@@ -217,8 +217,8 @@ export default function UAELonelinessPage() {
               financial pressure of remittances all create deep isolation — even in a country full of other Indians.</p>
           </div>
           <div className="faq-item">
-            <h3>Who are LeanOn listeners — are they Indian?</h3>
-            <p>Yes. LeanOn listeners are screened Indian peer supporters who speak your language and understand
+            <h3>Who are How Was Your Day listeners — are they Indian?</h3>
+            <p>Yes. How Was Your Day listeners are screened Indian peer supporters who speak your language and understand
               the NRI experience firsthand.</p>
           </div>
           <div className="faq-item">
@@ -227,13 +227,13 @@ export default function UAELonelinessPage() {
               Your first 5 minutes are completely free.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn confidential?</h3>
-            <p>Completely. LeanOn is anonymous — you can use any name. Your employer, visa sponsor, and family
+            <h3>Is How Was Your Day confidential?</h3>
+            <p>Completely. How Was Your Day is anonymous — you can use any name. Your employer, visa sponsor, and family
               will never know. You can speak freely without any fear.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to a listener at night from the UAE?</h3>
-            <p>Yes — LeanOn listeners are based in India, so availability follows Indian time. Indian listeners are awake and available even during
+            <p>Yes — How Was Your Day listeners are based in India, so availability follows Indian time. Indian listeners are awake and available even during
               UAE night hours. You are never left alone with your thoughts.</p>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function UAELonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

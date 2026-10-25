@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Late Night Support India — Someone to Talk to After Midnight | LeanOn',
+  title: 'Late Night Support India — Someone to Talk to After Midnight | How Was Your Day',
   description: 'Late night support from a real peer listener in India — available at 2 AM, 3 AM, anytime. Anonymous, ₹160/session, first 5 min free.',
   keywords: [
     'late night support india',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'midnight support india',
     'night time emotional support india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/late-night-support-india' },
+  alternates: { canonical: 'https://www.howwasyourday.live/late-night-support-india' },
 }
 
 const S = `
@@ -144,7 +144,7 @@ const jsonLd = JSON.stringify([
         name: 'Is anyone available at 2 AM?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'LeanOn always has at least some listeners online through the night, but overnight availability is lower than daytime — it may not always be instant. You can check live availability on the browse page. If no one is free at that exact moment, try again in a few minutes — listeners come online throughout the night.',
+          text: 'How Was Your Day always has at least some listeners online through the night, but overnight availability is lower than daytime — it may not always be instant. You can check live availability on the browse page. If no one is free at that exact moment, try again in a few minutes — listeners come online throughout the night.',
         },
       },
       {
@@ -181,13 +181,13 @@ const jsonLd = JSON.stringify([
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.leanon.app/',
+        item: 'https://www.howwasyourday.live/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Late Night Support India',
-        item: 'https://www.leanon.app/late-night-support-india',
+        item: 'https://www.howwasyourday.live/late-night-support-india',
       },
     ],
   },
@@ -205,7 +205,7 @@ export default function LateNightSupportIndiaPage() {
       {/* ── NAV ── */}
       <div className="nav-wrap">
         <nav>
-          <a href="/"><img src="/logo.png" alt="LeanOn" style={{ height: 44 }} /></a>
+          <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{ height: 44 }} /></a>
           <a href="/talk?src=seo"><button className="btn-nav">Try now</button></a>
         </nav>
       </div>
@@ -238,7 +238,7 @@ export default function LateNightSupportIndiaPage() {
         </div>
 
         <div className="disclaimer">
-          LeanOn is peer emotional support — not therapy or clinical treatment.
+          How Was Your Day is peer emotional support — not therapy or clinical treatment.
           If you need professional mental health care, please reach a licensed practitioner.
         </div>
 
@@ -261,14 +261,14 @@ export default function LateNightSupportIndiaPage() {
             And in India, even if someone is physically nearby, there&apos;s often
             no private space to process. You can&apos;t call a friend at midnight
             without alarming them. Therapists aren&apos;t available at 3&nbsp;AM.
-            That gap is exactly what LeanOn is here for.
+            That gap is exactly what How Was Your Day is here for.
           </p>
         </div>
 
         {/* Availability */}
         <div className="card">
           <p className="section-label">No appointment</p>
-          <h2>LeanOn is open — even after midnight</h2>
+          <h2>How Was Your Day is open — even after midnight</h2>
           <div className="avail-badge">
             <span className="avail-dot" />
             Listeners online now
@@ -318,7 +318,7 @@ export default function LateNightSupportIndiaPage() {
           <div className="faq-item">
             <h3>Is anyone available at 2 AM?</h3>
             <p>
-              LeanOn always has at least some listeners online through the night —
+              How Was Your Day always has at least some listeners online through the night —
               but overnight availability is lower than daytime, so it may not always
               be instant. Check the browse page for live availability.
               If no one is free at that exact moment, try again in a few minutes.

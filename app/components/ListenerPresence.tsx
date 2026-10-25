@@ -78,11 +78,11 @@ export default function ListenerPresence() {
   // (no popup, no heartbeat). The session page announces its state.
   const [sessionLive, setSessionLive] = useState(true)
   useEffect(() => {
-    const w = window as Window & { __leanonSessionLive?: boolean }
-    if (typeof w.__leanonSessionLive === 'boolean') setSessionLive(w.__leanonSessionLive)
+    const w = window as Window & { __howwasyourdaySessionLive?: boolean }
+    if (typeof w.__howwasyourdaySessionLive === 'boolean') setSessionLive(w.__howwasyourdaySessionLive)
     const onState = (e: Event) => setSessionLive((e as CustomEvent<boolean>).detail)
-    window.addEventListener('leanon:session-live', onState)
-    return () => window.removeEventListener('leanon:session-live', onState)
+    window.addEventListener('howwasyourday:session-live', onState)
+    return () => window.removeEventListener('howwasyourday:session-live', onState)
   }, [])
   const sessionLiveRef = useRef(sessionLive)
   useEffect(() => { sessionLiveRef.current = sessionLive }, [sessionLive])
@@ -196,7 +196,7 @@ export default function ListenerPresence() {
   }
 
   const clearIncoming = useCallback(() => {
-    if (incomingIdRef.current) closeLocalNotifications(`leanon-req-${incomingIdRef.current}`)
+    if (incomingIdRef.current) closeLocalNotifications(`howwasyourday-req-${incomingIdRef.current}`)
     incomingIdRef.current = null
     setIncoming(null)
     if (ringTimerRef.current) { clearInterval(ringTimerRef.current); ringTimerRef.current = null }
@@ -224,7 +224,7 @@ export default function ListenerPresence() {
     if (document.visibilityState !== 'visible') {
       showLocalNotification('🔔 New session request', {
         body: `${s.duration_mins}-min ${s.session_type} session — tap to accept`,
-        tag: `leanon-req-${s.id}`, url: '/dashboard', requireInteraction: true,
+        tag: `howwasyourday-req-${s.id}`, url: '/dashboard', requireInteraction: true,
       })
     }
   }, [clearIncoming])
@@ -351,13 +351,13 @@ export default function ListenerPresence() {
     }
   }, [isListener, available])
 
-  // Closing a LeanOn tab: tell the server, so a listener who closed every tab
+  // Closing a How Was Your Day tab: tell the server, so a listener who closed every tab
   // goes offline within LEAVE_GRACE_SECS instead of up to 15 minutes later
   // (owner test 2026-10-16: tabs closed, browser still open, still 'online').
   // pagehide with persisted=false = really unloading (close, reload, full page
   // load) — NOT switching apps, Chrome freezing a background tab, or in-app
   // navigation. The server only ages the heartbeat; a reload or another open
-  // LeanOn tab heart-beats again within 90s and nothing changes.
+  // How Was Your Day tab heart-beats again within 90s and nothing changes.
   useEffect(() => {
     if (!isListener || available !== true) return
     const onPageHide = (e: PageTransitionEvent) => {
@@ -376,7 +376,7 @@ export default function ListenerPresence() {
     if (!userId || typeof BroadcastChannel === 'undefined') return
     let bc: BroadcastChannel | null = null
     try {
-      bc = new BroadcastChannel('leanon-availability')
+      bc = new BroadcastChannel('howwasyourday-availability')
       bc.onmessage = (e) => {
         const m = e.data as { user_id?: string; is_available?: boolean }
         if (m?.user_id === userId && typeof m.is_available === 'boolean') {
@@ -391,13 +391,13 @@ export default function ListenerPresence() {
 
   // Silently keep the push token fresh for a listener who is ALREADY online
   // and permission was already granted in an earlier session (e.g. they
-  // reloaded, or opened LeanOn on a new device). No prompt is shown —
+  // reloaded, or opened How Was Your Day on a new device). No prompt is shown —
   // Notification.permission is only 'granted' if the browser already decided
   // that. registerPushNotifications() itself is idempotent and skips the
   // network call when the token is unchanged.
   useEffect(() => {
     if (skip || !isListener || available !== true) return
-    if (!alertsAlreadyAllowed()) return   // browser permission, or the LeanOn app's
+    if (!alertsAlreadyAllowed()) return   // browser permission, or the How Was Your Day app's
     registerPushNotifications().catch(() => {})
   }, [skip, isListener, available])
 
@@ -407,7 +407,7 @@ export default function ListenerPresence() {
     // Unlock audio on this user gesture so the incoming-request chime can play
     // later (browsers block sound until the page has been interacted with),
     // and register for push so a request still reaches this listener with no
-    // LeanOn tab open at all — the in-tab chime alone cannot do that.
+    // How Was Your Day tab open at all — the in-tab chime alone cannot do that.
     try {
       type WK = Window & { webkitAudioContext?: typeof AudioContext }
       const Ctx = window.AudioContext ?? (window as WK).webkitAudioContext

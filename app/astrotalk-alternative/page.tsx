@@ -4,22 +4,22 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'AstroTalk Alternative for Real Emotional Support | LeanOn',
-  description: 'Looking for an AstroTalk alternative where you can talk to a real person — not an astrologer? LeanOn connects you with peer listeners for genuine human conversation. No predictions, no gimmicks.',
+  title: 'AstroTalk Alternative for Real Emotional Support | How Was Your Day',
+  description: 'Looking for an AstroTalk alternative where you can talk to a real person — not an astrologer? How Was Your Day connects you with peer listeners for genuine human conversation. No predictions, no gimmicks.',
   keywords: [
     'astrotalk alternative', 'alternative to astrotalk', 'astrotalk for emotional support',
     'talk to real person instead of astrotalk', 'peer support india', 'talk to someone online india',
     'emotional support india', 'someone to talk to india', 'human listener india',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/astrotalk-alternative',
-    languages: { 'en-IN': 'https://www.leanon.app/astrotalk-alternative' },
+    canonical: 'https://www.howwasyourday.live/astrotalk-alternative',
+    languages: { 'en-IN': 'https://www.howwasyourday.live/astrotalk-alternative' },
   },
   openGraph: {
     title: 'AstroTalk Alternative — Talk to a Real Person, Not an Astrologer',
-    description: 'LeanOn is the emotional support platform for people who want a real human conversation without astrology predictions.',
-    url: 'https://www.leanon.app/astrotalk-alternative',
-    siteName: 'LeanOn',
+    description: 'How Was Your Day is the emotional support platform for people who want a real human conversation without astrology predictions.',
+    url: 'https://www.howwasyourday.live/astrotalk-alternative',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -30,23 +30,23 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How is LeanOn different from AstroTalk?',
+      name: 'How is How Was Your Day different from AstroTalk?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AstroTalk connects you with astrologers for horoscope and prediction-based chats. LeanOn connects you with screened peer listeners for real emotional conversations — no predictions, just genuine human support. LeanOn is ideal when you want to talk, vent, or feel heard.',
+        text: 'AstroTalk connects you with astrologers for horoscope and prediction-based chats. How Was Your Day connects you with screened peer listeners for real emotional conversations — no predictions, just genuine human support. How Was Your Day is ideal when you want to talk, vent, or feel heard.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I talk to someone on LeanOn just to feel better?',
+      name: 'Can I talk to someone on How Was Your Day just to feel better?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, that\'s exactly what LeanOn is for. Many people just want someone to talk to — not to hear what their stars say, but to feel understood. Our listeners are there for exactly that.',
+        text: 'Yes, that\'s exactly what How Was Your Day is for. Many people just want someone to talk to — not to hear what their stars say, but to feel understood. Our listeners are there for exactly that.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn free to use?',
+      name: 'Is How Was Your Day free to use?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Your first 5-minute session is completely free. After that, sessions are affordable starting at ₹15–₹30 per session depending on the listener.',
@@ -57,15 +57,15 @@ const faqSchema = {
       name: 'Will my conversations be kept private?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn is private — your name, phone number, and personal details are never shared with listeners. You can speak freely without worrying about privacy.',
+        text: 'Yes. How Was Your Day is private — your name, phone number, and personal details are never shared with listeners. You can speak freely without worrying about privacy.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do LeanOn listeners give advice or predictions?',
+      name: 'Do How Was Your Day listeners give advice or predictions?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn listeners are screened and expected to listen, not to advise or predict. They ask questions, reflect back what they hear, and help you feel understood — without telling you what to do.',
+        text: 'No. How Was Your Day listeners are screened and expected to listen, not to advise or predict. They ask questions, reflect back what they hear, and help you feel understood — without telling you what to do.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'AstroTalk Alternative', item: 'https://www.leanon.app/astrotalk-alternative' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'AstroTalk Alternative', item: 'https://www.howwasyourday.live/astrotalk-alternative' },
   ],
 }
 
@@ -154,7 +154,7 @@ export default function AstroTalkAlternativePage() {
         <h1>Looking for an AstroTalk Alternative?<br />Talk to a Real Person Instead</h1>
         <p className="lead">
           Millions of people visit AstroTalk when they are lonely, anxious, or stressed — not for horoscopes,
-          but just to talk. If what you actually need is someone to listen, LeanOn is built for exactly that.
+          but just to talk. If what you actually need is someone to listen, How Was Your Day is built for exactly that.
           Real peer listeners, no predictions, private.
         </p>
 
@@ -169,19 +169,19 @@ export default function AstroTalkAlternativePage() {
             to hear them out. The astrologer becomes a conversation partner by default.
           </p>
           <p>
-            The problem is that astrologers are screened and expected to give predictions — not to listen. LeanOn was built
+            The problem is that astrologers are screened and expected to give predictions — not to listen. How Was Your Day was built
             to fill that gap: screened peer listeners who are there specifically to hear you, not to tell you
             what the stars say.
           </p>
         </div>
 
         <div className="card">
-          <h2>LeanOn vs AstroTalk — what&apos;s actually different</h2>
+          <h2>How Was Your Day vs AstroTalk — what&apos;s actually different</h2>
           <table className="compare-table">
             <thead>
               <tr>
                 <th>Feature</th>
-                <th>LeanOn</th>
+                <th>How Was Your Day</th>
                 <th>AstroTalk</th>
               </tr>
             </thead>
@@ -226,7 +226,7 @@ export default function AstroTalkAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>How LeanOn works — 3 simple steps</h2>
+          <h2>How the app works — 3 simple steps</h2>
           <ul className="steps">
             <li>
               <div>
@@ -250,7 +250,7 @@ export default function AstroTalkAlternativePage() {
         </div>
 
         <div className="card">
-          <h2>What people talk about on LeanOn</h2>
+          <h2>What people talk about on How Was Your Day</h2>
           <p>Relationship problems. Job stress. Family pressure. Feeling lost or lonely. Not sleeping. Not knowing
             what to do next. These are the real reasons people reach out — and our listeners are there to hold space for all of it.</p>
           <p>You don&apos;t need a reason big enough. If something is bothering you, that&apos;s enough.</p>
@@ -266,28 +266,28 @@ export default function AstroTalkAlternativePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>How is LeanOn different from AstroTalk?</h3>
-            <p>AstroTalk connects you with astrologers for horoscope and prediction-based chats. LeanOn connects you
+            <h3>How is How Was Your Day different from AstroTalk?</h3>
+            <p>AstroTalk connects you with astrologers for horoscope and prediction-based chats. How Was Your Day connects you
               with screened peer listeners for real emotional conversations — no predictions, just genuine human support.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I talk to someone on LeanOn just to feel better?</h3>
-            <p>Yes, that&apos;s exactly what LeanOn is for. Many people just want someone to talk to — not to hear
+            <h3>Can I talk to someone on How Was Your Day just to feel better?</h3>
+            <p>Yes, that&apos;s exactly what How Was Your Day is for. Many people just want someone to talk to — not to hear
               what their stars say, but to feel understood. Our listeners are there for exactly that.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn free to use?</h3>
+            <h3>Is How Was Your Day free to use?</h3>
             <p>Your first 5-minute session is completely free. After that, a 15-minute session starts at ₹160,
               depending on the listener.</p>
           </div>
           <div className="faq-item">
             <h3>Will my conversations be kept private?</h3>
-            <p>Yes. LeanOn is private — your name, phone number, and personal details are never shared with
+            <p>Yes. How Was Your Day is private — your name, phone number, and personal details are never shared with
               listeners. You can speak freely without worrying about privacy.</p>
           </div>
           <div className="faq-item">
-            <h3>Do LeanOn listeners give advice or predictions?</h3>
-            <p>No. LeanOn listeners are screened and expected to listen, not to advise or predict. They ask questions, reflect back
+            <h3>Do How Was Your Day listeners give advice or predictions?</h3>
+            <p>No. How Was Your Day listeners are screened and expected to listen, not to advise or predict. They ask questions, reflect back
               what they hear, and help you feel understood — without telling you what to do.</p>
           </div>
         </div>
@@ -305,7 +305,7 @@ export default function AstroTalkAlternativePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for emergency mental health care.
+            How Was Your Day is peer support — not a substitute for emergency mental health care.
           </p>
         </div>
       </div>

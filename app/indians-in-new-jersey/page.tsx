@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in New Jersey | Edison, Parsippany | LeanOn',
+  title: 'Emotional Support for Indians in New Jersey | Edison, Parsippany | How Was Your Day',
   description: 'Edison, Parsippany, Cherry Hill — NJ has one of the highest Indian densities outside India. Feeling unseen despite being surrounded? Talk to someone who understands.',
   keywords: ['indians in new jersey', 'edison nj indian support', 'parsippany indian community', 'nj indian mental health', 'new jersey desi support', 'indian loneliness nj'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-new-jersey' },
-  openGraph: { title: 'Emotional Support for Indians in New Jersey | Edison, Parsippany | LeanOn', description: 'Edison, Parsippany, Cherry Hill — NJ has one of the highest Indian densities outside India. Feeling unseen despite being surrounded? Talk to someone who understands.', url: 'https://www.leanon.app/indians-in-new-jersey', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-new-jersey' },
+  openGraph: { title: 'Emotional Support for Indians in New Jersey | Edison, Parsippany | How Was Your Day', description: 'Edison, Parsippany, Cherry Hill — NJ has one of the highest Indian densities outside India. Feeling unseen despite being surrounded? Talk to someone who understands.', url: 'https://www.howwasyourday.live/indians-in-new-jersey', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Is this for NJ Indians specifically?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn is for Indians anywhere abroad, and listeners understand the specific NJ Indian experience — the Oak Tree Road community, the high density in Edison and Parsippany, the pressure of being in one of the most watched Indian communities in America. You don\'t need to explain the context.' } },
+  { '@type': 'Question', name: 'Is this for NJ Indians specifically?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is for Indians anywhere abroad, and listeners understand the specific NJ Indian experience — the Oak Tree Road community, the high density in Edison and Parsippany, the pressure of being in one of the most watched Indian communities in America. You don\'t need to explain the context.' } },
   { '@type': 'Question', name: 'When is the best time to connect from New Jersey?', acceptedAnswer: { '@type': 'Answer', text: 'New Jersey (EST) is 10.5 hours behind IST. 8am NJ = 6:30pm India. Your morning before the commute aligns with Indian evenings — a reliable window for finding a listener online.' } },
   { '@type': 'Question', name: 'Is this private from the Edison and Parsippany community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous. Only a phone number and first name. Listeners are in India, with no connection to NJ Indian networks. Nothing leaves the session.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in New Jersey', item: 'https://www.leanon.app/indians-in-new-jersey' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in New Jersey', item: 'https://www.howwasyourday.live/indians-in-new-jersey' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInNewJerseyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in New Jersey</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInNewJerseyPage() {
           <h2>Oak Tree Road and the Paradox of Visibility</h2>
           <p>Edison&rsquo;s Oak Tree Road — the stretch of Indian restaurants, sari shops, grocery stores, and gold jewellers — is one of the most famous Indian commercial corridors in the world. Parsippany, Iselin, Cherry Hill, Somerset — New Jersey&rsquo;s Indian community has roots going back to the 1970s and 80s. Third and fourth generation families sit alongside recent arrivals. The infrastructure is extraordinary.</p>
           <p>And with that extraordinary density comes a very particular kind of social pressure. Everyone knows everyone. News travels fast. Your marriage, your job, your children&rsquo;s schools, your parents&rsquo; health — all of it circulates. The community holds you warmly and also watches you closely. You can be on Oak Tree Road surrounded by hundreds of your own people and feel completely unable to say a true word.</p>
-          <p>LeanOn offers a real Indian peer listener in India — completely outside your NJ network, completely inside the culture. You can say the actual thing. First 5 minutes free.</p>
+          <p>How Was Your Day offers a real Indian peer listener in India — completely outside your NJ network, completely inside the culture. You can say the actual thing. First 5 minutes free.</p>
         </div>
 
         <div className="section">

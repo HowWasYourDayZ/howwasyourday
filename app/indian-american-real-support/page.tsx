@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Real Support for Indian Americans — Someone Who Gets It | LeanOn',
-  description: 'LeanOn connects Indian Americans with peer listeners who understand desi life — family expectations, identity navigation, immigration stress, and the loneliness of being between two cultures. First 5 min free.',
+  title: 'Real Support for Indian Americans — Someone Who Gets It | How Was Your Day',
+  description: 'How Was Your Day connects Indian Americans with peer listeners who understand desi life — family expectations, identity navigation, immigration stress, and the loneliness of being between two cultures. First 5 min free.',
   keywords: [
     'Indian American emotional support', 'desi therapist alternative', 'talk to someone who understands Indian culture',
     'South Asian mental health support', 'NRI emotional support', 'desi peer support',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'Indian American identity stress', 'desi counseling alternative', 'ABCDs support',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/indian-american-real-support',
-    languages: { 'en-US': 'https://www.leanon.app/indian-american-real-support' },
+    canonical: 'https://www.howwasyourday.live/indian-american-real-support',
+    languages: { 'en-US': 'https://www.howwasyourday.live/indian-american-real-support' },
   },
   openGraph: {
-    title: 'Real Support for Indian Americans — Someone Who Gets It | LeanOn',
+    title: 'Real Support for Indian Americans — Someone Who Gets It | How Was Your Day',
     description: 'Peer listeners with lived South Asian experience — not AI. For Indian Americans navigating desi life, family expectations, and identity. First 5 minutes free.',
-    url: 'https://www.leanon.app/indian-american-real-support',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/indian-american-real-support',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LeanOn Peer Support for Indian Americans and South Asian Diaspora',
-  description: 'LeanOn connects Indian Americans and South Asians with real peer listeners who understand desi life — family expectations, identity navigation, immigration stress, and cultural duality. Not AI.',
+  name: 'How Was Your Day Peer Support for Indian Americans and South Asian Diaspora',
+  description: 'How Was Your Day connects Indian Americans and South Asians with real peer listeners who understand desi life — family expectations, identity navigation, immigration stress, and cultural duality. Not AI.',
   provider: {
     '@type': 'Organization',
-    name: 'LeanOn',
-    url: 'https://www.leanon.app',
+    name: 'How Was Your Day',
+    url: 'https://www.howwasyourday.live',
   },
   areaServed: ['United States', 'India'],
   audience: {
@@ -48,10 +48,10 @@ const serviceSchema = {
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LeanOn',
-  url: 'https://www.leanon.app',
-  description: 'LeanOn is a peer support platform connecting people — including Indian Americans and the South Asian diaspora — with real human listeners who have genuine lived experience of desi life. Not AI.',
-  sameAs: ['https://www.leanon.app'],
+  name: 'How Was Your Day',
+  url: 'https://www.howwasyourday.live',
+  description: 'How Was Your Day is a peer support platform connecting people — including Indian Americans and the South Asian diaspora — with real human listeners who have genuine lived experience of desi life. Not AI.',
+  sameAs: ['https://www.howwasyourday.live'],
 }
 
 const faqSchema = {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: 'Where can Indian Americans find emotional support from someone who understands desi culture?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn connects Indian Americans with peer listeners who understand the unique pressures of desi life — family expectations, identity navigation, relationship dynamics, and the loneliness of being between two cultures.',
+        text: 'How Was Your Day connects Indian Americans with peer listeners who understand the unique pressures of desi life — family expectations, identity navigation, relationship dynamics, and the loneliness of being between two cultures.',
       },
     },
     {
@@ -71,20 +71,20 @@ const faqSchema = {
       name: 'Is there a human alternative to AI for South Asian mental health support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. First 5 minutes free.',
+        text: 'How Was Your Day has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. First 5 minutes free.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I talk to a South Asian listener on LeanOn?',
+      name: 'Can I talk to a South Asian listener on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has listeners with South Asian backgrounds who understand desi life firsthand — not just as a concept, but as something they have actually lived.',
+        text: 'Yes. How Was Your Day has listeners with South Asian backgrounds who understand desi life firsthand — not just as a concept, but as something they have actually lived.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What can Indian Americans talk about on LeanOn?',
+      name: 'What can Indian Americans talk about on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Identity stress, family expectations, navigating American culture vs. Indian expectations at home, H-1B and immigration anxiety, relationship dynamics, loneliness in a new country, or simply missing home.',
@@ -92,7 +92,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost for Indian Americans?',
+      name: 'How much does How Was Your Day cost for Indian Americans?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes — with the first 5 minutes free. Significantly more affordable than therapy.',
@@ -105,8 +105,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Indian American Real Support', item: 'https://www.leanon.app/indian-american-real-support' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Indian American Real Support', item: 'https://www.howwasyourday.live/indian-american-real-support' },
   ],
 }
 
@@ -197,7 +197,7 @@ export default function IndianAmericanRealSupportPage() {
 
         <h1>You Don&apos;t Need an AI. You Need Someone Who Understands Desi Life.</h1>
         <p className="lead">
-          LeanOn connects Indian Americans and South Asians with real peer listeners who genuinely
+          How Was Your Day connects Indian Americans and South Asians with real peer listeners who genuinely
           understand desi life — not from a textbook, not from training data, but from having actually
           lived it. Family expectations, identity stress, cultural duality, immigration anxiety — they
           get it because they have been there.
@@ -214,7 +214,7 @@ export default function IndianAmericanRealSupportPage() {
             versions of yourself is exhausting — and not many people fully understand it.
           </p>
           <p>
-            A therapist who has never experienced desi life can help with general anxiety. But a LeanOn
+            A therapist who has never experienced desi life can help with general anxiety. But a How Was Your Day
             listener who has actually lived the Indian-American experience understands the specific texture
             of your struggles. That difference matters.
           </p>
@@ -228,7 +228,7 @@ export default function IndianAmericanRealSupportPage() {
               <p>Knows about desi culture from training data. Can describe arranged marriages and family pressure — but has never felt the specific weight of disappointing Indian parents. No one is actually there.</p>
             </div>
             <div className="compare-col human">
-              <h3>💙 LeanOn desi listener</h3>
+              <h3>💙 How Was Your Day desi listener</h3>
               <p>A real South Asian human who has navigated the same duality — Indian expectations at home, American reality outside. Has felt it. Understands it from the inside.</p>
             </div>
           </div>
@@ -266,14 +266,14 @@ export default function IndianAmericanRealSupportPage() {
             the other side with genuine understanding.
           </p>
           <p>
-            LeanOn listeners with South Asian backgrounds are a request away — no appointment,
+            How Was Your Day listeners with South Asian backgrounds are a request away — no appointment,
             no waitlist, no $250/hour. Just a real person who gets it.
           </p>
           <a href="/browse" className="cta-night">Find a listener who understands desi life →</a>
         </div>
 
         <div className="card">
-          <h2>What you can talk about on LeanOn</h2>
+          <h2>What you can talk about on How Was Your Day</h2>
           <ul className="checklist">
             <li>Identity stress — navigating who you are across two cultures</li>
             <li>Family expectations — career, marriage, children, everything</li>
@@ -308,22 +308,22 @@ export default function IndianAmericanRealSupportPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can Indian Americans find emotional support from someone who understands desi culture?</h3>
-            <p>LeanOn connects Indian Americans with peer listeners who understand the unique pressures of desi life — family expectations, identity navigation, relationship dynamics, and the loneliness of being between two cultures.</p>
+            <p>How Was Your Day connects Indian Americans with peer listeners who understand the unique pressures of desi life — family expectations, identity navigation, relationship dynamics, and the loneliness of being between two cultures.</p>
           </div>
           <div className="faq-item">
             <h3>Is there a human alternative to AI for South Asian mental health support?</h3>
-            <p>LeanOn has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. First 5 minutes free.</p>
+            <p>How Was Your Day has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. First 5 minutes free.</p>
           </div>
           <div className="faq-item">
-            <h3>Can I talk to a South Asian listener on LeanOn?</h3>
-            <p>Yes. LeanOn has listeners with South Asian backgrounds who understand desi life firsthand — not just as a concept, but as something they have actually lived.</p>
+            <h3>Can I talk to a South Asian listener on How Was Your Day?</h3>
+            <p>Yes. How Was Your Day has listeners with South Asian backgrounds who understand desi life firsthand — not just as a concept, but as something they have actually lived.</p>
           </div>
           <div className="faq-item">
-            <h3>What can Indian Americans talk about on LeanOn?</h3>
+            <h3>What can Indian Americans talk about on How Was Your Day?</h3>
             <p>Identity stress, family expectations, navigating American culture vs. Indian expectations at home, H-1B and immigration anxiety, relationship dynamics, loneliness in a new country, or simply missing home.</p>
           </div>
           <div className="faq-item">
-            <h3>How much does LeanOn cost for Indian Americans?</h3>
+            <h3>How much does How Was Your Day cost for Indian Americans?</h3>
             <p>From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes — with the first 5 minutes free. Significantly more affordable than therapy.</p>
           </div>
         </div>
@@ -337,7 +337,7 @@ export default function IndianAmericanRealSupportPage() {
 
         <div className="disclaimer">
           <p>⚠️ If you are in crisis or thinking about self-harm, please contact your local emergency services or a crisis line in your country.<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

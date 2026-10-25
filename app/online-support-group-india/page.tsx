@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Online Support Group India — 1:1 Peer Support That Actually Connects | LeanOn',
-  description: 'Online support groups can feel performative. LeanOn offers 1:1 peer conversations — private, focused, real. From ₹160.',
+  title: 'Online Support Group India — 1:1 Peer Support That Actually Connects | How Was Your Day',
+  description: 'Online support groups can feel performative. How Was Your Day offers 1:1 peer conversations — private, focused, real. From ₹160.',
   keywords: ['online support group india', 'peer support group india', 'community support india', 'support group mental health india', 'group therapy alternative india', 'online community support india'],
-  alternates: { canonical: 'https://www.leanon.app/online-support-group-india', languages: { 'en-IN': 'https://www.leanon.app/online-support-group-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-support-group-india', languages: { 'en-IN': 'https://www.howwasyourday.live/online-support-group-india' } },
   openGraph: {
-    title: 'Online Support Group India — 1:1 Peer Support That Actually Connects | LeanOn',
-    description: 'Online support groups can feel performative. LeanOn offers 1:1 peer conversations — private, focused, real. From ₹160.',
-    url: 'https://www.leanon.app/online-support-group-india',
-    siteName: 'LeanOn',
+    title: 'Online Support Group India — 1:1 Peer Support That Actually Connects | How Was Your Day',
+    description: 'Online support groups can feel performative. How Was Your Day offers 1:1 peer conversations — private, focused, real. From ₹160.',
+    url: 'https://www.howwasyourday.live/online-support-group-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -30,10 +30,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn a support group?',
+      name: 'Is How Was Your Day a support group?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn is 1:1 peer support — a private conversation between you and one listener. It is not a group format. This means the session is entirely focused on you, without the group dynamics or the social performance that can make group support feel uncomfortable.',
+        text: 'No. How Was Your Day is 1:1 peer support — a private conversation between you and one listener. It is not a group format. This means the session is entirely focused on you, without the group dynamics or the social performance that can make group support feel uncomfortable.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is it anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. First name only, no photo, no social profile. Unlike a support group where multiple people know your story, a LeanOn session is between you and one listener only — who agrees to keep it confidential.',
+        text: 'Yes. First name only, no photo, no social profile. Unlike a support group where multiple people know your story, a How Was Your Day session is between you and one listener only — who agrees to keep it confidential.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How is this different from group therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Group therapy is a structured clinical intervention led by a licensed therapist for a group of people. LeanOn is 1:1 peer support — not therapy, not group, not clinical. It is a private human conversation with someone who has relevant lived experience.',
+        text: 'Group therapy is a structured clinical intervention led by a licensed therapist for a group of people. How Was Your Day is 1:1 peer support — not therapy, not group, not clinical. It is a private human conversation with someone who has relevant lived experience.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Online Support Group India', item: 'https://www.leanon.app/online-support-group-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Online Support Group India', item: 'https://www.howwasyourday.live/online-support-group-india' },
   ],
 }
 
@@ -123,7 +123,7 @@ export default function OnlineSupportGroupIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -135,7 +135,7 @@ export default function OnlineSupportGroupIndiaPage() {
 
         <div className="hero">
           <p className="tag">1:1 Peer Support · India · From ₹160</p>
-          <h1>Support groups have waiting lists, awkward silences, and strangers you&apos;ll see again. <em>LeanOn is different.</em></h1>
+          <h1>Support groups have waiting lists, awkward silences, and strangers you&apos;ll see again. <em>How Was Your Day is different.</em></h1>
           <p className="lead">1:1 peer support — private, focused, just you and one listener. No group dynamics, no performance, no waiting your turn. Your full session, yours entirely.</p>
         </div>
 
@@ -162,7 +162,7 @@ export default function OnlineSupportGroupIndiaPage() {
 
         <div className="section">
           <h2>The Community Aspect</h2>
-          <p>LeanOn is not a group — but it is a community. Many thousands of people using LeanOn are going through similar things. You are not alone in what you are carrying. Your session is private, but the experience of being heard by a peer who has been there connects you to something larger.</p>
+          <p>How Was Your Day is not a group — but it is a community. Many thousands of people using How Was Your Day are going through similar things. You are not alone in what you are carrying. Your session is private, but the experience of being heard by a peer who has been there connects you to something larger.</p>
           <p>That sense of &quot;I am not the only one&quot; is the core of what support groups offer — and it is available through 1:1 peer connection as well as through group formats.</p>
         </div>
 
@@ -182,8 +182,8 @@ export default function OnlineSupportGroupIndiaPage() {
             <div className="faq-a">A peer support group is a group of people who come together around a shared experience to support each other. They can be helpful but have limitations: unequal airtime, group dynamics, and performance anxiety.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn a support group?</div>
-            <div className="faq-a">No. LeanOn is 1:1 peer support — a private conversation between you and one listener. It is not a group format. The session is entirely focused on you.</div>
+            <div className="faq-q">Is How Was Your Day a support group?</div>
+            <div className="faq-a">No. How Was Your Day is 1:1 peer support — a private conversation between you and one listener. It is not a group format. The session is entirely focused on you.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Why 1:1 instead of group?</div>
@@ -191,11 +191,11 @@ export default function OnlineSupportGroupIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is it anonymous?</div>
-            <div className="faq-a">Yes. First name only, no photo, no social profile. Unlike a support group where multiple people know your story, a LeanOn session is between you and one listener only.</div>
+            <div className="faq-a">Yes. First name only, no photo, no social profile. Unlike a support group where multiple people know your story, a How Was Your Day session is between you and one listener only.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How is this different from group therapy?</div>
-            <div className="faq-a">Group therapy is a structured clinical intervention led by a licensed therapist. LeanOn is 1:1 peer support — not therapy, not group, not clinical. A private human conversation with someone who has relevant lived experience.</div>
+            <div className="faq-a">Group therapy is a structured clinical intervention led by a licensed therapist. How Was Your Day is 1:1 peer support — not therapy, not group, not clinical. A private human conversation with someone who has relevant lived experience.</div>
           </div>
         </div>
 

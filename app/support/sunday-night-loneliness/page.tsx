@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: "Sunday Night Loneliness — You're Not the Only One Feeling It | LeanOn",
+  title: "Sunday Night Loneliness — You're Not the Only One Feeling It | How Was Your Day",
   description: 'Sunday scaries hitting hard? Talk to a peer listener anonymously before the week starts. Available every Sunday night.',
-  alternates: { canonical: 'https://www.leanon.app/support/sunday-night-loneliness', languages: { 'en-IN': 'https://www.leanon.app/support/sunday-night-loneliness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/sunday-night-loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/sunday-night-loneliness' } },
   keywords: 'sunday scaries India, sunday night loneliness, sunday evening sadness, why do I feel lonely on sundays, someone to talk to sunday night',
   openGraph: {
-    title: "Sunday Night Loneliness — You're Not the Only One Feeling It | LeanOn",
+    title: "Sunday Night Loneliness — You're Not the Only One Feeling It | How Was Your Day",
     description: 'Sunday scaries hitting hard? Talk to a peer listener anonymously before the week starts. Available every Sunday night.',
-    url: 'https://www.leanon.app/support/sunday-night-loneliness',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/sunday-night-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -49,15 +49,15 @@ const faqSchema = {
       name: 'How does peer support help on a Sunday night specifically?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Talking it through with an empathetic listener before Monday arrives helps you release the dread instead of carrying it into the week in silence. LeanOn listeners are available specifically during Sunday evening and night hours, and many of them have their own experience with this exact weekly pattern — so you are talking to someone who genuinely gets it, not just anyone.',
+        text: 'Talking it through with an empathetic listener before Monday arrives helps you release the dread instead of carrying it into the week in silence. How Was Your Day listeners are available specifically during Sunday evening and night hours, and many of them have their own experience with this exact weekly pattern — so you are talking to someone who genuinely gets it, not just anyone.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost on a Sunday night?',
+      name: 'How much does How Was Your Day cost on a Sunday night?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.',
       },
     },
   ],
@@ -67,9 +67,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Sunday Night Loneliness', item: 'https://www.leanon.app/support/sunday-night-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Sunday Night Loneliness', item: 'https://www.howwasyourday.live/support/sunday-night-loneliness' },
   ],
 }
 
@@ -130,7 +130,7 @@ export default function SundayNightLonelinessPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -149,7 +149,7 @@ export default function SundayNightLonelinessPage() {
         <div className="hero">
           <p className="tag">Peer Support · Sunday Scaries</p>
           <h1>Sunday Nights Don&apos;t Have to Feel This <em>Heavy</em></h1>
-          <p className="lead">That specific dread that creeps in as the weekend winds down — the quiet, the looming week, the feeling that no one else is awake to talk to. LeanOn connects you with empathetic peer listeners who understand exactly what a Sunday night can feel like, right when it hits.</p>
+          <p className="lead">That specific dread that creeps in as the weekend winds down — the quiet, the looming week, the feeling that no one else is awake to talk to. How Was Your Day connects you with empathetic peer listeners who understand exactly what a Sunday night can feel like, right when it hits.</p>
         </div>
 
         {/* Understanding Sunday Night Loneliness */}
@@ -173,19 +173,19 @@ export default function SundayNightLonelinessPage() {
           <p>Unlike loneliness that strikes unpredictably, Sunday night loneliness follows you on a weekly schedule. That regularity can make it easy to dismiss — "it's just Sundays" — but a feeling that returns every single week and quietly drains your evening is worth taking seriously, not shrugging off.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps on a Sunday Night</h2>
-          <p>LeanOn is not therapy, and we are honest about that. We are peer support — real humans talking to real humans, exactly when the Sunday scaries hit. Here is how we help:</p>
+          <h2>How the app Helps on a Sunday Night</h2>
+          <p>How Was Your Day is not therapy, and we are honest about that. We are peer support — real humans talking to real humans, exactly when the Sunday scaries hit. Here is how we help:</p>
 
           <h3>Listeners Available During the Exact Hours It Hits</h3>
-          <p>LeanOn listeners are available specifically during Sunday evening and night hours, right when the dread tends to be at its worst. You do not have to wait until Monday morning to talk to someone — help is there while you are actually feeling it.</p>
+          <p>How Was Your Day listeners are available specifically during Sunday evening and night hours, right when the dread tends to be at its worst. You do not have to wait until Monday morning to talk to someone — help is there while you are actually feeling it.</p>
 
           <h3>Talk It Through Before the Week Starts</h3>
           <p>Carrying Sunday night dread into your week in silence tends to make it heavier by Monday morning. Talking it through with an empathetic listener before you go to bed can help you release some of that weight, so you start the week a little lighter instead of already behind.</p>
 
           <h3>Listeners Who Know This Exact Weekly Pattern</h3>
-          <p>Many LeanOn listeners have their own experience with Sunday scaries — the same weekly dread, the same quiet evenings, the same pre-Monday anxiety. Talking to someone who genuinely recognises the pattern, not just loneliness in general, makes a real difference.</p>
+          <p>Many How Was Your Day listeners have their own experience with Sunday scaries — the same weekly dread, the same quiet evenings, the same pre-Monday anxiety. Talking to someone who genuinely recognises the pattern, not just loneliness in general, makes a real difference.</p>
 
           <h3>A Low-Pressure Way to End the Weekend</h3>
           <p>There is no appointment to book and no waitlist. You can open the app on a Sunday night, talk for a few minutes with someone who gets it, and end your weekend feeling a little less alone — even if nothing about Monday has changed.</p>
@@ -229,7 +229,7 @@ export default function SundayNightLonelinessPage() {
           <p>Talk to a peer listener who understands the Sunday scaries. No appointments, no waitlists.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">You don't have to spend Sunday alone — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -250,18 +250,18 @@ export default function SundayNightLonelinessPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does peer support help on a Sunday night specifically?</div>
-            <div className="faq-a">Talking it through with an empathetic listener before Monday arrives helps you release the dread instead of carrying it into the week in silence. LeanOn listeners are available specifically during Sunday evening and night hours, and many of them have their own experience with this exact weekly pattern — so you are talking to someone who genuinely gets it, not just anyone.</div>
+            <div className="faq-a">Talking it through with an empathetic listener before Monday arrives helps you release the dread instead of carrying it into the week in silence. How Was Your Day listeners are available specifically during Sunday evening and night hours, and many of them have their own experience with this exact weekly pattern — so you are talking to someone who genuinely gets it, not just anyone.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn cost on a Sunday night?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.</div>
+            <div className="faq-q">How much does How Was Your Day cost on a Sunday night?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Sunday night loneliness often overlaps with other feelings. Explore more peer support on LeanOn:</p>
+          <p>Sunday night loneliness often overlaps with other feelings. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness Support</a>
             <a href="/support/overthinking" className="related-link">Overthinking</a>

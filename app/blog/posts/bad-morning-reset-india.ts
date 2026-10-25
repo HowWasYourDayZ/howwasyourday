@@ -4,7 +4,7 @@ export const post = {
   description: 'A bad morning in India — a fight, bad commute, frustrating call — can poison an entire day. Here is a five-step reset that actually works, and when to talk to someone.',
   date: '2026-09-08',
   readTime: '6 min read',
-  topics: ['bad day India', 'morning stress', 'emotional reset', 'mental health India', 'LeanOn'],
+  topics: ['bad day India', 'morning stress', 'emotional reset', 'mental health India', 'How Was Your Day'],
   content: `
 <p>The fight happened before 9 AM. Maybe it was with your partner as you were leaving. Maybe it was your parents. Maybe a call that came in while you were still getting dressed. Maybe nothing that dramatic — just the commute, the crowd, the heat, the person who cut in front of you, and the accumulation of small things that added up to something that felt like everything.</p>
 
@@ -40,7 +40,7 @@ export const post = {
 
 <p>All of the above helps. None of it replaces the relief of speaking it to a person. If you have someone you can call — a friend who will not make it complicated, who will just receive it — call them. Even ten minutes on the phone, even just saying &ldquo;I had a terrible morning and I just need to say it to someone,&rdquo; creates a shift that no amount of solo processing quite achieves.</p>
 
-<p>If you do not have that person readily available, or if the morning involves people in your circle whom you cannot exactly phone about it to, a LeanOn listener may be online right now. This is exactly the use case — not a crisis, not a long emotional excavation, just the morning pressing on you and someone who will hear it so the afternoon can be different.</p>
+<p>If you do not have that person readily available, or if the morning involves people in your circle whom you cannot exactly phone about it to, a How Was Your Day listener may be online right now. This is exactly the use case — not a crisis, not a long emotional excavation, just the morning pressing on you and someone who will hear it so the afternoon can be different.</p>
 
 <h2>Step 5: Decide on the Unfinished Business</h2>
 

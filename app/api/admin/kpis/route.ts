@@ -94,7 +94,7 @@ export async function GET(req: NextRequest) {
       // anywhere else would silently reindex every KPI after it.
       sb.from('users').select('id, wallet_balance').gt('wallet_balance', 0),
 
-      // PLATFORM EARNINGS — LeanOn's actual income: the flat ₹10 seeker fee
+      // PLATFORM EARNINGS — How Was Your Day's actual income: the flat ₹10 seeker fee
       // PLUS the listener service fee (both captured in
       // listener_earnings.platform_fee since the 2026-09-14 deploy).
       // For sessions settled before that deploy, platform_fee in
@@ -323,7 +323,7 @@ export async function GET(req: NextRequest) {
         uniqueRechargers: rechargers.size,
         uniqueSessionSeekers: sessionRowsAll ? funnel!.requested : new Set((sessionSeekers.data ?? []).map(r => r.seeker_id)).size,
       },
-      // LeanOn's own income — the flat fee kept per paid session. This is the
+      // How Was Your Day's own income — the flat fee kept per paid session. This is the
       // only figure on this page that is genuinely yours: recharges are
       // customer money, listener earnings are a cost, gateway fees are a
       // pass-through that offsets what Razorpay charges.
@@ -337,7 +337,7 @@ export async function GET(req: NextRequest) {
       // Approved-listener wallet balances are EXCLUDED: their wallet_balance = session
       // earnings credited by credit_wallet(), already captured in listenerEarningsUnrequestedRupees.
       // Including them here would double-count the same liability under two labels.
-      // What LeanOn holds on other people's behalf. None of it is revenue.
+      // What How Was Your Day holds on other people's behalf. None of it is revenue.
       walletLiability: {
         // Unspent seeker wallets (anyone who has never earned as a listener).
         totalRupees: sumBal(seekerWalletRows),

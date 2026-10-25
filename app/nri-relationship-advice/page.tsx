@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Relationship Advice | When You Need to Talk, Not Just Read Tips | LeanOn',
+  title: 'NRI Relationship Advice | When You Need to Talk, Not Just Read Tips | How Was Your Day',
   description: 'NRI relationship advice from a peer who gets it — not top-10 lists, not generic guidance. A real conversation with someone who understands the immigrant relationship experience.',
   keywords: ['nri relationship advice', 'nri relationship help', 'indian relationship advice abroad', 'nri couple advice', 'desi relationship advice', 'nri relationship support'],
-  alternates: { canonical: 'https://www.leanon.app/nri-relationship-advice' },
-  openGraph: { title: 'NRI Relationship Advice | When You Need to Talk, Not Just Read Tips | LeanOn', description: 'NRI relationship advice from a peer who gets it — not top-10 lists, not generic guidance. A real conversation with someone who understands the immigrant relationship experience.', url: 'https://www.leanon.app/nri-relationship-advice', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-relationship-advice' },
+  openGraph: { title: 'NRI Relationship Advice | When You Need to Talk, Not Just Read Tips | How Was Your Day', description: 'NRI relationship advice from a peer who gets it — not top-10 lists, not generic guidance. A real conversation with someone who understands the immigrant relationship experience.', url: 'https://www.howwasyourday.live/nri-relationship-advice', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Will the listener actually give me advice on my relationship?', acceptedAnswer: { '@type': 'Answer', text: 'Peer listeners do not give advice unless you specifically ask for it. What they do is listen — helping you think out loud, ask the questions that help you understand what you actually want, and make you feel less alone in navigating it. You will likely leave with more clarity than a list of tips could give you.' } },
   { '@type': 'Question', name: 'What kinds of NRI relationship situations can I talk about?', acceptedAnswer: { '@type': 'Answer', text: 'Any situation that is weighing on you — arranged marriage pressure, long-distance with a partner in India, marriage strain abroad, dating as an NRI, breakup in a foreign country, relationship with parents from abroad. Nothing is too specific or too complex.' } },
   { '@type': 'Question', name: 'Is this session confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private — only your phone number and first name are used. Nothing goes back to your partner, your family, or anyone else in your life.' } },
-  { '@type': 'Question', name: 'Do listeners understand the NRI relationship context?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are Indian and many have direct experience with the relationship dynamics NRIs navigate — the cultural expectations, the immigration pressures, the family involvement. You will not need to explain the basics.' } },
+  { '@type': 'Question', name: 'Do listeners understand the NRI relationship context?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are Indian and many have direct experience with the relationship dynamics NRIs navigate — the cultural expectations, the immigration pressures, the family involvement. You will not need to explain the basics.' } },
   { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Relationship Advice', item: 'https://www.leanon.app/nri-relationship-advice' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Relationship Advice', item: 'https://www.howwasyourday.live/nri-relationship-advice' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriRelationshipAdvicePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Relationship Advice</span></nav>
         <div className="hero">
           <p className="badge">NRI Relationship &middot; Indian Abroad &middot; Peer Support</p>
           <h1>NRI Relationship Advice — From a <em>Real Peer, Not a List</em></h1>
           <p className="lead">You have read the articles. You know the generic tips. What you actually need is to think it through out loud with someone who understands the NRI relationship context from the inside — the immigration pressure, the cultural expectations, the family across time zones. We don&rsquo;t give you a list of things to do. We give you someone to think out loud with. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk it through now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk it through now &rarr;</a>
         </div>
 
         <div className="section">
@@ -89,7 +89,7 @@ export default function NriRelationshipAdvicePage() {
         <div className="section">
           <h2>Why Talking It Through Helps More Than Reading</h2>
           <p>Reading about relationships gives you frameworks. Talking about your specific situation with someone who genuinely listens gives you clarity about what you actually think and feel. The two are not the same. A framework tells you what people in your situation generally do. A real conversation helps you hear what you want.</p>
-          <p>That is what peer listeners at LeanOn offer — not a script, not a protocol, not a list of things to try. A real person who already understands the NRI context, asking the questions that help you find your own answer. The clarity comes from the conversation, not from the listener&rsquo;s opinion about what you should do.</p>
+          <p>That is what peer listeners at How Was Your Day offer — not a script, not a protocol, not a list of things to try. A real person who already understands the NRI context, asking the questions that help you find your own answer. The clarity comes from the conversation, not from the listener&rsquo;s opinion about what you should do.</p>
         </div>
 
         <div className="section">
@@ -99,7 +99,7 @@ export default function NriRelationshipAdvicePage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Clarity, not a list. Someone to think out loud with.</h2><p>Real NRI peer listener. Understands the immigrant relationship world. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Clarity, not a list. Someone to think out loud with.</h2><p>Real NRI peer listener. Understands the immigrant relationship world. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>
           <a href="/nri-long-distance-relationship">NRI long distance &rarr;</a>

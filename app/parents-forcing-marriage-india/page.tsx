@@ -4,22 +4,22 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Parents Forcing Marriage India — Talk to Someone | LeanOn',
+  title: 'Parents Forcing Marriage India — Talk to Someone | How Was Your Day',
   description: 'Pressure to marry, marriage deadlines, family ultimatums. The pressure is real. Talk anonymously from ₹160 — no judgment.',
   keywords: ['parents forcing marriage India', 'marriage pressure India', 'family pressure to marry India', 'forced arranged marriage India', 'not ready for marriage India'],
-  alternates: { canonical: 'https://www.leanon.app/parents-forcing-marriage-india', languages: { 'en-IN': 'https://www.leanon.app/parents-forcing-marriage-india' } },
-  openGraph: { title: 'Parents Forcing Marriage India — Talk to Someone | LeanOn', description: 'Pressure to marry, marriage deadlines, family ultimatums. The pressure is real. Talk anonymously from ₹160 — no judgment.', url: 'https://www.leanon.app/parents-forcing-marriage-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/parents-forcing-marriage-india', languages: { 'en-IN': 'https://www.howwasyourday.live/parents-forcing-marriage-india' } },
+  openGraph: { title: 'Parents Forcing Marriage India — Talk to Someone | How Was Your Day', description: 'Pressure to marry, marriage deadlines, family ultimatums. The pressure is real. Talk anonymously from ₹160 — no judgment.', url: 'https://www.howwasyourday.live/parents-forcing-marriage-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is it normal to feel guilty for not wanting to marry yet?', acceptedAnswer: {'@type': 'Answer', text: 'Extremely common. The guilt is a function of how much your family\'s expectations are internalised. It does not mean their timeline is right for you.'}},
-    {'@type': 'Question', name: 'What if I do want to marry, just not this person?', acceptedAnswer: {'@type': 'Answer', text: 'This is a different conversation but equally valid. LeanOn is for whatever you are carrying about marriage pressure &mdash; whether it is the timeline, the specific candidate, the process, or the autonomy question.'}},
+    {'@type': 'Question', name: 'What if I do want to marry, just not this person?', acceptedAnswer: {'@type': 'Answer', text: 'This is a different conversation but equally valid. How Was Your Day is for whatever you are carrying about marriage pressure &mdash; whether it is the timeline, the specific candidate, the process, or the autonomy question.'}},
     {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Parents Forcing Marriage India', item: 'https://www.leanon.app/parents-forcing-marriage-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Parents Forcing Marriage India', item: 'https://www.howwasyourday.live/parents-forcing-marriage-india' },
 ] }
 
 const S = `
@@ -66,7 +66,7 @@ export default function ParentsForcingMarriageIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Parents Forcing Marriage India</span></nav>
         <div className="hero">

@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Trauma Support India — Talk to Someone Real | LeanOn',
+  title: 'Trauma Support India — Talk to Someone Real | How Was Your Day',
   description: 'Trauma stays in the body and the mind. Finding someone who listens without judgement is the first step. Peer support from ₹160.',
   keywords: ['trauma support india', 'PTSD support india', 'childhood trauma india', 'emotional abuse recovery india', 'trauma healing india', 'trauma counselling india', 'narcissistic abuse recovery india'],
-  alternates: { canonical: 'https://www.leanon.app/trauma-support-india', languages: { 'en-IN': 'https://www.leanon.app/trauma-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/trauma-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/trauma-support-india' } },
   openGraph: {
-    title: 'Trauma Support India — Talk to Someone Real | LeanOn',
+    title: 'Trauma Support India — Talk to Someone Real | How Was Your Day',
     description: 'Trauma stays in the body and the mind. Finding someone who listens without judgement is the first step. Peer support from ₹160.',
-    url: 'https://www.leanon.app/trauma-support-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/trauma-support-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'When should I see a professional instead?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'See a professional when you have symptoms of PTSD (flashbacks, nightmares, severe dissociation), when trauma is affecting your ability to function, or when you need structured clinical treatment. LeanOn will always point you toward professional help when that is the right path.',
+        text: 'See a professional when you have symptoms of PTSD (flashbacks, nightmares, severe dissociation), when trauma is affecting your ability to function, or when you need structured clinical treatment. How Was Your Day will always point you toward professional help when that is the right path.',
       },
     },
   ],
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Trauma Support India', item: 'https://www.leanon.app/trauma-support-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Trauma Support India', item: 'https://www.howwasyourday.live/trauma-support-india' },
   ],
 }
 
@@ -127,7 +127,7 @@ export default function TraumaSupportIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -139,7 +139,7 @@ export default function TraumaSupportIndiaPage() {
 
         <div className="disclaimer-box">
           <p>⚠️ <strong>Important:</strong> For crisis or psychiatric trauma treatment, please see a mental health professional or call <a href="tel:08046110007">NIMHANS: 080-46110007</a> or <a href="tel:14416">Tele-MANAS: 14416</a> (free · 24/7 · Govt of India).</p>
-          <p>LeanOn is peer support, not clinical trauma therapy. If you are in acute distress or experiencing PTSD symptoms, please seek professional help first.</p>
+          <p>How Was Your Day is peer support, not clinical trauma therapy. If you are in acute distress or experiencing PTSD symptoms, please seek professional help first.</p>
         </div>
 
         <div className="hero">
@@ -166,11 +166,11 @@ export default function TraumaSupportIndiaPage() {
             <li>Replace therapy for severe or complex trauma</li>
             <li>Serve as a crisis response</li>
           </ul>
-          <p>If any of the above is what you need, please see a qualified mental health professional. LeanOn will always say this honestly.</p>
+          <p>If any of the above is what you need, please see a qualified mental health professional. How Was Your Day will always say this honestly.</p>
         </div>
 
         <div className="section">
-          <h2>Types of Trauma People Bring to LeanOn</h2>
+          <h2>Types of Trauma People Bring to How Was Your Day</h2>
           <ul>
             <li><strong>Childhood experiences</strong> — things that happened a long time ago that still show up in the present</li>
             <li><strong>Relationship abuse</strong> — emotional, verbal, or physical — the aftermath of leaving, or the complexity of still being in it</li>
@@ -209,7 +209,7 @@ export default function TraumaSupportIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">When should I see a professional instead?</div>
-            <div className="faq-a">See a professional when you have symptoms of PTSD (flashbacks, nightmares, severe dissociation), when trauma is affecting your ability to function, or when you need structured clinical treatment. LeanOn will always point you toward professional help when that is the right path.</div>
+            <div className="faq-a">See a professional when you have symptoms of PTSD (flashbacks, nightmares, severe dissociation), when trauma is affecting your ability to function, or when you need structured clinical treatment. How Was Your Day will always point you toward professional help when that is the right path.</div>
           </div>
         </div>
 

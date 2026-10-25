@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support in Kolkata — Peer Listeners | LeanOn',
-  description: 'Connect with peer listeners in Kolkata, India. No appointment needed. Talk anonymously in Bengali, Hindi, or English about loneliness, family pressure, and more on LeanOn.',
-  alternates: { canonical: 'https://www.leanon.app/kolkata', languages: { 'en-IN': 'https://www.leanon.app/kolkata' } },
-  keywords: 'peer support Kolkata, emotional support Kolkata, loneliness Kolkata, talk to someone Kolkata, Bengali emotional support, family pressure Kolkata, leanon Kolkata',
+  title: 'Emotional Support in Kolkata — Peer Listeners | How Was Your Day',
+  description: 'Connect with peer listeners in Kolkata, India. No appointment needed. Talk anonymously in Bengali, Hindi, or English about loneliness, family pressure, and more on How Was Your Day.',
+  alternates: { canonical: 'https://www.howwasyourday.live/kolkata', languages: { 'en-IN': 'https://www.howwasyourday.live/kolkata' } },
+  keywords: 'peer support Kolkata, emotional support Kolkata, loneliness Kolkata, talk to someone Kolkata, Bengali emotional support, family pressure Kolkata, howwasyourday Kolkata',
   openGraph: {
-    title: 'Emotional Support in Kolkata — Peer Listeners | LeanOn',
-    description: 'Connect with peer listeners in Kolkata, India. No appointment needed. Talk anonymously in Bengali, Hindi, or English on LeanOn.',
-    url: 'https://www.leanon.app/kolkata',
-    siteName: 'LeanOn',
+    title: 'Emotional Support in Kolkata — Peer Listeners | How Was Your Day',
+    description: 'Connect with peer listeners in Kolkata, India. No appointment needed. Talk anonymously in Bengali, Hindi, or English on How Was Your Day.',
+    url: 'https://www.howwasyourday.live/kolkata',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -22,10 +22,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Can I talk to a listener in Bengali on LeanOn?',
+      name: 'Can I talk to a listener in Bengali on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has peer listeners who speak Bengali as well as Hindi and English. You can filter listeners by language on the browse page. For many users, speaking in Bangla is the difference between describing feelings and actually feeling heard.',
+        text: 'Yes. How Was Your Day has peer listeners who speak Bengali as well as Hindi and English. You can filter listeners by language on the browse page. For many users, speaking in Bangla is the difference between describing feelings and actually feeling heard.',
       },
     },
     {
@@ -38,10 +38,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn anonymous?',
+      name: 'Is How Was Your Day anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, completely. Only the name you choose (a first name or nickname is fine) is shown to a listener — no phone number, no photo, no surname, no location. Nobody in your para, family, or office can discover that you use LeanOn.',
+        text: 'Yes, completely. Only the name you choose (a first name or nickname is fine) is shown to a listener — no phone number, no photo, no surname, no location. Nobody in your para, family, or office can discover that you use How Was Your Day.',
       },
     },
     {
@@ -59,17 +59,17 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Kolkata', item: 'https://www.leanon.app/kolkata' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Kolkata', item: 'https://www.howwasyourday.live/kolkata' },
   ],
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'LeanOn',
+  name: 'How Was Your Day',
   description: 'Peer emotional support platform',
-  url: 'https://www.leanon.app/kolkata',
+  url: 'https://www.howwasyourday.live/kolkata',
   areaServed: { '@type': 'City', name: 'Kolkata', addressCountry: 'IN' },
   serviceType: 'Peer Emotional Support',
 }
@@ -128,7 +128,7 @@ export default function KolkataPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -141,7 +141,7 @@ export default function KolkataPage() {
         <div className="hero">
           <p className="tag">Peer Support · Kolkata</p>
           <h1>Peer Support in Kolkata — Someone to Lean On, in <em>Bangla or English</em></h1>
-          <p className="lead">Kolkata is a city that talks — adda, politics, poetry, football. But the conversation that matters most, the one about how you are actually doing, is often the hardest to start. LeanOn connects you with peer listeners who understand — in Bengali, Hindi, or English.</p>
+          <p className="lead">Kolkata is a city that talks — adda, politics, poetry, football. But the conversation that matters most, the one about how you are actually doing, is often the hardest to start. How Was Your Day connects you with peer listeners who understand — in Bengali, Hindi, or English.</p>
         </div>
 
         <div className="section">
@@ -158,16 +158,16 @@ export default function KolkataPage() {
           <p>The para, the extended family, the neighbourhood network — Kolkata&apos;s social fabric is warm, but it is also watchful. Personal struggles become community discussion fast. That is precisely why anonymous peer support matters here: a conversation that stays between you and your listener, with no chance of reaching your para.</p>
 
           <h3>The Mother-Tongue Difference</h3>
-          <p>Some feelings only have words in Bangla. LeanOn has listeners who speak Bengali, so the conversation can happen in the language your heart actually uses.</p>
+          <p>Some feelings only have words in Bangla. How Was Your Day has listeners who speak Bengali, so the conversation can happen in the language your heart actually uses.</p>
         </div>
 
         <div className="section">
-          <h2>Who Uses LeanOn in Kolkata</h2>
+          <h2>Who Uses How Was Your Day in Kolkata</h2>
           <h3>Young Professionals at a Crossroads</h3>
           <p>Whether you are weighing an offer in another city, stuck in a job that pays less than your potential, or supporting parents while building your own life — these are heavy decisions that benefit from a thinking-out-loud conversation with someone neutral.</p>
 
           <h3>Students Under Academic Pressure</h3>
-          <p>Kolkata&apos;s academic culture is demanding, and the comparison to cousins, neighbours, and batchmates never stops. Students use LeanOn when the pressure feels unspeakable at home.</p>
+          <p>Kolkata&apos;s academic culture is demanding, and the comparison to cousins, neighbours, and batchmates never stops. Students use How Was Your Day when the pressure feels unspeakable at home.</p>
 
           <h3>Anyone Carrying Quiet Loneliness</h3>
           <p>In a city famous for conversation, admitting loneliness feels almost contradictory. It is not. It is human — and it is exactly what peer listeners understand.</p>
@@ -185,16 +185,16 @@ export default function KolkataPage() {
         <div className="section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
-            <div className="faq-q">Can I talk to a listener in Bengali on LeanOn?</div>
-            <div className="faq-a">Yes. LeanOn has peer listeners who speak Bengali as well as Hindi and English. Filter by language on the browse page. For many users, speaking in Bangla is the difference between describing feelings and actually feeling heard.</div>
+            <div className="faq-q">Can I talk to a listener in Bengali on How Was Your Day?</div>
+            <div className="faq-a">Yes. How Was Your Day has peer listeners who speak Bengali as well as Hindi and English. Filter by language on the browse page. For many users, speaking in Bangla is the difference between describing feelings and actually feeling heard.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What emotional pressures are specific to Kolkata?</div>
             <div className="faq-a">The stay-or-leave dilemma — between opportunities elsewhere and ageing parents here — shapes many lives. Add academic and intellectual expectations, joint-family dynamics, and a watchful social fabric where everyone knows everyone, and anonymous support becomes especially valuable.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">Is LeanOn anonymous?</div>
-            <div className="faq-a">Yes, completely. Only the name you choose is shown to a listener — no phone number, photo, surname, or location. Nobody in your para, family, or office can discover that you use LeanOn.</div>
+            <div className="faq-q">Is How Was Your Day anonymous?</div>
+            <div className="faq-a">Yes, completely. Only the name you choose is shown to a listener — no phone number, photo, surname, or location. Nobody in your para, family, or office can discover that you use How Was Your Day.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does a session cost in Kolkata?</div>
@@ -204,7 +204,7 @@ export default function KolkataPage() {
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness</a>
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>
@@ -216,9 +216,9 @@ export default function KolkataPage() {
         </div>
 
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

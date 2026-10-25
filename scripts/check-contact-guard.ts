@@ -37,7 +37,7 @@ const MUST_ALLOW: string[] = [
  "mujhe baat karni hai",
  "can you tell me how much?",
  "I will talk to you full 15 mins here",
- "leanon.app/talk helped me",
+ "howwasyourday.live/talk helped me",
  "my number of friends is zero",
  "I was born on 12.04.2001",
  "ok...",
@@ -87,8 +87,8 @@ const MUST_ALLOW: string[] = [
  "I tried to open up.in the end nothing",
  "call Tele-MANAS on 14416",
  "NIMHANS 080 4611 0007",
- "leanon.app/browse",
- "https://www.leanon.app/talk",
+ "howwasyourday.live/browse",
+ "https://www.howwasyourday.live/talk",
  "thanks!!",
  "ok.",
  "good night",
@@ -170,7 +170,7 @@ const MUST_ALLOW: string[] = [
  "thank you listener",
  "I just feel like nobody understands me. My parents want me to get married, my job is stressful, and my friends are busy with their lives on instagram.",
  "Kal raat ko bahut roya. Usne mujhe whatsapp pe block kar diya aur insta se bhi unfollow kar diya. Samajh nahi aa raha kya karun.",
- "you can always come back to LeanOn and talk to me again, or call Tele-MANAS 14416 if it gets too heavy",
+ "you can always come back to How Was Your Day and talk to me again, or call Tele-MANAS 14416 if it gets too heavy",
  "my sister calls me on whatsapp but I ignore her",
  "I talk to my mom on facebook messenger",
  "I deleted my insta account",
@@ -212,13 +212,13 @@ const MUST_ALLOW: string[] = [
  "how old are you?",
  "where are you from?",
  "are you a real person?",
- "Sorry, I can't share my number or insta id — we have to keep our chats on LeanOn",
- "I won't be able to talk on whatsapp, LeanOn keeps both of us safe",
+ "Sorry, I can't share my number or insta id — we have to keep our chats on How Was Your Day",
+ "I won't be able to talk on whatsapp, How Was Your Day keeps both of us safe",
  "We are not allowed to share social media ids here",
  "Please don’t share your number with anyone you meet online",
  "Mera number share karna allowed nahi hai, yahin baat karte hain",
- "You can book me again here anytime, just search my name on LeanOn",
- "I'm here on LeanOn most evenings after 8 pm",
+ "You can book me again here anytime, just search my name on How Was Your Day",
+ "I'm here on How Was Your Day most evenings after 8 pm",
  "If you feel unsafe please call 14416 or 080-46110007 right away",
  "I am gay and my family will never accept it",
  "My visa got rejected for the 3rd time",
@@ -388,13 +388,13 @@ const num = () => pick([
   `₹${rnd(100, 999)} for ${rnd(5, 45)} minutes`, `${rnd(6, 9)}${rnd(100, 999)} ${rnd(10, 99)}`, `${rnd(1, 9)}${rnd(10, 99)} days`,
 ])
 const shorts = () => pick(['ok.bye', 'k.bye', 'ok.tc', 'hmm.ok', 'yes.ok', 'thanks.tc', 'gn', 'tc', 'okk', 'hmm', 'byee', 'love_you', 'miss_you', 'good_night', 'thank_you', '^_^', '-_-', 'T_T', 'o_O', 'B.Tech', 'M.Sc', 'Ph.D', 'Mr.Sharma', 'a.m.', 'p.m.', 'U.S.', 'e.g.', 'i.e.', 'etc.', 'No.1', 'co-worker', 'e-mail', 'ok...', 'its.me', 'see.you', 'nice.talking', 'feeling better now.gn', 'you are kind.thank you', '@everyone', 'meet @ 5', '@home', 'lol', 'xD', ':)', ':(', '<3'])
-const links = () => pick(['look what she posted instagram.com/p/Cx12abc', 'this reel instagram.com/reel/Abc123', 'he tweeted x.com/someone/status/12345', 'watch youtube.com/watch?v=abc', 'leanon.app/talk helped me', 'https://www.leanon.app/browse', 'read this article on bbc.com', 'my college site is du.ac.in'])
+const links = () => pick(['look what she posted instagram.com/p/Cx12abc', 'this reel instagram.com/reel/Abc123', 'he tweeted x.com/someone/status/12345', 'watch youtube.com/watch?v=abc', 'howwasyourday.live/talk helped me', 'https://www.howwasyourday.live/browse', 'read this article on bbc.com', 'my college site is du.ac.in'])
 const english = () => pick([
   'I just feel like nobody understands me', 'My parents want me to get married and I am not ready', 'I failed my exam again and I feel like a failure',
   'I have been crying since morning', 'Can you please just listen?', 'Thank you for listening to me today', 'Is this chat private?', 'Can my family see this?',
   'I lost my job last week', 'My husband does not talk to me anymore', 'I feel lonely even in a crowd', 'I am so anxious before every meeting',
   'Kal raat bahut roya', 'Mujhe kisi se baat karni thi', 'Ghar pe koi samajhta nahi', 'Office me pressure bahut hai', 'Main thak gaya hoon',
-  'you can always come back to LeanOn and talk again', 'please call Tele-MANAS 14416 if it gets too heavy', 'I will book you again tomorrow',
+  'you can always come back to How Was Your Day and talk again', 'please call Tele-MANAS 14416 if it gets too heavy', 'I will book you again tomorrow',
   'What is your name?', 'How old are you?', 'Where are you from?', 'Are you a real person?', 'Do you also feel this way sometimes?',
 ])
 const gens = [

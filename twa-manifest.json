@@ -1,8 +1,8 @@
 {
-  "packageId": "app.leanon.twa",
-  "host": "www.leanon.app",
-  "name": "LeanOn — Peer Support",
-  "launcherName": "LeanOn",
+  "packageId": "app.howwasyourday.twa",
+  "host": "www.howwasyourday.live",
+  "name": "How Was Your Day — Peer Support",
+  "launcherName": "How Was Your Day",
   "display": "standalone",
   "themeColor": "#1A8FA0",
   "themeColorDark": "#0F4867",
@@ -13,13 +13,13 @@
   "backgroundColor": "#0F4867",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://www.leanon.app/icon-512.png",
-  "maskableIconUrl": "https://www.leanon.app/icon-512.png",
-  "monochromeIconUrl": "https://www.leanon.app/icon-512.png",
+  "iconUrl": "https://www.howwasyourday.live/icon-512.png",
+  "maskableIconUrl": "https://www.howwasyourday.live/icon-512.png",
+  "monochromeIconUrl": "https://www.howwasyourday.live/icon-512.png",
   "shortcuts": [],
   "signingKey": {
-    "path": "leanon-keystore.jks",
-    "alias": "leanon"
+    "path": "howwasyourday-keystore.jks",
+    "alias": "howwasyourday"
   },
   "appVersionCode": 1,
   "appVersionName": "1.0.0",

@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Feeling Lonely in Singapore? Talk to an Indian Listener | LeanOn',
-  description: 'Loneliness as an Indian expat in Singapore is real — missing home, struggling with cultural distance, working hard but feeling unseen. LeanOn connects you with a real Indian listener who gets it, anytime.',
+  title: 'Feeling Lonely in Singapore? Talk to an Indian Listener | How Was Your Day',
+  description: 'Loneliness as an Indian expat in Singapore is real — missing home, struggling with cultural distance, working hard but feeling unseen. How Was Your Day connects you with a real Indian listener who gets it, anytime.',
   keywords: [
     'feeling lonely in singapore', 'loneliness support singapore', 'indian expat lonely singapore',
     'missing home singapore', 'nri lonely singapore', 'isolation singapore expat',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'emotional support singapore indian', 'south asian loneliness singapore',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/singapore-loneliness',
-    languages: { 'en-SG': 'https://www.leanon.app/singapore-loneliness' },
+    canonical: 'https://www.howwasyourday.live/singapore-loneliness',
+    languages: { 'en-SG': 'https://www.howwasyourday.live/singapore-loneliness' },
   },
   openGraph: {
-    title: 'Feeling Lonely in Singapore? Talk to an Indian Listener — LeanOn',
-    description: 'Missing home. Working hard. Feeling unseen. LeanOn connects Indian expats in Singapore with real peer listeners who understand your world — on Indian time, in your language.',
-    url: 'https://www.leanon.app/singapore-loneliness',
-    siteName: 'LeanOn',
+    title: 'Feeling Lonely in Singapore? Talk to an Indian Listener — How Was Your Day',
+    description: 'Missing home. Working hard. Feeling unseen. How Was Your Day connects Indian expats in Singapore with real peer listeners who understand your world — on Indian time, in your language.',
+    url: 'https://www.howwasyourday.live/singapore-loneliness',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'How do I deal with missing home while living in Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Talking about it helps more than suppressing it. LeanOn connects you with Indian peer listeners who have often lived through similar transitions. A 15 or 30 minute conversation — in Hindi, Tamil, Telugu, or English — can ease the ache of missing home significantly.',
+        text: 'Talking about it helps more than suppressing it. How Was Your Day connects you with Indian peer listeners who have often lived through similar transitions. A 15 or 30 minute conversation — in Hindi, Tamil, Telugu, or English — can ease the ache of missing home significantly.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk to an Indian listener from Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners are based in India and online daily on Indian time. You can talk in Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, or English. Sessions start from S$14 for 15 minutes, with the first 5 minutes free to try.',
+        text: 'Yes. How Was Your Day listeners are based in India and online daily on Indian time. You can talk in Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, or English. Sessions start from S$14 for 15 minutes, with the first 5 minutes free to try.',
       },
     },
     {
@@ -57,15 +57,15 @@ const faqSchema = {
       name: 'What if I feel lonely even though I have colleagues and acquaintances in Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is one of the most common forms of expat loneliness — surrounded by people but still feeling deeply alone. Professional relationships rarely go deep. LeanOn gives you a space for real, unfiltered conversation where you do not have to perform or pretend.',
+        text: 'That is one of the most common forms of expat loneliness — surrounded by people but still feeling deeply alone. Professional relationships rarely go deep. How Was Your Day gives you a space for real, unfiltered conversation where you do not have to perform or pretend.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is LeanOn safe and confidential?',
+      name: 'Is How Was Your Day safe and confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn sessions are anonymous by default. Your listener does not know your real name, employer, or location unless you choose to share. Everything stays between you and your listener.',
+        text: 'Yes. How Was Your Day sessions are anonymous by default. Your listener does not know your real name, employer, or location unless you choose to share. Everything stays between you and your listener.',
       },
     },
   ],
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Loneliness Support Singapore', item: 'https://www.leanon.app/singapore-loneliness' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Loneliness Support Singapore', item: 'https://www.howwasyourday.live/singapore-loneliness' },
   ],
 }
 
@@ -156,7 +156,7 @@ export default function SingaporeLonelinessPage() {
         <h1>Singapore is Full of People.<br />But Who Really Gets You?</h1>
         <p className="lead">
           You moved to Singapore for opportunity. You found the MRT, the hawker centres, the work visa —
-          but the warmth you left behind in India? That is harder to replace. LeanOn connects you with
+          but the warmth you left behind in India? That is harder to replace. How Was Your Day connects you with
           real Indian listeners who understand exactly what this distance feels like.
         </p>
 
@@ -180,7 +180,7 @@ export default function SingaporeLonelinessPage() {
         <div className="night-box">
           <h2>🌙 9 PM in Singapore — 6:30 PM back home</h2>
           <p>Everyone at home is busy with dinner. You are alone in your flat, phone in hand, not quite sure
-            who to call. LeanOn listeners are online right now — Indian, warm, non-judgmental — ready to
+            who to call. How Was Your Day listeners are online right now — Indian, warm, non-judgmental — ready to
             give you their full attention.</p>
           <p>You do not need a reason. Feeling disconnected IS the reason.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
@@ -191,7 +191,7 @@ export default function SingaporeLonelinessPage() {
           <p>Sometimes the loneliness is not just about missing people — it is missing your language.
             The ease of switching between Hindi and English mid-sentence. The warmth of someone who
             understands &ldquo;ghar ki yaad&rdquo; without you having to translate it.</p>
-          <p>LeanOn listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and more.
+          <p>How Was Your Day listeners speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and more.
             Choose a listener whose language and background matches yours.</p>
         </div>
 
@@ -232,24 +232,24 @@ export default function SingaporeLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How do I deal with missing home while living in Singapore?</h3>
-            <p>Talking about it helps more than suppressing it. LeanOn connects you with Indian peer listeners
+            <p>Talking about it helps more than suppressing it. How Was Your Day connects you with Indian peer listeners
               who have lived through similar transitions. A 15 or 30-minute conversation in your language can
               ease the ache significantly.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to an Indian listener from Singapore?</h3>
-            <p>Yes. LeanOn listeners are based in India, so availability follows Indian time and speak Hindi, Tamil, Telugu, Malayalam, Kannada,
+            <p>Yes. How Was Your Day listeners are based in India, so availability follows Indian time and speak Hindi, Tamil, Telugu, Malayalam, Kannada,
               Bengali, and English. Sessions start from S$14 for 15 minutes, with the first 5 minutes free.</p>
           </div>
           <div className="faq-item">
             <h3>What if I feel lonely even though I have colleagues in Singapore?</h3>
             <p>That is one of the most common forms of expat loneliness — surrounded by people but still feeling
-              deeply alone. Professional relationships rarely go deep. LeanOn gives you space for real,
+              deeply alone. Professional relationships rarely go deep. How Was Your Day gives you space for real,
               unfiltered conversation.</p>
           </div>
           <div className="faq-item">
-            <h3>Is LeanOn safe and confidential?</h3>
-            <p>Yes. LeanOn sessions are anonymous by default. Your listener does not know your real name,
+            <h3>Is How Was Your Day safe and confidential?</h3>
+            <p>Yes. How Was Your Day sessions are anonymous by default. Your listener does not know your real name,
               employer, or location unless you choose to share. Everything stays between you and your listener.</p>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function SingaporeLonelinessPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

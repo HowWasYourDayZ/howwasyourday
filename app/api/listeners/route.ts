@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
     // lib/listener-presence.ts.
     await sweepStaleListeners(sb)
 
-    // Exclude orphaned accounts: LeanOn is phone-only, so a listener whose users
+    // Exclude orphaned accounts: How Was Your Day is phone-only, so a listener whose users
     // row has no phone can never be logged into and must not appear bookable.
     // These ghosts come from auth-account recreation (see lib/ensure-user-row.ts).
     // We fetch phone ONLY to filter on it, then strip it from the response below
@@ -191,9 +191,9 @@ export async function GET(req: NextRequest) {
         'Surrogate-Control': 'no-store',
         // Diagnostic header — lets the owner verify which deploy is running and
         // what the server sees, without exposing sensitive data.
-        'X-LeanOn-Ts': new Date().toISOString(),
-        'X-LeanOn-Online': String(onlineCount),
-        'X-LeanOn-InSession': String(inSessionCount),
+        'X-HowWasYourDay-Ts': new Date().toISOString(),
+        'X-HowWasYourDay-Online': String(onlineCount),
+        'X-HowWasYourDay-InSession': String(inSessionCount),
       },
     })
   } catch (err) {

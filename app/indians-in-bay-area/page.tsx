@@ -3,24 +3,24 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Emotional Support for Indians in the Bay Area | San Jose, Fremont | LeanOn',
+  title: 'Emotional Support for Indians in the Bay Area | San Jose, Fremont | How Was Your Day',
   description: 'Fremont, Sunnyvale, Santa Clara — the Bay Area has 300,000+ Indians. But tech salaries and community events don\'t fill every gap. Talk to someone real.',
   keywords: ['indians in bay area support', 'fremont indian community', 'sunnyvale indian support', 'san jose indian mental health', 'silicon valley indian loneliness', 'desi support bay area'],
-  alternates: { canonical: 'https://www.leanon.app/indians-in-bay-area' },
-  openGraph: { title: 'Emotional Support for Indians in the Bay Area | San Jose, Fremont | LeanOn', description: 'Fremont, Sunnyvale, Santa Clara — the Bay Area has 300,000+ Indians. But tech salaries and community events don\'t fill every gap. Talk to someone real.', url: 'https://www.leanon.app/indians-in-bay-area', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/indians-in-bay-area' },
+  openGraph: { title: 'Emotional Support for Indians in the Bay Area | San Jose, Fremont | How Was Your Day', description: 'Fremont, Sunnyvale, Santa Clara — the Bay Area has 300,000+ Indians. But tech salaries and community events don\'t fill every gap. Talk to someone real.', url: 'https://www.howwasyourday.live/indians-in-bay-area', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand the Silicon Valley Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'LeanOn listeners are based in India and understand the NRI tech worker experience — the Bay Area burnout, imposter syndrome, the H-1B dependency, the performance culture. You don\'t need to explain the context. Many listeners have close family in the Bay Area tech community.' } },
+  { '@type': 'Question', name: 'Do listeners understand the Silicon Valley Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI tech worker experience — the Bay Area burnout, imposter syndrome, the H-1B dependency, the performance culture. You don\'t need to explain the context. Many listeners have close family in the Bay Area tech community.' } },
   { '@type': 'Question', name: 'What time works best to connect from the Bay Area?', acceptedAnswer: { '@type': 'Answer', text: 'Bay Area (PST/PDT) is 13.5 hours behind IST. 8am San Jose = 9:30pm India. Your morning — even before a full evening ends in India — finds listeners available. Evening Bay Area time (8–10pm) is India\'s late night and early morning, which also has listeners for night-owl sessions.' } },
   { '@type': 'Question', name: 'Is this confidential from my colleagues at my tech company?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous. Only a phone number and first name required. Nothing is shared with your employer, your Fremont or Sunnyvale community, or anyone back in India.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Indians in Bay Area', item: 'https://www.leanon.app/indians-in-bay-area' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Indians in Bay Area', item: 'https://www.howwasyourday.live/indians-in-bay-area' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function IndiansInBayAreaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Indians in Bay Area</span></nav>
         <div className="hero">
@@ -83,7 +83,7 @@ export default function IndiansInBayAreaPage() {
           <h2>The Bay Area Indian Tech Worker: The World&rsquo;s Most Optimised, Least-Talked-About Problem</h2>
           <p>Fremont is one of the most Indian cities in America by proportion. Sunnyvale, Santa Clara, and Cupertino have enormous Indian tech worker populations. San Jose&rsquo;s Little India corridor on Story Road has been here for decades. The community infrastructure is extraordinary — temples, cricket leagues, Diwali events, Indian grocery stores on every second block.</p>
           <p>And underneath all of that: a peculiar, specific exhaustion. The Bay Area tech Indian experience carries layers that are hard to name. Imposter syndrome in a world where everyone looks successful. H-1B anxiety — your entire life tied to your employer&rsquo;s goodwill. The identity question: I left India to be here, and here I am, but who am I becoming? The marriage under strain from two demanding careers. The children who feel more American than Indian and what that means to you.</p>
-          <p>LeanOn is for exactly this. Not crisis. Not diagnosis. Just: I need to talk to someone who actually gets it. A real Indian peer listener, in India, who understands the Silicon Valley Indian context. First 5 minutes free.</p>
+          <p>How Was Your Day is for exactly this. Not crisis. Not diagnosis. Just: I need to talk to someone who actually gets it. A real Indian peer listener, in India, who understands the Silicon Valley Indian context. First 5 minutes free.</p>
         </div>
 
         <div className="section">

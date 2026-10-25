@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Online Counselling Cost in India (2026): Full Price Comparison | LeanOn',
-  description: 'Compare therapy, free helplines and online peer support costs in India. See how LeanOn pricing works, when peer support fits, and what to expect before paying.',
-  alternates: { canonical: 'https://www.leanon.app/online-counselling-india-cost', languages: { 'en-IN': 'https://www.leanon.app/online-counselling-india-cost' } },
-  keywords: 'online counselling cost India, therapy price India, how much does therapy cost India, affordable counselling India, cheapest online emotional support India, online therapy cost comparison India, peer support price India, leanon pricing',
+  title: 'Online Counselling Cost in India (2026): Full Price Comparison | How Was Your Day',
+  description: 'Compare therapy, free helplines and online peer support costs in India. See how How Was Your Day pricing works, when peer support fits, and what to expect before paying.',
+  alternates: { canonical: 'https://www.howwasyourday.live/online-counselling-india-cost', languages: { 'en-IN': 'https://www.howwasyourday.live/online-counselling-india-cost' } },
+  keywords: 'online counselling cost India, therapy price India, how much does therapy cost India, affordable counselling India, cheapest online emotional support India, online therapy cost comparison India, peer support price India, howwasyourday pricing',
   openGraph: {
-    title: 'Online Counselling Cost in India (2026): Full Price Comparison | LeanOn',
-    description: 'Compare therapy, free helplines and online peer support costs in India. See how LeanOn pricing works, when peer support fits, and what to expect before paying.',
-    url: 'https://www.leanon.app/online-counselling-india-cost',
-    siteName: 'LeanOn',
+    title: 'Online Counselling Cost in India (2026): Full Price Comparison | How Was Your Day',
+    description: 'Compare therapy, free helplines and online peer support costs in India. See how How Was Your Day pricing works, when peer support fits, and what to expect before paying.',
+    url: 'https://www.howwasyourday.live/online-counselling-india-cost',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Is there anything cheaper that still involves a real human?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Screened peer support sits between free helplines and clinical therapy. On LeanOn, one introductory session of up to 5 minutes is free per account, and paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. You are speaking to a real, verified human being with lived experience of something similar — not a bot and not a script. Peer listeners are not licensed therapists and do not provide clinical treatment.',
+        text: 'Yes. Screened peer support sits between free helplines and clinical therapy. On How Was Your Day, one introductory session of up to 5 minutes is free per account, and paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. You are speaking to a real, verified human being with lived experience of something similar — not a bot and not a script. Peer listeners are not licensed therapists and do not provide clinical treatment.',
       },
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What exactly does a LeanOn session cost?',
+      name: 'What exactly does a How Was Your Day session cost?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sessions are 15, 30 or 45 minutes and are billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. You add money to a wallet before a session, and any unused wallet balance is fully refundable.',
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Online Counselling Cost', item: 'https://www.leanon.app/online-counselling-india-cost' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Online Counselling Cost', item: 'https://www.howwasyourday.live/online-counselling-india-cost' },
   ],
 }
 
@@ -133,7 +133,7 @@ export default function OnlineCounsellingCostPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -170,8 +170,8 @@ export default function OnlineCounsellingCostPage() {
           <h3>AI Wellness Chatbots — low cost</h3>
           <p>AI chat apps are cheap or free, always awake, and never judgemental. They can be a reasonable place to journal or to structure a thought at 3 a.m. But it is worth being plain about the limit: an AI is not a human being. It has never lost a parent, failed an exam, ended a relationship, or moved to a city where it knew nobody. Simulated empathy is not the same as a person who has actually been where you are and says so.</p>
 
-          <h3>LeanOn Peer Support — rates set by each listener</h3>
-          <p>On LeanOn, paid sessions are billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. You top up a wallet before a session, and any unused balance is fully refundable. LeanOn listeners are screened peers with lived experience, not licensed clinicians — which is exactly why the price is different, and also why it is not a replacement for clinical care.</p>
+          <h3>How Was Your Day Peer Support — rates set by each listener</h3>
+          <p>On How Was Your Day, paid sessions are billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. You top up a wallet before a session, and any unused balance is fully refundable. How Was Your Day listeners are screened peers with lived experience, not licensed clinicians — which is exactly why the price is different, and also why it is not a replacement for clinical care.</p>
         </div>
 
         {/* Decision framework */}
@@ -191,11 +191,11 @@ export default function OnlineCounsellingCostPage() {
 
         {/* Why cheaper */}
         <div className="section">
-          <h2>Why LeanOn Costs So Much Less</h2>
+          <h2>Why How Was Your Day Costs So Much Less</h2>
           <p>A price this far below therapy usually deserves suspicion, so here is the honest explanation of the model rather than a marketing answer.</p>
 
           <h3>Peers, not clinicians</h3>
-          <p>LeanOn listeners are screened peers with lived experience — people who have been through loneliness, heartbreak, career collapse, family pressure, grief — and who have been screened and chosen for how well they listen well. They are not licensed psychologists or psychiatrists. There is no decade of clinical training, licensing and supervision to recover in the price, because that training is not what they are offering. They are offering attention, empathy, and the particular credibility of having been there. That is worth a lot, but it does not cost what a clinical qualification costs.</p>
+          <p>How Was Your Day listeners are screened peers with lived experience — people who have been through loneliness, heartbreak, career collapse, family pressure, grief — and who have been screened and chosen for how well they listen well. They are not licensed psychologists or psychiatrists. There is no decade of clinical training, licensing and supervision to recover in the price, because that training is not what they are offering. They are offering attention, empathy, and the particular credibility of having been there. That is worth a lot, but it does not cost what a clinical qualification costs.</p>
 
           <h3>A simple, transparent fee — not a growing cut</h3>
           <p>What you pay is the listener&apos;s stated per-minute rate plus a flat ₹10 platform fee per paid session — not a percentage of your bill. The fee does not grow as your session gets longer, which means there is no incentive built into the system to keep you talking.</p>
@@ -207,7 +207,7 @@ export default function OnlineCounsellingCostPage() {
         {/* What ₹160 gets you */}
         <div className="section">
           <h2>What You Get for ₹160</h2>
-          <p>Around ₹160 is roughly what a 15-minute LeanOn session starts at — about the price of a coffee and a snack in most Indian cities. Concretely, here is what that buys:</p>
+          <p>Around ₹160 is roughly what a 15-minute How Was Your Day session starts at — about the price of a coffee and a snack in most Indian cities. Concretely, here is what that buys:</p>
           <ul>
             <li>A full 15-minute one-on-one conversation with a verified human being, not a bot and not a script.</li>
             <li>Someone who has lived through something similar to what you are carrying, so the empathy is real rather than performed.</li>
@@ -242,14 +242,14 @@ export default function OnlineCounsellingCostPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is there anything cheaper that still involves a real human?</div>
-            <div className="faq-a">Yes. Screened peer support sits between free helplines and clinical therapy. On LeanOn, paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, a 15-minute conversation with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee, with a real screened peer listener who brings relevant lived experience. One introductory session of up to 5 minutes is free per account. Peer listeners are not licensed therapists and do not provide clinical treatment.</div>
+            <div className="faq-a">Yes. Screened peer support sits between free helplines and clinical therapy. On How Was Your Day, paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, a 15-minute conversation with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee, with a real screened peer listener who brings relevant lived experience. One introductory session of up to 5 minutes is free per account. Peer listeners are not licensed therapists and do not provide clinical treatment.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is free support good enough?</div>
             <div className="faq-a">For crisis, free support is not just good enough — it is the correct choice. NIMHANS (080-46110007) and Tele-MANAS (14416) are staffed by trained professionals, cost nothing, and are excellent for acute distress. Where free options fall short is ongoing, non-urgent emotional weight: helplines are built for crisis rather than regular conversation, and AI chatbots, while cheap and available, are not human and have no lived experience to offer you.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What exactly does a LeanOn session cost?</div>
+            <div className="faq-q">What exactly does a How Was Your Day session cost?</div>
             <div className="faq-a">Sessions are 15, 30 or 45 minutes, billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. You add money to a wallet beforehand, and any unused balance is fully refundable.</div>
           </div>
         </div>
@@ -257,22 +257,22 @@ export default function OnlineCounsellingCostPage() {
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Explore more peer support resources on LeanOn:</p>
+          <p>Explore more peer support resources on How Was Your Day:</p>
           <div className="related">
             <a href="/alternatives-to-therapy-india" className="related-link">Alternatives to Therapy</a>
             <a href="/blog/peer-support-vs-therapy-india" className="related-link">Peer Support vs Therapy</a>
             <a href="/blog/affordable-alternatives-to-therapy-in-india" className="related-link">Affordable Alternatives</a>
             <a href="/support/someone-to-talk-to" className="related-link">Someone to Talk To</a>
-            <a href="/why-leanon" className="related-link">Why LeanOn</a>
+            <a href="/why-howwasyourday" className="related-link">Why How Was Your Day</a>
             <a href="/browse" className="related-link">Browse All Listeners</a>
           </div>
         </div>
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <p><strong>LeanOn is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
+          <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
           <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
-          <p>LeanOn listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
+          <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>
     </>

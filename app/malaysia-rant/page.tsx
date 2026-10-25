@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Need to Vent? Someone to Listen in Malaysia | LeanOn',
-  description: 'Frustrated, stressed, nowhere to vent in Malaysia? LeanOn gives you a real Indian listener who will hear you out completely — in Tamil, Hindi, or any Indian language. First 5 min free.',
+  title: 'Need to Vent? Someone to Listen in Malaysia | How Was Your Day',
+  description: 'Frustrated, stressed, nowhere to vent in Malaysia? How Was Your Day gives you a real Indian listener who will hear you out completely — in Tamil, Hindi, or any Indian language. First 5 min free.',
   keywords: [
     'need to vent malaysia', 'someone to vent to malaysia', 'rant to someone malaysia',
     'talk about stress malaysia', 'frustrated in malaysia expat', 'no one to talk to malaysia indian',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'work stress malaysia indian', 'venting support malaysia tamil',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/malaysia-rant',
-    languages: { 'en-MY': 'https://www.leanon.app/malaysia-rant' },
+    canonical: 'https://www.howwasyourday.live/malaysia-rant',
+    languages: { 'en-MY': 'https://www.howwasyourday.live/malaysia-rant' },
   },
   openGraph: {
-    title: 'Need to Vent? Someone to Listen in Malaysia — LeanOn',
-    description: 'Work stress, frustration, nowhere to let it out in Malaysia. LeanOn gives you a real Indian listener — in Tamil, Hindi, or your language — who will hear you out completely.',
-    url: 'https://www.leanon.app/malaysia-rant',
-    siteName: 'LeanOn',
+    title: 'Need to Vent? Someone to Listen in Malaysia — How Was Your Day',
+    description: 'Work stress, frustration, nowhere to let it out in Malaysia. How Was Your Day gives you a real Indian listener — in Tamil, Hindi, or your language — who will hear you out completely.',
+    url: 'https://www.howwasyourday.live/malaysia-rant',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -30,10 +30,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Can I just vent to a LeanOn listener without wanting advice?',
+      name: 'Can I just vent to a How Was Your Day listener without wanting advice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is exactly what LeanOn is built for. Listeners are screened and expected to follow your lead — if you want to vent without advice, they will listen without redirecting. They will ask what you need at the start and then hold that space for you.',
+        text: 'That is exactly what How Was Your Day is built for. Listeners are screened and expected to follow your lead — if you want to vent without advice, they will listen without redirecting. They will ask what you need at the start and then hold that space for you.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Why do I feel like I cannot fully vent to the people around me in Malaysia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'When the people you might vent to are connected to your workplace, community, or social circle, you self-censor. Everything you say could get back to someone. A LeanOn listener knows nobody in your life, has no stake in the outcome, and will never tell anyone what you said. That freedom makes honest venting possible.',
+        text: 'When the people you might vent to are connected to your workplace, community, or social circle, you self-censor. Everything you say could get back to someone. A How Was Your Day listener knows nobody in your life, has no stake in the outcome, and will never tell anyone what you said. That freedom makes honest venting possible.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I vent in Tamil or Hindi from Malaysia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn listeners speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Many people find that frustration and stress pour out more naturally in their mother tongue — choose the listener who matches yours.',
+        text: 'Yes. How Was Your Day listeners speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Many people find that frustration and stress pour out more naturally in their mother tongue — choose the listener who matches yours.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What if my frustration is about work in Malaysia specifically?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your listener will understand the context. Many LeanOn listeners understand the dynamics of working in Southeast Asia as an Indian — the cultural friction, the invisible barriers, the exhaustion of navigating a work culture that is different from what you grew up with.',
+        text: 'Your listener will understand the context. Many How Was Your Day listeners understand the dynamics of working in Southeast Asia as an Indian — the cultural friction, the invisible barriers, the exhaustion of navigating a work culture that is different from what you grew up with.',
       },
     },
     {
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Someone to Listen Malaysia', item: 'https://www.leanon.app/malaysia-rant' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Someone to Listen Malaysia', item: 'https://www.howwasyourday.live/malaysia-rant' },
   ],
 }
 
@@ -157,7 +157,7 @@ export default function MalaysiaRantPage() {
         <p className="lead">
           Work that does not recognise you. A system that does not make sense. Being far from the
           people you can be completely honest with. The frustration builds — and there is nowhere
-          safe to let it out. LeanOn gives you a real Indian listener who will hear every word without
+          safe to let it out. How Was Your Day gives you a real Indian listener who will hear every word without
           flinching.
         </p>
 
@@ -173,7 +173,7 @@ export default function MalaysiaRantPage() {
             <li>&ldquo;I just need to say all of this out loud without being judged.&rdquo;</li>
             <li>&ldquo;I don&apos;t want to be fixed. I just want to be heard.&rdquo;</li>
           </ul>
-          <p style={{ marginTop: '12px' }}>A LeanOn listener will let you say every last bit of it.</p>
+          <p style={{ marginTop: '12px' }}>A How Was Your Day listener will let you say every last bit of it.</p>
         </div>
 
         <div className="night-box">
@@ -181,7 +181,7 @@ export default function MalaysiaRantPage() {
           <p>You are on the LRT back from the office. The day was frustrating in a hundred small ways.
             You want to tell someone — but who? Your partner is dealing with their own day. Your friends
             back home will not quite get the specifics.</p>
-          <p>LeanOn listeners are online now. Indian, screened, and ready to hear you out fully.</p>
+          <p>How Was Your Day listeners are online now. Indian, screened, and ready to hear you out fully.</p>
           <a href="/browse" className="cta-night">Talk to a listener now →</a>
         </div>
 
@@ -190,7 +190,7 @@ export default function MalaysiaRantPage() {
           <p>In Malaysia, your social and professional worlds often overlap. The Indian community here
             can be tight-knit in ways that make honesty complicated. When you cannot afford for your
             rant to travel, you end up swallowing it instead.</p>
-          <p>A LeanOn listener is completely outside every circle. What you say stays between you two.
+          <p>A How Was Your Day listener is completely outside every circle. What you say stays between you two.
             Nobody gets back to you about it. You can say the real thing.</p>
         </div>
 
@@ -225,18 +225,18 @@ export default function MalaysiaRantPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Can I just vent without wanting advice?</h3>
-            <p>That is exactly what LeanOn is built for. Listeners follow your lead — if you want to vent
+            <p>That is exactly what How Was Your Day is built for. Listeners follow your lead — if you want to vent
               without advice, they will hold that space for you from start to finish.</p>
           </div>
           <div className="faq-item">
             <h3>Why can I not fully vent to the people around me in Malaysia?</h3>
             <p>When the people you might vent to are connected to your social circle or workplace, you
-              self-censor. A LeanOn listener knows nobody in your life, has no stake in the outcome,
+              self-censor. A How Was Your Day listener knows nobody in your life, has no stake in the outcome,
               and will never tell anyone. That freedom changes what you say.</p>
           </div>
           <div className="faq-item">
             <h3>Can I vent in Tamil or Hindi from Malaysia?</h3>
-            <p>Yes. LeanOn listeners speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and English.
+            <p>Yes. How Was Your Day listeners speak Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and English.
               Frustration often pours out more naturally in your mother tongue.</p>
           </div>
           <div className="faq-item">
@@ -265,7 +265,7 @@ export default function MalaysiaRantPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

@@ -7,31 +7,31 @@ export const metadata: Metadata = {
   // Kept out of search and AI assistants (lib/seo-noindex.ts, app/robots.ts):
   // ChatGPT was sending "side income" searchers here, flooding listener sign-ups.
   robots: NOINDEX_ROBOTS,
-  title: 'Becoming a LeanOn Peer Listener — What It Involves | LeanOn',
-  description: 'What being a LeanOn peer listener involves: screening, identity verification, the 40% service fee, and why this is not a job or a guaranteed income.',
-  alternates: { canonical: 'https://www.leanon.app/earn-by-listening' },
+  title: 'Becoming a How Was Your Day Peer Listener — What It Involves | How Was Your Day',
+  description: 'What being a How Was Your Day peer listener involves: screening, identity verification, the 40% service fee, and why this is not a job or a guaranteed income.',
+  alternates: { canonical: 'https://www.howwasyourday.live/earn-by-listening' },
   openGraph: {
-    title: 'Becoming a LeanOn Peer Listener — What It Involves | LeanOn',
+    title: 'Becoming a How Was Your Day Peer Listener — What It Involves | How Was Your Day',
     description: 'Screening, identity verification and the 40% service fee. Not a job or a guaranteed income.',
-    url: 'https://www.leanon.app/earn-by-listening',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/earn-by-listening',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
 
 const faqs = [
   { q: 'Do I need a degree or certification to become a listener?', a: 'No degree or certification is required. What matters is lived experience — you should have personally navigated what your future seekers are going through (loneliness, burnout, anxiety, grief, relationship stress, etc.). You will answer screening questions on active listening, boundaries and crisis referral as part of your application. This is peer support, not therapy — your qualification is your story.' },
-  { q: 'How do I get paid as a listener on LeanOn?', a: 'Earnings accumulate in your listener dashboard. You can request a payout to your UPI ID at any time (subject to minimum thresholds). Payouts are processed within 48–72 hours. There are no joining fees, subscription fees, or hidden deductions.' },
+  { q: 'How do I get paid as a listener on How Was Your Day?', a: 'Earnings accumulate in your listener dashboard. You can request a payout to your UPI ID at any time (subject to minimum thresholds). Payouts are processed within 48–72 hours. There are no joining fees, subscription fees, or hidden deductions.' },
   { q: 'What topics can I listen to as a peer listener?', a: 'You choose the topics you are qualified to support based on your own experience: loneliness, anxiety, burnout, grief, career stress, relationship issues, student stress, or any combination. You only take sessions on topics you select — you are never assigned calls outside your comfort zone.' },
-  { q: 'Is being a LeanOn listener emotionally draining?', a: 'It can be if you do not protect yourself. LeanOn recommends clear session boundaries and community support for listeners. Most listeners find the work deeply fulfilling rather than draining because they are making a real difference using experience they already carry. The key is to set your own pace and limits.' },
+  { q: 'Is being a How Was Your Day listener emotionally draining?', a: 'It can be if you do not protect yourself. How Was Your Day recommends clear session boundaries and community support for listeners. Most listeners find the work deeply fulfilling rather than draining because they are making a real difference using experience they already carry. The key is to set your own pace and limits.' },
 ]
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Earn by Listening', item: 'https://www.leanon.app/earn-by-listening' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Earn by Listening', item: 'https://www.howwasyourday.live/earn-by-listening' },
   ],
 }
 
@@ -92,7 +92,7 @@ export default function EarnByListeningPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -105,7 +105,7 @@ export default function EarnByListeningPage() {
         <div className="hero">
           <p className="badge">Set Your Own Hours · Work From Home</p>
           <h1>Earn Money With Your <em>Empathy</em></h1>
-          <p className="lead">If you have been through loneliness, burnout, anxiety, or heartbreak — your experience has value. Become a peer listener on LeanOn and earn ₹300–₹800/hour helping people through exactly what you have overcome.</p>
+          <p className="lead">If you have been through loneliness, burnout, anxiety, or heartbreak — your experience has value. Become a peer listener on How Was Your Day and earn ₹300–₹800/hour helping people through exactly what you have overcome.</p>
           <a href="/become-listener" className="cta-hero">Apply to become a listener →</a>
         </div>
 
@@ -179,7 +179,7 @@ export default function EarnByListeningPage() {
           <p><strong>Casual (4–6 sessions/week):</strong> ₹1,900–₹4,300/month take-home — solid side income with minimal time.</p>
           <p><strong>Part-time (2–3 sessions/day, 5 days/week):</strong> ₹12,000–₹27,000/month depending on your rate.</p>
           <p><strong>Active (4+ sessions/day, consistent availability):</strong> ₹24,000–₹48,000+/month.</p>
-          <p>No upfront costs. No subscription fees. You keep 60% of your rate on every paid session; LeanOn&apos;s 40% service fee supports the work of bringing seekers to LeanOn, secure payments, verification, safety and support.</p>
+          <p>No upfront costs. No subscription fees. You keep 60% of your rate on every paid session; How Was Your Day&apos;s 40% service fee supports the work of bringing seekers to How Was Your Day, secure payments, verification, safety and support.</p>
         </div>
 
         {/* FAQ */}

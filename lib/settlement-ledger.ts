@@ -13,7 +13,7 @@ type Sb = ReturnType<typeof createAdminClient>
 // Rules:
 // - A ledger row (wallet_transactions / listener_earnings) is written ONLY
 //   after the matching wallet credit succeeded.
-// - listener_earnings.platform_fee = LeanOn's total take for the session
+// - listener_earnings.platform_fee = How Was Your Day's total take for the session
 //   (amount_held − refund − listener net = ₹10 fee + service fee + NRI margin).
 // - Failures are logged with "RECONCILIATION NEEDED" and the session id.
 export async function applySettlement(sb: Sb, args: {
@@ -51,7 +51,7 @@ export async function applySettlement(sb: Sb, args: {
   // But ALWAYS record the earnings row when any listener-side money moved
   // (listenerEarning > 0 OR listenerServiceFee > 0). A 100%-fee session has
   // listenerEarning = 0 but listenerServiceFee = rawShare — without this guard
-  // LeanOn's service fee revenue would go unrecorded in listener_earnings.
+  // How Was Your Day's service fee revenue would go unrecorded in listener_earnings.
   if (listenerEarning > 0) {
     const { error } = await sb.rpc('credit_wallet', { p_user_id: listenerId, p_amount: listenerEarning })
     if (error) {
@@ -73,7 +73,7 @@ export async function applySettlement(sb: Sb, args: {
 
 // Earnings ledger row. listener_gross / service_fee come from migration 057;
 // if those columns are missing the row is still written without them, so the
-// listener's dashboard and LeanOn's revenue figure never silently lose a session.
+// listener's dashboard and How Was Your Day's revenue figure never silently lose a session.
 // mode 'insert' (normal settlement: first write wins, duplicate = already recorded)
 // or 'upsert' (admin re-run: corrects an earlier, wrong row).
 export async function recordEarnings(sb: Sb, args: { sessionId: string; listenerId: string; amountHeld: number; settlement: Settlement; mode?: 'insert' | 'upsert' }) {

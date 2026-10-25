@@ -4,7 +4,7 @@ export const post = {
   description: 'A lot of people open astrology apps late at night not for a prediction but out of loneliness. That is worth naming gently, without judgment.',
   date: '2026-08-12',
   readTime: '8 min read',
-  topics: ['loneliness', 'late night', 'someone to talk to', 'empathy', 'LeanOn'],
+  topics: ['loneliness', 'late night', 'someone to talk to', 'empathy', 'How Was Your Day'],
   content: `
 <p>It is past midnight, and somewhere in Mumbai, Delhi, Bangalore, Hyderabad, someone opens an astrology chat app. They type in their date of birth, their time of birth, maybe a question about their career or their marriage. And then, somewhere in the conversation that follows, the question quietly changes. It stops being about the stars and starts being about them — their day, their fears, the thing they have not said out loud to anyone in weeks. If this sounds familiar, you are not doing anything strange. You are one of a great many people for whom an astrology app has become, at some point, the closest thing to <strong>someone to talk to</strong>.</p>
 
@@ -44,11 +44,11 @@ export const post = {
 
 <p>There is nothing wrong with genuinely wanting an astrology reading — insight into timing, guidance framed through a tradition that means something to you, a sense of pattern in a confusing stretch of life. And there is nothing wrong with wanting a real conversation with another human being who will simply listen. These are two different things, and it is worth being a little honest with yourself, on any given night, about which one you are actually reaching for. Neither answer needs defending. But knowing the real answer means you can go looking for it more directly, instead of routing it through a question about Saturn.</p>
 
-<h2>Where LeanOn Fits, for the Second Need</h2>
+<h2>Where How Was Your Day Fits, for the Second Need</h2>
 
-<p>If what you are actually looking for tonight is <strong>peer support India</strong> can offer without any prediction attached — just a real person, present with you, in the actual moment you are in — that is exactly what LeanOn exists for. There is <a href="/talk-to-someone-not-astrologer">a more direct option</a> if the astrology framing was never really the point for you.</p>
+<p>If what you are actually looking for tonight is <strong>peer support India</strong> can offer without any prediction attached — just a real person, present with you, in the actual moment you are in — that is exactly what How Was Your Day exists for. There is <a href="/talk-to-someone-not-astrologer">a more direct option</a> if the astrology framing was never really the point for you.</p>
 
-<p>LeanOn's listeners are not astrologers and they are not therapists. They are peers with real, lived experience of the same things that tend to surface at midnight — loneliness, anxiety, grief, the ache of a delayed milestone, the strangeness of a city that still does not feel like home. They are chosen for their ability to listen with genuine empathy, not to read your chart or forecast your year. No prediction, no ritual, no performance — just an empathetic person sitting with you in the present, which is usually the thing that was actually needed all along.</p>
+<p>How Was Your Day's listeners are not astrologers and they are not therapists. They are peers with real, lived experience of the same things that tend to surface at midnight — loneliness, anxiety, grief, the ache of a delayed milestone, the strangeness of a city that still does not feel like home. They are chosen for their ability to listen with genuine empathy, not to read your chart or forecast your year. No prediction, no ritual, no performance — just an empathetic person sitting with you in the present, which is usually the thing that was actually needed all along.</p>
 
 <p>It is anonymous, first names only, and nobody in your life ever finds out. There is no appointment — you can find out whether being heard this way feels like what you were hoping for. And listeners go online at different hours — including the late-night hours this piece has been describing, because that is precisely when this feeling tends to arrive. You can <a href="/browse">browse peer listeners</a> and choose someone whose experience actually resembles your own, or read more about finding <a href="/someone-to-talk-to-at-night">someone to talk to at night</a>. The <a href="/faq">FAQ</a> covers the practical questions about privacy and how it all works.</p>
 

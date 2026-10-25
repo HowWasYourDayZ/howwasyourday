@@ -15,9 +15,9 @@ Read this before changing `ListenerPresence.tsx`, the dashboard's toggle,
      for a dead request;
    - a per-request tag, so a second request buzzes again;
    - `requireInteraction`, so it stays on screen until the listener taps it.
-2. `public/sw.js` shows the notification, even with no LeanOn tab open.
+2. `public/sw.js` shows the notification, even with no How Was Your Day tab open.
    Tapping it opens `/dashboard`, where the accept/decline modal is.
-3. If a LeanOn tab is open, the in-page layer also rings. It uses the
+3. If a How Was Your Day tab is open, the in-page layer also rings. It uses the
    `/dashboard` modal or `ListenerPresence` on any other page, and relies on:
    - realtime INSERT events;
    - a poll every 20–30 seconds;
@@ -29,7 +29,7 @@ Read this before changing `ListenerPresence.tsx`, the dashboard's toggle,
 
 - **"Go online" is the only thing that sets `is_available = true`.** Nothing
   else ever does.
-- While LeanOn is open, the page sends a heartbeat every 60–90 seconds. It
+- While How Was Your Day is open, the page sends a heartbeat every 60–90 seconds. It
   stamps `last_heartbeat_at` and reports `is_available` back, so the dashboard
   and the offline nudge re-sync if the listener was set offline.
 - **The sweep** (`sweepStaleListeners`) runs on every `/api/listeners` load:
@@ -79,7 +79,7 @@ Read this before changing `ListenerPresence.tsx`, the dashboard's toggle,
      3-minute request window.
 3. **One device per user.**
    - What happened: `users.fcm_token` kept only the last device registered, so
-     opening LeanOn on a laptop silently stopped alerts on the phone.
+     opening How Was Your Day on a laptop silently stopped alerts on the phone.
    - Also: a phone shared by two accounts kept ringing for the previous account.
    - Fix: the `push_tokens` table (migration 061). Registering moves the token
      to the account signed in now.
@@ -161,13 +161,13 @@ Known and accepted:
 
 1. Ask them to open the dashboard and read the **Phone alerts** card.
    - **"off"** → tap **Turn on alerts**.
-   - **"blocked"** → Settings → Apps → Chrome (or LeanOn) → Notifications → allow.
-   - **iPhone** → Share → Add to Home Screen, then use LeanOn from the
+   - **"blocked"** → Settings → Apps → Chrome (or How Was Your Day) → Notifications → allow.
+   - **iPhone** → Share → Add to Home Screen, then use How Was Your Day from the
      home-screen icon. Safari tabs cannot receive push.
 2. Ask them to tap **Send a test alert** and switch apps.
    - Arrives → alerts work, and the request probably expired before they
      reacted.
-   - Doesn't arrive → set Chrome / LeanOn battery use to **Unrestricted**. This
+   - Doesn't arrive → set Chrome / How Was Your Day battery use to **Unrestricted**. This
      is common on Xiaomi, Oppo, Vivo, Realme and Samsung, whose battery savers
      kill background apps.
 3. Server logs: `session request push not delivered` shows the session id,

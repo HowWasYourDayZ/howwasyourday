@@ -1,8 +1,8 @@
-// Mood-based landing pages for LeanOn.
+// Mood-based landing pages for How Was Your Day.
 // Consumed by the dynamic route /feeling/[mood] and the /daily-check-in hub.
 // Pure data — no React, no JSX, no side effects.
 //
-// SAFETY: LeanOn is peer emotional support, not professional mental health
+// SAFETY: How Was Your Day is peer emotional support, not professional mental health
 // care. Nothing here diagnoses, treats, or cures anything. The only crisis
 // helplines referenced anywhere in this file are NIMHANS (080-46110007) and
 // Tele-MANAS (14416).
@@ -27,9 +27,9 @@ export const FEELINGS: Feeling[] = [
     emoji: "🌙",
     label: "Lonely",
     h1: "Feeling lonely today? You are not the only one awake with this.",
-    metaTitle: "Feeling Lonely Today? Talk to Someone Now | LeanOn",
+    metaTitle: "Feeling Lonely Today? Talk to Someone Now | How Was Your Day",
     metaDescription:
-      "Feeling lonely right now? Talk to a verified LeanOn listener who has felt it too. Anonymous, judgement-free, first 5 minutes free.",
+      "Feeling lonely right now? Talk to a verified How Was Your Day listener who has felt it too. Anonymous, judgement-free, first 5 minutes free.",
     keywords:
       "feeling lonely, i feel lonely today, lonely in a new city, loneliness india, someone to talk to when lonely, anonymous emotional support india, feeling alone at night",
     lead: `Loneliness is not the same as being by yourself. You can feel it in a full house, in a WhatsApp group with two hundred people, at a wedding where everyone knows your name. What is actually missing is not company — it is the feeling that someone knows what your day was like and cares how it went.`,
@@ -52,25 +52,25 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why talking to someone who has felt this helps",
-        p: `There is a particular relief in talking to somebody who does not need loneliness explained to them. LeanOn listeners are ordinary people, verified and screened for how well they listen, who have lived through their own stretch of this — the first year in a new city, the marriage where you feel alone at the dinner table, the WFH months where you did not speak aloud until evening. They are not there to fix your life or hand you a five-step plan. They listen with real empathy, they ask the question nobody else asks, and they let the conversation go where it needs to. It is anonymous, so you are not managing your reputation while you talk. Sometimes being properly heard once is what breaks the loop.`,
+        p: `There is a particular relief in talking to somebody who does not need loneliness explained to them. How Was Your Day listeners are ordinary people, verified and screened for how well they listen, who have lived through their own stretch of this — the first year in a new city, the marriage where you feel alone at the dinner table, the WFH months where you did not speak aloud until evening. They are not there to fix your life or hand you a five-step plan. They listen with real empathy, they ask the question nobody else asks, and they let the conversation go where it needs to. It is anonymous, so you are not managing your reputation while you talk. Sometimes being properly heard once is what breaks the loop.`,
       },
     ],
     faqs: [
       {
         q: "Is it normal to feel lonely even when I live with family?",
-        a: `Yes, and it is far more common than people admit. Loneliness is about being known, not about being near people. Plenty of seekers on LeanOn live in busy homes with parents, siblings, spouses and relatives, and still have nobody they can say the true thing to — because the true thing would worry them, disappoint them, or get repeated. Being surrounded and unseen can actually feel worse than being alone, because it makes you doubt your own reaction. You are not ungrateful for feeling it.`,
+        a: `Yes, and it is far more common than people admit. Loneliness is about being known, not about being near people. Plenty of seekers on How Was Your Day live in busy homes with parents, siblings, spouses and relatives, and still have nobody they can say the true thing to — because the true thing would worry them, disappoint them, or get repeated. Being surrounded and unseen can actually feel worse than being alone, because it makes you doubt your own reaction. You are not ungrateful for feeling it.`,
       },
       {
         q: "What do I do when loneliness hits hardest at 1 or 2 AM?",
-        a: `Late nights are when there is nothing left to distract you, so the feeling gets the whole room. First, do not make decisions or send messages you will re-read at 9 AM. Get out of bed for ten minutes, drink water, and change the input — a podcast with human voices tends to help more than scrolling. If you want to actually talk to someone, LeanOn listeners are often online late precisely because that is when people need them. Talking for fifteen minutes at 2 AM is a completely reasonable thing to do.`,
+        a: `Late nights are when there is nothing left to distract you, so the feeling gets the whole room. First, do not make decisions or send messages you will re-read at 9 AM. Get out of bed for ten minutes, drink water, and change the input — a podcast with human voices tends to help more than scrolling. If you want to actually talk to someone, How Was Your Day listeners are often online late precisely because that is when people need them. Talking for fifteen minutes at 2 AM is a completely reasonable thing to do.`,
       },
       {
-        q: "How does LeanOn work, and what does it cost?",
+        q: "How does How Was Your Day work, and what does it cost?",
         a: `You pick a listener whose lived experience matches what you are carrying, and start a session. The first 5 minutes are free, so you can tell whether the person actually feels right before any money is involved. After that, a 15-minute session starts around ₹160, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. There is no subscription, no package, and no obligation to continue past the free 5 minutes.`,
       },
       {
         q: "Will anyone find out that I reached out?",
-        a: `No. You talk under a display name, your number is never shown to the listener, and nothing you say is shared with anyone in your life. Many people use LeanOn precisely because the honest version of how they feel is not something they can say to family, a partner, or colleagues without consequences. Anonymity is not a side feature here — for most seekers it is the whole reason the conversation can be honest at all.`,
+        a: `No. You talk under a display name, your number is never shown to the listener, and nothing you say is shared with anyone in your life. Many people use How Was Your Day precisely because the honest version of how they feel is not something they can say to family, a partner, or colleagues without consequences. Anonymity is not a side feature here — for most seekers it is the whole reason the conversation can be honest at all.`,
       },
     ],
     relatedSupport: [
@@ -86,9 +86,9 @@ export const FEELINGS: Feeling[] = [
     emoji: "😰",
     label: "Anxious",
     h1: "Feeling anxious right now? Let us slow this down together.",
-    metaTitle: "Feeling Anxious Right Now? Talk to Someone | LeanOn",
+    metaTitle: "Feeling Anxious Right Now? Talk to Someone | How Was Your Day",
     metaDescription:
-      "Anxious and cannot switch your mind off? Talk to a LeanOn listener who has been there. Anonymous, no judgement, first 5 minutes free.",
+      "Anxious and cannot switch your mind off? Talk to a How Was Your Day listener who has been there. Anonymous, no judgement, first 5 minutes free.",
     keywords:
       "feeling anxious, anxiety right now, cannot stop overthinking, anxious about work, anxiety help india, someone to talk to about anxiety, racing thoughts at night",
     lead: `Anxiety is not just worrying. It is your body running an emergency drill for something that has not happened, over and over, while you are supposed to sit in a meeting and behave normally. If your chest is tight and your mind will not stop rehearsing, you are not being dramatic — your alarm system is simply stuck on.`,
@@ -111,7 +111,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why talking to someone who has been anxious helps",
-        p: `Describing anxiety to somebody who has never had it is its own small stress — you can watch them trying to find the logical flaw in your fear. LeanOn listeners include people who have lived through their own version of this: the interview spirals, the health scare that would not leave, the panic before every family function. They will not tell you your fear is irrational. They will let you say the whole thing, all the branches, without rushing you to a conclusion, and they will bring genuine empathy rather than a checklist. That combination — being taken seriously and not being fixed — is what usually lets the volume drop. LeanOn is peer emotional support, not medical care, and if your anxiety is affecting your ability to work, sleep or eat, a licensed professional is the right next step.`,
+        p: `Describing anxiety to somebody who has never had it is its own small stress — you can watch them trying to find the logical flaw in your fear. How Was Your Day listeners include people who have lived through their own version of this: the interview spirals, the health scare that would not leave, the panic before every family function. They will not tell you your fear is irrational. They will let you say the whole thing, all the branches, without rushing you to a conclusion, and they will bring genuine empathy rather than a checklist. That combination — being taken seriously and not being fixed — is what usually lets the volume drop. How Was Your Day is peer emotional support, not medical care, and if your anxiety is affecting your ability to work, sleep or eat, a licensed professional is the right next step.`,
       },
     ],
     faqs: [
@@ -121,7 +121,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "Is what I feel anxiety or just normal stress?",
-        a: `LeanOn cannot and does not diagnose anything — that is genuinely a job for a licensed professional. What people generally describe as everyday stress has an object and ends when the thing ends. What people describe as anxiety tends to outlive its cause, jumps to a new topic when one is resolved, and shows up in the body even on days with nothing happening. If it is persistent and getting in the way of your work, sleep or relationships, please speak to a qualified professional. India also has two free 24/7 government helplines: NIMHANS on 080-46110007 and Tele-MANAS on 14416.`,
+        a: `How Was Your Day cannot and does not diagnose anything — that is genuinely a job for a licensed professional. What people generally describe as everyday stress has an object and ends when the thing ends. What people describe as anxiety tends to outlive its cause, jumps to a new topic when one is resolved, and shows up in the body even on days with nothing happening. If it is persistent and getting in the way of your work, sleep or relationships, please speak to a qualified professional. India also has two free 24/7 government helplines: NIMHANS on 080-46110007 and Tele-MANAS on 14416.`,
       },
       {
         q: "What if I start a session and cannot explain what is wrong?",
@@ -145,9 +145,9 @@ export const FEELINGS: Feeling[] = [
     emoji: "🌊",
     label: "Overwhelmed",
     h1: "Feeling overwhelmed? You do not have to carry all of it at once.",
-    metaTitle: "Feeling Overwhelmed? Talk It Out Today | LeanOn",
+    metaTitle: "Feeling Overwhelmed? Talk It Out Today | How Was Your Day",
     metaDescription:
-      "Everything at once and no room to breathe? Talk to a LeanOn listener who has been there. Anonymous, judgement-free, first 5 minutes free.",
+      "Everything at once and no room to breathe? Talk to a How Was Your Day listener who has been there. Anonymous, judgement-free, first 5 minutes free.",
     keywords:
       "feeling overwhelmed, too much to handle, overwhelmed with work, cannot cope right now, overwhelmed india, someone to talk to when overwhelmed, mental load",
     lead: `Overwhelm is what happens when the demands stack higher than the capacity, and everything starts feeling equally urgent. It is not weakness and it is not poor time management. It is a signal that you have been running above your limit for long enough that your system has stopped being able to prioritise.`,
@@ -170,7 +170,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why talking it through actually reduces the load",
-        p: `Overwhelm shrinks when it is externalised. Saying the full list to a person who is not going to judge you, add to it, or immediately propose solutions lets you finally see its actual size, which is almost always smaller than it felt. LeanOn listeners include people who have carried their own version of too much — the founder phase, the caregiving year, the semester where everything landed in the same week — and they bring empathy rather than efficiency tips. They will not tell you to wake up at 5 AM. They will let you talk until the pile has a shape, and that alone is often what makes the next step visible. Fifteen honest minutes can do more than another weekend of trying to power through.`,
+        p: `Overwhelm shrinks when it is externalised. Saying the full list to a person who is not going to judge you, add to it, or immediately propose solutions lets you finally see its actual size, which is almost always smaller than it felt. How Was Your Day listeners include people who have carried their own version of too much — the founder phase, the caregiving year, the semester where everything landed in the same week — and they bring empathy rather than efficiency tips. They will not tell you to wake up at 5 AM. They will let you talk until the pile has a shape, and that alone is often what makes the next step visible. Fifteen honest minutes can do more than another weekend of trying to power through.`,
       },
     ],
     faqs: [
@@ -188,7 +188,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "What if I just want to vent and not be given advice?",
-        a: `Say exactly that at the start and the listener will follow it. Venting without being interrupted by solutions is one of the most common reasons people use LeanOn, and listeners are chosen for their ability to hold space rather than to problem-solve. You are allowed to use your session purely to put things down.`,
+        a: `Say exactly that at the start and the listener will follow it. Venting without being interrupted by solutions is one of the most common reasons people use How Was Your Day, and listeners are chosen for their ability to hold space rather than to problem-solve. You are allowed to use your session purely to put things down.`,
       },
     ],
     relatedSupport: [
@@ -204,9 +204,9 @@ export const FEELINGS: Feeling[] = [
     emoji: "🫥",
     label: "Numb / Empty",
     h1: "Feeling numb or empty? Not feeling anything is still feeling something.",
-    metaTitle: "Feeling Numb or Empty? You Are Not Broken | LeanOn",
+    metaTitle: "Feeling Numb or Empty? You Are Not Broken | How Was Your Day",
     metaDescription:
-      "Feeling numb, blank or emotionally empty? Talk anonymously to a LeanOn listener who has been through it. First 5 minutes free.",
+      "Feeling numb, blank or emotionally empty? Talk anonymously to a How Was Your Day listener who has been through it. First 5 minutes free.",
     keywords:
       "feeling numb, emotionally numb, feeling empty inside, why do i feel nothing, no motivation feeling blank, emotional numbness india, someone to talk to",
     lead: `Numbness is harder to describe than sadness, which is partly why people carry it silently for so long. Things that used to matter register as beige. You function, you reply, you show up — and none of it reaches you. This is not you becoming a cold person. It is usually what a mind does after carrying too much for too long.`,
@@ -229,7 +229,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When it is bigger than a conversation, and where to go",
-        p: `LeanOn is peer emotional support. It is a real, human place to be heard, and it is not a substitute for professional mental health care. If the numbness has been constant for weeks, if you have stopped being able to do your normal daily life, if you find yourself feeling nothing about things that would once have frightened you, or if you are having any thoughts of harming yourself, please talk to a licensed mental health professional. India has two free, confidential helplines running 24/7 that anyone can call: NIMHANS at 080-46110007 and Tele-MANAS at 14416. Calling one of them is not an overreaction and it is not a permanent label. It is simply the right tool for that level of weight, and you deserve the right tool.`,
+        p: `How Was Your Day is peer emotional support. It is a real, human place to be heard, and it is not a substitute for professional mental health care. If the numbness has been constant for weeks, if you have stopped being able to do your normal daily life, if you find yourself feeling nothing about things that would once have frightened you, or if you are having any thoughts of harming yourself, please talk to a licensed mental health professional. India has two free, confidential helplines running 24/7 that anyone can call: NIMHANS at 080-46110007 and Tele-MANAS at 14416. Calling one of them is not an overreaction and it is not a permanent label. It is simply the right tool for that level of weight, and you deserve the right tool.`,
       },
     ],
     faqs: [
@@ -239,14 +239,14 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "Is numbness the same as depression?",
-        a: `LeanOn does not diagnose, and only a licensed professional can tell you what you are dealing with. What can be said honestly is that persistent emotional flatness is something professionals take seriously, and it is not something to wait out indefinitely. If it has lasted weeks, is stopping you from functioning, or comes with any thoughts of self-harm, please reach out to a qualified professional. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416, free, any time of day or night.`,
+        a: `How Was Your Day does not diagnose, and only a licensed professional can tell you what you are dealing with. What can be said honestly is that persistent emotional flatness is something professionals take seriously, and it is not something to wait out indefinitely. If it has lasted weeks, is stopping you from functioning, or comes with any thoughts of self-harm, please reach out to a qualified professional. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416, free, any time of day or night.`,
       },
       {
         q: "What is the point of talking if I do not feel anything to say?",
         a: `Quite a lot, actually. Sessions that begin with "I have nothing to say, I just feel blank" often turn out to be the fullest ones, because numbness is usually a lid rather than an emptiness. A listener will not demand that you produce emotion. They will ask about the ordinary details of your week and let whatever is underneath come up at its own pace, and it frequently does.`,
       },
       {
-        q: "How does LeanOn work, and what will it cost me?",
+        q: "How does How Was Your Day work, and what will it cost me?",
         a: `Choose a listener whose lived experience matches yours, and the first 5 minutes are free — no card, no commitment. Beyond that, a 15-minute session starts around ₹160, including a flat ₹10 platform fee; the exact price depends on the listener. It is anonymous, one session at a time, with nothing recurring.`,
       },
     ],
@@ -265,7 +265,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling sad today? You do not need a good enough reason.",
     metaTitle: "Feeling Sad Today? Talk to Someone Who Listens",
     metaDescription:
-      "Feeling low or sad and cannot say why? Talk anonymously to a LeanOn listener who understands. Judgement-free, first 5 minutes free.",
+      "Feeling low or sad and cannot say why? Talk anonymously to a How Was Your Day listener who understands. Judgement-free, first 5 minutes free.",
     keywords:
       "feeling sad, feeling low today, why am i so sad, sadness without reason, low mood help india, someone to talk to when sad, emotional support india",
     lead: `Sadness does not always come with a headline. Some days it arrives with an obvious cause and some days it just settles in, and the second kind is often harder because you feel you have to justify it. You do not. Sadness is information, not a fault, and it does not need to earn its place before you are allowed to feel it.`,
@@ -288,7 +288,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When sadness needs more than a conversation",
-        p: `Sadness is a normal human response and most of it passes with time, care, and being heard. But there is a line worth knowing. If low mood has been constant for weeks rather than days, if you have stopped being able to work, eat, or sleep normally, if you have lost interest in everything you once cared about, or if you are having any thoughts of harming yourself, that deserves a licensed mental health professional — not because you are broken, but because that is the level of support the situation warrants. India has two free helplines available 24/7 to anyone: NIMHANS at 080-46110007 and Tele-MANAS at 14416. LeanOn is peer emotional support and sits alongside professional care, never in place of it.`,
+        p: `Sadness is a normal human response and most of it passes with time, care, and being heard. But there is a line worth knowing. If low mood has been constant for weeks rather than days, if you have stopped being able to work, eat, or sleep normally, if you have lost interest in everything you once cared about, or if you are having any thoughts of harming yourself, that deserves a licensed mental health professional — not because you are broken, but because that is the level of support the situation warrants. India has two free helplines available 24/7 to anyone: NIMHANS at 080-46110007 and Tele-MANAS at 14416. How Was Your Day is peer emotional support and sits alongside professional care, never in place of it.`,
       },
     ],
     faqs: [
@@ -298,11 +298,11 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "How do I know if this is more than ordinary sadness?",
-        a: `LeanOn cannot diagnose anything, and only a licensed professional can. The signals generally worth acting on are duration and function: sadness lasting weeks without lifting, and a real drop in your ability to work, eat, sleep or care about things you used to. If either applies — or if there are any thoughts of self-harm — please speak to a qualified professional. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416 free, at any hour.`,
+        a: `How Was Your Day cannot diagnose anything, and only a licensed professional can. The signals generally worth acting on are duration and function: sadness lasting weeks without lifting, and a real drop in your ability to work, eat, sleep or care about things you used to. If either applies — or if there are any thoughts of self-harm — please speak to a qualified professional. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416 free, at any hour.`,
       },
       {
         q: "I do not want advice. Can I just talk?",
-        a: `Yes. Tell the listener at the start that you want to be heard rather than advised, and they will hold to it. Most LeanOn listeners will not offer solutions unless you ask, because being met with empathy rather than instructions is usually what actually helps when you are sad.`,
+        a: `Yes. Tell the listener at the start that you want to be heard rather than advised, and they will hold to it. Most How Was Your Day listeners will not offer solutions unless you ask, because being met with empathy rather than instructions is usually what actually helps when you are sad.`,
       },
       {
         q: "What does a session cost if I want to talk today?",
@@ -324,7 +324,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling burnt out? This is not laziness and you are not exaggerating.",
     metaTitle: "Feeling Burnt Out? Talk to Someone Who Gets It",
     metaDescription:
-      "Exhausted, cynical and running on empty? Talk anonymously to a LeanOn listener who has burnt out too. First 5 minutes free.",
+      "Exhausted, cynical and running on empty? Talk anonymously to a How Was Your Day listener who has burnt out too. First 5 minutes free.",
     keywords:
       "feeling burnt out, burnout symptoms, exhausted from work, work burnout india, cannot work anymore tired, founder burnout, someone to talk to about work stress",
     lead: `Burnout is not a bad week. It is what happens when high demand meets low recovery for months, until the work you once cared about produces nothing but dread. The tell is not tiredness — it is the cynicism and the sense that nothing you do makes a difference any more.`,
@@ -347,7 +347,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why talking to someone who has burnt out helps",
-        p: `The people around you are usually the wrong audience for this. Your manager has an interest in the answer, your teammates are in the same fire, and family may hear "I am exhausted" as "I might lose the job", which turns your admission into their anxiety. LeanOn listeners include people who have been through their own burnout — the startup year, the consulting grind, the job they could not leave — and they can hear the whole thing without cost or consequence to you. They bring empathy and recognition rather than performance advice, and they will not tell you to be more resilient. Being able to say "I cannot do this any more" to someone who knows what that sentence costs is often the first real relief in months.`,
+        p: `The people around you are usually the wrong audience for this. Your manager has an interest in the answer, your teammates are in the same fire, and family may hear "I am exhausted" as "I might lose the job", which turns your admission into their anxiety. How Was Your Day listeners include people who have been through their own burnout — the startup year, the consulting grind, the job they could not leave — and they can hear the whole thing without cost or consequence to you. They bring empathy and recognition rather than performance advice, and they will not tell you to be more resilient. Being able to say "I cannot do this any more" to someone who knows what that sentence costs is often the first real relief in months.`,
       },
     ],
     faqs: [
@@ -365,7 +365,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "Will my employer or anyone else ever know?",
-        a: `No. LeanOn is anonymous — you use a display name, your number is never shared with the listener, and nothing is reported to anyone. There is no connection to your workplace of any kind. That is exactly why many people use it to say things about work they could never say inside the company.`,
+        a: `No. How Was Your Day is anonymous — you use a display name, your number is never shared with the listener, and nothing is reported to anyone. There is no connection to your workplace of any kind. That is exactly why many people use it to say things about work they could never say inside the company.`,
       },
     ],
     relatedSupport: [
@@ -381,9 +381,9 @@ export const FEELINGS: Feeling[] = [
     emoji: "🌫️",
     label: "Stuck",
     h1: "Feeling stuck? Standing still is not the same as going nowhere.",
-    metaTitle: "Feeling Stuck in Life? Talk It Through | LeanOn",
+    metaTitle: "Feeling Stuck in Life? Talk It Through | How Was Your Day",
     metaDescription:
-      "Stuck in a job, a city or a decision you cannot make? Talk to a LeanOn listener who has been there. Anonymous, first 5 minutes free.",
+      "Stuck in a job, a city or a decision you cannot make? Talk to a How Was Your Day listener who has been there. Anonymous, first 5 minutes free.",
     keywords:
       "feeling stuck in life, stuck in a job, cannot make a decision, no direction in life, career confusion india, feeling left behind, someone to talk to",
     lead: `Feeling stuck is the sense that time is passing while nothing is moving — the same job, the same city, the same conversation with yourself every few months. It is not a lack of ambition. It usually means you are standing between options where every path costs something you are not ready to pay.`,
@@ -406,7 +406,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why talking it out unsticks things",
-        p: `Stuckness is largely a private loop that never gets aired, so it runs the same three arguments forever. Saying it aloud to someone with no stake in your answer changes that immediately — your family wants the safe option, your friends are inside the same industry, and your colleagues cannot be told at all. LeanOn listeners include people who have sat in the same fog: the career switchers, the ones who left a stable job at thirty, the ones who chose to stay and made peace with it. They listen with empathy instead of steering you toward the answer that would make them comfortable, and hearing your own reasoning out loud is usually what reveals which option you already prefer.`,
+        p: `Stuckness is largely a private loop that never gets aired, so it runs the same three arguments forever. Saying it aloud to someone with no stake in your answer changes that immediately — your family wants the safe option, your friends are inside the same industry, and your colleagues cannot be told at all. How Was Your Day listeners include people who have sat in the same fog: the career switchers, the ones who left a stable job at thirty, the ones who chose to stay and made peace with it. They listen with empathy instead of steering you toward the answer that would make them comfortable, and hearing your own reasoning out loud is usually what reveals which option you already prefer.`,
       },
     ],
     faqs: [
@@ -420,7 +420,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "Can a listener tell me what career I should choose?",
-        a: `No, and any service that promises to would be worth distrusting. LeanOn listeners are peers, not career advisors — what they offer is a space to think out loud without judgement, and the perspective of someone who has faced a similar fork. Most people find that the decision becomes clearer once they have heard themselves argue both sides to a person who is genuinely listening.`,
+        a: `No, and any service that promises to would be worth distrusting. How Was Your Day listeners are peers, not career advisors — what they offer is a space to think out loud without judgement, and the perspective of someone who has faced a similar fork. Most people find that the decision becomes clearer once they have heard themselves argue both sides to a person who is genuinely listening.`,
       },
       {
         q: "How does it work and what does it cost?",
@@ -440,9 +440,9 @@ export const FEELINGS: Feeling[] = [
     emoji: "🌚",
     label: "Can't Sleep",
     h1: "Cannot sleep? Your mind waited until it was quiet to speak.",
-    metaTitle: "Cannot Sleep? Someone to Talk To at 3 AM | LeanOn",
+    metaTitle: "Cannot Sleep? Someone to Talk To at 3 AM | How Was Your Day",
     metaDescription:
-      "Awake at 3 AM with a mind that will not stop? Talk to a LeanOn listener who is online late. Anonymous, first 5 minutes free.",
+      "Awake at 3 AM with a mind that will not stop? Talk to a How Was Your Day listener who is online late. Anonymous, first 5 minutes free.",
     keywords:
       "cannot sleep, awake at 3am, overthinking at night, sleepless nights anxiety, insomnia stress india, someone to talk to at night, racing thoughts before sleep",
     lead: `There is a particular loneliness to being awake when everyone else is not. The thoughts you outran all day finally catch up, the house is silent, and every worry sounds louder and more permanent than it will at nine in the morning. If you are reading this at an unreasonable hour, you are not the only one.`,
@@ -465,13 +465,13 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When lost sleep needs professional help",
-        p: `Occasional bad nights are part of being human. Sustained sleeplessness is not something to just push through. If you have been unable to sleep for weeks, if daytime functioning is going — driving, working, staying safe — or if the nights come with hopelessness or any thoughts of harming yourself, please speak to a licensed professional; poor sleep and low mood feed each other and both are treatable by the right people. Two free helplines are available across India at any hour, including the ones you are awake for: NIMHANS at 080-46110007 and Tele-MANAS at 14416. LeanOn listeners are peers who will keep you company and hear you out at 3 AM, and that is a real thing, but it is support rather than medical care.`,
+        p: `Occasional bad nights are part of being human. Sustained sleeplessness is not something to just push through. If you have been unable to sleep for weeks, if daytime functioning is going — driving, working, staying safe — or if the nights come with hopelessness or any thoughts of harming yourself, please speak to a licensed professional; poor sleep and low mood feed each other and both are treatable by the right people. Two free helplines are available across India at any hour, including the ones you are awake for: NIMHANS at 080-46110007 and Tele-MANAS at 14416. How Was Your Day listeners are peers who will keep you company and hear you out at 3 AM, and that is a real thing, but it is support rather than medical care.`,
       },
     ],
     faqs: [
       {
         q: "Is anyone actually available to talk in the middle of the night?",
-        a: `Yes. Late nights are one of LeanOn's busiest windows, because that is when people finally have both the time and the need. Many listeners deliberately keep late hours for exactly this reason. If you are awake at 2 or 3 AM and the silence is the problem, there is usually someone there.`,
+        a: `Yes. Late nights are one of How Was Your Day's busiest windows, because that is when people finally have both the time and the need. Many listeners deliberately keep late hours for exactly this reason. If you are awake at 2 or 3 AM and the silence is the problem, there is usually someone there.`,
       },
       {
         q: "Will talking about it not just wake me up more?",
@@ -483,7 +483,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "When should I stop managing this myself and see a professional?",
-        a: `If sleeplessness has run for several weeks, if it is affecting your ability to work or stay safe during the day, or if the nights come with hopelessness or any thoughts of self-harm, that is the point to involve a licensed professional rather than keep coping alone. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416 — both are free, confidential and open 24/7. LeanOn is peer emotional support and sits alongside that kind of care, not in place of it.`,
+        a: `If sleeplessness has run for several weeks, if it is affecting your ability to work or stay safe during the day, or if the nights come with hopelessness or any thoughts of self-harm, that is the point to involve a licensed professional rather than keep coping alone. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416 — both are free, confidential and open 24/7. How Was Your Day is peer emotional support and sits alongside that kind of care, not in place of it.`,
       },
     ],
     relatedSupport: [

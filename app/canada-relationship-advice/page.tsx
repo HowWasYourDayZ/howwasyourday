@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Support for Indians in Canada | LeanOn',
+  title: 'Relationship Support for Indians in Canada | How Was Your Day',
   description: 'Long-distance relationships, cultural clashes, new vs old values — Indian relationships in Canada carry unique pressures. Talk to someone who understands.',
   keywords: [
     'relationship advice indians canada', 'indian relationship support canada', 'long distance relationship india canada',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     'indian couple problems canada', 'relationship stress nri canada',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/canada-relationship-advice',
-    languages: { 'en-CA': 'https://www.leanon.app/canada-relationship-advice' },
+    canonical: 'https://www.howwasyourday.live/canada-relationship-advice',
+    languages: { 'en-CA': 'https://www.howwasyourday.live/canada-relationship-advice' },
   },
   openGraph: {
-    title: 'Relationship Support for Indians in Canada | LeanOn',
-    description: 'Indian relationships in Canada are complicated by distance, cultural friction, and the pressure of building a new life. LeanOn listeners understand the full picture.',
-    url: 'https://www.leanon.app/canada-relationship-advice',
-    siteName: 'LeanOn',
+    title: 'Relationship Support for Indians in Canada | How Was Your Day',
+    description: 'Indian relationships in Canada are complicated by distance, cultural friction, and the pressure of building a new life. How Was Your Day listeners understand the full picture.',
+    url: 'https://www.howwasyourday.live/canada-relationship-advice',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What if I am in a long-distance relationship between India and Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Long-distance between India and Canada is one of the hardest — different time zones, uncertain immigration timelines, the loneliness of being in a new country alone. LeanOn listeners understand this specific situation and can hold space for everything it brings up.',
+        text: 'Long-distance between India and Canada is one of the hardest — different time zones, uncertain immigration timelines, the loneliness of being in a new country alone. How Was Your Day listeners understand this specific situation and can hold space for everything it brings up.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'Is what I share kept private?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn sessions are anonymous and confidential. You can share openly without worrying about your community or family finding out.',
+        text: 'Yes. How Was Your Day sessions are anonymous and confidential. You can share openly without worrying about your community or family finding out.',
       },
     },
   ],
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Support Canada', item: 'https://www.leanon.app/canada-relationship-advice' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Support Canada', item: 'https://www.howwasyourday.live/canada-relationship-advice' },
   ],
 }
 
@@ -172,7 +172,7 @@ export default function CanadaRelationshipPage() {
         <div className="night-box">
           <h2>💬 You can&apos;t always talk to your partner about your partner</h2>
           <p>Sometimes the person you most need to process things with is the person you cannot process
-            things with right now. That is where a LeanOn listener comes in — someone completely outside
+            things with right now. That is where a How Was Your Day listener comes in — someone completely outside
             your situation, with no stakes and no agenda.</p>
           <p>You can say the thing you have been holding back. Out loud. To someone who will just listen.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
@@ -180,7 +180,7 @@ export default function CanadaRelationshipPage() {
 
         <div className="card">
           <h2>What people talk about</h2>
-          <p>You do not need a crisis to reach out. People come to LeanOn with things like:</p>
+          <p>You do not need a crisis to reach out. People come to How Was Your Day with things like:</p>
           <ul className="checklist">
             <li>Feeling disconnected from their partner after a hard week</li>
             <li>Uncertainty about a relationship that used to feel certain</li>
@@ -223,7 +223,7 @@ export default function CanadaRelationshipPage() {
           <div className="faq-item">
             <h3>What if I am in a long-distance relationship between India and Canada?</h3>
             <p>Long-distance between India and Canada is one of the hardest — different time zones, uncertain
-              immigration timelines, loneliness. LeanOn listeners understand this specific situation.</p>
+              immigration timelines, loneliness. How Was Your Day listeners understand this specific situation.</p>
           </div>
           <div className="faq-item">
             <h3>How much does a session cost?</h3>
@@ -231,7 +231,7 @@ export default function CanadaRelationshipPage() {
           </div>
           <div className="faq-item">
             <h3>Is what I share kept private?</h3>
-            <p>Yes. LeanOn sessions are anonymous and confidential. You can share openly without worrying about
+            <p>Yes. How Was Your Day sessions are anonymous and confidential. You can share openly without worrying about
               your community or family finding out.</p>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function CanadaRelationshipPage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

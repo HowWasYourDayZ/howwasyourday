@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Kannada NRI Support | Talk to a Kannadiga Abroad | LeanOn',
+  title: 'Kannada NRI Support | Talk to a Kannadiga Abroad | How Was Your Day',
   description: 'Kannadigas abroad — Bangalore\'s IT export to the world — often feel both far from home and oddly disconnected from other Indians. Talk to listeners who understand.',
   keywords: ['kannada nri support', 'kannadiga abroad', 'nri karnataka', 'talk to kannada person online', 'bangalore it nri'],
-  alternates: { canonical: 'https://www.leanon.app/kannada-nri-support' },
-  openGraph: { title: 'Kannada NRI Support | Talk to a Kannadiga Abroad | LeanOn', description: 'Kannadigas abroad — Bangalore\'s IT export to the world — often feel both far from home and oddly disconnected from other Indians. Talk to listeners who understand.', url: 'https://www.leanon.app/kannada-nri-support', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/kannada-nri-support' },
+  openGraph: { title: 'Kannada NRI Support | Talk to a Kannadiga Abroad | How Was Your Day', description: 'Kannadigas abroad — Bangalore\'s IT export to the world — often feel both far from home and oddly disconnected from other Indians. Talk to listeners who understand.', url: 'https://www.howwasyourday.live/kannada-nri-support', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Can I talk in Kannada?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several LeanOn listeners speak Kannada. Mention your language preference at the start and your listener will communicate in Kannada or Hindi as you prefer.' } },
+  { '@type': 'Question', name: 'Can I talk in Kannada?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several How Was Your Day listeners speak Kannada. Mention your language preference at the start and your listener will communicate in Kannada or Hindi as you prefer.' } },
   { '@type': 'Question', name: 'Do listeners understand Bengaluru culture specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Bengaluru IT culture — the cosmopolitan city identity, the particular mix of Kannada pride and global ambition — is something listeners understand well. You do not have to explain why losing the Bengaluru identity abroad is its own kind of grief.' } },
   { '@type': 'Question', name: 'I feel invisible in South Indian NRI groups because nobody knows Kannada. Is that a real thing?', acceptedAnswer: { '@type': 'Answer', text: 'It is very real. Kannadigas abroad often get lumped into a generic South Indian identity, and the specific Kannada language and culture gets erased. That erasure is a real loss. A listener who understands Kannada culture will hear it as such.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Kannada community abroad and your family in Karnataka will never know. Sessions use only your phone number and first name.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'Kannada NRI Support', item: 'https://www.leanon.app/kannada-nri-support' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'Kannada NRI Support', item: 'https://www.howwasyourday.live/kannada-nri-support' },
 ] }
 
 const S = `
@@ -70,21 +70,21 @@ export default function KannadaNriSupportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="LeanOn" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" className="nav-logo" alt="How Was Your Day" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Kannada NRI Support</span></nav>
         <div className="hero">
           <p className="badge">Kannada NRI &middot; Karnataka &middot; Bengaluru Diaspora</p>
           <h1>You took Bengaluru&rsquo;s ambition global. <em>But your Kannada identity got lost in the translation.</em></h1>
           <p className="lead">Kannadigas abroad are numerous — the Bengaluru-to-Silicon Valley pipeline is real. But in the diaspora, Kannada identity often gets absorbed into a generic &ldquo;South Indian&rdquo; category. The language, the Rajyotsava pride, the specific Mysore-Bengaluru cultural distinction — all of it becomes invisible. Talk to a Kannada listener who sees it. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The Specific Invisibility of Kannada Identity Abroad</h2>
           <p>In South Asian diaspora communities abroad, there is often a flattening of identity. Tamil, Telugu, Kannada, Malayalam — all get compressed into &ldquo;South Indian.&rdquo; For Tamils and Telugus, the community is large enough that distinct identity survives. For Kannadigas, there is often a real sense of cultural erasure — your language is not spoken widely enough in the diaspora for it to maintain its presence, and you find yourself defaulting to Hindi or English even with other South Indians.</p>
           <p>This is a particular kind of loneliness — the loss of linguistic and cultural specificity. The Rajyotsava feeling — the November 1 Karnataka pride — does not get celebrated in diaspora the way Diwali or Tamil New Year does. The specific humour, the Kannada film culture, the Mysore pak at Dasara — these things require no explanation at home and have no easy equivalent abroad.</p>
-          <p>LeanOn listeners from Karnataka understand this without needing it explained. First 5 minutes free.</p>
+          <p>How Was Your Day listeners from Karnataka understand this without needing it explained. First 5 minutes free.</p>
         </div>
 
         <div className="section">
@@ -95,12 +95,12 @@ export default function KannadaNriSupportPage() {
 
         <div className="section">
           <h2>Mysore-Bengaluru Distinctions and the Kannada Culture Abroad</h2>
-          <p>Being from Mysore is different from being from Bengaluru — different cultural personality, different pace, different relationship to tradition versus modernity. Being from coastal Karnataka is different again. LeanOn listeners understand that Karnataka is not a monolith, and that your specific regional identity within the state shapes how you experience being abroad.</p>
+          <p>Being from Mysore is different from being from Bengaluru — different cultural personality, different pace, different relationship to tradition versus modernity. Being from coastal Karnataka is different again. How Was Your Day listeners understand that Karnataka is not a monolith, and that your specific regional identity within the state shapes how you experience being abroad.</p>
           <p>Whatever the weight — the Kannada cultural loss, the family back in Karnataka, the specific IT burnout of the Bengaluru diaspora, the Rajyotsava homesickness — a listener will hear it as it is. Real, Kannada-understanding, non-judgmental peer support. First 5 minutes free.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Kannadiganu Kannadige listener.</h2><p>Your culture, seen and heard without explanation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Kannadiganu Kannadige listener.</h2><p>Your culture, seen and heard without explanation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

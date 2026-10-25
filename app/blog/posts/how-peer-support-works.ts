@@ -4,9 +4,9 @@ export const post = {
   description: 'Peer support is not therapy — and that is exactly why it works. Here is what peer support actually involves, and why lived experience matters.',
   date: '2025-05-20',
   readTime: '6 min read',
-  topics: ['peer support', 'mental health', 'India', 'how LeanOn works'],
+  topics: ['peer support', 'mental health', 'India', 'how How Was Your Day works'],
   content: `
-<p>One of the most common questions people ask about LeanOn is: &quot;How is talking to a peer listener different from talking to a therapist?&quot; The answer matters — not just for understanding what LeanOn is, but for understanding why peer support exists as its own valuable category of care.</p>
+<p>One of the most common questions people ask about How Was Your Day is: &quot;How is talking to a peer listener different from talking to a therapist?&quot; The answer matters — not just for understanding what How Was Your Day is, but for understanding why peer support exists as its own valuable category of care.</p>
 
 <h2>What Peer Support Actually Is</h2>
 
@@ -38,7 +38,7 @@ export const post = {
 
 <h2>What Peer Support Is Not</h2>
 
-<p>Peer support is not a substitute for clinical care when clinical care is needed. If you are experiencing a mental health crisis, severe depression, psychosis, or thoughts of self-harm, peer support is not the right primary intervention — you need professional clinical support. LeanOn is explicit about this on its platform and encourages users to seek professional help when appropriate.</p>
+<p>Peer support is not a substitute for clinical care when clinical care is needed. If you are experiencing a mental health crisis, severe depression, psychosis, or thoughts of self-harm, peer support is not the right primary intervention — you need professional clinical support. How Was Your Day is explicit about this on its platform and encourages users to seek professional help when appropriate.</p>
 
 <p>Peer support is also not advice-giving, problem-solving, or prescribing. Good peer listeners resist the urge to tell people what to do. Their role is to listen, to share from their own experience when useful, and to help the person they are supporting find their own clarity — not to supply it.</p>
 
@@ -52,13 +52,13 @@ export const post = {
 
 <p>This does not make peer support a second-best option for India given the constraints. It makes it a genuinely well-suited option for India given its specific culture and circumstances.</p>
 
-<h2>How LeanOn&apos;s Peer Support Works</h2>
+<h2>How the app&apos;s Peer Support Works</h2>
 
-<p>LeanOn connects people going through difficult experiences with verified peer listeners who have personal experience with those same challenges. Listeners apply to join the platform, share their experience, and go through a review process. Users can browse listener profiles, read their stories, and connect with the listener who feels right for their specific situation.</p>
+<p>How Was Your Day connects people going through difficult experiences with verified peer listeners who have personal experience with those same challenges. Listeners apply to join the platform, share their experience, and go through a review process. Users can browse listener profiles, read their stories, and connect with the listener who feels right for their specific situation.</p>
 
 <p>Sessions happen via text chat, giving people privacy within shared living situations (especially important in Indian joint family contexts where audio conversations are not always private). A short trial session is available for new users, so they can make sure they feel comfortable with a listener before committing to a paid session.</p>
 
-<p>LeanOn is honest about what it is and is not. It is not therapy, and it does not claim to treat mental health conditions. What it offers is something real and valuable: the experience of being genuinely understood by someone who has been where you are. In a country of 1.4 billion people where that experience is harder to find than it should be, that is not a small thing.</p>
+<p>How Was Your Day is honest about what it is and is not. It is not therapy, and it does not claim to treat mental health conditions. What it offers is something real and valuable: the experience of being genuinely understood by someone who has been where you are. In a country of 1.4 billion people where that experience is harder to find than it should be, that is not a small thing.</p>
 
 <h2>Is Peer Support Right for You?</h2>
 
@@ -66,6 +66,6 @@ export const post = {
 
 <p>It is not the right primary option for people in acute mental health crises, people with untreated clinical mental health conditions that require diagnosis and treatment, or people who need a structured, evidence-based therapeutic intervention.</p>
 
-<p>If you are not sure, <a href="/browse">browse peer listeners on LeanOn</a>. You can try it, see how it feels, and decide from there. That seems like a reasonable place to start.</p>
+<p>If you are not sure, <a href="/browse">browse peer listeners on How Was Your Day</a>. You can try it, see how it feels, and decide from there. That seems like a reasonable place to start.</p>
   `.trim(),
 }

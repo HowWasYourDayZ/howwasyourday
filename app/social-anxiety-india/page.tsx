@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Social Anxiety India — Anonymous Support Without Judgment | LeanOn',
+  title: 'Social Anxiety India — Anonymous Support Without Judgment | How Was Your Day',
   description: 'Dreading social situations, overthinking every interaction, avoiding people. Social anxiety is real and common. Anonymous peer support from ₹160.',
   keywords: ['social anxiety India', 'social anxiety support India', 'shyness vs social anxiety India', 'social phobia India'],
-  alternates: { canonical: 'https://www.leanon.app/social-anxiety-india', languages: { 'en-IN': 'https://www.leanon.app/social-anxiety-india' } },
-  openGraph: { title: 'Social Anxiety India — Anonymous Support Without Judgment | LeanOn', description: 'Dreading social situations, overthinking every interaction, avoiding people. Social anxiety is real and common. Anonymous peer support from ₹160.', url: 'https://www.leanon.app/social-anxiety-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/social-anxiety-india', languages: { 'en-IN': 'https://www.howwasyourday.live/social-anxiety-india' } },
+  openGraph: { title: 'Social Anxiety India — Anonymous Support Without Judgment | How Was Your Day', description: 'Dreading social situations, overthinking every interaction, avoiding people. Social anxiety is real and common. Anonymous peer support from ₹160.', url: 'https://www.howwasyourday.live/social-anxiety-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -17,8 +17,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Social Anxiety India', item: 'https://www.leanon.app/social-anxiety-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Social Anxiety India', item: 'https://www.howwasyourday.live/social-anxiety-india' },
 ] }
 
 const S = `
@@ -65,7 +65,7 @@ export default function SocialAnxietyIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Social Anxiety India</span></nav>
         <div className="hero">

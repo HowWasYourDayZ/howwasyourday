@@ -4,15 +4,15 @@ import GeoQuickAnswer from '@/app/components/GeoQuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Counselling or Peer Support? Talk It Through in India | LeanOn',
-  description: 'LeanOn is not relationship or couples counselling. If you first want to talk it through, a screened peer listener in India can listen — private, from ₹160 for 15 minutes, no appointment.',
+  title: 'Relationship Counselling or Peer Support? Talk It Through in India | How Was Your Day',
+  description: 'How Was Your Day is not relationship or couples counselling. If you first want to talk it through, a screened peer listener in India can listen — private, from ₹160 for 15 minutes, no appointment.',
   keywords: ['relationship counselling india', 'marriage counselling india', 'couple counselling india', 'divorce support india', 'toxic relationship support india'],
-  alternates: { canonical: 'https://www.leanon.app/relationship-counselling-india', languages: { 'en-IN': 'https://www.leanon.app/relationship-counselling-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/relationship-counselling-india', languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-counselling-india' } },
   openGraph: {
-    title: 'Relationship Counselling or Peer Support? Talk It Through in India | LeanOn',
-    description: 'LeanOn is not relationship or couples counselling. If you first want to talk it through, a screened peer listener in India can listen — private, from ₹160 for 15 minutes, no appointment.',
-    url: 'https://www.leanon.app/relationship-counselling-india',
-    siteName: 'LeanOn',
+    title: 'Relationship Counselling or Peer Support? Talk It Through in India | How Was Your Day',
+    description: 'How Was Your Day is not relationship or couples counselling. If you first want to talk it through, a screened peer listener in India can listen — private, from ₹160 for 15 minutes, no appointment.',
+    url: 'https://www.howwasyourday.live/relationship-counselling-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'What if I need a professional?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are dealing with abuse, severe trauma, addiction, or a clinical mental health condition, please see a licensed therapist or counsellor. LeanOn listeners are asked to suggest professional help when it is the right path. For the emotional weight of relationship difficulties — the confusion, the grief, the frustration — peer support is often exactly what is needed first.',
+        text: 'If you are dealing with abuse, severe trauma, addiction, or a clinical mental health condition, please see a licensed therapist or counsellor. How Was Your Day listeners are asked to suggest professional help when it is the right path. For the emotional weight of relationship difficulties — the confusion, the grief, the frustration — peer support is often exactly what is needed first.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'What if my partner does not know I am using this?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is between you and your partner. Many people use LeanOn to process their own feelings about a relationship before deciding what to do next — there is nothing wrong with seeking support for yourself. LeanOn is not couples therapy and does not require partner involvement.',
+        text: 'That is between you and your partner. Many people use How Was Your Day to process their own feelings about a relationship before deciding what to do next — there is nothing wrong with seeking support for yourself. How Was Your Day is not couples therapy and does not require partner involvement.',
       },
     },
     {
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'Can I talk about divorce?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Divorce decisions, the fear of divorce, the grief of a separation, the uncertainty about whether to stay or leave — these are among the most common things people come to LeanOn to talk through. A peer listener who has navigated relationship difficulty can hold space while you figure out what you actually want.',
+        text: 'Yes. Divorce decisions, the fear of divorce, the grief of a separation, the uncertainty about whether to stay or leave — these are among the most common things people come to How Was Your Day to talk through. A peer listener who has navigated relationship difficulty can hold space while you figure out what you actually want.',
       },
     },
   ],
@@ -68,8 +68,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Counselling India', item: 'https://www.leanon.app/relationship-counselling-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Counselling India', item: 'https://www.howwasyourday.live/relationship-counselling-india' },
   ],
 }
 
@@ -133,7 +133,7 @@ export default function RelationshipCounsellingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -162,7 +162,7 @@ export default function RelationshipCounsellingIndiaPage() {
 
         <GeoQuickAnswer path="/relationship-counselling-india" />
         <div className="section">
-          <p style={{background:'#FFF8F0',borderLeft:'4px solid #FF9933',borderRadius:'0 12px 12px 0',padding:'14px 18px',fontWeight:600}}>LeanOn does not provide relationship or couples counselling. Listeners are screened peers, not counsellors or therapists. For counselling, see a qualified relationship counsellor; LeanOn can sit alongside that.</p>
+          <p style={{background:'#FFF8F0',borderLeft:'4px solid #FF9933',borderRadius:'0 12px 12px 0',padding:'14px 18px',fontWeight:600}}>How Was Your Day does not provide relationship or couples counselling. Listeners are screened peers, not counsellors or therapists. For counselling, see a qualified relationship counsellor; How Was Your Day can sit alongside that.</p>
           <h2>What People Come to Talk About</h2>
           <ul>
             <li><strong>Marriage tension</strong> — communication breakdown, feeling unseen, growing apart</li>
@@ -179,7 +179,7 @@ export default function RelationshipCounsellingIndiaPage() {
           <h2>Why Peer Support — Not Just Formal Counselling</h2>
           <p>Professional relationship counselling is valuable — but it costs ₹2,000–₹8,000 per couple session, requires both partners to show up, and often has a weeks-long waitlist. For many people, that is not where they are right now.</p>
           <p>Peer support is different: it is immediate, it is anonymous, and it does not require your partner to be involved. Sometimes you just need to talk to someone who has been through something similar — not a professional with a clipboard, but a real person who has lived the complexity of relationship pain and come out the other side.</p>
-          <p>Couple therapy costs ₹2,000+ per session. LeanOn peer support starts at ₹160.</p>
+          <p>Couple therapy costs ₹2,000+ per session. How Was Your Day peer support starts at ₹160.</p>
         </div>
 
         <div className="section">
@@ -226,7 +226,7 @@ export default function RelationshipCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I need a professional?</div>
-            <div className="faq-a">If you are dealing with abuse, severe trauma, or a clinical condition, please see a licensed therapist. LeanOn will always point you toward professional help when that is the right path. For the emotional weight of relationship difficulties, peer support is often exactly what is needed first.</div>
+            <div className="faq-a">If you are dealing with abuse, severe trauma, or a clinical condition, please see a licensed therapist. How Was Your Day will always point you toward professional help when that is the right path. For the emotional weight of relationship difficulties, peer support is often exactly what is needed first.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is it anonymous?</div>
@@ -234,11 +234,11 @@ export default function RelationshipCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if my partner does not know I am using this?</div>
-            <div className="faq-a">That is between you and your partner. Many people use LeanOn to process their own feelings before deciding what to do next. LeanOn is not couples therapy and does not require partner involvement.</div>
+            <div className="faq-a">That is between you and your partner. Many people use How Was Your Day to process their own feelings before deciding what to do next. How Was Your Day is not couples therapy and does not require partner involvement.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I talk about divorce?</div>
-            <div className="faq-a">Yes. Divorce decisions, fear of divorce, the grief of separation, uncertainty about whether to stay or leave — these are among the most common things people come to LeanOn to talk through.</div>
+            <div className="faq-a">Yes. Divorce decisions, fear of divorce, the grief of separation, uncertainty about whether to stay or leave — these are among the most common things people come to How Was Your Day to talk through.</div>
           </div>
         </div>
 

@@ -4,36 +4,36 @@ import { NRI_USD_PRICES, NRI_INR_EQUIV } from '@/lib/geo-pricing'
 import { PRICE_RANGE_LINE, PRICE_SNAPSHOT, seeker15 } from '@/lib/price-snapshot'
 import { LISTENING_FACTS } from '@/lib/service-facts'
 
-// The single source of truth for "how much does LeanOn cost" — for people,
+// The single source of truth for "how much does How Was Your Day cost" — for people,
 // Google and AI assistants. Every number is read from lib/constants.ts and
 // lib/geo-pricing.ts, so this page can't drift from what users are charged.
 export const dynamic = 'force-static'
 
-const URL = 'https://www.leanon.app/pricing'
+const URL = 'https://www.howwasyourday.live/pricing'
 const EXAMPLE_RATE = 10 // ₹/min — a common listener rate, used only as a worked example
 const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`
 const example = (mins: number, voice = false) => (EXAMPLE_RATE + (voice ? VOICE_RATE_PREMIUM : 0)) * mins + PLATFORM_FEE
 
 export const metadata: Metadata = {
-  title: 'LeanOn Pricing — India & Abroad (NRI) | Free First Session',
-  description: `How much LeanOn costs: your first ${FREE_SESSION_MINS}-minute session is free. In India, 15 minutes costs from about ₹${seeker15(PRICE_SNAPSHOT.minRate)} depending on the listener (${inr(example(15))} at a ₹${EXAMPLE_RATE}/min listener). Abroad, sessions start at US$${NRI_USD_PRICES[15]} / $${NRI_USD_PRICES[30]} / $${NRI_USD_PRICES[45]} for 15 / 30 / 45 minutes. No subscription.`,
+  title: 'How Was Your Day Pricing — India & Abroad (NRI) | Free First Session',
+  description: `How much How Was Your Day costs: your first ${FREE_SESSION_MINS}-minute session is free. In India, 15 minutes costs from about ₹${seeker15(PRICE_SNAPSHOT.minRate)} depending on the listener (${inr(example(15))} at a ₹${EXAMPLE_RATE}/min listener). Abroad, sessions start at US$${NRI_USD_PRICES[15]} / $${NRI_USD_PRICES[30]} / $${NRI_USD_PRICES[45]} for 15 / 30 / 45 minutes. No subscription.`,
   alternates: { canonical: URL },
-  openGraph: { title: 'LeanOn Pricing — India & Abroad', description: 'Free first session. Pay per session, no subscription. India: listener rate × minutes + ₹10. Abroad: from US$10 for 15 minutes.', url: URL, siteName: 'LeanOn', type: 'website' },
+  openGraph: { title: 'How Was Your Day Pricing — India & Abroad', description: 'Free first session. Pay per session, no subscription. India: listener rate × minutes + ₹10. Abroad: from US$10 for 15 minutes.', url: URL, siteName: 'How Was Your Day', type: 'website' },
 }
 
 const faqs: [string, string][] = [
-  ['How much does LeanOn cost in India?', `Each listener sets their own per-minute rate. A paid session costs the listener's rate × the minutes you book, plus a flat ₹${PLATFORM_FEE} platform fee. ${PRICE_RANGE_LINE} For example, 15 minutes with a ₹${EXAMPLE_RATE}/min listener costs ${inr(example(15))}. You see the exact price before you start.`],
-  ['How much does LeanOn cost outside India (for NRIs)?', `Outside India, sessions start at US$${NRI_USD_PRICES[15]} for 15 minutes, US$${NRI_USD_PRICES[30]} for 30 minutes and US$${NRI_USD_PRICES[45]} for 45 minutes. With a listener whose own rate is higher, you pay that listener's rate instead, so every listener is paid their full rate. The exact price is shown in your local currency before you book. You are billed in Indian rupees (from ${inr(NRI_INR_EQUIV[15])} / ${inr(NRI_INR_EQUIV[30])} / ${inr(NRI_INR_EQUIV[45])}) and your bank converts it to your currency.`],
-  ['Is LeanOn free?', `Your first ${FREE_SESSION_MINS}-minute session is free${MAX_FREE_TRIALS === 1 ? ' (one free session per account)' : ''}. After that, you pay per session. There is no subscription and no membership fee.`],
+  ['How much does How Was Your Day cost in India?', `Each listener sets their own per-minute rate. A paid session costs the listener's rate × the minutes you book, plus a flat ₹${PLATFORM_FEE} platform fee. ${PRICE_RANGE_LINE} For example, 15 minutes with a ₹${EXAMPLE_RATE}/min listener costs ${inr(example(15))}. You see the exact price before you start.`],
+  ['How much does How Was Your Day cost outside India (for NRIs)?', `Outside India, sessions start at US$${NRI_USD_PRICES[15]} for 15 minutes, US$${NRI_USD_PRICES[30]} for 30 minutes and US$${NRI_USD_PRICES[45]} for 45 minutes. With a listener whose own rate is higher, you pay that listener's rate instead, so every listener is paid their full rate. The exact price is shown in your local currency before you book. You are billed in Indian rupees (from ${inr(NRI_INR_EQUIV[15])} / ${inr(NRI_INR_EQUIV[30])} / ${inr(NRI_INR_EQUIV[45])}) and your bank converts it to your currency.`],
+  ['Is How Was Your Day free?', `Your first ${FREE_SESSION_MINS}-minute session is free${MAX_FREE_TRIALS === 1 ? ' (one free session per account)' : ''}. After that, you pay per session. There is no subscription and no membership fee.`],
   ...(VOICE_PRICING_ENABLED ? [['Is a voice call more expensive than text chat?', `Yes, by ₹${VOICE_RATE_PREMIUM} per minute in India. A listener charging ₹${EXAMPLE_RATE}/min for text chat charges ₹${EXAMPLE_RATE + VOICE_RATE_PREMIUM}/min for a voice call, so 15 minutes of voice costs ${inr(example(15, true))}. If a call drops and you switch to text, the extra for the unused minutes is refunded.`] as [string, string]] : []),
-  ['How do I pay?', 'You add money to your LeanOn wallet (payments are processed by Razorpay) and each session is paid from the wallet. You only pay for sessions you book.'],
-  ['How does LeanOn compare with therapy costs?', 'LeanOn is peer support, not therapy, so it is not a like-for-like comparison. A private therapy session in Indian cities commonly costs ₹1,500–₹5,000. LeanOn is for when you want a real person to listen, not for clinical treatment. If you need a professional, please see a qualified mental health professional.'],
+  ['How do I pay?', 'You add money to your How Was Your Day wallet (payments are processed by Razorpay) and each session is paid from the wallet. You only pay for sessions you book.'],
+  ['How does How Was Your Day compare with therapy costs?', 'How Was Your Day is peer support, not therapy, so it is not a like-for-like comparison. A private therapy session in Indian cities commonly costs ₹1,500–₹5,000. How Was Your Day is for when you want a real person to listen, not for clinical treatment. If you need a professional, please see a qualified mental health professional.'],
 ]
 
 export default function PricingPage() {
   const jsonLd = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: 'LeanOn pricing', isPartOf: { '@id': 'https://www.leanon.app/#website' }, dateModified: '2026-10-24' },
-    { '@type': 'Service', name: 'LeanOn peer support session', serviceType: 'Peer emotional support (text or voice)', provider: { '@id': 'https://www.leanon.app/#organization' }, areaServed: ['IN', 'US', 'GB', 'CA', 'AU', 'AE', 'SG', 'MY', 'KW', 'OM'],
+    { '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: 'How Was Your Day pricing', isPartOf: { '@id': 'https://www.howwasyourday.live/#website' }, dateModified: '2026-10-24' },
+    { '@type': 'Service', name: 'How Was Your Day peer support session', serviceType: 'Peer emotional support (text or voice)', provider: { '@id': 'https://www.howwasyourday.live/#organization' }, areaServed: ['IN', 'US', 'GB', 'CA', 'AU', 'AE', 'SG', 'MY', 'KW', 'OM'],
       offers: [
         { '@type': 'Offer', name: `Free first ${FREE_SESSION_MINS}-minute session`, price: '0', priceCurrency: 'INR' },
         { '@type': 'AggregateOffer', name: '15-minute text session in India (price set by each listener)', priceCurrency: 'INR', lowPrice: String(seeker15(PRICE_SNAPSHOT.minRate)), highPrice: String(seeker15(PRICE_SNAPSHOT.maxRate)) },
@@ -42,14 +42,14 @@ export default function PricingPage() {
         { '@type': 'Offer', name: '45-minute session outside India', price: String(NRI_USD_PRICES[45]), priceCurrency: 'USD' },
       ] },
     { '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
-    { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'LeanOn', item: 'https://www.leanon.app' }, { '@type': 'ListItem', position: 2, name: 'Pricing', item: URL }] },
+    { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' }, { '@type': 'ListItem', position: 2, name: 'Pricing', item: URL }] },
   ] }
   const cell = 'border-b border-slate-200 px-3 py-3 text-left'
   return <main className="min-h-screen bg-white text-[#0F4867]"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <div className="mx-auto max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
       <nav className="mb-10 flex items-center justify-between"><a href="/" className="text-2xl font-black">Lean<span className="text-[#1A8FA0]">On</span></a><a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a></nav>
       <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-[#1A8FA0]">Pricing</p>
-      <h1 className="mb-4 text-4xl font-black leading-tight">What LeanOn costs</h1>
+      <h1 className="mb-4 text-4xl font-black leading-tight">What How Was Your Day costs</h1>
       <p className="mb-8 text-lg leading-8 text-slate-600">Your first {FREE_SESSION_MINS}-minute session is free. After that you pay per session, with no subscription. You always see the price before a session starts.</p>
 
       <section className="mb-8 rounded-3xl border border-slate-200 p-6">
@@ -75,7 +75,7 @@ export default function PricingPage() {
 
       <section className="mb-8 rounded-3xl border border-slate-200 p-6">
         <h2 className="mb-2 text-2xl font-black">Comparing listening services? The facts</h2>
-        <p className="mb-4 leading-7 text-slate-600">If you are choosing between apps where someone just listens, these are the things worth checking — here is exactly how LeanOn works.</p>
+        <p className="mb-4 leading-7 text-slate-600">If you are choosing between apps where someone just listens, these are the things worth checking — here is exactly how How Was Your Day works.</p>
         <div className="overflow-x-auto"><table className="w-full text-sm"><tbody>
           {LISTENING_FACTS.map(([k, v]) => <tr key={k}><th className={cell + ' w-1/3 font-extrabold'}>{k}</th><td className={cell}>{v}</td></tr>)}
         </tbody></table></div>
@@ -87,7 +87,7 @@ export default function PricingPage() {
       </section>
 
       <section className="rounded-3xl bg-[#0F4867] p-7 text-white"><h2 className="mb-2 text-2xl font-black">Start with a free {FREE_SESSION_MINS}-minute session</h2><p className="mb-5 text-white/80">Pick a listener whose experience matches yours. Text or voice, private, no appointment.</p><a href="/browse" className="inline-block rounded-full bg-[#FF9933] px-6 py-3 font-extrabold text-white">Browse listeners →</a></section>
-      <p className="mt-8 text-xs leading-6 text-slate-500">LeanOn provides peer support, not therapy, counselling, diagnosis or emergency care. In India, if you are thinking about harming yourself, call NIMHANS (080-46110007) or Tele-MANAS (14416), free and 24/7.</p>
+      <p className="mt-8 text-xs leading-6 text-slate-500">How Was Your Day provides peer support, not therapy, counselling, diagnosis or emergency care. In India, if you are thinking about harming yourself, call NIMHANS (080-46110007) or Tele-MANAS (14416), free and 24/7.</p>
     </div>
   </main>
 }

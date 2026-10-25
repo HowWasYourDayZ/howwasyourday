@@ -4,7 +4,7 @@ export const post = {
   description: 'Talking to someone who does not know you — no history, no stakes, no social consequences — is often more freeing than confiding in a friend. Here is why, and how it works.',
   date: '2026-09-08',
   readTime: '6 min read',
-  topics: ['venting', 'anonymous support India', 'peer support', 'mental health India', 'LeanOn'],
+  topics: ['venting', 'anonymous support India', 'peer support', 'mental health India', 'How Was Your Day'],
   content: `
 <p>There is a reason people tell things to strangers on trains. You end up next to someone, conversation starts, and before you know it you are saying things you have not told your closest friends. The journey ends, you go your separate ways, and something has shifted — the thing you were carrying is lighter.</p>
 
@@ -41,7 +41,7 @@ export const post = {
 
 <p>This is not paranoia. It is pattern recognition. Most people have had the experience of sharing something that traveled further than they intended. The result is a kind of pre-emptive silence: you stop sharing not because you do not have anything to say, but because the social cost of saying it feels too uncertain.</p>
 
-<p>On LeanOn, the listener has zero connection to your life. They do not know your name, your city, your family, your workplace. The session is confidential by contract. What you say in that conversation ends there — and you can say things in full knowledge of that, which changes what gets said.</p>
+<p>On How Was Your Day, the listener has zero connection to your life. They do not know your name, your city, your family, your workplace. The session is confidential by contract. What you say in that conversation ends there — and you can say things in full knowledge of that, which changes what gets said.</p>
 
 <h2>A Peer Listener vs a Sympathetic Friend</h2>
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Relationship Struggles for Indians in Singapore | LeanOn',
+  title: 'Relationship Struggles for Indians in Singapore | How Was Your Day',
   description: 'Long-distance strain, cultural clashes, partner conflicts abroad — relationship problems feel heavier as an Indian expat in Singapore. Talk to an Indian listener who understands your situation.',
   keywords: [
     'relationship advice singapore indian', 'indian expat relationship problems singapore',
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     'marriage struggles singapore expat', 'south asian relationship advice singapore',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/singapore-relationship-advice',
-    languages: { 'en-SG': 'https://www.leanon.app/singapore-relationship-advice' },
+    canonical: 'https://www.howwasyourday.live/singapore-relationship-advice',
+    languages: { 'en-SG': 'https://www.howwasyourday.live/singapore-relationship-advice' },
   },
   openGraph: {
-    title: 'Relationship Struggles for Indians in Singapore — Talk It Out | LeanOn',
-    description: 'Long-distance pain, cultural gaps, and partner conflicts feel lonelier when you are far from home. LeanOn connects Indian expats in Singapore with peer listeners who understand.',
-    url: 'https://www.leanon.app/singapore-relationship-advice',
-    siteName: 'LeanOn',
+    title: 'Relationship Struggles for Indians in Singapore — Talk It Out | How Was Your Day',
+    description: 'Long-distance pain, cultural gaps, and partner conflicts feel lonelier when you are far from home. How Was Your Day connects Indian expats in Singapore with peer listeners who understand.',
+    url: 'https://www.howwasyourday.live/singapore-relationship-advice',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'How do I cope with a long-distance relationship while living in Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Long-distance from Singapore to India is especially hard because of the time difference and the feeling of being worlds apart culturally. Having someone to talk to — who understands both sides — can help you process the strain. LeanOn peer listeners are Indian themselves, so they understand the context without you having to explain from scratch.',
+        text: 'Long-distance from Singapore to India is especially hard because of the time difference and the feeling of being worlds apart culturally. Having someone to talk to — who understands both sides — can help you process the strain. How Was Your Day peer listeners are Indian themselves, so they understand the context without you having to explain from scratch.',
       },
     },
     {
@@ -50,15 +50,15 @@ const faqSchema = {
       name: 'Can I get relationship support in Hindi or Tamil?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn has listeners who speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. Some relationship problems are just easier to talk about in your mother tongue — you can choose a listener accordingly.',
+        text: 'Yes. How Was Your Day has listeners who speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and English. Some relationship problems are just easier to talk about in your mother tongue — you can choose a listener accordingly.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is talking to a LeanOn listener the same as therapy?',
+      name: 'Is talking to a How Was Your Day listener the same as therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. LeanOn listeners are screened peer supporters, not therapists. They listen without judgment, ask thoughtful questions, and help you feel heard. They do not diagnose, prescribe, or give clinical advice. For serious mental health concerns, please also consult a licensed professional.',
+        text: 'No. How Was Your Day listeners are screened peer supporters, not therapists. They listen without judgment, ask thoughtful questions, and help you feel heard. They do not diagnose, prescribe, or give clinical advice. For serious mental health concerns, please also consult a licensed professional.',
       },
     },
     {
@@ -76,8 +76,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Relationship Advice Singapore', item: 'https://www.leanon.app/singapore-relationship-advice' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Relationship Advice Singapore', item: 'https://www.howwasyourday.live/singapore-relationship-advice' },
   ],
 }
 
@@ -158,7 +158,7 @@ export default function SingaporeRelationshipAdvicePage() {
         <p className="lead">
           Navigating a relationship as an Indian expat in Singapore means carrying two worlds at once —
           the expectations from back home, the pressures of life abroad, and a partner who may be adapting
-          differently than you are. LeanOn is here to help you talk it through.
+          differently than you are. How Was Your Day is here to help you talk it through.
         </p>
 
         <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
@@ -179,7 +179,7 @@ export default function SingaporeRelationshipAdvicePage() {
           <h2>💬 You do not need to figure it out alone</h2>
           <p>Relationship pain is hard to sit with in silence. But talking to friends carries risk — they
             know both of you, and everything you say shapes how they see your relationship.</p>
-          <p>A LeanOn listener is a safe, neutral space. They hear your side fully, without judgment,
+          <p>A How Was Your Day listener is a safe, neutral space. They hear your side fully, without judgment,
             without telling anyone, and without picking a side.</p>
           <a href="/browse" className="cta-night">Talk it through now →</a>
         </div>
@@ -188,7 +188,7 @@ export default function SingaporeRelationshipAdvicePage() {
           <h2>What talking to a peer listener looks like</h2>
           <p>You do not have to prepare anything. You can start wherever it feels right — the argument from
             last night, the thing you have been holding in for weeks, the question you keep going back to.</p>
-          <p>A LeanOn listener asks questions that help you think clearly. They do not tell you what to do.
+          <p>A How Was Your Day listener asks questions that help you think clearly. They do not tell you what to do.
             They help you hear yourself — sometimes that is exactly what you need to figure out your next step.</p>
         </div>
 
@@ -225,7 +225,7 @@ export default function SingaporeRelationshipAdvicePage() {
             <h3>How do I cope with a long-distance relationship while living in Singapore?</h3>
             <p>Long-distance from Singapore to India is especially hard because of time differences and the
               feeling of being worlds apart. Having someone to talk to who understands both sides can help you
-              process the strain. LeanOn listeners are Indian themselves — no need to explain the context.</p>
+              process the strain. How Was Your Day listeners are Indian themselves — no need to explain the context.</p>
           </div>
           <div className="faq-item">
             <h3>My partner and I are fighting more since we moved to Singapore. Is this common?</h3>
@@ -235,12 +235,12 @@ export default function SingaporeRelationshipAdvicePage() {
           </div>
           <div className="faq-item">
             <h3>Can I get relationship support in Hindi or Tamil?</h3>
-            <p>Yes. LeanOn has listeners who speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and
+            <p>Yes. How Was Your Day has listeners who speak Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, and
               English. Some relationship problems are easier to talk about in your mother tongue.</p>
           </div>
           <div className="faq-item">
-            <h3>Is talking to a LeanOn listener the same as therapy?</h3>
-            <p>No. LeanOn listeners are screened peer supporters, not therapists. They listen without judgment
+            <h3>Is talking to a How Was Your Day listener the same as therapy?</h3>
+            <p>No. How Was Your Day listeners are screened peer supporters, not therapists. They listen without judgment
               and help you feel heard. For serious mental health concerns, also consult a licensed professional.</p>
           </div>
           <div className="faq-item">
@@ -263,7 +263,7 @@ export default function SingaporeRelationshipAdvicePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

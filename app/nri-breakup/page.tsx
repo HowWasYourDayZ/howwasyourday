@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Breakup | Heartbreak Without Your Support Network | LeanOn',
+  title: 'NRI Breakup | Heartbreak Without Your Support Network | How Was Your Day',
   description: 'Breaking up when you\'re an NRI is different — your friends are far, your family doesn\'t know, your flatmate is a colleague. Talk to someone who gets it, privately.',
   keywords: ['nri breakup', 'breakup abroad', 'nri heartbreak', 'indian breakup abroad', 'desi breakup uk usa canada', 'nri relationship end'],
-  alternates: { canonical: 'https://www.leanon.app/nri-breakup' },
-  openGraph: { title: 'NRI Breakup | Heartbreak Without Your Support Network | LeanOn', description: 'Breaking up when you\'re an NRI is different — your friends are far, your family doesn\'t know, your flatmate is a colleague. Talk to someone who gets it, privately.', url: 'https://www.leanon.app/nri-breakup', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-breakup' },
+  openGraph: { title: 'NRI Breakup | Heartbreak Without Your Support Network | How Was Your Day', description: 'Breaking up when you\'re an NRI is different — your friends are far, your family doesn\'t know, your flatmate is a colleague. Talk to someone who gets it, privately.', url: 'https://www.howwasyourday.live/nri-breakup', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Breakup', item: 'https://www.leanon.app/nri-breakup' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Breakup', item: 'https://www.howwasyourday.live/nri-breakup' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriBreakupPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Breakup</span></nav>
         <div className="hero">
           <p className="badge">NRI Breakup &middot; Heartbreak Abroad &middot; Indian Immigrant</p>
           <h1>NRI Breakup — <em>Heartbreak With No One Around</em></h1>
           <p className="lead">Your support network is 8,000 miles away. You can&rsquo;t cry to your mum in person. Your flatmate might be a colleague. Your friends in your new country are still new enough that the history isn&rsquo;t there. Breaking up when you are an NRI is not just heartbreak — it is heartbreak in a foreign city with no safety net within reach. You are not alone. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -94,11 +94,11 @@ export default function NriBreakupPage() {
 
         <div className="section">
           <h2>Who Do You Talk To?</h2>
-          <p>A peer listener at LeanOn. Private, anonymous, no community overlap. Someone who understands the NRI context — the isolation, the absent support network, the community dynamics, the way immigrant life makes heartbreak heavier than it would be at home. They are not there to tell you it will be okay. They are there to hear it all, right now, when you need someone to talk to and there is no one around.</p>
+          <p>A peer listener at How Was Your Day. Private, anonymous, no community overlap. Someone who understands the NRI context — the isolation, the absent support network, the community dynamics, the way immigrant life makes heartbreak heavier than it would be at home. They are not there to tell you it will be okay. They are there to hear it all, right now, when you need someone to talk to and there is no one around.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Heartbreak in a foreign city. Someone is there.</h2><p>Real peer listener. Private, anonymous, understands NRI life. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Heartbreak in a foreign city. Someone is there.</h2><p>Real peer listener. Private, anonymous, understands NRI life. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

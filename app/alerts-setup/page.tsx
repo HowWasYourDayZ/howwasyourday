@@ -1,6 +1,6 @@
 'use client'
 
-// /alerts-setup — one place to check and fix LeanOn alerts on THIS device.
+// /alerts-setup — one place to check and fix How Was Your Day alerts on THIS device.
 // Runs the same steps the listener dashboard uses (lib/firebase-client.ts) and
 // shows the fix only for the first step that fails, with instructions for the
 // device in hand (most listeners: Chrome on Android). Shareable link: support
@@ -92,7 +92,7 @@ export default function AlertsSetupPage() {
       if (!d.ok) {
         setTest('error')
         setTestError(d.reason === 'no_device' ? 'This device is not registered yet — finish step 3 first.'
-          : d.reason === 'not_configured' ? 'Alerts are not set up on LeanOn’s server. Please tell LeanOn support.'
+          : d.reason === 'not_configured' ? 'Alerts are not set up on How Was Your Day’s server. Please tell How Was Your Day support.'
           : d.error || (Array.isArray(d.errors) && d.errors[0]) || 'The test alert could not be sent. Please try again.')
         return
       }
@@ -133,14 +133,14 @@ export default function AlertsSetupPage() {
       `}</style>
       <div className="as-wrap">
         <Link href="/dashboard" style={{ fontSize: 13, color: '#1A8FA0', fontWeight: 700, textDecoration: 'none' }}>← Back to dashboard</Link>
-        <h1>🔔 Turn on LeanOn alerts</h1>
+        <h1>🔔 Turn on How Was Your Day alerts</h1>
         <p className="as-lead">
           Alerts make your phone ring when a seeker requests a session, even when you&apos;re using other apps.
           Follow the steps on the device you want alerts on — each step turns green when it&apos;s done.
         </p>
 
         <div className="as-tabs" aria-label="Instructions for">
-          {([['android_chrome', 'Android (Chrome)'], ['android_app', 'Android (LeanOn app)'], ['desktop', 'Laptop / computer'], ['iphone', 'iPhone']] as [DeviceKind, string][]).map(([k, label]) => (
+          {([['android_chrome', 'Android (Chrome)'], ['android_app', 'Android (How Was Your Day app)'], ['desktop', 'Laptop / computer'], ['iphone', 'iPhone']] as [DeviceKind, string][]).map(([k, label]) => (
             <button key={k} type="button" aria-pressed={device === k} className={`as-tab${device === k ? ' on' : ''}`} onClick={() => setDevice(k)}>{label}</button>
           ))}
         </div>
@@ -151,13 +151,13 @@ export default function AlertsSetupPage() {
           {s1 === 'fail' && (
             <div className="as-body">
               {status === 'ios_install' ? (
-                <>On iPhone, alerts only work from the home-screen app: in Safari tap <b>Share → Add to Home Screen</b>, then open LeanOn from the new icon and come back to this page.</>
+                <>On iPhone, alerts only work from the home-screen app: in Safari tap <b>Share → Add to Home Screen</b>, then open How Was Your Day from the new icon and come back to this page.</>
               ) : status === 'not_configured' ? (
-                <>Alerts are not set up on LeanOn&apos;s server. Please tell LeanOn support.</>
+                <>Alerts are not set up on How Was Your Day&apos;s server. Please tell How Was Your Day support.</>
               ) : (
 device === 'desktop'
-                  ? <>This browser can&apos;t show alerts. Open <b>leanon.app/alerts-setup</b> in <b>Google Chrome</b>, Edge or Firefox.</>
-                  : <>This browser can&apos;t show alerts. Open <b>leanon.app/alerts-setup in Google Chrome</b> (not Samsung Internet, Opera, or the browser inside Facebook, Instagram or WhatsApp — use ⋮ → <b>Open in Chrome</b>).</>
+                  ? <>This browser can&apos;t show alerts. Open <b>howwasyourday.live/alerts-setup</b> in <b>Google Chrome</b>, Edge or Firefox.</>
+                  : <>This browser can&apos;t show alerts. Open <b>howwasyourday.live/alerts-setup in Google Chrome</b> (not Samsung Internet, Opera, or the browser inside Facebook, Instagram or WhatsApp — use ⋮ → <b>Open in Chrome</b>).</>
               )}
             </div>
           )}
@@ -165,7 +165,7 @@ device === 'desktop'
 
         {/* 2 — permission */}
         <div className={`as-step ${s2}`}>
-          <div className="as-head"><span className="as-icon">{icon(s2, 2)}</span>Notifications allowed for LeanOn</div>
+          <div className="as-head"><span className="as-icon">{icon(s2, 2)}</span>Notifications allowed for How Was Your Day</div>
           {s1 === 'ok' && status === 'prompt' && (
             <div className="as-body">
               Tap the button, then choose <b>Allow</b> when your phone asks.
@@ -208,7 +208,7 @@ device === 'desktop'
           <div className="as-head"><span className="as-icon">{icon(s4, 4)}</span>Test alert arrives</div>
           {s3 === 'ok' && (
             <div className="as-body">
-              {test === null && !testing && <>Send a test, then watch for the LeanOn notification at the top of your screen.</>}
+              {test === null && !testing && <>Send a test, then watch for the How Was Your Day notification at the top of your screen.</>}
               {testing && <>Test sent — watch for it now (checking for up to 20 seconds)…</>}
               {test === 'shown' && sawIt === null && (
                 <>The test alert reached this device. <b>Did you see the notification?</b>
@@ -234,7 +234,7 @@ device === 'desktop'
         )}
 
         <p className="as-lead" style={{ marginTop: 18, fontSize: 12.5 }}>
-          Still stuck? Take a screenshot of this page and send it to LeanOn support from the <Link href="/contact" style={{ color: '#1A8FA0', fontWeight: 700 }}>contact page</Link>.
+          Still stuck? Take a screenshot of this page and send it to How Was Your Day support from the <Link href="/contact" style={{ color: '#1A8FA0', fontWeight: 700 }}>contact page</Link>.
         </p>
       </div>
     </>
@@ -250,27 +250,27 @@ function icon(s: Step, n: number) {
 function BlockedSteps({ device }: { device: DeviceKind }) {
   if (device === 'android_app') return (
     <ol>
-      <li>Open your phone&apos;s <b>Settings → Apps → LeanOn → Notifications</b> and turn them <b>on</b>.</li>
-      <li>Close LeanOn completely and open it again, then come back to this page.</li>
-      <li>Still blocked? Open <b>leanon.app/alerts-setup in Google Chrome</b>, log in and do the steps there instead.</li>
+      <li>Open your phone&apos;s <b>Settings → Apps → How Was Your Day → Notifications</b> and turn them <b>on</b>.</li>
+      <li>Close How Was Your Day completely and open it again, then come back to this page.</li>
+      <li>Still blocked? Open <b>howwasyourday.live/alerts-setup in Google Chrome</b>, log in and do the steps there instead.</li>
     </ol>
   )
   if (device === 'desktop') return (
     <ol>
-      <li>Click the icon to the <b>left of leanon.app</b> in the address bar → <b>Site settings</b> → <b>Notifications → Allow</b>.</li>
+      <li>Click the icon to the <b>left of howwasyourday.live</b> in the address bar → <b>Site settings</b> → <b>Notifications → Allow</b>.</li>
       <li>Reload this page.</li>
     </ol>
   )
   if (device === 'iphone') return (
     <ol>
-      <li>iPhone <b>Settings → Notifications → LeanOn</b> → <b>Allow Notifications</b> on.</li>
-      <li>Open LeanOn from the home-screen icon and come back to this page.</li>
+      <li>iPhone <b>Settings → Notifications → How Was Your Day</b> → <b>Allow Notifications</b> on.</li>
+      <li>Open How Was Your Day from the home-screen icon and come back to this page.</li>
     </ol>
   )
   return (
     <ol>
-      <li>In Chrome, tap the icon to the <b>left of leanon.app</b> in the address bar → <b>Permissions</b> → <b>Notifications</b> → <b>Allow</b>.
-        <div className="as-err">Don&apos;t see it? Chrome <b>⋮</b> menu → <b>Settings → Site settings → Notifications</b> → under &quot;Blocked&quot; tap <b>leanon.app</b> → <b>Allow</b>.</div></li>
+      <li>In Chrome, tap the icon to the <b>left of howwasyourday.live</b> in the address bar → <b>Permissions</b> → <b>Notifications</b> → <b>Allow</b>.
+        <div className="as-err">Don&apos;t see it? Chrome <b>⋮</b> menu → <b>Settings → Site settings → Notifications</b> → under &quot;Blocked&quot; tap <b>howwasyourday.live</b> → <b>Allow</b>.</div></li>
       <li>Phone <b>Settings → Apps → Chrome → Notifications</b> → turn <b>on</b> (also turn on the <b>&quot;Sites&quot;</b> category if you see it).</li>
       <li>Come back to this tab — it re-checks by itself.</li>
     </ol>
@@ -286,7 +286,7 @@ function HiddenSteps({ device }: { device: DeviceKind }) {
       <li>Send another test.</li>
     </ol>
   )
-  const app = device === 'android_app' ? 'LeanOn' : device === 'iphone' ? 'LeanOn' : 'Chrome'
+  const app = device === 'android_app' ? 'How Was Your Day' : device === 'iphone' ? 'How Was Your Day' : 'Chrome'
   return (
     <ol>
       <li>Turn off <b>Do not disturb</b> (swipe down from the top of the screen).</li>
@@ -306,12 +306,12 @@ function NotArrivingSteps({ device }: { device: DeviceKind }) {
       </ol>
     </>
   )
-  const app = device === 'android_app' ? 'LeanOn' : 'Chrome'
+  const app = device === 'android_app' ? 'How Was Your Day' : 'Chrome'
   return (
     <>The test didn&apos;t reach this phone within 20 seconds.
       <ol>
         <li>Phone <b>Settings → Apps → {app} → Battery</b> → <b>Unrestricted</b> (or &quot;Don&apos;t optimise&quot;).</li>
-        <li>Turn off <b>Battery saver</b> and <b>Data saver</b> while you&apos;re online for LeanOn.</li>
+        <li>Turn off <b>Battery saver</b> and <b>Data saver</b> while you&apos;re online for How Was Your Day.</li>
         <li>Check your internet, then send another test.</li>
       </ol>
     </>

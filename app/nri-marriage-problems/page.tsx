@@ -3,25 +3,25 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Marriage Problems | When Your Marriage Is Straining Under the Distance | LeanOn',
+  title: 'NRI Marriage Problems | When Your Marriage Is Straining Under the Distance | How Was Your Day',
   description: 'NRI marriage problems are layered — immigration stress, money across borders, in-law dynamics from afar, identity clashes. Talk to someone who gets the full picture.',
   keywords: ['nri marriage problems', 'nri couple problems', 'indian marriage problems abroad', 'nri marital issues', 'nri husband wife problems', 'nri marriage stress'],
-  alternates: { canonical: 'https://www.leanon.app/nri-marriage-problems' },
-  openGraph: { title: 'NRI Marriage Problems | When Your Marriage Is Straining Under the Distance | LeanOn', description: 'NRI marriage problems are layered — immigration stress, money across borders, in-law dynamics from afar, identity clashes. Talk to someone who gets the full picture.', url: 'https://www.leanon.app/nri-marriage-problems', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-marriage-problems' },
+  openGraph: { title: 'NRI Marriage Problems | When Your Marriage Is Straining Under the Distance | How Was Your Day', description: 'NRI marriage problems are layered — immigration stress, money across borders, in-law dynamics from afar, identity clashes. Talk to someone who gets the full picture.', url: 'https://www.howwasyourday.live/nri-marriage-problems', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Can both partners talk to a listener separately?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Each person can have their own session with a listener. Sessions are individual — a listener speaks to one person at a time. If both partners want to talk separately, that is completely possible.' } },
-  { '@type': 'Question', name: 'Are you a mediator or couples support service?', acceptedAnswer: { '@type': 'Answer', text: 'No. LeanOn is peer listening — one person talking to one listener. It is not mediation, not couples sessions, not professional relationship support. It is a space for you to think through what you are experiencing with someone who understands the NRI context.' } },
-  { '@type': 'Question', name: 'Is my conversation confidential from my spouse?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. What you say in a session stays between you and the listener. Nothing is shared with anyone, including a partner who might also use LeanOn separately.' } },
+  { '@type': 'Question', name: 'Are you a mediator or couples support service?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day is peer listening — one person talking to one listener. It is not mediation, not couples sessions, not professional relationship support. It is a space for you to think through what you are experiencing with someone who understands the NRI context.' } },
+  { '@type': 'Question', name: 'Is my conversation confidential from my spouse?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. What you say in a session stays between you and the listener. Nothing is shared with anyone, including a partner who might also use How Was Your Day separately.' } },
   { '@type': 'Question', name: 'Can I talk in Hindi or other Indian languages?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many listeners are comfortable in Hindi and other Indian languages. Check individual listener profiles.' } },
   { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Marriage Problems', item: 'https://www.leanon.app/nri-marriage-problems' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Marriage Problems', item: 'https://www.howwasyourday.live/nri-marriage-problems' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriMarriageProblemsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Marriage Problems</span></nav>
         <div className="hero">
           <p className="badge">NRI Marriage &middot; Indian Couple Abroad &middot; Peer Support</p>
           <h1>NRI Marriage Problems — <em>More Than Just Couple Issues</em></h1>
           <p className="lead">NRI marriages carry weight that most relationship advice doesn&rsquo;t account for. Immigration decisions. Money across two countries. In-laws influencing from 8,000 miles away. Two people who left India together but changed in different directions once they got there. Talk to someone who understands the full picture. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -95,12 +95,12 @@ export default function NriMarriageProblemsPage() {
 
         <div className="section">
           <h2>Talking About It with Someone Neutral</h2>
-          <p>LeanOn peer listeners are not mediators. They are not in your relationship and they will not try to be. What they offer is a space to say what you cannot say inside the marriage without it becoming an argument, and what you cannot say outside the marriage without it becoming gossip. Someone who hears the NRI context as a given, not as context they need explained.</p>
+          <p>How Was Your Day peer listeners are not mediators. They are not in your relationship and they will not try to be. What they offer is a space to say what you cannot say inside the marriage without it becoming an argument, and what you cannot say outside the marriage without it becoming gossip. Someone who hears the NRI context as a given, not as context they need explained.</p>
           <p>Sometimes what you need before you can talk to your partner is to find out what you actually think. A peer listener helps with that.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The weight that NRI marriages carry in silence.</h2><p>Real peer listener. Understands the full NRI picture. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The weight that NRI marriages carry in silence.</h2><p>Real peer listener. Understands the full NRI picture. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

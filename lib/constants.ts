@@ -1,5 +1,5 @@
 export const PLATFORM_FEE       = 10   // flat ₹10 per session added on top of listener rate (paid by seeker) — unchanged by the service fee below
-// LeanOn's service fee on listener earnings, deducted from the listener's
+// How Was Your Day's service fee on listener earnings, deducted from the listener's
 // share at settlement (lib/session-billing.ts). The seeker's charge
 // (amountHeld) and the flat PLATFORM_FEE above are completely unaffected.
 //
@@ -67,14 +67,14 @@ export const REQUEST_RESPONSE_WINDOW_MS   = REQUEST_RESPONSE_WINDOW_SECS * 1000
 // Listener presence (lib/listener-presence.ts). A listener with no heartbeat for
 // STALE_HEARTBEAT_MINS goes offline. STALE is load-bearing: see PROJECT.md §8.2.3.
 // AWAY_WITH_ALERTS_MINS: a listener whose phone can get a request alert stays
-// online that long without heartbeats (LeanOn in the background, screen
+// online that long without heartbeats (How Was Your Day in the background, screen
 // locked). 240 until 2026-10-16, then switched off (15 for everyone), back on
 // at 60 from 2026-10-19 (owner decision) — away listeners are asked last by
 // Talk now and go offline on their first unanswered request.
 export const STALE_HEARTBEAT_MINS  = 15
 export const AWAY_WITH_ALERTS_MINS = 60
-// A LeanOn tab closing (pagehide, not bfcache) ages the listener's heartbeat so
-// they go offline LEAVE_GRACE_SECS later unless another LeanOn tab / a reload
+// A How Was Your Day tab closing (pagehide, not bfcache) ages the listener's heartbeat so
+// they go offline LEAVE_GRACE_SECS later unless another How Was Your Day tab / a reload
 // heart-beats first (every 60–90s). Must stay well above the heartbeat interval.
 export const LEAVE_GRACE_SECS = 180
 export const RECHARGE_AMOUNTS   = [200, 500, 1000, 2000] as const
@@ -104,7 +104,7 @@ export type LanguageId = typeof LANGUAGES[number]['id']
 // ── Message reactions ───────────────────────────────────────────────────────
 // Deliberately a SHORT, SUPPORTIVE-ONLY set.
 //
-// A thumbs-down (or any negative reaction) is intentionally excluded: LeanOn is
+// A thumbs-down (or any negative reaction) is intentionally excluded: How Was Your Day is
 // an emotional-support product, and letting someone react negatively to another
 // person's vulnerable message is a wellbeing risk, not a feature. Ambiguous
 // reactions (e.g. a crying face, which can read as pity) are excluded for the
@@ -116,7 +116,7 @@ export const MESSAGE_REACTIONS = ['❤️', '🙏', '🫂', '😊'] as const
 export type MessageReaction = typeof MESSAGE_REACTIONS[number]
 
 // ── Listener age (month + year only — never the day, for privacy) ───────────
-// Minimum age to be a listener; LeanOn is an adults-only platform.
+// Minimum age to be a listener; How Was Your Day is an adults-only platform.
 export const MIN_LISTENER_AGE = 18
 // Oldest birth year we offer in the dropdown (keeps the list finite/sane).
 export const MAX_LISTENER_AGE = 90

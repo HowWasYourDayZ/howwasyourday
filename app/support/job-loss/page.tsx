@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Laid Off? Talk to Someone Who Has Been There | LeanOn India',
+  title: 'Laid Off? Talk to Someone Who Has Been There | How Was Your Day India',
   description: 'Job loss hurts more than the paycheck. Talk anonymously to a peer listener who has been laid off and rebuilt. No appointment needed.',
-  alternates: { canonical: 'https://www.leanon.app/support/job-loss', languages: { 'en-IN': 'https://www.leanon.app/support/job-loss' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/job-loss', languages: { 'en-IN': 'https://www.howwasyourday.live/support/job-loss' } },
   keywords: 'job loss depression India, laid off emotional support, coping with layoff India, lost my job India, talk to someone after layoff, job loss anxiety, unemployment stress India, peer support after being fired',
   openGraph: {
-    title: 'Laid Off? Talk to Someone Who Has Been There | LeanOn India',
+    title: 'Laid Off? Talk to Someone Who Has Been There | How Was Your Day India',
     description: 'Job loss hurts more than the paycheck. Talk anonymously to a peer listener who has been laid off and rebuilt. No appointment needed.',
-    url: 'https://www.leanon.app/support/job-loss',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/job-loss',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -49,15 +49,15 @@ const faqSchema = {
       name: 'How can peer support help if I cannot afford therapy after losing my income?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer support is not therapy and LeanOn is honest about that. What it offers is an empathetic human being who has been through job loss themselves and will listen without judgment, at a fraction of the cost of a therapy session. For many people in the weeks right after a layoff, what they need most is not clinical treatment but someone to talk to who understands. If you are dealing with something that needs professional care, a listener will say so.',
+        text: 'Peer support is not therapy and How Was Your Day is honest about that. What it offers is an empathetic human being who has been through job loss themselves and will listen without judgment, at a fraction of the cost of a therapy session. For many people in the weeks right after a layoff, what they need most is not clinical treatment but someone to talk to who understands. If you are dealing with something that needs professional care, a listener will say so.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does LeanOn cost?',
+      name: 'How much does How Was Your Day cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn starts at ₹160 for a 15-minute session. A short trial session is available for new users. We know you have just lost your income, so we will not pretend cost does not matter. It is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.',
+        text: 'How Was Your Day starts at ₹160 for a 15-minute session. A short trial session is available for new users. We know you have just lost your income, so we will not pretend cost does not matter. It is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.',
       },
     },
   ],
@@ -67,9 +67,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Job Loss', item: 'https://www.leanon.app/support/job-loss' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Job Loss', item: 'https://www.howwasyourday.live/support/job-loss' },
   ],
 }
 
@@ -130,7 +130,7 @@ export default function JobLossSupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -149,7 +149,7 @@ export default function JobLossSupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Job Loss</p>
           <h1>Losing a Job Isn&apos;t Losing Your <em>Worth</em></h1>
-          <p className="lead">A layoff email takes thirty seconds to read and months to absorb. If you&apos;re staring at a laptop you no longer have a login for, wondering how to tell anyone — LeanOn connects you with peer listeners who have been laid off themselves, and rebuilt. No appointment needed.</p>
+          <p className="lead">A layoff email takes thirty seconds to read and months to absorb. If you&apos;re staring at a laptop you no longer have a login for, wondering how to tell anyone — How Was Your Day connects you with peer listeners who have been laid off themselves, and rebuilt. No appointment needed.</p>
         </div>
 
         {/* Understanding */}
@@ -173,19 +173,19 @@ export default function JobLossSupportPage() {
           <p>Indian families read employment as status, stability, and a signal about your future. A layoff can quietly reshape how relatives speak to you, stall a marriage conversation, and revive expectations you thought you had outgrown. There is the fear of becoming the cautionary story in a family WhatsApp group. There is the guilt of parents who sacrificed for your education. None of this is rational and all of it is real — and it is far more common than the confident LinkedIn posts suggest.</p>
         </div>
 
-        {/* How LeanOn helps */}
+        {/* How the app helps */}
         <div className="section">
-          <h2>How LeanOn Helps</h2>
-          <p>LeanOn is not therapy and not career coaching, and we are honest about that. It is peer support — one human who has been through this, listening to another. Here is what that looks like after a layoff:</p>
+          <h2>How the app Helps</h2>
+          <p>How Was Your Day is not therapy and not career coaching, and we are honest about that. It is peer support — one human who has been through this, listening to another. Here is what that looks like after a layoff:</p>
 
           <h3>Someone Who Has Actually Been Laid Off</h3>
           <p>Our listeners include people who were let go in startup shutdowns, cost-cutting rounds, and abrupt terminations — and who came out the other side. They are not reciting advice from an article. They know the specific silence of the morning after, and the empathy they offer comes from having lived it rather than studied it.</p>
 
           <h3>A Place Where You Don&apos;t Have to Perform Optimism</h3>
-          <p>LinkedIn demands that you be grateful, energised and open to opportunities within days. Family demands that you be reassuring. Friends want you to be fine. Somewhere in all that, nobody asks how you actually are. On LeanOn you can say the ungracious things out loud — that you feel humiliated, that you resent people who kept their jobs, that you are frightened — and be met with empathy instead of a pep talk.</p>
+          <p>LinkedIn demands that you be grateful, energised and open to opportunities within days. Family demands that you be reassuring. Friends want you to be fine. Somewhere in all that, nobody asks how you actually are. On How Was Your Day you can say the ungracious things out loud — that you feel humiliated, that you resent people who kept their jobs, that you are frightened — and be met with empathy instead of a pep talk.</p>
 
           <h3>Available at the Hours the Anxiety Spikes</h3>
-          <p>Job-loss anxiety keeps unsociable hours. It arrives at 2 AM, on Sunday evenings, and in the twenty minutes after a rejection email. LeanOn listeners go online at different hours, so you are not left holding a 3 AM spiral by yourself until the world wakes up.</p>
+          <p>Job-loss anxiety keeps unsociable hours. It arrives at 2 AM, on Sunday evenings, and in the twenty minutes after a rejection email. How Was Your Day listeners go online at different hours, so you are not left holding a 3 AM spiral by yourself until the world wakes up.</p>
 
           <h3>Completely Private</h3>
           <p>Nothing you say here reaches your professional network, your former colleagues, your recruiters, or your family. There is no profile anyone can find, no post anyone can screenshot, no mutual connection who might mention it. You can be fully honest about your situation without a single social consequence — which is often the only condition under which people can finally say the truth.</p>
@@ -229,7 +229,7 @@ export default function JobLossSupportPage() {
           <p>Talk to a peer listener who has been laid off and rebuilt. No subscription, no one in your life needs to know.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">You're not alone in this — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -250,18 +250,18 @@ export default function JobLossSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How can peer support help if I can&apos;t afford therapy after losing my income?</div>
-            <div className="faq-a">Peer support is not therapy and LeanOn is honest about that. What it offers is an empathetic human being who has been through job loss themselves and will listen without judgment, at a fraction of the cost of a therapy session. For many people in the weeks right after a layoff, what they need most is not clinical treatment but someone to talk to who understands. If you are dealing with something that needs professional care, a listener will say so.</div>
+            <div className="faq-a">Peer support is not therapy and How Was Your Day is honest about that. What it offers is an empathetic human being who has been through job loss themselves and will listen without judgment, at a fraction of the cost of a therapy session. For many people in the weeks right after a layoff, what they need most is not clinical treatment but someone to talk to who understands. If you are dealing with something that needs professional care, a listener will say so.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does LeanOn cost?</div>
-            <div className="faq-a">LeanOn starts at ₹160 for a 15-minute session, . A short trial session is available for new users. We know you have just lost your income, so we won&apos;t pretend cost does not matter — it is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.</div>
+            <div className="faq-q">How much does How Was Your Day cost?</div>
+            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, . A short trial session is available for new users. We know you have just lost your income, so we won&apos;t pretend cost does not matter — it is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.</div>
           </div>
         </div>
 
         {/* Related pages */}
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Job loss rarely arrives on its own. Explore more peer support on LeanOn:</p>
+          <p>Job loss rarely arrives on its own. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/career-confusion" className="related-link">Career Confusion</a>
             <a href="/support/anxiety" className="related-link">Anxiety Support</a>

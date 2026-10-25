@@ -1,4 +1,4 @@
-package app.leanon;
+package app.howwasyourday;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.content.Intent;
 // "Not now" on the ringing alert: stop ringing. The request itself stays open
 // for its normal window (the listener can still accept it on the dashboard).
 public class RequestActionReceiver extends BroadcastReceiver {
-    static final String ACTION_SILENCE = "app.leanon.SILENCE_REQUEST";
+    static final String ACTION_SILENCE = "app.howwasyourday.SILENCE_REQUEST";
     static final String EXTRA_SESSION = "session_id";
 
     @Override

@@ -4,7 +4,7 @@ export const post = {
   description: 'Indians in the UAE, UK, Canada, Singapore, Malaysia and the Gulf are increasingly turning to AI chatbots for emotional support. Here is why that makes complete sense — and where it stops being enough.',
   date: '2026-09-15',
   readTime: '7 min read',
-  topics: ['NRI emotional support', 'AI chatbot alternative', 'Indians abroad', 'expat loneliness', 'UAE support', 'UK Indian support', 'peer support', 'LeanOn'],
+  topics: ['NRI emotional support', 'AI chatbot alternative', 'Indians abroad', 'expat loneliness', 'UAE support', 'UK Indian support', 'peer support', 'How Was Your Day'],
   content: `
 <p>There is a specific kind of loneliness that happens when you move abroad. It is not the loneliness of being alone — you are often surrounded by people: colleagues, neighbours, sometimes even family. It is the loneliness of not being able to say what is actually true for you to anyone within reach.</p>
 
@@ -34,11 +34,11 @@ export const post = {
 
 <p><strong>Language and context matter.</strong> The comfort of talking to someone in Hindi, Tamil, Telugu, or Kannada — in a way that holds the cultural context without needing it explained — is something AI handles worse than a real person from the same background who now lives where you live.</p>
 
-<p><strong>Midnight has no geography.</strong> When it is 1am in Dubai and you cannot sleep and there is something pressing on you, the options are AI, or nobody. This is the gap LeanOn exists to fill: listeners who are awake, who understand the NRI experience, and who are genuinely available across time zones.</p>
+<p><strong>Midnight has no geography.</strong> When it is 1am in Dubai and you cannot sleep and there is something pressing on you, the options are AI, or nobody. This is the gap How Was Your Day exists to fill: listeners who are awake, who understand the NRI experience, and who are genuinely available across time zones.</p>
 
-<h2>Who Is Listening on LeanOn</h2>
+<h2>Who Is Listening on How Was Your Day</h2>
 
-<p>LeanOn peer listeners are real people — not AI, not therapists — who have applied to be listeners, gone through a process, and shown up specifically to be present for conversations like this. Many are Indians who have their own experience of loneliness, family pressure, relationship difficulty, and the gap between the life you planned and the one you are living.</p>
+<p>How Was Your Day peer listeners are real people — not AI, not therapists — who have applied to be listeners, gone through a process, and shown up specifically to be present for conversations like this. Many are Indians who have their own experience of loneliness, family pressure, relationship difficulty, and the gap between the life you planned and the one you are living.</p>
 
 <p>Conversations are anonymous. You do not have to explain your whole history. You can start talking about the thing that is pressing on you right now. Sessions start with a free five minutes — no commitment, no appointment.</p>
 

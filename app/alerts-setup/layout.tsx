@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
-// Help page for turning on LeanOn alerts on a device. Not for search results.
+// Help page for turning on How Was Your Day alerts on a device. Not for search results.
 export const metadata: Metadata = {
-  title: 'Turn on LeanOn alerts',
-  description: 'Check whether LeanOn alerts work on this phone or computer, and fix them step by step.',
+  title: 'Turn on How Was Your Day alerts',
+  description: 'Check whether How Was Your Day alerts work on this phone or computer, and fix them step by step.',
   robots: { index: false, follow: false },
 }
 

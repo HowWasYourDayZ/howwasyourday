@@ -4,14 +4,14 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support for Anxiety in India | Talk Anonymously | LeanOn',
+  title: 'Peer Support for Anxiety in India | Talk Anonymously | How Was Your Day',
   description: "Anxious all the time? Talk privately to a real, screened peer listener in India — text or voice, online now. Peer support, not diagnosis. First 5 minutes free.",
-  alternates: { canonical: 'https://www.leanon.app/support/anxiety', languages: { 'en-IN': 'https://www.leanon.app/support/anxiety' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/anxiety' } },
   openGraph: {
-    title: 'Peer Support for Anxiety in India | Talk Anonymously | LeanOn',
+    title: 'Peer Support for Anxiety in India | Talk Anonymously | How Was Your Day',
     description: "Anxious all the time? Talk privately to a real, screened peer listener in India — text or voice, online now. Peer support, not diagnosis. First 5 minutes free.",
-    url: 'https://www.leanon.app/support/anxiety',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/anxiety',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -20,13 +20,13 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I feel anxious all the time \u2014 can I talk to someone without seeing a psychiatrist?", acceptedAnswer: { '@type': 'Answer', text: "Yes, for everyday anxiety and overthinking, talking to a calm, real person can help. LeanOn connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now. It is peer support, not diagnosis or treatment — if anxiety is stopping your daily life or you have frequent panic attacks, also see a doctor. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "I feel anxious all the time \u2014 can I talk to someone without seeing a psychiatrist?", acceptedAnswer: { '@type': 'Answer', text: "Yes, for everyday anxiety and overthinking, talking to a calm, real person can help. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now. It is peer support, not diagnosis or treatment — if anxiety is stopping your daily life or you have frequent panic attacks, also see a doctor. Your first 5 minutes are free." } },
     {
       '@type': 'Question',
       name: 'What types of anxiety can peer support help with?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer support on LeanOn can help with work anxiety, exam anxiety, health anxiety, relationship anxiety, social anxiety, and general worry and racing thoughts. Our listeners are not therapists but have personal lived experience with anxiety and offer a non-judgmental space to talk through what you are feeling.',
+        text: 'Peer support on How Was Your Day can help with work anxiety, exam anxiety, health anxiety, relationship anxiety, social anxiety, and general worry and racing thoughts. Our listeners are not therapists but have personal lived experience with anxiety and offer a non-judgmental space to talk through what you are feeling.',
       },
     },
     {
@@ -50,15 +50,15 @@ const faqSchema = {
       name: 'Can talking about anxiety make it worse?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In a safe, non-judgmental environment, talking about anxiety generally helps rather than hurts. Putting feelings into words (a process psychologists call "affect labelling") can reduce the intensity of anxious feelings. LeanOn listeners are screened and expected to hold space without feeding spirals or catastrophising.',
+        text: 'In a safe, non-judgmental environment, talking about anxiety generally helps rather than hurts. Putting feelings into words (a process psychologists call "affect labelling") can reduce the intensity of anxious feelings. How Was Your Day listeners are screened and expected to hold space without feeding spirals or catastrophising.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What if my anxiety is severe — should I use LeanOn?',
+      name: 'What if my anxiety is severe — should I use How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn is peer support, not a substitute for clinical care. If you are experiencing severe anxiety, panic attacks, or anxiety that significantly impairs your daily functioning, we encourage you to also consult a mental health professional. LeanOn can complement professional care but is not a replacement for it.',
+        text: 'How Was Your Day is peer support, not a substitute for clinical care. If you are experiencing severe anxiety, panic attacks, or anxiety that significantly impairs your daily functioning, we encourage you to also consult a mental health professional. How Was Your Day can complement professional care but is not a replacement for it.',
       },
     },
   ],
@@ -68,9 +68,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/support' },
-    { '@type': 'ListItem', position: 3, name: 'Anxiety', item: 'https://www.leanon.app/support/anxiety' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/support' },
+    { '@type': 'ListItem', position: 3, name: 'Anxiety', item: 'https://www.howwasyourday.live/support/anxiety' },
   ],
 }
 
@@ -132,7 +132,7 @@ export default function AnxietySupportPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -146,8 +146,8 @@ export default function AnxietySupportPage() {
         <div className="hero">
           <p className="tag">Peer Support · Anxiety</p>
           <h1>Your <em>Anxious Mind</em> Deserves to Be Heard</h1>
-          <p className="lead">Anxiety affects millions of people in India — from work pressure and exam stress to racing thoughts that won&apos;t quit at 3 AM. LeanOn connects you with peer listeners who have managed their own anxiety and truly understand what you are going through.</p>
-          <QuickAnswer question={"I feel anxious all the time \u2014 can I talk to someone without seeing a psychiatrist?"} answer={"Yes, for everyday anxiety and overthinking, talking to a calm, real person can help. LeanOn connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now. It is peer support, not diagnosis or treatment — if anxiety is stopping your daily life or you have frequent panic attacks, also see a doctor. Your first 5 minutes are free."} />
+          <p className="lead">Anxiety affects millions of people in India — from work pressure and exam stress to racing thoughts that won&apos;t quit at 3 AM. How Was Your Day connects you with peer listeners who have managed their own anxiety and truly understand what you are going through.</p>
+          <QuickAnswer question={"I feel anxious all the time \u2014 can I talk to someone without seeing a psychiatrist?"} answer={"Yes, for everyday anxiety and overthinking, talking to a calm, real person can help. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now. It is peer support, not diagnosis or treatment — if anxiety is stopping your daily life or you have frequent panic attacks, also see a doctor. Your first 5 minutes are free."} />
         </div>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
@@ -175,19 +175,19 @@ export default function AnxietySupportPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Helps With Anxiety</h2>
+          <h2>How the app Helps With Anxiety</h2>
 
           <h3>Listeners Who Have Been There</h3>
-          <p>Every LeanOn listener with anxiety expertise has personally navigated it. They know what a panic attack feels like from the inside. They know the specific misery of health anxiety. They know how hard it is to explain to someone who has never experienced it why you just cannot &quot;calm down.&quot;</p>
+          <p>Every How Was Your Day listener with anxiety expertise has personally navigated it. They know what a panic attack feels like from the inside. They know the specific misery of health anxiety. They know how hard it is to explain to someone who has never experienced it why you just cannot &quot;calm down.&quot;</p>
 
           <h3>A Non-Judgmental Ear</h3>
-          <p>One of the most painful parts of anxiety is feeling like you cannot talk about it — friends get impatient, family minimises it, colleagues would think less of you. LeanOn gives you a private space to say everything without editing yourself.</p>
+          <p>One of the most painful parts of anxiety is feeling like you cannot talk about it — friends get impatient, family minimises it, colleagues would think less of you. How Was Your Day gives you a private space to say everything without editing yourself.</p>
 
           <h3>Grounding and Coping Insights</h3>
           <p>Our listeners share what has actually worked for them — breathing techniques, grounding practices, ways of reframing anxious thoughts — not as prescriptions, but as peer insights from people who have tried these things in real life.</p>
 
           <h3>Available During Anxiety Peaks</h3>
-          <p>Anxiety does not respect business hours. LeanOn listeners go online at different hours, including late at night, so when the spiral hits at midnight or your chest tightens before a Monday morning meeting, you have someone to reach out to immediately.</p>
+          <p>Anxiety does not respect business hours. How Was Your Day listeners go online at different hours, including late at night, so when the spiral hits at midnight or your chest tightens before a Monday morning meeting, you have someone to reach out to immediately.</p>
         </div>
 
         <h2 style={{fontSize:'20px',fontWeight:800,color:'var(--navy)',marginBottom:'16px'}}>Listeners Who Understand Anxiety</h2>
@@ -226,7 +226,7 @@ export default function AnxietySupportPage() {
           <p>Connect with a peer listener who truly understands. No appointment needed.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands — first 5 min free →</button></a>
-            <a href="/how-leanon-works"><button className="btn-secondary">How it works →</button></a>
+            <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
 
@@ -234,7 +234,7 @@ export default function AnxietySupportPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">What types of anxiety can peer support help with?</div>
-            <div className="faq-a">Peer support on LeanOn can help with work anxiety, exam anxiety, health anxiety, relationship anxiety, social anxiety, and general worry and racing thoughts. Our listeners are not therapists but have personal lived experience with anxiety and offer a non-judgmental space to talk through what you are feeling.</div>
+            <div className="faq-a">Peer support on How Was Your Day can help with work anxiety, exam anxiety, health anxiety, relationship anxiety, social anxiety, and general worry and racing thoughts. Our listeners are not therapists but have personal lived experience with anxiety and offer a non-judgmental space to talk through what you are feeling.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is anxiety common among young Indians?</div>
@@ -246,17 +246,17 @@ export default function AnxietySupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Can talking about anxiety make it worse?</div>
-            <div className="faq-a">In a safe, non-judgmental environment, talking about anxiety generally helps rather than hurts. Putting feelings into words can reduce the intensity of anxious feelings. LeanOn listeners are screened and expected to hold space without feeding spirals or catastrophising.</div>
+            <div className="faq-a">In a safe, non-judgmental environment, talking about anxiety generally helps rather than hurts. Putting feelings into words can reduce the intensity of anxious feelings. How Was Your Day listeners are screened and expected to hold space without feeding spirals or catastrophising.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What if my anxiety is severe — should I use LeanOn?</div>
-            <div className="faq-a">LeanOn is peer support, not a substitute for clinical care. If you are experiencing severe anxiety, panic attacks, or anxiety that significantly impairs your daily functioning, we encourage you to also consult a mental health professional. LeanOn can complement professional care but is not a replacement for it.</div>
+            <div className="faq-q">What if my anxiety is severe — should I use How Was Your Day?</div>
+            <div className="faq-a">How Was Your Day is peer support, not a substitute for clinical care. If you are experiencing severe anxiety, panic attacks, or anxiety that significantly impairs your daily functioning, we encourage you to also consult a mental health professional. How Was Your Day can complement professional care but is not a replacement for it.</div>
           </div>
         </div>
 
         <div className="section">
           <h2>Related Support Topics</h2>
-          <p>Anxiety often connects with other challenges. Explore more peer support on LeanOn:</p>
+          <p>Anxiety often connects with other challenges. Explore more peer support on How Was Your Day:</p>
           <div className="related">
             <a href="/support/loneliness" className="related-link">Loneliness</a>
             <a href="/support/student-stress" className="related-link">Student Stress</a>

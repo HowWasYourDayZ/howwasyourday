@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Intercultural Marriage | When Your Partner Doesn\'t Share Your Cultural World | LeanOn',
+  title: 'NRI Intercultural Marriage | When Your Partner Doesn\'t Share Your Cultural World | How Was Your Day',
   description: 'Married to someone outside your culture when you\'re an NRI? The gaps — festivals, food, family expectations, values — are real and often unspoken. Talk to a listener who understands.',
   keywords: ['nri intercultural marriage', 'indian married to foreigner', 'nri cross cultural marriage', 'indian partner abroad', 'nri mixed marriage', 'indian interracial marriage'],
-  alternates: { canonical: 'https://www.leanon.app/nri-intercultural-marriage' },
-  openGraph: { title: 'NRI Intercultural Marriage | When Your Partner Doesn\'t Share Your Cultural World | LeanOn', description: 'Married to someone outside your culture when you\'re an NRI? The gaps — festivals, food, family expectations, values — are real and often unspoken. Talk to a listener who understands.', url: 'https://www.leanon.app/nri-intercultural-marriage', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-intercultural-marriage' },
+  openGraph: { title: 'NRI Intercultural Marriage | When Your Partner Doesn\'t Share Your Cultural World | How Was Your Day', description: 'Married to someone outside your culture when you\'re an NRI? The gaps — festivals, food, family expectations, values — are real and often unspoken. Talk to a listener who understands.', url: 'https://www.howwasyourday.live/nri-intercultural-marriage', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'Do listeners understand intercultural marriage dynamics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LeanOn listeners are Indian and many understand the specific weight of navigating an intercultural marriage — the gap between what your partner experiences and what you carry from your cultural background, the family disapproval, the identity questions. You don\'t need to explain the context from scratch.' } },
+  { '@type': 'Question', name: 'Do listeners understand intercultural marriage dynamics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are Indian and many understand the specific weight of navigating an intercultural marriage — the gap between what your partner experiences and what you carry from your cultural background, the family disapproval, the identity questions. You don\'t need to explain the context from scratch.' } },
   { '@type': 'Question', name: 'My partner doesn\'t know I\'m talking to someone — is that okay?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private. You do not need your partner\'s knowledge or permission to talk to a peer listener. Many people find that having space to process their own feelings first helps them have better conversations with their partner afterward.' } },
   { '@type': 'Question', name: 'Can I talk in Hindi or other Indian languages?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many listeners are comfortable in Hindi and other Indian languages. Check individual listener profiles for languages.' } },
   { '@type': 'Question', name: 'Is this different from couples support?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This is individual peer listening — one person talking to one listener. It is not couples support, not mediation, not joint sessions. It is space for you to work through what you are experiencing.' } },
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Intercultural Marriage', item: 'https://www.leanon.app/nri-intercultural-marriage' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Intercultural Marriage', item: 'https://www.howwasyourday.live/nri-intercultural-marriage' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriInterculturalMarriagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Intercultural Marriage</span></nav>
         <div className="hero">
           <p className="badge">NRI Intercultural Marriage &middot; Indian Abroad &middot; Cross-Cultural Relationship</p>
           <h1>NRI Intercultural Marriage — <em>The Love Is Real. The Gaps Are Too.</em></h1>
           <p className="lead">Your partner loves you. But they don&rsquo;t feel the weight of Diwali away from home. They don&rsquo;t understand why you can&rsquo;t just &ldquo;move on&rdquo; from India. There is a loneliness in loving someone who can&rsquo;t quite enter your whole world — and it deserves to be said out loud. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -94,11 +94,11 @@ export default function NriInterculturalMarriagePage() {
 
         <div className="section">
           <h2>You Don&rsquo;t Need Advice. You Need to Be Heard.</h2>
-          <p>Not someone to tell you how to bridge the gap or what to do about your family in India. Just someone who understands the Indian side of this — the cultural weight, the identity complexity, the specific loneliness of having a part of yourself that your partner loves but cannot fully enter. A peer listener at LeanOn already carries that context. They will not need it translated.</p>
+          <p>Not someone to tell you how to bridge the gap or what to do about your family in India. Just someone who understands the Indian side of this — the cultural weight, the identity complexity, the specific loneliness of having a part of yourself that your partner loves but cannot fully enter. A peer listener at How Was Your Day already carries that context. They will not need it translated.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The part of you your partner loves but can&rsquo;t quite reach.</h2><p>Real peer listener. Understands the Indian cultural weight from the inside. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The part of you your partner loves but can&rsquo;t quite reach.</h2><p>Real peer listener. Understands the Indian cultural weight from the inside. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

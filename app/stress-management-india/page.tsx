@@ -3,15 +3,15 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Stress Management India — Talk It Out with a Real Person | LeanOn',
+  title: 'Stress Management India — Talk It Out with a Real Person | How Was Your Day',
   description: 'Overwhelmed by stress? Sometimes talking helps more than tips. Real peer listeners available from ₹160. Anonymous, judgment-free.',
   keywords: ['stress management india', 'anxiety management india', 'how to deal with stress india', 'stress relief india', 'reduce stress india', 'coping with stress india'],
-  alternates: { canonical: 'https://www.leanon.app/stress-management-india', languages: { 'en-IN': 'https://www.leanon.app/stress-management-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/stress-management-india', languages: { 'en-IN': 'https://www.howwasyourday.live/stress-management-india' } },
   openGraph: {
-    title: 'Stress Management India — Talk It Out with a Real Person | LeanOn',
+    title: 'Stress Management India — Talk It Out with a Real Person | How Was Your Day',
     description: 'Overwhelmed by stress? Sometimes talking helps more than tips. Real peer listeners available from ₹160. Anonymous, judgment-free.',
-    url: 'https://www.leanon.app/stress-management-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/stress-management-india',
+    siteName: 'How Was Your Day',
     type: 'website',
   },
 }
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'What is the difference between venting and peer support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Venting is releasing pressure. Peer support is doing that with someone who is screened and expected to hold space and reflect — so the release has somewhere to go and you come away with perspective as well as relief. LeanOn peer support is structured venting with someone who has been there.',
+        text: 'Venting is releasing pressure. Peer support is doing that with someone who is screened and expected to hold space and reflect — so the release has somewhere to go and you come away with perspective as well as relief. How Was Your Day peer support is structured venting with someone who has been there.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk to someone at 2am?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Often, yes. LeanOn listeners go online at different hours, including late at night. Stress does not keep office hours — and many people find it most intense at night when there is nothing else to distract from it.',
+        text: 'Often, yes. How Was Your Day listeners go online at different hours, including late at night. Stress does not keep office hours — and many people find it most intense at night when there is nothing else to distract from it.',
       },
     },
     {
@@ -67,8 +67,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Stress Management India', item: 'https://www.leanon.app/stress-management-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Stress Management India', item: 'https://www.howwasyourday.live/stress-management-india' },
   ],
 }
 
@@ -123,7 +123,7 @@ export default function StressManagementIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -147,7 +147,7 @@ export default function StressManagementIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>What Stress Types LeanOn Listeners Cover</h2>
+          <h2>What Stress Types How Was Your Day Listeners Cover</h2>
           <ul>
             <li><strong>Work stress</strong> — deadlines, managers, performance anxiety, the job that has consumed your evenings</li>
             <li><strong>Family stress</strong> — parent expectations, joint family friction, sibling dynamics, the weight of being the responsible one</li>
@@ -182,7 +182,7 @@ export default function StressManagementIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I talk to someone at 2am?</div>
-            <div className="faq-a">Often, yes. LeanOn listeners go online at different hours, including late at night. Stress does not keep office hours.</div>
+            <div className="faq-a">Often, yes. How Was Your Day listeners go online at different hours, including late at night. Stress does not keep office hours.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What does a stress support session actually look like?</div>

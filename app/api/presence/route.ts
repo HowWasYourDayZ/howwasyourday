@@ -43,8 +43,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(typeof isAvailable === 'boolean' ? { ok: true, is_available: isAvailable } : { ok: true })
     }
 
-    // A LeanOn tab was closed (beacon from ListenerPresence on pagehide). Don't
-    // go offline yet — a reload, a full page load or another open LeanOn tab
+    // A How Was Your Day tab was closed (beacon from ListenerPresence on pagehide). Don't
+    // go offline yet — a reload, a full page load or another open How Was Your Day tab
     // heart-beats within 90s. Instead make the heartbeat look LEAVE_GRACE_SECS
     // short of stale, so the normal sweep takes them offline then if nobody
     // came back. Never touches is_available, and never brings back a heartbeat
@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
     if (body.leaving === true) {
       // The sweep allows STALE_HEARTBEAT_MINS without a heartbeat, or
       // AWAY_WITH_ALERTS_MINS for a listener push can reach — age to just
-      // short of THEIR limit, so closing LeanOn means offline ~3 min later
+      // short of THEIR limit, so closing How Was Your Day means offline ~3 min later
       // either way (not 60 min later for listeners with alerts).
       const reachable = (await pushReachableUserIds(sb, [user.id])).has(user.id)
       const windowMins = reachable ? AWAY_WITH_ALERTS_MINS : STALE_HEARTBEAT_MINS

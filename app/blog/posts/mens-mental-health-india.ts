@@ -62,7 +62,7 @@ export const post = {
 
 <p>This is what <strong>emotional support men India</strong> actually looks like when it works. Not therapy as such. Not advice-giving. Not being told what to do. Being heard, by someone who genuinely gets it, in a space that is private and free from judgment.</p>
 
-<p>Platforms like <strong>LeanOn</strong> are built with this in mind. The supporters on LeanOn are peers who have navigated difficulty themselves and are chosen to offer genuine presence. The conversations are private and anonymous. There is no file being kept, no diagnosis being made, no one who will tell your family or your colleagues. Just a conversation with someone who is there to listen.</p>
+<p>Platforms like <strong>How Was Your Day</strong> are built with this in mind. The supporters on How Was Your Day are peers who have navigated difficulty themselves and are chosen to offer genuine presence. The conversations are private and anonymous. There is no file being kept, no diagnosis being made, no one who will tell your family or your colleagues. Just a conversation with someone who is there to listen.</p>
 
 <h2>Finding Someone to Lean On (Without Feeling Weak)</h2>
 
@@ -72,7 +72,7 @@ export const post = {
 
 <p>Support is scaffolding. Having someone to talk to — someone who can hold some of the weight while you figure out what to do with it — makes you more capable, not less. It helps you think more clearly, make better decisions, and be more present in your relationships. The men who seek support are not weaker than the men who do not. The evidence suggests they tend to function better and live longer.</p>
 
-<p>If you are a man in India who is carrying more than feels sustainable — whether that is work stress, <a href="/support/founder-burnout">burnout</a>, <a href="/support/career-confusion">career confusion</a>, relationship difficulty, or just the accumulated weight of years of managing alone — you can find support on LeanOn that does not require you to walk into a clinic or announce to anyone that you are struggling.</p>
+<p>If you are a man in India who is carrying more than feels sustainable — whether that is work stress, <a href="/support/founder-burnout">burnout</a>, <a href="/support/career-confusion">career confusion</a>, relationship difficulty, or just the accumulated weight of years of managing alone — you can find support on How Was Your Day that does not require you to walk into a clinic or announce to anyone that you are struggling.</p>
 
 <p>You can <a href="/browse">browse supporters</a> by topic, find someone whose experience resonates, and start a conversation. It is private. It is peer-to-peer. And it is designed for exactly this: the moment when you are ready to stop carrying it all alone.</p>
 

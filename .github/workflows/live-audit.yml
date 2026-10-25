@@ -1,4 +1,4 @@
-# Read-only live visibility audit of www.leanon.app (robots, sitemaps, page
+# Read-only live visibility audit of www.howwasyourday.live (robots, sitemaps, page
 # metadata, crawler access per user-agent, listener supply snapshot, mobile
 # PageSpeed). Runs weekly (brand guard: fails if the page ChatGPT cites changes),
 # on pushes to audit/* branches, or manually. Never deploys.
@@ -25,7 +25,7 @@ jobs:
         continue-on-error: true
         run: |
           for p in / /talk /for-women /marriage-problems-india; do
-            npx -y lighthouse@12 "https://www.leanon.app$p" --form-factor=mobile --screenEmulation.mobile --only-categories=performance,seo,accessibility,best-practices --output=json --output-path=lh.json --chrome-flags="--headless=new --no-sandbox" --quiet || continue
+            npx -y lighthouse@12 "https://www.howwasyourday.live$p" --form-factor=mobile --screenEmulation.mobile --only-categories=performance,seo,accessibility,best-practices --output=json --output-path=lh.json --chrome-flags="--headless=new --no-sandbox" --quiet || continue
             node -e "const j=require('./lh.json');const c=j.categories,a=j.audits;console.log('LH',process.argv[1],JSON.stringify({perf:c.performance.score,seo:c.seo.score,a11y:c.accessibility.score,bp:c['best-practices'].score,lcp:a['largest-contentful-paint'].displayValue,fcp:a['first-contentful-paint'].displayValue,tbt:a['total-blocking-time'].displayValue,cls:a['cumulative-layout-shift'].displayValue,bytes:a['total-byte-weight'].displayValue}))" "$p" | tee -a live-audit.log
           done
       - uses: actions/upload-artifact@v4

@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Punjabi Support Online for Canadians | Talk to Someone Back Home | LeanOn',
-  description: 'Living in Brampton, Surrey, or Calgary? LeanOn connects Punjabi NRIs in Canada with peer listeners in India who speak your language and understand your world.',
+  title: 'Punjabi Support Online for Canadians | Talk to Someone Back Home | How Was Your Day',
+  description: 'Living in Brampton, Surrey, or Calgary? How Was Your Day connects Punjabi NRIs in Canada with peer listeners in India who speak your language and understand your world.',
   keywords: ['punjabi support canada', 'punjabi nri canada', 'punjabi mental health canada', 'talk to punjabi person online', 'brampton indian support', 'surrey bc punjabi support', 'desi support canada'],
-  alternates: { canonical: 'https://www.leanon.app/punjabi-support-canada' },
-  openGraph: { title: 'Punjabi Support Online for Canadians | Talk to Someone Back Home | LeanOn', description: 'Living in Brampton, Surrey, or Calgary? LeanOn connects Punjabi NRIs in Canada with peer listeners in India who speak your language and understand your world.', url: 'https://www.leanon.app/punjabi-support-canada', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/punjabi-support-canada' },
+  openGraph: { title: 'Punjabi Support Online for Canadians | Talk to Someone Back Home | How Was Your Day', description: 'Living in Brampton, Surrey, or Calgary? How Was Your Day connects Punjabi NRIs in Canada with peer listeners in India who speak your language and understand your world.', url: 'https://www.howwasyourday.live/punjabi-support-canada', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,8 +19,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'Punjabi Support for Canadians', item: 'https://www.leanon.app/punjabi-support-canada' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'Punjabi Support for Canadians', item: 'https://www.howwasyourday.live/punjabi-support-canada' },
 ] }
 
 const S = `
@@ -69,7 +69,7 @@ export default function PunjabiSupportCanadaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>Punjabi Support for Canadians</span></nav>
         <div className="hero">
@@ -82,17 +82,17 @@ export default function PunjabiSupportCanadaPage() {
           <h2>You don&rsquo;t have to explain what &#2602;&#2608;&#2604;&#2587;&#2624; (pardesh) means</h2>
           <p>Pardesh is not just &ldquo;being away.&rdquo; It is the particular weight of building a life in a place that was never supposed to be permanent &mdash; and slowly realising it might be. You are expected to be happy about it. You moved to Brampton or Surrey; that is success. The fact that you feel invisible between Sunday calls, that the cold is not just the weather, that you code-switch so hard every day that you forget which one is you &mdash; that part nobody talks about.</p>
           <p>The dual identity of being Punjabi in Canada is real. You are too Indian for your Canadian colleagues and too Canadian for your family back in Punjab. You perform belonging in both directions and are fully at ease in neither. The loneliness is not weakness &mdash; it is the gap between the life everyone imagines you are living and the life you are actually in.</p>
-          <p>LeanOn listeners are in India. Many have direct experience with close family abroad &mdash; siblings in Brampton, cousins in Surrey, friends who moved and went quiet. They understand pardesh without a translation. The first 5 minutes are free, and no name is needed to start.</p>
+          <p>How Was Your Day listeners are in India. Many have direct experience with close family abroad &mdash; siblings in Brampton, cousins in Surrey, friends who moved and went quiet. They understand pardesh without a translation. The first 5 minutes are free, and no name is needed to start.</p>
         </div>
         <div className="section">
-          <h2>The LeanOn difference for the Punjabi diaspora</h2>
+          <h2>The How Was Your Day difference for the Punjabi diaspora</h2>
           <p>Punjabi families carry specific, layered expectations. The sacrifice is real &mdash; parents who spent savings to send you, siblings who are watching what &ldquo;going abroad&rdquo; actually delivers. The &ldquo;settle ho gaya?&rdquo; question from every relative is not small talk. It is a status check on a decision the whole family made together.</p>
-          <p>LeanOn listeners understand joint family pressure from afar. They understand the envy that sometimes comes from siblings back home, and the guilt that comes from noticing it. They understand the arranged marriage questions that start as soon as the visa is stamped, and the confusion of navigating that while also trying to make rent in a country that is expensive in ways no one at home quite grasps.</p>
+          <p>How Was Your Day listeners understand joint family pressure from afar. They understand the envy that sometimes comes from siblings back home, and the guilt that comes from noticing it. They understand the arranged marriage questions that start as soon as the visa is stamped, and the confusion of navigating that while also trying to make rent in a country that is expensive in ways no one at home quite grasps.</p>
           <p>They will not give you advice. They will not tell you what your family would think. They will listen &mdash; in Punjabi or Hindi if you prefer &mdash; while you say the things you have been carrying since you landed.</p>
         </div>
         <div className="section">
           <h2>When to call &mdash; time zones</h2>
-          <p>LeanOn listeners are India-based (IST). The time difference actually works in your favour. <strong>Brampton / Toronto (EDT):</strong> India is 9.5 hours ahead. A 9am call in Brampton is 6:30pm in India &mdash; right when listeners are coming online for the evening. <strong>Surrey / Vancouver (PDT):</strong> India is 12.5 hours ahead. 8am in Surrey is 8:30pm in India &mdash; peak listener availability.</p>
+          <p>How Was Your Day listeners are India-based (IST). The time difference actually works in your favour. <strong>Brampton / Toronto (EDT):</strong> India is 9.5 hours ahead. A 9am call in Brampton is 6:30pm in India &mdash; right when listeners are coming online for the evening. <strong>Surrey / Vancouver (PDT):</strong> India is 12.5 hours ahead. 8am in Surrey is 8:30pm in India &mdash; peak listener availability.</p>
           <p>If you have a quiet hour before your workday, before the house wakes up, or on a Sunday morning when the silence is loudest, there will very likely be a Punjabi or Hindi-speaking listener available. No appointment. No waiting list. Browse who is online now and start a session.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>

@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'NRI Long Distance Relationship with Partner in India | The Miles Don\'t Make It Easier | LeanOn',
+  title: 'NRI Long Distance Relationship with Partner in India | The Miles Don\'t Make It Easier | How Was Your Day',
   description: 'One of you is abroad. One is in India. The time zones, the visa wait, the uncertainty — it weighs on both of you in different ways. Talk to a listener who understands.',
   keywords: ['nri long distance india', 'long distance india abroad', 'nri partner in india', 'boyfriend girlfriend india abroad', 'waiting for visa together', 'nri relationship india'],
-  alternates: { canonical: 'https://www.leanon.app/nri-long-distance-india' },
-  openGraph: { title: 'NRI Long Distance Relationship with Partner in India | The Miles Don\'t Make It Easier | LeanOn', description: 'One of you is abroad. One is in India. The time zones, the visa wait, the uncertainty — it weighs on both of you in different ways. Talk to a listener who understands.', url: 'https://www.leanon.app/nri-long-distance-india', siteName: 'LeanOn', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn' }] },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-long-distance-india' },
+  openGraph: { title: 'NRI Long Distance Relationship with Partner in India | The Miles Don\'t Make It Easier | How Was Your Day', description: 'One of you is abroad. One is in India. The time zones, the visa wait, the uncertainty — it weighs on both of you in different ways. Talk to a listener who understands.', url: 'https://www.howwasyourday.live/nri-long-distance-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -19,9 +19,9 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.leanon.app/indian-emotional-support-abroad' },
-  { '@type': 'ListItem', position: 3, name: 'NRI Long Distance India', item: 'https://www.leanon.app/nri-long-distance-india' },
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+  { '@type': 'ListItem', position: 2, name: 'NRI Support', item: 'https://www.howwasyourday.live/indian-emotional-support-abroad' },
+  { '@type': 'ListItem', position: 3, name: 'NRI Long Distance India', item: 'https://www.howwasyourday.live/nri-long-distance-india' },
 ] }
 
 const S = `
@@ -70,14 +70,14 @@ export default function NriLongDistanceIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <style>{S}</style>
-      <nav className="nav"><a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a><a href="https://www.leanon.app/browse"><button className="btn-nav">Find a listener</button></a></nav>
+      <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a><a href="https://www.howwasyourday.live/browse"><button className="btn-nav">Find a listener</button></a></nav>
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><a href="/indian-emotional-support-abroad">NRI Support</a><span>&#x203A;</span><span style={{ color: 'var(--navy)' }}>NRI Long Distance India</span></nav>
         <div className="hero">
           <p className="badge">NRI Long Distance &middot; India-Abroad Relationship &middot; Visa Wait</p>
           <h1>NRI Long Distance — <em>One of You Here. One of You There.</em></h1>
           <p className="lead">One of you is building a life abroad. The other is in India, waiting. The time zone calls at midnight. The visa wait that has no guaranteed end date. The uncertainty of &ldquo;when can we be together&rdquo; that hangs over everything. It weighs on both of you, in different but equally real ways. Talk to someone who understands. First 5 minutes free.</p>
-          <a href="https://www.leanon.app/browse" className="cta-hero">Talk to someone now &rarr;</a>
+          <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
@@ -94,11 +94,11 @@ export default function NriLongDistanceIndiaPage() {
 
         <div className="section">
           <h2>Having Someone to Talk To</h2>
-          <p>The partner in India can talk to LeanOn too. But for whoever is reading this — the person abroad, carrying the specific weight of being in the better place geographically while the relationship waits — having someone who already understands the immigration context, the dependent visa reality, and the particular shape of the India-abroad long-distance relationship is different from talking to friends who don&rsquo;t know the terrain. First 5 minutes free, anonymous, private.</p>
+          <p>The partner in India can talk to How Was Your Day too. But for whoever is reading this — the person abroad, carrying the specific weight of being in the better place geographically while the relationship waits — having someone who already understands the immigration context, the dependent visa reality, and the particular shape of the India-abroad long-distance relationship is different from talking to friends who don&rsquo;t know the terrain. First 5 minutes free, anonymous, private.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The wait, the uncertainty, the weight of two different loneliness.</h2><p>Real peer listener. Understands the India-abroad long-distance reality. First 5 minutes free, from US$10.</p><a href="https://www.leanon.app/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The wait, the uncertainty, the weight of two different loneliness.</h2><p>Real peer listener. Understands the India-abroad long-distance reality. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-long-distance-relationship">NRI long distance &rarr;</a>
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Someone to Talk to in the UK — Real Human, Not a Bot | LeanOn',
+  title: 'Someone to Talk to in the UK — Real Human, Not a Bot | How Was Your Day',
   description: 'Not AI. Not a chatbot. Not a helpline script. A real Indian person who will listen to whatever is on your mind (availability follows Indian time).',
   keywords: [
     'someone to talk to uk', 'talk to someone uk', 'real person to talk to uk',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     'someone to listen uk', 'talk about feelings uk', 'nri support uk talk',
   ],
   alternates: {
-    canonical: 'https://www.leanon.app/uk-talk-to-someone',
-    languages: { 'en-GB': 'https://www.leanon.app/uk-talk-to-someone' },
+    canonical: 'https://www.howwasyourday.live/uk-talk-to-someone',
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uk-talk-to-someone' },
   },
   openGraph: {
     title: 'Someone to Talk to in the UK — Real Human, Not a Bot',
     description: 'Not AI. A real Indian person who will listen to whatever is on your mind. Listeners online daily (Indian time).',
-    url: 'https://www.leanon.app/uk-talk-to-someone',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/uk-talk-to-someone',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -29,15 +29,15 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Are LeanOn listeners real people or AI?',
+      name: 'Are How Was Your Day listeners real people or AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'LeanOn listeners are real humans — Indians who have applied to be listeners, gone through screening and identity verification, and choose to be on the app to support other people. There is no AI in the listening sessions. When you talk, a real person is on the other side.',
+        text: 'How Was Your Day listeners are real humans — Indians who have applied to be listeners, gone through screening and identity verification, and choose to be on the app to support other people. There is no AI in the listening sessions. When you talk, a real person is on the other side.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What can I talk about with a LeanOn listener?',
+      name: 'What can I talk about with a How Was Your Day listener?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Anything. Loneliness, work stress, relationship issues, family pressure, identity, sadness, anxiety, anger, or just an undifferentiated "I do not feel good and I need to say it out loud." There is no topic that is too small or too heavy. Listeners are screened and expected to hold space for all of it.',
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'Is this different from calling a helpline?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Helplines are invaluable in crisis — but they follow a script and are primarily there for emergency situations. LeanOn is for everyday emotional support — the loneliness, the stress, the unnamed heaviness of NRI life. It is a peer conversation, not a structured call, and listeners can follow you wherever the conversation naturally goes.',
+        text: 'Yes. Helplines are invaluable in crisis — but they follow a script and are primarily there for emergency situations. How Was Your Day is for everyday emotional support — the loneliness, the stress, the unnamed heaviness of NRI life. It is a peer conversation, not a structured call, and listeners can follow you wherever the conversation naturally goes.',
       },
     },
     {
@@ -74,8 +74,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Talk to Someone UK', item: 'https://www.leanon.app/uk-talk-to-someone' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Talk to Someone UK', item: 'https://www.howwasyourday.live/uk-talk-to-someone' },
   ],
 }
 
@@ -150,7 +150,7 @@ export default function UkTalkToSomeonePage() {
 
         <h1>Not a Bot. Not a Script.<br />A Real Person Who Will Actually Listen.</h1>
         <p className="lead">
-          There are plenty of apps that offer AI conversations. LeanOn is not one of them. Every session is
+          There are plenty of apps that offer AI conversations. How Was Your Day is not one of them. Every session is
           with a real, screened Indian human who is there entirely for you — no script, no agenda,
           no algorithm making sense of your feelings.
         </p>
@@ -162,7 +162,7 @@ export default function UkTalkToSomeonePage() {
           <p>AI can be useful. But when you are lonely, or stressed, or missing home, or just need to say
             something out loud — what helps is the sense that another person actually cares. That they are
             genuinely present. That their response comes from understanding, not an algorithm.</p>
-          <p>LeanOn listeners are real people who chose to be on this platform because they want to help.
+          <p>How Was Your Day listeners are real people who chose to be on this platform because they want to help.
             That is a different kind of conversation.</p>
         </div>
 
@@ -183,7 +183,7 @@ export default function UkTalkToSomeonePage() {
           <h2>🌙 Available whenever you need it</h2>
           <p>2 AM in your flat. Sunday afternoon when the quiet gets heavy. After a hard week at work
             when you finally have a moment to breathe — and realise how depleted you are.</p>
-          <p>LeanOn listeners are based in India, so availability follows Indian time. Right now, someone is ready to talk.</p>
+          <p>How Was Your Day listeners are based in India, so availability follows Indian time. Right now, someone is ready to talk.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
 
@@ -208,7 +208,7 @@ export default function UkTalkToSomeonePage() {
         <div className="card">
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
-            <h3>Are LeanOn listeners real people or AI?</h3>
+            <h3>Are How Was Your Day listeners real people or AI?</h3>
             <p>Real humans — Indians who applied to be listeners and went through screening
               process. There is no AI in the listening sessions. A real person is on the other side.</p>
           </div>
@@ -224,7 +224,7 @@ export default function UkTalkToSomeonePage() {
           </div>
           <div className="faq-item">
             <h3>Is this different from calling a helpline?</h3>
-            <p>Yes. Helplines follow scripts and are primarily for crisis situations. LeanOn is for everyday
+            <p>Yes. Helplines follow scripts and are primarily for crisis situations. How Was Your Day is for everyday
               emotional support — a real peer conversation that goes wherever you need it to go.</p>
           </div>
           <div className="faq-item">
@@ -246,7 +246,7 @@ export default function UkTalkToSomeonePage() {
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
             <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
             <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
-            LeanOn is peer support — not a substitute for professional mental health care or emergency services.
+            How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>
       </div>

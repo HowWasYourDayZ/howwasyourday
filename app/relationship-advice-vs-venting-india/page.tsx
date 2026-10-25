@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Just Want to Vent — Not Get Advice | LeanOn India',
+  title: 'Just Want to Vent — Not Get Advice | How Was Your Day India',
   description: "You don't want to be told what to do. You want to say what happened. Real peer listeners who just listen — no advice unless you ask. From ₹160.",
   keywords: [
     'venting vs advice relationship india',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'just need to vent india',
     'pure listening relationship india',
   ],
-  alternates: { canonical: 'https://www.leanon.app/relationship-advice-vs-venting-india', languages: { 'en-IN': 'https://www.leanon.app/relationship-advice-vs-venting-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/relationship-advice-vs-venting-india', languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-advice-vs-venting-india' } },
   openGraph: {
-    title: 'Just Want to Vent — Not Get Advice | LeanOn India',
+    title: 'Just Want to Vent — Not Get Advice | How Was Your Day India',
     description: "You don't want to be told what to do. You want to say what happened. Real peer listeners who just listen — no advice unless you ask. From ₹160.",
-    url: 'https://www.leanon.app/relationship-advice-vs-venting-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/relationship-advice-vs-venting-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Just Vent, No Advice' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Just Vent, No Advice' }],
   },
 }
 
@@ -33,7 +33,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Will the listener give advice?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not unless you ask. The default mode for a LeanOn peer listener is receive and reflect &mdash; not advise, fix, or steer. If you open with "I just need to vent, no advice," that is exactly what you will get. If you later want input, you can ask for it. The listener follows your lead.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Not unless you ask. The default mode for a How Was Your Day peer listener is receive and reflect &mdash; not advise, fix, or steer. If you open with "I just need to vent, no advice," that is exactly what you will get. If you later want input, you can ask for it. The listener follows your lead.' },
     },
     {
       '@type': 'Question',
@@ -62,8 +62,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Just Want to Vent, Not Get Advice', item: 'https://www.leanon.app/relationship-advice-vs-venting-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Just Want to Vent, Not Get Advice', item: 'https://www.howwasyourday.live/relationship-advice-vs-venting-india' },
   ],
 }
 
@@ -115,7 +115,7 @@ export default function RelationshipAdviceVsVentingIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>
       </nav>
 
@@ -157,8 +157,8 @@ export default function RelationshipAdviceVsVentingIndiaPage() {
         </div>
 
         <div className="section">
-          <h2>How LeanOn Listeners Listen</h2>
-          <p>The default mode for a LeanOn peer listener is receive and reflect, not advise and recommend. They will not give you their opinion about your partner unless you ask. They will not tell you whether to leave or stay. They will not suggest what you should have said or what you should say next.</p>
+          <h2>How the app Listeners Listen</h2>
+          <p>The default mode for a How Was Your Day peer listener is receive and reflect, not advise and recommend. They will not give you their opinion about your partner unless you ask. They will not tell you whether to leave or stay. They will not suggest what you should have said or what you should say next.</p>
           <p>They will hear what you say, confirm they understand it, and create space for more. They will follow your lead. If you want to talk for fifteen minutes without a single unsolicited input, that is a completely valid session. It is often the most useful kind.</p>
         </div>
 

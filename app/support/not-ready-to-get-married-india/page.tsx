@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Not Ready to Get Married India — When the Pressure Is Real But You Are Not | LeanOn',
+  title: 'Not Ready to Get Married India — When the Pressure Is Real But You Are Not | How Was Your Day',
   description: 'Family asking about marriage. Friends getting engaged. You are nowhere near ready — and you cannot explain that to anyone. The pressure is real. So is not being ready.',
   keywords: [
     'not ready to get married India', 'marriage pressure India', 'family pressure to get married India',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'parents forcing marriage India', 'resisting arranged marriage India', 'fear of commitment India',
     'everyone getting married India', 'marriage is not for me India', 'marriage pressure 30s India',
   ],
-  alternates: { canonical: 'https://www.leanon.app/support/not-ready-to-get-married-india', languages: { 'en-IN': 'https://www.leanon.app/support/not-ready-to-get-married-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/not-ready-to-get-married-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/not-ready-to-get-married-india' } },
   openGraph: {
-    title: 'Not Ready to Get Married India | LeanOn',
+    title: 'Not Ready to Get Married India | How Was Your Day',
     description: 'Family asking, friends pairing off, clock ticking. You are not ready. That is allowed.',
-    url: 'https://www.leanon.app/support/not-ready-to-get-married-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/support/not-ready-to-get-married-india',
+    siteName: 'How Was Your Day',
     type: 'article',
-    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'LeanOn — Marriage Pressure India' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day — Marriage Pressure India' }],
   },
 }
 
@@ -74,9 +74,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.leanon.app/browse' },
-    { '@type': 'ListItem', position: 3, name: 'Not Ready to Get Married India', item: 'https://www.leanon.app/support/not-ready-to-get-married-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://www.howwasyourday.live/browse' },
+    { '@type': 'ListItem', position: 3, name: 'Not Ready to Get Married India', item: 'https://www.howwasyourday.live/support/not-ready-to-get-married-india' },
   ],
 }
 
@@ -136,7 +136,7 @@ export default function NotReadyToGetMarriedIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Talk to someone</button></a>
       </nav>
 

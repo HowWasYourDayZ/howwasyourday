@@ -4,7 +4,7 @@ export const post = {
   description: 'Most people wait too long. Here are the signs that you are carrying something that would be lighter if you said it out loud — and how to actually do it in India.',
   date: '2026-09-09',
   readTime: '6 min read',
-  topics: ['mental health India', 'emotional support', 'peer support', 'LeanOn', 'loneliness India'],
+  topics: ['mental health India', 'emotional support', 'peer support', 'How Was Your Day', 'loneliness India'],
   content: `
 <p>Most people who would benefit from talking to someone do not think of themselves as people who need it. They think of themselves as people who are mostly fine, managing, getting through — and they reserve the idea of needing support for people who are in crisis, who have diagnosable conditions, who are visibly struggling.</p>
 
@@ -54,7 +54,7 @@ export const post = {
 
 <p>The practical barrier to talking to someone in India is real: cost, availability, stigma, not knowing where to start. Here is the actual path of least resistance:</p>
 
-<p>LeanOn connects you with screened peer listeners — real people who have lived experience and training in supportive conversation — for a session that starts at ₹160. No appointment. No intake form. No waiting list. You browse, pick someone whose profile feels right, and connect. The first five minutes are free so you can see if it feels okay before committing.</p>
+<p>How Was Your Day connects you with screened peer listeners — real people who have lived experience and training in supportive conversation — for a session that starts at ₹160. No appointment. No intake form. No waiting list. You browse, pick someone whose profile feels right, and connect. The first five minutes are free so you can see if it feels okay before committing.</p>
 
 <p>You do not have to know what you want to say before you start. Most people do not. You can open with &ldquo;something has been pressing on me and I am not entirely sure what it is&rdquo; — and go from there. The listener&apos;s job is to be present with whatever comes up, not to receive a polished presentation of a problem.</p>
 

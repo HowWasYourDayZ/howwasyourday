@@ -5,15 +5,15 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | LeanOn',
+  title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | How Was Your Day',
   description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, first 5 min free.',
   keywords: 'anonymous chat india, anonymous chat with real person india, anonymous online chat india, talk to stranger anonymously india, anonymous peer support india, private chat india no name, anonymous emotional support india, talk anonymously online india, anonymous listener india, private anonymous chat app india',
-  alternates: { canonical: 'https://www.leanon.app/anonymous-chat-india', languages: { 'en-IN': 'https://www.leanon.app/anonymous-chat-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/anonymous-chat-india', languages: { 'en-IN': 'https://www.howwasyourday.live/anonymous-chat-india' } },
   openGraph: {
-    title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | LeanOn',
+    title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | How Was Your Day',
     description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, first 5 min free.',
-    url: 'https://www.leanon.app/anonymous-chat-india',
-    siteName: 'LeanOn',
+    url: 'https://www.howwasyourday.live/anonymous-chat-india',
+    siteName: 'How Was Your Day',
     type: 'article',
   },
 }
@@ -24,10 +24,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Do I need to use my real name on LeanOn?',
+      name: 'Do I need to use my real name on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. You can use any first name or alias you choose. LeanOn only needs your phone number for account security — your listener never sees it. Your profile on the platform shows only the name you provide, and you are free to make that anything you like. There is no verification of identity for seekers.',
+        text: 'No. You can use any first name or alias you choose. How Was Your Day only needs your phone number for account security — your listener never sees it. Your profile on the platform shows only the name you provide, and you are free to make that anything you like. There is no verification of identity for seekers.',
       },
     },
     {
@@ -40,10 +40,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is anonymous chat on LeanOn safe?',
+      name: 'Is anonymous chat on How Was Your Day safe?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. LeanOn\'s listeners are screened, screened for active listening, and reviewed by the platform before going live. They agree to keep what you share confidential and are held to strict conduct standards. Unlike random chat apps where you have no idea who you are speaking to, every listener on LeanOn is a verified real person. Your anonymity is protected, and the person on the other end has been vetted.',
+        text: 'Yes. How Was Your Day\'s listeners are screened, screened for active listening, and reviewed by the platform before going live. They agree to keep what you share confidential and are held to strict conduct standards. Unlike random chat apps where you have no idea who you are speaking to, every listener on How Was Your Day is a verified real person. Your anonymity is protected, and the person on the other end has been vetted.',
       },
     },
     {
@@ -61,8 +61,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.leanon.app' },
-    { '@type': 'ListItem', position: 2, name: 'Anonymous Chat India', item: 'https://www.leanon.app/anonymous-chat-india' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
+    { '@type': 'ListItem', position: 2, name: 'Anonymous Chat India', item: 'https://www.howwasyourday.live/anonymous-chat-india' },
   ],
 }
 
@@ -137,7 +137,7 @@ export default function AnonymousChatIndiaPage() {
       <style>{S}</style>
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="LeanOn" className="nav-logo" /></a>
+        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 
@@ -156,7 +156,7 @@ export default function AnonymousChatIndiaPage() {
           <p className="tag">Anonymous · Private · Real People</p>
           <div className="badge">No Name. No Face. No History.</div>
           <h1>Say What You Can&apos;t Say to <em>Anyone You Know</em></h1>
-          <p className="lead">Some things can&apos;t go to your partner, your best friend, or your parents. On LeanOn, you talk to a real peer listener who has no connection to your life — and Your listener never sees your phone number, and nothing is shared with anyone in your life. Anonymous chat with a screened human, not a stranger from the internet.</p>
+          <p className="lead">Some things can&apos;t go to your partner, your best friend, or your parents. On How Was Your Day, you talk to a real peer listener who has no connection to your life — and Your listener never sees your phone number, and nothing is shared with anyone in your life. Anonymous chat with a screened human, not a stranger from the internet.</p>
           <div className="hero-cta">
             <a href="/talk?src=seo"><button className="btn-primary" style={{fontFamily:'Nunito,sans-serif'}}>Chat anonymously — first 5 min free →</button></a>
             <a href="/browse"><button className="btn-secondary" style={{fontFamily:'Nunito,sans-serif',background:'var(--teal)',border:'none',boxShadow:'0 4px 16px rgba(26,143,160,0.25)'}}>Browse listeners →</button></a>
@@ -168,7 +168,7 @@ export default function AnonymousChatIndiaPage() {
           <h2>When You Cannot Tell Anyone You Know</h2>
           <p>There is a specific kind of tension that comes with having something you cannot say out loud — not to your partner because it involves them, not to your best friend because they will tell other people, not to your parents because they will panic or judge. The thought sits inside you, getting heavier.</p>
           <p>This is exactly what anonymous chat is for. The relief of saying it to someone who has no stake in your life, no shared history with the people you are talking about, and no way to carry it back into your world. The session ends. The conversation does not follow you.</p>
-          <p>LeanOn is not a random chat app. The anonymity here is intentional — the platform is built around it. You are anonymous to your listener. What makes it different is that your listener is verified, screened and real. You get the freedom of anonymity with the quality of a screened human being on the other end.</p>
+          <p>How Was Your Day is not a random chat app. The anonymity here is intentional — the platform is built around it. You are anonymous to your listener. What makes it different is that your listener is verified, screened and real. You get the freedom of anonymity with the quality of a screened human being on the other end.</p>
         </div>
 
         {/* Why anonymity matters */}
@@ -187,12 +187,12 @@ export default function AnonymousChatIndiaPage() {
             {
               icon: '🌐',
               title: 'No social consequences',
-              body: 'Your words do not travel. Your listener will not run into your mother. They do not know your colleague. What you say on LeanOn has no path back into your social world.',
+              body: 'Your words do not travel. Your listener will not run into your mother. They do not know your colleague. What you say on How Was Your Day has no path back into your social world.',
             },
             {
               icon: '📁',
               title: 'Private to you',
-              body: 'Voice calls are not recorded. Text messages are stored securely and opened only by authorised LeanOn staff if a session is reported or flagged for safety. Nothing is shared with anyone in your life.',
+              body: 'Voice calls are not recorded. Text messages are stored securely and opened only by authorised How Was Your Day staff if a session is reported or flagged for safety. Nothing is shared with anyone in your life.',
             },
           ].map((c, i) => (
             <div key={i} className="card">
@@ -208,26 +208,26 @@ export default function AnonymousChatIndiaPage() {
           <h2>Anonymous Does Not Mean Low Quality</h2>
 
           <h3>Screened and Reviewed Listeners</h3>
-          <p>Every listener on LeanOn goes through a multi-step application process — including identity verification, screening questions on active listening and boundaries, and a profile review — before they are approved. You are not speaking to a random person from the internet — you are speaking to someone who has been vetted and is here because they want to support people, not for entertainment.</p>
+          <p>Every listener on How Was Your Day goes through a multi-step application process — including identity verification, screening questions on active listening and boundaries, and a profile review — before they are approved. You are not speaking to a random person from the internet — you are speaking to someone who has been vetted and is here because they want to support people, not for entertainment.</p>
 
           <h3>Reviewed, With Real Profiles</h3>
           <p>Listeners have real profiles with their lived experience, the topics they support, and their listener ratings from past sessions. Before you start a session, you can read about who you are going to speak to. Anonymity does not mean you are stepping into the unknown — you can make an informed choice about who to talk to.</p>
 
           <h3>Peer Experience, Not Random Opinion</h3>
-          <p>LeanOn listeners are peer listeners — real people who have personally navigated the kinds of experiences seekers bring to sessions. When someone has lived through anxiety, grief, relationship difficulty, or loneliness themselves, their support carries a quality that random conversation cannot offer. This is what separates LeanOn from Omegle or any other &ldquo;talk to strangers&rdquo; product.</p>
+          <p>How Was Your Day listeners are peer listeners — real people who have personally navigated the kinds of experiences seekers bring to sessions. When someone has lived through anxiety, grief, relationship difficulty, or loneliness themselves, their support carries a quality that random conversation cannot offer. This is what separates How Was Your Day from Omegle or any other &ldquo;talk to strangers&rdquo; product.</p>
         </div>
 
         {/* Comparison to random chat apps */}
         <div className="section">
-          <h2>LeanOn vs Random Chat Apps</h2>
-          <p>Omegle, Shagle, and their alternatives are built for entertainment. LeanOn is built for emotional support. Here is what the difference looks like in practice.</p>
+          <h2>How Was Your Day vs Random Chat Apps</h2>
+          <p>Omegle, Shagle, and their alternatives are built for entertainment. How Was Your Day is built for emotional support. Here is what the difference looks like in practice.</p>
 
           <table className="compare-table">
             <thead>
               <tr>
                 <th>Feature</th>
                 <th>Random chat apps</th>
-                <th>LeanOn</th>
+                <th>How Was Your Day</th>
               </tr>
             </thead>
             <tbody>
@@ -267,7 +267,7 @@ export default function AnonymousChatIndiaPage() {
 
         {/* What stays private */}
         <div className="section">
-          <h2>What Stays Private on LeanOn</h2>
+          <h2>What Stays Private on How Was Your Day</h2>
           <p>Here is exactly what your listener sees — and does not see — when you start a session.</p>
 
           <div className="privacy-list">
@@ -296,7 +296,7 @@ export default function AnonymousChatIndiaPage() {
 
         {/* Scenarios */}
         <div className="section">
-          <h2>What People Say Anonymously on LeanOn</h2>
+          <h2>What People Say Anonymously on How Was Your Day</h2>
           <p>These are the kinds of things that are hardest to say to anyone you know — and easiest to say to someone you will never meet in your real life.</p>
           <div className="scenario-list">
             <div className="scenario">&ldquo;I am unhappy in my marriage and I have never said that to anyone out loud.&rdquo;</div>
@@ -331,14 +331,14 @@ export default function AnonymousChatIndiaPage() {
         {/* Related */}
         <div className="section">
           <h2>Related Pages</h2>
-          <p>More ways to find the right kind of support on LeanOn.</p>
+          <p>More ways to find the right kind of support on How Was Your Day.</p>
           <div className="related">
             <a href="/chat-with-real-person" className="related-link">Chat with Real Person</a>
             <a href="/talk-about-my-problems-online" className="related-link">Talk About My Problems</a>
             <a href="/need-to-vent-right-now" className="related-link">Need to Vent</a>
-            <a href="/is-leanon-safe" className="related-link">Is LeanOn Safe?</a>
+            <a href="/is-howwasyourday-safe" className="related-link">Is How Was Your Day Safe?</a>
             <a href="/browse" className="related-link">Browse All Listeners</a>
-            <a href="/how-leanon-works" className="related-link">How LeanOn Works</a>
+            <a href="/how-it-works" className="related-link">How It Works</a>
           </div>
         </div>
 

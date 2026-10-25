@@ -1,6 +1,6 @@
 -- 072 — Chat messages can only be written by the server (2026-10-20)
 --
--- Every LeanOn page sends messages through POST /api/messages (service role),
+-- Every How Was Your Day page sends messages through POST /api/messages (service role),
 -- which checks the session, rate-limits, and runs the contact-detail guard
 -- (lib/contact-guard.ts). The two INSERT policies below let a signed-in
 -- participant insert straight into `messages` from the browser instead,

@@ -96,7 +96,7 @@ export async function refundAcrossPayments(admin: Admin, rzp: Razorpay, opts: {
     try {
       const r = await rzp.payments.refund(p.id, {
         amount: take,
-        notes: { reason: 'LeanOn wallet refund', refund_request_id: opts.requestId },
+        notes: { reason: 'How Was Your Day wallet refund', refund_request_id: opts.requestId },
       })
       refundIds.push(r.id)
       remaining -= take

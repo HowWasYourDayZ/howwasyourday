@@ -1,6 +1,6 @@
 import { NOINDEX_PATHS } from '@/lib/seo-noindex'
 
-const BASE = 'https://www.leanon.app'
+const BASE = 'https://www.howwasyourday.live'
 const URLS = [
   ['oman', '2026-09-16'],
   ['ai-chatbot-alternative-usa', '2026-09-16'],
