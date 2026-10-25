@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'person who gets it india', 'lived experience support india', 'peer who understands india',
     'someone who has been there india', 'real understanding india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/someone-who-gets-it-india', languages: { 'en-IN': 'https://www.howwasyourday.live/someone-who-gets-it-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/someone-who-gets-it-india', languages: { 'en-GB': 'https://www.howwasyourday.live/someone-who-gets-it-india' } },
   openGraph: {
     title: 'Someone Who Gets It — Talk to a Person Who\'s Been There | How Was Your Day',
     description: 'You\'re not looking for advice. You want someone who gets it — who\'s been through it. How Was Your Day listeners bring lived experience, not a script. From ₹160.',

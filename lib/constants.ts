@@ -1,4 +1,5 @@
-export const PLATFORM_FEE       = 10   // flat ₹10 per session added on top of listener rate (paid by seeker) — unchanged by the service fee below
+// ALL money amounts are integer PENCE (GBP) — see lib/money.ts.
+export const PLATFORM_FEE       = 100  // flat £1 per paid session added on top of listener rate (paid by seeker) — unchanged by the service fee below
 // How Was Your Day's service fee on listener earnings, deducted from the listener's
 // share at settlement (lib/session-billing.ts). The seeker's charge
 // (amountHeld) and the flat PLATFORM_FEE above are completely unaffected.
@@ -24,13 +25,14 @@ export function serviceFeeRateAt(at?: string | null): number {
   if (!Number.isFinite(t)) return LISTENER_SERVICE_FEE_RATE
   return (SERVICE_FEE_SCHEDULE.find(e => t >= e.from) ?? SERVICE_FEE_SCHEDULE[SERVICE_FEE_SCHEDULE.length - 1]).rate
 }
-// Razorpay gateway commission (2%) + 18% GST on the fee — borne by the seeker
-// at recharge time. The wallet is credited the selected tier; the gross charge
-// includes this fee.
-export const GATEWAY_FEE_RATE   = 0.0236
+// Payment-processor fee, borne by the seeker at top-up time. The wallet is
+// credited the selected tier; the gross charge includes this fee.
+// TODO(whop): set to Whop's actual fee once the Whop integration replaces Razorpay.
+export const GATEWAY_FEE_RATE   = 0.03
 export const grossRechargeAmount = (amount: number) => Math.ceil(amount * (1 + GATEWAY_FEE_RATE))
-export const MIN_LISTENER_RATE  = 1    // ₹/min (suggestion floor; no hard mandate)
-export const MAX_LISTENER_RATE  = 500  // ₹/min — requires migration 039 (011 was a no-op; live cap stays ≤200 until 039 runs)
+export const MIN_LISTENER_RATE  = 10   // pence/min (10p)
+export const MAX_LISTENER_RATE  = 500  // pence/min (£5) — enforced by lp_rate_range (migration 073)
+export const DEFAULT_LISTENER_RATE = 40 // pence/min (40p) — listener_profiles.rate_per_min default
 // Text/voice pricing (2026-09-24). Only the TEXT rate is stored
 // (listener_profiles.rate_per_min); voice is always text + VOICE_RATE_PREMIUM,
 // so voice > text holds structurally and no migration is needed.
@@ -38,7 +40,7 @@ export const MAX_LISTENER_RATE  = 500  // ₹/min — requires migration 039 (01
 // both modes again. Read by both client and server (inlined at build), so the
 // price shown and the price charged always agree.
 export const VOICE_PRICING_ENABLED = process.env.NEXT_PUBLIC_VOICE_PRICING !== 'false'
-export const VOICE_RATE_PREMIUM    = 5 // ₹/min
+export const VOICE_RATE_PREMIUM    = 10 // pence/min (10p)
 // Sessions booked before this (the voice-pricing deploy) never paid the premium.
 export const VOICE_PRICING_FROM    = Date.parse('2026-09-24T04:55:00Z')
 export const sessionRatePerMin = (textRate: number, type: 'text' | 'voice') =>
@@ -77,7 +79,9 @@ export const AWAY_WITH_ALERTS_MINS = 60
 // they go offline LEAVE_GRACE_SECS later unless another How Was Your Day tab / a reload
 // heart-beats first (every 60–90s). Must stay well above the heartbeat interval.
 export const LEAVE_GRACE_SECS = 180
-export const RECHARGE_AMOUNTS   = [200, 500, 1000, 2000] as const
+export const RECHARGE_AMOUNTS   = [500, 1000, 2000, 5000] as const // pence: £5 / £10 / £20 / £50
+export const MIN_RECHARGE       = 500    // pence (£5) — custom top-up floor
+export const MAX_RECHARGE       = 20_000 // pence (£200) — custom top-up ceiling
 export const UUID_RE            = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 // Crisis lines shown across the site (UK & Ireland + EU emergency). Only these —
 // see CLAUDE.md. 116 123 is Samaritans in both the UK and Ireland; 112 works in
@@ -90,18 +94,22 @@ export const CRISIS_RESOURCES   = {
 } as const
 
 export const LANGUAGES = [
-  { id: 'english',   label: 'English' },
-  { id: 'hindi',     label: 'हिंदी (Hindi)' },
-  { id: 'tamil',     label: 'தமிழ் (Tamil)' },
-  { id: 'telugu',    label: 'తెలుగు (Telugu)' },
-  { id: 'kannada',   label: 'ಕನ್ನಡ (Kannada)' },
-  { id: 'malayalam', label: 'മലയാളം (Malayalam)' },
-  { id: 'marathi',   label: 'मराठी (Marathi)' },
-  { id: 'bengali',   label: 'বাংলা (Bengali)' },
-  { id: 'gujarati',  label: 'ગુજરાતી (Gujarati)' },
-  { id: 'punjabi',   label: 'ਪੰਜਾਬੀ (Punjabi)' },
-  { id: 'odia',      label: 'ଓଡ଼ିଆ (Odia)' },
-  { id: 'urdu',      label: 'اردو (Urdu)' },
+  { id: 'english',    label: 'English' },
+  { id: 'welsh',      label: 'Cymraeg (Welsh)' },
+  { id: 'irish',      label: 'Gaeilge (Irish)' },
+  { id: 'french',     label: 'Français (French)' },
+  { id: 'german',     label: 'Deutsch (German)' },
+  { id: 'spanish',    label: 'Español (Spanish)' },
+  { id: 'italian',    label: 'Italiano (Italian)' },
+  { id: 'portuguese', label: 'Português (Portuguese)' },
+  { id: 'dutch',      label: 'Nederlands (Dutch)' },
+  { id: 'polish',     label: 'Polski (Polish)' },
+  { id: 'romanian',   label: 'Română (Romanian)' },
+  { id: 'greek',      label: 'Ελληνικά (Greek)' },
+  { id: 'swedish',    label: 'Svenska (Swedish)' },
+  { id: 'urdu',       label: 'اردو (Urdu)' },
+  { id: 'punjabi',    label: 'ਪੰਜਾਬੀ (Punjabi)' },
+  { id: 'arabic',     label: 'العربية (Arabic)' },
 ] as const
 
 export type LanguageId = typeof LANGUAGES[number]['id']

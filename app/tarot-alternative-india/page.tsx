@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'online pandit alternative india', 'jyotish alternative india',
     'vedic astrologer alternative india', 'tarot alternative india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/tarot-alternative-india', languages: { 'en-IN': 'https://www.howwasyourday.live/tarot-alternative-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/tarot-alternative-india', languages: { 'en-GB': 'https://www.howwasyourday.live/tarot-alternative-india' } },
   openGraph: {
     title: 'Tarot Card Reader Alternative India — Real Human Support Instead | How Was Your Day',
     description: 'Thinking of calling a tarot reader for emotional support? You need a real human peer listener — not predictions. Anonymous, from ₹160.',

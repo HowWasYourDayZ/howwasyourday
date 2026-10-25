@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | How Was Your Day',
   description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, first 5 min free.',
   keywords: 'anonymous chat india, anonymous chat with real person india, anonymous online chat india, talk to stranger anonymously india, anonymous peer support india, private chat india no name, anonymous emotional support india, talk anonymously online india, anonymous listener india, private anonymous chat app india',
-  alternates: { canonical: 'https://www.howwasyourday.live/anonymous-chat-india', languages: { 'en-IN': 'https://www.howwasyourday.live/anonymous-chat-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/anonymous-chat-india', languages: { 'en-GB': 'https://www.howwasyourday.live/anonymous-chat-india' } },
   openGraph: {
     title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | How Was Your Day',
     description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, first 5 min free.',

@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. Sessions from ₹160 for 15 minutes in India, US$10 for 15 minutes abroad.',
+    description: 'First 5 minutes free. Sessions from £7 for 15 minutes in India, US$10 for 15 minutes abroad.',
   },
 }
 
@@ -169,7 +169,7 @@ export default function EmotionalSupportWithoutAIPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 
@@ -276,7 +276,7 @@ export default function EmotionalSupportWithoutAIPage() {
             </li>
             <li>
               <strong>Continue as long as you need.</strong> Sessions are available in 15, 30, or 45-minute
-              blocks. Pricing starts at ₹160 for 15 minutes in India and US$10 for 15 minutes abroad.
+              blocks. Pricing starts at £7 for 15 minutes in India and US$10 for 15 minutes abroad.
             </li>
           </ol>
         </div>

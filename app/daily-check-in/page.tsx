@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords: 'daily check in mental health, how am I feeling today, mood check in India, emotional check in, name your feeling',
   alternates: {
     canonical: 'https://www.howwasyourday.live/daily-check-in',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/daily-check-in' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/daily-check-in' },
   },
   openGraph: {
     title: 'Daily Check-In — How Are You Feeling Today? | How Was Your Day',

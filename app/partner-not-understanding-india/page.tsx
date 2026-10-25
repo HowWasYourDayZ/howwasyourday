@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'partner not listening india',
     'feel invisible in relationship india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/partner-not-understanding-india', languages: { 'en-IN': 'https://www.howwasyourday.live/partner-not-understanding-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/partner-not-understanding-india', languages: { 'en-GB': 'https://www.howwasyourday.live/partner-not-understanding-india' } },
   openGraph: {
     title: "My Partner Doesn't Understand Me — Talk to Someone Who Will | How Was Your Day",
     description: "Your partner doesn't understand. You've explained it a hundred times. Talk to a real peer listener who will actually hear you — anonymous, ₹160.",

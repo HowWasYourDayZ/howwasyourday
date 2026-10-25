@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Trauma Support India — Talk to Someone Real | How Was Your Day',
   description: 'Trauma stays in the body and the mind. Finding someone who listens without judgement is the first step. Peer support from ₹160.',
   keywords: ['trauma support india', 'PTSD support india', 'childhood trauma india', 'emotional abuse recovery india', 'trauma healing india', 'trauma counselling india', 'narcissistic abuse recovery india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/trauma-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/trauma-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/trauma-support-india', languages: { 'en-GB': 'https://www.howwasyourday.live/trauma-support-india' } },
   openGraph: {
     title: 'Trauma Support India — Talk to Someone Real | How Was Your Day',
     description: 'Trauma stays in the body and the mind. Finding someone who listens without judgement is the first step. Peer support from ₹160.',

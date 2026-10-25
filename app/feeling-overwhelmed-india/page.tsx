@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'too much to handle India', 'feeling overwhelmed support India',
     'talk to someone when overwhelmed India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/feeling-overwhelmed-india', languages: { 'en-IN': 'https://www.howwasyourday.live/feeling-overwhelmed-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-overwhelmed-india', languages: { 'en-GB': 'https://www.howwasyourday.live/feeling-overwhelmed-india' } },
   openGraph: {
     title: 'Feeling Overwhelmed? You\'re Not Broken — You Just Need to Be Heard | How Was Your Day',
     description: 'Feeling overwhelmed, exhausted, or like you can\'t cope? Talk to a real peer listener — anonymous, no judgment. First 5 min free.',

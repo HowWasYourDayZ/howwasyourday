@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'talk to someone I don\'t know India', 'random chat with real person India',
     'confide in stranger online India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-stranger-online-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-stranger-online-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-stranger-online-india', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-to-stranger-online-india' } },
   openGraph: {
     title: 'Talk to a Stranger Online India — Real Person, No Judgment, Right Now | How Was Your Day',
     description: 'Sometimes the best person to talk to is someone who does not know you. Talk to a real peer listener in India — private, confidential, no appointment.',

@@ -1,3 +1,4 @@
+import { formatGBP } from '@/lib/money'
 import { NextRequest, NextResponse } from 'next/server'
 import Razorpay from 'razorpay'
 import { selfieSignedUrls, selfieTakenAt, archiveSelfie } from '@/lib/selfie-storage'
@@ -1121,7 +1122,7 @@ export async function PATCH(req: NextRequest) {
           const { error: rollbackErr } = await sb.rpc('credit_wallet', { p_user_id: userId, p_amount: amount })
           if (rollbackErr) {
             logger.error('force_payout: payout insert AND rollback both failed — wallet decremented with no payout record. MANUAL RECONCILIATION REQUIRED.', { userId, amount, insertError: insertErr.message, rollbackError: rollbackErr.message })
-            return NextResponse.json({ error: `Payout insert failed AND wallet rollback failed — ₹${amount} deducted but no payout record created. Fix manually: credit_wallet(${userId}, ${amount}) and verify payout_requests.` }, { status: 500 })
+            return NextResponse.json({ error: `Payout insert failed AND wallet rollback failed — ${formatGBP(amount)} deducted but no payout record created. Fix manually: credit_wallet(${userId}, ${amount}) and verify payout_requests.` }, { status: 500 })
           }
           return NextResponse.json({ error: `Failed to create payout: ${insertErr.message}` }, { status: 500 })
         }

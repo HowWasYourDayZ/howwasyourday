@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'instant counselling india', '24 hour counselling india',
     'immediate emotional support india', 'counselling now india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/walk-in-counselling-india', languages: { 'en-IN': 'https://www.howwasyourday.live/walk-in-counselling-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/walk-in-counselling-india', languages: { 'en-GB': 'https://www.howwasyourday.live/walk-in-counselling-india' } },
   openGraph: {
     title: 'Walk-In Counselling India — No Appointment, Talk Now | How Was Your Day',
     description: 'No waiting list. No appointment. No scheduling. How Was Your Day peer support needs no appointment — like walk-in counselling but from your phone. From ₹160.',

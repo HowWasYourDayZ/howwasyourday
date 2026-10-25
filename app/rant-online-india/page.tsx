@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'no one to rant to india', 'emotional release india', 'verbal processing india',
     'let it out india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/vent-to-someone-online', languages: { 'en-IN': 'https://www.howwasyourday.live/vent-to-someone-online' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/vent-to-someone-online', languages: { 'en-GB': 'https://www.howwasyourday.live/vent-to-someone-online' } },
   openGraph: {
     title: 'Rant Online India — Say It Without Anyone Judging You | How Was Your Day',
     description: 'Need to rant — really rant — without someone telling you to calm down or look on the bright side? Real peer listener in India. Anonymous. From ₹160.',

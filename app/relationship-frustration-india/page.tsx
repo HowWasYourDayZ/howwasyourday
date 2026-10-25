@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'vent relationship frustration india',
     'same argument again india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/relationship-frustration-india', languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-frustration-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/relationship-frustration-india', languages: { 'en-GB': 'https://www.howwasyourday.live/relationship-frustration-india' } },
   openGraph: {
     title: 'Relationship Frustration India — Say It Before It Becomes Something Bigger | How Was Your Day',
     description: 'The frustration keeps building. Same patterns, same arguments, nothing changes. Talk to someone real before it turns into a bigger fight. From ₹160.',

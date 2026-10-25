@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Anxiety Attack India — Talk Someone Through It | How Was Your Day',
   description: 'Heart racing, can\'t breathe, doom feeling. Anxiety attacks are terrifying. After it passes, you need to talk. Anonymous support from ₹160.',
   keywords: ['anxiety attack India', 'anxiety attack support India', 'panic anxiety India', 'what to do after anxiety attack India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/anxiety-attack-india', languages: { 'en-IN': 'https://www.howwasyourday.live/anxiety-attack-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/anxiety-attack-india', languages: { 'en-GB': 'https://www.howwasyourday.live/anxiety-attack-india' } },
   openGraph: { title: 'Anxiety Attack India — Talk Someone Through It | How Was Your Day', description: 'Heart racing, can\'t breathe, doom feeling. Anxiety attacks are terrifying. After it passes, you need to talk. Anonymous support from ₹160.', url: 'https://www.howwasyourday.live/anxiety-attack-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

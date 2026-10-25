@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Peer Support in India | Talk to a Real Peer Listener | How Was Your Day',
   description: "What peer support is, how it differs from therapy, and where to find it in India: screened peer listeners on How Was Your Day, one to one by text or voice. First 5 minutes free.",
   keywords: ['peer support India', 'what is peer support', 'peer listener India', 'online peer support', 'talk to a peer listener', 'peer support vs therapy'],
-  alternates: { canonical: 'https://www.howwasyourday.live/peer-support', languages: { 'en-IN': 'https://www.howwasyourday.live/peer-support' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-support', languages: { 'en-GB': 'https://www.howwasyourday.live/peer-support' } },
   openGraph: {
     title: 'Peer Support India — Real People, Real Conversations | How Was Your Day',
     description: 'Understand peer support and how it differs from therapy. How Was Your Day offers one-to-one text or voice conversations with screened peers in India. One introductory session of up to 5 minutes is free per account; it is not clinical care and availability varies.',
@@ -35,7 +35,7 @@ const faqSchema = {
       name: 'How is peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. How Was Your Day is for everyday emotional support; paid sessions start at ₹160 for 15 minutes in India, with a free introductory session before you pay.',
+        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. How Was Your Day is for everyday emotional support; paid sessions start at £7 for 15 minutes in India, with a free introductory session before you pay.',
       },
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'How much does peer support cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'On How Was Your Day, paid peer support sessions start at ₹160 for 15 minutes in India. Your first 5-minute introductory session is free once per account, so you can see whether the conversation feels right before paying. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
+        text: 'On How Was Your Day, paid peer support sessions start at £7 for 15 minutes in India. Your first 5-minute introductory session is free once per account, so you can see whether the conversation feels right before paying. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
       },
     },
     {
@@ -205,7 +205,7 @@ export default function PeerSupportPage() {
 
         {/* Stats row */}
         <div className="stats-row">
-          <div className="stat-pill"><em>₹160</em>/session</div>
+          <div className="stat-pill"><em>£7</em>/session</div>
           <div className="stat-pill">First <em>5 min free</em></div>
           <div className="stat-pill"><em>No appointment</em> needed</div>
           <div className="stat-pill"><em>Display name</em></div>
@@ -239,13 +239,13 @@ export default function PeerSupportPage() {
                   <td className="col-label">Peer support (How Was Your Day)</td>
                   <td>Real person with lived experience</td>
                   <td>Feeling heard, loneliness, burnout, everyday emotional weight</td>
-                  <td>₹160/session</td>
+                  <td>£7/session</td>
                 </tr>
                 <tr>
                   <td className="col-label">Therapy</td>
                   <td>Licensed psychologist or counsellor</td>
                   <td>Clinical diagnosis, structured treatment, mental health conditions</td>
-                  <td>₹1,500–₹5,000/session</td>
+                  <td>£40–£100/session</td>
                 </tr>
                 <tr>
                   <td className="col-label">AI chatbot</td>
@@ -348,7 +348,7 @@ export default function PeerSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does peer support cost in India?</div>
-            <div className="faq-a">Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. One introductory session of up to 5 minutes is free per account.</div>
+            <div className="faq-a">Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. One introductory session of up to 5 minutes is free per account.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How does privacy work on How Was Your Day?</div>

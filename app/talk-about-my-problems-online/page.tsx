@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'share problems with someone online', 'need someone to talk to about problems India',
     'get things off my chest online India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/talk-about-my-problems-online', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-about-my-problems-online' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-about-my-problems-online', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-about-my-problems-online' } },
   openGraph: {
     title: 'Want to Talk About Your Problems Online? How Was Your Day India',
     description: 'Find someone to talk to about your problems — a real peer listener who listens without judgment. Anonymous.',
@@ -48,7 +48,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost to talk online?',
-      acceptedAnswer: { '@type': 'Answer', text: 'New users get a free 5-minute trial — no payment needed to start. Paid sessions begin at ₹160 for 15 minutes. That is significantly less than a therapy appointment, with no waitlist, no appointment, and no insurance required. You can talk today.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'New users get a free 5-minute trial — no payment needed to start. Paid sessions begin at £7 for 15 minutes. That is significantly less than a therapy appointment, with no waitlist, no appointment, and no insurance required. You can talk today.' },
     },
   ],
 }
@@ -181,7 +181,7 @@ export default function TalkAboutMyProblemsOnlinePage() {
               <div className="step-num">2</div>
               <div className="step-body">
                 <h3>Start talking</h3>
-                <p>No appointment, no waitlist. New users get a free 5-minute trial. Paid sessions start at ₹160 for 15 minutes. Your listener follows your lead.</p>
+                <p>No appointment, no waitlist. New users get a free 5-minute trial. Paid sessions start at £7 for 15 minutes. Your listener follows your lead.</p>
               </div>
             </div>
             <div className="step">

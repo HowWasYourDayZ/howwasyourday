@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'need a friend to talk to India', 'talk to someone after a fight India',
     'need to vent about relationship India', 'talk to someone morning India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/i-need-someone-to-talk-to', languages: { 'en-IN': 'https://www.howwasyourday.live/i-need-someone-to-talk-to' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/i-need-someone-to-talk-to', languages: { 'en-GB': 'https://www.howwasyourday.live/i-need-someone-to-talk-to' } },
   openGraph: {
     title: 'I Need Someone to Talk To Right Now | How Was Your Day India',
     description: 'Need someone to talk to? Request a one-to-one conversation with a screened peer listener in India by text or voice. One introductory session up to 5 minutes is free per account; availability varies. Not therapy or crisis care.',
@@ -56,7 +56,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost to talk to someone on How Was Your Day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual prices vary by listener and mode and are shown before booking. Availability depends on which listeners are online.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual prices vary by listener and mode and are shown before booking. Availability depends on which listeners are online.' },
     },
     {
       '@type': 'Question',

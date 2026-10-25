@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/cant-afford-therapy-india',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/cant-afford-therapy-india' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/cant-afford-therapy-india' },
   },
   openGraph: {
     title: "Can't Afford Therapy in India? Here Are Real Alternatives That Actually Help | How Was Your Day",

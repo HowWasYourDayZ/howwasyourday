@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'divorced parent india', 'widowed parent india', 'single parenting india',
     'single mom india support', 'lone parent india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/single-parent-india', languages: { 'en-IN': 'https://www.howwasyourday.live/single-parent-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/single-parent-india', languages: { 'en-GB': 'https://www.howwasyourday.live/single-parent-india' } },
   openGraph: {
     title: 'Single Parent India — You\'re Carrying Two Roles. You Need Support Too. | How Was Your Day',
     description: 'Single parenting in India is exhausting and often completely invisible. Talk to someone who understands — anonymous peer support from ₹160.',

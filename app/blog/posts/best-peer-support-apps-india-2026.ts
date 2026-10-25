@@ -18,7 +18,7 @@ export const post = {
 <ul>
 <li><strong>Real humans or AI?</strong> This is the most important question. An AI chatbot can give you a grammatically correct response. It cannot give you the look of recognition that comes from someone who has actually been where you are. If you need to feel genuinely understood, you need a real person.</li>
 <li><strong>Peer support or professional counselling?</strong> Peer support is from someone with lived experience. Professional counselling is from a licensed psychologist or counsellor. They are good at different things. Peer support is for everyday emotional weight. Counselling is for diagnosed conditions or structured treatment.</li>
-<li><strong>Anonymous or not?</strong> In the UK or Ireland, stigma around mental health is real. If you need complete anonymity — especially from people in your own life — that matters.</li>
+<li><strong>Anonymous or not?</strong> In India, stigma around mental health is real. If you need complete anonymity — especially from people in your own life — that matters.</li>
 <li><strong>Available when you need it?</strong> The moments when you most need to talk are often not 11am on a Tuesday. They are Sunday night at 11pm. Availability matters.</li>
 <li><strong>Cost?</strong> Mental health support in India is already out of reach for most people because of cost. The price point is a real consideration.</li>
 </ul>

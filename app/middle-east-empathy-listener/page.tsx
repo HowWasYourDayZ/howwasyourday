@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/middle-east-empathy-listener',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/middle-east-empathy-listener' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/middle-east-empathy-listener' },
   },
   openGraph: {
     title: 'Empathy Listener for Indians in the Gulf — Feel Genuinely Understood',
@@ -140,7 +140,7 @@ export default function MiddleEastEmpathyListenerPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 

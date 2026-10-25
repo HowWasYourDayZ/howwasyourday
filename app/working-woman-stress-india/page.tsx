@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Working Woman Stress India — You\'re Carrying Too Much | How Was Your Day',
   description: 'Career pressure, home responsibilities, guilt, comparison. Working women in India carry an invisible double shift. Anonymous support from ₹160.',
   keywords: ['working woman stress India', 'working woman burnout India', 'career and family balance India', 'professional woman anxiety India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/working-woman-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/working-woman-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/working-woman-stress-india', languages: { 'en-GB': 'https://www.howwasyourday.live/working-woman-stress-india' } },
   openGraph: { title: 'Working Woman Stress India — You\'re Carrying Too Much | How Was Your Day', description: 'Career pressure, home responsibilities, guilt, comparison. Working women in India carry an invisible double shift. Anonymous support from ₹160.', url: 'https://www.howwasyourday.live/working-woman-stress-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

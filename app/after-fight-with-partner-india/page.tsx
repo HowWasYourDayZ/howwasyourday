@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'still upset after fight india',
     'fight replay loop india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/after-fight-with-partner-india', languages: { 'en-IN': 'https://www.howwasyourday.live/after-fight-with-partner-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/after-fight-with-partner-india', languages: { 'en-GB': 'https://www.howwasyourday.live/after-fight-with-partner-india' } },
   openGraph: {
     title: 'After a Fight With Your Partner — Process It Before It Festers | How Was Your Day',
     description: "You had the fight. Now you're replaying it. Your body is still activated. Talk to someone real — anonymous, 15 minutes, ₹160. Before it festers.",

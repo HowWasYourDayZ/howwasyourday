@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/support/family-pressure-india',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/support/family-pressure-india' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/support/family-pressure-india' },
   },
   openGraph: {
     title: 'Dealing With Family Pressure in India — Emotional Support When You Can\'t Talk to Them | How Was Your Day',

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Anger Management India — Talk Before It Explodes | How Was Your Day',
   description: 'Anger building up? Sometimes talking it through before it erupts is all you need. Anonymous peer support from ₹160.',
   keywords: ['anger management india', 'anger issues india', 'panic attack support india', 'emotional regulation india', 'controlling anger india', 'anger counselling india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/anger-management-india', languages: { 'en-IN': 'https://www.howwasyourday.live/anger-management-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/anger-management-india', languages: { 'en-GB': 'https://www.howwasyourday.live/anger-management-india' } },
   openGraph: {
     title: 'Anger Management India — Talk Before It Explodes | How Was Your Day',
     description: 'Anger building up? Sometimes talking it through before it erupts is all you need. Anonymous peer support from ₹160.',

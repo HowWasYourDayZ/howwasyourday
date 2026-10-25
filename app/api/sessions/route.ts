@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimit } from '@/lib/rate-limit'
-import { PLATFORM_FEE, FREE_SESSION_MINS, MAX_FREE_TRIALS, SESSION_DURATIONS, sessionRatePerMin, REQUEST_RESPONSE_WINDOW_SECS, serviceFeeRateAt } from '@/lib/constants'
-import { isNriCountry, NRI_INR_EQUIV, pricingCountry, quoteSession } from '@/lib/geo-pricing'
+import { PLATFORM_FEE, FREE_SESSION_MINS, MAX_FREE_TRIALS, SESSION_DURATIONS, sessionRatePerMin, REQUEST_RESPONSE_WINDOW_SECS, serviceFeeRateAt, DEFAULT_LISTENER_RATE } from '@/lib/constants'
+import { quoteSession } from '@/lib/geo-pricing'
 import { isUnlimitedTestPhone } from '@/lib/test-users'
 import { settleSession } from '@/lib/session-billing'
 import { applySettlement } from '@/lib/settlement-ledger'
@@ -199,7 +199,7 @@ export async function POST(req: NextRequest) {
     // stored in listener_rate_per_min below — settlement caps the listener's
     // share at that rate × billed mins, so storing the text rate would strip
     // the voice premium from the listener's earnings.
-    const rate  = sessionRatePerMin(Number(lp.rate_per_min ?? 10), sessionType)  // ?? not || — a legitimate rate of 0 must not be overridden
+    const rate  = sessionRatePerMin(Number(lp.rate_per_min ?? DEFAULT_LISTENER_RATE), sessionType)  // ?? not || — a legitimate rate of 0 must not be overridden
     // Lock the service fee rate at booking time. Per-listener custom rate wins over
     // the global schedule. NULL custom_service_fee_rate means "use global rate".
     // Resolution chain: custom override → global SERVICE_FEE_SCHEDULE.
@@ -212,30 +212,9 @@ export async function POST(req: NextRequest) {
     const bookedServiceFeeRate = (lp as { custom_service_fee_rate?: number | null }).custom_service_fee_rate
       ?? serviceFeeRateAt(new Date().toISOString())
 
-    // NRI pricing (Phase 2): if the seeker signed up with a non-India country,
-    // bill at the flat INR equivalent of the USD price. The listener still earns
-    // their configured rate × billed_mins minus the service fee — How Was Your Day keeps the NRI margin.
-    // We read account_country from the DB (never from the request body) so a
-    // crafted request cannot claim India status to avoid NRI pricing.
-    let isNriSession = false
-    let seekerPricingCountry: string | null = null
-    if (!effectivelyFree && (SESSION_DURATIONS as readonly number[]).includes(durationMins) && durationMins !== FREE_SESSION_MINS) {
-      // Country from the OTP-verified phone (lib/geo-pricing pricingCountry) —
-      // account_country alone was 'IN' for every overseas account.
-      const { data: seekerCountryRow } = await sb
-        .from('users').select('account_country, phone').eq('id', user.id).single()
-      const seekerPhone = seekerCountryRow?.phone ?? (user.phone ? '+' + user.phone.replace(/^\+/, '') : null)
-      seekerPricingCountry = pricingCountry(seekerPhone, seekerCountryRow?.account_country)
-      if (isNriCountry(seekerPricingCountry) && NRI_INR_EQUIV[durationMins as 15 | 30 | 45]) {
-        isNriSession = true
-      }
-    }
-
-    // NRI: flat price, but never below the Indian price (sessionTotalInr) — the
-    // listener's share is capped at rate × mins at settlement, so they always
-    // earn their full rate. Minus the ₹10 fee, which is added back below.
+    // One price for everyone (GBP, pence): listener rate × minutes + PLATFORM_FEE.
     // Same quote /api/talk/candidates shows (lib/geo-pricing quoteSession).
-    const total = quoteSession(Number(lp.rate_per_min ?? 10), sessionType, durationMins, isNriSession ? seekerPricingCountry : 'IN', effectivelyFree).total
+    const total = quoteSession(Number(lp.rate_per_min ?? DEFAULT_LISTENER_RATE), sessionType, durationMins, effectivelyFree).total
 
     // Note: balance check, seeker-active-session check, and listener-busy check are
     // all handled atomically inside the create_session RPC (migration 002).
@@ -390,7 +369,7 @@ export async function POST(req: NextRequest) {
         user_id:     user.id,
         amount:      total,
         type:        'debit',
-        description: `${durationMins}-min ${sessionType} session${isNriSession ? ' (NRI)' : ''}`,
+        description: `${durationMins}-min ${sessionType} session`,
         session_id:  sessionId,
       })
       if (txErr) logger.error('Session POST: wallet_transactions insert failed (audit gap):', { sessionId, error: txErr.message })

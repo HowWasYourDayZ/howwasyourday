@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'divorce emotional support india', 'separation support india',
     'divorce help india', 'divorce recovery india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/divorce-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/divorce-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/divorce-support-india', languages: { 'en-GB': 'https://www.howwasyourday.live/divorce-support-india' } },
   openGraph: {
     title: 'Divorce Support India — Process It With Someone Real | How Was Your Day',
     description: 'Going through a divorce in India? The emotional weight is enormous. Talk to a real peer listener who gets the Indian context — anonymous, from ₹160.',
@@ -126,13 +126,13 @@ export default function DivorceSupportIndiaPage() {
         <div className="hero">
           <p className="badge">Divorce Support &middot; India &middot; Anonymous</p>
           <h1>Divorce in India doesn&apos;t just end a marriage. <em>It ends a whole identity you built around it.</em></h1>
-          <p className="lead">In the UK or Ireland, divorce carries shame, family pressure, financial panic, and grief &mdash; all at once. You can&apos;t tell most people. You&apos;re managing everyone else&apos;s reactions while barely managing your own. Say it here.</p>
+          <p className="lead">In India, divorce carries shame, family pressure, financial panic, and grief &mdash; all at once. You can&apos;t tell most people. You&apos;re managing everyone else&apos;s reactions while barely managing your own. Say it here.</p>
           <a href="/browse" className="cta-hero">Talk to someone &rarr;</a>
         </div>
         <GeoQuickAnswer path="/divorce-support-india" />
         <div className="section">
           <h2>Why Divorce Hits Different in India</h2>
-          <p>In the UK or Ireland, marriage is not just a relationship between two people. It is a contract between two families, embedded in social identity, community standing, and in many cases religious significance. When it ends, the impact radiates outward in ways that do not happen in cultures where divorce is less socially loaded.</p>
+          <p>In India, marriage is not just a relationship between two people. It is a contract between two families, embedded in social identity, community standing, and in many cases religious significance. When it ends, the impact radiates outward in ways that do not happen in cultures where divorce is less socially loaded.</p>
           <p>For women especially, marital status is deeply tied to social identity. Divorce can mean losing your social position in a community, facing judgment from people who were once part of your support network, and navigating a legal and financial system that was not designed with your independence in mind.</p>
           <p>For men, the cultural expectation that they should have &ldquo;handled&rdquo; the marriage &mdash; and the silence around male emotional experience &mdash; means that divorce grief often goes completely unexpressed.</p>
         </div>

@@ -27,7 +27,7 @@ const schema={'@context':'https://schema.org','@graph':[
 ]}
 
 export default function Page(){return <main className="min-h-screen bg-white text-[#0F4867]"><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><div className="mx-auto max-w-4xl px-5 py-10 sm:px-8 sm:py-16">
-<nav className="mb-10 flex items-center justify-between"><a href="/" className="text-2xl font-black">Lean<span className="text-[#1A8FA0]">On</span></a><a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Find a peer listener</a></nav>
+<nav className="mb-10 flex items-center justify-between"><a href="/" className="text-2xl font-black">How Was <span className="text-[#1A8FA0]">Your Day</span></a><a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Find a peer listener</a></nav>
 <p className="mb-3 text-sm font-extrabold uppercase tracking-wider text-[#1A8FA0]">Peer support · Counselling · Mental health support</p>
 <h1 className="mb-6 text-4xl font-black leading-tight sm:text-6xl">Peer Support vs Counselling: What Is the Difference?</h1>
 <p className="mb-8 max-w-3xl text-xl leading-8 text-slate-600">Both involve talking about difficult experiences, but they are not the same service. Understanding the difference helps you choose support without confusing a human peer conversation with professional clinical care.</p>

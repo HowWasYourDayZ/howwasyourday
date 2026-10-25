@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
   title: 'GetCompanion Alternative — How Was Your Day | Peer Support Without the Middleman',
-  description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — ₹160/session, free 5-min trial, no "Happiness Executive" label.',
+  description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — £7/session, free 5-min trial, no "Happiness Executive" label.',
   keywords: [
     'getcompanion alternative', 'alternative to getcompanion', 'getcompanion vs howwasyourday',
     'companionship app india', 'paid companionship alternative', 'loneliness support india',
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/getcompanion-alternative',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/getcompanion-alternative' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/getcompanion-alternative' },
   },
   openGraph: {
     title: 'GetCompanion Alternative — How Was Your Day | Peer Support Without the Middleman',
-    description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — ₹160/session, free 5-min trial.',
+    description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — £7/session, free 5-min trial.',
     url: 'https://www.howwasyourday.live/getcompanion-alternative',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -44,7 +44,7 @@ const faqSchema = {
       name: 'Is How Was Your Day cheaper than GetCompanion?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day sessions start at ₹160 for 15 minutes, and your very first 5-minute session is completely free (one per account) — no wallet top-up needed. Both platforms use per-minute billing from a wallet, but How Was Your Day\'s free trial lets you find the right listener before spending anything.',
+        text: 'How Was Your Day sessions start at £7 for 15 minutes, and your very first 5-minute session is completely free (one per account) — no wallet top-up needed. Both platforms use per-minute billing from a wallet, but How Was Your Day\'s free trial lets you find the right listener before spending anything.',
       },
     },
     {
@@ -145,7 +145,7 @@ export default function GetCompanionAlternativePage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 

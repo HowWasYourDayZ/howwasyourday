@@ -57,7 +57,7 @@ export default function ReadyToTalkLanding({ data }: { data: ReadyToTalkLandingD
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
         <nav className="mb-10 flex items-center justify-between" aria-label="Primary">
-          <a href="/" className="text-2xl font-black tracking-tight">Lean<span className="text-[#1A8FA0]">On</span></a>
+          <a href="/" className="text-2xl font-black tracking-tight">How Was <span className="text-[#1A8FA0]">Your Day</span></a>
           <a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a>
         </nav>
 
@@ -95,8 +95,8 @@ export default function ReadyToTalkLanding({ data }: { data: ReadyToTalkLandingD
           <h2 className="mb-5 text-2xl font-black">A simple path from needing support to talking</h2>
           <ol className="space-y-5">
             <li><strong>1. Find a relevant listener.</strong><br /><span className="text-slate-600">Browse profiles and look for lived experience, topics and availability that fit what you want to discuss.</span></li>
-            <li><strong>2. Start with ₹0.</strong><br /><span className="text-slate-600">Your first 5-minute introductory session is free once per account. You can use it to see whether the conversation feels right.</span></li>
-            <li><strong>3. Continue only if you want to.</strong><br /><span className="text-slate-600">If you want more time, the paid session price is shown before you start. Paid sessions currently start at ₹160 for 15 minutes.</span></li>
+            <li><strong>2. Start with £0.</strong><br /><span className="text-slate-600">Your first 5-minute introductory session is free once per account. You can use it to see whether the conversation feels right.</span></li>
+            <li><strong>3. Continue only if you want to.</strong><br /><span className="text-slate-600">If you want more time, the paid session price is shown before you start. Paid sessions currently start at £7 for 15 minutes.</span></li>
             <li><strong>4. Choose text or voice.</strong><br /><span className="text-slate-600">Use the format that makes it easier for you to have the conversation privately.</span></li>
           </ol>
           <a href="/browse" className="mt-7 inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Find a listener →</a>

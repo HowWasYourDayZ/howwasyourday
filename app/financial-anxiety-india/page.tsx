@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Financial Anxiety India — Talk to Someone About Money Stress | How Was Your Day',
   description: 'EMI pressure, job insecurity, debt stress, family financial expectations. Money anxiety is real. Talk anonymously from ₹160.',
   keywords: ['financial anxiety India', 'money stress India', 'EMI stress India', 'financial pressure India', 'debt anxiety India', 'job insecurity anxiety India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/financial-anxiety-india', languages: { 'en-IN': 'https://www.howwasyourday.live/financial-anxiety-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/financial-anxiety-india', languages: { 'en-GB': 'https://www.howwasyourday.live/financial-anxiety-india' } },
   openGraph: {
     title: 'Financial Anxiety India — Talk to Someone About Money Stress | How Was Your Day',
     description: 'EMI pressure, job insecurity, debt stress, family financial expectations. Money anxiety is real. Talk anonymously from ₹160.',

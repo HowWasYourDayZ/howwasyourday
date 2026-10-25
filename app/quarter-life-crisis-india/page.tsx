@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'what to do with my life india', 'lost in your 20s india',
     'life direction india', 'feeling lost 20s india', 'early 20s confusion india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/quarter-life-crisis-india', languages: { 'en-IN': 'https://www.howwasyourday.live/quarter-life-crisis-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/quarter-life-crisis-india', languages: { 'en-GB': 'https://www.howwasyourday.live/quarter-life-crisis-india' } },
   openGraph: {
     title: 'Quarter Life Crisis India — Feeling Lost in Your 20s? | How Was Your Day',
     description: 'You\'re in your 20s. It\'s supposed to be the best time of your life. So why does it feel like drowning? Talk to someone who gets it. From ₹160.',

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'infidelity emotional recovery India', 'betrayal trauma India',
     'wife affair India', 'recovering from cheating India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/affair-recovery-india', languages: { 'en-IN': 'https://www.howwasyourday.live/affair-recovery-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/affair-recovery-india', languages: { 'en-GB': 'https://www.howwasyourday.live/affair-recovery-india' } },
   openGraph: {
     title: 'Partner Had an Affair — Emotional Support India | How Was Your Day',
     description: 'Betrayal is one of the hardest things to process. You need to talk — not to a therapist yet, to a real person who will just listen. From ₹160.',

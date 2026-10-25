@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Stop Overthinking — Talk to Someone Who Gets It | How Was Your Day',
   description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. First 5 minutes free.",
   keywords: 'how to stop overthinking, overthinking at night, racing thoughts India, anxiety overthinking, talk to someone about overthinking, rumination help, overthinking help India, peer support overthinking',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/overthinking', languages: { 'en-IN': 'https://www.howwasyourday.live/support/overthinking' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/overthinking', languages: { 'en-GB': 'https://www.howwasyourday.live/support/overthinking' } },
   openGraph: {
     title: 'How to Stop Overthinking — Talk to Someone Who Gets It | How Was Your Day',
     description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. First 5 minutes free.",
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.',
       },
     },
   ],
@@ -167,7 +167,7 @@ export default function OverthinkingSupportPage() {
           <p>They can feel identical from the inside, which is why overthinking is so convincing. Problem-solving moves — it asks what can I do, arrives at something, and lets go. Rumination replays — it asks why did this happen, what did they mean, what if it happens again, and never reaches an end because it was never looking for one. A useful test at 2 AM: has this thinking produced anything new in the last twenty minutes? If it is the same loop wearing a different sentence, your mind is not solving. It is circling, and it needs rest or company, not more thinking.</p>
 
           <h3>Overthinking Work and Career</h3>
-          <p>In the UK or Ireland, work is rarely just work. There is family expectation layered on top of it, comparisons with cousins and batchmates, the weight of a decision someone else partly made for you, and the constant background sense that you should be further along by now. So one offhand comment from a manager becomes three hours of analysis. A quiet appraisal cycle becomes a full imagined future. High-pressure work cultures give the mind endless raw material — and very few people you can say any of it to without it getting back to someone.</p>
+          <p>In India, work is rarely just work. There is family expectation layered on top of it, comparisons with cousins and batchmates, the weight of a decision someone else partly made for you, and the constant background sense that you should be further along by now. So one offhand comment from a manager becomes three hours of analysis. A quiet appraisal cycle becomes a full imagined future. High-pressure work cultures give the mind endless raw material — and very few people you can say any of it to without it getting back to someone.</p>
 
           <h3>Replaying Conversations</h3>
           <p>Social overthinking has its own particular sting. You reread a message you sent hours ago, hunting for the wrong word. You replay a conversation from a party last week and cringe at something nobody else remembers. You watch someone go from replying quickly to replying slowly and write an entire story about what it means. Underneath it is usually a simple, deeply human worry: that you might not be wanted. The mind tries to solve that fear by reviewing the evidence again and again, but there is no amount of reviewing that ever settles it.</p>
@@ -257,7 +257,7 @@ export default function OverthinkingSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.</div>
           </div>
         </div>
 

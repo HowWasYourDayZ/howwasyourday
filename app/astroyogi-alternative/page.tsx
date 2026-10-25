@@ -4,16 +4,16 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'AstroYogi Alternative India — Talk Without the Astrology | How Was Your Day',
-  description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. How Was Your Day is ₹160 for 15 minutes of real peer support, no horoscopes.',
+  description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. How Was Your Day is £7 for 15 minutes of real peer support, no horoscopes.',
   keywords: [
     'AstroYogi alternative', 'AstroSage alternative india', 'AstroTalk alternative india',
     'astrology app alternative india', 'cheap astrologer alternative india',
     'pay astrologer india alternative', 'online astrologer alternative india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/astroyogi-alternative', languages: { 'en-IN': 'https://www.howwasyourday.live/astroyogi-alternative' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/astroyogi-alternative', languages: { 'en-GB': 'https://www.howwasyourday.live/astroyogi-alternative' } },
   openGraph: {
     title: 'AstroYogi Alternative India — Talk Without the Astrology | How Was Your Day',
-    description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. How Was Your Day is ₹160 for 15 minutes of real peer support, no horoscopes.',
+    description: 'AstroYogi, AstroSage, AstroTalk — you\'re paying ₹20/min for someone to talk to. How Was Your Day is £7 for 15 minutes of real peer support, no horoscopes.',
     url: 'https://www.howwasyourday.live/astroyogi-alternative',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -176,7 +176,7 @@ export default function AstroYogiAlternativePage() {
 
         <div className="cta-card">
           <h2>The conversation you needed. Half the price. No horoscope required.</h2>
-          <p>Real peer listener. Anonymous. From ₹160. First 5 minutes free.</p>
+          <p>Real peer listener. Anonymous. From £7. First 5 minutes free.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

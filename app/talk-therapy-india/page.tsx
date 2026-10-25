@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'peer talk therapy india', 'affordable talk therapy india',
     'online talk therapy india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/talk-therapy-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-therapy-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-therapy-india', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-therapy-india' } },
   openGraph: {
     title: 'Talk Therapy India — The Power of Saying It Out Loud | How Was Your Day',
     description: 'Talk therapy works because speaking things out loud changes them. How Was Your Day offers real-voice peer conversations from ₹160 — no appointment.',

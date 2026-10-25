@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support | How Was Your Day',
   description: 'Being told you\'re too sensitive, imagining things, overreacting. Gaslighting makes you doubt your own reality. Talk to someone who will validate what you\'re experiencing. From ₹160.',
   keywords: ['gaslighting India', 'am I being gaslighted India', 'gaslighting in marriage India', 'gaslighting partner India', 'gaslighting signs India', 'psychological manipulation India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/gaslighting-india', languages: { 'en-IN': 'https://www.howwasyourday.live/gaslighting-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/gaslighting-india', languages: { 'en-GB': 'https://www.howwasyourday.live/gaslighting-india' } },
   openGraph: {
     title: 'Gaslighting India — Am I Being Gaslighted? Anonymous Support | How Was Your Day',
     description: 'Being told you\'re too sensitive, imagining things, overreacting. Gaslighting makes you doubt your own reality. Talk to someone who will validate what you\'re experiencing. From ₹160.',

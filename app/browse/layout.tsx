@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'talk to someone 2am India', 'human listener online India', 'peer support near me India',
     'Indians abroad emotional support', 'NRI talk to someone',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/browse', languages: { 'en-IN': 'https://www.howwasyourday.live/browse' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/browse', languages: { 'en-GB': 'https://www.howwasyourday.live/browse' } },
   openGraph: {
     title: 'Browse Peer Listeners | How Was Your Day — Talk to a Real Person',
     description: 'Browse verified peer listeners in India. Filter by topic, availability, and language. Start with a free 5-minute session — no appointment needed.',

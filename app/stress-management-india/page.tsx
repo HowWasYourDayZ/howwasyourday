@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Stress Management India — Talk It Out with a Real Person | How Was Your Day',
   description: 'Overwhelmed by stress? Sometimes talking helps more than tips. Real peer listeners available from ₹160. Anonymous, judgment-free.',
   keywords: ['stress management india', 'anxiety management india', 'how to deal with stress india', 'stress relief india', 'reduce stress india', 'coping with stress india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/stress-management-india', languages: { 'en-IN': 'https://www.howwasyourday.live/stress-management-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/stress-management-india', languages: { 'en-GB': 'https://www.howwasyourday.live/stress-management-india' } },
   openGraph: {
     title: 'Stress Management India — Talk It Out with a Real Person | How Was Your Day',
     description: 'Overwhelmed by stress? Sometimes talking helps more than tips. Real peer listeners available from ₹160. Anonymous, judgment-free.',

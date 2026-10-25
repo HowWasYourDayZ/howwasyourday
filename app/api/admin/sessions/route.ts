@@ -150,7 +150,7 @@ export async function GET(req: NextRequest) {
       return e
         ? {
             ...withPush,
-            // service fee = combined_le_platform_fee − seeker's flat ₹10
+            // service fee = combined_le_platform_fee − seeker's flat £1
             listener_service_fee: e.listener_service_fee - (s.platform_fee ?? 0),
             listener_net_amount:  e.listener_net_amount,
           }

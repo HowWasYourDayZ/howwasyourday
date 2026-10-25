@@ -1,4 +1,5 @@
 'use client'
+import { formatGBP } from '@/lib/money'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
@@ -202,7 +203,7 @@ export default function ProfilePage() {
 
   const formatDate = (iso: string) => {
     if (!iso) return '—'
-    return new Date(iso).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' })
+    return new Date(iso).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })
   }
 
   return (
@@ -280,7 +281,7 @@ export default function ProfilePage() {
             </div>
             <div className="stat-card clickable" onClick={() => router.push('/wallet')}>
               <div className="stat-icon">💰</div>
-              <div className="stat-value">₹{walletBalance}</div>
+              <div className="stat-value">{formatGBP(walletBalance)}</div>
               <div className="stat-label">Wallet →</div>
             </div>
             <div className="stat-card">
@@ -325,7 +326,7 @@ export default function ProfilePage() {
                 </p>
                 {walletBalance > 0 && (
                   <p style={{ fontSize: 13, fontWeight: 700, color: '#B71C1C', background: '#FFF5F5', border: '1px solid #FFCDD2', borderRadius: 8, padding: '8px 12px', marginBottom: 16 }}>
-                    You have ₹{walletBalance} in your wallet. You'll need to use or withdraw this balance before your account can be deleted.
+                    You have {formatGBP(walletBalance)} in your wallet. You'll need to use or withdraw this balance before your account can be deleted.
                   </p>
                 )}
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#0F4867', marginBottom: 10 }}>

@@ -7,8 +7,7 @@ import { createClient } from '@/lib/supabase'
 import { LANGUAGES, AGE_RANGES, ageRangeId, VOICE_PRICING_ENABLED, sessionRatePerMin, MAX_FREE_TRIALS } from '@/lib/constants'
 import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
 import { estimateListenerTakeHome } from '@/lib/session-billing'
-import { getBookingPriceDisplay, isNriCountry } from '@/lib/geo-pricing'
-import { PLATFORM_FEE } from '@/lib/constants'
+import { formatGBP, formatRate } from '@/lib/money'
 import { showToast } from '@/lib/toast'
 import Avatar from '@/app/components/Avatar'
 
@@ -270,7 +269,7 @@ const TOPIC_ALIASES: Record<string, string> = {
 // offline groups.
 const SORTS = [
   { id: 'best',      label: '⚡ Best match' },
-  { id: 'price-low', label: '₹ Price: low first' },
+  { id: 'price-low', label: '£ Price: low first' },
   { id: 'rating',    label: '⭐ Top rated' },
 ] as const
 type SortId = typeof SORTS[number]['id']
@@ -383,7 +382,6 @@ function BrowseContent() {
   const [joiningToast, setJoiningToast] = useState(false)
   // Overseas seekers (pricing country from the verified phone, via /api/auth/profile)
   // are billed per session, not per minute — show them the 15-min price in their currency.
-  const [nriCountry, setNriCountry] = useState<string | null>(null)
   const [myUserId, setMyUserId] = useState<string | null>(null)
   const [myTextRate, setMyTextRate] = useState<number | null>(null)
   const [query, setQuery]     = useState('')
@@ -552,10 +550,6 @@ function BrowseContent() {
       if (!user) return
       // Remember who I am so I never see (or can book) my own listener card.
       setMyUserId(user.id)
-      fetch('/api/auth/profile').then(r => (r.ok ? r.json() : null)).then(p => {
-        const c = (p as { account_country?: string } | null)?.account_country
-        if (isNriCountry(c)) setNriCountry(c!)
-      }).catch(() => {})
       client.from('sessions').select('id', { count: 'exact', head: true })
         .eq('seeker_id', user.id).eq('is_free_trial', true).eq('status', 'completed')
         .then(({ count }) => { if ((count ?? 0) >= MAX_FREE_TRIALS) setTrialAvailable(false) })
@@ -668,7 +662,7 @@ function BrowseContent() {
             <div className="session-toast-text">New session request!</div>
             <div className="session-toast-sub">
               {incomingSession.duration_mins ? `${incomingSession.duration_mins} min` : ''}{' '}
-              {incomingSession.session_type ?? ''}{incomingSession.amount_held ? ` · you earn ₹${estimateListenerTakeHome(incomingSession, myTextRate)}` : ' · free trial'}
+              {incomingSession.session_type ?? ''}{incomingSession.amount_held ? ` · you earn ${formatGBP(estimateListenerTakeHome(incomingSession, myTextRate))}` : ' · free trial'}
             </div>
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
@@ -733,7 +727,7 @@ function BrowseContent() {
           <h1>Who would you like to talk to?</h1>
           {authChecked && (myUserId ? (
             <a href="/wallet" className="wallet-chip" aria-label="Wallet balance">
-              <WalletIcon size={17} aria-hidden /> {balance !== null ? `₹${balance}` : 'Wallet'}
+              <WalletIcon size={17} aria-hidden /> {balance !== null ? formatGBP(balance) : 'Wallet'}
             </a>
           ) : (
             <a href="/auth?redirect=/browse" className="wallet-chip">
@@ -859,7 +853,7 @@ function BrowseContent() {
             <div style={{fontSize:48,marginBottom:16}}>🔍</div>
             <h3 style={{fontSize:20,fontWeight:800,color:'var(--navy)',marginBottom:8}}>No listeners match right now</h3>
             <p style={{fontSize:15,color:'var(--gray)',lineHeight:1.7,marginBottom:24,maxWidth:400,margin:'0 auto 24px'}}>
-              Our listeners are most active between 6–11 PM IST. Try broadening your topic, or check back in 30 minutes.
+              Listeners are usually most active in the evenings. Try broadening your topic, or check back in 30 minutes.
             </p>
             <div style={{display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap'}}>
               <button
@@ -890,10 +884,8 @@ function BrowseContent() {
           const textRate  = sessionRatePerMin(Number(l.rate_per_min), 'text')
           const voiceRate = sessionRatePerMin(Number(l.rate_per_min), 'voice')
           const noVoice = l.voice_disabled === true
-          // Overseas: the 15-min price as billed (flat, or the Indian price if higher).
-          const nri15 = (r: number) => getBookingPriceDisplay(r * 15 + PLATFORM_FEE, nriCountry, 15).primary
-          const textLabel  = nriCountry ? `15 min ${nri15(textRate)}` : `₹${textRate}/min`
-          const voiceLabel = nriCountry ? `15 min ${nri15(voiceRate)}` : `₹${voiceRate}/min`
+          const textLabel  = formatRate(textRate)
+          const voiceLabel = formatRate(voiceRate)
           const priceCaption = noVoice ? `Text ${textLabel}` : VOICE_PRICING_ENABLED ? `Text ${textLabel} · Call ${voiceLabel}` : `${textLabel} · text or call`
           const goodFor = (l.specialty_tags||[]).slice(0,2).map(t => tagInfo(t)?.label || t)
           const langs = (l.languages_spoken||[]).slice(0,2).map(lid => {
@@ -944,11 +936,11 @@ function BrowseContent() {
               {l.is_available && !inSession ? (
                 <>
                   <div className="mode-btns">
-                    <button className={`btn-mode text${noVoice ? ' full' : ''}`} aria-label={`Text conversation with ${l.name}, ${nriCountry ? textLabel : `₹${textRate} per minute`}`} onClick={() => go('text')}>
+                    <button className={`btn-mode text${noVoice ? ' full' : ''}`} aria-label={`Text conversation with ${l.name}, ${textLabel}`} onClick={() => go('text')}>
                       <span className="bl"><MessageCircle size={16} aria-hidden /> Text</span><small>{textLabel}</small>
                     </button>
                     {!noVoice && (
-                      <button className="btn-mode voice" aria-label={`Voice call with ${l.name}, ${nriCountry ? voiceLabel : `₹${voiceRate} per minute`}`} onClick={() => go('voice')}>
+                      <button className="btn-mode voice" aria-label={`Voice call with ${l.name}, ${voiceLabel}`} onClick={() => go('voice')}>
                         <span className="bl"><Phone size={16} aria-hidden /> Call</span><small>{voiceLabel}</small>
                       </button>
                     )}

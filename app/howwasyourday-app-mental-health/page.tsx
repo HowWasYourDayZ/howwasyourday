@@ -48,7 +48,7 @@ export default function HowWasYourDayAppMentalHealth() {
         <a href="/" className="back">← How Was Your Day Home</a>
         <h1>How Was Your Day App for <span>Mental Health</span> — India&apos;s Peer Support Platform</h1>
         <p className="lead">
-          How Was Your Day is India&apos;s peer support app for mental health — not therapy, not AI, but real humans with lived experience. Starting at ₹0 for your first 5 minutes.
+          How Was Your Day is India&apos;s peer support app for mental health — not therapy, not AI, but real humans with lived experience. Starting at £0 for your first 5 minutes.
         </p>
 
         <div className="section">
@@ -61,7 +61,7 @@ export default function HowWasYourDayAppMentalHealth() {
         <div className="section">
           <h2>Why How Was Your Day works for mental health in India</h2>
           <p>India faces a severe mental health crisis. 1 in 7 Indians experiences a mental health condition, yet fewer than 1% receive any form of support. The reasons? Stigma, cost, availability, and cultural barriers.</p>
-          <p>How Was Your Day addresses all of these. Sign up anonymously with just your phone number. Pay from ₹160 for a 15-minute session — a fraction of therapy costs. Listeners are often online late at night, when mental health struggles are often worst. Accessible in English and 11 Indian languages.</p>
+          <p>How Was Your Day addresses all of these. Sign up anonymously with just your phone number. Pay from £7 for a 15-minute session — a fraction of therapy costs. Listeners are often online late at night, when mental health struggles are often worst. Accessible in English and 11 Indian languages.</p>
           <p>It&apos;s not a replacement for professional mental health care — and we&apos;re honest about that. But for the millions of Indians who need someone to talk to right now, How Was Your Day fills a gap that nothing else does.</p>
         </div>
 

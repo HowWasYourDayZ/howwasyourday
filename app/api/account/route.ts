@@ -1,3 +1,4 @@
+import { formatGBP } from '@/lib/money'
 import { NextResponse } from 'next/server'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimit } from '@/lib/rate-limit'
@@ -57,13 +58,13 @@ async function assertNoMoneyOutstanding(admin: ReturnType<typeof createAdminClie
   ])
   const pendingPayout = (payouts ?? []).reduce((t, r) => t + Number(r.amount ?? 0), 0)
   const pendingRefund = (refunds ?? []).reduce((t, r) => t + Number(r.amount ?? 0), 0)
-  if (pendingPayout > 0) throw new MoneyOutstanding(`Your payout of ₹${pendingPayout} is still being transferred. You can delete your account once it has arrived.`)
-  if (pendingRefund > 0) throw new MoneyOutstanding(`Your refund of ₹${pendingRefund} is still being processed. You can delete your account once it has arrived.`)
+  if (pendingPayout > 0) throw new MoneyOutstanding(`Your payout of ${formatGBP(pendingPayout)} is still being transferred. You can delete your account once it has arrived.`)
+  if (pendingRefund > 0) throw new MoneyOutstanding(`Your refund of ${formatGBP(pendingRefund)} is still being processed. You can delete your account once it has arrived.`)
   const balance = Number(u?.wallet_balance ?? 0)
   if (balance >= 1) {
     throw new MoneyOutstanding((earned ?? 0) > 0
-      ? `You still have ₹${balance} in your How Was Your Day wallet. Please request a payout from your dashboard first — once it has been transferred you can delete your account.`
-      : `You still have ₹${balance} in your How Was Your Day wallet. Please use it or request a refund from the Wallet page first — then you can delete your account.`)
+      ? `You still have ${formatGBP(balance)} in your How Was Your Day wallet. Please request a payout from your dashboard first — once it has been transferred you can delete your account.`
+      : `You still have ${formatGBP(balance)} in your How Was Your Day wallet. Please use it or request a refund from the Wallet page first — then you can delete your account.`)
   }
 }
 

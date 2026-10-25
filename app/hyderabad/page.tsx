@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Hyderabad — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Hyderabad, India. No appointment needed. Talk anonymously on How Was Your Day.',
-  alternates: { canonical: 'https://www.howwasyourday.live/hyderabad', languages: { 'en-IN': 'https://www.howwasyourday.live/hyderabad' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/hyderabad', languages: { 'en-GB': 'https://www.howwasyourday.live/hyderabad' } },
   keywords: 'peer support Hyderabad, emotional support Hyderabad, loneliness Hyderabad, WFH isolation Hyderabad, career confusion Hyderabad, howwasyourday Hyderabad',
   openGraph: {
     title: 'Emotional Support in Hyderabad — Peer Listeners | How Was Your Day',

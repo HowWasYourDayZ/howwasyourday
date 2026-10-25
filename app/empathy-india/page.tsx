@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'lack of empathy partner india', 'empathy in relationships india',
     'empathetic listener india', 'emotional support empathy india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/empathy-india', languages: { 'en-IN': 'https://www.howwasyourday.live/empathy-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/empathy-india', languages: { 'en-GB': 'https://www.howwasyourday.live/empathy-india' } },
   openGraph: {
     title: 'Empathy India — Be Truly Heard, Not Just Listened To | How Was Your Day',
     description: 'Empathy is more than listening. It\'s feeling understood. Find an empathetic peer on How Was Your Day — real people, real understanding, from ₹160.',

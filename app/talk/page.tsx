@@ -1,5 +1,6 @@
 'use client'
 
+import { formatGBP } from '@/lib/money'
 // /talk — "Talk now": the match-first way in, for people who don't want to pick
 // from a catalogue. Two taps (what's on your mind, text or voice), phone login
 // only after that, then How Was Your Day connects them to the best listener online now
@@ -18,7 +19,7 @@ import { REQUEST_RESPONSE_WINDOW_SECS, FREE_SESSION_MINS } from '@/lib/constants
 import { TALK_TOPICS, TALK_TRY_SECS, TALK_MAX_TRIES, TALK_MAX_WAIT_SECS, talkTopic, type TalkTopicId } from '@/lib/talk-match'
 
 type Mode = 'text' | 'voice'
-type Candidate = { listenerId: string; name: string; priceInr: number; priceLabel: string }
+type Candidate = { listenerId: string; name: string; pricePence: number; priceLabel: string }
 type Phase =
   | { k: 'topic' }
   | { k: 'finding' }
@@ -166,9 +167,9 @@ function TalkInner() {
       setPhase({ k: 'error', message: 'Could not reach How Was Your Day. Check your connection and try again.' })
       return false
     }
-    if (!meta.current.free && queue.current.length > 0 && r.walletBalance < queue.current[0].priceInr) {
+    if (!meta.current.free && queue.current.length > 0 && r.walletBalance < queue.current[0].pricePence) {
       track('talk_wallet_short')
-      setPhase({ k: 'wallet', need: queue.current[0].priceInr - r.walletBalance, priceLabel: queue.current[0].priceLabel })
+      setPhase({ k: 'wallet', need: queue.current[0].pricePence - r.walletBalance, priceLabel: queue.current[0].priceLabel })
       return false
     }
     return true
@@ -274,7 +275,7 @@ function TalkInner() {
     if (!meta.current.free && queue.current.length > 0) {
       // Paid: show the price and let them confirm before anyone is alerted.
       // Prices differ slightly by listener; show the most it can be.
-      const top = queue.current.reduce((a, b) => (b.priceInr > a.priceInr ? b : a))
+      const top = queue.current.reduce((a, b) => (b.pricePence > a.pricePence ? b : a))
       setPhase({ k: 'confirm', priceLabel: top.priceLabel, durationMins: meta.current.durationMins })
       return
     }
@@ -491,7 +492,7 @@ function TalkInner() {
           <div className="card">
             <div className="pulse" style={{ animation: 'none' }} aria-hidden>💳</div>
             <h1 style={{ fontSize: 21 }}>Add money to talk now</h1>
-            <p className="sub">A {meta.current.durationMins}-minute session is {phase.priceLabel}. You need ₹{phase.need} more in your wallet. Unused minutes come back to your wallet.</p>
+            <p className="sub">A {meta.current.durationMins}-minute session is {phase.priceLabel}. You need {formatGBP(phase.need)} more in your wallet. Unused minutes come back to your wallet.</p>
             <Link className="btn" href={`/wallet?return=${encodeURIComponent('/talk?go=1')}`}>Add money</Link>
             <div><Link className="link" href="/browse">See all listeners →</Link></div>
           </div>

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Feeling Empty Inside India — Talk to Someone | How Was Your Day',
   description: 'Not sad, not angry — just hollow. Feeling empty inside is one of the hardest things to explain. Anonymous support from ₹160.',
   keywords: ['feeling empty inside India', 'emotional emptiness India', 'feel hollow India', 'numbness India', 'feeling nothing India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/feeling-empty-inside-india', languages: { 'en-IN': 'https://www.howwasyourday.live/feeling-empty-inside-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-empty-inside-india', languages: { 'en-GB': 'https://www.howwasyourday.live/feeling-empty-inside-india' } },
   openGraph: { title: 'Feeling Empty Inside India — Talk to Someone | How Was Your Day', description: 'Not sad, not angry — just hollow. Feeling empty inside is one of the hardest things to explain. Anonymous support from ₹160.', url: 'https://www.howwasyourday.live/feeling-empty-inside-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

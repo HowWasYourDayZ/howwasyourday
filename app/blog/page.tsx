@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     'career anxiety India', 'burnout India', 'anxiety blog India', 'howwasyourday blog',
     'emotional support India articles', 'mental health articles India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/blog', languages: { 'en-IN': 'https://www.howwasyourday.live/blog' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/blog', languages: { 'en-GB': 'https://www.howwasyourday.live/blog' } },
   openGraph: {
     title: 'Mental Health Blog India — Loneliness, Anxiety, Family Pressure & Peer Support | How Was Your Day',
     description: 'Honest, practical articles about emotional health in India.',
@@ -128,7 +128,7 @@ const itemListSchema = {
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr)
-  return d.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })
+  return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
 const S = `

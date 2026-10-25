@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'scared partner will leave India', 'insecure in relationship India',
     'jealousy anxiety relationship India', 'emotional support relationship India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/relationship-anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/relationship-anxiety' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/relationship-anxiety', languages: { 'en-GB': 'https://www.howwasyourday.live/support/relationship-anxiety' } },
   openGraph: {
     title: 'Relationship Anxiety — When Worry About Your Relationship Becomes Its Own Problem | How Was Your Day',
     description: 'Overanalysing messages, needing reassurance, scared of losing them — relationship anxiety is exhausting. Talk to someone who understands.',

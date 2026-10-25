@@ -80,7 +80,7 @@ export default function AlternativesToTherapyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
         <nav className="mb-10 flex items-center justify-between" aria-label="Primary">
-          <a href="/" className="text-2xl font-black tracking-tight">Lean<span className="text-[#1A8FA0]">On</span></a>
+          <a href="/" className="text-2xl font-black tracking-tight">How Was <span className="text-[#1A8FA0]">Your Day</span></a>
           <a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a>
         </nav>
 

@@ -27,7 +27,7 @@ function timeAgo(iso: string): string {
   if (m < 60) return `${m}m ago`
   if (h < 24) return `${h}h ago`
   if (d < 7)  return `${d}d ago`
-  return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
+  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
 }
 
 function groupByDate(notifs: Notification[]): { label: string; items: Notification[] }[] {

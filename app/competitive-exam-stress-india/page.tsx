@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Competitive Exam Stress India — CAT, GATE, Banking, UPSC | How Was Your Day',
   description: 'The pressure of competitive exams in India is unlike anything. Talk to someone who gets it — anonymous peer support from ₹160.',
   keywords: ['competitive exam stress India', 'CAT exam anxiety India', 'GATE exam stress India', 'banking exam stress India', 'exam anxiety India adults'],
-  alternates: { canonical: 'https://www.howwasyourday.live/competitive-exam-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/competitive-exam-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/competitive-exam-stress-india', languages: { 'en-GB': 'https://www.howwasyourday.live/competitive-exam-stress-india' } },
   openGraph: {
     title: 'Competitive Exam Stress India — CAT, GATE, Banking, UPSC | How Was Your Day',
     description: 'The pressure of competitive exams in India is unlike anything. Talk to someone who gets it — anonymous peer support from ₹160.',

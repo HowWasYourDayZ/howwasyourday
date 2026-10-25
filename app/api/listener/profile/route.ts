@@ -1,3 +1,4 @@
+import { formatGBP, formatRate } from '@/lib/money'
 import { NextRequest, NextResponse } from 'next/server'
 import { detectContact } from '@/lib/contact-guard'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
@@ -55,7 +56,7 @@ export async function PATCH(req: NextRequest) {
     if (body?.rate_per_min !== undefined) {
       const rate = typeof body.rate_per_min === 'number' ? body.rate_per_min : parseInt(String(body.rate_per_min))
       if (!Number.isInteger(rate) || rate < MIN_LISTENER_RATE || rate > MAX_LISTENER_RATE) {
-        return NextResponse.json({ error: `Rate must be between ₹${MIN_LISTENER_RATE} and ₹${MAX_LISTENER_RATE} per minute.` }, { status: 400 })
+        return NextResponse.json({ error: `Rate must be between ${formatRate(MIN_LISTENER_RATE)} and ${formatRate(MAX_LISTENER_RATE)}.` }, { status: 400 })
       }
       updates.rate_per_min = rate
     }

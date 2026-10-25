@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Chat with a Real Person in India — Not a Bot | How Was Your Day',
   description: 'Tired of AI chatbots? Talk to a real human listener on How Was Your Day. No scripts, no algorithms — just genuine empathy from someone who has lived it. No appointment needed.',
   keywords: 'chat with real person online India, talk to real human not AI, real person to talk to online India, human chat not chatbot India, AI alternative human connection, tired of AI chatbot, ChatGPT alternative India, human listener not bot, real human emotional support India, talk to actual human online, not a bot chat India, genuine human conversation online, chatbot replacement India, real person chat app India, human connection app India',
-  alternates: { canonical: 'https://www.howwasyourday.live/chat-with-real-person', languages: { 'en-IN': 'https://www.howwasyourday.live/chat-with-real-person' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/chat-with-real-person', languages: { 'en-GB': 'https://www.howwasyourday.live/chat-with-real-person' } },
   openGraph: {
     title: 'Chat with a Real Person in India — Not a Bot | How Was Your Day',
     description: 'Tired of AI chatbots? Talk to a real human listener on How Was Your Day. No scripts, no algorithms — just genuine empathy from someone who has lived it. No appointment needed.',
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to a real person online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session. New users get a free 5-minute trial. It is significantly more affordable than therapy and no appointment — no insurance, no waitlist, no prescription needed.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session. New users get a free 5-minute trial. It is significantly more affordable than therapy and no appointment — no insurance, no waitlist, no prescription needed.',
       },
     },
   ],

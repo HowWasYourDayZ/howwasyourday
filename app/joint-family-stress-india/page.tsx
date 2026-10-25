@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Joint Family Stress India — Anonymous Support | How Was Your Day',
   description: 'No privacy, constant interference, family politics. Joint family stress is uniquely Indian. Talk anonymously from ₹160.',
   keywords: ['joint family stress India', 'joint family problems India', 'joint family conflict India', 'living with in-laws India', 'no privacy joint family India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/joint-family-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/joint-family-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/joint-family-stress-india', languages: { 'en-GB': 'https://www.howwasyourday.live/joint-family-stress-india' } },
   openGraph: { title: 'Joint Family Stress India — Anonymous Support | How Was Your Day', description: 'No privacy, constant interference, family politics. Joint family stress is uniquely Indian. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/joint-family-stress-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

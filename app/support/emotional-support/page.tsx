@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Online Emotional Support India — Talk to a Peer Listener | How Was Your Day',
   description: 'Get online emotional support from screened peer listeners in India. Anonymous, affordable.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-support', languages: { 'en-IN': 'https://www.howwasyourday.live/support/emotional-support' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-support', languages: { 'en-GB': 'https://www.howwasyourday.live/support/emotional-support' } },
   openGraph: {
     title: 'Online Emotional Support India — Talk to a Peer Listener | How Was Your Day',
     description: 'Get online emotional support from screened peer listeners in India. Anonymous, affordable.',
@@ -160,7 +160,7 @@ export default function EmotionalSupportPage() {
           <p>Most of us have experienced going to a friend or family member in distress and receiving a list of things we should do — when all we actually wanted was for someone to sit with us in what we were feeling. Genuine emotional support is rarer than it sounds. It requires the other person to resist the urge to fix and instead simply be present.</p>
 
           <h3>The Gap Between Needing Support and Finding It</h3>
-          <p>In the UK or Ireland, that gap is particularly wide. Cultural norms around emotional expression, the expectation of self-reliance, and the stigma around mental health struggles make it genuinely hard to say &quot;I am not okay and I need someone to talk to.&quot; Friends may not know how to hold that. Family may make it worse. Colleagues are not appropriate. And therapy can feel too formal, too expensive, or too clinical for what you actually need.</p>
+          <p>In India, that gap is particularly wide. Cultural norms around emotional expression, the expectation of self-reliance, and the stigma around mental health struggles make it genuinely hard to say &quot;I am not okay and I need someone to talk to.&quot; Friends may not know how to hold that. Family may make it worse. Colleagues are not appropriate. And therapy can feel too formal, too expensive, or too clinical for what you actually need.</p>
 
           <h3>What Real Emotional Support Feels Like</h3>
           <p>You know you have received emotional support when you finish a conversation feeling lighter — not because your situation has changed, but because you feel less alone in it. When someone has really listened, reflected back your experience, and let you know that your feelings make sense. That experience is what How Was Your Day is built around.</p>

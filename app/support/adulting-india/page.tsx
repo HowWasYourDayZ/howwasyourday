@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'young adult stress India', 'life overwhelming India', 'Indian adult loneliness',
     'everything is too much India', 'job marriage pressure India', 'adulthood India struggles',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/adulting-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/adulting-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/adulting-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/adulting-india' } },
   openGraph: {
     title: 'Adulting in India Is Hard | How Was Your Day',
     description: 'Job pressure, marriage pressure, money, family expectations — all at once. Nobody prepared you for this.',

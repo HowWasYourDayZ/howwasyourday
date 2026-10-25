@@ -52,7 +52,7 @@ export default function SomeoneTalkToAtNightPage() {
         <div className="card">
           <h2>Why nights feel harder</h2>
           <p>Night anxiety is real and common. When there&apos;s no distraction, no work, no noise — the thoughts you&apos;ve been pushing down all day come flooding in. Loneliness, regrets, fears about the future. Everything feels heavier at 2 AM.</p>
-          <p>In the UK or Ireland, with joint families and shared spaces, there&apos;s often nowhere private to process these feelings. You can&apos;t call a friend at midnight without alarming them. Therapists aren&apos;t available at 3 AM. How Was Your Day fills that gap.</p>
+          <p>In India, with joint families and shared spaces, there&apos;s often nowhere private to process these feelings. You can&apos;t call a friend at midnight without alarming them. Therapists aren&apos;t available at 3 AM. How Was Your Day fills that gap.</p>
         </div>
 
         <div className="card">

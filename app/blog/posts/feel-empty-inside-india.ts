@@ -20,7 +20,7 @@ export const post = {
 
 <h2>Why It Happens</h2>
 
-<p><strong>You have been suppressing for too long.</strong> In the UK or Ireland, emotional suppression is not a personal quirk. It is a structural feature of how most people were raised — not in a cruel way, but in a way that consistently communicated that feelings were less important than functioning. You learned early to feel things privately, if at all, and to present a capable, stable version of yourself to the world. After enough years of this, the inner volume goes down. The system learns to produce less.</p>
+<p><strong>You have been suppressing for too long.</strong> In India, emotional suppression is not a personal quirk. It is a structural feature of how most people were raised — not in a cruel way, but in a way that consistently communicated that feelings were less important than functioning. You learned early to feel things privately, if at all, and to present a capable, stable version of yourself to the world. After enough years of this, the inner volume goes down. The system learns to produce less.</p>
 
 <p><strong>You exhausted your emotional reserves.</strong> Emotional exhaustion and emptiness are close cousins. If you have been in a sustained period of stress, caregiving, high-performance demand, or emotional difficulty without proper replenishment — the tank runs dry. Emptiness is what the tank looks like when it is empty.</p>
 

@@ -16,7 +16,7 @@
 //
 // LISTENER SERVICE FEE: How Was Your Day takes the rate in force when the session
 // STARTED (serviceFeeRateAt, lib/constants.ts) out of the listener's share. This is
-// entirely separate from PLATFORM_FEE (the seeker's flat ₹10) — the seeker's
+// entirely separate from PLATFORM_FEE (the seeker's flat £1) — the seeker's
 // amountHeld and refundAmount math below are completely unaffected by this
 // fee; the seeker never sees or pays it. The fee applies only to the
 // listener's rawShare (full or pro-rated), so an early-exit session is

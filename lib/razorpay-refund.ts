@@ -1,3 +1,4 @@
+import { formatGBP } from '@/lib/money'
 import type Razorpay from 'razorpay'
 import type { createAdminClient } from '@/lib/supabase-server'
 
@@ -75,7 +76,8 @@ export async function razorpayAlreadyRefunded(admin: Admin, rzp: Razorpay, userI
 export async function refundAcrossPayments(admin: Admin, rzp: Razorpay, opts: {
   userId: string; requestId: string; amountRupees: number; preferredPaymentId: string | null
 }): Promise<RefundOutcome> {
-  const requestedPaise = Math.round(opts.amountRupees * 100)
+  // DB amounts are already pence = the provider minor unit ("paise" names are legacy).
+  const requestedPaise = Math.round(opts.amountRupees)
   const payments = await loadPayments(admin, rzp, opts.userId, opts.requestId, opts.preferredPaymentId)
   const errors = payments.flatMap(p => (p.error ? [p.error] : []))
   // An unreadable payment may already hold part of this refund — sending more
@@ -109,4 +111,5 @@ export async function refundAcrossPayments(admin: Admin, rzp: Razorpay, opts: {
   return { requestedPaise, sentBeforePaise, sentNowPaise, remainingPaise: Math.max(0, remaining), refundIds, errors }
 }
 
-export const rupees = (paise: number) => `₹${(paise / 100).toLocaleString('en-IN', { maximumFractionDigits: 2 })}`
+// Minor units (pence) → "£7.50". Name kept from the Razorpay/INR original.
+export const rupees = (paise: number) => formatGBP(paise)

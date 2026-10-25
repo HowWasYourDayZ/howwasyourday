@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Need to Vent India — Someone to Listen Right Now | How Was Your Day',
   description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. First 5 minutes free.',
   keywords: ['need to vent India', 'want to vent India', 'vent out India', 'vent to someone India', 'just need to vent India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/need-to-vent-india', languages: { 'en-IN': 'https://www.howwasyourday.live/need-to-vent-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/need-to-vent-india', languages: { 'en-GB': 'https://www.howwasyourday.live/need-to-vent-india' } },
   openGraph: { title: 'Need to Vent India — Someone to Listen Right Now | How Was Your Day', description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. First 5 minutes free.', url: 'https://www.howwasyourday.live/need-to-vent-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

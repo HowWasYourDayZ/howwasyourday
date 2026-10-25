@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'emotional disconnection India', 'anhedonia India', 'feeling empty inside India',
     'numb for years India', 'emotional flatness India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-numbness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/emotional-numbness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-numbness', languages: { 'en-GB': 'https://www.howwasyourday.live/support/emotional-numbness' } },
   openGraph: {
     title: 'Emotional Numbness — When You\'ve Forgotten What It Feels Like to Feel | How Was Your Day',
     description: 'Feeling emotionally numb — not sad, not happy, just nothing. Talk to someone who understands.',

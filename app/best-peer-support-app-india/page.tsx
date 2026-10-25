@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Best Peer Support App in India 2026 — How Was Your Day vs Alternatives',
   description: 'Looking for the best peer support app in India? Compare How Was Your Day, YourDOST, iCall, Wysa and more. Real people. Anonymous. From ₹160.',
   keywords: ['best peer support app India', 'peer support app India', 'peer support platform India', 'best mental health app India 2026', 'peer support app review India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/best-peer-support-app-india', languages: { 'en-IN': 'https://www.howwasyourday.live/best-peer-support-app-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/best-peer-support-app-india', languages: { 'en-GB': 'https://www.howwasyourday.live/best-peer-support-app-india' } },
   openGraph: {
     title: 'Best Peer Support App in India 2026 — How Was Your Day vs Alternatives',
     description: 'Looking for the best peer support app in India? Compare How Was Your Day, YourDOST, iCall, Wysa and more. Real people. Anonymous. From ₹160.',

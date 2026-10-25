@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'midlife crisis symptoms india', 'feeling stuck 40s india',
     'career plateau india', 'midlife identity crisis india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/midlife-crisis-india', languages: { 'en-IN': 'https://www.howwasyourday.live/midlife-crisis-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/midlife-crisis-india', languages: { 'en-GB': 'https://www.howwasyourday.live/midlife-crisis-india' } },
   openGraph: {
     title: 'Midlife Crisis India — 40s Don\'t Have to Feel Like a Dead End | How Was Your Day',
     description: 'Feeling like you\'ve taken the wrong turn somewhere in your 40s? Talk to someone who\'s been through it. Real peer support from ₹160.',

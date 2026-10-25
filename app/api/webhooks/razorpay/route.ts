@@ -1,11 +1,11 @@
+import { formatGBP } from '@/lib/money'
+import { MIN_RECHARGE, MAX_RECHARGE } from '@/lib/constants'
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import Razorpay from 'razorpay'
 import { createAdminClient } from '@/lib/supabase-server'
 import { grossRechargeAmount } from '@/lib/constants'
 
-const MIN_RECHARGE = 50
-const MAX_RECHARGE = 10_000
 import { logger } from '@/lib/logger'
 
 // Razorpay sends webhook events when payments complete asynchronously.
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       const paymentId  = payment.id
       const orderId    = payment.order_id
       const amountPaise = payment.amount
-      const grossRs    = Math.round(amountPaise / 100) // avoid float precision issues with INTEGER DB column
+      const grossRs    = Math.round(amountPaise) // already pence (minor unit) — INTEGER DB column
 
       // userId + credit amount were stored in order notes during POST /api/wallet.
       // The gross charge includes the gateway fee (paid by the seeker, not credited)
@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
           user_id:      userId,
           amount:       feeToRecord,
           type:         'gateway_fee',
-          description:  `Razorpay gateway fee (₹${grossRs} charged − ₹${amountRs} credited)`,
+          description:  `Razorpay gateway fee (${formatGBP(grossRs)} charged − ${formatGBP(amountRs)} credited)`,
           reference_id: `gf_${paymentId}`,
         }).then(({ error }) => {
           // 23505 = the in-app confirmation already recorded this fee (idempotent).

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/gulf-relationship-support',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/gulf-relationship-support' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/gulf-relationship-support' },
   },
   openGraph: {
     title: 'Relationship Support for Indians in the Gulf — Talk to Someone Who Gets It',
@@ -141,7 +141,7 @@ export default function GulfRelationshipSupportPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 

@@ -27,7 +27,7 @@ export type UpiPayoutResult =
 export async function createUpiPayout(opts: {
   name: string          // listener's display name (RazorpayX contact)
   upiId: string         // VPA to pay, e.g. name@okhdfcbank
-  amountInr: number     // rupees (converted to paise here)
+  amountInr: number     // pence (the DB unit; legacy name) — already the minor unit
   referenceId: string   // payout_requests.id — idempotency + reconciliation
   userId: string        // internal user id, stored in payout notes
 }): Promise<UpiPayoutResult> {
@@ -51,8 +51,8 @@ export async function createUpiPayout(opts: {
       },
       body: JSON.stringify({
         account_number: process.env.RAZORPAYX_ACCOUNT_NUMBER,
-        amount: Math.round(opts.amountInr * 100), // paise
-        currency: 'INR',
+        amount: Math.round(opts.amountInr), // pence
+        currency: 'GBP', // TODO(whop): RazorpayX is India-only; listener payouts move to Whop
         mode: 'UPI',
         purpose: 'payout',
         // If the X balance is short, park the payout in RazorpayX's queue

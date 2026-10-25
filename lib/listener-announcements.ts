@@ -1,3 +1,4 @@
+import { formatRate } from '@/lib/money'
 import { LISTENER_SERVICE_FEE_RATE, VOICE_PRICING_ENABLED, VOICE_RATE_PREMIUM } from './constants'
 
 const FEE  = Math.round(LISTENER_SERVICE_FEE_RATE * 100)
@@ -16,7 +17,7 @@ export const PRICING_NOTICE = {
     : 'An update on how you earn on How Was Your Day',
   body:
     (VOICE_PRICING_ENABLED
-      ? `Seekers can now choose text chat or a voice call, and voice is always priced ₹${VOICE_RATE_PREMIUM}/min above your text rate. `
+      ? `Seekers can now choose text chat or a voice call, and voice is always priced ${formatRate(VOICE_RATE_PREMIUM)} above your text rate. `
       : '') +
     `From 24 Sep 2026, you keep ${KEEP}% of your rate on every paid session; How Was Your Day's ${FEE}% service fee supports the work of bringing seekers to How Was Your Day, secure payments, ` +
     `verification, safety and support. Sessions you've already completed aren't affected. You set your own price — now is a good time to review it.`,

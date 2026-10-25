@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Feeling Lonely in Your Marriage? Talk to Someone | How Was Your Day India',
   description: 'Lonely in your marriage? Talk anonymously to a peer listener who has felt it too. Private, judgment-free emotional support in India. No appointment needed.',
   keywords: 'lonely in marriage, emotional loneliness marriage India, feeling alone in relationship, married but lonely, talk to someone about marriage, marriage loneliness support India, anonymous emotional support for married people',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/marriage-loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/marriage-loneliness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/marriage-loneliness', languages: { 'en-GB': 'https://www.howwasyourday.live/support/marriage-loneliness' } },
   openGraph: {
     title: 'Feeling Lonely in Your Marriage? Talk to Someone | How Was Your Day India',
     description: 'Lonely in your marriage? Talk anonymously to a peer listener who has felt it too. Private, judgment-free emotional support in India. No appointment needed.',
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.',
       },
     },
   ],
@@ -270,7 +270,7 @@ export default function MarriageLonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.</div>
           </div>
         </div>
 

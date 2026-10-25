@@ -61,7 +61,7 @@ export default function NeedSomeoneToTalkToIndia() {
 
         <div className="section">
           <h2>You deserve someone who truly understands</h2>
-          <p>In the UK or Ireland, it&apos;s often hard to find someone to talk to — really talk to. Family members may not understand or may judge you. Friends get tired of hearing about the same problems. Therapy feels too clinical or is simply too expensive. And at 2 AM when the feelings are worst, there&apos;s often no one available at all.</p>
+          <p>In India, it&apos;s often hard to find someone to talk to — really talk to. Family members may not understand or may judge you. Friends get tired of hearing about the same problems. Therapy feels too clinical or is simply too expensive. And at 2 AM when the feelings are worst, there&apos;s often no one available at all.</p>
           <p>How Was Your Day changes this. Our peer listeners go online at different hours — and they genuinely understand. Not because they have a degree, but because they have lived through something similar.</p>
         </div>
 

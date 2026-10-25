@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'relationship vent session india',
     'say it out loud relationship india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/vent-about-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/vent-about-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/vent-about-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/vent-about-relationship-india' } },
   openGraph: {
     title: 'Vent About Your Relationship — Say It to Someone Real | How Was Your Day',
     description: 'Need to vent about your relationship — not get advice, just say it? Real peer listener in India, private, no appointment. 15 minutes from ₹160.',

@@ -484,7 +484,7 @@ export default function AuthPage() {
       <>
         <style>{S}</style>
         <div className="page">
-          <div className="topbar"><a href="/" className="back">←</a><span className="logo">Lean<span>On</span></span><div className="spacer" /></div>
+          <div className="topbar"><a href="/" className="back">←</a><span className="logo">How Was <span>Your Day</span></span><div className="spacer" /></div>
           <div className="content">
             <div className="step-icon">🔧</div>
             <h1>Sign-in is being set up</h1>
@@ -505,7 +505,7 @@ export default function AuthPage() {
             : step === 'phone'
               ? <a href="/" className="back">←</a>
               : <div className="spacer" />}
-          <span className="logo">Lean<span>On</span></span>
+          <span className="logo">How Was <span>Your Day</span></span>
           <div className="spacer" />
         </div>
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Parents Forcing Marriage India — Talk to Someone | How Was Your Day',
   description: 'Pressure to marry, marriage deadlines, family ultimatums. The pressure is real. Talk anonymously from ₹160 — no judgment.',
   keywords: ['parents forcing marriage India', 'marriage pressure India', 'family pressure to marry India', 'forced arranged marriage India', 'not ready for marriage India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/parents-forcing-marriage-india', languages: { 'en-IN': 'https://www.howwasyourday.live/parents-forcing-marriage-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/parents-forcing-marriage-india', languages: { 'en-GB': 'https://www.howwasyourday.live/parents-forcing-marriage-india' } },
   openGraph: { title: 'Parents Forcing Marriage India — Talk to Someone | How Was Your Day', description: 'Pressure to marry, marriage deadlines, family ultimatums. The pressure is real. Talk anonymously from ₹160 — no judgment.', url: 'https://www.howwasyourday.live/parents-forcing-marriage-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

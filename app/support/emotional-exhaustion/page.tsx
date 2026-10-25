@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Emotional Exhaustion & Being Emotionally Drained | How Was Your Day India',
   description: 'Feeling emotionally drained, tired of everything, or like you have nothing left to give? Talk to a peer listener in India who has been through emotional exhaustion. Anonymous, no appointment.',
   keywords: ['emotional exhaustion India', 'emotionally drained India', 'nothing left to give India', 'tired of everything India', 'emotionally tired India', 'compassion fatigue India', 'feeling emotionally depleted India', 'too tired to feel India', 'emotionally burnt out India', 'emotional fatigue India', 'I am exhausted emotionally India', 'how to recover from emotional exhaustion India', 'mental tiredness India', 'emotionally overwhelmed India', 'support for emotional exhaustion India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-exhaustion', languages: { 'en-IN': 'https://www.howwasyourday.live/support/emotional-exhaustion' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/emotional-exhaustion', languages: { 'en-GB': 'https://www.howwasyourday.live/support/emotional-exhaustion' } },
   openGraph: {
     title: 'Emotional Exhaustion & Being Emotionally Drained | How Was Your Day India',
     description: 'Feeling emotionally drained, tired of everything, or like you have nothing left to give? Talk to a peer listener in India who has been through emotional exhaustion. Anonymous, no appointment.',
@@ -176,7 +176,7 @@ export default function EmotionalExhaustionPage() {
 
         <div className="section">
           <h2>What Causes It in India</h2>
-          <p>Emotional exhaustion is not a random occurrence. It is almost always the result of sustained emotional output in a context that does not provide for replenishment. In the UK or Ireland, several cultural dynamics make this particularly acute.</p>
+          <p>Emotional exhaustion is not a random occurrence. It is almost always the result of sustained emotional output in a context that does not provide for replenishment. In India, several cultural dynamics make this particularly acute.</p>
 
           <h3>The Always-On Culture</h3>
           <p>India&apos;s work culture — especially in startups, consulting, banking, and high-growth companies — has normalised a level of availability and output that would have been considered extreme even a generation ago. The expectation of instant responsiveness across time zones, the erosion of boundaries between work and life, and the ambient pressure to perform at all times creates a specific form of emotional taxation that accumulates without any designated outlet.</p>

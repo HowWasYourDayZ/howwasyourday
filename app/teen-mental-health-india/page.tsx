@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Teen Mental Health India — You Don\'t Have to Figure It Out Alone | How Was Your Day',
   description: 'Class 12 pressure. Parent expectations. Social anxiety. It\'s a lot. Talk to someone who gets it — anonymous peer support from ₹160.',
   keywords: ['teen mental health india', 'adolescent mental health india', 'teenager anxiety india', 'teen depression india', 'student mental health india class 12', 'board exam stress india', 'teen peer support india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/teen-mental-health-india', languages: { 'en-IN': 'https://www.howwasyourday.live/teen-mental-health-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/teen-mental-health-india', languages: { 'en-GB': 'https://www.howwasyourday.live/teen-mental-health-india' } },
   openGraph: {
     title: 'Teen Mental Health India — You Don\'t Have to Figure It Out Alone | How Was Your Day',
     description: 'Class 12 pressure. Parent expectations. Social anxiety. It\'s a lot. Talk to someone who gets it — anonymous peer support from ₹160.',

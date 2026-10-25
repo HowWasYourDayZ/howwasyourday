@@ -7,7 +7,7 @@ const URL = 'https://www.howwasyourday.live/relationship-emotional-support-guide
 export const metadata: Metadata = {
   title: 'Relationship & Emotional Support in India: Who to Talk To | How Was Your Day',
   description: 'Feeling lonely in your marriage, stressed by relationship problems or overwhelmed at home? A practical guide to human peer support in India, when it fits, and when professional help is safer.',
-  alternates: { canonical: URL, languages: { 'en-IN': URL } },
+  alternates: { canonical: URL, languages: { 'en-GB': URL } },
   openGraph: {
     title: 'Who Can I Talk To About My Relationship or Emotional Stress in India?',
     description: 'Understand peer listening, counselling, personal safety and practical options for relationship and everyday emotional support in India.',

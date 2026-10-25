@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Kolkata — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Kolkata, India. No appointment needed. Talk anonymously in Bengali, Hindi, or English about loneliness, family pressure, and more on How Was Your Day.',
-  alternates: { canonical: 'https://www.howwasyourday.live/kolkata', languages: { 'en-IN': 'https://www.howwasyourday.live/kolkata' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/kolkata', languages: { 'en-GB': 'https://www.howwasyourday.live/kolkata' } },
   keywords: 'peer support Kolkata, emotional support Kolkata, loneliness Kolkata, talk to someone Kolkata, Bengali emotional support, family pressure Kolkata, howwasyourday Kolkata',
   openGraph: {
     title: 'Emotional Support in Kolkata — Peer Listeners | How Was Your Day',

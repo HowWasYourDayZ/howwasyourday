@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Online Support Group India — 1:1 Peer Support That Actually Connects | How Was Your Day',
   description: 'Online support groups can feel performative. How Was Your Day offers 1:1 peer conversations — private, focused, real. From ₹160.',
   keywords: ['online support group india', 'peer support group india', 'community support india', 'support group mental health india', 'group therapy alternative india', 'online community support india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/online-support-group-india', languages: { 'en-IN': 'https://www.howwasyourday.live/online-support-group-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-support-group-india', languages: { 'en-GB': 'https://www.howwasyourday.live/online-support-group-india' } },
   openGraph: {
     title: 'Online Support Group India — 1:1 Peer Support That Actually Connects | How Was Your Day',
     description: 'Online support groups can feel performative. How Was Your Day offers 1:1 peer conversations — private, focused, real. From ₹160.',

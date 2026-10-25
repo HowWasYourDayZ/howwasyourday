@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Ahmedabad — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Ahmedabad, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
-  alternates: { canonical: 'https://www.howwasyourday.live/ahmedabad', languages: { 'en-IN': 'https://www.howwasyourday.live/ahmedabad' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/ahmedabad', languages: { 'en-GB': 'https://www.howwasyourday.live/ahmedabad' } },
   keywords: 'peer support Ahmedabad, emotional support Ahmedabad, loneliness Ahmedabad, business family pressure Ahmedabad, talk to someone Ahmedabad, howwasyourday Ahmedabad',
   openGraph: {
     title: 'Emotional Support in Ahmedabad — Peer Listeners | How Was Your Day',

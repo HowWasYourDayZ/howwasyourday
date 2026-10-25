@@ -1,5 +1,5 @@
 import { PLATFORM_FEE, FREE_SESSION_MINS } from '@/lib/constants'
-import { NRI_USD_PRICES } from '@/lib/geo-pricing'
+import { formatGBP } from '@/lib/money'
 
 // "Talk now" (/talk) — the match-first entry for people who don't want to
 // browse a catalogue. Shared by the page and /api/talk/candidates.
@@ -23,9 +23,10 @@ export function talkTopic(id: string | null | undefined) {
 }
 
 // Paid "Talk now" matches only listeners at or below this TEXT rate, so the
-// price is known before anyone is picked (₹10/min → ₹160 for 15 min of text).
+// price is known before anyone is picked (40p/min → £7 for 15 min of text,
+// including the £1 platform fee). Pence, like every amount (lib/money.ts).
 // Seekers who want a particular (or pricier) listener still use /browse.
-export const TALK_MAX_TEXT_RATE = 10
+export const TALK_MAX_TEXT_RATE = 40
 
 // How long one listener gets before Talk now moves on to the next. Measured
 // 2026-10-15: median accept 10s, 90% within 28s. The listener's own request
@@ -47,12 +48,12 @@ export const TALK_MAX_TRIES = 10
 const TALK_EX15 = TALK_MAX_TEXT_RATE * 15 + PLATFORM_FEE
 
 export const TALK_FAQ: { q: string; a: string }[] = [
-  { q: 'What is How Was Your Day Talk now?', a: `Talk now (howwasyourday.live/talk) is the quickest way to talk to a real person in India or abroad. You pick what is on your mind and text or voice, and How Was Your Day asks a screened peer listener who is online — no browsing and no appointment. If a listener does not answer within about ${TALK_TRY_SECS} seconds, How Was Your Day asks the next one automatically, for up to ${Math.round(TALK_MAX_WAIT_SECS / 60)} minutes. A session starts only when a listener accepts; if nobody can, you are not charged.` },
-  { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that a Talk now session is 15 minutes, up to ₹${TALK_EX15} for text in India (you pay the matched listener's own price, shown before anyone is asked), and from US$${NRI_USD_PRICES[15]} outside India. You see the price before anyone is asked, it is charged only if a listener accepts, and unused minutes come back to your wallet.` },
+  { q: 'What is How Was Your Day Talk now?', a: `Talk now (howwasyourday.live/talk) is the quickest way to talk to a real person, anywhere in the UK or Europe. You pick what is on your mind and text or voice, and How Was Your Day asks a screened peer listener who is online — no browsing and no appointment. If a listener does not answer within about ${TALK_TRY_SECS} seconds, How Was Your Day asks the next one automatically, for up to ${Math.round(TALK_MAX_WAIT_SECS / 60)} minutes. A session starts only when a listener accepts; if nobody can, you are not charged.` },
+  { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that a Talk now session is 15 minutes, up to ${formatGBP(TALK_EX15)} for text (you pay the matched listener's own price, shown before anyone is asked). You see the price before anyone is asked, it is charged only if a listener accepts, and unused minutes come back to your wallet.` },
   { q: 'Who can use it?', a: 'Adults 18 and over. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).' },
-  { q: 'Who will I talk to?', a: 'A screened peer listener based in India — an ordinary adult with lived experience who listens without judging you. Listeners pass a written application, a screening quiz, a live selfie check and a manual review by How Was Your Day. They are not therapists and do not give medical advice.' },
+  { q: 'Who will I talk to?', a: 'A screened peer listener based in the UK or Europe — an ordinary adult with lived experience who listens without judging you. Listeners pass a written application, a screening quiz, a live selfie check and a manual review by How Was Your Day. They are not therapists and do not give medical advice.' },
   { q: 'What can I talk about?', a: 'Relationship problems, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day. You choose the topic so How Was Your Day can start with listeners who talk about it.' },
-  { q: 'Can Indians living abroad (NRIs) use it?', a: 'Yes. Talk now works from India, the USA, UK, Canada, Australia, the UAE, Kuwait, Oman, Singapore and Malaysia, with prices shown in your currency. Listeners are in India and understand the Indian context.' },
+  { q: 'Where does it work?', a: 'Talk now works across the UK, Ireland and the rest of Europe. Prices are in pounds sterling (GBP); if you pay with a euro card, your bank converts the amount.' },
   { q: 'Is it private?', a: 'A listener sees only the name you choose, never your phone number. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported session.' },
   { q: 'Is it therapy or a crisis line?', a: 'No. How Was Your Day is peer support, not therapy or emergency care. If you are in crisis or thinking about self-harm, text SHOUT to 85258 (free, 24/7) or Samaritans 116 123.' },
 ]

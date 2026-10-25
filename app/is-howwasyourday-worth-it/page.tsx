@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { FREE_SESSION_MINS, PLATFORM_FEE, VOICE_RATE_PREMIUM, RECHARGE_AMOUNTS, LANGUAGES } from '@/lib/constants'
-import { NRI_USD_PRICES } from '@/lib/geo-pricing'
+import { formatGBP, formatRate } from '@/lib/money'
 import { TALK_MAX_TEXT_RATE } from '@/lib/talk-match'
 
 export const dynamic = 'force-static'
@@ -15,11 +15,11 @@ const URL = 'https://www.howwasyourday.live/is-howwasyourday-worth-it'
 const R = TALK_MAX_TEXT_RATE
 const p15 = R * 15 + PLATFORM_FEE, p30 = R * 30 + PLATFORM_FEE, p45 = R * 45 + PLATFORM_FEE
 const langs = LANGUAGES.map(l => l.label.replace(/^.*\((.*)\)$/, '$1')).join(', ')
-const recharge = RECHARGE_AMOUNTS.map(a => `₹${a.toLocaleString('en-IN')}`).join(', ')
+const recharge = RECHARGE_AMOUNTS.map(a => formatGBP(a)).join(', ')
 
 export const metadata: Metadata = {
   title: 'Is How Was Your Day Worth It? Honest Answers Before You Pay | How Was Your Day',
-  description: `Is How Was Your Day legit, private and worth the money? Straight answers before your first paid session: who the listeners are, what it costs (₹${p15} for 15 min in India, US$${NRI_USD_PRICES[15]} abroad), refunds, privacy, and when How Was Your Day is the wrong choice.`,
+  description: `Is How Was Your Day legit, private and worth the money? Straight answers before your first paid session: who the listeners are, what it costs (${formatGBP(p15)} for 15 min at the standard rate), refunds, privacy, and when How Was Your Day is the wrong choice.`,
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: { title: 'Is How Was Your Day worth it? Honest answers before you pay', description: 'Who the listeners are, what it costs, refunds, privacy — and when How Was Your Day is not the right choice.', url: URL, siteName: 'How Was Your Day', type: 'article' },
@@ -29,15 +29,15 @@ const groups: { h: string; items: { q: string; a: string }[] }[] = [
   {
     h: 'Is it real?',
     items: [
-      { q: 'Is How Was Your Day legit?', a: `Yes. How Was Your Day (howwasyourday.live) is a peer-support service run from India. You talk one to one, by text or voice, with a real person — not a bot. Every listener applies in writing, passes a screening quiz, completes a live selfie check and is reviewed by How Was Your Day before taking any session. Payments go through Razorpay, and unused wallet balance can be refunded on request.` },
+      { q: 'Is How Was Your Day legit?', a: `Yes. How Was Your Day (howwasyourday.live) is a peer-support service for the UK and Europe. You talk one to one, by text or voice, with a real person — not a bot. Every listener applies in writing, passes a screening quiz, completes a live selfie check and is reviewed by How Was Your Day before taking any session. Payments are taken by card, and unused wallet balance can be refunded on request.` },
       { q: 'Am I talking to a real person or AI?', a: 'A real person, always. How Was Your Day has no AI listeners, and no AI reads or analyses your conversations.' },
-      { q: 'Who are the listeners?', a: 'Ordinary adults in India with lived experience of what they talk about — breakups, family pressure, loneliness, burnout, grief, anxiety. They are screened peers, not therapists or counsellors, and they do not diagnose or give medical advice.' },
+      { q: 'Who are the listeners?', a: 'Ordinary adults in the UK and Europe with lived experience of what they talk about — breakups, family pressure, loneliness, burnout, grief, anxiety. They are screened peers, not therapists or counsellors, and they do not diagnose or give medical advice.' },
     ],
   },
   {
     h: 'Is it worth the money?',
     items: [
-      { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that, in India, a text session with a ₹${R}/min listener is ₹${p15} for 15 minutes, ₹${p30} for 30 or ₹${p45} for 45 (including a flat ₹${PLATFORM_FEE} platform fee); voice is ₹${VOICE_RATE_PREMIUM}/min more, and some listeners charge more — the exact price is shown before you start. Outside India, sessions start at US$${NRI_USD_PRICES[15]} for 15 minutes, US$${NRI_USD_PRICES[30]} for 30 and US$${NRI_USD_PRICES[45]} for 45. No subscription.` },
+      { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that, a text session with a ${formatRate(R)} listener is ${formatGBP(p15)} for 15 minutes, ${formatGBP(p30)} for 30 or ${formatGBP(p45)} for 45 (including a flat ${formatGBP(PLATFORM_FEE)} platform fee); voice is ${formatRate(VOICE_RATE_PREMIUM)} more, and some listeners charge more — the exact price is shown before you start. Prices are in pounds sterling (GBP). No subscription.` },
       { q: 'Is it worth paying compared with therapy?', a: 'They serve different purposes. A qualified professional can assess and treat mental-health conditions. How Was Your Day may suit someone who wants a non-clinical conversation about loneliness, a breakup or a difficult day; it is not therapy or a replacement for professional care. One introductory session up to 5 minutes is free per account, so you can decide whether peer support feels useful before paying.' },
       { q: 'What if it does not help?', a: 'You can end a session whenever you want and you pay only for the minutes you used; the rest of the held amount goes back to your wallet straight away. If no listener accepts your request, nothing is charged.' },
     ],
@@ -55,7 +55,7 @@ const groups: { h: string; items: { q: string; a: string }[] }[] = [
     items: [
       { q: 'Do I need to book an appointment?', a: 'No appointment is needed. Open howwasyourday.live/talk, choose text or voice and select what is on your mind; How Was Your Day requests a conversation with a screened listener and may try another if there is no response within about 30 seconds. You can also browse listener profiles at howwasyourday.live/browse. A session begins only when a listener accepts, and an immediate match is not guaranteed because availability varies.' },
       { q: 'Can I talk in my language, or choose who I talk to?', a: `Often, yes. Listeners can offer ${langs} — filter by language on howwasyourday.live/browse to see who speaks yours. Each profile shows the listener's name, languages and the topics they talk about, so you can choose someone you are comfortable with. You can also book the same listener again from their profile.` },
-      { q: 'How do I pay?', a: `Top up your How Was Your Day wallet (${recharge}) through Razorpay; a small payment-gateway charge is added at checkout. The session amount is held only when you send a request, returned in full if nobody accepts, and anything left in your wallet can be refunded on request from the wallet page.` },
+      { q: 'How do I pay?', a: `Top up your How Was Your Day wallet (${recharge}) by card; a small payment-processing charge is added at checkout. The session amount is held only when you send a request, returned in full if nobody accepts, and anything left in your wallet can be refunded on request from the wallet page.` },
     ],
   },
   {
@@ -111,10 +111,9 @@ export default function IsHowWasYourDayWorthItPage() {
         <h1>Is How Was Your Day worth it? Honest answers before you pay</h1>
         <p className="lead">The questions people ask before their first paid session — answered plainly, including when How Was Your Day is not the right choice.</p>
         <p className="short">
-          <strong>In short:</strong> How Was Your Day connects adults with a screened peer listener in India for a one-to-one text or voice
+          <strong>In short:</strong> How Was Your Day connects adults with a screened peer listener in the UK or Europe for a one-to-one text or voice
           conversation, without an appointment. One introductory session of up to {FREE_SESSION_MINS} minutes is free per account.
-          Paid prices depend on the selected listener and mode; a 15-minute text session with a ₹{R}/min listener is ₹{p15} in India,
-          while overseas sessions start at US${NRI_USD_PRICES[15]}. You pay only for used minutes, and unused wallet balance is refundable on request.
+          Paid prices depend on the selected listener and mode; a 15-minute text session with a {formatRate(R)} listener is {formatGBP(p15)}. You pay only for used minutes, and unused wallet balance is refundable on request.
           How Was Your Day is peer support, not therapy.
         </p>
         {groups.map(g => (

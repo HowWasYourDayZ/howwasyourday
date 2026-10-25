@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Pune — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Pune, India. No appointment needed. Talk anonymously in Marathi, Hindi, or English about stress, loneliness, and student life on How Was Your Day.',
-  alternates: { canonical: 'https://www.howwasyourday.live/pune', languages: { 'en-IN': 'https://www.howwasyourday.live/pune' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/pune', languages: { 'en-GB': 'https://www.howwasyourday.live/pune' } },
   keywords: 'peer support Pune, emotional support Pune, loneliness Pune, student stress Pune, talk to someone Pune, Marathi emotional support, howwasyourday Pune',
   openGraph: {
     title: 'Emotional Support in Pune — Peer Listeners | How Was Your Day',

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Can\'t Communicate With Your Partner India | How Was Your Day',
   description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. First 5 minutes free.",
   keywords: ['communication problems relationship India', 'can\'t talk to partner India', 'partner doesn\'t listen India', 'communication issues marriage India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/communication-problems-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/communication-problems-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/communication-problems-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/communication-problems-relationship-india' } },
   openGraph: { title: 'Can\'t Communicate With Your Partner India | How Was Your Day', description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. First 5 minutes free.", url: 'https://www.howwasyourday.live/communication-problems-relationship-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

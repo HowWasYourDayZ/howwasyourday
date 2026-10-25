@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'parents forcing marriage India', 'resisting arranged marriage India', 'fear of commitment India',
     'everyone getting married India', 'marriage is not for me India', 'marriage pressure 30s India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/not-ready-to-get-married-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/not-ready-to-get-married-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/not-ready-to-get-married-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/not-ready-to-get-married-india' } },
   openGraph: {
     title: 'Not Ready to Get Married India | How Was Your Day',
     description: 'Family asking, friends pairing off, clock ticking. You are not ready. That is allowed.',

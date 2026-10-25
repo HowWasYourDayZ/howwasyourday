@@ -1,3 +1,4 @@
+import { formatGBP, formatRate } from '@/lib/money'
 import { NextRequest, NextResponse } from 'next/server'
 import { detectContact } from '@/lib/contact-guard'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
@@ -76,7 +77,7 @@ export async function POST(req: NextRequest) {
     if (detectContact(bio).length)
       return NextResponse.json({ error: 'Your profile is public, so it can’t include contact details (phone, social media, email or links). Please remove them.' }, { status: 400 })
     if (!Number.isFinite(rate) || rate < MIN_LISTENER_RATE || rate > MAX_LISTENER_RATE)
-      return NextResponse.json({ error: `Rate must be between ₹${MIN_LISTENER_RATE} and ₹${MAX_LISTENER_RATE} per minute.` }, { status: 400 })
+      return NextResponse.json({ error: `Rate must be between ${formatRate(MIN_LISTENER_RATE)} and ${formatRate(MAX_LISTENER_RATE)}.` }, { status: 400 })
     if (tags.length === 0)
       return NextResponse.json({ error: 'Please select at least one topic.' }, { status: 400 })
     // Public display photo (reviewed by the admin before it goes live) —
@@ -207,7 +208,7 @@ export async function POST(req: NextRequest) {
       // DB cap may lag MAX_LISTENER_RATE until migration 039 is applied.)
       if (profileErr.code === '23514') {
         return NextResponse.json(
-          { error: `Your rate is outside the allowed range (₹${MIN_LISTENER_RATE}–₹${MAX_LISTENER_RATE} per minute). Please adjust it and try again.` },
+          { error: `Your rate is outside the allowed range (${formatRate(MIN_LISTENER_RATE)}–${formatRate(MAX_LISTENER_RATE)}). Please adjust it and try again.` },
           { status: 400 }
         )
       }

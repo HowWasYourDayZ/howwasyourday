@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: { mood: string } })
     title: f.metaTitle,
     description: f.metaDescription,
     keywords: f.keywords,
-    alternates: { canonical: url, languages: { 'en-IN': url } },
+    alternates: { canonical: url, languages: { 'en-GB': url } },
     openGraph: {
       title: f.metaTitle,
       description: f.metaDescription,

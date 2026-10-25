@@ -1,4 +1,5 @@
 'use client'
+import { formatGBP } from '@/lib/money'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
@@ -99,7 +100,7 @@ export default function SessionsPage() {
   }, [])
 
   const formatDate = (iso: string) =>
-    new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+    new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 
   const formatDuration = (mins: number) => {
     if (!mins) return '—'
@@ -164,7 +165,7 @@ export default function SessionsPage() {
             </div>
             {s.amount_held > 0 && (
               <div className="amount">
-                {s.status === 'cancelled' ? `₹${s.amount_held} refunded` : `₹${s.amount_held} charged`}
+                {s.status === 'cancelled' ? `${formatGBP(s.amount_held)} refunded` : `${formatGBP(s.amount_held)} charged`}
               </div>
             )}
             <div className="rating-row">

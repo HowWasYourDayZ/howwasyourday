@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'vent anonymously online India', 'need to talk about something that just happened',
     'quick emotional support India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/need-to-vent-right-now', languages: { 'en-IN': 'https://www.howwasyourday.live/need-to-vent-right-now' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/need-to-vent-right-now', languages: { 'en-GB': 'https://www.howwasyourday.live/need-to-vent-right-now' } },
   openGraph: {
     title: 'Need to Vent Right Now? Talk to a Real Person in 2 Minutes | How Was Your Day',
     description: 'Something happened and you need to get it off your chest RIGHT NOW. How Was Your Day connects you with a real listener in India within minutes — no appointment, private, no appointment.',

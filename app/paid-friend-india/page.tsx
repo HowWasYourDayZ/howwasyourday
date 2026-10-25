@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'friendship support india', 'online friend india', 'talk like a friend india',
     'paid listener india', 'someone to talk to india', 'friend who listens india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/paid-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/paid-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/paid-friend-india', languages: { 'en-GB': 'https://www.howwasyourday.live/paid-friend-india' } },
   openGraph: {
     title: 'Paid Friend India — A Real Person Who Actually Listens | How Was Your Day',
     description: 'Sometimes you just need a friend who listens without judgment. How Was Your Day peer listeners are real people, not therapists — real conversations from ₹160.',
@@ -143,7 +143,7 @@ export default function PaidFriendIndiaPage() {
         <div className="section">
           <h2>What Is a Paid Friend?</h2>
           <p>The concept of paying someone to listen &mdash; or to spend time with you &mdash; is not new. In Japan, the &ldquo;rent-a-friend&rdquo; industry has existed for decades, with people hiring &ldquo;client partners&rdquo; to accompany them to events, provide company, or simply listen. The industry is enormous and mainstream there.</p>
-          <p>In the UK or Ireland, the concept is arriving in a different form. Not companionship for events, but emotional support through conversation. The need is the same: a real human being, without agenda, who will give you their full attention and genuinely hear you.</p>
+          <p>In India, the concept is arriving in a different form. Not companionship for events, but emotional support through conversation. The need is the same: a real human being, without agenda, who will give you their full attention and genuinely hear you.</p>
           <p>How Was Your Day is not &ldquo;rent a friend&rdquo; in the companionship sense. It is peer emotional support &mdash; a screened listener who holds space for your experience without judging, steering, or advising. Closer to the best version of a friend who actually listens than to a therapist or a companion service.</p>
         </div>
 

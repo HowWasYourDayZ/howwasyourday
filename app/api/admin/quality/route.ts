@@ -1,3 +1,4 @@
+import { ukOffsetMs } from '@/lib/uk-time'
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimit } from '@/lib/rate-limit'
@@ -28,7 +29,7 @@ function dateFloor(days: number | null) {
   if (days === null) return null
   // Use IST (UTC+5:30) so "today" matches midnight IST, same as the Overview KPI.
   // Server runs UTC on Vercel; setHours(0,0,0,0) would start "today" at 5:30am IST.
-  const IST_OFFSET_MS = 5.5 * 60 * 60 * 1000
+  const IST_OFFSET_MS = ukOffsetMs() // UK local time (GMT/BST); name kept from the IST original
   const now = new Date()
   const nowIST = new Date(now.getTime() + IST_OFFSET_MS)
   const floorIST = new Date(Date.UTC(nowIST.getUTCFullYear(), nowIST.getUTCMonth(), nowIST.getUTCDate()))

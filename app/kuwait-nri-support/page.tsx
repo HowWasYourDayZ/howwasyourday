@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/kuwait-nri-support',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/kuwait-nri-support' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/kuwait-nri-support' },
   },
   openGraph: {
     title: 'Emotional Support for Indians in Kuwait — NRI Peer Support | How Was Your Day',

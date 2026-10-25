@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Low Self-Esteem India — Talk to Someone Who Gets It | How Was Your Day',
   description: 'Constant self-doubt, feeling not good enough, comparing yourself. Low self-esteem is exhausting. Talk anonymously from ₹160.',
   keywords: ['low self esteem India', 'not good enough India', 'self doubt India', 'feeling worthless India', 'self confidence issues India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/low-self-esteem-india', languages: { 'en-IN': 'https://www.howwasyourday.live/low-self-esteem-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/low-self-esteem-india', languages: { 'en-GB': 'https://www.howwasyourday.live/low-self-esteem-india' } },
   openGraph: { title: 'Low Self-Esteem India — Talk to Someone Who Gets It | How Was Your Day', description: 'Constant self-doubt, feeling not good enough, comparing yourself. Low self-esteem is exhausting. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/low-self-esteem-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

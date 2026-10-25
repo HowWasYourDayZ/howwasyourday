@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'BetterHelp Alternative India — Human Support, Indian Prices | How Was Your Day',
   description: 'BetterHelp costs $280/month. How Was Your Day peer sessions start at ₹160. Real human listeners, Indian context.',
   keywords: ['betterhelp alternative india', '7 cups alternative india', 'replika alternative india', 'woebot alternative india', 'talkspace alternative india', 'online therapy alternative india', 'best online counselling app india', 'therapy app india', 'online therapy india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/betterhelp-alternative-india', languages: { 'en-IN': 'https://www.howwasyourday.live/betterhelp-alternative-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/betterhelp-alternative-india', languages: { 'en-GB': 'https://www.howwasyourday.live/betterhelp-alternative-india' } },
   openGraph: {
     title: 'BetterHelp Alternative India — Human Support, Indian Prices | How Was Your Day',
     description: 'BetterHelp costs $280/month. How Was Your Day peer sessions start at ₹160. Real human listeners, Indian context.',

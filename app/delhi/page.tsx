@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Delhi — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Delhi, India. No appointment needed. Talk anonymously about anxiety, loneliness, stress, and more on How Was Your Day.',
-  alternates: { canonical: 'https://www.howwasyourday.live/delhi', languages: { 'en-IN': 'https://www.howwasyourday.live/delhi' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/delhi', languages: { 'en-GB': 'https://www.howwasyourday.live/delhi' } },
   keywords: 'peer support Delhi, emotional support Delhi, loneliness Delhi, career expectations Delhi, family pressure Delhi, talk to someone Delhi, howwasyourday Delhi',
   openGraph: {
     title: 'Emotional Support in Delhi — Peer Listeners | How Was Your Day',

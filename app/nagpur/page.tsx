@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Nagpur — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Nagpur, Maharashtra. Talk anonymously about career pressure, family expectations, civil services stress. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/nagpur', languages: { 'en-IN': 'https://www.howwasyourday.live/nagpur' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/nagpur', languages: { 'en-GB': 'https://www.howwasyourday.live/nagpur' } },
   keywords: 'peer support Nagpur, emotional support Nagpur, civil services stress Nagpur, family pressure Nagpur Maharashtra, talk to someone Nagpur, howwasyourday Nagpur',
   openGraph: {
     title: 'Emotional Support in Nagpur — Peer Listeners | How Was Your Day',

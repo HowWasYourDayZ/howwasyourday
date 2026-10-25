@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Peer Support for Imposter Syndrome in India | How Was Your Day',
   description: 'Feel like a fraud despite your success? Talk to a peer listener who understands imposter syndrome. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/imposter-syndrome', languages: { 'en-IN': 'https://www.howwasyourday.live/support/imposter-syndrome' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/imposter-syndrome', languages: { 'en-GB': 'https://www.howwasyourday.live/support/imposter-syndrome' } },
   openGraph: {
     title: 'Peer Support for Imposter Syndrome in India | How Was Your Day',
     description: 'Feel like a fraud despite your success? Talk to a peer listener who understands imposter syndrome. No appointment needed.',
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview when self-doubt tends to peak.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview when self-doubt tends to peak.',
       },
     },
   ],
@@ -253,7 +253,7 @@ export default function ImposterSyndromeSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview.</div>
           </div>
         </div>
 

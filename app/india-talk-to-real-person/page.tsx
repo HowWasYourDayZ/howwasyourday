@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/india-talk-to-real-person',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/india-talk-to-real-person' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/india-talk-to-real-person' },
   },
   openGraph: {
     title: 'Talk to a Real Person in India — Not an AI Chatbot | How Was Your Day',
@@ -189,7 +189,7 @@ export default function IndiaTalkToRealPersonPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 

@@ -140,7 +140,7 @@ export default function VentToRealPersonPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 
@@ -232,7 +232,7 @@ export default function VentToRealPersonPage() {
           </p>
           <p>
             Your first 5 minutes are free. No credit card needed. You can also book a 15, 30, or 45-minute
-            session if you know you need more time. Sessions in India start at ₹160 for 15 minutes.
+            session if you know you need more time. Sessions in India start at £7 for 15 minutes.
           </p>
           <p>
             Anonymous from start to finish — you never have to share your name, your location, or anything

@@ -56,7 +56,7 @@ const data: ReadyToTalkLandingData = {
     },
     {
       "q": "How much does it cost?",
-      "a": "New seekers can start with one free 5-minute introductory session (one per account). Paid sessions currently start at ₹160 for 15 minutes, with the applicable price shown before you continue."
+      "a": "New seekers can start with one free 5-minute introductory session (one per account). Paid sessions currently start at £7 for 15 minutes, with the applicable price shown before you continue."
     },
     {
       "q": "Do I have to explain everything before starting?",

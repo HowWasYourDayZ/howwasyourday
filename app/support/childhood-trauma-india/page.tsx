@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'dysfunctional family India', 'emotional neglect childhood India', 'processing childhood India',
     'family trauma India', 'adolescent trauma India support',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/childhood-trauma-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/childhood-trauma-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/childhood-trauma-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/childhood-trauma-india' } },
   openGraph: {
     title: 'Growing Up Hard in India — Emotional Support for Childhood Trauma | How Was Your Day',
     description: 'Difficult teenage years leave marks that show up decades later. You don\'t need a diagnosis to deserve support.',
@@ -157,7 +157,7 @@ export default function ChildhoodTraumaIndiaPage() {
 
         <div className="section">
           <h2>Why Indian Childhood Experiences Are Hard to Name as Trauma</h2>
-          <p>In the UK or Ireland, &quot;trauma&quot; is a word that conjures dramatic events — violence, disasters, catastrophic loss. It does not easily apply to the experience of a father who was physically present but emotionally absent. Or a mother who was loving but completely overwhelmed. Or a home where financial stress created a low-grade terror that was never named. Or years of being the most responsible person in your family before you had the language or the resources to understand that role.</p>
+          <p>In India, &quot;trauma&quot; is a word that conjures dramatic events — violence, disasters, catastrophic loss. It does not easily apply to the experience of a father who was physically present but emotionally absent. Or a mother who was loving but completely overwhelmed. Or a home where financial stress created a low-grade terror that was never named. Or years of being the most responsible person in your family before you had the language or the resources to understand that role.</p>
           <p>The cultural vocabulary for these experiences is thin. We have words for grief, for loss, for bereavement. We do not have good words for the slow, chronic injury of emotional neglect — of growing up in a house where love was real but attunement was missing. Or the particular wound of a parent who could not be relied upon. Or the early exposure to adult pain — substance abuse, financial desperation, marital conflict — that a teenager absorbs and carries without any adult helping them process it.</p>
           <p>And then there is family loyalty. Many Indians who had difficult childhoods also deeply love their families. The coexistence of these two truths — love and hurt — is itself something that rarely gets spoken because it feels disloyal. We are not supposed to name what was hard. We are supposed to be grateful for what was given.</p>
           <p>Both can be true simultaneously. You can love your parents and grieve the things that were missing. You can be grateful for your upbringing and still need to process what it cost you. These truths do not cancel each other out.</p>

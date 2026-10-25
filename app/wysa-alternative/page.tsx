@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/wysa-alternative',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/wysa-alternative' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/wysa-alternative' },
   },
   openGraph: {
     title: 'Done Talking to a Bot? Talk to a Real Person on How Was Your Day',
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'Is How Was Your Day free?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5-minute session is completely free — no credit card, no commitment. After that, sessions start at ₹160 for 15 minutes. You only pay for the time you use.',
+        text: 'Your first 5-minute session is completely free — no credit card, no commitment. After that, sessions start at £7 for 15 minutes. You only pay for the time you use.',
       },
     },
   ],
@@ -143,7 +143,7 @@ export default function WysaAlternativePage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 
@@ -210,7 +210,7 @@ export default function WysaAlternativePage() {
               <tr>
                 <td>Free to use?</td>
                 <td>Free tier / paid subscription</td>
-                <td className="tick">✅ First 5 min free, then ₹160/session</td>
+                <td className="tick">✅ First 5 min free, then £7/session</td>
               </tr>
               <tr>
                 <td>Human connection?</td>
@@ -295,7 +295,7 @@ export default function WysaAlternativePage() {
           <div className="faq-item">
             <h3>Is How Was Your Day free?</h3>
             <p>Your first 5-minute session is completely free — no credit card, no commitment. After that,
-              sessions start at ₹160 for 15 minutes. You only pay for the time you use.</p>
+              sessions start at £7 for 15 minutes. You only pay for the time you use.</p>
           </div>
         </div>
 

@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Grief & Loss Peer Support India | How Was Your Day',
   description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. First 5 minutes free.",
-  alternates: { canonical: 'https://www.howwasyourday.live/support/grief', languages: { 'en-IN': 'https://www.howwasyourday.live/support/grief' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/grief', languages: { 'en-GB': 'https://www.howwasyourday.live/support/grief' } },
   openGraph: {
     title: 'Grief & Loss Peer Support India | How Was Your Day',
     description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. First 5 minutes free.",

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Having a Bad Day? Talk to Someone Right Now | How Was Your Day India',
   description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. First 5 minutes free.',
   keywords: ['bad day India', 'having a bad day India', 'everything went wrong India', 'just want to vent India', 'talk to someone bad day India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/bad-day-india', languages: { 'en-IN': 'https://www.howwasyourday.live/bad-day-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/bad-day-india', languages: { 'en-GB': 'https://www.howwasyourday.live/bad-day-india' } },
   openGraph: { title: 'Having a Bad Day? Talk to Someone Right Now | How Was Your Day India', description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. First 5 minutes free.', url: 'https://www.howwasyourday.live/bad-day-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

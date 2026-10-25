@@ -87,7 +87,7 @@ export async function GET(req: NextRequest) {
 
       // Raw share — NRI sessions: listener's INR rate × actual mins (amount_held
       // includes an NRI margin not payable to the listener, so using it overstates).
-      // India sessions: amount_held − ₹10 platform fee is the correct raw share.
+      // India sessions: amount_held − £1 platform fee is the correct raw share.
       let rawShare: number
       if (s.listener_rate_per_min && s.listener_rate_per_min > 0 && s.started_at && s.ended_at) {
         const elapsedMins = (new Date(s.ended_at).getTime() - new Date(s.started_at).getTime()) / 60000

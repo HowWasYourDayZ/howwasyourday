@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Peer Support for Loneliness in India | How Was Your Day',
   description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
-  alternates: { canonical: 'https://www.howwasyourday.live/support/loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/loneliness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/loneliness', languages: { 'en-GB': 'https://www.howwasyourday.live/support/loneliness' } },
   openGraph: {
     title: 'Peer Support for Loneliness in India | How Was Your Day',
     description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.',
+        text: 'One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.',
       },
     },
   ],
@@ -256,7 +256,7 @@ export default function LonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at ₹160 with a listener charging ₹10 per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.</div>
+            <div className="faq-a">One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.</div>
           </div>
         </div>
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/marriage-problems-india',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/marriage-problems-india' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/marriage-problems-india' },
   },
   openGraph: {
     title: 'Marriage Problems? Talk to Someone Who Understands | How Was Your Day India',

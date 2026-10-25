@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Social Anxiety India — Anonymous Support Without Judgment | How Was Your Day',
   description: 'Dreading social situations, overthinking every interaction, avoiding people. Social anxiety is real and common. Anonymous peer support from ₹160.',
   keywords: ['social anxiety India', 'social anxiety support India', 'shyness vs social anxiety India', 'social phobia India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/social-anxiety-india', languages: { 'en-IN': 'https://www.howwasyourday.live/social-anxiety-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/social-anxiety-india', languages: { 'en-GB': 'https://www.howwasyourday.live/social-anxiety-india' } },
   openGraph: { title: 'Social Anxiety India — Anonymous Support Without Judgment | How Was Your Day', description: 'Dreading social situations, overthinking every interaction, avoiding people. Social anxiety is real and common. Anonymous peer support from ₹160.', url: 'https://www.howwasyourday.live/social-anxiety-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

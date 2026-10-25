@@ -1,3 +1,5 @@
+import { formatGBP } from '@/lib/money'
+import { MIN_RECHARGE, MAX_RECHARGE } from '@/lib/constants'
 import { NextRequest, NextResponse } from 'next/server'
 import Razorpay from 'razorpay'
 import crypto from 'crypto'
@@ -6,8 +8,6 @@ import { checkRateLimit } from '@/lib/rate-limit'
 import { notifyWalletRecharge } from '@/lib/notify'
 import { grossRechargeAmount } from '@/lib/constants'
 
-const MIN_RECHARGE = 50
-const MAX_RECHARGE = 10_000
 import { logger } from '@/lib/logger'
 
 function getRzp() {
@@ -36,15 +36,16 @@ export async function POST(req: NextRequest) {
     const { amount } = await req.json()
     // Allow any integer between ₹50 and ₹10,000 — prevents crafted floats and extreme values
     if (!Number.isInteger(amount) || amount < MIN_RECHARGE || amount > MAX_RECHARGE) {
-      return NextResponse.json({ error: `Please enter an amount between ₹${MIN_RECHARGE} and ₹${MAX_RECHARGE}` }, { status: 400 })
+      return NextResponse.json({ error: `Please enter an amount between ${formatGBP(MIN_RECHARGE)} and ${formatGBP(MAX_RECHARGE)}` }, { status: 400 })
     }
 
     // Gross charge includes the Razorpay gateway fee (borne by the seeker).
     // The wallet is credited `amount` (stored in notes); the gateway fee is the difference.
     const gross = grossRechargeAmount(amount)
     const order = await rzp.orders.create({
-      amount:   gross * 100,
-      currency: 'INR',
+      // Amounts are already pence (the provider's minor unit). TODO(whop): replace Razorpay with Whop.
+      amount:   gross,
+      currency: 'GBP',
       receipt:  `wallet_${user.id.slice(0, 8)}_${Date.now()}`,
       notes:    { userId: user.id, amount: String(amount) },
     })
@@ -103,7 +104,7 @@ export async function PUT(req: NextRequest) {
         logger.error('Wallet PUT: payment not captured', { paymentId: razorpay_payment_id, paymentStatus: (payment as { status?: string }).status })
         return NextResponse.json({ error: 'Payment was not completed. Please try again or contact support.' }, { status: 400 })
       }
-      grossPaid = Math.round(Number(order.amount) / 100)
+      grossPaid = Math.round(Number(order.amount)) // pence
       const noteAmount = parseInt(String((order.notes as Record<string, string> | undefined)?.amount ?? ''), 10)
       if (Number.isInteger(noteAmount) && noteAmount >= MIN_RECHARGE && noteAmount <= MAX_RECHARGE) {
         verifiedAmount = noteAmount
@@ -157,7 +158,7 @@ export async function PUT(req: NextRequest) {
         // report every recharging seeker as off by their fees (and the webhook
         // path already wrote 'gateway_fee', so the two disagreed).
         type:         'gateway_fee',
-        description:  `Razorpay gateway fee (₹${grossPaid} charged − ₹${verifiedAmount} credited)`,
+        description:  `Razorpay gateway fee (${formatGBP(grossPaid)} charged − ${formatGBP(verifiedAmount)} credited)`,
         reference_id: `gf_${razorpay_payment_id}`,
       }).then(({ error }) => {
         // 23505 = the webhook already recorded it (idempotent); log anything else.

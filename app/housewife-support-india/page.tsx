@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'homemaker isolation india', 'housewife depression india', 'homemaker mental health india',
     'housewife support india', 'homemaker support india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/housewife-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/housewife-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/housewife-support-india', languages: { 'en-GB': 'https://www.howwasyourday.live/housewife-support-india' } },
   openGraph: {
     title: 'Housewife Mental Health India — Your Work Is Real. So Is Your Exhaustion. | How Was Your Day',
     description: 'Homemakers in India can request a conversation with a screened peer listener about loneliness, family pressure or emotional exhaustion. Non-clinical peer support; availability varies.',

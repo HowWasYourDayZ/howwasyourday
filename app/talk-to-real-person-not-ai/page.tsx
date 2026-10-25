@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. Sessions from ₹160 for 15 minutes in India, US$10 for 15 minutes abroad.',
+    description: 'First 5 minutes free. Sessions from £7 for 15 minutes in India, US$10 for 15 minutes abroad.',
   },
 }
 
@@ -165,7 +165,7 @@ export default function TalkToRealPersonPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 
@@ -241,7 +241,7 @@ export default function TalkToRealPersonPage() {
             </div>
             <div className="compare-col human">
               <h3>💙 How Was Your Day Real Human</h3>
-              <p>First 5 min free, then from ₹160 for 15 minutes — real connection that actually helps</p>
+              <p>First 5 min free, then from £7 for 15 minutes — real connection that actually helps</p>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/online-counseling-india',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/online-counseling-india' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/online-counseling-india' },
   },
   openGraph: {
     title: 'Online Counseling India — Affordable Emotional Support Without a Therapist | How Was Your Day',
@@ -228,7 +228,7 @@ export default function OnlineCounselingIndiaPage() {
           <p>For many users, How Was Your Day is the only form of emotional support they have access to. At ₹160 for a session, it is within reach for someone earning a modest salary. For people who genuinely cannot afford therapy, this is not a compromise — it is the option that actually exists.</p>
 
           <h3>People Who Do Not Want a Formal Record</h3>
-          <p>In the UK or Ireland, seeking mental health support still carries stigma in many contexts. People worry about records that could affect employment, relationships, or family dynamics. How Was Your Day is anonymous, generates no formal records, and requires no identification that links your real identity to what you share.</p>
+          <p>In India, seeking mental health support still carries stigma in many contexts. People worry about records that could affect employment, relationships, or family dynamics. How Was Your Day is anonymous, generates no formal records, and requires no identification that links your real identity to what you share.</p>
 
           <h3>People Between Therapy Sessions</h3>
           <p>Some users see a therapist monthly but need support in between. How Was Your Day fills the gap — a place to process what has come up between sessions without waiting for the next appointment.</p>

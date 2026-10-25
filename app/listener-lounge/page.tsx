@@ -37,10 +37,10 @@ function fmtTime(iso: string) {
   const isToday = d.toDateString() === now.toDateString()
   const yesterday = new Date(now); yesterday.setDate(now.getDate() - 1)
   const isYesterday = d.toDateString() === yesterday.toDateString()
-  const time = d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })
+  const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })
   if (isToday) return time
   if (isYesterday) return `Yesterday ${time}`
-  return `${d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })} ${time}`
+  return `${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} ${time}`
 }
 
 function dayLabel(iso: string) {
@@ -49,7 +49,7 @@ function dayLabel(iso: string) {
   if (d.toDateString() === now.toDateString()) return 'Today'
   const yesterday = new Date(now); yesterday.setDate(now.getDate() - 1)
   if (d.toDateString() === yesterday.toDateString()) return 'Yesterday'
-  return d.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' })
+  return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })
 }
 
 const S = `

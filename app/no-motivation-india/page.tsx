@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'No Motivation India — Can\'t Get Going? Talk to Someone | How Was Your Day',
   description: 'Can\'t start anything. Everything feels pointless. No motivation is more than laziness. Anonymous support from ₹160.',
   keywords: ['no motivation India', 'lack of motivation India', 'can\'t get motivated India', 'feeling unmotivated India', 'low motivation depression India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/no-motivation-india', languages: { 'en-IN': 'https://www.howwasyourday.live/no-motivation-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/no-motivation-india', languages: { 'en-GB': 'https://www.howwasyourday.live/no-motivation-india' } },
   openGraph: { title: 'No Motivation India — Can\'t Get Going? Talk to Someone | How Was Your Day', description: 'Can\'t start anything. Everything feels pointless. No motivation is more than laziness. Anonymous support from ₹160.', url: 'https://www.howwasyourday.live/no-motivation-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

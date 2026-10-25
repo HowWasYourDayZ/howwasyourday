@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Imposter Syndrome India — Talk to Someone Who Has Been There | How Was Your Day',
   description: 'Waiting to be found out, feeling like a fraud despite your achievements. Imposter syndrome is epidemic in India. Anonymous peer support from ₹160.',
   keywords: ['imposter syndrome India', 'feeling like a fraud India', 'imposter syndrome at work India', 'high achiever anxiety India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/imposter-syndrome-india', languages: { 'en-IN': 'https://www.howwasyourday.live/imposter-syndrome-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/imposter-syndrome-india', languages: { 'en-GB': 'https://www.howwasyourday.live/imposter-syndrome-india' } },
   openGraph: { title: 'Imposter Syndrome India — Talk to Someone Who Has Been There | How Was Your Day', description: 'Waiting to be found out, feeling like a fraud despite your achievements. Imposter syndrome is epidemic in India. Anonymous peer support from ₹160.', url: 'https://www.howwasyourday.live/imposter-syndrome-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

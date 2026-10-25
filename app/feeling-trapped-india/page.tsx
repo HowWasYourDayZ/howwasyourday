@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'feel stuck India', 'no way out feeling India', 'trapped in relationship India',
     'feel stuck in life India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/feeling-trapped-india', languages: { 'en-IN': 'https://www.howwasyourday.live/feeling-trapped-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-trapped-india', languages: { 'en-GB': 'https://www.howwasyourday.live/feeling-trapped-india' } },
   openGraph: {
     title: 'Feeling Trapped — In Your Marriage, Job, or Family | How Was Your Day India',
     description: 'Can\'t leave, can\'t stay. Feeling trapped is one of the most suffocating feelings there is. Talk to someone anonymously from ₹160.',

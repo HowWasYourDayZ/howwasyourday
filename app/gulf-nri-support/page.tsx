@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/gulf-nri-support',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/gulf-nri-support' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/gulf-nri-support' },
   },
   openGraph: {
     title: 'Emotional Support for Gulf NRIs — Talk to Someone Indian, Any Time',
@@ -141,7 +141,7 @@ export default function GulfNriSupportPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 

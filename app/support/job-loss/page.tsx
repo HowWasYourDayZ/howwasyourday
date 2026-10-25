@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Laid Off? Talk to Someone Who Has Been There | How Was Your Day India',
   description: 'Job loss hurts more than the paycheck. Talk anonymously to a peer listener who has been laid off and rebuilt. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/job-loss', languages: { 'en-IN': 'https://www.howwasyourday.live/support/job-loss' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/job-loss', languages: { 'en-GB': 'https://www.howwasyourday.live/support/job-loss' } },
   keywords: 'job loss depression India, laid off emotional support, coping with layoff India, lost my job India, talk to someone after layoff, job loss anxiety, unemployment stress India, peer support after being fired',
   openGraph: {
     title: 'Laid Off? Talk to Someone Who Has Been There | How Was Your Day India',
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session. A short trial session is available for new users. We know you have just lost your income, so we will not pretend cost does not matter. It is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session. A short trial session is available for new users. We know you have just lost your income, so we will not pretend cost does not matter. It is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.',
       },
     },
   ],
@@ -161,7 +161,7 @@ export default function JobLossSupportPage() {
           <p>Job loss follows the shape of grief: the disbelief, the replaying of the last few weeks looking for the signal you missed, the anger at a manager or a founder or a spreadsheet, the flat exhaustion. People are often startled by how heavy it feels. It helps to know that you&apos;re not overreacting — you&apos;re mourning something real. Routine, colleagues, a place to be at 10 AM, and a plan for the next two years all disappeared in the same meeting.</p>
 
           <h3>When &quot;What Do You Do?&quot; Has No Answer</h3>
-          <p>In the UK or Ireland, that question shows up within ninety seconds of meeting anyone — at a wedding, in a WhatsApp group, in the lift. For years you had a clean answer with a company name in it. Now you have a pause. That pause is where the identity collapse lives. It isn&apos;t vanity. Most working professionals have quietly built a large part of their self-concept on their designation, and losing it feels like losing a part of yourself, not just a source of income.</p>
+          <p>In India, that question shows up within ninety seconds of meeting anyone — at a wedding, in a WhatsApp group, in the lift. For years you had a clean answer with a company name in it. Now you have a pause. That pause is where the identity collapse lives. It isn&apos;t vanity. Most working professionals have quietly built a large part of their self-concept on their designation, and losing it feels like losing a part of yourself, not just a source of income.</p>
 
           <h3>The Secret Months</h3>
           <p>This is the part almost nobody talks about. Plenty of people don&apos;t tell their family for weeks. They keep waking at the same hour, dressing, packing a laptop bag, and leaving the house — to a café, a co-working space, a library, sometimes just a long drive — because the alternative is a conversation they can&apos;t face yet. If you&apos;re doing this, you&apos;re not being dishonest. You&apos;re buying yourself time to feel steady enough to speak. But carrying it entirely alone is what makes it unbearable, and that is exactly the gap a peer listener can fill.</p>
@@ -254,7 +254,7 @@ export default function JobLossSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day cost?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, . A short trial session is available for new users. We know you have just lost your income, so we won&apos;t pretend cost does not matter — it is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, . A short trial session is available for new users. We know you have just lost your income, so we won&apos;t pretend cost does not matter — it is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.</div>
           </div>
         </div>
 

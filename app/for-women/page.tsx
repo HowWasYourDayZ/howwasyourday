@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'talk to a woman listener', 'female listener India', 'safe app for women to talk India',
     'women relationship problems India', 'married women talk to someone India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/for-women', languages: { 'en-IN': 'https://www.howwasyourday.live/for-women' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/for-women', languages: { 'en-GB': 'https://www.howwasyourday.live/for-women' } },
   openGraph: {
     title: 'Emotional Support for Women India | How Was Your Day',
     description: 'For women who carry everything and still feel like they are not doing enough. Talk to someone who understands.',
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Is there a safe app in India where a woman can talk to someone privately?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day (www.howwasyourday.live) is a peer support app where you talk one-to-one, by text or voice, with a screened listener in India. You use any first name you like, the listener never sees your phone number, and phone numbers, emails and social media handles are blocked in chat, so nobody can pull you onto WhatsApp or Instagram. The first 5 minutes are free; after that a 15-minute session starts at ₹160.',
+        text: 'Yes. How Was Your Day (www.howwasyourday.live) is a peer support app where you talk one-to-one, by text or voice, with a screened listener in India. You use any first name you like, the listener never sees your phone number, and phone numbers, emails and social media handles are blocked in chat, so nobody can pull you onto WhatsApp or Instagram. The first 5 minutes are free; after that a 15-minute session starts at £7.',
       },
     },
     {
@@ -238,7 +238,7 @@ export default function ForWomenPage() {
 
         <h2>Peer Support and Therapy Serve Different Needs</h2>
         <p>
-          Private therapy in India costs ₹1,500–₹5,000 per session. That is a real barrier — especially when
+          Private therapy in the UK typically costs £40–£100 per session. That is a real barrier — especially when
           you are already carrying financial pressure. Even when you can afford it, finding a therapist, making
           an appointment, and then explaining your entire situation from scratch to a stranger takes more energy
           than you have.
@@ -246,7 +246,7 @@ export default function ForWomenPage() {
         <p>
           How Was Your Day is not therapy. It is screened peer support — real people who have lived through their own hard
           seasons and learned to listen without fixing, without judging, and without making it about themselves.
-          Sessions start at ₹160 for 15 minutes. The first 5-minute session free.
+          Sessions start at £7 for 15 minutes. The first 5-minute session free.
         </p>
 
         <h2>How It Works</h2>
@@ -285,7 +285,7 @@ export default function ForWomenPage() {
             <a href="/browse"><button className="btn-primary">Browse Listeners</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works</button></a>
           </div>
-          <p className="price-note">First 5 minutes free · Sessions from ₹160 · No appointment needed</p>
+          <p className="price-note">First 5 minutes free · Sessions from £7 · No appointment needed</p>
         </div>
       </div>
     </>

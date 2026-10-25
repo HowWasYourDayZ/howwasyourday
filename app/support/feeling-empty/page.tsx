@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Feeling Empty Inside? Peer Support for Numbness & Emptiness | How Was Your Day',
   description: 'Feeling emotionally empty, numb, or like nothing makes you happy anymore? Talk to a peer listener in India who has been there. Anonymous.',
   keywords: ['feeling empty inside India', 'feel numb emotionally India', 'nothing makes me happy anymore', 'emotional numbness India', 'I feel empty what to do', 'why do I feel empty India', 'feel hollow inside India', 'anhedonia India', 'feel detached from life India', 'emotionally disconnected India', 'why do I feel nothing India', 'empty feeling in chest India', 'peer support for emptiness India', 'talk to someone about feeling empty', 'feeling empty in relationship India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/feeling-empty', languages: { 'en-IN': 'https://www.howwasyourday.live/support/feeling-empty' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/feeling-empty', languages: { 'en-GB': 'https://www.howwasyourday.live/support/feeling-empty' } },
   openGraph: {
     title: 'Feeling Empty Inside? Peer Support for Numbness & Emptiness | How Was Your Day',
     description: 'Feeling emotionally empty, numb, or like nothing makes you happy anymore? Talk to a peer listener in India who has been there. Anonymous.',

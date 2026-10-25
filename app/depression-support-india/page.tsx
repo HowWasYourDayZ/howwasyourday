@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Feeling low, empty, or hopeless? You don\'t need a diagnosis to deserve support. Talk to a real peer listener — anonymous, ₹160/session, first 5 min free.',
   alternates: {
     canonical: 'https://www.howwasyourday.live/depression-support-india',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/depression-support-india' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/depression-support-india' },
   },
   openGraph: {
     title: 'Feeling Depressed? Talk to Someone Who Understands | How Was Your Day India',

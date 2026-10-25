@@ -123,7 +123,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Failed to submit refund request. Please try again.' }, { status: 500 })
     }
 
-    // IMMEDIATELY zero the wallet balance so the UI shows ₹0 and the seeker cannot
+    // IMMEDIATELY zero the wallet balance so the UI shows £0 and the seeker cannot
     // spend funds that are earmarked for refund. The balance change fires the
     // Supabase realtime subscription on the wallet page — no page refresh needed.
     // The admin processes the cash refund (Razorpay/UPI) based on refund_requests.amount.

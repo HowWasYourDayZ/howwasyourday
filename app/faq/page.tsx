@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'How Was Your Day FAQ: Pricing, First Session & Peer Support | India',
+  title: 'How Was Your Day FAQ: Pricing, First Session & Peer Support | UK & Europe',
   description: 'How the app works, what a session costs, the free 5-minute introduction, privacy and safety. Compare peer support with therapy and see prices before starting.',
-  alternates: { canonical: 'https://www.howwasyourday.live/faq', languages: { 'en-IN': 'https://www.howwasyourday.live/faq' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/faq', languages: { 'en-GB': 'https://www.howwasyourday.live/faq' } },
   keywords: [
     'lean on app FAQ', 'howwasyourday FAQ', 'what is howwasyourday', 'lean on meaning', 'lean on someone',
-    'peer support India FAQ', 'How Was Your Day how it works', 'howwasyourday pricing', 'howwasyourday privacy',
+    'peer support UK FAQ', 'How Was Your Day how it works', 'howwasyourday pricing', 'howwasyourday privacy',
   ],
 }
 
@@ -16,7 +16,7 @@ const faqs = [
     items: [
       {
         q: 'Who can use How Was Your Day?',
-        a: 'Adults aged 18 and over, in India or abroad. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).',
+        a: 'Adults aged 18 and over, in the UK, Ireland or elsewhere in Europe. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).',
       },
       {
         q: 'What is How Was Your Day?',
@@ -31,8 +31,8 @@ const faqs = [
         a: 'Listeners on How Was Your Day are not licensed therapists or clinical counsellors. They are real people with lived experience — people who have navigated the same challenges and found their way through. Peer support is different from therapy, and valuable in its own right: it offers empathy, understanding, and connection. How Was Your Day is ideal when you need someone who truly gets it, not a clinical diagnosis.',
       },
       {
-        q: 'Is How Was Your Day available across India?',
-        a: 'How Was Your Day is online, so people can browse from anywhere in India, including Bengaluru, Mumbai, Delhi, Chennai, Hyderabad and smaller towns. Whether a conversation can start immediately depends on which listeners are online and available.',
+        q: 'Is How Was Your Day available across the UK and Europe?',
+        a: 'How Was Your Day is online, so people can browse from anywhere in the UK, Ireland and the rest of Europe. Whether a conversation can start immediately depends on which listeners are online and available.',
       },
       {
         q: 'What topics can I talk about?',
@@ -53,11 +53,11 @@ const faqs = [
       },
       {
         q: 'Is there a How Was Your Day app on the Play Store or App Store?',
-        a: 'You do not need to download anything: How Was Your Day works in any phone or computer browser at www.howwasyourday.live. On Android, open it in Chrome and tap "Add to Home screen" to get an app icon; on iPhone, use Safari\'s Share → "Add to Home Screen". An older Play Store app called "How Was Your Day" (a 2024 therapist-booking app) is a different, retired product.',
+        a: 'You do not need to download anything: How Was Your Day works in any phone or computer browser at www.howwasyourday.live. On Android, open it in Chrome and tap "Add to Home screen" to get an app icon; on iPhone, use Safari\'s Share → "Add to Home Screen".',
       },
       {
         q: 'How does pricing work?',
-        a: 'One 5-minute introductory session is free per account. In the UK or Ireland, paid sessions are priced at the listener’s rate per minute × session length, plus a flat ₹10 platform fee; for example, 15 minutes with a ₹10/min listener costs ₹160. Voice calls cost ₹5/min more than text when voice pricing is enabled. Your exact price is shown before you start. See /pricing for details.',
+        a: 'One 5-minute introductory session is free per account. Paid sessions are priced in pounds sterling at the listener’s rate per minute × session length, plus a flat £1 platform fee; for example, 15 minutes with a 40p/min listener costs £7. Voice calls cost 10p/min more than text. Your exact price is shown before you start. See /pricing for details.',
       },
       {
         q: 'Do I need to book in advance?',
@@ -74,11 +74,11 @@ const faqs = [
     items: [
       {
         q: 'How much does How Was Your Day cost?',
-        a: 'One introductory session of up to 5 minutes is free per account. In the UK or Ireland, the total is the selected listener\'s per-minute rate × session length, plus a flat ₹10 platform fee; for example, 15 minutes at ₹10/min costs ₹160 and 30 minutes costs ₹310. Voice calls are ₹5/min more than text when voice pricing is enabled. Outside India, sessions start at US$10 for 15 minutes, US$15 for 30 and US$20 for 45. See howwasyourday.live/pricing for details.',
+        a: 'One introductory session of up to 5 minutes is free per account. After that, the total is the selected listener\'s per-minute rate × session length, plus a flat £1 platform fee; for example, 15 minutes at 40p/min costs £7 and 30 minutes costs £13. Voice calls are 10p/min more than text. Prices are in pounds sterling (GBP). See howwasyourday.live/pricing for details.',
       },
       {
         q: 'How does the wallet work?',
-        a: 'You top up your How Was Your Day wallet with ₹200, ₹500, ₹1,000, or ₹2,000. The session amount is held from your wallet when you start a session and released to the listener when it ends. Unused balance is fully refundable at any time.',
+        a: 'You top up your How Was Your Day wallet by card with £5, £10, £20 or £50 (or a custom amount). The session amount is held from your wallet when you start a session and released to the listener when it ends. Unused balance is fully refundable at any time.',
       },
       {
         q: 'Can I get a refund?',
@@ -104,27 +104,6 @@ const faqs = [
       {
         q: 'What if I\'m in a mental health crisis?',
         a: 'How Was Your Day is peer support, not a crisis service. If you are in crisis or having thoughts of self-harm, please call Samaritans at <a href="tel:116123">116 123</a> or text SHOUT to 85258 (free, 24/7).',
-      },
-    ],
-  },
-  {
-    category: 'Indians Abroad (NRI)',
-    items: [
-      {
-        q: 'Can Indians living in the USA, UK, Canada or Australia use How Was Your Day?',
-        a: 'Yes. How Was Your Day has dedicated support for Indians and South Asians living abroad. Whether you are in the USA, UK, Canada, Australia, UAE, Singapore, or anywhere else, you can connect with peer listeners who understand the cultural context — family expectations, homesickness, H-1B visa stress, cultural adjustment, or simply wanting to talk to someone who gets it.',
-      },
-      {
-        q: 'How much does How Was Your Day cost for NRIs outside India?',
-        a: 'For people using How Was Your Day outside India, sessions are priced in US dollars, from US$10 for 15 minutes, US$15 for 30 minutes and US$20 for 45 minutes — text or voice. A listener with a higher own rate costs that rate; the exact price is shown before you book. Your first 5-minute session is always free. Full pricing: howwasyourday.live/pricing.',
-      },
-      {
-        q: 'What can NRIs talk about on How Was Your Day?',
-        a: 'NRIs on How Was Your Day most commonly talk about homesickness and missing family, immigration stress (H-1B, visa uncertainty, work permit anxiety), cultural isolation ("fitting in" between two worlds), marriage pressure from family back home, career confusion abroad, loneliness in a new country, and relationship difficulties across distances.',
-      },
-      {
-        q: 'Do How Was Your Day listeners understand NRI cultural experiences?',
-        a: 'Many How Was Your Day listeners have lived abroad themselves or have close experience with NRI life — immigration stress, being caught between Indian and local culture, long-distance family dynamics. You can read listener bios and filter by topic to find someone whose experience matches yours.',
       },
     ],
   },

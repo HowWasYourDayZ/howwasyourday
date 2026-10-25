@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Peer Counselling India — Affordable Emotional Support | How Was Your Day',
   description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on How Was Your Day.',
   keywords: ['peer counselling India', 'peer counselling online India', 'peer counselling app India', 'peer counsellor India', 'peer counselling cost India', 'online peer counselling'],
-  alternates: { canonical: 'https://www.howwasyourday.live/peer-counselling-india', languages: { 'en-IN': 'https://www.howwasyourday.live/peer-counselling-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-counselling-india', languages: { 'en-GB': 'https://www.howwasyourday.live/peer-counselling-india' } },
   openGraph: {
     title: 'Peer Counselling India — Affordable Emotional Support | How Was Your Day',
     description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on How Was Your Day.',

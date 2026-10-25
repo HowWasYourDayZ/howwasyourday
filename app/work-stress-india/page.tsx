@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Work Stress India — Talk to Someone Who Gets IT Burnout | How Was Your Day',
   description: 'Work stress eating you alive? Talk to a real person — not an HR bot. Peer support for corporate burnout, IT pressure, office politics. From ₹160.',
   keywords: ['work stress india', 'IT burnout india', 'corporate burnout india', 'office politics stress india', 'layoff stress india', 'professional burnout india', 'tech job stress india', 'software engineer burnout india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/work-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/work-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/work-stress-india', languages: { 'en-GB': 'https://www.howwasyourday.live/work-stress-india' } },
   openGraph: {
     title: 'Work Stress India — Talk to Someone Who Gets IT Burnout | How Was Your Day',
     description: 'Work stress eating you alive? Talk to a real person — not an HR bot. Peer support for corporate burnout, IT pressure, office politics. From ₹160.',

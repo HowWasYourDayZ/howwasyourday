@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'mental health support India affordable', 'professional help India cost',
     'therapy India difficult', 'psychological help India', 'counseling access India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/i-need-professional-help-india', languages: { 'en-IN': 'https://www.howwasyourday.live/i-need-professional-help-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/i-need-professional-help-india', languages: { 'en-GB': 'https://www.howwasyourday.live/i-need-professional-help-india' } },
   openGraph: {
     title: 'I Need Professional Help But Can\'t Access It — What to Do Right Now in India | How Was Your Day',
     description: 'You know you need professional support but it is out of reach. Here is what to do right now in India.',
@@ -162,7 +162,7 @@ export default function INeedProfessionalHelpIndiaPage() {
           <ul>
             <li><strong>Cost:</strong> A single private therapy session costs roughly what a person earning ₹30,000 per month earns in a day. Weekly therapy is not financially feasible for most of the people who need it.</li>
             <li><strong>Access in non-metros:</strong> If you are not in Bangalore, Mumbai, Delhi, Hyderabad, or Chennai, the options narrow dramatically. Online therapy has improved this, but quality and affordability remain inconsistent.</li>
-            <li><strong>Stigma:</strong> Even when therapy is available and affordable, the fear of family finding out, colleagues knowing, a record existing — keeps many people from accessing it. In the UK or Ireland, mental health stigma is not just cultural, it can have real consequences for employment, marriage prospects, and family relationships.</li>
+            <li><strong>Stigma:</strong> Even when therapy is available and affordable, the fear of family finding out, colleagues knowing, a record existing — keeps many people from accessing it. In India, mental health stigma is not just cultural, it can have real consequences for employment, marriage prospects, and family relationships.</li>
             <li><strong>Not knowing who to see:</strong> The difference between a psychiatrist, psychologist, and counsellor is not well understood. Many people see the wrong kind of professional for their needs, or see someone unqualified because they did not know what to look for.</li>
             <li><strong>Fear of the process itself:</strong> What happens when you walk into a therapist&apos;s office? What if they judge you? What if you have to talk about things you are not ready for? The unknown is its own barrier.</li>
           </ul>

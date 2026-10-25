@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'corporate job stress India', 'office job burnout India', 'high pressure job India',
     'job stress and loneliness India', 'banking career burnout India', 'bank job exhausting India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/banking-job-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/banking-job-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/banking-job-stress-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/banking-job-stress-india' } },
   openGraph: {
     title: 'Banking Job Stress India — The Pressure That Comes Home With You | How Was Your Day',
     description: 'Targets, long hours, accountability pressure. The specific exhaustion of a bank job in India. Talk to someone who gets it.',

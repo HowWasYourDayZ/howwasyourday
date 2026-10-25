@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/relationship-advice-online-india',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-advice-online-india' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/relationship-advice-online-india' },
   },
   openGraph: {
     title: 'Relationship Problems Online India — Human Peer Support | How Was Your Day',
@@ -142,7 +142,7 @@ export default function RelationshipAdvicePage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 

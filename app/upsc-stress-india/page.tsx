@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'UPSC Stress India — Talk to Someone Who Gets the Pressure | How Was Your Day',
   description: 'Years of preparation, family expectations, uncertainty, isolation. UPSC stress is unlike any other. Anonymous peer support from ₹160.',
   keywords: ['UPSC stress India', 'UPSC depression India', 'UPSC aspirant mental health', 'civil services stress India', 'IAS preparation mental health India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/upsc-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/upsc-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/upsc-stress-india', languages: { 'en-GB': 'https://www.howwasyourday.live/upsc-stress-india' } },
   openGraph: {
     title: 'UPSC Stress India — Talk to Someone Who Gets the Pressure | How Was Your Day',
     description: 'Years of preparation, family expectations, uncertainty, isolation. UPSC stress is unlike any other. Anonymous peer support from ₹160.',

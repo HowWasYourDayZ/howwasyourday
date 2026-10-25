@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'morning relationship fight india',
     'process before work india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/morning-emotional-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/morning-emotional-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/morning-emotional-support-india', languages: { 'en-GB': 'https://www.howwasyourday.live/morning-emotional-support-india' } },
   openGraph: {
     title: 'Morning Emotional Support India — Reset Before the Day Starts | How Was Your Day',
     description: 'Relationship fight before work. Anxiety about the day. Something from last night still sitting heavy. 15-minute morning session from ₹160. Reset and go.',

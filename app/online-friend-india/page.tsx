@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'online connection india', 'someone to talk to online india', 'real conversation online india',
     'online peer support india', 'chat with real person india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/online-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/online-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-friend-india', languages: { 'en-GB': 'https://www.howwasyourday.live/online-friend-india' } },
   openGraph: {
     title: 'Online Friend India — Real Connection, No Strings | How Was Your Day',
     description: 'Looking for someone to connect with online in India — not a therapist, not a stranger, just someone real to talk to. How Was Your Day peer listeners, from ₹160.',

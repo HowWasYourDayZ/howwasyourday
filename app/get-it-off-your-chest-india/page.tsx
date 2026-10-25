@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'let it out india', 'no one to confide in india', 'too personal to share india',
     'emotional release india', 'private problem india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/blog/getting-it-off-your-chest', languages: { 'en-IN': 'https://www.howwasyourday.live/blog/getting-it-off-your-chest' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/blog/getting-it-off-your-chest', languages: { 'en-GB': 'https://www.howwasyourday.live/blog/getting-it-off-your-chest' } },
   openGraph: {
     title: 'Get It Off Your Chest India — Say What\'s Been Building Up | How Was Your Day',
     description: 'That thing you\'ve been carrying. The thing you haven\'t told anyone. Say it to someone real — anonymous, no judgment, from ₹160.',

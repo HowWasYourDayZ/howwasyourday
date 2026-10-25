@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Talk to Someone Free India — First 5 Minutes Free | How Was Your Day',
   description: 'First 5-minute session free. No subscription, no commitment. Real peer listeners in India. Start now.',
   keywords: ['talk to someone free India', 'free emotional support India', 'free chat India mental health', 'talk to someone online free India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-free-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-someone-free-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-free-india', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-to-someone-free-india' } },
   openGraph: { title: 'Talk to Someone Free India — First 5 Minutes Free | How Was Your Day', description: 'First 5-minute session free. No subscription, no commitment. Real peer listeners in India. Start now.', url: 'https://www.howwasyourday.live/talk-to-someone-free-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

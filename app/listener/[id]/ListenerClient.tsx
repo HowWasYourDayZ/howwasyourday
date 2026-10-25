@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 import { LANGUAGES, PLATFORM_FEE, MAX_FREE_TRIALS, VOICE_PRICING_ENABLED, sessionRatePerMin } from '@/lib/constants'
 import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
-import { isNriCountry, getBookingPriceDisplay, sessionTotalInr } from '@/lib/geo-pricing'
+import { formatGBP, formatRate } from '@/lib/money'
 import Avatar from '@/app/components/Avatar'
 import { EDUCATION_LEVELS, EDUCATION_FIELDS, labelOf } from '@/lib/listener-onboarding'
 import { trackEvent } from '@/lib/analytics'
@@ -121,7 +121,6 @@ export default function ListenerClient({ id }: { id: string }) {
   // Wallet top-up context: show confirmation when arriving back from /wallet?return=
   const [fromWallet, setFromWallet] = useState(false)
   const [pricingReady, setPricingReady] = useState(false)
-  const [accountCountry, setAccountCountry] = useState<string | null>(null)
   // Offline messaging state
   const [msgCount, setMsgCount]         = useState(0)
   const [showMsgCompose, setShowMsgCompose] = useState(false)
@@ -180,7 +179,6 @@ export default function ListenerClient({ id }: { id: string }) {
       const unlimited = profileData.is_unlimited_tester === true
       setIsUnlimitedTester(unlimited)
       // Store for geo-pricing display (NRI vs India)
-      if (profileData.account_country) setAccountCountry(profileData.account_country as string)
       setPricingReady(true)
 
       const [{data: userData}, totalTrials, listenerTrial] = await Promise.all([
@@ -228,7 +226,7 @@ export default function ListenerClient({ id }: { id: string }) {
   const ini  = (n:string) => n.split(' ').map((x:string)=>x[0]||'').join('').slice(0,2).toUpperCase()||'?'
   const rate = sessionRatePerMin(Number(listener.rate_per_min), type)
   // Same rule as /api/sessions: overseas = flat price, never below the Indian price.
-  const cost = duration === 5 ? 0 : sessionTotalInr(rate * duration + PLATFORM_FEE, accountCountry, duration)
+  const cost = duration === 5 ? 0 : rate * duration + PLATFORM_FEE
 
   const ERROR_MESSAGES: Record<string, string> = {
     listener_unavailable: 'This listener is currently unavailable.',
@@ -328,7 +326,7 @@ export default function ListenerClient({ id }: { id: string }) {
                 {listener.rating > 0 && <span className="stat">⭐ {(+listener.rating).toFixed(1)}</span>}
                 {listener.total_sessions > 0 && <span className="stat">{listener.total_sessions} sessions</span>}
                 <span className="rate-badge" style={{whiteSpace:'nowrap'}}>
-                  {VOICE_PRICING_ENABLED ? `From ₹${listener.rate_per_min}/min` : `₹${listener.rate_per_min}/min`}
+                  {VOICE_PRICING_ENABLED ? `From ${formatRate(listener.rate_per_min)}` : formatRate(listener.rate_per_min)}
                 </span>
               </div>
             </div>
@@ -371,7 +369,7 @@ export default function ListenerClient({ id }: { id: string }) {
               {reviews.map((r,i) => {
                 const name = r.users?.name || 'Anonymous'
                 const masked = name.length <= 2 ? name[0] + '***' : name[0] + '***' + name[name.length - 1]
-                const date = r.created_at ? new Date(r.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : ''
+                const date = r.created_at ? new Date(r.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : ''
                 return (
                 <div key={i} className="review">
                   <div className="review-top">
@@ -394,7 +392,7 @@ export default function ListenerClient({ id }: { id: string }) {
             <div style={{fontSize:24,marginBottom:12}}>💰</div>
             <div style={{fontSize:18,fontWeight:900,color:'#0F4867',marginBottom:8}}>Insufficient Balance</div>
             <div style={{fontSize:14,color:'#5A7A8A',marginBottom:20,lineHeight:1.6}}>
-              Your wallet has ₹{balance}. This session costs ₹{cost}. You need ₹{cost - balance} more.
+              Your wallet has {formatGBP(balance)}. This session costs {formatGBP(cost)}. You need {formatGBP(cost - balance)} more.
             </div>
             <div style={{display:'flex',gap:10}}>
               <button onClick={()=>setShowInsufficient(false)} style={{flex:1,padding:13,background:'white',border:'1.5px solid #D5EEF6',borderRadius:12,fontFamily:'Nunito,sans-serif',fontWeight:700,cursor:'pointer'}}>Cancel</button>
@@ -442,11 +440,11 @@ export default function ListenerClient({ id }: { id: string }) {
             <div className="type-row">
               <span className="type-row-label">Mode:</span>
               <button className={`type-btn${type==='text'?' sel':''}`} onClick={()=>setType('text')}>
-                💬 Text{VOICE_PRICING_ENABLED && !isNriCountry(accountCountry) ? ` · ₹${sessionRatePerMin(Number(listener.rate_per_min), 'text')}/min` : ''}
+                💬 Text{VOICE_PRICING_ENABLED ? ` · ${formatRate(sessionRatePerMin(Number(listener.rate_per_min), 'text'))}` : ''}
               </button>
               {!listener.voice_disabled && (
                 <button className={`type-btn${type==='voice'?' sel':''}`} onClick={()=>setType('voice')}>
-                  📞 Voice{VOICE_PRICING_ENABLED && !isNriCountry(accountCountry) ? ` · ₹${sessionRatePerMin(Number(listener.rate_per_min), 'voice')}/min` : ''}
+                  📞 Voice{VOICE_PRICING_ENABLED ? ` · ${formatRate(sessionRatePerMin(Number(listener.rate_per_min), 'voice'))}` : ''}
                 </button>
               )}
             </div>
@@ -466,12 +464,7 @@ export default function ListenerClient({ id }: { id: string }) {
                   >
                     <div className="opt-label">{d} min</div>
                     <div className="opt-price">
-                      {isFreeTier ? '—' : (() => {
-                        const inrCost = rate * d + PLATFORM_FEE
-                        if (!isNriCountry(accountCountry)) return `₹${inrCost}`
-                        const { primary } = getBookingPriceDisplay(inrCost, accountCountry, d)
-                        return primary
-                      })()}
+                      {isFreeTier ? '—' : formatGBP(rate * d + PLATFORM_FEE)}
                     </div>
                     {isFreeTier && (
                       freeTrialUsed
@@ -484,8 +477,8 @@ export default function ListenerClient({ id }: { id: string }) {
             </div>
             {userId && balance > 0 && (
               <div style={{fontSize:12,fontWeight:700,color:'#5A7A8A',textAlign:'right',marginBottom:6}}>
-                💰 Wallet: ₹{balance}
-                {duration !== 5 && balance < cost && <span style={{color:'#c53030',marginLeft:6}}>· need ₹{cost - balance} more</span>}
+                💰 Wallet: {formatGBP(balance)}
+                {duration !== 5 && balance < cost && <span style={{color:'#c53030',marginLeft:6}}>· need {formatGBP(cost - balance)} more</span>}
               </div>
             )}
             {duration === 5 && !freeTrialUsed && (
@@ -493,24 +486,10 @@ export default function ListenerClient({ id }: { id: string }) {
                 ✅ No payment needed — completely free for 5 minutes
               </div>
             )}
-            {isNriCountry(accountCountry) && duration !== 5 && (() => {
-              const { note } = getBookingPriceDisplay(cost, accountCountry, duration)
-              return note ? (
-                <div style={{fontSize:11,color:'#5A7A8A',fontWeight:600,textAlign:'center',marginBottom:6}}>
-                  {note}
-                </div>
-              ) : null
-            })()}
             <button className="btn-book" onClick={book} disabled={isBooking}>
               {isBooking ? <span className="spin">⟳</span>
                 : duration===5 ? '🎁 Try Free — 5 min, no payment needed →'
-                : (() => {
-                    if (isNriCountry(accountCountry)) {
-                      const { primary } = getBookingPriceDisplay(cost, accountCountry, duration)
-                      return `Book ${duration}-min ${type} — ${primary} →`
-                    }
-                    return `Book ${duration}-min ${type} — ₹${cost} →`
-                  })()}
+                : `Book ${duration}-min ${type} — ${formatGBP(cost)} →`}
             </button>
           </>
         ) : (

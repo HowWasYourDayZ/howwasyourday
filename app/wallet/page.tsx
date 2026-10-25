@@ -3,9 +3,10 @@ import { useState, useEffect, useRef, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 import { showToast } from '@/lib/toast'
-import { grossRechargeAmount } from '@/lib/constants'
+import { grossRechargeAmount, PLATFORM_FEE } from '@/lib/constants'
 import { trackEvent } from '@/lib/analytics'
-import { pricingCountry, isNriCountry, NRI_INR_EQUIV, getNriDisplayPrice } from '@/lib/geo-pricing'
+import { formatGBP } from '@/lib/money'
+import { MIN_RECHARGE, MAX_RECHARGE } from '@/lib/constants'
 const S = `
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -45,26 +46,14 @@ const S = `
   @keyframes spin{to{transform:rotate(360deg);}}
 `
 
-const INDIA_PRESETS = [
-  { amount:200,  sessions:'~1 session',    tag:'' },
-  { amount:500,  sessions:'~3 sessions',   tag:'Popular' },
-  { amount:1000, sessions:'~6 sessions',   tag:'Best value' },
-  { amount:2000, sessions:'~12 sessions',  tag:'' },
+// Amounts in pence (lib/money.ts). Session guide at the default 40p/min text
+// rate: 15 min ≈ £7, 30 min ≈ £13, 45 min ≈ £19 (incl. the £1 platform fee).
+const PRESETS = [
+  { amount:500,  sessions:'Tops up a short session', tag:'' },
+  { amount:1000, sessions:'~1 × 15 min',  tag:'Popular' },
+  { amount:2000, sessions:'~2–3 sessions', tag:'Best value' },
+  { amount:5000, sessions:'~6 sessions',   tag:'' },
 ]
-
-// Overseas (NRI) sessions cost the flat NRI price (lib/geo-pricing.ts), so the
-// India presets (₹200 ≈ "1 session") would leave them short. These match one
-// session each, labelled in the user's currency. Display only: what is credited
-// is still decided server-side from the Razorpay order.
-function nriPresets(country: string) {
-  const p = (m: 15 | 30 | 45) => getNriDisplayPrice(m, country) ?? ''
-  return [
-    { amount: NRI_INR_EQUIV[15],     sessions: `1 × 15 min (${p(15)})`, tag: '' },
-    { amount: NRI_INR_EQUIV[30],     sessions: `1 × 30 min (${p(30)})`, tag: 'Popular' },
-    { amount: NRI_INR_EQUIV[45],     sessions: `1 × 45 min (${p(45)})`, tag: '' },
-    { amount: NRI_INR_EQUIV[45] * 2, sessions: `2 × 45 min`,            tag: '' },
-  ]
-}
 
 type RazorpayResponse = { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string }
 type RazorpayOptions = { key: string | undefined; amount: number; currency: string; name: string; description: string; order_id: string; prefill: object; theme: { color: string }; handler: (r: RazorpayResponse) => void }
@@ -78,7 +67,7 @@ function WalletPageInner() {
   // After a successful recharge, redirect here (e.g. /listener/[id] from free-trial conversion screen).
   const returnUrl = searchParams.get('return')
   const sb = createClient()
-  const [selected, setSelected] = useState(returnUrl ? 200 : 500)
+  const [selected, setSelected] = useState(returnUrl ? 1000 : 2000)
   const [customInput, setCustomInput] = useState('')
   const [loading, setLoading]   = useState(false)
   const [balance, setBalance]   = useState<number|null>(null)
@@ -90,7 +79,6 @@ function WalletPageInner() {
   const [paymentPending, setPaymentPending] = useState(false)
   const [showRefundConfirm, setShowRefundConfirm] = useState(false)
   const [isListener, setIsListener] = useState(false)
-  const [nriCountry, setNriCountry] = useState<string | null>(null)
   const [hasEarningsCredits, setHasEarningsCredits] = useState(false)
   const [hasRazorpayCredits, setHasRazorpayCredits] = useState(false)
   const rzpScriptRef = useRef(false)
@@ -135,12 +123,6 @@ function WalletPageInner() {
     // API (admin client, bypasses RLS) if the row is missing or inaccessible —
     // e.g. users who completed payment before their public.users row was created.
     const { data: userData } = await sb.from('users').select('wallet_balance, account_country').eq('id', user.id).maybeSingle()
-    // India vs overseas pricing follows the verified phone (same rule as billing).
-    const pc = pricingCountry(user.phone ? '+' + user.phone.replace(/^\+/, '') : null, (userData?.account_country as string | null) ?? null)
-    if (isNriCountry(pc)) {
-      setNriCountry(pc)
-      setSelected(returnUrl ? NRI_INR_EQUIV[15] : NRI_INR_EQUIV[30])
-    }
     if (userData !== null) {
       setBalance((userData?.wallet_balance as number) ?? 0)
     } else {
@@ -205,7 +187,7 @@ function WalletPageInner() {
     setBalance(0)
     setRefundSubmitted(true)
     setRefundPendingAmount(balance)
-    showToast(`Refund request submitted! You'll receive ₹${balance} in 3–5 business days.`, 'success')
+    showToast(`Refund request submitted! You'll receive ${formatGBP(balance ?? 0)} in 3–5 business days.`, 'success')
   }
 
   async function handleRecharge() {
@@ -239,8 +221,8 @@ function WalletPageInner() {
       // Open Razorpay checkout — order amount includes the gateway fee
       const rzp = new window.Razorpay({
         key:         process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-        amount:      orderAmountPaise ?? selected * 100,
-        currency:    'INR',
+        amount:      orderAmountPaise ?? grossRechargeAmount(selected), // pence (minor unit)
+        currency:    'GBP', // TODO(whop): replace Razorpay checkout with Whop
         name:        'How Was Your Day',
         description: 'Wallet recharge',
         order_id:    orderId,
@@ -273,9 +255,9 @@ function WalletPageInner() {
             sb.from('wallet_transactions')
               .select('*').eq('user_id', userId).order('created_at', { ascending: false }).limit(10)
               .then(({ data: txns }) => { if (txns) setTransactions(txns as Txn[]) })
-            showToast(`₹${selected} added to your wallet!`, 'success')
+            showToast(`${formatGBP(selected)} added to your wallet!`, 'success')
             // GA4 'purchase' (mark it as a key event in GA) — ties paying users to their landing page.
-            trackEvent('purchase', { transaction_id: response.razorpay_payment_id, value: selected, currency: 'INR', items: [{ item_name: 'Wallet recharge', price: selected, quantity: 1 }] })
+            trackEvent('purchase', { transaction_id: response.razorpay_payment_id, value: selected / 100, currency: 'GBP', items: [{ item_name: 'Wallet recharge', price: selected / 100, quantity: 1 }] })
             // If user came from the free-trial conversion screen, redirect back to the
             // listener profile so they can immediately book a paid session.
             if (returnUrl && returnUrl.startsWith('/') && !returnUrl.startsWith('//')) {
@@ -311,8 +293,8 @@ function WalletPageInner() {
 
         <div className="balance-card">
           <div className="balance-label">AVAILABLE BALANCE</div>
-          {/* When a refund is pending, show ₹0 regardless of DB value — funds are earmarked. */}
-          <div className="balance-amount">₹{refundPendingAmount !== null ? 0 : (balance ?? '—')}</div>
+          {/* When a refund is pending, show £0 regardless of DB value — funds are earmarked. */}
+          <div className="balance-amount">{refundPendingAmount !== null ? formatGBP(0) : (balance === null ? '—' : formatGBP(balance))}</div>
           <div className="balance-sub">{balance !== null ? `Available for sessions — rates vary by listener` : 'Loading...'}</div>
           {/* Listener earnings: show "Withdraw Earnings" CTA */}
           {isListener && hasEarningsCredits && !refundSubmitted && refundPendingAmount === null && (
@@ -335,7 +317,7 @@ function WalletPageInner() {
             showRefundConfirm ? (
               <div style={{ marginTop: 16, background: 'rgba(255,255,255,0.12)', borderRadius: 14, padding: '14px 16px', textAlign: 'left' }}>
                 <p style={{ fontSize: 13, color: 'white', fontWeight: 600, marginBottom: 12, lineHeight: 1.5 }}>
-                  Request a refund of ₹{balance} to your original payment method? We&apos;ll process it within 3–5 business days.
+                  Request a refund of {formatGBP(balance ?? 0)} to your original payment method? We&apos;ll process it within 3–5 business days.
                 </p>
                 <div style={{ display: 'flex', gap: 8 }}>
                   <button onClick={confirmRefund} style={{ flex: 1, padding: '9px 0', borderRadius: 50, background: 'white', color: 'var(--navy)', border: 'none', fontFamily: 'Nunito,sans-serif', fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>
@@ -348,7 +330,7 @@ function WalletPageInner() {
               </div>
             ) : (refundSubmitted || refundPendingAmount !== null) ? (
               <div style={{marginTop:16,fontSize:13,color:'rgba(255,255,255,0.85)',fontWeight:600,lineHeight:1.5,background:'rgba(255,255,255,0.12)',borderRadius:12,padding:'12px 14px'}}>
-                ✓ Refund of ₹{refundPendingAmount ?? balance} requested — the cash will arrive in 3–5 business days to your original payment method. We process refunds manually via Razorpay.
+                ✓ Refund of {formatGBP(refundPendingAmount ?? balance ?? 0)} requested — the cash will arrive in 3–5 business days to your original payment method. We process refunds manually.
               </div>
             ) : (
               <button className="refund-btn" onClick={() => setShowRefundConfirm(true)} disabled={refunding || !balance || balance <= 0} style={{ marginTop: isListener && hasEarningsCredits ? 8 : 16 }}>
@@ -366,24 +348,22 @@ function WalletPageInner() {
               Top up your wallet to start a session. Choose any session length and pay per minute.
             </p>
             <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:12,maxWidth:320,margin:'0 auto 20px'}}>
-              {(nriCountry ? nriPresets(nriCountry) : INDIA_PRESETS).map(p => p.amount).map(amt => (
+              {PRESETS.map(p => p.amount).map(amt => (
                 <button key={amt} onClick={() => setSelected(amt)}
                   style={{background: selected===amt ? '#FFF8F0' : 'white',border:`2px solid ${selected===amt?'var(--orange)':'var(--border)'}`,borderRadius:16,padding:'16px 8px',textAlign:'center',cursor:'pointer',fontFamily:'Nunito,sans-serif',fontWeight:900,fontSize:20,color:'var(--navy)'}}>
-                  ₹{amt}
+                  {formatGBP(amt)}
                 </button>
               ))}
             </div>
-            <p style={{fontSize:13,color:'var(--gray)'}}>{nriCountry
-              ? `15 min ${getNriDisplayPrice(15, nriCountry)} · 30 min ${getNriDisplayPrice(30, nriCountry)} · 45 min ${getNriDisplayPrice(45, nriCountry)} (charged in ₹ at a fixed rate)`
-              : 'From ₹160 for 15 min · ₹310 for 30 min · ₹460 for 45 min (price varies by listener)'}</p>
+            <p style={{fontSize:13,color:'var(--gray)'}}>Each listener sets their own per-minute price, plus a {formatGBP(PLATFORM_FEE)} platform fee per paid session. You see the exact price before you book.</p>
           </div>
         )}
 
         <div className="section-title">Recharge wallet</div>
         <div className="presets">
-          {(nriCountry ? nriPresets(nriCountry) : INDIA_PRESETS).map(p => (
+          {PRESETS.map(p => (
             <div key={p.amount} className={`preset${selected===p.amount && !customInput?' sel':''}`} onClick={() => { setSelected(p.amount); setCustomInput('') }}>
-              <div className="preset-amount">₹{p.amount}</div>
+              <div className="preset-amount">{formatGBP(p.amount)}</div>
               <div className="preset-sessions">{p.sessions}</div>
               {p.tag && <div className="preset-tag">{p.tag}</div>}
             </div>
@@ -392,29 +372,29 @@ function WalletPageInner() {
 
         {/* Custom amount input */}
         <div style={{marginBottom:14}}>
-          <div style={{fontSize:13,fontWeight:700,color:'var(--navy)',marginBottom:6}}>Or enter a custom amount (min ₹50)</div>
+          <div style={{fontSize:13,fontWeight:700,color:'var(--navy)',marginBottom:6}}>Or enter a custom amount in pounds ({formatGBP(MIN_RECHARGE)}–{formatGBP(MAX_RECHARGE)})</div>
           <div style={{display:'flex',alignItems:'center',background:'white',border:`2px solid ${customInput ? 'var(--orange)' : 'var(--border)'}`,borderRadius:14,overflow:'hidden'}}>
-            <span style={{padding:'12px 12px 12px 16px',fontWeight:900,fontSize:18,color:'var(--navy)'}}>₹</span>
+            <span style={{padding:'12px 12px 12px 16px',fontWeight:900,fontSize:18,color:'var(--navy)'}}>£</span>
             <input
               type="number"
               inputMode="numeric"
-              min={50}
-              max={10000}
-              placeholder="e.g. 100"
+              min={MIN_RECHARGE / 100}
+              max={MAX_RECHARGE / 100}
+              placeholder="e.g. 15"
               value={customInput}
               onChange={e => {
                 const v = e.target.value.replace(/[^0-9]/g,'')
                 setCustomInput(v)
                 const n = parseInt(v, 10)
-                if (!isNaN(n) && n >= 50 && n <= 10000) setSelected(n)
+                if (!isNaN(n) && n * 100 >= MIN_RECHARGE && n * 100 <= MAX_RECHARGE) setSelected(n * 100)
               }}
               style={{flex:1,padding:'12px 16px 12px 4px',fontFamily:'Nunito,sans-serif',fontSize:16,fontWeight:700,color:'var(--navy)',border:'none',outline:'none',background:'transparent'}}
             />
           </div>
           {customInput && (() => {
             const n = parseInt(customInput, 10)
-            if (isNaN(n) || n < 50) return <p style={{fontSize:12,color:'#E53935',fontWeight:600,marginTop:6}}>Minimum ₹50</p>
-            if (n > 10000) return <p style={{fontSize:12,color:'#E53935',fontWeight:600,marginTop:6}}>Maximum ₹10,000</p>
+            if (isNaN(n) || n * 100 < MIN_RECHARGE) return <p style={{fontSize:12,color:'#E53935',fontWeight:600,marginTop:6}}>Minimum {formatGBP(MIN_RECHARGE)}</p>
+            if (n * 100 > MAX_RECHARGE) return <p style={{fontSize:12,color:'#E53935',fontWeight:600,marginTop:6}}>Maximum {formatGBP(MAX_RECHARGE)}</p>
             return null
           })()}
         </div>
@@ -426,8 +406,8 @@ function WalletPageInner() {
 
         {/* Gateway fee callout — show exact charge before user pays */}
         <div style={{background:'rgba(255,153,51,0.08)',border:'1px solid rgba(255,153,51,0.25)',borderRadius:14,padding:'12px 16px',marginBottom:16,fontSize:13,color:'#7A4000',fontWeight:600,lineHeight:1.5}}>
-          💳 You&apos;ll be charged <strong>₹{grossRechargeAmount(selected)}</strong>{' '}
-          <span style={{fontWeight:500,opacity:0.8}}>(₹{selected} wallet credit + ₹{grossRechargeAmount(selected) - selected} gateway fee)</span>
+          💳 You&apos;ll be charged <strong>{formatGBP(grossRechargeAmount(selected))}</strong>{' '}
+          <span style={{fontWeight:500,opacity:0.8}}>({formatGBP(selected)} wallet credit + {formatGBP(grossRechargeAmount(selected) - selected)} payment fee)</span>
         </div>
 
         {paymentPending && (
@@ -437,10 +417,10 @@ function WalletPageInner() {
           </div>
         )}
         {(() => {
-          const customInvalid = !!customInput && (isNaN(parseInt(customInput,10)) || parseInt(customInput,10) < 50 || parseInt(customInput,10) > 10000)
+          const customInvalid = !!customInput && (isNaN(parseInt(customInput,10)) || parseInt(customInput,10) * 100 < MIN_RECHARGE || parseInt(customInput,10) * 100 > MAX_RECHARGE)
           return (
             <button className="btn" onClick={handleRecharge} disabled={loading || paymentPending || customInvalid} style={{marginBottom:32}}>
-              {loading || paymentPending ? <span className="spin">⟳</span> : customInvalid ? 'Enter a valid amount (₹50–₹10,000)' : `Add ₹${selected} to wallet →`}
+              {loading || paymentPending ? <span className="spin">⟳</span> : customInvalid ? `Enter a valid amount (${formatGBP(MIN_RECHARGE)}–${formatGBP(MAX_RECHARGE)})` : `Add ${formatGBP(selected)} to wallet →`}
             </button>
           )
         })()}
@@ -460,10 +440,10 @@ function WalletPageInner() {
                 <div key={i} className="txn">
                   <div>
                     <div className="txn-desc">{t.description || 'Transaction'}</div>
-                    <div className="txn-date">{new Date(t.created_at).toLocaleDateString('en-IN', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</div>
+                    <div className="txn-date">{new Date(t.created_at).toLocaleDateString('en-GB', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</div>
                   </div>
                   <div className={`txn-amount ${t.type==='credit'?'cr':'dr'}`}>
-                    {t.type==='credit' ? '+' : '−'}₹{Math.abs(t.amount)}
+                    {t.type==='credit' ? '+' : '−'}{formatGBP(Math.abs(t.amount))}
                   </div>
                 </div>
               ))}

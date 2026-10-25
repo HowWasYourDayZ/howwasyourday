@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'How do I cope with a breakup when I cannot tell my family?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In the UK or Ireland, many relationships are kept private from family — which means when they end, you are also grieving in secret. This can make breakup pain significantly harder to process. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.',
+        text: 'In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. This can make breakup pain significantly harder to process. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.',
       },
     },
     {
@@ -240,7 +240,7 @@ export default function BreakupSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I cope with a breakup when I cannot tell my family?</div>
-            <div className="faq-a">In the UK or Ireland, many relationships are kept private from family — which means when they end, you are also grieving in secret. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.</div>
+            <div className="faq-a">In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support help after a divorce?</div>

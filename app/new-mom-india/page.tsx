@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'New Mom India — When It\'s Not All Joy | How Was Your Day',
   description: 'Sleep deprivation, identity shift, isolation, pressure to be happy. New motherhood is hard. Talk anonymously from ₹160.',
   keywords: ['new mom India', 'new mother stress India', 'first time mom anxiety India', 'new baby overwhelming India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/new-mom-india', languages: { 'en-IN': 'https://www.howwasyourday.live/new-mom-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/new-mom-india', languages: { 'en-GB': 'https://www.howwasyourday.live/new-mom-india' } },
   openGraph: { title: 'New Mom India — When It\'s Not All Joy | How Was Your Day', description: 'Sleep deprivation, identity shift, isolation, pressure to be happy. New motherhood is hard. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/new-mom-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

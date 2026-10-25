@@ -1,4 +1,5 @@
 'use client'
+import { formatGBP, formatRate } from '@/lib/money'
 import { useState, useEffect, useCallback, useRef, Fragment } from 'react'
 import { createClient } from '@/lib/supabase'
 import { LISTENER_SERVICE_FEE_RATE, serviceFeeRateAt } from '@/lib/constants'
@@ -232,21 +233,21 @@ const S = `
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-function fmt(n: number) { return n.toLocaleString('en-IN') }
+function fmt(n: number) { return n.toLocaleString('en-GB') }
 // Takes RUPEES, not paise. The API returns rupee amounts (users.wallet_balance,
 // wallet_transactions.amount and sessions.platform_fee are all rupee columns);
 // only the Razorpay boundary deals in paise. KPI fields are named *Rupees to
 // keep that unambiguous.
-function fmtRs(rupees: number) { return `₹${fmt(Math.round(rupees))}` }
+function fmtRs(rupees: number) { return `${formatGBP(fmt(Math.round(rupees)))}` }
 function fmtDate(iso: string | null | undefined) {
   if (!iso) return '—'
-  return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
 // Date + time, for "last login" where the time of day matters.
 function fmtDateTime(iso: string | null | undefined) {
   if (!iso) return 'Never'
-  return new Date(iso).toLocaleString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+  return new Date(iso).toLocaleString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -841,10 +842,10 @@ export default function AdminPage() {
       let toastMsg = `Action "${action}" completed`
       if (action === 'force_refund') {
         toastMsg = resData.razorpayRefundId
-          ? `₹${resData.amount} refunded via Razorpay ✓`
+          ? `${formatGBP(resData.amount)} refunded via Razorpay ✓`
           : `Balance cleared — manual Razorpay refund needed (check admin notes)`
       } else if (action === 'force_payout') {
-        toastMsg = `₹${resData.amount} payout queued — pay via UPI then mark paid in Payouts tab`
+        toastMsg = `${formatGBP(resData.amount)} payout queued — pay via UPI then mark paid in Payouts tab`
       }
       if (typeof resData.warning === 'string') toastMsg = `⚠️ ${resData.warning}`
       showToast(toastMsg)
@@ -1117,7 +1118,7 @@ export default function AdminPage() {
                             <div style={{ minWidth: 180, flex: 1 }}>
                               <div style={{ fontWeight: 800 }}>{u?.name || '—'}</div>
                               <div style={{ fontSize: 12, color: 'var(--gray)' }}>
-                                {u?.phone || u?.email || '—'} · ₹{l.rate_per_min ?? '—'}/min
+                                {u?.phone || u?.email || '—'} · {formatRate(l.rate_per_min ?? '—')}
                               </div>
                               {/* Education (public on the profile) and payout account holder (KYC: should match the name above). */}
                               <div style={{ fontSize: 12, marginTop: 4, color: 'var(--navy)', fontWeight: 700 }}>
@@ -1235,7 +1236,7 @@ export default function AdminPage() {
                 })()}
                 {/* Paying customers — everyone who recharged or completed a paid session. */}
                 {customers && customers.length > 0 && (() => {
-                  const d = (x: string | null) => x ? new Date(x).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : '—'
+                  const d = (x: string | null) => x ? new Date(x).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : '—'
                   const real = customers.filter(c => !c.flags.includes('deleted') && !c.flags.includes('also listener'))
                   const shown = showAllCustomers ? customers : customers.slice(0, 10)
                   const td: React.CSSProperties = { padding: '8px 10px', borderTop: '1px solid var(--border)', fontSize: 12, verticalAlign: 'top', whiteSpace: 'nowrap' }
@@ -1517,7 +1518,7 @@ export default function AdminPage() {
                 {/* ── GROSS PLATFORM REVENUE (platform fee) ── */}
                 {kpis.platformEarnings && (
                   <>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--gray)', marginBottom: 10 }}>How Was Your Day Revenue — before gateway costs (India: ₹10 flat + listener svc fee — {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}% now, 15% before 24 Sep 2026 · NRI: same + USD price margin)</div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--gray)', marginBottom: 10 }}>How Was Your Day Revenue — before gateway costs (£1 flat platform fee + listener service fee — {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}%)</div>
                     <div className="kpi-grid" style={{ marginBottom: 20 }}>
                       <div className="kpi-card" style={{ borderLeft: '5px solid var(--green)' }}>
                         <div className="kpi-label">All Time</div>
@@ -1695,7 +1696,7 @@ export default function AdminPage() {
                           <td style={{ color: 'var(--gray)', fontSize: 13 }}>{u.phone || '—'}</td>
                           <td style={{ color: 'var(--gray)' }}>{fmtDate(u.created_at)}</td>
                           <td style={{ color: 'var(--gray)', fontSize: 12 }}>{fmtDateTime(u.last_sign_in_at)}</td>
-                          <td>₹{u.wallet_balance ?? 0}</td>
+                          <td>{formatGBP(u.wallet_balance ?? 0)}</td>
                           <td>
                             {u.phone?.startsWith('DELETE')
                               ? <span className="badge badge-red" style={{ background: '#1a1a1a', color: '#ff6b6b' }}>Deleted</span>
@@ -1711,13 +1712,13 @@ export default function AdminPage() {
                               {!u.phone?.startsWith('DELETE') && (
                                 confirmForceRefundId === u.id ? (
                                   <span style={{ display: 'inline-flex', gap: 4, alignItems: 'center' }}>
-                                    <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--teal)' }}>Refund ₹{u.wallet_balance ?? 0}?</span>
+                                    <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--teal)' }}>Refund {formatGBP(u.wallet_balance ?? 0)}?</span>
                                     <button className="btn btn-teal" style={{ fontSize: 11, padding: '4px 8px' }} disabled={busy !== null || (u.wallet_balance ?? 0) <= 0} onClick={() => { setConfirmForceRefundId(null); userAction(u.id, 'force_refund') }}>Yes, refund</button>
                                     <button className="btn btn-gray" style={{ fontSize: 11, padding: '4px 8px' }} onClick={() => setConfirmForceRefundId(null)}>Cancel</button>
                                   </span>
                                 ) : (
                                   <button className="btn btn-teal" style={{ fontSize: 12 }} disabled={busy !== null || (u.wallet_balance ?? 0) <= 0} onClick={() => setConfirmForceRefundId(u.id)} title={(u.wallet_balance ?? 0) > 0 ? 'Refund the whole wallet balance to the original Razorpay payment(s). Does NOT ban or suspend the account.' : 'No balance to refund'}>
-                                    Refund {(u.wallet_balance ?? 0) > 0 ? `₹${u.wallet_balance}` : '₹0'}
+                                    Refund {(u.wallet_balance ?? 0) > 0 ? `${formatGBP(u.wallet_balance)}` : '£0'}
                                   </button>
                                 )
                               )}
@@ -2014,16 +2015,16 @@ export default function AdminPage() {
                             </td>
                             <td style={{ color: 'var(--gray)', fontSize: 12 }}>{fmtDate(u?.created_at)}</td>
                             <td style={{ color: 'var(--gray)', fontSize: 12 }}>{fmtDateTime(l.last_sign_in_at)}</td>
-                            <td>₹{l.rate_per_min ?? '—'}/min</td>
+                            <td>{formatRate(l.rate_per_min ?? '—')}</td>
                             <td>{l.rating ? `${l.rating.toFixed(1)} ★` : '—'}</td>
                             <td>{l.total_sessions ?? 0}</td>
                             <td style={{ fontWeight: 800, whiteSpace: 'nowrap' }}>
-                              ₹{(l.earned_total ?? 0).toLocaleString('en-IN')}
+                              {formatGBP((l.earned_total ?? 0))}
                               {/* Settled = cleared and payable. Only worth calling out
                                   when it differs from the total. */}
                               {(l.earned_settled ?? 0) !== (l.earned_total ?? 0) && (
                                 <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--gray)' }}>
-                                  ₹{(l.earned_settled ?? 0).toLocaleString('en-IN')} settled
+                                  {formatGBP((l.earned_settled ?? 0))} settled
                                 </div>
                               )}
                             </td>
@@ -2032,8 +2033,8 @@ export default function AdminPage() {
                               {(() => {
                                 const bal = Number((l.users as { wallet_balance?: number } | undefined)?.wallet_balance ?? 0)
                                 return bal > 0
-                                  ? <span style={{ color: 'var(--teal)' }}>₹{bal.toLocaleString('en-IN')}</span>
-                                  : <span style={{ color: 'var(--gray)' }}>₹0</span>
+                                  ? <span style={{ color: 'var(--teal)' }}>{formatGBP(bal)}</span>
+                                  : <span style={{ color: 'var(--gray)' }}>£0</span>
                               })()}
                             </td>
                             <td>
@@ -2323,13 +2324,13 @@ export default function AdminPage() {
                                   {!l.users?.phone?.startsWith('DELETE') && (
                                     confirmForcePayoutId === l.user_id ? (
                                       <span style={{ display: 'inline-flex', gap: 4, alignItems: 'center' }}>
-                                        <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--teal)' }}>Queue ₹{l.payout_available ?? '?'} payout?</span>
+                                        <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--teal)' }}>Queue {formatGBP(l.payout_available ?? '?')} payout?</span>
                                         <button className="btn btn-teal" style={{ fontSize: 11, padding: '4px 8px' }} disabled={busy !== null || (l.payout_available ?? 0) <= 0} onClick={() => { setConfirmForcePayoutId(null); userAction(l.user_id, 'force_payout') }}>Yes, queue</button>
                                         <button className="btn btn-gray" style={{ fontSize: 11, padding: '4px 8px' }} onClick={() => setConfirmForcePayoutId(null)}>Cancel</button>
                                       </span>
                                     ) : (
-                                      <button className="btn btn-teal" style={{ fontSize: 12 }} disabled={busy !== null || (l.payout_available ?? 0) <= 0} onClick={() => setConfirmForcePayoutId(l.user_id)} title={(l.payout_available ?? 0) > 0 ? `Pays what is still owed: wallet ₹${Number((l.users as { wallet_balance?: number } | undefined)?.wallet_balance ?? 0)}, settled earnings ₹${l.earned_settled ?? 0} − already paid/requested ₹${l.payout_claimed ?? 0}` : 'Nothing owed — already paid out (or no settled earnings)'}>
-                                        Payout {l.payout_available == null ? '' : `₹${l.payout_available}`}
+                                      <button className="btn btn-teal" style={{ fontSize: 12 }} disabled={busy !== null || (l.payout_available ?? 0) <= 0} onClick={() => setConfirmForcePayoutId(l.user_id)} title={(l.payout_available ?? 0) > 0 ? `Pays what is still owed: wallet ${formatGBP(Number((l.users as { wallet_balance?: number } | undefined)?.wallet_balance ?? 0))}, settled earnings ${formatGBP(l.earned_settled ?? 0)} − already paid/requested ${formatGBP(l.payout_claimed ?? 0)}` : 'Nothing owed — already paid out (or no settled earnings)'}>
+                                        Payout {l.payout_available == null ? '' : `${formatGBP(l.payout_available)}`}
                                       </button>
                                     )
                                   )}
@@ -2536,14 +2537,14 @@ export default function AdminPage() {
                           {s.is_free_trial
                             ? <span className="badge badge-gray">Free</span>
                             : (() => {
-                                const platformFee = s.platform_fee ?? 0  // seeker's flat ₹10
+                                const platformFee = s.platform_fee ?? 0  // seeker's flat platform fee
 
                                 // ── Settled path (listener_earnings row exists) ──────────────
                                 // listener_net_amount and listener_service_fee come from the
                                 // actual settlement ledger — exact, accounts for early exits
                                 // and the listener service fee.  Use these when available.
                                 if (s.listener_net_amount != null && s.listener_service_fee != null) {
-                                  const howWasYourDayExtra  = s.listener_service_fee  // beyond ₹10 flat
+                                  const howWasYourDayExtra  = s.listener_service_fee  // beyond the flat platform fee
                                   const howWasYourDayEarned = platformFee + howWasYourDayExtra  // How Was Your Day total
                                   const listenerNet  = s.listener_net_amount
                                   const refund = Math.max(0, s.amount_held - howWasYourDayEarned - listenerNet)
@@ -2563,27 +2564,27 @@ export default function AdminPage() {
 
                                   const tooltip = isNri
                                     ? [
-                                        `NRI session · Seeker held ₹${s.amount_held}`,
-                                        `Listener ₹${listenerNet} (rate ₹${s.listener_rate_per_min}/min × ${Math.round((1 - feeRate) * 100)}%)`,
-                                        `Svc fee ₹${nriSvcFee} · NRI margin ₹${nriMargin} · Flat ₹${platformFee}`,
-                                        `How Was Your Day total ₹${howWasYourDayEarned}`,
-                                        isEarlyExit ? `Refund ₹${refund}` : null,
+                                        `NRI session · Seeker held ${formatGBP(s.amount_held)}`,
+                                        `Listener ${formatGBP(listenerNet)} (rate ${formatRate(s.listener_rate_per_min)} × ${Math.round((1 - feeRate) * 100)}%)`,
+                                        `Svc fee ${formatGBP(nriSvcFee)} · NRI margin ${formatGBP(nriMargin)} · Flat ${formatGBP(platformFee)}`,
+                                        `How Was Your Day total ${formatGBP(howWasYourDayEarned)}`,
+                                        isEarlyExit ? `Refund ${formatGBP(refund)}` : null,
                                       ].filter(Boolean).join(' | ')
                                     : [
-                                        `Seeker held ₹${s.amount_held}`,
-                                        `Listener earned ₹${listenerNet}`,
-                                        howWasYourDayExtra > 0 ? `Service fee ₹${howWasYourDayExtra}` : null,
-                                        `Platform fee ₹${platformFee}`,
-                                        `How Was Your Day total ₹${howWasYourDayEarned}`,
-                                        isEarlyExit ? `Refund ₹${refund}` : null,
+                                        `Seeker held ${formatGBP(s.amount_held)}`,
+                                        `Listener earned ${formatGBP(listenerNet)}`,
+                                        howWasYourDayExtra > 0 ? `Service fee ${formatGBP(howWasYourDayExtra)}` : null,
+                                        `Platform fee ${formatGBP(platformFee)}`,
+                                        `How Was Your Day total ${formatGBP(howWasYourDayEarned)}`,
+                                        isEarlyExit ? `Refund ${formatGBP(refund)}` : null,
                                       ].filter(Boolean).join(' · ')
 
                                   return (
                                     <span title={tooltip}>
                                       {isNri && <span style={{ fontSize: 9, background: '#E8F4FF', color: '#0066CC', borderRadius: 3, padding: '1px 4px', marginRight: 4, fontWeight: 800 }}>NRI</span>}
-                                      ₹{listenerNet}
-                                      <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+₹{howWasYourDayEarned}</span>
-                                      {isEarlyExit && <span style={{ fontSize: 10, color: 'var(--orange)', marginLeft: 3 }}>↩₹{refund}</span>}
+                                      {formatGBP(listenerNet)}
+                                      <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+{formatGBP(howWasYourDayEarned)}</span>
+                                      {isEarlyExit && <span style={{ fontSize: 10, color: 'var(--orange)', marginLeft: 3 }}>↩{formatGBP(refund)}</span>}
                                     </span>
                                   )
                                 }
@@ -2595,8 +2596,8 @@ export default function AdminPage() {
                                 // Cancelled: seeker is fully refunded — nothing was earned.
                                 if (s.status === 'cancelled') {
                                   return (
-                                    <span title={`Cancelled — seeker refunded ₹${s.amount_held}`} style={{ color: 'var(--gray)' }}>
-                                      ₹0
+                                    <span title={`Cancelled — seeker refunded ${formatGBP(s.amount_held)}`} style={{ color: 'var(--gray)' }}>
+                                      £0
                                     </span>
                                   )
                                 }
@@ -2618,9 +2619,9 @@ export default function AdminPage() {
                                   const nriMargin  = isNriActive ? (s.amount_held - platformFee - rawShare) : 0
                                   const platformTotal = platformFee + serviceFee + nriMargin
                                   return (
-                                    <span title={`Seeker held ₹${s.amount_held} · Projected listener ₹${listenerNet} (${Math.round(activeFeeRate * 100)}% svc fee ₹${serviceFee})${isNriActive ? ` · NRI margin ₹${nriMargin}` : ''} · How Was Your Day ~₹${platformTotal}`}>
-                                      ~₹{listenerNet}
-                                      <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+₹{platformTotal}</span>
+                                    <span title={`Seeker held ${formatGBP(s.amount_held)} · Projected listener ${formatGBP(listenerNet)} (${Math.round(activeFeeRate * 100)}% svc fee ${formatGBP(serviceFee)})${isNriActive ? ` · NRI margin ${formatGBP(nriMargin)}` : ''} · How Was Your Day ~${formatGBP(platformTotal)}`}>
+                                      ~{formatGBP(listenerNet)}
+                                      <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+{formatGBP(platformTotal)}</span>
                                     </span>
                                   )
                                 }
@@ -2642,10 +2643,10 @@ export default function AdminPage() {
                                 }
                                 const refund = isEarlyExit ? Math.max(0, s.amount_held - listenerEarning - platformFee) : 0
                                 return (
-                                  <span title={`Seeker held ₹${s.amount_held}${isEarlyExit ? ` · ${billedMins}/${s.duration_mins} min used · Listener earned ₹${listenerEarning} · Refund ₹${refund}` : ` · Listener earned ₹${listenerEarning}`} · Platform fee ₹${platformFee}`}>
-                                    ₹{listenerEarning}
-                                    {platformFee > 0 && <span style={{ fontSize: 10, color: 'var(--gray)', marginLeft: 3 }}>+₹{platformFee}</span>}
-                                    {isEarlyExit && <span style={{ fontSize: 10, color: 'var(--orange)', marginLeft: 3 }}>↩₹{refund}</span>}
+                                  <span title={`Seeker held ${formatGBP(s.amount_held)}${isEarlyExit ? ` · ${billedMins}/${s.duration_mins} min used · Listener earned ${formatGBP(listenerEarning)} · Refund ${formatGBP(refund)}` : ` · Listener earned ${formatGBP(listenerEarning)}`} · Platform fee ${formatGBP(platformFee)}`}>
+                                    {formatGBP(listenerEarning)}
+                                    {platformFee > 0 && <span style={{ fontSize: 10, color: 'var(--gray)', marginLeft: 3 }}>+{formatGBP(platformFee)}</span>}
+                                    {isEarlyExit && <span style={{ fontSize: 10, color: 'var(--orange)', marginLeft: 3 }}>↩{formatGBP(refund)}</span>}
                                   </span>
                                 )
                               })()
@@ -2673,7 +2674,7 @@ export default function AdminPage() {
                               : `Alert failed: ${p.errors?.[0] || 'unknown'}`
                             const why = devices === 0 ? s.listener_push_error : null
                             return <div style={{ fontSize: 11, fontWeight: 700, marginTop: 4, color: ok ? 'var(--teal)' : 'var(--red)' }}>{ok ? '🔔' : '🔕'} {text}
-                              {why && <div style={{ fontWeight: 500, color: 'var(--gray)', maxWidth: 260, wordBreak: 'break-word' }}>Why: {why.error}{why.at ? ` (${new Date(why.at).toLocaleString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })})` : ''}</div>}
+                              {why && <div style={{ fontWeight: 500, color: 'var(--gray)', maxWidth: 260, wordBreak: 'break-word' }}>Why: {why.error}{why.at ? ` (${new Date(why.at).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })})` : ''}</div>}
                             </div>
                           })()}
                           {unsettledIds.has(s.id) && (
@@ -2695,7 +2696,7 @@ export default function AdminPage() {
                                   if (res?.ok) {
                                     showToast(json.already_settled
                                       ? `Already settled: ${json.message}`
-                                      : `✅ ₹${json.listenerEarning} credited to listener`)
+                                      : `✅ ${formatGBP(json.listenerEarning)} credited to listener`)
                                     setUnsettledIds(prev => { const n = new Set(prev); n.delete(s.id); return n })
                                   } else {
                                     showToast(`Failed: ${json.error || 'unknown error'}`)
@@ -2775,9 +2776,9 @@ export default function AdminPage() {
                         const rawShare = Math.round(listenerNet / (1 - feeRate))
                         const nriSvcFee = Math.round(rawShare * feeRate)
                         const nriMargin = extra - nriSvcFee
-                        return ` · NRI ₹${transcriptSession.amount_held} · Listener ₹${listenerNet} + How Was Your Day ₹${howWasYourDay} (₹${pFee} flat+₹${nriSvcFee} fee+₹${nriMargin} margin)`
+                        return ` · NRI ${formatGBP(transcriptSession.amount_held)} · Listener ${formatGBP(listenerNet)} + How Was Your Day ${formatGBP(howWasYourDay)} (${formatGBP(pFee)} flat+${formatGBP(nriSvcFee)} fee+${formatGBP(nriMargin)} margin)`
                       }
-                      return ` · ₹${listenerNet} listener + ₹${howWasYourDay} How Was Your Day${extra > 0 ? ` (₹${pFee}+₹${extra})` : ''}`
+                      return ` · ${formatGBP(listenerNet)} listener + ${formatGBP(howWasYourDay)} How Was Your Day${extra > 0 ? ` (${formatGBP(pFee)}+${formatGBP(extra)})` : ''}`
                     })()}
                   </div>
                 </div>
@@ -2998,16 +2999,16 @@ export default function AdminPage() {
                   })()}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 8 }}>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: 'var(--navy)' }}>₹{p.amount}</div>
+                  <div style={{ fontSize: 22, fontWeight: 900, color: 'var(--navy)' }}>{formatGBP(p.amount)}</div>
                   <div style={{ display: 'flex', gap: 8 }}>
-                  <button className="btn btn-teal" disabled={busy !== null} onClick={() => adminAction('complete_payout', p.id, rzpxEnabled && p.upi_id ? `₹${p.amount} sent via RazorpayX` : `Marked ₹${p.amount} payout complete`)}>
+                  <button className="btn btn-teal" disabled={busy !== null} onClick={() => adminAction('complete_payout', p.id, rzpxEnabled && p.upi_id ? `${formatGBP(p.amount)} sent via RazorpayX` : `Marked ${formatGBP(p.amount)} payout complete`)}>
                     {busy === `complete_payout:${p.id}` ? 'Sending…' : rzpxEnabled && p.upi_id ? '⚡ Pay via UPI' : 'Mark Paid'}
                   </button>
                   {confirmRejectPayoutId === p.id ? (
                     <span style={{ display: 'inline-flex', flexDirection: 'column', gap: 4, alignItems: 'flex-end' }}>
                       <input className="search-input" style={{ minWidth: 180, padding: '3px 8px', fontSize: 12 }} placeholder="Reason (shown to listener)" value={rejectPayoutReason} onChange={e => setRejectPayoutReason(e.target.value)} autoFocus />
                       <span style={{ display: 'inline-flex', gap: 4 }}>
-                        <button className="btn btn-red" style={{ fontSize: 11, padding: '4px 8px' }} disabled={busy !== null} onClick={() => { const r = rejectPayoutReason; setConfirmRejectPayoutId(null); setRejectPayoutReason(''); adminAction('reject_payout', p.id, `Rejected ₹${p.amount} payout — balance returned`, r || undefined) }}>Confirm Reject</button>
+                        <button className="btn btn-red" style={{ fontSize: 11, padding: '4px 8px' }} disabled={busy !== null} onClick={() => { const r = rejectPayoutReason; setConfirmRejectPayoutId(null); setRejectPayoutReason(''); adminAction('reject_payout', p.id, `Rejected ${formatGBP(p.amount)} payout — balance returned`, r || undefined) }}>Confirm Reject</button>
                         <button className="btn btn-gray" style={{ fontSize: 11, padding: '4px 8px' }} onClick={() => { setConfirmRejectPayoutId(null); setRejectPayoutReason('') }}>Cancel</button>
                       </span>
                     </span>
@@ -3065,13 +3066,13 @@ export default function AdminPage() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: 'var(--navy)' }}>₹{r.amount}</div>
+                  <div style={{ fontSize: 22, fontWeight: 900, color: 'var(--navy)' }}>{formatGBP(r.amount)}</div>
                   <button
                     className="btn btn-teal"
                     disabled={busy !== null}
                     onClick={() => {
-                      if (!confirm(`Refund ₹${r.amount} to ${r.users?.name || 'this user'} through Razorpay?`)) return
-                      adminAction('complete_refund', r.id, `Refund of ₹${r.amount} sent via Razorpay`)
+                      if (!confirm(`Refund ${formatGBP(r.amount)} to ${r.users?.name || 'this user'} through Razorpay?`)) return
+                      adminAction('complete_refund', r.id, `Refund of ${formatGBP(r.amount)} sent via Razorpay`)
                     }}
                   >
                     {busy === `complete_refund:${r.id}` ? 'Refunding…' : 'Refund via Razorpay'}
@@ -3081,7 +3082,7 @@ export default function AdminPage() {
                     style={{ background: 'white', color: 'var(--navy)', border: '1.5px solid var(--border)' }}
                     disabled={busy !== null}
                     onClick={() => {
-                      const n = prompt(`Only use this if you already refunded the full ₹${r.amount} yourself (Razorpay dashboard / UPI). Note (optional):`)
+                      const n = prompt(`Only use this if you already refunded the full ${formatGBP(r.amount)} yourself (Razorpay dashboard / UPI). Note (optional):`)
                       if (n === null) return
                       adminAction('complete_refund_manual', r.id, 'Refund marked as done manually', n || undefined)
                     }}
@@ -3092,9 +3093,9 @@ export default function AdminPage() {
                     className="btn btn-red"
                     disabled={busy !== null}
                     onClick={() => {
-                      const n = prompt(`Reject this refund? ₹${r.amount} goes back to the user's wallet. Reason (optional):`)
+                      const n = prompt(`Reject this refund? ${formatGBP(r.amount)} goes back to the user's wallet. Reason (optional):`)
                       if (n === null) return
-                      adminAction('reject_refund', r.id, `Refund rejected — ₹${r.amount} returned to wallet`, n || undefined)
+                      adminAction('reject_refund', r.id, `Refund rejected — ${formatGBP(r.amount)} returned to wallet`, n || undefined)
                     }}
                   >
                     {busy === `reject_refund:${r.id}` ? 'Saving…' : 'Reject'}
@@ -3128,7 +3129,7 @@ export default function AdminPage() {
                     <tr key={cp.id} style={{ borderTop: '1px solid var(--border)' }}>
                       <td style={{ padding: '10px 14px', fontWeight: 700, color: 'var(--navy)' }}>{cp.name || '—'}</td>
                       <td style={{ padding: '10px 14px', color: 'var(--gray)', fontWeight: 600, fontFamily: 'monospace', fontSize: 12 }}>{cp.phone || '—'}</td>
-                      <td style={{ padding: '10px 14px', textAlign: 'right', fontWeight: 800, color: 'var(--navy)' }}>₹{fmt(cp.amount)}</td>
+                      <td style={{ padding: '10px 14px', textAlign: 'right', fontWeight: 800, color: 'var(--navy)' }}>{formatGBP(fmt(cp.amount))}</td>
                       <td style={{ padding: '10px 14px', color: 'var(--gray)', fontWeight: 600, fontSize: 12 }}>{fmtDateTime(cp.created_at)}</td>
                       <td style={{ padding: '10px 14px', color: 'var(--green)', fontWeight: 700, fontSize: 12 }}>{fmtDateTime(cp.processed_at)}</td>
                     </tr>
@@ -3293,7 +3294,7 @@ export default function AdminPage() {
               </div>
               <div className="section-title" style={{fontSize:15}}>Listener quality</div>
               <div className="table-wrap" style={{marginBottom:28}}><table><thead><tr><th>Listener</th><th>Paid</th><th>Unique seekers</th><th>2nd-session %</th><th>3+ seekers</th><th>Rating</th><th>Rated</th><th>Reports / 100</th><th>Refunds / 100</th><th>Blocks / 100</th><th>Short voice</th><th>Avg duration</th><th>Earnings</th></tr></thead><tbody>
-                {qualityListeners.map(l=><tr key={l.listener_id}><td style={{fontWeight:800}}>{l.name}</td><td>{l.paid_sessions}</td><td>{l.unique_paid_seekers}</td><td>{l.second_session_pct==null?'—':`${l.second_session_pct}%`}</td><td>{l.three_plus_seekers}</td><td>{l.rating==null?'—':`${l.rating} ⭐`}</td><td>{l.rating_count==null?'—':l.rating_count}</td><td>{l.paid_sessions?l.reports_per_100:'—'}</td><td>{l.paid_sessions?l.refunds_per_100:'—'}</td><td>{l.paid_sessions?l.blocks_per_100:'—'}</td><td>{l.paid_sessions?`${l.short_voice_pct??0}%`:'—'}</td><td>{l.avg_duration_mins==null?'—':`${l.avg_duration_mins} min`}</td><td>₹{fmt(l.earnings)}</td></tr>)}
+                {qualityListeners.map(l=><tr key={l.listener_id}><td style={{fontWeight:800}}>{l.name}</td><td>{l.paid_sessions}</td><td>{l.unique_paid_seekers}</td><td>{l.second_session_pct==null?'—':`${l.second_session_pct}%`}</td><td>{l.three_plus_seekers}</td><td>{l.rating==null?'—':`${l.rating} ⭐`}</td><td>{l.rating_count==null?'—':l.rating_count}</td><td>{l.paid_sessions?l.reports_per_100:'—'}</td><td>{l.paid_sessions?l.refunds_per_100:'—'}</td><td>{l.paid_sessions?l.blocks_per_100:'—'}</td><td>{l.paid_sessions?`${l.short_voice_pct??0}%`:'—'}</td><td>{l.avg_duration_mins==null?'—':`${l.avg_duration_mins} min`}</td><td>{formatGBP(fmt(l.earnings))}</td></tr>)}
                 {qualityListeners.length===0&&<tr><td colSpan={13} className="empty">No completed paid-session listener data in this window.</td></tr>}
               </tbody></table></div>
               <div className="section-title" style={{fontSize:15}}>Session quality</div>
@@ -3302,7 +3303,7 @@ export default function AdminPage() {
                 <div className="kpi-card"><div className="kpi-label">Short voice sessions</div><div className="kpi-value">{qualitySummary.short_voice_pct==null?'—':`${qualitySummary.short_voice_pct}%`}</div><div className="kpi-sub">{qualitySummary.short_voice_sessions} under 2 min; missing telemetry excluded</div></div>
                 <div className="kpi-card"><div className="kpi-label">Sessions rated</div><div className="kpi-value">{qualitySummary.sessions_rated_pct==null?'—':`${qualitySummary.sessions_rated_pct}%`}</div><div className="kpi-sub">{qualitySummary.rating_count==null?'Rating history unavailable':`${qualitySummary.rating_count} ratings`}</div></div>
                 <div className="kpi-card"><div className="kpi-label">Average rating</div><div className="kpi-value">{qualitySummary.avg_rating==null?'—':`${qualitySummary.avg_rating} ⭐`}</div><div className="kpi-sub">5-star {qualitySummary.five_star_pct==null?'—':`${qualitySummary.five_star_pct}%`} · 1–2 star {qualitySummary.low_rating_pct==null?'—':`${qualitySummary.low_rating_pct}%`}</div></div>
-                <div className="kpi-card"><div className="kpi-label">Refund rate</div><div className="kpi-value">{qualitySummary.refund_rate_pct}%</div><div className="kpi-sub">{qualitySummary.refunds_issued} issued · ₹{fmt(qualitySummary.refund_amount)}</div></div>
+                <div className="kpi-card"><div className="kpi-label">Refund rate</div><div className="kpi-value">{qualitySummary.refund_rate_pct}%</div><div className="kpi-sub">{qualitySummary.refunds_issued} issued · {formatGBP(fmt(qualitySummary.refund_amount))}</div></div>
                 <div className="kpi-card"><div className="kpi-label">Reports / 1K</div><div className="kpi-value">{qualitySummary.report_rate_per_1000}</div><div className="kpi-sub">{qualitySummary.report_count} reports</div></div>
                 <div className="kpi-card"><div className="kpi-label">Blocks / 100</div><div className="kpi-value">{qualitySummary.block_rate_per_100_sessions}</div><div className="kpi-sub">{qualitySummary.block_count} blocks</div></div>
                 <div className="kpi-card"><div className="kpi-label">Crisis flags</div><div className="kpi-value">{qualitySummary.crisis_flags}</div></div>

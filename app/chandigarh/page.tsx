@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Chandigarh — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Chandigarh. Family pressure, UPSC and engineering culture, Punjab/Haryana youth, joint family dynamics. From ₹160.',
-  alternates: { canonical: 'https://www.howwasyourday.live/chandigarh', languages: { 'en-IN': 'https://www.howwasyourday.live/chandigarh' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/chandigarh', languages: { 'en-GB': 'https://www.howwasyourday.live/chandigarh' } },
   keywords: 'peer support Chandigarh, emotional support Chandigarh, family pressure Chandigarh, marriage pressure Punjab Haryana, UPSC stress Chandigarh, talk to someone Chandigarh',
   openGraph: {
     title: 'Emotional Support in Chandigarh — Peer Listeners | How Was Your Day',

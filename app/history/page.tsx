@@ -84,10 +84,10 @@ function fmtTime(iso: string) {
   const diff = now.getTime() - d.getTime()
   if (diff < 60_000) return 'Now'
   if (diff < 3_600_000) return `${Math.floor(diff / 60_000)}m ago`
-  if (diff < 86_400_000) return d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })
+  if (diff < 86_400_000) return d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   if (diff < 604_800_000) return days[d.getDay()]
-  return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
 }
 // Supabase embeds can come back as an object or a single-element array — normalise.
 function one(v: unknown): Party | null {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'biodata India stress', 'meeting for arranged marriage anxiety India',
     'parents marriage pressure India', 'unmarried pressure India', 'late marriage India anxiety',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/arranged-marriage-stress', languages: { 'en-IN': 'https://www.howwasyourday.live/support/arranged-marriage-stress' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/arranged-marriage-stress', languages: { 'en-GB': 'https://www.howwasyourday.live/support/arranged-marriage-stress' } },
   openGraph: {
     title: 'Arranged Marriage Pressure and Stress in India — Talk to Someone Who Gets It | How Was Your Day',
     description: 'The profiles, the meetings, the family expectations — arranged marriage stress is real and rarely discussed. How Was Your Day listeners understand it.',

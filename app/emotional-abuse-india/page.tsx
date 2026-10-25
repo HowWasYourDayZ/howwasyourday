@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'psychological abuse India', 'is my partner emotionally abusive India',
     'emotional abuse signs India', 'verbal abuse India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/emotional-abuse-india', languages: { 'en-IN': 'https://www.howwasyourday.live/emotional-abuse-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/emotional-abuse-india', languages: { 'en-GB': 'https://www.howwasyourday.live/emotional-abuse-india' } },
   openGraph: {
     title: 'Emotional Abuse India — Talk to Someone Anonymously | How Was Your Day',
     description: 'Constant criticism, silent treatment, being made to feel crazy. Emotional abuse is real. Talk anonymously from ₹160.',
@@ -154,7 +154,7 @@ export default function EmotionalAbuseIndiaPage() {
         <div className="section">
           <h2>Why It Is Hard to Name</h2>
           <p>There is no bruise. No moment you can point to and say: this is the evidence. The person doing it often presents themselves as the reasonable one, and you as the difficult, sensitive, dramatic one. After enough time, you begin to believe that version.</p>
-          <p>In the UK or Ireland, there is also a strong cultural pressure to keep family matters private and to "adjust." Women especially are expected to manage conflict through accommodation rather than direct expression. This means that naming emotional abuse as abuse &mdash; rather than as a personality clash or a phase &mdash; requires overcoming not just the abuser&apos;s narrative but the cultural one as well.</p>
+          <p>In India, there is also a strong cultural pressure to keep family matters private and to "adjust." Women especially are expected to manage conflict through accommodation rather than direct expression. This means that naming emotional abuse as abuse &mdash; rather than as a personality clash or a phase &mdash; requires overcoming not just the abuser&apos;s narrative but the cultural one as well.</p>
         </div>
 
         <div className="section">

@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Peer Support for Anxiety in India | Talk Anonymously | How Was Your Day',
   description: "Anxious all the time? Talk privately to a real, screened peer listener in India — text or voice, online now. Peer support, not diagnosis. First 5 minutes free.",
-  alternates: { canonical: 'https://www.howwasyourday.live/support/anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/anxiety' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/anxiety', languages: { 'en-GB': 'https://www.howwasyourday.live/support/anxiety' } },
   openGraph: {
     title: 'Peer Support for Anxiety in India | Talk Anonymously | How Was Your Day',
     description: "Anxious all the time? Talk privately to a real, screened peer listener in India — text or voice, online now. Peer support, not diagnosis. First 5 minutes free.",

@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'Why is the first Canadian winter so hard for Indian immigrants?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In the UK or Ireland, even winters are social — people gather outside, evenings are lively, the streets stay busy. Canadian winters are the opposite: dark by 4 PM, temperatures that keep people indoors for months, and a social culture that does not compensate for the isolation. For newcomers without an established network, the first winter can feel like a completely different kind of hard.',
+        text: 'In India, even winters are social — people gather outside, evenings are lively, the streets stay busy. Canadian winters are the opposite: dark by 4 PM, temperatures that keep people indoors for months, and a social culture that does not compensate for the isolation. For newcomers without an established network, the first winter can feel like a completely different kind of hard.',
       },
     },
     {
@@ -139,7 +139,7 @@ export default function CanadaWinterLonelinessPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 
@@ -159,7 +159,7 @@ export default function CanadaWinterLonelinessPage() {
 
         <div className="card">
           <h2>What the first Canadian winter actually feels like</h2>
-          <p>In the UK or Ireland, winters are social. People gather, evenings are lively, the streets stay busy.
+          <p>In India, winters are social. People gather, evenings are lively, the streets stay busy.
             Canadian winters are the opposite — and if you arrived without a support network, it can feel
             like the world has simply stopped:</p>
           <ul className="checklist">
@@ -212,7 +212,7 @@ export default function CanadaWinterLonelinessPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Why is the first Canadian winter so hard for Indian immigrants?</h3>
-            <p>In the UK or Ireland, winters are social and lively. Canadian winters keep people indoors for months,
+            <p>In India, winters are social and lively. Canadian winters keep people indoors for months,
               with darkness by 4 PM. For newcomers without a network, it can be profoundly isolating.</p>
           </div>
           <div className="faq-item">

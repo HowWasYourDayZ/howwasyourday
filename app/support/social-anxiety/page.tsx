@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Peer Support for Social Anxiety in India | How Was Your Day',
   description: 'Struggling with social anxiety? Talk to a peer listener who gets it. No appointment needed. How Was Your Day listeners are empathetic.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/social-anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/social-anxiety' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/social-anxiety', languages: { 'en-GB': 'https://www.howwasyourday.live/support/social-anxiety' } },
   openGraph: {
     title: 'Peer Support for Social Anxiety in India | How Was Your Day',
     description: 'Struggling with social anxiety? Talk to a peer listener who gets it. No appointment needed. How Was Your Day listeners are empathetic.',
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.',
       },
     },
   ],
@@ -154,7 +154,7 @@ export default function SocialAnxietySupportPage() {
         {/* Understanding social anxiety */}
         <div className="section">
           <h2>Understanding Social Anxiety in India</h2>
-          <p>Social anxiety is far more than nervousness before a big event — it is a persistent, exhausting fear of being watched, judged, or embarrassed in front of others. In the UK or Ireland, where social life is deeply woven into family, community, and career, social anxiety can feel especially isolating because so much of daily life happens in groups.</p>
+          <p>Social anxiety is far more than nervousness before a big event — it is a persistent, exhausting fear of being watched, judged, or embarrassed in front of others. In India, where social life is deeply woven into family, community, and career, social anxiety can feel especially isolating because so much of daily life happens in groups.</p>
 
           <h3>Shyness, Introversion, or Social Anxiety?</h3>
           <p>It is easy to dismiss social anxiety as &quot;just being shy&quot; or introverted, but they are not the same. Introverts often enjoy social interaction in smaller doses and recharge alone by choice. Someone with social anxiety, on the other hand, may desperately want connection but be gripped by an intense fear of judgment, humiliation, or saying the wrong thing — often with racing thoughts, a pounding heart, and physical discomfort well before the situation even begins.</p>
@@ -256,7 +256,7 @@ export default function SocialAnxietySupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.</div>
           </div>
         </div>
 

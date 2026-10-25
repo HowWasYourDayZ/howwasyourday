@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Can't Sleep Because of Anxiety? Peer Support India | How Was Your Day",
   description: "Lying awake with racing thoughts, anxiety, or overthinking? Talk to a peer listener in India who knows that 2 AM feeling. Anonymous support.",
   keywords: ["can't sleep anxiety India", "insomnia anxiety India", "lying awake overthinking India", "racing thoughts at night India", "2am anxiety India", "sleep anxiety India", "I can't sleep what do I do India", "anxiety at night India", "midnight anxiety India", "overthinking at night India", "sleep problems anxiety India", "can't sleep worry India", "wake up anxious India", "night time anxiety India", "talk to someone at night India"],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/cant-sleep-anxiety', languages: { 'en-IN': 'https://www.howwasyourday.live/support/cant-sleep-anxiety' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/cant-sleep-anxiety', languages: { 'en-GB': 'https://www.howwasyourday.live/support/cant-sleep-anxiety' } },
   openGraph: {
     title: "Can't Sleep Because of Anxiety? Peer Support India | How Was Your Day",
     description: "Lying awake with racing thoughts, anxiety, or overthinking? Talk to a peer listener in India who knows that 2 AM feeling. Anonymous support.",
@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to someone at night in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session and listeners are often online late at night. New users get a free 5-minute trial. For the cost of a coffee, you can have a real conversation with someone who has personally navigated what you are going through — and who is awake right now.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session and listeners are often online late at night. New users get a free 5-minute trial. For the cost of a coffee, you can have a real conversation with someone who has personally navigated what you are going through — and who is awake right now.',
       },
     },
   ],

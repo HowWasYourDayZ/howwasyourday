@@ -1,4 +1,5 @@
 'use client'
+import { formatGBP } from '@/lib/money'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
@@ -70,8 +71,8 @@ const S = `
   .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#0F4867;color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:12px 24px;border-radius:50px;z-index:200;}
 `
 
-function fmt(rupees: number) { return `₹${rupees.toLocaleString('en-IN')}` }
-function fmtDate(iso: string) { return new Date(iso).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' }) }
+function fmt(rupees: number) { return `${formatGBP(rupees)}` }
+function fmtDate(iso: string) { return new Date(iso).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }) }
 
 export default function EarningsPage() {
   const router = useRouter()
@@ -194,7 +195,7 @@ export default function EarningsPage() {
                 // is algebraically exact for India sessions (= 10 + listenerServiceFee).
                 const svcFee = e.service_fee ?? (e.platform_fee - PLATFORM_FEE)
                 const listenerGross = e.listener_gross ?? (e.net_amount + svcFee)
-                return `Your share ₹${listenerGross} · Service fee ₹${svcFee}`
+                return `Your share ${formatGBP(listenerGross)} · Service fee ${formatGBP(svcFee)}`
               })()}</div>
             </div>
           </div>

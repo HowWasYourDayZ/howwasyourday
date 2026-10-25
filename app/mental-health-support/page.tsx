@@ -31,7 +31,7 @@ const sections: [string, string, string[]?][] = [
 
 export default function MentalHealthSupportPage() {
   return <main className="min-h-screen bg-white text-[#0F4867]"><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><div className="mx-auto max-w-4xl px-5 py-10 sm:px-8 sm:py-16">
-    <nav className="mb-10 flex items-center justify-between"><a href="/" className="text-2xl font-black">Lean<span className="text-[#1A8FA0]">On</span></a><a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Talk to someone</a></nav>
+    <nav className="mb-10 flex items-center justify-between"><a href="/" className="text-2xl font-black">How Was <span className="text-[#1A8FA0]">Your Day</span></a><a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Talk to someone</a></nav>
     <p className="mb-3 text-sm font-extrabold uppercase tracking-wider text-[#1A8FA0]">Mental health support · Peer support · Empathy</p>
     <h1 className="mb-6 text-4xl font-black leading-tight sm:text-6xl">Mental Health Support Online — Know What Kind of Support You Need</h1>
     <p className="mb-8 max-w-3xl text-xl leading-8 text-slate-600">Mental health support can mean many things: a friend who listens, a peer who understands, a counsellor, a psychologist or a psychiatrist. Knowing the difference helps you find support that matches your situation.</p>

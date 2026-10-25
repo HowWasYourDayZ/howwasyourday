@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: "Sunday Night Loneliness — You're Not the Only One Feeling It | How Was Your Day",
   description: 'Sunday scaries hitting hard? Talk to a peer listener anonymously before the week starts. Available every Sunday night.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/sunday-night-loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/sunday-night-loneliness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/sunday-night-loneliness', languages: { 'en-GB': 'https://www.howwasyourday.live/support/sunday-night-loneliness' } },
   keywords: 'sunday scaries India, sunday night loneliness, sunday evening sadness, why do I feel lonely on sundays, someone to talk to sunday night',
   openGraph: {
     title: "Sunday Night Loneliness — You're Not the Only One Feeling It | How Was Your Day",
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost on a Sunday night?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.',
       },
     },
   ],
@@ -254,7 +254,7 @@ export default function SundayNightLonelinessPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day cost on a Sunday night?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.</div>
           </div>
         </div>
 

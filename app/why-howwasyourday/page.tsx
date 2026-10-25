@@ -72,7 +72,7 @@ export default function WhyHowWasYourDayPage() {
             <h3>How Was Your Day Peer Support</h3>
             <ul>
               <li>Listeners often online late at night</li>
-              <li>From ₹160 for 15 minutes</li>
+              <li>From £7 for 15 minutes</li>
               <li>No appointment needed</li>
               <li>Private — listeners never see your number</li>
               <li>Real humans with lived experience</li>
@@ -84,7 +84,7 @@ export default function WhyHowWasYourDayPage() {
             <h3>Traditional Therapy</h3>
             <ul>
               <li>Limited hours, no late-night access</li>
-              <li>₹1,500–₹5,000 per session</li>
+              <li>£40–£100 per session</li>
               <li>Requires weeks of scheduling</li>
               <li>Your name and details on record</li>
               <li>Clinical framework, diagnoses</li>

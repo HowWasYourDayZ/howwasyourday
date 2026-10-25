@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'NRI Mental Health — Talk to Someone Who Gets India | How Was Your Day',
   description: 'Living abroad but missing home? Struggling in the gap between two worlds? Talk to an Indian peer listener who understands. From US$10.',
   keywords: ['NRI mental health support', 'Indian diaspora support', 'expat Indian mental health', 'overseas Indian mental health', 'NRI therapy india', 'NRI emotional support'],
-  alternates: { canonical: 'https://www.howwasyourday.live/nri-mental-health', languages: { 'en-IN': 'https://www.howwasyourday.live/nri-mental-health' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/nri-mental-health', languages: { 'en-GB': 'https://www.howwasyourday.live/nri-mental-health' } },
   openGraph: {
     title: 'NRI Mental Health — Talk to Someone Who Gets India | How Was Your Day',
     description: 'Living abroad but missing home? Struggling in the gap between two worlds? Talk to an Indian peer listener who understands. From US$10.',

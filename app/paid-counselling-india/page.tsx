@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Paid Counselling India — Affordable, Anonymous & Online | How Was Your Day',
   description: 'Paid online counselling in India from ₹160 per session. Talk to a screened peer listener — anonymous, judgment-free.',
   keywords: ['paid counselling india', 'affordable counselling india', 'low cost counselling india', 'mental health counselling india', 'talk to counsellor online india', 'emotional counselling india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/online-counselling-india-cost', languages: { 'en-IN': 'https://www.howwasyourday.live/online-counselling-india-cost' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-counselling-india-cost', languages: { 'en-GB': 'https://www.howwasyourday.live/online-counselling-india-cost' } },
   openGraph: {
     title: 'Paid Counselling India — Affordable, Anonymous & Online | How Was Your Day',
     description: 'Paid online counselling in India from ₹160 per session. Talk to a screened peer listener — anonymous, judgment-free.',

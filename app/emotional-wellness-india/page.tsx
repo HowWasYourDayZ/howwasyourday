@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Emotional Wellness India — Build the Habit of Being Heard | How Was Your Day',
   description: 'Emotional wellness isn\'t a goal. It\'s a practice. Start with being heard. Real peer conversations from ₹160.',
   keywords: ['emotional wellness india', 'emotional intelligence india', 'emotional health india', 'mindfulness support india', 'self-help india', 'emotional wellbeing india', 'emotional fitness india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/emotional-wellness-india', languages: { 'en-IN': 'https://www.howwasyourday.live/emotional-wellness-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/emotional-wellness-india', languages: { 'en-GB': 'https://www.howwasyourday.live/emotional-wellness-india' } },
   openGraph: {
     title: 'Emotional Wellness India — Build the Habit of Being Heard | How Was Your Day',
     description: 'Emotional wellness isn\'t a goal. It\'s a practice. Start with being heard. Real peer conversations from ₹160.',

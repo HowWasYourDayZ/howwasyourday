@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Controlling Partner India — Anonymous Support | How Was Your Day',
   description: 'Checking your phone, monitoring your friends, deciding what you wear. A controlling relationship slowly erodes you. Talk anonymously from ₹160.',
   keywords: ['controlling partner India', 'controlling husband India', 'possessive partner India', 'jealous controlling relationship India', 'controlling relationship signs India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/controlling-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/controlling-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/controlling-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/controlling-relationship-india' } },
   openGraph: {
     title: 'Controlling Partner India — Anonymous Support | How Was Your Day',
     description: 'Checking your phone, monitoring your friends, deciding what you wear. A controlling relationship slowly erodes you. Talk anonymously from ₹160.',

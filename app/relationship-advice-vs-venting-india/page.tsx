@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'just need to vent india',
     'pure listening relationship india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/relationship-advice-vs-venting-india', languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-advice-vs-venting-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/relationship-advice-vs-venting-india', languages: { 'en-GB': 'https://www.howwasyourday.live/relationship-advice-vs-venting-india' } },
   openGraph: {
     title: 'Just Want to Vent — Not Get Advice | How Was Your Day India',
     description: "You don't want to be told what to do. You want to say what happened. Real peer listeners who just listen — no advice unless you ask. From ₹160.",

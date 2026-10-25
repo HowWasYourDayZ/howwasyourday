@@ -105,14 +105,14 @@ export default function EarnByListeningPage() {
         <div className="hero">
           <p className="badge">Set Your Own Hours · Work From Home</p>
           <h1>Earn Money With Your <em>Empathy</em></h1>
-          <p className="lead">If you have been through loneliness, burnout, anxiety, or heartbreak — your experience has value. Become a peer listener on How Was Your Day and earn ₹300–₹800/hour helping people through exactly what you have overcome.</p>
+          <p className="lead">If you have been through loneliness, burnout, anxiety, or heartbreak — your experience has value. Become a peer listener on How Was Your Day and get paid for helping people through exactly what you have overcome.</p>
           <a href="/become-listener" className="cta-hero">Apply to become a listener →</a>
         </div>
 
         <div className="stats">
-          <div className="stat"><div className="stat-value">₹300–800</div><div className="stat-label">per hour (active listeners)</div></div>
+          <div className="stat"><div className="stat-value">60%</div><div className="stat-label">of your rate, every paid session</div></div>
           <div className="stat"><div className="stat-value">UPI</div><div className="stat-label">direct payout to your account</div></div>
-          <div className="stat"><div className="stat-value">0 ₹</div><div className="stat-label">upfront cost to join</div></div>
+          <div className="stat"><div className="stat-value">£0</div><div className="stat-label">upfront cost to join</div></div>
         </div>
 
         {/* Who should apply */}
@@ -175,10 +175,8 @@ export default function EarnByListeningPage() {
         {/* What you earn */}
         <div className="section">
           <h2>What You Can Realistically Earn</h2>
-          <p>Listeners set their own rate — typically ₹100–₹300 per 15-minute session, with voice calls priced ₹5/min above text. You keep 60% of your rate on every paid session.</p>
-          <p><strong>Casual (4–6 sessions/week):</strong> ₹1,900–₹4,300/month take-home — solid side income with minimal time.</p>
-          <p><strong>Part-time (2–3 sessions/day, 5 days/week):</strong> ₹12,000–₹27,000/month depending on your rate.</p>
-          <p><strong>Active (4+ sessions/day, consistent availability):</strong> ₹24,000–₹48,000+/month.</p>
+          <p>Listeners set their own per-minute rate in pounds, with voice calls priced 10p/min above text. You keep 60% of your rate on every paid session.</p>
+          <p>Sessions are not guaranteed — how much you earn depends on your rate, your availability and how many seekers choose you.</p>
           <p>No upfront costs. No subscription fees. You keep 60% of your rate on every paid session; How Was Your Day&apos;s 40% service fee supports the work of bringing seekers to How Was Your Day, secure payments, verification, safety and support.</p>
         </div>
 

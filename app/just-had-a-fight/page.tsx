@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'fight with parents India', 'I had a big fight India',
     'someone to talk to after argument India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/just-had-a-fight', languages: { 'en-IN': 'https://www.howwasyourday.live/just-had-a-fight' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/just-had-a-fight', languages: { 'en-GB': 'https://www.howwasyourday.live/just-had-a-fight' } },
   openGraph: {
     title: 'Just Had a Fight? Someone to Talk to Right Now in India | How Was Your Day',
     description: 'Had a fight with your partner, parent, or colleague and you\'re still reeling? Talk to a real peer listener in India right now — anonymous, no judgment, no advice unless you want it.',

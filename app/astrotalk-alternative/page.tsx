@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/astrotalk-alternative',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/astrotalk-alternative' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/astrotalk-alternative' },
   },
   openGraph: {
     title: 'AstroTalk Alternative — Talk to a Real Person, Not an Astrologer',
@@ -142,7 +142,7 @@ export default function AstroTalkAlternativePage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 
@@ -277,7 +277,7 @@ export default function AstroTalkAlternativePage() {
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day free to use?</h3>
-            <p>Your first 5-minute session is completely free. After that, a 15-minute session starts at ₹160,
+            <p>Your first 5-minute session is completely free. After that, a 15-minute session starts at £7,
               depending on the listener.</p>
           </div>
           <div className="faq-item">

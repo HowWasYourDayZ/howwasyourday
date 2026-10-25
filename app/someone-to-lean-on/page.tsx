@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Someone to Lean On — Talk to a Real Person Tonight | How Was Your Day India',
   description: 'Need someone to lean on? Talk anonymously to a verified peer listener in India tonight. No appointment needed. Real humans with lived experience, not AI.',
   keywords: 'someone to lean on, need someone to lean on, having someone to lean on, no one to lean on, what does lean on mean, lean on someone meaning, someone to lean on India',
-  alternates: { canonical: 'https://www.howwasyourday.live/someone-to-lean-on', languages: { 'en-IN': 'https://www.howwasyourday.live/someone-to-lean-on' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/someone-to-lean-on', languages: { 'en-GB': 'https://www.howwasyourday.live/someone-to-lean-on' } },
   openGraph: {
     title: 'Someone to Lean On — Talk to a Real Person Tonight | How Was Your Day India',
     description: 'Need someone to lean on? Talk anonymously to a verified peer listener in India tonight. No appointment needed. Real humans with lived experience, not AI.',
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does it cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The price depends on the listener you choose plus a flat ₹10 platform fee per paid session. A 15-minute session starts around ₹160 — far less than a therapy appointment in India, and with no appointment. A short trial session is available for new users.',
+        text: 'The price depends on the listener you choose plus a flat £1 platform fee per paid session. A 15-minute session starts around £7 — far less than a therapy appointment in India, and with no appointment. A short trial session is available for new users.',
       },
     },
   ],
@@ -264,7 +264,7 @@ export default function SomeoneToHowWasYourDayPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does it cost?</div>
-            <div className="faq-a">The price depends on the listener you choose plus a flat ₹10 platform fee per paid session. A 15-minute session starts around ₹160 — far less than a therapy appointment in India, and with no appointment. A short trial session is available for new users.</div>
+            <div className="faq-a">The price depends on the listener you choose plus a flat £1 platform fee per paid session. A 15-minute session starts around £7 — far less than a therapy appointment in India, and with no appointment. A short trial session is available for new users.</div>
           </div>
         </div>
 

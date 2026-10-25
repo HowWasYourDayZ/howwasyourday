@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Relationship Counselling or Peer Support? Talk It Through in India | How Was Your Day',
   description: 'How Was Your Day is not relationship or couples counselling. If you first want to talk it through, a screened peer listener in India can listen — private, from ₹160 for 15 minutes, no appointment.',
   keywords: ['relationship counselling india', 'marriage counselling india', 'couple counselling india', 'divorce support india', 'toxic relationship support india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/relationship-counselling-india', languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-counselling-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/relationship-counselling-india', languages: { 'en-GB': 'https://www.howwasyourday.live/relationship-counselling-india' } },
   openGraph: {
     title: 'Relationship Counselling or Peer Support? Talk It Through in India | How Was Your Day',
     description: 'How Was Your Day is not relationship or couples counselling. If you first want to talk it through, a screened peer listener in India can listen — private, from ₹160 for 15 minutes, no appointment.',

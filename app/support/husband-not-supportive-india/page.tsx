@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'husband not involved India', 'marriage breakdown India', 'coping without husband support India',
     'managing alone in marriage India', 'husband financial withdrawal India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/husband-not-supportive-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/husband-not-supportive-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/husband-not-supportive-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/husband-not-supportive-india' } },
   openGraph: {
     title: 'Husband Not Supportive India | How Was Your Day',
     description: 'Emotional and financial withdrawal in marriage. The exhaustion of managing everything while your partner has checked out.',
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'My husband has stopped contributing financially. What are my options?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Financial withdrawal in a marriage is a serious issue. Your practical options depend on your situation — whether you have your own income, what the legal framework is, whether children are involved. In the UK or Ireland, a wife has legal rights to maintenance under the Hindu Marriage Act and other personal laws. Beyond the legal dimension, the emotional weight of financial abandonment — the stress, the loss of security, the practical burden — is real and deserves to be named and addressed. Talking to a peer listener is not a legal resource, but it can be a place to process the emotional experience while you figure out the practical steps.',
+        text: 'Financial withdrawal in a marriage is a serious issue. Your practical options depend on your situation — whether you have your own income, what the legal framework is, whether children are involved. In India, a wife has legal rights to maintenance under the Hindu Marriage Act and other personal laws. Beyond the legal dimension, the emotional weight of financial abandonment — the stress, the loss of security, the practical burden — is real and deserves to be named and addressed. Talking to a peer listener is not a legal resource, but it can be a place to process the emotional experience while you figure out the practical steps.',
       },
     },
     {
@@ -199,7 +199,7 @@ export default function HusbandNotSupportiveIndiaPage() {
 
         <h2>Why This Is Hard to Talk About</h2>
         <p>
-          In the UK or Ireland, naming that your husband is not supportive can feel dangerous.
+          In India, naming that your husband is not supportive can feel dangerous.
           It can feel like you are airing private matters, being disloyal to the family,
           risking your marriage in the telling of it, or inviting judgment about whether you chose right.
         </p>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'inter-caste relationship india', 'love marriage problems india', 'intercaste marriage india',
     'interfaith marriage india', 'religious difference relationship india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/interfaith-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/interfaith-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/interfaith-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/interfaith-relationship-india' } },
   openGraph: {
     title: 'Interfaith Relationship India — Love Across Religions Is Hard. Talk About It. | How Was Your Day',
     description: 'Hindu-Muslim. Hindu-Christian. Sikh-Hindu. Love marriages across religions in India carry enormous weight. Talk to someone who won\'t judge. From ₹160.',

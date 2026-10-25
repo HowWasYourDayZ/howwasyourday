@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Crying for No Reason India — Talk to Someone | How Was Your Day',
   description: 'Random crying, tears at your desk, no idea why. You\'re not broken — you\'re carrying something. Talk anonymously from ₹160.',
   keywords: ['crying for no reason India', 'randomly crying India', 'crying without reason India', 'unexplained tears India', 'why am I crying India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/crying-for-no-reason-india', languages: { 'en-IN': 'https://www.howwasyourday.live/crying-for-no-reason-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/crying-for-no-reason-india', languages: { 'en-GB': 'https://www.howwasyourday.live/crying-for-no-reason-india' } },
   openGraph: { title: 'Crying for No Reason India — Talk to Someone | How Was Your Day', description: 'Random crying, tears at your desk, no idea why. You\'re not broken — you\'re carrying something. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/crying-for-no-reason-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

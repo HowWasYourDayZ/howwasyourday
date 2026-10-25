@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Feeling Invisible India — Nobody Sees You | How Was Your Day',
   description: 'At home, at work, in the family — feeling unseen is one of the loneliest feelings. Talk to someone who will actually pay attention. From ₹160.',
   keywords: ['feeling invisible India', 'nobody notices me India', 'feeling unseen India', 'ignored by family India', 'feeling insignificant India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/feeling-invisible-india', languages: { 'en-IN': 'https://www.howwasyourday.live/feeling-invisible-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/feeling-invisible-india', languages: { 'en-GB': 'https://www.howwasyourday.live/feeling-invisible-india' } },
   openGraph: { title: 'Feeling Invisible India — Nobody Sees You | How Was Your Day', description: 'At home, at work, in the family — feeling unseen is one of the loneliest feelings. Talk to someone who will actually pay attention. From ₹160.', url: 'https://www.howwasyourday.live/feeling-invisible-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

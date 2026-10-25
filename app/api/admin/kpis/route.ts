@@ -1,3 +1,4 @@
+import { ukOffsetMs } from '@/lib/uk-time'
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimit } from '@/lib/rate-limit'
@@ -21,7 +22,7 @@ export async function GET(req: NextRequest) {
     const now = new Date()
     // Use IST (UTC+5:30) for day/month boundaries so "today" matches midnight IST,
     // not midnight UTC (which would make "today" start at 5:30am IST — wrong for India).
-    const IST_OFFSET_MS = 5.5 * 60 * 60 * 1000
+    const IST_OFFSET_MS = ukOffsetMs(now) // UK local time (GMT/BST); name kept from the IST original
     const nowIST = new Date(now.getTime() + IST_OFFSET_MS)
     // Date.UTC(y,m,d) gives midnight UTC for the IST calendar date.
     // Subtract IST_OFFSET_MS to get midnight IST expressed as a UTC timestamp —
@@ -94,7 +95,7 @@ export async function GET(req: NextRequest) {
       // anywhere else would silently reindex every KPI after it.
       sb.from('users').select('id, wallet_balance').gt('wallet_balance', 0),
 
-      // PLATFORM EARNINGS — How Was Your Day's actual income: the flat ₹10 seeker fee
+      // PLATFORM EARNINGS — How Was Your Day's actual income: the flat £1 seeker fee
       // PLUS the listener service fee (both captured in
       // listener_earnings.platform_fee since the 2026-09-14 deploy).
       // For sessions settled before that deploy, platform_fee in

@@ -105,13 +105,14 @@
   ChatGPT turned the old `/earn-by-listening` page into a flood of income-seeking listener sign-ups.
   Recruitment pages are listed in `lib/seo-noindex.ts` (`NOINDEX_PATHS` + `AI_BLOCKED_PATHS`,
   used by `app/robots.ts`); a new recruitment page must be added to both.
-- Prices in copy must match `/pricing`, which reads `lib/constants.ts` / `lib/geo-pricing.ts`. The India "from" price (`/pricing`, `QuickAnswer`, `llms.txt`, `lib/geo-questions.ts`) comes from the dated `lib/price-snapshot.ts` (seeker price range from listed listeners; 24 Oct 2026: 15 min from about ₹40, typically ₹160) — refresh it from the Live visibility audit's `listeners.rates`. ChatGPT ranked How Was Your Day by price per minute and read "from ₹160" as the minimum.
-  Overseas pages quote "from US$10/15/20" (or local currency as the app shows it —
-  `lib/geo-pricing.ts`, e.g. £8/12/16), never ₹160. Since 2026-10-14 the overseas price is the flat
-  price OR the listener's Indian price if higher (`sessionTotalInr`) — never write "flat, whichever
-  listener". India vs overseas is decided by the verified phone (`pricingCountry`), not the dropdown.
-  Only ONE free 5-minute session per account — never "per listener". Listeners are in India: never claim 24/7 availability to overseas
-  visitors ("availability follows Indian time"). Listeners are screened, never "trained".
+- **Money is GBP and every amount is INTEGER PENCE** (Oct 2026, migration 073): wallet, `amount_held`,
+  `rate_per_min`, fees, earnings, payouts. Display only through `lib/money.ts` (`formatGBP`, `formatRate`);
+  never store or compute in pounds, never show ₹/US$. One price for every seeker (UK and EU) — the
+  LeanOn India-vs-NRI pricing was removed; `lib/geo-pricing.ts quoteSession()` is the single quote.
+  Prices in copy must match `/pricing` (reads `lib/constants.ts`); quote the RULES (listener rate ×
+  minutes + £1, standard rate `DEFAULT_LISTENER_RATE` 40p/min → £7 for 15 min) — never an invented
+  "typical" price until `lib/price-snapshot.ts` has real listener data. Only ONE free 5-minute session
+  per account — never "per listener". Listeners are screened, never "trained".
 - **`/talk` (Talk now) is the primary entry and the link AI assistants are given** (`llms.txt`,
   sitemap priority 1.0, home hero, footer, floating button, bottom menu, new sign-ups). The page is a
   client component whose server render is empty, so its crawlable text + JSON-LD live in
@@ -119,7 +120,7 @@
 - **No listener rates, earnings, take-home % or service fee on ANY indexable / AI-readable page —
   including seeker pages and `/faq`** (2026-10-16: ChatGPT quoted /faq's earnings answers and a false
   "keep all of it" line to an under-18 asking for apps that pay to talk). Seeker pages quote the
-  seeker's price only ("15 minutes from ₹160"). The listener fee lives on `/terms`, `/become-listener`
+  seeker's price only ("15 minutes is £7 at the standard rate"). The listener fee lives on `/terms`, `/become-listener`
   and the dashboard. The old earnings blog post 308s to `/howwasyourday-is-not-a-job`.
 - **`/become-a-peer-supporter` is the ONE indexable, AI-readable recruitment page** (owner decision
   2026-10-16): purpose-first, 18+, screening steps, "not a job, sessions not guaranteed" — and NO
@@ -131,7 +132,7 @@
 - After deploying public-page changes, run `node scripts/indexnow.mjs` (Bing → ChatGPT search).
 - **ChatGPT already recommends How Was Your Day (#1) for "I feel lonely… services with real human listeners?"**, quoting the
   HOME page's title and meta description (2026-10-24). Don't change the home title, meta description or the facts it
-  quotes (one-to-one, text or voice, free 5-minute intro, from ₹160) without reason — see
+  quotes (one-to-one, text or voice, free 5-minute intro, price) without reason — see
   `docs/ai-visibility/WINNING_ANSWERS.md`. The weekly Live visibility audit fails if they disappear.
 
 ## Listener presence & request alerts (2026-09-24) — read `docs/NOTIFICATIONS.md` first
@@ -221,9 +222,10 @@
 
 ## Business invariants
 
-- Platform fee: **flat ₹10 per paid session** (`PLATFORM_FEE`), paid by the
-  seeker on top of the listener's rate. Seeker bears the Razorpay gateway fee
-  at recharge (`grossRechargeAmount`). Wallet credits the tier amount from
+- Platform fee: **flat £1 (100p) per paid session** (`PLATFORM_FEE`), paid by the
+  seeker on top of the listener's rate. Seeker bears the payment-processor fee
+  at top-up (`grossRechargeAmount`, `GATEWAY_FEE_RATE` — set it to Whop's real fee
+  when Whop replaces Razorpay). Wallet credits the tier amount from
   server-set order notes — never the gross.
 - Listener service fee: **40%** of listener earnings since 2026-09-24 (was 15%
   from 2026-09-14) (`LISTENER_SERVICE_FEE_RATE`, `lib/constants.ts`), deducted at settlement
@@ -237,7 +239,7 @@
   sessions are never recalculated. **Never call this a "commission" in any
   user-facing copy — "service fee" only.** User-facing surfaces that must stay
   in sync if this rate changes: `app/become-listener/page.tsx` (onboarding —
-  mentions ONLY the 15% service fee, never the seeker's ₹10),
+  mentions ONLY the service fee, never the seeker's £1),
   `app/dashboard/page.tsx` (fee-update banner + per-session earnings display,
   which reads `listener_earnings.net_amount` — NOT `sessions.amount_held -
   sessions.platform_fee`, which no longer equals what the listener receives),
@@ -251,13 +253,13 @@
   top of that schedule — never edit or remove past entries. Admin breakdowns use
   the same lookup.
 - **`listener_earnings.platform_fee` ≠ `sessions.platform_fee`.** On the session
-  it is only the seeker's flat ₹10. On the earnings row it is How Was Your Day's TOTAL take
-  for that session (₹10 + listener service fee + any NRI margin, ± pro-rata
+  it is only the seeker's flat £1. On the earnings row it is How Was Your Day's TOTAL take
+  for that session (£1 + listener service fee, ± pro-rata
   rounding). Never `SUM(listener_earnings.platform_fee)` as "seeker fees" — use
   `sessions.platform_fee` for that, and `listener_earnings.service_fee` (migration
   057) for the listener service fee alone.
 - Text/voice pricing (2026-09-24): only the TEXT rate is stored
-  (`listener_profiles.rate_per_min`); voice = text + `VOICE_RATE_PREMIUM` (₹5/min),
+  (`listener_profiles.rate_per_min`); voice = text + `VOICE_RATE_PREMIUM` (10p/min),
   via `sessionRatePerMin()` in `lib/constants.ts`. `/api/sessions` POST stores the
   per-mode rate in `sessions.listener_rate_per_min` — settlement caps the listener's
   share at that rate, so it MUST be the voice rate for voice sessions. Kill switch:
@@ -268,7 +270,7 @@
   by its own conditional UPDATE — never an earlier read — or the premium is paid twice.
 - **Settlement money movement lives in ONE place: `lib/settlement-ledger.ts applySettlement()`**
   (used by PATCH, cleanup, expire). Ledger rows are written only after the wallet credit
-  succeeds. Seekers are charged pro-rata of THEIR price for minutes used (NRI included);
+  succeeds. Seekers are charged pro-rata of THEIR price for minutes used ;
   the listener's share comes out of that. Abandoned sessions (nobody pressed End) bill
   up to the earlier participant's last heartbeat (`abandonedSessionEnd()`), not the cron time.
 - **Payouts pay earnings only:** for a listener who also recharged, `/api/payout` caps the

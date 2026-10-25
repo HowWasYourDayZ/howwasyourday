@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'marriage not working India', 'loveless marriage India', 'feeling unloved in marriage India',
     'lonely married women India support',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/married-but-lonely', languages: { 'en-IN': 'https://www.howwasyourday.live/support/married-but-lonely' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/married-but-lonely', languages: { 'en-GB': 'https://www.howwasyourday.live/support/married-but-lonely' } },
   openGraph: {
     title: 'Married but Lonely India | How Was Your Day',
     description: 'Alone in every way that matters — emotionally, mentally, sometimes financially. The loneliness inside a marriage is one of the hardest things to name.',

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'process feelings during commute india',
     'support during morning commute india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/talk-during-commute-india', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-during-commute-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-during-commute-india', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-during-commute-india' } },
   openGraph: {
     title: 'Talk to Someone During Your Commute | How Was Your Day',
     description: "Your commute is 20–45 minutes. That's enough time to process last night, reset from a fight, or vent before the workday starts. Real peer listener, ₹160.",

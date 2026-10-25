@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Noida — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Noida, NCR. Young professionals, IT burnout, apartment loneliness. Talk anonymously on How Was Your Day from ₹160.',
-  alternates: { canonical: 'https://www.howwasyourday.live/noida', languages: { 'en-IN': 'https://www.howwasyourday.live/noida' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/noida', languages: { 'en-GB': 'https://www.howwasyourday.live/noida' } },
   keywords: 'peer support Noida, emotional support Noida NCR, IT burnout Noida, loneliness Noida, work stress Noida, talk to someone Noida, howwasyourday Noida',
   openGraph: {
     title: 'Emotional Support in Noida — Peer Listeners | How Was Your Day',

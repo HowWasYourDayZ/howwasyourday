@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'physician burnout india', 'medical professional stress india', 'nurse burnout india',
     'hospital worker stress india', 'medical burnout india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/doctor-burnout-india', languages: { 'en-IN': 'https://www.howwasyourday.live/doctor-burnout-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/doctor-burnout-india', languages: { 'en-GB': 'https://www.howwasyourday.live/doctor-burnout-india' } },
   openGraph: {
     title: 'Doctor Burnout India — You Heal Everyone. Who Heals You? | How Was Your Day',
     description: 'Doctor burnout in India is at crisis levels — long hours, emotional labour, patient deaths, impossible expectations. Talk to someone real, anonymously. From ₹160.',

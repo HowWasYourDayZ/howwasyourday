@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Online Counselling Cost in India (2026): Full Price Comparison | How Was Your Day',
   description: 'Compare therapy, free helplines and online peer support costs in India. See how How Was Your Day pricing works, when peer support fits, and what to expect before paying.',
-  alternates: { canonical: 'https://www.howwasyourday.live/online-counselling-india-cost', languages: { 'en-IN': 'https://www.howwasyourday.live/online-counselling-india-cost' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/online-counselling-india-cost', languages: { 'en-GB': 'https://www.howwasyourday.live/online-counselling-india-cost' } },
   keywords: 'online counselling cost India, therapy price India, how much does therapy cost India, affordable counselling India, cheapest online emotional support India, online therapy cost comparison India, peer support price India, howwasyourday pricing',
   openGraph: {
     title: 'Online Counselling Cost in India (2026): Full Price Comparison | How Was Your Day',
@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'How much does therapy cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In the UK or Ireland, a session with a clinical psychologist or qualified therapist typically costs between ₹1,500 and ₹4,000 per session, whether online or in person. A psychiatrist consultation usually costs ₹1,000 to ₹3,000 per visit, with medication as an additional ongoing cost. Established online therapy platforms are broadly in the same range, often ₹1,000 to ₹3,000 per session. Prices vary by city, by the practitioner\'s experience, and by whether the session is 45 or 60 minutes long.',
+        text: 'In India, a session with a clinical psychologist or qualified therapist typically costs between ₹1,500 and ₹4,000 per session, whether online or in person. A psychiatrist consultation usually costs ₹1,000 to ₹3,000 per visit, with medication as an additional ongoing cost. Established online therapy platforms are broadly in the same range, often ₹1,000 to ₹3,000 per session. Prices vary by city, by the practitioner\'s experience, and by whether the session is 45 or 60 minutes long.',
       },
     },
     {

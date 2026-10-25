@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Peer Support for Work-From-Home Loneliness in India | How Was Your Day',
   description: 'Feeling isolated working from home? Talk to a peer listener who understands WFH loneliness. Empathetic support in India.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/work-from-home-loneliness', languages: { 'en-IN': 'https://www.howwasyourday.live/support/work-from-home-loneliness' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/work-from-home-loneliness', languages: { 'en-GB': 'https://www.howwasyourday.live/support/work-from-home-loneliness' } },
   openGraph: {
     title: 'Peer Support for Work-From-Home Loneliness in India | How Was Your Day',
     description: 'Feeling isolated working from home? Talk to a peer listener who understands WFH loneliness. Empathetic support in India.',
@@ -24,7 +24,7 @@ const faqSchema = {
       name: 'Why does working from home cause loneliness in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In the UK or Ireland, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on once the laptop closes.',
+        text: 'Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In India, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on once the laptop closes.',
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.',
       },
     },
   ],
@@ -234,7 +234,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">Why does working from home cause loneliness in India?</div>
-            <div className="faq-a">Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In the UK or Ireland, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on.</div>
+            <div className="faq-a">Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In India, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How is WFH loneliness different from general loneliness?</div>
@@ -250,7 +250,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.</div>
           </div>
         </div>
 

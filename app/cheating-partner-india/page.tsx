@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'infidelity support India', 'partner cheating what to do India',
     'discovered affair India', 'betrayal support India', 'cheating spouse India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/cheating-partner-india', languages: { 'en-IN': 'https://www.howwasyourday.live/cheating-partner-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/cheating-partner-india', languages: { 'en-GB': 'https://www.howwasyourday.live/cheating-partner-india' } },
   openGraph: {
     title: 'My Partner Is Cheating — Who Do I Talk To? | How Was Your Day India',
     description: 'Found out your partner is cheating? You need someone neutral, not your mother or friends. Anonymous peer support from ₹160.',

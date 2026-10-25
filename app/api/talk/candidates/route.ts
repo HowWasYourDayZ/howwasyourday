@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimit } from '@/lib/rate-limit'
-import { MAX_FREE_TRIALS } from '@/lib/constants'
-import { getBookingPriceDisplay, pricingCountry, quoteSession } from '@/lib/geo-pricing'
+import { MAX_FREE_TRIALS, DEFAULT_LISTENER_RATE } from '@/lib/constants'
+import { getBookingPriceDisplay, quoteSession } from '@/lib/geo-pricing'
 import { isUnlimitedTestPhone } from '@/lib/test-users'
 import { sweepStaleListeners, wasUnanswered, STALE_HEARTBEAT_MINS } from '@/lib/listener-presence'
 import { talkTopic, TALK_MAX_TEXT_RATE } from '@/lib/talk-match'
@@ -59,7 +59,6 @@ export async function GET(req: NextRequest) {
     ])
     const free = isUnlimitedTestPhone(user.phone) || (trials ?? 0) < MAX_FREE_TRIALS
     const durationMins = free ? 5 : 15
-    const country = pricingCountry(me?.phone ?? (user.phone ? '+' + user.phone.replace(/^\+/, '') : null), me?.account_country ?? null)
 
     // Same eligibility as /browse (/api/listeners), including hiding a listener
     // whose new photo is still under review. pending_avatar_url may not exist on
@@ -81,7 +80,7 @@ export async function GET(req: NextRequest) {
 
     type Row = { user_id: string; rate_per_min: number | null; rating: number | null; specialty_tags: string[] | null; last_heartbeat_at: string | null; users: { name: string | null } }
     let rows = ((online ?? []) as unknown as Row[]).filter(r => !exclude.has(r.user_id))
-    if (!free) rows = rows.filter(r => Number(r.rate_per_min ?? 10) <= TALK_MAX_TEXT_RATE)
+    if (!free) rows = rows.filter(r => Number(r.rate_per_min ?? DEFAULT_LISTENER_RATE) <= TALK_MAX_TEXT_RATE)
     const ids = rows.map(r => r.user_id)
     if (ids.length === 0) {
       if (searchId) await recordTalkSearch(sb, { id: searchId, seekerId: user.id, free, candidates: 0 })
@@ -139,18 +138,18 @@ export async function GET(req: NextRequest) {
         const reliability = (a + 1) / (a + m + 2)               // 0.5 with no history
         const topicHit = (r.specialty_tags ?? []).some(t => wanted.has(t)) ? 1 : 0
         // Free trial: prefer standard-rate listeners, so "continue for 15 min"
-        // after the free 5 isn't a ₹600+ surprise (paid matches are already
+        // after the free 5 isn't a big surprise (paid matches are already
         // limited to them above).
-        const standardRate = Number(r.rate_per_min ?? 10) <= TALK_MAX_TEXT_RATE ? 1 : 0
+        const standardRate = Number(r.rate_per_min ?? DEFAULT_LISTENER_RATE) <= TALK_MAX_TEXT_RATE ? 1 : 0
         const score = presence(r.last_heartbeat_at) + topicHit * 2 + reliability * 2 + standardRate * 1.5 + (Number(r.rating ?? 0) / 5) * 0.5 + Math.random() * 0.3
         // The same quote POST /api/sessions holds (lib/geo-pricing quoteSession).
-        const { indianTotal: indian, total: inr } = quoteSession(Number(r.rate_per_min ?? 10), type, durationMins, country, free)
+        const { total } = quoteSession(Number(r.rate_per_min ?? DEFAULT_LISTENER_RATE), type, durationMins, free)
         return {
           listenerId: r.user_id,
           name: r.users?.name ?? 'A listener',
           score,
-          priceInr: inr,
-          priceLabel: free ? 'Free' : getBookingPriceDisplay(indian, country, durationMins).primary,
+          pricePence: total,
+          priceLabel: free ? 'Free' : getBookingPriceDisplay(total),
         }
       })
       .sort((x, y) => y.score - x.score)

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Peer Support Online India — Talk to Someone Who\'s Been There | How Was Your Day',
   description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. First 5 min free.',
   keywords: ['peer support online india', 'peer support app india', 'peer support mental health india', 'peer support india', 'online peer support india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/peer-support-online-india', languages: { 'en-IN': 'https://www.howwasyourday.live/peer-support-online-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/peer-support-online-india', languages: { 'en-GB': 'https://www.howwasyourday.live/peer-support-online-india' } },
   openGraph: {
     title: 'Peer Support Online India — Talk to Someone Who\'s Been There | How Was Your Day',
     description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. First 5 min free.',

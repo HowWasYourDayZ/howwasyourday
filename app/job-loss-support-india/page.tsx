@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Lost Your Job? Emotional Support India | How Was Your Day',
   description: 'Layoff, resignation, being let go — the emotional side of job loss is real. Talk anonymously from ₹160. Not career advice — just someone to listen.',
   keywords: ['job loss support India', 'lost my job India', 'layoff emotional support India', 'fired from job support India', 'job loss depression India', 'redundancy support India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/job-loss-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/job-loss-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/job-loss-support-india', languages: { 'en-GB': 'https://www.howwasyourday.live/job-loss-support-india' } },
   openGraph: {
     title: 'Lost Your Job? Emotional Support India | How Was Your Day',
     description: 'Layoff, resignation, being let go — the emotional side of job loss is real. Talk anonymously from ₹160. Not career advice — just someone to listen.',

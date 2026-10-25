@@ -122,7 +122,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr)
-  return d.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })
+  return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
 const S = `

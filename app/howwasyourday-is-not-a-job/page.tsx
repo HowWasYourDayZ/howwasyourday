@@ -133,7 +133,7 @@ export default function HowWasYourDayIsNotAJobPage() {
         <div className="section">
           <h2>What How Was Your Day actually is</h2>
           <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)',marginBottom:16}}>How Was Your Day connects people who want emotional support with real human peer listeners — by private text or voice, with no appointment needed. The person who needs support is the customer. They browse listener profiles, choose who they want to talk to, and pay per session.</p>
-          <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)'}}>Every new account gets one free 5-minute first session. Paid sessions start at ₹160 for 15 minutes. No subscriptions. No lock-in.</p>
+          <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)'}}>Every new account gets one free 5-minute first session. Paid sessions start at £7 for 15 minutes. No subscriptions. No lock-in.</p>
         </div>
 
         <div className="section">

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Trust Issues in Relationship India | How Was Your Day',
   description: "Trust issues or cheating worries? Talk privately to a neutral, real peer listener in India before you decide anything — text or voice. First 5 minutes free.",
   keywords: ['trust issues relationship India', 'can\'t trust partner India', 'jealousy trust issues India', 'past trauma affecting relationship India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/relationship-trust-issues-india', languages: { 'en-IN': 'https://www.howwasyourday.live/relationship-trust-issues-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/relationship-trust-issues-india', languages: { 'en-GB': 'https://www.howwasyourday.live/relationship-trust-issues-india' } },
   openGraph: { title: 'Trust Issues in Relationship India | How Was Your Day', description: "Trust issues or cheating worries? Talk privately to a neutral, real peer listener in India before you decide anything — text or voice. First 5 minutes free.", url: 'https://www.howwasyourday.live/relationship-trust-issues-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

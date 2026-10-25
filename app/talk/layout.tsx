@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { FREE_SESSION_MINS } from '@/lib/constants'
-import { NRI_USD_PRICES } from '@/lib/geo-pricing'
 import { TALK_FAQ, TALK_TRY_SECS } from '@/lib/talk-match'
 
 // /talk — "Talk now": the match-first entry and How Was Your Day's primary link for
@@ -14,13 +13,13 @@ const URL = 'https://www.howwasyourday.live/talk'
 
 export const metadata: Metadata = {
   title: 'Talk to Someone — Request a Listener, First 5 Minutes Free | How Was Your Day',
-  description: `Request a conversation with a real person — no appointment. Pick what's on your mind, choose text or voice, and How Was Your Day asks screened peer listeners in India who are online; a session starts when one accepts. First ${FREE_SESSION_MINS} minutes free, once per account.`,
+  description: `Request a conversation with a real person — no appointment. Pick what's on your mind, choose text or voice, and How Was Your Day asks screened peer listeners in the UK and Europe who are online; a session starts when one accepts. First ${FREE_SESSION_MINS} minutes free, once per account.`,
   keywords: ['talk to someone now', 'talk to someone online india', 'someone to talk to', 'talk to a real person', 'relationship problems talk to someone', 'nri talk to someone', 'peer support india', 'online emotional support india', 'vent to someone online'],
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Talk to someone now — How Was Your Day',
-    description: `Request a one-to-one conversation with a screened peer listener in India. A session starts when a listener accepts. First ${FREE_SESSION_MINS} minutes free.`,
+    description: `Request a one-to-one conversation with a screened peer listener in the UK or Europe. A session starts when a listener accepts. First ${FREE_SESSION_MINS} minutes free.`,
     url: URL,
     siteName: 'How Was Your Day',
     type: 'website',
@@ -44,11 +43,10 @@ const jsonLd = [
     url: URL,
     serviceType: 'Peer emotional support (non-clinical)',
     provider: { '@id': 'https://www.howwasyourday.live/#organization' },
-    areaServed: ['India', 'United States', 'United Kingdom', 'Canada', 'Australia', 'United Arab Emirates', 'Kuwait', 'Oman', 'Singapore', 'Malaysia'],
-    description: 'One-to-one text or voice conversation with a screened peer listener in India, starting when an available listener accepts the request. Not therapy or emergency care.',
+    areaServed: ['United Kingdom', 'Ireland', 'European Union'],
+    description: 'One-to-one text or voice conversation with a screened peer listener in the UK or Europe, starting when an available listener accepts the request. Not therapy or emergency care.',
     offers: [
-      { '@type': 'Offer', name: `Free ${FREE_SESSION_MINS}-minute first session`, price: '0', priceCurrency: 'INR', description: 'Once per account.' },
-      { '@type': 'Offer', name: '15-minute session (outside India)', price: String(NRI_USD_PRICES[15]), priceCurrency: 'USD' },
+      { '@type': 'Offer', name: `Free ${FREE_SESSION_MINS}-minute first session`, price: '0', priceCurrency: 'GBP', description: 'Once per account.' },
     ],
   },
   {

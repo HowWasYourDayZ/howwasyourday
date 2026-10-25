@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Anonymous Emotional Support India | How Was Your Day Peer Listeners',
   description: 'Private emotional support from screened peer listeners — they never see your number. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/anonymous-support', languages: { 'en-IN': 'https://www.howwasyourday.live/support/anonymous-support' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/anonymous-support', languages: { 'en-GB': 'https://www.howwasyourday.live/support/anonymous-support' } },
   openGraph: {
     title: 'Anonymous Emotional Support India | How Was Your Day Peer Listeners',
     description: 'Private emotional support from screened peer listeners — they never see your number. No appointment needed.',

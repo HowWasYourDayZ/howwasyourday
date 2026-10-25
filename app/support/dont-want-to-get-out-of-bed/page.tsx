@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'functional depression India', 'hidden depression India', 'going through the motions India',
     'exhausted but can\'t sleep India', 'heavy body morning India', 'waking up dreading day India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed', languages: { 'en-IN': 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed', languages: { 'en-GB': 'https://www.howwasyourday.live/support/dont-want-to-get-out-of-bed' } },
   openGraph: {
     title: 'Don\'t Want to Get Out of Bed | How Was Your Day',
     description: 'Not laziness. Not weakness. The weight of everything you are carrying. Talk to someone who understands.',
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'Is How Was Your Day peer support or therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day is peer support — not therapy. Our listeners are screened, real people with lived experience, from ₹160. They listen without judgment. For clinical treatment, a therapist or psychiatrist is the right path. For being heard and feeling less alone right now, How Was Your Day is here.',
+        text: 'How Was Your Day is peer support — not therapy. Our listeners are screened, real people with lived experience, from £7. They listen without judgment. For clinical treatment, a therapist or psychiatrist is the right path. For being heard and feeling less alone right now, How Was Your Day is here.',
       },
     },
     {
@@ -234,7 +234,7 @@ export default function DontWantToGetOutOfBedPage() {
           to go through the motions, to feel like you are the only one carrying this particular weight.
         </p>
         <p>
-          Sessions start from ₹160 for 15 minutes. Your first 5-minute session is free.
+          Sessions start from £7 for 15 minutes. Your first 5-minute session is free.
           No appointment. No waiting room. No explaining yourself to a stranger who holds a clipboard.
         </p>
 
@@ -250,7 +250,7 @@ export default function DontWantToGetOutOfBedPage() {
 
         <div className="cta-card">
           <h2>You Do Not Have to Carry This Morning Alone</h2>
-          <p>Talk to a real person who understands. No appointment. No judgment. From ₹160.</p>
+          <p>Talk to a real person who understands. No appointment. No judgment. From £7.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">You don't have to explain yourself — first 5 min free →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works</button></a>

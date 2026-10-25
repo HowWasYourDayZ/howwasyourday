@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Mental Health Support India — Real People, Not Just Apps | How Was Your Day',
   description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. One introductory session of up to 5 minutes is free per account.",
   keywords: ['mental health support India', 'mental health support online India', 'mental health help India', 'mental health chat India', 'online mental health support India', 'affordable mental health India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/mental-health-support-india', languages: { 'en-IN': 'https://www.howwasyourday.live/mental-health-support-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/mental-health-support-india', languages: { 'en-GB': 'https://www.howwasyourday.live/mental-health-support-india' } },
   openGraph: {
     title: 'Mental Health Support India — Real People, Not Just Apps | How Was Your Day',
     description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. One introductory session of up to 5 minutes is free per account.",

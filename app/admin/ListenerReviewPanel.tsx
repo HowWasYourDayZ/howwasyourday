@@ -34,7 +34,7 @@ export function fmtWhen(d: Date | string | null | undefined): string | null {
   if (!d) return null
   const t = typeof d === 'string' ? new Date(d) : d
   if (Number.isNaN(t.getTime())) return null
-  return t.toLocaleString('en-IN', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true })
+  return t.toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true })
 }
 
 function Photo({ url, title, note, when }: { url: string | null | undefined; title: string; note: string; when?: string | null }) {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Sasural Problems — In-Law Conflict India | How Was Your Day',
   description: 'Saas, devar, nand — navigating sasural dynamics is exhausting. Talk to someone anonymously who understands Indian family structures. From ₹160.',
   keywords: ['sasural problems India', 'saas bahu conflict India', 'in-law problems India', 'husband\'s family problems India', 'joint family conflict India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/sasural-problems-india', languages: { 'en-IN': 'https://www.howwasyourday.live/sasural-problems-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/sasural-problems-india', languages: { 'en-GB': 'https://www.howwasyourday.live/sasural-problems-india' } },
   openGraph: { title: 'Sasural Problems — In-Law Conflict India | How Was Your Day', description: 'Saas, devar, nand — navigating sasural dynamics is exhausting. Talk to someone anonymously who understands Indian family structures. From ₹160.', url: 'https://www.howwasyourday.live/sasural-problems-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

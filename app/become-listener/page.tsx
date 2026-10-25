@@ -1,7 +1,8 @@
 'use client'
+import { formatGBP, formatRate } from '@/lib/money'
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { MIN_LISTENER_RATE, MAX_LISTENER_RATE, LISTENER_SERVICE_FEE_RATE, VOICE_PRICING_ENABLED, VOICE_RATE_PREMIUM, LANGUAGES, MONTHS, MIN_LISTENER_AGE, MAX_LISTENER_AGE, ageFromBirth } from '@/lib/constants'
+import { DEFAULT_LISTENER_RATE, MIN_LISTENER_RATE, MAX_LISTENER_RATE, LISTENER_SERVICE_FEE_RATE, VOICE_PRICING_ENABLED, VOICE_RATE_PREMIUM, LANGUAGES, MONTHS, MIN_LISTENER_AGE, MAX_LISTENER_AGE, ageFromBirth } from '@/lib/constants'
 import { createClient } from '@/lib/supabase'
 import { SHOW_LISTENER_GROWTH_NOTICE, SHOW_NEW_LISTENER_ONBOARDING } from '@/lib/feature-flags'
 import { compressImage, extForType, AVATAR_OPTS, MAX_INPUT_BYTES } from '@/lib/compress-image'
@@ -157,12 +158,12 @@ function validateLived(v: string): string {
 function validateRate(v: string): string {
   const n = parseInt(v)
   if (VOICE_PRICING_ENABLED) {
-    if (isNaN(n) || n < MIN_LISTENER_RATE) return `Text rate must be at least ₹${MIN_LISTENER_RATE}/min (voice at least ₹${MIN_LISTENER_RATE + VOICE_RATE_PREMIUM}/min)`
-    if (n > MAX_LISTENER_RATE) return `Text rate can be at most ₹${MAX_LISTENER_RATE}/min (voice at most ₹${MAX_LISTENER_RATE + VOICE_RATE_PREMIUM}/min)`
+    if (isNaN(n) || n < MIN_LISTENER_RATE) return `Text rate must be at least ${formatRate(MIN_LISTENER_RATE)} (voice at least ${formatRate(MIN_LISTENER_RATE + VOICE_RATE_PREMIUM)})`
+    if (n > MAX_LISTENER_RATE) return `Text rate can be at most ${formatRate(MAX_LISTENER_RATE)} (voice at most ${formatRate(MAX_LISTENER_RATE + VOICE_RATE_PREMIUM)})`
     return ''
   }
-  if (isNaN(n) || n < MIN_LISTENER_RATE) return `Please enter a rate of at least ₹${MIN_LISTENER_RATE} per minute`
-  if (n > MAX_LISTENER_RATE) return `Rate can be at most ₹${MAX_LISTENER_RATE} per minute`
+  if (isNaN(n) || n < MIN_LISTENER_RATE) return `Please enter a rate of at least ${formatRate(MIN_LISTENER_RATE)}`
+  if (n > MAX_LISTENER_RATE) return `Rate can be at most ${formatRate(MAX_LISTENER_RATE)}`
   return ''
 }
 function validateBank(v: string): string {
@@ -239,7 +240,7 @@ export default function BecomeListenerPage() {
   const [phone, setPhone] = useState('')
   const [bio, setBio]     = useState('')
   const [tags, setTags]   = useState<string[]>([])
-  const [rate, setRate]   = useState('10')
+  const [rate, setRate]   = useState(String(DEFAULT_LISTENER_RATE))
   // Raw voice text while the listener is typing in the voice box; null = derive from rate.
   const [voiceDraft, setVoiceDraft] = useState<string | null>(null)
   const [langs, setLangs] = useState<string[]>(['english'])
@@ -974,7 +975,7 @@ export default function BecomeListenerPage() {
             <p>Three short steps: your public profile, your background, then payment details. Every application is reviewed before anyone goes live.</p>
             <p style={{marginTop:10}}><strong>How payment works:</strong> you earn when seekers book paid sessions with you. You set your own rate and keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of it on every paid session. How Was Your Day&apos;s {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}% service fee supports the work of bringing seekers to How Was Your Day, secure payments, verification, safety and support — so you can focus on listening.</p>
             <div className="earn-row">
-              <div className="earn-item"><div className="amount">₹{MIN_LISTENER_RATE}+</div><div className="label">per minute (you choose)</div></div>
+              <div className="earn-item"><div className="amount">{formatRate(MIN_LISTENER_RATE)}+</div><div className="label">per minute (you choose)</div></div>
               <div className="earn-item"><div className="amount">{Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}%</div><div className="label">of your rate you keep on paid sessions</div></div>
             </div>
             {SHOW_LISTENER_GROWTH_NOTICE && (
@@ -1338,24 +1339,22 @@ export default function BecomeListenerPage() {
               🔒 Seekers only see a range (e.g. 30–39), never your exact birth date. Helps them find a listener at a similar life stage.
             </p>
 
-            <label className="lbl">Your rate per minute <span style={{color:'#c0392b'}}>*</span> <span style={{fontWeight:500,color:'var(--gray)'}}>— suggestion: ₹10–₹50/min</span></label>
+            <label className="lbl">Your rate per minute <span style={{color:'#c0392b'}}>*</span> <span style={{fontWeight:500,color:'var(--gray)'}}>— in pence, e.g. 40 = 40p/min</span></label>
             {VOICE_PRICING_ENABLED ? (
               <>
                 <div className="rate-pair" style={{display:'grid',gridTemplateColumns:'minmax(0,1fr) minmax(0,1fr)',gap:10}}>
                   <div>
                     <div style={{fontSize:12,fontWeight:800,color:'var(--navy)',marginBottom:4}}>💬 Text chat</div>
                     <div className={`rate-wrap${fieldErrors.rate ? ' err' : ''}`}>
-                      <span className="rate-prefix">₹</span>
-                      <input className="rate-input" type="number" min={MIN_LISTENER_RATE} max={MAX_LISTENER_RATE} value={rate} aria-label="Text chat rate per minute"
+                                            <input className="rate-input" type="number" min={MIN_LISTENER_RATE} max={MAX_LISTENER_RATE} value={rate} aria-label="Text chat rate per minute"
                         onChange={e => { setVoiceDraft(null); setRate(e.target.value); if (fieldErrors.rate) setFieldErrors(f => ({...f, rate: ''})) }} />
-                      <span className="rate-suffix">/min</span>
+                      <span className="rate-suffix">p / min</span>
                     </div>
                   </div>
                   <div>
                     <div style={{fontSize:12,fontWeight:800,color:'var(--navy)',marginBottom:4}}>📞 Voice call</div>
                     <div className={`rate-wrap${fieldErrors.rate ? ' err' : ''}`}>
-                      <span className="rate-prefix">₹</span>
-                      <input className="rate-input" type="number" min={MIN_LISTENER_RATE + VOICE_RATE_PREMIUM} max={MAX_LISTENER_RATE + VOICE_RATE_PREMIUM} aria-label="Voice call rate per minute"
+                                            <input className="rate-input" type="number" min={MIN_LISTENER_RATE + VOICE_RATE_PREMIUM} max={MAX_LISTENER_RATE + VOICE_RATE_PREMIUM} aria-label="Voice call rate per minute"
                         value={voiceDraft ?? (rate.trim() && Number.isFinite(parseInt(rate)) ? String(parseInt(rate) + VOICE_RATE_PREMIUM) : '')}
                         onChange={e => {
                           const v = e.target.value
@@ -1365,22 +1364,21 @@ export default function BecomeListenerPage() {
                           if (fieldErrors.rate) setFieldErrors(f => ({...f, rate: ''}))
                         }}
                         onBlur={() => setVoiceDraft(null)} />
-                      <span className="rate-suffix">/min</span>
+                      <span className="rate-suffix">p / min</span>
                     </div>
                   </div>
                 </div>
-                <p style={{fontSize:12,color:'var(--gray)',margin:'2px 0 4px',fontWeight:600}}>Voice is always ₹{VOICE_RATE_PREMIUM}/min more than text — change either one and the other adjusts.</p>
+                <p style={{fontSize:12,color:'var(--gray)',margin:'2px 0 4px',fontWeight:600}}>Voice is always {formatRate(VOICE_RATE_PREMIUM)} more than text — change either one and the other adjusts.</p>
               </>
             ) : (
             <div className={`rate-wrap${fieldErrors.rate ? ' err' : ''}`}>
-              <span className="rate-prefix">₹</span>
-              <input className="rate-input" type="number" min={1} max={MAX_LISTENER_RATE} value={rate}
+                            <input className="rate-input" type="number" min={MIN_LISTENER_RATE} max={MAX_LISTENER_RATE} value={rate}
                 onChange={e => { setRate(e.target.value); if (fieldErrors.rate) setFieldErrors(f => ({...f, rate: ''})) }} />
-              <span className="rate-suffix">/ minute</span>
+              <span className="rate-suffix">p / minute</span>
             </div>
             )}
             {fieldErrors.rate && <span className="field-err">{fieldErrors.rate}</span>}
-            <p style={{fontSize:12,color:'var(--gray)',marginBottom:12,fontWeight:500}}>You keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of your rate on every paid session. New listeners often start at ₹10–₹15 and raise it as they build reviews.</p>
+            <p style={{fontSize:12,color:'var(--gray)',marginBottom:12,fontWeight:500}}>You keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of your rate on every paid session. The standard starting rate is {formatRate(DEFAULT_LISTENER_RATE)}; you can raise it as you build reviews.</p>
 
             <div style={{background:'#F0F8FC',borderRadius:12,padding:'10px 14px',marginBottom:12,fontSize:13,color:'#0F4867',fontWeight:600}}>
               📅 Sessions are booked in <strong>15, 30, or 45 minute slots</strong>. No open-ended calls — clean start and end times for both sides.
@@ -1394,25 +1392,25 @@ export default function BecomeListenerPage() {
               return (
                 <div className="rate-preview">
                   <p>What you take home:</p>
-                  <p>15 min → 💬 <strong>₹{earn15.toLocaleString('en-IN')}</strong> · 📞 <strong>₹{voiceNet(15).toLocaleString('en-IN')}</strong></p>
-                  <p>30 min → 💬 <strong>₹{earn30.toLocaleString('en-IN')}</strong> · 📞 <strong>₹{voiceNet(30).toLocaleString('en-IN')}</strong></p>
-                  <p>45 min → 💬 <strong>₹{earn45.toLocaleString('en-IN')}</strong> · 📞 <strong>₹{voiceNet(45).toLocaleString('en-IN')}</strong></p>
+                  <p>15 min → 💬 <strong>{formatGBP(earn15)}</strong> · 📞 <strong>{formatGBP(voiceNet(15))}</strong></p>
+                  <p>30 min → 💬 <strong>{formatGBP(earn30)}</strong> · 📞 <strong>{formatGBP(voiceNet(30))}</strong></p>
+                  <p>45 min → 💬 <strong>{formatGBP(earn45)}</strong> · 📞 <strong>{formatGBP(voiceNet(45))}</strong></p>
                 </div>
               )
             })() : (
             <div className="rate-preview">
-              <p>At <strong>₹{rateNum.toLocaleString('en-IN')}/min</strong> you earn (after the service fee):</p>
-              <p>15 min → you earn <strong>₹{earn15.toLocaleString('en-IN')}</strong></p>
-              <p>30 min → you earn <strong>₹{earn30.toLocaleString('en-IN')}</strong></p>
-              <p>45 min → you earn <strong>₹{earn45.toLocaleString('en-IN')}</strong></p>
+              <p>At <strong>{formatRate(rateNum)}</strong> you earn (after the service fee):</p>
+              <p>15 min → you earn <strong>{formatGBP(earn15)}</strong></p>
+              <p>30 min → you earn <strong>{formatGBP(earn30)}</strong></p>
+              <p>45 min → you earn <strong>{formatGBP(earn45)}</strong></p>
             </div>
             )}
 
             <div className="fee-box">
               <h3>What you take home from a 15-min text chat</h3>
-              <div className="fee-row"><span className="label">Session value (15 min at ₹{rateNum}/min)</span><span className="value">₹{gross15.toLocaleString('en-IN')}</span></div>
-              <div className="fee-row"><span className="label">How Was Your Day service fee ({Math.round(LISTENER_SERVICE_FEE_RATE * 100)}%) — seekers, payments, safety &amp; support</span><span className="value">− ₹{serviceFee15.toLocaleString('en-IN')}</span></div>
-              <div className="fee-row highlight"><span className="label">You take home</span><span className="value">₹{earn15.toLocaleString('en-IN')} ✓</span></div>
+              <div className="fee-row"><span className="label">Session value (15 min at {formatRate(rateNum)})</span><span className="value">{formatGBP(gross15)}</span></div>
+              <div className="fee-row"><span className="label">How Was Your Day service fee ({Math.round(LISTENER_SERVICE_FEE_RATE * 100)}%) — seekers, payments, safety &amp; support</span><span className="value">− {formatGBP(serviceFee15)}</span></div>
+              <div className="fee-row highlight"><span className="label">You take home</span><span className="value">{formatGBP(earn15)} ✓</span></div>
             </div>
 
             <label className="lbl">Account holder name <span style={{color:'#c0392b'}}>*</span></label>

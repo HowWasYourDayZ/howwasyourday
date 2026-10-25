@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'I am having a terrible day India', 'bad day quick support India',
     'reset after a bad morning India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/having-a-bad-day', languages: { 'en-IN': 'https://www.howwasyourday.live/having-a-bad-day' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/having-a-bad-day', languages: { 'en-GB': 'https://www.howwasyourday.live/having-a-bad-day' } },
   openGraph: {
     title: 'Having a Bad Day? Talk It Out With a Real Listener | How Was Your Day India',
     description: 'When the day has gone sideways and you need someone to hear you — How Was Your Day connects you with a real peer listener in India in minutes. Private, no appointment.',

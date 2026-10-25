@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'touched out mom India', 'no break as a mother India', 'husband not helping with baby India',
     'mother struggling India', 'mommy burnout India', 'need a break from parenting India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/mom-burnout-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/mom-burnout-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/mom-burnout-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/mom-burnout-india' } },
   openGraph: {
     title: 'Mom Burnout India — You Love Your Child. You Are Also Exhausted. | How Was Your Day',
     description: 'Maternal burnout in India. Loving your child and being completely burnt out are not contradictions.',
@@ -189,7 +189,7 @@ export default function MomBurnoutIndiaPage() {
 
         <h2>Why Maternal Burnout Is Particularly Hard in India</h2>
         <p>
-          In the UK or Ireland, mothers are expected to be selfless. To prioritise the child, the family, the household —
+          In India, mothers are expected to be selfless. To prioritise the child, the family, the household —
           always. There is almost no cultural permission to say: I am burnt out by this role that I also love.
         </p>
         <p>

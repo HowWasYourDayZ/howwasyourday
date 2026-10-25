@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Feeling Like a Failure? Peer Support in India | How Was Your Day',
   description: 'Feel like you\'re failing at life, work, or relationships? Talk to a real peer listener in India who has felt the same and come through it. Anonymous, no appointment.',
   keywords: ['feeling like a failure India', 'I am a failure India', 'feel worthless India', 'feel like I am not good enough India', 'failure at life India', 'failing at everything India', 'I am a disappointment India', 'feel inadequate India', 'not good enough India', 'peer support for failure India', 'I failed my family India', 'startup failure India', 'career failure India', 'exam failure India', 'how to deal with failure India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/feeling-like-a-failure', languages: { 'en-IN': 'https://www.howwasyourday.live/support/feeling-like-a-failure' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/feeling-like-a-failure', languages: { 'en-GB': 'https://www.howwasyourday.live/support/feeling-like-a-failure' } },
   openGraph: {
     title: 'Feeling Like a Failure? Peer Support in India | How Was Your Day',
     description: 'Feel like you\'re failing at life, work, or relationships? Talk to a real peer listener in India who has felt the same and come through it. Anonymous, no appointment.',
@@ -181,7 +181,7 @@ export default function FeelingLikeAFailurePage() {
           <p>India&apos;s education system runs on rank. Not pass or fail — rank. Where you placed in class, in district, in state. Children internalise early that their value is a number relative to other children. This way of measuring worth does not disappear when school ends. It continues into careers, salaries, neighbourhoods, the school the children attend. The comparison never stops.</p>
 
           <h3>Parental Pressure and Family Expectations</h3>
-          <p>In the UK or Ireland, family expectations are not a background presence — they are an active daily reality. Parents have sacrificed for children to succeed. Children carry that weight. When you feel like you are falling short, you are not just disappointing yourself. You are carrying the fear of disappointing people who love you and who you love. That is an enormous emotional load.</p>
+          <p>In India, family expectations are not a background presence — they are an active daily reality. Parents have sacrificed for children to succeed. Children carry that weight. When you feel like you are falling short, you are not just disappointing yourself. You are carrying the fear of disappointing people who love you and who you love. That is an enormous emotional load.</p>
 
           <h3>Salary as Identity</h3>
           <p>A specific and very Indian form of the failure feeling comes from salary comparisons. In many families and social circles, income is discussed openly, and your worth as an adult is substantially tied to what you earn. This creates a chronic low-grade sense of inadequacy in anyone who earns less than the comparison point — which, given the way comparisons work, is almost everyone.</p>

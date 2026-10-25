@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'identity crisis india', 'life purpose india', 'existential dread india',
     'why am I here india', 'questioning everything india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/existential-crisis-india', languages: { 'en-IN': 'https://www.howwasyourday.live/existential-crisis-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/existential-crisis-india', languages: { 'en-GB': 'https://www.howwasyourday.live/existential-crisis-india' } },
   openGraph: {
     title: 'Existential Crisis India — What\'s the Point? You\'re Not Alone. | How Was Your Day',
     description: 'Questioning everything — your job, your relationships, your purpose? Existential crisis hits hard in India. Talk to someone real. From ₹160.',

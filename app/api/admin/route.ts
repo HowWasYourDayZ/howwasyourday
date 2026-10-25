@@ -1,3 +1,4 @@
+import { formatGBP } from '@/lib/money'
 import { NextRequest, NextResponse } from 'next/server'
 import Razorpay from 'razorpay'
 import { createAdminClient } from '@/lib/supabase-server'
@@ -281,8 +282,8 @@ export async function POST(req: NextRequest) {
       type:       'payout_update',
       title:      rzpxPayoutId ? 'Payout sent! 🎉' : 'Payout completed',
       body:       rzpxPayoutId
-        ? `₹${pr.amount} is on its way to your UPI (${pr.upi_id}). It usually arrives within minutes.`
-        : `Your payout of ₹${pr.amount} has been transferred${(pr.upi_id as string | null)?.startsWith('bank:') ? ' to your bank account' : ''}. It may take a few hours to reflect.`,
+        ? `${formatGBP(pr.amount)} is on its way to your UPI (${pr.upi_id}). It usually arrives within minutes.`
+        : `Your payout of ${formatGBP(pr.amount)} has been transferred${(pr.upi_id as string | null)?.startsWith('bank:') ? ' to your bank account' : ''}. It may take a few hours to reflect.`,
       action_url: '/dashboard',
     }).then(() => {}, () => {})
 
@@ -417,7 +418,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { data: claimed } = await admin.from('refund_requests')
-      .update({ status: 'rejected', admin_notes: `Rejected by admin${notes ? `: ${String(notes).slice(0, 300)}` : ''} — ₹${rr.amount} returned to wallet` })
+      .update({ status: 'rejected', admin_notes: `Rejected by admin${notes ? `: ${String(notes).slice(0, 300)}` : ''} — ${formatGBP(rr.amount)} returned to wallet` })
       .eq('id', id).eq('status', 'pending')
       .select('id').single()
     if (!claimed) return NextResponse.json({ error: 'Refund request not found or already processed' }, { status: 404 })
@@ -427,7 +428,7 @@ export async function POST(req: NextRequest) {
     if (creditErr) {
       await admin.from('refund_requests').update({ status: 'pending', admin_notes: null }).eq('id', id)
       logger.error('reject_refund: credit_wallet failed', { id, userId: rr.user_id, amount: rr.amount, error: creditErr.message })
-      return NextResponse.json({ error: `Could not return ₹${rr.amount} to the wallet: ${creditErr.message}. Request left pending.` }, { status: 500 })
+      return NextResponse.json({ error: `Could not return ${formatGBP(rr.amount)} to the wallet: ${creditErr.message}. Request left pending.` }, { status: 500 })
     }
     // No reference_id: /api/refund picks the latest credit reference as the Razorpay payment.
     await admin.from('wallet_transactions').insert({
@@ -436,7 +437,7 @@ export async function POST(req: NextRequest) {
     }).then(() => {}, (e) => logger.error('reject_refund: ledger insert failed (audit gap)', { id, error: String(e) }))
     await admin.from('notifications').insert({
       user_id: rr.user_id, type: 'system', title: 'Refund request declined',
-      body: `Your refund request was declined and ₹${rr.amount} is back in your How Was Your Day wallet.`,
+      body: `Your refund request was declined and ${formatGBP(rr.amount)} is back in your How Was Your Day wallet.`,
       action_url: '/wallet',
     }).then(() => {}, () => {})
 

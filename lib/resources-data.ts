@@ -16,7 +16,7 @@ In peer support, active listening is the foundation of everything. When you feel
 
 The core elements of active listening include: giving undivided attention (putting away your phone, making eye contact, removing mental distractions), using verbal and non-verbal cues to show you're present (nodding, "mm-hmm", brief responses like "I see" or "that makes sense"), reflecting back what you hear ("So what I'm understanding is..."), asking open questions that invite deeper sharing ("How did that make you feel?" rather than "Did that upset you?"), and resisting the urge to offer advice unless explicitly asked.
 
-In the UK or Ireland, active listening is particularly valuable because cultural norms often discourage emotional expression. Many people have never had the experience of being truly listened to without judgment. When How Was Your Day listeners practice active listening, they often give seekers something genuinely new — the experience of being heard without being fixed, judged, or redirected.
+In India, active listening is particularly valuable because cultural norms often discourage emotional expression. Many people have never had the experience of being truly listened to without judgment. When How Was Your Day listeners practice active listening, they often give seekers something genuinely new — the experience of being heard without being fixed, judged, or redirected.
 
 If you want to practice active listening, start small. In your next conversation, resist the urge to share your own story when someone shares theirs. Instead, ask one follow-up question. Notice how the quality of the conversation changes.`,
   },
@@ -62,7 +62,7 @@ The signs of burnout include: persistent exhaustion that doesn't resolve with re
 
 Burnout progresses through stages. Early warning signs include mild fatigue, reduced enthusiasm, and forgetting commitments. In later stages, burnout can produce severe emotional numbing, chronic physical symptoms, and even depression.
 
-In the UK or Ireland, burnout is particularly common among IT professionals, startup founders, healthcare workers, and students facing competitive exam pressure. The culture of long hours and the stigma around admitting vulnerability makes it harder to recognise and address.
+In India, burnout is particularly common among IT professionals, startup founders, healthcare workers, and students facing competitive exam pressure. The culture of long hours and the stigma around admitting vulnerability makes it harder to recognise and address.
 
 What helps? The first step is naming it — distinguishing burnout from simple tiredness. The second is rest that is genuinely restorative: not passive consumption, but activities that fill you up. The third is talking about it — with someone who understands, ideally someone who has been through their own burnout. This is where peer support can be transformative. Many How Was Your Day listeners have personal experience with burnout recovery and can offer the kind of understanding that is hard to find elsewhere.`,
   },
@@ -94,7 +94,7 @@ Stress is a response to an external trigger. There is a cause: a deadline, a con
 
 Anxiety, by contrast, is often not tied to a specific external trigger. It is a persistent state of apprehension, worry, or dread that can arise even when the circumstances don't objectively warrant it. Anxiety often involves anticipatory worry ("what if things go wrong?"), physical symptoms like a racing heart and tight chest, difficulty concentrating, irritability, and sleep disruption. In anxiety disorders, these experiences are persistent and significantly interfere with daily life.
 
-In the UK or Ireland, the distinction matters because the sources of support differ. Stress often responds well to practical changes: better time management, delegation, rest, and peer conversations about the pressures involved. Anxiety, particularly when it is persistent or severe, may benefit from professional support alongside peer connection.
+In India, the distinction matters because the sources of support differ. Stress often responds well to practical changes: better time management, delegation, rest, and peer conversations about the pressures involved. Anxiety, particularly when it is persistent or severe, may benefit from professional support alongside peer connection.
 
 How Was Your Day peer listeners are not therapists and don't provide clinical treatment. But they can offer something invaluable for both stress and anxiety: the experience of being truly heard by someone who has been through similar pressures. Many How Was Your Day listeners specialise in work stress, student pressure, and anxiety — and bring genuine lived experience to those conversations.
 
@@ -126,7 +126,7 @@ The signs of emotional burnout are distinct: you feel emotionally numb or detach
 
 Emotional burnout is particularly common among caregivers (parents, healthcare workers, those supporting sick family members), people in high-empathy professions, and people who have been carrying others emotionally for extended periods without adequate support for themselves.
 
-In the UK or Ireland, emotional burnout is widespread but rarely named. The expectation that one should be "strong" — particularly for women, who are often expected to be the emotional anchor for entire families — makes it hard to acknowledge when you have nothing left to give.
+In India, emotional burnout is widespread but rarely named. The expectation that one should be "strong" — particularly for women, who are often expected to be the emotional anchor for entire families — makes it hard to acknowledge when you have nothing left to give.
 
 Recovery from emotional burnout requires intentional restoration of emotional resources. This means creating boundaries — not just physical but emotional — around how much you give. It means making space for your own emotional experience, not just others'. It means replenishing through activities that genuinely restore you: rest, creative expression, time in nature, honest conversations.
 
@@ -196,7 +196,7 @@ Unlike therapy, peer counselling does not involve clinical diagnosis, evidence-b
 
 Research supports the effectiveness of peer counselling for a range of challenges including loneliness, anxiety, depression, substance recovery, grief, chronic illness adjustment, and transitions like job loss or relationship breakdown. Studies have found that peer counselling can be as effective as professional therapy for mild to moderate emotional difficulties — and significantly more accessible, affordable, and destigmatised.
 
-In the UK or Ireland, where professional mental health services are chronically underprovided and heavily stigmatised, peer counselling fills a critical gap. Estimates suggest that India has fewer than 1 psychiatrist per 100,000 people. Against this backdrop, peer support — including platforms like How Was Your Day — represents a scalable, culturally appropriate way to extend meaningful support to millions of people who would otherwise receive none.
+In India, where professional mental health services are chronically underprovided and heavily stigmatised, peer counselling fills a critical gap. Estimates suggest that India has fewer than 1 psychiatrist per 100,000 people. Against this backdrop, peer support — including platforms like How Was Your Day — represents a scalable, culturally appropriate way to extend meaningful support to millions of people who would otherwise receive none.
 
 How Was Your Day peer listeners are not counsellors in the clinical sense. They do not use evidence-based protocols or provide diagnoses. But they offer something equally valuable: the authentic understanding that comes from lived experience, in a format that is immediately accessible, deeply private, and genuinely affordable.
 
@@ -268,7 +268,7 @@ Many students in India who use How Was Your Day do so during exam seasons, seeki
     slug: 'career-confusion-in-your-20s',
     title: 'Career Confusion in Your 20s: What\'s Normal and What Helps',
     description: 'Feeling lost about your career in your 20s is more common than you think — and more complex than "just find your passion." Here\'s an honest guide.',
-    content: `Career confusion in your 20s is one of the most normalised yet genuinely difficult experiences of early adult life. In the UK or Ireland, where career choices are often made at 16-17 (choosing a stream in Class 11), and where family expectations around stable, high-earning careers carry enormous weight, the gap between who you are and what you're doing professionally can feel immense.
+    content: `Career confusion in your 20s is one of the most normalised yet genuinely difficult experiences of early adult life. In India, where career choices are often made at 16-17 (choosing a stream in Class 11), and where family expectations around stable, high-earning careers carry enormous weight, the gap between who you are and what you're doing professionally can feel immense.
 
 The advice to "just find your passion" is, unfortunately, both unhelpful and misleading. Research by Cal Newport and others has consistently shown that passion typically follows mastery, not precedes it — people become passionate about what they become good at, not the reverse. And the pressure to have a calling in your 20s — when you have had limited experience of the world — sets up unrealistic expectations that compound confusion into shame.
 
@@ -360,7 +360,7 @@ How Was Your Day peer listeners provide a uniquely safe container for vulnerabil
     description: 'Most people find it genuinely difficult to ask for help — even when they need it badly. Here\'s the psychology behind this barrier and how to overcome it.',
     content: `Asking for help is one of the most fundamentally human acts — and one of the things most people find genuinely difficult. The barriers are real: fear of appearing weak, fear of burdening others, the belief that you should handle your own problems, the uncertainty about how your request will be received.
 
-In the UK or Ireland, these barriers are often amplified. Cultural values around self-reliance and not being a "burden" run deep. The stigma around mental and emotional struggles — the idea that such difficulties reveal weakness of character — makes help-seeking particularly loaded. And the social density of Indian life, where a request for help can quickly become family or community news, makes the privacy cost of asking high.
+In India, these barriers are often amplified. Cultural values around self-reliance and not being a "burden" run deep. The stigma around mental and emotional struggles — the idea that such difficulties reveal weakness of character — makes help-seeking particularly loaded. And the social density of Indian life, where a request for help can quickly become family or community news, makes the privacy cost of asking high.
 
 The psychological reality is that the barriers to asking for help are largely distortions. Research suggests that when people ask for help, it is received more positively than they expected. People generally feel good about being asked — it signals trust and creates connection. The imagined reaction (judgment, imposition, dismissal) rarely matches reality.
 
@@ -380,7 +380,7 @@ Researcher Kristin Neff, who has spent decades studying self-compassion, identif
 
 Self-compassion is frequently confused with self-pity or self-indulgence — the idea that being kind to yourself means making excuses, lowering standards, or avoiding accountability. Research shows the opposite is true. Self-compassion is associated with higher motivation (because failure feels less catastrophic when met with kindness), greater resilience, lower rates of anxiety and depression, and better interpersonal relationships.
 
-In the UK or Ireland, where self-criticism is often framed as a virtue ("you need to be harder on yourself to improve"), self-compassion can feel countercultural. Many people have internalized the belief that kindness toward themselves is self-indulgent — that they don't deserve it, or that allowing it would lead to laziness.
+In India, where self-criticism is often framed as a virtue ("you need to be harder on yourself to improve"), self-compassion can feel countercultural. Many people have internalized the belief that kindness toward themselves is self-indulgent — that they don't deserve it, or that allowing it would lead to laziness.
 
 The practice of self-compassion: When you notice self-criticism arising, pause. Ask: if a good friend told me what I'm telling myself, what would I say to them? Apply that same response to yourself. Notice the resistance — that is where the work is.
 
@@ -426,7 +426,7 @@ India's traditional joint family system, which historically provided elderly mem
 
 The consequences of elderly loneliness are severe. Research suggests that chronic loneliness in old age is associated with significantly elevated risk of dementia, cardiovascular disease, depression, and premature death. The health impact of chronic loneliness is comparable to smoking 15 cigarettes a day.
 
-In the UK or Ireland, the elderly face unique barriers to addressing loneliness: cultural norms that discourage complaining, the belief that family should be sufficient (and that needing more reveals family failure), limited mobility, and unfamiliarity with digital platforms that might provide connection.
+In India, the elderly face unique barriers to addressing loneliness: cultural norms that discourage complaining, the belief that family should be sufficient (and that needing more reveals family failure), limited mobility, and unfamiliarity with digital platforms that might provide connection.
 
 What helps? Regular, meaningful social contact — not just proximity, but conversation with genuine depth. Intergenerational programs. Community centers and senior groups where meaningful activity and social connection occur together.
 

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'new city friends India', 'alone in new city India', 'relocating India emotional support',
     'work relocation loneliness India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/new-city-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/new-city-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/new-city-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/new-city-india' } },
   openGraph: {
     title: 'Feeling Lonely in a New City in India — You Are Not the Only One | How Was Your Day',
     description: 'Moving to Bangalore, Mumbai, Hyderabad, or Pune for work and feeling alone? Talk to someone who gets it.',

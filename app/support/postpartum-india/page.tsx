@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'new mother support India', 'baby blues India', 'motherhood identity India',
     'new baby mental health India', 'postpartum help India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/postpartum-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/postpartum-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/postpartum-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/postpartum-india' } },
   openGraph: {
     title: 'Postpartum Loneliness and Exhaustion in India — You Don\'t Have to Feel This Way Alone | How Was Your Day',
     description: 'New motherhood in India can be isolating in ways nobody warns you about. Talk to someone who won\'t judge you.',

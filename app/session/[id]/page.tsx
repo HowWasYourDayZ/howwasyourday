@@ -7,7 +7,7 @@ import { createBrowserClient } from '@supabase/ssr'
 import { showToast } from '@/lib/toast'
 import ReportModal from '@/app/components/ReportModal'
 import { SESSION_DURATIONS, MESSAGE_REACTIONS, REQUEST_RESPONSE_WINDOW_MS, PLATFORM_FEE, sessionRatePerMin } from '@/lib/constants'
-import { getBookingPriceDisplay, sessionTotalInr } from '@/lib/geo-pricing'
+import { formatGBP } from '@/lib/money'
 
 // ── CRITICAL FIX 1: Create client ONCE outside component
 // Previously inside component = new WebSocket on every render
@@ -176,7 +176,7 @@ function fmtTimer(s: number) {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 }
 function fmtTime(iso: string) {
-  return new Date(iso).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })
+  return new Date(iso).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })
 }
 function ini(n: string) {
   return n.split(' ').map(x => x[0] || '').join('').slice(0, 2).toUpperCase() || '?'
@@ -494,7 +494,6 @@ function SessionContent() {
   const [reqDuration, setReqDuration] = useState<number | null>(null)
   const [alertStatus, setAlertStatus] = useState<'unknown' | 'delivered' | 'not_delivered'>('unknown')
   const [alternatives, setAlternatives] = useState<AltListener[] | null>(null)
-  const [accountCountry, setAccountCountry] = useState<string | null>(null)
   const [switchingTo, setSwitchingTo] = useState<AltListener | null>(null)
   const [switchReleased, setSwitchReleased] = useState(false)
   const isWaitingSeeker = sessionStatus === 'pending' && userId !== null && listenerId !== null && userId !== listenerId
@@ -542,8 +541,7 @@ function SessionContent() {
           : Promise.resolve(new Set<string>()),
       ])
       if (cancelled) return
-      const prof = me as { account_country?: string; wallet_balance?: number } | null
-      setAccountCountry(prof?.account_country ?? null)
+      const prof = me as { wallet_balance?: number } | null
       if (prof?.wallet_balance != null) setWalletBalance(Number(prof.wallet_balance))
       if (!list) return // keep the last good list on a failed refresh
       const rows = ((list as { listeners?: unknown[] }).listeners ?? []) as AltListener[]
@@ -559,25 +557,25 @@ function SessionContent() {
   }, [showAlternatives, listenerId, userId, sessionIsFreeTrial])
 
   const switchDuration = reqDuration ?? (sessionIsFreeTrial ? 5 : durationMins)
-  function altInrCost(l: AltListener): number | null {
+  function altCost(l: AltListener): number | null {
     if (sessionIsFreeTrial) return 0
     const rate = Number(l.rate_per_min)
     if (!Number.isFinite(rate) || rate <= 0) return null
-    // Same rule as /api/sessions: overseas = flat price, never below the Indian price.
-    return sessionTotalInr(sessionRatePerMin(rate, isVoice ? 'voice' : 'text') * switchDuration + PLATFORM_FEE, accountCountry, switchDuration)
+    // Same rule as /api/sessions (lib/geo-pricing quoteSession).
+    return sessionRatePerMin(rate, isVoice ? 'voice' : 'text') * switchDuration + PLATFORM_FEE
   }
   // The current hold comes back when switching, so it counts towards the new price.
   function altAffordable(l: AltListener): boolean {
-    const cost = altInrCost(l)
+    const cost = altCost(l)
     if (cost === null || cost === 0 || walletBalance === null) return true
     return walletBalance + (sessionIsFreeTrial ? 0 : (sessionAmountHeld ?? 0)) >= cost
   }
 
   function altPrice(l: AltListener): string {
     if (sessionIsFreeTrial) return `Free ${switchDuration}-min intro`
-    const inr = altInrCost(l)
-    if (inr === null) return `${switchDuration} min`
-    return `${getBookingPriceDisplay(inr, accountCountry, switchDuration).primary} · ${switchDuration} min`
+    const cost = altCost(l)
+    if (cost === null) return `${switchDuration} min`
+    return `${formatGBP(cost)} · ${switchDuration} min`
   }
 
   // Book the other listener INSTEAD of this request, in one server call: every
@@ -844,8 +842,7 @@ function SessionContent() {
         setListenerStillOnline(j.profile?.is_available === true)
         const textRate = Number(j.profile?.rate_per_min)
         if (Number.isFinite(textRate) && textRate > 0) {
-          const inr = sessionRatePerMin(textRate, isVoice ? 'voice' : 'text') * 15 + PLATFORM_FEE
-          setContinuePrice(getBookingPriceDisplay(inr, (me as { account_country?: string }).account_country, 15).primary)
+          setContinuePrice(formatGBP(sessionRatePerMin(textRate, isVoice ? 'voice' : 'text') * 15 + PLATFORM_FEE))
         }
       })
       .catch(() => setListenerStillOnline(false))
@@ -1258,7 +1255,7 @@ function SessionContent() {
       .then(r => r.ok ? r.json() : null)
       .then(d => {
         if (d?.refund > 0 && userId !== listenerId) {
-          showToast(`Switched to text — ₹${d.refund} voice extra refunded to your wallet`, 'success')
+          showToast(`Switched to text — ${formatGBP(d.refund)} voice extra refunded to your wallet`, 'success')
         }
       })
       .catch(() => {})
@@ -1810,7 +1807,7 @@ function SessionContent() {
             <span className="listener-banner-text">
               {sessionIsFreeTrial
                 ? `Free trial session · ${durationMins} min · no earnings on trial sessions`
-                : `Paid session · ${durationMins} min${listenerEarning != null ? ` · you'll earn ₹${listenerEarning}` : ''}`}
+                : `Paid session · ${durationMins} min${listenerEarning != null ? ` · you'll earn ${formatGBP(listenerEarning)}` : ''}`}
             </span>
             <button
               className="listener-banner-close"
@@ -1832,7 +1829,7 @@ function SessionContent() {
 
         <div className="msgs">
           <div className="date-pill">
-            {new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+            {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
           </div>
 
           {msgs.length === 0 && (

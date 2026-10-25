@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Gurgaon — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Gurgaon (Gurugram). Corporate burnout, startup stress, transient loneliness. Talk anonymously on How Was Your Day from ₹160.',
-  alternates: { canonical: 'https://www.howwasyourday.live/gurgaon', languages: { 'en-IN': 'https://www.howwasyourday.live/gurgaon' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/gurgaon', languages: { 'en-GB': 'https://www.howwasyourday.live/gurgaon' } },
   keywords: 'peer support Gurgaon, emotional support Gurugram, corporate burnout Gurgaon, loneliness Gurgaon, startup stress Gurugram, talk to someone Gurgaon, howwasyourday Gurgaon',
   openGraph: {
     title: 'Emotional Support in Gurgaon — Peer Listeners | How Was Your Day',

@@ -75,7 +75,7 @@ export const post = {
 
 <h2>Evaluating a Platform for Safety</h2>
 
-<p>Before trusting any platform with something personal, check for a few basics: is there a verification process for whoever you will be talking to, so you know they are who they say they are? Is there a clear crisis protocol — what happens if a conversation reveals a genuine emergency? And how is your data handled? In the UK or Ireland, the <strong>DPDP Act, 2023</strong> sets legal standards for how personal data must be protected; a platform that takes privacy seriously should be able to speak clearly to how it complies.</p>
+<p>Before trusting any platform with something personal, check for a few basics: is there a verification process for whoever you will be talking to, so you know they are who they say they are? Is there a clear crisis protocol — what happens if a conversation reveals a genuine emergency? And how is your data handled? In India, the <strong>DPDP Act, 2023</strong> sets legal standards for how personal data must be protected; a platform that takes privacy seriously should be able to speak clearly to how it complies.</p>
 
 <h2>How the app Fits Into This Landscape</h2>
 

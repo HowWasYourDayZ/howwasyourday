@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Just Want to Talk, Not a Prediction? Here\'s a Direct Option | How Was Your Day',
   description: 'If you find yourself calling an astrologer at night just to talk to someone, you\'re not alone. How Was Your Day connects you with a real person for real conversation.',
-  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-not-astrologer', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-someone-not-astrologer' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-not-astrologer', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-to-someone-not-astrologer' } },
   keywords: 'talk to someone instead of astrologer, astrology chat for loneliness, why do I call an astrologer just to talk, someone to talk to at night India',
   openGraph: {
     title: 'Just Want to Talk, Not a Prediction? Here\'s a Direct Option | How Was Your Day',
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does it cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A 15-minute session starts around ₹160, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. A short trial session is available for new users.',
+        text: 'A 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. A short trial session is available for new users.',
       },
     },
   ],
@@ -217,7 +217,7 @@ export default function TalkToSomeoneNotAstrologerPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does it cost?</div>
-            <div className="faq-a">A 15-minute session starts around ₹160, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. A short trial session is available for new users.</div>
+            <div className="faq-a">A 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. A short trial session is available for new users.</div>
           </div>
         </div>
 

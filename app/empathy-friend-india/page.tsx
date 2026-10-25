@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Empathy Friend India — Talk to Someone Who Actually Listens | How Was Your Day',
   description: 'Find an empathetic listener online in India. Real people, screened for active listening, available from ₹160. Not a therapist. Not a bot. A human.',
   keywords: ['empathy friend india', 'empathetic listener online india', 'compassionate listener online india', 'screened listener india', 'non-judgmental support india', 'online peer support india', 'peer mentoring india', 'community support india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/empathy-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/empathy-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/empathy-friend-india', languages: { 'en-GB': 'https://www.howwasyourday.live/empathy-friend-india' } },
   openGraph: {
     title: 'Empathy Friend India — Talk to Someone Who Actually Listens | How Was Your Day',
     description: 'Find an empathetic listener online in India. Real people, screened for active listening, available from ₹160. Not a therapist. Not a bot. A human.',

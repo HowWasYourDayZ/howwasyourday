@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Bhopal — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Bhopal, Madhya Pradesh. Talk anonymously about UPSC stress, student pressure, family expectations. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/bhopal', languages: { 'en-IN': 'https://www.howwasyourday.live/bhopal' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/bhopal', languages: { 'en-GB': 'https://www.howwasyourday.live/bhopal' } },
   keywords: 'peer support Bhopal, emotional support Bhopal, UPSC stress Bhopal, student pressure Bhopal MP, talk to someone Bhopal, howwasyourday Bhopal',
   openGraph: {
     title: 'Emotional Support in Bhopal — Peer Listeners | How Was Your Day',

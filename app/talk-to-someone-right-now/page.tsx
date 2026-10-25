@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Talk to Someone Right Now — Anonymous, no appointment | How Was Your Day India',
   description: "Talk to someone right now — a real, screened peer listener in India, online now, by text or voice. No appointment. First 5 minutes free.",
-  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-right-now', languages: { 'en-IN': 'https://www.howwasyourday.live/talk-to-someone-right-now' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-right-now', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-to-someone-right-now' } },
   keywords: 'talk to someone right now, need to talk to someone now India, someone to talk to immediately, urgent emotional support India, talk to someone online now, anonymous listener India',
   openGraph: {
     title: 'Talk to Someone Right Now — Anonymous, no appointment | How Was Your Day India',
@@ -43,7 +43,7 @@ const faqSchema = {
       name: 'How does pricing work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at ₹160 for 15 minutes, and a short trial session is available for new users.',
+        text: 'Sessions start at £7 for 15 minutes, and a short trial session is available for new users.',
       },
     },
     {
@@ -258,7 +258,7 @@ export default function TalkToSomeoneRightNowPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does pricing work?</div>
-            <div className="faq-a">Sessions start at ₹160 for 15 minutes, and a short trial session is available for new users.</div>
+            <div className="faq-a">Sessions start at £7 for 15 minutes, and a short trial session is available for new users.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I don&apos;t know what to say?</div>

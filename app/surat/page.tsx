@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Surat — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Surat, Gujarat. Talk anonymously about business pressure, family expectations, diamond industry stress. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/surat', languages: { 'en-IN': 'https://www.howwasyourday.live/surat' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/surat', languages: { 'en-GB': 'https://www.howwasyourday.live/surat' } },
   keywords: 'peer support Surat, emotional support Surat, business stress Surat Gujarat, family pressure Surat, talk to someone Surat, howwasyourday Surat',
   openGraph: {
     title: 'Emotional Support in Surat — Peer Listeners | How Was Your Day',

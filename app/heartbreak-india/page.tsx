@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'how to get over heartbreak India', 'breakup support India',
     'heartbreak recovery India', 'breakup pain relief India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/heartbreak-india', languages: { 'en-IN': 'https://www.howwasyourday.live/heartbreak-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/heartbreak-india', languages: { 'en-GB': 'https://www.howwasyourday.live/heartbreak-india' } },
   openGraph: {
     title: 'Heartbreak Support India — Talk to Someone Who Gets It | How Was Your Day',
     description: 'Heartbreak is physical. It\'s not \'just feelings\'. Talk to a peer listener who has been there — anonymous, from ₹160.',

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'male emotional health India', 'men need support India', 'lonely single man India',
     'men adulting India loneliness', 'men under pressure India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/men-loneliness-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/men-loneliness-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/men-loneliness-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/men-loneliness-india' } },
   openGraph: {
     title: 'Men in India Get Lonely Too — They Just Can\'t Say It | How Was Your Day',
     description: 'Job pressure. Marriage pressure. No one to actually talk to. Male loneliness in India is real and almost never discussed.',

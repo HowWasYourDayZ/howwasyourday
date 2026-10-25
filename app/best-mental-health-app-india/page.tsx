@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Best Mental Health App India 2026 — Honest Comparison | How Was Your Day',
   description: 'Which mental health app is best in India? We compare How Was Your Day, Amaha, YourDOST, Wysa, and others across cost, anonymity, and Indian context.',
   keywords: ['best mental health app india', 'best online counselling app india', 'best therapy app india', 'mental wellness app india', 'online therapy india', 'therapy app india', 'best mental health platform india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/best-mental-health-app-india', languages: { 'en-IN': 'https://www.howwasyourday.live/best-mental-health-app-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/best-mental-health-app-india', languages: { 'en-GB': 'https://www.howwasyourday.live/best-mental-health-app-india' } },
   openGraph: {
     title: 'Best Mental Health App India 2026 — Honest Comparison | How Was Your Day',
     description: 'Which mental health app is best in India? We compare How Was Your Day, Amaha, YourDOST, Wysa, and others across cost, anonymity, and Indian context.',

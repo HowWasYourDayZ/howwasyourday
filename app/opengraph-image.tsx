@@ -21,7 +21,7 @@ export default function OgImage() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'baseline', fontSize: 110, fontWeight: 800, color: 'white', letterSpacing: '-2px' }}>
-          Lean<span style={{ color: '#FF9933' }}>On</span>
+          How Was <span style={{ color: '#FF9933' }}>Your Day</span>
         </div>
         <div style={{ display: 'flex', fontSize: 38, fontWeight: 600, color: 'rgba(255,255,255,0.92)', marginTop: 18 }}>
           Someone to lean on, anytime.

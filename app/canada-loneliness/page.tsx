@@ -139,7 +139,7 @@ export default function CanadaLonelinessPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 
@@ -173,7 +173,7 @@ export default function CanadaLonelinessPage() {
 
         <div className="night-box">
           <h2>❄️ The first winter hits different</h2>
-          <p>In the UK or Ireland, even a bad day ends with noise, people, movement. In Canada, winter evenings are dark
+          <p>In India, even a bad day ends with noise, people, movement. In Canada, winter evenings are dark
             by 4 PM and profoundly silent. That contrast — especially in your first year — can be genuinely
             overwhelming.</p>
           <p>How Was Your Day listeners are available whenever the silence gets too loud — midnight, 2 AM, any time.

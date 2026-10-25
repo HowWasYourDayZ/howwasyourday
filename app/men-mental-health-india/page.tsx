@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Men Mental Health India — It Takes Courage to Talk | How Was Your Day',
   description: 'Men in India rarely ask for help. That changes here. Anonymous peer support from ₹160 — talk to a real person, no judgement.',
   keywords: ['men mental health india', 'men asking for help india', 'men depression india', 'men anxiety india', 'men loneliness india', 'boys dont cry india', 'male mental health india'],
-  alternates: { canonical: 'https://www.howwasyourday.live/men-mental-health-india', languages: { 'en-IN': 'https://www.howwasyourday.live/men-mental-health-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/men-mental-health-india', languages: { 'en-GB': 'https://www.howwasyourday.live/men-mental-health-india' } },
   openGraph: {
     title: 'Men Mental Health India — It Takes Courage to Talk | How Was Your Day',
     description: 'Men in India rarely ask for help. That changes here. Anonymous peer support from ₹160 — talk to a real person, no judgement.',

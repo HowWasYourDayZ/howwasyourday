@@ -1,4 +1,5 @@
 'use client'
+import { formatGBP, formatRate } from '@/lib/money'
 export const dynamic = 'force-dynamic'
 import { syncServerClock, serverNow } from '@/lib/server-clock'
 import { useState, useEffect, useRef, Suspense } from 'react'
@@ -156,8 +157,8 @@ function fmtDate(iso: string) {
   const now = new Date()
   const diff = now.getTime() - d.getTime()
   const days = Math.floor(diff / 86400000)
-  if (days === 0) return `Today, ${d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })}`
-  if (days === 1) return `Yesterday, ${d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })}`
+  if (days === 0) return `Today, ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })}`
+  if (days === 1) return `Yesterday, ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })}`
   return `${days} days ago`
 }
 
@@ -703,7 +704,7 @@ export default function DashboardPage() {
     // listener service fee. Deriving earnings from amount_held - platform_fee
     // overstates them — that's true for partial sessions as before, and now also
     // for every new full session, since sessions.platform_fee only ever holds
-    // the seeker's flat ₹10 and never the service fee. session_id here builds a
+    // the seeker's flat £1 and never the service fee. session_id here builds a
     // lookup so the per-session "Recent sessions" list below can show the real
     // net amount instead of recomputing (and overstating) it inline.
     const { data: _earnings } = await sb
@@ -816,7 +817,7 @@ export default function DashboardPage() {
     const body = await res.json().catch(() => ({}))
     if (res.status === 409) { showToast('You already have a pending payout request.', 'warning'); return }
     if (!res.ok) { showToast(body.message || body.error || 'Failed to submit payout. Please try again.', 'error'); return }
-    showToast(`Payout request submitted! ₹${body.amount} will be transferred within 3 business days.`, 'success')
+    showToast(`Payout request submitted! ${formatGBP(body.amount)} will be transferred within 3 business days.`, 'success')
   }
 
   async function deleteAccount() {
@@ -910,8 +911,8 @@ export default function DashboardPage() {
     const rate = parseInt(editRate)
     if (isNaN(rate) || rate < MIN_LISTENER_RATE || rate > MAX_LISTENER_RATE) {
       alert(VOICE_PRICING_ENABLED
-        ? `Text rate must be ₹${MIN_LISTENER_RATE}–₹${MAX_LISTENER_RATE}/min (voice ₹${MIN_LISTENER_RATE + VOICE_RATE_PREMIUM}–₹${MAX_LISTENER_RATE + VOICE_RATE_PREMIUM}/min)`
-        : `Rate must be between ₹${MIN_LISTENER_RATE} and ₹${MAX_LISTENER_RATE} per minute`)
+        ? `Text rate must be ${formatGBP(MIN_LISTENER_RATE)}–${formatRate(MAX_LISTENER_RATE)} (voice ${formatGBP(MIN_LISTENER_RATE + VOICE_RATE_PREMIUM)}–${formatRate(MAX_LISTENER_RATE + VOICE_RATE_PREMIUM)})`
+        : `Rate must be between ${formatGBP(MIN_LISTENER_RATE)} and ${formatRate(MAX_LISTENER_RATE)}`)
       return
     }
     // Match the server's bio length validation (30–400) so the user gets a
@@ -1005,7 +1006,7 @@ export default function DashboardPage() {
           <div className="modal-detail-item">
             <div className="modal-detail-label">You earn</div>
             <div className="modal-detail-value">
-              {incomingSession.amount_held ? `₹${estimateListenerTakeHome(incomingSession, profile?.rate_per_min, incomingSession.service_fee_rate ?? profile?.custom_service_fee_rate)}` : 'Free trial'}
+              {incomingSession.amount_held ? `${formatGBP(estimateListenerTakeHome(incomingSession, profile?.rate_per_min, incomingSession.service_fee_rate ?? profile?.custom_service_fee_rate))}` : 'Free trial'}
             </div>
           </div>
         </div>
@@ -1203,11 +1204,11 @@ export default function DashboardPage() {
 
             {/* Rate */}
             <div className="field-group">
-              <div className="field-label">Your rate /min — suggested ₹5–₹50 (max ₹{MAX_LISTENER_RATE})</div>
+              <div className="field-label">Your rate per minute, in pence ({formatRate(MIN_LISTENER_RATE)}–{formatRate(MAX_LISTENER_RATE)})</div>
               {VOICE_PRICING_ENABLED ? (
                 <>
                   <div className="rate-row" style={{flexWrap:'wrap'}}>
-                    <span style={{fontSize:13,fontWeight:800,color:'var(--navy)'}}>💬 Text ₹</span>
+                    <span style={{fontSize:13,fontWeight:800,color:'var(--navy)'}}>💬 Text (p/min)</span>
                     <input
                       type="number"
                       className="rate-input"
@@ -1217,7 +1218,7 @@ export default function DashboardPage() {
                       max={MAX_LISTENER_RATE}
                       onChange={e => { setEditVoiceDraft(null); setEditRate(e.target.value) }}
                     />
-                    <span style={{fontSize:13,fontWeight:800,color:'var(--navy)'}}>📞 Voice ₹</span>
+                    <span style={{fontSize:13,fontWeight:800,color:'var(--navy)'}}>📞 Voice (p/min)</span>
                     <input
                       type="number"
                       className="rate-input"
@@ -1234,13 +1235,12 @@ export default function DashboardPage() {
                     />
                   </div>
                   <div style={{fontSize:12,color:'var(--gray)',fontWeight:600,marginTop:6}}>
-                    Voice is always ₹{VOICE_RATE_PREMIUM}/min more than text — change either one and the other adjusts.
+                    Voice is always {formatRate(VOICE_RATE_PREMIUM)} more than text — change either one and the other adjusts.
                   </div>
                 </>
               ) : (
               <div className="rate-row">
-                <span style={{fontSize:20,fontWeight:900,color:'var(--navy)'}}>₹</span>
-                <input
+                                <input
                   type="number"
                   className="rate-input"
                   value={editRate}
@@ -1248,13 +1248,13 @@ export default function DashboardPage() {
                   max={MAX_LISTENER_RATE}
                   onChange={e => setEditRate(e.target.value)}
                 />
-                <span style={{fontSize:14,color:'var(--gray)',fontWeight:600}}>/min</span>
+                <span style={{fontSize:14,color:'var(--gray)',fontWeight:600}}>p / min</span>
               </div>
               )}
               {/* Earnings preview — updates live as rate changes. Shows net-of-service-fee
                   earnings (matches become-listener/page.tsx's calculator and what
                   listener_earnings.net_amount will actually credit) — never the seeker's
-                  flat ₹10, which is irrelevant to listener economics. */}
+                  flat £1 platform fee, which is irrelevant to listener economics. */}
               {(() => {
                 const r = Math.min(Math.max(parseInt(editRate)||MIN_LISTENER_RATE, MIN_LISTENER_RATE), MAX_LISTENER_RATE)
                 const effectiveFeeRate = profile?.custom_service_fee_rate ?? LISTENER_SERVICE_FEE_RATE
@@ -1263,8 +1263,8 @@ export default function DashboardPage() {
                   return gross - Math.round(gross * effectiveFeeRate)
                 }
                 const earn = (mins: number) => VOICE_PRICING_ENABLED
-                  ? <>💬 <strong style={{color:'var(--navy)'}}>₹{net(mins)}</strong> · 📞 <strong style={{color:'var(--navy)'}}>₹{net(mins, r + VOICE_RATE_PREMIUM)}</strong></>
-                  : <strong style={{color:'var(--navy)'}}>₹{net(mins)}</strong>
+                  ? <>💬 <strong style={{color:'var(--navy)'}}>{formatGBP(net(mins))}</strong> · 📞 <strong style={{color:'var(--navy)'}}>{formatGBP(net(mins, r + VOICE_RATE_PREMIUM))}</strong></>
+                  : <strong style={{color:'var(--navy)'}}>{formatGBP(net(mins))}</strong>
                 return (
                   <div style={{marginTop:10,background:'var(--light)',borderRadius:12,padding:'10px 14px',fontSize:12,color:'var(--gray)',fontWeight:600,lineHeight:1.9}}>
                     📅 Sessions are booked in <strong style={{color:'var(--navy)'}}>15 / 30 / 45 min slots</strong>
@@ -1421,7 +1421,7 @@ export default function DashboardPage() {
               <div style={{fontSize:13,color:'#3A6070',lineHeight:1.65,fontWeight:500,display:'grid',gap:10}}>
                 {VOICE_PRICING_ENABLED && <div>
                   <strong style={{color:'var(--navy)'}}>📞 Voice calls now earn you more.</strong> Seekers can now pick text chat
-                  or a voice call, and voice is always priced ₹{VOICE_RATE_PREMIUM}/min above your text rate — automatically.
+                  or a voice call, and voice is always priced {formatRate(VOICE_RATE_PREMIUM)} above your text rate — automatically.
                 </div>}
                 <div>
                   <strong style={{color:'var(--navy)'}}>🤝 You keep {Math.round((1 - effectiveFeeRate) * 100)}% of your rate on every paid session.</strong> From
@@ -1432,8 +1432,8 @@ export default function DashboardPage() {
                 <div>
                   <strong style={{color:'var(--navy)'}}>✏️ You set your price.</strong>{' '}
                   {VOICE_PRICING_ENABLED
-                    ? <>At your current rate (💬 ₹{text} · 📞 ₹{voice} /min), a 30-min voice call takes home <strong style={{color:'var(--navy)'}}>₹{takeHome(voice, 30)}</strong> and a 30-min text chat <strong style={{color:'var(--navy)'}}>₹{takeHome(text, 30)}</strong>.</>
-                    : <>At your current rate (₹{text}/min), a 30-min session takes home <strong style={{color:'var(--navy)'}}>₹{takeHome(text, 30)}</strong>.</>}
+                    ? <>At your current rate (💬 {formatGBP(text)} · 📞 {formatGBP(voice)} /min), a 30-min voice call takes home <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(voice, 30))}</strong> and a 30-min text chat <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(text, 30))}</strong>.</>
+                    : <>At your current rate ({formatRate(text)}), a 30-min session takes home <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(text, 30))}</strong>.</>}
                   {' '}Now is a good time to review your price.
                 </div>
               </div>
@@ -1454,7 +1454,7 @@ export default function DashboardPage() {
         <div className="stats-grid">
           <div className="stat-card accent">
             <div className="stat-label">This month</div>
-            <div className="stat-value">₹{thisMonthEarned}</div>
+            <div className="stat-value">{formatGBP(thisMonthEarned)}</div>
             <div className="stat-sub">{thisMonthSessions.length} sessions</div>
           </div>
           <div className="stat-card">
@@ -1469,15 +1469,15 @@ export default function DashboardPage() {
           </div>
           <div className="stat-card">
             <div className="stat-label">Wallet balance</div>
-            <div className="stat-value">₹{profile.balance}</div>
+            <div className="stat-value">{formatGBP(profile.balance)}</div>
             <div className="stat-sub">Available</div>
           </div>
         </div>
 
         <div className="progress-section">
           <div className="progress-label">
-            <span className="level-label">Level: ₹{profile.rate_per_min}/min</span>
-            <span className="level-label">Next: ₹{profile.rate_per_min + 5}/min at {nextTierAt} sessions</span>
+            <span className="level-label">Level: {formatRate(profile.rate_per_min)}</span>
+            <span className="level-label">Next: {formatRate(profile.rate_per_min + 5)} at {nextTierAt} sessions</span>
           </div>
           <div className="progress-bar">
             <div className="progress-fill" style={{ width: `${progressPct}%` }} />
@@ -1513,7 +1513,7 @@ export default function DashboardPage() {
           <div className="payout-row">
             <div>
               <div className="payout-label">Available to withdraw</div>
-              <div className="payout-balance">₹{profile.balance}</div>
+              <div className="payout-balance">{formatGBP(profile.balance)}</div>
             </div>
             <button className="btn-payout" onClick={requestPayout}
               disabled={payoutLoading || profile.balance <= 0}>
@@ -1538,8 +1538,8 @@ export default function DashboardPage() {
               <div className="profile-name">{profile.name}</div>
               <div className="profile-rate">
                 {VOICE_PRICING_ENABLED
-                  ? `💬 ₹${profile.rate_per_min} · 📞 ₹${Number(profile.rate_per_min) + VOICE_RATE_PREMIUM} /min`
-                  : `₹${profile.rate_per_min}/min`} · {(profile.specialty_tags || []).slice(0, 2).join(', ')}
+                  ? `💬 ${formatGBP(profile.rate_per_min)} · 📞 ${formatGBP(Number(profile.rate_per_min) + VOICE_RATE_PREMIUM)} /min`
+                  : `${formatRate(profile.rate_per_min)}`} · {(profile.specialty_tags || []).slice(0, 2).join(', ')}
               </div>
             </div>
           </div>
@@ -1728,7 +1728,7 @@ export default function DashboardPage() {
                       </div>
                       <div className="session-meta">{s.ended_at ? fmtDate(s.ended_at) : ''}</div>
                     </div>
-                    <div className="session-earn">+₹{earned}</div>
+                    <div className="session-earn">+{formatGBP(earned)}</div>
                   </div>
                 )
               })}

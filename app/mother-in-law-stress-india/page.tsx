@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'sasural tension India', 'controlling mother in law India', 'joint family tension India',
     'mother in law problems India', 'saas problem India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/mother-in-law-stress-india', languages: { 'en-IN': 'https://www.howwasyourday.live/mother-in-law-stress-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/mother-in-law-stress-india', languages: { 'en-GB': 'https://www.howwasyourday.live/mother-in-law-stress-india' } },
   openGraph: {
     title: 'Mother-in-Law Stress India — Anonymous Support for Saas-Bahu Tension | How Was Your Day',
     description: 'Saas-bahu tension, controlling in-laws, joint family conflict. Talk to someone who understands Indian family dynamics — anonymous, from ₹160.',

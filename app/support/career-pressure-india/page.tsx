@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Career Pressure in India — Emotional Support When Work Feels Like Everything | How Was Your Day',
-  description: 'In the UK or Ireland, career is identity. When it is going wrong, everything feels like it is going wrong. Talk to someone who gets the pressure — the IIT culture, the salary bar, the family expectations.',
+  description: 'In India, career is identity. When it is going wrong, everything feels like it is going wrong. Talk to someone who gets the pressure — the IIT culture, the salary bar, the family expectations.',
   keywords: [
     'career pressure India', 'work stress India', 'job pressure India', 'career anxiety India',
     'IT career stress India', 'engineering career India mental health', 'career failure India',
@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/support/career-pressure-india',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/support/career-pressure-india' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/support/career-pressure-india' },
   },
   openGraph: {
     title: 'Career Pressure in India — Emotional Support When Work Feels Like Everything | How Was Your Day',
-    description: 'In the UK or Ireland, career is identity. When it is going wrong, everything feels like it is going wrong. Talk to someone who gets the pressure — the IIT culture, the salary bar, the family expectations.',
+    description: 'In India, career is identity. When it is going wrong, everything feels like it is going wrong. Talk to someone who gets the pressure — the IIT culture, the salary bar, the family expectations.',
     url: 'https://www.howwasyourday.live/support/career-pressure-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -164,13 +164,13 @@ export default function CareerPressureIndiaPage() {
         <div className="hero">
           <p className="badge">Peer Support · Career Pressure · India</p>
           <h1>When Career Feels Like <em>Your Entire Identity</em></h1>
-          <p className="lead">In the UK or Ireland, your career is not just what you do — it is who you are, what your family sacrificed for, and what determines your place in the world. When it is going wrong — or just going nowhere — everything feels like it is going wrong. Talk to someone who understands this pressure from the inside.</p>
+          <p className="lead">In India, your career is not just what you do — it is who you are, what your family sacrificed for, and what determines your place in the world. When it is going wrong — or just going nowhere — everything feels like it is going wrong. Talk to someone who understands this pressure from the inside.</p>
           <a href="/browse?topic=career" className="cta-hero">Find a listener →</a>
         </div>
 
         <div className="section">
           <h2>Why Career Hits Differently in India</h2>
-          <p>In most countries, career is one dimension of a life. In the UK or Ireland, it is often experienced as the dimension — the one that determines respect, marriage prospects, family harmony, and your own sense of self-worth. This is not an exaggeration; it is the product of a culture that has spent decades treating professional achievement as the primary vehicle for social mobility and family honour.</p>
+          <p>In most countries, career is one dimension of a life. In India, it is often experienced as the dimension — the one that determines respect, marriage prospects, family harmony, and your own sense of self-worth. This is not an exaggeration; it is the product of a culture that has spent decades treating professional achievement as the primary vehicle for social mobility and family honour.</p>
           <p>The result is a level of psychological investment in career that most generic mental health content does not speak to. A bad performance review in India is not just feedback about work. It can feel like confirmation of a fear you have been carrying since you did not make it into the institution your parents dreamed of. A job loss is not just a financial setback. It is a social event with consequences that ripple through your family.</p>
 
           <h3>The IIT-IIM Benchmark</h3>

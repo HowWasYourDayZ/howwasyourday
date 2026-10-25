@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'People Pleaser India — Exhausted from Saying Yes | How Was Your Day',
   description: 'You say yes to everything. You can\'t disappoint anyone. You\'ve forgotten what you actually want. Talk anonymously from ₹160.',
   keywords: ['people pleaser India', 'people pleasing India', 'can\'t say no India', 'approval seeking India', 'people pleasing exhaustion India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/people-pleaser-india', languages: { 'en-IN': 'https://www.howwasyourday.live/people-pleaser-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/people-pleaser-india', languages: { 'en-GB': 'https://www.howwasyourday.live/people-pleaser-india' } },
   openGraph: { title: 'People Pleaser India — Exhausted from Saying Yes | How Was Your Day', description: 'You say yes to everything. You can\'t disappoint anyone. You\'ve forgotten what you actually want. Talk anonymously from ₹160.', url: 'https://www.howwasyourday.live/people-pleaser-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

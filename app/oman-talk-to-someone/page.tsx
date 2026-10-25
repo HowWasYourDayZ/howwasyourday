@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/oman-talk-to-someone',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/oman-talk-to-someone' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/oman-talk-to-someone' },
   },
   openGraph: {
     title: 'Talk to Someone Online in Oman — Real Indian Listeners | How Was Your Day',

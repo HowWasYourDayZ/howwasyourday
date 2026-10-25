@@ -54,10 +54,10 @@ function ini(n?: string | null) {
   return n.split(' ').map(x => x[0] || '').join('').slice(0, 2).toUpperCase()
 }
 function fmtTime(iso: string) {
-  return new Date(iso).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })
+  return new Date(iso).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })
 }
 function fmtDate(iso: string) {
-  return new Date(iso).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })
+  return new Date(iso).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })
 }
 function sameDay(a: string, b: string) {
   return new Date(a).toDateString() === new Date(b).toDateString()
@@ -146,7 +146,7 @@ export default function ChatHistoryPage() {
   const otherName = session.other?.name || (session.iAmListener ? 'Seeker' : 'Listener')
   const sessionDate = session.started_at ? fmtDate(session.started_at) : ''
   const endedAt = session.ended_at
-    ? new Date(session.ended_at).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })
+    ? new Date(session.ended_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })
     : null
 
   return (

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Panic Attack India — What Happens After | How Was Your Day',
   description: 'The panic has passed. Now comes the shame, the exhaustion, the fear of the next one. Talk to someone anonymously from ₹160.',
   keywords: ['panic attack India', 'panic attack support India', 'panic disorder India', 'panic attack aftermath India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/panic-attack-india', languages: { 'en-IN': 'https://www.howwasyourday.live/panic-attack-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/panic-attack-india', languages: { 'en-GB': 'https://www.howwasyourday.live/panic-attack-india' } },
   openGraph: { title: 'Panic Attack India — What Happens After | How Was Your Day', description: 'The panic has passed. Now comes the shame, the exhaustion, the fear of the next one. Talk to someone anonymously from ₹160.', url: 'https://www.howwasyourday.live/panic-attack-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'working woman exhausted India', 'IT woman burnout India', 'career break women India',
     'returning to work after baby India', 'women identity career India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/working-woman-india', languages: { 'en-IN': 'https://www.howwasyourday.live/support/working-woman-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/working-woman-india', languages: { 'en-GB': 'https://www.howwasyourday.live/support/working-woman-india' } },
   openGraph: {
     title: 'Working Woman Stress India | How Was Your Day',
     description: 'Career + home + family. All at once. For working women in India who are tired of carrying everything.',

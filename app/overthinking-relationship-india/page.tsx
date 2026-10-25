@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Overthinking Your Relationship? Talk It Out Anonymously | How Was Your Day India',
   description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 15-minute conversation can break the loop. From ₹160.',
   keywords: ['overthinking relationship India', 'relationship anxiety India', 'overanalysing relationship India', 'obsessive thoughts about relationship India', 'relationship overthinking India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/overthinking-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/overthinking-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/overthinking-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/overthinking-relationship-india' } },
   openGraph: {
     title: 'Overthinking Your Relationship? Talk It Out Anonymously | How Was Your Day India',
     description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 15-minute conversation can break the loop. From ₹160.',

@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Lucknow — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Lucknow, India. Talk anonymously about family pressure, UPSC stress, relationship challenges. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/lucknow', languages: { 'en-IN': 'https://www.howwasyourday.live/lucknow' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/lucknow', languages: { 'en-GB': 'https://www.howwasyourday.live/lucknow' } },
   keywords: 'peer support Lucknow, emotional support Lucknow, UPSC stress Lucknow, family pressure Lucknow UP, talk to someone Lucknow, howwasyourday Lucknow',
   openGraph: {
     title: 'Emotional Support in Lucknow — Peer Listeners | How Was Your Day',

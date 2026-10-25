@@ -69,7 +69,7 @@ export default function AnswersPage() {
         </p>
         <p className="lead">
           How Was Your Day is peer support: screened listeners in India, by text or voice, not therapists and not AI.
-          The first 5 minutes are free; in India a 15-minute session starts at ₹160.
+          The first 5 minutes are free; in India a 15-minute session starts at £7.
         </p>
         <div className="crisis">
           If you are thinking about harming yourself, text SHOUT to 85258 or

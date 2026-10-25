@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Need to Vent? Talk to Someone Who Will Actually Listen | How Was Your Day',
   description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. First 5 minutes free.",
   keywords: ['need to vent India', 'someone to vent to India', 'want to vent my feelings India', 'need to talk about my problems India', 'need to get things off my chest', 'vent to someone online India', 'talk about my problems India', 'someone to listen to me vent India', 'need to express my feelings India', 'I just want to talk India', 'need to release emotions India', 'emotional outlet India', 'talk to someone who listens India', 'vent without judgment India', 'talk about life problems India'],
-  alternates: { canonical: 'https://www.howwasyourday.live/support/need-to-vent', languages: { 'en-IN': 'https://www.howwasyourday.live/support/need-to-vent' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/need-to-vent', languages: { 'en-GB': 'https://www.howwasyourday.live/support/need-to-vent' } },
   openGraph: {
     title: 'Need to Vent? Talk to Someone Who Will Actually Listen | How Was Your Day',
     description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. First 5 minutes free.",

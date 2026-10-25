@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'too embarrassed to say india', 'shame india support', 'secret I cant share india',
     'keeping secrets alone india', 'too personal to share india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/cant-tell-anyone-india', languages: { 'en-IN': 'https://www.howwasyourday.live/cant-tell-anyone-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/cant-tell-anyone-india', languages: { 'en-GB': 'https://www.howwasyourday.live/cant-tell-anyone-india' } },
   openGraph: {
     title: 'Can\'t Tell Anyone? Say It Here — Anonymous, No Judgment | How Was Your Day',
     description: 'The thing you\'ve been carrying alone because there\'s no safe person to say it to. Say it to a real person on How Was Your Day. Anonymous, private, from ₹160.',

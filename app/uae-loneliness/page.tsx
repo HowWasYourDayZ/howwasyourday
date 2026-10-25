@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.howwasyourday.live/uae-loneliness',
-    languages: { 'en-IN': 'https://www.howwasyourday.live/uae-loneliness' },
+    languages: { 'en-GB': 'https://www.howwasyourday.live/uae-loneliness' },
   },
   openGraph: {
     title: 'Feeling Lonely in UAE? Talk to an Indian Listener — First 5 Min Free',
@@ -140,7 +140,7 @@ export default function UAELonelinessPage() {
       <style>{S}</style>
 
       <nav>
-        <a href="/" className="logo">Lean<span>On</span></a>
+        <a href="/" className="logo">How Was <span>Your Day</span></a>
         <a href="/auth" className="nav-cta">Open app</a>
       </nav>
 

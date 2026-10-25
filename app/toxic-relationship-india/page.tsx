@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'unhealthy relationship India', 'leave toxic relationship India',
     'toxic partner India', 'toxic marriage India',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/toxic-relationship-india', languages: { 'en-IN': 'https://www.howwasyourday.live/toxic-relationship-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/toxic-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/toxic-relationship-india' } },
   openGraph: {
     title: 'Am I in a Toxic Relationship? Anonymous Support India | How Was Your Day',
     description: 'Second-guessing everything, walking on eggshells, feeling worse than you did alone. Talk it out anonymously from ₹160.',

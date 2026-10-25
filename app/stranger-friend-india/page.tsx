@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'talk to someone anonymous india', 'anonymous conversation india',
     'talk to stranger online india', 'friendly stranger online india',
   ],
-  alternates: { canonical: 'https://www.howwasyourday.live/stranger-friend-india', languages: { 'en-IN': 'https://www.howwasyourday.live/stranger-friend-india' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/stranger-friend-india', languages: { 'en-GB': 'https://www.howwasyourday.live/stranger-friend-india' } },
   openGraph: {
     title: 'Talk to a Friendly Stranger in India — Someone Outside Your Circle | How Was Your Day',
     description: 'Sometimes a stranger is easier to talk to than anyone you know. Anonymous, judgment-free, real conversations in India from ₹160.',

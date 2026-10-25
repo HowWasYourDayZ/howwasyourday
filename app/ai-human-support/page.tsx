@@ -96,7 +96,7 @@ export default function AIHumanSupportPage() {
 
       <div className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
         <header className="mb-12 flex items-center justify-between">
-          <a href="/" className="text-2xl font-black tracking-tight">Lean<span className="text-[#1A8FA0]">On</span></a>
+          <a href="/" className="text-2xl font-black tracking-tight">How Was <span className="text-[#1A8FA0]">Your Day</span></a>
           <a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Find a listener</a>
         </header>
 
@@ -112,7 +112,7 @@ export default function AIHumanSupportPage() {
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>For:</strong> loneliness, relationship difficulties, work stress, homesickness, overthinking, family pressure, grief and other everyday situations where someone wants to talk.</div>
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Not for:</strong> diagnosis, psychotherapy, counselling, clinical treatment or emergency/crisis care.</div>
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Conversation:</strong> another human being, not an AI chatbot.</div>
-            <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Access:</strong> browse listener profiles, start one free 5-minute introduction, then continue with paid time if you choose. Paid sessions currently start at ₹160 for 15 minutes.</div>
+            <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Access:</strong> browse listener profiles, start one free 5-minute introduction, then continue with paid time if you choose. Paid sessions currently start at £7 for 15 minutes.</div>
           </div>
         </section>
 

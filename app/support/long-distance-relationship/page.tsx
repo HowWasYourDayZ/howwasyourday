@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Long-Distance Relationship Loneliness — Talk It Through | How Was Your Day',
   description: 'Missing your partner across cities or time zones? Talk to a peer listener anonymously. No appointment. Empathetic support for LDR loneliness.',
-  alternates: { canonical: 'https://www.howwasyourday.live/support/long-distance-relationship', languages: { 'en-IN': 'https://www.howwasyourday.live/support/long-distance-relationship' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/support/long-distance-relationship', languages: { 'en-GB': 'https://www.howwasyourday.live/support/long-distance-relationship' } },
   keywords: 'long distance relationship loneliness India, LDR loneliness, missing partner abroad, long distance relationship stress, talk to someone long distance relationship',
   openGraph: {
     title: 'Long-Distance Relationship Loneliness — Talk It Through | How Was Your Day',
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.',
+        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.',
       },
     },
   ],
@@ -256,7 +256,7 @@ export default function LongDistanceRelationshipSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at ₹160 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.</div>
+            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including odd hours when you are waiting on a call from a partner in a different time zone.</div>
           </div>
         </div>
 

@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Visakhapatnam — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Visakhapatnam (Vizag), Andhra Pradesh. Talk anonymously about career pressure, family expectations, work stress. No appointment needed.',
-  alternates: { canonical: 'https://www.howwasyourday.live/visakhapatnam', languages: { 'en-IN': 'https://www.howwasyourday.live/visakhapatnam' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/visakhapatnam', languages: { 'en-GB': 'https://www.howwasyourday.live/visakhapatnam' } },
   keywords: 'peer support Visakhapatnam, emotional support Vizag, work stress Visakhapatnam Andhra, family pressure Vizag, talk to someone Visakhapatnam, howwasyourday Vizag',
   openGraph: {
     title: 'Emotional Support in Visakhapatnam — Peer Listeners | How Was Your Day',

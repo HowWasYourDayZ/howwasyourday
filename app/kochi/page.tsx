@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Emotional Support in Kochi — Peer Listeners | How Was Your Day',
   description: 'Connect with peer listeners in Kochi. Gulf migration, NRI family separation, Kerala joint family dynamics, high education. From ₹160.',
-  alternates: { canonical: 'https://www.howwasyourday.live/kochi', languages: { 'en-IN': 'https://www.howwasyourday.live/kochi' } },
+  alternates: { canonical: 'https://www.howwasyourday.live/kochi', languages: { 'en-GB': 'https://www.howwasyourday.live/kochi' } },
   keywords: 'peer support Kochi, emotional support Kerala, NRI mental health Kerala, Gulf migration loneliness, family separation Kerala, talk to someone Kochi Ernakulam',
   openGraph: {
     title: 'Emotional Support in Kochi — Peer Listeners | How Was Your Day',
