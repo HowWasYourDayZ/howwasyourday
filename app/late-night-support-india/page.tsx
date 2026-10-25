@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{
     --navy:#0F3552;

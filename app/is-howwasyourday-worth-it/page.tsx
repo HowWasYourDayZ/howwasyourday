@@ -80,7 +80,7 @@ const jsonLd = {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Nunito',sans-serif;color:#0F4867;-webkit-font-smoothing:antialiased;
     background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}

@@ -193,7 +193,7 @@ export default function BottomNav() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+
         .bottom-nav{
           position:fixed;bottom:0;left:0;right:0;z-index:100;
           background:white;border-top:1.5px solid #D5EEF6;

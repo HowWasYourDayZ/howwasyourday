@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--orange:#FF9933;--gray:#6B8FA8;--border:#DDE8F0;--cream:#FFFBF5;}
   body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
@@ -52,7 +52,7 @@ export default function DeleteAccountPage() {
           <li>Your sign-in (the account can no longer be used) and your email address, if you gave one</li>
           <li>Your profile photo, and for listeners the display photo and verification selfie</li>
           <li>Your profile text (bio, lived experience, taglines)</li>
-          <li>Listener application details: bank account, IFSC, UPI ID, Aadhaar details and screening answers</li>
+          <li>Listener application details: bank details, identity-check records and screening answers</li>
           <li>Notifications and the push-notification tokens for your devices</li>
         </ul>
 

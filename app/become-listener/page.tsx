@@ -34,7 +34,7 @@ const TAGS = [
 ]
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--bg:#FFFFFF;--light:#F0F8FC;--border:#D5EEF6;--gray:#5A7A8A;}
   body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--navy);-webkit-font-smoothing:antialiased;
@@ -181,10 +181,6 @@ function validateUPI(v: string): string {
   if (!/^[\w.\-]{2,}@[\w]{2,}$/.test(v)) return 'Enter a valid UPI ID (e.g. yourname@okaxis)'
   return ''
 }
-function validateAadhaar(v: string): string {
-  if (!/^\d{12}$/.test(v.replace(/\D/g, ''))) return 'Enter your 12-digit Aadhaar number'
-  return ''
-}
 function validateBirth(monthStr: string, yearStr: string): string {
   const month = parseInt(monthStr, 10)
   const year  = parseInt(yearStr, 10)
@@ -248,7 +244,6 @@ export default function BecomeListenerPage() {
   const [bank, setBank]   = useState('')
   const [ifsc, setIfsc]   = useState('')
   const [upi, setUpi]     = useState('')
-  const [aadhaar, setAadhaar] = useState('')
   const [birthMonth, setBirthMonth] = useState('')
   const [birthYear, setBirthYear]   = useState('')
   const [loading, setLoading] = useState(false)
@@ -308,7 +303,7 @@ export default function BecomeListenerPage() {
   const [otpVerified] = useState(true)
 
   // "Request fix" applicants only need to change what the admin flagged, so
-  // pre-fill their previous answers. Only Aadhaar is re-entered (never stored).
+  // pre-fill their previous answers. 
   // Each read is independent and ignores errors (e.g. migration 060 columns
   // not present yet) so a failure never blocks the form.
   async function prefillResubmission(uid: string) {
@@ -549,11 +544,6 @@ export default function BecomeListenerPage() {
     if (!accountHolder.trim()) errs.push('Enter the name exactly as on your bank account')
     const banke = validateBank(bank); if (banke) errs.push(banke)
     const ifsce = validateIFSC(ifsc); if (ifsce) errs.push(ifsce)
-    // On resubmission, Aadhaar is optional — the API preserves the existing hash
-    // if a new number isn't supplied. On a first submission it is required.
-    if (!isResubmission || aadhaar.trim()) {
-      const aae = validateAadhaar(aadhaar); if (aae) errs.push(aae)
-    }
     if (upi.trim()) { const upie = validateUPI(upi); if (upie) errs.push(upie) }
     return errs
   }
@@ -629,7 +619,6 @@ export default function BecomeListenerPage() {
       if (!accountHolder.trim()) fe.accountHolder = 'Enter the name exactly as on your bank account'
       const banke = validateBank(bank); if (banke) fe.bank = banke
       const ifsce = validateIFSC(ifsc); if (ifsce) fe.ifsc = ifsce
-      if (!isResubmission || aadhaar.trim()) { const aae = validateAadhaar(aadhaar); if (aae) fe.aadhaar = aae }
       if (upi.trim()) { const upie = validateUPI(upi); if (upie) fe.upi = upie }
       setFieldErrors(fe)
       setShaking(true)
@@ -666,7 +655,6 @@ export default function BecomeListenerPage() {
           bank:       bank.trim(),
           ifsc:       ifsc.trim().toUpperCase(),
           upi:        upi.trim(),
-          aadhaar:    aadhaar.replace(/\D/g, ''),
           avatar_url: avatarUrl || undefined,
           tagline_phrases: taglines,
           lived_experience: lived.trim(),
@@ -832,7 +820,7 @@ export default function BecomeListenerPage() {
           <h2>Your identity on How Was Your Day</h2>
           {[
             ['👤', 'Seekers see: your real first name, your approved display photo, your bio, your education and your listed topics.'],
-            ['🔒', 'Only How Was Your Day sees (kept private): your Aadhaar number, your bank/UPI details, your screening answers, and your camera selfie, which is used only to verify your identity and is never shown to seekers.'],
+            ['🔒', 'Only How Was Your Day sees (kept private): your bank details, your screening answers, and your camera selfie, which is used only to verify your identity and is never shown to seekers.'],
             ['📋', 'You cannot use a fake name, avatar, or stock photo. Every profile is reviewed before going live.'],
           ].map(([icon, text], i) => (
             <div key={i} className="landing-row"><span className="landing-icon">{icon}</span><span>{text}</span></div>
@@ -1457,25 +1445,6 @@ export default function BecomeListenerPage() {
             />
             {fieldErrors.upi && <span className="field-err">{fieldErrors.upi}</span>}
 
-            <label className="lbl">Aadhaar number (12 digits) {!isResubmission && <span style={{color:'#c0392b'}}>*</span>}</label>
-            {isResubmission && (
-              <p style={{fontSize:12,color:'var(--gray)',fontWeight:600,marginBottom:6}}>
-                🔒 Optional — only re-enter if your identity details have changed. We hash your Aadhaar and never store the number in full.
-              </p>
-            )}
-            <input
-              className={`input${fieldErrors.aadhaar ? ' err' : ''}`}
-              type="text"
-              inputMode="numeric"
-              maxLength={12}
-              placeholder="12-digit Aadhaar"
-              value={aadhaar}
-              onChange={e => { setAadhaar(e.target.value.replace(/\D/g,'').slice(0,12)); if (fieldErrors.aadhaar) setFieldErrors(f => ({...f, aadhaar: ''})) }}
-            />
-            {fieldErrors.aadhaar && <span className="field-err">{fieldErrors.aadhaar}</span>}
-            <p style={{fontSize:12,color:'var(--gray)',margin:'-4px 0 4px',lineHeight:1.5}}>
-              🔒 Used only for one-time identity verification by our team. Never shown to seekers.
-            </p>
 
             <div className="disclaimer">
               <p>⚠️ <strong>Important:</strong> How Was Your Day is a peer support platform. By applying, you confirm you are sharing personal lived experience only — not providing clinical advice, therapy, or counseling of any kind.</p>

@@ -3,7 +3,7 @@ import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-se
 import { checkRateLimit } from '@/lib/rate-limit'
 import { logger } from '@/lib/logger'
 
-const VALID_ID_TYPES = ['aadhaar', 'pan', 'passport', 'voter_id', 'driving_license'] as const
+const VALID_ID_TYPES = ['passport', 'driving_license', 'national_id_card', 'residence_permit'] as const
 
 // POST /api/listener/verify — submit identity verification
 export async function POST(req: NextRequest) {

@@ -1,5 +1,13 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+// Nunito is self-hosted (served from our own domain) — loading it from Google
+// Fonts would send every visitor's IP address to Google (GDPR).
+import '@fontsource/nunito/400.css'
+import '@fontsource/nunito/500.css'
+import '@fontsource/nunito/600.css'
+import '@fontsource/nunito/700.css'
+import '@fontsource/nunito/800.css'
+import '@fontsource/nunito/900.css'
 import BottomNav from './components/BottomNav'
 import ToastProvider from './components/ToastProvider'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -8,9 +16,11 @@ import ListenerPresence from './components/ListenerPresence'
 import SiteFooter from './components/SiteFooter'
 import ServiceWorkerRegister from './components/ServiceWorkerRegister'
 import WhatsAppSupport from './components/WhatsAppSupport'
+import CookieConsent from './components/CookieConsent'
 import { SERVICE_DESCRIPTION } from '@/lib/service-facts'
 
 const countries = ['India', 'United States', 'United Kingdom', 'Canada', 'United Arab Emirates', 'Oman', 'Kuwait', 'Singapore', 'Malaysia', 'Australia']
+// Google Analytics loads only after cookie consent (app/components/CookieConsent.tsx).
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
@@ -44,4 +54,4 @@ const webSiteJsonLd={'@context':'https://schema.org','@type':'WebSite','@id':'ht
 const webAppJsonLd={'@context':'https://schema.org','@type':'WebApplication','@id':'https://www.howwasyourday.live/#webapplication',name:'How Was Your Day',url:'https://www.howwasyourday.live',applicationCategory:'HealthApplication',operatingSystem:'Any web browser (Android, iPhone, computer) — no download needed',description:'Peer emotional support through real human listeners. How Was Your Day provides non-clinical peer support and human connection for people who want a private text or voice conversation. It is not therapy and does not replace emergency or clinical care.',provider:{'@id':'https://www.howwasyourday.live/#organization'},areaServed:countries.map(name=>({'@type':'Country',name})),audience:{'@type':'Audience',audienceType:'Adults seeking peer support, emotional support and human connection'},offers:{'@type':'Offer',price:'0',description:'One free 5-minute introductory session for eligible new users. Paid session pricing is shown at checkout and may vary by market.'}}
 const serviceJsonLd={'@context':'https://schema.org','@type':'Service','@id':'https://www.howwasyourday.live/#service',name:'How Was Your Day Peer Support',serviceType:'Peer Support',alternateName:['Peer Support Session','Online Listener Session','Emotional Support Chat'],provider:{'@id':'https://www.howwasyourday.live/#organization'},description:SERVICE_DESCRIPTION,category:'Peer Support',areaServed:countries.map(name=>({'@type':'Country',name})),availableLanguage:['English','Hindi','Tamil','Telugu','Kannada','Malayalam','Marathi','Bengali','Gujarati','Punjabi','Odia','Urdu']}
 
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webSiteJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webAppJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(serviceJsonLd)}}/><link rel="author" type="text/plain" href="https://www.howwasyourday.live/llms.txt"/><meta name="theme-color" content="#1A8FA0"/><link rel="apple-touch-icon" href="/icon-192.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="default"/><meta name="apple-mobile-web-app-title" content="How Was Your Day"/>{GA_ID&&<><script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}/><script dangerouslySetInnerHTML={{__html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{page_path:window.location.pathname});`}}/></>}<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>{process.env.NEXT_PUBLIC_BING_VERIFICATION&&<meta name="msvalidate.01" content={process.env.NEXT_PUBLIC_BING_VERIFICATION}/>}</head><body style={{margin:0,padding:0}}><ErrorBoundary>{children}</ErrorBoundary><SiteFooter/><BottomNav/><FloatingCTA/><WhatsAppSupport/><ListenerPresence/><ToastProvider/><ServiceWorkerRegister/></body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webSiteJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webAppJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(serviceJsonLd)}}/><link rel="author" type="text/plain" href="https://www.howwasyourday.live/llms.txt"/><meta name="theme-color" content="#1A8FA0"/><link rel="apple-touch-icon" href="/icon-192.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="default"/><meta name="apple-mobile-web-app-title" content="How Was Your Day"/>{process.env.NEXT_PUBLIC_BING_VERIFICATION&&<meta name="msvalidate.01" content={process.env.NEXT_PUBLIC_BING_VERIFICATION}/>}</head><body style={{margin:0,padding:0}}><ErrorBoundary>{children}</ErrorBoundary><SiteFooter/><BottomNav/><FloatingCTA/><WhatsAppSupport/><ListenerPresence/><ToastProvider/><ServiceWorkerRegister/><CookieConsent gaId={GA_ID}/></body></html>}

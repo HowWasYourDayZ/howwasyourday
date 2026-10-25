@@ -292,6 +292,21 @@
 - The owner's full name must never appear anywhere on the platform.
 - Admin email/phone live in env vars only — never in code or UI.
 
+## UK/EU data protection (GDPR, Oct 2026)
+
+- **Cookie consent:** Google Analytics loads ONLY after "Accept analytics" (`app/components/CookieConsent.tsx`,
+  `hwyd_cookie_consent` cookie). Never add a script/pixel/SDK that sets non-essential cookies or sends data to a
+  third party before consent, and list any new cookie/storage key on `/cookies`. Fonts are self-hosted
+  (`@fontsource/nunito`) — never load `fonts.googleapis.com` or other third-party assets by default.
+- **Explicit consent (Art. 9):** sign-in requires a separate "sensitive information" tick box; the server refuses
+  without `sensitiveDataConsent: true` and stores `users.sensitive_data_consent_at` (migration 074,
+  `lib/consent-record.ts`). Don't merge it into the Terms checkbox.
+- **Company / DPO details** live in `lib/legal.ts` and feed `/privacy`, `/terms`, `/cookies`. Every processor in
+  the Privacy Policy table must be real; adding a new vendor that receives personal data = update that table.
+- **Data minimisation:** no national ID numbers (Aadhaar was removed); listener identity = live selfie + review
+  (+ optional UK/EU ID document, migration 075). Never send conversation content to analytics or AI.
+- Retention periods stated in `lib/legal.ts` are a promise — an enforcement job is still TODO.
+
 ## Cost control (Vercel free tier — Fluid Active CPU is the binding limit)
 
 The constraint is **Fluid Active CPU** (billed on compute, NOT DB-wait time), not

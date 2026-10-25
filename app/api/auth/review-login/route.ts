@@ -3,6 +3,7 @@ import crypto from 'crypto'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimitStrict } from '@/lib/rate-limit'
 import { ensureUserRow } from '@/lib/ensure-user-row'
+import { recordSensitiveDataConsent } from '@/lib/consent-record'
 import { suspensionStatus } from '@/lib/suspension'
 import { logger } from '@/lib/logger'
 import { reviewLoginPhone, isReviewPhone, reviewCodeMatches } from '@/lib/review-login'
@@ -34,6 +35,10 @@ export async function POST(req: NextRequest) {
   if (!code) return NextResponse.json({ review: matches })
   if (body?.ageConfirmed !== true) {
     return NextResponse.json({ error: 'Please confirm you are 18 or older to continue.', code: 'age_not_confirmed' }, { status: 400 })
+  }
+  // Explicit consent to sensitive (health-related) data — UK/EU GDPR Art. 9.
+  if (body?.sensitiveDataConsent !== true) {
+    return NextResponse.json({ error: 'Please give your consent to continue.', code: 'consent_not_given' }, { status: 400 })
   }
   if (!matches || !reviewCodeMatches(code)) {
     logger.warn('review-login: wrong phone or code', { ip })
@@ -88,6 +93,7 @@ export async function POST(req: NextRequest) {
 
   const accountCountry = typeof body?.country === 'string' && /^[A-Z]{2}$/.test(body.country) ? body.country : null
   await ensureUserRow(admin, { id: userId, phone: target, phoneVerified: true, accountCountry })
+  await recordSensitiveDataConsent(admin, userId)
   logger.info('review-login: demo account signed in', { userId })
   return NextResponse.json({ success: true })
 }

@@ -3,6 +3,7 @@ import crypto from 'crypto'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimitStrict } from '@/lib/rate-limit'
 import { ensureUserRow } from '@/lib/ensure-user-row'
+import { recordSensitiveDataConsent } from '@/lib/consent-record'
 import { logger } from '@/lib/logger'
 import { suspensionStatus } from '@/lib/suspension'
 
@@ -154,7 +155,11 @@ export async function POST(req: NextRequest) {
   if (body?.ageConfirmed !== true) {
     return NextResponse.json({ error: 'Please confirm you are 18 or older to continue.', code: 'age_not_confirmed' }, { status: 400 })
   }
-  // ISO country code from the auth page's country selector (e.g. 'IN', 'US', 'GB').
+  // Explicit consent to sensitive (health-related) data — UK/EU GDPR Art. 9.
+  if (body?.sensitiveDataConsent !== true) {
+    return NextResponse.json({ error: 'Please give your consent to continue.', code: 'consent_not_given' }, { status: 400 })
+  }
+  // ISO country code from the auth page's country selector (e.g. 'GB', 'IE', 'FR').
   // Validated as a simple 2-letter string; unknown values are stored as-is (tolerated).
   const accountCountry = typeof body?.country === 'string' && /^[A-Z]{2}$/.test(body.country)
     ? body.country : null
@@ -401,15 +406,15 @@ export async function POST(req: NextRequest) {
     id: userId,
     phone: e164,
     phoneVerified: true,
-    // Store the country the user selected in the phone prefix dropdown.
-    // Passed from auth/page.tsx → POST body → here. Used for geo-pricing.
-    // Falls back to null (existing rows and India signups where country isn't sent).
+    // The country selected in the phone prefix dropdown (auth/page.tsx).
+    // Informational only — pricing is the same everywhere.
     accountCountry: accountCountry ?? null,
   })
   if (rowErr) {
     // The session is already valid — do not fail the login over the mirror row.
     logger.error('phone-widget: session minted but users row did not', { userId })
   }
+  else await recordSensitiveDataConsent(admin, userId)
 
   logger.info('phone-widget: signed in via MSG91 widget', { userId, isNewUser })
   return NextResponse.json({ success: true, isNewUser })

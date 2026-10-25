@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { LEGAL } from '@/lib/legal'
+import { LISTENER_SERVICE_FEE_RATE } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Terms of Use — How Was Your Day',
@@ -7,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--orange:#FF9933;--gray:#6B8FA8;--border:#DDE8F0;--cream:#FFFBF5;}
   body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
@@ -31,23 +33,23 @@ export default function TermsPage() {
       <div className="page">
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Terms of Use</h1>
-        <p className="updated">Last updated: October 23, 2026</p>
+        <p className="updated">Last updated: {LEGAL.lastUpdated}</p>
 
         <div className="warning-box">
-          <p>⚠️ How Was Your Day is a peer support platform only. It is NOT a mental health service, therapy platform, or medical service. Listeners are not licensed therapists, psychologists, or counselors unless an individual profile explicitly states a relevant qualification. If you are in crisis or immediate danger, contact an appropriate local emergency or crisis service where you are.</p>
+          <p>⚠️ How Was Your Day is a peer support platform only. It is NOT a mental health service, therapy platform, or medical service. Listeners are not licensed therapists, psychologists, or counselors unless an individual profile explicitly states a relevant qualification. If you are in crisis or immediate danger, call 999 or 112, Samaritans on 116 123 (UK &amp; Ireland), or text SHOUT to 85258 (UK).</p>
         </div>
 
         <h2>1. What How Was Your Day is</h2>
-        <p>How Was Your Day is a marketplace connecting people who seek emotional peer support ("Seekers") with people who offer it based on lived experience ("Listeners"). Sessions are peer conversations, not clinical consultations.</p>
+        <p>These terms are an agreement between you and {LEGAL.entityName} (company number {LEGAL.companyNumber}, registered office {LEGAL.registeredAddress}). How Was Your Day is a marketplace connecting people who seek emotional peer support ("Seekers") with people who offer it based on lived experience ("Listeners"). Sessions are peer conversations, not clinical consultations.</p>
 
         <h2>2. Who can use How Was Your Day</h2>
         <ul>
           <li>You must be 18 years or older to use How Was Your Day</li>
-          <li>You must be located in a country or territory where How Was Your Day is currently offered</li>
+          <li>You must be located in the United Kingdom, Ireland or another country of the European Economic Area where How Was Your Day is offered</li>
           <li>You must provide a valid mobile number and any other information required to create an account</li>
           <li>Country availability, payment methods, and other product features may vary by market</li>
         </ul>
-        <p>Current public country experiences include India, the United States, United Kingdom, Canada, Australia, United Arab Emirates, Oman, Kuwait, Singapore and Malaysia. How Was Your Day may change supported markets from time to time.</p>
+        <p>How Was Your Day may change supported countries from time to time.</p>
 
         <h2>3. Prohibited conduct</h2>
         <ul>
@@ -65,22 +67,23 @@ export default function TermsPage() {
 
         <h2>5. Payments and refunds</h2>
         <ul>
-          <li>Wallet top-ups and payments are processed using the payment methods made available to you at checkout</li>
-          <li>Unused wallet balance is refundable subject to the current refund process and applicable payment rules</li>
+          <li>All prices are in pounds sterling (GBP) and include any VAT that applies. If you pay with a card in another currency, your bank sets the exchange rate and any fee</li>
+          <li>Wallet top-ups and payments are processed by our payment provider using the payment methods shown at checkout</li>
+          <li>Unused wallet balance is refundable on request, to the original payment method, through the wallet page</li>
+          <li><strong>Your right to cancel:</strong> as a consumer you can cancel a wallet top-up within 14 days and get back any unused balance. When you start a session you ask us to provide the service straight away, and you accept that you lose the right to cancel that session once it has been fully provided; for a session ended early you pay only for the minutes used</li>
           <li>Completed sessions are generally non-refundable unless a safety, billing, or platform error requires an adjustment</li>
           <li>Any platform fee and applicable taxes are shown before a paid session is started</li>
-          <li>From 24 September 2026, How Was Your Day applies a 40% service fee on listener earnings (previously 15%), deducted at session settlement; sessions completed before that date are unaffected. The listener's net settlement is shown in the listener dashboard</li>
-          <li>Prices and currency presentation may vary by market and are determined by the checkout experience</li>
+          <li>How Was Your Day applies a {Math.round(LISTENER_SERVICE_FEE_RATE * 100)}% service fee on listener earnings, deducted at session settlement. The listener&apos;s net settlement is shown in the listener dashboard</li>
         </ul>
 
         <h2>6. Content moderation</h2>
-        <p>How Was Your Day uses AI-assisted moderation and human safety processes. Sessions that violate these terms may be terminated without refund. Repeat violations may result in permanent account suspension.</p>
+        <p>How Was Your Day uses automated, rule-based checks (not AI) and human review to keep sessions safe (see our <a href="/privacy">Privacy Policy</a>). Sessions that violate these terms may be terminated without refund. Repeat violations may result in permanent account suspension.</p>
 
         <h2>7. Limitation of liability</h2>
-        <p>How Was Your Day is not liable for the advice or content shared by listeners. We do not guarantee outcomes from peer support sessions. We are a platform, not a healthcare provider.</p>
+        <p>How Was Your Day is not liable for the advice or content shared by listeners. We do not guarantee outcomes from peer support sessions. We are a platform, not a healthcare provider. Nothing in these terms limits or excludes our liability for death or personal injury caused by our negligence, for fraud, or any other liability that cannot be limited by law, and nothing affects your statutory rights as a consumer (including under the Consumer Rights Act 2015).</p>
 
         <h2>8. Governing law</h2>
-        <p>These terms are governed by the laws of India. Disputes will be subject to the jurisdiction of courts in Bengaluru, Karnataka, subject to applicable law.</p>
+        <p>These terms are governed by the law of {LEGAL.governingLaw}. If you live in Scotland or Northern Ireland you can also bring proceedings there, and if you live in the EU/EEA you keep the protection of the mandatory consumer laws of your country and can bring proceedings in your local courts.</p>
 
         <h2>9. Contact</h2>
         <p>For legal or compliance queries, please use the <a href="/contact">contact form</a> on our website and select &ldquo;Legal&rdquo; as the topic.</p>

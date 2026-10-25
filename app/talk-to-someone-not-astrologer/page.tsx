@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is How Was Your Day private and anonymous?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. You can talk using just a first name, without sharing your identity. How Was Your Day is built to be DPDP compliant, so your conversations and personal information stay private and protected.',
+        text: 'Yes. You can talk using just a first name, without sharing your identity. How Was Your Day is built to comply with UK and EU data protection law (GDPR), so your conversations and personal information stay private and protected.',
       },
     },
     {
@@ -73,7 +73,7 @@ const breadcrumbSchema = {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
   body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
@@ -213,7 +213,7 @@ export default function TalkToSomeoneNotAstrologerPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is How Was Your Day private and anonymous?</div>
-            <div className="faq-a">Yes. You can talk using just a first name, without sharing your identity. How Was Your Day is built to be DPDP compliant, so your conversations and personal information stay private and protected.</div>
+            <div className="faq-a">Yes. You can talk using just a first name, without sharing your identity. How Was Your Day is built to comply with UK and EU data protection law (GDPR), so your conversations and personal information stay private and protected.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does it cost?</div>

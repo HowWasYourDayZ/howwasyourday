@@ -17,24 +17,41 @@ import { createClient } from '@/lib/supabase'
 // route for the full trust model.
 
 // Supported countries — must match MSG91 "Country Wise Restriction" allowed list.
-// Alphabetical order; India is the default (DEFAULT_COUNTRY below).
-// US + CA share dial code +1 — we use the country code
-// internally so analytics can distinguish them.
+// UK first (the default), then Ireland and the EU alphabetically. Digit counts
+// are the national number WITHOUT the leading 0 (stripped in digits()).
 const COUNTRIES = [
-  { code: 'AU', name: 'Australia',      dialCode: '61',  flag: '🇦🇺', minDigits: 9,  maxDigits: 9  },
-  { code: 'CA', name: 'Canada',         dialCode: '1',   flag: '🇨🇦', minDigits: 10, maxDigits: 10 },
-  { code: 'IN', name: 'India',          dialCode: '91',  flag: '🇮🇳', minDigits: 10, maxDigits: 10 },
-  { code: 'KW', name: 'Kuwait',         dialCode: '965', flag: '🇰🇼', minDigits: 8,  maxDigits: 8  },
-  { code: 'MY', name: 'Malaysia',       dialCode: '60',  flag: '🇲🇾', minDigits: 9,  maxDigits: 11 },
-  { code: 'OM', name: 'Oman',           dialCode: '968', flag: '🇴🇲', minDigits: 8,  maxDigits: 8  },
-  { code: 'SG', name: 'Singapore',      dialCode: '65',  flag: '🇸🇬', minDigits: 8,  maxDigits: 8  },
-  { code: 'AE', name: 'UAE',            dialCode: '971', flag: '🇦🇪', minDigits: 9,  maxDigits: 9  },
   { code: 'GB', name: 'United Kingdom', dialCode: '44',  flag: '🇬🇧', minDigits: 10, maxDigits: 10 },
-  { code: 'US', name: 'United States',  dialCode: '1',   flag: '🇺🇸', minDigits: 10, maxDigits: 10 },
+  { code: 'IE', name: 'Ireland',        dialCode: '353', flag: '🇮🇪', minDigits: 9,  maxDigits: 9  },
+  { code: 'AT', name: 'Austria',        dialCode: '43',  flag: '🇦🇹', minDigits: 10, maxDigits: 13 },
+  { code: 'BE', name: 'Belgium',        dialCode: '32',  flag: '🇧🇪', minDigits: 9,  maxDigits: 9  },
+  { code: 'BG', name: 'Bulgaria',       dialCode: '359', flag: '🇧🇬', minDigits: 8,  maxDigits: 9  },
+  { code: 'HR', name: 'Croatia',        dialCode: '385', flag: '🇭🇷', minDigits: 8,  maxDigits: 9  },
+  { code: 'CY', name: 'Cyprus',         dialCode: '357', flag: '🇨🇾', minDigits: 8,  maxDigits: 8  },
+  { code: 'CZ', name: 'Czechia',        dialCode: '420', flag: '🇨🇿', minDigits: 9,  maxDigits: 9  },
+  { code: 'DK', name: 'Denmark',        dialCode: '45',  flag: '🇩🇰', minDigits: 8,  maxDigits: 8  },
+  { code: 'EE', name: 'Estonia',        dialCode: '372', flag: '🇪🇪', minDigits: 7,  maxDigits: 8  },
+  { code: 'FI', name: 'Finland',        dialCode: '358', flag: '🇫🇮', minDigits: 9,  maxDigits: 10 },
+  { code: 'FR', name: 'France',         dialCode: '33',  flag: '🇫🇷', minDigits: 9,  maxDigits: 9  },
+  { code: 'DE', name: 'Germany',        dialCode: '49',  flag: '🇩🇪', minDigits: 10, maxDigits: 11 },
+  { code: 'GR', name: 'Greece',         dialCode: '30',  flag: '🇬🇷', minDigits: 10, maxDigits: 10 },
+  { code: 'HU', name: 'Hungary',        dialCode: '36',  flag: '🇭🇺', minDigits: 9,  maxDigits: 9  },
+  { code: 'IT', name: 'Italy',          dialCode: '39',  flag: '🇮🇹', minDigits: 9,  maxDigits: 10 },
+  { code: 'LV', name: 'Latvia',         dialCode: '371', flag: '🇱🇻', minDigits: 8,  maxDigits: 8  },
+  { code: 'LT', name: 'Lithuania',      dialCode: '370', flag: '🇱🇹', minDigits: 8,  maxDigits: 8  },
+  { code: 'LU', name: 'Luxembourg',     dialCode: '352', flag: '🇱🇺', minDigits: 9,  maxDigits: 9  },
+  { code: 'MT', name: 'Malta',          dialCode: '356', flag: '🇲🇹', minDigits: 8,  maxDigits: 8  },
+  { code: 'NL', name: 'Netherlands',    dialCode: '31',  flag: '🇳🇱', minDigits: 9,  maxDigits: 9  },
+  { code: 'PL', name: 'Poland',         dialCode: '48',  flag: '🇵🇱', minDigits: 9,  maxDigits: 9  },
+  { code: 'PT', name: 'Portugal',       dialCode: '351', flag: '🇵🇹', minDigits: 9,  maxDigits: 9  },
+  { code: 'RO', name: 'Romania',        dialCode: '40',  flag: '🇷🇴', minDigits: 9,  maxDigits: 9  },
+  { code: 'SK', name: 'Slovakia',       dialCode: '421', flag: '🇸🇰', minDigits: 9,  maxDigits: 9  },
+  { code: 'SI', name: 'Slovenia',       dialCode: '386', flag: '🇸🇮', minDigits: 8,  maxDigits: 8  },
+  { code: 'ES', name: 'Spain',          dialCode: '34',  flag: '🇪🇸', minDigits: 9,  maxDigits: 9  },
+  { code: 'SE', name: 'Sweden',         dialCode: '46',  flag: '🇸🇪', minDigits: 7,  maxDigits: 9  },
 ] as const
 
 type Country = typeof COUNTRIES[number]
-const DEFAULT_COUNTRY: Country = COUNTRIES.find(c => c.code === 'IN')!
+const DEFAULT_COUNTRY: Country = COUNTRIES[0]
 
 const WIDGET_ID  = process.env.NEXT_PUBLIC_MSG91_WIDGET_ID || ''
 const TOKEN_AUTH = process.env.NEXT_PUBLIC_MSG91_TOKEN_AUTH || ''
@@ -53,7 +70,7 @@ declare global {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
   body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
@@ -157,6 +174,11 @@ export default function AuthPage() {
   // 18+ only (Terms). Sent to the server, which refuses sign-in without it. A ref
   // because handleToken is a stable callback that would otherwise see a stale value.
   const [adultConfirmed, setAdultConfirmed] = useState(false)
+  // Separate, explicit consent for sensitive (health-related) information —
+  // UK/EU GDPR Art. 9(2)(a). Must not be bundled into the Terms checkbox.
+  const [sensitiveConsent, setSensitiveConsent] = useState(false)
+  const consentRef = useRef(false)
+  useEffect(() => { consentRef.current = sensitiveConsent }, [sensitiveConsent])
   const adultRef = useRef(false)
   useEffect(() => { adultRef.current = adultConfirmed }, [adultConfirmed])
   const otpRefs = useRef<(HTMLInputElement|null)[]>([])
@@ -215,9 +237,10 @@ export default function AuthPage() {
       const res = await fetch('/api/auth/phone-widget', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        // country is sent so the server can store account_country on the users row
-        // for geo-pricing (NRI vs India). Validated as 2-letter ISO code server-side.
-        body: JSON.stringify({ token, country: country.code, ageConfirmed: adultRef.current }),
+        // country is stored as users.account_country (informational; pricing is
+        // the same everywhere). sensitiveDataConsent records the separate explicit
+        // consent (UK/EU GDPR Art. 9) ticked on the phone step.
+        body: JSON.stringify({ token, country: country.code, ageConfirmed: adultRef.current, sensitiveDataConsent: consentRef.current }),
       })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) {
@@ -349,6 +372,7 @@ export default function AuthPage() {
   async function requestOtp() {
     setError('')
     if (!adultConfirmed) { setError('Please confirm you are 18 or older to continue.'); return }
+    if (!sensitiveConsent) { setError('Please give your consent to continue.'); return }
     if (!isValidPhone()) {
       const len = country.minDigits === country.maxDigits
         ? `${country.minDigits}-digit`
@@ -395,7 +419,7 @@ export default function AuthPage() {
       const res = await fetch('/api/auth/review-login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone: country.dialCode + digits(), code, country: country.code, ageConfirmed: adultRef.current }),
+        body: JSON.stringify({ phone: country.dialCode + digits(), code, country: country.code, ageConfirmed: adultRef.current, sensitiveDataConsent: consentRef.current }),
       })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) { setError(data?.error || 'Incorrect code. Please check and try again.'); setLoading(false); return }
@@ -566,8 +590,8 @@ export default function AuthPage() {
                   className="phone-input"
                   type="tel"
                   inputMode="numeric"
-                  maxLength={country.maxDigits}
-                  placeholder={country.code === 'IN' ? '98765 43210' : country.code === 'US' || country.code === 'CA' ? '(555) 012-3456' : '…'}
+                  maxLength={country.maxDigits + 4} // room for a leading 0 and spaces; digits() + isValidPhone() enforce the real length
+                  placeholder={country.code === 'GB' ? '07700 900123' : '…'}
                   autoFocus
                   aria-label="Mobile number"
                   value={digits()}
@@ -580,9 +604,13 @@ export default function AuthPage() {
               {error && <p className="error">{error}</p>}
               <label className="tos" style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer', textAlign: 'left' }}>
                 <input type="checkbox" checked={adultConfirmed} onChange={e => setAdultConfirmed(e.target.checked)} style={{ width: 18, height: 18, marginTop: 1, flexShrink: 0, accentColor: '#1A8FA0' }} />
-                <span>I am 18 or older. How Was Your Day is for adults only. I agree to the <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</span>
+                <span>I am 18 or older. How Was Your Day is for adults only. I agree to the <a href="/terms">Terms</a> and have read the <a href="/privacy">Privacy Policy</a>.</span>
               </label>
-              <button className="btn" onClick={requestOtp} disabled={loading || !isValidPhone() || !adultConfirmed}>
+              <label className="tos" style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer', textAlign: 'left' }}>
+                <input type="checkbox" checked={sensitiveConsent} onChange={e => setSensitiveConsent(e.target.checked)} style={{ width: 18, height: 18, marginTop: 1, flexShrink: 0, accentColor: '#1A8FA0' }} />
+                <span>I explicitly consent to How Was Your Day processing what I share about my wellbeing and mental health in conversations, so the service can work and keep people safe. I can withdraw this consent at any time by deleting my account (<a href="/privacy#sensitive">how we use it</a>).</span>
+              </label>
+              <button className="btn" onClick={requestOtp} disabled={loading || !isValidPhone() || !adultConfirmed || !sensitiveConsent}>
                 {loading ? <span className="spin">⟳</span> : !widgetReady ? 'Loading…' : 'Send OTP →'}
               </button>
             </>

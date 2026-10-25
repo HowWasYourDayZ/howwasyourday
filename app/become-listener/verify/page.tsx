@@ -9,16 +9,16 @@ const sb = createBrowserClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
 
+// UK/EU identity documents (migration 075 allows these values).
 const ID_TYPES = [
-  { value: 'aadhaar',          label: 'Aadhaar Card' },
-  { value: 'pan',              label: 'PAN Card' },
-  { value: 'passport',         label: 'Passport' },
-  { value: 'voter_id',         label: 'Voter ID' },
-  { value: 'driving_license',  label: "Driver's Licence" },
+  { value: 'passport',          label: 'Passport' },
+  { value: 'driving_license',   label: 'Driving licence (photocard)' },
+  { value: 'national_id_card',  label: 'National identity card (EU/EEA)' },
+  { value: 'residence_permit',  label: 'Biometric residence permit / residence card' },
 ]
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Nunito',sans-serif;color:#0F4867;background:#F0F8FC;-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:20px 20px 80px;}

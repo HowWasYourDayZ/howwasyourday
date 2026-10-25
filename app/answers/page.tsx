@@ -33,7 +33,7 @@ const faqSchema = {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Nunito',sans-serif;color:#0F4867;background:#FFFBF5;-webkit-font-smoothing:antialiased;}
   a{text-decoration:none;color:#1A8FA0;}

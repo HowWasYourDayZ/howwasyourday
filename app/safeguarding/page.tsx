@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Nunito',sans-serif;background:#FFFBF5;color:#0F4867;-webkit-font-smoothing:antialiased;}
   a{color:#1A8FA0;font-weight:700;text-decoration:none;}
@@ -48,7 +48,7 @@ export default function SafeguardingPage() {
         <ul>
           <li>Listeners are ordinary adults in India with lived experience — peers, not therapists or counsellors. They are screened, not clinically trained.</li>
           <li>Every applicant completes a written application and a screening quiz on difficult situations: a seeker who mentions ending their life, requests for phone numbers or Instagram, flirting or sexual comments, questions about medication, and looking after their own wellbeing after a heavy session.</li>
-          <li>Identity is checked with a live camera selfie (kept private, never shown to seekers) and the last four digits of their Aadhaar number.</li>
+          <li>Identity is checked with a live camera selfie (kept private, never shown to seekers) and a manual review by our team.</li>
           <li>Every application and every profile photo is reviewed by a person at How Was Your Day before it goes live; many applicants are asked to fix something or are turned down.</li>
           <li>Before applying, listeners read what How Was Your Day is and is not — listen rather than advise, never diagnose or discuss medication, never treat it as a job — and agree to the Terms.</li>
         </ul>

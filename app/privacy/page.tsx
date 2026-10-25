@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
+import { LEGAL } from '@/lib/legal'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — How Was Your Day',
-  description: 'How Was Your Day privacy policy. Learn how we protect your data, session confidentiality, and your rights as a How Was Your Day user.',
+  description: 'How Was Your Day privacy policy under UK GDPR and EU GDPR: what we collect, why, who we share it with, how long we keep it, and your rights.',
   alternates: { canonical: 'https://www.howwasyourday.live/privacy' },
 }
 
 const S = `
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--orange:#FF9933;--gray:#6B8FA8;--border:#DDE8F0;--cream:#FFFBF5;}
   body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
@@ -22,57 +23,120 @@ const S = `
   li{font-size:14px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:4px;}
   .highlight-box{background:#F0F7FF;border:1.5px solid #B8D4F0;border-radius:16px;padding:16px 18px;margin:24px 0;}
   .highlight-box p{margin:0;font-size:13px;color:#1E3D5C;font-weight:600;}
+  .tbl{width:100%;border-collapse:collapse;font-size:13px;color:#3A5A6E;margin:8px 0 14px;}
+  .tbl th,.tbl td{border-bottom:1px solid var(--border);padding:8px 6px;text-align:left;vertical-align:top;}
+  .tbl th{color:var(--navy);font-weight:800;}
+  .wrap{overflow-x:auto;}
 `
 
+const purposes: [string, string, string][] = [
+  ['Create and run your account; sign you in with a one-time code', 'Phone number, chosen first name, country, sign-in records', 'Contract (Art. 6(1)(b))'],
+  ['Connect you with a listener and run text or voice sessions', 'Session details (type, length, times, rating), text messages, voice connection data (calls are not recorded)', 'Contract (Art. 6(1)(b)); for anything you share about your health or wellbeing: your explicit consent (Art. 9(2)(a))'],
+  ['Wallet, payments, refunds and listener payouts', 'Top-ups, session charges, refunds, payout requests and bank details for listeners', 'Contract (Art. 6(1)(b)); keeping financial records: legal obligation (Art. 6(1)(c))'],
+  ['Keep people safe: crisis-word alerts, reports, contact-detail checks, suspensions', 'Messages, reports, flags, account status', 'Legitimate interests in a safe service (Art. 6(1)(f)); explicit consent for health-related content (Art. 9(2)(a)); in an emergency, vital interests (Art. 6(1)(d), 9(2)(c))'],
+  ['Check listeners before they take sessions', 'Application answers, birth month and year, education, languages, a live camera selfie, an identity document if requested, screening quiz answers', 'Contract and our legitimate interest in a safe service (Art. 6(1)(b), (f)); anything about the listener\'s own health in their lived-experience answers: explicit consent (Art. 9(2)(a))'],
+  ['Security and abuse prevention', 'IP address, device and browser information, rate-limit and bot-check signals', 'Legitimate interests (Art. 6(1)(f))'],
+  ['Notifications', 'Push-notification tokens, in-app notifications, service emails', 'Contract (Art. 6(1)(b))'],
+  ['Analytics (only if you accept analytics cookies)', 'Pages visited and app events, never message content, names or phone numbers', 'Consent (Art. 6(1)(a)) — see our Cookie Policy'],
+  ['Answer your messages', 'What you send through the contact form, and your email address', 'Legitimate interests (Art. 6(1)(f))'],
+]
+
+const processors: [string, string, string][] = [
+  ['Supabase', 'Database, sign-in and file storage', LEGAL.hostingRegion],
+  ['Vercel', 'Website hosting', 'Global edge network; USA'],
+  ['MSG91', 'Sends and checks sign-in codes by SMS', 'India'],
+  ['Agora', 'Real-time voice connection (not recorded)', 'Global network; USA'],
+  ['Google Firebase Cloud Messaging', 'Push notifications', 'USA'],
+  ['Resend', 'Service emails', 'USA'],
+  ['Cloudflare Turnstile', 'Bot protection on sign-in', 'Global network'],
+  ['Upstash', 'Rate limiting', 'Region chosen by us'],
+  ['Our payment provider', 'Card payments, refunds and listener payouts', 'Shown at checkout'],
+  ['Google Analytics (only with consent)', 'Usage statistics', 'USA'],
+]
+
 export default function PrivacyPage() {
+  const r = LEGAL.retention
   return (
     <>
       <style>{S}</style>
       <div className="page">
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Privacy Policy</h1>
-        <p className="updated">Last updated: 24 October 2026</p>
+        <p className="updated">Last updated: {LEGAL.lastUpdated}</p>
 
         <div className="highlight-box">
-          <p>How Was Your Day is a peer support platform. We take your privacy seriously — especially given the sensitive nature of the conversations on our platform.</p>
+          <p>How Was Your Day is a peer-support service for adults in the UK and Europe. What people share here is often personal and sometimes about their mental health, so we collect as little as we can, never sell your data, never use it for advertising, and never send your conversations to analytics or AI.</p>
         </div>
 
-        <h2>1. What we collect</h2>
+        <h2>1. Who we are</h2>
+        <p>{LEGAL.entityName} (company number {LEGAL.companyNumber}, registered office {LEGAL.registeredAddress}) is the controller of your personal data. We are registered with the UK Information Commissioner&apos;s Office (registration {LEGAL.icoRegistration}). Our representative in the EU is {LEGAL.euRepresentative}. For anything about your data, email <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a> or use the <a href="/contact">contact form</a>.</p>
+        <p>This policy explains how we use personal data under the UK GDPR, the Data Protection Act 2018 and, for people in the EU/EEA, the EU GDPR.</p>
+
+        <h2>2. What we use and why</h2>
+        <div className="wrap"><table className="tbl">
+          <thead><tr><th>Purpose</th><th>Data</th><th>Lawful basis</th></tr></thead>
+          <tbody>{purposes.map(([a, b, c]) => <tr key={a}><td>{a}</td><td>{b}</td><td>{c}</td></tr>)}</tbody>
+        </table></div>
+
+        <h2 id="sensitive">3. Sensitive information (your explicit consent)</h2>
+        <p>Conversations on How Was Your Day can include information about your physical or mental health, relationships or other sensitive matters. This is &ldquo;special category&rdquo; data. We only process it because you give your <strong>explicit consent</strong> when you sign in, and only to provide the service and keep people safe. You can withdraw that consent at any time by deleting your account (see section 8); this does not affect processing before you withdrew it.</p>
+        <p>We do not use your conversations for advertising, profiling or training AI models, and we do not sell them.</p>
+
+        <h2>4. What we do NOT collect</h2>
         <ul>
-          <li>Your phone number (for authentication via OTP)</li>
-          <li>Your first name (optional, for personalisation)</li>
-          <li>Session details: type, duration, rating</li>
-          <li>Text chat messages — stored securely so a session can be reviewed if it is reported or flagged for safety. Only authorised How Was Your Day administrators can open them</li>
-          <li>Wallet transaction history</li>
-          <li>Device type and basic usage analytics (Google Analytics and Vercel Analytics). We never send chat content, names or phone numbers to analytics</li>
+          <li>We do not record voice calls.</li>
+          <li>We do not ask seekers for their full name, email address or date of birth.</li>
+          <li>We do not show your phone number to listeners, or a listener&apos;s phone number to you.</li>
+          <li>We do not collect national identity numbers.</li>
         </ul>
 
-        <h2>2. What we do NOT collect</h2>
+        <h2>5. Safety checks and automated rules</h2>
+        <p>If words linked to self-harm or suicide appear in a chat, How Was Your Day shows crisis helplines, lets the listener know to take extra care, and flags the session for review by our team. Messages are also checked automatically, by fixed rules (not AI), for contact details such as phone numbers, email addresses and social media handles: a message that contains an actual contact detail is not delivered, and one that only hints at one is delivered and noted for review. These checks do not make decisions with legal or similarly significant effects about you; a person reviews any action on your account, and you can ask us to look again.</p>
+        <p>Reported or flagged conversations may be read by authorised staff to keep people safe and resolve disputes. If we believe someone is at immediate risk of serious harm, we may share the minimum necessary information with emergency services.</p>
+
+        <h2>6. Who we share data with</h2>
+        <p>We use the service providers below (processors) under contracts that require them to protect your data and use it only on our instructions. Listeners see only the first name you choose and what you tell them in a session. We may also share data when the law requires it, or with professional advisers and, if the business is sold, a buyer bound by this policy.</p>
+        <div className="wrap"><table className="tbl">
+          <thead><tr><th>Provider</th><th>What for</th><th>Where</th></tr></thead>
+          <tbody>{processors.map(([a, b, c]) => <tr key={a}><td>{a}</td><td>{b}</td><td>{c}</td></tr>)}</tbody>
+        </table></div>
+
+        <h2>7. International transfers</h2>
+        <p>Our main database is hosted in {LEGAL.hostingRegion}. Some providers above process data outside the UK and EEA. When they do, we rely on an adequacy decision (for example the UK–US data bridge or EU–US Data Privacy Framework where the provider is certified) or on the UK International Data Transfer Addendum / EU Standard Contractual Clauses, with extra safeguards where needed. You can ask us for a copy of the relevant safeguards.</p>
+
+        <h2>8. How long we keep data</h2>
         <ul>
-          <li>We do not record voice calls</li>
-          <li>We do not share your information with advertisers</li>
-          <li>We do not sell your data to any third party</li>
+          <li><strong>Your account:</strong> {r.account}.</li>
+          <li><strong>Text messages:</strong> {r.messages}.</li>
+          <li><strong>Payment and payout records:</strong> {r.payments}, kept without your contact details after you delete your account.</li>
+          <li><strong>Listener verification selfie:</strong> {r.selfie}.</li>
+          <li><strong>Analytics:</strong> up to 14 months in Google Analytics, and only if you accepted analytics cookies.</li>
         </ul>
+        <p>When you delete your account, we remove your contact details and profile. We keep the limited records above for the stated periods to meet legal obligations, handle disputes and keep the service safe.</p>
 
-        <h2>3. Safety checks</h2>
-        <p>If words linked to self-harm or suicide appear in a chat, How Was Your Day shows crisis helplines, lets the listener know to take extra care, and flags the session for review by the How Was Your Day team. Sessions are not analysed by AI. Reported or flagged conversations may be read by authorised How Was Your Day administrators to keep people safe and handle disputes.</p>
-        <p>Messages are also checked automatically (by fixed rules, not AI) for contact details such as phone numbers, email addresses and social media handles, so that no one can be pulled off How Was Your Day. A message containing an actual contact detail is not delivered; messages that only hint at one are delivered and noted for the How Was Your Day team to review.</p>
-
-        <h2>4. Data storage and retention</h2>
-        <p>Your data is stored on Supabase servers hosted in the Asia South (Mumbai) region. Text messages and session records are kept for safety, dispute handling and accounting, including after an account is deleted — without your contact details (see <a href="/delete-account">what deletion removes</a>). We comply with India&apos;s Digital Personal Data Protection Act (DPDP Act 2023).</p>
-
-        <h2>5. Listener identity verification</h2>
-        <p>Listeners give their Aadhaar number and take a live camera selfie for identity checks. Only the last 4 digits of the Aadhaar number and a one-way coded version of it are stored, never the full number. The selfie is kept in private storage that only authorised How Was Your Day administrators can open — it is never shown to seekers — and it is deleted when the listener&apos;s account is deleted. We do not share this data with third parties.</p>
-
-        <h2 id="delete-account">6. Your rights</h2>
+        <h2 id="delete-account">9. Your rights</h2>
+        <p>You have the right to:</p>
         <ul>
-          <li>Request deletion of your account — use the &ldquo;Delete account&rdquo; option inside the app under Profile. If you can&apos;t sign in or no longer have the app, send a deletion request through the <a href="/contact">contact form</a> with the phone number on your account; we remove your personal details within 30 days. Records we must keep for payments and safety (such as transaction history) are retained without your contact details.</li>
-          <li>Withdraw consent at any time by deleting your account</li>
+          <li><strong>Access</strong> your personal data and get a copy of it</li>
+          <li><strong>Correct</strong> data that is wrong or incomplete</li>
+          <li><strong>Delete</strong> your data — use &ldquo;Delete account&rdquo; under Profile in the app, or ask us if you can&apos;t sign in (<a href="/delete-account">what deletion removes</a>)</li>
+          <li><strong>Restrict</strong> or <strong>object to</strong> our use of your data, including anything based on legitimate interests</li>
+          <li><strong>Data portability</strong> — receive data you gave us in a machine-readable format</li>
+          <li><strong>Withdraw consent</strong> at any time — analytics through <a href="/cookies">cookie settings</a>, sensitive-data consent by deleting your account</li>
         </ul>
-        <p>For privacy concerns, use the <a href="/contact">contact form</a> on our website.</p>
+        <p>To use any right, email <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a> or use the <a href="/contact">contact form</a> from the phone number on your account. We reply within one month (we may extend this by up to two months for complex requests and will tell you if so). There is normally no charge.</p>
 
-        <h2>7. Contact</h2>
-        <p>For privacy concerns, please use the <a href="/contact">contact form</a> on our website.</p>
+        <h2>10. Complaints</h2>
+        <p>Please contact us first so we can try to help. You also have the right to complain to a data protection authority: in the UK, the Information Commissioner&apos;s Office (<a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">ico.org.uk</a>, 0303 123 1113); in the EU/EEA, the supervisory authority where you live or work (<a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener noreferrer">list of EU authorities</a>).</p>
+
+        <h2>11. Age</h2>
+        <p>How Was Your Day is only for adults aged 18 and over. We do not knowingly collect data from children; if we learn that an account belongs to someone under 18, we close it.</p>
+
+        <h2>12. Security</h2>
+        <p>Data is encrypted in transit, access is limited to authorised staff who need it, listener selfies are kept in private storage that is never public, and all writes to sensitive records go through our servers rather than your browser.</p>
+
+        <h2>13. Changes</h2>
+        <p>We will update this page if how we use data changes, and tell you in the app about significant changes.</p>
       </div>
     </>
   )

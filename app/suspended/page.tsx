@@ -18,7 +18,7 @@ export default function SuspendedPage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
         body{font-family:'Nunito',sans-serif;background:#F0F8FC;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
         .card{background:#fff;border-radius:20px;padding:40px 32px;max-width:460px;width:100%;text-align:center;box-shadow:0 4px 24px rgba(15,72,103,0.10);}
