@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
     {'@type': 'Question', name: 'What causes panic attacks?', acceptedAnswer: {'@type': 'Answer', text: 'Panic attacks are the body\'s threat-response system (fight-or-flight) activating inappropriately &mdash; without a genuine external threat. This can be triggered by accumulated stress, specific phobias, hyperventilation, caffeine, or sometimes seemingly nothing at all. Understanding the mechanism does not always stop them, but it does reduce the catastrophic interpretation that something is seriously wrong with your health.'}},
     {'@type': 'Question', name: 'Should I see a doctor after a panic attack?', acceptedAnswer: {'@type': 'Answer', text: 'If you have not been evaluated for panic attacks before, yes &mdash; a doctor can rule out cardiac causes for the symptoms, which can look similar. Once physical causes are ruled out, ongoing support for panic can come from therapy (especially CBT) or peer support for the emotional processing component.'}},
     {'@type': 'Question', name: 'Is How Was Your Day a crisis service?', acceptedAnswer: {'@type': 'Answer', text: 'No. How Was Your Day is for peer emotional support. In an immediate crisis, call Samaritans 116 123 or text SHOUT to 85258. How Was Your Day is for processing the emotional aftermath of panic, anxiety, and other difficult experiences.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function PanicAttackIndiaPage() {
         <div className="hero">
           <p className="badge">Panic Attack · Aftermath · India</p>
           <h1>The panic has passed. Now comes the shame, the exhaustion, <em>and the fear of the next one.</em></h1>
-          <p className="lead">After a panic attack, the physical intensity fades but the emotional aftermath remains. Talk anonymously from ₹160. First 5 minutes free.</p>
+          <p className="lead">After a panic attack, the physical intensity fades but the emotional aftermath remains. Talk anonymously from ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <GeoQuickAnswer path="/panic-attack-india" />
@@ -90,7 +90,7 @@ export default function PanicAttackIndiaPage() {
           <p>Processing a panic attack verbally &mdash; describing what happened, what you were feeling before it, what triggered it &mdash; reduces the power it has over you. Unexpressed, it becomes a kind of unresolved event that the nervous system keeps returning to. Named and witnessed, it becomes something that happened, rather than something happening.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The worst has passed. Now let someone help you process it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The worst has passed. Now let someone help you process it.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/anxiety-attack-india">Anxiety attack India &rarr;</a>
             <a href="/support/anxiety">Anxiety support &rarr;</a>
             <a href="/support/cant-sleep-anxiety">Can't sleep anxiety &rarr;</a>

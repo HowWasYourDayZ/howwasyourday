@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Denver Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific dynamics of Denver — the smaller Indian community, the outdoor-focused culture that can feel alienating, and the altitude effects that genuinely affect mood and energy, especially in the first year.' } },
   { '@type': 'Question', name: 'What time can I connect from Denver?', acceptedAnswer: { '@type': 'Answer', text: 'Denver (MST) is 12.5 hours behind IST. 7am Denver = 7:30pm India. Early mornings work well — Indian listeners are available in their evening before your day starts.' } },
   { '@type': 'Question', name: 'Is the session confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. How Was Your Day is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, or anyone in your Denver network.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'I feel out of place in Denver\'s outdoor culture. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. The cultural mismatch of Indian sensibility in an outdoorsy, hiking-and-skiing city — where the default bonding activity requires equipment you don\'t own and a physical culture you didn\'t grow up with — is something listeners can hold without judgment.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function IndiansInDenverPage() {
         <div className="hero">
           <p className="badge">Indians in Denver &middot; Colorado &middot; Mile High City</p>
           <h1>5,280 feet above sea level. <em>Feeling it in more ways than one.</em></h1>
-          <p className="lead">Denver&rsquo;s Indian community is growing — tech workers, medical professionals, students at CU Denver and DU. The city is beautiful and the lifestyle is appealing on paper. But the smaller Indian community, the outdoor-focused culture, and the altitude that genuinely affects your mood in the first year all compound the usual NRI loneliness. Talk to someone who gets it. First 5 minutes free.</p>
+          <p className="lead">Denver&rsquo;s Indian community is growing — tech workers, medical professionals, students at CU Denver and DU. The city is beautiful and the lifestyle is appealing on paper. But the smaller Indian community, the outdoor-focused culture, and the altitude that genuinely affects your mood in the first year all compound the usual NRI loneliness. Talk to someone who gets it. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndiansInDenverPage() {
           <h2>Denver&rsquo;s Indian Community: Small, Growing, and Spread Out</h2>
           <p>Denver&rsquo;s Indian community is concentrated in the tech sector — Oracle, Lockheed Martin, Arrow Electronics, and a growing startup scene — and the medical world around UCHealth and Children&rsquo;s Hospital Colorado. The suburbs of Aurora and Centennial have the largest Indian residential populations. Greenwood Village and the Denver Tech Center employ thousands of Indian professionals. The University of Denver and CU Denver have modest Indian student communities.</p>
           <p>The Indian community infrastructure in Denver is present but thinner than in larger metros. There are temples and Indian grocery stores and cultural events. But the critical mass that makes Indian community feel effortless — the accidental meetings, the deep bench of people who just understand — is harder to find in Denver than in New Jersey or the Bay Area. You have to work harder to maintain Indian social connection, and many Indians in Denver describe feeling more isolated than they expected in such an outwardly welcoming city.</p>
-          <p>How Was Your Day listeners are based in India, available without appointment, and understand the Denver Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India, available without appointment, and understand the Denver Indian experience. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function IndiansInDenverPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Mile High City. The loneliness is real at any altitude.</h2><p>Real Indian peer listener. Understands the Denver Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Mile High City. The loneliness is real at any altitude.</h2><p>Real Indian peer listener. Understands the Denver Indian experience. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

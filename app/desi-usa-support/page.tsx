@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much does a How Was Your Day session cost from the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. No subscription required.',
+        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Sessions from 8 minutes. No subscription required.',
       },
     },
   ],
@@ -157,7 +157,7 @@ export default function DesiUsaSupportPage() {
           the community. No explaining needed.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone desi now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone desi now →</a>
 
         <div className="card">
           <h2>What the desi community in America quietly deals with</h2>

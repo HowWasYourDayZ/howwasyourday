@@ -4,17 +4,17 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Having a Bad Day? Talk to Someone Right Now | How Was Your Day India',
-  description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. First 5 minutes free.',
+  description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. Sessions from 8 minutes.',
   keywords: ['bad day India', 'having a bad day India', 'everything went wrong India', 'just want to vent India', 'talk to someone bad day India'],
   alternates: { canonical: 'https://www.howwasyourday.live/bad-day-india', languages: { 'en-GB': 'https://www.howwasyourday.live/bad-day-india' } },
-  openGraph: { title: 'Having a Bad Day? Talk to Someone Right Now | How Was Your Day India', description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. First 5 minutes free.', url: 'https://www.howwasyourday.live/bad-day-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Having a Bad Day? Talk to Someone Right Now | How Was Your Day India', description: 'Everything went wrong. You just need to talk it out. A real person, right now, from ₹160. Sessions from 8 minutes.', url: 'https://www.howwasyourday.live/bad-day-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Do I need a specific reason to use How Was Your Day?', acceptedAnswer: {'@type': 'Answer', text: 'No. "I had a bad day and I need to talk to someone" is reason enough.'}},
-    {'@type': 'Question', name: 'How quickly can I start a session?', acceptedAnswer: {'@type': 'Answer', text: 'Immediately. Browse listeners who are online right now and start a session. No appointment, no form, no assessment. The first 5 minutes are free.'}},
-    {'@type': 'Question', name: 'What if I can\'t afford it?', acceptedAnswer: {'@type': 'Answer', text: 'Your first 5-minute session is free with no charge. Sessions start at ₹160 if you continue beyond that. There is no subscription.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How quickly can I start a session?', acceptedAnswer: {'@type': 'Answer', text: 'Immediately. Browse listeners who are online right now and start a session. No appointment, no form, no assessment. Sessions start at 8 minutes.'}},
+    {'@type': 'Question', name: 'What if I can\'t afford it?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at 8 minutes with no charge. Sessions start at ₹160 if you continue beyond that. There is no subscription.'}},
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -72,7 +72,7 @@ export default function BadDayIndiaPage() {
         <div className="hero">
           <p className="badge">Bad Day · Vent · Talk Right Now · India</p>
           <h1>Everything went wrong today. <em>You just need someone to hear it.</em></h1>
-          <p className="lead">Not therapy, not a lecture. Just a real person who will listen right now. From ₹160. First 5 minutes free.</p>
+          <p className="lead">Not therapy, not a lecture. Just a real person who will listen right now. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -82,13 +82,13 @@ export default function BadDayIndiaPage() {
         </div>
         <div className="section">
           <h2>No Appointment, No Commitment</h2>
-          <p>You do not need to be in crisis. You do not need to have a serious mental health issue. You just need to talk. There is no appointment on How Was Your Day &mdash; browse listeners who are online, start a session, the first 5 minutes are free. If it helps, continue. If not, you stop and pay nothing.</p>
+          <p>You do not need to be in crisis. You do not need to have a serious mental health issue. You just need to talk. There is no appointment on How Was Your Day &mdash; browse listeners who are online, start a session, sessions start at 8 minutes. If it helps, continue. If not, you stop and pay nothing.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Start talking. Right now.</h2><p>Real person. No judgment. First 5 minutes free. From ₹160.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Start talking. Right now.</h2><p>Real person. No judgment. Sessions from 8 minutes. From ₹160.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/need-to-vent-india">Need to vent India &rarr;</a>
             <a href="/support/emotional-support">Emotional support India &rarr;</a>
-            <a href="/talk-to-someone-free-india">First 5 minutes free &rarr;</a>
+            <a href="/talk-to-someone-free-india">Sessions from 8 minutes &rarr;</a>
             <a href="/vent-to-someone-online">Vent online &rarr;</a>
             <a href="/empathy-india">Empathy India &rarr;</a></div></div>
       </div>

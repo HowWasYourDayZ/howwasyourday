@@ -162,7 +162,7 @@ export default function MalaysiaEmpathyListenerPage() {
           peers who are here only to understand you.
         </p>
 
-        <a href="/browse" className="cta-hero">Find an empathy listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Find an empathy listener →</a>
 
         <div className="card">
           <h2>What empathy listening actually means</h2>
@@ -199,7 +199,7 @@ export default function MalaysiaEmpathyListenerPage() {
 
         <div className="card">
           <h2>Session pricing for Malaysia</h2>
-          <p>Pay in Malaysian ringgit. The first 5-minute session free.</p>
+          <p>Pay in Malaysian ringgit. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>

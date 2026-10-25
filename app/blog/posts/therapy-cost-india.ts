@@ -19,7 +19,7 @@ export const post = {
   <li><strong>Clinical psychologist or therapist:</strong> roughly ₹1,500 to ₹4,000 per session. Senior practitioners in metros sit at the upper end of that range, and sometimes above it.</li>
   <li><strong>Online therapy platforms:</strong> broadly similar to in-person rates — commonly ₹1,000 to ₹3,000 per session. Online delivery removes travel, not the cost of the clinician&apos;s time.</li>
   <li><strong>Government helplines:</strong> completely free, 24/7. Samaritans runs a free helpline at <strong>116 123</strong>, and Shout is reachable by texting SHOUT to <strong>85258</strong>. These are staffed, real, and cost nothing.</li>
-  <li><strong>How Was Your Day peer support:</strong> listeners set their own per-minute rate, plus a flat ₹10 platform fee per session. For example, a 15-minute session with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. Any unused wallet balance is fully refundable.</li>
+  <li><strong>How Was Your Day peer support:</strong> listeners set their own per-minute rate, plus a flat ₹10 platform fee per session. For example, a 15-minute session with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. Every session is paid, from 8 minutes. Any unused wallet balance is fully refundable.</li>
 </ul>
 
 <p>Those are the headline figures. But the headline figures are not the whole picture, and the gap between them and what people actually end up spending is where most budgets break.</p>
@@ -78,7 +78,7 @@ export const post = {
 
 <p>The second reason is our fee structure. What you pay is the listener&apos;s stated rate plus a flat ₹10 per session — not a percentage of your bill, not a subscription, not a cut that grows with the listener&apos;s price. That is the entire fee you see as a seeker.</p>
 
-<p>The third is that you pay by the minute for what you actually use, rather than buying a fixed fifty-minute hour whether you need it or not. Some evenings you need twenty minutes. Some evenings you need five. One introductory session of up to 5 minutes is free per account, so you can try the service before deciding whether to pay for a longer session. And if you top up your wallet and do not use it, the unused balance is fully refundable. We would rather refund you than hold your money hostage.</p>
+<p>The third is that you pay by the minute for what you actually use, rather than buying a fixed fifty-minute hour whether you need it or not. Some evenings you need twenty minutes. Some evenings you need five. Every session is paid, from 8 minutes, so you can try the service before deciding whether to pay for a longer session. And if you top up your wallet and do not use it, the unused balance is fully refundable. We would rather refund you than hold your money hostage.</p>
 
 <h2>Example: ₹160 for a 15-Minute Conversation</h2>
 

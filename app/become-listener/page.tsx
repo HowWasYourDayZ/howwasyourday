@@ -450,15 +450,15 @@ export default function BecomeListenerPage() {
   // the seeker's separate flat PLATFORM_FEE never touches listener earnings and
   // isn't shown here (see lib/constants.ts for both).
   const rateNum      = Math.max(0, parseInt(rate) || 0)
-  const gross15       = rateNum * 15
-  const gross30       = rateNum * 30
-  const gross45       = rateNum * 45
-  const serviceFee15  = Math.round(gross15 * LISTENER_SERVICE_FEE_RATE)
-  const serviceFee30  = Math.round(gross30 * LISTENER_SERVICE_FEE_RATE)
-  const serviceFee45  = Math.round(gross45 * LISTENER_SERVICE_FEE_RATE)
-  const earn15        = gross15 - serviceFee15
-  const earn30        = gross30 - serviceFee30
-  const earn45        = gross45 - serviceFee45
+  const gross8       = rateNum * 8
+  const gross16       = rateNum * 16
+  const gross32       = rateNum * 32
+  const serviceFee8  = Math.round(gross8 * LISTENER_SERVICE_FEE_RATE)
+  const serviceFee16  = Math.round(gross16 * LISTENER_SERVICE_FEE_RATE)
+  const serviceFee32  = Math.round(gross32 * LISTENER_SERVICE_FEE_RATE)
+  const earn8        = gross8 - serviceFee8
+  const earn16        = gross16 - serviceFee16
+  const earn32        = gross32 - serviceFee32
 
   function toggleTag(t: string) {
     setTags(p => p.includes(t) ? p.filter(x => x !== t) : [...p, t])
@@ -1369,7 +1369,7 @@ export default function BecomeListenerPage() {
             <p style={{fontSize:12,color:'var(--gray)',marginBottom:12,fontWeight:500}}>You keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of your rate on every paid session. The standard starting rate is {formatRate(DEFAULT_LISTENER_RATE)}; you can raise it as you build reviews.</p>
 
             <div style={{background:'#F0F8FC',borderRadius:12,padding:'10px 14px',marginBottom:12,fontSize:13,color:'#0F4867',fontWeight:600}}>
-              📅 Sessions are booked in <strong>15, 30, or 45 minute slots</strong>. No open-ended calls — clean start and end times for both sides.
+              📅 Sessions are <strong>8, 16 or 32 minutes</strong> — instant, or booked into weekly hours you set. No open-ended calls — clean start and end times for both sides.
             </div>
 
             {VOICE_PRICING_ENABLED ? (() => {
@@ -1380,25 +1380,25 @@ export default function BecomeListenerPage() {
               return (
                 <div className="rate-preview">
                   <p>What you take home:</p>
-                  <p>15 min → 💬 <strong>{formatGBP(earn15)}</strong> · 📞 <strong>{formatGBP(voiceNet(15))}</strong></p>
-                  <p>30 min → 💬 <strong>{formatGBP(earn30)}</strong> · 📞 <strong>{formatGBP(voiceNet(30))}</strong></p>
-                  <p>45 min → 💬 <strong>{formatGBP(earn45)}</strong> · 📞 <strong>{formatGBP(voiceNet(45))}</strong></p>
+                  <p>8 min → 💬 <strong>{formatGBP(earn8)}</strong> · 📞 <strong>{formatGBP(voiceNet(8))}</strong></p>
+                  <p>16 min → 💬 <strong>{formatGBP(earn16)}</strong> · 📞 <strong>{formatGBP(voiceNet(16))}</strong></p>
+                  <p>32 min → 💬 <strong>{formatGBP(earn32)}</strong> · 📞 <strong>{formatGBP(voiceNet(32))}</strong></p>
                 </div>
               )
             })() : (
             <div className="rate-preview">
               <p>At <strong>{formatRate(rateNum)}</strong> you earn (after the service fee):</p>
-              <p>15 min → you earn <strong>{formatGBP(earn15)}</strong></p>
-              <p>30 min → you earn <strong>{formatGBP(earn30)}</strong></p>
-              <p>45 min → you earn <strong>{formatGBP(earn45)}</strong></p>
+              <p>8 min → you earn <strong>{formatGBP(earn8)}</strong></p>
+              <p>16 min → you earn <strong>{formatGBP(earn16)}</strong></p>
+              <p>32 min → you earn <strong>{formatGBP(earn32)}</strong></p>
             </div>
             )}
 
             <div className="fee-box">
-              <h3>What you take home from a 15-min text chat</h3>
-              <div className="fee-row"><span className="label">Session value (15 min at {formatRate(rateNum)})</span><span className="value">{formatGBP(gross15)}</span></div>
-              <div className="fee-row"><span className="label">How Was Your Day service fee ({Math.round(LISTENER_SERVICE_FEE_RATE * 100)}%) — seekers, payments, safety &amp; support</span><span className="value">− {formatGBP(serviceFee15)}</span></div>
-              <div className="fee-row highlight"><span className="label">You take home</span><span className="value">{formatGBP(earn15)} ✓</span></div>
+              <h3>What you take home from an 8-min text chat</h3>
+              <div className="fee-row"><span className="label">Session value (8 min at {formatRate(rateNum)})</span><span className="value">{formatGBP(gross8)}</span></div>
+              <div className="fee-row"><span className="label">How Was Your Day service fee ({Math.round(LISTENER_SERVICE_FEE_RATE * 100)}%) — seekers, payments, safety &amp; support</span><span className="value">− {formatGBP(serviceFee8)}</span></div>
+              <div className="fee-row highlight"><span className="label">You take home</span><span className="value">{formatGBP(earn8)} ✓</span></div>
             </div>
 
             <label className="lbl">Account holder name <span style={{color:'#c0392b'}}>*</span></label>

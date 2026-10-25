@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
   title: 'GetCompanion Alternative — How Was Your Day | Peer Support Without the Middleman',
-  description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — £7/session, free 5-min trial, no "Happiness Executive" label.',
+  description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — from £4.20 per session, no "Happiness Executive" label.',
   keywords: [
     'getcompanion alternative', 'alternative to getcompanion', 'getcompanion vs howwasyourday',
     'companionship app india', 'paid companionship alternative', 'loneliness support india',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'GetCompanion Alternative — How Was Your Day | Peer Support Without the Middleman',
-    description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — £7/session, free 5-min trial.',
+    description: 'GetCompanion charges for companionship. How Was Your Day connects you with real peer listeners who have lived through what you\'re facing — from £4.20 per session.',
     url: 'https://www.howwasyourday.live/getcompanion-alternative',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -44,7 +44,7 @@ const faqSchema = {
       name: 'Is How Was Your Day cheaper than GetCompanion?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day sessions start at £7 for 15 minutes, and your very first 5-minute session is completely free (one per account) — no wallet top-up needed. Both platforms use per-minute billing from a wallet, but How Was Your Day\'s free trial lets you find the right listener before spending anything.',
+        text: 'How Was Your Day sessions start at £4.20 for 8 minutes — no wallet top-up needed. Both platforms use per-minute billing from a wallet, but How Was Your Day\'s 8-minute sessions let you find the right listener without spending much.',
       },
     },
     {
@@ -206,9 +206,9 @@ export default function GetCompanionAlternativePage() {
                 <td className="tick">Been through the same thing</td>
               </tr>
               <tr>
-                <td>Free trial</td>
+                <td>Short sessions</td>
                 <td className="cross">No</td>
-                <td className="tick">5 min free per new listener</td>
+                <td className="tick">From 8 minutes</td>
               </tr>
               <tr>
                 <td>Session cost</td>
@@ -275,13 +275,13 @@ export default function GetCompanionAlternativePage() {
             <li>
               <div>
                 <strong>Start your free session</strong>
-                <p>Your first 5 minutes are completely free &mdash; no payment needed. Start a text chat or voice call whenever you are ready.</p>
+                <p>Sessions start at 8 minutes &mdash; no payment needed. Start a text chat or voice call whenever you are ready.</p>
               </div>
             </li>
             <li>
               <div>
                 <strong>Continue if it clicks</strong>
-                <p>If you find the right listener, extend to a 15, 30, or 45-minute paid session. Recharge your wallet with UPI, cards, or net banking. Unused balance is fully refundable.</p>
+                <p>If you find the right listener, extend to an 8, 16 or 32-minute paid session. Recharge your wallet with UPI, cards, or net banking. Unused balance is fully refundable.</p>
               </div>
             </li>
           </ul>
@@ -307,7 +307,7 @@ export default function GetCompanionAlternativePage() {
             <h3>Is How Was Your Day cheaper than GetCompanion?</h3>
             <p>How Was Your Day sessions start at &#8377;160 for 15 minutes. Your first 5-minute session
               is free (one per account) &mdash; no wallet top-up needed. Both platforms use
-              per-minute billing, but How Was Your Day&apos;s free trial lets you try it first.</p>
+              per-minute billing, but How Was Your Day&apos;s 8-minute sessions let you try it cheaply first.</p>
           </div>
           <div className="faq-item">
             <h3>Do I need to meet someone in person?</h3>

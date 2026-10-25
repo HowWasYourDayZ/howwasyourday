@@ -4,17 +4,17 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Emotional Support for Indians in Texas | Houston, Dallas, Austin | How Was Your Day',
-  description: 'Texas is home to 400,000+ Indians — and many feel quietly alone in it. Talk to a peer listener in India who understands the Texas Indian experience. First 5 min free.',
+  description: 'Texas is home to 400,000+ Indians — and many feel quietly alone in it. Talk to a peer listener in India who understands the Texas Indian experience. From 8 minutes.',
   keywords: ['indians in texas support', 'indian community texas', 'texas indian mental health', 'desi support texas', 'houston dallas austin indian support', 'nri texas'],
   alternates: { canonical: 'https://www.howwasyourday.live/indians-in-texas' },
-  openGraph: { title: 'Emotional Support for Indians in Texas | Houston, Dallas, Austin | How Was Your Day', description: 'Texas is home to 400,000+ Indians — and many feel quietly alone in it. Talk to a peer listener in India who understands the Texas Indian experience. First 5 min free.', url: 'https://www.howwasyourday.live/indians-in-texas', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Emotional Support for Indians in Texas | Houston, Dallas, Austin | How Was Your Day', description: 'Texas is home to 400,000+ Indians — and many feel quietly alone in it. Talk to a peer listener in India who understands the Texas Indian experience. From 8 minutes.', url: 'https://www.howwasyourday.live/indians-in-texas', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Do listeners understand the Texas Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience in American metros including the Texas corridor — Houston\'s energy sector, Dallas tech, Austin startups. You don\'t need to explain the context.' } },
   { '@type': 'Question', name: 'What time works to connect from Texas?', acceptedAnswer: { '@type': 'Answer', text: 'Texas (CST/CDT) is 11–11.5 hours behind IST. 7am in Houston or Dallas = 6:30pm in India. Early Texas morning aligns well with Indian evenings when listeners are active.' } },
   { '@type': 'Question', name: 'Is my session completely confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are anonymous — only a phone number and first name required. Nothing leaves the session. Your community, employer, and family won\'t know.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInTexasPage() {
         <div className="hero">
           <p className="badge">Indians in Texas &middot; Houston &middot; Dallas &middot; Austin</p>
           <h1>Texas. The big life. <em>The quiet loneliness.</em></h1>
-          <p className="lead">Houston, Dallas-Plano-Frisco, Austin, San Antonio. Texas has one of the fastest-growing Indian populations in America. Tech jobs, big houses, community events. And still — the isolation of an immigrant life. The family calls that feel like performance. The friendships that feel shallow. Talk to someone real. First 5 minutes free.</p>
+          <p className="lead">Houston, Dallas-Plano-Frisco, Austin, San Antonio. Texas has one of the fastest-growing Indian populations in America. Tech jobs, big houses, community events. And still — the isolation of an immigrant life. The family calls that feel like performance. The friendships that feel shallow. Talk to someone real. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -90,11 +90,11 @@ export default function IndiansInTexasPage() {
           <h2>Talking Across Time Zones: Texas to India</h2>
           <p>Texas (CST/CDT) sits 11 to 11.5 hours behind IST. This creates a natural bridge. Your 7am in Houston or Dallas is 6:30pm in India — a good evening window when Indian listeners are available and winding down their day. Even 6am Texas is comfortable India evening time.</p>
           <p>If you&rsquo;re in Austin working late in the startup grind, or sitting in your Frisco house after the kids are in bed, or driving home from the Houston Medical Center — India is awake and available. How Was Your Day listeners don&rsquo;t require appointments. Browse who is online and start a session when the moment feels right.</p>
-          <p>The sessions are text-based, anonymous, and fully private. No one in your Texas community, your workplace, or your family back home will know. Your first 5-minute session is free.</p>
+          <p>The sessions are text-based, anonymous, and fully private. No one in your Texas community, your workplace, or your family back home will know. Sessions start at 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Texas-sized life. Real support behind it.</h2><p>Real Indian peer listener. Understands the Texas NRI experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Texas-sized life. Real support behind it.</h2><p>Real Indian peer listener. Understands the Texas NRI experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indians-in-houston">Indians in Houston &rarr;</a>
           <a href="/indians-in-dallas">Indians in Dallas &rarr;</a>

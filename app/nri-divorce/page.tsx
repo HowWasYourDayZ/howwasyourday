@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the visa anxiety around divorce?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The specific fear of what happens to your immigration status if the marriage ends — dependent visa, joint sponsorship, H4 expiry — is something listeners understand. You do not have to explain why that anxiety layers onto the emotional grief. They already know the shape of it.' } },
   { '@type': 'Question', name: 'Will this be confidential from my community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your Indian diaspora community, your family in India, and your spouse will never know you spoke to anyone. Confidentiality is absolute.' } },
   { '@type': 'Question', name: 'What about the shame of telling parents in India?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common and most painful parts of NRI separation — the dread of the conversation with parents in India, the anticipated disappointment, the community fallout back home. Listeners understand this weight completely and will hold it with you without judgment.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No commitment, no subscription.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No commitment, no subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriDivorcePage() {
         <div className="hero">
           <p className="badge">NRI Divorce &middot; Separation &middot; Indian Abroad</p>
           <h1>You don&rsquo;t need legal advice right now. <em>You need someone to talk to.</em></h1>
-          <p className="lead">NRI divorce brings layers that most people around you cannot fully see — immigration status tied to your marriage, community shame that spans two countries, parents in India who don&rsquo;t know yet, children with roots in two places. This is not a legal guide. It is a space to speak the human part of it to someone who understands. First 5 minutes free.</p>
+          <p className="lead">NRI divorce brings layers that most people around you cannot fully see — immigration status tied to your marriage, community shame that spans two countries, parents in India who don&rsquo;t know yet, children with roots in two places. This is not a legal guide. It is a space to speak the human part of it to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriDivorcePage() {
           <h2>The Layers Nobody Else Sees</h2>
           <p>When a marriage ends for an NRI, the grief comes with layers that most people around you — colleagues, local friends, even counsellors unfamiliar with the immigrant experience — will not fully understand. The first layer is the personal loss, which is the same for anyone. But then there are the NRI-specific layers that compound everything.</p>
           <p>If your visa is tied to your spouse, separation is not just emotional — it is existential. Your right to stay in the country you have built your life in is suddenly in question. This fear — which might seem like a practical concern — actually runs deep emotionally, because it means the loss of the marriage might mean the loss of the life, the career, and the identity you have built abroad. That is a specific kind of terror that divorce support resources rarely address.</p>
-          <p>And then there is the conversation with your parents in India. The community back home. The distant relatives whose opinion somehow still matters. The shame that travels faster than news. How Was Your Day listeners understand all of these layers without needing them explained. You can talk about the emotional weight of the NRI divorce experience — not the legalities, just the human part. First 5 minutes free.</p>
+          <p>And then there is the conversation with your parents in India. The community back home. The distant relatives whose opinion somehow still matters. The shame that travels faster than news. How Was Your Day listeners understand all of these layers without needing them explained. You can talk about the emotional weight of the NRI divorce experience — not the legalities, just the human part. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function NriDivorcePage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The human weight of NRI separation deserves to be heard.</h2><p>No legal advice. No judgment. Just a real listener who understands. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The human weight of NRI separation deserves to be heard.</h2><p>No legal advice. No judgment. Just a real listener who understands. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

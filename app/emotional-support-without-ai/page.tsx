@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Real Emotional Support — Not a Chatbot | How Was Your Day',
-  description: 'How Was Your Day is the human alternative to ChatGPT for emotional support. Real peer listeners with lived experience — for loneliness, grief, relationships, and anything weighing on you. First 5 min free.',
+  description: 'How Was Your Day is the human alternative to ChatGPT for emotional support. Real peer listeners with lived experience — for loneliness, grief, relationships, and anything weighing on you. From 8 minutes.',
   keywords: [
     'emotional support without ai', 'human alternative to chatgpt', 'talking to ai vs real person',
     'real emotional support online', 'chatgpt alternative emotional support', 'ai vs human mental health',
@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. Sessions from £7 for 15 minutes in India, US$10 for 15 minutes abroad.',
+    description: 'Sessions from 8 minutes. Sessions from £4.20 for 8 minutes.',
   },
 }
 
@@ -91,7 +91,7 @@ const faqSchema = {
       name: 'How do I find a real person to talk to online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Browse How Was Your Day\'s peer listeners at howwasyourday.live/browse — filter by language, availability, and topic. First 5 minutes are free. Real humans, real conversations, real support.',
+        text: 'Browse How Was Your Day\'s peer listeners at howwasyourday.live/browse — filter by language, availability, and topic. Sessions start at 8 minutes. Real humans, real conversations, real support.',
       },
     },
   ],
@@ -186,7 +186,7 @@ export default function EmotionalSupportWithoutAIPage() {
           present in the conversation with you.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to a real human now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to a real human now →</a>
 
         <div className="card">
           <h2>What AI cannot give you</h2>
@@ -271,12 +271,12 @@ export default function EmotionalSupportWithoutAIPage() {
               what they&apos;ve personally been through.
             </li>
             <li>
-              <strong>Start a free session.</strong> Your first 5 minutes are free. No credit card needed
+              <strong>Start a free session.</strong> Sessions start at 8 minutes. No credit card needed
               upfront. Just start talking to someone who is genuinely there.
             </li>
             <li>
-              <strong>Continue as long as you need.</strong> Sessions are available in 15, 30, or 45-minute
-              blocks. Pricing starts at £7 for 15 minutes in India and US$10 for 15 minutes abroad.
+              <strong>Continue as long as you need.</strong> Sessions are available in 8, 16 or 32-minute
+              blocks. Pricing starts at £4.20 for 8 minutes.
             </li>
           </ol>
         </div>
@@ -316,7 +316,7 @@ export default function EmotionalSupportWithoutAIPage() {
           <div className="faq-item">
             <h3>How do I find a real person to talk to online?</h3>
             <p>Browse How Was Your Day&apos;s peer listeners at howwasyourday.live/browse — filter by language, availability,
-              and topic. First 5 minutes are free. Real humans, real conversations, real support.</p>
+              and topic. Sessions start at 8 minutes. Real humans, real conversations, real support.</p>
           </div>
         </div>
 

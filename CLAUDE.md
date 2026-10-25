@@ -113,9 +113,11 @@
   never store or compute in pounds, never show ₹/US$. One price for every seeker (UK and EU) — the
   LeanOn India-vs-NRI pricing was removed; `lib/geo-pricing.ts quoteSession()` is the single quote.
   Prices in copy must match `/pricing` (reads `lib/constants.ts`); quote the RULES (listener rate ×
-  minutes + £1, standard rate `DEFAULT_LISTENER_RATE` 40p/min → £7 for 15 min) — never an invented
-  "typical" price until `lib/price-snapshot.ts` has real listener data. Only ONE free 5-minute session
-  per account — never "per listener". Listeners are screened, never "trained".
+  minutes + £1, standard rate `DEFAULT_LISTENER_RATE` 40p/min → £4.20 for 8 min) — never an invented
+  "typical" price until `lib/price-snapshot.ts` has real listener data. **No free sessions** (2026-10-25):
+  every session is paid, 8 / 16 / 32 minutes (`SESSION_DURATIONS`). Never write "free trial", "first 5
+  minutes free" or quote 15/30/45. Only `TEST_UNLIMITED_PHONES` (owner/QA, env only) get zero-cost
+  sessions. Listeners are screened, never "trained".
 - **`/talk` (Talk now) is the primary entry and the link AI assistants are given** (`llms.txt`,
   sitemap priority 1.0, home hero, footer, floating button, bottom menu, new sign-ups). The page is a
   client component whose server render is empty, so its crawlable text + JSON-LD live in
@@ -123,7 +125,7 @@
 - **No listener rates, earnings, take-home % or service fee on ANY indexable / AI-readable page —
   including seeker pages and `/faq`** (2026-10-16: ChatGPT quoted /faq's earnings answers and a false
   "keep all of it" line to an under-18 asking for apps that pay to talk). Seeker pages quote the
-  seeker's price only ("15 minutes is £7 at the standard rate"). The listener fee lives on `/terms`, `/become-listener`
+  seeker's price only ("8 minutes is £4.20 at the standard rate"). The listener fee lives on `/terms`, `/become-listener`
   and the dashboard. The old earnings blog post 308s to `/howwasyourday-is-not-a-job`.
 - **`/become-a-peer-supporter` is the ONE indexable, AI-readable recruitment page** (owner decision
   2026-10-16): purpose-first, 18+, screening steps, "not a job, sessions not guaranteed" — and NO
@@ -287,7 +289,8 @@
 - **Deleting an account never strands money:** self-deletion is refused while there is a wallet
   balance or a pending payout/refund; admin deletion keeps pending payouts/refunds payable, and
   leftovers show on the admin Overview as "Deleted accounts still holding money".
-- Session durations: 5 (free trial) / 15 / 30 / 45 minutes. The free trial may be text OR voice.
+- Session durations: **8 / 16 / 32 minutes**, all paid (migration 076). India/NRI pages are 308-redirected
+  via `lib/seo-redirects.json` — don't link to or recreate them.
 - Crisis helplines (UK launch, Oct 2026): ONLY Samaritans (116 123), Shout (text SHOUT to 85258) and
   emergency 999 / 112 — the set in `CRISIS_RESOURCES` (`lib/constants.ts`). Never add other numbers
   without the owner.

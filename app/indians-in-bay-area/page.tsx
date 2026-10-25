@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Silicon Valley Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI tech worker experience — the Bay Area burnout, imposter syndrome, the H-1B dependency, the performance culture. You don\'t need to explain the context. Many listeners have close family in the Bay Area tech community.' } },
   { '@type': 'Question', name: 'What time works best to connect from the Bay Area?', acceptedAnswer: { '@type': 'Answer', text: 'Bay Area (PST/PDT) is 13.5 hours behind IST. 8am San Jose = 9:30pm India. Your morning — even before a full evening ends in India — finds listeners available. Evening Bay Area time (8–10pm) is India\'s late night and early morning, which also has listeners for night-owl sessions.' } },
   { '@type': 'Question', name: 'Is this confidential from my colleagues at my tech company?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous. Only a phone number and first name required. Nothing is shared with your employer, your Fremont or Sunnyvale community, or anyone back in India.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInBayAreaPage() {
         <div className="hero">
           <p className="badge">Indians in Bay Area &middot; Fremont &middot; Silicon Valley</p>
           <h1>You optimised everything except <em>how you&rsquo;re actually feeling.</em></h1>
-          <p className="lead">Fremont. Sunnyvale. Santa Clara. Cupertino. The Bay Area is the global capital of Indian tech success. And quietly — some of the highest rates of burnout, imposter syndrome, and identity exhaustion in any immigrant community. You can earn $300K and still feel like something is missing. Talk to a peer listener in India who has heard this exact thing. First 5 minutes free.</p>
+          <p className="lead">Fremont. Sunnyvale. Santa Clara. Cupertino. The Bay Area is the global capital of Indian tech success. And quietly — some of the highest rates of burnout, imposter syndrome, and identity exhaustion in any immigrant community. You can earn $300K and still feel like something is missing. Talk to a peer listener in India who has heard this exact thing. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,18 +83,18 @@ export default function IndiansInBayAreaPage() {
           <h2>The Bay Area Indian Tech Worker: The World&rsquo;s Most Optimised, Least-Talked-About Problem</h2>
           <p>Fremont is one of the most Indian cities in America by proportion. Sunnyvale, Santa Clara, and Cupertino have enormous Indian tech worker populations. San Jose&rsquo;s Little India corridor on Story Road has been here for decades. The community infrastructure is extraordinary — temples, cricket leagues, Diwali events, Indian grocery stores on every second block.</p>
           <p>And underneath all of that: a peculiar, specific exhaustion. The Bay Area tech Indian experience carries layers that are hard to name. Imposter syndrome in a world where everyone looks successful. H-1B anxiety — your entire life tied to your employer&rsquo;s goodwill. The identity question: I left India to be here, and here I am, but who am I becoming? The marriage under strain from two demanding careers. The children who feel more American than Indian and what that means to you.</p>
-          <p>How Was Your Day is for exactly this. Not crisis. Not diagnosis. Just: I need to talk to someone who actually gets it. A real Indian peer listener, in India, who understands the Silicon Valley Indian context. First 5 minutes free.</p>
+          <p>How Was Your Day is for exactly this. Not crisis. Not diagnosis. Just: I need to talk to someone who actually gets it. A real Indian peer listener, in India, who understands the Silicon Valley Indian context. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>Time Zone and Timing: Bay Area to India</h2>
           <p>Bay Area (PST/PDT) is 13.5 hours behind IST. 8am in San Jose or Fremont is 9:30pm in India — late evening, when some listeners are still available. More reliably: 6am in the Bay Area is 7:30pm India time, a prime window. If you commute early, take a walk before the stand-up meeting, or have a quiet moment before the household wakes — that is often Indian evening time.</p>
           <p>Weekend mornings in the Bay Area — that quiet hour before the Fremont temple visit or the Sunnyvale cricket match — are Indian evenings. There is almost always someone available. No appointment needed. Browse who is online and start a session.</p>
-          <p>Sessions are text-based, anonymous, and completely private. Nothing reaches your team, your H-1B sponsor, or your family back in India. The first 5-minute session free.</p>
+          <p>Sessions are text-based, anonymous, and completely private. Nothing reaches your team, your H-1B sponsor, or your family back in India. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You optimised everything. Now talk to someone real.</h2><p>Real Indian peer listener. Understands Silicon Valley Indian life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You optimised everything. Now talk to someone real.</h2><p>Real Indian peer listener. Understands Silicon Valley Indian life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

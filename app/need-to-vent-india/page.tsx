@@ -5,16 +5,16 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Need to Vent India — Someone to Listen Right Now | How Was Your Day',
-  description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. First 5 minutes free.',
+  description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. Sessions from 8 minutes.',
   keywords: ['need to vent India', 'want to vent India', 'vent out India', 'vent to someone India', 'just need to vent India'],
   alternates: { canonical: 'https://www.howwasyourday.live/need-to-vent-india', languages: { 'en-GB': 'https://www.howwasyourday.live/need-to-vent-india' } },
-  openGraph: { title: 'Need to Vent India — Someone to Listen Right Now | How Was Your Day', description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. First 5 minutes free.', url: 'https://www.howwasyourday.live/need-to-vent-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Need to Vent India — Someone to Listen Right Now | How Was Your Day', description: 'Not advice. Not solutions. Just someone to listen while you get it all out. From ₹160. Sessions from 8 minutes.', url: 'https://www.howwasyourday.live/need-to-vent-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is it okay to just vent without wanting advice?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Many sessions on How Was Your Day are exactly this &mdash; someone needed to say what they were carrying and be heard. No advice, no solutions. Just genuine listening. That is a complete and valuable use of peer support.'}},
     {'@type': 'Question', name: 'How is this different from just talking to a friend?', acceptedAnswer: {'@type': 'Answer', text: 'Friends have their own responses, their own tiredness, their own opinions. A screened listener\'s job is to receive what you are saying fully, without their own stuff getting in the way. The result feels different &mdash; more received, less managed.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -72,7 +72,7 @@ export default function NeedToVentIndiaPage() {
         <div className="hero">
           <p className="badge">Vent · Listen · Right Now · India</p>
           <h1>Not therapy. Not advice. Just someone to shut up and listen <em>while you let it all out.</em></h1>
-          <p className="lead">Not looking for solutions. Just somewhere to put all of it. A real listener, from ₹160. First 5 minutes free.</p>
+          <p className="lead">Not looking for solutions. Just somewhere to put all of it. A real listener, from ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <GeoQuickAnswer path="/need-to-vent-india" />
@@ -87,7 +87,7 @@ export default function NeedToVentIndiaPage() {
           <p>See also: <a href="/support/need-to-vent" style={{color:"#1A8FA0",fontWeight:700}}>Need to vent</a> &mdash; the topic page.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Let it out. Someone is listening.</h2><p>Anonymous peer support. No advice unless you want it. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Let it out. Someone is listening.</h2><p>Anonymous peer support. No advice unless you want it. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/bad-day-india">Bad day India &rarr;</a>
             <a href="/support/emotional-support">Emotional support India &rarr;</a>
             <a href="/talk-to-someone-free-india">Free session trial &rarr;</a>

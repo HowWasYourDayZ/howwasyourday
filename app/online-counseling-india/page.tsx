@@ -43,7 +43,7 @@ const faqSchema = {
       name: 'How much does a session cost on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions on How Was Your Day start at ₹160 for 15 minutes. Longer sessions are ₹249 for 30 minutes and ₹329 for 45 minutes. New users get a free 5-minute trial. Compare this to ₹1,500–₹5,000 for a single therapy session, and you start to see why thousands of people have chosen How Was Your Day as their first step toward getting emotional support.',
+        text: 'Sessions on How Was Your Day start at ₹160 for 15 minutes. Longer sessions are ₹249 for 30 minutes and ₹329 for 45 minutes. Sessions start at 8 minutes. Compare this to ₹1,500–₹5,000 for a single therapy session, and you start to see why thousands of people have chosen How Was Your Day as their first step toward getting emotional support.',
       },
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = {
       name: 'Is there a minimum session length?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'New users get a free 5-minute trial. Paid sessions start at 15 minutes. Most people find that 30 minutes is the sweet spot — enough to really get into a topic without feeling rushed. But if you just need to vent for 15 minutes and feel lighter, that works too. You choose based on what you need.',
+        text: 'Sessions start at 8 minutes. Paid sessions start at 15 minutes. Most people find that 30 minutes is the sweet spot — enough to really get into a topic without feeling rushed. But if you just need to vent for 15 minutes and feel lighter, that works too. You choose based on what you need.',
       },
     },
   ],
@@ -192,7 +192,7 @@ export default function OnlineCounselingIndiaPage() {
           <p>The therapist-to-population ratio in India is approximately 1 per 100,000 people — one of the lowest in the world. Good therapists have waitlists. The idea of getting help &quot;now&quot; — when you actually need it — is largely theoretical in the public mental health system. Private therapists are faster but expensive.</p>
 
           <h3>What How Was Your Day Costs Instead</h3>
-          <p>A 15-minute peer support session on How Was Your Day costs ₹160. A 30-minute session is ₹249. A 45-minute session is ₹329. New users get a free 5-minute trial. You do not need insurance, a referral, a prescription, or an appointment. You open the app, browse who is online right now, and start talking.</p>
+          <p>A 15-minute peer support session on How Was Your Day costs ₹160. A 30-minute session is ₹249. A 45-minute session is ₹329. Sessions start at 8 minutes. You do not need insurance, a referral, a prescription, or an appointment. You open the app, browse who is online right now, and start talking.</p>
         </div>
 
         <div className="section">

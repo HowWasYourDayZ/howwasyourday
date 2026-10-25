@@ -5,11 +5,11 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Relationship Stress Peer Support India | How Was Your Day',
-  description: "Relationship stress building up? Talk it through with a neutral, real peer listener in India — private, text or voice, online now. Not couples therapy. First 5 minutes free.",
+  description: "Relationship stress building up? Talk it through with a neutral, real peer listener in India — private, text or voice, online now. Not couples therapy. Sessions from 8 minutes.",
   alternates: { canonical: 'https://www.howwasyourday.live/support/relationship-stress', languages: { 'en-GB': 'https://www.howwasyourday.live/support/relationship-stress' } },
   openGraph: {
     title: 'Relationship Stress Peer Support India | How Was Your Day',
-    description: "Relationship stress building up? Talk it through with a neutral, real peer listener in India — private, text or voice, online now. Not couples therapy. First 5 minutes free.",
+    description: "Relationship stress building up? Talk it through with a neutral, real peer listener in India — private, text or voice, online now. Not couples therapy. Sessions from 8 minutes.",
     url: 'https://www.howwasyourday.live/support/relationship-stress',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "My relationship is stressing me out \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. How Was Your Day connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "My relationship is stressing me out \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. How Was Your Day connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Sessions start at 8 minutes." } },
     {
       '@type': 'Question',
       name: 'What counts as relationship stress?',
@@ -151,7 +151,7 @@ export default function RelationshipStressSupportPage() {
           <p className="tag">Peer Support · Relationship Stress</p>
           <h1>Getting Through Relationship Stress — You Don&apos;t Have to <em>Face It Alone</em></h1>
           <p className="lead">Relationship stress is one of the heaviest burdens to carry — especially when you feel you cannot talk to anyone about it. How Was Your Day connects you with peer listeners in India who have navigated the same complicated feelings and come out the other side.</p>
-          <QuickAnswer question={"My relationship is stressing me out \u2014 who can I talk to?"} answer={"When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. How Was Your Day connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Your first 5 minutes are free."} />
+          <QuickAnswer question={"My relationship is stressing me out \u2014 who can I talk to?"} answer={"When fights, distance or doubts keep building, talking them through with someone neutral helps you see clearly. How Was Your Day connects you with a peer listener in India who has lived through relationship stress — privately, by text or voice, with someone online now. They do not take sides and it is not couples therapy. Sessions start at 8 minutes."} />
         </div>
 
         {/* What Is Relationship Stress */}
@@ -267,7 +267,7 @@ export default function RelationshipStressSupportPage() {
           <h2>Talk to Someone Who Gets It</h2>
           <p>Find a peer listener who understands relationship stress. No appointments, no waitlists.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

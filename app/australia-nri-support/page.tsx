@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'NRI Emotional Support for Indians in Australia | How Was Your Day',
-    description: 'Indian in Australia and carrying the weight of expat life? Talk anonymously to a peer listener who understands. First 5 minutes free.',
+    description: 'Indian in Australia and carrying the weight of expat life? Talk anonymously to a peer listener who understands. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/australia-nri-support',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -35,7 +35,7 @@ const faqSchema = {
       name: 'Is there peer support available for Indians in Australia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day connects you with screened Indian peer listeners who understand the NRI experience — immigration stress, loneliness, homesickness, family pressure, the gap between the life you imagined and the one you are living. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes.',
+        text: 'Yes. How Was Your Day connects you with screened Indian peer listeners who understand the NRI experience — immigration stress, loneliness, homesickness, family pressure, the gap between the life you imagined and the one you are living. Sessions are anonymous, online daily on Indian time, and start with an 8-minute session.',
       },
     },
     {
@@ -97,7 +97,7 @@ export default function AustraliaNriSupportPage() {
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>
-          Talk to an Indian listener — first 5 min free
+          Talk to an Indian listener — from 8 minutes
         </a>
 
         <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 12 }}>What the Australian NRI Experience Actually Carries</h2>
@@ -118,7 +118,7 @@ export default function AustraliaNriSupportPage() {
 
         <div style={{ background: '#f0f9fb', borderRadius: 16, padding: '28px 24px', marginTop: 40, textAlign: 'center' }}>
           <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>You do not have to hold it alone.</p>
-          <p style={{ color: '#555', marginBottom: 20 }}>First 5 minutes free. Anonymous. In your language.</p>
+          <p style={{ color: '#555', marginBottom: 20 }}>Sessions from 8 minutes. Anonymous. In your language.</p>
           <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 32px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem' }}>
             Find a listener now
           </a>

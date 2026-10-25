@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to a Real Person, Not an AI | How Was Your Day',
-  description: 'How Was Your Day connects you with real human peer listeners — not AI chatbots. When you\'re lonely or overwhelmed, a real person who has lived through similar experiences is ready to listen. First 5 minutes free.',
+  description: 'How Was Your Day connects you with real human peer listeners — not AI chatbots. When you\'re lonely or overwhelmed, a real person who has lived through similar experiences is ready to listen. Sessions from 8 minutes.',
   keywords: [
     'talk to real person not ai', 'human vs ai emotional support', 'chatgpt for loneliness',
     'ai chatbot loneliness', 'real person to talk to online', 'human emotional support',
@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. Sessions from £7 for 15 minutes in India, US$10 for 15 minutes abroad.',
+    description: 'Sessions from 8 minutes. Sessions from £4.20 for 8 minutes.',
   },
 }
 
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'What is How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day is a peer support platform that connects you with real human listeners — people with lived experience, not AI chatbots or algorithms. Sessions start at 5 minutes free.',
+        text: 'How Was Your Day is a peer support platform that connects you with real human listeners — people with lived experience, not AI chatbots or algorithms. Sessions start at 8 minutes.',
       },
     },
     {
@@ -181,7 +181,7 @@ export default function TalkToRealPersonPage() {
           chatbots. Real humans.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to a real person now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to a real person now →</a>
 
         <div className="card">
           <h2>The problem with talking to AI about loneliness</h2>
@@ -241,7 +241,7 @@ export default function TalkToRealPersonPage() {
             </div>
             <div className="compare-col human">
               <h3>💙 How Was Your Day Real Human</h3>
-              <p>First 5 min free, then from £7 for 15 minutes — real connection that actually helps</p>
+              <p>From 8 minutes, then from £4.20 for 8 minutes — real connection that actually helps</p>
             </div>
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function TalkToRealPersonPage() {
 
         <div className="cta">
           <h2>Real humans. Real support. Right now.</h2>
-          <p>Browse listeners by availability, language, and topic. First 5 minutes free.</p>
+          <p>Browse listeners by availability, language, and topic. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-white">Browse real listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -278,7 +278,7 @@ export default function TalkToRealPersonPage() {
           <div className="faq-item">
             <h3>What is How Was Your Day?</h3>
             <p>How Was Your Day is a peer support platform that connects you with real human listeners — people with
-              lived experience, not AI chatbots or algorithms. Sessions start at 5 minutes free.</p>
+              lived experience, not AI chatbots or algorithms. Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day an AI chatbot?</h3>

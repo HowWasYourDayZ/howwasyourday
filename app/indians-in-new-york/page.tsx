@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand New York Indian life?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the specific intensity of New York: the pace, the cost of living pressure, the isolation of a city of millions. You don\'t need to explain the context.' } },
   { '@type': 'Question', name: 'When can I connect from New York?', acceptedAnswer: { '@type': 'Answer', text: 'New York (EST) is 10.5 hours behind IST. 8am NYC = 6:30pm India. Your morning commute on the subway — Queens to Manhattan or anywhere — is Indian evening. No appointment needed.' } },
   { '@type': 'Question', name: 'Is this private from my community in Queens or New Jersey?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the NYC or NJ Indian network. Nothing is shared with anyone.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInNewYorkPage() {
         <div className="hero">
           <p className="badge">Indians in NYC &middot; Queens &middot; Manhattan</p>
           <h1>Eight million people around you. <em>And still, some nights hit differently.</em></h1>
-          <p className="lead">New York&rsquo;s Indian diaspora is scattered across Queens, Manhattan, New Jersey suburbs, and Long Island. The subway, the grind, the relentless pace — and somewhere in between the appointments and the ambition, a quieter loneliness. Talk to a real peer listener in India. First 5 minutes free.</p>
+          <p className="lead">New York&rsquo;s Indian diaspora is scattered across Queens, Manhattan, New Jersey suburbs, and Long Island. The subway, the grind, the relentless pace — and somewhere in between the appointments and the ambition, a quieter loneliness. Talk to a real peer listener in India. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInNewYorkPage() {
           <h2>Jackson Heights to Murray Hill: New York&rsquo;s Indian Map</h2>
           <p>New York&rsquo;s Indian community is spread across the city in ways that reflect its diversity. Jackson Heights in Queens — the neighbourhood around 74th Street — is one of the most famous South Asian corridors in America, with Bengali, Bangladeshi, Pakistani, and Indian communities layered on top of each other. Flushing has a large Indian presence. Murray Hill in Manhattan is home to younger professionals. Long Island has established South Asian suburbs. New Jersey — just across the water — is an extension of this same diaspora.</p>
           <p>The city moves fast. Friendships form in workplaces and immediately take on a professional texture. The community is present — the restaurants, the temples, the cultural events — but deeply distributed. You might go weeks without a real conversation. The pace and ambition that drew you here are also the things that keep genuine connection at arm&rsquo;s length.</p>
-          <p>How Was Your Day is for exactly this: a real Indian peer listener in India, understanding everything about where you come from, available when the New York pace briefly stops and something quieter comes through. First 5 minutes free.</p>
+          <p>How Was Your Day is for exactly this: a real Indian peer listener in India, understanding everything about where you come from, available when the New York pace briefly stops and something quieter comes through. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>The New York Indian Experience: Real and Unspoken</h2>
           <p>New York draws Indian professionals in finance, technology, medicine, law, and the arts. Each carries a particular weight. The finance professional in Midtown who earns extraordinarily but works hours that leave no room for a life. The doctor doing a residency at a Manhattan hospital, 80-hour weeks, far from family. The tech worker in a Brooklyn apartment who moved from the Bay Area and is still figuring out what New York means to them.</p>
-          <p>New York (EST) is 10.5 hours behind IST. 8am NYC is 6:30pm India. Your morning — whether you&rsquo;re on the 7 train from Jackson Heights or walking over the Queensboro Bridge — is India&rsquo;s evening. A real Indian listener is available, without an appointment, in the gaps the city briefly creates. Sessions are anonymous and completely private. The first 5-minute session free.</p>
+          <p>New York (EST) is 10.5 hours behind IST. 8am NYC is 6:30pm India. Your morning — whether you&rsquo;re on the 7 train from Jackson Heights or walking over the Queensboro Bridge — is India&rsquo;s evening. A real Indian listener is available, without an appointment, in the gaps the city briefly creates. Sessions are anonymous and completely private. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>New York pace. Real human connection.</h2><p>Real Indian peer listener. Understands NYC Indian life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>New York pace. Real human connection.</h2><p>Real Indian peer listener. Understands NYC Indian life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indians-in-new-jersey">Indians in New Jersey &rarr;</a>

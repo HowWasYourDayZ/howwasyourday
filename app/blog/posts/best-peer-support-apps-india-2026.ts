@@ -27,7 +27,7 @@ export const post = {
 
 <p><strong>What it is:</strong> A peer support platform connecting people with screened peer listeners — real humans who have lived experience in the emotional area they support people through. Every How Was Your Day listener has personally been through something relevant to the conversations they take. They are screened for active listening and supportive conversation. They are not licensed therapists.</p>
 
-<p><strong>Cost:</strong> Around ₹160/session. Your first 5-minute session is free, so you can get a sense of whether the connection feels right before committing.</p>
+<p><strong>Cost:</strong> Around ₹160/session. Sessions start at 8 minutes, so you can get a sense of whether the connection feels right before committing.</p>
 
 <p><strong>Pros:</strong> Real humans, not AI. Private — first name only, no last name, no photo. No appointment needed. Pay per session, no subscription trap. The lived-experience angle is the most meaningful differentiator: when someone says "I've been through something like that," they mean it.</p>
 
@@ -85,6 +85,6 @@ export const post = {
 
 <p>The mental health gap in India is real. Therapy is out of reach for most people. AI responses are not the same as being heard. Peer support from a real person with lived experience is not perfect, but for the everyday emotional weight that most people are carrying — loneliness, burnout, relationship stress, family pressure, the general heaviness of a hard season — it is often exactly the right tool.</p>
 
-<p>If that is what you are looking for, <a href="/browse">browse How Was Your Day peer listeners here</a>. First 5 minutes are free.</p>
+<p>If that is what you are looking for, <a href="/browse">browse How Was Your Day peer listeners here</a>. Sessions start at 8 minutes.</p>
 `,
 }

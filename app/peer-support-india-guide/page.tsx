@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: 'What does a peer support session on How Was Your Day cost?',
-    a: 'In India: the listener\'s per-minute rate × minutes + a flat ₹10 platform fee. At ₹10/min, a 15-minute session is ₹160. Voice calls are ₹5/min more than text. Outside India, prices start at US$10 (15 min), US$15 (30 min), US$20 (45 min). Every new account receives one free 5-minute introduction.',
+    a: 'In India: the listener\'s per-minute rate × minutes + a flat ₹10 platform fee. At ₹10/min, a 15-minute session is ₹160. Voice calls are ₹5/min more than text. Outside India, prices start at US$10 (15 min), US$15 (30 min), US$20 (45 min). Sessions start at 8 minutes.',
   },
 ]
 
@@ -263,7 +263,7 @@ export default function PeerSupportIndiaGuidePage() {
             <li><strong>Topic match</strong> — filter by the topic you want to discuss (loneliness, burnout, relationship stress, grief, etc.).</li>
             <li><strong>Language</strong> — if you want to speak in your first language, filter by language.</li>
             <li><strong>Rating and sessions</strong> — a listener with a higher rating and more completed sessions has a demonstrated track record.</li>
-            <li><strong>Free introduction</strong> — use the free 5-minute first session to get a sense of whether the listener&apos;s style works for you.</li>
+            <li><strong>Free introduction</strong> — use a short 8-minute session to get a sense of whether the listener&apos;s style works for you.</li>
           </ul>
         </div>
 
@@ -298,7 +298,7 @@ export default function PeerSupportIndiaGuidePage() {
 
         <div id="pricing" className="section">
           <h2>Pricing</h2>
-          <p>Every new account receives one free 5-minute introduction. There are no subscriptions or automatic charges.</p>
+          <p>Sessions start at 8 minutes. There are no subscriptions or automatic charges.</p>
           <ul>
             <li><strong>India:</strong> listener&apos;s per-minute rate × minutes + ₹10 flat platform fee. At ₹10/min: 15 min = ₹160, 30 min = ₹310, 45 min = ₹460. Voice calls: +₹5/min.</li>
             <li><strong>Outside India:</strong> from US$10 (15 min), US$15 (30 min), US$20 (45 min).</li>
@@ -326,7 +326,7 @@ export default function PeerSupportIndiaGuidePage() {
 
         <div className="cta-card">
           <h2>Ready to talk to a peer listener?</h2>
-          <p>Browse real human peer listeners by topic and language. Private, no appointment needed. First 5 minutes free.</p>
+          <p>Browse real human peer listeners by topic and language. Private, no appointment needed. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners →</a>
         </div>
       </div>

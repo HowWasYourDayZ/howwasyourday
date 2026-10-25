@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'I was laid off and I am terrified. Is this the right place to talk about that?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. H1B layoff is not like a normal layoff — it comes with a 60-day clock, immediate visa jeopardy, and a rush of decisions that need to be made under enormous pressure. The emotional weight of that terror is something How Was Your Day listeners understand and can hold with you.' } },
   { '@type': 'Question', name: 'My partner is on H4 and cannot work. We are both struggling. Can we each talk to a listener?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, absolutely. The H4 isolation — financial dependency, professional sidelining, far from your own support network — is its own form of stress that deserves space. Both the H1B holder and the H4 partner can find listeners who understand their specific experience.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your employer, your community, and your family will never know.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription needed.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription needed.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriH1bVisaStressPage() {
         <div className="hero">
           <p className="badge">H1B Visa &middot; Immigration Anxiety &middot; Green Card Wait</p>
           <h1>You built a life here. <em>And you do not fully own it yet.</em></h1>
-          <p className="lead">H1B holders carry a quiet, chronic anxiety that rarely gets spoken out loud — tethered to an employer, living in fear of the layoff that changes everything, waiting in a green card queue that stretches a decade or more. This is not a legal blog. It is a space to speak the emotional weight of living on a leash. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">H1B holders carry a quiet, chronic anxiety that rarely gets spoken out loud — tethered to an employer, living in fear of the layoff that changes everything, waiting in a green card queue that stretches a decade or more. This is not a legal blog. It is a space to speak the emotional weight of living on a leash. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriH1bVisaStressPage() {
           <h2>Living on a Leash — the H1B Employer Dependency</h2>
           <p>The H1B visa ties your legal right to be in the United States to a single employer. This is not a trivial constraint — it shapes every major decision you make. You cannot easily quit a toxic job. You cannot take a sabbatical to deal with a family crisis. You cannot take time between jobs to reassess your career. Every setback at work — a bad manager, an unfair performance review, a restructuring — carries a weight that non-immigrant colleagues simply do not experience because their right to stay in the country is not on the table.</p>
           <p>The layoff, in particular, is a special terror for H1B holders. It is not just financial. It is existential — a 60-day clock, immediate visa jeopardy, the need to find a new sponsored job before the window closes, the decision of whether to try to stay or go back to India. This is a specific and acute form of stress that deserves to be named and spoken, not just managed.</p>
-          <p>How Was Your Day listeners understand the H1B experience from the inside. They have heard these fears from hundreds of people and they understand the specific shape of the anxiety without needing it explained. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand the H1B experience from the inside. They have heard these fears from hundreds of people and they understand the specific shape of the anxiety without needing it explained. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function NriH1bVisaStressPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The H1B anxiety deserves to be spoken aloud.</h2><p>Real peer listener. Understands the visa weight completely. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The H1B anxiety deserves to be spoken aloud.</h2><p>Real peer listener. Understands the visa weight completely. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-workplace-stress">NRI workplace stress &rarr;</a>
           <a href="/telugu-nri-support">Telugu NRI support &rarr;</a>

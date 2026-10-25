@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Is How Was Your Day useful for IT professionals in Hinjewadi and Magarpatta?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Long commutes, project deadlines, layoff anxiety, and living far from family are everyday realities for Pune\'s IT workforce. Many of How Was Your Day\'s listeners have lived through exactly this and offer judgment-free, completely private conversations from around ₹160 for 15 minutes — with one free 5-minute trial per account to start.',
+        text: 'Yes. Long commutes, project deadlines, layoff anxiety, and living far from family are everyday realities for Pune\'s IT workforce. Many of How Was Your Day\'s listeners have lived through exactly this and offer judgment-free, completely private conversations from around ₹160 for 15 minutes.',
       },
     },
     {
@@ -164,7 +164,7 @@ export default function PunePage() {
           <p>The pressure of competitive exams and placement season is intense and isolating. Talking to a listener who has been through it — and come out the other side — brings perspective no coaching class provides.</p>
 
           <h3>Young Professionals Far From Home</h3>
-          <p>When the workday ends and the flat is quiet, the distance from home feels longest. How Was Your Day listeners are available for a 15-minute conversation whenever the silence gets loud.</p>
+          <p>When the workday ends and the flat is quiet, the distance from home feels longest. How Was Your Day listeners are available for a 16-minute conversation whenever the silence gets loud.</p>
 
           <h3>Anyone Navigating a New Beginning</h3>
           <p>New city, new job, new relationship, new breakup. Pune is a city of transitions, and transitions are exactly when having someone to lean on matters most.</p>

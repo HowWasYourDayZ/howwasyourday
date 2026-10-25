@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview when self-doubt tends to peak.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview when self-doubt tends to peak.',
       },
     },
   ],
@@ -227,7 +227,7 @@ export default function ImposterSyndromeSupportPage() {
           <h2>Ready to Quiet the Inner Critic?</h2>
           <p>Talk to a peer listener who truly understands imposter syndrome. No appointments, no waitlists.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">You belong here — talk to someone — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">You belong here — talk to someone →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function ImposterSyndromeSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview.</div>
+            <div className="faq-a">How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time — including the night before a big presentation or interview.</div>
           </div>
         </div>
 

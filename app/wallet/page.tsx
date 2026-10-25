@@ -47,10 +47,10 @@ const S = `
 `
 
 // Amounts in pence (lib/money.ts). Session guide at the default 40p/min text
-// rate: 15 min ≈ £7, 30 min ≈ £13, 45 min ≈ £19 (incl. the £1 platform fee).
+// rate: 8 min £4.20, 16 min £7.40, 32 min £13.80 (incl. the £1 platform fee).
 const PRESETS = [
-  { amount:500,  sessions:'Tops up a short session', tag:'' },
-  { amount:1000, sessions:'~1 × 15 min',  tag:'Popular' },
+  { amount:500,  sessions:'~1 × 8 min',    tag:'' },
+  { amount:1000, sessions:'~1 × 16 min',  tag:'Popular' },
   { amount:2000, sessions:'~2–3 sessions', tag:'Best value' },
   { amount:5000, sessions:'~6 sessions',   tag:'' },
 ]

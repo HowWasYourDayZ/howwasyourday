@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost compared to therapy in the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A single therapy session in the USA can cost $150-$250. How Was Your Day sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. That is over 10 times more affordable per minute than most therapy options.',
+        text: 'A single therapy session in the USA can cost $150-$250. How Was Your Day sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Sessions from 8 minutes. That is over 10 times more affordable per minute than most therapy options.',
       },
     },
     {
@@ -157,7 +157,7 @@ export default function UsaTherapyAlternativePage() {
           of the cost.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>Why accessing mental health support in the USA is so hard</h2>

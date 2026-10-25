@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: 'Can I try How Was Your Day before paying?',
-    a: 'New seekers can start with a free 5-minute introductory session. The purpose is to help you see whether a particular listener feels like a good fit before continuing with paid time.',
+    a: 'New seekers can start with an 8-minute session. The purpose is to help you see whether a particular listener feels like a good fit before continuing with paid time.',
   },
   {
     q: 'Can I use text instead of voice?',
@@ -112,7 +112,7 @@ export default function AIHumanSupportPage() {
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>For:</strong> loneliness, relationship difficulties, work stress, homesickness, overthinking, family pressure, grief and other everyday situations where someone wants to talk.</div>
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Not for:</strong> diagnosis, psychotherapy, counselling, clinical treatment or emergency/crisis care.</div>
             <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Conversation:</strong> another human being, not an AI chatbot.</div>
-            <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Access:</strong> browse listener profiles, start one free 5-minute introduction, then continue with paid time if you choose. Paid sessions currently start at £7 for 15 minutes.</div>
+            <div className="rounded-2xl bg-[#F0F8FC] p-4"><strong>Access:</strong> browse listener profiles, start with an 8-minute session, then book longer if you choose. Paid sessions currently start at £4.20 for 8 minutes.</div>
           </div>
         </section>
 
@@ -146,7 +146,7 @@ export default function AIHumanSupportPage() {
           <h2 className="mb-5 text-2xl font-black">How the app works</h2>
           <ol className="space-y-4 text-white/90">
             <li><strong className="text-white">1. Browse.</strong> Read listener profiles and look for someone whose experience or topics feel relevant.</li>
-            <li><strong className="text-white">2. Try.</strong> Start with one free 5-minute introductory session.</li>
+            <li><strong className="text-white">2. Try.</strong> Start with an 8-minute session.</li>
             <li><strong className="text-white">3. Talk.</strong> Continue by text or voice if you want to keep the conversation going.</li>
             <li><strong className="text-white">4. Choose.</strong> Continue with listeners you genuinely connect with; you do not have to stay with a poor fit.</li>
           </ol>
@@ -167,7 +167,7 @@ export default function AIHumanSupportPage() {
 
         <section className="rounded-3xl border border-[#D5EEF6] p-7 text-center sm:p-9">
           <h2 className="mb-3 text-2xl font-black">Want a human conversation?</h2>
-          <p className="mb-6 text-slate-600">Start with a free 5-minute introduction and see whether the listener feels right for you.</p>
+          <p className="mb-6 text-slate-600">Start with an 8-minute session and see whether the listener feels right for you.</p>
           <a href="/browse" className="inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Find someone to talk to →</a>
         </section>
 

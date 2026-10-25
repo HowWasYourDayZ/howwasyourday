@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'Can talking to someone at night help with anxiety and insomnia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — and the mechanism is straightforward. Night anxiety is often circular: thoughts loop because they have nowhere to go. Speaking them out loud, to someone who listens without judgment, interrupts the loop. It is not magic — it is just that language requires sequencing, and sequencing breaks cycles. Many people find that a 15-minute conversation in the early hours is more effective than two hours of solo spiraling.',
+        text: 'Yes — and the mechanism is straightforward. Night anxiety is often circular: thoughts loop because they have nowhere to go. Speaking them out loud, to someone who listens without judgment, interrupts the loop. It is not magic — it is just that language requires sequencing, and sequencing breaks cycles. Many people find that a 16-minute conversation in the early hours is more effective than two hours of solo spiraling.',
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to someone at night in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session and listeners are often online late at night. New users get a free 5-minute trial. For the cost of a coffee, you can have a real conversation with someone who has personally navigated what you are going through — and who is awake right now.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session and listeners are often online late at night. Sessions start at 8 minutes. For the cost of a coffee, you can have a real conversation with someone who has personally navigated what you are going through — and who is awake right now.',
       },
     },
   ],
@@ -206,7 +206,7 @@ export default function CantSleepAnxietyPage() {
           <p>If you have been lying awake for more than 20 minutes, get up. Do not stay in bed trying to force sleep — it reinforces the anxiety. Do something boring and non-stimulating: fold clothes, read a physical book with a lamp, make a warm drink, sit quietly. Not a screen. Not email. Something that occupies your hands without activating your mind. When you feel genuinely sleepy, go back to bed.</p>
 
           <h3>Talk to Someone</h3>
-          <p>This is the most underused and most effective intervention for night anxiety. The thoughts are looping because they are solo — your mind circling the same track with no interruption. Speaking them out loud to another person, even briefly, breaks the loop. Language requires sequencing. Sequencing requires linear thought. Linear thought interrupts the circular spiral. A 15-minute conversation at 2 AM with someone who will simply listen — not fix, not advise, just hear — can achieve what two hours of solo rumination cannot.</p>
+          <p>This is the most underused and most effective intervention for night anxiety. The thoughts are looping because they are solo — your mind circling the same track with no interruption. Speaking them out loud to another person, even briefly, breaks the loop. Language requires sequencing. Sequencing requires linear thought. Linear thought interrupts the circular spiral. A 16-minute conversation at 2 AM with someone who will simply listen — not fix, not advise, just hear — can achieve what two hours of solo rumination cannot.</p>
 
           <h3>Avoid Screens in the Hour Before Sleep</h3>
           <p>The blue light from phones and laptops suppresses melatonin production and signals daylight to your brain. But the bigger issue is the stimulation: social media, news, and conversations are designed to engage and activate. You cannot wind down while simultaneously consuming content engineered to hold your attention. The hour before bed matters more than most people acknowledge.</p>
@@ -256,7 +256,7 @@ export default function CantSleepAnxietyPage() {
 
         <div className="cta-card">
           <h2>Someone Is Awake Right Now</h2>
-          <p>How Was Your Day listeners go online at different hours, including late at night. Talk to someone who knows the 2 AM feeling. Start with a free trial session.</p>
+          <p>How Was Your Day listeners go online at different hours, including late at night. Talk to someone who knows the 2 AM feeling. Start with an 8-minute session.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Someone is up too — start free now →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     languages: { 'en-GB': 'https://www.howwasyourday.live/dubai-loneliness' },
   },
   openGraph: {
-    title: 'Lonely in Dubai? Talk to an Indian Listener — First 5 Min Free',
+    title: 'Lonely in Dubai? Talk to an Indian Listener — From 8 Minutes',
     description: 'Dubai is glamorous on Instagram but lonely in reality for many Indian expats. How Was Your Day peer listeners understand the expat experience. Talk now, in your language.',
     url: 'https://www.howwasyourday.live/dubai-loneliness',
     siteName: 'How Was Your Day',
@@ -156,7 +156,7 @@ export default function DubaiLonelinessPage() {
           knows them, no roots, no softness. How Was Your Day is a place to say that out loud.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>The Dubai expat paradox — glamorous and hollow at once</h2>
@@ -196,7 +196,7 @@ export default function DubaiLonelinessPage() {
             <li>15-minute session — AED 37</li>
             <li>30-minute session — AED 55</li>
             <li>45-minute session — AED 74</li>
-            <li>Your first 5 minutes are free — always</li>
+            <li>Sessions start at 8 minutes — always</li>
           </ul>
           <p style={{ marginTop: '12px' }}>No subscriptions. No commitments. Pay only for what you use.</p>
         </div>
@@ -222,7 +222,7 @@ export default function DubaiLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How much does How Was Your Day cost from Dubai?</h3>
-            <p>AED 37 for 15 minutes, AED 55 for 30 minutes, AED 74 for 45 minutes. First 5 minutes are free.</p>
+            <p>AED 37 for 15 minutes, AED 55 for 30 minutes, AED 74 for 45 minutes. Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk in Hindi or my regional language?</h3>

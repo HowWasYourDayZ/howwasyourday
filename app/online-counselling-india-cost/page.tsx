@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Is there anything cheaper that still involves a real human?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Screened peer support sits between free helplines and clinical therapy. On How Was Your Day, one introductory session of up to 5 minutes is free per account, and paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. You are speaking to a real, verified human being with lived experience of something similar — not a bot and not a script. Peer listeners are not licensed therapists and do not provide clinical treatment.',
+        text: 'Yes. Screened peer support sits between free helplines and clinical therapy. On How Was Your Day, every session is paid, from 8 minutes, and paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. You are speaking to a real, verified human being with lived experience of something similar — not a bot and not a script. Peer listeners are not licensed therapists and do not provide clinical treatment.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What exactly does a How Was Your Day session cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions are 15, 30 or 45 minutes and are billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. You add money to a wallet before a session, and any unused wallet balance is fully refundable.',
+        text: 'Sessions are 15, 30 or 45 minutes and are billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. Every session is paid, from 8 minutes. You add money to a wallet before a session, and any unused wallet balance is fully refundable.',
       },
     },
   ],
@@ -171,7 +171,7 @@ export default function OnlineCounsellingCostPage() {
           <p>AI chat apps are cheap or free, always awake, and never judgemental. They can be a reasonable place to journal or to structure a thought at 3 a.m. But it is worth being plain about the limit: an AI is not a human being. It has never lost a parent, failed an exam, ended a relationship, or moved to a city where it knew nobody. Simulated empathy is not the same as a person who has actually been where you are and says so.</p>
 
           <h3>How Was Your Day Peer Support — rates set by each listener</h3>
-          <p>On How Was Your Day, paid sessions are billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. You top up a wallet before a session, and any unused balance is fully refundable. How Was Your Day listeners are screened peers with lived experience, not licensed clinicians — which is exactly why the price is different, and also why it is not a replacement for clinical care.</p>
+          <p>On How Was Your Day, paid sessions are billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. Every session is paid, from 8 minutes. You top up a wallet before a session, and any unused balance is fully refundable. How Was Your Day listeners are screened peers with lived experience, not licensed clinicians — which is exactly why the price is different, and also why it is not a replacement for clinical care.</p>
         </div>
 
         {/* Decision framework */}
@@ -214,7 +214,7 @@ export default function OnlineCounsellingCostPage() {
             <li>Availability 24 hours a day — no appointment, no waitlist, no two-week gap before someone can see you.</li>
             <li>Complete anonymity. You choose what you share, and nobody in your life finds out.</li>
             <li>A refundable wallet — any balance you do not use comes back to you in full.</li>
-            <li>One introductory session of up to 5 minutes is free per account, so you can try the service before deciding whether to pay for a longer session.</li>
+            <li>Every session is paid, from 8 minutes, so you can try the service before deciding whether to pay for a longer session.</li>
           </ul>
           <p>If it turns out that what you need is clinical care, a listener will say so and point you toward it. The goal is that you end up in the right place, not that you spend money here.</p>
         </div>
@@ -242,7 +242,7 @@ export default function OnlineCounsellingCostPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is there anything cheaper that still involves a real human?</div>
-            <div className="faq-a">Yes. Screened peer support sits between free helplines and clinical therapy. On How Was Your Day, paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, a 15-minute conversation with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee, with a real screened peer listener who brings relevant lived experience. One introductory session of up to 5 minutes is free per account. Peer listeners are not licensed therapists and do not provide clinical treatment.</div>
+            <div className="faq-a">Yes. Screened peer support sits between free helplines and clinical therapy. On How Was Your Day, paid sessions are charged by the minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee. For example, a 16-minute conversation with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee, with a real screened peer listener who brings relevant lived experience. Every session is paid, from 8 minutes. Peer listeners are not licensed therapists and do not provide clinical treatment.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is free support good enough?</div>
@@ -250,7 +250,7 @@ export default function OnlineCounsellingCostPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What exactly does a How Was Your Day session cost?</div>
-            <div className="faq-a">Sessions are 15, 30 or 45 minutes, billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. You add money to a wallet beforehand, and any unused balance is fully refundable.</div>
+            <div className="faq-a">Sessions are 15, 30 or 45 minutes, billed per minute at the selected listener’s per-minute rate, plus a flat ₹10 platform fee per paid session. For example, 15 minutes with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. Every session is paid, from 8 minutes. You add money to a wallet beforehand, and any unused balance is fully refundable.</div>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import { PLATFORM_FEE, FREE_SESSION_MINS } from '@/lib/constants'
+import { PLATFORM_FEE, SESSION_DURATIONS } from '@/lib/constants'
 import { formatGBP } from '@/lib/money'
 
 // "Talk now" (/talk) — the match-first entry for people who don't want to
@@ -23,7 +23,7 @@ export function talkTopic(id: string | null | undefined) {
 }
 
 // Paid "Talk now" matches only listeners at or below this TEXT rate, so the
-// price is known before anyone is picked (40p/min → £7 for 15 min of text,
+// price is known before anyone is picked (40p/min → £4.20 for 8 min of text,
 // including the £1 platform fee). Pence, like every amount (lib/money.ts).
 // Seekers who want a particular (or pricier) listener still use /browse.
 export const TALK_MAX_TEXT_RATE = 40
@@ -45,11 +45,11 @@ export const TALK_MAX_TRIES = 10
 // Must stay literally true: prices from lib/constants + lib/geo-pricing,
 // listeners are SCREENED (never "trained"), only Samaritans / Shout (text SHOUT to 85258).
 
-const TALK_EX15 = TALK_MAX_TEXT_RATE * 15 + PLATFORM_FEE
+const talkMax = (mins: number) => TALK_MAX_TEXT_RATE * mins + PLATFORM_FEE
 
 export const TALK_FAQ: { q: string; a: string }[] = [
   { q: 'What is How Was Your Day Talk now?', a: `Talk now (howwasyourday.live/talk) is the quickest way to talk to a real person, anywhere in the UK. You pick what is on your mind and text or voice, and How Was Your Day asks a screened peer listener who is online — no browsing and no appointment. If a listener does not answer within about ${TALK_TRY_SECS} seconds, How Was Your Day asks the next one automatically, for up to ${Math.round(TALK_MAX_WAIT_SECS / 60)} minutes. A session starts only when a listener accepts; if nobody can, you are not charged.` },
-  { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that a Talk now session is 15 minutes, up to ${formatGBP(TALK_EX15)} for text (you pay the matched listener's own price, shown before anyone is asked). You see the price before anyone is asked, it is charged only if a listener accepts, and unused minutes come back to your wallet.` },
+  { q: 'How much does it cost?', a: `Every session is paid — there is no free trial. You choose ${SESSION_DURATIONS.join(', ')} minutes; for text that is at most ${SESSION_DURATIONS.map(m => formatGBP(talkMax(m))).join(' / ')} (you pay the matched listener's own price, shown before anyone is asked). You see the price before anyone is asked, it is charged only if a listener accepts, and unused minutes come back to your wallet.` },
   { q: 'Who can use it?', a: 'Adults 18 and over. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).' },
   { q: 'Who will I talk to?', a: 'A screened peer listener based in the UK — an ordinary adult with lived experience who listens without judging you. Listeners pass a written application, a screening quiz, a live selfie check and a manual review by How Was Your Day. They are not therapists and do not give medical advice.' },
   { q: 'What can I talk about?', a: 'Relationship problems, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day. You choose the topic so How Was Your Day can start with listeners who talk about it.' },

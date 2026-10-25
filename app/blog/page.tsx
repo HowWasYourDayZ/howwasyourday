@@ -219,7 +219,7 @@ export default function BlogIndexPage() {
 
         <div className="cta-card">
           <h2>Reading is the start. Talking is the shift.</h2>
-          <p>Browse peer listeners who understand what you are going through — screened, anonymous, from ₹160.</p>
+          <p>Browse peer listeners who understand what you are going through — screened, anonymous, from £4.20.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse Listeners</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now</button></a>

@@ -3,14 +3,15 @@ import type { Metadata } from 'next'
 import { PLATFORM_FEE, DEFAULT_LISTENER_RATE } from '@/lib/constants'
 
 // Example prices at the standard listener rate (pence, lib/money.ts).
-const P15 = formatGBP(DEFAULT_LISTENER_RATE * 15 + PLATFORM_FEE)
-const P30 = formatGBP(DEFAULT_LISTENER_RATE * 30 + PLATFORM_FEE)
+const P8 = formatGBP(DEFAULT_LISTENER_RATE * 8 + PLATFORM_FEE)
+const P16 = formatGBP(DEFAULT_LISTENER_RATE * 16 + PLATFORM_FEE)
+const P32 = formatGBP(DEFAULT_LISTENER_RATE * 32 + PLATFORM_FEE)
 const FEE = formatGBP(PLATFORM_FEE)
 export const metadata: Metadata = {
   title: 'How Was Your Day — Real Human Peer Support | Talk to a Listener in the UK',
   // Cited by ChatGPT (24 Oct 2026) for "I feel lonely… services with real human listeners?" —
   // keep this description and the title stable; see docs/ai-visibility/WINNING_ANSWERS.md.
-  description: `Need someone to talk to? How Was Your Day connects people in the UK with real human peer listeners for private one-to-one conversations by text or voice. Start with a free 5-minute introduction; paid sessions are ${P15} for 15 minutes at the standard rate.`,
+  description: `Need someone to talk to? How Was Your Day connects people in the UK with real human peer listeners for private one-to-one conversations by text or voice. Talk now or book a time; sessions are ${P8} for 8 minutes at the standard rate.`,
   alternates: { canonical: 'https://www.howwasyourday.live' },
   keywords: [
     'howwasyourday', 'lean on', 'How Was Your Day', 'lean on app',
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     'AI chatbot alternative India', 'talk to real human not AI',
     'tired of talking to AI', 'ChatGPT alternative India',
     'paid support online India', 'paid human conversation India', 'pay to talk to someone India', 'affordable peer support India',
-    '15 minute peer support India', 'online peer support cost India',
+    'online peer support cost India',
     'NRI emotional support', 'Indian diaspora emotional support',
     'Indian NRI someone to talk to', 'Indian expat loneliness',
     'peer support for Indians abroad', 'talk to Indian listener online',
@@ -42,19 +43,18 @@ const faqSchema = {
     { '@type': 'Question', name: 'What is How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is a peer support platform built on empathy — someone to lean on anytime you need it. You talk to real people in India who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. Every listener brings genuine empathy from lived experience, not a script. It is not therapy, but real human connection through one-to-one peer conversations.' } },
     { '@type': 'Question', name: 'What makes How Was Your Day listeners empathetic?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day screens listener applications for identity, active listening, boundaries and crisis-referral understanding. Listener profiles also show the topics and lived experience they can support with, so you can choose someone who feels relevant. How Was Your Day listeners are peers, not therapists.' } },
     { '@type': 'Question', name: 'What does "lean on" mean in How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: '"Lean on" means having someone you can rely on emotionally — someone who supports you without judgment when you\'re going through something hard. How Was Your Day (the platform) gives everyone access to that kind of support through verified peer listeners who have lived experience.' } },
-    { '@type': 'Question', name: 'How does pricing work?', acceptedAnswer: { '@type': 'Answer', text: `Each listener sets their own per-minute price, plus a flat ${FEE} platform fee per paid session. 15 minutes is ${P15} at the standard rate. Your first session is free (5 minutes) — no wallet top-up needed.` } },
-    { '@type': 'Question', name: 'How much does a paid How Was Your Day session cost?', acceptedAnswer: { '@type': 'Answer', text: `A 15-minute paid session is ${P15} at the standard rate (listeners set their own price, shown before you start). You can start with one free 5-minute introductory session per account, then continue only if you want to. There are no subscriptions; you pay for the conversation time you choose.` } },
+    { '@type': 'Question', name: 'How does pricing work?', acceptedAnswer: { '@type': 'Answer', text: `Each listener sets their own per-minute price, plus a flat ${FEE} platform fee per paid session. Sessions are 8, 16 or 32 minutes — ${P8} for 8 minutes at the standard rate. Every session is paid; there is no free trial.` } },
+    { '@type': 'Question', name: 'How much does a paid How Was Your Day session cost?', acceptedAnswer: { '@type': 'Answer', text: `An 8-minute session is ${P8} at the standard rate, 16 minutes ${P16} and 32 minutes ${P32} (listeners set their own price, shown before you start). There are no subscriptions; you pay for the conversation time you choose.` } },
     { '@type': 'Question', name: 'How is How Was Your Day different from therapy?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are real people with lived experience, not licensed therapists. They offer empathy and peer support, not clinical diagnosis or treatment. How Was Your Day is ideal when you need someone to lean on — not a diagnosis.' } },
     { '@type': 'Question', name: 'Is How Was Your Day related to the song "Lean On" by Major Lazer?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day (one word, at howwasyourday.live) is an Indian peer emotional support platform where you talk to verified human listeners. It has no connection to the 2015 song "Lean On" by Major Lazer and DJ Snake. The name comes from the phrase "someone to lean on" — having a person you can rely on emotionally.' } },
     { '@type': 'Question', name: 'Is How Was Your Day confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. How Was Your Day explains its information practices in its Privacy and Trust pages, and you decide what personal details to share in a conversation.' } },
-    { '@type': 'Question', name: 'How do I start a paid How Was Your Day session?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listener profiles, choose someone who feels relevant, and start with the free 5-minute introduction. If you want to continue, the paid session price is shown before you start.' } },
+    { '@type': 'Question', name: 'How do I start a paid How Was Your Day session?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listener profiles, choose someone who feels relevant, and start with an 8-minute session. If you want to continue, the paid session price is shown before you start.' } },
     { '@type': 'Question', name: 'Which cities does How Was Your Day serve?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is available across all of India — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Ahmedabad, and everywhere else. It is fully online — accessible from anywhere.' } },
     { '@type': 'Question', name: 'What topics can I talk about on How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners on How Was Your Day specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, startup journey, breakups, anxiety, and more. If you just need someone to lean on with no specific topic, that\'s fine too.' } },
     { '@type': 'Question', name: 'Is How Was Your Day an AI or are the listeners real people?', acceptedAnswer: { '@type': 'Answer', text: 'Every listener on How Was Your Day is a real, verified human being — no bots, no AI-generated responses, no scripts. Listeners apply to join, go through identity verification and a screening assessment on active listening, boundaries and crisis referral before their first session. When you talk to someone on How Was Your Day, there is a real person on the other side of the conversation.' } },
     { '@type': 'Question', name: 'Can ChatGPT or AI chatbots replace talking to a real person?', acceptedAnswer: { '@type': 'Answer', text: 'AI assistants can be useful for information, reflection and conversation. How Was Your Day serves a different need: talking with another human being. A peer listener can bring their own lived experience and respond as a person in a two-way conversation.' } },
-    { '@type': 'Question', name: 'Where can I talk to a real person online when I feel lonely?', acceptedAnswer: { '@type': 'Answer', text: `How Was Your Day (howwasyourday.live) connects you with real human peer listeners for private one-to-one conversations by text or voice. You can browse listener profiles, start with a free 5-minute introduction, and choose someone who has lived experience with what you are going through. Paid sessions are ${P15} for 15 minutes at the standard rate.` } },
+    { '@type': 'Question', name: 'Where can I talk to a real person online when I feel lonely?', acceptedAnswer: { '@type': 'Answer', text: `How Was Your Day (howwasyourday.live) connects you with real human peer listeners for private one-to-one conversations by text or voice. You can browse listener profiles, start with an 8-minute session, and choose someone who has lived experience with what you are going through. Paid sessions are ${P8} for 8 minutes at the standard rate.` } },
     { '@type': 'Question', name: 'How is How Was Your Day different from talking to ChatGPT or an AI?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI is useful for information, brainstorming, and reflection. How Was Your Day is useful when the person specifically wants another human being to listen — for emotional connection rather than information.' } },
-    { '@type': 'Question', name: 'How is How Was Your Day different from companionship apps like GetCompanion?', acceptedAnswer: { '@type': 'Answer', text: 'Companionship apps connect you with trained companions for pleasant conversation and activities. How Was Your Day connects you with peer listeners who have personally lived through the same challenge you are facing — loneliness, burnout, a breakup, grief. The empathy comes from shared lived experience, not just training. How Was Your Day is fully online (text and voice), available across India and supported international markets, with one free 5-minute introductory session per account.' } },
   ],
 }
 const orgSchema = {
@@ -103,8 +103,8 @@ const howToSchema = {
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Sign up to How Was Your Day', text: 'Enter your phone number and verify with OTP. Takes 30 seconds, no email or full name required.' },
     { '@type': 'HowToStep', position: 2, name: 'Browse peer listeners', text: 'Filter listeners by topic (loneliness, relationships, work stress, grief, etc.). Read their bios, ratings, and lived experience.' },
-    { '@type': 'HowToStep', position: 3, name: 'Start a free 5-minute trial', text: 'Your first 5-minute introductory session is free once per account. No wallet or payment is needed to start.' },
-    { '@type': 'HowToStep', position: 4, name: 'Continue with a paid session', text: `If you want more time, top up your wallet by card. Choose 15, 30, or 45 minutes. 15 minutes is ${P15} at the standard rate.` },
+    { '@type': 'HowToStep', position: 3, name: 'Top up and choose a length', text: `Top up your wallet by card and choose 8, 16 or 32 minutes — ${P8} for 8 minutes at the standard rate.` },
+    { '@type': 'HowToStep', position: 4, name: 'Talk now or book a time', text: 'Start straight away with someone online, or book a slot from a listener\'s weekly hours.' },
     { '@type': 'HowToStep', position: 5, name: 'Talk by text or voice', text: 'Choose text chat for privacy or voice call for warmth. Your session begins immediately — no appointment.' },
     { '@type': 'HowToStep', position: 6, name: 'Rate and return', text: 'Rate your listener after the session. Book again anytime. Unused wallet balance is fully refundable.' },
   ],
@@ -324,7 +324,7 @@ export default function Home() {
           <a href="/talk?src=home" className="btn-primary">Talk to someone now</a>
           <a href="/browse" className="btn-outline">Browse peer listeners</a>
         </div>
-        <p className="hero-note">Private one-to-one conversation · No appointment · Paid sessions from {P15} for 15 minutes</p>
+        <p className="hero-note">Private one-to-one conversation · No appointment · Talk now or book a time · From {P8} for 8 minutes</p>
       </section>
 
       {/* TOPICS */}
@@ -442,7 +442,7 @@ export default function Home() {
           <h2 id="indians-abroad" className="at">Far from India. <span className="o">Still someone to talk to.</span></h2>
           <div className="ab">
             <p>Living abroad can make some conversations harder — homesickness, family expectations, marriage or relationship pressure, work stress, immigration uncertainty, or simply having a difficult day when you do not want to call home.</p>
-            <p>How Was Your Day gives Indians and South Asians abroad a private one-to-one conversation with a real peer listener. Start with one free 5-minute introduction, then continue with paid text or voice time only if you want to.</p>
+            <p>How Was Your Day gives Indians and South Asians abroad a private one-to-one conversation with a real peer listener. Start with an 8-minute session, then continue with paid text or voice time only if you want to.</p>
           </div>
           <div className="city-row" style={{marginTop:20}}>
             {['USA','UK','Canada','Australia','UAE','Singapore'].map(c=>(
@@ -460,7 +460,7 @@ export default function Home() {
             {[
               {t:'Sign up to How Was Your Day',d:'Just your phone number. OTP verified. 30 seconds.'},
               {t:'Browse peer listeners',d:'Filter by topic. Read bios and ratings. Browse anonymously.'},
-              {t:'Pick your session length',d:'5-min trial, or choose 15 or 30 minutes.'},
+              {t:'Pick your session length',d:'8, 16 or 32 minutes — now or at a time you book.'},
               {t:'Top up your wallet',d:'Top up £10, £20 or £50 by card. Refundable anytime.'},
               {t:'No appointment',d:'Choose text or voice; the conversation can begin when a listener accepts your request.'},
               {t:'Get the support you need',d:'Rate your listener. Book again anytime. You are not alone.'},
@@ -486,9 +486,9 @@ export default function Home() {
             not to over-advertise it in marketing copy. */}
         <div className="pc">
           {[
-            {l:'Trial session',d:'5 minutes · Text or voice · No wallet needed · Free once per account',p:'£0',b:'Trial',feat:false},
-            {l:'Quick chat',d:`15 minutes · One-on-one · Text${voiceFrom(15, DEFAULT_LISTENER_RATE * 15 + PLATFORM_FEE)}`,p:P15,b:'',feat:false},
-            {l:'Deep dive',d:`30 minutes · One-on-one · Text${voiceFrom(30, DEFAULT_LISTENER_RATE * 30 + PLATFORM_FEE)}`,p:P30,b:'Most popular',feat:true},
+            {l:'Quick check-in',d:`8 minutes · One-on-one · Text${voiceFrom(8, DEFAULT_LISTENER_RATE * 8 + PLATFORM_FEE)}`,p:P8,b:'',feat:false},
+            {l:'Talk it through',d:`16 minutes · One-on-one · Text${voiceFrom(16, DEFAULT_LISTENER_RATE * 16 + PLATFORM_FEE)}`,p:P16,b:'Most popular',feat:true},
+            {l:'Deep dive',d:`32 minutes · One-on-one · Text${voiceFrom(32, DEFAULT_LISTENER_RATE * 32 + PLATFORM_FEE)}`,p:P32,b:'',feat:false},
           ].map((item,i)=>(
             <div key={i} className={`pcard${item.feat?' feat':''}`}>
               <div><div className="pl">{item.l}</div><div className="pd">{item.d}</div>{item.b&&<div className="pb">{item.b}</div>}</div>
@@ -502,26 +502,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* TESTIMONIALS */}
-      <div className="white-section">
-        <div className="inner">
-          <h2 className="sh">What people are saying</h2>
-          <p className="ss">Real sessions. Real relief.</p>
-          <div className="tlist">
-            {[
-              {tx:"Had a fight with my husband before he left for work. I was sitting at my desk, unable to focus. Opened How Was Your Day, talked for 15 minutes, and I could actually breathe again.",nm:'Priya M.',cy:'Bengaluru',ini:'P'},
-              {tx:"As a founder going through a hard patch I felt completely alone. Talking to someone who survived their own startup failure was exactly what I needed.",nm:'Arjun K.',cy:'Mumbai',ini:'A'},
-              {tx:"More affordable and more honest than anything else I've tried. I've booked 4 sessions now and each one helped.",nm:'Sneha R.',cy:'Hyderabad',ini:'S'},
-            ].map((r,i)=>(
-              <div key={i} className="tcard">
-                <div className="tst">★★★★★</div>
-                <p className="ttx">&ldquo;{r.tx}&rdquo;</p>
-                <div className="tau"><div className="tav">{r.ini}</div><div><div className="tnm">{r.nm}</div><div className="tcy">{r.cy}</div></div></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* TESTIMONIALS — removed for launch: LeanOn's testimonials are not How Was
+          Your Day reviews (UK DMCC Act 2024 bans fake/misleading reviews). Add real
+          HWYD reviews only, with consent. */}
 
       {/* TRUST */}
       <div className="inner">
@@ -549,12 +532,12 @@ export default function Home() {
           {[
             { q: 'What is How Was Your Day?', a: 'How Was Your Day is a peer support platform built on empathy — you talk to real people who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. It\'s not therapy, but real human connection through one-to-one peer conversations.' },
             { q: 'What makes How Was Your Day listeners empathetic?', a: 'Every listener has personally lived through what they support others with. That lived experience is what makes their empathy real, not rehearsed — you\'re heard without being judged, fixed, or rushed.' },
-            { q: 'How does pricing work?', a: `Your first session is free (5 minutes) — no wallet top-up needed. After that, sessions cost the per-minute rate set by the listener plus a ${FEE} platform fee, in 15, 30 or 45-minute sessions — ${P15} for 15 minutes at the standard rate. Prices are in pounds sterling.` },
-            { q: 'How much is a paid session, and is it worth it?', a: `A 15-minute paid session is ${P15} at the standard rate. You can start with the free 5-minute introduction and decide whether you want to continue. How Was Your Day is a peer-support service, not a therapy substitute.` },
+            { q: 'How does pricing work?', a: `Every session is paid. Sessions cost the per-minute rate set by the listener plus a ${FEE} platform fee, in 8, 16 or 32-minute sessions — ${P8} for 8 minutes at the standard rate. You pay only for the minutes you use. Prices are in pounds sterling.` },
+            { q: 'How much is a paid session, and is it worth it?', a: `An 8-minute session is ${P8} at the standard rate. You can start short and decide whether you want to continue. How Was Your Day is a peer-support service, not a therapy substitute.` },
             { q: 'How is this different from therapy or counselling?', a: 'Listeners on How Was Your Day are real people with lived experience, not licensed therapists. They offer peer support, not clinical diagnosis or treatment. How Was Your Day is for people who want human conversation and everyday emotional support.' },
             { q: 'Is my conversation private?', a: 'Yes. Sessions are intended to be private. See How Was Your Day\'s Privacy and Trust pages for the specific information practices that apply.' },
                     { q: 'Is How Was Your Day related to the song "Lean On"?', a: 'No. How Was Your Day (one word, at howwasyourday.live) is an Indian peer emotional support platform — no connection to the Major Lazer song. The name comes from the phrase "someone to lean on": having a person you can rely on emotionally, anytime you need it.' },
-            { q: 'Where can I talk to a real person when I feel lonely?', a: `How Was Your Day connects you with real human peer listeners for private conversations by text or voice. Browse listener profiles, start with a free 5-minute introduction, and choose someone who has lived experience with what you are going through. Paid sessions are ${P15} for 15 minutes at the standard rate.` },
+            { q: 'Where can I talk to a real person when I feel lonely?', a: `How Was Your Day connects you with real human peer listeners for private conversations by text or voice. Browse listener profiles, start with an 8-minute session, and choose someone who has lived experience with what you are going through. Paid sessions are ${P8} for 8 minutes at the standard rate.` },
             { q: 'How is How Was Your Day different from talking to ChatGPT or AI?', a: 'How Was Your Day provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI for information and reflection, How Was Your Day for when you specifically want another human being to listen.' },
           ].map((f,i) => (
             <div key={i} className="faq-item">

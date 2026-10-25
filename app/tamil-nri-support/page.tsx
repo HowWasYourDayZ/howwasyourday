@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the pressure from Chennai or Coimbatore families specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Tamil listeners understand the regional dynamics — the weight of family reputation, arranged marriage expectations, caste conversations that follow you abroad, and the particular brand of Tamil pride that comes with being from a family that worked hard to send you.' } },
   { '@type': 'Question', name: 'Is this completely confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your family, your community, and your colleagues will never know. Nothing is shared or stored beyond the session.' } },
   { '@type': 'Question', name: 'I am in the UK or USA. What time can I call?', acceptedAnswer: { '@type': 'Answer', text: 'India listeners are active evenings IST (6pm–11pm). From the UK (BST), that is 1:30pm–6:30pm. From the US East Coast, that is 8:30am–1:30pm. From the West Coast, 5:30am–10:30am. Morning sessions in the US often work well.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. Sessions from US$10 for 15 minutes. No subscription, no commitment. Pay only if the session feels right after the first 5 minutes.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions from US$10 for 15 minutes. No subscription, no commitment. Pay only if the session feels right after the first 5 minutes.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function TamilNriSupportPage() {
         <div className="hero">
           <p className="badge">Tamil NRI &middot; Diaspora Support &middot; Peer Listening</p>
           <h1>You carry Tamil pride abroad. <em>But who carries you?</em></h1>
-          <p className="lead">The Tamil diaspora spans the UK, USA, Canada, Singapore, and Australia. Wherever you landed, you brought with you the weight of family expectations from Chennai or Coimbatore, the pressure to represent your culture well, and the quiet loneliness of being between two worlds. Talk to a Tamil peer listener who understands without explanation. First 5 minutes free.</p>
+          <p className="lead">The Tamil diaspora spans the UK, USA, Canada, Singapore, and Australia. Wherever you landed, you brought with you the weight of family expectations from Chennai or Coimbatore, the pressure to represent your culture well, and the quiet loneliness of being between two worlds. Talk to a Tamil peer listener who understands without explanation. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function TamilNriSupportPage() {
           <h2>The Tamil Abroad Experience Nobody Fully Articulates</h2>
           <p>Tamil families have one of the highest rates of overseas migration in India. You are part of a diaspora that spans generations — some of you are first-generation immigrants carrying the full weight of your family&rsquo;s hopes, others are second-generation carrying the confusion of belonging fully to neither place. Both are lonely in different ways, and both are real.</p>
           <p>There is the pressure to be &ldquo;settled abroad&rdquo; — a performance that begins before you even leave. Every call home is a status update. Every visit back is scrutinised. The &ldquo;nalla irukkiya?&rdquo; (are you doing well?) from your relatives is not just a greeting — it is a check on whether the sacrifice and the sending-away was worth it. You say yes. You are usually not entirely telling the truth.</p>
-          <p>And then there is the Tamil identity itself: the language pride, the Carnatic music you miss, Pongal celebrated in a cold flat, the caste conversations that follow you abroad even when you thought you had left them behind. How Was Your Day listeners understand this specific weight. You do not have to explain it. First 5 minutes free.</p>
+          <p>And then there is the Tamil identity itself: the language pride, the Carnatic music you miss, Pongal celebrated in a cold flat, the caste conversations that follow you abroad even when you thought you had left them behind. How Was Your Day listeners understand this specific weight. You do not have to explain it. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function TamilNriSupportPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You don&rsquo;t have to explain yourself to a Tamil listener.</h2><p>They already know the shape of it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You don&rsquo;t have to explain yourself to a Tamil listener.</h2><p>They already know the shape of it. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

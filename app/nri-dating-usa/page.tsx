@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Will the listener judge me for dating non-Indians or outside my caste?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners are peer listeners, not moral authorities. They will hear you without judgement, whatever your choices or situation. Their role is to understand, not to assess.' } },
   { '@type': 'Question', name: 'Is this confidential from my family and community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, community, or anyone else.' } },
   { '@type': 'Question', name: 'What if I\'m second-generation and my dating life is complicated by identity questions?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is particularly well-suited to second-generation Indian-Americans, who often navigate an identity gap between their American life and their Indian family. Listeners understand the ABCD experience without needing extensive explanation.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriDatingUsaPage() {
         <div className="hero">
           <p className="badge">NRI Dating &middot; Indian-American &middot; Desi Love Life</p>
           <h1>Dating apps. Family pressure. <em>Two completely different instructions for your love life.</em></h1>
-          <p className="lead">Dating as an Indian in America is navigating two incompatible instruction sets. Your parents want a rishta. Your friends are on Hinge. You&rsquo;re somewhere in between — wanting love but carrying the weight of expectations, the fear of judgment from the community, and the exhaustion of explaining your culture to every date. Talk to a real peer listener who understands this without explanation. First 5 minutes free.</p>
+          <p className="lead">Dating as an Indian in America is navigating two incompatible instruction sets. Your parents want a rishta. Your friends are on Hinge. You&rsquo;re somewhere in between — wanting love but carrying the weight of expectations, the fear of judgment from the community, and the exhaustion of explaining your culture to every date. Talk to a real peer listener who understands this without explanation. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,17 +84,17 @@ export default function NriDatingUsaPage() {
           <h2>The NRI Dating Double-Bind</h2>
           <p>Dating as an Indian in America puts you in a structural double-bind. American dating culture — apps, casual dating, taking time to find the right person, no rush — is fine in theory and complicated in practice when your family has a different timeline. Indian family culture — rishta, timelines, the community watching, your parents wanting to be involved — doesn&rsquo;t disappear because you live in Houston or Fremont.</p>
           <p>The result is a love life that often has a hidden layer. The relationship your parents don&rsquo;t know about. The non-Indian partner you&rsquo;re afraid to introduce. The Indian match your parents like and you don&rsquo;t. The exhausting Hinge conversations where you have to explain caste, your parents&rsquo; involvement, your timeline for marriage, and what Diwali means before you&rsquo;ve even had a first date. The loneliness of navigating all of this without a community of people who truly get it.</p>
-          <p>How Was Your Day is exactly that place — a real Indian peer listener who understands the double-bind from the inside. No explanation required. First 5 minutes free.</p>
+          <p>How Was Your Day is exactly that place — a real Indian peer listener who understands the double-bind from the inside. No explanation required. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>What People Actually Need to Say</h2>
           <p>The things people actually need to say about NRI dating are not the things that fit into a casual conversation with friends. "I&rsquo;m afraid that if I date the person I want, it will destroy my relationship with my parents." "I&rsquo;ve been on the apps for two years and I&rsquo;m starting to feel like something is wrong with me." "I&rsquo;m in a relationship I can&rsquo;t tell anyone about and it&rsquo;s exhausting." "My parents have a shortlist and I don&rsquo;t know how to say no without breaking their hearts."</p>
-          <p>These are real. A How Was Your Day listener will hear them — really hear them — without judgement, without advice you didn&rsquo;t ask for, and without the community gossip risk. Sessions are anonymous and completely private. First 5 minutes free — one free session per account.</p>
+          <p>These are real. A How Was Your Day listener will hear them — really hear them — without judgement, without advice you didn&rsquo;t ask for, and without the community gossip risk. Sessions are anonymous and completely private. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Someone who understands both instructions.</h2><p>Real Indian peer listener. Gets the NRI dating experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Someone who understands both instructions.</h2><p>Real Indian peer listener. Gets the NRI dating experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/usa">Desi support USA &rarr;</a>

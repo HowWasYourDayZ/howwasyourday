@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a session cost in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that: CA$14 for 15 minutes, CA$21 for 30 minutes, CA$28 for 45 minutes.',
+        text: 'Sessions start at 8 minutes. After that: CA$14 for 15 minutes, CA$21 for 30 minutes, CA$28 for 45 minutes.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function CanadaEmpathyListenerPage() {
           you wanted to talk about. How Was Your Day listeners get the Indian experience. You can just talk.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>Things you should not have to explain</h2>
@@ -191,7 +191,7 @@ export default function CanadaEmpathyListenerPage() {
         <div className="card">
           <h2>Session details</h2>
           <ul className="checklist">
-            <li>First 5 minutes completely free — no credit card</li>
+            <li>Sessions from 8 minutes — no credit card</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
             <li>Browse listener profiles and pick someone who feels right</li>
             <li>Anonymous — your conversations stay private</li>
@@ -225,7 +225,7 @@ export default function CanadaEmpathyListenerPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost in Canada?</h3>
-            <p>First 5 minutes free. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
+            <p>Sessions from 8 minutes. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
             <h3>Can I choose a listener based on their background?</h3>

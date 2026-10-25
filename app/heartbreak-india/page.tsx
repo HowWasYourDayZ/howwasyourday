@@ -29,7 +29,7 @@ const faqSchema = {
     { '@type': 'Question', name: 'Why do some heartbreaks hit harder than others?', acceptedAnswer: { '@type': 'Answer', text: 'The intensity of heartbreak is usually proportional to the degree of hope and investment you put into the relationship — not necessarily its duration. A relationship that felt like it could be the one, or a person who represented a particular future you had imagined, leaves a gap that is proportional to the size of that hope. It is also affected by attachment style, past loss, and how much of your identity was bound up in the relationship.' } },
     { '@type': 'Question', name: 'Is How Was Your Day different from talking to a friend about a breakup?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Friends who care about you usually get exhausted after a point — they feel helpless, they run out of things to say, they subtly start redirecting you toward moving on. A How Was Your Day listener has infinite patience for the grief, has no personal exhaustion about the topic, and is selected to hold difficult emotional conversations without trying to resolve them prematurely.' } },
     { '@type': 'Question', name: 'Does How Was Your Day offer support for breakups specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. There is also a dedicated /support/breakup page for the process of getting through a breakup. This page specifically addresses the physical and emotional pain of heartbreak — the acute phase where you cannot think about anything else and the pain feels unbearable.' } },
-    { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. The first 5 minutes are free. No subscription needed.' } },
+    { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions start at 8 minutes. No subscription needed.' } },
   ],
 }
 
@@ -98,7 +98,7 @@ export default function HeartbreakIndiaPage() {
         <div className="hero">
           <p className="badge">Heartbreak &middot; Breakup Pain &middot; India</p>
           <h1>It actually hurts. Your chest, your sleep, your appetite. <em>This is real.</em></h1>
-          <p className="lead">Heartbreak is not just feelings &mdash; it is a physical experience. Talk to a peer listener who has been there. Anonymous, from &#x20b9;160. First 5 minutes free.</p>
+          <p className="lead">Heartbreak is not just feelings &mdash; it is a physical experience. Talk to a peer listener who has been there. Anonymous, from &#x20b9;160. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -123,7 +123,7 @@ export default function HeartbreakIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>Your pain is real. You deserve to be heard.</h2>
-          <p>Anonymous peer support. No judgment. From &#x20b9;160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From &#x20b9;160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
         <div className="section">

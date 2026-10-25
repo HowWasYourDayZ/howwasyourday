@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand Seattle Indian tech worker life?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI tech worker experience — including the specific isolation of Seattle, the Microsoft and Amazon culture, the H-1B dependency, and the grey winters that compound everything. No explanation needed.' } },
   { '@type': 'Question', name: 'When can I connect from Seattle?', acceptedAnswer: { '@type': 'Answer', text: 'Seattle (PST/PDT) is 13.5 hours behind IST. 8am Seattle = 9:30pm India. Early mornings in Seattle align with late Indian evenings — listeners are often still available. 6am Seattle = 7:30pm India, a strong window.' } },
   { '@type': 'Question', name: 'Is this confidential from my Microsoft or Amazon colleagues?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous. Only a phone number and first name required. Nothing reaches your employer, your Bellevue or Redmond community, or family back in India.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInSeattlePage() {
         <div className="hero">
           <p className="badge">Indians in Seattle &middot; Bellevue &middot; Redmond</p>
           <h1>The Seattle Freeze is real. <em>Especially for Indians here.</em></h1>
-          <p className="lead">Bellevue and Redmond have tens of thousands of Indian tech workers. The &ldquo;Seattle Freeze&rdquo; is a real phenomenon — Seattleites are polite but don&rsquo;t warm up easily. Add to that the grey winters, the H-1B dependency on your job, and the community bubble that can feel both supportive and suffocating. Talk to a real listener in India. First 5 minutes free.</p>
+          <p className="lead">Bellevue and Redmond have tens of thousands of Indian tech workers. The &ldquo;Seattle Freeze&rdquo; is a real phenomenon — Seattleites are polite but don&rsquo;t warm up easily. Add to that the grey winters, the H-1B dependency on your job, and the community bubble that can feel both supportive and suffocating. Talk to a real listener in India. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInSeattlePage() {
           <h2>Bellevue, Redmond, Sammamish: The Indian Tech Corridor</h2>
           <p>The Eastside of Seattle — Bellevue, Redmond, Sammamish, Issaquah — has become one of the largest Indian tech worker concentrations in America, driven by Microsoft&rsquo;s headquarters in Redmond and Amazon&rsquo;s massive expansion in Bellevue. The Bellevue BAPS temple and the Redmond Shiva-Vishnu temple serve a large and growing community. Grocery stores, restaurants, community organisations — the infrastructure is here.</p>
           <p>And yet: the Seattle Freeze is real. Seattle is famous among newcomers for the difficulty of forming genuine friendships. Locals are polite and then closed. The Indian community offers warmth — but that warmth comes with the usual community dynamics: gossip, comparison, the performance of success. And underneath it all: nine months of grey sky every year, a work culture of 60-hour weeks, and the anxiety of a life entirely dependent on your employer&rsquo;s goodwill.</p>
-          <p>How Was Your Day is for exactly this. A real Indian peer listener in India — outside your Eastside bubble, inside your culture. First 5 minutes free.</p>
+          <p>How Was Your Day is for exactly this. A real Indian peer listener in India — outside your Eastside bubble, inside your culture. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>Grey Sky, Real Conversation</h2>
           <p>Seattle&rsquo;s weather is a psychological factor that is often underestimated. The overcast skies from October through May are genuinely affecting for people from sunny parts of India — Karnataka, Tamil Nadu, Andhra Pradesh, Punjab. The vitamin D deficiency is real. The seasonal weight accumulates. Combined with the isolation of a new city that doesn&rsquo;t warm up easily, and the pressure of a career that your visa depends on — it creates a specific kind of quiet overwhelm.</p>
-          <p>Seattle (PST/PDT) is 13.5 hours behind IST. 6am in Seattle is 7:30pm India — a prime window. Your early morning run by the Bellevue waterfront or your quiet coffee before the stand-up call is India&rsquo;s evening. Listeners are available, no appointment needed. Sessions are anonymous and completely private. The first 5-minute session free.</p>
+          <p>Seattle (PST/PDT) is 13.5 hours behind IST. 6am in Seattle is 7:30pm India — a prime window. Your early morning run by the Bellevue waterfront or your quiet coffee before the stand-up call is India&rsquo;s evening. Listeners are available, no appointment needed. Sessions are anonymous and completely private. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Someone warm, when Seattle is grey.</h2><p>Real Indian peer listener. Understands Seattle NRI life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Someone warm, when Seattle is grey.</h2><p>Real Indian peer listener. Understands Seattle NRI life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

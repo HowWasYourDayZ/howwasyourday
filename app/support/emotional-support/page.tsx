@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'How does online emotional support work on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You browse peer listeners, pick someone whose lived experience resonates with yours, and start a session via text or voice. The listener is a real person who has been through similar challenges and is screened and expected to offer empathetic, non-judgmental support. There is no booking required, and a short trial session is available for new users.',
+        text: 'You browse peer listeners, pick someone whose lived experience resonates with yours, and start a session via text or voice. The listener is a real person who has been through similar challenges and is screened and expected to offer empathetic, non-judgmental support. There is no booking required, and sessions start at 8 minutes.',
       },
     },
     {
@@ -220,7 +220,7 @@ export default function EmotionalSupportPage() {
           <p>Prefer to type? Use text chat. Want to hear a voice? Switch to audio. You are in complete control of how you communicate and how much you share. There is no pressure to go deeper than you want to, and no one will push you toward anything.</p>
 
           <h3>No Commitment Required</h3>
-          <p>If the first listener does not feel right, you can try another. A short trial session for new users exists specifically so you can find the right match before you commit to a longer session. Peer support is only useful when it feels right — and finding the right listener is part of the process.</p>
+          <p>If the first listener does not feel right, you can try another. Sessions start at 8 minutes, so you can find the right match before you commit to a longer session. Peer support is only useful when it feels right — and finding the right listener is part of the process.</p>
         </div>
 
         {/* Listener cards */}
@@ -260,7 +260,7 @@ export default function EmotionalSupportPage() {
           <h2>Start a Session Now</h2>
           <p>Find someone who understands. No appointment needed.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Get support from a real person — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Get support from a real person →</button></a>
             <a href="/browse"><button className="btn-secondary">Browse Listeners First</button></a>
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function EmotionalSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does online emotional support work on How Was Your Day?</div>
-            <div className="faq-a">You browse peer listeners, pick someone whose lived experience resonates with yours, and start a session via text or voice. The listener is a real person screened for empathetic support. There is no booking required, and a short trial session is available for new users.</div>
+            <div className="faq-a">You browse peer listeners, pick someone whose lived experience resonates with yours, and start a session via text or voice. The listener is a real person screened for empathetic support. There is no booking required, and sessions start at 8 minutes.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is online emotional support as effective as in-person support?</div>

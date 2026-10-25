@@ -50,7 +50,7 @@ export const post = {
 
 <p>When AI starts feeling hollow — when you notice the relief is shorter, when you find yourself wishing the response came from a real person — that is the moment to reach for one.</p>
 
-<p style="margin-top: 32px"><a href="/browse" style="display:inline-block;background:#0F4867;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700">Talk to a real Indian listener — first 5 minutes free</a></p>
+<p style="margin-top: 32px"><a href="/browse" style="display:inline-block;background:#0F4867;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700">Talk to a real Indian listener — sessions from 8 minutes</a></p>
 
 <p style="margin-top: 16px; color: #666; font-size: 0.85em">If you are in crisis: Samaritans 116 123 · text SHOUT to 85258</p>
 `,

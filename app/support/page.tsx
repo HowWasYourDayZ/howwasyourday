@@ -216,7 +216,7 @@ export default function SupportHubPage() {
         {/* Intro section */}
         <div className="intro-section">
           <h2>Why Peer Support Works</h2>
-          <p>Unlike therapy, peer support connects you with real people who have lived through similar challenges. On How Was Your Day, adults can request a one-to-one conversation with a screened peer listener by text or voice. One introductory session of up to 5 minutes is free per account; paid prices depend on listener and mode. Availability varies and requests are not always accepted. Peer listening is not a replacement for therapy.</p>
+          <p>Unlike therapy, peer support connects you with real people who have lived through similar challenges. On How Was Your Day, adults can request a one-to-one conversation with a screened peer listener by text or voice. Every session is paid, from 8 minutes; paid prices depend on listener and mode. Availability varies and requests are not always accepted. Peer listening is not a replacement for therapy.</p>
         </div>
 
         {/* CTA */}

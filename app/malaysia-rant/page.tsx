@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Need to Vent? Someone to Listen in Malaysia | How Was Your Day',
-  description: 'Frustrated, stressed, nowhere to vent in Malaysia? How Was Your Day gives you a real Indian listener who will hear you out completely — in Tamil, Hindi, or any Indian language. First 5 min free.',
+  description: 'Frustrated, stressed, nowhere to vent in Malaysia? How Was Your Day gives you a real Indian listener who will hear you out completely — in Tamil, Hindi, or any Indian language. From 8 minutes.',
   keywords: [
     'need to vent malaysia', 'someone to vent to malaysia', 'rant to someone malaysia',
     'talk about stress malaysia', 'frustrated in malaysia expat', 'no one to talk to malaysia indian',
@@ -161,7 +161,7 @@ export default function MalaysiaRantPage() {
           flinching.
         </p>
 
-        <a href="/browse" className="cta-hero">Rant to a listener now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Rant to a listener now →</a>
 
         <div className="card">
           <h2>Things you probably need to say right now</h2>
@@ -196,7 +196,7 @@ export default function MalaysiaRantPage() {
 
         <div className="card">
           <h2>Session pricing for Malaysia</h2>
-          <p>Pay in Malaysian ringgit. First 5 minutes free — one free session per account.</p>
+          <p>Pay in Malaysian ringgit. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>
@@ -248,7 +248,7 @@ export default function MalaysiaRantPage() {
           <div className="faq-item">
             <h3>How much does it cost from Malaysia?</h3>
             <p>RM 45 for 15 minutes, RM 67 for 30 minutes, or RM 89 for 45 minutes. First 5 minutes
-              of your first session are free.</p>
+              of a session are not charged.</p>
           </div>
         </div>
 

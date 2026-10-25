@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is no motivation a sign of depression?', acceptedAnswer: {'@type': 'Answer', text: 'It can be. Loss of motivation, energy, and interest in things you used to care about are classic signs of depression. But they are also signs of burnout, anxiety, grief, and simple exhaustion. You cannot diagnose from this symptom alone. If the loss of motivation is persistent and accompanied by persistent low mood, please consider speaking to a mental health professional.'}},
-    {'@type': 'Question', name: 'Can a 15-minute conversation help with motivation?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Not by delivering a motivational speech &mdash; those do not work. But by helping you identify what is actually in the way. A good conversation does not add energy; it removes the weight that is blocking it.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'Can a 16-minute conversation help with motivation?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Not by delivering a motivational speech &mdash; those do not work. But by helping you identify what is actually in the way. A good conversation does not add energy; it removes the weight that is blocking it.'}},
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function NoMotivationIndiaPage() {
         <div className="hero">
           <p className="badge">No Motivation · Unmotivated · India</p>
           <h1>It's not laziness. You used to be able to do things. <em>Something has changed.</em></h1>
-          <p className="lead">You know what you need to do but you cannot start. Everything feels heavier than it should. Talk anonymously from ₹160.</p>
+          <p className="lead">You know what you need to do but you cannot start. Everything feels heavier than it should. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -85,7 +85,7 @@ export default function NoMotivationIndiaPage() {
           <p>Naming the actual source of the problem is the beginning of addressing it.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Something is in the way. Let someone help you find it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Something is in the way. Let someone help you find it.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/crying-for-no-reason-india">Crying for no reason &rarr;</a>
             <a href="/feeling-empty-inside-india">Feeling empty &rarr;</a>
             <a href="/support/dont-want-to-get-out-of-bed">Can't get out of bed &rarr;</a>

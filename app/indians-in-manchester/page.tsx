@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Manchester Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the British Indian context — the north-south divide within the British Indian community, the Rusholme and Bolton communities, the specific dynamics of being Indian in a northern English city with its own distinct culture.' } },
   { '@type': 'Question', name: 'What time can I connect from Manchester?', acceptedAnswer: { '@type': 'Answer', text: 'Manchester (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours behind in summer. 2pm Manchester in winter = 7:30pm India. Afternoons or early evenings are good times to connect.' } },
   { '@type': 'Question', name: 'Is this different from talking to my family or British Indian friends?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are outside your Manchester social circle entirely. They don\'t know your family, your community, or your workplace. You can say what you actually feel without worrying about word getting back to anyone.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
   { '@type': 'Question', name: 'I feel caught between the British Indian community and British mainstream culture. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the core experiences How Was Your Day was built for. The in-between identity of the British Indian — not fully belonging to either world, navigating both with exhausting fluency — is something listeners understand and can hold without judgment.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function IndiansInManchesterPage() {
         <div className="hero">
           <p className="badge">Indians in Manchester &middot; North of England &middot; Rusholme &middot; Bolton</p>
           <h1>Rusholme curry mile. <em>The rain doesn&rsquo;t stop either.</em></h1>
-          <p className="lead">Manchester has a substantial Indian and South Asian community — Rusholme, Bolton, Oldham, Burnley. But the North of England carries a particular loneliness for Indian immigrants: the distance from London&rsquo;s larger Indian hubs, the northern chill that goes beyond weather, and the in-between identity of being British Indian in a city that is proudly not London. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">Manchester has a substantial Indian and South Asian community — Rusholme, Bolton, Oldham, Burnley. But the North of England carries a particular loneliness for Indian immigrants: the distance from London&rsquo;s larger Indian hubs, the northern chill that goes beyond weather, and the in-between identity of being British Indian in a city that is proudly not London. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndiansInManchesterPage() {
           <h2>Rusholme, Bolton, Oldham: The Northern Indian Community</h2>
           <p>Manchester&rsquo;s Indian and South Asian community is one of the oldest and most established in England — Rusholme&rsquo;s curry mile is famous, and Bolton, Oldham, and Burnley have significant South Asian communities that go back generations. The Manchester University and University of Salford Indian student populations add a newer layer. The city&rsquo;s NHS hospitals and GP practices have large Indian medical professional communities.</p>
           <p>But Manchester is not London. London&rsquo;s Indian community — Wembley, Southall, East Ham — has a scale and infrastructure that Manchester&rsquo;s simply doesn&rsquo;t match. The British Indian experience in Manchester has a particular character: more working-class roots, more industrial city history, more of the grit that comes with a northern English city that has been through hard decades. The Indian professional who moved to Manchester for the university or the NHS and finds themselves in a community that is real but different from what they imagined.</p>
-          <p>How Was Your Day listeners understand the British Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand the British Indian experience. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function IndiansInManchesterPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Northern England, Indian roots. Talk to someone who holds both.</h2><p>Real Indian peer listener. Understands the British Indian experience in the North. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Northern England, Indian roots. Talk to someone who holds both.</h2><p>Real Indian peer listener. Understands the British Indian experience in the North. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

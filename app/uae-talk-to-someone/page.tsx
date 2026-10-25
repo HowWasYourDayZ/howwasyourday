@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to Someone Online in UAE & Dubai | How Was Your Day',
-  description: 'Need a real person to talk to in the UAE or Dubai? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Malayalam and more. First 5 minutes free.',
+  description: 'Need a real person to talk to in the UAE or Dubai? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Malayalam and more. Sessions from 8 minutes.',
   keywords: [
     'talk to someone online UAE', 'someone to talk to dubai', 'need to talk UAE',
     'online chat support dubai', 'talk to a person UAE', 'emotional support online UAE',
@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'Can I talk to someone in the UAE right now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now. No appointment needed, no waiting list. Browse listeners who are online and start talking immediately — the first 5 minutes are free.',
+        text: 'Yes. How Was Your Day listeners are based in India, so availability follows Indian time — check who is online now. No appointment needed, no waiting list. Browse listeners who are online and start talking immediately — sessions start at 8 minutes.',
       },
     },
     {
@@ -95,7 +95,7 @@ export default function UAETalkToSomeonePage() {
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>
-          Browse listeners — first 5 min free
+          Browse listeners — from 8 minutes
         </a>
 
         <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 12 }}>Why Indians in the UAE Reach Out</h2>
@@ -118,7 +118,7 @@ export default function UAETalkToSomeonePage() {
 
         <div style={{ background: '#f0f9fb', borderRadius: 16, padding: '28px 24px', marginTop: 40, textAlign: 'center' }}>
           <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>Ready to talk to a real person?</p>
-          <p style={{ color: '#555', marginBottom: 20 }}>First 5 minutes free. No appointment, no forms, no judgment.</p>
+          <p style={{ color: '#555', marginBottom: 20 }}>Sessions from 8 minutes. No appointment, no forms, no judgment.</p>
           <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 32px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem' }}>
             Find a listener now
           </a>

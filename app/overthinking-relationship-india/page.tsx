@@ -5,12 +5,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Overthinking Your Relationship? Talk It Out Anonymously | How Was Your Day India',
-  description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 15-minute conversation can break the loop. From ₹160.',
+  description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 16-minute conversation can break the loop. From ₹160.',
   keywords: ['overthinking relationship India', 'relationship anxiety India', 'overanalysing relationship India', 'obsessive thoughts about relationship India', 'relationship overthinking India'],
   alternates: { canonical: 'https://www.howwasyourday.live/overthinking-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/overthinking-relationship-india' } },
   openGraph: {
     title: 'Overthinking Your Relationship? Talk It Out Anonymously | How Was Your Day India',
-    description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 15-minute conversation can break the loop. From ₹160.',
+    description: 'Analysing every text, every tone, every silence. Relationship overthinking is exhausting. A 16-minute conversation can break the loop. From ₹160.',
     url: 'https://www.howwasyourday.live/overthinking-relationship-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -40,7 +40,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free. No subscription needed.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes. No subscription needed.' },
     }
   ],
 }
@@ -114,7 +114,7 @@ export default function OverthinkinRelationshipIndiaPage() {
         <div className="hero">
           <p className="badge">Relationship Overthinking · Anxiety · India</p>
           <h1>You've been in your head for three hours. <em>You need someone to think out loud with.</em></h1>
-          <p className="lead">Analysing every text, every tone, every silence. Relationship overthinking is exhausting and isolating. A 15-minute conversation can break the loop. Anonymous peer support from ₹160.</p>
+          <p className="lead">Analysing every text, every tone, every silence. Relationship overthinking is exhausting and isolating. A 16-minute conversation can break the loop. Anonymous peer support from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <GeoQuickAnswer path="/overthinking-relationship-india" />
@@ -126,7 +126,7 @@ export default function OverthinkinRelationshipIndiaPage() {
         <div className="section">
           <h2>Why Talking Helps</h2>
           <p>When you say something out loud to someone who is listening carefully, you hear it differently. The loop that runs internally at high speed slows down when it is externalised. The listener reflects back what they are hearing. You catch yourself. "Actually, I think what I'm really worried about is..." The clarity that was not available internally becomes available in conversation.</p>
-          <p>A 15-minute conversation can do what hours of internal analysis cannot: create enough distance from the loop to see it.</p>
+          <p>A 16-minute conversation can do what hours of internal analysis cannot: create enough distance from the loop to see it.</p>
         </div>
         <div className="section">
           <h2>Frequently Asked Questions</h2>
@@ -139,7 +139,7 @@ export default function OverthinkinRelationshipIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>Break the loop. Talk to someone.</h2>
-          <p>Anonymous peer support. A real person. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous peer support. A real person. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
         <div className="section">

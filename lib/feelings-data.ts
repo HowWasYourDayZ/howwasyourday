@@ -29,7 +29,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling lonely today? You are not the only one awake with this.",
     metaTitle: "Feeling Lonely Today? Talk to Someone Now | How Was Your Day",
     metaDescription:
-      "Feeling lonely right now? Talk to a verified How Was Your Day listener who has felt it too. Anonymous, judgement-free, first 5 minutes free.",
+      "Feeling lonely right now? Talk to a verified How Was Your Day listener who has felt it too. Anonymous, judgement-free, sessions from 8 minutes.",
     keywords:
       "feeling lonely, i feel lonely today, lonely in a new city, loneliness india, someone to talk to when lonely, anonymous emotional support india, feeling alone at night",
     lead: `Loneliness is not the same as being by yourself. You can feel it in a full house, in a WhatsApp group with two hundred people, at a wedding where everyone knows your name. What is actually missing is not company — it is the feeling that someone knows what your day was like and cares how it went.`,
@@ -66,7 +66,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "How does How Was Your Day work, and what does it cost?",
-        a: `You pick a listener whose lived experience matches what you are carrying, and start a session. The first 5 minutes are free, so you can tell whether the person actually feels right before any money is involved. After that, a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. There is no subscription, no package, and no obligation to continue past the free 5 minutes.`,
+        a: `You pick a listener whose lived experience matches what you are carrying, and start a session. Sessions start at 8 minutes, so you can tell whether the person actually feels right before any money is involved. After that, an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. There is no subscription, no package, and no obligation to book again.`,
       },
       {
         q: "Will anyone find out that I reached out?",
@@ -88,7 +88,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling anxious right now? Let us slow this down together.",
     metaTitle: "Feeling Anxious Right Now? Talk to Someone | How Was Your Day",
     metaDescription:
-      "Anxious and cannot switch your mind off? Talk to a How Was Your Day listener who has been there. Anonymous, no judgement, first 5 minutes free.",
+      "Anxious and cannot switch your mind off? Talk to a How Was Your Day listener who has been there. Anonymous, no judgement, sessions from 8 minutes.",
     keywords:
       "feeling anxious, anxiety right now, cannot stop overthinking, anxious about work, anxiety help india, someone to talk to about anxiety, racing thoughts at night",
     lead: `Anxiety is not just worrying. It is your body running an emergency drill for something that has not happened, over and over, while you are supposed to sit in a meeting and behave normally. If your chest is tight and your mind will not stop rehearsing, you are not being dramatic — your alarm system is simply stuck on.`,
@@ -129,7 +129,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "What does a session cost?",
-        a: `The first 5 minutes are free, which is usually enough to know whether the listener feels right for you. After that, a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener. Nothing is charged automatically and there is no subscription — you choose each time whether to continue.`,
+        a: `Sessions start at 8 minutes, which is usually enough to know whether the listener feels right for you. After that, an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener. Nothing is charged automatically and there is no subscription — you choose each time whether to continue.`,
       },
     ],
     relatedSupport: [
@@ -147,7 +147,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling overwhelmed? You do not have to carry all of it at once.",
     metaTitle: "Feeling Overwhelmed? Talk It Out Today | How Was Your Day",
     metaDescription:
-      "Everything at once and no room to breathe? Talk to a How Was Your Day listener who has been there. Anonymous, judgement-free, first 5 minutes free.",
+      "Everything at once and no room to breathe? Talk to a How Was Your Day listener who has been there. Anonymous, judgement-free, sessions from 8 minutes.",
     keywords:
       "feeling overwhelmed, too much to handle, overwhelmed with work, cannot cope right now, overwhelmed india, someone to talk to when overwhelmed, mental load",
     lead: `Overwhelm is what happens when the demands stack higher than the capacity, and everything starts feeling equally urgent. It is not weakness and it is not poor time management. It is a signal that you have been running above your limit for long enough that your system has stopped being able to prioritise.`,
@@ -176,7 +176,7 @@ export const FEELINGS: Feeling[] = [
     faqs: [
       {
         q: "I have too much to do to spend time talking. Is this not just more time lost?",
-        a: `That is the exact logic that keeps overwhelm running. In practice, most of the day lost to overwhelm goes to stalling, re-prioritising and re-reading the same list, not to actual work. Fifteen minutes of saying it all out loud usually returns more usable hours than it costs, because you come out with an order instead of a pile. If fifteen feels impossible, the free first 5 minutes are a real option.`,
+        a: `That is the exact logic that keeps overwhelm running. In practice, most of the day lost to overwhelm goes to stalling, re-prioritising and re-reading the same list, not to actual work. Fifteen minutes of saying it all out loud usually returns more usable hours than it costs, because you come out with an order instead of a pile. If that feels like too much, an 8-minute session is a real option.`,
       },
       {
         q: "How do I say no to family obligations without a fight?",
@@ -184,7 +184,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "What does it cost to talk to someone here?",
-        a: `The first 5 minutes are free. After that, a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener. There is no subscription and no minimum commitment, which matters when your budget is already stretched.`,
+        a: `Sessions start at 8 minutes. After that, an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener. There is no subscription and no minimum commitment, which matters when your budget is already stretched.`,
       },
       {
         q: "What if I just want to vent and not be given advice?",
@@ -206,7 +206,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling numb or empty? Not feeling anything is still feeling something.",
     metaTitle: "Feeling Numb or Empty? You Are Not Broken | How Was Your Day",
     metaDescription:
-      "Feeling numb, blank or emotionally empty? Talk anonymously to a How Was Your Day listener who has been through it. First 5 minutes free.",
+      "Feeling numb, blank or emotionally empty? Talk anonymously to a How Was Your Day listener who has been through it. Sessions from 8 minutes.",
     keywords:
       "feeling numb, emotionally numb, feeling empty inside, why do i feel nothing, no motivation feeling blank, emotional numbness india, someone to talk to",
     lead: `Numbness is harder to describe than sadness, which is partly why people carry it silently for so long. Things that used to matter register as beige. You function, you reply, you show up — and none of it reaches you. This is not you becoming a cold person. It is usually what a mind does after carrying too much for too long.`,
@@ -247,7 +247,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "How does How Was Your Day work, and what will it cost me?",
-        a: `Choose a listener whose lived experience matches yours, and the first 5 minutes are free — no card, no commitment. Beyond that, a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener. It is anonymous, one session at a time, with nothing recurring.`,
+        a: `Choose a listener whose lived experience matches yours — no card, no commitment. Beyond that, an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener. It is anonymous, one session at a time, with nothing recurring.`,
       },
     ],
     relatedSupport: [
@@ -265,7 +265,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling sad today? You do not need a good enough reason.",
     metaTitle: "Feeling Sad Today? Talk to Someone Who Listens",
     metaDescription:
-      "Feeling low or sad and cannot say why? Talk anonymously to a How Was Your Day listener who understands. Judgement-free, first 5 minutes free.",
+      "Feeling low or sad and cannot say why? Talk anonymously to a How Was Your Day listener who understands. Judgement-free, sessions from 8 minutes.",
     keywords:
       "feeling sad, feeling low today, why am i so sad, sadness without reason, low mood help india, someone to talk to when sad, emotional support india",
     lead: `Sadness does not always come with a headline. Some days it arrives with an obvious cause and some days it just settles in, and the second kind is often harder because you feel you have to justify it. You do not. Sadness is information, not a fault, and it does not need to earn its place before you are allowed to feel it.`,
@@ -306,7 +306,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "What does a session cost if I want to talk today?",
-        a: `The first 5 minutes are free, which is enough to see whether the listener feels right. After that, a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener. You pay per session, nothing recurring, and you can stop whenever you want.`,
+        a: `Sessions start at 8 minutes, which is enough to see whether the listener feels right. After that, an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener. You pay per session, nothing recurring, and you can stop whenever you want.`,
       },
     ],
     relatedSupport: [
@@ -324,7 +324,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling burnt out? This is not laziness and you are not exaggerating.",
     metaTitle: "Feeling Burnt Out? Talk to Someone Who Gets It",
     metaDescription:
-      "Exhausted, cynical and running on empty? Talk anonymously to a How Was Your Day listener who has burnt out too. First 5 minutes free.",
+      "Exhausted, cynical and running on empty? Talk anonymously to a How Was Your Day listener who has burnt out too. Sessions from 8 minutes.",
     keywords:
       "feeling burnt out, burnout symptoms, exhausted from work, work burnout india, cannot work anymore tired, founder burnout, someone to talk to about work stress",
     lead: `Burnout is not a bad week. It is what happens when high demand meets low recovery for months, until the work you once cared about produces nothing but dread. The tell is not tiredness — it is the cynicism and the sense that nothing you do makes a difference any more.`,
@@ -361,7 +361,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "What does it cost and how quickly can I talk to someone?",
-        a: `You can usually start within minutes — listeners are online through evenings and late nights, which is when most burnt out people finally have a free hour. The first 5 minutes are free. After that, a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener.`,
+        a: `You can usually start within minutes — listeners are online through evenings and late nights, which is when most burnt out people finally have a free hour. Sessions start at 8 minutes. After that, an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener.`,
       },
       {
         q: "Will my employer or anyone else ever know?",
@@ -383,7 +383,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Feeling stuck? Standing still is not the same as going nowhere.",
     metaTitle: "Feeling Stuck in Life? Talk It Through | How Was Your Day",
     metaDescription:
-      "Stuck in a job, a city or a decision you cannot make? Talk to a How Was Your Day listener who has been there. Anonymous, first 5 minutes free.",
+      "Stuck in a job, a city or a decision you cannot make? Talk to a How Was Your Day listener who has been there. Anonymous, sessions from 8 minutes.",
     keywords:
       "feeling stuck in life, stuck in a job, cannot make a decision, no direction in life, career confusion india, feeling left behind, someone to talk to",
     lead: `Feeling stuck is the sense that time is passing while nothing is moving — the same job, the same city, the same conversation with yourself every few months. It is not a lack of ambition. It usually means you are standing between options where every path costs something you are not ready to pay.`,
@@ -424,7 +424,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "How does it work and what does it cost?",
-        a: `Pick a listener whose background fits what you are wrestling with, and the first 5 minutes are free. After that, a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener. No packages, no subscription, and it stays anonymous.`,
+        a: `Pick a listener whose background fits what you are wrestling with. After that, an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener. No packages, no subscription, and it stays anonymous.`,
       },
     ],
     relatedSupport: [
@@ -442,7 +442,7 @@ export const FEELINGS: Feeling[] = [
     h1: "Cannot sleep? Your mind waited until it was quiet to speak.",
     metaTitle: "Cannot Sleep? Someone to Talk To at 3 AM | How Was Your Day",
     metaDescription:
-      "Awake at 3 AM with a mind that will not stop? Talk to a How Was Your Day listener who is online late. Anonymous, first 5 minutes free.",
+      "Awake at 3 AM with a mind that will not stop? Talk to a How Was Your Day listener who is online late. Anonymous, sessions from 8 minutes.",
     keywords:
       "cannot sleep, awake at 3am, overthinking at night, sleepless nights anxiety, insomnia stress india, someone to talk to at night, racing thoughts before sleep",
     lead: `There is a particular loneliness to being awake when everyone else is not. The thoughts you outran all day finally catch up, the house is silent, and every worry sounds louder and more permanent than it will at nine in the morning. If you are reading this at an unreasonable hour, you are not the only one.`,
@@ -479,7 +479,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "How much does a late-night session cost?",
-        a: `The same as any other time — there is no night surcharge. The first 5 minutes are free, and after that a 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener. For a lot of people fifteen minutes at 3 AM is enough to stop the spiral.`,
+        a: `The same as any other time — there is no night surcharge. Sessions start at 8 minutes, and after that an 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener. For a lot of people fifteen minutes at 3 AM is enough to stop the spiral.`,
       },
       {
         q: "When should I stop managing this myself and see a professional?",

@@ -76,7 +76,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day offers a 5-minute trial session for new users — no credit card, no wallet top-up. After that, sessions start from £7 for 15 minutes, including a flat £1 platform fee. This is significantly more affordable than therapy, which typically costs ₹1,500–5,000 per session in India.',
+        text: 'How Was Your Day offers a 5-minute trial session for new users — no credit card, no wallet top-up. After that, sessions start from £4.20 for 8 minutes, including a flat £1 platform fee. This is significantly more affordable than therapy, which typically costs ₹1,500–5,000 per session in India.',
       },
     },
     {
@@ -225,7 +225,7 @@ export default function HowWasYourDayBrandPage() {
             <div className="diff-card us">
               <div className="diff-title">✅ How Was Your Day</div>
               <div className="diff-list">
-                From £7 for 15 minutes<br/>
+                From £4.20 for 8 minutes<br/>
                 Start in 60 seconds<br/>
                 Real humans with lived experience<br/>
                 Completely private<br/>
@@ -256,11 +256,11 @@ export default function HowWasYourDayBrandPage() {
         <div className="section">
           <h2>Frequently Asked Questions About How Was Your Day</h2>
           {[
-            { q: 'What is How Was Your Day?', a: 'How Was Your Day is India\'s peer support platform — an app that connects people with verified peer listeners who have personally experienced the same challenges. It\'s not therapy. It\'s real human connection. Sessions start at £7 for 15 minutes, with a trial session for new users.' },
+            { q: 'What is How Was Your Day?', a: 'How Was Your Day is India\'s peer support platform — an app that connects people with verified peer listeners who have personally experienced the same challenges. It\'s not therapy. It\'s real human connection. Sessions start at £4.20 for 8 minutes, with a trial session for new users.' },
             { q: 'What does "How Was Your Day" mean?', a: '"How Was Your Day" takes its name from "lean on" — to emotionally rely on someone, to let another person support you when you\'re struggling. The platform is built on the idea that everyone deserves someone to lean on.' },
             { q: 'Why is it called How Was Your Day?', a: 'The name was chosen because "lean on" captures what we offer: not therapy, not AI, not advice — just someone to lean on. A real human who has been through what you\'re going through.' },
             { q: 'Is How Was Your Day the same as therapy?', a: 'No. How Was Your Day is peer support, not therapy. Listeners are verified people with lived experience — not licensed therapists. They offer genuine empathy and understanding, not clinical diagnosis.' },
-            { q: 'How much does How Was Your Day cost?', a: 'How Was Your Day offers a 5-minute trial session for new users. After that, sessions start from £7 for 15 minutes — significantly more affordable than therapy (£40–£100/session in India).' },
+            { q: 'How much does How Was Your Day cost?', a: 'How Was Your Day offers a 5-minute trial session for new users. After that, sessions start from £4.20 for 8 minutes — significantly more affordable than therapy (£40–£100/session in India).' },
             { q: 'Is How Was Your Day safe and private?', a: 'Yes. Phone OTP sign-up (no full name required), conversations never shared outside How Was Your Day, crisis helplines in every session, and every report reviewed by a person.' },
             { q: 'How is How Was Your Day different from other mental health apps?', a: 'Unlike AI chatbots (not real humans) or professional therapy platforms (expensive, clinical), How Was Your Day offers real humans with lived experience, with no appointment, at a fraction of therapy cost.' },
             { q: 'Is How Was Your Day available across India?', a: 'Yes — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, and everywhere else. Online.' },

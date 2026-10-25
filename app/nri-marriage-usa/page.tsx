@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is How Was Your Day the right place for marriage problems?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is peer support, not mediation or professional advice. But peer listeners are real Indians who have heard many of these stories. Sometimes what you need before anything else is to be heard — by someone who truly understands the cultural complexity, without judgement.' } },
   { '@type': 'Question', name: 'What if I\'m not sure my marriage is a problem — just that something feels off?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly what peer support is for. You don\'t need a crisis or a clear problem to talk to someone. "Something feels off and I can\'t name it" is a completely valid reason to reach out.' } },
   { '@type': 'Question', name: 'Is this confidential from my family?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. Only a phone number and first name. Nothing is shared with your family in India or the US, your community, or anyone else.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriMarriageUsaPage() {
         <div className="hero">
           <p className="badge">NRI Marriage &middot; USA &middot; Indian Relationships</p>
           <h1>NRI marriage. The pressure is different here. <em>So is the loneliness of it.</em></h1>
-          <p className="lead">Whether it&rsquo;s the arranged marriage you agreed to under pressure, the long-distance marriage with your spouse still in India, the American-born partner your parents disapprove of, or the marriage that looked right on paper but feels wrong in practice — NRI marriage in America carries its own unique weight. Talk to a real Indian peer listener. First 5 minutes free.</p>
+          <p className="lead">Whether it&rsquo;s the arranged marriage you agreed to under pressure, the long-distance marriage with your spouse still in India, the American-born partner your parents disapprove of, or the marriage that looked right on paper but feels wrong in practice — NRI marriage in America carries its own unique weight. Talk to a real Indian peer listener. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,17 +84,17 @@ export default function NriMarriageUsaPage() {
           <h2>NRI Marriage in America: The Pressures Nobody Names</h2>
           <p>NRI marriage in America is not just about two people — it involves two families, two cultural scripts, two sets of expectations, and often an ocean between them. The couple living in Plano or Sugar Land has to navigate the parents in India watching every decision, the aunties and uncles in the Indian community in America watching every move, and the American-born or raised children who will grow up in a completely different world than either parent knew.</p>
           <p>There are many forms this takes. The arranged marriage where both parties knew each other for six months before the wedding and are now living together in a suburb, discovering each other under significant pressure to make it work. The love marriage to someone of a different background that the family has grudgingly accepted but never fully welcomed. The marriage to an Indian-American — a different cultural identity entirely — where the expectations around Indian womanhood or manhood create friction. The marriage that started well and has drifted.</p>
-          <p>Whatever the form, the common thread is that there is often no one to talk to about it — the community watches, the family has opinions, and the stakes of saying the wrong thing to the wrong person are high. How Was Your Day offers a real Indian peer listener in India — outside your social network entirely — who understands all of this. First 5 minutes free.</p>
+          <p>Whatever the form, the common thread is that there is often no one to talk to about it — the community watches, the family has opinions, and the stakes of saying the wrong thing to the wrong person are high. How Was Your Day offers a real Indian peer listener in India — outside your social network entirely — who understands all of this. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>What a Peer Listener Can Offer</h2>
           <p>How Was Your Day is peer support, not professional advice. A peer listener will not tell you what to do about your marriage. What they will do is listen — deeply and without judgement — while you say the things you have not been able to say out loud. They have cultural fluency. They understand what it means to be told "just adjust" or "log kya kahenge." They understand the weight of family honour and what it costs to carry it.</p>
-          <p>Sometimes being heard — really heard, by someone who truly gets the cultural context — is the thing that creates movement when everything has felt stuck. Talk to someone. First 5 minutes free. From US$10 for a full 15-minute session.</p>
+          <p>Sometimes being heard — really heard, by someone who truly gets the cultural context — is the thing that creates movement when everything has felt stuck. Talk to someone. Sessions from 8 minutes. From US$10 for a full 15-minute session.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You don&rsquo;t have to carry this alone.</h2><p>Real Indian peer listener. Understands NRI marriage complexity. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You don&rsquo;t have to carry this alone.</h2><p>Real Indian peer listener. Understands NRI marriage complexity. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>
           <a href="/nri-dating-usa">NRI dating USA &rarr;</a>

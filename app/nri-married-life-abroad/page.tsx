@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do I need my partner\'s permission to talk to a listener?', acceptedAnswer: { '@type': 'Answer', text: 'No. Sessions are individual and private. You do not need your partner\'s knowledge or permission. Many people find that having their own space to process helps them show up better in their marriage.' } },
   { '@type': 'Question', name: 'What if my partner and I both want to talk separately?', acceptedAnswer: { '@type': 'Answer', text: 'Each person can have their own session with a listener. Sessions are private between you and the listener you choose.' } },
   { '@type': 'Question', name: 'Are listeners available at different times, given time zones?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners are available across different times of day. Browse the available listeners to find someone who is online when you need to talk.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes are free. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriMarriedLifeAbroadPage() {
         <div className="hero">
           <p className="badge">NRI Married Life &middot; Indian Couple Abroad &middot; Peer Support</p>
           <h1>NRI Married Life Abroad — <em>Beautiful from Outside. Heavy Inside.</em></h1>
-          <p className="lead">Both working. No grandparents for childcare. Two people carrying each other&rsquo;s immigration anxiety. The Instagram life and the Sunday evening silence. NRI married life is not the version in the family WhatsApp group — it is two people trying to hold everything together without a support network within reach. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">Both working. No grandparents for childcare. Two people carrying each other&rsquo;s immigration anxiety. The Instagram life and the Sunday evening silence. NRI married life is not the version in the family WhatsApp group — it is two people trying to hold everything together without a support network within reach. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -98,7 +98,7 @@ export default function NriMarriedLifeAbroadPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The heaviness that doesn&rsquo;t show on the outside.</h2><p>Real peer listener. Understands NRI married life from the inside. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The heaviness that doesn&rsquo;t show on the outside.</h2><p>Real peer listener. Understands NRI married life from the inside. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

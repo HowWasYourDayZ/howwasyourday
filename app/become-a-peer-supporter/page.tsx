@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: 'How much time does it take?',
-    a: 'You choose when you are available. When you are online, people who need to talk can reach you; sessions are 5 to 45 minutes. You should only be online when you can give someone your full attention.',
+    a: 'You choose when you are available. When you are online, people who need to talk can reach you; sessions are 8, 16 or 32 minutes, and you can also publish weekly hours for booked sessions. You should only be online when you can give someone your full attention.',
   },
 ]
 
@@ -162,7 +162,7 @@ export default function BecomeAPeerSupporterPage() {
         </div>
 
         <p className="small">
-          Need someone to talk to yourself? <a href="/talk">Talk to someone now</a> — first 5 minutes free.
+          Need someone to talk to yourself? <a href="/talk">Talk to someone now</a> — sessions from 8 minutes.
         </p>
       </main>
     </>

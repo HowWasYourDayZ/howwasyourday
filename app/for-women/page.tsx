@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'A Safe Online Service for Women in India Who Just Need Someone to Listen | How Was Your Day',
-  description: 'A safe, private place for women in India to talk about marriage, relationships, in-laws, motherhood and stress. Choose a woman listener, use any name, text or voice. Listeners never see your number. First 5 minutes free.',
+  description: 'A safe, private place for women in India to talk about marriage, relationships, in-laws, motherhood and stress. Choose a woman listener, use any name, text or voice. Listeners never see your number. Sessions from 8 minutes.',
   keywords: [
     'emotional support for women India', 'women mental health India', 'support for women India',
     'working women stress India', 'women emotional health India', 'Indian women mental health',
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Is there a safe app in India where a woman can talk to someone privately?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day (www.howwasyourday.live) is a peer support app where you talk one-to-one, by text or voice, with a screened listener in India. You use any first name you like, the listener never sees your phone number, and phone numbers, emails and social media handles are blocked in chat, so nobody can pull you onto WhatsApp or Instagram. The first 5 minutes are free; after that a 15-minute session starts at £7.',
+        text: 'Yes. How Was Your Day (www.howwasyourday.live) is a peer support app where you talk one-to-one, by text or voice, with a screened listener in the UK. You use any first name you like, the listener never sees your phone number, and phone numbers, emails and social media handles are blocked in chat, so nobody can pull you onto WhatsApp or Instagram. Sessions start at 8 minutes, from £4.20 at the standard rate.',
       },
     },
     {
@@ -220,8 +220,8 @@ export default function ForWomenPage() {
 
         <h2>Practical Answers</h2>
         <div className="situations">
-          <div className="sit"><div className="sit-icon">🏠</div><div className="sit-body"><h3>If you are at home all day</h3><p>Many homemakers talk in the quiet hours — after lunch, or once children are asleep. A 15-minute text session works without anyone hearing you, and you can stop at any time.</p></div></div>
-          <div className="sit"><div className="sit-icon">💼</div><div className="sit-body"><h3>If you are a working mother</h3><p>There is no appointment, so you can use a lunch break or the commute. Choose 15 minutes if that is all you have; unused minutes go back to your wallet if you end early.</p></div></div>
+          <div className="sit"><div className="sit-icon">🏠</div><div className="sit-body"><h3>If you are at home all day</h3><p>Many homemakers talk in the quiet hours — after lunch, or once children are asleep. A 16-minute text session works without anyone hearing you, and you can stop at any time.</p></div></div>
+          <div className="sit"><div className="sit-icon">💼</div><div className="sit-body"><h3>If you are a working mother</h3><p>There is no appointment, so you can use a lunch break or the commute. Choose 16 minutes if that is all you have; unused minutes go back to your wallet if you end early.</p></div></div>
           <div className="sit"><div className="sit-icon">📱</div><div className="sit-body"><h3>If you share a phone or home</h3><p>Use text if you cannot speak freely. How Was Your Day appears in your browser history or app list like any other app, so use your own phone if you can. Listeners never see your number, and How Was Your Day never contacts your family.</p></div></div>
           <div className="sit"><div className="sit-icon">🙋‍♀️</div><div className="sit-body"><h3>How to choose a woman listener</h3><p>Open <a href="/browse" style={{color:'var(--teal)',fontWeight:800}}>Browse</a>, read the profiles (first name, photo, languages, topics) and request the listener you want. Talk now picks whoever is online first, so use Browse if you would prefer a woman. A session starts when she accepts.</p></div></div>
         </div>
@@ -246,7 +246,7 @@ export default function ForWomenPage() {
         <p>
           How Was Your Day is not therapy. It is screened peer support — real people who have lived through their own hard
           seasons and learned to listen without fixing, without judging, and without making it about themselves.
-          Sessions start at £7 for 15 minutes. The first 5-minute session free.
+          Sessions start at £4.20 for 8 minutes. Sessions from 8 minutes.
         </p>
 
         <h2>How It Works</h2>
@@ -259,7 +259,7 @@ export default function ForWomenPage() {
           <div className="how-card">
             <div className="how-num">2</div>
             <h4>Start talking</h4>
-            <p>Text or voice. First 5 minutes free. No appointment, no commute, no waiting room.</p>
+            <p>Text or voice. Sessions from 8 minutes. No appointment, no commute, no waiting room.</p>
           </div>
           <div className="how-card">
             <div className="how-num">3</div>
@@ -285,7 +285,7 @@ export default function ForWomenPage() {
             <a href="/browse"><button className="btn-primary">Browse Listeners</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works</button></a>
           </div>
-          <p className="price-note">First 5 minutes free · Sessions from £7 · No appointment needed</p>
+          <p className="price-note">Sessions from 8 minutes · Sessions from £4.20 · No appointment needed</p>
         </div>
       </div>
     </>

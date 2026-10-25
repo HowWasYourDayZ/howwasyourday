@@ -185,7 +185,7 @@ export default function TarotAlternativeIndiaPage() {
 
         <div className="cta-card">
           <h2>The support you were looking for. No predictions needed.</h2>
-          <p>Real human listener. Screened. Anonymous. From ₹160. First 5 minutes free.</p>
+          <p>Real human listener. Screened. Anonymous. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

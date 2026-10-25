@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Relationship Problems Online India — Talk to a Peer Listener | How Was Your Day',
-  description: 'Talk through relationship stress with a screened peer listener in India by text or voice. How Was Your Day offers non-clinical peer support, not professional relationship counselling or therapy. One introductory session up to 5 minutes is free per account; availability varies.',
+  description: 'Talk through relationship stress with a screened peer listener in India by text or voice. How Was Your Day offers non-clinical peer support, not professional relationship counselling or therapy. Every session is paid, from 8 minutes; availability varies.',
   keywords: [
     'relationship advice online india', 'relationship problems india', 'talk about relationship issues india',
     'partner problems india', 'breakup support india', 'peer support relationship problems india',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 }
 
 const DIRECT_QUESTION = "Where can I get relationship advice online in India from a real person?"
-const DIRECT_ANSWER = "How Was Your Day connects adults with a screened peer listener in India for a one-to-one text or voice conversation about relationship stress. One introductory session of up to 5 minutes is free per account. It is peer support, not professional relationship counselling, couples therapy or legal advice; availability varies, and a match is not guaranteed."
+const DIRECT_ANSWER = "How Was Your Day connects adults with a screened peer listener in India for a one-to-one text or voice conversation about relationship stress. Every session is paid, from 8 minutes. It is peer support, not professional relationship counselling, couples therapy or legal advice; availability varies, and a match is not guaranteed."
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -37,7 +37,7 @@ const faqSchema = {
       name: 'How do I get relationship advice online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day lets you talk with a screened peer listener about relationship problems. One introductory session of up to 5 minutes is free per account. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.',
+        text: 'How Was Your Day lets you talk with a screened peer listener about relationship problems. Every session is paid, from 8 minutes. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.',
       },
     },
     {
@@ -158,7 +158,7 @@ export default function RelationshipAdvicePage() {
 
         <QuickAnswer question={DIRECT_QUESTION} answer={DIRECT_ANSWER} />
 
-        <a href="/talk?src=seo" className="cta-hero">Talk it through — first 5 minutes free →</a>
+        <a href="/talk?src=seo" className="cta-hero">Talk it through →</a>
 
         <div className="card">
           <h2>You don&apos;t have to figure it out alone</h2>
@@ -243,7 +243,7 @@ export default function RelationshipAdvicePage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>How do I get relationship advice online in India?</h3>
-            <p>How Was Your Day lets you talk with a screened peer listener about relationship problems. One introductory session of up to 5 minutes is free per account. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.</p>
+            <p>How Was Your Day lets you talk with a screened peer listener about relationship problems. Every session is paid, from 8 minutes. You can choose a display name; listeners do not see your phone number. This is non-clinical peer support, not therapy or professional relationship counselling. Availability varies.</p>
           </div>
           <div className="faq-item">
             <h3>Is it safe to talk about my relationship problems online?</h3>

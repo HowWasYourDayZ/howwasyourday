@@ -4,14 +4,14 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Feeling Depressed? Talk to Someone Who Understands | How Was Your Day India',
-  description: 'Feeling low, empty, or hopeless? You don\'t need a diagnosis to deserve support. Talk to a real peer listener — anonymous, ₹160/session, first 5 min free.',
+  description: 'Feeling low, empty, or hopeless? You don\'t need a diagnosis to deserve support. Talk to a real peer listener — anonymous, ₹160/session, from 8 minutes.',
   alternates: {
     canonical: 'https://www.howwasyourday.live/depression-support-india',
     languages: { 'en-GB': 'https://www.howwasyourday.live/depression-support-india' },
   },
   openGraph: {
     title: 'Feeling Depressed? Talk to Someone Who Understands | How Was Your Day India',
-    description: 'Feeling low, empty, or hopeless? You don\'t need a diagnosis to deserve support. Talk to a real peer listener — anonymous, ₹160/session, first 5 min free.',
+    description: 'Feeling low, empty, or hopeless? You don\'t need a diagnosis to deserve support. Talk to a real peer listener — anonymous, ₹160/session, from 8 minutes.',
     url: 'https://www.howwasyourday.live/depression-support-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -229,7 +229,7 @@ export default function DepressionSupportPage() {
           <p>
             No real name required. No video. Your listener never sees your phone number. You choose what to share and how much.
           </p>
-          <h3>First 5 minutes free, ₹160/session after</h3>
+          <h3>Sessions from 8 minutes, ₹160/session after</h3>
           <p>
             You can test the connection before you commit. Sessions are 15–45 minutes. There&apos;s no subscription
             and no commitment.
@@ -244,7 +244,7 @@ export default function DepressionSupportPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>You&apos;ve Been Carrying This Long Enough</h2>
-          <p>Talk to a peer listener who understands what it feels like from the inside. Anonymous. No appointment. First 5 minutes free.</p>
+          <p>Talk to a peer listener who understands what it feels like from the inside. Anonymous. No appointment. Sessions from 8 minutes.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Talk to someone right now →</button></a>
             <a href="/browse"><button className="btn-secondary">Browse peer listeners →</button></a>

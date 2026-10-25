@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Why Real Human Support Beats AI in India | How Was Your Day',
-    description: 'How Was Your Day connects Indians with real peer listeners — humans with lived experience of Indian life — not AI chatbots. First 5 minutes free.',
+    description: 'How Was Your Day connects Indians with real peer listeners — humans with lived experience of Indian life — not AI chatbots. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/talk-to-human-instead-of-chatgpt',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -43,7 +43,7 @@ const serviceSchema = {
     '@type': 'Offer',
     price: '20',
     priceCurrency: 'INR',
-    description: 'Per minute, first 5 minutes free',
+    description: 'Per minute, from 8 minutes',
   },
 }
 
@@ -204,7 +204,7 @@ export default function IndiaHumanSupportVsAIPage() {
           response and being heard by a real human being. How Was Your Day connects you with the latter.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to a real human now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to a real human now →</a>
 
         <div className="compare-box">
           <h2>AI chatbots vs How Was Your Day real human listeners</h2>
@@ -291,7 +291,7 @@ export default function IndiaHumanSupportVsAIPage() {
             experience of Indian life.
           </p>
           <p>
-            Sessions start at ₹160 for 15 minutes. Your first 5 minutes are completely free. Listeners speak
+            Sessions start at ₹160 for 15 minutes. Sessions start at 8 minutes. Listeners speak
             Hindi and other regional languages — filter by language when browsing.
           </p>
         </div>

@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Can I specifically talk to someone who has lived abroad?', acceptedAnswer: { '@type': 'Answer', text: 'Listener profiles share their background and areas of lived experience. You can browse and choose someone whose specific experience matches what you want to talk about — whether that\'s life in the UK, the US, Canada, or elsewhere.' } },
   { '@type': 'Question', name: 'Can I talk in Hindi or my regional language?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many listeners are comfortable in Hindi and other Indian languages. Check individual listener profiles for language preferences.' } },
   { '@type': 'Question', name: 'Is my conversation private?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private — only your phone number and first name are used to create your account. Nothing is shared with your family, community, or anyone else.' } },
-  { '@type': 'Question', name: 'How much does it cost to talk to an NRI online?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes free — one free session per account. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does it cost to talk to an NRI online?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions from 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function TalkToNriOnlinePage() {
         <div className="hero">
           <p className="badge">NRI Connection &middot; Indian Immigrant Life &middot; Peer Support</p>
           <h1>Talk to an NRI Online — Someone Who <em>Already Knows</em> Your World</h1>
-          <p className="lead">You say &ldquo;Diwali away from home&rdquo; and they already know. You say &ldquo;my mother keeps sending profiles&rdquo; and they don&rsquo;t need it explained. The shorthand of shared experience is irreplaceable — and it&rsquo;s what How Was Your Day gives you. Not a chatbot, not a professional. A real Indian person who has lived the immigrant life from the inside. First 5 minutes free.</p>
+          <p className="lead">You say &ldquo;Diwali away from home&rdquo; and they already know. You say &ldquo;my mother keeps sending profiles&rdquo; and they don&rsquo;t need it explained. The shorthand of shared experience is irreplaceable — and it&rsquo;s what How Was Your Day gives you. Not a chatbot, not a professional. A real Indian person who has lived the immigrant life from the inside. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -99,7 +99,7 @@ export default function TalkToNriOnlinePage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Skip the preamble. Start where it matters.</h2><p>Real Indian peer listener. Understands the immigrant world from the inside. First 5 minutes free.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Skip the preamble. Start where it matters.</h2><p>Real Indian peer listener. Understands the immigrant world from the inside. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-mental-health">NRI mental health &rarr;</a>

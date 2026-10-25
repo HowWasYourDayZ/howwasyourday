@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand British Indian dating culture?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the British Indian diaspora experience — the generational dynamics, the community gossip, the expectations around who you should marry and when. They won\'t need the cultural context explained.' } },
   { '@type': 'Question', name: 'What if I\'m in a secret relationship and it\'s taking a toll?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly the kind of weight peer support is for. The exhaustion of a hidden relationship, the fear of coming out to your family, the guilt and the longing — a listener will hear all of it without judgement.' } },
   { '@type': 'Question', name: 'Is this for British Indians of all backgrounds — Punjabi, Gujarati, Tamil?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners have cultural familiarity across North and South Indian backgrounds. Your specific community context doesn\'t need extensive explanation.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, community, or anyone else.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function NriDatingUkPage() {
         <div className="hero">
           <p className="badge">NRI Dating UK &middot; British Desi &middot; Indian Relationships</p>
           <h1>British Indian dating. <em>The gap between what you want and what&rsquo;s expected.</em></h1>
-          <p className="lead">British Indian dating exists in the gap between two cultures. Your parents want a good match from a respectable family. You&rsquo;re on apps, figuring out your identity, not wanting to hurt anyone but not wanting to settle. The community gossip. The family WhatsApp groups. The weight of everyone&rsquo;s expectations on your love life. Talk to someone who gets it. First 5 minutes free.</p>
+          <p className="lead">British Indian dating exists in the gap between two cultures. Your parents want a good match from a respectable family. You&rsquo;re on apps, figuring out your identity, not wanting to hurt anyone but not wanting to settle. The community gossip. The family WhatsApp groups. The weight of everyone&rsquo;s expectations on your love life. Talk to someone who gets it. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,17 +84,17 @@ export default function NriDatingUkPage() {
           <h2>British Indian Dating: Living in the Gap</h2>
           <p>The British Indian dating experience is one of the most under-talked-about sources of genuine stress in the diaspora. You have grown up in Britain — with British friends, British cultural references, British ideas about relationships and love and personal freedom. You have also grown up Indian — with an Indian family, Indian food and festivals and language at home, Indian community events on the weekends, Indian expectations about who you should marry and when and how.</p>
           <p>These two cultures have very different ideas about love and commitment. British dating culture — apps, casual dating, taking your time, sleeping together before commitment, leaving if it isn&rsquo;t working — is the water you swim in at work and with your non-Indian friends. Indian family culture has different expectations: a match of suitable family background, involvement of parents, marriage as a life commitment not easily undone, the community&rsquo;s opinion mattering.</p>
-          <p>You are navigating both of these simultaneously, often in secret from one side or the other. It is genuinely exhausting. How Was Your Day is a space to say all of it — to a real Indian peer listener who understands both sides completely. First 5 minutes free.</p>
+          <p>You are navigating both of these simultaneously, often in secret from one side or the other. It is genuinely exhausting. How Was Your Day is a space to say all of it — to a real Indian peer listener who understands both sides completely. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>What You Actually Need to Say</h2>
           <p>British Indian dating has its own specific things that go unsaid. The white partner you have been with for two years and your parents still don&rsquo;t know about. The Indian match your parents love and you feel nothing for. The community gossip that someone saw you out with someone &ldquo;inappropriate.&rdquo; The loneliness of wanting a relationship that works in both worlds and not finding it. The grief of knowing your parents&rsquo; happiness and your own may be in conflict.</p>
-          <p>UK afternoons (2–4pm GMT/BST) are Indian evenings (7:30–9:30pm IST) — a natural window when listeners are available. No appointment needed. Anonymous. Completely private from the Leicester, Birmingham, or London Indian community. First 5 minutes free — one free session per account.</p>
+          <p>UK afternoons (2–4pm GMT/BST) are Indian evenings (7:30–9:30pm IST) — a natural window when listeners are available. No appointment needed. Anonymous. Completely private from the Leicester, Birmingham, or London Indian community. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Both cultures understood. No explanation needed.</h2><p>Real Indian peer listener. Gets British Indian dating complexity. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Both cultures understood. No explanation needed.</h2><p>Real Indian peer listener. Gets British Indian dating complexity. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/uk">Indians in UK &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

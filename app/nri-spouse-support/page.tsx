@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand the dependent spouse experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Listeners are screened and expected to understand the NRI experience, including the specific weight of being a dependent visa spouse — the identity loss, the career disruption, the isolation of a new country with no independent network, and the complex emotional dynamic of being entirely dependent on one person.' } },
   { '@type': 'Question', name: 'I feel resentful toward my partner even though I love them. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and this is one of the most common experiences listeners hear from dependent spouses. Love and resentment can coexist — the resentment of having given up your career, your city, your friends for someone else\'s opportunity, even when you made the choice willingly. Listeners hold this without judgment.' } },
   { '@type': 'Question', name: 'I don\'t have work authorisation in this country. Does that affect what I can talk about?', acceptedAnswer: { '@type': 'Answer', text: 'No — you can talk about anything. The specific anxiety of not having work authorisation, of having your identity tied to your partner\'s visa status, of waiting for an EAD card or a work permit, is something listeners understand and can hold.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'My partner doesn\'t understand why I\'m struggling — they think I should be grateful to be here. Can listeners help?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The mismatch between your partner\'s experience of immigration (opportunity, success, adventure) and yours (dependency, isolation, identity loss) is a real and painful gap. Listeners can hold your experience without requiring your partner\'s frame.' } },
 ] }
 
@@ -76,14 +76,14 @@ export default function NriSpouseSupportPage() {
         <div className="hero">
           <p className="badge">NRI Spouse &middot; Dependent Visa &middot; H4 &middot; Identity Abroad</p>
           <h1>You moved for love. <em>Now you&rsquo;re not sure who you are.</em></h1>
-          <p className="lead">The dependent visa spouse experience is one of the most isolating in the NRI world — and one of the least talked about. You didn&rsquo;t come for your own opportunity. You came because you love someone who did. And now you are in a foreign country with no career, no independent social network, and an identity that used to be yours and now feels borrowed. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">The dependent visa spouse experience is one of the most isolating in the NRI world — and one of the least talked about. You didn&rsquo;t come for your own opportunity. You came because you love someone who did. And now you are in a foreign country with no career, no independent social network, and an identity that used to be yours and now feels borrowed. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
         <div className="section">
           <h2>The H4 Visa, UK Dependent, Canada Spouse: What the Papers Don&rsquo;t Say</h2>
           <p>The H4 visa — the dependent visa for H1B spouses — is one of the most personally costly immigration statuses in the world. You are authorised to live in America. You are not, for most H4 holders, authorised to work. The EAD (Employment Authorisation Document) for H4 holders is available only under specific conditions, takes months to process, and is subject to policy changes that can leave you with work one year and without it the next. Your entire professional identity — your career, your qualifications, your sense of what you contribute — is placed on hold by a document you did not apply for.</p>
-          <p>The UK dependent visa and Canadian spousal open work permit have their own variations, but the emotional structure is similar: you are in this country because of someone else&rsquo;s visa, someone else&rsquo;s job, someone else&rsquo;s decision to stay. Even when you agreed to the move, even when you were excited about it, the downstream reality — the loneliness, the dependence, the loss of professional identity — is different from what you imagined. How Was Your Day is for exactly this space. First 5 minutes free.</p>
+          <p>The UK dependent visa and Canadian spousal open work permit have their own variations, but the emotional structure is similar: you are in this country because of someone else&rsquo;s visa, someone else&rsquo;s job, someone else&rsquo;s decision to stay. Even when you agreed to the move, even when you were excited about it, the downstream reality — the loneliness, the dependence, the loss of professional identity — is different from what you imagined. How Was Your Day is for exactly this space. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -99,7 +99,7 @@ export default function NriSpouseSupportPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You moved for love. Your feelings matter too.</h2><p>Real Indian peer listener. Understands the dependent spouse experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You moved for love. Your feelings matter too.</h2><p>Real Indian peer listener. Understands the dependent spouse experience. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

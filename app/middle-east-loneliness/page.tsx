@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Middle East Loneliness Support for Indians — Talk in Your Language',
-    description: 'Far from home in the Middle East and feeling the weight of it? How Was Your Day peer listeners are Indian, speak your language, and are online daily on Indian time. First 5 minutes free.',
+    description: 'Far from home in the Middle East and feeling the weight of it? How Was Your Day peer listeners are Indian, speak your language, and are online daily on Indian time. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/middle-east-loneliness',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'What does How Was Your Day cost across the Middle East?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'From the UAE: AED 37/55/74 for 15/30/45 min. Kuwait: KD 4/5/7. Oman: OMR 4/6/8. Available everywhere in the Middle East — Saudi Arabia, Qatar, Bahrain, and beyond. First 5 minutes free — one free session per account.',
+        text: 'From the UAE: AED 37/55/74 for 15/30/45 min. Kuwait: KD 4/5/7. Oman: OMR 4/6/8. Available everywhere in the Middle East — Saudi Arabia, Qatar, Bahrain, and beyond. Sessions from 8 minutes.',
       },
     },
     {
@@ -157,7 +157,7 @@ export default function MiddleEastLonelinessPage() {
           rarely gets named. How Was Your Day is here for that silence.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>Why Indians in the Middle East feel so alone</h2>
@@ -177,7 +177,7 @@ export default function MiddleEastLonelinessPage() {
           <p>When the workday ends and there is nothing left to distract you, the quiet fills in fast.
             How Was Your Day listeners are available throughout the day, with many active during Gulf evening hours. You are
             never left alone with it after dark.</p>
-          <p>First 5 minutes are completely free. No card needed to start.</p>
+          <p>Sessions from 8 minutes. No card needed to start.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
         </div>
 
@@ -195,7 +195,7 @@ export default function MiddleEastLonelinessPage() {
             <li>UAE: AED 37 / AED 55 / AED 74 for 15/30/45 min</li>
             <li>Kuwait: KD 4 / KD 5 / KD 7 for 15/30/45 min</li>
             <li>Oman: OMR 4 / OMR 6 / OMR 8 for 15/30/45 min</li>
-            <li>First 5 minutes free — one free session per account</li>
+            <li>Sessions from 8 minutes</li>
           </ul>
           <p style={{ marginTop: '12px' }}>Also available in Saudi Arabia, Qatar, and Bahrain. Anonymous and no subscription required.</p>
         </div>
@@ -227,7 +227,7 @@ export default function MiddleEastLonelinessPage() {
           <div className="faq-item">
             <h3>What does How Was Your Day cost across the Middle East?</h3>
             <p>UAE: AED 37/55/74. Kuwait: KD 4/5/7. Oman: OMR 4/6/8. Available in Saudi Arabia, Qatar, and
-              Bahrain too. First 5 minutes free — one free session per account.</p>
+              Bahrain too. Sessions from 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day available late at night from the Middle East?</h3>

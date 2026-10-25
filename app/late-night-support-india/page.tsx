@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Late Night Support India — Someone to Talk to After Midnight | How Was Your Day',
-  description: 'Late night support from a real peer listener in India — available at 2 AM, 3 AM, anytime. Anonymous, ₹160/session, first 5 min free.',
+  description: 'Late night support from a real peer listener in India — available at 2 AM, 3 AM, anytime. Anonymous, ₹160/session, from 8 minutes.',
   keywords: [
     'late night support india',
     'someone to talk to at night india',
@@ -225,7 +225,7 @@ export default function LateNightSupportIndiaPage() {
           <a href="/talk?src=seo"><button className="btn-primary">Find someone right now →</button></a>
           <a href="/browse"><button className="btn-outline">Browse available listeners</button></a>
         </div>
-        <p className="hero-note">Anonymous · First 5 min free · ₹160 per session after</p>
+        <p className="hero-note">Anonymous · From 8 minutes · ₹160 per session after</p>
       </div>
 
       {/* ── BODY ── */}

@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
     {'@type': 'Question', name: 'What is the difference between an anxiety attack and a panic attack?', acceptedAnswer: {'@type': 'Answer', text: 'The terms are often used interchangeably. In clinical language, panic attacks are sudden intense fear responses with physical symptoms (racing heart, shortness of breath, dizziness). Anxiety attacks typically build more gradually. Both are frightening, both are real, and both leave an aftermath that deserves attention.'}},
     {'@type': 'Question', name: 'Why do I feel ashamed after an anxiety attack?', acceptedAnswer: {'@type': 'Answer', text: 'Because there is still significant stigma around visible emotional distress, especially in India where composure is valued. The shame is a cultural overlay on a physiological event &mdash; your nervous system did something outside your conscious control. The shame is not deserved.'}},
     {'@type': 'Question', name: 'Can peer support help with anxiety?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. For many people, having a regular space to process anxiety &mdash; to talk through what they are carrying, what triggered the attack, what the fear is &mdash; reduces the overall load and makes attacks less frequent. It is not therapy but it is genuinely useful.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function AnxietyAttackIndiaPage() {
         <div className="hero">
           <p className="badge">Anxiety Attack · After the Storm · India</p>
           <h1>After the anxiety attack passes, there's a specific kind of exhaustion and shame. <em>You need to talk about it.</em></h1>
-          <p className="lead">The attack has passed. Now comes the exhaustion, the confusion, and the fear of the next one. Talk to someone anonymously from ₹160.</p>
+          <p className="lead">The attack has passed. Now comes the exhaustion, the confusion, and the fear of the next one. Talk to someone anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -89,7 +89,7 @@ export default function AnxietyAttackIndiaPage() {
           <p>In an immediate crisis, please call Samaritans 116 123 or text SHOUT to 85258. Both are free and 24/7.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You survived it. Now let someone help you process it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You survived it. Now let someone help you process it.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/panic-attack-india">Panic attack India &rarr;</a>
             <a href="/support/anxiety">Anxiety support &rarr;</a>
             <a href="/support/cant-sleep-anxiety">Can't sleep anxiety &rarr;</a>

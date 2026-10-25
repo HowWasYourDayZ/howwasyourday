@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'How much does a session cost from the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that: £8 for 15 minutes, £12 for 30 minutes, £16 for 45 minutes.',
+        text: 'Sessions start at 8 minutes. After that: £8 for 15 minutes, £12 for 30 minutes, £16 for 45 minutes.',
       },
     },
   ],
@@ -155,7 +155,7 @@ export default function LondonLonelinessPage() {
           honest about something most people are quietly feeling too.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>London loneliness — why the city makes it worse</h2>
@@ -230,7 +230,7 @@ export default function LondonLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost?</h3>
-            <p>First 5 minutes are free. Then £8 for 15 min, £12 for 30 min, £16 for 45 min.</p>
+            <p>Sessions start at 8 minutes. Then £8 for 15 min, £12 for 30 min, £16 for 45 min.</p>
           </div>
         </div>
 

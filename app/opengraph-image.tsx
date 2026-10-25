@@ -41,7 +41,7 @@ export default function OgImage() {
             borderRadius: 50,
           }}
         >
-          First 5 minutes free
+          Sessions from 8 minutes
         </div>
       </div>
     ),

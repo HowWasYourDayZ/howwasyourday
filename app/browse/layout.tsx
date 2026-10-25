@@ -1,19 +1,18 @@
 import type { Metadata } from 'next'
+import { DEFAULT_LISTENER_RATE, PLATFORM_FEE, SESSION_DURATIONS } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Browse Peer Listeners | How Was Your Day — Talk to a Real Person',
-  description: 'Browse verified peer listeners in India. Filter by topic, availability, and language. Start with a free 5-minute session — no appointment needed.',
+  description: 'Browse verified peer listeners in the UK. Filter by topic, availability, and language. Talk now or book a time — sessions from 8 minutes.',
   keywords: [
-    'peer listener India', 'talk to a real person online India', 'online emotional support India',
-    'someone to talk to India', 'peer support chat India', 'talk to someone when lonely India',
-    'someone to lean on India', 'emotional support Bengaluru', 'peer support Mumbai',
-    'talk to someone 2am India', 'human listener online India', 'peer support near me India',
-    'Indians abroad emotional support', 'NRI talk to someone',
+    'peer listener UK', 'talk to a real person online UK', 'online emotional support UK',
+    'someone to talk to UK', 'peer support chat UK', 'talk to someone when lonely',
+    'book a listener', 'talk to someone tonight', 'human listener online',
   ],
   alternates: { canonical: 'https://www.howwasyourday.live/browse', languages: { 'en-GB': 'https://www.howwasyourday.live/browse' } },
   openGraph: {
     title: 'Browse Peer Listeners | How Was Your Day — Talk to a Real Person',
-    description: 'Browse verified peer listeners in India. Filter by topic, availability, and language. Start with a free 5-minute session — no appointment needed.',
+    description: 'Browse verified peer listeners in the UK. Filter by topic, availability, and language. Talk now or book a time — sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/browse',
     type: 'website',
   },
@@ -31,78 +30,18 @@ const serviceSchema = {
     name: 'How Was Your Day',
     url: 'https://www.howwasyourday.live',
   },
-  areaServed: [
-    { '@type': 'Country', name: 'India' },
-    { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'United Kingdom' },
-    { '@type': 'Country', name: 'Canada' },
-    { '@type': 'Country', name: 'United Arab Emirates' },
-    { '@type': 'Country', name: 'Australia' },
-    { '@type': 'Country', name: 'Singapore' },
-    { '@type': 'Country', name: 'Malaysia' },
-  ],
+  areaServed: [{ '@type': 'Country', name: 'United Kingdom' }],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Peer support sessions',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Free 5-minute introductory session',
-        description: 'One free 5-minute session per account — text or voice, no payment required.',
-        price: '0',
-        priceCurrency: 'INR',
-      },
-      {
-        '@type': 'Offer',
-        name: '15-minute peer support session (India)',
-        description: '15-minute text or voice session with a verified peer listener.',
-        price: '160',
-        priceCurrency: 'INR',
-        eligibleRegion: { '@type': 'Country', name: 'India' },
-      },
-      {
-        '@type': 'Offer',
-        name: '15-minute peer support session (International)',
-        description: '15-minute text or voice session for Indians abroad (NRI).',
-        price: '10',
-        priceCurrency: 'USD',
-        eligibleRegion: [
-          { '@type': 'Country', name: 'United States' },
-          { '@type': 'Country', name: 'United Kingdom' },
-          { '@type': 'Country', name: 'Canada' },
-          { '@type': 'Country', name: 'United Arab Emirates' },
-          { '@type': 'Country', name: 'Australia' },
-        ],
-      },
-      {
-        '@type': 'Offer',
-        name: '30-minute peer support session (International)',
-        description: '30-minute text or voice session for Indians abroad (NRI).',
-        price: '15',
-        priceCurrency: 'USD',
-        eligibleRegion: [
-          { '@type': 'Country', name: 'United States' },
-          { '@type': 'Country', name: 'United Kingdom' },
-          { '@type': 'Country', name: 'Canada' },
-          { '@type': 'Country', name: 'United Arab Emirates' },
-          { '@type': 'Country', name: 'Australia' },
-        ],
-      },
-      {
-        '@type': 'Offer',
-        name: '45-minute peer support session (International)',
-        description: '45-minute text or voice session for Indians abroad (NRI).',
-        price: '20',
-        priceCurrency: 'USD',
-        eligibleRegion: [
-          { '@type': 'Country', name: 'United States' },
-          { '@type': 'Country', name: 'United Kingdom' },
-          { '@type': 'Country', name: 'Canada' },
-          { '@type': 'Country', name: 'United Arab Emirates' },
-          { '@type': 'Country', name: 'Australia' },
-        ],
-      },
-    ],
+    // Example prices at the standard text rate (pence → pounds); listeners set their own.
+    itemListElement: SESSION_DURATIONS.map(m => ({
+      '@type': 'Offer',
+      name: `${m}-minute peer support session`,
+      description: `${m}-minute text or voice session with a verified peer listener, now or booked for later. Price shown is at the standard rate; each listener sets their own.`,
+      price: ((DEFAULT_LISTENER_RATE * m + PLATFORM_FEE) / 100).toFixed(2),
+      priceCurrency: 'GBP',
+    })),
   },
 }
 

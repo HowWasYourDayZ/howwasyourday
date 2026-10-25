@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'I arrived recently and I am struggling a lot. Is this for new students?', acceptedAnswer: { '@type': 'Answer', text: 'Especially for new students. The first few months in Canada are often the hardest — the cold, the culture gap, the loneliness of orientation before real friendships form. How Was Your Day is available immediately, no waiting list, no appointment needed. First 5 minutes free.' } },
+  { '@type': 'Question', name: 'I arrived recently and I am struggling a lot. Is this for new students?', acceptedAnswer: { '@type': 'Answer', text: 'Especially for new students. The first few months in Canada are often the hardest — the cold, the culture gap, the loneliness of orientation before real friendships form. How Was Your Day is available immediately, no waiting list, no appointment needed. Sessions from 8 minutes.' } },
   { '@type': 'Question', name: 'I am worried about my post-study work permit. Do listeners understand that anxiety?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Canadian immigration policy, post-study work permit rules, and the anxiety of building a life on an uncertain legal foundation are well understood by listeners. You can speak about the immigration anxiety alongside the personal and emotional weight.' } },
   { '@type': 'Question', name: 'There are so many Indian students in my program that it almost creates its own pressure. Is that a real thing?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. When a program has a very high concentration of Indian students, it can create a competitive, performance-based atmosphere that differs from the supportive community you hoped for. Comparison, hierarchy, and the pressure to not appear to be struggling in front of peers — all of these are real and nameable.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your family, your university, and your Indian student community in Canada will never know.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes-3 CAD. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes-3 CAD. No subscription required.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function IndianStudentCanadaPage() {
         <div className="hero">
           <p className="badge">Indian Student &middot; Canada &middot; Toronto &amp; Vancouver</p>
           <h1>Canada looked like the answer. <em>The winter didn&rsquo;t come up in the brochure.</em></h1>
-          <p className="lead">Hundreds of thousands of Indian students come to Canada every year — to Toronto, Vancouver, Brampton, smaller cities they had to look up on a map. Many arrive with enormous hope and find themselves, within months, dealing with a cold they had underestimated, a loneliness they had not anticipated, and a financial pressure nobody told them about. How Was Your Day is for those moments. First 5 minutes free.</p>
+          <p className="lead">Hundreds of thousands of Indian students come to Canada every year — to Toronto, Vancouver, Brampton, smaller cities they had to look up on a map. Many arrive with enormous hope and find themselves, within months, dealing with a cold they had underestimated, a loneliness they had not anticipated, and a financial pressure nobody told them about. How Was Your Day is for those moments. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndianStudentCanadaPage() {
           <h2>The Canadian Winter — and It Is Not Just the Weather</h2>
           <p>The Canadian winter is something most Indian students from warmer parts of India are genuinely not prepared for — not just the temperature, but the way the cold changes everything about daily life. Going outside becomes an event. The city gets quieter. The days get shorter. You spend more time inside, alone with your thoughts, and the homesickness that was manageable in autumn becomes acute in January.</p>
           <p>This is physiological as well as emotional — reduced sunlight affects mood in ways that are well-documented and well-known in Canada, but rarely mentioned in the orientation materials for international students. If you find yourself unusually low in January or February with no obvious explanation, you are not weak. You are experiencing something most people around you also experience and rarely discuss.</p>
-          <p>How Was Your Day listeners understand the winter depression of the Indian student in Canada. You can speak about it — the cold, the isolation, the homesickness, all of it — without being told to exercise more or join more clubs. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand the winter depression of the Indian student in Canada. You can speak about it — the cold, the isolation, the homesickness, all of it — without being told to exercise more or join more clubs. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function IndianStudentCanadaPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The Canada experience nobody puts in the prospectus.</h2><p>A peer listener who understands India, Canada, and the gap. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The Canada experience nobody puts in the prospectus.</h2><p>A peer listener who understands India, Canada, and the gap. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-student-support">Indian student abroad &rarr;</a>
           <a href="/punjabi-support-canada">Punjabi support Canada &rarr;</a>

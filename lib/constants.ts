@@ -45,19 +45,11 @@ export const VOICE_RATE_PREMIUM    = 10 // pence/min (10p)
 export const VOICE_PRICING_FROM    = Date.parse('2026-09-24T04:55:00Z')
 export const sessionRatePerMin = (textRate: number, type: 'text' | 'voice') =>
   type === 'voice' && VOICE_PRICING_ENABLED ? textRate + VOICE_RATE_PREMIUM : textRate
-export const FREE_SESSION_MINS  = 5
-// Each user gets N free 5-min trials (N = MAX_FREE_TRIALS, now 1 — so one per
-// account in practice), at most ONE per listener (so they can try the
-// product before paying). Reduced 5 → 3 (2026-08-11) → 2 → 1 (2026-09-13):
-// multiple free trials let users satisfy casual "need to vent" needs without
-// ever reaching the paywall — at 2 trials, 101/104 free users never recharged.
-// 1 trial preserves a genuine try-before-you-buy moment while making the
-// paywall decision unavoidable after the first session.
-// NOTE: any user-facing copy stating the number must be updated alongside this
-// (app/browse/page.tsx nudge, app/session/[id]/page.tsx conversion screen,
-// homepage FAQ, /faq, city page FAQs, layout Service schema, public/llms.txt).
-export const MAX_FREE_TRIALS    = 1
-export const SESSION_DURATIONS  = [5, 15, 30, 45] as const
+// Paid session lengths (2026-10-25, PROJECT.md §5): 8 / 16 / 32 minutes, 8 is
+// the minimum. There are NO free sessions. Same lengths for instant and
+// scheduled sessions. Mirrored by sessions_duration_mins_check (migration 076).
+export const SESSION_DURATIONS  = [8, 16, 32] as const
+export type SessionDuration = typeof SESSION_DURATIONS[number]
 // How long a seeker's session REQUEST stays open waiting for the listener to
 // accept, before it auto-cancels and refunds the seeker. This is the single
 // source of truth — the seeker waiting screen, the listener dashboard countdown,

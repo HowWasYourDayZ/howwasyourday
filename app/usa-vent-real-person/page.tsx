@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Vent to a Real Person Online in the US — Anonymous, Human | How Was Your Day',
-  description: 'How Was Your Day lets you vent to a real human listener in the US — on Indian time, anonymous, first 5 minutes free. No AI, no judgment. From $10 for 15 min, $15 for 30 min.',
+  description: 'How Was Your Day lets you vent to a real human listener in the US — on Indian time, anonymous, sessions from 8 minutes. No AI, no judgment. From $10 for 15 min, $15 for 30 min.',
   keywords: [
     'vent to real person USA', 'anonymous venting online USA', 'someone to talk to in America',
     'vent online USA', 'talk to someone USA', 'real human listener America',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Vent to a Real Person Online in the US — Anonymous, Human | How Was Your Day',
-    description: "You've got a lot on your mind. A real human is ready to listen. How Was Your Day — anonymous, online daily on Indian time, first 5 min free.",
+    description: "You've got a lot on your mind. A real human is ready to listen. How Was Your Day — anonymous, online daily on Indian time, from 8 minutes.",
     url: 'https://www.howwasyourday.live/usa-vent-real-person',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -27,7 +27,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'How Was Your Day — Anonymous Venting with Real Humans in the US',
-  description: 'How Was Your Day lets Americans vent to real human peer listeners — private, no appointment needed, no AI. First 5 minutes free, then from $10 for 15 minutes.',
+  description: 'How Was Your Day lets Americans vent to real human peer listeners — private, no appointment needed, no AI. Sessions from 8 minutes, then from $10 for 15 minutes.',
   provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'United States',
@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes.',
+    description: 'Sessions from 8 minutes. From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes.',
     priceCurrency: 'USD',
   },
 }
@@ -60,7 +60,7 @@ const faqSchema = {
       name: 'Where can I vent to someone online in the US?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day lets you vent to a real human listener — online daily on Indian time, private, first 5 minutes free. No AI, no judgment, just a real person ready to hear you out.',
+        text: 'How Was Your Day lets you vent to a real human listener — online daily on Indian time, private, sessions from 8 minutes. No AI, no judgment, just a real person ready to hear you out.',
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       name: 'How much does it cost to vent on How Was Your Day in the US?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that, from $10 for 15 minutes, $15 for 30 minutes, or $20 for 45 minutes — significantly cheaper than therapy, with no insurance or appointment needed.',
+        text: 'Sessions start at 8 minutes. After that, from $10 for 15 minutes, $15 for 30 minutes, or $20 for 45 minutes — significantly cheaper than therapy, with no insurance or appointment needed.',
       },
     },
     {
@@ -187,7 +187,7 @@ export default function USAVentRealPersonPage() {
           fully present and ready to receive what you&apos;re carrying.
         </p>
 
-        <a href="/browse" className="cta-hero">Vent to a real person now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Vent to a real person now →</a>
 
         <div className="card">
           <h2>American hustle culture was built to make you feel like this</h2>
@@ -269,7 +269,7 @@ export default function USAVentRealPersonPage() {
 
         <div className="cta">
           <h2>Say it out loud to someone who&apos;ll actually hear you.</h2>
-          <p>Anonymous. Human. On Indian time. First 5 minutes free. $10 / $15 / $20 for 15, 30, 45 min.</p>
+          <p>Anonymous. Human. On Indian time. Sessions from 8 minutes. $10 / $15 / $20 for 15, 30, 45 min.</p>
           <a href="/browse" className="btn-white">Browse real listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -279,7 +279,7 @@ export default function USAVentRealPersonPage() {
           <div className="faq-item">
             <h3>Where can I vent to someone online in the US?</h3>
             <p>How Was Your Day lets you vent to a real human listener — online daily on Indian time, private,
-              first 5 minutes free. No AI, no judgment, just a real person ready to hear you out.</p>
+              sessions from 8 minutes. No AI, no judgment, just a real person ready to hear you out.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day anonymous in the US?</h3>
@@ -288,7 +288,7 @@ export default function USAVentRealPersonPage() {
           </div>
           <div className="faq-item">
             <h3>How much does it cost to vent on How Was Your Day in the US?</h3>
-            <p>Your first 5 minutes are free. After that, from $10 for 15 minutes, $15 for 30 minutes, or
+            <p>Sessions start at 8 minutes. After that, from $10 for 15 minutes, $15 for 30 minutes, or
               $20 for 45 minutes — significantly cheaper than therapy, with no insurance or appointment
               needed.</p>
           </div>

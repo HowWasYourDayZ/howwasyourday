@@ -58,6 +58,6 @@ export const post = {
 
 <p>For deeper work on the patterns — particularly if the fear is affecting current relationships — a therapist specialising in attachment and family systems is the most effective resource. Peer support can be a useful first step toward that work, and sometimes a useful ongoing support alongside it.</p>
 
-<p>First 5 minutes are free. Anonymous. No judgment.</p>
+<p>Sessions start at 8 minutes. Anonymous. No judgment.</p>
 `,
 }

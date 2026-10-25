@@ -4,12 +4,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Peer Counselling India — Affordable Emotional Support | How Was Your Day',
-  description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on How Was Your Day.',
+  description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. Sessions from 8 minutes on How Was Your Day.',
   keywords: ['peer counselling India', 'peer counselling online India', 'peer counselling app India', 'peer counsellor India', 'peer counselling cost India', 'online peer counselling'],
   alternates: { canonical: 'https://www.howwasyourday.live/peer-counselling-india', languages: { 'en-GB': 'https://www.howwasyourday.live/peer-counselling-india' } },
   openGraph: {
     title: 'Peer Counselling India — Affordable Emotional Support | How Was Your Day',
-    description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. First 5 minutes free on How Was Your Day.',
+    description: 'Peer counselling in India from people with lived experience. More affordable than therapy, more human than AI. Sessions from 8 minutes on How Was Your Day.',
     url: 'https://www.howwasyourday.live/peer-counselling-india',
     siteName: 'How Was Your Day',
     type: 'website',
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'How much does peer counselling cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000 per session. Peer counselling on How Was Your Day costs approximately ₹160 per session, and the first 5 minutes are free. There are no subscription fees or automatic renewals.',
+        text: 'Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000 per session. Peer counselling on How Was Your Day costs approximately ₹160 per session. There are no subscription fees or automatic renewals.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Where can I find peer counselling in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day (howwasyourday.live) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Your first 5-minute session is free.',
+        text: 'How Was Your Day (howwasyourday.live) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Sessions start at 8 minutes.',
       },
     },
   ],
@@ -158,7 +158,7 @@ export default function PeerCounsellingIndiaPage() {
         <div className="hero">
           <p className="tag">Peer Counselling · India · No Appointment Needed</p>
           <h1>Peer counselling. From someone <em>who has been there.</em></h1>
-          <p className="lead">Not a licensed therapist. Not an AI. A real person who has personally lived through something like what you are carrying — screened for listening, no appointment, and affordable. Peer counselling on How Was Your Day starts at ₹160/session, with the first 5 minutes free.</p>
+          <p className="lead">Not a licensed therapist. Not an AI. A real person who has personally lived through something like what you are carrying — screened for listening, no appointment, and affordable. Peer counselling on How Was Your Day starts at ₹160/session.</p>
         </div>
 
         {/* What is peer counselling */}
@@ -202,7 +202,7 @@ export default function PeerCounsellingIndiaPage() {
                 <tr className="highlight-row">
                   <td className="col-label">How Was Your Day peer counselling</td>
                   <td>Screened peer listener with lived experience</td>
-                  <td>₹160/session (first 5 min free)</td>
+                  <td>₹160/session (from 8 minutes)</td>
                   <td>No appointment needed</td>
                 </tr>
                 <tr>
@@ -235,7 +235,7 @@ export default function PeerCounsellingIndiaPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>Talk to a Peer Counsellor Today</h2>
-          <p>Browse peer listeners by area of experience. First 5 minutes free. Private, no appointment required — check live listener availability.</p>
+          <p>Browse peer listeners by area of experience. Sessions from 8 minutes. Private, no appointment required — check live listener availability.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer counsellors →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -255,7 +255,7 @@ export default function PeerCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does peer counselling cost in India?</div>
-            <div className="faq-a">Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000. Peer counselling on How Was Your Day costs approximately ₹160 per session, and the first 5 minutes are free. No subscription fees, no automatic renewals.</div>
+            <div className="faq-a">Licensed therapy in India costs ₹1,500–₹5,000 per session. Online therapy platforms charge ₹800–₹2,000. Peer counselling on How Was Your Day costs approximately ₹160 per session. No subscription fees, no automatic renewals.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is peer counselling confidential?</div>
@@ -267,7 +267,7 @@ export default function PeerCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Where can I find peer counselling in India?</div>
-            <div className="faq-a">How Was Your Day (howwasyourday.live) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Your first 5-minute session is free.</div>
+            <div className="faq-a">How Was Your Day (howwasyourday.live) offers peer counselling from screened peer listeners across India. Sessions start at ₹160, are private, and available without an appointment. Sessions start at 8 minutes.</div>
           </div>
         </div>
 

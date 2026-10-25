@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Vent to a Real Person in India — Safe, Anonymous, Human | How Was Your Day',
-  description: 'How Was Your Day has real human listeners in India. Vent about anything — family, relationships, work stress, loneliness. Sessions are anonymous. First 5 minutes free.',
+  description: 'How Was Your Day has real human listeners in India. Vent about anything — family, relationships, work stress, loneliness. Sessions are anonymous. Sessions from 8 minutes.',
   keywords: [
     'vent to someone in India', 'kisi se baat karni hai', 'I want to vent India',
     'koi baat sunne wala India', 'vent online India', 'talk to someone anonymously India',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Vent to a Real Person in India — Safe, Anonymous, Human | How Was Your Day',
-    description: 'Real human listeners in India. Vent about anything, anonymously. First 5 minutes free.',
+    description: 'Real human listeners in India. Vent about anything, anonymously. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/india-vent-to-real-person',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -43,7 +43,7 @@ const serviceSchema = {
     '@type': 'Offer',
     price: '20',
     priceCurrency: 'INR',
-    description: 'Per minute, first 5 minutes free',
+    description: 'Per minute, from 8 minutes',
   },
 }
 
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'Where can I vent to someone in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. First 5 minutes are free.',
+        text: 'How Was Your Day has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. Sessions start at 8 minutes.',
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: 'How much does it cost to vent on How Was Your Day in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are completely free. After that, sessions start at ₹160 for 15 minutes, ₹310 for 30 minutes or ₹460 for 45 minutes (with a ₹10/min listener; prices vary by listener).',
+        text: 'Sessions start at 8 minutes. After that, sessions start at ₹160 for 15 minutes, ₹310 for 30 minutes or ₹460 for 45 minutes (with a ₹10/min listener; prices vary by listener).',
       },
     },
   ],
@@ -198,7 +198,7 @@ export default function IndiaVentToRealPersonPage() {
           real Indian listeners, with no appointment.
         </p>
 
-        <a href="/browse" className="cta-hero">Find someone to listen — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Find someone to listen →</a>
 
         <div className="card">
           <h2>You don&apos;t need a reason big enough to reach out</h2>
@@ -269,7 +269,7 @@ export default function IndiaVentToRealPersonPage() {
         <div className="card">
           <h2>How much does it cost?</h2>
           <p>
-            Your first 5 minutes are completely free — no credit card needed to start. After that:
+            Sessions start at 8 minutes — no credit card needed to start. After that:
             from ₹160 for 15 minutes, ₹310 for 30 minutes, ₹460 for 45 minutes (prices vary by listener).
           </p>
           <p>
@@ -288,7 +288,7 @@ export default function IndiaVentToRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I vent to someone in India?</h3>
-            <p>How Was Your Day has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. First 5 minutes are free.</p>
+            <p>How Was Your Day has real human listeners in India — people who genuinely listen without judgment. Vent about anything: family, relationships, work stress, loneliness. Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is it okay to vent to a stranger online in India?</h3>
@@ -304,7 +304,7 @@ export default function IndiaVentToRealPersonPage() {
           </div>
           <div className="faq-item">
             <h3>How much does it cost to vent on How Was Your Day in India?</h3>
-            <p>Your first 5 minutes are completely free. After that, sessions start at ₹160 for 15 minutes, ₹310 for 30 minutes or ₹460 for 45 minutes (with a ₹10/min listener; prices vary by listener).</p>
+            <p>Sessions start at 8 minutes. After that, sessions start at ₹160 for 15 minutes, ₹310 for 30 minutes or ₹460 for 45 minutes (with a ₹10/min listener; prices vary by listener).</p>
           </div>
         </div>
 

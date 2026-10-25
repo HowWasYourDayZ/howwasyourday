@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Atlanta Indian community experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience including the close-knit community dynamics of places like Alpharetta and Johns Creek. You don\'t need to explain what it feels like when the community is both support and pressure.' } },
   { '@type': 'Question', name: 'What time zone works for talking from Atlanta?', acceptedAnswer: { '@type': 'Answer', text: 'Atlanta (EST) is 10.5 hours behind IST. 8am Atlanta = 6:30pm India. Your morning before work aligns with Indian evenings — a natural window when many listeners are available.' } },
   { '@type': 'Question', name: 'Will anyone in my community find out?', acceptedAnswer: { '@type': 'Answer', text: 'No. Sessions are private — only a phone number and first name. Listeners are in India, outside your Atlanta network. Nothing is shared with your community, family, or employer.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. Sessions start from US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions start from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInAtlantaPage() {
         <div className="hero">
           <p className="badge">Indians in Atlanta &middot; Alpharetta &middot; Johns Creek</p>
           <h1>Atlanta. The community you wanted. <em>The connection you still miss.</em></h1>
-          <p className="lead">Alpharetta, Johns Creek, Duluth — the Atlanta metro has a dense, close-knit Indian community built around temples, cricket leagues, and Diwali parties. But sometimes the community itself is the pressure. Everyone watching. Everyone comparing. A real conversation with someone outside your circle — and inside your culture. First 5 minutes free.</p>
+          <p className="lead">Alpharetta, Johns Creek, Duluth — the Atlanta metro has a dense, close-knit Indian community built around temples, cricket leagues, and Diwali parties. But sometimes the community itself is the pressure. Everyone watching. Everyone comparing. A real conversation with someone outside your circle — and inside your culture. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,7 +83,7 @@ export default function IndiansInAtlantaPage() {
           <h2>When the Community Is Both Comfort and Pressure</h2>
           <p>The Atlanta Indian community — concentrated in Alpharetta, Johns Creek, Duluth, Suwanee, and Sugar Hill — is one of the most tightly woven Indian diaspora communities in America. The BAPS temple in Lilburn draws thousands. The Navratri celebrations in Alpharetta fill convention halls. The community infrastructure is genuinely remarkable.</p>
           <p>And precisely because it is so tight-knit, it can also be suffocating. Gossip travels fast. Everyone knows which families are struggling, which marriages are strained, whose children didn&rsquo;t make the gifted program. The social surveillance — done with warmth and genuine concern — means there are things you simply cannot say inside the community.</p>
-          <p>How Was Your Day gives you a real Indian peer listener who is completely outside this network. Based in India, understanding everything about the culture, but with no connection to your Atlanta circle. You can say the actual thing. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener who is completely outside this network. Based in India, understanding everything about the culture, but with no connection to your Atlanta circle. You can say the actual thing. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -94,7 +94,7 @@ export default function IndiansInAtlantaPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Outside the circle. Inside the culture.</h2><p>Real Indian peer listener. Understands Atlanta NRI life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Outside the circle. Inside the culture.</h2><p>Real Indian peer listener. Understands Atlanta NRI life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

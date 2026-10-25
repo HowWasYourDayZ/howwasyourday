@@ -43,7 +43,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. Your first 5-minute session is free. There is no subscription, no recurring charge. You pay for what you use when you need it.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. Sessions start at 8 minutes. There is no subscription, no recurring charge. You pay for what you use when you need it.' },
     },
     {
       '@type': 'Question',
@@ -155,7 +155,7 @@ export default function SingleParentIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>You carry so much. Put some of it down for 15 minutes.</h2>
-          <p>Private. No appointment. From ₹160. First 5 minutes free.</p>
+          <p>Private. No appointment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
         <div className="section">

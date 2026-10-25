@@ -223,7 +223,7 @@ export default function BetterhelpAlternativeIndiaPage() {
 
         <div className="cta-card">
           <h2>Try a Session for ₹160</h2>
-          <p>Real human listeners. Indian context. No subscription. First 5 minutes free.</p>
+          <p>Real human listeners. Indian context. No subscription. Sessions from 8 minutes.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>

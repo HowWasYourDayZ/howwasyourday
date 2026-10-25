@@ -1267,10 +1267,10 @@ export default function DashboardPage() {
                   : <strong style={{color:'var(--navy)'}}>{formatGBP(net(mins))}</strong>
                 return (
                   <div style={{marginTop:10,background:'var(--light)',borderRadius:12,padding:'10px 14px',fontSize:12,color:'var(--gray)',fontWeight:600,lineHeight:1.9}}>
-                    📅 Sessions are booked in <strong style={{color:'var(--navy)'}}>15 / 30 / 45 min slots</strong>
-                    <br/>15 min → you earn {earn(15)}
-                    <br/>30 min → you earn {earn(30)}
-                    <br/>45 min → you earn {earn(45)}
+                    📅 Sessions are <strong style={{color:'var(--navy)'}}>8 / 16 / 32 min</strong>
+                    <br/>8 min → you earn {earn(8)}
+                    <br/>16 min → you earn {earn(16)}
+                    <br/>32 min → you earn {earn(32)}
                     <br/><span style={{fontSize:11,opacity:0.85}}>You keep {Math.round((1 - effectiveFeeRate)*100)}% of your rate on every paid session — How Was Your Day&apos;s {Math.round(effectiveFeeRate*100)}% service fee supports bringing seekers to How Was Your Day, payments, safety and support.</span>
                   </div>
                 )
@@ -1432,8 +1432,8 @@ export default function DashboardPage() {
                 <div>
                   <strong style={{color:'var(--navy)'}}>✏️ You set your price.</strong>{' '}
                   {VOICE_PRICING_ENABLED
-                    ? <>At your current rate (💬 {formatGBP(text)} · 📞 {formatGBP(voice)} /min), a 30-min voice call takes home <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(voice, 30))}</strong> and a 30-min text chat <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(text, 30))}</strong>.</>
-                    : <>At your current rate ({formatRate(text)}), a 30-min session takes home <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(text, 30))}</strong>.</>}
+                    ? <>At your current rate (💬 {formatGBP(text)} · 📞 {formatGBP(voice)} /min), a 16-min voice call takes home <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(voice, 16))}</strong> and a 16-min text chat <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(text, 16))}</strong>.</>
+                    : <>At your current rate ({formatRate(text)}), a 16-min session takes home <strong style={{color:'var(--navy)'}}>{formatGBP(takeHome(text, 16))}</strong>.</>}
                   {' '}Now is a good time to review your price.
                 </div>
               </div>

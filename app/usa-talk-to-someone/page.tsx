@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'How quickly can I talk to someone on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Immediately. Browse available listeners, pick one who feels right, and start the session. No appointment, no registration form, no insurance. Your first 5 minutes are free.',
+        text: 'Immediately. Browse available listeners, pick one who feels right, and start the session. No appointment, no registration form, no insurance. Sessions start at 8 minutes.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost from the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. Compared to $200/hour therapy, it is genuinely accessible.',
+        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Sessions from 8 minutes. Compared to $200/hour therapy, it is genuinely accessible.',
       },
     },
     {
@@ -156,7 +156,7 @@ export default function UsaTalkToSomeonePage() {
           judgment. How Was Your Day peer listeners are in India, so availability follows Indian time — check who is online now.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to a real person now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to a real person now →</a>
 
         <div className="card">
           <h2>Why AI chatbots are not enough</h2>
@@ -193,7 +193,7 @@ export default function UsaTalkToSomeonePage() {
           <p>Therapy in the USA costs $200 per session, requires insurance or weeks of paperwork, and
             often has a waiting list measured in months. How Was Your Day sessions start at <strong>$10 for 15 minutes</strong>,
             <strong> $15 for 30 minutes</strong>, and <strong>$20 for 45 minutes</strong>.</p>
-          <p>Your first 5-minute session free. No insurance required. No referral needed. No waitlist.
+          <p>Sessions from 8 minutes. No insurance required. No referral needed. No waitlist.
             Just a real person.</p>
         </div>
 
@@ -215,7 +215,7 @@ export default function UsaTalkToSomeonePage() {
           <div className="faq-item">
             <h3>How quickly can I talk to someone on How Was Your Day?</h3>
             <p>Immediately. Browse available listeners, pick one who feels right, and start the session.
-              No appointment, no registration form, no insurance. Your first 5 minutes are free.</p>
+              No appointment, no registration form, no insurance. Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>What can I talk about with a How Was Your Day listener?</h3>
@@ -225,7 +225,7 @@ export default function UsaTalkToSomeonePage() {
           <div className="faq-item">
             <h3>How much does How Was Your Day cost from the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first
-              5 minutes free — one free session per account.</p>
+              sessions from 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Are How Was Your Day listeners Indian?</h3>

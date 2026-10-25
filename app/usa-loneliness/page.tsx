@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost in the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. Compare that to $200/hour for therapy — How Was Your Day is accessible emotional support whenever you need it.',
+        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Sessions from 8 minutes. Compare that to $200/hour for therapy — How Was Your Day is accessible emotional support whenever you need it.',
       },
     },
     {
@@ -156,7 +156,7 @@ export default function UsaLonelinessPage() {
           you already know what we are talking about.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>NRI loneliness looks very specific</h2>
@@ -187,7 +187,7 @@ export default function UsaLonelinessPage() {
             sympathetically but they do not really understand the cultural weight of it all.</p>
           <p>How Was Your Day listeners are people who have lived the Indian experience. Many are themselves NRIs or
             have family abroad. They do not need the background explained. They already get it.</p>
-          <p>Sessions start at <strong>$10 for 15 minutes</strong> — your first 5-minute session free.</p>
+          <p>Sessions start at <strong>$10 for 15 minutes</strong> — sessions from 8 minutes.</p>
         </div>
 
         <div className="card">
@@ -225,7 +225,7 @@ export default function UsaLonelinessPage() {
           <div className="faq-item">
             <h3>How much does How Was Your Day cost in the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first
-              5 minutes free — one free session per account — far more accessible than $200/hour therapy.</p>
+              sessions from 8 minutes — far more accessible than $200/hour therapy.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk in Hindi or my regional language?</h3>

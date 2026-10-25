@@ -162,7 +162,7 @@ export default function MalaysiaRelationshipAdvicePage() {
           judgment.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>What relationship struggles look like for Indians in Malaysia</h2>
@@ -196,7 +196,7 @@ export default function MalaysiaRelationshipAdvicePage() {
 
         <div className="card">
           <h2>Session pricing for Malaysia</h2>
-          <p>Pay in Malaysian ringgit. Your first 5-minute session free.</p>
+          <p>Pay in Malaysian ringgit. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>

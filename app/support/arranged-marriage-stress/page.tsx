@@ -201,7 +201,7 @@ export default function ArrangedMarriageStressPage() {
         <div className="cta-card">
           <h2>A space for what you cannot say to your family</h2>
           <p>Anonymous. No agenda about what you should decide. A listener who understands the arranged marriage process from the inside.</p>
-          <a href="/browse?topic=relationships" className="btn-cta">Talk to someone who understands — first 5 min free →</a>
+          <a href="/browse?topic=relationships" className="btn-cta">Talk to someone who understands →</a>
         </div>
 
         <div className="section">

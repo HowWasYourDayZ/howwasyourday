@@ -206,7 +206,7 @@ export default function EmotionalNumbnessPage() {
         <div className="cta-card">
           <h2>Someone is here to listen — without needing you to feel it first</h2>
           <p>You do not have to perform emotions you do not have. Just say what is actually there — or not there. That is enough to begin.</p>
-          <a href="/browse?topic=general" className="btn-cta">You're not broken — talk to someone — first 5 min free →</a>
+          <a href="/browse?topic=general" className="btn-cta">You're not broken — talk to someone →</a>
         </div>
 
         <div className="section">

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is emotional support the same as therapy?', acceptedAnswer: {'@type': 'Answer', text: 'No. Therapy is a clinical service provided by licensed professionals. It involves diagnosis, treatment planning, and specific evidence-based interventions. Emotional support &mdash; the kind How Was Your Day provides &mdash; is peer-based, non-clinical, and focused on being heard rather than treated. Many people benefit from both.'}},
     {'@type': 'Question', name: 'Who provides emotional support on How Was Your Day?', acceptedAnswer: {'@type': 'Answer', text: 'Real people &mdash; screened peer listeners with lived experience. They are not AI, not therapists, and not volunteers. They are compensated for their time and screened for active listening and supportive conversation.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free. No subscription.'}},
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes. No subscription.'}},
     {'@type': 'Question', name: 'Is it anonymous?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. First name only. Listener agrees to keep it confidential.'}}
 ] }
 
@@ -72,7 +72,7 @@ export default function EmotionalSupportIndiaPage() {
         <div className="hero">
           <p className="badge">Emotional Support · Real People · India</p>
           <h1>Sometimes you don't need advice. You need someone to <em>actually be there.</em></h1>
-          <p className="lead">Real human peer listeners in India. Not AI, not therapy, not advice. Genuine emotional support from ₹160. First 5 minutes free.</p>
+          <p className="lead">Real human peer listeners in India. Not AI, not therapy, not advice. Genuine emotional support from ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -83,15 +83,15 @@ export default function EmotionalSupportIndiaPage() {
         <div className="section">
           <h2>Why How Was Your Day Listeners Are Different</h2>
           <p>How Was Your Day listeners are screened specifically for the skills that make emotional support possible: active listening, reflecting without steering, genuine curiosity, and the capacity to hold complexity without rushing to resolution. They have also been through difficult things themselves &mdash; which means they understand what being heard in a hard moment actually requires.</p>
-          <p>Sessions are anonymous, available immediately, and start at ₹160. First 5 minutes are free.</p>
+          <p>Sessions are anonymous, available immediately, and start at ₹160. Sessions start at 8 minutes.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You deserve to be heard. Not fixed. Heard.</h2><p>Anonymous peer support. Real people. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You deserve to be heard. Not fixed. Heard.</h2><p>Anonymous peer support. Real people. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/empathy-india">Empathy India &rarr;</a>
             <a href="/need-to-vent-india">Need to vent &rarr;</a>
             <a href="/bad-day-india">Bad day India &rarr;</a>
             <a href="/someone-who-gets-it-india">Someone who gets it &rarr;</a>
-            <a href="/talk-to-someone-free-india">First 5 minutes free &rarr;</a></div></div>
+            <a href="/talk-to-someone-free-india">Sessions from 8 minutes &rarr;</a></div></div>
       </div>
     </>
   )

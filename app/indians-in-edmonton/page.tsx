@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Edmonton Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific isolation of Edmonton — the brutal northern winters, the smaller and less-connected Indian community compared to Toronto or Vancouver, and the particular loneliness of being in a city that is often overlooked even within Canada.' } },
   { '@type': 'Question', name: 'What time can I connect from Edmonton?', acceptedAnswer: { '@type': 'Answer', text: 'Edmonton (MST) is 12.5 hours behind IST. 7am Edmonton = 7:30pm India. Early mornings before work or university are a good time — Indian listeners are available in their evening.' } },
   { '@type': 'Question', name: 'I\'m a University of Alberta student feeling isolated. Is How Was Your Day right for me?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Indian university students navigating Edmonton winters, academic pressure, and the social difficulty of building a life in a new city are among the people How Was Your Day was built for. Listeners understand the student experience — the homesickness, the financial stress, the academic pressure — without judgment.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
   { '@type': 'Question', name: 'Edmonton is not as famous as Vancouver or Toronto. Does that affect what I can talk about?', acceptedAnswer: { '@type': 'Answer', text: 'No. Listeners are screened and expected to understand NRI experience broadly, and the fact that Edmonton is less well-known outside Alberta doesn\'t limit what you can discuss. The isolation of being in a less-famous city — including the way it\'s invisible in Indian diaspora conversations — is something worth talking about.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function IndiansInEdmontonPage() {
         <div className="hero">
           <p className="badge">Indians in Edmonton &middot; Northern Alberta &middot; Canada</p>
           <h1>-40°C in January. <em>The cold that doesn&rsquo;t just mean weather.</em></h1>
-          <p className="lead">Edmonton is one of the coldest major cities in North America, and its Indian community — University of Alberta students, healthcare workers, trades, IT professionals — navigates that cold while building lives far from the main Indian hubs in Brampton and Surrey. The isolation of northern Alberta has its own character. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">Edmonton is one of the coldest major cities in North America, and its Indian community — University of Alberta students, healthcare workers, trades, IT professionals — navigates that cold while building lives far from the main Indian hubs in Brampton and Surrey. The isolation of northern Alberta has its own character. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndiansInEdmontonPage() {
           <h2>University of Alberta, AHS, Trades: The Edmonton Indian Community</h2>
           <p>Edmonton&rsquo;s Indian community is smaller than Calgary&rsquo;s and considerably smaller than the Toronto or Vancouver Indian communities, but it is real and growing. The University of Alberta has a significant Indian student and faculty community — a large proportion of international students are from India, and Indian graduate students and postdocs are a meaningful part of the university&rsquo;s research culture. Alberta Health Services employs Indian physicians, nurses, and allied health professionals. The trades sector — electricians, engineers, welders — has a growing Indian workforce.</p>
           <p>The community is centred in areas like Mill Woods, Millwoods Town Centre, and the Edmonton suburbs of Sherwood Park and Spruce Grove. There are temples, Indian grocery stores, and cultural events. But Edmonton is spread out — the city sprawls over a massive area, and without a car, the social infrastructure that does exist is hard to reach. The isolation is physical as well as social.</p>
-          <p>How Was Your Day listeners understand the Edmonton Indian experience. First 5 minutes free, from US$10.</p>
+          <p>How Was Your Day listeners understand the Edmonton Indian experience. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function IndiansInEdmontonPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Northern Alberta. You deserve someone to talk to too.</h2><p>Real Indian peer listener. Understands the Edmonton Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Northern Alberta. You deserve someone to talk to too.</h2><p>Real Indian peer listener. Understands the Edmonton Indian experience. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-loneliness-canada">NRI loneliness Canada &rarr;</a>
           <a href="/indians-in-calgary">Indians in Calgary &rarr;</a>

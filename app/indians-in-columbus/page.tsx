@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand Midwest Indian isolation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience, including the specific weight of being Indian in a smaller Midwestern city — fewer Indians around you, less cultural infrastructure, the physical distance from the coasts where larger Indian communities live, and the particular loneliness that comes with being one of very few Indians in a predominantly white environment.' } },
   { '@type': 'Question', name: 'What time zone does Columbus use for connecting?', acceptedAnswer: { '@type': 'Answer', text: 'Columbus (EST) is 10.5 hours behind IST. 8am Columbus = 6:30pm India. Before your morning commute or your OSU class, Indian listeners are available in their evening.' } },
   { '@type': 'Question', name: 'Is this private from OSU or my workplace?', acceptedAnswer: { '@type': 'Answer', text: 'Completely private. How Was Your Day uses phone number and first name only. Nothing is shared with Ohio State University, your employer, your Columbus community, or anyone else.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
   { '@type': 'Question', name: 'I\'m an OSU student feeling isolated. Is How Was Your Day right for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many How Was Your Day users are Indian students at American universities who feel the gap between their Indian identity and their American student life acutely. Listeners understand the student experience — the homesickness, the academic pressure, the social awkwardness of being one of few Indians in your department or dorm.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function IndiansInColumbusPage() {
         <div className="hero">
           <p className="badge">Indians in Columbus &middot; Ohio &middot; OSU &middot; Midwest</p>
           <h1>Ohio State, downtown Columbus. <em>Still very far from home.</em></h1>
-          <p className="lead">Columbus is growing — OSU draws Indian students by the thousands, the tech and medical sectors have established Indian professional communities, and the city is more diverse than its Midwestern reputation suggests. But fewer Indians means less cultural infrastructure, and the particular isolation of the Midwest Indian experience is real. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">Columbus is growing — OSU draws Indian students by the thousands, the tech and medical sectors have established Indian professional communities, and the city is more diverse than its Midwestern reputation suggests. But fewer Indians means less cultural infrastructure, and the particular isolation of the Midwest Indian experience is real. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndiansInColumbusPage() {
           <h2>OSU, Nationwide Children&rsquo;s, OhioHealth: The Columbus Indian Community</h2>
           <p>Ohio State University has one of the largest Indian student populations of any Midwestern university — thousands of Indian graduate students, researchers, and undergraduates call Columbus home each year. The medical campuses — Nationwide Children&rsquo;s Hospital, OhioHealth, OSU Wexner Medical Center — have significant Indian physician and medical professional communities. The tech corridor around Easton and the Dublin and Westerville suburbs have Indian IT professional families.</p>
           <p>By most Midwestern standards, Columbus is welcoming. The city is younger and more diverse than many Ohio cities. There are Indian grocery stores, temples, cultural associations. The India Festival in downtown Columbus draws thousands. And yet the Columbus Indian community is smaller than Chicago, smaller than Detroit, smaller than the Bay Area or the New York metro. The cultural infrastructure that larger Indian communities take for granted — the density of people who just &ldquo;get it&rdquo; without explanation — is thinner here.</p>
-          <p>How Was Your Day listeners are based in India, available without appointment, and ready to hold the specific weight of Midwest Indian experience. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India, available without appointment, and ready to hold the specific weight of Midwest Indian experience. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function IndiansInColumbusPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Buckeye State, but still needing to talk.</h2><p>Real Indian peer listener. Understands the Midwest Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Buckeye State, but still needing to talk.</h2><p>Real Indian peer listener. Understands the Midwest Indian experience. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

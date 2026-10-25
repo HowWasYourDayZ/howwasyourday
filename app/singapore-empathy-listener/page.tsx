@@ -160,7 +160,7 @@ export default function SingaporeEmpathyListenerPage() {
           attention.
         </p>
 
-        <a href="/browse" className="cta-hero">Find an empathy listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Find an empathy listener →</a>
 
         <div className="card">
           <h2>The difference between being heard and being understood</h2>
@@ -200,7 +200,7 @@ export default function SingaporeEmpathyListenerPage() {
 
         <div className="card">
           <h2>Session pricing for Singapore</h2>
-          <p>Pay in Singapore dollars. The first 5-minute session free.</p>
+          <p>Pay in Singapore dollars. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>

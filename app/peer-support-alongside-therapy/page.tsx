@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import QuickAnswer from '@/app/components/QuickAnswer'
-import { FREE_SESSION_MINS } from '@/lib/constants'
+import { SESSION_DURATIONS } from '@/lib/constants'
 
 export const dynamic = 'force-static'
 
@@ -14,14 +14,14 @@ const URL = 'https://www.howwasyourday.live/peer-support-alongside-therapy'
 
 export const metadata: Metadata = {
   title: 'Someone to Talk To Between Therapy Sessions or While You Wait | How Was Your Day',
-  description: `In therapy, on medication or on a waiting list — and need someone to talk to in between? Talk privately to a real, screened peer listener in India. Alongside your care, never instead of it. First ${FREE_SESSION_MINS} minutes free.`,
+  description: `In therapy, on medication or on a waiting list — and need someone to talk to in between? Talk privately to a real, screened peer listener in the UK. Alongside your care, never instead of it. Sessions from ${SESSION_DURATIONS[0]} minutes.`,
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: { title: 'Someone to talk to between therapy sessions', description: 'Peer support alongside professional care — never instead of it.', url: URL, siteName: 'How Was Your Day', type: 'article' },
 }
 
 const QA_Q = 'I am in therapy or on a waiting list — can I talk to someone in between?'
-const QA_A = 'Yes. Many people use How Was Your Day between therapy sessions, late at night when their therapist is not available, or while they wait for a first appointment. You talk privately, by text or voice, with a screened peer listener in India who listens without judging. Keep your doctor or therapist: How Was Your Day listeners never advise on diagnosis or medication. Your first 5 minutes are free.'
+const QA_A = 'Yes. Many people use How Was Your Day between therapy sessions, late at night when their therapist is not available, or while they wait for a first appointment. You talk privately, by text or voice, with a screened peer listener in India who listens without judging. Keep your doctor or therapist: How Was Your Day listeners never advise on diagnosis or medication. Sessions start at 8 minutes.'
 
 const faqs = [
   { q: 'Can I use How Was Your Day if I have depression, anxiety or another diagnosis?', a: 'Yes, as long as you keep your professional care. A peer listener can be someone to talk to about your day, your worries or how you are coping. They are not clinicians: they will not diagnose you, change your treatment or tell you what medication to take. Share only what you are comfortable sharing.' },

@@ -54,7 +54,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Your first 5-minute session is free — no charge, no commitment. If a session is not useful in the first 5 minutes, you stop and pay nothing. There is no subscription and no appointment needed. You can start right now.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions start at 8 minutes — no charge, no commitment. If a session is not useful in the first 5 minutes, you stop and pay nothing. There is no subscription and no appointment needed. You can start right now.' },
     },
   ],
 }
@@ -131,7 +131,7 @@ export default function CheatingPartnerIndiaPage() {
         <div className="hero">
           <p className="badge">Infidelity &middot; Betrayal &middot; Anonymous Support</p>
           <h1>You just found out. You can&apos;t think. You need to talk to someone who <em>isn&apos;t your mother.</em></h1>
-          <p className="lead">The shock, the replaying, the not knowing who to trust. You need a neutral person with no stake in what happens next. Anonymous peer support, from &#x20b9;160. First 5 minutes free.</p>
+          <p className="lead">The shock, the replaying, the not knowing who to trust. You need a neutral person with no stake in what happens next. Anonymous peer support, from &#x20b9;160. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -173,7 +173,7 @@ export default function CheatingPartnerIndiaPage() {
 
         <div className="cta-card">
           <h2>You do not have to carry this alone.</h2>
-          <p>Anonymous peer support. A real person, no judgment. From &#x20b9;160. First 5 minutes free.</p>
+          <p>Anonymous peer support. A real person, no judgment. From &#x20b9;160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
 

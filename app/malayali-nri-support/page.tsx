@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Gulf Malayali experience specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Gulf-Kerala corridor is deeply understood — the sacrifice of Gulf workers, the remittances that built Kerala, and the identity crisis of returning after years abroad to a home that has moved on. Both Gulf experiences and Western country experiences are understood.' } },
   { '@type': 'Question', name: 'I am a nurse in the UK and very isolated. Is this for me?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Malayali nurses in the UK are one of the most isolated NRI groups — working difficult hours, in a new country, often far from their immediate family who may still be in Kerala or the Gulf. You do not have to minimise that. A listener will hear it.' } },
   { '@type': 'Question', name: 'Is this confidential from my family in Kerala?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your family in Kerala and your community abroad will never know. Sessions are anonymous — phone number and first name only.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription needed.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription needed.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function MayalaliNriSupportPage() {
         <div className="hero">
           <p className="badge">Malayali NRI &middot; Kerala &middot; Gulf &amp; UK &amp; USA</p>
           <h1>Kerala sends more people abroad than almost any state. <em>Most of them carry it quietly.</em></h1>
-          <p className="lead">Kerala&rsquo;s NRI community is one of the largest and most geographically spread in India — Gulf workers, nurses in the UK, IT professionals in the US, students in Australia. Each group carries a different weight, but the loneliness of being the one who left is common across all of them. Talk to a Malayali peer listener who understands. First 5 minutes free.</p>
+          <p className="lead">Kerala&rsquo;s NRI community is one of the largest and most geographically spread in India — Gulf workers, nurses in the UK, IT professionals in the US, students in Australia. Each group carries a different weight, but the loneliness of being the one who left is common across all of them. Talk to a Malayali peer listener who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function MayalaliNriSupportPage() {
           <h2>The Gulf-Kerala Story — and the Identity It Creates</h2>
           <p>The Gulf-Kerala corridor is one of the most significant migration stories in modern India. Generations of Malayali workers went to Dubai, Abu Dhabi, Kuwait, and Saudi Arabia, sent remittances home, and built a Kerala that runs partly on NRI money. The sacrifice was real. The psychological cost of that sacrifice — years away from family, children growing up without a parent present, the social status anxiety of &ldquo;Gulf returnee&rdquo; — is rarely discussed directly.</p>
           <p>Gulf returnees face a particular identity crisis: you worked for decades abroad, saved carefully, returned home — and found that Kerala has moved on in ways that make you feel like a stranger in your own place. Your reference points are from the Gulf years. The social scripts back home have changed. This specific disorientation is something How Was Your Day listeners understand without needing it explained.</p>
-          <p>Onam in Dubai is different from Onam in Thrissur. Both are beautiful. Only one feels like home. How Was Your Day is a space to talk about that difference honestly. First 5 minutes free.</p>
+          <p>Onam in Dubai is different from Onam in Thrissur. Both are beautiful. Only one feels like home. How Was Your Day is a space to talk about that difference honestly. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function MayalaliNriSupportPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Oru Keralite kku oru Keralite listener.</h2><p>Understands the Gulf, the UK, the US, and the weight of being away. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Oru Keralite kku oru Keralite listener.</h2><p>Understands the Gulf, the UK, the US, and the weight of being away. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

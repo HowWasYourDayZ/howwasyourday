@@ -31,7 +31,7 @@ const data: ReadyToTalkLandingData = {
   "why": [
     "How Was Your Day is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
     "You choose a listener rather than receiving a generic response. The goal is a human conversation where you can talk, vent, reflect or simply not feel alone for a while.",
-    "You can start without committing to a long programme: one free 5-minute introduction is available per account, followed by paid time only if you choose to continue."
+    "You can start without committing to a long programme: sessions start at 8 minutes, followed by paid time only if you choose to continue."
   ],
   "fitTitle": "You may be looking for a human when…",
   "fit": [
@@ -53,7 +53,7 @@ const data: ReadyToTalkLandingData = {
     },
     {
       "q": "How much does it cost?",
-      "a": "New seekers can start with one free 5-minute introductory session (one per account). Paid sessions currently start at £7 for 15 minutes, with the applicable price shown before you continue."
+      "a": "New seekers can start with an 8-minute session. Paid sessions currently start at £4.20 for 8 minutes, with the applicable price shown before you continue."
     },
     {
       "q": "Do I have to explain everything before starting?",
@@ -61,7 +61,7 @@ const data: ReadyToTalkLandingData = {
     },
     {
       "q": "How do I start?",
-      "a": "Open Browse, review listener profiles and choose someone who feels relevant. Start with the free 5-minute introduction."
+      "a": "Open Browse, review listener profiles and choose someone who feels relevant. Start with an 8-minute session."
     }
   ],
   "related": [

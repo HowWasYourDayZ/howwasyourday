@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-const answer = 'For everyday relationship stress, loneliness in marriage, or family pressure, you can speak to someone you trust or consider a one-to-one conversation with a screened peer listener on How Was Your Day. It is non-clinical human support by text or voice, not relationship counselling or therapy. One introductory session of up to 5 minutes is free per account; availability varies and a match is not guaranteed.'
+const answer = 'For everyday relationship stress, loneliness in marriage, or family pressure, you can speak to someone you trust or consider a one-to-one conversation with a screened peer listener on How Was Your Day. It is non-clinical human support by text or voice, not relationship counselling or therapy. Every session is paid, from 8 minutes; availability varies and a match is not guaranteed.'
 
 const groups = [
   {

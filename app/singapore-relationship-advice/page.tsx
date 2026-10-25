@@ -161,7 +161,7 @@ export default function SingaporeRelationshipAdvicePage() {
           differently than you are. How Was Your Day is here to help you talk it through.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>Relationship struggles that are common for Indians in Singapore</h2>
@@ -194,7 +194,7 @@ export default function SingaporeRelationshipAdvicePage() {
 
         <div className="card">
           <h2>Session pricing for Singapore</h2>
-          <p>Pay in Singapore dollars. Your first 5-minute session free.</p>
+          <p>Pay in Singapore dollars. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>

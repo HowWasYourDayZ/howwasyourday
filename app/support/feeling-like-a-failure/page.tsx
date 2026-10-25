@@ -254,7 +254,7 @@ export default function FeelingLikeAFailurePage() {
           <h2>Talk to Someone Who Has Been There</h2>
           <p>A peer listener who has personally navigated failure — and come through it — may be online right now. Private, no judgment, no appointments.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who will listen — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who will listen →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PLATFORM_FEE, VOICE_RATE_PREMIUM, FREE_SESSION_MINS, VOICE_PRICING_ENABLED, DEFAULT_LISTENER_RATE } from '@/lib/constants'
+import { PLATFORM_FEE, VOICE_RATE_PREMIUM, SESSION_DURATIONS, VOICE_PRICING_ENABLED, DEFAULT_LISTENER_RATE } from '@/lib/constants'
 import { formatGBP, formatRate } from '@/lib/money'
 
 // The canonical, factual description of How Was Your Day — what it is, who it is (and is
@@ -12,24 +12,25 @@ import { formatGBP, formatRate } from '@/lib/money'
 export const dynamic = 'force-static'
 
 const EXAMPLE_RATE = DEFAULT_LISTENER_RATE // pence/min
-const ex15 = EXAMPLE_RATE * 15 + PLATFORM_FEE
+const ex8 = EXAMPLE_RATE * 8 + PLATFORM_FEE
+const LENGTHS = SESSION_DURATIONS.join(', ').replace(/, (\d+)$/, ' or $1')
 
 export const metadata: Metadata = {
   title: 'How It Works — Paid Peer Support, Explained Honestly',
-  description: `What How Was Your Day is, who it helps, how listeners are screened, what a session costs (first ${FREE_SESSION_MINS} minutes free, then ${formatGBP(ex15)} for 15 minutes at the standard rate), privacy, safety, and what How Was Your Day is not.`,
+  description: `What How Was Your Day is, who it helps, how listeners are screened, what a session costs (${formatGBP(ex8)} for 8 minutes at the standard rate), booking a time, privacy, safety, and what How Was Your Day is not.`,
   keywords: ['how howwasyourday works', 'what is howwasyourday', 'paid peer support india', 'talk to someone online india', 'online emotional support india', 'relationship support online', 'peer support vs therapy'],
   alternates: { canonical: 'https://www.howwasyourday.live/how-it-works' },
 }
 
 const FAQ: { q: string; a: string }[] = [
-  { q: 'What is How Was Your Day?', a: 'How Was Your Day (howwasyourday.live) is an online peer-support service for the UK. You talk privately, one to one, by text or voice, with a screened peer listener: an ordinary person with lived experience who listens without judgment. It is paid per session, with your first 5 minutes free.' },
+  { q: 'What is How Was Your Day?', a: 'How Was Your Day (howwasyourday.live) is an online peer-support service for the UK. You talk privately, one to one, by text or voice, with a screened peer listener: an ordinary person with lived experience who listens without judgment. It is paid per session, with your sessions from 8 minutes.' },
   { q: 'Is How Was Your Day therapy?', a: 'No. How Was Your Day is peer support, not therapy, counselling, diagnosis or medical care. Listeners are not psychologists, psychiatrists or licensed counsellors and do not give medical or clinical advice. For a mental health condition, please see a qualified professional.' },
   { q: 'Who is How Was Your Day for?', a: 'Adults (18+) who want to talk something through with a real person: relationship trouble, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day.' },
   { q: 'Who is How Was Your Day not for?', a: 'Anyone in immediate danger or thinking about suicide or self-harm should call Samaritans (116 123) or Shout (text SHOUT to 85258), or call 999 / 112 in an emergency. How Was Your Day is also not the right place for a diagnosis, medication, or treatment of a mental health condition.' },
   { q: 'How are How Was Your Day listeners chosen?', a: 'Every listener applies with a written application about their lived experience and why they want to listen, completes a screening quiz on handling difficult conversations, takes a live verification selfie, and is reviewed manually by How Was Your Day before they can take any session. Listeners are screened, not clinically trained, and agree to a code of conduct: confidentiality, no judgment, and no medical advice.' },
-  { q: 'How much does How Was Your Day cost?', a: `Your first ${FREE_SESSION_MINS}-minute session is free (once per account). After that, each listener sets a per-minute rate in pounds and a session costs rate × minutes + a flat ${formatGBP(PLATFORM_FEE)} fee — for example ${formatGBP(ex15)} for 15 minutes with a ${formatRate(EXAMPLE_RATE)} listener.${VOICE_PRICING_ENABLED ? ` Voice calls cost ${formatRate(VOICE_RATE_PREMIUM)} more than text.` : ''} You always see the price before you start.` },
+  { q: 'How much does How Was Your Day cost?', a: `Every session is paid — ${LENGTHS} minutes. Each listener sets a per-minute rate in pounds and a session costs rate × minutes + a flat ${formatGBP(PLATFORM_FEE)} fee — for example ${formatGBP(ex8)} for 8 minutes with a ${formatRate(EXAMPLE_RATE)} listener.${VOICE_PRICING_ENABLED ? ` Voice calls cost ${formatRate(VOICE_RATE_PREMIUM)} more than text.` : ''} You always see the price before you start.` },
   { q: 'Do I pay if I end early or nobody answers?', a: 'If no listener accepts your request, the amount held is returned to your wallet in full. If you end a session early, you pay only for the minutes used, and nothing if it lasted under a minute.' },
-  { q: 'When are listeners available?', a: 'Listeners are based in the UK and go online when they choose, so availability varies through the day. You can see who is online right now, or use Talk now to be connected with whoever is free.' },
+  { q: 'When are listeners available?', a: 'Listeners are based in the UK and go online when they choose, so availability varies through the day. You can see who is online right now, use Talk now to be connected with whoever is free, or book a time from a listener\'s weekly hours.' },
   { q: 'Is it private?', a: 'A listener sees only the name you choose — never your phone number. Voice calls are not recorded. Text messages are stored securely; only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. How Was Your Day does not sell your data or share conversations outside How Was Your Day.' },
 ]
 
@@ -47,8 +48,8 @@ const howToJsonLd = {
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Tell us what it is about, or choose someone', text: 'Use Talk now (pick a topic and text or voice, and How Was Your Day connects you with a listener who is free) or browse listeners by topic and language.' },
     { '@type': 'HowToStep', position: 2, name: 'Confirm your phone number', text: 'Sign in with a one-time code sent to your mobile number. UK and EU mobile numbers are supported. No email or full name needed.' },
-    { '@type': 'HowToStep', position: 3, name: `Talk free for ${FREE_SESSION_MINS} minutes`, text: `Your first ${FREE_SESSION_MINS}-minute session is free, by text or voice.` },
-    { '@type': 'HowToStep', position: 4, name: 'Continue if it helps', text: `Book 15, 30 or 45 minutes from your How Was Your Day wallet. ${formatGBP(ex15)} for 15 minutes at the standard rate.` },
+    { '@type': 'HowToStep', position: 3, name: 'Choose a length — now or later', text: `Choose ${LENGTHS} minutes, paid from your How Was Your Day wallet (${formatGBP(ex8)} for 8 minutes at the standard rate). Talk now, or book a time that suits you.` },
+    { '@type': 'HowToStep', position: 4, name: 'Talk by text or voice', text: 'Your session starts when the listener accepts, or at the time you booked.' },
   ],
 }
 
@@ -97,7 +98,7 @@ export default function HowItWorksPage() {
         <p className="lead">
           How Was Your Day is an online peer-support service for the UK. You talk privately, one to one, by text or voice, with a
           screened peer listener — a real person with lived experience who listens without judging you. It is paid per
-          session, and your first {FREE_SESSION_MINS} minutes are free.
+          session, from {SESSION_DURATIONS[0]} minutes, now or at a time you book.
         </p>
 
         <div className="note">How Was Your Day is peer support — not therapy, counselling, diagnosis or medical care. Listeners are not licensed professionals.</div>
@@ -129,7 +130,8 @@ export default function HowItWorksPage() {
             <li><strong>Talk now:</strong> pick what it is about and choose text or voice. How Was Your Day asks a listener who is free right now and, if they cannot answer within about 30 seconds, asks the next one. <a href="/talk">Talk now →</a></li>
             <li><strong>Or choose someone yourself:</strong> browse listeners by topic, language, age group and who is online. <a href="/browse">See listeners →</a></li>
             <li>Sign in with a one-time code sent to your phone. UK and EU mobile numbers work. No email or full name needed.</li>
-            <li>Sessions are 5 (free), 15, 30 or 45 minutes. You can switch a voice call to text during the session.</li>
+            <li>Sessions are {LENGTHS} minutes, all paid. You can switch a voice call to text during the session.</li>
+            <li><strong>Book a time:</strong> on a listener&apos;s profile, pick one of their published slots. The price is held when you book; cancel at least 2 hours before for a full refund.</li>
           </ul>
         </section>
 
@@ -149,8 +151,8 @@ export default function HowItWorksPage() {
         <section className="sec">
           <h2>What it costs</h2>
           <ul>
-            <li>Your first {FREE_SESSION_MINS}-minute session is free — once per account.</li>
-            <li>Each listener sets a per-minute rate in pounds (GBP). A session costs <strong>rate × minutes + {formatGBP(PLATFORM_FEE)}</strong>: for example {formatGBP(ex15)} for 15 minutes with a {formatRate(EXAMPLE_RATE)} listener.{VOICE_PRICING_ENABLED ? ` Voice calls are ${formatRate(VOICE_RATE_PREMIUM)} more than text.` : ''}</li>
+            <li>There are no free sessions; the {SESSION_DURATIONS[0]}-minute session is the low-cost way to try a listener.</li>
+            <li>Each listener sets a per-minute rate in pounds (GBP). A session costs <strong>rate × minutes + {formatGBP(PLATFORM_FEE)}</strong>: for example {formatGBP(ex8)} for 8 minutes with a {formatRate(EXAMPLE_RATE)} listener.{VOICE_PRICING_ENABLED ? ` Voice calls are ${formatRate(VOICE_RATE_PREMIUM)} more than text.` : ''}</li>
             <li>You pay from a How Was Your Day wallet. If nobody accepts your request, the full amount comes back. If you end early, you pay only for the minutes used — nothing if it lasted under a minute.</li>
           </ul>
           <p>Full details: <a href="/pricing">Pricing</a>.</p>
@@ -158,7 +160,7 @@ export default function HowItWorksPage() {
 
         <section className="sec">
           <h2>When listeners are available</h2>
-          <p>Listeners are in the UK and go online when they choose, so availability varies through the day. There is no appointment: you can see who is online right now, or use Talk now to reach whoever is free.</p>
+          <p>Listeners are in the UK and go online when they choose, so availability varies through the day. You can see who is online right now, use Talk now to reach whoever is free, or book a time from a listener&apos;s weekly hours.</p>
         </section>
 
         <section className="sec">
@@ -188,7 +190,7 @@ export default function HowItWorksPage() {
 
         <div className="cta">
           <h2>Talk to someone</h2>
-          <p>First {FREE_SESSION_MINS} minutes free. Private, one to one, by text or voice.</p>
+          <p>From {SESSION_DURATIONS[0]} minutes. Private, one to one, by text or voice.</p>
           <a href="/talk"><span className="btn">Talk now</span></a>
           <a href="/browse"><span className="btn alt">See listeners</span></a>
         </div>

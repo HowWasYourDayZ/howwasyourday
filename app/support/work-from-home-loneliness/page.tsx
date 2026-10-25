@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.',
       },
     },
   ],
@@ -250,7 +250,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a short trial session available for new users. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.</div>
+            <div className="faq-a">How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time — including right after a long, silent day of back-to-back video calls.</div>
           </div>
         </div>
 

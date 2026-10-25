@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Wysa Alternative — Talk to a Real Human, Not an AI | How Was Your Day',
-  description: 'Wysa is an AI chatbot — it can\'t truly understand you. How Was Your Day connects you to a real peer listener in under 2 minutes. First 5 min free. Anonymous.',
+  description: 'Wysa is an AI chatbot — it can\'t truly understand you. How Was Your Day connects you to a real peer listener in under 2 minutes. From 8 minutes. Anonymous.',
   keywords: [
     'wysa alternative', 'wysa app alternative', 'alternative to wysa',
     'wysa vs real person', 'ai chatbot alternative mental health',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Done Talking to a Bot? Talk to a Real Person on How Was Your Day',
-    description: 'Wysa is an AI chatbot — it can\'t truly understand you. How Was Your Day connects you to a real peer listener in under 2 minutes. First 5 min free. Anonymous.',
+    description: 'Wysa is an AI chatbot — it can\'t truly understand you. How Was Your Day connects you to a real peer listener in under 2 minutes. From 8 minutes. Anonymous.',
     url: 'https://www.howwasyourday.live/wysa-alternative',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'Is How Was Your Day free?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5-minute session is completely free — no credit card, no commitment. After that, sessions start at £7 for 15 minutes. You only pay for the time you use.',
+        text: 'Sessions start at 8 minutes — no credit card, no commitment. After that, sessions start at £4.20 for 8 minutes. You only pay for the time you use.',
       },
     },
   ],
@@ -157,10 +157,10 @@ export default function WysaAlternativePage() {
           Wysa is a well-designed AI chatbot — and AI is genuinely useful for tracking moods and building
           habits. But when you need to actually feel understood, no algorithm can replace a human being who
           has been through it themselves. How Was Your Day connects you to a real peer listener in under 2 minutes.
-          First 5 minutes free. Private.
+          Sessions from 8 minutes. Private.
         </p>
 
-        <a href="/talk?src=seo" className="cta-hero">Talk to a real person → first 5 min free</a>
+        <a href="/talk?src=seo" className="cta-hero">Talk to a real person → from 8 minutes</a>
 
         <div className="card">
           <h2>Why people move on from Wysa</h2>
@@ -210,7 +210,7 @@ export default function WysaAlternativePage() {
               <tr>
                 <td>Free to use?</td>
                 <td>Free tier / paid subscription</td>
-                <td className="tick">✅ First 5 min free, then £7/session</td>
+                <td className="tick">✅ From 8 minutes, then £4.20 per session</td>
               </tr>
               <tr>
                 <td>Human connection?</td>
@@ -233,7 +233,7 @@ export default function WysaAlternativePage() {
             <li>
               <div>
                 <strong>Start your free session</strong>
-                <p>Your first 5 minutes are completely free — no payment needed, no commitment. Sign up anonymously with just a phone number.</p>
+                <p>Sessions start at 8 minutes — no payment needed, no commitment. Sign up anonymously with just a phone number.</p>
               </div>
             </li>
             <li>
@@ -294,8 +294,8 @@ export default function WysaAlternativePage() {
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day free?</h3>
-            <p>Your first 5-minute session is completely free — no credit card, no commitment. After that,
-              sessions start at £7 for 15 minutes. You only pay for the time you use.</p>
+            <p>Sessions start at 8 minutes — no credit card, no commitment. After that,
+              sessions start at £4.20 for 8 minutes. You only pay for the time you use.</p>
           </div>
         </div>
 

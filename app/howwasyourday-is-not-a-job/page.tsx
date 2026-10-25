@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: 'What is How Was Your Day actually for?',
-    a: 'How Was Your Day is for people who feel lonely, overwhelmed, or simply need a real human conversation. You can browse peer listeners, choose who you want to talk to, and start a private text or voice session. Every new account gets one free 5-minute first session.',
+    a: 'How Was Your Day is for people who feel lonely, overwhelmed, or simply need a real human conversation. You can browse peer listeners, choose who you want to talk to, and start a private text or voice session. Every new account gets sessions from 8 minutes.',
   },
   {
     q: 'I heard How Was Your Day pays listeners — does that make it a job?',
@@ -133,7 +133,7 @@ export default function HowWasYourDayIsNotAJobPage() {
         <div className="section">
           <h2>What How Was Your Day actually is</h2>
           <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)',marginBottom:16}}>How Was Your Day connects people who want emotional support with real human peer listeners — by private text or voice, with no appointment needed. The person who needs support is the customer. They browse listener profiles, choose who they want to talk to, and pay per session.</p>
-          <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)'}}>Every new account gets one free 5-minute first session. Paid sessions start at £7 for 15 minutes. No subscriptions. No lock-in.</p>
+          <p style={{fontSize:16,lineHeight:1.8,color:'var(--gray)'}}>Every new account gets sessions from 8 minutes. Paid sessions start at £4.20 for 8 minutes. No subscriptions. No lock-in.</p>
         </div>
 
         <div className="section">
@@ -148,7 +148,7 @@ export default function HowWasYourDayIsNotAJobPage() {
 
         <div className="cta-card">
           <h2>Need someone to talk to?</h2>
-          <p>Browse peer listeners who are available right now. Private, real human conversations — by text or voice. First 5 minutes free.</p>
+          <p>Browse peer listeners who are available right now. Private, real human conversations — by text or voice. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners →</a>
         </div>
 

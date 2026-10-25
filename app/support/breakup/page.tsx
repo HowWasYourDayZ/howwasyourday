@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Breakup & Heartbreak Support in India | Talk to Someone Who Gets It | How Was Your Day',
-  description: "Can't stop thinking about your breakup? Talk privately to a real peer listener in India who has been through heartbreak — text or voice, online now. First 5 minutes free.",
+  description: "Can't stop thinking about your breakup? Talk privately to a real peer listener in India who has been through heartbreak — text or voice, online now. Sessions from 8 minutes.",
   alternates: { canonical: 'https://www.howwasyourday.live/support/breakup' },
   openGraph: {
     title: 'Breakup Support — How Was Your Day',
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I can't stop thinking about my breakup \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking it out with someone who has been through heartbreak helps more than replaying it alone. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Your first 5 minutes are free. It is peer support, not therapy." } },
+    { '@type': 'Question', name: "I can't stop thinking about my breakup \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking it out with someone who has been through heartbreak helps more than replaying it alone. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Sessions start at 8 minutes. It is peer support, not therapy." } },
     {
       '@type': 'Question',
       name: 'How long does breakup pain typically last?',
@@ -145,7 +145,7 @@ export default function BreakupSupportPage() {
           <p className="tag">Peer Support · Breakup & Heartbreak</p>
           <h1>Heartbreak Is Real. <em>So Is Recovery.</em></h1>
           <p className="lead">A breakup can feel like the floor has disappeared. Whether you are recovering from a long-term relationship, a divorce, or a first heartbreak, How Was Your Day connects you with peer listeners who have been through it — and rebuilt.</p>
-          <QuickAnswer question={"I can't stop thinking about my breakup \u2014 who can I talk to?"} answer={"Talking it out with someone who has been through heartbreak helps more than replaying it alone. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Your first 5 minutes are free. It is peer support, not therapy."} />
+          <QuickAnswer question={"I can't stop thinking about my breakup \u2014 who can I talk to?"} answer={"Talking it out with someone who has been through heartbreak helps more than replaying it alone. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment, no judging, no 'just move on'. Sessions start at 8 minutes. It is peer support, not therapy."} />
         </div>
 
         <div className="notice">
@@ -223,7 +223,7 @@ export default function BreakupSupportPage() {
           <h2>You Don&apos;t Have to Get Through This Alone</h2>
           <p>Connect with a peer listener who has been through heartbreak and found their way back.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk about it — first 5 min are free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk about it →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

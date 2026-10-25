@@ -176,7 +176,7 @@ export default function GetItOffYourChestIndiaPage() {
 
         <div className="cta-card">
           <h2>The right person to say it to is waiting.</h2>
-          <p>Anonymous. No judgment. Real person. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous. No judgment. Real person. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

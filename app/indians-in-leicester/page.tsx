@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Leicester Gujarati and Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the British Indian diaspora experience — including the unique Leicester context of a community with roots going back to the East African Indian migration of the 1970s, and the specific Gujarati cultural pressures. No explanation needed.' } },
   { '@type': 'Question', name: 'When is a good time to connect from Leicester?', acceptedAnswer: { '@type': 'Answer', text: 'Leicester (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours in summer. Indian evenings (6–10pm IST) are Leicester afternoons (1:30–5:30pm BST in summer). Afternoons in Leicester map well to Indian evening availability.' } },
   { '@type': 'Question', name: 'Is this private from the Belgrave Road community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the Leicester Indian community. Nothing is shared with anyone.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInLeicesterPage() {
         <div className="hero">
           <p className="badge">Indians in Leicester &middot; Belgrave &middot; Golden Mile</p>
           <h1>Leicester. More Indian than almost anywhere. <em>And still, some things stay unsaid.</em></h1>
-          <p className="lead">Leicester is remarkable — Belgrave Road, Melton Road, the Golden Mile — a city where Indians didn&rsquo;t just settle but transformed the landscape. Third generation. Fourth generation. And still, the loneliness of identity, the pressure to honour the sacrifice of grandparents who came here in the 1960s and 70s, the feeling of not fitting neatly into British or Indian. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">Leicester is remarkable — Belgrave Road, Melton Road, the Golden Mile — a city where Indians didn&rsquo;t just settle but transformed the landscape. Third generation. Fourth generation. And still, the loneliness of identity, the pressure to honour the sacrifice of grandparents who came here in the 1960s and 70s, the feeling of not fitting neatly into British or Indian. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInLeicesterPage() {
           <h2>The Golden Mile and the Weight of History</h2>
           <p>Leicester has the highest concentration of Indian-heritage people of any city outside the Indian subcontinent. The Belgrave Road Golden Mile is famous — Diwali celebrations here are among the biggest in the world outside India. Melton Road&rsquo;s shops and restaurants, the Shree Sanatan Mandir, the gurdwaras and cultural centres — Leicester&rsquo;s Indian community has built something remarkable.</p>
           <p>Much of Leicester&rsquo;s Indian community has roots in East Africa — Gujarati families who came via Uganda, Kenya, and Tanzania in the 1960s and 70s. This is a community that has survived displacement twice: first from India to East Africa, then from East Africa to Britain. The resilience is extraordinary. The expectation of resilience — of just getting on with it — is also extraordinarily high.</p>
-          <p>Third and fourth generation Leicesterians of Indian descent carry a complex inheritance. The identity question — too British to feel fully Indian, too Indian to feel fully British — is not unique to Leicester but is particularly acute in a city where the community is so large and so well-established. Talk to a real Indian peer listener who understands both sides. First 5 minutes free.</p>
+          <p>Third and fourth generation Leicesterians of Indian descent carry a complex inheritance. The identity question — too British to feel fully Indian, too Indian to feel fully British — is not unique to Leicester but is particularly acute in a city where the community is so large and so well-established. Talk to a real Indian peer listener who understands both sides. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>When the Community Is Everywhere and Yet</h2>
           <p>The Leicester Indian community&rsquo;s density creates the same paradox that all tight-knit diaspora communities know: you are surrounded by your people and yet there are things you cannot say among them. The community gossip network is real. The expectation to be fine — to honour the sacrifice of your grandparents who built this from nothing — is heavy. Mental health is not something discussed openly.</p>
-          <p>Leicester (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours in summer. Indian evenings (6–10pm IST) fall in Leicester afternoons (1:30–5:30pm BST in summer). Your lunch break, or early afternoon before school pickup — that window is India&rsquo;s evening. A real Indian listener is available. No appointment needed. Anonymous. The first 5-minute session free.</p>
+          <p>Leicester (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours in summer. Indian evenings (6–10pm IST) fall in Leicester afternoons (1:30–5:30pm BST in summer). Your lunch break, or early afternoon before school pickup — that window is India&rsquo;s evening. A real Indian listener is available. No appointment needed. Anonymous. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The city built by your community. A space that&rsquo;s just for you.</h2><p>Real Indian peer listener. Understands Leicester Indian community history and pressures. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The city built by your community. A space that&rsquo;s just for you.</h2><p>Real Indian peer listener. Understands Leicester Indian community history and pressures. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/uk">Indians in UK &rarr;</a>
           <a href="/indians-in-birmingham">Indians in Birmingham &rarr;</a>

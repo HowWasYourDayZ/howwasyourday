@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'How is sasural stress different from general in-law stress?', acceptedAnswer: {'@type': 'Answer', text: 'Sasural stress in India has a specific cultural texture: the saas-bahu dynamic, the expectation that the bahu will adjust, the public performance of family harmony, and the social cost of appearing to struggle. These are specific enough that the person you talk to benefits from understanding this context.'}},
     {'@type': 'Question', name: 'Can a peer listener understand sasural dynamics?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. How Was Your Day listeners come from backgrounds that include this experience, and are screened and expected to listen to it without either dismissing it or amplifying it. They understand the cultural context without requiring you to explain it from scratch.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -85,7 +85,7 @@ export default function SasuralProblemsIndiaPage() {
           <p>A How Was Your Day listener has no relationship with any of the people you are describing. They hear only what you tell them, with no overlay of prior relationship.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You deserve a space that is yours.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You deserve a space that is yours.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/mother-in-law-stress-india">Mother-in-law stress &rarr;</a>
             <a href="/joint-family-stress-india">Joint family stress &rarr;</a>
             <a href="/toxic-relationship-india">Toxic relationship &rarr;</a>

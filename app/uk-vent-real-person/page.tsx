@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Vent to a Real Person Online in the UK — Safe, Anonymous, Human | How Was Your Day',
-    description: 'Sometimes the very British thing to do is not to say anything. That is the problem. How Was Your Day — real humans, on Indian time, anonymous, first 5 min free.',
+    description: 'Sometimes the very British thing to do is not to say anything. That is the problem. How Was Your Day — real humans, on Indian time, anonymous, from 8 minutes.',
     url: 'https://www.howwasyourday.live/uk-vent-real-person',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -27,7 +27,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'How Was Your Day — Anonymous Venting with Real Humans in the UK',
-  description: 'How Was Your Day lets people in the UK vent to real human peer listeners — private, no appointment needed, no AI, no NHS waiting list. First 5 minutes free, starting at £8 for 15 minutes.',
+  description: 'How Was Your Day lets people in the UK vent to real human peer listeners — private, no appointment needed, no AI, no NHS waiting list. Sessions from 8 minutes, starting at £8 for 15 minutes.',
   provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'United Kingdom',
@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. £8 for 15 minutes, £12 for 30 minutes, £16 for 45 minutes.',
+    description: 'Sessions from 8 minutes. £8 for 15 minutes, £12 for 30 minutes, £16 for 45 minutes.',
     priceCurrency: 'GBP',
   },
 }
@@ -68,7 +68,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'First 5 minutes are free. After that, £8 for 15 minutes, £12 for 30 minutes, or £16 for 45 minutes. No subscription, no insurance, no waiting list.',
+        text: 'Sessions start at 8 minutes. After that, £8 for 15 minutes, £12 for 30 minutes, or £16 for 45 minutes. No subscription, no insurance, no waiting list.',
       },
     },
     {
@@ -187,7 +187,7 @@ export default function UKVentRealPersonPage() {
           upper lip required. Just a real person ready to hear you out.
         </p>
 
-        <a href="/browse" className="cta-hero">Vent to a real person now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Vent to a real person now →</a>
 
         <div className="card">
           <h2>You&apos;ve been fine. You&apos;re always fine. That&apos;s the problem.</h2>
@@ -260,7 +260,7 @@ export default function UKVentRealPersonPage() {
             </div>
             <div className="compare-col human">
               <h3>💙 How Was Your Day Real Human</h3>
-              <p>First 5 min free, then £8 for 15 min — real connection that actually helps</p>
+              <p>From 8 minutes, then £8 for 15 min — real connection that actually helps</p>
             </div>
           </div>
         </div>
@@ -281,7 +281,7 @@ export default function UKVentRealPersonPage() {
 
         <div className="cta">
           <h2>Say it out loud to someone who&apos;ll actually hear you.</h2>
-          <p>Anonymous. Human. On Indian time. First 5 minutes free. £8 / £12 / £16 for 15, 30, 45 min.</p>
+          <p>Anonymous. Human. On Indian time. Sessions from 8 minutes. £8 / £12 / £16 for 15, 30, 45 min.</p>
           <a href="/browse" className="btn-white">Browse real listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -295,7 +295,7 @@ export default function UKVentRealPersonPage() {
           </div>
           <div className="faq-item">
             <h3>How much does How Was Your Day cost in the UK?</h3>
-            <p>First 5 minutes are free. After that, £8 for 15 minutes, £12 for 30 minutes, or £16
+            <p>Sessions start at 8 minutes. After that, £8 for 15 minutes, £12 for 30 minutes, or £16
               for 45 minutes. No subscription, no insurance, no waiting list.</p>
           </div>
           <div className="faq-item">

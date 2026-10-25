@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is feeling empty a sign of depression?', acceptedAnswer: {'@type': 'Answer', text: 'Yes, emotional emptiness and numbness are classic features of depression. But they can also result from burnout, trauma, or prolonged emotional suppression. If the emptiness is persistent and affecting your functioning, please consider speaking to a mental health professional.'}},
     {'@type': 'Question', name: 'How does a peer listener help when I feel nothing?', acceptedAnswer: {'@type': 'Answer', text: 'By providing a witness. The experience of describing the emptiness to someone who is listening carefully &mdash; tracking what you are saying, asking questions that go deeper &mdash; often begins to create small movements in a state that has felt completely static. The emptiness rarely lifts in one conversation, but it begins to.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -87,7 +87,7 @@ export default function FeelingEmptyInsideIndiaPage() {
           <p>A How Was Your Day listener will not try to cheer you up. They will try to understand what you are describing and hold space for it. See also: <a href="/support/feeling-empty" style={{color:"#1A8FA0",fontWeight:700}}>Support for feeling empty</a> &mdash; the topic page.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You are not broken. You are carrying something.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You are not broken. You are carrying something.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/support/feeling-empty">Feeling empty support &rarr;</a>
             <a href="/no-motivation-india">No motivation &rarr;</a>
             <a href="/crying-for-no-reason-india">Crying for no reason &rarr;</a>

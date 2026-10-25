@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'I secretly wish I could go back to India. Is that normal?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it is more common than people admit. The return fantasy — wanting to undo the move, to reclaim the life you had before — is something many NRIs carry quietly because it feels ungrateful or like a failure. Listeners understand it completely. It is not weakness. It is a human response to long-term displacement.' } },
   { '@type': 'Question', name: 'I feel guilty because my life is objectively good. Am I wrong to feel burnt out?', acceptedAnswer: { '@type': 'Answer', text: 'No. The privilege guilt that comes with NRI burnout is real and it makes the burnout harder to address, but it does not make the burnout less real. You can have a good life and still be depleted. The two are not incompatible.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your family, your employer, and your community will never know.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription or commitment.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription or commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriBurnoutPage() {
         <div className="hero">
           <p className="badge">NRI Burnout &middot; Immigrant Exhaustion &middot; The Hollow Dream</p>
           <h1>You did everything right. <em>So why does it feel like nothing?</em></h1>
-          <p className="lead">The visa. The job. The apartment in a city that was supposed to be the goal. You built the thing you worked for — and now you are running on empty in a way you cannot explain to anyone back home because they think you are living the dream. NRI burnout is real. Talk to someone who understands why the dream does not always deliver the peace. First 5 minutes free.</p>
+          <p className="lead">The visa. The job. The apartment in a city that was supposed to be the goal. You built the thing you worked for — and now you are running on empty in a way you cannot explain to anyone back home because they think you are living the dream. NRI burnout is real. Talk to someone who understands why the dream does not always deliver the peace. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriBurnoutPage() {
           <h2>The Immigrant Ambition That Never Turns Off</h2>
           <p>Indian immigrants — particularly those who came for education or professional opportunity — typically carry a specific kind of drive that does not have an off switch. The ambition that got you the degree, the visa, the job: it is the same drive that now keeps you working evenings and weekends even after you have achieved the original goal, because there is always a new goal, because rest feels dangerous, because the immigrant without a safety net cannot afford to slow down.</p>
           <p>At some point — usually after years, sometimes after a decade — the drive starts to feel less like motivation and more like a treadmill. You are tired in a deep way. Not just work tired. Tired of the performance, tired of the proving, tired of the relentless forward motion with no clear destination. This is NRI burnout — and it is different from standard work exhaustion because it carries the additional weight of displacement, suppressed grief, and the guilt of not enjoying the life you worked so hard to build.</p>
-          <p>How Was Your Day listeners understand this from the inside. Not as a productivity problem to be solved, but as a human experience to be heard. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand this from the inside. Not as a productivity problem to be solved, but as a human experience to be heard. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -97,11 +97,11 @@ export default function NriBurnoutPage() {
         <div className="section">
           <h2>Suppressed Grief and the No-Safety-Net Life</h2>
           <p>Immigrants live without the safety net that most people take for granted. No parents around the corner. No childhood friends nearby. No support system that does not require a flight to access. When difficult things happen — an illness, a loss, a relationship ending — you navigate it largely alone, while appearing to be fine because the people who need to believe you are fine are watching on a video call from India.</p>
-          <p>The accumulated weight of years of this — of absorbing difficulty without adequate support, of performing okay-ness for the benefit of family at home — is a real thing. It does not always feel like grief because it is spread across time, but it accumulates. How Was Your Day peer listeners understand this specific weight. Real listening, no advice, no performance required. First 5 minutes free.</p>
+          <p>The accumulated weight of years of this — of absorbing difficulty without adequate support, of performing okay-ness for the benefit of family at home — is a real thing. It does not always feel like grief because it is spread across time, but it accumulates. How Was Your Day peer listeners understand this specific weight. Real listening, no advice, no performance required. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The dream that stopped feeling like one.</h2><p>Real peer listener. No judgment. No productivity tips. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The dream that stopped feeling like one.</h2><p>Real peer listener. No judgment. No productivity tips. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-workplace-stress">NRI workplace stress &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

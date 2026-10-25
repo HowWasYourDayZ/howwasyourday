@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk to someone in Tamil from Malaysia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day has Tamil-speaking listeners online daily on Indian time. You can also find listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Sessions start from RM 45 for 15 minutes, with the first 5 minutes free.',
+        text: 'Yes. How Was Your Day has Tamil-speaking listeners online daily on Indian time. You can also find listeners who speak Hindi, Telugu, Malayalam, Kannada, Bengali, and English. Sessions start from RM 45 for 15 minutes.',
       },
     },
     {
@@ -161,7 +161,7 @@ export default function MalaysiaLonelinessPage() {
           you with real Indian listeners who understand this specific kind of loneliness.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>What loneliness looks like for Indians in Malaysia</h2>
@@ -197,7 +197,7 @@ export default function MalaysiaLonelinessPage() {
 
         <div className="card">
           <h2>Session pricing for Malaysia</h2>
-          <p>Pay in Malaysian ringgit. The first 5-minute session free.</p>
+          <p>Pay in Malaysian ringgit. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>
@@ -239,7 +239,7 @@ export default function MalaysiaLonelinessPage() {
           <div className="faq-item">
             <h3>Can I talk to someone in Tamil from Malaysia?</h3>
             <p>Yes. How Was Your Day has Tamil-speaking listeners online daily on Indian time. Sessions start from RM 45 for
-              15 minutes, with the first 5 minutes free.</p>
+              15 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>What if I feel lonely even in a place with many Indians?</h3>

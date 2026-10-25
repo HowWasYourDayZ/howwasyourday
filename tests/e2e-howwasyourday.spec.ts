@@ -230,7 +230,7 @@ test.describe('Homepage content', () => {
     await page.goto('/')
     const text = await page.evaluate(() => document.body.innerText)
     // Prices mentioned on the page (₹ symbol or per min)
-    expect(text).toMatch(/₹|per min|free/i)
+    expect(text).toMatch(/£|per min/i)
   })
 
   test('mentions "free" first session', async ({ page }) => {
@@ -610,7 +610,7 @@ test.describe('Become listener page', () => {
     await page.waitForSelector('input, h1, h2', { timeout: 8000 })
     const bodyText = await page.evaluate(() => document.body.innerText)
     // Should mention rate or earnings somewhere in the page text
-    expect(bodyText).toMatch(/₹|rate|earn|listen/i)
+    expect(bodyText).toMatch(/£|rate|earn|listen/i)
   })
 
   test('no JS errors on load', async ({ page }) => {
@@ -935,7 +935,7 @@ test.describe('API security — unauthenticated access', () => {
 
   test('POST /api/sessions — rejects unauthenticated', async ({ request }) => {
     const res = await request.post('/api/sessions', {
-      data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: 'text' },
+      data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: 'text' },
     })
     expect([401, 403]).toContain(res.status())
   })
@@ -951,14 +951,14 @@ test.describe('API security — unauthenticated access', () => {
 
   test('POST /api/sessions — rejects invalid session type', async ({ request }) => {
     const res = await request.post('/api/sessions', {
-      data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: 'carrier_pigeon' },
+      data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: 'carrier_pigeon' },
     })
     expect([400, 401, 403]).toContain(res.status())
   })
 
   test('POST /api/sessions — rejects malformed UUID', async ({ request }) => {
     const res = await request.post('/api/sessions', {
-      data: { listenerId: 'not-a-valid-uuid', durationMins: 15, sessionType: 'text' },
+      data: { listenerId: 'not-a-valid-uuid', durationMins: 8, sessionType: 'text' },
     })
     expect([400, 401, 403]).toContain(res.status())
   })
@@ -1081,7 +1081,7 @@ test.describe('Razorpay webhook security', () => {
 test.describe('CSRF protection', () => {
   test('POST /api/sessions from untrusted origin returns 403', async ({ request }) => {
     const res = await request.post('/api/sessions', {
-      data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: 'text' },
+      data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: 'text' },
       headers: { 'Origin': 'https://evil-attacker.com' },
     })
     // 403 = CSRF blocked, 401 = CSRF passed but no auth
@@ -1148,7 +1148,7 @@ test.describe('Session page', () => {
         configurable: true,
       })
     })
-    await page.goto(`/session/${FAKE_UUID}?type=voice&name=TestListener&duration=15`)
+    await page.goto(`/session/${FAKE_UUID}?type=voice&name=TestListener&duration=8`)
     await page.waitForLoadState('domcontentloaded')
     // Should not be a blank page
     const body = await page.textContent('body')
@@ -1158,7 +1158,7 @@ test.describe('Session page', () => {
 
   test('session page with text type redirect unauthenticated', async ({ page }) => {
     await skipIfBlocked(page)
-    await page.goto(`/session/${FAKE_UUID}?type=text&name=TestListener&duration=15`)
+    await page.goto(`/session/${FAKE_UUID}?type=text&name=TestListener&duration=8`)
     await expect(page).toHaveURL(/\/auth/, { timeout: 12000 })
   })
 })
@@ -1272,8 +1272,8 @@ test.describe('Admin page', () => {
 // ─── 28. SESSIONS API — VALIDATION ────────────────────────────────────────────
 
 test.describe('Sessions API — input validation', () => {
-  test('valid durations: 5, 15, 30, 45 minutes only', async ({ request }) => {
-    const invalidDurations = [0, 1, 10, 20, 60, 90, 120, -1, 999]
+  test('valid durations: 8, 16, 32 minutes only', async ({ request }) => {
+    const invalidDurations = [0, 1, 5, 10, 15, 20, 30, 45, 60, -1, 999] // 5/15/30/45 were LeanOn's lengths
     for (const dur of invalidDurations) {
       const res = await request.post('/api/sessions', {
         data: { listenerId: FAKE_UUID, durationMins: dur, sessionType: 'text' },
@@ -1287,7 +1287,7 @@ test.describe('Sessions API — input validation', () => {
     const invalid = ['video', 'audio', '', null, 123, 'chat']
     for (const type of invalid) {
       const res = await request.post('/api/sessions', {
-        data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: type },
+        data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: type },
       })
       expect([400, 401, 403]).toContain(res.status())
     }
@@ -1297,7 +1297,7 @@ test.describe('Sessions API — input validation', () => {
     const invalidIds = ['not-a-uuid', '12345', '', 'abc-def-123']
     for (const id of invalidIds) {
       const res = await request.post('/api/sessions', {
-        data: { listenerId: id, durationMins: 15, sessionType: 'text' },
+        data: { listenerId: id, durationMins: 8, sessionType: 'text' },
       })
       expect([400, 401, 403]).toContain(res.status())
     }
@@ -1475,14 +1475,14 @@ test.describe('Admin moderate API', () => {
 test.describe('Injection and XSS protection', () => {
   test('POST /api/sessions — SQL injection in listenerId rejected', async ({ request }) => {
     const res = await request.post('/api/sessions', {
-      data: { listenerId: "'; DROP TABLE sessions; --", durationMins: 15, sessionType: 'text' },
+      data: { listenerId: "'; DROP TABLE sessions; --", durationMins: 8, sessionType: 'text' },
     })
     expect([400, 401, 403]).toContain(res.status())
   })
 
   test('POST /api/sessions — XSS payload in sessionType rejected', async ({ request }) => {
     const res = await request.post('/api/sessions', {
-      data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: '<script>alert(1)</script>' },
+      data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: '<script>alert(1)</script>' },
     })
     expect([400, 401, 403]).toContain(res.status())
   })
@@ -1545,7 +1545,7 @@ test.describe('Become listener — form validation', () => {
     await page.waitForSelector('input, h1', { timeout: 8000 })
     const text = await page.evaluate(() => document.body.innerText)
     // The page should mention earnings or listener role
-    expect(text).toMatch(/₹|earn|rate|listen/i)
+    expect(text).toMatch(/£|earn|rate|listen/i)
   })
 })
 
@@ -1600,7 +1600,7 @@ test.describe('Edge cases and boundary conditions', () => {
 
   test('session API returns JSON for errors', async ({ request }) => {
     const res = await request.post('/api/sessions', {
-      data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: 'text' },
+      data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: 'text' },
     })
     const contentType = res.headers()['content-type'] || ''
     expect([401, 403]).toContain(res.status())
@@ -1741,8 +1741,8 @@ test.describe('Race condition protection', () => {
   test('simultaneous POST /api/sessions both fail (no double booking)', async ({ request }) => {
     // Two simultaneous unauthenticated requests — both should fail auth, not race to create sessions
     const [r1, r2] = await Promise.all([
-      request.post('/api/sessions', { data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: 'text' } }),
-      request.post('/api/sessions', { data: { listenerId: FAKE_UUID, durationMins: 15, sessionType: 'text' } }),
+      request.post('/api/sessions', { data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: 'text' } }),
+      request.post('/api/sessions', { data: { listenerId: FAKE_UUID, durationMins: 8, sessionType: 'text' } }),
     ])
     expect([401, 403]).toContain(r1.status())
     expect([401, 403]).toContain(r2.status())

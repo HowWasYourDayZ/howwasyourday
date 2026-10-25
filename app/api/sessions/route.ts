@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimit } from '@/lib/rate-limit'
-import { PLATFORM_FEE, FREE_SESSION_MINS, MAX_FREE_TRIALS, SESSION_DURATIONS, sessionRatePerMin, REQUEST_RESPONSE_WINDOW_SECS, serviceFeeRateAt, DEFAULT_LISTENER_RATE } from '@/lib/constants'
+import { PLATFORM_FEE, SESSION_DURATIONS, sessionRatePerMin, REQUEST_RESPONSE_WINDOW_SECS, serviceFeeRateAt, DEFAULT_LISTENER_RATE } from '@/lib/constants'
 import { quoteSession } from '@/lib/geo-pricing'
 import { isUnlimitedTestPhone } from '@/lib/test-users'
 import { settleSession } from '@/lib/session-billing'
@@ -53,7 +53,6 @@ export async function POST(req: NextRequest) {
     }
 
     const sb     = createAdminClient()
-    const isFree = durationMins === FREE_SESSION_MINS
 
     // "Talk to someone available now" on the waiting screen: book this listener
     // INSTEAD of the seeker's own pending request. Every check below runs first
@@ -94,25 +93,10 @@ export async function POST(req: NextRequest) {
     // the free-trial caps entirely so they can start unlimited free sessions
     // with any listener for testing and outreach, including longer durations at no cost.
     const unlimitedTester = isUnlimitedTestPhone(user.phone)
-    // effectivelyFree = true means zero cost and free-trial flag — applies to all durations for unlimited testers
-    const effectivelyFree = isFree || unlimitedTester
+    // There are NO free sessions (PROJECT.md §5). The only zero-cost sessions are
+    // for owner/QA accounts listed in TEST_UNLIMITED_PHONES (env only).
+    const effectivelyFree = unlimitedTester
 
-    // Up to MAX_FREE_TRIALS *completed* free trials per user, ONE per listener.
-    // Cancelled sessions do NOT count — the seeker never got value from them.
-    if (isFree && !unlimitedTester) {
-      const [totalTrials, listenerTrial] = await Promise.all([
-        sb.from('sessions').select('id', { count: 'exact', head: true })
-          .eq('seeker_id', user.id).eq('is_free_trial', true).eq('status', 'completed'),
-        sb.from('sessions').select('id', { count: 'exact', head: true })
-          .eq('seeker_id', user.id).eq('listener_id', listenerId).eq('is_free_trial', true).eq('status', 'completed'),
-      ])
-      if ((totalTrials.count ?? 0) >= MAX_FREE_TRIALS) {
-        return NextResponse.json({ error: 'free_trial_used', message: `You've used all ${MAX_FREE_TRIALS} of your free 5-min trials. Recharge your wallet to continue.` }, { status: 400 })
-      }
-      if ((listenerTrial.count ?? 0) > 0) {
-        return NextResponse.json({ error: 'free_trial_used', message: 'You already had a free trial with this listener. Select a paid session to continue.' }, { status: 400 })
-      }
-    }
 
     // A request nobody answered must not keep the listener "busy" (or the seeker
     // "already in a session") until the nightly cleanup — expire it now. Runs

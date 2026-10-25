@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a session cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
+        text: 'Sessions start at 8 minutes. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function CanadaNriSupportPage() {
           is the cost of it. How Was Your Day is here for the honest parts.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>The hidden emotional cost of being an NRI in Canada</h2>
@@ -196,7 +196,7 @@ export default function CanadaNriSupportPage() {
         <div className="card">
           <h2>Session details</h2>
           <ul className="checklist">
-            <li>First 5 minutes completely free</li>
+            <li>Sessions from 8 minutes</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
             <li>Real human listeners — not AI</li>
             <li>Anonymous and confidential</li>
@@ -230,7 +230,7 @@ export default function CanadaNriSupportPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost?</h3>
-            <p>First 5 minutes free. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
+            <p>Sessions from 8 minutes. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day available across all of Canada?</h3>

@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'What if I\'m considering an arranged match but have genuine fears?', acceptedAnswer: { '@type': 'Answer', text: 'Fear before a life decision is completely normal. Talking through your fears with someone who understands the cultural context — without the pressure of family involvement — can help you get clearer about what you actually want.' } },
   { '@type': 'Question', name: 'What if I\'ve already said yes to someone my parents chose and I\'m having doubts?', acceptedAnswer: { '@type': 'Answer', text: 'Pre-wedding doubt is common and rarely talked about. The pressure to continue once the families are involved is enormous. A peer listener can hold that weight with you — not tell you what to do, but help you feel less alone while you figure it out.' } },
   { '@type': 'Question', name: 'Is this confidential from my family?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, your prospective match\'s family, or anyone else.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function ArrangedMarriageNriPage() {
         <div className="hero">
           <p className="badge">Arranged Marriage &middot; NRI Pressure &middot; Desi Abroad</p>
           <h1>Everyone has an opinion. <em>No one is asking how you actually feel.</em></h1>
-          <p className="lead">Your parents have a shortlist. Your family WhatsApp group has opinions. The community is watching. And somewhere in the middle of all of it, no one is asking how you actually feel. Arranged marriage as an NRI carries its own version of the pressure — the parents abroad who worry you&rsquo;ll &ldquo;go Western,&rdquo; the family in India who want you settled, the clock everyone hears except you. Talk to someone first. First 5 minutes free.</p>
+          <p className="lead">Your parents have a shortlist. Your family WhatsApp group has opinions. The community is watching. And somewhere in the middle of all of it, no one is asking how you actually feel. Arranged marriage as an NRI carries its own version of the pressure — the parents abroad who worry you&rsquo;ll &ldquo;go Western,&rdquo; the family in India who want you settled, the clock everyone hears except you. Talk to someone first. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,17 +84,17 @@ export default function ArrangedMarriageNriPage() {
           <h2>The NRI Arranged Marriage Pressure: A Different Kind</h2>
           <p>Arranged marriage pressure on NRIs has a particular character. In India, the pressure exists within a world where everyone around you is navigating the same thing — your friends are also dealing with rishtas, your colleagues are also having the family conversations. You can complain, compare notes, laugh about it together.</p>
           <p>Abroad, it is different. The rishta pressure comes from family back in India, who worry that time is running out and that you are drifting away from your culture and values. It comes from the diaspora community around you, which has its own dense social surveillance. And it arrives into a world — your American, British, or Canadian life — where none of your non-Indian friends understand what a rishta even is, and where your Indian friends are also carrying the same pressure but rarely talking about it openly.</p>
-          <p>The result is a very specific kind of silence. You say yes to the meetings, the WhatsApp exchanges, the visits. You smile. You perform openness. And inside, you have a different set of feelings that there is no safe place to voice. How Was Your Day gives you that place. First 5 minutes free.</p>
+          <p>The result is a very specific kind of silence. You say yes to the meetings, the WhatsApp exchanges, the visits. You smile. You perform openness. And inside, you have a different set of feelings that there is no safe place to voice. How Was Your Day gives you that place. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>Before You Make a Life Decision Under Pressure</h2>
           <p>Arranged marriages happen under time pressure, social pressure, and emotional pressure. The combination makes it genuinely difficult to know what you actually want. The fear of disappointing your parents. The guilt about your own desires. The pressure of the community watching. The sense that everyone else has figured this out and you are the only one struggling.</p>
-          <p>Talking to a real Indian peer listener — who has heard many of these stories and genuinely understands the cultural forces at play — before you make a decision can create space. Not to give you the answer, but to help you hear yourself. Sessions are anonymous and completely private. First 5 minutes free — one free session per account.</p>
+          <p>Talking to a real Indian peer listener — who has heard many of these stories and genuinely understands the cultural forces at play — before you make a decision can create space. Not to give you the answer, but to help you hear yourself. Sessions are anonymous and completely private. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Hear yourself before the pressure decides for you.</h2><p>Real Indian peer listener. Understands arranged marriage pressure on NRIs. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Hear yourself before the pressure decides for you.</h2><p>Real Indian peer listener. Understands arranged marriage pressure on NRIs. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>

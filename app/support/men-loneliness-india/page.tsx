@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What is How Was Your Day and how does it help with loneliness?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day connects you with screened peer listeners — real people who have their own lived experience and are selected to listen actively and without judgment. A session is not therapy — it is a real conversation with a real person who is there specifically to hear what you are going through. Many men use How Was Your Day specifically because it provides what their current social circle cannot: someone to talk to about the actual internal experience, not just the surface level. Sessions start at ₹160 for 15 minutes. First 5 minutes are free.',
+        text: 'How Was Your Day connects you with screened peer listeners — real people who have their own lived experience and are selected to listen actively and without judgment. A session is not therapy — it is a real conversation with a real person who is there specifically to hear what you are going through. Many men use How Was Your Day specifically because it provides what their current social circle cannot: someone to talk to about the actual internal experience, not just the surface level. Sessions start at ₹160 for 15 minutes. Sessions start at 8 minutes.',
       },
     },
     {
@@ -262,7 +262,7 @@ export default function MenLonelinessIndiaPage() {
 
         <div className="cta-card">
           <h2>Just Wanted to Talk?</h2>
-          <p>A real person. No judgment. No advice you didn&apos;t ask for. private, no appointment. First 5 minutes free.</p>
+          <p>A real person. No judgment. No advice you didn&apos;t ask for. private, no appointment. Sessions from 8 minutes.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Someone is listening — start free now →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works</button></a>

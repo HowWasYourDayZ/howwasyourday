@@ -49,12 +49,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Can I talk at any time of day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'There is no appointment. Listeners go online at different hours — early morning, late night, during the workday — and Browse shows who is online right now. The first 5-minute session free.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'There is no appointment. Listeners go online at different hours — early morning, late night, during the workday — and Browse shows who is online right now. Sessions from 8 minutes.' },
     },
     {
       '@type': 'Question',
       name: 'How much does a session cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Your first 5-minute session is free — you pay only if you continue beyond that. No subscription, no commitment.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions start at 8 minutes — you pay only if you continue beyond that. No subscription, no commitment.' },
     },
   ],
 }
@@ -174,7 +174,7 @@ export default function MotherInLawStressIndiaPage() {
 
         <div className="cta-card">
           <h2>You deserve to be heard without judgment.</h2>
-          <p>Anonymous peer support from someone who gets Indian family dynamics. From &#x20b9;160. First 5 minutes free.</p>
+          <p>Anonymous peer support from someone who gets Indian family dynamics. From &#x20b9;160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
 

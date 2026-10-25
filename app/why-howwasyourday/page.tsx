@@ -72,7 +72,7 @@ export default function WhyHowWasYourDayPage() {
             <h3>How Was Your Day Peer Support</h3>
             <ul>
               <li>Listeners often online late at night</li>
-              <li>From £7 for 15 minutes</li>
+              <li>From £4.20 for 8 minutes</li>
               <li>No appointment needed</li>
               <li>Private — listeners never see your number</li>
               <li>Real humans with lived experience</li>

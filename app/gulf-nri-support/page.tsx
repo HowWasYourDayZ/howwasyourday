@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Emotional Support for Gulf NRIs — Talk to Someone Indian, Any Time',
-    description: 'Building a life in the Gulf while holding everything together back home. How Was Your Day peer listeners understand exactly what that feels like. First 5 minutes free.',
+    description: 'Building a life in the Gulf while holding everything together back home. How Was Your Day peer listeners understand exactly what that feels like. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/gulf-nri-support',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -157,7 +157,7 @@ export default function GulfNriSupportPage() {
           You stay strong. But who is there for you? How Was Your Day is.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>The NRI emotional burden nobody talks about</h2>
@@ -177,7 +177,7 @@ export default function GulfNriSupportPage() {
           <h2>🌙 Across the Gulf — someone is always awake to listen</h2>
           <p>Whether you are in Dubai, Riyadh, Kuwait City, Muscat, Doha, or Manama — How Was Your Day
             listeners are online daily on Indian time. No appointments. Talk in your language when someone is online.</p>
-          <p>First 5 minutes free — one free session per account. Start right now.</p>
+          <p>Sessions from 8 minutes. Start right now.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
         </div>
 
@@ -196,7 +196,7 @@ export default function GulfNriSupportPage() {
             <li>UAE: AED 37 / AED 55 / AED 74 for 15/30/45 min</li>
             <li>Kuwait: KD 4 / KD 5 / KD 7 for 15/30/45 min</li>
             <li>Oman: OMR 4 / OMR 6 / OMR 8 for 15/30/45 min</li>
-            <li>First 5 minutes free — one free session per account</li>
+            <li>Sessions from 8 minutes</li>
           </ul>
           <p style={{ marginTop: '12px' }}>Anonymous. No subscription. Available in Saudi Arabia, Qatar, and Bahrain too.</p>
         </div>
@@ -227,7 +227,7 @@ export default function GulfNriSupportPage() {
           </div>
           <div className="faq-item">
             <h3>What does a session cost across Gulf countries?</h3>
-            <p>UAE: AED 37/55/74. Kuwait: KD 4/5/7. Oman: OMR 4/6/8 for 15/30/45 min. First 5 min free.</p>
+            <p>UAE: AED 37/55/74. Kuwait: KD 4/5/7. Oman: OMR 4/6/8 for 15/30/45 min. From 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>I am in Saudi Arabia or Qatar — is How Was Your Day available there?</h3>

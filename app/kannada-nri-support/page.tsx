@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand Bengaluru culture specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Bengaluru IT culture — the cosmopolitan city identity, the particular mix of Kannada pride and global ambition — is something listeners understand well. You do not have to explain why losing the Bengaluru identity abroad is its own kind of grief.' } },
   { '@type': 'Question', name: 'I feel invisible in South Indian NRI groups because nobody knows Kannada. Is that a real thing?', acceptedAnswer: { '@type': 'Answer', text: 'It is very real. Kannadigas abroad often get lumped into a generic South Indian identity, and the specific Kannada language and culture gets erased. That erasure is a real loss. A listener who understands Kannada culture will hear it as such.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Kannada community abroad and your family in Karnataka will never know. Sessions use only your phone number and first name.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function KannadaNriSupportPage() {
         <div className="hero">
           <p className="badge">Kannada NRI &middot; Karnataka &middot; Bengaluru Diaspora</p>
           <h1>You took Bengaluru&rsquo;s ambition global. <em>But your Kannada identity got lost in the translation.</em></h1>
-          <p className="lead">Kannadigas abroad are numerous — the Bengaluru-to-Silicon Valley pipeline is real. But in the diaspora, Kannada identity often gets absorbed into a generic &ldquo;South Indian&rdquo; category. The language, the Rajyotsava pride, the specific Mysore-Bengaluru cultural distinction — all of it becomes invisible. Talk to a Kannada listener who sees it. First 5 minutes free.</p>
+          <p className="lead">Kannadigas abroad are numerous — the Bengaluru-to-Silicon Valley pipeline is real. But in the diaspora, Kannada identity often gets absorbed into a generic &ldquo;South Indian&rdquo; category. The language, the Rajyotsava pride, the specific Mysore-Bengaluru cultural distinction — all of it becomes invisible. Talk to a Kannada listener who sees it. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function KannadaNriSupportPage() {
           <h2>The Specific Invisibility of Kannada Identity Abroad</h2>
           <p>In South Asian diaspora communities abroad, there is often a flattening of identity. Tamil, Telugu, Kannada, Malayalam — all get compressed into &ldquo;South Indian.&rdquo; For Tamils and Telugus, the community is large enough that distinct identity survives. For Kannadigas, there is often a real sense of cultural erasure — your language is not spoken widely enough in the diaspora for it to maintain its presence, and you find yourself defaulting to Hindi or English even with other South Indians.</p>
           <p>This is a particular kind of loneliness — the loss of linguistic and cultural specificity. The Rajyotsava feeling — the November 1 Karnataka pride — does not get celebrated in diaspora the way Diwali or Tamil New Year does. The specific humour, the Kannada film culture, the Mysore pak at Dasara — these things require no explanation at home and have no easy equivalent abroad.</p>
-          <p>How Was Your Day listeners from Karnataka understand this without needing it explained. First 5 minutes free.</p>
+          <p>How Was Your Day listeners from Karnataka understand this without needing it explained. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -96,11 +96,11 @@ export default function KannadaNriSupportPage() {
         <div className="section">
           <h2>Mysore-Bengaluru Distinctions and the Kannada Culture Abroad</h2>
           <p>Being from Mysore is different from being from Bengaluru — different cultural personality, different pace, different relationship to tradition versus modernity. Being from coastal Karnataka is different again. How Was Your Day listeners understand that Karnataka is not a monolith, and that your specific regional identity within the state shapes how you experience being abroad.</p>
-          <p>Whatever the weight — the Kannada cultural loss, the family back in Karnataka, the specific IT burnout of the Bengaluru diaspora, the Rajyotsava homesickness — a listener will hear it as it is. Real, Kannada-understanding, non-judgmental peer support. First 5 minutes free.</p>
+          <p>Whatever the weight — the Kannada cultural loss, the family back in Karnataka, the specific IT burnout of the Bengaluru diaspora, the Rajyotsava homesickness — a listener will hear it as it is. Real, Kannada-understanding, non-judgmental peer support. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Kannadiganu Kannadige listener.</h2><p>Your culture, seen and heard without explanation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Kannadiganu Kannadige listener.</h2><p>Your culture, seen and heard without explanation. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

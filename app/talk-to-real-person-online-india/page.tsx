@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to a Real Person Online India — Not an AI, Not a Bot | How Was Your Day',
-  description: 'Tired of talking to AI chatbots? How Was Your Day connects you with real human peer listeners across India — private and genuinely caring. First 5 minutes free.',
+  description: 'Tired of talking to AI chatbots? How Was Your Day connects you with real human peer listeners across India — private and genuinely caring. Sessions from 8 minutes.',
   keywords: [
     'talk to a real person online india', 'real human conversation online india', 'not ai not chatgpt india',
     'talk to human not bot india', 'human chat support india', 'real person to talk to india',
@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'How can I talk to a real person online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day connects you with real screened peer listeners across India. Browse who is online, start a free 5-minute session, and talk to a real human who is there just to listen — no AI, no bots.',
+        text: 'How Was Your Day connects you with real screened peer listeners across India. Browse who is online, start a 8-minute session, and talk to a real human who is there just to listen — no AI, no bots.',
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to a real person on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free (one per account). After that, 15-minute paid sessions start at ₹160 depending on the listener. Much more affordable than professional therapy.',
+        text: 'Sessions start at 8 minutes. After that, 15-minute paid sessions start at ₹160 depending on the listener. Much more affordable than professional therapy.',
       },
     },
     {
@@ -160,7 +160,7 @@ export default function TalkToRealPersonPage() {
          . No AI. No bots. No predictions.
         </p>
 
-        <a href="/browse" className="cta-hero">Find a listener now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Find a listener now →</a>
 
         <div className="card">
           <h2>Why a real person is different from an AI</h2>
@@ -208,7 +208,7 @@ export default function TalkToRealPersonPage() {
             <li>
               <div>
                 <strong>Start for free</strong>
-                <p>First 5 minutes free — one free session per account. No payment details needed to start.</p>
+                <p>Sessions from 8 minutes. No payment details needed to start.</p>
               </div>
             </li>
             <li>
@@ -241,7 +241,7 @@ export default function TalkToRealPersonPage() {
           <div className="faq-item">
             <h3>How can I talk to a real person online in India?</h3>
             <p>How Was Your Day connects you with real screened peer listeners across India. Browse who is online, start a
-              free 5-minute session, and talk to a real human who is there just to listen.</p>
+              8-minute session, and talk to a real human who is there just to listen.</p>
           </div>
           <div className="faq-item">
             <h3>Are How Was Your Day listeners real humans or AI?</h3>
@@ -256,7 +256,7 @@ export default function TalkToRealPersonPage() {
           </div>
           <div className="faq-item">
             <h3>How much does it cost to talk on How Was Your Day?</h3>
-            <p>Your first 5 minutes are free (one per account). After that, 15-minute paid sessions start at ₹160
+            <p>Sessions start at 8 minutes. After that, 15-minute paid sessions start at ₹160
               depending on the listener — much more affordable than professional therapy.</p>
           </div>
           <div className="faq-item">

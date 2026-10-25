@@ -181,7 +181,7 @@ export default function QuarterLifeCrisisIndiaPage() {
 
         <div className="cta-card">
           <h2>You are not the only one feeling lost in your 20s.</h2>
-          <p>Talk to someone who has been through it. Anonymous. From ₹160. First 5 minutes free.</p>
+          <p>Talk to someone who has been through it. Anonymous. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

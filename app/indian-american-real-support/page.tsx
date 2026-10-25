@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Real Support for Indian Americans — Someone Who Gets It | How Was Your Day',
-  description: 'How Was Your Day connects Indian Americans with peer listeners who understand desi life — family expectations, identity navigation, immigration stress, and the loneliness of being between two cultures. First 5 min free.',
+  description: 'How Was Your Day connects Indian Americans with peer listeners who understand desi life — family expectations, identity navigation, immigration stress, and the loneliness of being between two cultures. From 8 minutes.',
   keywords: [
     'Indian American emotional support', 'desi therapist alternative', 'talk to someone who understands Indian culture',
     'South Asian mental health support', 'NRI emotional support', 'desi peer support',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Real Support for Indian Americans — Someone Who Gets It | How Was Your Day',
-    description: 'Peer listeners with lived South Asian experience — not AI. For Indian Americans navigating desi life, family expectations, and identity. First 5 minutes free.',
+    description: 'Peer listeners with lived South Asian experience — not AI. For Indian Americans navigating desi life, family expectations, and identity. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/indian-american-real-support',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -41,7 +41,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. From $10 for 15 min, $15 for 30 min, $20 for 45 min.',
+    description: 'Sessions from 8 minutes. From $10 for 15 min, $15 for 30 min, $20 for 45 min.',
   },
 }
 
@@ -71,7 +71,7 @@ const faqSchema = {
       name: 'Is there a human alternative to AI for South Asian mental health support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. First 5 minutes free.',
+        text: 'How Was Your Day has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. Sessions from 8 minutes.',
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost for Indian Americans?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes — with the first 5 minutes free. Significantly more affordable than therapy.',
+        text: 'From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes —. Significantly more affordable than therapy.',
       },
     },
   ],
@@ -203,7 +203,7 @@ export default function IndianAmericanRealSupportPage() {
           get it because they have been there.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone who gets it — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone who gets it →</a>
 
         <div className="card">
           <h2>The specific loneliness of being South Asian in America</h2>
@@ -288,7 +288,7 @@ export default function IndianAmericanRealSupportPage() {
         <div className="card">
           <h2>How much does it cost?</h2>
           <p>
-            Your first 5 minutes are completely free — no credit card needed to start. After that:
+            Sessions start at 8 minutes — no credit card needed to start. After that:
             from $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes.
           </p>
           <p>
@@ -312,7 +312,7 @@ export default function IndianAmericanRealSupportPage() {
           </div>
           <div className="faq-item">
             <h3>Is there a human alternative to AI for South Asian mental health support?</h3>
-            <p>How Was Your Day has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. First 5 minutes free.</p>
+            <p>How Was Your Day has real peer listeners with lived experience of South Asian culture — understanding of arranged marriage dynamics, family pressure, immigration stress, and cultural identity. Sessions from 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk to a South Asian listener on How Was Your Day?</h3>
@@ -324,7 +324,7 @@ export default function IndianAmericanRealSupportPage() {
           </div>
           <div className="faq-item">
             <h3>How much does How Was Your Day cost for Indian Americans?</h3>
-            <p>From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes — with the first 5 minutes free. Significantly more affordable than therapy.</p>
+            <p>From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes —. Significantly more affordable than therapy.</p>
           </div>
         </div>
 

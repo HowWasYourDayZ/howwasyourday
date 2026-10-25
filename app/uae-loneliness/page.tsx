@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     languages: { 'en-GB': 'https://www.howwasyourday.live/uae-loneliness' },
   },
   openGraph: {
-    title: 'Feeling Lonely in UAE? Talk to an Indian Listener — First 5 Min Free',
+    title: 'Feeling Lonely in UAE? Talk to an Indian Listener — From 8 Minutes',
     description: 'Far from home, missing family, and carrying it all alone? How Was Your Day peer listeners understand the UAE expat experience. Talk now, in your language.',
     url: 'https://www.howwasyourday.live/uae-loneliness',
     siteName: 'How Was Your Day',
@@ -156,7 +156,7 @@ export default function UAELonelinessPage() {
           Indian peer listener who actually gets it, in your own language.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>What loneliness really looks like for Indians in the UAE</h2>
@@ -177,7 +177,7 @@ export default function UAELonelinessPage() {
           <p>After the workday ends, the loneliness can hit hardest. No family nearby. No one to just sit
             with. How Was Your Day listeners are based in India, so availability follows Indian time — including late UAE nights when India is still awake
             and our listeners are ready.</p>
-          <p>Start talking right now. First 5 minutes are free, no questions asked.</p>
+          <p>Start talking right now. Sessions start at 8 minutes, no questions asked.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
         </div>
 
@@ -224,7 +224,7 @@ export default function UAELonelinessPage() {
           <div className="faq-item">
             <h3>How much does a session cost for someone in the UAE?</h3>
             <p>Sessions start at AED 37 for 15 minutes, AED 55 for 30 minutes, and AED 74 for 45 minutes.
-              Your first 5 minutes are completely free.</p>
+              Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day confidential?</h3>

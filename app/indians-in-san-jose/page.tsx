@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand the Silicon Valley Indian experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and are screened and expected to understand the NRI experience — including the specific pressures of Bay Area tech life: H1B anxiety, layoff fear, the overachiever identity, and the loneliness that comes with working 60-hour weeks in a city that measures you by your company and title.' } },
   { '@type': 'Question', name: 'What timezone does San Jose connect from?', acceptedAnswer: { '@type': 'Answer', text: 'San Jose (PST) is 13.5 hours behind IST. 7am San Jose = 8:30pm India. Before your morning standup, Indian listeners are available in their evening. Early mornings before work are a good time to connect.' } },
   { '@type': 'Question', name: 'Will my employer or colleagues know I used How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day is private — phone number and first name only. Nothing is shared with your company, your manager, your HR department, or anyone in your Bay Area community.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
   { '@type': 'Question', name: 'Is this different from talking to a friend or family in India?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners are screened and expected to listen without judgment and without advice unless you ask. Unlike family, they won\'t worry about you, tell others, or try to fix your situation. You can say exactly what\'s on your mind.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function IndiansInSanJosePage() {
         <div className="hero">
           <p className="badge">Indians in San Jose &middot; Silicon Valley &middot; South Bay</p>
           <h1>100,000 Indians in the Valley. <em>Still lonely.</em></h1>
-          <p className="lead">San Jose has one of the largest Indian populations in America — Milpitas, Sunnyvale, Cupertino, Fremont. The zip codes, the companies, the potlucks — the community infrastructure is real. And yet so many Bay Area Indians describe a specific, exhausting loneliness: surrounded by other Indians who are all too busy to really talk. First 5 minutes free.</p>
+          <p className="lead">San Jose has one of the largest Indian populations in America — Milpitas, Sunnyvale, Cupertino, Fremont. The zip codes, the companies, the potlucks — the community infrastructure is real. And yet so many Bay Area Indians describe a specific, exhausting loneliness: surrounded by other Indians who are all too busy to really talk. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndiansInSanJosePage() {
           <h2>The South Bay Indian Community: Scale Without Connection</h2>
           <p>The Indian community in the South Bay is extraordinary in its size. San Jose, Milpitas, Sunnyvale, Cupertino, Fremont, Santa Clara — these are cities where you can live an almost entirely Indian-facing life. Indian grocery stores, temples, cultural associations, cricket leagues, Diwali events that fill convention halls. On paper, you are never alone.</p>
           <p>And yet the specific loneliness of Bay Area Indians is something that doesn&rsquo;t show up in the census data. Everyone here is optimizing — their career, their H1B timeline, their green card queue position, their kids&rsquo; school district. The conversations are about stock options, home prices, and school rankings. The deeper conversations — about what you actually feel, what you actually fear, what you miss about India that you&rsquo;ve never said out loud — those happen less often than you&rsquo;d expect in a city with 100,000 Indians.</p>
-          <p>How Was Your Day listeners are Indians based in India who have been chosen for their ability to hold space for exactly this. Not advice. Not a tech bro response. Real listening from someone who understands the NRI experience from the inside. First 5 minutes free, no appointment.</p>
+          <p>How Was Your Day listeners are Indians based in India who have been chosen for their ability to hold space for exactly this. Not advice. Not a tech bro response. Real listening from someone who understands the NRI experience from the inside. Sessions from 8 minutes, no appointment.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function IndiansInSanJosePage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The Valley is full of Indians. Talk to one who will actually listen.</h2><p>Real peer listener based in India. Understands the Silicon Valley Indian experience. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The Valley is full of Indians. Talk to one who will actually listen.</h2><p>Real peer listener based in India. Understands the Silicon Valley Indian experience. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

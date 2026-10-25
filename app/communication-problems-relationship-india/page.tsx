@@ -5,17 +5,17 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Can\'t Communicate With Your Partner India | How Was Your Day',
-  description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. First 5 minutes free.",
+  description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. Sessions from 8 minutes.",
   keywords: ['communication problems relationship India', 'can\'t talk to partner India', 'partner doesn\'t listen India', 'communication issues marriage India'],
   alternates: { canonical: 'https://www.howwasyourday.live/communication-problems-relationship-india', languages: { 'en-GB': 'https://www.howwasyourday.live/communication-problems-relationship-india' } },
-  openGraph: { title: 'Can\'t Communicate With Your Partner India | How Was Your Day', description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. First 5 minutes free.", url: 'https://www.howwasyourday.live/communication-problems-relationship-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Can\'t Communicate With Your Partner India | How Was Your Day', description: "Keep fighting and can't talk to each other? Talk it through privately with a real peer listener in India — text or voice. Not couples therapy. Sessions from 8 minutes.", url: 'https://www.howwasyourday.live/communication-problems-relationship-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: "We keep fighting and can't talk to each other \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. How Was Your Day connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "We keep fighting and can't talk to each other \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. How Was Your Day connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Sessions start at 8 minutes." } },
     {'@type': 'Question', name: 'Is communication breakdown a sign the relationship is over?', acceptedAnswer: {'@type': 'Answer', text: 'Not necessarily. Many relationships with severe communication breakdown have been repaired. But the repair usually requires both people to want it and some structured help. How Was Your Day is a useful first step: processing your own experience of the breakdown before attempting to bridge it.'}},
     {'@type': 'Question', name: 'Can one person\'s communication changing help the relationship?', acceptedAnswer: {'@type': 'Answer', text: 'Often yes. When one person in a communication breakdown starts approaching conversations differently &mdash; less defensively, more curiously &mdash; it changes the dynamic even without the other person consciously changing.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -73,8 +73,8 @@ export default function CommunicationProblemsRelationshipIndiaPage() {
         <div className="hero">
           <p className="badge">Communication Problems · Relationship · India</p>
           <h1>Every conversation becomes a fight. You feel unheard. They feel unheard. <em>The gap keeps growing.</em></h1>
-          <p className="lead">Communication breakdown in a relationship is one of the most common sources of relationship pain. Talk anonymously from ₹160.</p>
-          <QuickAnswer question={"We keep fighting and can't talk to each other \u2014 who can I talk to?"} answer={"When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. How Was Your Day connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Your first 5 minutes are free."} />
+          <p className="lead">Communication breakdown in a relationship is one of the most common sources of relationship pain. Talk anonymously from £4.20.</p>
+          <QuickAnswer question={"We keep fighting and can't talk to each other \u2014 who can I talk to?"} answer={"When every conversation turns into a fight, talking to someone outside the relationship can help you work out what you actually want to say. How Was Your Day connects you with a peer listener in India for a private, one-to-one text or voice conversation. They listen and help you think it through; it is not couples therapy. Sessions start at 8 minutes."} />
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -87,7 +87,7 @@ export default function CommunicationProblemsRelationshipIndiaPage() {
           <p>Sometimes the most useful first step is talking to a neutral third party &mdash; not couples therapy (though that can be valuable), but simply having a space to process your side of things with someone who listens without defending the other person. It helps you understand what you are actually trying to say, which makes it easier to say it.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You deserve to be heard in your own relationship.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You deserve to be heard in your own relationship.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/support/relationship-stress">Relationship stress &rarr;</a>
             <a href="/overthinking-relationship-india">Overthinking relationship &rarr;</a>
             <a href="/toxic-relationship-india">Toxic relationship &rarr;</a>

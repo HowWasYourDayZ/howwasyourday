@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Married but Feel Very Lonely? Someone to Talk To in India | How Was Your Day',
-  description: "Lonely in your marriage and can't tell family? Talk privately to a real peer listener in India — text or voice, your number never shown. Not couples therapy. First 5 minutes free.",
+  description: "Lonely in your marriage and can't tell family? Talk privately to a real peer listener in India — text or voice, your number never shown. Not couples therapy. Sessions from 8 minutes.",
   keywords: [
     'married but lonely India', 'lonely in marriage India', 'unhappy marriage India',
     'husband emotionally unavailable India', 'feeling alone in marriage India',
@@ -29,7 +29,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I feel lonely in my marriage \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Feeling alone while married is common and hard to say out loud, especially to family. How Was Your Day connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "I feel lonely in my marriage \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Feeling alone while married is common and hard to say out loud, especially to family. How Was Your Day connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Sessions start at 8 minutes." } },
     {
       '@type': 'Question',
       name: 'Is it normal to feel lonely inside a marriage?',
@@ -167,7 +167,7 @@ export default function MarriedButLonelyPage() {
           things because you already know they will not really hear you. Where the distance between two people
           in the same house can feel wider than any ocean.
         </p>
-        <QuickAnswer question={"I'm married but feel very lonely. Is there someone I can talk to?"} answer={"Feeling alone while married is common and hard to say out loud, especially to family. How Was Your Day connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Your first 5 minutes are free."} />
+        <QuickAnswer question={"I'm married but feel very lonely. Is there someone I can talk to?"} answer={"Feeling alone while married is common and hard to say out loud, especially to family. How Was Your Day connects you with a peer listener in India who understands marriage pressure, for a private one-to-one text or voice conversation. The listener sees only the name you choose, never your number. They listen and help you think — it is not couples therapy. Sessions start at 8 minutes."} />
 
         <div className="crisis">
           <strong>If you are having thoughts of self-harm</strong>
@@ -241,9 +241,9 @@ export default function MarriedButLonelyPage() {
 
         <div className="cta-card">
           <h2>You Deserve to Be Heard</h2>
-          <p>Talk to a real screened peer listener — private, no judgment, no appointment. First 5 minutes free.</p>
+          <p>Talk to a real screened peer listener — private, no judgment, no appointment. Sessions from 8 minutes.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands →</button></a>
             <a href="/for-women"><button className="btn-secondary">Support for women</button></a>
           </div>
         </div>

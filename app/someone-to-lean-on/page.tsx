@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does it cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The price depends on the listener you choose plus a flat £1 platform fee per paid session. A 15-minute session starts around £7 — far less than a therapy appointment in India, and with no appointment. A short trial session is available for new users.',
+        text: 'The price depends on the listener you choose plus a flat £1 platform fee per paid session. An 8-minute session starts around £4.20 — far less than a therapy appointment in India, and with no appointment. Sessions start at 8 minutes, so trying someone costs little.',
       },
     },
   ],
@@ -198,7 +198,7 @@ export default function SomeoneToHowWasYourDayPage() {
           <p>Every listener on How Was Your Day is a verified human being who has personally lived through something like what you are carrying: a breakup, a job loss, years in a marriage they could not talk about, the long quiet of a city where nobody knows them. They are peers, not licensed therapists, and we are direct about that distinction. And there is no AI anywhere in the conversation — no generated replies, no simulated empathy. The person typing has actually been there.</p>
 
           <h3>Anonymous, First Names Only, Open at 3 AM</h3>
-          <p>You choose a listener and talk. First names only, no photographs of you, nothing shared with anyone in your life, and nothing that shows up anywhere later. Listeners go online at different hours, often including the hours when this feeling is worst, so having someone to lean on does not depend on office timings. You can find out whether this particular person actually gets it with a short trial session before committing to a longer one.</p>
+          <p>You choose a listener and talk. First names only, no photographs of you, nothing shared with anyone in your life, and nothing that shows up anywhere later. Listeners go online at different hours, often including the hours when this feeling is worst, so having someone to lean on does not depend on office timings. You can find out whether this particular person actually gets it with a short 8-minute session before committing to a longer one.</p>
         </div>
 
         {/* Listener cards */}
@@ -264,7 +264,7 @@ export default function SomeoneToHowWasYourDayPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does it cost?</div>
-            <div className="faq-a">The price depends on the listener you choose plus a flat £1 platform fee per paid session. A 15-minute session starts around £7 — far less than a therapy appointment in India, and with no appointment. A short trial session is available for new users.</div>
+            <div className="faq-a">The price depends on the listener you choose plus a flat £1 platform fee per paid session. An 8-minute session starts around £4.20 — far less than a therapy appointment in India, and with no appointment. Sessions start at 8 minutes, so trying someone costs little.</div>
           </div>
         </div>
 

@@ -204,7 +204,7 @@ export default function RelationshipAnxietyPage() {
         <div className="cta-card">
           <h2>You can say the thing you have been editing</h2>
           <p>Anonymous. No judgment. A real listener who has heard relationship anxiety before and will not flinch at yours.</p>
-          <a href="/browse?topic=relationships" className="btn-cta">Talk to someone who gets it — first 5 min free →</a>
+          <a href="/browse?topic=relationships" className="btn-cta">Talk to someone who gets it →</a>
         </div>
 
         <div className="section">

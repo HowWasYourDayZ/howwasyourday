@@ -69,7 +69,7 @@ export default function AnswersPage() {
         </p>
         <p className="lead">
           How Was Your Day is peer support: screened listeners in India, by text or voice, not therapists and not AI.
-          The first 5 minutes are free; in India a 15-minute session starts at £7.
+          Sessions start at 8 minutes; an 8-minute session starts at £4.20.
         </p>
         <div className="crisis">
           If you are thinking about harming yourself, text SHOUT to 85258 or
@@ -94,7 +94,7 @@ export default function AnswersPage() {
 
         <div className="cta">
           <h2>Want to talk it through?</h2>
-          <p>A screened listener in India, by text or voice. First 5 minutes free.</p>
+          <p>A screened listener in India, by text or voice. Sessions from 8 minutes.</p>
           <a className="btn" href="/talk?src=answers">Talk now</a>
         </div>
       </div>

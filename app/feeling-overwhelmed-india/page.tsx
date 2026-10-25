@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Feeling Overwhelmed? You\'re Not Broken — You Just Need to Be Heard | How Was Your Day',
-  description: 'Feeling overwhelmed, exhausted, or like you can\'t cope? Talk to a real peer listener — anonymous, no judgment. First 5 min free.',
+  description: 'Feeling overwhelmed, exhausted, or like you can\'t cope? Talk to a real peer listener — anonymous, no judgment. From 8 minutes.',
   keywords: [
     'feeling overwhelmed India', 'overwhelmed and don\'t know why India',
     'feeling overwhelmed all the time India', 'everything feels too much India',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.howwasyourday.live/feeling-overwhelmed-india', languages: { 'en-GB': 'https://www.howwasyourday.live/feeling-overwhelmed-india' } },
   openGraph: {
     title: 'Feeling Overwhelmed? You\'re Not Broken — You Just Need to Be Heard | How Was Your Day',
-    description: 'Feeling overwhelmed, exhausted, or like you can\'t cope? Talk to a real peer listener — anonymous, no judgment. First 5 min free.',
+    description: 'Feeling overwhelmed, exhausted, or like you can\'t cope? Talk to a real peer listener — anonymous, no judgment. From 8 minutes.',
     url: 'https://www.howwasyourday.live/feeling-overwhelmed-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -48,7 +48,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How long does a session take?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions are available in 15, 30, or 45-minute slots — you choose what feels right. Most people experiencing overwhelm find that a 15-minute session is enough to get the weight out and return to their day from a lower-pressure state. There is also a free 5-minute trial if you want to check how it feels before committing to a session.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions are available in 8, 16 or 32-minute slots — you choose what feels right. Most people experiencing overwhelm find that a 15-minute session is enough to get the weight out and return to their day from a lower-pressure state. There is also a free 5-minute trial if you want to check how it feels before committing to a session.' },
     },
   ],
 }
@@ -189,7 +189,7 @@ export default function FeelingOverwhelmedPage() {
 
         <div className="cta-card">
           <h2>You don&apos;t have to keep carrying this alone.</h2>
-          <p>A real peer listener may be online right now — anonymous, judgment-free, and ready to sit with you exactly where you are. First 5 minutes are free.</p>
+          <p>A real peer listener may be online right now — anonymous, judgment-free, and ready to sit with you exactly where you are. Sessions start at 8 minutes.</p>
           <div className="cta-buttons">
             <a href="/talk?src=seo" className="btn-cta">Talk to someone now →</a>
             <a href="/browse" className="btn-cta-outline">Browse listeners →</a>

@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a session cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
+        text: 'Sessions start at 8 minutes. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function CanadaImmigrationStressPage() {
           future rests on a process you cannot fully control. You are allowed to find that hard.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>What immigration stress actually feels like</h2>
@@ -192,7 +192,7 @@ export default function CanadaImmigrationStressPage() {
         <div className="card">
           <h2>Session details</h2>
           <ul className="checklist">
-            <li>First 5 minutes completely free — no commitment</li>
+            <li>Sessions from 8 minutes — no commitment</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
             <li>Anonymous — nothing you say goes anywhere</li>
             <li>Real human listeners, not AI or bots</li>
@@ -227,7 +227,7 @@ export default function CanadaImmigrationStressPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost?</h3>
-            <p>First 5 minutes free. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
+            <p>Sessions from 8 minutes. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
             <h3>What if I want to talk about leaving Canada?</h3>

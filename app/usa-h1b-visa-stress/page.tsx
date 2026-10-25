@@ -156,7 +156,7 @@ export default function UsaH1bVisaStressPage() {
           an enormous psychological burden that most people around you will never understand.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone who gets it — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone who gets it →</a>
 
         <div className="card">
           <h2>The specific weight of H-1B anxiety</h2>
@@ -188,7 +188,7 @@ export default function UsaH1bVisaStressPage() {
           <p>A How Was Your Day listener is a neutral, confidential space. They understand the H-1B system without
             needing it explained. They will sit with you in the uncertainty without minimising it or
             catastrophising it.</p>
-          <p>Sessions start at <strong>$10 for 15 minutes</strong> — your first 5-minute session free.</p>
+          <p>Sessions start at <strong>$10 for 15 minutes</strong> — sessions from 8 minutes.</p>
         </div>
 
         <div className="card">

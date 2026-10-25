@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to Someone Online in Oman | How Was Your Day',
-  description: 'Need a real person to talk to in Oman? How Was Your Day connects Indian expats in Muscat and across Oman with screened peer listeners in India — in your language. First 5 minutes free.',
+  description: 'Need a real person to talk to in Oman? How Was Your Day connects Indian expats in Muscat and across Oman with screened peer listeners in India — in your language. Sessions from 8 minutes.',
   keywords: [
     'talk to someone online oman', 'someone to talk to oman', 'need to talk oman',
     'online chat support oman', 'talk to a person oman', 'emotional support oman indian',
@@ -85,7 +85,7 @@ export default function OmanTalkToSomeonePage() {
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>
-          Browse listeners — first 5 min free
+          Browse listeners — from 8 minutes
         </a>
 
         <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 12 }}>Why Indians in Oman Reach Out</h2>
@@ -108,7 +108,7 @@ export default function OmanTalkToSomeonePage() {
 
         <div style={{ background: '#f0f9fb', borderRadius: 16, padding: '28px 24px', marginTop: 40, textAlign: 'center' }}>
           <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>Ready to talk to a real person?</p>
-          <p style={{ color: '#555', marginBottom: 20 }}>First 5 minutes free. No appointment, no forms, no judgment.</p>
+          <p style={{ color: '#555', marginBottom: 20 }}>Sessions from 8 minutes. No appointment, no forms, no judgment.</p>
           <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 32px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem' }}>
             Find a listener now
           </a>

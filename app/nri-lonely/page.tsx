@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is NRI loneliness different from depression?', acceptedAnswer: { '@type': 'Answer', text: 'Loneliness is not the same as depression, though they can co-exist. NRI loneliness is often a contextual response to genuinely isolating circumstances — being far from your support network, in a cultural environment that does not fully understand you. A peer listener is not a substitute for professional help if you feel you need it, but for the loneliness of immigrant life, peer connection often helps directly.' } },
   { '@type': 'Question', name: 'Will talking to a listener actually help with loneliness?', acceptedAnswer: { '@type': 'Answer', text: 'For many people, yes. Being genuinely heard by someone who already understands your world — without having to explain the context — addresses the specific kind of loneliness that comes from feeling unseen. It does not solve everything, but it changes something.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private — phone number and first name only. Nothing is shared with your family, community, or employer.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes are free. Sessions continue from US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriLonelyPage() {
         <div className="hero">
           <p className="badge">NRI Loneliness &middot; Indian Immigrant Life &middot; Peer Support</p>
           <h1>NRI Lonely — <em>The Kind You Can&rsquo;t Explain to People Back Home</em></h1>
-          <p className="lead">You can&rsquo;t explain it to people in India — they think your life is perfect. You can&rsquo;t explain it to colleagues abroad — they don&rsquo;t understand the context. You are lonely in both directions at once. That is the specific shape of NRI loneliness. And it deserves to be named — not managed, not solved. Just heard. First 5 minutes free.</p>
+          <p className="lead">You can&rsquo;t explain it to people in India — they think your life is perfect. You can&rsquo;t explain it to colleagues abroad — they don&rsquo;t understand the context. You are lonely in both directions at once. That is the specific shape of NRI loneliness. And it deserves to be named — not managed, not solved. Just heard. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone who understands &rarr;</a>
         </div>
 
@@ -99,7 +99,7 @@ export default function NriLonelyPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The loneliness that has nowhere to go.</h2><p>Real peer listener. Already understands the NRI world. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The loneliness that has nowhere to go.</h2><p>Real peer listener. Already understands the NRI world. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>

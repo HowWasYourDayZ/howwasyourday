@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does a session cost from the Gulf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'From the UAE: AED 37 for 15 min, AED 55 for 30 min, AED 74 for 45 min. From Kuwait: KD 4 / KD 5 / KD 7. From Oman: OMR 4 / OMR 6 / OMR 8. First 5 minutes are free — one free session per account.',
+        text: 'From the UAE: AED 37 for 15 min, AED 55 for 30 min, AED 74 for 45 min. From Kuwait: KD 4 / KD 5 / KD 7. From Oman: OMR 4 / OMR 6 / OMR 8. Sessions start at 8 minutes — one free session per account.',
       },
     },
     {
@@ -157,7 +157,7 @@ export default function MiddleEastEmpathyListenerPage() {
           a basic human need.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>What it feels like to be unheard in the Gulf</h2>
@@ -198,7 +198,7 @@ export default function MiddleEastEmpathyListenerPage() {
             <li>UAE: AED 37 / AED 55 / AED 74 for 15/30/45 min</li>
             <li>Kuwait: KD 4 / KD 5 / KD 7 for 15/30/45 min</li>
             <li>Oman: OMR 4 / OMR 6 / OMR 8 for 15/30/45 min</li>
-            <li>First 5 minutes free — one free session per account</li>
+            <li>Sessions from 8 minutes</li>
           </ul>
         </div>
 

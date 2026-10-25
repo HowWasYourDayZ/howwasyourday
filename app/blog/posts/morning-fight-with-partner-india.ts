@@ -48,6 +48,6 @@ export const post = {
 
 <p>You can do this during your commute. In fifteen minutes at your desk before the inbox. During your first coffee. The session fits into the natural rhythm of the morning &mdash; it does not require a special block of time or a long afternoon.</p>
 
-<p>If you had a fight this morning and you are still carrying it, <a href="/browse">browse available listeners here</a>. First 5 minutes are free. You can say what happened in 15 minutes and get on with the day.</p>
+<p>If you had a fight this morning and you are still carrying it, <a href="/browse">browse available listeners here</a>. Sessions start at 8 minutes. You can say what happened in 15 minutes and get on with the day.</p>
 `,
 }

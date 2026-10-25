@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Patel community pressure specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Patel community carries specific expectations — family business involvement, arranged marriage within community, the reputation weight of the Patel name abroad. Listeners understand this without needing it explained.' } },
   { '@type': 'Question', name: 'Is this confidential from my community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Gujarati community in Leicester, Harrow, or Houston will never know. Sessions use only your phone number and first name. Nothing is shared.' } },
   { '@type': 'Question', name: 'What if my family pressure is about the family business?', acceptedAnswer: { '@type': 'Answer', text: 'Business family pressure — the expectation to join or grow the family enterprise, the conflict between your own career ambitions and family duty — is something How Was Your Day listeners hear often. You can talk about it without being judged or advised.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Your first 5-minute session is free. No subscription. Pay only if the session feels right after the first 5 minutes.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Sessions start at 8 minutes. No subscription. Pay only if the session feels right after the first 5 minutes.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function GujaratiNriSupportPage() {
         <div className="hero">
           <p className="badge">Gujarati NRI &middot; UK &amp; USA &middot; Diaspora Support</p>
           <h1>You built something incredible abroad. <em>And you are still carrying it alone.</em></h1>
-          <p className="lead">Gujaratis have one of the most established diasporas in the world — Leicester, Harrow, Houston, New Jersey. The community is strong. The expectations are stronger. Business family pressure, arranged marriage within the community, the drive to succeed that never quite turns off. Talk to a Gujarati peer listener who understands the weight behind the accomplishment. First 5 minutes free.</p>
+          <p className="lead">Gujaratis have one of the most established diasporas in the world — Leicester, Harrow, Houston, New Jersey. The community is strong. The expectations are stronger. Business family pressure, arranged marriage within the community, the drive to succeed that never quite turns off. Talk to a Gujarati peer listener who understands the weight behind the accomplishment. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function GujaratiNriSupportPage() {
           <h2>The Gujarati NRI Pressure Nobody Names</h2>
           <p>The Gujarati business community abroad is legendary — from the corner shops that became retail empires to the motels that built a community identity. But behind the entrepreneurial success narrative is the individual human being who carries the weight of that legacy. The expectation that you will work in the family business, grow it, not disgrace the family name — this does not pause because you moved to Leicester or Houston.</p>
           <p>Patel community identity specifically comes with a particular set of expectations. Marriage within the community is not just preferred — it is assumed. The matrimonial networks are active and intrusive. And the reputation of your family in the broader Patel community is always silently present in decisions that should feel personal. This is a real weight, and it is one most Gujaratis abroad carry without being able to articulate it to people outside the community.</p>
-          <p>How Was Your Day listeners understand the Gujarati social fabric. They understand what it means to feel the eyes of the community even from thousands of miles away. You do not have to explain the structure — just talk about what it feels like from where you are. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand the Gujarati social fabric. They understand what it means to feel the eyes of the community even from thousands of miles away. You do not have to explain the structure — just talk about what it feels like from where you are. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function GujaratiNriSupportPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Someone who understands the Gujarati weight abroad.</h2><p>No judgment. No advice. Just a real listener who gets it. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Someone who understands the Gujarati weight abroad.</h2><p>No judgment. No advice. Just a real listener who gets it. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

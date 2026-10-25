@@ -1,4 +1,4 @@
-import { FREE_SESSION_MINS, PLATFORM_FEE } from '@/lib/constants'
+import { SESSION_DURATIONS, PLATFORM_FEE } from '@/lib/constants'
 import { formatGBP } from '@/lib/money'
 import { TALK_MAX_TEXT_RATE } from '@/lib/talk-match'
 
@@ -11,13 +11,13 @@ import { TALK_MAX_TEXT_RATE } from '@/lib/talk-match'
 export const QUICK_ANSWER_UPDATED = '24 October 2026'
 
 export default function QuickAnswer({ question, answer }: { question: string; answer: string }) {
-  const talk15 = TALK_MAX_TEXT_RATE * 15 + PLATFORM_FEE
+  const talk8 = TALK_MAX_TEXT_RATE * SESSION_DURATIONS[0] + PLATFORM_FEE
   const facts = [
     'Real people, not AI',
     'Screened peer listeners in the UK',
     'Text or voice, one to one',
-    `One introductory session of up to ${FREE_SESSION_MINS} minutes free per account`,
-    `Pay each listener's own price in pounds: 15 minutes is ${formatGBP(talk15)} at the standard rate`,
+    `Paid ${SESSION_DURATIONS.join(' / ')}-minute sessions — now or booked for later`,
+    `Pay each listener's own price in pounds: ${SESSION_DURATIONS[0]} minutes is ${formatGBP(talk8)} at the standard rate`,
     'Charged only if a listener accepts; voice calls never recorded',
     'Availability varies; an immediate match is not guaranteed',
     'Peer support, not therapy',

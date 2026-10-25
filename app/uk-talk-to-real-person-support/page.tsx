@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to a Real Person About Your Problems — Not an AI | How Was Your Day UK',
-  description: 'How Was Your Day connects people in the UK with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time), first 5 minutes free. From £8 for 15 min.',
+  description: 'How Was Your Day connects people in the UK with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time), sessions from 8 minutes. From £8 for 15 min.',
   keywords: [
     'talk to real person UK', 'human support not AI UK', 'someone to talk to in the UK',
     'real person emotional support UK', 'alternative to therapy UK', 'peer support UK',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Talk to a Real Person About Your Problems — Not an AI | How Was Your Day UK',
-    description: "You don't need another app. You need a real human who listens. How Was Your Day — vetted human peer listeners, online daily on Indian time, first 5 min free.",
+    description: "You don't need another app. You need a real human who listens. How Was Your Day — vetted human peer listeners, online daily on Indian time, from 8 minutes.",
     url: 'https://www.howwasyourday.live/uk-talk-to-real-person-support',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -27,7 +27,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'How Was Your Day — Real Human Peer Support for the United Kingdom',
-  description: 'How Was Your Day connects people in the United Kingdom feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners — not AI chatbots. Listeners online daily (Indian time), first 5 minutes free, no NHS waiting list.',
+  description: 'How Was Your Day connects people in the United Kingdom feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners — not AI chatbots. Listeners online daily (Indian time), sessions from 8 minutes, no NHS waiting list.',
   provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'United Kingdom',
@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. £8 for 15 minutes, £12 for 30 minutes, £16 for 45 minutes.',
+    description: 'Sessions from 8 minutes. £8 for 15 minutes, £12 for 30 minutes, £16 for 45 minutes.',
     priceCurrency: 'GBP',
   },
 }
@@ -60,7 +60,7 @@ const faqSchema = {
       name: 'Where can I find a real person to talk to about loneliness in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day connects people in the UK with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time), first 5 minutes free, starting at £8 for 15 minutes.',
+        text: 'How Was Your Day connects people in the UK with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time), sessions from 8 minutes, starting at £8 for 15 minutes.',
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: 'Is there an affordable alternative to therapy in the UK for emotional support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "How Was Your Day peer support starts at £8 for 15 minutes with the first 5 minutes free. It's not therapy — it's a real human listener who is fully present, available any time, with no NHS waiting list.",
+        text: "How Was Your Day peer support starts at £8 for 15 minutes. It's not therapy — it's a real human listener who is fully present, available any time, with no NHS waiting list.",
       },
     },
     {
@@ -187,7 +187,7 @@ export default function UKTalkToRealPersonPage() {
           A real person, no appointment, from £8.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to a real person now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to a real person now →</a>
 
         <div className="card">
           <h2>Britain has a loneliness problem — and an NHS waiting list problem</h2>
@@ -246,7 +246,7 @@ export default function UKTalkToRealPersonPage() {
             </div>
             <div className="compare-col human">
               <h3>💙 How Was Your Day Real Human</h3>
-              <p>First 5 min free, then £8 for 15 min — real connection that actually helps</p>
+              <p>From 8 minutes, then £8 for 15 min — real connection that actually helps</p>
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function UKTalkToRealPersonPage() {
             <li>Complete anonymity — no name, no location, no identifying details required</li>
             <li>No appointment — listeners are in India, so availability follows Indian time</li>
             <li>No NHS referral, no GP appointment, no insurance — just a human who listens</li>
-            <li>First 5 minutes free — no credit card, no commitment required</li>
+            <li>Sessions from 8 minutes — no credit card, no commitment required</li>
           </ul>
         </div>
 
@@ -286,7 +286,7 @@ export default function UKTalkToRealPersonPage() {
 
         <div className="cta">
           <h2>Real humans. Real support. Right now.</h2>
-          <p>Browse listeners available now. First 5 minutes free. £8 / £12 / £16 for 15, 30, 45 min.</p>
+          <p>Browse listeners available now. Sessions from 8 minutes. £8 / £12 / £16 for 15, 30, 45 min.</p>
           <a href="/browse" className="btn-white">Browse real listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -296,11 +296,11 @@ export default function UKTalkToRealPersonPage() {
           <div className="faq-item">
             <h3>Where can I find a real person to talk to about loneliness in the UK?</h3>
             <p>How Was Your Day connects people in the UK with real peer listeners — humans with lived experience,
-              not AI chatbots. Listeners online daily (Indian time), first 5 minutes free, starting at £8 for 15 minutes.</p>
+              not AI chatbots. Listeners online daily (Indian time), sessions from 8 minutes, starting at £8 for 15 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is there an affordable alternative to therapy in the UK for emotional support?</h3>
-            <p>How Was Your Day peer support starts at £8 for 15 minutes with the first 5 minutes free. It&apos;s
+            <p>How Was Your Day peer support starts at £8 for 15 minutes. It&apos;s
               not therapy — it&apos;s a real human listener who is fully present, available any time,
               with no NHS waiting list.</p>
           </div>

@@ -158,7 +158,7 @@ export default function GulfRelationshipSupportPage() {
           listener who truly understands.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>How Gulf migration changes relationships</h2>
@@ -198,7 +198,7 @@ export default function GulfRelationshipSupportPage() {
             <li>UAE: AED 37 / AED 55 / AED 74 for 15/30/45 min</li>
             <li>Kuwait: KD 4 / KD 5 / KD 7 for 15/30/45 min</li>
             <li>Oman: OMR 4 / OMR 6 / OMR 8 for 15/30/45 min</li>
-            <li>First 5 minutes free — one free session per account</li>
+            <li>Sessions from 8 minutes</li>
           </ul>
           <p style={{ marginTop: '12px' }}>Anonymous. No subscription. Available in Saudi Arabia, Qatar, and Bahrain too.</p>
         </div>
@@ -229,7 +229,7 @@ export default function GulfRelationshipSupportPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost for Gulf NRIs?</h3>
-            <p>UAE: AED 37/55/74. Kuwait: KD 4/5/7. Oman: OMR 4/6/8 for 15/30/45 min. First 5 min free.</p>
+            <p>UAE: AED 37/55/74. Kuwait: KD 4/5/7. Oman: OMR 4/6/8 for 15/30/45 min. From 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Will my spouse or family find out I talked to a listener?</h3>

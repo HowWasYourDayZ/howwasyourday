@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much does a How Was Your Day session cost in the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free — far more accessible than $200/hour therapy sessions.',
+        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Sessions from 8 minutes — far more accessible than $200/hour therapy sessions.',
       },
     },
   ],
@@ -157,7 +157,7 @@ export default function UsaNriSupportPage() {
           to someone who actually understands.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone Indian now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone Indian now →</a>
 
         <div className="card">
           <h2>What NRIs in the USA quietly carry</h2>
@@ -232,7 +232,7 @@ export default function UsaNriSupportPage() {
           <div className="faq-item">
             <h3>How much does a How Was Your Day session cost in the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first
-              5 minutes free — one free session per account.</p>
+              sessions from 8 minutes.</p>
           </div>
         </div>
 

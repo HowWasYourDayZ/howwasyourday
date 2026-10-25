@@ -31,7 +31,7 @@ export const post = {
 <p>Most people who come to How Was Your Day are not looking for companionship. They are looking for the conversation they cannot have anywhere else. The thing they need to say that does not fit inside any of their existing relationships. That is a different need from loneliness, and it requires a different kind of space.</p>
 
 <h2>The Cost Question</h2>
-<p>Paid friendship services vary widely in cost, and many are expensive. Peer support on How Was Your Day starts at &#8377;160 for 15 minutes &mdash; the cost of a large coffee. The first 5 minutes are free. For most people, the relevant question is not the price but the fit: what kind of support are you actually looking for, and which model delivers it?</p>
+<p>Paid friendship services vary widely in cost, and many are expensive. Peer support on How Was Your Day starts at &#8377;160 for 15 minutes &mdash; the cost of a large coffee. Sessions start at 8 minutes. For most people, the relevant question is not the price but the fit: what kind of support are you actually looking for, and which model delivers it?</p>
 <p>If you are not sure, starting with a short session is low-commitment enough to find out.</p>
 `,
 }

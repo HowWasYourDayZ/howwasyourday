@@ -4,7 +4,7 @@ import ReadyToTalkLanding, { type ReadyToTalkLandingData } from '@/app/component
 const data: ReadyToTalkLandingData = {
   "canonical": "/need-someone-to-talk-to-but-dont-need-therapy",
   "title": "Need Someone to Talk To but Don't Need Therapy? | How Was Your Day",
-  "description": "Need someone to talk to but do not think you need therapy? Learn how peer support works and start a private human conversation on How Was Your Day with a free 5-minute introduction.",
+  "description": "Need someone to talk to but do not think you need therapy? Learn how peer support works and start a private human conversation on How Was Your Day in sessions from 8 minutes.",
   "keywords": [
     "need someone to talk to but dont need therapy",
     "Need Someone to Talk To but Don't Need Therapy?",
@@ -31,7 +31,7 @@ const data: ReadyToTalkLandingData = {
   "why": [
     "How Was Your Day is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
     "You choose a listener rather than receiving a generic response. The goal is a human conversation where you can talk, vent, reflect or simply not feel alone for a while.",
-    "You can start without committing to a long programme: one free 5-minute introduction is available per account, followed by paid time only if you choose to continue."
+    "You can start without committing to a long programme: sessions start at 8 minutes, followed if you like by paid time only if you choose to continue."
   ],
   "fitTitle": "Peer support may be relevant when…",
   "fit": [
@@ -53,7 +53,7 @@ const data: ReadyToTalkLandingData = {
     },
     {
       "q": "Can I try before paying?",
-      "a": "Yes. New seekers get one free 5-minute introductory session (one per account). Paid continuation is optional."
+      "a": "Yes. New seekers can start with an 8-minute session. Paid continuation is optional."
     }
   ],
   "related": [

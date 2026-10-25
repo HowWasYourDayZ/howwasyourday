@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { FREE_SESSION_MINS } from '@/lib/constants'
+import { SESSION_DURATIONS } from '@/lib/constants'
 import { TALK_FAQ, TALK_TRY_SECS } from '@/lib/talk-match'
 
 // /talk — "Talk now": the match-first entry and How Was Your Day's primary link for
@@ -12,14 +12,14 @@ import { TALK_FAQ, TALK_TRY_SECS } from '@/lib/talk-match'
 const URL = 'https://www.howwasyourday.live/talk'
 
 export const metadata: Metadata = {
-  title: 'Talk to Someone — Request a Listener, First 5 Minutes Free | How Was Your Day',
-  description: `Request a conversation with a real person — no appointment. Pick what's on your mind, choose text or voice, and How Was Your Day asks screened peer listeners in the UK who are online; a session starts when one accepts. First ${FREE_SESSION_MINS} minutes free, once per account.`,
+  title: 'Talk to Someone — Request a Listener, From 8 Minutes | How Was Your Day',
+  description: `Request a conversation with a real person — no appointment. Pick what's on your mind, choose text or voice, and How Was Your Day asks screened peer listeners in the UK who are online; a session starts when one accepts. Paid ${SESSION_DURATIONS.join(', ')}-minute sessions.`,
   keywords: ['talk to someone now', 'talk to someone online india', 'someone to talk to', 'talk to a real person', 'relationship problems talk to someone', 'nri talk to someone', 'peer support india', 'online emotional support india', 'vent to someone online'],
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Talk to someone now — How Was Your Day',
-    description: `Request a one-to-one conversation with a screened peer listener in the UK. A session starts when a listener accepts. First ${FREE_SESSION_MINS} minutes free.`,
+    description: `Request a one-to-one conversation with a screened peer listener in the UK. A session starts when a listener accepts. Paid ${SESSION_DURATIONS.join(', ')}-minute sessions.`,
     url: URL,
     siteName: 'How Was Your Day',
     type: 'website',
@@ -46,7 +46,7 @@ const jsonLd = [
     areaServed: ['United Kingdom'],
     description: 'One-to-one text or voice conversation with a screened peer listener in the UK, starting when an available listener accepts the request. Not therapy or emergency care.',
     offers: [
-      { '@type': 'Offer', name: `Free ${FREE_SESSION_MINS}-minute first session`, price: '0', priceCurrency: 'GBP', description: 'Once per account.' },
+      { '@type': 'Offer', name: `Paid ${SESSION_DURATIONS.join(' / ')}-minute session`, priceCurrency: 'GBP', description: 'Each listener sets a per-minute price, shown before anyone is asked.' },
     ],
   },
   {
@@ -88,7 +88,7 @@ export default function TalkLayout({ children }: { children: React.ReactNode }) 
         <ol>
           <li>Choose text or voice and tap what&apos;s on your mind.</li>
           <li>We ask a screened peer listener who is free now. No answer in about {TALK_TRY_SECS} seconds? We ask the next one.</li>
-          <li>Talk privately, one to one. First {FREE_SESSION_MINS} minutes free, once per account. Peer support, not therapy.</li>
+          <li>Talk privately, one to one, for {SESSION_DURATIONS.join(', ')} minutes. Peer support, not therapy.</li>
         </ol>
         <h2>Questions</h2>
         {TALK_FAQ.map(f => (

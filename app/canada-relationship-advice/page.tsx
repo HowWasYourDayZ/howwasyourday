@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a session cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that, sessions are CA$14 for 15 minutes, CA$21 for 30 minutes, and CA$28 for 45 minutes.',
+        text: 'Sessions start at 8 minutes. After that, sessions are CA$14 for 15 minutes, CA$21 for 30 minutes, and CA$28 for 45 minutes.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function CanadaRelationshipPage() {
           nobody quite prepares you for. Talk to someone who gets the full picture.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>Relationship challenges unique to Indians in Canada</h2>
@@ -193,7 +193,7 @@ export default function CanadaRelationshipPage() {
         <div className="card">
           <h2>Session details</h2>
           <ul className="checklist">
-            <li>First 5 minutes completely free — no commitment</li>
+            <li>Sessions from 8 minutes — no commitment</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
             <li>Real human listeners — not AI, not bots</li>
             <li>Anonymous — your story stays between you and your listener</li>
@@ -227,7 +227,7 @@ export default function CanadaRelationshipPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost?</h3>
-            <p>Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
+            <p>Sessions start at 8 minutes. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
             <h3>Is what I share kept private?</h3>

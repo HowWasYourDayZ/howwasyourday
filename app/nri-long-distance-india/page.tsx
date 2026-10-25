@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'My partner is in India and doesn\'t know I\'m talking to someone — is that okay?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private. You do not need your partner\'s knowledge or permission. Having your own space to process what you are going through is not a betrayal.' } },
   { '@type': 'Question', name: 'Do listeners understand F2/H4/UK spouse visa dynamics?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners are Indian and many understand the reality of dependent visa situations — the wait, the uncertainty, the way it shapes the relationship dynamic. You will not need to explain the immigration basics.' } },
   { '@type': 'Question', name: 'Can I talk in Hindi?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many listeners are comfortable in Hindi. Check individual listener profiles.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes are free. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriLongDistanceIndiaPage() {
         <div className="hero">
           <p className="badge">NRI Long Distance &middot; India-Abroad Relationship &middot; Visa Wait</p>
           <h1>NRI Long Distance — <em>One of You Here. One of You There.</em></h1>
-          <p className="lead">One of you is building a life abroad. The other is in India, waiting. The time zone calls at midnight. The visa wait that has no guaranteed end date. The uncertainty of &ldquo;when can we be together&rdquo; that hangs over everything. It weighs on both of you, in different but equally real ways. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">One of you is building a life abroad. The other is in India, waiting. The time zone calls at midnight. The visa wait that has no guaranteed end date. The uncertainty of &ldquo;when can we be together&rdquo; that hangs over everything. It weighs on both of you, in different but equally real ways. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -94,11 +94,11 @@ export default function NriLongDistanceIndiaPage() {
 
         <div className="section">
           <h2>Having Someone to Talk To</h2>
-          <p>The partner in India can talk to How Was Your Day too. But for whoever is reading this — the person abroad, carrying the specific weight of being in the better place geographically while the relationship waits — having someone who already understands the immigration context, the dependent visa reality, and the particular shape of the India-abroad long-distance relationship is different from talking to friends who don&rsquo;t know the terrain. First 5 minutes free, anonymous, private.</p>
+          <p>The partner in India can talk to How Was Your Day too. But for whoever is reading this — the person abroad, carrying the specific weight of being in the better place geographically while the relationship waits — having someone who already understands the immigration context, the dependent visa reality, and the particular shape of the India-abroad long-distance relationship is different from talking to friends who don&rsquo;t know the terrain. Sessions from 8 minutes, anonymous, private.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The wait, the uncertainty, the weight of two different loneliness.</h2><p>Real peer listener. Understands the India-abroad long-distance reality. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The wait, the uncertainty, the weight of two different loneliness.</h2><p>Real peer listener. Understands the India-abroad long-distance reality. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-long-distance-relationship">NRI long distance &rarr;</a>
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>

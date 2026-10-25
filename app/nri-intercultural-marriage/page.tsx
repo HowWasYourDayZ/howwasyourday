@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'My partner doesn\'t know I\'m talking to someone — is that okay?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private. You do not need your partner\'s knowledge or permission to talk to a peer listener. Many people find that having space to process their own feelings first helps them have better conversations with their partner afterward.' } },
   { '@type': 'Question', name: 'Can I talk in Hindi or other Indian languages?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Many listeners are comfortable in Hindi and other Indian languages. Check individual listener profiles for languages.' } },
   { '@type': 'Question', name: 'Is this different from couples support?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. This is individual peer listening — one person talking to one listener. It is not couples support, not mediation, not joint sessions. It is space for you to work through what you are experiencing.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes are free. Sessions continue from US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriInterculturalMarriagePage() {
         <div className="hero">
           <p className="badge">NRI Intercultural Marriage &middot; Indian Abroad &middot; Cross-Cultural Relationship</p>
           <h1>NRI Intercultural Marriage — <em>The Love Is Real. The Gaps Are Too.</em></h1>
-          <p className="lead">Your partner loves you. But they don&rsquo;t feel the weight of Diwali away from home. They don&rsquo;t understand why you can&rsquo;t just &ldquo;move on&rdquo; from India. There is a loneliness in loving someone who can&rsquo;t quite enter your whole world — and it deserves to be said out loud. First 5 minutes free.</p>
+          <p className="lead">Your partner loves you. But they don&rsquo;t feel the weight of Diwali away from home. They don&rsquo;t understand why you can&rsquo;t just &ldquo;move on&rdquo; from India. There is a loneliness in loving someone who can&rsquo;t quite enter your whole world — and it deserves to be said out loud. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -98,7 +98,7 @@ export default function NriInterculturalMarriagePage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The part of you your partner loves but can&rsquo;t quite reach.</h2><p>Real peer listener. Understands the Indian cultural weight from the inside. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The part of you your partner loves but can&rsquo;t quite reach.</h2><p>Real peer listener. Understands the Indian cultural weight from the inside. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-marriage-uk">NRI marriage UK &rarr;</a>

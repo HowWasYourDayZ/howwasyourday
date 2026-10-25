@@ -15,7 +15,7 @@ import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 import { createClient } from '@/lib/supabase'
-import { REQUEST_RESPONSE_WINDOW_SECS, FREE_SESSION_MINS } from '@/lib/constants'
+import { REQUEST_RESPONSE_WINDOW_SECS, SESSION_DURATIONS } from '@/lib/constants'
 import { TALK_TOPICS, TALK_TRY_SECS, TALK_MAX_TRIES, TALK_MAX_WAIT_SECS, talkTopic, type TalkTopicId } from '@/lib/talk-match'
 
 type Mode = 'text' | 'voice'
@@ -52,14 +52,17 @@ function readSrc(): string {
   try { return sessionStorage.getItem(SRC_KEY) || 'direct' } catch { return 'direct' }
 }
 
-function readChoice(): { topic: TalkTopicId; mode: Mode } | null {
+type Choice = { topic: TalkTopicId; mode: Mode; mins: number }
+const validMins = (n: unknown): number => (SESSION_DURATIONS as readonly number[]).includes(Number(n)) ? Number(n) : SESSION_DURATIONS[0]
+
+function readChoice(): Choice | null {
   try {
     const v = JSON.parse(sessionStorage.getItem(CHOICE_KEY) || 'null')
-    if (v && talkTopic(v.topic) && (v.mode === 'text' || v.mode === 'voice')) return v
+    if (v && talkTopic(v.topic) && (v.mode === 'text' || v.mode === 'voice')) return { ...v, mins: validMins(v.mins) }
   } catch { /* storage blocked */ }
   return null
 }
-function saveChoice(c: { topic: TalkTopicId; mode: Mode }) {
+function saveChoice(c: Choice) {
   try { sessionStorage.setItem(CHOICE_KEY, JSON.stringify(c)) } catch { /* ignore */ }
 }
 
@@ -71,7 +74,9 @@ function TalkInner() {
   // Text or voice: chosen on the same screen as the topic (text preselected,
   // or what they picked last time), so one tap on a topic connects.
   const [mode, setMode] = useState<Mode>('text')
-  useEffect(() => { const c = readChoice(); if (c) setMode(c.mode) }, [])
+  // Session length (8 / 16 / 32 min, PROJECT.md §5), 8 preselected.
+  const [mins, setMins] = useState<number>(SESSION_DURATIONS[0])
+  useEffect(() => { const c = readChoice(); if (c) { setMode(c.mode); setMins(c.mins) } }, [])
   const [onlineCount, setOnlineCount] = useState<number | null>(null)
   const [secsLeft, setSecsLeft] = useState(TALK_TRY_SECS)
   const [loggedIn, setLoggedIn] = useState<boolean | null>(null)
@@ -79,8 +84,8 @@ function TalkInner() {
   // Matching state lives in refs: the poll/timer callbacks must see the latest.
   const tried = useRef<string[]>([])
   const queue = useRef<Candidate[]>([])
-  const meta = useRef<{ free: boolean; durationMins: number }>({ free: true, durationMins: 5 })
-  const choice = useRef<{ topic: TalkTopicId; mode: Mode } | null>(null)
+  const meta = useRef<{ free: boolean; durationMins: number }>({ free: false, durationMins: SESSION_DURATIONS[0] })
+  const choice = useRef<Choice | null>(null)
   // lastSwitchTry: when we last looked for someone to switch to (at most every
   // 15s, so a quiet evening doesn't hammer the API); timedOut: timeout sent once.
   const current = useRef<{ sessionId: string; startedAt: number; lastSwitchTry: number; timedOut: boolean } | null>(null)
@@ -149,7 +154,7 @@ function TalkInner() {
     { ok: true; walletBalance: number } | { ok: false; status: number }
   > => {
     const c = choice.current!
-    const qs = new URLSearchParams({ topic: c.topic, type: c.mode, exclude: tried.current.join(','), search: searchId.current })
+    const qs = new URLSearchParams({ topic: c.topic, type: c.mode, mins: String(c.mins), exclude: tried.current.join(','), search: searchId.current })
     const res = await fetch(`/api/talk/candidates?${qs}`, { cache: 'no-store' }).catch(() => null)
     if (!res || !res.ok) return { ok: false, status: res?.status ?? 0 }
     const d = await res.json() as { free: boolean; durationMins: number; walletBalance?: number; candidates: Candidate[] }
@@ -246,18 +251,18 @@ function TalkInner() {
     }
   }, [fetchCandidates, goToSession, loadCandidates, router])
 
-  const start = useCallback(async (c: { topic: TalkTopicId; mode: Mode }) => {
+  const start = useCallback(async (c: Choice) => {
     if (starting.current || busy.current) return   // double tap
     starting.current = true
     try { await startInner(c) } finally { starting.current = false }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadCandidates, router, tryNext])
 
-  const startInner = async (c: { topic: TalkTopicId; mode: Mode }) => {
+  const startInner = async (c: Choice) => {
     gen.current++
     choice.current = c
     saveChoice(c)
-    track('talk_start', { src: readSrc(), topic: c.topic, mode: c.mode })
+    track('talk_start', { src: readSrc(), topic: c.topic, mode: c.mode, mins: c.mins })
     const sb = createClient()
     const { data: { session } } = await sb.auth.getSession()
     if (!session) { track('talk_login_required'); router.push('/auth?redirect=' + encodeURIComponent('/talk?go=1')); return }
@@ -405,7 +410,7 @@ function TalkInner() {
             {onlineCount !== null && onlineCount > 0 && <div className="live"><i />{onlineCount} listener{onlineCount === 1 ? '' : 's'} online now</div>}
             {onlineCount === 0 && <div className="live" style={{ background: '#FFF8EC', color: '#9A5B00' }}>Nobody is online this minute — tap anyway to try, or see all listeners</div>}
             <h1>Talk to someone now</h1>
-            <p className="sub">A real person, one to one and private, when a listener is online. New here? Your first {FREE_SESSION_MINS} minutes are free.</p>
+            <p className="sub">A real person, one to one and private, when a listener is online. You see the price before anyone is asked, and pay only for the minutes you use.</p>
             <div className="seg" role="radiogroup" aria-label="How would you like to talk?">
               {(['text', 'voice'] as const).map(m => (
                 <button key={m} type="button" role="radio" aria-checked={mode === m} className={mode === m ? 'on' : ''} onClick={() => setMode(m)}>
@@ -413,8 +418,15 @@ function TalkInner() {
                 </button>
               ))}
             </div>
+            <div className="seg" role="radiogroup" aria-label="How long?">
+              {SESSION_DURATIONS.map(m => (
+                <button key={m} type="button" role="radio" aria-checked={mins === m} className={mins === m ? 'on' : ''} onClick={() => setMins(m)}>
+                  {m} min
+                </button>
+              ))}
+            </div>
             {(() => {
-              const go = (id: TalkTopicId) => { setTopic(id); start({ topic: id, mode }) }
+              const go = (id: TalkTopicId) => { setTopic(id); start({ topic: id, mode, mins }) }
               const main = TALK_TOPICS.find(o => o.id === 'talk')!
               return (
                 <>
@@ -455,7 +467,7 @@ function TalkInner() {
                 : <>{phase.name} has been alerted and still has a little time to answer. We&apos;ll keep looking for someone else meanwhile.</>}
             </p>
             <p className="sub" style={{ fontSize: 13, marginBottom: 0 }}>
-              {phase.free ? 'Free for 5 minutes.' : `${phase.priceLabel} for ${meta.current.durationMins} minutes — refunded if nobody answers. You only pay for the time you use.`}
+              {phase.free ? `Test account: free for ${meta.current.durationMins} minutes.` : `${phase.priceLabel} for ${meta.current.durationMins} minutes — refunded if nobody answers. You only pay for the time you use.`}
             </p>
             <button className="btn ghost" onClick={cancelRequest}>Cancel</button>
             {/* Leaving withdraws the request (see the pagehide/unmount effect). */}
@@ -468,7 +480,6 @@ function TalkInner() {
             <div className="pulse" style={{ animation: 'none' }} aria-hidden>🤝</div>
             <h1 style={{ fontSize: 21 }}>{phase.durationMins}-minute {choice.current?.mode === 'voice' ? 'call' : 'chat'}: at most {phase.priceLabel}</h1>
             <p className="sub" style={{ marginBottom: 4 }}>
-              You&apos;ve already had your free 5 minutes, so this is a paid {phase.durationMins}-minute session.
               The amount is held from your wallet only when a listener is asked, and returned in full if nobody answers.
               If you end early, unused minutes come back to your wallet.
             </p>

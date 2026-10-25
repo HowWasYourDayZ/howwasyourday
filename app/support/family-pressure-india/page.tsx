@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Dealing With Family Pressure in India — Emotional Support When You Can\'t Talk to Them | How Was Your Day',
-  description: "Family pressure about marriage or career? Talk privately to a real peer listener in India who gets it — text or voice, your number never shown. First 5 minutes free.",
+  description: "Family pressure about marriage or career? Talk privately to a real peer listener in India who gets it — text or voice, your number never shown. Sessions from 8 minutes.",
   keywords: [
     'family pressure India', 'Indian family expectations', 'parents pressure India',
     'dealing with family stress India', 'career pressure from parents India', 'marriage pressure India',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Dealing With Family Pressure in India — Emotional Support When You Can\'t Talk to Them | How Was Your Day',
-    description: "Family pressure about marriage or career? Talk privately to a real peer listener in India who gets it — text or voice, your number never shown. First 5 minutes free.",
+    description: "Family pressure about marriage or career? Talk privately to a real peer listener in India who gets it — text or voice, your number never shown. Sessions from 8 minutes.",
     url: 'https://www.howwasyourday.live/support/family-pressure-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -31,7 +31,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "My family is pressuring me about marriage or career \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When you can't say it at home, saying it to someone neutral helps. How Was Your Day connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "My family is pressuring me about marriage or career \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "When you can't say it at home, saying it to someone neutral helps. How Was Your Day connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Sessions start at 8 minutes." } },
     {
       '@type': 'Question',
       name: 'Will the listener judge my family or take sides?',
@@ -167,7 +167,7 @@ export default function FamilyPressureIndiaPage() {
           <p className="badge">Peer Support · Family Pressure · India</p>
           <h1>When the Pressure Comes From <em>The People You Love</em></h1>
           <p className="lead">Indian family expectations around career, marriage, and money can feel like a weight you carry everywhere. The hardest part: you cannot vent to the people who are the source of it. How Was Your Day gives you a space outside all of that — anonymous, confidential, and genuinely understanding of the Indian family dynamic.</p>
-          <QuickAnswer question={"My family is pressuring me about marriage or career \u2014 who can I talk to?"} answer={"When you can't say it at home, saying it to someone neutral helps. How Was Your Day connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Your first 5 minutes are free."} />
+          <QuickAnswer question={"My family is pressuring me about marriage or career \u2014 who can I talk to?"} answer={"When you can't say it at home, saying it to someone neutral helps. How Was Your Day connects you with a peer listener in India who understands family and marriage pressure, for a private text or voice conversation — nothing is shared with anyone you know, and the listener sees only the name you choose. Sessions start at 8 minutes."} />
           <a href="/browse?topic=relationships" className="cta-hero">Find a listener →</a>
         </div>
 
@@ -254,7 +254,7 @@ export default function FamilyPressureIndiaPage() {
         <div className="cta-card">
           <h2>There is a space outside the pressure</h2>
           <p>Talk to someone who understands Indian family dynamics — anonymously, confidentially, and without it getting back to anyone in your life.</p>
-          <a href="/browse?topic=relationships" className="btn-cta">Talk to someone who gets the pressure — first 5 min free →</a>
+          <a href="/browse?topic=relationships" className="btn-cta">Talk to someone who gets the pressure →</a>
         </div>
 
         <div className="section">

@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a session cost in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
+        text: 'Sessions start at 8 minutes. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function CanadaTalkToSomeonePage() {
           Just a person listening.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>Why real human connection matters</h2>
@@ -174,7 +174,7 @@ export default function CanadaTalkToSomeonePage() {
           <h2>🌙 No appointment, no waiting room</h2>
           <p>You do not need to book a week in advance. You do not need to explain why you want to talk.
             Browse the listeners who are available right now, pick the one who feels right, and start
-            your first 5 minutes free.</p>
+            your sessions from 8 minutes.</p>
           <p>That is it. No friction. Just a real conversation when you need one.</p>
           <a href="/browse" className="cta-night">Find a listener online now →</a>
         </div>
@@ -194,7 +194,7 @@ export default function CanadaTalkToSomeonePage() {
         <div className="card">
           <h2>Session details</h2>
           <ul className="checklist">
-            <li>First 5 minutes completely free — no credit card</li>
+            <li>Sessions from 8 minutes — no credit card</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
             <li>Real humans every time — we do not use AI in sessions</li>
             <li>Anonymous — your name and story are yours</li>
@@ -229,7 +229,7 @@ export default function CanadaTalkToSomeonePage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost in Canada?</h3>
-            <p>First 5 minutes free. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
+            <p>Sessions from 8 minutes. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
             <h3>What if I want to stop mid-session?</h3>

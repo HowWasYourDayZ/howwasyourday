@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     languages: { 'en-GB': 'https://www.howwasyourday.live/middle-east-rant' },
   },
   openGraph: {
-    title: 'Need to Rant? There\'s an Indian Listener Ready in the Gulf — First 5 Min Free',
+    title: 'Need to Rant? There\'s an Indian Listener Ready in the Gulf — From 8 Minutes',
     description: 'Work stress, visa anxieties, kafala pressures — sometimes you just need someone to hear you out without fixing, judging, or minimising what you feel.',
     url: 'https://www.howwasyourday.live/middle-east-rant',
     siteName: 'How Was Your Day',
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to a listener from the Gulf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'From the UAE, sessions cost AED 37 for 15 min, AED 55 for 30 min, and AED 74 for 45 min. From Kuwait: KD 4 for 15 min, KD 5 for 30 min, KD 7 for 45 min. From Oman: OMR 4 for 15 min, OMR 6 for 30 min, OMR 8 for 45 min. First 5 minutes free — one free session per account.',
+        text: 'From the UAE, sessions cost AED 37 for 15 min, AED 55 for 30 min, and AED 74 for 45 min. From Kuwait: KD 4 for 15 min, KD 5 for 30 min, KD 7 for 45 min. From Oman: OMR 4 for 15 min, OMR 6 for 30 min, OMR 8 for 45 min. Sessions from 8 minutes.',
       },
     },
     {
@@ -158,7 +158,7 @@ export default function MiddleEastRantPage() {
           That is exactly what How Was Your Day is for.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>What Gulf workers carry that they rarely say out loud</h2>
@@ -178,7 +178,7 @@ export default function MiddleEastRantPage() {
           <h2>🔥 Something just happened and you need to talk right now</h2>
           <p>Whether it was today at work, a call that went badly, a decision that does not feel right —
             How Was Your Day listeners are available on Indian time. You do not have to wait until it passes.</p>
-          <p>Start talking in your language. First 5 minutes are free, no payment needed to begin.</p>
+          <p>Start talking in your language. Sessions start at 8 minutes, no payment needed to begin.</p>
           <a href="/browse" className="cta-night">Find a listener right now →</a>
         </div>
 
@@ -225,7 +225,7 @@ export default function MiddleEastRantPage() {
           <div className="faq-item">
             <h3>How much does it cost to talk from the Gulf?</h3>
             <p>UAE: AED 37 / AED 55 / AED 74 for 15/30/45 min. Kuwait: KD 4 / KD 5 / KD 7.
-              Oman: OMR 4 / OMR 6 / OMR 8. First 5 minutes free — one free session per account.</p>
+              Oman: OMR 4 / OMR 6 / OMR 8. Sessions from 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>What if I do not know what to say — I just feel overwhelmed?</h3>

@@ -5,12 +5,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'How to Stop Overthinking — Talk to Someone Who Gets It | How Was Your Day',
-  description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. First 5 minutes free.",
+  description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. Sessions from 8 minutes.",
   keywords: 'how to stop overthinking, overthinking at night, racing thoughts India, anxiety overthinking, talk to someone about overthinking, rumination help, overthinking help India, peer support overthinking',
   alternates: { canonical: 'https://www.howwasyourday.live/support/overthinking', languages: { 'en-GB': 'https://www.howwasyourday.live/support/overthinking' } },
   openGraph: {
     title: 'How to Stop Overthinking — Talk to Someone Who Gets It | How Was Your Day',
-    description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. First 5 minutes free.",
+    description: "Can't stop overthinking? Talk the loop out with a real peer listener in India — private, text or voice, no appointment. Sessions from 8 minutes.",
     url: 'https://www.howwasyourday.live/support/overthinking',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -21,7 +21,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I can't stop overthinking, especially at night \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Saying the loop out loud to a real person often breaks it. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Your first 5 minutes are free. It is peer support, not therapy." } },
+    { '@type': 'Question', name: "I can't stop overthinking, especially at night \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Saying the loop out loud to a real person often breaks it. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Sessions start at 8 minutes. It is peer support, not therapy." } },
     {
       '@type': 'Question',
       name: 'Why does my mind race more at night?',
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.',
       },
     },
   ],
@@ -152,7 +152,7 @@ export default function OverthinkingSupportPage() {
           <p className="tag">Peer Support · Overthinking</p>
           <h1>Your Mind Won&apos;t Stop. You&apos;re Not <em>Broken</em>.</h1>
           <p className="lead">If you&apos;re reading this at 1 AM with the same three thoughts going round and round, you&apos;re in the right place. How Was Your Day connects you with peer listeners across India who have lived inside their own spirals — and know that the loop usually loosens the moment you say it out loud to someone.</p>
-          <QuickAnswer question={"I can't stop overthinking, especially at night \u2014 who can I talk to?"} answer={"Saying the loop out loud to a real person often breaks it. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Your first 5 minutes are free. It is peer support, not therapy."} />
+          <QuickAnswer question={"I can't stop overthinking, especially at night \u2014 who can I talk to?"} answer={"Saying the loop out loud to a real person often breaks it. How Was Your Day connects you with a screened peer listener in India for a private text or voice conversation with someone who is online now — no appointment. Sessions start at 8 minutes. It is peer support, not therapy."} />
         </div>
 
         {/* Understanding overthinking */}
@@ -231,7 +231,7 @@ export default function OverthinkingSupportPage() {
           <h2>Ready to Get Out of Your Own Head?</h2>
           <p>Talk to a peer listener who knows the loop from the inside. No appointments, no waitlists.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Quiet the loop — talk it out — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Quiet the loop — talk it out →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
@@ -257,7 +257,7 @@ export default function OverthinkingSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.</div>
+            <div className="faq-a">How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time — including the late nights when overthinking tends to peak.</div>
           </div>
         </div>
 

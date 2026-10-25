@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { checkRateLimit } from '@/lib/rate-limit'
-import { MAX_FREE_TRIALS, DEFAULT_LISTENER_RATE } from '@/lib/constants'
+import { SESSION_DURATIONS, DEFAULT_LISTENER_RATE } from '@/lib/constants'
 import { getBookingPriceDisplay, quoteSession } from '@/lib/geo-pricing'
 import { isUnlimitedTestPhone } from '@/lib/test-users'
 import { sweepStaleListeners, wasUnanswered, STALE_HEARTBEAT_MINS } from '@/lib/listener-presence'
@@ -51,14 +51,12 @@ export async function GET(req: NextRequest) {
     await expireStalePendingRequests(sb).catch(e => logger.warn('talk candidates: expiring stale requests failed', { error: String(e) }))
     await sweepStaleListeners(sb)
 
-    // Free 5 minutes if the seeker hasn't had their trial; else a paid 15.
-    const [{ count: trials }, { data: me }] = await Promise.all([
-      sb.from('sessions').select('id', { count: 'exact', head: true })
-        .eq('seeker_id', user.id).eq('is_free_trial', true).eq('status', 'completed'),
-      sb.from('users').select('phone, account_country, wallet_balance').eq('id', user.id).maybeSingle(),
-    ])
-    const free = isUnlimitedTestPhone(user.phone) || (trials ?? 0) < MAX_FREE_TRIALS
-    const durationMins = free ? 5 : 15
+    // Every session is paid (PROJECT.md §5); the seeker picks 8 / 16 / 32 min.
+    // Only owner/QA test accounts (TEST_UNLIMITED_PHONES) are free.
+    const { data: me } = await sb.from('users').select('wallet_balance').eq('id', user.id).maybeSingle()
+    const free = isUnlimitedTestPhone(user.phone)
+    const asked = Number(searchParams.get('mins'))
+    const durationMins: number = (SESSION_DURATIONS as readonly number[]).includes(asked) ? asked : SESSION_DURATIONS[0]
 
     // Same eligibility as /browse (/api/listeners), including hiding a listener
     // whose new photo is still under review. pending_avatar_url may not exist on
@@ -137,9 +135,7 @@ export async function GET(req: NextRequest) {
         const a = answered.get(r.user_id) ?? 0, m = missed.get(r.user_id) ?? 0
         const reliability = (a + 1) / (a + m + 2)               // 0.5 with no history
         const topicHit = (r.specialty_tags ?? []).some(t => wanted.has(t)) ? 1 : 0
-        // Free trial: prefer standard-rate listeners, so "continue for 15 min"
-        // after the free 5 isn't a big surprise (paid matches are already
-        // limited to them above).
+        // Prefer standard-rate listeners (test accounts aren't rate-limited above).
         const standardRate = Number(r.rate_per_min ?? DEFAULT_LISTENER_RATE) <= TALK_MAX_TEXT_RATE ? 1 : 0
         const score = presence(r.last_heartbeat_at) + topicHit * 2 + reliability * 2 + standardRate * 1.5 + (Number(r.rating ?? 0) / 5) * 0.5 + Math.random() * 0.3
         // The same quote POST /api/sessions holds (lib/geo-pricing quoteSession).

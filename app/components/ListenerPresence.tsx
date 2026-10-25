@@ -441,7 +441,7 @@ export default function ListenerPresence() {
           <div style={{ fontSize:15, fontWeight:900, marginBottom:2 }}>🔔 New session request</div>
           <div style={{ fontSize:12.5, opacity:.85, marginBottom:12 }}>
             {incoming.duration_mins} min · {incoming.session_type}
-            {incoming.amount_held ? ` · you earn ${formatGBP(estimateListenerTakeHome(incoming, textRate))}` : ' · free trial'}
+            {incoming.amount_held ? ` · you earn ${formatGBP(estimateListenerTakeHome(incoming, textRate))}` : ' · free (test account)'}
           </div>
           <div style={{ display:'flex', gap:8 }}>
             <button

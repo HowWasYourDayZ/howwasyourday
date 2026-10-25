@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'I had a racist incident at uni and I don\'t know what to do with it. Can I talk about that?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Racist experiences — in halls, in seminars, in social settings — are something listeners hear often from Indian students in the UK. You can speak about it honestly, including the confusion about how to respond and the anger and the sadness, without being told what you should have done.' } },
   { '@type': 'Question', name: 'The UK is very expensive and I am stressed about money. Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Financial stress — the cost of a UK degree, the guilt of spending family money, the anxiety of making it work — is something you can speak about honestly. Sessions are anonymous. Nothing reaches your family or your university.' } },
   { '@type': 'Question', name: 'I missed Diwali at home for the first time this year and I feel terrible about it. Is that something to talk about?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Festival homesickness — Diwali, Holi, Eid, Christmas — is real grief. Missing the first one is often harder than anyone prepares you for. A listener will hear it as the real thing it is.' } },
-  { '@type': 'Question', name: 'How much does it cost? I am a student on a tight budget.', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes-2 GBP. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does it cost? I am a student on a tight budget.', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes-2 GBP. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function IndianStudentUkPage() {
         <div className="hero">
           <p className="badge">Indian Student &middot; UK &middot; London &amp; Beyond</p>
           <h1>You came to London for a degree. <em>Nobody prepared you for this weight.</em></h1>
-          <p className="lead">Indian students in the UK — in London, Leicester, Manchester, Edinburgh, Birmingham — carry a specific load: a £30,000+ degree, family savings on the line, a student visa that means you cannot easily leave, cold weather culture shock, and a loneliness between the university orientation brochure and the actual reality. Talk to a peer listener who understands the real experience. First 5 minutes free.</p>
+          <p className="lead">Indian students in the UK — in London, Leicester, Manchester, Edinburgh, Birmingham — carry a specific load: a £30,000+ degree, family savings on the line, a student visa that means you cannot easily leave, cold weather culture shock, and a loneliness between the university orientation brochure and the actual reality. Talk to a peer listener who understands the real experience. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndianStudentUkPage() {
           <h2>The Gap Between the Brochure and the Reality</h2>
           <p>UK university brochures are excellent. The campus looks beautiful. The international student community looks vibrant. The career outcomes look promising. And then you arrive in October, when the weather is already grey and cold in ways you did not fully anticipate, and you find that making real friends is significantly harder than the orientation implied.</p>
           <p>British social culture is different from Indian social culture in ways that are hard to articulate but immediately felt. The reserve, the implicit social codes, the fact that most British students have existing friendship groups from home and are not particularly motivated to integrate a new international student into them — this creates a specific form of isolation that no amount of &ldquo;attend the freshers&rsquo; events&rdquo; advice resolves.</p>
-          <p>You might have a good time at the events. You might know plenty of other Indian students. And you might still feel fundamentally alone in a way that you cannot explain to your parents back home, who would be confused and hurt to hear that you are not thriving the way they imagined. How Was Your Day is where you say that honestly. First 5 minutes free.</p>
+          <p>You might have a good time at the events. You might know plenty of other Indian students. And you might still feel fundamentally alone in a way that you cannot explain to your parents back home, who would be confused and hurt to hear that you are not thriving the way they imagined. How Was Your Day is where you say that honestly. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function IndianStudentUkPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The real student experience deserves to be heard.</h2><p>A peer listener who understands India, the UK, and the gap between them. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The real student experience deserves to be heard.</h2><p>A peer listener who understands India, the UK, and the gap between them. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-student-support">Indian student abroad &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

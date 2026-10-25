@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does it cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. A short trial session is available for new users.',
+        text: 'An 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. Sessions start at 8 minutes, so trying someone costs little.',
       },
     },
   ],
@@ -217,7 +217,7 @@ export default function TalkToSomeoneNotAstrologerPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does it cost?</div>
-            <div className="faq-a">A 15-minute session starts around £7, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. A short trial session is available for new users.</div>
+            <div className="faq-a">An 8-minute session starts around £4.20, including a flat £1 platform fee; the exact price depends on the listener and is shown before you start. Sessions start at 8 minutes, so trying someone costs little.</div>
           </div>
         </div>
 

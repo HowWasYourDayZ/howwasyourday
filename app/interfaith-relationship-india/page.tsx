@@ -147,7 +147,7 @@ export default function InterfaithRelationshipIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>Say the whole complicated thing. To someone with no stake in it.</h2>
-          <p>Anonymous. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
         <div className="section">

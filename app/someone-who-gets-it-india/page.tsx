@@ -146,7 +146,7 @@ export default function SomeoneWhoGetsItIndiaPage() {
           <h2>How the app Matches Lived Experience to Your Situation</h2>
           <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Each profile describes the listener&apos;s background and areas of lived experience. You can see what they have been through, what they know from the inside, and how they approach support.</p>
           <p>If you are going through a divorce, look for someone who has navigated their own. If you are stuck in career confusion in your late 20s, look for someone who has been there and come out the other side. If you are dealing with family pressure around marriage, look for someone who understands that specific weight.</p>
-          <p>Your first 5-minute session is free. If the connection does not feel right, try someone else. You are choosing until you find the person who actually gets it.</p>
+          <p>Sessions start at 8 minutes. If the connection does not feel right, try someone else. You are choosing until you find the person who actually gets it.</p>
         </div>
 
         <div className="section">
@@ -167,7 +167,7 @@ export default function SomeoneWhoGetsItIndiaPage() {
 
         <div className="cta-card">
           <h2>Find the person who has been there.</h2>
-          <p>Real people. Real lived experience. From ₹160. First 5 minutes free.</p>
+          <p>Real people. Real lived experience. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a session cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
+        text: 'Sessions start at 8 minutes. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function CanadaRantPage() {
           bandwidth to actually hear you. How Was Your Day listeners are here for exactly this.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>Things people come to How Was Your Day to get off their chest</h2>
@@ -191,7 +191,7 @@ export default function CanadaRantPage() {
         <div className="card">
           <h2>Session details</h2>
           <ul className="checklist">
-            <li>First 5 minutes completely free — no credit card needed</li>
+            <li>Sessions from 8 minutes — no credit card needed</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
             <li>Real humans — not AI, not a bot, not a script</li>
             <li>Anonymous — your name and story stay with you</li>
@@ -225,7 +225,7 @@ export default function CanadaRantPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost?</h3>
-            <p>First 5 minutes free. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
+            <p>Sessions from 8 minutes. Then CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.</p>
           </div>
           <div className="faq-item">
             <h3>Will the listener judge me for what I say?</h3>

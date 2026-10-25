@@ -25,12 +25,12 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: 'Can I talk to a real person instead of ChatGPT?', a: 'Yes. How Was Your Day connects seekers with real human peer listeners for one-to-one conversations by text or voice. You can browse listener profiles and choose who you want to talk to.' },
-  { q: 'I use ChatGPT because I feel lonely. Is there a human alternative?', a: 'If what you want is another human being rather than an AI conversation, How Was Your Day is one option. How Was Your Day connects you with peer listeners for one-to-one text or voice conversations. New seekers can start with a free 5-minute introductory session.' },
+  { q: 'I use ChatGPT because I feel lonely. Is there a human alternative?', a: 'If what you want is another human being rather than an AI conversation, How Was Your Day is one option. How Was Your Day connects you with peer listeners for one-to-one text or voice conversations. New seekers can start with an 8-minute session.' },
   { q: 'Should I use How Was Your Day or ChatGPT?', a: 'It depends on what you need. ChatGPT can be useful for information, reflection, brainstorming and many kinds of conversation. How Was Your Day is specifically for people who want a human peer listener and human-to-human connection. If you need diagnosis or clinical treatment, use a qualified mental-health professional rather than either service.' },
   { q: 'Is How Was Your Day an AI chatbot?', a: 'No. How Was Your Day is a human peer-support platform. The conversation is with a real listener, not an AI-generated character or bot.' },
   { q: 'Is ChatGPT bad for emotional support?', a: 'Not necessarily. AI assistants can be useful for reflection, information, brainstorming and many other purposes. How Was Your Day serves a different need: talking with another person when human connection or being listened to is what you want.' },
   { q: 'What is the difference between an AI conversation and How Was Your Day?', a: 'An AI assistant generates responses from an AI system. How Was Your Day provides a human-to-human conversation with a peer listener. The practical difference is the presence of another person who can listen and respond from their own human experience.' },
-  { q: 'Can I try How Was Your Day before paying?', a: 'New seekers can start with one free 5-minute introductory session. If you want to continue, the listener rate is shown before you start a paid conversation.' },
+  { q: 'Can I try How Was Your Day before paying?', a: 'New seekers can start with an 8-minute session. If you want to continue, the listener rate is shown before you start a paid conversation.' },
   { q: 'Is How Was Your Day therapy?', a: 'No. How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. For a clinical need, use an appropriately qualified professional.' },
 ]
 
@@ -94,7 +94,7 @@ export default function AIChatbotAlternativePage() {
                 <tr className="border-t border-[#D5EEF6]"><td className="p-3 font-bold">Another human being</td><td className="p-3">No</td><td className="p-3">Yes — a real peer listener</td></tr>
                 <tr className="border-t border-[#D5EEF6]"><td className="p-3 font-bold">Someone to listen to you</td><td className="p-3">AI conversation</td><td className="p-3">One-to-one human conversation</td></tr>
                 <tr className="border-t border-[#D5EEF6]"><td className="p-3 font-bold">Text or voice</td><td className="p-3">Depends on the AI product</td><td className="p-3">Both text and voice sessions</td></tr>
-                <tr className="border-t border-[#D5EEF6]"><td className="p-3 font-bold">Try before paying</td><td className="p-3">Depends on the AI product</td><td className="p-3">One free 5-minute introductory session for new seekers</td></tr>
+                <tr className="border-t border-[#D5EEF6]"><td className="p-3 font-bold">Try before paying</td><td className="p-3">Depends on the AI product</td><td className="p-3">Paid sessions from 8 minutes</td></tr>
               </tbody>
             </table>
           </div>

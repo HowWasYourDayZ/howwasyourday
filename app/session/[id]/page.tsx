@@ -201,8 +201,8 @@ function SessionContent() {
   const sessionId    = routeParams.id as string
   const listenerName = (() => { try { return decodeURIComponent(searchParams.get('name') || 'Listener') } catch { return 'Listener' } })()
   // Validate duration against allowed values — prevents NaN crash and URL manipulation
-  const rawDuration  = parseInt(searchParams.get('duration') || '15')
-  const durationMins = (SESSION_DURATIONS as readonly number[]).includes(rawDuration) ? rawDuration : 15
+  const rawDuration  = parseInt(searchParams.get('duration') || String(SESSION_DURATIONS[0]))
+  const durationMins = (SESSION_DURATIONS as readonly number[]).includes(rawDuration) ? rawDuration : SESSION_DURATIONS[0]
   const sessionType  = searchParams.get('type') === 'voice' ? 'voice' : 'text'
   const [isVoice, setIsVoice] = useState(sessionType === 'voice')
 
@@ -257,7 +257,7 @@ function SessionContent() {
   const [showFreeTrialConversion, setShowFreeTrialConversion] = useState(true)
   // Listener availability at the moment the conversion screen shows. null = loading.
   const [listenerStillOnline, setListenerStillOnline] = useState<boolean | null>(null)
-  // Price of a 15-min continuation in the trial's mode (null until loaded)
+  // Price of a 16-min continuation in the trial's mode (null until loaded)
   const [continuePrice, setContinuePrice] = useState<string | null>(null)
 
   const channelRef      = useRef<ReturnType<typeof supabase.channel> | null>(null)
@@ -556,7 +556,7 @@ function SessionContent() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showAlternatives, listenerId, userId, sessionIsFreeTrial])
 
-  const switchDuration = reqDuration ?? (sessionIsFreeTrial ? 5 : durationMins)
+  const switchDuration = reqDuration ?? durationMins
   function altCost(l: AltListener): number | null {
     if (sessionIsFreeTrial) return 0
     const rate = Number(l.rate_per_min)
@@ -842,7 +842,7 @@ function SessionContent() {
         setListenerStillOnline(j.profile?.is_available === true)
         const textRate = Number(j.profile?.rate_per_min)
         if (Number.isFinite(textRate) && textRate > 0) {
-          setContinuePrice(formatGBP(sessionRatePerMin(textRate, isVoice ? 'voice' : 'text') * 15 + PLATFORM_FEE))
+          setContinuePrice(formatGBP(sessionRatePerMin(textRate, isVoice ? 'voice' : 'text') * 16 + PLATFORM_FEE))
         }
       })
       .catch(() => setListenerStillOnline(false))
@@ -1357,14 +1357,14 @@ function SessionContent() {
     const isSeeker = userId !== null && listenerId !== null && userId !== listenerId
 
     // ── Free-trial conversion screen
-    // Shown for seekers after their one free 5-min trial.
+    // Shown for seekers after a free test-account session.
     // Voice-failed sessions skip it — the user wasn't charged and needs to leave cleanly.
     if (sessionIsFreeTrial && isSeeker && !voiceFailed && showFreeTrialConversion) {
       // Send the user directly to the listener booking page (skip the wallet interstitial).
       // If their balance is insufficient the listener page shows an inline top-up modal —
       // one fewer redirect than the old wallet-first flow.
       const continueUrl = listenerId
-        ? `/listener/${listenerId}?from=trial&type=${isVoice ? 'voice' : 'text'}`
+        ? `/listener/${listenerId}?from=trial&duration=16&type=${isVoice ? 'voice' : 'text'}`
         : '/browse'
 
       return (
@@ -1385,7 +1385,7 @@ function SessionContent() {
                 {listenerStillOnline === null
                   ? <>Want to keep talking?<br />Checking if your listener is still here…</>
                   : listenerStillOnline
-                  ? <>🟢 {resolvedListenerName} is still online.<br />Want to keep talking? Continue for 15 more minutes.</>
+                  ? <>🟢 {resolvedListenerName} is still online.<br />Want to keep talking? Continue for 16 more minutes.</>
                   : <>Your listener has gone offline.<br />Browse other listeners and start a paid session.</>
                 }
               </p>
@@ -1397,7 +1397,7 @@ function SessionContent() {
                 ) : (
                   <a href={continueUrl} style={{ width: '100%' }}>
                     <button className="btn-trial-continue">
-                      {continuePrice ? `Continue talking — ${continuePrice} for 15 min →` : 'Continue talking →'}
+                      {continuePrice ? `Continue talking — ${continuePrice} for 16 min →` : 'Continue talking →'}
                     </button>
                   </a>
                 )}
@@ -1806,7 +1806,7 @@ function SessionContent() {
             <span className="listener-banner-icon">{sessionIsFreeTrial ? '🎁' : '💰'}</span>
             <span className="listener-banner-text">
               {sessionIsFreeTrial
-                ? `Free trial session · ${durationMins} min · no earnings on trial sessions`
+                ? `Free test-account session · ${durationMins} min · no earnings`
                 : `Paid session · ${durationMins} min${listenerEarning != null ? ` · you'll earn ${formatGBP(listenerEarning)}` : ''}`}
             </span>
             <button

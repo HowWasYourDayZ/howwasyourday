@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is it normal to struggle as a new mom?', acceptedAnswer: {'@type': 'Answer', text: 'Extremely normal. The combination of sleep deprivation, hormonal shift, identity change, and social pressure to appear grateful is genuinely very hard. The fact that others appear to be coping does not mean they actually are.'}},
     {'@type': 'Question', name: 'Can I talk about struggling with motherhood without feeling judged?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. A How Was Your Day listener will not respond with "but you should be grateful" or "it gets better." They will listen to what you are actually experiencing.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -72,7 +72,7 @@ export default function NewMomIndiaPage() {
         <div className="hero">
           <p className="badge">New Mom · Motherhood · Postpartum Stress · India</p>
           <h1>You're supposed to be the happiest you've ever been. <em>You've never felt more alone.</em></h1>
-          <p className="lead">Sleep deprivation, identity shift, isolation, pressure to perform joy. New motherhood in India is hard. Talk anonymously from ₹160.</p>
+          <p className="lead">Sleep deprivation, identity shift, isolation, pressure to perform joy. New motherhood in India is hard. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <GeoQuickAnswer path="/new-mom-india" />
@@ -87,7 +87,7 @@ export default function NewMomIndiaPage() {
           <p>How Was Your Day is for that gap &mdash; the space between clinical need and just-needing-to-talk. See also: <a href="/support/postpartum-india" style={{color:"#1A8FA0",fontWeight:700}}>Postpartum support India</a>.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>New motherhood is hard. You are allowed to say that.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>New motherhood is hard. You are allowed to say that.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/support/postpartum-india">Postpartum India &rarr;</a>
             <a href="/support/mom-burnout-india">Mom burnout India &rarr;</a>
             <a href="/for-women">Support for women &rarr;</a>

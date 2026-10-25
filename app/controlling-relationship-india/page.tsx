@@ -39,7 +39,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.' },
     }
   ],
 }
@@ -113,7 +113,7 @@ export default function ControllingRelationshipIndiaPage() {
         <div className="hero">
           <p className="badge">Controlling Relationship · Possessive Partner · India</p>
           <h1>It feels like love. Until you realise you've stopped <em>being yourself.</em></h1>
-          <p className="lead">Checking your phone, monitoring your friends, deciding what you wear. Controlling behaviour erodes your sense of self gradually. Talk anonymously from ₹160.</p>
+          <p className="lead">Checking your phone, monitoring your friends, deciding what you wear. Controlling behaviour erodes your sense of self gradually. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -137,7 +137,7 @@ export default function ControllingRelationshipIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>You deserve to be yourself.</h2>
-          <p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
         <div className="section">

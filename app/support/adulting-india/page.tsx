@@ -207,9 +207,9 @@ export default function AdultingIndiaPage() {
 
         <div className="cta-card">
           <h2>Just Wanted to Talk?</h2>
-          <p>Real person. No judgment. No agenda. private, no appointment. First 5 minutes free, from ₹160 for 15 minutes.</p>
+          <p>Real person. No judgment. No agenda. private, no appointment. Sessions from 8 minutes, from ₹160 for 15 minutes.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Start talking — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Start talking →</button></a>
             <a href="/support/men-loneliness-india"><button className="btn-secondary">Men &amp; loneliness</button></a>
           </div>
         </div>

@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Will the listener understand British Indian culture?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the British Indian diaspora experience — the Gujarati and Punjabi communities of the Midlands and North, the intergenerational dynamics, the specific pressures of being raised British and Indian simultaneously. No lengthy explanation needed.' } },
   { '@type': 'Question', name: 'What if my situation feels complicated — is this still right?', acceptedAnswer: { '@type': 'Answer', text: 'Complicated is exactly what peer support is designed for. Listeners don\'t need a simple problem to work with. They can sit with complexity and ambiguity without pushing you toward any particular answer.' } },
   { '@type': 'Question', name: 'Is this confidential from my family and community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your family, community, or anyone else.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriMarriageUkPage() {
         <div className="hero">
           <p className="badge">NRI Marriage UK &middot; British Desi &middot; Indian Relationships</p>
           <h1>British Indian marriage. The pressure from both worlds. <em>The conversation you haven&rsquo;t had yet.</em></h1>
-          <p className="lead">Whether you&rsquo;re dealing with an arranged match your family pushed for, a partner who doesn&rsquo;t understand your culture, or a marriage that looks fine from the outside but feels lonely inside — British Indian marriage has pressures that combine two worlds in complicated ways. Talk to someone who gets both. First 5 minutes free.</p>
+          <p className="lead">Whether you&rsquo;re dealing with an arranged match your family pushed for, a partner who doesn&rsquo;t understand your culture, or a marriage that looks fine from the outside but feels lonely inside — British Indian marriage has pressures that combine two worlds in complicated ways. Talk to someone who gets both. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,17 +84,17 @@ export default function NriMarriageUkPage() {
           <h2>The Two-World Pressure of British Indian Marriage</h2>
           <p>British Indian marriage sits at the intersection of two very different sets of expectations. British culture has one idea of what a marriage should be — romantic love, individual fulfilment, equal partnership, the right to leave if it doesn&rsquo;t work. Indian family culture has another — arranged or semi-arranged matches, family honour, "log kya kahenge," the understanding that marriage is between two families not just two people, and that adjusting is what you do.</p>
           <p>Growing up British and Indian means you have internalised both, and they do not resolve neatly. You want to love your partner and feel chosen. Your family wants you to make a sensible match and not shame them. The community in Birmingham, Leicester, or Southall watches closely. And in the middle of all of this, you are trying to have an actual marriage with an actual person — which is hard enough without the weight of two cultural traditions on top of it.</p>
-          <p>How Was Your Day is a space to say all of this to someone who truly understands — a real Indian peer listener in India who knows both the culture you were raised in and the family expectations you carry. First 5 minutes free.</p>
+          <p>How Was Your Day is a space to say all of this to someone who truly understands — a real Indian peer listener in India who knows both the culture you were raised in and the family expectations you carry. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>What Peer Support Looks Like for Marriage Pressure</h2>
           <p>How Was Your Day listeners are not advisors and will not tell you what to do about your marriage. They are real people — screened peer listeners with lived experience of Indian cultural dynamics — who will genuinely hear you. No judgement. No advice you didn&rsquo;t ask for. Just the experience of being understood by someone who gets the cultural context without needing it explained.</p>
-          <p>UK (GMT/BST) afternoons align with Indian evenings — 3pm in Birmingham or Leicester is 8:30pm in India. Your quiet afternoon at home, or your lunch break at work, is when Indian listeners are in their evenings. No appointment needed. Anonymous. First 5 minutes free — one free session per account.</p>
+          <p>UK (GMT/BST) afternoons align with Indian evenings — 3pm in Birmingham or Leicester is 8:30pm in India. Your quiet afternoon at home, or your lunch break at work, is when Indian listeners are in their evenings. No appointment needed. Anonymous. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Both worlds understood. No explanation required.</h2><p>Real Indian peer listener. Understands British Indian marriage dynamics. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Both worlds understood. No explanation required.</h2><p>Real Indian peer listener. Understands British Indian marriage dynamics. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/uk">Indians in UK &rarr;</a>
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>

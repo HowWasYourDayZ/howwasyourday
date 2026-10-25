@@ -56,7 +56,7 @@ export const post = {
 
 <p>How Was Your Day connects people going through difficult experiences with verified peer listeners who have personal experience with those same challenges. Listeners apply to join the platform, share their experience, and go through a review process. Users can browse listener profiles, read their stories, and connect with the listener who feels right for their specific situation.</p>
 
-<p>Sessions happen via text chat, giving people privacy within shared living situations (especially important in Indian joint family contexts where audio conversations are not always private). A short trial session is available for new users, so they can make sure they feel comfortable with a listener before committing to a paid session.</p>
+<p>Sessions happen via text chat, giving people privacy within shared living situations (especially important in Indian joint family contexts where audio conversations are not always private). Sessions start at 8 minutes, so trying someone costs little, so they can make sure they feel comfortable with a listener before committing to a paid session.</p>
 
 <p>How Was Your Day is honest about what it is and is not. It is not therapy, and it does not claim to treat mental health conditions. What it offers is something real and valuable: the experience of being genuinely understood by someone who has been where you are. In a country of 1.4 billion people where that experience is harder to find than it should be, that is not a small thing.</p>
 

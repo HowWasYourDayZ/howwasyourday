@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Emotional Support for Indians in Oman | How Was Your Day',
-  description: 'Feeling lonely or overwhelmed in Oman? How Was Your Day connects Indian expats with a screened Indian peer listener — in your language, on Indian time, starting with a free 5-minute trial.',
+  description: 'Feeling lonely or overwhelmed in Oman? How Was Your Day connects Indian expats with a screened Indian peer listener — in your language, on Indian time, in sessions from 8 minutes.',
   keywords: [
     'emotional support Oman Indian', 'lonely in Oman Indian', 'Indian expat Oman loneliness',
     'talk to someone Oman', 'Oman NRI support', 'feeling isolated Oman',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Emotional Support for Indians in Oman — Talk to an Indian Listener',
-    description: 'Lonely or overwhelmed in Oman? How Was Your Day peer listeners understand the Indian expat experience and speak your language. First 5 minutes free.',
+    description: 'Lonely or overwhelmed in Oman? How Was Your Day peer listeners understand the Indian expat experience and speak your language. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/oman-loneliness',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -157,7 +157,7 @@ export default function OmanLonelinessPage() {
           sure you always have someone to talk to, in your own language.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>The quiet loneliness of life in Oman</h2>
@@ -196,7 +196,7 @@ export default function OmanLonelinessPage() {
             <li>15-minute session — OMR 4</li>
             <li>30-minute session — OMR 6</li>
             <li>45-minute session — OMR 8</li>
-            <li>First 5 minutes free — one free session per account</li>
+            <li>Sessions from 8 minutes</li>
           </ul>
           <p style={{ marginTop: '12px' }}>Anonymous. No subscription. Pay only for what you use.</p>
         </div>
@@ -217,7 +217,7 @@ export default function OmanLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How much does How Was Your Day cost from Oman?</h3>
-            <p>OMR 4 for 15 minutes, OMR 6 for 30 minutes, OMR 8 for 45 minutes. First 5 minutes are free.</p>
+            <p>OMR 4 for 15 minutes, OMR 6 for 30 minutes, OMR 8 for 45 minutes. Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Can I speak in Malayalam or Hindi from Oman?</h3>

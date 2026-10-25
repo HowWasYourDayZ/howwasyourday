@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.',
       },
     },
   ],
@@ -244,7 +244,7 @@ export default function MarriageLonelinessSupportPage() {
           <h2>Ready to Be Heard?</h2>
           <p>Talk to a peer listener who understands loneliness inside a marriage. Private and outside your circle. No appointments, no waitlists.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who understands →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
@@ -270,7 +270,7 @@ export default function MarriageLonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.</div>
+            <div className="faq-a">How Was Your Day starts at £4.20 for an 8-minute session. There is no subscription and no appointment. How Was Your Day is peer support, not couples counselling or marriage therapy, and it is available any time, including late at night.</div>
           </div>
         </div>
 

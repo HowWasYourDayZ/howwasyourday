@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much does a session cost from Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'S$14 for 15 minutes, S$20 for 30 minutes, or S$27 for 45 minutes. The first 5 minutes of your first session are free — just to try it out and see if you feel comfortable.',
+        text: 'S$14 for 15 minutes, S$20 for 30 minutes, or S$27 for 45 minutes. The first 5 minutes of a session are not charged — just to try it out and see if you feel comfortable.',
       },
     },
   ],
@@ -160,7 +160,7 @@ export default function SingaporeRantPage() {
           listener who will hear you out completely, without interrupting, without advising, without judging.
         </p>
 
-        <a href="/browse" className="cta-hero">Rant to a listener now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Rant to a listener now →</a>
 
         <div className="card">
           <h2>What you probably want to say right now</h2>
@@ -194,7 +194,7 @@ export default function SingaporeRantPage() {
 
         <div className="card">
           <h2>Session pricing for Singapore</h2>
-          <p>Pay in Singapore dollars. First 5 minutes free — one free session per account.</p>
+          <p>Pay in Singapore dollars. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>
@@ -245,7 +245,7 @@ export default function SingaporeRantPage() {
           <div className="faq-item">
             <h3>How much does a session cost from Singapore?</h3>
             <p>S$14 for 15 minutes, S$20 for 30 minutes, or S$27 for 45 minutes. The first 5 minutes of
-              your first session are free to try.</p>
+              a session cost little to try.</p>
           </div>
         </div>
 

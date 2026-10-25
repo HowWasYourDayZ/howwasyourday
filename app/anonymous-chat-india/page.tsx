@@ -6,12 +6,12 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
   title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | How Was Your Day',
-  description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, first 5 min free.',
+  description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, from 8 minutes.',
   keywords: 'anonymous chat india, anonymous chat with real person india, anonymous online chat india, talk to stranger anonymously india, anonymous peer support india, private chat india no name, anonymous emotional support india, talk anonymously online india, anonymous listener india, private anonymous chat app india',
   alternates: { canonical: 'https://www.howwasyourday.live/anonymous-chat-india', languages: { 'en-GB': 'https://www.howwasyourday.live/anonymous-chat-india' } },
   openGraph: {
     title: 'Anonymous Chat India — Talk to a Real Person, No Name Needed | How Was Your Day',
-    description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, first 5 min free.',
+    description: 'Anonymous chat with a real peer listener in India — no account name, no face, no history. Just talk. ₹160/session, from 8 minutes.',
     url: 'https://www.howwasyourday.live/anonymous-chat-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -158,7 +158,7 @@ export default function AnonymousChatIndiaPage() {
           <h1>Say What You Can&apos;t Say to <em>Anyone You Know</em></h1>
           <p className="lead">Some things can&apos;t go to your partner, your best friend, or your parents. On How Was Your Day, you talk to a real peer listener who has no connection to your life — and Your listener never sees your phone number, and nothing is shared with anyone in your life. Anonymous chat with a screened human, not a stranger from the internet.</p>
           <div className="hero-cta">
-            <a href="/talk?src=seo"><button className="btn-primary" style={{fontFamily:'Nunito,sans-serif'}}>Chat anonymously — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary" style={{fontFamily:'Nunito,sans-serif'}}>Chat anonymously →</button></a>
             <a href="/browse"><button className="btn-secondary" style={{fontFamily:'Nunito,sans-serif',background:'var(--teal)',border:'none',boxShadow:'0 4px 16px rgba(26,143,160,0.25)'}}>Browse listeners →</button></a>
           </div>
         </div>
@@ -310,9 +310,9 @@ export default function AnonymousChatIndiaPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>Say It to Someone Who Will Never Tell</h2>
-          <p>Your first 5 minutes are free. Use a name, use an alias — it does not matter. A real, screened listener is on the other side. Your listener never sees your phone number, and nothing is shared with anyone in your life.</p>
+          <p>Sessions start at 8 minutes. Use a name, use an alias — it does not matter. A real, screened listener is on the other side. Your listener never sees your phone number, and nothing is shared with anyone in your life.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Chat anonymously — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Chat anonymously →</button></a>
             <a href="/browse"><button className="btn-secondary">Browse listeners →</button></a>
           </div>
         </div>

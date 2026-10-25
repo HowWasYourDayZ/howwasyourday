@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to Someone Online in Singapore | How Was Your Day',
-  description: 'Need a real person to talk to in Singapore? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Telugu, and more. First 5 minutes free.',
+  description: 'Need a real person to talk to in Singapore? How Was Your Day connects Indian expats with screened peer listeners in India — in Hindi, Tamil, Telugu, and more. Sessions from 8 minutes.',
   keywords: [
     'talk to someone online singapore', 'someone to talk to singapore', 'need to talk singapore',
     'online chat support singapore', 'talk to a person singapore', 'emotional support online singapore',
@@ -161,7 +161,7 @@ export default function SingaporeTalkToSomeonePage() {
           from Singapore, in your language.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>When do you need someone to talk to?</h2>
@@ -196,7 +196,7 @@ export default function SingaporeTalkToSomeonePage() {
 
         <div className="card">
           <h2>Session pricing for Singapore</h2>
-          <p>Pay in Singapore dollars. The first 5-minute session free.</p>
+          <p>Pay in Singapore dollars. Sessions from 8 minutes.</p>
           <div className="pricing-grid">
             <div className="price-card">
               <div className="dur">15 min</div>

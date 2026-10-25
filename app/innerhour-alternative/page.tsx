@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'InnerHour Alternative India — Peer Support from £7 | How Was Your Day',
-  description: 'Looking for an InnerHour or Amaha alternative? How Was Your Day offers real human peer support at £7 — no subscription, private, no appointment.',
+  title: 'InnerHour Alternative India — Peer Support from £4.20 | How Was Your Day',
+  description: 'Looking for an InnerHour or Amaha alternative? How Was Your Day offers real human peer support at £4.20 — no subscription, private, no appointment.',
   keywords: ['innerhour alternative', 'amaha alternative', 'practo therapy alternative', 'lybrate counselling alternative', 'mpower alternative'],
   alternates: { canonical: 'https://www.howwasyourday.live/innerhour-alternative', languages: { 'en-GB': 'https://www.howwasyourday.live/innerhour-alternative' } },
   openGraph: {
-    title: 'InnerHour Alternative India — Peer Support from £7 | How Was Your Day',
-    description: 'Looking for an InnerHour or Amaha alternative? How Was Your Day offers real human peer support at £7 — no subscription, private, no appointment.',
+    title: 'InnerHour Alternative India — Peer Support from £4.20 | How Was Your Day',
+    description: 'Looking for an InnerHour or Amaha alternative? How Was Your Day offers real human peer support at £4.20 — no subscription, private, no appointment.',
     url: 'https://www.howwasyourday.live/innerhour-alternative',
     siteName: 'How Was Your Day',
     type: 'website',
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'Is Amaha good?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Amaha is good for what it is — corporate-sponsored therapy access with licensed professionals and structured self-help tools. If your employer offers it or you can afford the ₹2,500–₹12,000/month range, it is a solid clinical option. If you are paying out of pocket and want something more immediate and affordable, How Was Your Day starts at £7 per session with no subscription.',
+        text: 'Amaha is good for what it is — corporate-sponsored therapy access with licensed professionals and structured self-help tools. If your employer offers it or you can afford the ₹2,500–₹12,000/month range, it is a solid clinical option. If you are paying out of pocket and want something more immediate and affordable, How Was Your Day starts at £4.20 per session with no subscription.',
       },
     },
     {
@@ -140,8 +140,8 @@ export default function InnerhourAlternativePage() {
 
         <div className="hero">
           <p className="tag">InnerHour / Amaha Alternative · India</p>
-          <h1>InnerHour became Amaha. Amaha costs <em>₹12,000+</em>. How Was Your Day costs £7.</h1>
-          <p className="lead">InnerHour rebranded to Amaha in 2022 and moved upmarket — targeting corporate HR budgets, not individual users. If you are looking for affordable peer support that is actually built for you, How Was Your Day starts at £7 per session with no subscription.</p>
+          <h1>InnerHour became Amaha. Amaha costs <em>₹12,000+</em>. How Was Your Day costs from £4.20.</h1>
+          <p className="lead">InnerHour rebranded to Amaha in 2022 and moved upmarket — targeting corporate HR budgets, not individual users. If you are looking for affordable peer support that is actually built for you, How Was Your Day starts at £4.20 per session with no subscription.</p>
         </div>
 
         <div className="section">
@@ -184,7 +184,7 @@ export default function InnerhourAlternativePage() {
                 <tr className="highlight-row">
                   <td className="col-label">How Was Your Day</td>
                   <td>Peer listeners</td>
-                  <td>£7/session</td>
+                  <td>£4.20 per session</td>
                   <td>Yes</td>
                 </tr>
               </tbody>
@@ -195,13 +195,13 @@ export default function InnerhourAlternativePage() {
         <div className="section">
           <h2>Who Each Platform Is For</h2>
           <p><strong>Clinical or psychiatric needs</strong> — If you need diagnosis, medication management, or structured psychotherapy for a clinical condition, Amaha, Practo, or mPower are the right choice. These platforms connect you with licensed professionals.</p>
-          <p><strong>Just need to talk</strong> — If you are carrying emotional weight — relationship stress, family pressure, work burnout, loneliness, anxiety — and you need a real human being to talk to right now, without a subscription or an appointment, that is exactly what How Was Your Day is built for. From £7, private, no appointment.</p>
+          <p><strong>Just need to talk</strong> — If you are carrying emotional weight — relationship stress, family pressure, work burnout, loneliness, anxiety — and you need a real human being to talk to right now, without a subscription or an appointment, that is exactly what How Was Your Day is built for. From £4.20, private, no appointment.</p>
           <p>How Was Your Day does not compete with clinical platforms. It fills a different gap: the everyday emotional weight that does not need a psychiatrist but does need a real person.</p>
         </div>
 
         <div className="cta-card">
-          <h2>Try How Was Your Day for £7</h2>
-          <p>Real peer listeners, no subscription, anonymous. First 5 minutes free.</p>
+          <h2>Try How Was Your Day from £4.20</h2>
+          <p>Real peer listeners, no subscription, anonymous. Sessions from 8 minutes.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -216,7 +216,7 @@ export default function InnerhourAlternativePage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is Amaha good?</div>
-            <div className="faq-a">Amaha is good for what it is — corporate-sponsored therapy access with licensed professionals. If your employer offers it or you can afford the ₹2,500–₹12,000/month range, it is a solid clinical option. If you want something immediate and affordable, How Was Your Day starts at £7 per session.</div>
+            <div className="faq-a">Amaha is good for what it is — corporate-sponsored therapy access with licensed professionals. If your employer offers it or you can afford the ₹2,500–₹12,000/month range, it is a solid clinical option. If you want something immediate and affordable, How Was Your Day starts at £4.20 per session.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between a therapist and a peer listener?</div>

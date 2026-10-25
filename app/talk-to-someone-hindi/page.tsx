@@ -4,17 +4,17 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to Someone in Hindi Online | Peer Support in Hindi | How Was Your Day',
-  description: 'Need to talk to someone in Hindi? How Was Your Day listeners speak Hindi and understand the Indian emotional context. No appointment. First 5 minutes free.',
+  description: 'Need to talk to someone in Hindi? How Was Your Day listeners speak Hindi and understand the Indian emotional context. No appointment. Sessions from 8 minutes.',
   keywords: ['talk to someone in hindi', 'hindi emotional support', 'hindi peer support', 'speak hindi online support', 'hindi speaking listener', 'hindi mental health support online', 'apni baat karo hindi mein'],
   alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-hindi' },
-  openGraph: { title: 'Talk to Someone in Hindi Online | Peer Support in Hindi | How Was Your Day', description: 'Need to talk to someone in Hindi? How Was Your Day listeners speak Hindi and understand the Indian emotional context. No appointment. First 5 minutes free.', url: 'https://www.howwasyourday.live/talk-to-someone-hindi', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Talk to Someone in Hindi Online | Peer Support in Hindi | How Was Your Day', description: 'Need to talk to someone in Hindi? How Was Your Day listeners speak Hindi and understand the Indian emotional context. No appointment. Sessions from 8 minutes.', url: 'https://www.howwasyourday.live/talk-to-someone-hindi', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Are all listeners fluent in Hindi?', acceptedAnswer: { '@type': 'Answer', text: 'Most are. Hindi is the primary language of many listeners. When booking, you can note your language preference and your listener will communicate with you in Hindi.' } },
   { '@type': 'Question', name: 'Can I mix Hindi and English (Hinglish)?', acceptedAnswer: { '@type': 'Answer', text: 'Of course. Listeners are completely comfortable with Hinglish — most conversations naturally mix both. Say what feels natural. There is no pressure to stay in one language.' } },
   { '@type': 'Question', name: 'I\'m abroad — is this available for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day works globally. Listeners are India-based but serve anyone with a phone number, wherever you are — UK, USA, Canada, UAE, Australia, or anywhere else Indians live and work.' } },
-  { '@type': 'Question', name: 'Is it free?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. If the connection feels right, paid sessions start from ₹160 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'Is it free?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. If the connection feels right, paid sessions start from ₹160 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -74,7 +74,7 @@ export default function TalkToSomeoneHindiPage() {
         <div className="hero">
           <p className="badge">Hindi Support &middot; Apni Bhasha &middot; NRI &amp; India</p>
           <h1>&#2310;&#2346;&#2344;&#2368; &#2348;&#2366;&#2340;, <em>&#2310;&#2346;&#2344;&#2368; &#2349;&#2366;&#2359;&#2366; &#2350;&#2375;&#2306;&#2404;</em> (Your words, in your language.)</h1>
-          <p className="lead">Some things can only be said properly in Hindi. The exact words your mother used. The feeling that has no English translation. The conversation you&rsquo;ve been rehearsing in your head &mdash; in Hindi &mdash; for weeks. Talk to a real peer listener who speaks Hindi. Anywhere in the world. First 5 minutes free.</p>
+          <p className="lead">Some things can only be said properly in Hindi. The exact words your mother used. The feeling that has no English translation. The conversation you&rsquo;ve been rehearsing in your head &mdash; in Hindi &mdash; for weeks. Talk to a real peer listener who speaks Hindi. Anywhere in the world. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">&#2309;&#2349;&#2368; &#2348;&#2366;&#2340; &#2325;&#2352;&#2375;&#2306; &rarr;</a>
         </div>
         <div className="section">
@@ -92,10 +92,10 @@ export default function TalkToSomeoneHindiPage() {
         <div className="section">
           <h2>How it works</h2>
           <p>Sign up with your phone number. No last name, no photo, no social account needed &mdash; just a number. Browse listeners who are currently online. Start a free 5-minute session. In the session notes, mention that you prefer Hindi &mdash; or simply start speaking and your listener will follow.</p>
-          <p>Sessions are text-based. No video, no voice &mdash; just text. This makes it easier to be honest, easier to say the thing you have been holding. The first 5 minutes are free. If it feels right, you continue. If not, you end and pay nothing. From ₹160 for 15 minutes after the free session.</p>
+          <p>Sessions are text-based. No video, no voice &mdash; just text. This makes it easier to be honest, easier to say the thing you have been holding. Sessions start at 8 minutes. If it feels right, you continue. If not, you end and pay nothing. From ₹160 for 15 minutes after the free session.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Apni baat, apni bhasha mein.</h2><p>Hindi-speaking peer listeners. India-based. No appointment. First 5 minutes free.</p><a href="/browse" className="btn-cta">Listener dhundhe &rarr;</a></div>
+        <div className="cta-card"><h2>Apni baat, apni bhasha mein.</h2><p>Hindi-speaking peer listeners. India-based. No appointment. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Listener dhundhe &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/indian-diaspora-support">Indian diaspora support &rarr;</a>

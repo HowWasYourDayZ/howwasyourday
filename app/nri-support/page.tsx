@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the NRI or diaspora experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and many have personal experience with family emigrating, siblings abroad, or their own experience navigating between cultures. You do not have to explain what it means to feel like a different person in two different worlds.' } },
   { '@type': 'Question', name: 'What time zone are listeners in?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are India-based (IST — UTC+5:30). This works naturally for diaspora users: India evening (7pm–11pm IST) is US East Coast morning (8:30am–12:30pm EST) and UK evening (2:30pm–6:30pm GMT). If you have a quiet moment before your workday, Indian listeners are likely available.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are anonymous. You sign up with only a phone number and first name — no last name, no photo, no social login. Listeners agree to keep what you share confidential. Nothing from your session is shared with your family, your employer, or anyone in India.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Your first 5-minute session is free — you can stop after those 5 minutes and pay nothing. There is no subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Sessions start at 8 minutes — you can stop after those 5 minutes and pay nothing. There is no subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function NriSupportPage() {
         <div className="hero">
           <p className="badge">NRI Support &middot; Indians Abroad &middot; Diaspora</p>
           <h1>Someone who actually gets <em>the NRI experience.</em></h1>
-          <p className="lead">The loneliness that does not translate. The calls home where you say everything is fine. The exhaustion of holding two worlds at once. Talk to a real Indian peer listener who understands — no explaining required. First 5 minutes free.</p>
+          <p className="lead">The loneliness that does not translate. The calls home where you say everything is fine. The exhaustion of holding two worlds at once. Talk to a real Indian peer listener who understands — no explaining required. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -92,10 +92,10 @@ export default function NriSupportPage() {
         <div className="section">
           <h2>What NRI Peer Support Is (and Is Not)</h2>
           <p>How Was Your Day is peer support &mdash; not a helpline, not a therapist, not a chatbot. Listeners are real people with lived experience. They will not give you advice about your visa or your marriage. They will listen while you say the things you have been carrying. Sometimes being heard by someone who understands is what shifts something.</p>
-          <p>Sessions are text-based and anonymous. You sign up with only a phone number and first name. Nothing is shared with your family, your employer, or anyone back home. Your first 5-minute session is free.</p>
+          <p>Sessions are text-based and anonymous. You sign up with only a phone number and first name. Nothing is shared with your family, your employer, or anyone back home. Sessions start at 8 minutes.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You do not have to hold it alone.</h2><p>Real Indian peer listener. Understands the NRI experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You do not have to hold it alone.</h2><p>Real Indian peer listener. Understands the NRI experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-diaspora-support">Indian diaspora support &rarr;</a>
           <a href="/nri-mental-health">NRI mental health &rarr;</a>

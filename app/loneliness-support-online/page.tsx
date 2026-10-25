@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'What if I am surrounded by people but still feel lonely?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common and most painful forms of loneliness. Being physically around people is not the same as being truly known or seen by them. How Was Your Day listeners are selected to be genuinely present — which is exactly what superficial social contact fails to provide.' } },
   { '@type': 'Question', name: 'Is there a specific reason I need to be lonely to use How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. You do not need a diagnosis or a specific event. Feeling lonely is sufficient reason to reach out. How Was Your Day is for anyone who needs to be heard.' } },
   { '@type': 'Question', name: 'Will the listener judge me for being lonely?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day listeners are screened and expected to listen without judgment. Loneliness is one of the most common human experiences. There is nothing to be judged for.' } },
-  { '@type': 'Question', name: 'How do I start?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listeners who are currently online. Choose someone whose profile resonates with you. Start a session — no appointment, no form. The first 5 minutes are free.' } },
+  { '@type': 'Question', name: 'How do I start?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listeners who are currently online. Choose someone whose profile resonates with you. Start a session — no appointment, no form. Sessions start at 8 minutes.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -79,7 +79,7 @@ export default function LonelinessSupportOnlinePage() {
         <div className="hero">
           <p className="badge">Loneliness &middot; Feeling Alone &middot; Need to Talk</p>
           <h1>Loneliness does not always look <em>like isolation.</em></h1>
-          <p className="lead">Sometimes you are surrounded by people and still feel completely alone. A real peer listener who understands the texture of loneliness — no appointment needed. First 5 minutes free.</p>
+          <p className="lead">Sometimes you are surrounded by people and still feel completely alone. A real peer listener who understands the texture of loneliness — no appointment needed. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -119,11 +119,11 @@ export default function LonelinessSupportOnlinePage() {
         </div>
         <div className="section">
           <h2>No Appointment. No Reason Required.</h2>
-          <p>Browse listeners who are currently online. No appointment, no form, no assessment. Start a text session immediately. Your first 5-minute session is free &mdash; if it does not feel right, you stop and pay nothing. If it helps, continue for as long as you need.</p>
+          <p>Browse listeners who are currently online. No appointment, no form, no assessment. Start a text session immediately. Sessions start at 8 minutes &mdash; if it does not feel right, you stop and pay nothing. If it helps, continue for as long as you need.</p>
           <p>Anonymous: you sign up with a phone number and first name only. Nothing is connected to your real identity. What you share stays between you and your listener.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You do not have to be invisible.</h2><p>Real person. Genuinely present. No appointment. First 5 minutes free.</p><a href="/browse" className="btn-cta">Talk to someone now &rarr;</a></div>
+        <div className="cta-card"><h2>You do not have to be invisible.</h2><p>Real person. Genuinely present. No appointment. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Talk to someone now &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/someone-to-talk-to">Someone to talk to &rarr;</a>
           <a href="/online-emotional-support">Online emotional support &rarr;</a>

@@ -4,10 +4,10 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Indian Loneliness in the UK | Talk to Someone Who Understands | How Was Your Day',
-  description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, How Was Your Day connects you with peer listeners in India who understand. First 5 min free.',
+  description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, How Was Your Day connects you with peer listeners in India who understand. From 8 minutes.',
   keywords: ['indian loneliness uk', 'nri loneliness uk', 'lonely indian in london', 'feeling alone uk indian', 'british indian loneliness', 'desi loneliness uk', 'indian isolation britain'],
   alternates: { canonical: 'https://www.howwasyourday.live/nri-loneliness-uk' },
-  openGraph: { title: 'Indian Loneliness in the UK | Talk to Someone Who Understands | How Was Your Day', description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, How Was Your Day connects you with peer listeners in India who understand. First 5 min free.', url: 'https://www.howwasyourday.live/nri-loneliness-uk', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Indian Loneliness in the UK | Talk to Someone Who Understands | How Was Your Day', description: 'Feeling alone as an Indian in the UK? Whether you\'re new here or second-generation, How Was Your Day connects you with peer listeners in India who understand. From 8 minutes.', url: 'https://www.howwasyourday.live/nri-loneliness-uk', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -74,7 +74,7 @@ export default function NriLonelinessUkPage() {
         <div className="hero">
           <p className="badge">Indian Loneliness &middot; UK &middot; British Desi</p>
           <h1>Surrounded by people. <em>Still feeling alone.</em></h1>
-          <p className="lead">You&rsquo;ve lived here for years &mdash; maybe you were even born here. You have colleagues, friends, a life that looks full from outside. But there&rsquo;s a particular loneliness that comes with being Indian in the UK. The code-switching. The effort of being &ldquo;on.&rdquo; The identity that doesn&rsquo;t fully fit anywhere. Talk to someone who has heard it all before. First 5 minutes free.</p>
+          <p className="lead">You&rsquo;ve lived here for years &mdash; maybe you were even born here. You have colleagues, friends, a life that looks full from outside. But there&rsquo;s a particular loneliness that comes with being Indian in the UK. The code-switching. The effort of being &ldquo;on.&rdquo; The identity that doesn&rsquo;t fully fit anywhere. Talk to someone who has heard it all before. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -92,10 +92,10 @@ export default function NriLonelinessUkPage() {
         <div className="section">
           <h2>A real conversation, no appointment needed</h2>
           <p>How Was Your Day listeners are India-based and active in the evenings IST &mdash; which is lunchtime to early afternoon in the UK. UK to India is 4.5 hours ahead in BST and 5.5 hours in GMT. A 1pm call in London is 5:30pm or 6:30pm in India. Evening calls from the UK land at peak listener availability in India.</p>
-          <p>No appointment. No waiting list. Private &mdash; a phone number is all you need. Browse who is online now and start a session. The first 5 minutes are free.</p>
+          <p>No appointment. No waiting list. Private &mdash; a phone number is all you need. Browse who is online now and start a session. Sessions start at 8 minutes.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The loneliness you cannot quite name has a name.</h2><p>A real Indian peer listener who understands. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The loneliness you cannot quite name has a name.</h2><p>A real Indian peer listener who understands. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/uk">Indians in the UK &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

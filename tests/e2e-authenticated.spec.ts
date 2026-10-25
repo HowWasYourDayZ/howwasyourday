@@ -109,9 +109,9 @@ test.describe('Seeker: login survives navigation (middleware regression)', () =>
   test('wallet page renders balance and recharge tiers', async ({ page }) => {
     await login(page, SEEKER_PHONE, SEEKER_OTP)
     await page.goto('/wallet')
-    // ₹200 appears in both the empty-wallet quick-buttons and the recharge
+    // £10 appears in both the empty-wallet quick-buttons and the recharge
     // presets, so scope to the first match to avoid a strict-mode violation.
-    await expect(page.getByText('₹200', { exact: true }).first()).toBeVisible({ timeout: 15_000 })
+    await expect(page.getByText('£10', { exact: true }).first()).toBeVisible({ timeout: 15_000 })
   })
 })
 
@@ -373,9 +373,9 @@ test.describe('Seeker books a free trial with the approved listener', () => {
     await page.goto(`/listener/${listenerId}`)
     await expect(page.locator('.listener-name')).toBeVisible({ timeout: 15_000 })
 
-    // Select the 5-min free option and book. Use the exact accessible name —
-    // hasText '5 min' also substring-matches "15 min" and "45 min".
-    await page.getByRole('button', { name: '5 minute session free', exact: true }).click()
+    // Select the 8-minute session (paid; the test seeker needs wallet balance
+    // or a TEST_UNLIMITED_PHONES number). Accessible name starts with the length.
+    await page.getByRole('button', { name: /^8 minute session/ }).click()
     await page.locator('.btn-book').click()
 
     // Either we land on the session page, or a clear booking error is shown

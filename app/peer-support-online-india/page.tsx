@@ -4,12 +4,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Peer Support Online India — Talk to Someone Who\'s Been There | How Was Your Day',
-  description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. First 5 min free.',
+  description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. From 8 minutes.',
   keywords: ['peer support online india', 'peer support app india', 'peer support mental health india', 'peer support india', 'online peer support india'],
   alternates: { canonical: 'https://www.howwasyourday.live/peer-support-online-india', languages: { 'en-GB': 'https://www.howwasyourday.live/peer-support-online-india' } },
   openGraph: {
     title: 'Peer Support Online India — Talk to Someone Who\'s Been There | How Was Your Day',
-    description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. First 5 min free.',
+    description: 'Peer support from real people who\'ve experienced what you\'re going through. Private, ₹160/session, no appointment needed. From 8 minutes.',
     url: 'https://www.howwasyourday.live/peer-support-online-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is peer support free on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'New users get a free 5-minute trial session. After that, paid sessions start at around ₹160 for 15 minutes, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. That is a fraction of what a private therapy session costs in India, and there is no appointment.',
+        text: 'Sessions start at 8 minutes session. After that, paid sessions start at around ₹160 for 15 minutes, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. That is a fraction of what a private therapy session costs in India, and there is no appointment.',
       },
     },
     {
@@ -204,7 +204,7 @@ export default function PeerSupportOnlineIndiaPage() {
           <p>Listeners are available in the middle of the night, over weekends, on public holidays. Whether you are in Mumbai, Bengaluru, a small town in UP, or anywhere else in India — if you have a phone and data, peer support is available.</p>
 
           <h3>Affordable</h3>
-          <p>A 15-minute session on How Was Your Day costs around ₹160. New users get a free 5-minute trial to find out whether the listener they chose actually understands them before committing to a longer session. There are no subscription traps, no membership fees, no automatic renewals.</p>
+          <p>A 15-minute session on How Was Your Day costs around ₹160. Sessions start at 8 minutes to find out whether the listener they chose actually understands them before committing to a longer session. There are no subscription traps, no membership fees, no automatic renewals.</p>
         </div>
 
         {/* Who it's for */}
@@ -304,7 +304,7 @@ export default function PeerSupportOnlineIndiaPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>Find a Peer Listener Today</h2>
-          <p>Browse listeners by experience area. First 5 minutes free. Private, no appointment, no waitlist — check live listener availability.</p>
+          <p>Browse listeners by experience area. Sessions from 8 minutes. Private, no appointment, no waitlist — check live listener availability.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Find a peer listener →</button></a>
             <a href="/browse"><button className="btn-secondary">Browse peer listeners →</button></a>
@@ -328,7 +328,7 @@ export default function PeerSupportOnlineIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is peer support free on How Was Your Day?</div>
-            <div className="faq-a">New users get a free 5-minute trial session. After that, paid sessions start at around ₹160 for 15 minutes, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. That is a fraction of what a private therapy session costs in India, and there is no appointment.</div>
+            <div className="faq-a">Sessions start at 8 minutes session. After that, paid sessions start at around ₹160 for 15 minutes, including a flat ₹10 platform fee; the exact price depends on the listener and is shown before you start. That is a fraction of what a private therapy session costs in India, and there is no appointment.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support help with depression or anxiety?</div>

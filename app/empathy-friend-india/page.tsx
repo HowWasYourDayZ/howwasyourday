@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'How do I find an empathetic listener online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Browse listener profiles at howwasyourday.live/browse. Each listener shows their areas of lived experience, their approach, and their availability. Choose someone whose background resonates with what you are going through. Your first 5-minute session is free, so you can assess the connection before committing.',
+        text: 'Browse listener profiles at howwasyourday.live/browse. Each listener shows their areas of lived experience, their approach, and their availability. Choose someone whose background resonates with what you are going through. Sessions start at 8 minutes, so you can assess the connection before committing.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What if the listener does not understand my problem?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You choose your listener based on their background and areas of experience. If a session does not feel right, you can end it during the free 5-minute window and try someone else. There are no penalties for switching listeners.',
+        text: 'You choose your listener based on their background and areas of experience. If a session does not feel right, you can end it early, pay only for the minutes used, and try someone else. There are no penalties for switching listeners.',
       },
     },
   ],
@@ -198,7 +198,7 @@ export default function EmpathyFriendIndiaPage() {
 
         <div className="cta-card">
           <h2>Find Your Empathy Friend</h2>
-          <p>Real people, chosen for how well they listen, from ₹160. First 5 minutes free.</p>
+          <p>Real people, chosen for how well they listen, from ₹160. Sessions from 8 minutes.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -213,7 +213,7 @@ export default function EmpathyFriendIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I find an empathetic listener online in India?</div>
-            <div className="faq-a">Browse listener profiles at howwasyourday.live/browse. Each listener shows their areas of lived experience and availability. Your first 5-minute session is free, so you can assess the connection before committing.</div>
+            <div className="faq-a">Browse listener profiles at howwasyourday.live/browse. Each listener shows their areas of lived experience and availability. Sessions start at 8 minutes, so you can assess the connection before committing.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is active listening?</div>
@@ -225,7 +225,7 @@ export default function EmpathyFriendIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if the listener does not understand my problem?</div>
-            <div className="faq-a">You choose your listener based on their background. If a session does not feel right, you can end it during the free 5-minute window and try someone else. There are no penalties for switching listeners.</div>
+            <div className="faq-a">You choose your listener based on their background. If a session does not feel right, you can end it early, pay only for the minutes used, and try someone else. There are no penalties for switching listeners.</div>
           </div>
         </div>
 

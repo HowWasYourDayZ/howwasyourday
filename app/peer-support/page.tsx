@@ -5,12 +5,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Peer Support in India | Talk to a Real Peer Listener | How Was Your Day',
-  description: "What peer support is, how it differs from therapy, and where to find it in India: screened peer listeners on How Was Your Day, one to one by text or voice. First 5 minutes free.",
+  description: "What peer support is, how it differs from therapy, and where to find it in India: screened peer listeners on How Was Your Day, one to one by text or voice. Sessions from 8 minutes.",
   keywords: ['peer support India', 'what is peer support', 'peer listener India', 'online peer support', 'talk to a peer listener', 'peer support vs therapy'],
   alternates: { canonical: 'https://www.howwasyourday.live/peer-support', languages: { 'en-GB': 'https://www.howwasyourday.live/peer-support' } },
   openGraph: {
     title: 'Peer Support India — Real People, Real Conversations | How Was Your Day',
-    description: 'Understand peer support and how it differs from therapy. How Was Your Day offers one-to-one text or voice conversations with screened peers in India. One introductory session of up to 5 minutes is free per account; it is not clinical care and availability varies.',
+    description: 'Understand peer support and how it differs from therapy. How Was Your Day offers one-to-one text or voice conversations with screened peers in India. Every session is paid, from 8 minutes; it is not clinical care and availability varies.',
     url: 'https://www.howwasyourday.live/peer-support',
     siteName: 'How Was Your Day',
     type: 'website',
@@ -21,7 +21,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "What is peer support, and where can I find it in India?", acceptedAnswer: { '@type': 'Answer', text: "Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. One introductory session of up to 5 minutes is free per account; availability varies." } },
+    { '@type': 'Question', name: "What is peer support, and where can I find it in India?", acceptedAnswer: { '@type': 'Answer', text: "Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. Every session is paid, from 8 minutes; availability varies." } },
     {
       '@type': 'Question',
       name: 'What is peer support?',
@@ -35,7 +35,7 @@ const faqSchema = {
       name: 'How is peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. How Was Your Day is for everyday emotional support; paid sessions start at £7 for 15 minutes in India, with a free introductory session before you pay.',
+        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. How Was Your Day is for everyday emotional support; paid sessions start at £4.20 for 8 minutes in India, with a free introductory session before you pay.',
       },
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'How much does peer support cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'On How Was Your Day, paid peer support sessions start at £7 for 15 minutes in India. Your first 5-minute introductory session is free once per account, so you can see whether the conversation feels right before paying. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
+        text: 'On How Was Your Day, paid peer support sessions start at £4.20 for 8 minutes in India. Sessions start at 8 minutes, so you can see whether the conversation feels right before paying. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
       },
     },
     {
@@ -191,7 +191,7 @@ export default function PeerSupportPage() {
           <p className="tag">Peer Support · India · No Appointment Needed</p>
           <h1>Peer support. <em>Real people.</em> Real conversations.</h1>
           <p className="lead">Not therapy. Not an AI chatbot. Not advice from someone who has never been through it. Peer support is the experience of talking to a real human being who has lived something like what you are carrying right now — and who listens without judgment, without a diagnosis, and without a clinical distance between you.</p>
-          <QuickAnswer question={"What is peer support, and where can I find it in India?"} answer={"Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. One introductory session of up to 5 minutes is free per account; availability varies."} />
+          <QuickAnswer question={"What is peer support, and where can I find it in India?"} answer={"Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. Every session is paid, from 8 minutes; availability varies."} />
         </div>
 
 
@@ -205,8 +205,8 @@ export default function PeerSupportPage() {
 
         {/* Stats row */}
         <div className="stats-row">
-          <div className="stat-pill"><em>£7</em>/session</div>
-          <div className="stat-pill">First <em>5 min free</em></div>
+          <div className="stat-pill"><em>£4.20</em>+ /session</div>
+          <div className="stat-pill">Sessions <em>from 8 min</em></div>
           <div className="stat-pill"><em>No appointment</em> needed</div>
           <div className="stat-pill"><em>Display name</em></div>
           <div className="stat-pill">Screened <em>peer listeners</em></div>
@@ -239,7 +239,7 @@ export default function PeerSupportPage() {
                   <td className="col-label">Peer support (How Was Your Day)</td>
                   <td>Real person with lived experience</td>
                   <td>Feeling heard, loneliness, burnout, everyday emotional weight</td>
-                  <td>£7/session</td>
+                  <td>£4.20 per session</td>
                 </tr>
                 <tr>
                   <td className="col-label">Therapy</td>
@@ -272,8 +272,8 @@ export default function PeerSupportPage() {
             <div className="step">
               <div className="step-num">2</div>
               <div className="step-text">
-                <div className="step-title">Start with 5 minutes free</div>
-                <div className="step-desc">Your first session is a free 5-minute trial. Talk, get a sense of the connection, and decide whether to continue — with no commitment until you choose to extend.</div>
+                <div className="step-title">Start with an 8-minute session</div>
+                <div className="step-desc">Sessions start at 8 minutes. Talk, get a sense of the connection, and decide whether to continue — with no commitment until you choose to extend.</div>
               </div>
             </div>
             <div className="step">
@@ -298,7 +298,7 @@ export default function PeerSupportPage() {
               <tr><td>Can I choose who I talk to?</td><td>Yes — profiles show first name, photo, languages and topics, so you can choose by experience or language, or choose a woman listener.</td></tr>
               <tr><td>Is it confidential?</td><td>Listeners never see your phone number and agree to keep what you share confidential. Voice calls are never recorded; text is stored securely and only read if a session is reported or flagged.</td></tr>
               <tr><td>What safeguarding is in place?</td><td>Contact details blocked in chat, crisis words flagged with helplines shown, reporting after every session, suspension and bans. <a href="/safeguarding" style={{color:'var(--teal)',fontWeight:800}}>Full safeguarding policy →</a></td></tr>
-              <tr><td>What does it cost?</td><td>First 5-minute session free, once per account; then each listener&apos;s own price, shown before you start — see <a href="/pricing" style={{color:'var(--teal)',fontWeight:800}}>pricing</a>.</td></tr>
+              <tr><td>What does it cost?</td><td>Sessions from 8 minutes, once per account; then each listener&apos;s own price, shown before you start — see <a href="/pricing" style={{color:'var(--teal)',fontWeight:800}}>pricing</a>.</td></tr>
               <tr><td>When is it available?</td><td>No appointment. Listeners choose their own hours, so availability follows Indian time and varies.</td></tr>
             </tbody>
           </table></div>
@@ -324,7 +324,7 @@ export default function PeerSupportPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>Start Your First Peer Support Session</h2>
-          <p>One introductory session of up to 5 minutes is free per account. Listeners do not see your phone number; you can choose a display name. No appointment is needed, but availability depends on which listeners are online.</p>
+          <p>Every session is paid, from 8 minutes. Listeners do not see your phone number; you can choose a display name. No appointment is needed, but availability depends on which listeners are online.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -348,7 +348,7 @@ export default function PeerSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does peer support cost in India?</div>
-            <div className="faq-a">Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. One introductory session of up to 5 minutes is free per account.</div>
+            <div className="faq-a">8-minute text sessions start at £4.20 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Every session is paid, from 8 minutes.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How does privacy work on How Was Your Day?</div>

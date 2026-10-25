@@ -1,4 +1,4 @@
-import { PLATFORM_FEE, MIN_LISTENER_RATE, DEFAULT_LISTENER_RATE } from '@/lib/constants'
+import { PLATFORM_FEE, MIN_LISTENER_RATE, DEFAULT_LISTENER_RATE, SESSION_DURATIONS } from '@/lib/constants'
 import { formatGBP, formatRate } from '@/lib/money'
 
 // What seekers pay — the pricing RULES (every amount in pence, lib/money.ts).
@@ -12,8 +12,9 @@ export const PRICE_SNAPSHOT = {
   defaultRate: DEFAULT_LISTENER_RATE, // pence/min, a new listener's starting rate
 } as const
 
-export const seeker15 = (ratePerMin: number) => ratePerMin * 15 + PLATFORM_FEE
+// Price of the shortest (8-minute) session at a given text rate.
+export const seekerMin = (ratePerMin: number) => ratePerMin * SESSION_DURATIONS[0] + PLATFORM_FEE
 
 export const PRICE_RANGE_LINE =
   `Each listener sets their own per-minute price (from ${formatRate(PRICE_SNAPSHOT.minRate)}); a paid session adds a flat ${formatGBP(PLATFORM_FEE)} platform fee. ` +
-  `At the standard ${formatRate(PRICE_SNAPSHOT.defaultRate)}, 15 minutes of text costs ${formatGBP(seeker15(PRICE_SNAPSHOT.defaultRate))}.`
+  `At the standard ${formatRate(PRICE_SNAPSHOT.defaultRate)}, an ${SESSION_DURATIONS[0]}-minute text session costs ${formatGBP(seekerMin(PRICE_SNAPSHOT.defaultRate))}.`

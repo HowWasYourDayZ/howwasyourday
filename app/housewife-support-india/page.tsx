@@ -53,7 +53,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How does pricing work?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. Your first 5-minute session is free. There is no subscription &mdash; you pay only for what you use. You can recharge your wallet from your phone using UPI.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. Sessions start at 8 minutes. There is no subscription &mdash; you pay only for what you use. You can recharge your wallet from your phone using UPI.' },
     },
   ],
 }
@@ -182,7 +182,7 @@ export default function HousewifeSupportIndiaPage() {
 
         <div className="cta-card">
           <h2>You are allowed to need someone too.</h2>
-          <p>Anonymous. Private. Your space. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous. Private. Your space. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
 

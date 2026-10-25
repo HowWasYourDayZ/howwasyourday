@@ -5,11 +5,11 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Grief & Loss Peer Support India | How Was Your Day',
-  description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. First 5 minutes free.",
+  description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. Sessions from 8 minutes.",
   alternates: { canonical: 'https://www.howwasyourday.live/support/grief', languages: { 'en-GB': 'https://www.howwasyourday.live/support/grief' } },
   openGraph: {
     title: 'Grief & Loss Peer Support India | How Was Your Day',
-    description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. First 5 minutes free.",
+    description: "Grieving and no one to talk to? Talk privately to a real peer listener in India who has lived through loss — text or voice. Sessions from 8 minutes.",
     url: 'https://www.howwasyourday.live/support/grief',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I lost someone and have no one to talk to \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Grief can feel very lonely, especially when people around you expect you to move on. How Was Your Day connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Your first 5 minutes are free. It is peer support, not grief therapy." } },
+    { '@type': 'Question', name: "I lost someone and have no one to talk to \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Grief can feel very lonely, especially when people around you expect you to move on. How Was Your Day connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Sessions start at 8 minutes. It is peer support, not grief therapy." } },
     {
       '@type': 'Question',
       name: 'What is the difference between normal grief and complicated grief?',
@@ -149,7 +149,7 @@ export default function GriefSupportPage() {
           <p className="tag">Peer Support · Grief & Loss</p>
           <h1>Grief Is Not a Problem to Solve. <em>It Is Love With Nowhere to Go.</em></h1>
           <p className="lead">Losing someone — or something — you loved deeply is one of the most painful human experiences. How Was Your Day connects you with peer listeners who have been through loss themselves and understand what it means to carry grief while continuing to live.</p>
-          <QuickAnswer question={"I lost someone and have no one to talk to \u2014 where can I go?"} answer={"Grief can feel very lonely, especially when people around you expect you to move on. How Was Your Day connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Your first 5 minutes are free. It is peer support, not grief therapy."} />
+          <QuickAnswer question={"I lost someone and have no one to talk to \u2014 where can I go?"} answer={"Grief can feel very lonely, especially when people around you expect you to move on. How Was Your Day connects you with a peer listener in India who has lived through loss, for a private, unhurried text or voice conversation. They listen; they do not rush you. Sessions start at 8 minutes. It is peer support, not grief therapy."} />
         </div>
 
         <div className="section">
@@ -225,7 +225,7 @@ export default function GriefSupportPage() {
           <h2>Your Grief Deserves to Be Witnessed</h2>
           <p>Talk to someone who knows loss from the inside. No pressure, no timeline, no judgment.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who will sit with you — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who will sit with you →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

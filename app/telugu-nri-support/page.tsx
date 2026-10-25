@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Can I talk in Telugu?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several How Was Your Day listeners speak Telugu. When browsing, you can find Telugu-speaking listeners and mention your language preference at the beginning of your session.' } },
   { '@type': 'Question', name: 'Do you have listeners from both Andhra Pradesh and Telangana?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Listeners come from different Telugu-speaking regions and understand the cultural distinctions — whether your family is from Hyderabad, Vijayawada, Guntur, or Warangal. You do not need to explain the context.' } },
   { '@type': 'Question', name: 'I am on an H1B. Do listeners understand visa stress?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. H1B anxiety — the employer dependency, the lottery fear, the decade-long green card wait, the layoff terror — is something Telugu listeners understand well, both from personal knowledge and from the many seekers who have shared this with them.' } },
-  { '@type': 'Question', name: 'How much does it cost and when can I call from the US?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes, with the first 5 minutes free. India listeners are active 6pm–11pm IST. From the US East Coast, that is 8:30am–1:30pm EDT. From the Bay Area, 5:30am–10:30am PDT.' } },
+  { '@type': 'Question', name: 'How much does it cost and when can I call from the US?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. India listeners are active 6pm–11pm IST. From the US East Coast, that is 8:30am–1:30pm EDT. From the Bay Area, 5:30am–10:30am PDT.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Telugu community in New Jersey or Fremont will never know. Sessions are anonymous — phone number and first name only. Nothing is shared beyond the session.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function TeluguNriSupportPage() {
         <div className="hero">
           <p className="badge">Telugu NRI &middot; Silicon Valley &middot; Andhra &amp; Telangana</p>
           <h1>The Bay Area Telugu community is everywhere. <em>You can still feel alone in it.</em></h1>
-          <p className="lead">Telugu NRIs make up one of the largest Indian communities in the US — in Silicon Valley, New Jersey, Seattle, and beyond. You are surrounded by your own people. And yet the specific loneliness of H1B life, dependent visa isolation, family pressure from Hyderabad, and the relentless performance of being &ldquo;doing well&rdquo; — that is a weight nobody talks about. Talk to a Telugu peer listener who understands it. First 5 minutes free.</p>
+          <p className="lead">Telugu NRIs make up one of the largest Indian communities in the US — in Silicon Valley, New Jersey, Seattle, and beyond. You are surrounded by your own people. And yet the specific loneliness of H1B life, dependent visa isolation, family pressure from Hyderabad, and the relentless performance of being &ldquo;doing well&rdquo; — that is a weight nobody talks about. Talk to a Telugu peer listener who understands it. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -96,11 +96,11 @@ export default function TeluguNriSupportPage() {
         <div className="section">
           <h2>Andhra vs. Telangana: The Listeners Understand the Distinction</h2>
           <p>Telugu is one language, but the cultural experience of being from Andhra Pradesh versus Telangana is different — different food, different sensibilities, different regional pride, and sometimes real interpersonal friction even within the Telugu diaspora. How Was Your Day listeners understand this. You do not have to explain that your family being from Vijayawada and your colleague&rsquo;s family being from Warangal is not a trivial distinction.</p>
-          <p>Whatever part of Telugu culture you carry, and whatever part of the NRI experience is weighing on you right now, there is a listener who can hear it. No judgment. No advice. Just a real conversation with someone who gets it. First 5 minutes free.</p>
+          <p>Whatever part of Telugu culture you carry, and whatever part of the NRI experience is weighing on you right now, there is a listener who can hear it. No judgment. No advice. Just a real conversation with someone who gets it. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Telugu manishi ki Telugu listener.</h2><p>Someone who understands your world without the explanation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Telugu manishi ki Telugu listener.</h2><p>Someone who understands your world without the explanation. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

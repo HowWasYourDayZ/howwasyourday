@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Emotional Support for Indians in Kuwait — NRI Peer Support | How Was Your Day',
-    description: 'Indian in Kuwait and feeling the weight of expat life? How Was Your Day peer listeners understand Gulf NRI experience. Anonymous, in your language, first 5 minutes free.',
+    description: 'Indian in Kuwait and feeling the weight of expat life? How Was Your Day peer listeners understand Gulf NRI experience. Anonymous, in your language, sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/kuwait-nri-support',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -34,7 +34,7 @@ const faqSchema = {
       name: 'Is there emotional support available for Indians in Kuwait?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day connects you with screened Indian peer listeners who understand the NRI and Gulf expat experience. Sessions are anonymous, online daily on Indian time, and start with a free 5 minutes. No appointment needed.',
+        text: 'Yes. How Was Your Day connects you with screened Indian peer listeners who understand the NRI and Gulf expat experience. Sessions are anonymous, online daily on Indian time, and start with an 8-minute session. No appointment needed.',
       },
     },
     {
@@ -85,7 +85,7 @@ export default function KuwaitNriSupportPage() {
         </p>
 
         <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 28px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem', marginBottom: 48 }}>
-          Talk to an Indian listener — first 5 min free
+          Talk to an Indian listener — from 8 minutes
         </a>
 
         <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 12 }}>The NRI Experience Kuwait Does Not Talk About</h2>
@@ -106,7 +106,7 @@ export default function KuwaitNriSupportPage() {
 
         <div style={{ background: '#f0f9fb', borderRadius: 16, padding: '28px 24px', marginTop: 40, textAlign: 'center' }}>
           <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>You do not have to hold it alone.</p>
-          <p style={{ color: '#555', marginBottom: 20 }}>First 5 minutes free. Anonymous. In your language.</p>
+          <p style={{ color: '#555', marginBottom: 20 }}>Sessions from 8 minutes. Anonymous. In your language.</p>
           <a href="/browse" style={{ display: 'inline-block', background: '#0F4867', color: '#fff', padding: '14px 32px', borderRadius: 10, textDecoration: 'none', fontWeight: 700, fontSize: '1rem' }}>
             Find a listener now
           </a>

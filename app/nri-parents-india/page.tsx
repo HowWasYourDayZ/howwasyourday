@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'My parent had a health crisis and I could not get there in time. I cannot stop thinking about it. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The experience of a parent\'s health emergency from thousands of miles away — the helplessness, the scrambled flights, the arriving after or not arriving at all — is a specific kind of grief that listeners understand and will hold with you without judgment.' } },
   { '@type': 'Question', name: 'I watch my parents aging on video calls. It is unbearable. Is that something to talk about?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. The video call aging grief — watching your parents get older in a two-inch square, unable to actually be there, noticing the changes that accumulate between visits — is one of the most specific and painful NRI experiences. Many listeners have heard this from hundreds of people and understand it deeply.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Your family in India and your community abroad will never know.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at ₹160 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at ₹160 for 15 minutes. No subscription required.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriParentsIndiaPage() {
         <div className="hero">
           <p className="badge">NRI Guilt &middot; Aging Parents &middot; The Distance</p>
           <h1>Your parents are aging in India. <em>And you cannot fix the distance.</em></h1>
-          <p className="lead">You left for a better life — and you got it. But your parents are in India, and they are getting older, and you are not there. Not for the small daily things, not for the health scares, sometimes not even for the big ones. The guilt of that distance is a real and heavy thing to carry. You are not alone in it. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">You left for a better life — and you got it. But your parents are in India, and they are getting older, and you are not there. Not for the small daily things, not for the health scares, sometimes not even for the big ones. The guilt of that distance is a real and heavy thing to carry. You are not alone in it. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriParentsIndiaPage() {
           <h2>The Video Call Grief</h2>
           <p>There is a specific kind of grief that NRIs carry that does not have a common name — the grief of watching your parents age on a screen. You notice it between visits: the hair that has greyed more, the way your father moves a little more slowly, your mother&rsquo;s hearing that has gotten worse. You see it in two-inch increments on a phone screen, and there is nothing you can do about it except call more often, which helps but does not fix the fundamental thing.</p>
           <p>The video call is both a gift and a reminder. You can see them, which is something. And you can see them, which means you can see exactly what you are missing — the daily presence, the ability to be there when something goes wrong, the possibility of an ordinary afternoon that does not require an 8,000-mile flight.</p>
-          <p>This grief is real. It accumulates between visits. It sits underneath your daily life — in the morning call, in the news about a health issue managed by a sibling or a neighbour because you were not there. How Was Your Day listeners have heard this from hundreds of NRIs and they understand the specific texture of it without needing an explanation. First 5 minutes free.</p>
+          <p>This grief is real. It accumulates between visits. It sits underneath your daily life — in the morning call, in the news about a health issue managed by a sibling or a neighbour because you were not there. How Was Your Day listeners have heard this from hundreds of NRIs and they understand the specific texture of it without needing an explanation. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function NriParentsIndiaPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The distance you cannot fix deserves to be spoken.</h2><p>Real peer listener. No platitudes. Just genuine hearing. First 5 minutes free. Sessions from ₹160.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The distance you cannot fix deserves to be spoken.</h2><p>Real peer listener. No platitudes. Just genuine hearing. Sessions from 8 minutes. Sessions from £4.20.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-burnout">NRI burnout &rarr;</a>

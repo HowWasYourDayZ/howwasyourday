@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much does it cost to talk to a real person online in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session. New users get a free 5-minute trial. It is significantly more affordable than therapy and no appointment — no insurance, no waitlist, no prescription needed.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. Sessions start at 8 minutes. It is significantly more affordable than therapy and no appointment — no insurance, no waitlist, no prescription needed.',
       },
     },
   ],
@@ -252,7 +252,7 @@ export default function ChatWithRealPersonPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>Start Talking to a Real Person →</h2>
-          <p>Your first 5 minutes are free. No credit card, no commitment. Just a real human, ready to listen — right now.</p>
+          <p>Sessions start at 8 minutes. No credit card, no commitment. Just a real human, ready to listen — right now.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Find a Real Listener</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now</button></a>

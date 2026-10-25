@@ -222,7 +222,7 @@ export default function StudentStressSupportPage() {
           <h2>You Are More Than Your Rank</h2>
           <p>Talk to someone who has been through the pressure of Indian student life and made it through. No appointment needed.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who gets student life — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone who gets student life →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

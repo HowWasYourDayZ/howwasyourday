@@ -251,9 +251,9 @@ export default function FeelingEmptyPage() {
 
         <div className="cta-card">
           <h2>Ready to Talk About What You Are Feeling?</h2>
-          <p>A peer listener who has personally navigated emptiness may be online right now. No appointments, no waitlists. Start with a free trial session.</p>
+          <p>A peer listener who has personally navigated emptiness may be online right now. No appointments, no waitlists. Start with an 8-minute session.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">You don't have to feel this alone — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">You don't have to feel this alone →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

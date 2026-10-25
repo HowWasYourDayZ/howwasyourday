@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Is How Was Your Day a replacement for couples therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day is peer support, not professional therapy. But for many people, it is a first safe step — a place to untangle your thoughts before (or instead of) more formal counseling. Sessions start at $10 for 15 minutes, with your first 5 minutes free.',
+        text: 'How Was Your Day is peer support, not professional therapy. But for many people, it is a first safe step — a place to untangle your thoughts before (or instead of) more formal counseling. Sessions start at $10 for 15 minutes, with your sessions from 8 minutes.',
       },
     },
     {
@@ -156,7 +156,7 @@ export default function UsaRelationshipAdvicePage() {
           adjustments, family pressure from 8,000 miles away — it is a lot to carry, often in silence.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>What relationship strain looks like for Indians in the USA</h2>
@@ -223,7 +223,7 @@ export default function UsaRelationshipAdvicePage() {
           <div className="faq-item">
             <h3>Is How Was Your Day a replacement for couples therapy?</h3>
             <p>How Was Your Day is peer support, not professional therapy. But for many people it is a first safe step —
-              a place to untangle your thoughts. Sessions start at $10 for 15 minutes, first 5 minutes free.</p>
+              a place to untangle your thoughts. Sessions start at $10 for 15 minutes, sessions from 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk about my long-distance relationship with someone in India?</h3>

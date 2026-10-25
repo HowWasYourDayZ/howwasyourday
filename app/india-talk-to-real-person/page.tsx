@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to a Real Person in India — Not an AI Chatbot | How Was Your Day',
-  description: 'How Was Your Day connects you with real Indian peer listeners — humans with genuine lived experience of Indian life, loneliness, family pressure, and relationship stress. First 5 minutes free.',
+  description: 'How Was Your Day connects you with real Indian peer listeners — humans with genuine lived experience of Indian life, loneliness, family pressure, and relationship stress. Sessions from 8 minutes.',
   keywords: [
     'real person to talk to in India', 'koi baat sunne wala', 'loneliness help India real person',
     'talk to someone in India', 'human listener India', 'not AI chatbot India',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Talk to a Real Person in India — Not an AI Chatbot | How Was Your Day',
-    description: 'Real Indian peer listeners with no appointment — humans who understand Indian life, loneliness, family pressure, and relationship stress. First 5 minutes free.',
+    description: 'Real Indian peer listeners with no appointment — humans who understand Indian life, loneliness, family pressure, and relationship stress. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/india-talk-to-real-person',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -44,7 +44,7 @@ const serviceSchema = {
     '@type': 'Offer',
     price: '20',
     priceCurrency: 'INR',
-    description: 'Per minute, first 5 minutes free',
+    description: 'Per minute, from 8 minutes',
   },
 }
 
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'Where can I find a real person to talk to in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. First 5 minutes free.',
+        text: 'How Was Your Day is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. Sessions from 8 minutes.',
       },
     },
     {
@@ -90,7 +90,7 @@ const faqSchema = {
       name: 'Is How Was Your Day affordable in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at ₹160 for 15 minutes with the first 5 minutes free. Prices depend on the listener and are shown before you start.',
+        text: 'Sessions start at ₹160 for 15 minutes. Prices depend on the listener and are shown before you start.',
       },
     },
     {
@@ -205,7 +205,7 @@ export default function IndiaTalkToRealPersonPage() {
           understands what it actually feels like to live here.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to a real person now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to a real person now →</a>
 
         <GeoQuickAnswer path="/india-talk-to-real-person" />
         <div className="card">
@@ -286,7 +286,7 @@ export default function IndiaTalkToRealPersonPage() {
         <div className="card">
           <h2>How much does it cost?</h2>
           <p>
-            Sessions start at ₹160 for 15 minutes. Your first 5 minutes are completely free — no payment
+            Sessions start at ₹160 for 15 minutes. Sessions start at 8 minutes — no payment
             needed to start. With a listener charging ₹10/min, 15 minutes is ₹160, 30 minutes ₹310 and
             45 minutes ₹460; each listener's price is shown before you start.
           </p>
@@ -297,7 +297,7 @@ export default function IndiaTalkToRealPersonPage() {
 
         <div className="cta">
           <h2>A real Indian human is ready to listen right now</h2>
-          <p>Private, affordable, no appointment. First 5 minutes free.</p>
+          <p>Private, affordable, no appointment. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-white">Browse listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -306,7 +306,7 @@ export default function IndiaTalkToRealPersonPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Where can I find a real person to talk to in India?</h3>
-            <p>How Was Your Day is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. First 5 minutes free.</p>
+            <p>How Was Your Day is an Indian peer support platform where you can talk to real human listeners — people with genuine lived experience of Indian life, urban loneliness, family pressure, and relationship stress. Sessions from 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is there a human alternative to AI chatbots in India for emotional support?</h3>
@@ -318,7 +318,7 @@ export default function IndiaTalkToRealPersonPage() {
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day affordable in India?</h3>
-            <p>Sessions start at ₹160 for 15 minutes with the first 5 minutes free. Prices depend on the listener and are shown before you start.</p>
+            <p>Sessions start at ₹160 for 15 minutes. Prices depend on the listener and are shown before you start.</p>
           </div>
           <div className="faq-item">
             <h3>What kind of problems can I talk about on How Was Your Day in India?</h3>

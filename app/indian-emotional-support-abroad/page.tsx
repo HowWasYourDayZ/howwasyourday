@@ -4,7 +4,7 @@ import ReadyToTalkLanding, { type ReadyToTalkLandingData } from '@/app/component
 const data: ReadyToTalkLandingData = {
   "canonical": "/indian-emotional-support-abroad",
   "title": "Indian Emotional Support Abroad | Talk to Someone Who Gets It | How Was Your Day",
-  "description": "Indian or South Asian living abroad and need someone to talk to? How Was Your Day offers private peer support by text or voice, with a free 5-minute introduction.",
+  "description": "Indian or South Asian living abroad and need someone to talk to? How Was Your Day offers private peer support by text or voice, in sessions from 8 minutes.",
   "keywords": [
     "indian emotional support abroad",
     "Indian Emotional Support Abroad",
@@ -31,7 +31,7 @@ const data: ReadyToTalkLandingData = {
   "why": [
     "How Was Your Day is built around one-to-one peer support. It is not positioned as therapy, counselling or an AI companion.",
     "You choose a listener rather than receiving a generic response. The goal is a human conversation where you can talk, vent, reflect or simply not feel alone for a while.",
-    "You can start without committing to a long programme: one free 5-minute introduction is available per account, followed by paid time only if you choose to continue."
+    "You can start without committing to a long programme: sessions start at 8 minutes, followed by paid time only if you choose to continue."
   ],
   "fitTitle": "Indians abroad may look for a conversation about…",
   "fit": [
@@ -53,7 +53,7 @@ const data: ReadyToTalkLandingData = {
     },
     {
       "q": "Can I try How Was Your Day before paying?",
-      "a": "Yes. New seekers get one free 5-minute introductory session (one per account)."
+      "a": "Yes. New seekers can start with an 8-minute session."
     },
     {
       "q": "When are listeners online if I live abroad?",

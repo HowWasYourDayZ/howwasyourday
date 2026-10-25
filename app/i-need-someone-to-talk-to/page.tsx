@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'I Need Someone to Talk To Right Now | How Was Your Day India',
-  description: "Need someone to talk to? How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. One introductory session up to 5 minutes is free per account. Availability varies; an immediate match is not guaranteed. Peer support, not therapy.",
+  description: "Need someone to talk to? How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. Every session is paid, from 8 minutes. Availability varies; an immediate match is not guaranteed. Peer support, not therapy.",
   keywords: [
     'i need someone to talk to right now', 'need someone to talk to India',
     'someone to talk to online India', 'I want to talk to someone India',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.howwasyourday.live/i-need-someone-to-talk-to', languages: { 'en-GB': 'https://www.howwasyourday.live/i-need-someone-to-talk-to' } },
   openGraph: {
     title: 'I Need Someone to Talk To Right Now | How Was Your Day India',
-    description: 'Need someone to talk to? Request a one-to-one conversation with a screened peer listener in India by text or voice. One introductory session up to 5 minutes is free per account; availability varies. Not therapy or crisis care.',
+    description: 'Need someone to talk to? Request a one-to-one conversation with a screened peer listener in India by text or voice. Every session is paid, from 8 minutes; availability varies. Not therapy or crisis care.',
     url: 'https://www.howwasyourday.live/i-need-someone-to-talk-to',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -32,11 +32,11 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I need someone to talk to right now \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. One introductory session up to 5 minutes is free per account; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, text SHOUT to 85258 first." } },
+    { '@type': 'Question', name: "I need someone to talk to right now \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. Every session is paid, from 8 minutes; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, text SHOUT to 85258 first." } },
     {
       '@type': 'Question',
       name: 'How do I find someone to talk to right now in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Open How Was Your Day to see listener profiles and current availability, or use Talk now to request a conversation. No appointment is needed; a session starts when a listener accepts, and immediate availability is not guaranteed. One introductory session up to 5 minutes is free per account.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Open How Was Your Day to see listener profiles and current availability, or use Talk now to request a conversation. No appointment is needed; a session starts when a listener accepts, and immediate availability is not guaranteed. Every session is paid, from 8 minutes.' },
     },
     {
       '@type': 'Question',
@@ -56,7 +56,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost to talk to someone on How Was Your Day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual prices vary by listener and mode and are shown before booking. Availability depends on which listeners are online.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Every session is paid, from 8 minutes. 8-minute text sessions start at £4.20 with a listener charging 40p per minute; actual prices vary by listener and mode and are shown before booking. Availability depends on which listeners are online.' },
     },
     {
       '@type': 'Question',
@@ -148,7 +148,7 @@ export default function INeedSomeoneToTalkToPage() {
           <p className="badge">Real People · Text or Voice · Peer Support</p>
           <h1>Someone Is Here to <em>Listen</em> — Right Now</h1>
           <p className="lead">You do not need a diagnosis or a perfectly formed problem to ask for a conversation. How Was Your Day lets adults request a one-to-one text or voice chat with a screened peer listener. It is non-clinical support; timing depends on listener availability and acceptance.</p>
-          <QuickAnswer question={"I need someone to talk to right now \u2014 where can I go?"} answer={"Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. One introductory session up to 5 minutes is free per account; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, text SHOUT to 85258 first."} />
+          <QuickAnswer question={"I need someone to talk to right now \u2014 where can I go?"} answer={"Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. Every session is paid, from 8 minutes; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, text SHOUT to 85258 first."} />
           <a href="/talk?src=seo" className="cta-hero">Talk to someone →</a>
         </div>
 
@@ -163,7 +163,7 @@ export default function INeedSomeoneToTalkToPage() {
             <li>A situation you keep turning over but have no one to process it with</li>
             <li>The feeling of not being okay without a clear reason why</li>
             <li>Loneliness, anxiety, grief, a difficult relationship, work pressure, or just a bad stretch</li>
-            <li>Nothing specific — just the need to not be alone with your thoughts for 15 minutes</li>
+            <li>Nothing specific — just the need to not be alone with your thoughts for 16 minutes</li>
           </ul>
         </div>
 
@@ -181,7 +181,7 @@ export default function INeedSomeoneToTalkToPage() {
               <div className="step-num">2</div>
               <div className="step-body">
                 <h3>Start a session — no appointment needed</h3>
-                <p>Send a session request to a listener. One introductory session up to 5 minutes is free per account; paid prices are shown before booking and vary by listener and mode. A session begins when a listener accepts.</p>
+                <p>Send a session request to a listener. Every session is paid, from 8 minutes; paid prices are shown before booking and vary by listener and mode. A session begins when a listener accepts.</p>
               </div>
             </div>
             <div className="step">

@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Want to Talk About Your Problems Online? How Was Your Day India',
-  description: 'Find someone to talk to about your problems — a real peer listener who listens without judgment. Anonymous. First 5 min free.',
+  description: 'Find someone to talk to about your problems — a real peer listener who listens without judgment. Anonymous. From 8 minutes.',
   keywords: [
     'talk about my problems online', 'someone to talk to about my problems',
     'talk to someone about my problems india', 'talk about problems online India',
@@ -48,7 +48,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost to talk online?',
-      acceptedAnswer: { '@type': 'Answer', text: 'New users get a free 5-minute trial — no payment needed to start. Paid sessions begin at £7 for 15 minutes. That is significantly less than a therapy appointment, with no waitlist, no appointment, and no insurance required. You can talk today.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes — no payment needed to start. Paid sessions begin at £4.20 for 8 minutes. That is significantly less than a therapy appointment, with no waitlist, no appointment, and no insurance required. You can talk today.' },
     },
   ],
 }
@@ -181,7 +181,7 @@ export default function TalkAboutMyProblemsOnlinePage() {
               <div className="step-num">2</div>
               <div className="step-body">
                 <h3>Start talking</h3>
-                <p>No appointment, no waitlist. New users get a free 5-minute trial. Paid sessions start at £7 for 15 minutes. Your listener follows your lead.</p>
+                <p>No appointment, no waitlist. Sessions start at 8 minutes. Paid sessions start at £4.20 for 8 minutes. Your listener follows your lead.</p>
               </div>
             </div>
             <div className="step">
@@ -216,7 +216,7 @@ export default function TalkAboutMyProblemsOnlinePage() {
 
         <div className="cta-card">
           <h2>Say it out loud — someone is listening</h2>
-          <p>Whatever you are carrying right now, you do not have to carry it alone. Find a real listener who is online now. First 5 minutes free.</p>
+          <p>Whatever you are carrying right now, you do not have to carry it alone. Find a real listener who is online now. Sessions from 8 minutes.</p>
           <div className="cta-card-row">
             <a href="/talk?src=seo" className="btn-cta">Find someone to talk to →</a>
             <a href="/browse" className="btn-cta-ghost">Browse listeners →</a>

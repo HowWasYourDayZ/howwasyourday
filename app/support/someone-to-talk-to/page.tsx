@@ -4,11 +4,11 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Someone to Talk To in India | Peer Support & Pricing | How Was Your Day',
-  description: 'Talk one-to-one with a screened peer listener about loneliness, work stress or relationship difficulties. One free 5-minute introduction per account; example: 15 minutes at 40p/min costs £7 including the £1 platform fee.',
+  description: 'Talk one-to-one with a screened peer listener about loneliness, work stress or relationship difficulties. Sessions from 8 minutes; example: 8 minutes at 40p/min costs £4.20 including the £1 platform fee.',
   alternates: { canonical: 'https://www.howwasyourday.live/support/someone-to-talk-to', languages: { 'en-GB': 'https://www.howwasyourday.live/support/someone-to-talk-to' } },
   openGraph: {
     title: 'Someone to Talk To in India | How Was Your Day Peer Listeners',
-    description: 'Browse real peer-listener profiles and availability. One free 5-minute introduction per account; clear pay-per-session pricing, with no subscription.',
+    description: 'Browse real peer-listener profiles and availability. Sessions from 8 minutes; clear pay-per-session pricing, with no subscription.',
     url: 'https://www.howwasyourday.live/support/someone-to-talk-to',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How quickly can I talk to someone on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sign in with phone OTP, browse the live listener directory and send a request to an available listener. There is no advance appointment, but an immediate start depends on who is online and accepts. One 5-minute introductory session is free per account. Paid India sessions are priced at the selected listener rate × minutes plus a £1 platform fee; a 15-minute session at 40p/min costs £7. Exact prices are shown before you begin.',
+        text: 'Sign in with phone OTP, browse the live listener directory and send a request to an available listener. There is no advance appointment, but an immediate start depends on who is online and accepts. Every session is paid, from 8 minutes. Paid India sessions are priced at the selected listener rate × minutes plus a £1 platform fee; an 8-minute session at 40p/min costs £4.20. Exact prices are shown before you begin.',
       },
     },
   ],
@@ -210,7 +210,7 @@ export default function SomeoneToTalkToPage() {
           <p>A therapist is a licensed professional who works within a clinical framework — diagnosing conditions, applying evidence-based interventions, and tracking therapeutic progress over time. That structure is exactly right for people who need clinical care. But many people do not need treatment. They need to be heard by someone who has been through something similar and come out the other side.</p>
 
           <h3>Accessibility and Affordability</h3>
-          <p>Clinical therapy and peer support are different services, so price is not a like-for-like comparison. On How Was Your Day, one 5-minute introductory session is free per account. In India, a paid session costs the selected listener&apos;s per-minute rate multiplied by the session length, plus a flat £1 platform fee. For example, 15 minutes at 40p/min costs £7. Check <a href="/pricing" style={{color:'var(--teal)',fontWeight:700}}>current pricing</a>; the exact price is displayed before you start.</p>
+          <p>Clinical therapy and peer support are different services, so price is not a like-for-like comparison. On How Was Your Day, every session is paid, from 8 minutes. In India, a paid session costs the selected listener&apos;s per-minute rate multiplied by the session length, plus a flat £1 platform fee. For example, 8 minutes at 40p/min costs £4.20. Check <a href="/pricing" style={{color:'var(--teal)',fontWeight:700}}>current pricing</a>; the exact price is displayed before you start.</p>
 
           <h3>Complementary, Not Competing</h3>
           <p>Many people use peer support alongside therapy — as a way to process between clinical sessions, access support when a therapist is not available, or take a meaningful first step before they are ready for formal treatment. How Was Your Day listeners are screened and expected to recognise when someone might benefit from professional care and will gently say so when that appears to be the case.</p>
@@ -234,7 +234,7 @@ export default function SomeoneToTalkToPage() {
         <div className="section">
           <h2>Browse real peer listeners</h2>
           <p>Use the live directory to review listener introductions, lived-experience topics, languages, ratings and current availability. Choose based on the details shown in each real profile and whether the listener is currently available.</p>
-          <p>One 5-minute introductory session is free per account. In India, paid pricing depends on the listener&apos;s rate and session length, plus a flat £1 platform fee. For example, 15 minutes at 40p/min costs £7.</p>
+          <p>Every session is paid, from 8 minutes. Paid pricing depends on the listener&apos;s rate and session length, plus a flat £1 platform fee. For example, 8 minutes at 40p/min costs £4.20.</p>
           <div className="related" style={{marginTop:16}}>
             <a href="/browse" className="related-link">Browse real listeners →</a>
             <a href="/pricing" className="related-link">See all prices →</a>
@@ -247,7 +247,7 @@ export default function SomeoneToTalkToPage() {
           <h2>Find Someone Who Is Available</h2>
           <p>Browse actual listener profiles and see who is online. Availability can change throughout the day; your session starts when a listener accepts your request.</p>
           <div className="cta-btns">
-            <a href="/browse"><button className="btn-primary">Browse listeners — first 5 minutes free →</button></a>
+            <a href="/browse"><button className="btn-primary">Browse listeners →</button></a>
             <a href="/pricing"><button className="btn-secondary">See session prices</button></a>
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function SomeoneToTalkToPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How quickly can I talk to someone on How Was Your Day?</div>
-            <div className="faq-a">Sign in with phone OTP, browse the live listener directory and send a request to an available listener. There is no advance appointment, but an immediate start depends on who is online and accepts. One 5-minute introductory session is free per account. Paid prices are shown before you start.</div>
+            <div className="faq-a">Sign in with phone OTP, browse the live listener directory and send a request to an available listener. There is no advance appointment, but an immediate start depends on who is online and accepts. Every session is paid, from 8 minutes. Paid prices are shown before you start.</div>
           </div>
         </div>
 

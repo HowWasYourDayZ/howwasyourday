@@ -4,17 +4,17 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Emotional Support for Indians in Vancouver | Surrey, Burnaby | How Was Your Day',
-  description: 'Surrey, Burnaby, Abbotsford — BC has Canada\'s second-largest South Asian community. Beautiful province. Hard to talk about what\'s actually going on. First 5 min free.',
+  description: 'Surrey, Burnaby, Abbotsford — BC has Canada\'s second-largest South Asian community. Beautiful province. Hard to talk about what\'s actually going on. From 8 minutes.',
   keywords: ['indians in vancouver', 'surrey bc indian support', 'burnaby indian community', 'abbotsford indian', 'vancouver indian mental health', 'desi support bc', 'punjabi support surrey'],
   alternates: { canonical: 'https://www.howwasyourday.live/indians-in-vancouver' },
-  openGraph: { title: 'Emotional Support for Indians in Vancouver | Surrey, Burnaby | How Was Your Day', description: 'Surrey, Burnaby, Abbotsford — BC has Canada\'s second-largest South Asian community. Beautiful province. Hard to talk about what\'s actually going on. First 5 min free.', url: 'https://www.howwasyourday.live/indians-in-vancouver', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Emotional Support for Indians in Vancouver | Surrey, Burnaby | How Was Your Day', description: 'Surrey, Burnaby, Abbotsford — BC has Canada\'s second-largest South Asian community. Beautiful province. Hard to talk about what\'s actually going on. From 8 minutes.', url: 'https://www.howwasyourday.live/indians-in-vancouver', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Do listeners understand the Surrey and BC Punjabi community?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the Punjabi diaspora experience — including the specific BC Punjabi community, the pressure of the community in Surrey, and the identity weight of immigrant life in Canada. No explanation needed.' } },
   { '@type': 'Question', name: 'When can I connect from Vancouver?', acceptedAnswer: { '@type': 'Answer', text: 'Vancouver (PST/PDT) is 13.5 hours behind IST. 8am Vancouver = 9:30pm India. Early mornings in Vancouver are late Indian evenings — still workable. 6am Vancouver = 7:30pm India, a stronger window.' } },
   { '@type': 'Question', name: 'Is this private from the Surrey community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the Surrey or BC Indian community. Nothing is shared.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInVancouverPage() {
         <div className="hero">
           <p className="badge">Indians in Vancouver &middot; Surrey &middot; BC Punjabi</p>
           <h1>Surrey. Burnaby. Beautiful BC. <em>And the loneliness that the mountains don&rsquo;t fix.</em></h1>
-          <p className="lead">Surrey has one of the most dense Punjabi communities in the world outside of Punjab. And still — the isolation of immigrant life, the rain, the pressure to send money back, the parents who sacrificed, the identity that doesn&rsquo;t fit neatly in Canada or in India. Talk to a real peer listener. First 5 minutes free.</p>
+          <p className="lead">Surrey has one of the most dense Punjabi communities in the world outside of Punjab. And still — the isolation of immigrant life, the rain, the pressure to send money back, the parents who sacrificed, the identity that doesn&rsquo;t fit neatly in Canada or in India. Talk to a real peer listener. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,7 +83,7 @@ export default function IndiansInVancouverPage() {
           <h2>Surrey, Burnaby, Abbotsford: BC&rsquo;s Punjabi Heartland</h2>
           <p>British Columbia has one of the world&rsquo;s most remarkable concentrations of Punjabi Canadians — Surrey&rsquo;s Punjabi community is extraordinary in its scale and density. The gurdwaras of Surrey and Abbotsford are among the largest outside of India. The Punjabi Market on Main Street in Vancouver is one of the most famous South Asian commercial corridors in North America. Burnaby, Langley, and Delta all have significant Indian communities.</p>
           <p>The BC Indian community — predominantly Punjabi, with significant Gujarati and South Indian communities — is one that has built real institutions here. But size and institutions don&rsquo;t dissolve the specific weight of immigrant life. The community pressure in Surrey can be as intense as anywhere: the family hierarchy, the expectations around marriage and career, the gossip network that makes it difficult to say anything true within the community.</p>
-          <p>How Was Your Day is a space completely outside the Surrey and BC community networks — where a real Indian peer listener in India can hear you without it going anywhere. First 5 minutes free.</p>
+          <p>How Was Your Day is a space completely outside the Surrey and BC community networks — where a real Indian peer listener in India can hear you without it going anywhere. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -93,7 +93,7 @@ export default function IndiansInVancouverPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Beautiful BC. Real support behind it.</h2><p>Real Indian peer listener. Understands BC Punjabi and Indian community life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Beautiful BC. Real support behind it.</h2><p>Real Indian peer listener. Understands BC Punjabi and Indian community life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/punjabi-support-canada">Punjabi support Canada &rarr;</a>
           <a href="/indians-in-toronto">Indians in Toronto &rarr;</a>

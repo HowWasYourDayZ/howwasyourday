@@ -5,12 +5,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to Someone Right Now — Anonymous, no appointment | How Was Your Day India',
-  description: "Talk to someone right now — a real, screened peer listener in India, online now, by text or voice. No appointment. First 5 minutes free.",
+  description: "Talk to someone right now — a real, screened peer listener in India, online now, by text or voice. No appointment. Sessions from 8 minutes.",
   alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-right-now', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-to-someone-right-now' } },
   keywords: 'talk to someone right now, need to talk to someone now India, someone to talk to immediately, urgent emotional support India, talk to someone online now, anonymous listener India',
   openGraph: {
     title: 'Talk to Someone Right Now — Anonymous, no appointment | How Was Your Day India',
-    description: "Talk to someone right now — a real, screened peer listener in India, online now, by text or voice. No appointment. First 5 minutes free.",
+    description: "Talk to someone right now — a real, screened peer listener in India, online now, by text or voice. No appointment. Sessions from 8 minutes.",
     url: 'https://www.howwasyourday.live/talk-to-someone-right-now',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -21,7 +21,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "Can I talk to someone right now, without an appointment?", acceptedAnswer: { '@type': 'Answer', text: "Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, text SHOUT to 85258 first." } },
+    { '@type': 'Question', name: "Can I talk to someone right now, without an appointment?", acceptedAnswer: { '@type': 'Answer', text: "Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Sessions start at 8 minutes. If you are in danger, text SHOUT to 85258 first." } },
     {
       '@type': 'Question',
       name: 'How fast can I actually talk to someone?',
@@ -43,7 +43,7 @@ const faqSchema = {
       name: 'How does pricing work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at £7 for 15 minutes, and a short trial session is available for new users.',
+        text: 'Sessions start at £4.20 for 8 minutes, and sessions start at 8 minutes.',
       },
     },
     {
@@ -150,7 +150,7 @@ export default function TalkToSomeoneRightNowPage() {
           <p className="tag">No Appointment · Private</p>
           <h1>Someone Is Ready to <em>Listen</em> — Right Now</h1>
           <p className="lead">You do not need an appointment, a referral, or a reason good enough. Open the listener directory, see who is online, and start talking when a listener accepts.</p>
-          <QuickAnswer question={"Can I talk to someone right now, without an appointment?"} answer={"Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, text SHOUT to 85258 first."} />
+          <QuickAnswer question={"Can I talk to someone right now, without an appointment?"} answer={"Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Sessions start at 8 minutes. If you are in danger, text SHOUT to 85258 first."} />
         </div>
 
         {/* How it works */}
@@ -258,7 +258,7 @@ export default function TalkToSomeoneRightNowPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does pricing work?</div>
-            <div className="faq-a">Sessions start at £7 for 15 minutes, and a short trial session is available for new users.</div>
+            <div className="faq-a">Sessions start at £4.20 for 8 minutes, and sessions start at 8 minutes.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I don&apos;t know what to say?</div>

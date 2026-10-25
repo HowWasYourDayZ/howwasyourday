@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Is How Was Your Day a real person or an AI?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day connects you with real human peer listeners — not AI, not chatbots, not automated responses. Every listener is a real person who has applied, been screened and been approved. They are online right now, available to talk.' } },
   { '@type': 'Question', name: 'Why is talking to a human different from talking to an AI?', acceptedAnswer: { '@type': 'Answer', text: 'An AI generates what a person who understood you would say. A real human who has lived through something similar actually knows what it feels like. The difference is not subtle — AI and human conversations serve different needs; How Was Your Day is designed for people who specifically want another human being to listen.' } },
-  { '@type': 'Question', name: 'Do I need an appointment?', acceptedAnswer: { '@type': 'Answer', text: 'No appointment needed. Browse listeners who are currently online and start a session immediately. The first 5 minutes are free.' } },
+  { '@type': 'Question', name: 'Do I need an appointment?', acceptedAnswer: { '@type': 'Answer', text: 'No appointment needed. Browse listeners who are currently online and start a session immediately. Sessions start at 8 minutes.' } },
   { '@type': 'Question', name: 'What is this different from therapy?', acceptedAnswer: { '@type': 'Answer', text: 'Therapy involves a licensed professional working with you on diagnosis and treatment. How Was Your Day is peer support — real people with lived experience who will listen without judgment. It is more informal, more accessible, and needs no booking.' } },
   { '@type': 'Question', name: 'Is it anonymous?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You sign up with a phone number and first name only. No last name, no photo, no social login. Sessions are private and listeners agree to keep what you share confidential.' } },
 ] }
@@ -82,7 +82,7 @@ export default function TalkToSomeoneOnlinePage() {
         <div className="hero">
           <p className="badge">Real Person &middot; Not AI &middot; No Appointment &middot; Available Now</p>
           <h1>A real person. Right now. <em>No appointment.</em></h1>
-          <p className="lead">Not an AI. Not a bot. Not a therapist with a two-week waitlist. Just a real human being who will listen — right now, no form, no assessment. The first 5 minutes are free.</p>
+          <p className="lead">Not an AI. Not a bot. Not a therapist with a two-week waitlist. Just a real human being who will listen — right now, no form, no assessment. Sessions start at 8 minutes.</p>
           <a href="/browse" className="cta-hero">Find a real person to talk to &rarr;</a>
         </div>
         <div className="section">
@@ -109,7 +109,7 @@ export default function TalkToSomeoneOnlinePage() {
                 <li>Real human with lived experience</li>
                 <li>Understands from the inside</li>
                 <li>No appointment</li>
-                <li>First 5 minutes free</li>
+                <li>Sessions from 8 minutes</li>
               </ul>
             </div>
             <div className="compare-col">
@@ -127,10 +127,10 @@ export default function TalkToSomeoneOnlinePage() {
         <div className="section">
           <h2>How It Works</h2>
           <p>Browse listeners who are currently online. Each listener profile shows a little about their background and what they have been through. Choose someone whose experience resonates with yours. Start a session &mdash; text-based, anonymous, no signup beyond a phone number and first name.</p>
-          <p>Your first 5-minute session is free. If it helps, you continue with a paid session. If not, you stop and pay nothing. No subscription, no commitment, no waitlist.</p>
+          <p>Sessions start at 8 minutes. If it helps, you continue with a paid session. If not, you stop and pay nothing. No subscription, no commitment, no waitlist.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Real person. Right now.</h2><p>Not AI. Not a bot. A real human being who will actually listen. First 5 minutes free.</p><a href="/browse" className="btn-cta">Talk to someone now &rarr;</a></div>
+        <div className="cta-card"><h2>Real person. Right now.</h2><p>Not AI. Not a bot. A real human being who will actually listen. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Talk to someone now &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/online-emotional-support">Online emotional support &rarr;</a>
           <a href="/someone-to-talk-to">Need someone to talk to &rarr;</a>

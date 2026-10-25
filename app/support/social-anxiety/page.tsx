@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.',
       },
     },
   ],
@@ -230,7 +230,7 @@ export default function SocialAnxietySupportPage() {
           <h2>Ready to Feel More at Ease?</h2>
           <p>Talk to a peer listener who truly understands social anxiety. No appointments, no waitlists.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">No judgment, no pressure — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">No judgment, no pressure →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
@@ -256,7 +256,7 @@ export default function SocialAnxietySupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.</div>
+            <div className="faq-a">How Was Your Day starts at £4.20 for an 8-minute session. It is significantly more affordable than therapy and available any time, including right before a high-anxiety moment like an interview or a wedding.</div>
           </div>
         </div>
 

@@ -31,7 +31,7 @@ export const COUNTRY_SEO: CountrySeoData[] = [
     howItWorks: ['Browse available peer listeners and read their lived-experience profiles.', 'Start your first 5-minute session free so you can see whether the connection feels right.', 'Continue with a paid session only if you want to. Sessions are time-based and the listener rate is shown before you start.', 'Use text when privacy matters or voice when you want the warmth of a real conversation.'],
     faqs: [
       { q: 'What is How Was Your Day in India?', a: 'How Was Your Day is a peer-support platform where people can talk one-to-one with real human listeners. It is for everyday emotional support and human connection, not therapy or clinical care.' },
-      { q: 'Is the first session free?', a: 'New seekers get one free 5-minute introductory session. It is designed to help you find out whether a listener feels like the right fit.' },
+      { q: 'Is the first session free?', a: 'New seekers can start with an 8-minute session. It is designed to help you find out whether a listener feels like the right fit.' },
       { q: 'What can I talk about?', a: 'Anything within the scope of peer support: loneliness, relationships, work stress, grief, family pressure, overthinking, or simply needing someone to hear you out.' },
     ],
         searchTerms: ['peer support India', 'someone to talk to India', 'talk to someone online India', 'emotional support India', 'real person to talk to India', 'paid peer support India', 'affordable peer support India', 'online emotional support session India', 'talk to a real person online India'],
@@ -39,7 +39,7 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'usa', country: 'United States', regionCode: 'US', audience: 'Indian and South Asian people living in the United States',
     title: 'Peer Support for Indians in the USA — Talk to Someone | How Was Your Day',
-    description: 'Living in the USA and need someone who understands the Indian or South Asian context? How Was Your Day offers private one-to-one peer support with real human listeners. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Living in the USA and need someone who understands the Indian or South Asian context? How Was Your Day offers private one-to-one peer support with real human listeners. Sessions from 8 minutes.',
     eyebrow: 'Peer support · USA',
     intro: 'Living far from home can make some conversations surprisingly difficult. How Was Your Day gives Indians and South Asians in the USA a private place to talk to a real person — without turning every difficult day into a therapy appointment.',
     localAngle: 'Talk about homesickness, family expectations from a distance, relationship pressure, work stress, cultural differences, visa uncertainty or simply the feeling that you cannot explain your experience to people around you. You can choose a listener based on language, topic and lived experience.',
@@ -55,12 +55,12 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'uk', country: 'United Kingdom', regionCode: 'GB', audience: 'Indian and South Asian people living in the UK',
     title: 'Peer Support for Indians in the UK — Someone to Talk To | How Was Your Day',
-    description: 'Need someone to talk to in the UK who understands Indian or South Asian life? How Was Your Day connects you with real peer listeners for private conversations. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Need someone to talk to in the UK who understands Indian or South Asian life? How Was Your Day connects you with real peer listeners for private conversations. Sessions from 8 minutes.',
     eyebrow: 'Peer support · UK',
     intro: 'There are conversations that are easier with someone who understands where you come from. How Was Your Day gives Indians and South Asians in the UK a private way to talk with a real peer listener about life, relationships, family, work and loneliness.',
     localAngle: 'Whether you moved to the UK recently, grew up between cultures, or have lived there for years, you can choose a listener around the lived experience you want to discuss. The goal is simple: a real human conversation without judgement or unsolicited advice.',
     situations: ['Missing family, festivals and life in India', 'Work and relocation stress', 'Marriage and family expectations across cultures', 'Loneliness after moving cities or countries', 'Relationship problems you do not want to discuss with people you know', 'Feeling caught between Indian and British expectations'],
-    howItWorks: ['Read listener profiles and choose someone whose lived experience fits your situation.', 'Start with the free 5-minute introductory session.', 'Use text or voice depending on your privacy and preference.', 'Continue only when you feel the conversation is worth continuing.'],
+    howItWorks: ['Read listener profiles and choose someone whose lived experience fits your situation.', 'Start with an 8-minute session.', 'Use text or voice depending on your privacy and preference.', 'Continue only when you feel the conversation is worth continuing.'],
     faqs: [
       { q: 'Who is How Was Your Day for in the UK?', a: 'How Was Your Day is for people who want peer emotional support and human connection. The UK page is particularly relevant to Indians and South Asians living away from home.' },
       { q: 'Can I talk privately?', a: 'How Was Your Day is designed around a private one-to-one session. You can choose text when you do not want people nearby to hear a voice conversation.' },
@@ -71,12 +71,12 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'canada', country: 'Canada', regionCode: 'CA', audience: 'Indian and South Asian people living in Canada',
     title: 'Peer Support for Indians in Canada — Talk to a Real Listener | How Was Your Day',
-    description: 'Indian or South Asian in Canada and need someone to talk to? How Was Your Day offers private one-to-one peer support with real human listeners. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Indian or South Asian in Canada and need someone to talk to? How Was Your Day offers private one-to-one peer support with real human listeners. Sessions from 8 minutes.',
     eyebrow: 'Peer support · Canada',
     intro: 'Moving countries can change who you can call when something is weighing on you. How Was Your Day gives Indians and South Asians in Canada a private place to talk to a real person who understands the cultural context behind the words.',
     localAngle: 'Talk about homesickness, immigration or work uncertainty, relationships, family expectations, loneliness, cultural adjustment or the everyday pressure of building a life away from India. Choose someone whose lived experience resonates with yours.',
     situations: ['Homesickness and distance from parents', 'Immigration, work or study pressure', 'Long-distance relationships and marriage decisions', 'Cultural adjustment and feeling out of place', 'Loneliness after moving to a new city', 'Family expectations while living independently abroad'],
-    howItWorks: ['Browse real listener profiles and look for relevant lived experience.', 'Start with one free 5-minute introductory session.', 'Choose text for maximum privacy or voice when you want a more natural conversation.', 'If the fit feels right, continue with a paid session at the displayed rate.'],
+    howItWorks: ['Browse real listener profiles and look for relevant lived experience.', 'Start with an 8-minute session.', 'Choose text for maximum privacy or voice when you want a more natural conversation.', 'If the fit feels right, continue with a paid session at the displayed rate.'],
     faqs: [
       { q: 'Can Indians in Canada use How Was Your Day?', a: 'Yes. How Was Your Day has dedicated peer-support content for the Indian and South Asian diaspora. Live listener availability is shown in the app.' },
       { q: 'What topics are appropriate?', a: 'Loneliness, relationships, homesickness, family pressure, work or study stress and other everyday emotional concerns are appropriate for peer support.' },
@@ -87,12 +87,12 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'australia', country: 'Australia', regionCode: 'AU', audience: 'Indian and South Asian people living in Australia',
     title: 'Peer Support for Indians in Australia — Someone to Talk To | How Was Your Day',
-    description: 'Need someone to talk to in Australia who understands Indian or South Asian life? Connect with real peer listeners on How Was Your Day. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Need someone to talk to in Australia who understands Indian or South Asian life? Connect with real peer listeners on How Was Your Day. Sessions from 8 minutes.',
     eyebrow: 'Peer support · Australia',
     intro: 'A busy life abroad can still feel lonely. How Was Your Day gives Indians and South Asians in Australia a private, one-to-one space to talk with a real peer listener about whatever is weighing on them.',
     localAngle: 'From homesickness and long-distance family relationships to work, study, dating, marriage and cultural adjustment, the right listener can make it easier to say the thing you have been holding in. Browse by lived experience and topic rather than trying to find the perfect words first.',
     situations: ['Homesickness and missing family in India', 'University, work or career pressure', 'Long-distance family and relationship strain', 'Cultural differences in dating and marriage', 'Feeling lonely after moving to Australia', 'Needing to vent without burdening a friend or partner'],
-    howItWorks: ['Find a listener whose profile matches what you are going through.', 'Start with the free 5-minute introduction.', 'Talk by text or voice depending on your situation.', 'Continue only if the listener feels like a good fit.'],
+    howItWorks: ['Find a listener whose profile matches what you are going through.', 'Start with an 8-minute session.', 'Talk by text or voice depending on your situation.', 'Continue only if the listener feels like a good fit.'],
     faqs: [
       { q: 'Is How Was Your Day available to people in Australia?', a: 'How Was Your Day has an Australia-focused peer-support experience for people who want to talk to real listeners. Check the live listener list for current availability.' },
       { q: 'Can I talk about homesickness?', a: 'Yes. Homesickness, family distance, cultural adjustment and relationships are common reasons someone may want a peer conversation.' },
@@ -103,7 +103,7 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'uae', country: 'United Arab Emirates', regionCode: 'AE', audience: 'Indian and South Asian people living in the UAE',
     title: 'Peer Support for Indians in the UAE — Talk to Someone | How Was Your Day',
-    description: 'Living in the UAE and need someone who understands the Indian or South Asian context? How Was Your Day connects you with real peer listeners. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Living in the UAE and need someone who understands the Indian or South Asian context? How Was Your Day connects you with real peer listeners. Sessions from 8 minutes.',
     eyebrow: 'Peer support · UAE',
     intro: 'Life as an expatriate can be busy, social and still emotionally isolating. How Was Your Day gives Indians and South Asians in the UAE a private place to talk to a real person about work, relationships, family, homesickness and everyday pressure.',
     localAngle: 'Whether you are in Dubai, Abu Dhabi, Sharjah or elsewhere in the UAE, you can start with the experience rather than the diagnosis. Talk about family back home, career pressure, relationships, loneliness, cultural expectations or simply a difficult day.',
@@ -119,12 +119,12 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'singapore', country: 'Singapore', regionCode: 'SG', audience: 'Indian and South Asian people living in Singapore',
     title: 'Peer Support for Indians in Singapore — Real Human Listeners | How Was Your Day',
-    description: 'Need someone to talk to in Singapore who understands Indian or South Asian life? How Was Your Day offers private one-to-one peer support. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Need someone to talk to in Singapore who understands Indian or South Asian life? How Was Your Day offers private one-to-one peer support. Sessions from 8 minutes.',
     eyebrow: 'Peer support · Singapore',
     intro: 'You can be surrounded by people and still have no one you want to tell the whole story to. How Was Your Day gives Indians and South Asians in Singapore a private way to talk with a real peer listener.',
     localAngle: 'Talk about work intensity, relocation, relationships, family expectations, loneliness, cultural differences or the simple need to get something off your chest. Listener profiles help you choose someone based on lived experience and topic.',
     situations: ['Work and career pressure', 'Homesickness and family distance', 'Relationship or marriage uncertainty', 'Cultural adjustment and identity', 'Loneliness after relocating', 'A difficult thought you need to say out loud'],
-    howItWorks: ['Browse listeners and choose someone whose lived experience feels relevant.', 'Start with the free 5-minute introductory session.', 'Use text when privacy matters or voice when speaking feels easier.', 'Continue if you find the conversation useful.'],
+    howItWorks: ['Browse listeners and choose someone whose lived experience feels relevant.', 'Start with an 8-minute session.', 'Use text when privacy matters or voice when speaking feels easier.', 'Continue if you find the conversation useful.'],
     faqs: [
       { q: 'Who is the Singapore page for?', a: 'It is primarily for Indians and South Asians living in Singapore who want human peer support and a listener who understands the cultural context.' },
       { q: 'Can I talk about work stress?', a: 'Yes. Work and career pressure are appropriate topics for a peer-support conversation, as are relationships, homesickness and loneliness.' },
@@ -135,7 +135,7 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'malaysia', country: 'Malaysia', regionCode: 'MY', audience: 'Indian and South Asian people living in Malaysia',
     title: 'Peer Support for Indians in Malaysia — Someone to Talk To | How Was Your Day',
-    description: 'Indian or South Asian in Malaysia and need someone to talk to? How Was Your Day connects you with real peer listeners for private conversations. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Indian or South Asian in Malaysia and need someone to talk to? How Was Your Day connects you with real peer listeners for private conversations. Sessions from 8 minutes.',
     eyebrow: 'Peer support · Malaysia',
     intro: 'Sometimes the hardest part is not the problem itself — it is finding someone you feel comfortable telling. How Was Your Day gives Indians and South Asians in Malaysia a private place to talk with a real listener.',
     localAngle: 'Use How Was Your Day for homesickness, family pressure, relationships, work stress, identity, cultural expectations or simply a conversation when you do not want to burden the people close to you. Choose a listener by lived experience and topic.',
@@ -151,7 +151,7 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'kuwait', country: 'Kuwait', regionCode: 'KW', audience: 'Indian and South Asian people living in Kuwait',
     title: 'Peer Support for Indians in Kuwait — Talk to a Real Person | How Was Your Day',
-    description: 'Living in Kuwait and need someone who understands Indian or South Asian life? How Was Your Day connects you with real peer listeners for private support conversations. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Living in Kuwait and need someone who understands Indian or South Asian life? How Was Your Day connects you with real peer listeners for private support conversations. Sessions from 8 minutes.',
     eyebrow: 'Peer support · Kuwait',
     intro: 'Expatriate life can mean carrying work pressure, family expectations and homesickness without wanting to explain everything to the people around you. How Was Your Day gives Indians and South Asians in Kuwait a private place to talk to a real listener.',
     localAngle: 'Talk about work and shift-life pressure, family back home, relationships, marriage decisions, loneliness or simply something you need to get off your chest. The conversation starts with a human listener, not a diagnosis or a script.',
@@ -167,12 +167,12 @@ export const COUNTRY_SEO: CountrySeoData[] = [
   {
     slug: 'oman', country: 'Oman', regionCode: 'OM', audience: 'Indian and South Asian people living in Oman',
     title: 'Peer Support for Indians in Oman — Talk to Someone | How Was Your Day',
-    description: 'Living in Oman and need someone who understands Indian or South Asian life abroad? How Was Your Day connects you with real peer listeners for private conversations. First 5 minutes free, then from US$10 for 15 min.',
+    description: 'Living in Oman and need someone who understands Indian or South Asian life abroad? How Was Your Day connects you with real peer listeners for private conversations. Sessions from 8 minutes.',
     eyebrow: 'Peer support · Oman',
     intro: 'Living abroad can make ordinary problems harder to talk about. How Was Your Day gives Indians and South Asians in Oman a private way to speak with a real peer listener about homesickness, work, relationships, family and everyday pressure.',
     localAngle: 'Whether you are in Muscat, Salalah, Sohar or elsewhere in Oman, you can talk about distance from family, expatriate work life, marriage and relationship pressure, cultural adjustment or simply needing someone to listen. Choose by lived experience and topic.',
     situations: ['Missing family and life in India', 'Long workdays, shift work or expatriate pressure', 'Relationship and marriage concerns while living abroad', 'Feeling isolated despite living in an Indian community', 'Family responsibilities and financial pressure', 'Needing a neutral person to listen without judgement'],
-    howItWorks: ['Browse real listener profiles and choose someone who feels relevant to your situation.', 'Start with one free 5-minute introductory session.', 'Use text when privacy matters or voice when you prefer speaking.', 'Continue with a paid session only if the conversation is useful to you.'],
+    howItWorks: ['Browse real listener profiles and choose someone who feels relevant to your situation.', 'Start with an 8-minute session.', 'Use text when privacy matters or voice when you prefer speaking.', 'Continue with a paid session only if the conversation is useful to you.'],
     faqs: [
       { q: 'Can Indians in Oman use How Was Your Day?', a: 'Yes. How Was Your Day has an Oman-focused peer-support experience for Indians and South Asians. Live listener availability is shown in the app.' },
       { q: 'Can I talk about homesickness and family back in India?', a: 'Yes. Homesickness, family distance, relationships, work pressure and cultural adjustment are appropriate peer-support topics.' },

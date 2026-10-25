@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'Which is the best free mental health app in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For AI-based self-help tools: Wysa is the best free option in India. For human peer support: How Was Your Day offers a free 5-minute trial on every session. For professional counselling on a budget: iCall (TISS) offers subsidised sessions. There is no single "best free app" — it depends on what you need.',
+        text: 'For AI-based self-help tools: Wysa is the best free option in India. For human peer support: How Was Your Day offers sessions from 8 minutes. For professional counselling on a budget: iCall (TISS) offers subsidised sessions. There is no single "best free app" — it depends on what you need.',
       },
     },
     {
@@ -242,7 +242,7 @@ export default function BestMentalHealthAppIndiaPage() {
 
         <div className="cta-card">
           <h2>Try How Was Your Day — Human Peer Support from ₹160</h2>
-          <p>Real listeners, Indian context, anonymous, pay per session. First 5 minutes free.</p>
+          <p>Real listeners, Indian context, anonymous, pay per session. Sessions from 8 minutes.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -253,7 +253,7 @@ export default function BestMentalHealthAppIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">Which is the best free mental health app in India?</div>
-            <div className="faq-a">For AI-based self-help: Wysa is the best free option. For human peer support: How Was Your Day offers a free 5-minute trial on every session. For professional counselling on a budget: iCall (TISS) offers subsidised sessions.</div>
+            <div className="faq-a">For AI-based self-help: Wysa is the best free option. For human peer support: How Was Your Day offers sessions from 8 minutes. For professional counselling on a budget: iCall (TISS) offers subsidised sessions.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between a peer listener and a therapist?</div>

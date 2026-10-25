@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { FREE_SESSION_MINS, PLATFORM_FEE, VOICE_RATE_PREMIUM, RECHARGE_AMOUNTS, LANGUAGES } from '@/lib/constants'
+import { SESSION_DURATIONS, PLATFORM_FEE, VOICE_RATE_PREMIUM, RECHARGE_AMOUNTS, LANGUAGES } from '@/lib/constants'
 import { formatGBP, formatRate } from '@/lib/money'
 import { TALK_MAX_TEXT_RATE } from '@/lib/talk-match'
 
@@ -13,13 +13,13 @@ export const dynamic = 'force-static'
 
 const URL = 'https://www.howwasyourday.live/is-howwasyourday-worth-it'
 const R = TALK_MAX_TEXT_RATE
-const p15 = R * 15 + PLATFORM_FEE, p30 = R * 30 + PLATFORM_FEE, p45 = R * 45 + PLATFORM_FEE
+const [p8, p16, p32] = SESSION_DURATIONS.map(m => R * m + PLATFORM_FEE)
 const langs = LANGUAGES.map(l => l.label.replace(/^.*\((.*)\)$/, '$1')).join(', ')
 const recharge = RECHARGE_AMOUNTS.map(a => formatGBP(a)).join(', ')
 
 export const metadata: Metadata = {
   title: 'Is How Was Your Day Worth It? Honest Answers Before You Pay | How Was Your Day',
-  description: `Is How Was Your Day legit, private and worth the money? Straight answers before your first paid session: who the listeners are, what it costs (${formatGBP(p15)} for 15 min at the standard rate), refunds, privacy, and when How Was Your Day is the wrong choice.`,
+  description: `Is How Was Your Day legit, private and worth the money? Straight answers before your first paid session: who the listeners are, what it costs (${formatGBP(p8)} for 8 min at the standard rate), refunds, privacy, and when How Was Your Day is the wrong choice.`,
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: { title: 'Is How Was Your Day worth it? Honest answers before you pay', description: 'Who the listeners are, what it costs, refunds, privacy — and when How Was Your Day is not the right choice.', url: URL, siteName: 'How Was Your Day', type: 'article' },
@@ -37,8 +37,8 @@ const groups: { h: string; items: { q: string; a: string }[] }[] = [
   {
     h: 'Is it worth the money?',
     items: [
-      { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that, a text session with a ${formatRate(R)} listener is ${formatGBP(p15)} for 15 minutes, ${formatGBP(p30)} for 30 or ${formatGBP(p45)} for 45 (including a flat ${formatGBP(PLATFORM_FEE)} platform fee); voice is ${formatRate(VOICE_RATE_PREMIUM)} more, and some listeners charge more — the exact price is shown before you start. Prices are in pounds sterling (GBP). No subscription.` },
-      { q: 'Is it worth paying compared with therapy?', a: 'They serve different purposes. A qualified professional can assess and treat mental-health conditions. How Was Your Day may suit someone who wants a non-clinical conversation about loneliness, a breakup or a difficult day; it is not therapy or a replacement for professional care. One introductory session up to 5 minutes is free per account, so you can decide whether peer support feels useful before paying.' },
+      { q: 'How much does it cost?', a: `Every session is paid — there is no free trial. A text session with a ${formatRate(R)} listener is ${formatGBP(p8)} for 8 minutes, ${formatGBP(p16)} for 16 or ${formatGBP(p32)} for 32 (including a flat ${formatGBP(PLATFORM_FEE)} platform fee); voice is ${formatRate(VOICE_RATE_PREMIUM)} more, and some listeners charge more — the exact price is shown before you start. Prices are in pounds sterling (GBP). No subscription.` },
+      { q: 'Is it worth paying compared with therapy?', a: 'They serve different purposes. A qualified professional can assess and treat mental-health conditions. How Was Your Day may suit someone who wants a non-clinical conversation about loneliness, a breakup or a difficult day; it is not therapy or a replacement for professional care. Every session is paid, from 8 minutes, so you can decide whether peer support feels useful before paying.' },
       { q: 'What if it does not help?', a: 'You can end a session whenever you want and you pay only for the minutes you used; the rest of the held amount goes back to your wallet straight away. If no listener accepts your request, nothing is charged.' },
     ],
   },
@@ -112,8 +112,8 @@ export default function IsHowWasYourDayWorthItPage() {
         <p className="lead">The questions people ask before their first paid session — answered plainly, including when How Was Your Day is not the right choice.</p>
         <p className="short">
           <strong>In short:</strong> How Was Your Day connects adults with a screened peer listener in the UK for a one-to-one text or voice
-          conversation, without an appointment. One introductory session of up to {FREE_SESSION_MINS} minutes is free per account.
-          Paid prices depend on the selected listener and mode; a 15-minute text session with a {formatRate(R)} listener is {formatGBP(p15)}. You pay only for used minutes, and unused wallet balance is refundable on request.
+          conversation, now or at a time you book. Sessions are paid and last 8, 16 or 32 minutes.
+          Paid prices depend on the selected listener and mode; an 8-minute text session with a {formatRate(R)} listener is {formatGBP(p8)}. You pay only for used minutes, and unused wallet balance is refundable on request.
           How Was Your Day is peer support, not therapy.
         </p>
         {groups.map(g => (
@@ -125,7 +125,7 @@ export default function IsHowWasYourDayWorthItPage() {
           </section>
         ))}
         <div className="cta">
-          <p>Your one introductory session of up to {FREE_SESSION_MINS} minutes is free per account — enough to decide whether peer support feels right for you.</p>
+          <p>Start with {SESSION_DURATIONS[0]} minutes ({formatGBP(p8)} at the standard rate) — enough to decide whether peer support feels right for you. You pay only for the minutes you use.</p>
           <a className="btn" href="/talk?src=seo">Talk to someone now</a>
         </div>
         <p className="fine">More: <a href="/pricing">Pricing</a> · <a href="/trust">Trust &amp; safety</a> · <a href="/how-it-works">How the app works</a> · Updated 17 October 2026</p>

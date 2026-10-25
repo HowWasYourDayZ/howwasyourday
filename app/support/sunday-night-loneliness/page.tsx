@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost on a Sunday night?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. It is available every Sunday evening and night, exactly when the scaries tend to peak.',
       },
     },
   ],
@@ -228,7 +228,7 @@ export default function SundayNightLonelinessPage() {
           <h2>Don&apos;t Face Monday Alone Tonight</h2>
           <p>Talk to a peer listener who understands the Sunday scaries. No appointments, no waitlists.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">You don't have to spend Sunday alone — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">You don't have to spend Sunday alone →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function SundayNightLonelinessPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day cost on a Sunday night?</div>
-            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, with a trial session available for new users. It is available every Sunday evening and night, exactly when the scaries tend to peak.</div>
+            <div className="faq-a">How Was Your Day starts at £4.20 for an 8-minute session. It is available every Sunday evening and night, exactly when the scaries tend to peak.</div>
           </div>
         </div>
 

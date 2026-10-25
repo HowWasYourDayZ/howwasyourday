@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand Indian life in Phoenix?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the Phoenix Indian experience of being in a fast-growing, newly-forming community where people are still building their networks, and the particular isolation of a car-dependent desert city.' } },
   { '@type': 'Question', name: 'What time works to connect from Phoenix?', acceptedAnswer: { '@type': 'Answer', text: 'Phoenix (MST, no daylight saving) is 11.5 hours behind IST in winter and 12.5 hours behind in summer (when the rest of the US is on daylight saving). 8am Phoenix = 8:30–9:30pm India depending on season. Early mornings work well.' } },
   { '@type': 'Question', name: 'Is this private from my Phoenix community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing is shared with your Chandler or Scottsdale community, your employer, or family back in India.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInPhoenixPage() {
         <div className="hero">
           <p className="badge">Indians in Phoenix &middot; Chandler &middot; Scottsdale</p>
           <h1>New city. Fast growth. <em>Still finding your people.</em></h1>
-          <p className="lead">Chandler, Tempe, and Scottsdale have seen a dramatic rise in Indian tech workers as companies expand to Phoenix. Many are new arrivals still building community. The heat, the sprawl, the car-dependent life — it can feel isolating while you&rsquo;re building your roots. Talk to someone in India in the meantime. First 5 minutes free.</p>
+          <p className="lead">Chandler, Tempe, and Scottsdale have seen a dramatic rise in Indian tech workers as companies expand to Phoenix. Many are new arrivals still building community. The heat, the sprawl, the car-dependent life — it can feel isolating while you&rsquo;re building your roots. Talk to someone in India in the meantime. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInPhoenixPage() {
           <h2>Chandler, Tempe, Scottsdale: Phoenix&rsquo;s Emerging Indian Hub</h2>
           <p>The Greater Phoenix area — particularly Chandler, Tempe, Gilbert, and Scottsdale — has seen rapid growth in its Indian tech worker population. Intel&rsquo;s semiconductor fabs in Chandler, the Taiwan Semiconductor Manufacturing Company (TSMC) facilities, and the broader tech expansion in the East Valley have brought thousands of Indian engineers and their families to Arizona in the past few years.</p>
           <p>Phoenix is hot, sprawling, and car-dependent. Unlike the Bay Area or Dallas, the Indian community infrastructure is still catching up. The temple exists, the Indian grocery stores are there, and the community is forming — but for many new arrivals, the sense of deep community that takes years to build is not yet present. You might be in a new subdivision in Gilbert with Indian neighbours on one side but still feel profoundly alone in your first year or two.</p>
-          <p>How Was Your Day bridges that gap. A real Indian peer listener in India, with no appointment, before your Phoenix community fully forms. First 5 minutes free.</p>
+          <p>How Was Your Day bridges that gap. A real Indian peer listener in India, with no appointment, before your Phoenix community fully forms. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>The Desert and the Distance</h2>
           <p>Phoenix in July is 115 degrees Fahrenheit. The outdoor life that other parts of America offer — evening walks, weekend socialising on porches — is compressed into a few months of bearable weather. The rest of the time, Phoenix life moves indoors, into air conditioning, from car to building and back. This suburban isolation, combined with a still-forming community and the usual NRI pressures, creates a specific kind of loneliness.</p>
-          <p>Phoenix (MST) does not observe daylight saving time. In winter, 8am Phoenix is 8:30pm India — late evening but still within reach. In summer (when the rest of the US moves clocks forward), 8am Phoenix is 9:30pm India — slightly later but still workable. Early mornings in Phoenix align well with Indian late evenings. No appointment needed, sessions are anonymous, first 5 minutes free.</p>
+          <p>Phoenix (MST) does not observe daylight saving time. In winter, 8am Phoenix is 8:30pm India — late evening but still within reach. In summer (when the rest of the US moves clocks forward), 8am Phoenix is 9:30pm India — slightly later but still workable. Early mornings in Phoenix align well with Indian late evenings. No appointment needed, sessions are anonymous, sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Before your Phoenix community forms.</h2><p>Real Indian peer listener. Understands the new arrival NRI experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Before your Phoenix community forms.</h2><p>Real Indian peer listener. Understands the new arrival NRI experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indians-in-texas">Indians in Texas &rarr;</a>
           <a href="/usa">Desi support USA &rarr;</a>

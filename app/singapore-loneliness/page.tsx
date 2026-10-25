@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Can I talk to an Indian listener from Singapore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day listeners are based in India and online daily on Indian time. You can talk in Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, or English. Sessions start from S$14 for 15 minutes, with the first 5 minutes free to try.',
+        text: 'Yes. How Was Your Day listeners are based in India and online daily on Indian time. You can talk in Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, or English. Sessions start from S$14 for 15 minutes to try.',
       },
     },
     {
@@ -160,7 +160,7 @@ export default function SingaporeLonelinessPage() {
           real Indian listeners who understand exactly what this distance feels like.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>The loneliness no one talks about in Singapore</h2>
@@ -239,7 +239,7 @@ export default function SingaporeLonelinessPage() {
           <div className="faq-item">
             <h3>Can I talk to an Indian listener from Singapore?</h3>
             <p>Yes. How Was Your Day listeners are based in India, so availability follows Indian time and speak Hindi, Tamil, Telugu, Malayalam, Kannada,
-              Bengali, and English. Sessions start from S$14 for 15 minutes, with the first 5 minutes free.</p>
+              Bengali, and English. Sessions start from S$14 for 15 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>What if I feel lonely even though I have colleagues in Singapore?</h3>

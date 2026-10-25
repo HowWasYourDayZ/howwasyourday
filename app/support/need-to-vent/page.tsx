@@ -5,12 +5,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Need to Vent? Talk to Someone Who Will Actually Listen | How Was Your Day',
-  description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. First 5 minutes free.",
+  description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. Sessions from 8 minutes.",
   keywords: ['need to vent India', 'someone to vent to India', 'want to vent my feelings India', 'need to talk about my problems India', 'need to get things off my chest', 'vent to someone online India', 'talk about my problems India', 'someone to listen to me vent India', 'need to express my feelings India', 'I just want to talk India', 'need to release emotions India', 'emotional outlet India', 'talk to someone who listens India', 'vent without judgment India', 'talk about life problems India'],
   alternates: { canonical: 'https://www.howwasyourday.live/support/need-to-vent', languages: { 'en-GB': 'https://www.howwasyourday.live/support/need-to-vent' } },
   openGraph: {
     title: 'Need to Vent? Talk to Someone Who Will Actually Listen | How Was Your Day',
-    description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. First 5 minutes free.",
+    description: "Need to vent? Talk to a real person who just listens — a screened peer listener in India, text or voice, online now. Sessions from 8 minutes.",
     url: 'https://www.howwasyourday.live/support/need-to-vent',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -22,7 +22,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I just need to vent to someone \u2014 where can I do that?", acceptedAnswer: { '@type': 'Answer', text: "Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what How Was Your Day is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "I just need to vent to someone \u2014 where can I do that?", acceptedAnswer: { '@type': 'Answer', text: "Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what How Was Your Day is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Sessions start at 8 minutes." } },
     {
       '@type': 'Question',
       name: 'Why is venting to someone important for mental health?',
@@ -68,7 +68,7 @@ const faqSchema = {
       name: 'How long should a venting session be?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'However long you need. Most people find that 15–20 minutes of uninterrupted expression is enough to feel significantly lighter. 30-minute sessions allow for the initial release and then some processing. There is no minimum or prescription — you can book whatever feels right for where you are.',
+        text: 'However long you need. Most people find that 15–20 minutes of uninterrupted expression is enough to feel significantly lighter. 32-minute sessions allow for the initial release and then some processing. There is no minimum or prescription — you can book whatever feels right for where you are.',
       },
     },
   ],
@@ -160,7 +160,7 @@ export default function NeedToVentPage() {
           <p className="tag">Peer Support · Venting &amp; Expression</p>
           <h1>Need to <em>Vent</em>? Someone Is Ready to Listen</h1>
           <p className="lead">Sometimes you do not need advice. You do not need a solution. You just need to say what you have been carrying — and have someone actually hear it. How Was Your Day peer listeners listen without judgment, without redirecting, and without rushing to fix anything.</p>
-          <QuickAnswer question={"I just need to vent to someone \u2014 where can I do that?"} answer={"Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what How Was Your Day is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Your first 5 minutes are free."} />
+          <QuickAnswer question={"I just need to vent to someone \u2014 where can I do that?"} answer={"Venting to a real person who just listens — no fixing, no advice unless you ask — is exactly what How Was Your Day is for. Connect with a screened peer listener in India by text or voice, privately, with someone who is online now. Sessions start at 8 minutes."} />
         </div>
 
         <div className="section">
@@ -248,9 +248,9 @@ export default function NeedToVentPage() {
 
         <div className="cta-card">
           <h2>Ready to Get It Off Your Chest?</h2>
-          <p>A peer listener is ready right now — no judgment, no advice unless you want it, no social consequence. Start with a free trial session.</p>
+          <p>A peer listener is ready right now — no judgment, no advice unless you want it, no social consequence. Start with an 8-minute session.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Just say it — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Just say it →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

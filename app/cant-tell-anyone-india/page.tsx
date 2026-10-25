@@ -153,7 +153,7 @@ export default function CantTellAnyoneIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>The safe person is here. Say it.</h2>
-          <p>Anonymous. Real person. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous. Real person. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
         <div className="section">

@@ -4,17 +4,17 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Emotional Support for Indians in Houston | How Was Your Day',
-  description: 'Sugar Land, Katy, Pearland — Houston\'s Indian community is huge but loneliness hits differently here. Talk to a peer listener in India who understands. First 5 min free.',
+  description: 'Sugar Land, Katy, Pearland — Houston\'s Indian community is huge but loneliness hits differently here. Talk to a peer listener in India who understands. From 8 minutes.',
   keywords: ['indians in houston support', 'indian community houston', 'sugar land indian support', 'katy texas indian', 'indian loneliness houston', 'desi support houston texas'],
   alternates: { canonical: 'https://www.howwasyourday.live/indians-in-houston' },
-  openGraph: { title: 'Emotional Support for Indians in Houston | How Was Your Day', description: 'Sugar Land, Katy, Pearland — Houston\'s Indian community is huge but loneliness hits differently here. Talk to a peer listener in India who understands. First 5 min free.', url: 'https://www.howwasyourday.live/indians-in-houston', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Emotional Support for Indians in Houston | How Was Your Day', description: 'Sugar Land, Katy, Pearland — Houston\'s Indian community is huge but loneliness hits differently here. Talk to a peer listener in India who understands. From 8 minutes.', url: 'https://www.howwasyourday.live/indians-in-houston', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Can I talk to someone who understands Houston\'s Indian community specifically?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and are familiar with the NRI experience including the Houston and Texas context — the tech corridors, the Sugar Land and Katy communities, the pressure of immigrant life in America. You don\'t need to explain the background.' } },
   { '@type': 'Question', name: 'What time does it work to call from Houston?', acceptedAnswer: { '@type': 'Answer', text: 'Houston (CST) is 11.5 hours behind IST. 8am Houston = 7:30pm India. This means your early morning before work aligns with Indian evenings — a good window when many listeners are available.' } },
   { '@type': 'Question', name: 'Is this confidential — no one in my community will know?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. You sign up with only a phone number and first name. Nothing is shared with anyone in your community, your employer, or family back in India.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. Paid sessions start from US$10 for 15 minutes. There is no subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Paid sessions start from US$10 for 15 minutes. There is no subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInHoustonPage() {
         <div className="hero">
           <p className="badge">Indians in Houston &middot; Sugar Land &middot; Texas Desi</p>
           <h1>You built a life in Sugar Land. <em>You don&rsquo;t have to carry it alone.</em></h1>
-          <p className="lead">Houston has one of the largest Indian communities in America — Sugar Land, Katy, Pearland, Stafford. But being surrounded by your own community doesn&rsquo;t always mean feeling understood. The H-1B pressure. The family back home who think you&rsquo;ve &ldquo;arrived.&rdquo; The loneliness of a big American life with something missing. Talk to a real Indian peer listener in India. First 5 minutes free.</p>
+          <p className="lead">Houston has one of the largest Indian communities in America — Sugar Land, Katy, Pearland, Stafford. But being surrounded by your own community doesn&rsquo;t always mean feeling understood. The H-1B pressure. The family back home who think you&rsquo;ve &ldquo;arrived.&rdquo; The loneliness of a big American life with something missing. Talk to a real Indian peer listener in India. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -94,7 +94,7 @@ export default function IndiansInHoustonPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You don&rsquo;t have to carry it alone.</h2><p>Real Indian peer listener. Understands the Houston NRI experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You don&rsquo;t have to carry it alone.</h2><p>Real Indian peer listener. Understands the Houston NRI experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indians-in-texas">Indians in Texas &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

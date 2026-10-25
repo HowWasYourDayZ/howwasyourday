@@ -24,7 +24,7 @@ const faqSchema = {
   mainEntity: [
     {'@type': 'Question', name: 'Is it normal to feel this much pressure about an exam?', acceptedAnswer: {'@type': 'Answer', text: 'For competitive exams in India, yes. The social and family stakes are real. The sense that your entire future is contingent on one result is a real pressure, not an irrational one. The emotional response to that pressure &mdash; anxiety, paralysis, mood swings &mdash; is entirely normal.'}},
     {'@type': 'Question', name: 'Can I talk to someone about exam stress even if I am not in crisis?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. You do not need to be in crisis to use How Was Your Day. Many people use it for regular stress processing &mdash; just to have somewhere to put what they are carrying. A 15-minute session during preparation can help more than hours of unproductive overthinking.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
   ],
 }
 
@@ -95,7 +95,7 @@ export default function CompetitiveExamStressIndiaPage() {
         <div className="hero">
           <p className="badge">Exam Stress · CAT · GATE · Banking · UPSC</p>
           <h1>The syllabus is manageable. The <em>pressure isn\'t.</em></h1>
-          <p className="lead">Competitive exams in India carry a weight that goes far beyond the syllabus. Talk to someone who understands. Anonymous peer support from ₹160.</p>
+          <p className="lead">Competitive exams in India carry a weight that goes far beyond the syllabus. Talk to someone who understands. Anonymous peer support from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <GeoQuickAnswer path="/competitive-exam-stress-india" />
@@ -120,7 +120,7 @@ export default function CompetitiveExamStressIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>The pressure is real. You do not have to carry it alone.</h2>
-          <p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
         <div className="section">

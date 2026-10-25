@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is burnout different for working women in India?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. The specific stressors &mdash; the double shift, the guilt, the social comparison, the lack of acknowledgment &mdash; create a particular texture of burnout that is distinct from either general burnout or the working-woman experience in other cultural contexts.'}},
     {'@type': 'Question', name: 'Can I talk about work AND home stress in one session?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Life does not compartmentalise and neither do How Was Your Day sessions. You can bring whatever is most pressing &mdash; a difficult day at work, a conflict at home, the general weight of all of it.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function WorkingWomanStressIndiaPage() {
         <div className="hero">
           <p className="badge">Working Woman · Double Shift · India</p>
           <h1>You're doing two jobs. Only one of them <em>anyone sees.</em></h1>
-          <p className="lead">Career pressure, domestic load, guilt, and the invisible double shift. Working women in India carry more than anyone acknowledges. Talk anonymously from ₹160.</p>
+          <p className="lead">Career pressure, domestic load, guilt, and the invisible double shift. Working women in India carry more than anyone acknowledges. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -85,7 +85,7 @@ export default function WorkingWomanStressIndiaPage() {
           <p>See also: <a href="/support/working-woman-india" style={{color:"#1A8FA0",fontWeight:700}}>Working woman India</a> &mdash; the topic page.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You are doing enough. Let someone tell you they see it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You are doing enough. Let someone tell you they see it.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/support/working-woman-india">Working woman India &rarr;</a>
             <a href="/support/mom-burnout-india">Mom burnout India &rarr;</a>
             <a href="/for-women">Support for women &rarr;</a>

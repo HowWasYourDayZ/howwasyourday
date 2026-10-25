@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Vent to a Real Person Online — Someone Who Actually Listens | How Was Your Day',
-  description: 'Need to vent but have no one to talk to? How Was Your Day connects you with real human listeners online — anonymous, first 5 minutes free. Not an AI. A real person.',
+  description: 'Need to vent but have no one to talk to? How Was Your Day connects you with real human listeners online — anonymous, sessions from 8 minutes. Not an AI. A real person.',
   keywords: [
     'vent to someone online', 'i need to vent', 'someone to vent to', 'vent online',
     'vent to a real person', 'vent anonymously online', 'need to vent no one to talk to',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Vent to a Real Person Online | How Was Your Day',
-    description: 'Sometimes you don\'t need advice. You just need to let it out. How Was Your Day connects you with real human listeners — anonymous, first 5 minutes free.',
+    description: 'Sometimes you don\'t need advice. You just need to let it out. How Was Your Day connects you with real human listeners — anonymous, sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/vent-to-a-real-person-online',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -31,7 +31,7 @@ const faqSchema = {
       name: 'Where can I vent to someone online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day lets you vent to a real human listener — someone with lived experience who won\'t judge you, won\'t give unsolicited advice, and won\'t try to fix you. First 5 minutes free.',
+        text: 'How Was Your Day lets you vent to a real human listener — someone with lived experience who won\'t judge you, won\'t give unsolicited advice, and won\'t try to fix you. Sessions from 8 minutes.',
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: 'How long does a venting session last?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions are 5 (free), 15, 30, or 45 minutes. Many people find 15 minutes enough to feel significantly lighter.',
+        text: 'Sessions are 8, 16 or 32 minutes. Many people find 16 minutes enough to feel significantly lighter.',
       },
     },
   ],
@@ -156,7 +156,7 @@ export default function VentToRealPersonPage() {
           you. How Was Your Day makes that possible, right now.
         </p>
 
-        <a href="/browse" className="cta-hero">Find someone to listen — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Find someone to listen →</a>
 
         <div className="night-box">
           <h2>🌙 Need to vent at 2 AM?</h2>
@@ -231,8 +231,8 @@ export default function VentToRealPersonPage() {
             resonates with what you&apos;re dealing with.
           </p>
           <p>
-            Your first 5 minutes are free. No credit card needed. You can also book a 15, 30, or 45-minute
-            session if you know you need more time. Sessions in India start at £7 for 15 minutes.
+            Sessions start at 8 minutes. No credit card needed. You can also book an 8, 16 or 32-minute
+            session if you know you need more time. Sessions in India start at £4.20 for 8 minutes.
           </p>
           <p>
             Anonymous from start to finish — you never have to share your name, your location, or anything
@@ -242,7 +242,7 @@ export default function VentToRealPersonPage() {
 
         <div className="cta">
           <h2>Someone is ready to hear you right now</h2>
-          <p>Anonymous, no judgment. First 5 minutes free.</p>
+          <p>Anonymous, no judgment. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-white">Find a listener →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -253,7 +253,7 @@ export default function VentToRealPersonPage() {
             <h3>Where can I vent to someone online?</h3>
             <p>How Was Your Day lets you vent to a real human listener — someone with lived experience who won&apos;t
               judge you, won&apos;t give unsolicited advice, and won&apos;t try to fix you. No appointment,
-              first 5 minutes free.</p>
+              sessions from 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is it safe to vent to someone online?</h3>
@@ -273,7 +273,7 @@ export default function VentToRealPersonPage() {
           </div>
           <div className="faq-item">
             <h3>How long does a venting session last?</h3>
-            <p>Sessions are 5 (free), 15, 30, or 45 minutes. Many people find 15 minutes enough to feel
+            <p>Sessions are 8, 16 or 32 minutes. Many people find 16 minutes enough to feel
               significantly lighter.</p>
           </div>
         </div>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is low self-esteem the same as depression?', acceptedAnswer: {'@type': 'Answer', text: 'They often co-occur. Low self-esteem can be a feature of depression, and depression can intensify existing low self-esteem. But they are distinct things. You can have low self-esteem without being depressed, and depression involves other features beyond self-evaluation.'}},
     {'@type': 'Question', name: 'Can talking help with self-esteem?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Being genuinely heard by someone who does not confirm your negative self-assessments is itself a counter-experience to the inner critic. Over time, accumulated experiences of being received positively by others shift the internal model.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function LowSelfEsteemIndiaPage() {
         <div className="hero">
           <p className="badge">Low Self-Esteem · Self-Doubt · India</p>
           <h1>You've talked yourself out of things a hundred times. <em>You're tired of your own inner critic.</em></h1>
-          <p className="lead">Constant self-doubt, feeling not good enough, comparing yourself to everyone. Low self-esteem is exhausting. Talk anonymously from ₹160.</p>
+          <p className="lead">Constant self-doubt, feeling not good enough, comparing yourself to everyone. Low self-esteem is exhausting. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -84,7 +84,7 @@ export default function LowSelfEsteemIndiaPage() {
           <p>Simply being heard &mdash; by someone who does not confirm the negative self-assessment, who listens carefully and reflects back something different from the inner critic's verdict &mdash; is often the beginning of a shift. You cannot think your way out of low self-esteem. But you can begin to hear it from a different angle.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The inner critic is not always right.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The inner critic is not always right.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/people-pleaser-india">People pleaser India &rarr;</a>
             <a href="/imposter-syndrome-india">Imposter syndrome &rarr;</a>
             <a href="/social-anxiety-india">Social anxiety &rarr;</a>

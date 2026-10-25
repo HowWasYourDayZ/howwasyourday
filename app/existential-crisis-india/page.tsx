@@ -170,7 +170,7 @@ export default function ExistentialCrisisIndiaPage() {
 
         <div className="cta-card">
           <h2>The questions deserve a real conversation.</h2>
-          <p>Someone who won&apos;t panic or lecture. Anonymous. From ₹160. First 5 minutes free.</p>
+          <p>Someone who won&apos;t panic or lecture. Anonymous. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

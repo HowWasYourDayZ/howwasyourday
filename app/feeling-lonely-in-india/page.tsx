@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Feeling Lonely in India? Peer Support & Human Conversation | How Was Your Day',
-  description: 'Feeling lonely in India? Learn about ways to seek connection and how non-clinical peer support works. How Was Your Day offers one-to-one text or voice conversations with screened peer listeners; one introductory session up to 5 minutes is free per account. Availability varies.',
+  description: 'Feeling lonely in India? Learn about ways to seek connection and how non-clinical peer support works. How Was Your Day offers one-to-one text or voice conversations with screened peer listeners; every session is paid, from 8 minutes. Availability varies.',
   keywords: ['feeling lonely in india', 'loneliness india', 'i feel lonely india', 'lonely in india', 'loneliness support india', 'how to deal with loneliness india'],
   alternates: { canonical: 'https://www.howwasyourday.live/feeling-lonely-in-india' },
 }
@@ -64,7 +64,7 @@ export default function FeelingLonelyInIndiaPage() {
 
         <div className="card">
           <h2>Taking the first step</h2>
-          <p>Reaching out can feel difficult when you are lonely. How Was Your Day lets adults request a one-to-one text or voice conversation with a screened peer listener. Your account uses a verified phone number, but listeners do not see it; you can choose a display name. One introductory session up to 5 minutes is free per account, and availability depends on who is online.</p>
+          <p>Reaching out can feel difficult when you are lonely. How Was Your Day lets adults request a one-to-one text or voice conversation with a screened peer listener. Your account uses a verified phone number, but listeners do not see it; you can choose a display name. Every session is paid, from 8 minutes, and availability depends on who is online.</p>
           <p>You do not need to have everything organised before starting a conversation. You can say that you have been feeling lonely or unsure where to begin, and let the listener know what kind of support you want.</p>
         </div>
 

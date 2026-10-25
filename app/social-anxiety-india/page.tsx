@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is social anxiety the same as introversion?', acceptedAnswer: {'@type': 'Answer', text: 'No. Introverts prefer less social stimulation and find it draining. Social anxiety involves fear and avoidance driven by anticipated judgment. An introvert who avoids parties because they prefer quiet is not anxious. Someone who avoids parties because they are terrified of saying something wrong and being judged has social anxiety.'}},
     {'@type': 'Question', name: 'Can peer support help with social anxiety?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Processing the social anxiety &mdash; talking through specific situations that triggered it, what the fear is, where it comes from &mdash; with a non-judgmental listener reduces its hold. Many people find that talking about the anxiety is itself a useful counter-experience.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function SocialAnxietyIndiaPage() {
         <div className="hero">
           <p className="badge">Social Anxiety · Anonymous Support · India</p>
           <h1>Every interaction replayed. Every gathering dreaded. <em>You're exhausted from managing it alone.</em></h1>
-          <p className="lead">Dreading social situations, overthinking every interaction. Social anxiety makes ordinary life exhausting. Talk anonymously from ₹160.</p>
+          <p className="lead">Dreading social situations, overthinking every interaction. Social anxiety makes ordinary life exhausting. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -85,7 +85,7 @@ export default function SocialAnxietyIndiaPage() {
           <p>See also: <a href="/support/social-anxiety" style={{color:"#1A8FA0",fontWeight:700}}>Social anxiety support</a> &mdash; the topic page.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You deserve connection without the performance.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You deserve connection without the performance.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/imposter-syndrome-india">Imposter syndrome &rarr;</a>
             <a href="/people-pleaser-india">People pleaser &rarr;</a>
             <a href="/low-self-esteem-india">Low self-esteem &rarr;</a>

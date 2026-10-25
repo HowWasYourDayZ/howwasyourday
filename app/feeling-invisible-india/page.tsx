@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is feeling invisible related to depression?', acceptedAnswer: {'@type': 'Answer', text: 'Often yes. Feeling unseen and unvalued is a major contributor to depression and low self-worth. It is also a common feature of depressive episodes. If the feeling is persistent and accompanied by other low-mood symptoms, please consider speaking to a mental health professional.'}},
     {'@type': 'Question', name: 'Why would talking to a stranger help?', acceptedAnswer: {'@type': 'Answer', text: 'Because the stranger has no prior model of you as invisible. They come to the conversation fresh, with genuine attention. Their experience of you is formed entirely by what you share &mdash; which is often very different from how you are received in contexts where a role or history has already been assigned to you.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -85,7 +85,7 @@ export default function FeelingInvisibleIndiaPage() {
           <p>A How Was Your Day listener will pay attention. They will track what you are saying, reflect it back, ask questions that go deeper. For someone who has been feeling invisible, the experience of being genuinely seen by another person &mdash; even a stranger &mdash; is often unexpectedly powerful.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You deserve to be seen. Let someone really look.</h2><p>Anonymous peer support. Genuine attention. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You deserve to be seen. Let someone really look.</h2><p>Anonymous peer support. Genuine attention. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/low-self-esteem-india">Low self-esteem &rarr;</a>
             <a href="/people-pleaser-india">People pleaser &rarr;</a>
             <a href="/feeling-empty-inside-india">Feeling empty &rarr;</a>

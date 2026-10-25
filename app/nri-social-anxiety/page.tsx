@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is How Was Your Day a substitute for professional support for social anxiety?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is peer support — not a substitute for professional help. If social anxiety is significantly affecting your daily life, professional support is worth exploring. How Was Your Day is a space to be heard by someone who understands the NRI-specific layers without judgment, which can be a valuable complement to professional support or a first step toward it.' } },
   { '@type': 'Question', name: 'Can listeners understand accent anxiety specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Accent anxiety — the fear of being judged, mimicked, or dismissed because of how you speak — is something many NRIs carry, and listeners understand it as a real and specific burden, not a trivial vanity.' } },
   { '@type': 'Question', name: 'I\'m exhausted by always being "the Indian one" in every room. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. The exhaustion of being the representative of your entire country — answering questions about India, being the diversity in every team photo, having your food and culture treated as curiosity — is a real weight. Listeners are screened and expected to hold this without minimising it.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'My social anxiety is worse at Indian community events than at work. Is that unusual?', acceptedAnswer: { '@type': 'Answer', text: 'Not at all. Many NRIs find that Indian community events — where they feel they should belong — produce more anxiety than their Western work environment, because the expectations are higher and the judgment feels more personal. This is a common experience and worth talking about.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function NriSocialAnxietyPage() {
         <div className="hero">
           <p className="badge">NRI Social Anxiety &middot; Accent &middot; Belonging &middot; Identity</p>
           <h1>It&rsquo;s not just nerves. <em>It&rsquo;s everything at once.</em></h1>
-          <p className="lead">For Indian immigrants, social anxiety carries layers that most people don&rsquo;t see. It&rsquo;s the accent you&rsquo;re monitoring while you speak. The cultural reference you missed and don&rsquo;t want to ask about. The way you&rsquo;re always calculating whether this room is safe for who you are. It&rsquo;s exhausting in a way that &ldquo;just be yourself&rdquo; doesn&rsquo;t fix. Talk to a listener who understands the layers. First 5 minutes free.</p>
+          <p className="lead">For Indian immigrants, social anxiety carries layers that most people don&rsquo;t see. It&rsquo;s the accent you&rsquo;re monitoring while you speak. The cultural reference you missed and don&rsquo;t want to ask about. The way you&rsquo;re always calculating whether this room is safe for who you are. It&rsquo;s exhausting in a way that &ldquo;just be yourself&rdquo; doesn&rsquo;t fix. Talk to a listener who understands the layers. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriSocialAnxietyPage() {
           <h2>What NRI Social Anxiety Actually Looks Like</h2>
           <p>Social anxiety for NRIs is not the same as social anxiety in the abstract. There are layers. The standard layer — the worry about being judged, the difficulty speaking up in groups, the over-analysis of everything you said after the fact — and then the NRI layer on top: the accent you are monitoring in real time, the cultural references you don&rsquo;t get and don&rsquo;t ask about because you don&rsquo;t want to seem like you don&rsquo;t belong, the way your name is slightly wrong in someone else&rsquo;s mouth, the question &ldquo;where are you originally from?&rdquo; that comes after you thought you had arrived somewhere socially.</p>
           <p>The NRI who practises sentences in their head before saying them in a meeting — not because they don&rsquo;t know what to say but because they are running an accent check simultaneously. The Indian professional who goes to a work social event and manages their presentation so carefully for two hours that they come home exhausted from something that was supposed to be fun. The international student who is technically fluent in English and still feels like they are operating in a second language because the social code is different.</p>
-          <p>How Was Your Day listeners understand this specific kind of social exhaustion. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand this specific kind of social exhaustion. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function NriSocialAnxietyPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Talk to someone who already understands before you even start.</h2><p>Real Indian peer listener. No cultural explanation required. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Talk to someone who already understands before you even start.</h2><p>Real Indian peer listener. No cultural explanation required. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-anxiety-abroad">NRI anxiety abroad &rarr;</a>
           <a href="/nri-identity-crisis">NRI identity crisis &rarr;</a>

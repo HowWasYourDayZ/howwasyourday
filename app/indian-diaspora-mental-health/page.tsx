@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'What makes How Was Your Day different for Indian diaspora users?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are Indian, based in India, and understand the diaspora experience from the inside. You do not need to explain your family dynamics, your cultural pressures, what it means to be an NRI, or what "log kya kahenge" means. The cultural framework is already there. Sessions are anonymous, affordable, and accessible from any timezone.' } },
   { '@type': 'Question', name: 'Is this available for Indians in all countries?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is accessible worldwide. Indian diaspora users in the USA, UK, Canada, Australia, the Gulf, Singapore, and anywhere else can connect with Indian peer listeners in India.' } },
   { '@type': 'Question', name: 'Do I need to be in a crisis to use How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. Peer support is not only for crises. It is for the daily weight — loneliness, identity questions, relationship pressure, family stress, the quiet accumulation of immigrant life. Most How Was Your Day users are not in crisis. They just need someone real to talk to.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. Sessions start from US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions start from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function IndianDiasporaMentalHealthPage() {
         <div className="hero">
           <p className="badge">Indian Diaspora &middot; South Asian Mental Health &middot; Peer Support</p>
           <h1>Indian diaspora. <em>The most underserved emotional health community in the world.</em></h1>
-          <p className="lead">South Asian emotional health carries particular stigma — the community doesn&rsquo;t talk about these things, the family doesn&rsquo;t have the language for it, and Western services rarely understand the cultural context. How Was Your Day was built specifically for this: real Indian peer listeners who understand the context without explanation. Wherever you are in the world. First 5 minutes free.</p>
+          <p className="lead">South Asian emotional health carries particular stigma — the community doesn&rsquo;t talk about these things, the family doesn&rsquo;t have the language for it, and Western services rarely understand the cultural context. How Was Your Day was built specifically for this: real Indian peer listeners who understand the context without explanation. Wherever you are in the world. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,18 +84,18 @@ export default function IndianDiasporaMentalHealthPage() {
           <h2>Why Indian Diaspora Emotional Health Is Under-Served</h2>
           <p>The Indian diaspora is one of the most widely distributed and economically successful immigrant communities in the world. Indians in the USA, UK, Canada, Australia, Singapore, and the Gulf collectively represent tens of millions of people. And yet their emotional health needs are systematically under-served in ways that are worth naming directly.</p>
           <p>South Asian culture — across its many regional and religious variations — carries deep stigma around emotional struggle. &ldquo;Log kya kahenge&rdquo; (what will people say) is not just a phrase; it is a governing principle that determines what can and cannot be said. Emotional difficulty is often associated with weakness, ingratitude, or failure. Seeking help outside the family is seen as a breach of family honour. The result is that an enormous amount of suffering goes unacknowledged, unspoken, and unaddressed.</p>
-          <p>Western emotional health services, while often excellent, frequently lack the cultural competence to understand South Asian family dynamics, the weight of immigrant sacrifice, or the specific pressures of NRI life. You end up explaining the background instead of the actual issue. How Was Your Day is built to close exactly this gap. First 5 minutes free.</p>
+          <p>Western emotional health services, while often excellent, frequently lack the cultural competence to understand South Asian family dynamics, the weight of immigrant sacrifice, or the specific pressures of NRI life. You end up explaining the background instead of the actual issue. How Was Your Day is built to close exactly this gap. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>What How Was Your Day Offers the Indian Diaspora</h2>
           <p>How Was Your Day offers real Indian peer listeners — people from India, screened for active listening, who understand the cultural context of diaspora life from the inside. You do not need to explain what a rishta is, or what it means when your parents say &ldquo;we sacrificed everything for you,&rdquo; or why you feel guilty for being successful and lonely simultaneously. The cultural framework is already in place.</p>
-          <p>Sessions are text-based, anonymous, and accessible from anywhere in the world. How Was Your Day listeners are in India (IST), which creates natural time zone overlaps for Indian diaspora in America, the UK, Canada, and the Gulf. Your first 5-minute session is free. Sessions start from US$10 for 15 minutes. No subscription, no commitment. You can talk on a Tuesday morning before work, or a Sunday night after everyone is asleep, or any other moment when the weight needs somewhere to go.</p>
+          <p>Sessions are text-based, anonymous, and accessible from anywhere in the world. How Was Your Day listeners are in India (IST), which creates natural time zone overlaps for Indian diaspora in America, the UK, Canada, and the Gulf. Sessions start at 8 minutes. Sessions start from US$10 for 15 minutes. No subscription, no commitment. You can talk on a Tuesday morning before work, or a Sunday night after everyone is asleep, or any other moment when the weight needs somewhere to go.</p>
           <p>The Indian diaspora deserves emotional health support that actually understands them. How Was Your Day was built to provide exactly that.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Finally — support that understands the context.</h2><p>Real Indian peer listener. No cultural explanation needed. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Finally — support that understands the context.</h2><p>Real Indian peer listener. No cultural explanation needed. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/indian-diaspora-support">Indian diaspora support &rarr;</a>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is imposter syndrome a mental health condition?', acceptedAnswer: {'@type': 'Answer', text: 'Not formally. It is a psychological phenomenon &mdash; a pattern of thinking &mdash; rather than a clinical diagnosis. But it causes real suffering and affects performance, relationships, and quality of life. It is absolutely worth talking about.'}},
     {'@type': 'Question', name: 'Does it go away on its own?', acceptedAnswer: {'@type': 'Answer', text: 'Rarely. The external achievements that trigger it do not resolve it, because it is not actually about your competence &mdash; it is about an internal model of yourself that has not caught up with your actual accomplishments. Talking about it with someone who has experienced it and can hold it without confirming the fraud narrative is one of the most effective ways to shift it.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function ImposterSyndromeIndiaPage() {
         <div className="hero">
           <p className="badge">Imposter Syndrome · Fraud Feeling · India</p>
           <h1>You have the job, the degree, the position. And you are waiting to be <em>found out.</em></h1>
-          <p className="lead">Feeling like a fraud despite your achievements. Waiting for the day someone realises you do not belong here. Talk anonymously from ₹160.</p>
+          <p className="lead">Feeling like a fraud despite your achievements. Waiting for the day someone realises you do not belong here. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -85,7 +85,7 @@ export default function ImposterSyndromeIndiaPage() {
           <p>How Was Your Day listeners understand this specific Indian professional pressure. You do not need to explain the context.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You earned it. Let someone help you believe it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You earned it. Let someone help you believe it.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/low-self-esteem-india">Low self-esteem &rarr;</a>
             <a href="/people-pleaser-india">People pleaser &rarr;</a>
             <a href="/social-anxiety-india">Social anxiety &rarr;</a>

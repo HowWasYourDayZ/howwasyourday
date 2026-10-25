@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Birmingham Indian community?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the British Indian diaspora experience — including Birmingham\'s Punjabi and Gujarati communities, the intergenerational pressures of a community that has been here for generations, and the particular dynamics of Handsworth and Soho Road. No explanation needed.' } },
   { '@type': 'Question', name: 'When is a good time to connect from Birmingham?', acceptedAnswer: { '@type': 'Answer', text: 'UK (GMT/BST) is 5.5 hours behind IST in winter and 4.5 hours in summer. 3pm Birmingham = 8:30pm India. Afternoon in Birmingham is Indian evening — a reliable window for listeners.' } },
   { '@type': 'Question', name: 'Is this private from the Birmingham community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the Birmingham Indian network. Nothing is shared.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInBirminghamPage() {
         <div className="hero">
           <p className="badge">Indians in Birmingham &middot; Handsworth &middot; Soho Road</p>
           <h1>Soho Road to Handsworth. <em>You know this community. Do they know you?</em></h1>
-          <p className="lead">Birmingham&rsquo;s Indian community — especially the Punjabi and Gujarati communities around Handsworth, Soho Road, and Lozells — goes back generations. It&rsquo;s tight-knit. It looks after its own. And sometimes that same closeness means nothing can be said out loud. Talk to someone outside Birmingham who still completely understands. First 5 minutes free.</p>
+          <p className="lead">Birmingham&rsquo;s Indian community — especially the Punjabi and Gujarati communities around Handsworth, Soho Road, and Lozells — goes back generations. It&rsquo;s tight-knit. It looks after its own. And sometimes that same closeness means nothing can be said out loud. Talk to someone outside Birmingham who still completely understands. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInBirminghamPage() {
           <h2>Handsworth, Soho Road, Lozells: Generations of Community</h2>
           <p>Birmingham&rsquo;s Indian community is one of the oldest and most established in the United Kingdom. The first wave of Punjabi and Gujarati immigrants arrived in the 1950s and 60s, many settling in Handsworth and the Soho Road corridor. Third and fourth generation families now live here. The community has built temples, gurdwaras, community centres, and political representation that few other Indian diaspora communities outside London can match.</p>
           <p>The depth of this community is its great strength — and also the source of particular pressures. When the community has been here for generations, the expectations are layered with history. Your grandparents sacrificed. Your parents built. What are you doing? The community watches with love and judgement intertwined. Mental health struggles, marriage difficulties, identity questions — these things carry stigma in long-established communities that have survived by holding themselves together tightly.</p>
-          <p>How Was Your Day gives you a real Indian peer listener in India — completely outside the Birmingham community network, completely inside the cultural context. You can say the actual thing. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener in India — completely outside the Birmingham community network, completely inside the cultural context. You can say the actual thing. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>The Birmingham Indian Experience: What Goes Unsaid</h2>
           <p>The British Indian experience in Birmingham has its own particular weight. The identity question: British or Indian, and what does each mean? The generational gap between parents who came here with nothing and children who have everything but feel something is missing. The community&rsquo;s views on marriage, on mental health, on what is acceptable to say and what must be kept private.</p>
-          <p>Birmingham (GMT/BST) is 5.5 hours behind IST in winter (4.5 hours in summer). 3pm in Birmingham is 8:30pm in India — a natural afternoon window when India is in the evening. A real Indian listener is available, no appointment needed. The sessions are anonymous and completely private from the Handsworth and Soho Road community. First 5 minutes free — one free session per account.</p>
+          <p>Birmingham (GMT/BST) is 5.5 hours behind IST in winter (4.5 hours in summer). 3pm in Birmingham is 8:30pm in India — a natural afternoon window when India is in the evening. A real Indian listener is available, no appointment needed. The sessions are anonymous and completely private from the Handsworth and Soho Road community. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Outside the community. Inside the culture.</h2><p>Real Indian peer listener. Understands British Indian community dynamics. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Outside the community. Inside the culture.</h2><p>Real Indian peer listener. Understands British Indian community dynamics. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/uk">Indians in UK &rarr;</a>
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>

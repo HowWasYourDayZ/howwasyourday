@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Toronto Indian community experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the Brampton and Mississauga Punjabi community, the Scarborough Tamil and Gujarati communities, and the specific weight of Canadian immigrant life. No explanation needed.' } },
   { '@type': 'Question', name: 'When can I connect from Toronto?', acceptedAnswer: { '@type': 'Answer', text: 'Toronto (EST) is 10.5 hours behind IST. 8am Toronto = 6:30pm India. Your morning before work is India\'s evening — a reliable window for listeners. No appointment needed.' } },
   { '@type': 'Question', name: 'Is this private from my Brampton or Mississauga community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Listeners are in India with no connection to the GTA Indian community. Nothing is shared with anyone.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInTorontoPage() {
         <div className="hero">
           <p className="badge">Indians in Toronto &middot; Mississauga &middot; Brampton</p>
           <h1>Brampton. Mississauga. Scarborough. <em>And still, some nights feel very far from home.</em></h1>
-          <p className="lead">The Greater Toronto Area is home to more than half a million South Asians. The temples, the restaurants, the community networks — all there. And still — the Canadian winters hit hard. The immigrant weight. The family back home who think you&rsquo;re thriving. Talk to a real peer listener in India. First 5 minutes free.</p>
+          <p className="lead">The Greater Toronto Area is home to more than half a million South Asians. The temples, the restaurants, the community networks — all there. And still — the Canadian winters hit hard. The immigrant weight. The family back home who think you&rsquo;re thriving. Talk to a real peer listener in India. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInTorontoPage() {
           <h2>Brampton, Mississauga, Scarborough: The GTA&rsquo;s Indian World</h2>
           <p>The Greater Toronto Area has the largest South Asian population in Canada — and one of the largest in the world outside South Asia. Brampton has become one of the most recognisably South Asian cities anywhere in the world outside the subcontinent. Mississauga&rsquo;s Square One area has an enormous Punjabi and Gujarati community. Scarborough has a large Tamil and South Indian presence. The Sikh gurdwaras of Brampton draw thousands on weekends. The mandirs of Mississauga are packed for Navratri.</p>
           <p>The community is real, warm, and enveloping. And like all dense diaspora communities, it brings its own pressures. Brampton&rsquo;s Punjabi community is famously tight-knit — and tight-knit means everyone knows your business. The social comparison. The rishta pressure on the unmarried. The expectations on the new immigrant still finding their feet in a Canadian job market that doesn&rsquo;t always recognise their credentials from India.</p>
-          <p>How Was Your Day gives you a real Indian peer listener in India — completely outside the GTA community network — to say the things the community network doesn&rsquo;t have space for. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener in India — completely outside the GTA community network — to say the things the community network doesn&rsquo;t have space for. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>Canadian Winters and the Quiet Weight</h2>
           <p>Toronto winters are long and genuinely hard — November through March can be dark, cold, and isolating in ways that newcomers from India underestimate. The snow. The short days. The indoor life. The isolation of a suburban house when you haven&rsquo;t yet built your Canadian friendships. The family calls from India where you say everything is fine.</p>
-          <p>Toronto (EST) is 10.5 hours behind IST. 8am Toronto is 6:30pm India. Your morning — whether you&rsquo;re in Brampton commuting on the 410, or in Mississauga walking to the GO station — is India&rsquo;s evening. A real Indian listener is available, no appointment needed. Anonymous and completely private. The first 5-minute session free.</p>
+          <p>Toronto (EST) is 10.5 hours behind IST. 8am Toronto is 6:30pm India. Your morning — whether you&rsquo;re in Brampton commuting on the 410, or in Mississauga walking to the GO station — is India&rsquo;s evening. A real Indian listener is available, no appointment needed. Anonymous and completely private. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Community everywhere. Real conversation here.</h2><p>Real Indian peer listener. Understands GTA Indian community life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Community everywhere. Real conversation here.</h2><p>Real Indian peer listener. Understands GTA Indian community life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/punjabi-support-canada">Punjabi support Canada &rarr;</a>
           <a href="/nri-loneliness-canada">NRI loneliness Canada &rarr;</a>

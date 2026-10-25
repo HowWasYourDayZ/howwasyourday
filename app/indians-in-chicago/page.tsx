@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand what Indian life in Chicago is like?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience in American Midwest metros. The Chicago Indian experience — the Schaumburg and Naperville communities, the Midwest winters, the community dynamics — doesn\'t need explaining. They already know.' } },
   { '@type': 'Question', name: 'When can I connect from Chicago?', acceptedAnswer: { '@type': 'Answer', text: 'Chicago (CST) is 11.5 hours behind IST. 8am Chicago = 7:30pm India. Your early morning before the commute is Indian evening — a reliable window for finding a listener. No appointment needed.' } },
   { '@type': 'Question', name: 'Is this private from my Schaumburg or Naperville community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely private. Sessions are anonymous — phone number and first name only. Listeners are in India, with no connection to the Chicago Indian network. Nothing is shared with anyone.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInChicagoPage() {
         <div className="hero">
           <p className="badge">Indians in Chicago &middot; Schaumburg &middot; Naperville</p>
           <h1>The Midwest dream. Community around you. <em>Still somehow alone.</em></h1>
-          <p className="lead">Schaumburg and Naperville have dense Indian communities — temples, cricket clubs, Bollywood nights. And still, loneliness. The Midwest winters are hard. The community is warm but also watchful. You need somewhere that&rsquo;s outside the gossip network but completely inside the culture. First 5 minutes free.</p>
+          <p className="lead">Schaumburg and Naperville have dense Indian communities — temples, cricket clubs, Bollywood nights. And still, loneliness. The Midwest winters are hard. The community is warm but also watchful. You need somewhere that&rsquo;s outside the gossip network but completely inside the culture. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInChicagoPage() {
           <h2>Schaumburg, Naperville, Skokie: The Chicago Indian Triangle</h2>
           <p>Chicago&rsquo;s Indian community is concentrated in a triangle running from Skokie and Devon Avenue on the North Side — home to one of the most famous South Asian commercial strips in America — out to Schaumburg in the northwest suburbs and Naperville and Lisle to the southwest. The Devon Avenue corridor has been an Indian cultural hub since the 1970s. The suburbs have grown dramatically as the community has prospered.</p>
           <p>What marks Chicago Indian community life is a particular warmth combined with a particular watchfulness. The community is deeply interconnected — you will meet the same families at the mandir on Sunday and at the cricket club on Saturday and at the Diwali party next month. This closeness is genuinely supportive. It is also the reason that certain things simply cannot be said inside it. Marriages under strain. Mental health struggles. The question of whether this life is really what you wanted.</p>
-          <p>How Was Your Day gives you a real Indian peer listener in India — outside the Chicago network, inside the culture — to say those things. First 5 minutes free.</p>
+          <p>How Was Your Day gives you a real Indian peer listener in India — outside the Chicago network, inside the culture — to say those things. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>Chicago Winters and the Loneliness That Compounds</h2>
           <p>The Midwest winter is not a small thing. Chicago winters are long, grey, and genuinely isolating. For Indians who grew up in warm climates — whether in South India, Punjab, Gujarat, or UP — the Chicago cold from November through March can become a psychological weight that compounds other isolation. The short days. The indoor weeks. The gap between the warm community events of summer and the long quiet of winter.</p>
-          <p>Chicago (CST) is 11.5 hours behind IST. 8am Chicago is 7:30pm India — a natural window. On a grey February morning, your commute to the office in Schaumburg or your desk in a Naperville home office is India&rsquo;s warm evening. A real Indian listener is available. No appointment needed. Anonymous. The first 5 minutes are free.</p>
+          <p>Chicago (CST) is 11.5 hours behind IST. 8am Chicago is 7:30pm India — a natural window. On a grey February morning, your commute to the office in Schaumburg or your desk in a Naperville home office is India&rsquo;s warm evening. A real Indian listener is available. No appointment needed. Anonymous. Sessions start at 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Warm community. Real conversation.</h2><p>Real Indian peer listener. Understands Chicago NRI life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Warm community. Real conversation.</h2><p>Real Indian peer listener. Understands Chicago NRI life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

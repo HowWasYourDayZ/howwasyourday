@@ -226,7 +226,7 @@ export default function PostpartumIndiaPage() {
         <div className="cta-card">
           <h2>You do not have to feel this way alone</h2>
           <p>Anonymous. No judgment. A real person who will hear the complicated truth of what new motherhood has been like — without telling you how you should feel.</p>
-          <a href="/browse?topic=parenting" className="btn-cta">You're not alone in this — first 5 min free →</a>
+          <a href="/browse?topic=parenting" className="btn-cta">You're not alone in this →</a>
         </div>
 
         <div className="section">

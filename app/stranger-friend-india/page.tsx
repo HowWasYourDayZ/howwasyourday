@@ -183,7 +183,7 @@ export default function StrangerFriendIndiaPage() {
 
         <div className="cta-card">
           <h2>Say it to someone with no stake in how it turns out.</h2>
-          <p>Anonymous. Trained. Real. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous. Trained. Real. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

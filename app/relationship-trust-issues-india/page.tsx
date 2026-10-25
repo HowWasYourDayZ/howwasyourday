@@ -5,17 +5,17 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Trust Issues in Relationship India | How Was Your Day',
-  description: "Trust issues or cheating worries? Talk privately to a neutral, real peer listener in India before you decide anything — text or voice. First 5 minutes free.",
+  description: "Trust issues or cheating worries? Talk privately to a neutral, real peer listener in India before you decide anything — text or voice. Sessions from 8 minutes.",
   keywords: ['trust issues relationship India', 'can\'t trust partner India', 'jealousy trust issues India', 'past trauma affecting relationship India'],
   alternates: { canonical: 'https://www.howwasyourday.live/relationship-trust-issues-india', languages: { 'en-GB': 'https://www.howwasyourday.live/relationship-trust-issues-india' } },
-  openGraph: { title: 'Trust Issues in Relationship India | How Was Your Day', description: "Trust issues or cheating worries? Talk privately to a neutral, real peer listener in India before you decide anything — text or voice. First 5 minutes free.", url: 'https://www.howwasyourday.live/relationship-trust-issues-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Trust Issues in Relationship India | How Was Your Day', description: "Trust issues or cheating worries? Talk privately to a neutral, real peer listener in India before you decide anything — text or voice. Sessions from 8 minutes.", url: 'https://www.howwasyourday.live/relationship-trust-issues-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: "I think my partner is lying or cheating \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Before you confront anyone or decide anything, it helps to say it all out loud to someone neutral. How Was Your Day connects you with a peer listener in India who has been through trust issues, for a private text or voice conversation. They listen and help you sort your thoughts — they do not investigate, take sides or give legal advice. Your first 5 minutes are free." } },
+    { '@type': 'Question', name: "I think my partner is lying or cheating \u2014 who can I talk to?", acceptedAnswer: { '@type': 'Answer', text: "Before you confront anyone or decide anything, it helps to say it all out loud to someone neutral. How Was Your Day connects you with a peer listener in India who has been through trust issues, for a private text or voice conversation. They listen and help you sort your thoughts — they do not investigate, take sides or give legal advice. Sessions start at 8 minutes." } },
     {'@type': 'Question', name: 'Is trust issues the same as jealousy?', acceptedAnswer: {'@type': 'Answer', text: 'They overlap but are distinct. Jealousy is often a specific emotional response to a specific perceived threat. Trust issues are a more pervasive difficulty with believing in the reliability or faithfulness of others, based on past experience. Both can coexist and both are valid topics to explore.'}},
     {'@type': 'Question', name: 'Can trust be rebuilt after it is broken?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. But it requires time, consistent experience, and often help from a professional for deeper work. How Was Your Day is a good starting point &mdash; a space to understand where the distrust comes from and what it is doing to the current relationship.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -73,8 +73,8 @@ export default function RelationshipTrustIssuesIndiaPage() {
         <div className="hero">
           <p className="badge">Trust Issues · Jealousy · Relationship Anxiety · India</p>
           <h1>You want to trust. But you can't stop watching for <em>the thing you're afraid of.</em></h1>
-          <p className="lead">Constant vigilance, phone checking, expecting betrayal. Trust issues are exhausting to live with. Talk anonymously from ₹160.</p>
-          <QuickAnswer question={"I think my partner is lying or cheating \u2014 who can I talk to?"} answer={"Before you confront anyone or decide anything, it helps to say it all out loud to someone neutral. How Was Your Day connects you with a peer listener in India who has been through trust issues, for a private text or voice conversation. They listen and help you sort your thoughts — they do not investigate, take sides or give legal advice. Your first 5 minutes are free."} />
+          <p className="lead">Constant vigilance, phone checking, expecting betrayal. Trust issues are exhausting to live with. Talk anonymously from £4.20.</p>
+          <QuickAnswer question={"I think my partner is lying or cheating \u2014 who can I talk to?"} answer={"Before you confront anyone or decide anything, it helps to say it all out loud to someone neutral. How Was Your Day connects you with a peer listener in India who has been through trust issues, for a private text or voice conversation. They listen and help you sort your thoughts — they do not investigate, take sides or give legal advice. Sessions start at 8 minutes."} />
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -87,7 +87,7 @@ export default function RelationshipTrustIssuesIndiaPage() {
           <p>A neutral listener can help you identify where the specific patterns come from, which often reduces their power. They can also simply hold space for the exhaustion of living inside this much vigilance &mdash; the specific suffering of wanting to trust and being unable to.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You deserve a relationship that does not feel like surveillance.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You deserve a relationship that does not feel like surveillance.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/affair-recovery-india">Affair recovery India &rarr;</a>
             <a href="/cheating-partner-india">Cheating partner India &rarr;</a>
             <a href="/overthinking-relationship-india">Overthinking relationship &rarr;</a>

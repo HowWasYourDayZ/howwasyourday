@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to a Real Person About Your Problems — Not an AI | How Was Your Day US',
-  description: 'How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time). First 5 minutes free. From $10 for 15 min.',
+  description: 'How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time). Sessions from 8 minutes. From $10 for 15 min.',
   keywords: [
     'real person to talk to about loneliness USA', 'human support not AI USA',
     'affordable emotional support real person', 'talk to someone about loneliness US',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Talk to a Real Person About Your Problems — Not an AI | How Was Your Day US',
-    description: 'America has no shortage of apps. You need a real human. How Was Your Day connects you with vetted human peer listeners — online daily on Indian time, first 5 min free.',
+    description: 'America has no shortage of apps. You need a real human. How Was Your Day connects you with vetted human peer listeners — online daily on Indian time, from 8 minutes.',
     url: 'https://www.howwasyourday.live/usa-talk-to-real-person-support',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -27,7 +27,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'How Was Your Day — Real Human Peer Support for the United States',
-  description: 'How Was Your Day connects people in the United States feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners — not AI chatbots. Listeners online daily (Indian time) with first 5 minutes free.',
+  description: 'How Was Your Day connects people in the United States feeling lonely, overwhelmed, or emotionally stuck with real human peer listeners — not AI chatbots. Listeners online daily (Indian time) with sessions from 8 minutes.',
   provider: { '@type': 'Organization', name: 'How Was Your Day', url: 'https://www.howwasyourday.live' },
   serviceType: 'Peer Emotional Support',
   areaServed: 'United States',
@@ -37,7 +37,7 @@ const serviceSchema = {
   },
   offers: {
     '@type': 'Offer',
-    description: 'First 5 minutes free. From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes.',
+    description: 'Sessions from 8 minutes. From $10 for 15 minutes, $15 for 30 minutes, $20 for 45 minutes.',
     priceCurrency: 'USD',
   },
 }
@@ -60,7 +60,7 @@ const faqSchema = {
       name: 'Where can I talk to a real person about loneliness in the US?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time) from $10 for 15 minutes, with the first 5 minutes completely free.',
+        text: 'How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI chatbots. Listeners online daily (Indian time) from $10 for 15 minutes.',
       },
     },
     {
@@ -187,7 +187,7 @@ export default function USATalkToRealPersonPage() {
           Not algorithms. A real person who is actually there, online daily on Indian time across the United States.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to a real person now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to a real person now →</a>
 
         <div className="card">
           <h2>The American loneliness crisis is real — and AI makes it worse</h2>
@@ -227,7 +227,7 @@ export default function USATalkToRealPersonPage() {
             </div>
             <div className="compare-col human">
               <h3>💙 How Was Your Day Real Human</h3>
-              <p>First 5 min free, then from $10 for 15 min — real connection that actually helps</p>
+              <p>From 8 minutes, then from $10 for 15 min — real connection that actually helps</p>
             </div>
           </div>
           <div className="compare-row">
@@ -267,7 +267,7 @@ export default function USATalkToRealPersonPage() {
             <li>Complete anonymity — no name, no location, no identifying information required</li>
             <li>No appointment — US evenings fall in the Indian morning, when listeners are often online</li>
             <li>No insurance, no waitlist, no prescription — just a human who listens</li>
-            <li>First 5 minutes free — no commitment, no credit card required upfront</li>
+            <li>Sessions from 8 minutes — no commitment, no credit card required upfront</li>
           </ul>
         </div>
 
@@ -286,7 +286,7 @@ export default function USATalkToRealPersonPage() {
 
         <div className="cta">
           <h2>Real humans. Real support. Right now.</h2>
-          <p>Browse listeners available now. First 5 minutes free. $10 / $15 / $20 for 15, 30, 45 min.</p>
+          <p>Browse listeners available now. Sessions from 8 minutes. $10 / $15 / $20 for 15, 30, 45 min.</p>
           <a href="/browse" className="btn-white">Browse real listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -296,7 +296,7 @@ export default function USATalkToRealPersonPage() {
           <div className="faq-item">
             <h3>Where can I talk to a real person about loneliness in the US?</h3>
             <p>How Was Your Day connects Americans with real peer listeners — humans with lived experience, not AI
-              chatbots. Listeners online daily (Indian time) from $10 for 15 minutes, with the first 5 minutes completely free.</p>
+              chatbots. Listeners online daily (Indian time) from $10 for 15 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day a real person or AI?</h3>

@@ -2,9 +2,9 @@
 import { useState, useEffect, useRef, RefObject } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { BadgeCheck, Globe, Gift, LogIn, Mail, MessageCircle, Phone, Search, SlidersHorizontal, Star, Wallet as WalletIcon, X } from 'lucide-react'
+import { BadgeCheck, Globe, LogIn, Mail, MessageCircle, Phone, Search, SlidersHorizontal, Star, Wallet as WalletIcon, X } from 'lucide-react'
 import { createClient } from '@/lib/supabase'
-import { LANGUAGES, AGE_RANGES, ageRangeId, VOICE_PRICING_ENABLED, sessionRatePerMin, MAX_FREE_TRIALS } from '@/lib/constants'
+import { LANGUAGES, AGE_RANGES, ageRangeId, VOICE_PRICING_ENABLED, sessionRatePerMin } from '@/lib/constants'
 import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
 import { estimateListenerTakeHome } from '@/lib/session-billing'
 import { formatGBP, formatRate } from '@/lib/money'
@@ -13,14 +13,12 @@ import Avatar from '@/app/components/Avatar'
 
 // Post-login welcome banner / onboarding modal
 // New users (howwasyourday_welcome_new in sessionStorage) see a full-screen overlay
-// that explains the free trial and pushes them to pick a listener.
+// that explains how sessions work and pushes them to pick a listener.
 // Returning but un-onboarded users see the original thin strip.
 function WelcomeBanner({
   listenerGridRef,
   onDismiss,
-  trialAvailable = true,
 }: {
-  trialAvailable?: boolean
   listenerGridRef?: RefObject<HTMLDivElement | null>
   // Called with the topic the user came from (if any), so the parent can
   // pre-filter the listener grid before the modal closes.
@@ -83,7 +81,7 @@ function WelcomeBanner({
           fontSize:'clamp(24px,6vw,32px)', fontWeight:900, color:'white',
           lineHeight:1.15, marginBottom:14, maxWidth:320,
         }}>
-          Your first 5 minutes are completely free.
+          Someone to talk to, from 8 minutes.
         </h2>
         <p style={{fontSize:16, color:'rgba(213,238,246,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
           Real person, not AI.
@@ -120,12 +118,10 @@ function WelcomeBanner({
     <div style={{background:'var(--navy)',color:'white',padding:'10px 8px 10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:8,fontFamily:'Nunito,sans-serif'}}>
       <div style={{flex:1}}>
         <p style={{fontSize:14,fontWeight:800,margin:0,marginBottom:2}}>
-          {trialAvailable ? 'Your first 5 minutes are free.' : 'Not sure where to start?'}
+          Not sure where to start?
         </p>
         <p style={{fontSize:13,fontWeight:600,color:'rgba(213,238,246,0.9)',margin:0}}>
-          {trialAvailable
-            ? 'Pick someone you’d feel comfortable talking to — text or voice, private and one-to-one.'
-            : 'Pick a topic, then someone you’d feel comfortable talking to.'}
+          Pick someone you’d feel comfortable talking to — text or voice, now or at a time you book. Sessions start at 8 minutes.
         </p>
       </div>
       <button aria-label="Dismiss" onClick={() => { setShow(false); localStorage.setItem('howwasyourday_onboarded','1') }} style={{background:'none',border:'none',color:'white',cursor:'pointer',width:44,height:44,flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center'}}><X size={20} aria-hidden /></button>
@@ -381,7 +377,7 @@ function BrowseContent() {
   const [sortBy, setSortBy]     = useState<SortId>('best')
   const [joiningToast, setJoiningToast] = useState(false)
   // Overseas seekers (pricing country from the verified phone, via /api/auth/profile)
-  // are billed per session, not per minute — show them the 15-min price in their currency.
+  // are billed per session, not per minute — show them the price.
   const [myUserId, setMyUserId] = useState<string | null>(null)
   const [myTextRate, setMyTextRate] = useState<number | null>(null)
   const [query, setQuery]     = useState('')
@@ -397,7 +393,6 @@ function BrowseContent() {
   // days and haven't had a single session yet. Disappears after first session.
   const [authChecked, setAuthChecked] = useState(false)
   // Anonymous visitors are assumed eligible; logged-in seekers are checked below.
-  const [trialAvailable, setTrialAvailable] = useState(true)
   const [showFilters, setShowFilters] = useState(false)
 
   // Read ?topic= from URL after hydration to avoid SSR mismatch.
@@ -550,9 +545,6 @@ function BrowseContent() {
       if (!user) return
       // Remember who I am so I never see (or can book) my own listener card.
       setMyUserId(user.id)
-      client.from('sessions').select('id', { count: 'exact', head: true })
-        .eq('seeker_id', user.id).eq('is_free_trial', true).eq('status', 'completed')
-        .then(({ count }) => { if ((count ?? 0) >= MAX_FREE_TRIALS) setTrialAvailable(false) })
       const {data} = await client.from('users').select('wallet_balance').eq('id',user.id).single()
       if (data) {
         setBalance(data.wallet_balance as number | null)
@@ -662,7 +654,7 @@ function BrowseContent() {
             <div className="session-toast-text">New session request!</div>
             <div className="session-toast-sub">
               {incomingSession.duration_mins ? `${incomingSession.duration_mins} min` : ''}{' '}
-              {incomingSession.session_type ?? ''}{incomingSession.amount_held ? ` · you earn ${formatGBP(estimateListenerTakeHome(incomingSession, myTextRate))}` : ' · free trial'}
+              {incomingSession.session_type ?? ''}{incomingSession.amount_held ? ` · you earn ${formatGBP(estimateListenerTakeHome(incomingSession, myTextRate))}` : ' · free (test account)'}
             </div>
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
@@ -713,7 +705,6 @@ function BrowseContent() {
       )}
 
       <WelcomeBanner
-        trialAvailable={trialAvailable}
         listenerGridRef={listenerGridRef}
         onDismiss={(topic) => {
           // Pre-filter the listener grid to the user's topic intent when
@@ -814,7 +805,6 @@ function BrowseContent() {
                   : `${onlineNow} ${tagInfo(tag)?.label ?? tag} listeners available right now`}
               </span>
             </div>
-            {trialAvailable && <span style={{opacity:0.7,fontWeight:600,fontSize:12}}>First 5 min free</span>}
           </div>
         ) : (
           <div>
@@ -945,7 +935,6 @@ function BrowseContent() {
                       </button>
                     )}
                   </div>
-                  {trialAvailable && <div className="card-caption free"><Gift size={14} aria-hidden /> First 5 min free</div>}
                 </>
               ) : (
                 <>

@@ -58,7 +58,7 @@ export default function SomeoneTalkToAtNightPage() {
         <div className="card">
           <h2>Real people, no appointment</h2>
           <p>How Was Your Day has peer listeners available across all time zones and working through the night shift. Our listeners are real people — many of them are night owls themselves, or have been through dark nights of their own. They understand what it feels like to be alone with heavy thoughts.</p>
-          <p>You can text (so no one hears) or use voice if you need to hear a calm voice. Start a 5-minute session now — no top-up, no scheduling, no waiting room.</p>
+          <p>You can text (so no one hears) or use voice if you need to hear a calm voice. Start an 8-minute session now — no scheduling, no waiting room.</p>
         </div>
 
         <div className="card">

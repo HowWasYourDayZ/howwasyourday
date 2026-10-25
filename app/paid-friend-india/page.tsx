@@ -45,7 +45,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is ₹160 really the cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 15-minute session starts at ₹160. Longer sessions (30 or 45 minutes) cost proportionally more. Your first 5-minute session is free, so you can assess the connection before committing. There are no subscriptions, no hidden fees, no automatic renewals.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A 15-minute session starts at ₹160. Longer sessions (30 or 45 minutes) cost proportionally more. Sessions start at 8 minutes, so you can assess the connection before committing. There are no subscriptions, no hidden fees, no automatic renewals.' },
     },
     {
       '@type': 'Question',
@@ -184,7 +184,7 @@ export default function PaidFriendIndiaPage() {
           <h2>What a How Was Your Day Session Feels Like</h2>
           <p>You browse listener profiles and choose someone whose background resonates. You start a voice call. The listener is a real Indian person &mdash; they understand your context, your cultural references, the specific weight of the situations you&apos;re navigating.</p>
           <p>You talk. They listen. Not passively &mdash; they reflect back what they hear, ask questions that go deeper, track the feeling underneath the words. They do not advise unless you ask. They do not judge. They do not make it about themselves.</p>
-          <p>Your first 5-minute session is free. If the connection is right, you continue. If not, you can end the session and choose someone else. No penalties, no awkwardness.</p>
+          <p>Sessions start at 8 minutes. If the connection is right, you continue. If not, you can end the session and choose someone else. No penalties, no awkwardness.</p>
         </div>
 
         <div className="section">
@@ -199,7 +199,7 @@ export default function PaidFriendIndiaPage() {
 
         <div className="cta-card">
           <h2>You don&apos;t have to carry it alone.</h2>
-          <p>A real person. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>A real person. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

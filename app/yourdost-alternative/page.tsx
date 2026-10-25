@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Looking for a YourDOST Alternative? Try How Was Your Day',
-  description: 'YourDOST feels corporate and expensive. How Was Your Day connects you to a real peer listener in under 2 minutes — anonymous, £7/session, no HR data sharing.',
+  description: 'YourDOST feels corporate and expensive. How Was Your Day connects you to a real peer listener in under 2 minutes — anonymous, £4.20 per session, no HR data sharing.',
   keywords: [
     'yourdost alternative', 'alternative to yourdost', 'yourdost vs howwasyourday',
     'corporate wellness alternative india', 'peer support india', 'anonymous mental health support india',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Looking for a YourDOST Alternative? Try How Was Your Day',
-    description: 'YourDOST feels corporate and expensive. How Was Your Day connects you to a real peer listener in under 2 minutes — anonymous, £7/session, no HR data sharing.',
+    description: 'YourDOST feels corporate and expensive. How Was Your Day connects you to a real peer listener in under 2 minutes — anonymous, £4.20 per session, no HR data sharing.',
     url: 'https://www.howwasyourday.live/yourdost-alternative',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does it cost compared to YourDOST?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If your company\'s YourDOST subscription has expired — or you left the job — counseling sessions typically cost ₹500 to ₹2,000 per session out of pocket. On How Was Your Day, sessions start at £7 for 15 minutes, and your very first 5 minutes are free. No subscription, no commitment, pay only when you want to talk.',
+        text: 'If your company\'s YourDOST subscription has expired — or you left the job — counseling sessions typically cost ₹500 to ₹2,000 per session out of pocket. On How Was Your Day, sessions start at £4.20 for 8 minutes, and your very first 5 minutes are free. No subscription, no commitment, pay only when you want to talk.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'Can I use How Was Your Day without a corporate subscription?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day has nothing to do with your employer. Anyone in India can sign up directly — whether you are employed, between jobs, a student, or self-employed. You just need a phone number to get started, and your first session is free.',
+        text: 'Yes. How Was Your Day has nothing to do with your employer. Anyone in India can sign up directly — whether you are employed, between jobs, a student, or self-employed. You just need a phone number to get started, and sessions start at 8 minutes.',
       },
     },
   ],
@@ -196,12 +196,12 @@ export default function YourDOSTAlternativePage() {
               <tr>
                 <td>Session cost</td>
                 <td>₹500–₹2,000 per session</td>
-                <td className="tick">£7 per session</td>
+                <td className="tick">from £4.20 per session</td>
               </tr>
               <tr>
                 <td>First session free?</td>
                 <td className="cross">No</td>
-                <td className="tick">✅ First 5 min free</td>
+                <td className="tick">✅ From 8 minutes</td>
               </tr>
               <tr>
                 <td>Anonymous?</td>
@@ -234,7 +234,7 @@ export default function YourDOSTAlternativePage() {
             <li>
               <div>
                 <strong>Start your free session</strong>
-                <p>Your first 5 minutes are completely free — no payment needed, no commitment. Just start talking whenever you are ready.</p>
+                <p>Sessions start at 8 minutes — no payment needed, no commitment. Just start talking whenever you are ready.</p>
               </div>
             </li>
             <li>
@@ -296,7 +296,7 @@ export default function YourDOSTAlternativePage() {
           <div className="faq-item">
             <h3>How much does it cost compared to YourDOST?</h3>
             <p>If your company&apos;s YourDOST subscription has lapsed, counseling sessions typically
-              cost ₹500 to ₹2,000 per session out of pocket. On How Was Your Day, sessions start at £7 for
+              cost ₹500 to ₹2,000 per session out of pocket. On How Was Your Day, sessions start at £4.20 for
               15 minutes, and your very first 5 minutes are free. No subscription, no commitment —
               pay only when you want to talk.</p>
           </div>
@@ -304,7 +304,7 @@ export default function YourDOSTAlternativePage() {
             <h3>Can I use How Was Your Day without a corporate subscription?</h3>
             <p>Yes. How Was Your Day has nothing to do with your employer. Anyone in India can sign up directly —
               whether you are employed, between jobs, a student, or self-employed. You just need a phone
-              number to get started, and your first session is free.</p>
+              number to get started, and sessions start at 8 minutes.</p>
           </div>
         </div>
 

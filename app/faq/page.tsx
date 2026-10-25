@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'How Was Your Day FAQ: Pricing, First Session & Peer Support | UK',
-  description: 'How the app works, what a session costs, the free 5-minute introduction, privacy and safety. Compare peer support with therapy and see prices before starting.',
+  description: 'How the app works, what a session costs, booking a time, privacy and safety. Compare peer support with therapy and see prices before starting.',
   alternates: { canonical: 'https://www.howwasyourday.live/faq', languages: { 'en-GB': 'https://www.howwasyourday.live/faq' } },
   keywords: [
     'lean on app FAQ', 'howwasyourday FAQ', 'what is howwasyourday', 'lean on meaning', 'lean on someone',
@@ -40,7 +40,7 @@ const faqs = [
       },
       {
         q: 'How is How Was Your Day different from companionship apps like GetCompanion?',
-        a: 'How Was Your Day is built around peer support: one-to-one conversations with screened listeners who bring relevant lived experience. It is not therapy or a clinical service. The first 5-minute introductory session is free once per account; after that, paid session prices are shown before you start. See the pricing page for the current India and international rates.',
+        a: 'How Was Your Day is built around peer support: one-to-one conversations with screened listeners who bring relevant lived experience. It is not therapy or a clinical service. Every session is paid, from 8 minutes; paid session prices are shown before you start. See the pricing page for the current India and international rates.',
       },
     ],
   },
@@ -49,7 +49,7 @@ const faqs = [
     items: [
       {
         q: 'How do I start using How Was Your Day?',
-        a: 'The quickest way is Talk now at howwasyourday.live/talk: choose text or voice, tap what is on your mind, confirm your phone number with a one-time code, and How Was Your Day connects you with a screened listener who is online. One introductory session of up to 5 minutes is free per account. You can also browse listener profiles at howwasyourday.live/browse and choose someone yourself.',
+        a: 'The quickest way is Talk now at howwasyourday.live/talk: choose text or voice, tap what is on your mind, confirm your phone number with a one-time code, and How Was Your Day connects you with a screened listener who is online. Every session is paid, from 8 minutes. You can also browse listener profiles at howwasyourday.live/browse and choose someone yourself.',
       },
       {
         q: 'Is there a How Was Your Day app on the Play Store or App Store?',
@@ -57,7 +57,7 @@ const faqs = [
       },
       {
         q: 'How does pricing work?',
-        a: 'One 5-minute introductory session is free per account. Paid sessions are priced in pounds sterling at the listener’s rate per minute × session length, plus a flat £1 platform fee; for example, 15 minutes with a 40p/min listener costs £7. Voice calls cost 10p/min more than text. Your exact price is shown before you start. See /pricing for details.',
+        a: 'Every session is paid, from 8 minutes. Paid sessions are priced in pounds sterling at the listener’s rate per minute × session length, plus a flat £1 platform fee; for example, 8 minutes with a 40p/min listener costs £4.20. Voice calls cost 10p/min more than text. Your exact price is shown before you start. See /pricing for details.',
       },
       {
         q: 'Do I need to book in advance?',
@@ -74,7 +74,7 @@ const faqs = [
     items: [
       {
         q: 'How much does How Was Your Day cost?',
-        a: 'One introductory session of up to 5 minutes is free per account. After that, the total is the selected listener\'s per-minute rate × session length, plus a flat £1 platform fee; for example, 15 minutes at 40p/min costs £7 and 30 minutes costs £13. Voice calls are 10p/min more than text. Prices are in pounds sterling (GBP). See howwasyourday.live/pricing for details.',
+        a: 'Every session is paid, from 8 minutes. After that, the total is the selected listener\'s per-minute rate × session length, plus a flat £1 platform fee; for example, 8 minutes at 40p/min costs £4.20 and 16 minutes costs £7.40. Voice calls are 10p/min more than text. Prices are in pounds sterling (GBP). See howwasyourday.live/pricing for details.',
       },
       {
         q: 'How does the wallet work?',

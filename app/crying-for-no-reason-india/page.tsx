@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is crying for no reason a sign of depression?', acceptedAnswer: {'@type': 'Answer', text: 'Sometimes. Unexplained crying is one symptom of depression, but it is also a symptom of anxiety, emotional exhaustion, grief, and unprocessed stress. You cannot diagnose yourself from a single symptom. What matters is the broader pattern &mdash; how you are generally, whether you feel functional, whether things feel hopeless or just temporarily heavy.'}},
     {'@type': 'Question', name: 'Should I be worried?', acceptedAnswer: {'@type': 'Answer', text: 'Not necessarily. But it is worth paying attention to. If it is happening frequently and you genuinely do not know why, something is asking for your attention. How Was Your Day is a good first step &mdash; a conversation that helps you begin to identify what you are actually carrying.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function CryingForNoReasonIndiaPage() {
         <div className="hero">
           <p className="badge">Unexplained Crying · Emotional Overwhelm · India</p>
           <h1>You're at your desk. Or in the bathroom. And you're crying and <em>you don't even know why.</em></h1>
-          <p className="lead">Random crying is not a sign of weakness. It is a sign that something has been building. Talk anonymously from ₹160.</p>
+          <p className="lead">Random crying is not a sign of weakness. It is a sign that something has been building. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -85,7 +85,7 @@ export default function CryingForNoReasonIndiaPage() {
           <p>How Was Your Day listeners are screened and expected to hold space for exactly this kind of conversation &mdash; where you do not know where to start, where the feelings are not yet formed into words, where you just need someone present while you figure out what is actually happening.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Something is asking for your attention. Let someone help you hear it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Something is asking for your attention. Let someone help you hear it.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/no-motivation-india">No motivation India &rarr;</a>
             <a href="/feeling-empty-inside-india">Feeling empty inside &rarr;</a>
             <a href="/support/anxiety">Anxiety support &rarr;</a>

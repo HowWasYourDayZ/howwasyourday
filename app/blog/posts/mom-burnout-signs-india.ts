@@ -68,6 +68,6 @@ This is harder than it sounds. Many mothers in India have not said it out loud t
 
 If you need somewhere to say what is actually true — without being advised, without being judged, without it being turned into a family conversation — [How Was Your Day peer listeners](/browse) are screened people who will simply listen. Many of them are mothers. Many of them understand from the inside what you are carrying.
 
-Private. No appointment. First 5 minutes free.
+Private. No appointment. Sessions from 8 minutes.
   `.trim(),
 }

@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'How much does peer support cost on How Was Your Day vs therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A session with a licensed therapist in India costs ₹1,500–₹5,000. A peer support session on How Was Your Day costs ₹160 for 15 minutes, ₹249 for 30 minutes, or ₹329 for 45 minutes. New users get a free 5-minute trial. The difference is significant: what you would spend on a single therapy session buys you several months of regular peer support on How Was Your Day.',
+        text: 'A session with a licensed therapist in India costs ₹1,500–₹5,000. A peer support session on How Was Your Day costs ₹160 for 15 minutes, ₹249 for 30 minutes, or ₹329 for 45 minutes. Sessions start at 8 minutes. The difference is significant: what you would spend on a single therapy session buys you several months of regular peer support on How Was Your Day.',
       },
     },
     {
@@ -163,7 +163,7 @@ export default function CantAffordTherapyIndiaPage() {
         <div className="hero">
           <p className="badge">Honest Guide · Affordable Options · India</p>
           <h1>Can&apos;t Afford Therapy? <em>Here Is What Actually Helps</em></h1>
-          <p className="lead">Therapy in India costs ₹1,500–₹5,000 per session. For most people, that is genuinely unaffordable as a regular expense. This is not a judgment — it is just true. Here is an honest look at what actually exists at lower price points, including peer support from ₹160.</p>
+          <p className="lead">Therapy in India costs ₹1,500–₹5,000 per session. For most people, that is genuinely unaffordable as a regular expense. This is not a judgment — it is just true. Here is an honest look at what actually exists at lower price points, including peer support from £4.20.</p>
           <a href="/browse" className="cta-hero">See peer support options →</a>
         </div>
 
@@ -271,7 +271,7 @@ export default function CantAffordTherapyIndiaPage() {
 
         <div className="cta-card">
           <h2>Start with a free trial</h2>
-          <p>Browse listeners online right now. New users get a free 5-minute trial. No appointment, no subscription, no explanation needed.</p>
+          <p>Browse listeners online right now. Sessions start at 8 minutes. No appointment, no subscription, no explanation needed.</p>
           <a href="/browse" className="btn-cta">Browse listeners →</a>
         </div>
 

@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'What if I\'m feeling guilty about my partner waiting?', acceptedAnswer: { '@type': 'Answer', text: 'Guilt is one of the most common things people carry in this situation — guilt for leaving, guilt for the waiting, guilt for the times you feel resentment about the sacrifice. A peer listener can hold this with you without judgement.' } },
   { '@type': 'Question', name: 'What if the relationship is starting to struggle under the distance?', acceptedAnswer: { '@type': 'Answer', text: 'That happens. Long-distance strains the best relationships. A peer listener won\'t give you relationship advice, but they will hear what you\'re going through and help you feel less alone in it.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are anonymous — phone number and first name only. Nothing is shared with your partner, family, or anyone else.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriLongDistanceRelationshipPage() {
         <div className="hero">
           <p className="badge">NRI Long-Distance &middot; Visa Wait &middot; India-Abroad</p>
           <h1>Oceans apart. <em>And the loneliness of loving someone on a different timezone.</em></h1>
-          <p className="lead">Your partner is in India. You&rsquo;re in America, the UK, or Canada. The visa process is endless. The calls are never quite enough. You&rsquo;re building a life somewhere they haven&rsquo;t arrived yet — and they&rsquo;re waiting in a world you&rsquo;ve already left behind. Talk to a real Indian peer listener who understands this specific, unacknowledged pain. First 5 minutes free.</p>
+          <p className="lead">Your partner is in India. You&rsquo;re in America, the UK, or Canada. The visa process is endless. The calls are never quite enough. You&rsquo;re building a life somewhere they haven&rsquo;t arrived yet — and they&rsquo;re waiting in a world you&rsquo;ve already left behind. Talk to a real Indian peer listener who understands this specific, unacknowledged pain. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriLongDistanceRelationshipPage() {
           <h2>The NRI Long-Distance Limbo</h2>
           <p>The NRI long-distance relationship is different from other long-distance situations in one crucial way: it is not chosen. Nobody wanted the visa to take this long. Nobody planned to spend their first years of marriage in different countries. But the H-1B spousal visa queue can be years long. The UK spouse visa process has its own delays and costs. Canadian PR processes create their own timelines. You are waiting on bureaucracy for the most intimate part of your life.</p>
           <p>In the meantime: you are building a life abroad — a home, a routine, a social circle — in a place your partner has not yet experienced. Your partner is living in a world you have partly left — familiar family and friends, but the growing distance of someone whose daily life has become radically different from yours. The calls are wonderful and also insufficient. You can video-call but you cannot have Sunday morning together.</p>
-          <p>This kind of pain is real and largely unacknowledged. It doesn&rsquo;t show up in the happy couple photos. It is the private loneliness of loving someone across an ocean and a bureaucratic queue. How Was Your Day is for exactly this. First 5 minutes free.</p>
+          <p>This kind of pain is real and largely unacknowledged. It doesn&rsquo;t show up in the happy couple photos. It is the private loneliness of loving someone across an ocean and a bureaucratic queue. How Was Your Day is for exactly this. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -94,7 +94,7 @@ export default function NriLongDistanceRelationshipPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Heard. Without judgment. While you wait.</h2><p>Real Indian peer listener. Understands the NRI long-distance weight. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Heard. Without judgment. While you wait.</h2><p>Real Indian peer listener. Understands the NRI long-distance weight. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

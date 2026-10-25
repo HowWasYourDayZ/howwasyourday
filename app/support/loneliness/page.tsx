@@ -5,11 +5,11 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Peer Support for Loneliness in India | How Was Your Day',
-  description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
+  description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. Every session is paid, from 8 minutes; availability varies. Peer support, not therapy.",
   alternates: { canonical: 'https://www.howwasyourday.live/support/loneliness', languages: { 'en-GB': 'https://www.howwasyourday.live/support/loneliness' } },
   openGraph: {
     title: 'Peer Support for Loneliness in India | How Was Your Day',
-    description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. One introductory session up to 5 minutes is free per account; availability varies. Peer support, not therapy.",
+    description: "Feeling lonely and looking for someone to talk to? How Was Your Day offers one-to-one text or voice conversations with screened peer listeners in India. Every session is paid, from 8 minutes; availability varies. Peer support, not therapy.",
     url: 'https://www.howwasyourday.live/support/loneliness',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -20,7 +20,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "What can I do when I feel lonely and have no one to talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking with another person is one way some people seek connection when they feel lonely. How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. One introductory session up to 5 minutes is free per account; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed." } },
+    { '@type': 'Question', name: "What can I do when I feel lonely and have no one to talk to?", acceptedAnswer: { '@type': 'Answer', text: "Talking with another person is one way some people seek connection when they feel lonely. How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. Every session is paid, from 8 minutes; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed." } },
     {
       '@type': 'Question',
       name: 'Is feeling lonely normal in India even when surrounded by people?',
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.',
+        text: 'Every session is paid, from 8 minutes. 8-minute text sessions start at £4.20 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.',
       },
     },
   ],
@@ -151,7 +151,7 @@ export default function LonelinessSupportPage() {
           <p className="tag">Peer Support · Loneliness</p>
           <h1>You Are Not Alone in Feeling <em>Alone</em></h1>
           <p className="lead">Loneliness can happen in a new city, in a busy workplace, at home or even when surrounded by people. How Was Your Day offers non-clinical one-to-one conversations with screened peer listeners for adults who want a human conversation. It is not therapy, and availability depends on who is online.</p>
-          <QuickAnswer question={"What can I do when I feel lonely and have no one to talk to?"} answer={"Talking with another person is one way some people seek connection when they feel lonely. How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. One introductory session up to 5 minutes is free per account; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed."} />
+          <QuickAnswer question={"What can I do when I feel lonely and have no one to talk to?"} answer={"Talking with another person is one way some people seek connection when they feel lonely. How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not therapy. Every session is paid, from 8 minutes; paid prices vary by listener and mode. Availability varies, so an immediate match is not guaranteed."} />
         </div>
 
         {/* What is loneliness */}
@@ -230,7 +230,7 @@ export default function LonelinessSupportPage() {
           <h2>Ready to Feel Less Alone?</h2>
           <p>Talk with a screened peer listener about loneliness. No appointment is needed, but availability varies and a session starts when a listener accepts your request.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Request a conversation — first 5 minutes free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Request a conversation →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
@@ -256,7 +256,7 @@ export default function LonelinessSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day peer support cost?</div>
-            <div className="faq-a">One introductory session up to 5 minutes is free per account. Paid 15-minute text sessions in India start at £7 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.</div>
+            <div className="faq-a">Every session is paid, from 8 minutes. 8-minute text sessions start at £4.20 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Availability depends on which listeners are online.</div>
           </div>
         </div>
 

@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand Pune IT culture specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Pune-to-abroad pipeline is well understood — the IT corridor background, the particular mix of ambition and cultural rootedness that Pune families carry. You do not have to explain the context.' } },
   { '@type': 'Question', name: 'What if the pressure is from extended family back in Maharashtra?', acceptedAnswer: { '@type': 'Answer', text: 'Extended family pressure from Maharashtra is one of the most common things Marathi NRIs talk about with listeners. The expectations, the obligations, the guilt of not being there for occasions — all of it is heard without judgment.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Marathi community abroad and your family back in Pune or Mumbai will never know. Sessions are anonymous — phone number and first name only.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription needed.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription needed.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function MarathiNriSupportPage() {
         <div className="hero">
           <p className="badge">Marathi NRI &middot; Pune &amp; Mumbai &middot; Diaspora Support</p>
           <h1>Pune chi swapne, parades cha bhaar. <em>You shouldn&rsquo;t have to carry it alone.</em></h1>
-          <p className="lead">Marathi NRIs carry a specific weight — the IT dreams born in Pune&rsquo;s tech corridors, the Mumbai ambition taken global, the extended family obligations that do not pause because you moved continents. How Was Your Day connects you with Marathi peer listeners who understand your home and your now, without needing either explained. First 5 minutes free.</p>
+          <p className="lead">Marathi NRIs carry a specific weight — the IT dreams born in Pune&rsquo;s tech corridors, the Mumbai ambition taken global, the extended family obligations that do not pause because you moved continents. How Was Your Day connects you with Marathi peer listeners who understand your home and your now, without needing either explained. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function MarathiNriSupportPage() {
           <h2>The Pune-to-Abroad Pipeline and What It Carries</h2>
           <p>Pune has become one of India&rsquo;s great IT export cities. Tens of thousands of Maharashtrians have followed the path from Pune or Mumbai engineering colleges to onsite assignments, H1B visas, and eventually permanent lives abroad. The path is well-worn. The emotional cost of walking it is not well-discussed.</p>
           <p>Marathi families carry deep cultural rootedness — Ganesh Chaturthi is not just a festival, it is the heartbeat of the year. Missing it from Seattle or London is not a small thing. Neither is missing the Gudi Padwa family gathering, the puran poli at your aai&rsquo;s house, the specific comfort of speaking Marathi all day with people who share your cultural reference. These are real losses that get minimised in the NRI success narrative.</p>
-          <p>How Was Your Day listeners understand this. Many have family or close connections abroad and have heard these specific stories. You do not have to minimise the weight of what you carry — a listener will hear it as it is. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand this. Many have family or close connections abroad and have heard these specific stories. You do not have to minimise the weight of what you carry — a listener will hear it as it is. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -100,7 +100,7 @@ export default function MarathiNriSupportPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Apla manus, apli bhashet.</h2><p>A Marathi listener who understands without explanation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Apla manus, apli bhashet.</h2><p>A Marathi listener who understands without explanation. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

@@ -38,7 +38,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if I just need 10 minutes to get something off my chest?',
-      acceptedAnswer: { '@type': 'Answer', text: 'That is exactly what a 15-minute session is for. You do not need a long-term problem or a mental health crisis. If something happened and you need to say it out loud to a real person before it derails your day — that is enough. Book, vent, feel better.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'That is exactly what a 16-minute session is for. You do not need a long-term problem or a mental health crisis. If something happened and you need to say it out loud to a real person before it derails your day — that is enough. Book, vent, feel better.' },
     },
     {
       '@type': 'Question',

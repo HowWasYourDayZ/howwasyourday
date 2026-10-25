@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'What is NRI anxiety and how is it different from regular anxiety?', acceptedAnswer: { '@type': 'Answer', text: 'NRI anxiety is regular anxiety layered with specific immigrant stressors: visa status tied to employment, the weight of family expectations from afar, the performance of success for a community watching from India, the fear of returning without having "made it," and the constant background calculation of when and whether to come back.' } },
   { '@type': 'Question', name: 'Is H-1B anxiety common among Indians in America?', acceptedAnswer: { '@type': 'Answer', text: 'Extremely common. The H-1B tethers your entire life to your employer\'s goodwill. You cannot speak up at work, cannot leave a bad situation, cannot take a gap to breathe. This structural dependency creates anxiety that is not pathological — it is a rational response to a genuinely precarious situation.' } },
   { '@type': 'Question', name: 'Will a listener understand immigration-related stress?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are Indian and understand the H-1B and visa situation, the immigration-career dependency, and the specific way these create anxiety. Many have close family members living with this. No explanation needed.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function NriAnxietyAbroadPage() {
         <div className="hero">
           <p className="badge">NRI Anxiety &middot; Immigration Stress &middot; Desi Abroad</p>
           <h1>The H-1B. The performance. The family back home watching. <em>No wonder you&rsquo;re anxious.</em></h1>
-          <p className="lead">NRI anxiety isn&rsquo;t ordinary anxiety — it&rsquo;s layered. The visa tied to your job. The family who invested everything in your success. The community watching. The pressure to make the sacrifice &ldquo;worth it.&rdquo; And underneath all of it, a quiet question: is this the life I actually wanted? Talk to a real Indian peer listener. First 5 minutes free.</p>
+          <p className="lead">NRI anxiety isn&rsquo;t ordinary anxiety — it&rsquo;s layered. The visa tied to your job. The family who invested everything in your success. The community watching. The pressure to make the sacrifice &ldquo;worth it.&rdquo; And underneath all of it, a quiet question: is this the life I actually wanted? Talk to a real Indian peer listener. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function NriAnxietyAbroadPage() {
           <h2>What Makes NRI Anxiety Different</h2>
           <p>Anxiety is a feature of many people&rsquo;s lives. But NRI anxiety has specific layers that make it different from the anxiety of someone who stayed in India, or someone who grew up in the country they now live in. The H-1B or work visa tethers your entire presence in the country to a single employer&rsquo;s goodwill. You cannot speak up when your manager is wrong. You cannot leave for a better job without risk. You cannot afford to seem anything less than excellent, because the alternative is not a bad performance review — it is deportation.</p>
           <p>This structural dependency creates a particular kind of anxiety that is not a personal pathology. It is a rational response to a genuinely precarious situation. The anxiety about layoffs is not irrational when your visa is tied to your employment. The anxiety about performance reviews is not irrational when your right to be in the country is at stake.</p>
-          <p>On top of this: the family in India who have invested hope and sometimes money in your success. The community who is watching. The internal question — underneath all the performance — of whether this is the life you actually wanted. How Was Your Day is for exactly this specific, layered, under-acknowledged weight. First 5 minutes free.</p>
+          <p>On top of this: the family in India who have invested hope and sometimes money in your success. The community who is watching. The internal question — underneath all the performance — of whether this is the life you actually wanted. How Was Your Day is for exactly this specific, layered, under-acknowledged weight. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>What You Need Is to Be Heard</h2>
           <p>There are very few places where NRI anxiety can be voiced honestly. Your manager cannot hear it — your job depends on seeming fine. Your parents cannot hear it — they would worry or feel responsible. Your Indian community friends are performing the same fine-ness. The result is a private anxiety carried alone.</p>
-          <p>A real Indian peer listener at How Was Your Day can hear all of this — the visa fear, the performance pressure, the family expectation, the quiet question underneath — without judgment, without advice you didn&rsquo;t ask for, and without telling you to be grateful. Listeners are available when India is in the evening (morning US time, afternoon UK time). Anonymous. First 5 minutes free — one free session per account.</p>
+          <p>A real Indian peer listener at How Was Your Day can hear all of this — the visa fear, the performance pressure, the family expectation, the quiet question underneath — without judgment, without advice you didn&rsquo;t ask for, and without telling you to be grateful. Listeners are available when India is in the evening (morning US time, afternoon UK time). Anonymous. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The NRI anxiety, finally heard.</h2><p>Real Indian peer listener. Understands visa, performance, and family pressure. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The NRI anxiety, finally heard.</h2><p>Real Indian peer listener. Understands visa, performance, and family pressure. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

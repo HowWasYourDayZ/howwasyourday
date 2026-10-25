@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is people pleasing a mental health issue?', acceptedAnswer: {'@type': 'Answer', text: 'It is a learned behaviour pattern that can be associated with anxiety, codependency, and low self-worth. It does not require a diagnosis to be worth addressing. If it is affecting your quality of life &mdash; your energy, your relationships, your sense of who you are &mdash; it is worth talking about.'}},
     {'@type': 'Question', name: 'Why do I feel guilty when I say no?', acceptedAnswer: {'@type': 'Answer', text: 'Because at some level, you learned that your worth was conditional on your usefulness to others. The guilt is the enforcement mechanism. It does not mean you have done something wrong &mdash; it means the pattern is strongly conditioned.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function PeoplePleaseIndiaPage() {
         <div className="hero">
           <p className="badge">People Pleasing · Approval Seeking · India</p>
           <h1>You've spent so long making everyone else comfortable that you've <em>lost track of yourself.</em></h1>
-          <p className="lead">Saying yes to everything. Never disappointing anyone. Forgetting what you actually want. Talk anonymously from ₹160.</p>
+          <p className="lead">Saying yes to everything. Never disappointing anyone. Forgetting what you actually want. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -85,7 +85,7 @@ export default function PeoplePleaseIndiaPage() {
           <p>A How Was Your Day listener will not tell you to just start saying no. They will listen to what the pattern has cost you and help you see it clearly, at whatever pace feels right.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You matter too. Let someone help you remember that.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You matter too. Let someone help you remember that.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/low-self-esteem-india">Low self-esteem India &rarr;</a>
             <a href="/social-anxiety-india">Social anxiety India &rarr;</a>
             <a href="/imposter-syndrome-india">Imposter syndrome &rarr;</a>

@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the West Bengal vs Bangladesh distinction?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Bengali diaspora spans both West Bengal and Bangladesh and carries different cultural weights. Listeners understand this without needing it explained — the specific experiences of Bong NRIs versus Bangladeshi NRIs are different and both are heard.' } },
   { '@type': 'Question', name: 'I feel a specific intellectual loneliness abroad. Can listeners understand that?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Bengali intellectual tradition is something listeners understand — the specific frustration of being in an environment where your cultural reference points do not land, where the conversation is always a translation. That is a real and nameable form of loneliness.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Your Bengali community and your family will never know. Sessions are anonymous — phone number and first name only. Nothing is shared beyond the session.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function BengaliNriSupportPage() {
         <div className="hero">
           <p className="badge">Bengali NRI &middot; Bangla Culture &middot; Diaspora Support</p>
           <h1>The intellectual loneliness of being Bengali abroad <em>is real and nameable.</em></h1>
-          <p className="lead">Bengali NRIs carry a specific kind of cultural weight — the literature, the music, the food, the particular intellectual tradition that does not translate easily into other contexts. Whether you are from West Bengal or Bangladesh, in the UK, the US, or beyond, the loneliness of being between two worlds has a texture. Talk to a Bengali peer listener who understands it. First 5 minutes free.</p>
+          <p className="lead">Bengali NRIs carry a specific kind of cultural weight — the literature, the music, the food, the particular intellectual tradition that does not translate easily into other contexts. Whether you are from West Bengal or Bangladesh, in the UK, the US, or beyond, the loneliness of being between two worlds has a texture. Talk to a Bengali peer listener who understands it. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function BengaliNriSupportPage() {
           <h2>The Cultural Weight That Goes Abroad With You</h2>
           <p>Bengali culture has a deep intellectual and artistic tradition — Tagore, Ray, the Baul music, the specific pleasure of adda, the way food is central to every occasion, the language pride that runs through generations. When you move abroad, you carry all of this with you, and what you find is that it is hard to fully live out in a new context.</p>
           <p>The UK Bengali community is one of the oldest South Asian diaspora communities — Tower Hamlets, east London, the generations who came before. The US has significant Bengali communities in New York, Boston, and the Bay Area. But being part of a diaspora community does not resolve the specific loneliness of missing the original. Community events are warm substitutes. Durga Puja in Queens is beautiful. It is not the same as being in Kolkata for it, and you can love it and still feel that absence.</p>
-          <p>How Was Your Day listeners understand this — the specific, high-context Bengali homesickness that is partly cultural and partly personal. You do not have to explain it. First 5 minutes free.</p>
+          <p>How Was Your Day listeners understand this — the specific, high-context Bengali homesickness that is partly cultural and partly personal. You do not have to explain it. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -96,11 +96,11 @@ export default function BengaliNriSupportPage() {
         <div className="section">
           <h2>West Bengal and Bangladesh — Different Journeys, Same Belonging</h2>
           <p>The Bengali diaspora includes people from West Bengal and Bangladesh, and these are meaningfully different experiences — different political histories, different migration patterns, different family cultures, sometimes different religions. How Was Your Day listeners understand these distinctions. You do not have to code-switch or simplify your identity for the listener to understand you.</p>
-          <p>Whether the weight you are carrying is about family in Dhaka, homesickness for Kolkata, the specific stress of UK immigration status, or the loneliness of being the &ldquo;foreign one&rdquo; in every room you are in — a listener will hear it as it is. No judgment. First 5 minutes free.</p>
+          <p>Whether the weight you are carrying is about family in Dhaka, homesickness for Kolkata, the specific stress of UK immigration status, or the loneliness of being the &ldquo;foreign one&rdquo; in every room you are in — a listener will hear it as it is. No judgment. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Amar kotha, amar moto keu shunuk.</h2><p>A Bengali listener who gets the weight without the translation. First 5 minutes free. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Amar kotha, amar moto keu shunuk.</h2><p>A Bengali listener who gets the weight without the translation. Sessions from 8 minutes. Sessions from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/uk">Indians in UK &rarr;</a>

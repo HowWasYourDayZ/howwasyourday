@@ -24,7 +24,7 @@ const faqSchema = {
     {'@type': 'Question', name: 'Is UPSC stress actually serious?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Studies on UPSC aspirants consistently find high rates of anxiety, depression, and burnout. The combination of indefinite timeline, social pressure, financial sacrifice, and identity investment creates a genuinely high-risk psychological environment. The fact that it is common does not make it less serious.'}},
     {'@type': 'Question', name: 'How does talking to a peer help with UPSC stress?', acceptedAnswer: {'@type': 'Answer', text: 'A peer listener who has navigated similar pressure understands the specific texture of what you are carrying. They are not going to tell you to just relax or to have a backup plan. They will listen to the actual weight of it and reflect back what they hear. That is often the relief that disciplined practice and preparation cannot provide.'}},
     {'@type': 'Question', name: 'Does How Was Your Day have listeners who understand UPSC?', acceptedAnswer: {'@type': 'Answer', text: 'How Was Your Day listeners come from diverse backgrounds including people who have navigated competitive exam stress, career uncertainty, and family pressure. The platform does not match on specific exam type, but the emotional content &mdash; uncertainty, sacrifice, pressure &mdash; is something many listeners understand deeply.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
   ],
 }
 
@@ -95,7 +95,7 @@ export default function UPSCStressIndiaPage() {
         <div className="hero">
           <p className="badge">UPSC Stress · Civil Services · Aspirant Mental Health</p>
           <h1>You\'ve been preparing for years. Nobody around you truly <em>gets what this feels like.</em></h1>
-          <p className="lead">Years of preparation, family expectations, uncertainty, and isolation. UPSC stress is unlike anything else. Talk to someone who understands. Anonymous from ₹160.</p>
+          <p className="lead">Years of preparation, family expectations, uncertainty, and isolation. UPSC stress is unlike anything else. Talk to someone who understands. Anonymous from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -119,7 +119,7 @@ export default function UPSCStressIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>The pressure is real. So is the support.</h2>
-          <p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
         <div className="section">

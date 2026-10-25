@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Can I talk about family pressure around dating as well as the dating itself?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The family pressure, the community dynamics, the arranged marriage alternative hovering in the background — all of this is part of the NRI dating experience and can be part of the conversation.' } },
   { '@type': 'Question', name: 'Is this confidential from my community in Canada?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private — phone number and first name only. Nothing goes anywhere near your community, your family, or anyone in Canada or India.' } },
   { '@type': 'Question', name: 'Are listeners based in India or Canada?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners are based in India but understand the NRI experience — many have direct experience with family abroad or with life in the diaspora. They understand the Brampton community dynamics, the Canadian dating culture, the desi dating pressures without needing it explained.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes are free. Sessions continue from US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriDatingCanadaPage() {
         <div className="hero">
           <p className="badge">NRI Dating Canada &middot; Desi Dating &middot; Indian Abroad</p>
           <h1>NRI Dating in Canada — <em>Love, But Complicated</em></h1>
-          <p className="lead">Dating as an Indian in Canada comes with layers no dating app was designed for. The Brampton community where everyone knows everyone. Parents in India still wanting to arrange a match. The question of dating someone outside the community. The loneliness of being single in a new country where the rules are different. Talk to a listener who already understands the desi dating world. First 5 minutes free.</p>
+          <p className="lead">Dating as an Indian in Canada comes with layers no dating app was designed for. The Brampton community where everyone knows everyone. Parents in India still wanting to arrange a match. The question of dating someone outside the community. The loneliness of being single in a new country where the rules are different. Talk to a listener who already understands the desi dating world. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -98,7 +98,7 @@ export default function NriDatingCanadaPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The dating life you can&rsquo;t explain to your parents.</h2><p>Real peer listener. Understands desi dating in Canada. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The dating life you can&rsquo;t explain to your parents.</h2><p>Real peer listener. Understands desi dating in Canada. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-loneliness-canada">NRI loneliness Canada &rarr;</a>
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>

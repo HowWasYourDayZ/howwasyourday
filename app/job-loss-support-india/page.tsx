@@ -23,7 +23,7 @@ const faqSchema = {
   mainEntity: [
     {'@type': 'Question', name: 'Is it normal to feel depressed after a job loss?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. Job loss is a major life disruption and a genuine grief event &mdash; you are mourning an identity, a structure, a set of relationships, and a version of the future you expected. Feeling low, unmotivated, anxious about the future, or confused about your sense of self are all normal responses. These do not mean something is permanently wrong with you.'}},
     {'@type': 'Question', name: 'Can a peer listener help if I need career advice?', acceptedAnswer: {'@type': 'Answer', text: 'How Was Your Day is not a career advice service. But if what you need right now is someone to listen to the emotional side of what you are going through &mdash; the shame, the confusion, the fear about what comes next &mdash; peer support is exactly right for that.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free. No subscription.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes. No subscription.'}}
   ],
 }
 
@@ -94,7 +94,7 @@ export default function JobLossSupportIndiaPage() {
         <div className="hero">
           <p className="badge">Job Loss · Emotional Support · India</p>
           <h1>It\'s not just income. It\'s identity. It\'s structure. <em>It\'s how you answer \'what do you do\'.</em></h1>
-          <p className="lead">Losing a job in India is not just a financial event &mdash; it is an identity event. Talk to someone who understands that. Anonymous peer support from ₹160.</p>
+          <p className="lead">Losing a job in India is not just a financial event &mdash; it is an identity event. Talk to someone who understands that. Anonymous peer support from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -118,7 +118,7 @@ export default function JobLossSupportIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>You are more than your job title.</h2>
-          <p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
         <div className="section">

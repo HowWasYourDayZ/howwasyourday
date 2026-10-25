@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand Indian life in Florida?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the Florida Indian experience of being in a fast-growing but still-forming community, new arrivals still building connections, and the specific isolation that warm weather and suburban sprawl can create.' } },
   { '@type': 'Question', name: 'What time works to connect from Florida?', acceptedAnswer: { '@type': 'Answer', text: 'Florida (EST) is 10.5 hours behind IST. 8am Florida = 6:30pm India. Early Florida mornings before work align with Indian evenings — a reliable window for finding listeners online.' } },
   { '@type': 'Question', name: 'Is this confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private — phone number and first name only. Nothing is shared with your community, family, or employer.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInFloridaPage() {
         <div className="hero">
           <p className="badge">Indians in Florida &middot; Orlando &middot; Tampa</p>
           <h1>Florida sunshine. <em>And the loneliness it doesn&rsquo;t fix.</em></h1>
-          <p className="lead">Florida&rsquo;s Indian community has exploded in the last decade — Orlando, Tampa, Jacksonville, and South Florida all have growing desi communities. But rapid growth means new arrivals who haven&rsquo;t built community yet, children between cultures, and the specific loneliness of warm weather that somehow makes isolation feel worse. Talk to a real peer listener. First 5 minutes free.</p>
+          <p className="lead">Florida&rsquo;s Indian community has exploded in the last decade — Orlando, Tampa, Jacksonville, and South Florida all have growing desi communities. But rapid growth means new arrivals who haven&rsquo;t built community yet, children between cultures, and the specific loneliness of warm weather that somehow makes isolation feel worse. Talk to a real peer listener. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,7 +83,7 @@ export default function IndiansInFloridaPage() {
           <h2>Florida&rsquo;s Indian Community: Growing Fast, Still Finding Itself</h2>
           <p>Florida has seen dramatic growth in its Indian population over the past decade. Orlando draws Indian tech workers and healthcare professionals. Tampa has a substantial and growing desi community in its suburbs. Jacksonville, Boca Raton, and the South Florida corridor all have significant and expanding Indian presences. The state is sunny, affordable compared to the coasts, and increasingly popular as a relocation destination for Indians from more expensive metros.</p>
           <p>But rapid growth means the community infrastructure is still forming in many parts of Florida. New arrivals may not yet have found their people — the temple, the cricket club, the Saturday language class for children. The car-dependent sprawl of Florida suburbs can compound isolation. And unlike the tight-knit communities of New Jersey or Atlanta, in many Florida cities you can be Indian and genuinely alone.</p>
-          <p>How Was Your Day connects you with a real Indian peer listener in India — someone who understands the NRI experience fully even before the Florida community solidifies around you. First 5 minutes free.</p>
+          <p>How Was Your Day connects you with a real Indian peer listener in India — someone who understands the NRI experience fully even before the Florida community solidifies around you. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -93,7 +93,7 @@ export default function IndiansInFloridaPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Sun and real support.</h2><p>Real Indian peer listener. Understands Florida NRI life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Sun and real support.</h2><p>Real Indian peer listener. Understands Florida NRI life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

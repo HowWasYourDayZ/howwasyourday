@@ -44,7 +44,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. Your first 5-minute session is free. Compare this with private therapy in India, which typically costs ₹1,500–5,000 per session.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. Sessions start at 8 minutes. Compare this with private therapy in India, which typically costs ₹1,500–5,000 per session.' },
     },
     {
       '@type': 'Question',
@@ -157,7 +157,7 @@ export default function TalkTherapyIndiaPage() {
 
         <div className="section">
           <h2>Getting Started: What a First Session Is Like</h2>
-          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose someone whose background resonates with what you are going through. Start the session. The first 5 minutes are free &mdash; use them to feel the connection.</p>
+          <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Choose someone whose background resonates with what you are going through. Start the session. Sessions start at 8 minutes &mdash; use them to feel the connection.</p>
           <p>You do not need to prepare. You do not need to have it organised. You can start with &ldquo;I don&apos;t quite know where to begin&rdquo; and that is fine. A good listener will follow you wherever you need to go.</p>
         </div>
 
@@ -173,7 +173,7 @@ export default function TalkTherapyIndiaPage() {
 
         <div className="cta-card">
           <h2>Say it out loud. To someone real.</h2>
-          <p>No appointment. From ₹160. First 5 minutes free.</p>
+          <p>No appointment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

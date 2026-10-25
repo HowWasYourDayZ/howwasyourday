@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'I am not in crisis — I just need to talk about the breakup. Is that enough reason?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You do not need to be in crisis to talk to a peer listener. Heartbreak is a real and significant thing to carry, especially when you are alone abroad. That is a completely valid reason to want to talk to someone.' } },
   { '@type': 'Question', name: 'What if my visa or living situation is affected by the breakup?', acceptedAnswer: { '@type': 'Answer', text: 'Peer listeners can hear all of this — the practical consequences and the emotional ones together. You do not have to separate them.' } },
   { '@type': 'Question', name: 'Can I talk to the same listener more than once?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You can return to the same listener for follow-up sessions. Many people find it helpful to talk to the same person as they work through something over time.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes are free. Sessions continue from US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriBreakupPage() {
         <div className="hero">
           <p className="badge">NRI Breakup &middot; Heartbreak Abroad &middot; Indian Immigrant</p>
           <h1>NRI Breakup — <em>Heartbreak With No One Around</em></h1>
-          <p className="lead">Your support network is 8,000 miles away. You can&rsquo;t cry to your mum in person. Your flatmate might be a colleague. Your friends in your new country are still new enough that the history isn&rsquo;t there. Breaking up when you are an NRI is not just heartbreak — it is heartbreak in a foreign city with no safety net within reach. You are not alone. First 5 minutes free.</p>
+          <p className="lead">Your support network is 8,000 miles away. You can&rsquo;t cry to your mum in person. Your flatmate might be a colleague. Your friends in your new country are still new enough that the history isn&rsquo;t there. Breaking up when you are an NRI is not just heartbreak — it is heartbreak in a foreign city with no safety net within reach. You are not alone. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -98,7 +98,7 @@ export default function NriBreakupPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Heartbreak in a foreign city. Someone is there.</h2><p>Real peer listener. Private, anonymous, understands NRI life. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Heartbreak in a foreign city. Someone is there.</h2><p>Real peer listener. Private, anonymous, understands NRI life. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

@@ -33,7 +33,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What should I do when I\'m having a really bad day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The most effective thing — backed by both research and the experience of most people who try it — is to say it out loud to another person before it compounds. Not to analyse it. Not to fix it. Just to get it outside your head and into the world where it stops circling. A 15-minute conversation with a peer listener on How Was Your Day often turns a day that was going to be a write-off into one where you can actually function.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The most effective thing — backed by both research and the experience of most people who try it — is to say it out loud to another person before it compounds. Not to analyse it. Not to fix it. Just to get it outside your head and into the world where it stops circling. A 16-minute conversation with a peer listener on How Was Your Day often turns a day that was going to be a write-off into one where you can actually function.' },
     },
     {
       '@type': 'Question',
@@ -43,7 +43,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I reset emotionally in the middle of a workday?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Step one: get it out. Not to your colleagues or your manager — somewhere private and consequence-free. A 15-minute session with a peer listener is often enough to release the pressure and reset. You will not fix the situation. But you will get back enough equilibrium to get through the afternoon without it bleeding into everything.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Step one: get it out. Not to your colleagues or your manager — somewhere private and consequence-free. A 16-minute session with a peer listener is often enough to release the pressure and reset. You will not fix the situation. But you will get back enough equilibrium to get through the afternoon without it bleeding into everything.' },
     },
     {
       '@type': 'Question',
@@ -58,7 +58,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How fast can I talk to someone when my day is going badly?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Within minutes. Browse online listeners on How Was Your Day, pick one, book. If you are at lunch or have 15 minutes between meetings, that is enough time to connect and get the thing out that is sitting on your chest.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Within minutes. Browse online listeners on How Was Your Day, pick one, book. If you are at lunch or have 16 minutes between meetings, that is enough time to connect and get the thing out that is sitting on your chest.' },
     },
   ],
 }
@@ -164,7 +164,7 @@ export default function HavingABadDayPage() {
           <h2>What Actually Resets a Bad Day</h2>
           <p>Not productivity tips. Not taking a walk. Not deep breathing, though none of those are wrong. What actually interrupts the accumulation cycle is expression — getting the original thing out, spoken, received, outside of you.</p>
           <p>When you say what happened to a real person who is genuinely listening, the loop closes. The nervous system gets the signal that it has been processed. The pressure drops. The subsequent events of the day stop piling onto the original trigger — because the original trigger is no longer sitting there, unresolved, underneath everything.</p>
-          <p>A 15-minute conversation with a peer listener on How Was Your Day does not fix the situation. But it often turns a day that was going to be a complete write-off into one where you can actually function through the afternoon.</p>
+          <p>A 16-minute conversation with a peer listener on How Was Your Day does not fix the situation. But it often turns a day that was going to be a complete write-off into one where you can actually function through the afternoon.</p>
         </div>
 
         <div className="section">
@@ -176,7 +176,7 @@ export default function HavingABadDayPage() {
             </div>
             <div className="trigger-card">
               <p className="trigger-card-label">Lunchtime</p>
-              <p>The morning accumulated. A meeting went wrong, or a colleague did something, or work stress built to a point where you need the lunch break to decompress — or the afternoon will be a write-off. You have 15 minutes and nowhere to take it.</p>
+              <p>The morning accumulated. A meeting went wrong, or a colleague did something, or work stress built to a point where you need the lunch break to decompress — or the afternoon will be a write-off. You have 16 minutes and nowhere to take it.</p>
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function HavingABadDayPage() {
 
         <div className="cta-card">
           <h2>The afternoon does not have to be a write-off.</h2>
-          <p>No appointment needed. 15 minutes is enough to get it out and return to your day from a different state.</p>
+          <p>No appointment needed. 16 minutes is enough to get it out and return to your day from a different state.</p>
           <a href="/browse" className="btn-cta">Talk it out now →</a>
         </div>
 

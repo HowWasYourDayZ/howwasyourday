@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Boston Indian academic and professional experience?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are based in India and understand the NRI experience — including the specific weight of Boston\'s Indian community: the academic pressure of Cambridge, the PhD and postdoc experience, the residency grind, the high-achieving culture that leaves little room to say "I\'m not okay".' } },
   { '@type': 'Question', name: 'When can I connect from Boston?', acceptedAnswer: { '@type': 'Answer', text: 'Boston (EST) is 10.5 hours behind IST. 8am Boston = 6:30pm India. Before your lab meeting or your morning clinic round, India is in the evening and listeners are available.' } },
   { '@type': 'Question', name: 'Is this confidential from my department or colleagues?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous — phone number and first name only. Nothing reaches your supervisor, your research group, your hospital, or your Boston community.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInBostonPage() {
         <div className="hero">
           <p className="badge">Indians in Boston &middot; Cambridge &middot; New England</p>
           <h1>Smart city. <em>Smart doesn&rsquo;t mean okay.</em></h1>
-          <p className="lead">Cambridge, Burlington, Lexington — Boston draws some of the most accomplished Indians in America. But high achievement and emotional weight are not opposites — often they travel together. The PhD pressure, the residency grind, the loneliness of a city that celebrates intellect but sometimes misses warmth. Talk to someone real. First 5 minutes free.</p>
+          <p className="lead">Cambridge, Burlington, Lexington — Boston draws some of the most accomplished Indians in America. But high achievement and emotional weight are not opposites — often they travel together. The PhD pressure, the residency grind, the loneliness of a city that celebrates intellect but sometimes misses warmth. Talk to someone real. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function IndiansInBostonPage() {
           <h2>Cambridge, Burlington, Lexington: The Boston Indian Academic Circle</h2>
           <p>Boston draws Indian professionals and academics to an extraordinary degree. MIT and Harvard draw Indian PhD students and postdocs by the hundreds each year. The biotech and pharma corridor — Cambridge, Waltham, Burlington, Lexington — employs thousands of Indian scientists and engineers. Massachusetts General Hospital, Brigham and Women&rsquo;s, Beth Israel — the Boston medical world has a large and distinguished Indian medical community.</p>
           <p>The Burlington and Lexington suburbs have established Indian family communities. Newton has a significant Indian professional presence. Westborough, Marlborough, and the Route 9 corridor are home to Indian families who have settled into Massachusetts suburban life. The community is distributed, educated, and often quietly overwhelmed.</p>
-          <p>What makes Boston Indian life particularly complex is the intersection of exceptional achievement with exceptional pressure. You are here because you are among the best in the world at what you do. And that means there is even less permission to say: I&rsquo;m struggling. Talk to someone who has heard this. First 5 minutes free.</p>
+          <p>What makes Boston Indian life particularly complex is the intersection of exceptional achievement with exceptional pressure. You are here because you are among the best in the world at what you do. And that means there is even less permission to say: I&rsquo;m struggling. Talk to someone who has heard this. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>The Weight That Excellence Doesn&rsquo;t Dissolve</h2>
           <p>The Boston Indian experience has its own specific character. The PhD student in year four of five, watching their stipend fail to cover Cambridge rent, questioning whether the sacrifice is worth it. The medical resident working 80-hour weeks and calling home to parents who are deeply proud and completely unaware of how exhausted you are. The biotech professional who has made it by every external measure and still feels something missing.</p>
-          <p>Boston (EST) is 10.5 hours behind IST. 8am in Cambridge or Burlington is 6:30pm in India. Before your lab meeting starts, India is in the evening. A real Indian peer listener is available, no appointment needed, anonymous and private. The first 5-minute session free. High achievement does not require silent suffering.</p>
+          <p>Boston (EST) is 10.5 hours behind IST. 8am in Cambridge or Burlington is 6:30pm in India. Before your lab meeting starts, India is in the evening. A real Indian peer listener is available, no appointment needed, anonymous and private. Sessions from 8 minutes. High achievement does not require silent suffering.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Smart enough to ask for support.</h2><p>Real Indian peer listener. Understands Boston Indian academic and professional life. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Smart enough to ask for support.</h2><p>Real Indian peer listener. Understands Boston Indian academic and professional life. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

@@ -166,7 +166,7 @@ export default function WalkInCounsellingIndiaPage() {
               <div className="step-num">2</div>
               <div className="step-body">
                 <h3>Select</h3>
-                <p>Choose someone whose background resonates. Your first 5-minute session is free.</p>
+                <p>Choose someone whose background resonates. Sessions start at 8 minutes.</p>
               </div>
             </div>
             <div className="step">
@@ -204,7 +204,7 @@ export default function WalkInCounsellingIndiaPage() {
 
         <div className="cta-card">
           <h2>The support you need, without an appointment.</h2>
-          <p>No appointment. No waiting list. From ₹160. First 5 minutes free.</p>
+          <p>No appointment. No waiting list. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Browse available listeners &rarr;</a>
         </div>
 

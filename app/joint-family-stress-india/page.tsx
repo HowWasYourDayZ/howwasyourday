@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is joint family stress a real mental health issue?', acceptedAnswer: {'@type': 'Answer', text: 'Yes. The absence of private space, the constant negotiation, and the dual loyalty demands of joint family living are recognized contributors to anxiety, depression, and relationship stress. The fact that it is culturally common does not make it psychologically cost-free.'}},
     {'@type': 'Question', name: 'How do I talk about this without seeming ungrateful?', acceptedAnswer: {'@type': 'Answer', text: 'To a How Was Your Day listener, you do not need to manage how you come across. You can say exactly what is happening and how it makes you feel, without framing it carefully or softening it for the listener\'s benefit. That freedom is one of the most valuable things about neutral peer support.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -71,7 +71,7 @@ export default function JointFamilyStressIndiaPage() {
         <div className="hero">
           <p className="badge">Joint Family · Privacy · Conflict · India</p>
           <h1>You love your family. <em>You're also drowning in them.</em></h1>
-          <p className="lead">No privacy, constant interference, family politics. Joint family stress is real and uniquely Indian. Talk anonymously from ₹160.</p>
+          <p className="lead">No privacy, constant interference, family politics. Joint family stress is real and uniquely Indian. Talk anonymously from £4.20.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -85,7 +85,7 @@ export default function JointFamilyStressIndiaPage() {
           <p>That is exactly what How Was Your Day provides.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You can love your family and need space from them at the same time.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You can love your family and need space from them at the same time.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/mother-in-law-stress-india">Mother-in-law stress &rarr;</a>
             <a href="/sasural-problems-india">Sasural problems &rarr;</a>
             <a href="/feeling-trapped-india">Feeling trapped &rarr;</a>

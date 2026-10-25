@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is it normal to still miss India after years abroad?', acceptedAnswer: { '@type': 'Answer', text: 'Completely normal. Homesickness for India doesn\'t follow a neat timeline. People who have been abroad for 10 or 20 years still feel it at particular moments — a smell, a festival, a family occasion, a song. The duration of absence doesn\'t make the feeling smaller.' } },
   { '@type': 'Question', name: 'What do people miss most about India?', acceptedAnswer: { '@type': 'Answer', text: 'Different things for different people: the food, the chaos, the extended family, the way people talk, the festivals, the ease of being in a place where you are the default, the everyday things that are invisible until they are gone. Listeners at How Was Your Day understand all of this without needing it catalogued.' } },
   { '@type': 'Question', name: 'Will talking to someone help with homesickness?', acceptedAnswer: { '@type': 'Answer', text: 'Being heard by someone who truly understands often helps. Not because the homesickness disappears, but because carrying it alone is harder than carrying it with someone who gets it. How Was Your Day listeners are in India — they are from the place you miss.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function NriHomesickPage() {
         <div className="hero">
           <p className="badge">NRI Homesickness &middot; Missing India &middot; Desi Abroad</p>
           <h1>Home is 5,000 miles away. <em>And some days that distance is everything.</em></h1>
-          <p className="lead">The smell of your mother&rsquo;s kitchen. The chai. The chaos you used to complain about. The people who knew you before you became who you are now. Homesickness for India is its own specific pain — one that your non-Indian colleagues don&rsquo;t understand and that you&rsquo;re too embarrassed to admit to your parents because it would just worry them. Talk to a real Indian peer listener. First 5 minutes free.</p>
+          <p className="lead">The smell of your mother&rsquo;s kitchen. The chai. The chaos you used to complain about. The people who knew you before you became who you are now. Homesickness for India is its own specific pain — one that your non-Indian colleagues don&rsquo;t understand and that you&rsquo;re too embarrassed to admit to your parents because it would just worry them. Talk to a real Indian peer listener. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,7 +83,7 @@ export default function NriHomesickPage() {
           <h2>What Missing India Actually Feels Like</h2>
           <p>Homesickness for India is not always the dramatic, acute missing of early weeks after arriving. More often it is quieter and more persistent — a background ache that surfaces at particular moments. The Diwali weekend when you are in Houston or Fremont and the community event is wonderful but it is not your family&rsquo;s home. The Sunday morning when you would normally have gone to your parents&rsquo; house for breakfast. The smell of rain on dry earth that reminds you of somewhere specific.</p>
           <p>It surfaces at difficult life moments too — when you are unwell and there is no one to bring you chai and sit with you. When something goes wrong and you want comfort that geography makes impossible. When your parents are getting older and you are watching it through a screen. These moments land differently than general loneliness.</p>
-          <p>How Was Your Day listeners are in India. They are from the place you miss. They know what you mean without you having to explain it. The chai, the chaos, the family Sunday — they understand the specific texture of what you are missing. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are in India. They are from the place you miss. They know what you mean without you having to explain it. The chai, the chaos, the family Sunday — they understand the specific texture of what you are missing. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -93,7 +93,7 @@ export default function NriHomesickPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Someone from home, to hear you miss it.</h2><p>Real Indian peer listener. In India. Understands what you miss. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Someone from home, to hear you miss it.</h2><p>Real Indian peer listener. In India. Understands what you miss. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

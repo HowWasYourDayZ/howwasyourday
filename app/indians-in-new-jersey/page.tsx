@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is this for NJ Indians specifically?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is for Indians anywhere abroad, and listeners understand the specific NJ Indian experience — the Oak Tree Road community, the high density in Edison and Parsippany, the pressure of being in one of the most watched Indian communities in America. You don\'t need to explain the context.' } },
   { '@type': 'Question', name: 'When is the best time to connect from New Jersey?', acceptedAnswer: { '@type': 'Answer', text: 'New Jersey (EST) is 10.5 hours behind IST. 8am NJ = 6:30pm India. Your morning before the commute aligns with Indian evenings — a reliable window for finding a listener online.' } },
   { '@type': 'Question', name: 'Is this private from the Edison and Parsippany community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are anonymous. Only a phone number and first name. Listeners are in India, with no connection to NJ Indian networks. Nothing leaves the session.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInNewJerseyPage() {
         <div className="hero">
           <p className="badge">Indians in NJ &middot; Edison &middot; Parsippany</p>
           <h1>Edison has more Indians per mile than most cities in India. <em>And still, loneliness finds a way.</em></h1>
-          <p className="lead">New Jersey&rsquo;s Indian community is legendary — Oak Tree Road in Edison feels like a different country. But high density isn&rsquo;t the same as deep connection. The gossip circuit. The keeping-up-with-the-Guptas pressure. The feeling that everyone knows your business. Talk to someone outside the NJ Indian community who still gets the culture completely. First 5 minutes free.</p>
+          <p className="lead">New Jersey&rsquo;s Indian community is legendary — Oak Tree Road in Edison feels like a different country. But high density isn&rsquo;t the same as deep connection. The gossip circuit. The keeping-up-with-the-Guptas pressure. The feeling that everyone knows your business. Talk to someone outside the NJ Indian community who still gets the culture completely. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,7 +83,7 @@ export default function IndiansInNewJerseyPage() {
           <h2>Oak Tree Road and the Paradox of Visibility</h2>
           <p>Edison&rsquo;s Oak Tree Road — the stretch of Indian restaurants, sari shops, grocery stores, and gold jewellers — is one of the most famous Indian commercial corridors in the world. Parsippany, Iselin, Cherry Hill, Somerset — New Jersey&rsquo;s Indian community has roots going back to the 1970s and 80s. Third and fourth generation families sit alongside recent arrivals. The infrastructure is extraordinary.</p>
           <p>And with that extraordinary density comes a very particular kind of social pressure. Everyone knows everyone. News travels fast. Your marriage, your job, your children&rsquo;s schools, your parents&rsquo; health — all of it circulates. The community holds you warmly and also watches you closely. You can be on Oak Tree Road surrounded by hundreds of your own people and feel completely unable to say a true word.</p>
-          <p>How Was Your Day offers a real Indian peer listener in India — completely outside your NJ network, completely inside the culture. You can say the actual thing. First 5 minutes free.</p>
+          <p>How Was Your Day offers a real Indian peer listener in India — completely outside your NJ network, completely inside the culture. You can say the actual thing. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -93,7 +93,7 @@ export default function IndiansInNewJerseyPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Outside the NJ network. Inside the culture.</h2><p>Real Indian peer listener. Understands the NJ Indian experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Outside the NJ network. Inside the culture.</h2><p>Real Indian peer listener. Understands the NJ Indian experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa">Desi support USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

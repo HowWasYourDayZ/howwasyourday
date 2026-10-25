@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Loneliness Support for Indians in Kuwait | How Was Your Day',
-  description: 'Feeling lonely and isolated in Kuwait? How Was Your Day connects Indian expats with a screened Indian peer listener — in your language, any time, starting with a free 5-minute trial.',
+  description: 'Feeling lonely and isolated in Kuwait? How Was Your Day connects Indian expats with a screened Indian peer listener — in your language, any time, in sessions from 8 minutes.',
   keywords: [
     'loneliness support Kuwait Indian', 'lonely in Kuwait Indian', 'Indian expat Kuwait lonely',
     'emotional support Kuwait Indians', 'talk to someone Kuwait', 'Kuwait NRI loneliness',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Loneliness Support for Indians in Kuwait — Talk to an Indian Listener',
-    description: 'Isolated in Kuwait and missing home? How Was Your Day peer listeners understand the expat experience and speak your language. First 5 minutes free.',
+    description: 'Isolated in Kuwait and missing home? How Was Your Day peer listeners understand the expat experience and speak your language. Sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/kuwait-loneliness',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -157,7 +157,7 @@ export default function KuwaitLonelinessPage() {
           speaks your language and understands your world.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>Loneliness in Kuwait — what it really feels like</h2>
@@ -176,7 +176,7 @@ export default function KuwaitLonelinessPage() {
           <h2>🌙 Alone in Kuwait City tonight?</h2>
           <p>How Was Your Day listeners are based in India, so availability follows Indian time. The time difference between Kuwait and India is small —
             which means Indian listeners are awake and ready whenever you need to talk, day or night.</p>
-          <p>First 5 minutes are completely free. No card needed to start.</p>
+          <p>Sessions from 8 minutes. No card needed to start.</p>
           <a href="/browse" className="cta-night">Find an Indian listener now →</a>
         </div>
 
@@ -193,7 +193,7 @@ export default function KuwaitLonelinessPage() {
             <li>15-minute session — KD 4</li>
             <li>30-minute session — KD 5</li>
             <li>45-minute session — KD 7</li>
-            <li>First 5 minutes free — one free session per account</li>
+            <li>Sessions from 8 minutes</li>
           </ul>
           <p style={{ marginTop: '12px' }}>No subscription. Anonymous. Pay only for what you use.</p>
         </div>
@@ -214,7 +214,7 @@ export default function KuwaitLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How much does How Was Your Day cost from Kuwait?</h3>
-            <p>KD 4 for 15 minutes, KD 5 for 30 minutes, KD 7 for 45 minutes. First 5 minutes are free.</p>
+            <p>KD 4 for 15 minutes, KD 5 for 30 minutes, KD 7 for 45 minutes. Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk in Malayalam, Hindi, or my regional language?</h3>

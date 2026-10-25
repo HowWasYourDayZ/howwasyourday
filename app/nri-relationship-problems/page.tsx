@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is peer support the right thing when my relationship is really struggling?', acceptedAnswer: { '@type': 'Answer', text: 'Peer support is not a substitute for other kinds of help when things are serious. But it is often the first and most accessible step — being heard by someone who truly understands the cultural context, before you decide what else you need.' } },
   { '@type': 'Question', name: 'What if my problem involves my partner\'s family as much as my partner?', acceptedAnswer: { '@type': 'Answer', text: 'NRI relationship problems almost always involve families, not just couples. Listeners understand Indian family dynamics — joint family expectations, parental involvement in couples\' decisions, the weight of family honour — and won\'t need that context explained.' } },
   { '@type': 'Question', name: 'Is this confidential from my partner and family?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. Only a phone number and first name. Nothing is shared with your partner, family, or community.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriRelationshipProblemsPage() {
         <div className="hero">
           <p className="badge">NRI Relationships &middot; Cultural Mismatch &middot; Desi Abroad</p>
           <h1>Two people. Two cultures. <em>The gap nobody warned you about.</em></h1>
-          <p className="lead">NRI relationships aren&rsquo;t just about two people — they&rsquo;re about two families, two cultures, and two different ideas of what a relationship should look like. Whether you&rsquo;re navigating a cross-cultural relationship, family disapproval, the gap between your values and your partner&rsquo;s, or the loneliness of a marriage that started under pressure — talk to someone who has heard it all. First 5 minutes free.</p>
+          <p className="lead">NRI relationships aren&rsquo;t just about two people — they&rsquo;re about two families, two cultures, and two different ideas of what a relationship should look like. Whether you&rsquo;re navigating a cross-cultural relationship, family disapproval, the gap between your values and your partner&rsquo;s, or the loneliness of a marriage that started under pressure — talk to someone who has heard it all. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,17 +84,17 @@ export default function NriRelationshipProblemsPage() {
           <h2>The Cultural Weight That Comes Into Every NRI Relationship</h2>
           <p>Indian relationships abroad carry weight that is different from Indian relationships in India and different from local relationships in the country you live in. You are navigating the expectations you absorbed growing up — about what a partner should be, what a family should look like, what obligations you have to your parents, what success in a relationship means — and all of this has to interact with another person who may have absorbed different expectations entirely.</p>
           <p>If you are with someone from a different cultural background, you are managing the constant work of translation — explaining your family to them, explaining their family to yourself, finding the common ground in two sets of inherited ideas about love, commitment, money, gender roles, children, and what it means to be part of a family. This is exhausting and meaningful and sometimes overwhelming.</p>
-          <p>If you are with someone Indian, the cultural match may be closer — but it is never simple. Different regions, different castes, different family dynamics, different expectations formed in very different homes. And then the NRI overlay: two people trying to figure out what kind of Indian life to build in a non-Indian country, with parents watching from India and community watching from the diaspora. How Was Your Day offers a space for all of this. First 5 minutes free.</p>
+          <p>If you are with someone Indian, the cultural match may be closer — but it is never simple. Different regions, different castes, different family dynamics, different expectations formed in very different homes. And then the NRI overlay: two people trying to figure out what kind of Indian life to build in a non-Indian country, with parents watching from India and community watching from the diaspora. How Was Your Day offers a space for all of this. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>When There Is Nobody Safe to Talk To</h2>
           <p>One of the loneliest aspects of NRI relationship problems is having no one safe to talk to. You cannot tell your parents — they have opinions that would make things worse, or they would worry, or they would tell other family members. You cannot tell your Indian community friends — it goes in the gossip circuit. You cannot tell your non-Indian friends — they don&rsquo;t have the cultural framework to understand. You are alone with the weight of it.</p>
-          <p>How Was Your Day is built for exactly this gap. A real Indian peer listener in India — outside your social network entirely, inside the cultural context completely — who can hear what you are actually carrying. Anonymous. Private. No appointment. First 5 minutes free — one free session per account.</p>
+          <p>How Was Your Day is built for exactly this gap. A real Indian peer listener in India — outside your social network entirely, inside the cultural context completely — who can hear what you are actually carrying. Anonymous. Private. No appointment. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Cultural context without explanation.</h2><p>Real Indian peer listener. Understands NRI relationship complexity. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Cultural context without explanation.</h2><p>Real Indian peer listener. Understands NRI relationship complexity. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>
           <a href="/nri-dating-usa">NRI dating USA &rarr;</a>

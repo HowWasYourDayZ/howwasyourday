@@ -4,10 +4,10 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'NRI Loneliness in Canada | You\'re Not Alone | How Was Your Day',
-  description: 'The loneliness of being Indian in Canada is different. It\'s not just missing home — it\'s feeling invisible in two countries. Talk to someone who gets it. First 5 min free.',
+  description: 'The loneliness of being Indian in Canada is different. It\'s not just missing home — it\'s feeling invisible in two countries. Talk to someone who gets it. From 8 minutes.',
   keywords: ['nri loneliness canada', 'lonely indian in canada', 'indian loneliness toronto', 'punjabi loneliness canada', 'missing home india canada', 'indian isolation canada', 'feeling lonely abroad canada'],
   alternates: { canonical: 'https://www.howwasyourday.live/nri-loneliness-canada' },
-  openGraph: { title: 'NRI Loneliness in Canada | You\'re Not Alone | How Was Your Day', description: 'The loneliness of being Indian in Canada is different. It\'s not just missing home — it\'s feeling invisible in two countries. Talk to someone who gets it. First 5 min free.', url: 'https://www.howwasyourday.live/nri-loneliness-canada', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'NRI Loneliness in Canada | You\'re Not Alone | How Was Your Day', description: 'The loneliness of being Indian in Canada is different. It\'s not just missing home — it\'s feeling invisible in two countries. Talk to someone who gets it. From 8 minutes.', url: 'https://www.howwasyourday.live/nri-loneliness-canada', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -74,7 +74,7 @@ export default function NriLonelinessCanadaPage() {
         <div className="hero">
           <p className="badge">NRI Loneliness &middot; Canada &middot; Indian Diaspora</p>
           <h1>The loneliness of being Indian <em>in Canada.</em></h1>
-          <p className="lead">You video call home and say everything is fine. You post pictures at Niagara Falls or Banff. But some nights &mdash; usually in winter, when it&rsquo;s 4pm and already dark &mdash; the loneliness hits differently. Not just missing people. Missing being understood. Missing belonging somewhere. Talk to someone in India who gets it. Right now. First 5 minutes free.</p>
+          <p className="lead">You video call home and say everything is fine. You post pictures at Niagara Falls or Banff. But some nights &mdash; usually in winter, when it&rsquo;s 4pm and already dark &mdash; the loneliness hits differently. Not just missing people. Missing being understood. Missing belonging somewhere. Talk to someone in India who gets it. Right now. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -91,10 +91,10 @@ export default function NriLonelinessCanadaPage() {
         <div className="section">
           <h2>How the app works across the ocean</h2>
           <p>How Was Your Day listeners are India-based, active in the evenings IST &mdash; which is Canadian morning. Brampton and Toronto are 9.5 hours behind India. An 8am call in Brampton is 5:30pm in India. Surrey and Vancouver are 12.5 hours behind. 8am in Surrey is 8:30pm in India &mdash; perfect listener availability.</p>
-          <p>You sign up with just your phone number. No photo, no full name, no social account. Your family back home and your colleagues in Canada never know. There is no appointment, no waiting list. Browse who is online right now and start a session. The first 5 minutes are free.</p>
+          <p>You sign up with just your phone number. No photo, no full name, no social account. Your family back home and your colleagues in Canada never know. There is no appointment, no waiting list. Browse who is online right now and start a session. Sessions start at 8 minutes.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The loneliness is real. So is the support.</h2><p>A real Indian peer listener who understands the Canada experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The loneliness is real. So is the support.</h2><p>A real Indian peer listener who understands the Canada experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/punjabi-support-canada">Punjabi support Canada &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

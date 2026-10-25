@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Talk to a Real Person About Relationship Problems in India | How Was Your Day',
-  description: "Talk through a fight, breakup, trust concerns or marriage pressure with a screened peer listener in India by text or voice. This is non-clinical peer support, not couples therapy or legal advice. One introductory session up to 5 minutes is free per account; availability varies.",
+  description: "Talk through a fight, breakup, trust concerns or marriage pressure with a screened peer listener in India by text or voice. This is non-clinical peer support, not couples therapy or legal advice. Every session is paid, from 8 minutes; availability varies.",
   keywords: [
     'relationship advice real person', 'someone to talk to about relationship problems',
     'relationship support online', 'relationship help online', 'talk about breakup online',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Relationship Support from a Real Person | How Was Your Day',
-    description: 'How Was Your Day offers one-to-one text or voice conversations with screened peer listeners about relationship stress. It is not professional counselling; one introductory session up to 5 minutes is free per account, and availability depends on who is online.',
+    description: 'How Was Your Day offers one-to-one text or voice conversations with screened peer listeners about relationship stress. It is not professional counselling; every session is paid, from 8 minutes, and availability depends on who is online.',
     url: 'https://www.howwasyourday.live/relationship-support-real-person',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -28,13 +28,13 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "Who can I talk to about relationship problems?", acceptedAnswer: { '@type': 'Answer', text: "If you want to talk through a fight, breakup, trust concern or marriage and family pressure, How Was Your Day lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. One introductory session up to 5 minutes is free per account; a match is not guaranteed." } },
+    { '@type': 'Question', name: "Who can I talk to about relationship problems?", acceptedAnswer: { '@type': 'Answer', text: "If you want to talk through a fight, breakup, trust concern or marriage and family pressure, How Was Your Day lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. Every session is paid, from 8 minutes; a match is not guaranteed." } },
     {
       '@type': 'Question',
       name: 'Where can I get relationship advice from a real person online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day offers one-to-one conversations with screened peer listeners about relationships, breakups, marriage stress and emotional disconnection. It is non-clinical support, not therapy. One introductory session up to 5 minutes is free per account; availability varies.',
+        text: 'How Was Your Day offers one-to-one conversations with screened peer listeners about relationships, breakups, marriage stress and emotional disconnection. It is non-clinical support, not therapy. Every session is paid, from 8 minutes; availability varies.',
       },
     },
     {
@@ -157,10 +157,10 @@ export default function RelationshipSupportPage() {
         <p className="lead">
           When you&apos;re dealing with a relationship problem — a fight, a breakup, a slow drift apart or feeling unheard — you may want a human conversation outside your usual circle. How Was Your Day lets adults request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not professional relationship counselling.
         </p>
-        <QuickAnswer question={"Where can I talk to a real person about relationship problems in India?"} answer={"If you want to talk through a fight, breakup, trust concern or marriage and family pressure, How Was Your Day lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. One introductory session up to 5 minutes is free per account; a match is not guaranteed."} />
+        <QuickAnswer question={"Where can I talk to a real person about relationship problems in India?"} answer={"If you want to talk through a fight, breakup, trust concern or marriage and family pressure, How Was Your Day lets you request a one-to-one conversation with a screened peer listener in India. Listeners are expected to listen without judgement, but the service is not professional relationship counselling, couples therapy or legal advice. Every session is paid, from 8 minutes; a match is not guaranteed."} />
         <p style={{ fontSize: 14, margin: '10px 0 20px', lineHeight: 1.7, color: '#4A6470' }}>Not sure what kind of help fits? <a href="/relationship-emotional-support-guide-india" style={{ fontWeight: 800, color: '#0F7788', textDecoration: 'underline' }}>Read our relationship and emotional support guide</a> for marriage, family pressure, women’s emotional load, and when to choose counselling instead of peer listening.</p>
 
-        <a href="/talk?src=seo" className="cta-hero">Talk it through — first 5 minutes free →</a>
+        <a href="/talk?src=seo" className="cta-hero">Talk it through →</a>
 
         <div className="card">
           <h2>Relationship situations How Was Your Day listeners understand</h2>
@@ -226,7 +226,7 @@ export default function RelationshipSupportPage() {
 
         <div className="cta">
           <h2>A real person is ready to listen</h2>
-          <p>One introductory session up to 5 minutes is free per account. Use a display name; listeners do not see your phone number. Availability varies.</p>
+          <p>Every session is paid, from 8 minutes. Use a display name; listeners do not see your phone number. Availability varies.</p>
           <a href="/browse" className="btn-white">Browse listeners →</a><br />
           <a href="/talk?src=seo" className="btn-orange">Talk now</a>
         </div>
@@ -236,7 +236,7 @@ export default function RelationshipSupportPage() {
           <div className="faq-item">
             <h3>Where can I get relationship advice from a real person online?</h3>
             <p>How Was Your Day connects you with peer listeners who have real lived experience of relationships,
-              breakups, marriage stress, and emotional disconnection. One introductory session up to 5 minutes is free per account; availability varies.</p>
+              breakups, marriage stress, and emotional disconnection. Every session is paid, from 8 minutes; availability varies.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day relationship advice or therapy?</h3>

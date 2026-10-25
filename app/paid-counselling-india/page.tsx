@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'How does How Was Your Day pricing work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Your first 5-minute session is free, so you can try a listener before committing. You recharge your wallet and use it when you need it.',
+        text: 'How Was Your Day is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Sessions start at 8 minutes, so you can try a listener before committing. You recharge your wallet and use it when you need it.',
       },
     },
     {
@@ -157,7 +157,7 @@ export default function PaidCounsellingIndiaPage() {
 
         <div className="stats-row">
           <div className="stat-pill">From <em>₹160</em>/session</div>
-          <div className="stat-pill">First <em>5 min free</em></div>
+          <div className="stat-pill">Sessions <em>from 8 min</em></div>
           <div className="stat-pill"><em>Anonymous</em></div>
           <div className="stat-pill">No <em>appointment</em></div>
           <div className="stat-pill">Pay <em>per session</em></div>
@@ -214,7 +214,7 @@ export default function PaidCounsellingIndiaPage() {
             <li><strong>Private</strong> — first name only, no photo, no social account required</li>
             <li><strong>No waitlist</strong> — browse available listeners and start in minutes</li>
             <li><strong>Pay as you go</strong> — recharge when you want, use when you need it</li>
-            <li><strong>Your first 5-minute session is free</strong> — try before you commit</li>
+            <li><strong>Sessions start at 8 minutes</strong> — try before you commit</li>
           </ul>
         </div>
 
@@ -233,7 +233,7 @@ export default function PaidCounsellingIndiaPage() {
 
         <div className="cta-card">
           <h2>Start a Session for ₹160</h2>
-          <p>Browse real peer listeners. First 5 minutes are free. No appointment, no waitlist.</p>
+          <p>Browse real peer listeners. Sessions start at 8 minutes. No appointment, no waitlist.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -248,7 +248,7 @@ export default function PaidCounsellingIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does How Was Your Day pricing work?</div>
-            <div className="faq-a">How Was Your Day is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Your first 5-minute session is free. You recharge your wallet and use it when you need it.</div>
+            <div className="faq-a">How Was Your Day is pay-per-session — no monthly subscription, no automatic renewal. Sessions start at ₹160. Sessions start at 8 minutes. You recharge your wallet and use it when you need it.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is ₹160 really the full cost?</div>

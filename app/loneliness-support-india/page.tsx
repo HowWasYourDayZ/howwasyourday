@@ -155,7 +155,7 @@ export default function LonelinessSupportPage() {
           unseen. How Was Your Day is here for exactly those moments.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>Loneliness in India looks different than people think</h2>

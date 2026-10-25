@@ -231,7 +231,7 @@ export default function CareerConfusionSupportPage() {
           <h2>You Are Allowed to Want Something Different</h2>
           <p>Talk to someone who has been through career confusion and found their way. No judgment, no scripts.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk it through — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk it through →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>

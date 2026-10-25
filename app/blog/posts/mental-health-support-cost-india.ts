@@ -33,7 +33,7 @@ export const post = {
 
 <p>Peer support is a different category from professional therapy. A peer supporter is not a licensed therapist — they are someone with lived experience who has been screened for active listening and supportive conversation. It is not clinical care. It is what you need when you need to be genuinely heard by someone who has actually been through something like what you are facing.</p>
 
-<p>On How Was Your Day, peer support costs approximately ₹160 per session. Your first 5-minute session is free. There are no subscription fees, no automatic renewals, and no appointment needed — listeners are.</p>
+<p>On How Was Your Day, peer support costs approximately ₹160 per session. Sessions start at 8 minutes. There are no subscription fees, no automatic renewals, and no appointment needed — listeners are.</p>
 
 <p>The cost difference between peer support and professional therapy is not a quality difference — it reflects what you are actually getting. A peer listener is not a licensed professional. For everyday emotional weight — loneliness, burnout, relationship stress, family pressure — peer support is often the right tool at a fraction of the cost of therapy. For a diagnosed mental health condition requiring clinical treatment, professional care is what you need.</p>
 
@@ -56,7 +56,7 @@ export const post = {
 
 <p><strong>If you have a diagnosed mental health condition</strong> — depression, anxiety disorder, OCD, PTSD, bipolar disorder — you need professional clinical care. The cost is real, but the right tool here is a licensed therapist or psychiatrist, not a peer support platform. iCall (TISS) is the most affordable professional option in India, starting at ₹200.</p>
 
-<p><strong>If you are carrying everyday emotional weight</strong> — the kind that accumulates across a hard month, a difficult relationship, a job that is depleting you, the feeling of being alone with something you cannot say to the people around you — peer support is often exactly the right tool. At ₹160/session, with no appointment and the first 5 minutes free, How Was Your Day is accessible in a way that therapy is not for most people.</p>
+<p><strong>If you are carrying everyday emotional weight</strong> — the kind that accumulates across a hard month, a difficult relationship, a job that is depleting you, the feeling of being alone with something you cannot say to the people around you — peer support is often exactly the right tool. At ₹160/session, with no appointment and the sessions from 8 minutes, How Was Your Day is accessible in a way that therapy is not for most people.</p>
 
 <p><strong>If you are in a crisis right now</strong> — please call Samaritans (116 123) or Shout (text SHOUT to 85258). Both are free and available right now.</p>
 
@@ -66,6 +66,6 @@ export const post = {
 
 <p>Peer support fills that gap. It is not therapy. It does not pretend to be. But for the sustained emotional weight that most people in India are carrying — and for which there was previously nowhere to turn — peer support from a real person who has been there is often exactly what helps.</p>
 
-<p><a href="/browse">Browse How Was Your Day peer listeners here</a> — first 5 minutes free, ₹160/session.</p>
+<p><a href="/browse">Browse How Was Your Day peer listeners here</a> — sessions from 8 minutes, ₹160/session.</p>
 `,
 }

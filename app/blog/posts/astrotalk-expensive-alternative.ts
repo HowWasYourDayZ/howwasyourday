@@ -54,13 +54,13 @@ export const post = {
 
 <h2>The Numbers One More Time</h2>
 
-<p>AstroTalk mid-range: ₹20–₹30 per minute. How Was Your Day: approximately ₹10–₹11 per minute, with the first 5 minutes free. A 30-minute conversation costs you ₹600–₹900 on one platform and ₹300 on the other. Over a month of weekly conversations, that difference is real money — and it adds up faster than the sessions do.</p>
+<p>AstroTalk mid-range: ₹20–₹30 per minute. How Was Your Day: approximately ₹10–₹11 per minute. A 30-minute conversation costs you ₹600–₹900 on one platform and ₹300 on the other. Over a month of weekly conversations, that difference is real money — and it adds up faster than the sessions do.</p>
 
 <p>If the conversation was worth having, it was worth having. The question is only whether the framework you paid extra for was the thing you actually needed.</p>
 
 <h2>Try How Was Your Day First</h2>
 
-<p>If you have never used a peer support platform and are not sure whether talking to a screened peer listener is what you are looking for, How Was Your Day's first session is free — five minutes, no obligation, no card required. You can <a href="/browse">browse peer listeners</a>, read a little about who they are and what they have experience with, and try a conversation before spending anything.</p>
+<p>If you have never used a peer support platform and are not sure whether talking to a screened peer listener is what you are looking for, How Was Your Day's sessions start at 8 minutes — no subscription, no obligation. You can <a href="/browse">browse peer listeners</a>, read a little about who they are and what they have experience with, and try a conversation before spending anything.</p>
 
 <p>If it is not what you needed, nothing is lost. If it is, you will probably find that the conversation you were routing through an astrology app could have happened here all along — at one-fifth the price, and without the detour.</p>
 

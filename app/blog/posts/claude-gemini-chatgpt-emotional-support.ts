@@ -62,7 +62,7 @@ export const post = {
 
 <p>If it is the second one — if you are looking for someone who has genuinely been where you are, who will remember you, and who has something at stake in being present — a peer listener on How Was Your Day is a better fit than any model, no matter how well-calibrated its responses are.</p>
 
-<p style="margin-top: 32px"><a href="/browse" style="display:inline-block;background:#0F4867;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700">Browse listeners — first 5 minutes free</a></p>
+<p style="margin-top: 32px"><a href="/browse" style="display:inline-block;background:#0F4867;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700">Browse listeners — sessions from 8 minutes</a></p>
 
 <p style="margin-top: 16px; color: #666; font-size: 0.85em">If you are in crisis: Samaritans 116 123 · text SHOUT to 85258</p>
 `,

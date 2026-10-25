@@ -53,7 +53,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does How Was Your Day cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Your first 5-minute session is free — you pay only if you continue. No subscription, no appointment, no waiting.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions start at 8 minutes — you pay only if you continue. No subscription, no appointment, no waiting.' },
     },
   ],
 }
@@ -176,7 +176,7 @@ export default function EmotionalAbuseIndiaPage() {
 
         <div className="cta-card">
           <h2>You are not imagining it. You deserve to be heard.</h2>
-          <p>Anonymous peer support. No judgment. From &#x20b9;160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From &#x20b9;160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
 

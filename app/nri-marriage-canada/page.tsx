@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'What if I\'m facing pressure to get married and don\'t want to?', acceptedAnswer: { '@type': 'Answer', text: 'That is exactly the kind of thing a peer listener can hold with you. The pressure to marry, the fear of disappointing your family, the guilt of wanting something different — these are real and complicated. A listener won\'t tell you what to do, but they will genuinely hear you.' } },
   { '@type': 'Question', name: 'What if my marriage is in trouble and I don\'t want the community to know?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions are private. Only a phone number and first name. Listeners are in India, outside your Brampton or Surrey community entirely. Nothing is shared with anyone.' } },
   { '@type': 'Question', name: 'Is this also for men dealing with marriage pressure?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day is for anyone, regardless of gender. Men in the Indian diaspora often have fewer places to talk about marriage pressure, relationship struggles, or family expectations. A real peer listener will hear you without judgement.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriMarriageCanadaPage() {
         <div className="hero">
           <p className="badge">NRI Marriage Canada &middot; Punjabi &middot; Gujarati</p>
           <h1>Canadian life. Indian family expectations. <em>Something has to give.</em></h1>
-          <p className="lead">Brampton and Surrey have some of the highest concentrations of Punjabi families in the world outside of Punjab — and with that comes the full weight of community expectations around marriage. The &lsquo;when are you getting married?&rsquo; calls. The rishta pressure from parents back home. The mismatch between who you&rsquo;ve become here and who they want you to marry. Talk to a real peer listener. First 5 minutes free.</p>
+          <p className="lead">Brampton and Surrey have some of the highest concentrations of Punjabi families in the world outside of Punjab — and with that comes the full weight of community expectations around marriage. The &lsquo;when are you getting married?&rsquo; calls. The rishta pressure from parents back home. The mismatch between who you&rsquo;ve become here and who they want you to marry. Talk to a real peer listener. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,17 +84,17 @@ export default function NriMarriageCanadaPage() {
           <h2>Marriage Pressure in Brampton, Surrey, and Beyond</h2>
           <p>The Punjabi communities of Brampton, Ontario and Surrey, British Columbia have recreated community structures of extraordinary density and warmth. The gurdwaras are packed. The family networks are tight. The expectations around marriage — when, to whom, from what family background — are high and publicly enforced.</p>
           <p>For Indian-Canadians navigating these communities, marriage pressure is one of the most common sources of genuine distress. The aunties at the gurdwara know your age. The parents have shortlists. The family WhatsApp groups circulate rishtas. If you are in your late twenties or thirties and unmarried, the scrutiny is constant. If you are married but struggling, the expectation to stay and adjust — and to keep it private — is equally intense.</p>
-          <p>Gujarati communities in the GTA face similar dynamics — the rishta culture, the caste considerations, the expectation that family honour is maintained through proper marriages. How Was Your Day is for anyone navigating these pressures, whatever their background. A real Indian peer listener in India — outside your Brampton or Surrey community entirely. First 5 minutes free.</p>
+          <p>Gujarati communities in the GTA face similar dynamics — the rishta culture, the caste considerations, the expectation that family honour is maintained through proper marriages. How Was Your Day is for anyone navigating these pressures, whatever their background. A real Indian peer listener in India — outside your Brampton or Surrey community entirely. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>When Canadian Values and Indian Expectations Collide</h2>
           <p>Growing up or building a life in Canada creates particular tensions around marriage. Canadian culture — with its emphasis on individual choice, personal fulfilment, and the acceptability of leaving a relationship that isn&rsquo;t working — pulls in one direction. Indian family culture pulls in another. The result is often a person caught between two incompatible instructions for their love life, unable to fully honour either without disappointing someone they love.</p>
-          <p>This tension doesn&rsquo;t resolve by itself. But talking about it — with someone who truly understands both sides, without an agenda — can create clarity. Toronto and Vancouver (EST and PST) are 10.5–13.5 hours behind IST. Morning in Canada is evening in India. Listeners are available, no appointment needed. First 5 minutes free.</p>
+          <p>This tension doesn&rsquo;t resolve by itself. But talking about it — with someone who truly understands both sides, without an agenda — can create clarity. Toronto and Vancouver (EST and PST) are 10.5–13.5 hours behind IST. Morning in Canada is evening in India. Listeners are available, no appointment needed. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Heard. Without judgement. Without the community knowing.</h2><p>Real Indian peer listener. Understands Canadian Indian marriage dynamics. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Heard. Without judgement. Without the community knowing.</h2><p>Real Indian peer listener. Understands Canadian Indian marriage dynamics. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/punjabi-support-canada">Punjabi support Canada &rarr;</a>
           <a href="/nri-loneliness-canada">NRI loneliness Canada &rarr;</a>

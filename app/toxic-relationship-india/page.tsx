@@ -54,7 +54,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Your first 5-minute session is free. No subscription, no appointment needed.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions start at 8 minutes. No subscription, no appointment needed.' },
     },
   ],
 }
@@ -180,7 +180,7 @@ export default function ToxicRelationshipIndiaPage() {
 
         <div className="cta-card">
           <h2>You deserve clarity. You deserve to be heard.</h2>
-          <p>Anonymous peer support. No judgment. From &#x20b9;160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From &#x20b9;160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
 

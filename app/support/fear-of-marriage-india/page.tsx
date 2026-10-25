@@ -226,9 +226,9 @@ export default function FearOfMarriageIndiaPage() {
 
         <div className="cta-card">
           <h2>You Can Say It Out Loud Here</h2>
-          <p>Talk to a real person who will hear it without judgment, without advice, without pushing. Anonymous. First 5 minutes free.</p>
+          <p>Talk to a real person who will hear it without judgment, without advice, without pushing. Anonymous. Sessions from 8 minutes.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Your concerns make sense — talk to someone — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Your concerns make sense — talk to someone →</button></a>
             <a href="/support/not-ready-to-get-married-india"><button className="btn-secondary">Not ready to marry</button></a>
           </div>
         </div>

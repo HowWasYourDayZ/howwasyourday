@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is it normal to feel lonely even if I have Indian friends abroad?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Having Indian friends abroad does not eliminate NRI loneliness. The loneliness is often about the absence of people who knew you before — who have history with you, who don\'t need context. It can coexist with a social life.' } },
   { '@type': 'Question', name: 'My parents think I have everything — will you judge me for being lonely?', acceptedAnswer: { '@type': 'Answer', text: 'No judgment. Peer listeners understand that having a good life abroad and feeling lonely are not incompatible. The feeling does not need to be earned by suffering. It just is, and it deserves to be heard.' } },
   { '@type': 'Question', name: 'Is the session private from my family?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private — phone number and first name only. Nothing is shared with your family, your community, or anyone else.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'First 5 minutes are free. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. Sessions continue from US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function IndiansLonelyAbroadPage() {
         <div className="hero">
           <p className="badge">Indian Loneliness Abroad &middot; Immigrant Life &middot; Peer Support</p>
           <h1>Indians Feeling Lonely Abroad — <em>You&rsquo;re Not Ungrateful. You&rsquo;re Human.</em></h1>
-          <p className="lead">You fought hard to get here. Your parents sacrificed. So why does feeling lonely feel like an insult to all of that? It doesn&rsquo;t. Feeling lonely abroad doesn&rsquo;t cancel the gratitude. It doesn&rsquo;t erase the achievement. It just means you are human, and being human in a foreign country is genuinely hard. Talk to someone who won&rsquo;t judge you for it. First 5 minutes free.</p>
+          <p className="lead">You fought hard to get here. Your parents sacrificed. So why does feeling lonely feel like an insult to all of that? It doesn&rsquo;t. Feeling lonely abroad doesn&rsquo;t cancel the gratitude. It doesn&rsquo;t erase the achievement. It just means you are human, and being human in a foreign country is genuinely hard. Talk to someone who won&rsquo;t judge you for it. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -95,11 +95,11 @@ export default function IndiansLonelyAbroadPage() {
 
         <div className="section">
           <h2>What How Was Your Day Offers</h2>
-          <p>A listener who already understands the immigrant context and will not need you to justify feeling lonely when your life looks good. No gratitude calculation. No comparison to what people in India face. No performance required. Just the actual thing you are experiencing, heard by someone who already knows the terrain. Private. Anonymous. First 5 minutes free. That is enough. Sometimes it is everything.</p>
+          <p>A listener who already understands the immigrant context and will not need you to justify feeling lonely when your life looks good. No gratitude calculation. No comparison to what people in India face. No performance required. Just the actual thing you are experiencing, heard by someone who already knows the terrain. Private. Anonymous. Sessions from 8 minutes. That is enough. Sometimes it is everything.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The loneliness that doesn&rsquo;t need to be earned by suffering.</h2><p>Real peer listener. No judgment. Already understands the immigrant weight. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The loneliness that doesn&rsquo;t need to be earned by suffering.</h2><p>Real peer listener. No judgment. Already understands the immigrant weight. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>
           <a href="/nri-loneliness-uk">NRI loneliness UK &rarr;</a>

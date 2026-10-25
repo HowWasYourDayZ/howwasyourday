@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Vent to Someone Online in India | Real Human Peer Support | How Was Your Day',
-  description: 'Need to vent to someone who will listen? How Was Your Day connects you with screened peer listeners. One free 5-minute introduction per account; example: 15 minutes at 40p/min costs £7 including the £1 platform fee.',
+  description: 'Need to vent to someone who will listen? How Was Your Day connects you with screened peer listeners. Sessions from 8 minutes; example: 8 minutes at 40p/min costs £4.20 including the £1 platform fee.',
   keywords: [
     'vent to someone online India', 'online venting India',
     'talk to someone to vent India', 'vent online anonymously India',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.howwasyourday.live/vent-to-someone-online', languages: { 'en-GB': 'https://www.howwasyourday.live/vent-to-someone-online' } },
   openGraph: {
     title: 'Vent to Someone Online in India | Real Human Peer Support | How Was Your Day',
-    description: 'Need to vent to someone who will listen? How Was Your Day connects you with screened peer listeners. One free 5-minute introduction per account; example: 15 minutes at 40p/min costs £7 including the £1 platform fee.',
+    description: 'Need to vent to someone who will listen? How Was Your Day connects you with screened peer listeners. Sessions from 8 minutes; example: 8 minutes at 40p/min costs £4.20 including the £1 platform fee.',
     url: 'https://www.howwasyourday.live/vent-to-someone-online',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -53,7 +53,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How long should a vent session be?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Most people find 15 minutes is enough to feel meaningfully lighter. The first few minutes are often just getting it out — the whole thing, unedited. The last few minutes are the shift: once it is out, something changes. 30 minutes is better if there is a lot or if you want to actually talk through it rather than just express it.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Most people find 16 minutes is enough to feel meaningfully lighter. The first few minutes are often just getting it out — the whole thing, unedited. The last few minutes are the shift: once it is out, something changes. 32 minutes is better if there is a lot or if you want to actually talk through it rather than just express it.' },
     },
     {
       '@type': 'Question',
@@ -63,7 +63,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does a vent session cost on How Was Your Day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session of up to 5 minutes is free per account. In India, paid sessions are priced at the selected listener’s per-minute rate multiplied by the duration, plus a flat £1 platform fee. For example, 15 minutes at 40p/min costs £7. The exact price is shown before you start; see https://www.howwasyourday.live/pricing.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Every session is paid, from 8 minutes. Paid sessions are priced at the selected listener’s per-minute rate multiplied by the duration, plus a flat £1 platform fee. For example, 8 minutes at 40p/min costs £4.20. The exact price is shown before you start; see https://www.howwasyourday.live/pricing.' },
     },
     {
       '@type': 'Question',
@@ -160,7 +160,7 @@ export default function VentToSomeoneOnlinePage() {
 
         <div className="section">
           <h2>Quick answer: vent to someone online in India</h2>
-          <p>How Was Your Day connects you with screened peer listeners for one-to-one text or voice conversations. One introductory session of up to 5 minutes is free per account. In India, paid sessions are charged at the selected listener&apos;s rate per minute × session length, plus a flat £1 platform fee. For example, 15 minutes at 40p/min costs £7. Availability depends on which listeners are online and accept your request.</p>
+          <p>How Was Your Day connects you with screened peer listeners for one-to-one text or voice conversations. Every session is paid, from 8 minutes. Paid sessions are charged at the selected listener&apos;s rate per minute × session length, plus a flat £1 platform fee. For example, 8 minutes at 40p/min costs £4.20. Availability depends on which listeners are online and accept your request.</p>
           <p><a href="/pricing" style={{color:'var(--teal)',fontWeight:800}}>See current pricing</a> · <a href="/trust" style={{color:'var(--teal)',fontWeight:800}}>Read about trust and safety</a> · <a href="/browse" style={{color:'var(--teal)',fontWeight:800}}>Browse real listeners</a></p>
         </div>
 

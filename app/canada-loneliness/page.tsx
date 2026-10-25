@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'How much does a How Was Your Day session cost in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are completely free. After that, sessions are CA$14 for 15 minutes, CA$21 for 30 minutes, and CA$28 for 45 minutes. You pay in Indian rupees through the app — straightforward and affordable.',
+        text: 'Sessions start at 8 minutes. After that, sessions are CA$14 for 15 minutes, CA$21 for 30 minutes, and CA$28 for 45 minutes. You pay in Indian rupees through the app — straightforward and affordable.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function CanadaLonelinessPage() {
           How Was Your Day is here for exactly this.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>This is what Indian loneliness in Canada actually looks like</h2>
@@ -193,7 +193,7 @@ export default function CanadaLonelinessPage() {
         <div className="card">
           <h2>What a How Was Your Day session looks like</h2>
           <ul className="checklist">
-            <li>Your first 5 minutes are completely free — no card needed</li>
+            <li>Sessions start at 8 minutes — no card needed</li>
             <li>CA$14 for 15 min &nbsp;·&nbsp; CA$21 for 30 min &nbsp;·&nbsp; CA$28 for 45 min</li>
             <li>Real humans — screened peer listeners, not AI or bots</li>
             <li>Anonymous — your name, your story, your privacy</li>
@@ -224,7 +224,7 @@ export default function CanadaLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a How Was Your Day session cost in Canada?</h3>
-            <p>Your first 5 minutes are free. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.
+            <p>Sessions start at 8 minutes. After that: CA$14 for 15 min, CA$21 for 30 min, CA$28 for 45 min.
               Affordable support, whenever you need it.</p>
           </div>
           <div className="faq-item">

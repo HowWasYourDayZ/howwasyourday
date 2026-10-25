@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day starts at £7 for a 15-minute session. A short trial session is available for new users. We know you have just lost your income, so we will not pretend cost does not matter. It is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.',
+        text: 'How Was Your Day starts at £4.20 for an 8-minute session. Sessions start at 8 minutes, so trying someone costs little. We know you have just lost your income, so we will not pretend cost does not matter. It is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.',
       },
     },
   ],
@@ -228,7 +228,7 @@ export default function JobLossSupportPage() {
           <h2>You Don&apos;t Have to Carry This Alone</h2>
           <p>Talk to a peer listener who has been laid off and rebuilt. No subscription, no one in your life needs to know.</p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">You're not alone in this — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">You're not alone in this →</button></a>
             <a href="/how-it-works"><button className="btn-secondary">How it works →</button></a>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function JobLossSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How much does How Was Your Day cost?</div>
-            <div className="faq-a">How Was Your Day starts at £7 for a 15-minute session, . A short trial session is available for new users. We know you have just lost your income, so we won&apos;t pretend cost does not matter — it is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.</div>
+            <div className="faq-a">How Was Your Day starts at £4.20 for an 8-minute session, . Sessions start at 8 minutes, so trying someone costs little. We know you have just lost your income, so we won&apos;t pretend cost does not matter — it is a small fraction of what a therapy session costs in India, there is no subscription, and you decide session by session.</div>
           </div>
         </div>
 

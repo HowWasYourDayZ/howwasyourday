@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is it normal to feel guilty for not wanting to marry yet?', acceptedAnswer: {'@type': 'Answer', text: 'Extremely common. The guilt is a function of how much your family\'s expectations are internalised. It does not mean their timeline is right for you.'}},
     {'@type': 'Question', name: 'What if I do want to marry, just not this person?', acceptedAnswer: {'@type': 'Answer', text: 'This is a different conversation but equally valid. How Was Your Day is for whatever you are carrying about marriage pressure &mdash; whether it is the timeline, the specific candidate, the process, or the autonomy question.'}},
-    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.'}}
+    {'@type': 'Question', name: 'How much does it cost?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -87,7 +87,7 @@ export default function ParentsForcingMarriageIndiaPage() {
           <p>See also: <a href="/support/not-ready-to-get-married-india" style={{color:"#1A8FA0",fontWeight:700}}>Not ready to get married</a> and <a href="/support/arranged-marriage-stress" style={{color:"#1A8FA0",fontWeight:700}}>Arranged marriage stress</a>.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Your timeline matters too.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Your timeline matters too.</h2><p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/support/arranged-marriage-stress">Arranged marriage stress &rarr;</a>
             <a href="/support/not-ready-to-get-married-india">Not ready to marry &rarr;</a>
             <a href="/joint-family-stress-india">Joint family stress &rarr;</a>

@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the DC area Indian professional experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners understand the NRI experience including the specific pressures of the DMV Indian community — government contractor work, H1B complexities in the policy world, the diplomatic distance of living near power, and the particular emotional suppression that comes with high-achieving, high-visibility careers.' } },
   { '@type': 'Question', name: 'What time can I connect from the DC area?', acceptedAnswer: { '@type': 'Answer', text: 'Washington DC (EST) is 10.5 hours behind IST. 8am DC = 6:30pm India. Before your morning commute on the Silver Line, Indian listeners are in their evening and available. Early mornings work well.' } },
   { '@type': 'Question', name: 'Is this completely private from my professional network?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. How Was Your Day is anonymous — phone number and first name only. Nothing is shared with your employer, colleagues, government contacts, or anyone in the Northern Virginia or DC Indian community.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'I work in a field where showing vulnerability feels professionally risky. Will this stay private?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. How Was Your Day was built specifically for people who cannot easily show vulnerability in their professional world. Sessions are anonymous, private, and outside your professional network entirely.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function IndiansInWashingtonDCPage() {
         <div className="hero">
           <p className="badge">Indians in DC &middot; Fairfax &middot; Ashburn &middot; Northern Virginia</p>
           <h1>Fairfax, Ashburn, Herndon. <em>Little India. Big silence.</em></h1>
-          <p className="lead">The Northern Virginia corridor — Fairfax, Ashburn, Herndon, Reston — is sometimes called &ldquo;Little India.&rdquo; Bethesda, Rockville, and Silver Spring hold some of the most accomplished Indian families in America. Living near power shapes you. The diplomatic distance, the high-stakes careers, the community that is too visible to be vulnerable in. Talk to someone outside all of it. First 5 minutes free.</p>
+          <p className="lead">The Northern Virginia corridor — Fairfax, Ashburn, Herndon, Reston — is sometimes called &ldquo;Little India.&rdquo; Bethesda, Rockville, and Silver Spring hold some of the most accomplished Indian families in America. Living near power shapes you. The diplomatic distance, the high-stakes careers, the community that is too visible to be vulnerable in. Talk to someone outside all of it. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function IndiansInWashingtonDCPage() {
           <h2>Fairfax, Ashburn, Herndon: The Indian DMV</h2>
           <p>No Indian community in America is more concentrated in a single corridor than Northern Virginia. Fairfax County alone has one of the largest Indian populations of any county in the country. Ashburn and Herndon — where data centres sit alongside Indian grocery stores — are places where you can go days without speaking to anyone who isn&rsquo;t Indian or working in tech. The Silver Line was practically built for the Indian commuter.</p>
           <p>On the Maryland side, Rockville and Bethesda carry a significant Indian professional and medical community — the NIH, FEMA, and government contractor world has drawn Indian professionals for decades. Gaithersburg, Germantown, and the I-270 corridor have large Indian family communities. The DMV Indian community is one of the most established, credentialed, and quietly burdened in America.</p>
-          <p>How Was Your Day listeners are based in India, understand the NRI experience deeply, and are available without appointment. First 5 minutes free. From US$10.</p>
+          <p>How Was Your Day listeners are based in India, understand the NRI experience deeply, and are available without appointment. Sessions from 8 minutes. From US$10.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function IndiansInWashingtonDCPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Living near power doesn&rsquo;t mean you have someone to talk to.</h2><p>Real Indian peer listener. Understands the DMV Indian experience. Private. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Living near power doesn&rsquo;t mean you have someone to talk to.</h2><p>Real Indian peer listener. Understands the DMV Indian experience. Private. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

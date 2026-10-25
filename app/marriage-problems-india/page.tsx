@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Marriage Problems in India? Talk to Someone Privately | How Was Your Day',
-  description: 'Struggling with marriage problems? Talk anonymously to a peer listener who gets it — no judgment, first 5 minutes free, then from ₹160 for 15 minutes.',
+  description: 'Struggling with marriage problems? Talk anonymously to a peer listener who gets it — no judgment, sessions from 8 minutes.',
   keywords: [
     'marriage problems india talk to someone', 'marriage advice online india',
     'unhappy marriage india help', 'married but unhappy india',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Marriage Problems? Talk to Someone Who Understands | How Was Your Day India',
-    description: 'Struggling with marriage problems? Talk anonymously to a peer listener who gets it — no judgment, first 5 minutes free, then from ₹160 for 15 minutes.',
+    description: 'Struggling with marriage problems? Talk anonymously to a peer listener who gets it — no judgment, sessions from 8 minutes.',
     url: 'https://www.howwasyourday.live/marriage-problems-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -39,7 +39,7 @@ const faqSchema = {
       name: 'Where can I talk to someone about my marriage problems in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'How Was Your Day (www.howwasyourday.live) lets you talk one-to-one with a screened peer listener in India, by text or voice, without an appointment. You use any first name, the listener never sees your phone number, and the first 5 minutes are free; after that a 15-minute session starts at ₹160. It is for being heard and thinking things through — not couples therapy or legal advice.',
+        text: 'How Was Your Day (www.howwasyourday.live) lets you talk one-to-one with a screened peer listener in India, by text or voice, without an appointment. You use any first name, the listener never sees your phone number; after that a 15-minute session starts at ₹160. It is for being heard and thinking things through — not couples therapy or legal advice.',
       },
     },
     {
@@ -207,7 +207,7 @@ export default function MarriageProblemsIndiaPage() {
             How Was Your Day lets you talk privately about your marriage — fights, distance, in-laws, an arranged
             marriage that is not working, thoughts of divorce — with a screened listener in India, by text or
             voice. Use any name; the listener never sees your number. You can choose a woman listener.
-            First 5 minutes free, then from ₹160 for 15 minutes. Not couples therapy, not legal advice.
+            Sessions from 8 minutes, then from ₹160 for 15 minutes. Not couples therapy, not legal advice.
           </p>
         </div>
 
@@ -306,10 +306,10 @@ export default function MarriageProblemsIndiaPage() {
           <h2>You can say it here</h2>
           <p>
             Talk to a screened peer listener — private, no judgment, no appointment.
-            First 5 minutes free. ₹160 for a 15-minute session.
+            Sessions from 8 minutes. ₹160 for a 15-minute session.
           </p>
           <div className="cta-btns">
-            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone — first 5 min free →</button></a>
+            <a href="/talk?src=seo"><button className="btn-primary">Talk to someone →</button></a>
             <a href="/browse"><button className="btn-secondary">Browse listeners →</button></a>
           </div>
         </div>

@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a session with a How Was Your Day listener cost from the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5 minutes are completely free — no card needed upfront. After that, paid sessions are £8 for 15 minutes, £12 for 30 minutes, or £16 for 45 minutes. All listeners are screened Indians who understand the NRI experience.',
+        text: 'Sessions start at 8 minutes — no card needed upfront. After that, paid sessions are £8 for 15 minutes, £12 for 30 minutes, or £16 for 45 minutes. All listeners are screened Indians who understand the NRI experience.',
       },
     },
     {
@@ -155,7 +155,7 @@ export default function UkLonelinessPage() {
           You are just far from everything that felt like home.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>UK loneliness hits differently when you are Indian</h2>
@@ -190,7 +190,7 @@ export default function UkLonelinessPage() {
 
         <div className="card">
           <h2>Pricing in GBP — transparent and affordable</h2>
-          <p>Your first 5 minutes are completely free. After that:</p>
+          <p>Sessions start at 8 minutes. After that:</p>
           <ul className="checklist">
             <li>15 minutes — £8</li>
             <li>30 minutes — £12</li>
@@ -228,7 +228,7 @@ export default function UkLonelinessPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost from the UK?</h3>
-            <p>Your first 5 minutes are free. After that: £8 for 15 min, £12 for 30 min, £16 for 45 min.
+            <p>Sessions start at 8 minutes. After that: £8 for 15 min, £12 for 30 min, £16 for 45 min.
               No subscription required.</p>
           </div>
           <div className="faq-item">

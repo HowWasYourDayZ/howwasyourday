@@ -5,12 +5,12 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Mental Health Support India — Real People, Not Just Apps | How Was Your Day',
-  description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. One introductory session of up to 5 minutes is free per account.",
+  description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. Every session is paid, from 8 minutes.",
   keywords: ['mental health support India', 'mental health support online India', 'mental health help India', 'mental health chat India', 'online mental health support India', 'affordable mental health India'],
   alternates: { canonical: 'https://www.howwasyourday.live/mental-health-support-india', languages: { 'en-GB': 'https://www.howwasyourday.live/mental-health-support-india' } },
   openGraph: {
     title: 'Mental Health Support India — Real People, Not Just Apps | How Was Your Day',
-    description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. One introductory session of up to 5 minutes is free per account.",
+    description: "Non-clinical peer support in India for everyday stress, loneliness and relationship difficulties. One-to-one text or voice with screened peer listeners. Not therapy or crisis care; availability varies. Every session is paid, from 8 minutes.",
     url: 'https://www.howwasyourday.live/mental-health-support-india',
     siteName: 'How Was Your Day',
     type: 'website',
@@ -21,13 +21,13 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "Where can I get mental health support online in India?", acceptedAnswer: { '@type': 'Answer', text: "For non-urgent stress, loneliness, low mood or relationship difficulties, How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. One introductory session of up to 5 minutes is free per account. Availability depends on who is online, so an immediate match is not guaranteed." } },
+    { '@type': 'Question', name: "Where can I get mental health support online in India?", acceptedAnswer: { '@type': 'Answer', text: "For non-urgent stress, loneliness, low mood or relationship difficulties, How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. Every session is paid, from 8 minutes. Availability depends on who is online, so an immediate match is not guaranteed." } },
     {
       '@type': 'Question',
       name: 'What kind of mental health support is available in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Options include qualified mental-health professionals for assessment and treatment, government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Prices and availability vary by provider. How Was Your Day offers peer-listener conversations, not clinical treatment; one introductory session of up to 5 minutes is free per account, and paid prices are shown before booking.',
+        text: 'Options include qualified mental-health professionals for assessment and treatment, government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Prices and availability vary by provider. How Was Your Day offers peer-listener conversations, not clinical treatment; every session is paid, from 8 minutes, and paid prices are shown before booking.',
       },
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'Is mental health support free in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Shout (text SHOUT to 85258) is a free, 24/7 mental-health helpline. Private-care fees vary by clinician, service and location. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the listener and mode and are shown before booking.',
+        text: 'Shout (text SHOUT to 85258) is a free, 24/7 mental-health helpline. Private-care fees vary by clinician, service and location. How Was Your Day offers every session is paid, from 8 minutes; paid prices depend on the listener and mode and are shown before booking.',
       },
     },
     {
@@ -167,7 +167,7 @@ export default function MentalHealthSupportIndiaPage() {
           <p className="tag">Mental Health Support · India · Peer Conversations</p>
           <h1>Mental health support that <em>actually feels human</em></h1>
           <p className="lead">When you feel stressed, low or alone, talking with another person may help you feel heard. How Was Your Day connects adults with screened peer listeners for everyday emotional conversations by text or voice. It is not therapy or clinical treatment. Pricing is shown before booking, and immediate availability is not guaranteed.</p>
-          <QuickAnswer question={"Where can I get mental health support online in India?"} answer={"For non-urgent stress, loneliness, low mood or relationship difficulties, How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. One introductory session of up to 5 minutes is free per account. Availability depends on who is online, so an immediate match is not guaranteed."} />
+          <QuickAnswer question={"Where can I get mental health support online in India?"} answer={"For non-urgent stress, loneliness, low mood or relationship difficulties, How Was Your Day lets adults in India request a one-to-one text or voice conversation with a screened peer listener. It is non-clinical peer support, not diagnosis or treatment; use it alongside professional care, never instead of it. Every session is paid, from 8 minutes. Availability depends on who is online, so an immediate match is not guaranteed."} />
           <p style={{ fontSize: 14, margin: '10px 0 20px', lineHeight: 1.7, color: '#4A6470' }}>Not sure what kind of help fits? <a href="/relationship-emotional-support-guide-india" style={{ fontWeight: 800, color: '#0F7788', textDecoration: 'underline' }}>Read our relationship and emotional support guide</a> for marriage, family pressure, women’s emotional load, and when to choose counselling instead of peer listening.</p>
         </div>
 
@@ -229,8 +229,8 @@ export default function MentalHealthSupportIndiaPage() {
             <div className="step">
               <div className="step-num">2</div>
               <div className="step-text">
-                <div className="step-title">Start with 5 minutes free</div>
-                <div className="step-desc">Your first session is a free 5-minute trial. Talk, get a sense of the connection, and decide whether to continue. No commitment until you choose.</div>
+                <div className="step-title">Start with an 8-minute session</div>
+                <div className="step-desc">Sessions start at 8 minutes. Talk, get a sense of the connection, and decide whether to continue. No commitment until you choose.</div>
               </div>
             </div>
             <div className="step">
@@ -246,7 +246,7 @@ export default function MentalHealthSupportIndiaPage() {
         {/* Stats */}
         <div className="stats-row">
           <div className="stat-pill"><em>₹160</em>/session</div>
-          <div className="stat-pill">First <em>5 min free</em></div>
+          <div className="stat-pill">Sessions <em>from 8 min</em></div>
           <div className="stat-pill"><em>Display name</em></div>
           <div className="stat-pill">30+ <em>screened listeners</em></div>
           <div className="stat-pill"><em>Availability</em> varies</div>
@@ -255,7 +255,7 @@ export default function MentalHealthSupportIndiaPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>Talk to Someone Who Gets It</h2>
-          <p>Screened peer listeners. No appointment needed. One introductory session up to 5 minutes is free per account; paid prices vary by listener and mode. Availability depends on who is online.</p>
+          <p>Screened peer listeners. No appointment needed. Every session is paid, from 8 minutes; paid prices vary by listener and mode. Availability depends on who is online.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -267,7 +267,7 @@ export default function MentalHealthSupportIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">What kind of mental health support is available in India?</div>
-            <div className="faq-a">Options include qualified mental-health professionals for assessment or treatment, free government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Fees and availability vary. How Was Your Day is not a clinical service; one introductory session of up to 5 minutes is free per account, and paid prices are shown before booking.</div>
+            <div className="faq-a">Options include qualified mental-health professionals for assessment or treatment, free government crisis helplines for urgent distress, and non-clinical peer support for conversation and connection. Fees and availability vary. How Was Your Day is not a clinical service; every session is paid, from 8 minutes, and paid prices are shown before booking.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Is How Was Your Day a mental health app?</div>
@@ -279,7 +279,7 @@ export default function MentalHealthSupportIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is mental health support free in India?</div>
-            <div className="faq-a">Shout (text SHOUT to 85258) is a free, 24/7 mental-health helpline. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the selected listener and mode and are shown before booking.</div>
+            <div className="faq-a">Shout (text SHOUT to 85258) is a free, 24/7 mental-health helpline. How Was Your Day offers every session is paid, from 8 minutes; paid prices depend on the selected listener and mode and are shown before booking.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between mental health support and therapy?</div>

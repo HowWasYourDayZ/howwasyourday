@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much does How Was Your Day cost from the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. No referral needed, no waitlist.',
+        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Sessions from 8 minutes. No referral needed, no waitlist.',
       },
     },
   ],
@@ -157,7 +157,7 @@ export default function IndianAmericanLonelinessPage() {
           How Was Your Day is a space where it can be.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>What the Indian-American in-between feels like</h2>

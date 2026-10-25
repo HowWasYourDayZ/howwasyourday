@@ -26,7 +26,7 @@ const faqSchema = {
       name: 'What is the best peer support app in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For people who want to talk to a real human with lived experience, How Was Your Day is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session with the first 5 minutes free, is private, and is available without an appointment. For clinical counselling with a licensed professional, options like iCall (TISS) may be more appropriate. For a free AI companion, Wysa is available.',
+        text: 'For people who want to talk to a real human with lived experience, How Was Your Day is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session, is private, and is available without an appointment. For clinical counselling with a licensed professional, options like iCall (TISS) may be more appropriate. For a free AI companion, Wysa is available.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'What does peer support cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'On How Was Your Day, peer support costs approximately ₹160 per session, with the first 5 minutes free. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.',
+        text: 'On How Was Your Day, peer support costs approximately ₹160 per session. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.',
       },
     },
     {
@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'Are there free peer support apps in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Wysa offers a free AI chatbot. iCall (run by TISS) offers subsidised counselling sessions starting at ₹200. Crisis helplines Samaritans (116 123) and Shout (text SHOUT to 85258) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.',
+        text: 'Wysa offers a free AI chatbot. iCall (run by TISS) offers subsidised counselling sessions starting at ₹200. Crisis helplines Samaritans (116 123) and Shout (text SHOUT to 85258) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers paid sessions from 8 minutes.',
       },
     },
     {
@@ -257,7 +257,7 @@ export default function BestPeerSupportAppIndiaPage() {
             <div className="diff-card">
               <div className="diff-icon">💰</div>
               <div className="diff-title">Pay per session</div>
-              <div className="diff-desc">₹160/session. No subscriptions, no membership fees, no auto-renewals. Your first 5-minute session is free.</div>
+              <div className="diff-desc">₹160/session. No subscriptions, no membership fees, no auto-renewals. Sessions start at 8 minutes.</div>
             </div>
           </div>
         </div>
@@ -278,7 +278,7 @@ export default function BestPeerSupportAppIndiaPage() {
 
         {/* CTA */}
         <div className="cta-card">
-          <h2>Try How Was Your Day — First 5 Minutes Free</h2>
+          <h2>Try How Was Your Day — From 8 Minutes</h2>
           <p>Browse real peer listeners by experience area. No appointment, no subscription. Talk anonymously from ₹160/session.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
@@ -291,7 +291,7 @@ export default function BestPeerSupportAppIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">What is the best peer support app in India?</div>
-            <div className="faq-a">For people who want to talk to a real human with lived experience, How Was Your Day is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session with the first 5 minutes free, is private, and is available without an appointment.</div>
+            <div className="faq-a">For people who want to talk to a real human with lived experience, How Was Your Day is the strongest option in India in 2026. It offers real peer listeners (not AI), costs ₹160/session, is private, and is available without an appointment.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How does How Was Your Day compare to YourDOST?</div>
@@ -303,11 +303,11 @@ export default function BestPeerSupportAppIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What does peer support cost in India?</div>
-            <div className="faq-a">On How Was Your Day, peer support costs approximately ₹160 per session, with the first 5 minutes free. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.</div>
+            <div className="faq-a">On How Was Your Day, peer support costs approximately ₹160 per session. This compares to ₹1,500–₹5,000 for a private therapist, ₹800–₹2,000 for online therapy platforms, and ₹200–₹500 for services like iCall.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Are there free peer support apps in India?</div>
-            <div className="faq-a">Wysa offers a free AI chatbot. iCall offers subsidised counselling from ₹200. Crisis helplines Samaritans (116 123) and Shout (text SHOUT to 85258) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.</div>
+            <div className="faq-a">Wysa offers a free AI chatbot. iCall offers subsidised counselling from ₹200. Crisis helplines Samaritans (116 123) and Shout (text SHOUT to 85258) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers paid sessions from 8 minutes.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How is peer support different from counselling?</div>

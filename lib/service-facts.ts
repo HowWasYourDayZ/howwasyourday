@@ -1,4 +1,4 @@
-import { FREE_SESSION_MINS, MAX_FREE_TRIALS, PLATFORM_FEE, VOICE_RATE_PREMIUM, VOICE_PRICING_ENABLED } from '@/lib/constants'
+import { SESSION_DURATIONS, PLATFORM_FEE, VOICE_RATE_PREMIUM, VOICE_PRICING_ENABLED } from '@/lib/constants'
 import { formatGBP, formatRate } from '@/lib/money'
 import { PRICE_RANGE_LINE } from '@/lib/price-snapshot'
 
@@ -10,13 +10,13 @@ import { PRICE_RANGE_LINE } from '@/lib/price-snapshot'
 
 export const PUBLIC_SERVICE_FACTS = {
   minAge: 18,
-  freeTrialMinutes: FREE_SESSION_MINS,
-  freeTrialsPerAccount: MAX_FREE_TRIALS,
+  sessionLengthsMins: SESSION_DURATIONS,
+  freeSessions: false,
   listenerType: 'screened human peer listener',
   supportType: 'non-clinical peer support',
   instantConnectionGuaranteed: false,
   availability:
-    'You can request a conversation without an appointment. A session begins only when an available listener accepts your request; listeners are in the UK and choose their own hours.',
+    'You can request a conversation now, without an appointment, or book a time with a listener in advance. An instant session begins only when an available listener accepts your request; listeners are in the UK and choose their own hours.',
   privacy:
     'Listeners see the name you choose, never your phone number. Voice calls are not recorded. Text messages are stored securely and may be reviewed by authorised How Was Your Day administrators if a session is reported or flagged for safety.',
   notFor:
@@ -26,8 +26,8 @@ export const PUBLIC_SERVICE_FACTS = {
 export const SERVICE_DESCRIPTION =
   `How Was Your Day offers one-to-one text or voice conversations with screened human peer listeners in the UK, for adults aged ${PUBLIC_SERVICE_FACTS.minAge} and over. ` +
   `It is everyday emotional support — not therapy, clinical care or crisis assistance. ` +
-  `One introductory session of up to ${FREE_SESSION_MINS} minutes is free per account; later sessions are paid. ` +
-  `A conversation starts only when an available listener accepts your request. ` +
+  `Sessions are paid and last ${SESSION_DURATIONS.join(', ').replace(/, (\d+)$/, ' or $1')} minutes; you can talk now or book a time. ` +
+  `An instant conversation starts only when an available listener accepts your request. ` +
   `Listeners do not see your phone number; How Was Your Day keeps account and session information as explained in its Privacy Policy.`
 
 // The checklist people (and AI assistants comparing listening apps) use — shown on
@@ -35,7 +35,7 @@ export const SERVICE_DESCRIPTION =
 // stay literally true (CLAUDE.md).
 export const LISTENING_FACTS: [string, string][] = [
   ['Price', `In pounds sterling (GBP). Each listener sets their own rate. You pay rate × minutes + ${formatGBP(PLATFORM_FEE)} per paid session. ${PRICE_RANGE_LINE} The exact price is shown before you start.`],
-  ['Free to try', `Your first ${FREE_SESSION_MINS}-minute session is free${MAX_FREE_TRIALS === 1 ? ', once per account' : ''}. No card needed to start it.`],
+  ['Session lengths', `${SESSION_DURATIONS.join(', ').replace(/, (\d+)$/, ' or $1')} minutes, text or voice — now, or booked for later. There are no free sessions; the ${SESSION_DURATIONS[0]}-minute session is the low-cost way to try someone.`],
   ['When you are charged', 'Only if a listener accepts your request. Sessions under a minute are free, and unused minutes return to your wallet if you end early.'],
   ['Refunds', 'Unused wallet balance is refundable on request. No subscription, no expiry.'],
   ['Choosing who you talk to', 'You choose: every listener shows a real first name, photo, languages and topics, so you can pick by experience, language — or choose a woman listener. Or let Talk now ask whoever is online.'],

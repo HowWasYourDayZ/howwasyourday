@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Can I talk in Hindi, Gujarati, or Punjabi?', acceptedAnswer: { '@type': 'Answer', text: 'Many listeners speak Hindi and some speak Punjabi. Mention your language preference when booking and your listener will accommodate you.' } },
   { '@type': 'Question', name: 'Is it confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Private. A phone number is all you need to sign up. No last name, no photo, no social login. No one in your family or community in the UK or India is notified. Listeners agree to keep what you share confidential.' } },
   { '@type': 'Question', name: 'Are there listeners available in UK evenings?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Indian listeners are active 6pm–11pm IST, which is 12:30pm–6:30pm BST (summer) or 12:30pm–5:30pm GMT (winter). Lunchtime or early afternoon UK time works well.' } },
-  { '@type': 'Question', name: 'What does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'From US$10 for 15 minutes. Your first 5-minute session is free — if it doesn\'t feel right, you pay nothing.' } },
+  { '@type': 'Question', name: 'What does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'From US$10 for 15 minutes. Sessions start at 8 minutes — if it doesn\'t feel right, you pay nothing.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function IndiansInUkPage() {
         <div className="hero">
           <p className="badge">British Indian Support &middot; UK Diaspora &middot; Desi Abroad</p>
           <h1>You&rsquo;ve built a life here. <em>You don&rsquo;t have to feel alone in it.</em></h1>
-          <p className="lead">Birmingham, Leicester, London &mdash; you&rsquo;re surrounded by people but sometimes feel completely unseen. The second-generation identity crisis. The parents who sacrificed everything and the guilt that comes with it. The British who don&rsquo;t fully get it and the Indians who think you&rsquo;ve &ldquo;gone gora.&rdquo; Talk to a real Indian peer listener who understands. No appointment. No waiting list. First 5 minutes free.</p>
+          <p className="lead">Birmingham, Leicester, London &mdash; you&rsquo;re surrounded by people but sometimes feel completely unseen. The second-generation identity crisis. The parents who sacrificed everything and the guilt that comes with it. The British who don&rsquo;t fully get it and the Indians who think you&rsquo;ve &ldquo;gone gora.&rdquo; Talk to a real Indian peer listener who understands. No appointment. No waiting list. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
@@ -95,7 +95,7 @@ export default function IndiansInUkPage() {
           <p>Afternoon calls from the UK work perfectly. If you have a lunch break, a quiet afternoon slot, or an early evening moment, India listeners will be available. No appointment needed. Browse who is online and start a session.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>You don&rsquo;t have to carry both worlds alone.</h2><p>A real Indian peer listener. Understands the British Indian experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>You don&rsquo;t have to carry both worlds alone.</h2><p>A real Indian peer listener. Understands the British Indian experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-mental-health">NRI mental health &rarr;</a>

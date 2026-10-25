@@ -40,7 +40,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does it cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. First 5 minutes free.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at ₹160. Sessions from 8 minutes.' },
     }
   ],
 }
@@ -139,7 +139,7 @@ export default function GaslightingIndiaPage() {
         </div>
         <div className="cta-card">
           <h2>Your experience is real. You deserve to be heard.</h2>
-          <p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p>
+          <p>Anonymous peer support. No judgment. From ₹160. Sessions from 8 minutes.</p>
           <a href="/browse" className="btn-cta">Find a listener &rarr;</a>
         </div>
         <div className="section">

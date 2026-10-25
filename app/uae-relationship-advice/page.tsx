@@ -157,7 +157,7 @@ export default function UAERelationshipAdvicePage() {
           what you have been holding in.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to an Indian listener — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to an Indian listener →</a>
 
         <div className="card">
           <h2>The relationship strains Indian expats in UAE rarely talk about</h2>
@@ -201,7 +201,7 @@ export default function UAERelationshipAdvicePage() {
             <li>15-minute session — AED 37</li>
             <li>30-minute session — AED 55</li>
             <li>45-minute session — AED 74</li>
-            <li>First 5 minutes free — one free session per account</li>
+            <li>Sessions from 8 minutes</li>
           </ul>
           <p style={{ marginTop: '12px' }}>Anonymous. No subscription. Talk in Hindi, Tamil, Telugu, Malayalam, or any Indian language.</p>
         </div>
@@ -232,7 +232,7 @@ export default function UAERelationshipAdvicePage() {
           </div>
           <div className="faq-item">
             <h3>What does a session cost from UAE?</h3>
-            <p>AED 37 for 15 minutes, AED 55 for 30 minutes, AED 74 for 45 minutes. First 5 minutes are free.</p>
+            <p>AED 37 for 15 minutes, AED 55 for 30 minutes, AED 74 for 45 minutes. Sessions start at 8 minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Can I talk about pressure from an arranged marriage or in-laws?</h3>

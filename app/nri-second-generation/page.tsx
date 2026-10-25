@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand second generation identity?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners understand the NRI experience broadly and are selected to hold the in-between identity — the ABCD/BBCD experience, the cultural code-switching, the sense of not fully belonging to either the Western world you grew up in or the Indian world your parents come from.' } },
   { '@type': 'Question', name: 'I feel like a fraud at Indian community events. Is that normal?', acceptedAnswer: { '@type': 'Answer', text: 'Very normal. Many second-generation Indians describe feeling like performers at their own community\'s events — going through motions of Indian identity that feel both genuine and hollow. Listeners can hold this complexity without trying to resolve it for you.' } },
   { '@type': 'Question', name: 'I don\'t speak my parents\' mother tongue well. I feel guilty about it. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and you won\'t be judged. The language guilt — feeling like you\'ve failed your heritage by not speaking Tamil, Gujarati, Telugu, Punjabi, Hindi fluently — is one of the most common things second-generation Indians carry. Sessions are conducted in English.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
   { '@type': 'Question', name: 'My parents don\'t understand my identity struggle. Can listeners help with this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The generational gap between first-generation NRI parents and their second-generation children — especially around identity — is real and painful. Listeners understand both sides of this and can hold your experience without taking sides.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function NriSecondGenerationPage() {
         <div className="hero">
           <p className="badge">Second Generation &middot; ABCD &middot; BBCD &middot; In-Between Identity</p>
           <h1>Too Indian for here. <em>Too Western for there.</em></h1>
-          <p className="lead">You grew up with dal and Disney simultaneously. You can code-switch between your parents&rsquo; world and your friends&rsquo; world in a single breath. And somewhere in the middle of all that fluency, you lost the thread of who you actually are. The second-generation identity struggle is real, and it doesn&rsquo;t have an easy answer. Talk to someone who won&rsquo;t try to give you one. First 5 minutes free.</p>
+          <p className="lead">You grew up with dal and Disney simultaneously. You can code-switch between your parents&rsquo; world and your friends&rsquo; world in a single breath. And somewhere in the middle of all that fluency, you lost the thread of who you actually are. The second-generation identity struggle is real, and it doesn&rsquo;t have an easy answer. Talk to someone who won&rsquo;t try to give you one. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriSecondGenerationPage() {
           <h2>ABCD, BBCD, and the In-Between That Has No Name</h2>
           <p>American Born Confused Desi. British Born Confused Desi. The terms exist because the experience is common enough to need a name — but the name itself is reductive. You are not confused. You are navigating two complete cultural systems simultaneously, and doing it well enough that neither world fully sees the work it takes. The American or British world sees an Indian. The Indian world — India, the community, the temple — sees an American or a Brit. Neither sees you.</p>
           <p>The second-generation Indian experience is marked by a specific kind of exhaustion: the constant translation. Translating yourself to your Western friends who want to understand your Indian identity but can&rsquo;t quite get there. Translating yourself to your Indian relatives who find your Western sensibilities puzzling or threatening. Being the bridge — the one who explains India to the West and the West to India — without anyone asking you how the bridging feels.</p>
-          <p>How Was Your Day listeners are based in India and understand the Indian side of this equation from the inside. They can hold the complexity without reducing it. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are based in India and understand the Indian side of this equation from the inside. They can hold the complexity without reducing it. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function NriSecondGenerationPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Both worlds are yours. Talk to someone who gets that.</h2><p>Real Indian peer listener. Understands second-generation identity. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Both worlds are yours. Talk to someone who gets that.</h2><p>Real Indian peer listener. Understands second-generation identity. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/nri-identity-crisis">NRI identity crisis &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

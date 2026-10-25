@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Is the NRI identity crisis a real thing?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The experience of being neither fully from here nor fully from there — of not being claimed completely by either culture — is one of the most common things NRIs describe. It is not a personal failure. It is the structural reality of living between two worlds.' } },
   { '@type': 'Question', name: 'Will a listener in India understand identity questions from abroad?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are Indian and understand NRI identity dynamics from the Indian side — they know what "foreign-returned" means, they know the gap between how NRIs are perceived in India and how they feel. They understand the in-between.' } },
   { '@type': 'Question', name: 'What if I don\'t even know how to describe my identity problem?', acceptedAnswer: { '@type': 'Answer', text: 'That is completely okay. A listener\'s job is not to receive a well-formulated problem. They can sit with "I don\'t know who I am anymore" just as well as any specific issue. Start where you are.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,7 +75,7 @@ export default function NriIdentityCrisisPage() {
         <div className="hero">
           <p className="badge">NRI Identity &middot; Dual Culture &middot; Desi Abroad</p>
           <h1>Too Indian there. <em>Not Indian enough here.</em></h1>
-          <p className="lead">You feel it every time you go back to India — they call you &ldquo;foreign-returned&rdquo; or say you&rsquo;ve changed. And every time you&rsquo;re abroad, you&rsquo;re the Indian one. Neither place fully claims you. The NRI identity is a permanent in-between — and it&rsquo;s exhausting to carry without naming it. Talk to a real peer listener who lives this too. First 5 minutes free.</p>
+          <p className="lead">You feel it every time you go back to India — they call you &ldquo;foreign-returned&rdquo; or say you&rsquo;ve changed. And every time you&rsquo;re abroad, you&rsquo;re the Indian one. Neither place fully claims you. The NRI identity is a permanent in-between — and it&rsquo;s exhausting to carry without naming it. Talk to a real peer listener who lives this too. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -83,17 +83,17 @@ export default function NriIdentityCrisisPage() {
           <h2>The Permanent In-Between</h2>
           <p>The NRI identity crisis is not a phase that resolves when you have been abroad long enough. It is a structural feature of living between two worlds. In America, the UK, or Canada, you are Indian — the representative of a culture, asked to explain food and festivals and family dynamics, seen as different from the local default. In India, you are &ldquo;foreign-returned&rdquo; — someone who has changed, who has Western habits, whose accent has shifted, who doesn&rsquo;t quite get the jokes or the references anymore.</p>
           <p>Neither place fully claims you as its own. You hold knowledge of both worlds in ways that people who stayed behind and people who were born abroad do not. And that knowledge — the dual citizenship of the soul that comes with the NRI experience — is exhausting. You are always translating. Always explaining. Always the bridge.</p>
-          <p>This is not a failure. It is the genuine cost and complexity of a life lived across cultures. But it needs to be named. And the place to name it is with someone who already understands the shape of it. How Was Your Day listeners are Indian, understand the NRI experience from the inside, and won&rsquo;t need the in-between explained. First 5 minutes free.</p>
+          <p>This is not a failure. It is the genuine cost and complexity of a life lived across cultures. But it needs to be named. And the place to name it is with someone who already understands the shape of it. How Was Your Day listeners are Indian, understand the NRI experience from the inside, and won&rsquo;t need the in-between explained. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
           <h2>When the Question Becomes &ldquo;Who Am I?&rdquo;</h2>
           <p>For many NRIs, the identity question deepens over time rather than resolving. The longer you are abroad, the more the India you carry is the India you left — not the one that has continued changing. You miss a place that partly no longer exists. You carry values that India has partly moved on from. And the abroad-self you have built is not quite the Indian self your family sees.</p>
-          <p>The question &ldquo;who am I?&rdquo; in this context is genuine and weighty. A real Indian peer listener at How Was Your Day can sit with you in that question — not to resolve it, which would be dishonest, but to hear you explore it. Sometimes naming the in-between is itself a kind of relief. Sessions are anonymous and private. First 5 minutes free — one free session per account.</p>
+          <p>The question &ldquo;who am I?&rdquo; in this context is genuine and weighty. A real Indian peer listener at How Was Your Day can sit with you in that question — not to resolve it, which would be dishonest, but to hear you explore it. Sometimes naming the in-between is itself a kind of relief. Sessions are anonymous and private. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The in-between, understood.</h2><p>Real Indian peer listener. Gets the NRI dual-identity experience. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The in-between, understood.</h2><p>Real Indian peer listener. Gets the NRI dual-identity experience. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/second-generation-indian-usa">Second gen Indian USA &rarr;</a>
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>

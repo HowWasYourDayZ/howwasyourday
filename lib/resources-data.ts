@@ -180,7 +180,7 @@ Check ratings and session count. Experienced listeners with higher ratings have 
 
 Consider session type. If privacy is paramount, text chat is ideal. If you want the warmth of a real voice, choose voice call. Both are fully supported on How Was Your Day.
 
-Start with the free 5-minute trial. This is the best way to assess fit. In five minutes, you'll have a good sense of whether this listener's style works for you. There is no obligation to continue if it doesn't feel right.
+Start with an 8-minute session. This is the best way to assess fit. In eight minutes, you'll have a good sense of whether this listener's style works for you. There is no obligation to continue if it doesn't feel right.
 
 After your first session, leave a rating. This helps other seekers find the right listener — and helps great listeners build their reputation on the platform.
 
@@ -308,7 +308,7 @@ A digital detox — a structured period of reduced or eliminated screen use — 
 
 Practical approaches to digital wellbeing: turn off non-essential notifications, create phone-free zones in your home (particularly the bedroom), replace passive scrolling with intentional connection (call someone instead of liking their post), and notice how you feel after different types of screen time. Use that information to make choices that serve your actual wellbeing.
 
-How Was Your Day is designed to facilitate genuine human connection — the kind that benefits mental health — rather than passive consumption. A 15-minute conversation with a peer listener produces something qualitatively different from 15 minutes of scrolling.`,
+How Was Your Day is designed to facilitate genuine human connection — the kind that benefits mental health — rather than passive consumption. A 16-minute conversation with a peer listener produces something qualitatively different from 16 minutes of scrolling.`,
   },
   {
     slug: 'feeling-unheard',

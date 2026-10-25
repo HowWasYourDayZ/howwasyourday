@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Can How Was Your Day listeners understand NRI bereavement specifically?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the specific weight of NRI grief — learning of a death on WhatsApp, watching a funeral on a video call, the guilt of not being there, the inability to grieve with the community, and the way the loss sits differently when the distance was physical as well as emotional.' } },
   { '@type': 'Question', name: 'I feel guilty that I wasn\'t there when my parent died. Is that normal?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it is one of the most common experiences NRIs carry after a loss. The guilt of not being there — regardless of whether you could have been — is a real part of NRI grief. It can sit for years. Talking about it with someone who understands the context is important.' } },
   { '@type': 'Question', name: 'I had to go back to work three days after my parent died because I couldn\'t take more leave. Can I talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The expectation that you return to work quickly, navigate a foreign HR system\'s bereavement policy, and continue performing professionally while grieving is a specific NRI burden. Listeners can hold this without judgment.' } },
-  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription.' } },
+  { '@type': 'Question', name: 'How much does a session cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription.' } },
   { '@type': 'Question', name: 'The grief happened months or years ago. Is it too late to talk about it?', acceptedAnswer: { '@type': 'Answer', text: 'No. NRI grief often resurfaces long after the event — sometimes because you never properly grieved at the time, sometimes because anniversaries or family events bring it back, sometimes because the guilt has been accumulating quietly for years. It is never too late to talk about loss.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function NriGriefPage() {
         <div className="hero">
           <p className="badge">NRI Grief &middot; Loss from Abroad &middot; Bereavement</p>
           <h1>You found out on WhatsApp. <em>The body was 8,000 miles away.</em></h1>
-          <p className="lead">NRI bereavement is a grief that multiplies. You weren&rsquo;t there. You couldn&rsquo;t be there. You watched the funeral on a phone screen in a bathroom at work. And then you went back to your desk because you had used up your bereavement leave. This specific pain — the grief of distance, of not being able to touch the person one last time — deserves to be witnessed. Talk to someone who understands. First 5 minutes free.</p>
+          <p className="lead">NRI bereavement is a grief that multiplies. You weren&rsquo;t there. You couldn&rsquo;t be there. You watched the funeral on a phone screen in a bathroom at work. And then you went back to your desk because you had used up your bereavement leave. This specific pain — the grief of distance, of not being able to touch the person one last time — deserves to be witnessed. Talk to someone who understands. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -84,7 +84,7 @@ export default function NriGriefPage() {
           <h2>Learning of Death on a WhatsApp Message</h2>
           <p>There is a particular brutality to learning of a death through a phone notification. The news arrives as text, sometimes a single line, sometimes a voice note that you play three times because you cannot believe the words. There is no one physically with you. You are in your apartment, or your office, or your car in a Walmart parking lot, and the person is gone, and you are ten thousand kilometres away and the next flight is 23 hours away and costs more than you have available right now.</p>
           <p>The NRI who got the call at 3am and spent the night in darkness, unable to sleep, unable to do anything, watching the phone for updates. Who scrambled to book a flight and found prices that made them feel sick. Who got on the plane knowing they would arrive after the funeral, because Indian rituals happen within 24 hours and the flight alone takes longer than that. This is not an edge case — it is the ordinary reality of NRI bereavement, and it produces a grief that is not like any other.</p>
-          <p>How Was Your Day listeners are in India. They understand this from the inside. First 5 minutes free.</p>
+          <p>How Was Your Day listeners are in India. They understand this from the inside. Sessions from 8 minutes.</p>
         </div>
 
         <div className="section">
@@ -101,7 +101,7 @@ export default function NriGriefPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>This grief deserves to be witnessed. Let someone in.</h2><p>Real Indian peer listener based in India. Understands NRI bereavement from the inside. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>This grief deserves to be witnessed. Let someone in.</h2><p>Real Indian peer listener based in India. Understands NRI bereavement from the inside. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-homesick">NRI homesickness &rarr;</a>

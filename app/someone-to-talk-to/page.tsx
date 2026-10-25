@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
   { '@type': 'Question', name: 'Do I need a specific reason to use How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'No. "I need someone to talk to" is reason enough. You do not need to be in crisis, have a diagnosis, or have a specific event to discuss. If you need to be heard, How Was Your Day is for you.' } },
   { '@type': 'Question', name: 'Who are the listeners on How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are real people with lived experience of difficult times — not therapists, not AI, not call center agents. They have applied, been screened, and screened for active listening. They choose to be on the platform because they want to support others through hard moments.' } },
-  { '@type': 'Question', name: 'How quickly can I start talking?', acceptedAnswer: { '@type': 'Answer', text: 'Immediately. Browse listeners who are online right now and start a session. No appointment, no form, no waiting. The first 5 minutes are free.' } },
+  { '@type': 'Question', name: 'How quickly can I start talking?', acceptedAnswer: { '@type': 'Answer', text: 'Immediately. Browse listeners who are online right now and start a session. No appointment, no form, no waiting. Sessions start at 8 minutes.' } },
   { '@type': 'Question', name: 'Is it anonymous?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You sign up with a phone number and first name only — no last name, no photo, no social login. Listeners agree to keep what you share confidential. What you share stays private.' } },
   { '@type': 'Question', name: 'What if I do not know what to say?', acceptedAnswer: { '@type': 'Answer', text: 'That is fine. Many sessions start with "I am not sure where to begin." Your listener will follow your lead. You do not need to have it organized or articulate. Just start.' } },
 ] }
@@ -80,7 +80,7 @@ export default function SomeoneToTalkToPage() {
         <div className="hero">
           <p className="badge">Someone to Talk To &middot; Real Listener &middot; No Appointment</p>
           <h1>You just need to be heard. <em>No reason required.</em></h1>
-          <p className="lead">You do not need to be in crisis. You do not need a diagnosis. You do not need to have it figured out. How Was Your Day connects you with real people who have been through hard things and know what it means to need someone to talk to. First 5 minutes free.</p>
+          <p className="lead">You do not need to be in crisis. You do not need a diagnosis. You do not need to have it figured out. How Was Your Day connects you with real people who have been through hard things and know what it means to need someone to talk to. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Find someone to talk to &rarr;</a>
         </div>
         <div className="section">
@@ -99,12 +99,12 @@ export default function SomeoneToTalkToPage() {
           <div className="steps">
             <div className="step"><div className="step-num">1</div><div className="step-text"><strong>Browse</strong> listeners who are currently online. See a bit about their background and what they have been through.</div></div>
             <div className="step"><div className="step-num">2</div><div className="step-text"><strong>Choose</strong> someone whose experience feels right for what you need. Or just pick the one who is available.</div></div>
-            <div className="step"><div className="step-num">3</div><div className="step-text"><strong>Start</strong> a text session immediately. No form, no assessment, no appointment. The first 5 minutes are free.</div></div>
+            <div className="step"><div className="step-num">3</div><div className="step-text"><strong>Start</strong> a text session immediately. No form, no assessment, no appointment. Sessions start at 8 minutes.</div></div>
             <div className="step"><div className="step-num">4</div><div className="step-text"><strong>Talk.</strong> Say what you have been carrying. Your listener will follow your lead.</div></div>
           </div>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Someone is online right now, ready to listen.</h2><p>Real person. No judgment. No reason required. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Someone is online right now, ready to listen.</h2><p>Real person. No judgment. No reason required. Sessions from 8 minutes.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/support/someone-to-talk-to">Talk to someone online &rarr;</a>
           <a href="/online-emotional-support">Online emotional support &rarr;</a>

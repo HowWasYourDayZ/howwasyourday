@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'What does a session cost from the USA?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first 5-minute session free. No subscription required.',
+        text: 'Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Sessions from 8 minutes. No subscription required.',
       },
     },
     {
@@ -156,7 +156,7 @@ export default function UsaEmpathyListenerPage() {
           How Was Your Day listeners are different. They already know the context. You can start from the middle of the story.
         </p>
 
-        <a href="/browse" className="cta-hero">Talk to someone now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Talk to someone now →</a>
 
         <div className="card">
           <h2>What makes a How Was Your Day listener different</h2>
@@ -186,7 +186,7 @@ export default function UsaEmpathyListenerPage() {
             Asking gentle questions. Reflecting back what they hear. Not rushing to fix anything.</p>
           <p>By the end of even a 15-minute session, something shifts. The weight feels more manageable.
             You feel less alone. Sometimes that is all you needed.</p>
-          <p>Sessions start at <strong>$10 for 15 minutes</strong>. First 5 minutes free — one free session per account.</p>
+          <p>Sessions start at <strong>$10 for 15 minutes</strong>. Sessions from 8 minutes.</p>
         </div>
 
         <div className="card">
@@ -227,7 +227,7 @@ export default function UsaEmpathyListenerPage() {
           <div className="faq-item">
             <h3>What does a session cost from the USA?</h3>
             <p>Sessions start at $10 for 15 minutes, $15 for 30 minutes, and $20 for 45 minutes. Your first
-              5 minutes free — one free session per account. No subscription required.</p>
+              sessions from 8 minutes. No subscription required.</p>
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day confidential?</h3>

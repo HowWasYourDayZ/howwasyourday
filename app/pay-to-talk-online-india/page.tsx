@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Pay for a Private Conversation with a Human Listener in India | How Was Your Day',
-  description: 'Pay to talk to a real peer listener in India. One free 5-minute introduction per account; prices depend on listener rate, with a 15-minute example at ₹160.',
+  description: 'Pay to talk to a real peer listener in India. Sessions from 8 minutes; prices depend on listener rate, with a 15-minute example at ₹160.',
   keywords: [
     'pay to talk to someone online india', 'pay per minute chat india', 'paid chat online india',
     'pay someone to listen india', 'pay to vent online india', 'talk to someone online india paid',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Pay to Talk to a Real Person Online | How Was Your Day',
-    description: 'Pay to talk to a real peer listener in India. One free 5-minute introduction per account; prices depend on listener rate, with a 15-minute example at ₹160.',
+    description: 'Pay to talk to a real peer listener in India. Sessions from 8 minutes; prices depend on listener rate, with a 15-minute example at ₹160.',
     url: 'https://www.howwasyourday.live/pay-to-talk-online-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'Is it worth paying to talk to someone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Whether paying is worthwhile depends on what you need. How Was Your Day is for people who want a real person to listen, not an AI response or an astrology prediction. One introductory session of up to 5 minutes is free per account. Paid sessions are priced by the selected listener’s rate and duration, plus a flat ₹10 platform fee; the price is shown before you start.',
+        text: 'Whether paying is worthwhile depends on what you need. How Was Your Day is for people who want a real person to listen, not an AI response or an astrology prediction. Every session is paid, from 8 minutes. Paid sessions are priced by the selected listener’s rate and duration, plus a flat ₹10 platform fee; the price is shown before you start.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'How much does it cost per minute to talk on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In India, the session total is the selected listener’s per-minute rate × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; another listener rate changes the total. One introductory session of up to 5 minutes is free per account. See https://www.howwasyourday.live/pricing for current details.',
+        text: 'In India, the session total is the selected listener’s per-minute rate × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; another listener rate changes the total. Every session is paid, from 8 minutes. See https://www.howwasyourday.live/pricing for current details.',
       },
     },
     {
@@ -160,7 +160,7 @@ export default function PayToTalkOnlineIndiaPage() {
           If you want a real person to listen rather than an AI response or a prediction, How Was Your Day offers one-to-one conversations with screened peer listeners. It is peer support, not therapy or clinical care. Your first introductory session of up to 5 minutes is free once per account; check the displayed price before starting a paid session.
         </p>
 
-        <a href="/talk?src=seo" className="cta-hero">Try your free 5-minute introduction →</a>
+        <a href="/talk?src=seo" className="cta-hero">Try an 8-minute session →</a>
 
         <GeoQuickAnswer path="/pay-to-talk-online-india" />
         <div className="card">
@@ -190,7 +190,7 @@ export default function PayToTalkOnlineIndiaPage() {
               <div className="label">How Was Your Day</div>
               <div className="amount">₹160 example</div>
               <div className="detail">Example: 15 min at ₹10/min + ₹10 platform fee<br />Peer listener, not clinical care</div>
-              <div className="free-badge">First 5 min free once/account</div>
+              <div className="free-badge">From 8 minutes once/account</div>
             </div>
           </div>
         </div>
@@ -277,7 +277,7 @@ export default function PayToTalkOnlineIndiaPage() {
         <div className="cta">
           <h2>Ready to talk to a real person?</h2>
           <p>No astrologer. No AI. Just someone who is there to listen.</p>
-          <a href="/talk?src=seo" className="btn-white">Try your free 5-minute introduction →</a><br />
+          <a href="/talk?src=seo" className="btn-white">Try an 8-minute session →</a><br />
           <a href="/browse" className="btn-orange">Browse listeners →</a>
         </div>
 
@@ -285,11 +285,11 @@ export default function PayToTalkOnlineIndiaPage() {
           <h2>Frequently asked questions</h2>
           <div className="faq-item">
             <h3>Is it worth paying to talk to someone?</h3>
-            <p>Whether paying is worthwhile depends on what you need. How Was Your Day is for people who want a real person to listen, not an AI response or prediction. One introductory session of up to 5 minutes is free per account. Paid sessions are priced according to the selected listener’s rate and duration, plus a flat ₹10 platform fee; you see the price before starting.</p>
+            <p>Whether paying is worthwhile depends on what you need. How Was Your Day is for people who want a real person to listen, not an AI response or prediction. Every session is paid, from 8 minutes. Paid sessions are priced according to the selected listener’s rate and duration, plus a flat ₹10 platform fee; you see the price before starting.</p>
           </div>
           <div className="faq-item">
             <h3>How much does it cost per minute?</h3>
-            <p>In India, the total is the selected listener’s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; the total changes with the listener’s rate. One introductory session of up to 5 minutes is free per account. See <a href="/pricing">current pricing</a>.</p>
+            <p>In India, the total is the selected listener’s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; the total changes with the listener’s rate. Every session is paid, from 8 minutes. See <a href="/pricing">current pricing</a>.</p>
           </div>
           <div className="faq-item">
             <h3>Is it anonymous?</h3>

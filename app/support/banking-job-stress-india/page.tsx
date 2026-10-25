@@ -188,7 +188,7 @@ export default function BankingJobStressIndiaPage() {
 
         <div className="cta-card">
           <h2>Just Wanted to Talk?</h2>
-          <p>Real person. No advice, no judgment. Anonymous. First 5 minutes free, sessions from ₹160.</p>
+          <p>Real person. No advice, no judgment. Anonymous. Sessions from 8 minutes, sessions from £4.20.</p>
           <div className="cta-btns">
             <a href="/talk?src=seo"><button className="btn-primary">Someone is listening — start free now →</button></a>
             <a href="/support/adulting-india"><button className="btn-secondary">Adulting pressure</button></a>

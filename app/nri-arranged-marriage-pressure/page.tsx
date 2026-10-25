@@ -14,8 +14,8 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Will a listener tell me what to do about my parents?', acceptedAnswer: { '@type': 'Answer', text: 'No. Peer listeners do not give advice unless you specifically ask for it. They are there to help you think through what you are feeling and what you want — not to push you toward a particular choice. This is your decision. They are just here to listen.' } },
   { '@type': 'Question', name: 'Do listeners understand arranged marriage dynamics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are Indian and most have direct experience with arranged marriage dynamics — either in their own families or personally. They understand rishta culture, bio-data, the family pressure involved, and the specific weight it carries when you are an NRI navigating expectations from two continents.' } },
   { '@type': 'Question', name: 'Can I talk about this anonymously?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. Sessions are private — only your phone number and first name are used. Nothing goes back to your family, your community, or anyone in your life. You can say exactly what you actually feel without it going anywhere.' } },
-  { '@type': 'Question', name: 'Can I talk at any time or do I need to book?', acceptedAnswer: { '@type': 'Answer', text: 'No appointment needed. Browse available listeners and start a session when you need one. First 5 minutes are free.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
+  { '@type': 'Question', name: 'Can I talk at any time or do I need to book?', acceptedAnswer: { '@type': 'Answer', text: 'No appointment needed. Browse available listeners and start a session when you need one. Sessions start at 8 minutes.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription, no commitment.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -76,7 +76,7 @@ export default function NriArrangedMarriagePressurePage() {
         <div className="hero">
           <p className="badge">NRI Marriage Pressure &middot; Arranged Marriage &middot; Indian Abroad</p>
           <h1>NRI Arranged Marriage Pressure — <em>The Squeeze from Two Worlds</em></h1>
-          <p className="lead">Parents in India sending profiles. Aunties abroad monitoring your &ldquo;eligibility.&rdquo; The bio-data WhatsApp chain at every family event. You are an adult with a life, a career, and your own idea of what you want — and somehow that still gets lost in the noise. Talk to someone who has been squeezed by the same two worlds. First 5 minutes free.</p>
+          <p className="lead">Parents in India sending profiles. Aunties abroad monitoring your &ldquo;eligibility.&rdquo; The bio-data WhatsApp chain at every family event. You are an adult with a life, a career, and your own idea of what you want — and somehow that still gets lost in the noise. Talk to someone who has been squeezed by the same two worlds. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -99,7 +99,7 @@ export default function NriArrangedMarriagePressurePage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>The exhaustion that doesn&rsquo;t fit in a family call.</h2><p>Real peer listener. Understands the NRI arranged marriage squeeze. First 5 minutes free, from US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>The exhaustion that doesn&rsquo;t fit in a family call.</h2><p>Real peer listener. Understands the NRI arranged marriage squeeze. Sessions from 8 minutes.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/arranged-marriage-nri">Arranged marriage NRI &rarr;</a>
           <a href="/nri-marriage-usa">NRI marriage USA &rarr;</a>

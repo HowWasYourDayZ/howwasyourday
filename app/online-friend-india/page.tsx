@@ -45,7 +45,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is there a free option?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Your first 5-minute session is free. If you decide to continue, sessions start at ₹160 for 15 minutes. There is no subscription and no automatic charge beyond what you select.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. If you decide to continue, sessions start at ₹160 for 15 minutes. There is no subscription and no automatic charge beyond what you select.' },
     },
     {
       '@type': 'Question',
@@ -133,7 +133,7 @@ export default function OnlineFriendIndiaPage() {
 
         <div className="section">
           <h2>What Online Friendship Looks Like on How Was Your Day</h2>
-          <p>A 1:1 voice call with a real Indian person. Your choice of listener, based on their background and what you need. The first 5 minutes are free, so you know the connection before committing.</p>
+          <p>A 1:1 voice call with a real Indian person. Your choice of listener, based on their background and what you need. Sessions start at 8 minutes, so you know the connection before committing.</p>
           <p>The listener is screened for active listening &mdash; they are not there to talk about themselves, not there to advise, not there to steer. They are there to hear you. Fully. Without the social dynamics that make honest conversation so hard with people you know.</p>
         </div>
 
@@ -153,7 +153,7 @@ export default function OnlineFriendIndiaPage() {
         <div className="section">
           <h2>How to Find the Right Listener for You</h2>
           <p>Browse listener profiles at <a href="/browse" style={{color:'var(--teal)',fontWeight:700}}>howwasyourday.live/browse</a>. Each profile shows the listener&apos;s background, what they have lived through, and what topics they can support. If you are going through something specific &mdash; career confusion, relationship difficulty, loneliness after a move &mdash; look for someone who has navigated something similar.</p>
-          <p>Your first 5-minute session is free. Use them to assess the connection. If it feels right, continue. If not, there is no penalty for ending the session and trying someone else.</p>
+          <p>Sessions start at 8 minutes. Use them to assess the connection. If it feels right, continue. If not, there is no penalty for ending the session and trying someone else.</p>
         </div>
 
         <div className="section">
@@ -168,7 +168,7 @@ export default function OnlineFriendIndiaPage() {
 
         <div className="cta-card">
           <h2>Real conversation. Real person. No strings.</h2>
-          <p>From ₹160. First 5 minutes free. No appointment needed.</p>
+          <p>From ₹160. Sessions from 8 minutes. No appointment needed.</p>
           <a href="/browse" className="btn-cta">Browse listeners &rarr;</a>
         </div>
 

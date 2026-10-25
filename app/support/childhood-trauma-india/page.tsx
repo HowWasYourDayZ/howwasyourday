@@ -204,7 +204,7 @@ export default function ChildhoodTraumaIndiaPage() {
         <div className="cta-card">
           <h2>The real version deserves to be spoken</h2>
           <p>Anonymous, no judgment, no family connections. Just a real person who will hear what it was actually like.</p>
-          <a href="/browse?topic=general" className="btn-cta">Talk to someone who listens without judgment — first 5 min free →</a>
+          <a href="/browse?topic=general" className="btn-cta">Talk to someone who listens without judgment →</a>
         </div>
 
         <div className="section">

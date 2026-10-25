@@ -30,8 +30,8 @@ export default function CountrySeoPage({ data }: { data: CountrySeoData }) {
           <h2 className="mb-4 text-2xl font-black">A simple path from needing support to talking</h2>
           <ol className="space-y-4 text-white/90">
             <li><span className="mr-2 font-black text-[#FF9933]">1.</span>Browse listener profiles and look for relevant lived experience, topics and availability.</li>
-            <li><span className="mr-2 font-black text-[#FF9933]">2.</span>Your first 5-minute session is free — one free session per account.</li>
-            <li><span className="mr-2 font-black text-[#FF9933]">3.</span>If you want to continue, the price is shown before you start: {data.slug === 'india' ? 'paid sessions start at £7 for 15 minutes' : 'US$10 for 15 minutes, US$15 for 30, US$20 for 45'}.{data.slug === 'india' ? '' : ' Listeners are in India, so availability follows Indian time — browse to see who is online now.'}</li>
+            <li><span className="mr-2 font-black text-[#FF9933]">2.</span>Sessions start at 8 minutes — one free session per account.</li>
+            <li><span className="mr-2 font-black text-[#FF9933]">3.</span>If you want to continue, the price is shown before you start: {data.slug === 'india' ? 'paid sessions start at £4.20 for 8 minutes' : 'US$10 for 15 minutes, US$15 for 30, US$20 for 45'}.{data.slug === 'india' ? '' : ' Listeners are in India, so availability follows Indian time — browse to see who is online now.'}</li>
             <li><span className="mr-2 font-black text-[#FF9933]">4.</span>Choose text or voice and continue only if the conversation feels useful.</li>
           </ol>
           <a href="/browse" className="mt-7 inline-flex rounded-full bg-[#FF9933] px-6 py-3 font-extrabold text-white">Browse listeners →</a>
@@ -49,7 +49,7 @@ export default function CountrySeoPage({ data }: { data: CountrySeoData }) {
           </div>
         </section>
         <section className="mb-8 rounded-3xl bg-[#F0F8FC] p-6"><h2 className="mb-4 text-xl font-black">Other Indian diaspora markets</h2><div className="flex flex-wrap gap-2">{COUNTRY_LINKS.filter(([name]) => name.toLowerCase() !== data.country.toLowerCase()).map(([name, href]) => <a key={href} href={href} className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0F4867] ring-1 ring-[#D5EEF6]">{name}</a>)}</div></section>
-        <section className="rounded-3xl bg-[#F0F8FC] p-6 text-center sm:p-8"><h2 className="mb-2 text-2xl font-black">Sometimes you just need someone who listens.</h2><p className="mb-5 text-slate-600">Start with one free 5-minute introductory session and see whether the connection feels right.</p><a href="/browse" className="inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Talk to someone →</a></section>
+        <section className="rounded-3xl bg-[#F0F8FC] p-6 text-center sm:p-8"><h2 className="mb-2 text-2xl font-black">Sometimes you just need someone who listens.</h2><p className="mb-5 text-slate-600">Start with an 8-minute session and see whether the connection feels right.</p><a href="/browse" className="inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Talk to someone →</a></section>
         <p className="mt-8 text-xs leading-6 text-slate-500">How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, contact the appropriate emergency or crisis service where you are.</p>
       </div>
     </main>

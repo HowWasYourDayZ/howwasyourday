@@ -15,7 +15,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do listeners understand the Canada Punjabi experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. They understand joint family pressure from afar, the sacrifice parents made, the \'successful abroad\' mask, and the loneliness in Canadian winters. You do not have to explain the context — they already know it.' } },
   { '@type': 'Question', name: 'What if I\'m embarrassed to talk about this?', acceptedAnswer: { '@type': 'Answer', text: 'You sign up anonymously with only a phone number. No photo, no full name, no social account. Your family in Brampton or Punjab never knows. Everything you say stays between you and your listener.' } },
   { '@type': 'Question', name: 'Is this available at convenient hours from Canada?', acceptedAnswer: { '@type': 'Answer', text: 'India listeners are active evenings IST (6pm–11pm), which is Canada morning (6:30am–1:30pm EDT / 3:30am–10:30am PDT). This lines up perfectly before your workday starts.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Your first 5-minute session is free — if it doesn\'t feel right, you pay nothing.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start from US$10 for 15 minutes. Sessions start at 8 minutes — if it doesn\'t feel right, you pay nothing.' } },
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -75,14 +75,14 @@ export default function PunjabiSupportCanadaPage() {
         <div className="hero">
           <p className="badge">Punjabi Support &middot; NRI Canada &middot; Desi Abroad</p>
           <h1>Someone back home who <em>speaks your language.</em></h1>
-          <p className="lead">You moved to Brampton or Surrey with big dreams and a heavier heart than anyone back home knows. The loneliness between calls to your parents. The pressure to have &ldquo;made it.&rdquo; The feeling that no one here fully understands &mdash; and you can&rsquo;t explain it to people there either. Talk to a Punjabi peer listener in India. No explaining required. First 5 minutes free.</p>
+          <p className="lead">You moved to Brampton or Surrey with big dreams and a heavier heart than anyone back home knows. The loneliness between calls to your parents. The pressure to have &ldquo;made it.&rdquo; The feeling that no one here fully understands &mdash; and you can&rsquo;t explain it to people there either. Talk to a Punjabi peer listener in India. No explaining required. Sessions from 8 minutes.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
         <div className="section">
           <h2>You don&rsquo;t have to explain what &#2602;&#2608;&#2604;&#2587;&#2624; (pardesh) means</h2>
           <p>Pardesh is not just &ldquo;being away.&rdquo; It is the particular weight of building a life in a place that was never supposed to be permanent &mdash; and slowly realising it might be. You are expected to be happy about it. You moved to Brampton or Surrey; that is success. The fact that you feel invisible between Sunday calls, that the cold is not just the weather, that you code-switch so hard every day that you forget which one is you &mdash; that part nobody talks about.</p>
           <p>The dual identity of being Punjabi in Canada is real. You are too Indian for your Canadian colleagues and too Canadian for your family back in Punjab. You perform belonging in both directions and are fully at ease in neither. The loneliness is not weakness &mdash; it is the gap between the life everyone imagines you are living and the life you are actually in.</p>
-          <p>How Was Your Day listeners are in India. Many have direct experience with close family abroad &mdash; siblings in Brampton, cousins in Surrey, friends who moved and went quiet. They understand pardesh without a translation. The first 5 minutes are free, and no name is needed to start.</p>
+          <p>How Was Your Day listeners are in India. Many have direct experience with close family abroad &mdash; siblings in Brampton, cousins in Surrey, friends who moved and went quiet. They understand pardesh without a translation. Sessions start at 8 minutes, and no name is needed to start.</p>
         </div>
         <div className="section">
           <h2>The How Was Your Day difference for the Punjabi diaspora</h2>
@@ -96,7 +96,7 @@ export default function PunjabiSupportCanadaPage() {
           <p>If you have a quiet hour before your workday, before the house wakes up, or on a Sunday morning when the silence is loudest, there will very likely be a Punjabi or Hindi-speaking listener available. No appointment. No waiting list. Browse who is online now and start a session.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Apni baat, apne bande se.</h2><p>A Punjabi peer listener who gets it. First 5 minutes free. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Apni baat, apne bande se.</h2><p>A Punjabi peer listener who gets it. Sessions from 8 minutes. From US$10.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-mental-health">NRI mental health &rarr;</a>

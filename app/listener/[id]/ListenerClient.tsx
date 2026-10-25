@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
-import { LANGUAGES, PLATFORM_FEE, MAX_FREE_TRIALS, VOICE_PRICING_ENABLED, sessionRatePerMin } from '@/lib/constants'
+import { LANGUAGES, PLATFORM_FEE, SESSION_DURATIONS, VOICE_PRICING_ENABLED, sessionRatePerMin } from '@/lib/constants'
 import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
 import { formatGBP, formatRate } from '@/lib/money'
 import Avatar from '@/app/components/Avatar'
@@ -106,8 +106,8 @@ export default function ListenerClient({ id }: { id: string }) {
 
   const [listener, setListener] = useState<ListenerProfile|null>(null)
   const [reviews,  setReviews]  = useState<Review[]>([])
-  // Default to the free 5-min trial; switched to 15 once we know the trial is used.
-  const [duration, setDuration] = useState<number>(5)
+  // Default to the shortest paid session (8 min).
+  const [duration, setDuration] = useState<number>(SESSION_DURATIONS[0])
   const [type,     setType]     = useState<'text'|'voice'>('text')
   const [balance,  setBalance]  = useState<number>(0)
   const [loading,  setLoading]  = useState(false)
@@ -116,7 +116,6 @@ export default function ListenerClient({ id }: { id: string }) {
   const [isBooking, setIsBooking] = useState(false)
   const [showInsufficient, setShowInsufficient] = useState(false)
   const [bookError, setBookError] = useState<string | null>(null)
-  const [freeTrialUsed, setFreeTrialUsed] = useState(false)
   const [isUnlimitedTester, setIsUnlimitedTester] = useState(false)
   // Wallet top-up context: show confirmation when arriving back from /wallet?return=
   const [fromWallet, setFromWallet] = useState(false)
@@ -134,12 +133,9 @@ export default function ListenerClient({ id }: { id: string }) {
     const params = new URLSearchParams(window.location.search)
     const t = params.get('type')
     if (t === 'text' || t === 'voice') setType(t)
-    if (params.get('from') === 'trial') setDuration(15)
-    if (params.get('from') === 'wallet') {
-      setFromWallet(true)
-      // Auto-select 15 min (not 5 min which is the free trial) since user just topped up
-      setDuration(15)
-    }
+    if (params.get('from') === 'wallet') setFromWallet(true)
+    const d = Number(params.get('duration'))
+    if ((SESSION_DURATIONS as readonly number[]).includes(d)) setDuration(d)
   }, [])
 
   useEffect(() => {
@@ -173,7 +169,7 @@ export default function ListenerClient({ id }: { id: string }) {
       if (!user) return
       setUserId(user.id)
 
-      // Check profile first — unlimited testers skip all trial / balance gates
+      // Unlimited testers (owner/QA, env only) skip the balance gate
       const profileRes = await fetch('/api/auth/profile')
       const profileData = profileRes.ok ? await profileRes.json() : {}
       const unlimited = profileData.is_unlimited_tester === true
@@ -181,17 +177,8 @@ export default function ListenerClient({ id }: { id: string }) {
       // Store for geo-pricing display (NRI vs India)
       setPricingReady(true)
 
-      const [{data: userData}, totalTrials, listenerTrial] = await Promise.all([
-        client.from('users').select('wallet_balance').eq('id', user.id).single(),
-        unlimited ? Promise.resolve({ count: 0 }) : client.from('sessions').select('id', { count: 'exact', head: true }).eq('seeker_id', user.id).eq('is_free_trial', true).eq('status', 'completed'),
-        unlimited ? Promise.resolve({ count: 0 }) : client.from('sessions').select('id', { count: 'exact', head: true }).eq('seeker_id', user.id).eq('listener_id', id).eq('is_free_trial', true).eq('status', 'completed'),
-      ])
+      const { data: userData } = await client.from('users').select('wallet_balance').eq('id', user.id).single()
       if (userData) setBalance(userData.wallet_balance as number)
-      if (!unlimited) {
-        const used = (totalTrials.count ?? 0) >= MAX_FREE_TRIALS || (listenerTrial.count ?? 0) > 0
-        setFreeTrialUsed(used)
-        if (used) setDuration(15)
-      }
     })
   }, [id])
 
@@ -225,8 +212,8 @@ export default function ListenerClient({ id }: { id: string }) {
 
   const ini  = (n:string) => n.split(' ').map((x:string)=>x[0]||'').join('').slice(0,2).toUpperCase()||'?'
   const rate = sessionRatePerMin(Number(listener.rate_per_min), type)
-  // Same rule as /api/sessions: overseas = flat price, never below the Indian price.
-  const cost = duration === 5 ? 0 : rate * duration + PLATFORM_FEE
+  // Same rule as /api/sessions (lib/geo-pricing quoteSession). Every session is paid.
+  const cost = rate * duration + PLATFORM_FEE
 
   const ERROR_MESSAGES: Record<string, string> = {
     listener_unavailable: 'This listener is currently unavailable.',
@@ -234,7 +221,6 @@ export default function ListenerClient({ id }: { id: string }) {
     listener_busy: 'This listener is in a session. Please try again shortly.',
     already_in_session: 'You already have an active session.',
     insufficient_balance: 'Your wallet balance is too low. Top up to continue.',
-    free_trial_used: "You've used your free trial. Recharge your wallet to continue.",
     cannot_book_self: 'You cannot start a session with your own listener profile.',
   }
 
@@ -270,10 +256,8 @@ export default function ListenerClient({ id }: { id: string }) {
     // Double-click guard
     if (isBooking) return
     // Client-side balance check (skipped for unlimited testers — server makes it free)
-    // Don't book on a price computed before the pricing country loaded
-    // (an overseas seeker would see the Indian price and be charged more).
-    if (duration !== 5 && !pricingReady) return
-    if (!isUnlimitedTester && duration !== 5 && balance < cost) { setShowInsufficient(true); return }
+    if (!pricingReady) return
+    if (!isUnlimitedTester && balance < cost) { setShowInsufficient(true); return }
     setIsBooking(true)
     setBookError(null)
     try {
@@ -421,7 +405,7 @@ export default function ListenerClient({ id }: { id: string }) {
               {listener.name} is in a session
             </div>
             <div style={{fontSize:13,fontWeight:600,color:'var(--gray)',lineHeight:1.65,marginBottom:16}}>
-              They&apos;re with someone right now. Sessions are typically 15–45 minutes.
+              They&apos;re with someone right now. Sessions are 8, 16 or 32 minutes.
               Check back shortly — they&apos;ll be available again soon.
             </div>
             <a href="/browse">
@@ -449,46 +433,27 @@ export default function ListenerClient({ id }: { id: string }) {
               )}
             </div>
             <div className="book-opts">
-              {([5,15,30,45] as const).map(d => {
-                const isFreeTier = d === 5
-                const disabled = isFreeTier && freeTrialUsed
-                return (
-                  <div key={d}
-                    className={`book-opt${duration===d?' sel':''}${disabled?' disabled':''}`}
-                    onClick={() => !disabled && setDuration(d)}
-                    role="button"
-                    aria-pressed={duration===d}
-                    aria-disabled={disabled}
-                    aria-label={`${d} minute session${isFreeTier && !freeTrialUsed ? ' free' : ''}`}
-                    style={disabled ? {opacity:0.45,cursor:'not-allowed'} : undefined}
-                  >
-                    <div className="opt-label">{d} min</div>
-                    <div className="opt-price">
-                      {isFreeTier ? '—' : formatGBP(rate * d + PLATFORM_FEE)}
-                    </div>
-                    {isFreeTier && (
-                      freeTrialUsed
-                        ? <div className="opt-free" style={{background:'#8E8E93'}}>Used</div>
-                        : <div className="opt-free">FREE</div>
-                    )}
-                  </div>
-                )
-              })}
+              {SESSION_DURATIONS.map(d => (
+                <div key={d}
+                  className={`book-opt${duration===d?' sel':''}`}
+                  onClick={() => setDuration(d)}
+                  role="button"
+                  aria-pressed={duration===d}
+                  aria-label={`${d} minute session, ${formatGBP(rate * d + PLATFORM_FEE)}`}
+                >
+                  <div className="opt-label">{d} min</div>
+                  <div className="opt-price">{formatGBP(rate * d + PLATFORM_FEE)}</div>
+                </div>
+              ))}
             </div>
             {userId && balance > 0 && (
               <div style={{fontSize:12,fontWeight:700,color:'#5A7A8A',textAlign:'right',marginBottom:6}}>
                 💰 Wallet: {formatGBP(balance)}
-                {duration !== 5 && balance < cost && <span style={{color:'#c53030',marginLeft:6}}>· need {formatGBP(cost - balance)} more</span>}
-              </div>
-            )}
-            {duration === 5 && !freeTrialUsed && (
-              <div style={{background:'rgba(52,199,89,.1)',border:'1px solid rgba(52,199,89,.3)',borderRadius:10,padding:'8px 12px',fontSize:12,fontWeight:700,color:'#166534',marginBottom:8,textAlign:'center'}}>
-                ✅ No payment needed — completely free for 5 minutes
+                {balance < cost && <span style={{color:'#c53030',marginLeft:6}}>· need {formatGBP(cost - balance)} more</span>}
               </div>
             )}
             <button className="btn-book" onClick={book} disabled={isBooking}>
               {isBooking ? <span className="spin">⟳</span>
-                : duration===5 ? '🎁 Try Free — 5 min, no payment needed →'
                 : `Book ${duration}-min ${type} — ${formatGBP(cost)} →`}
             </button>
           </>

@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is How Was Your Day free to use?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Your first 5-minute session is completely free. After that, sessions are affordable starting at ₹15–₹30 per session depending on the listener.',
+        text: 'Sessions start at 8 minutes. After that, sessions are affordable starting at ₹15–₹30 per session depending on the listener.',
       },
     },
     {
@@ -158,7 +158,7 @@ export default function AstroTalkAlternativePage() {
           Real peer listeners, no predictions, private.
         </p>
 
-        <a href="/browse" className="cta-hero">Find a listener now — first 5 min free →</a>
+        <a href="/browse" className="cta-hero">Find a listener now →</a>
 
         <GeoQuickAnswer path="/astrotalk-alternative" />
         <div className="card">
@@ -198,7 +198,7 @@ export default function AstroTalkAlternativePage() {
               </tr>
               <tr>
                 <td>First session</td>
-                <td className="tick">First 5 min free, always</td>
+                <td className="tick">From 8 minutes, always</td>
                 <td>Varies by astrologer</td>
               </tr>
               <tr>
@@ -237,7 +237,7 @@ export default function AstroTalkAlternativePage() {
             <li>
               <div>
                 <strong>Start your free session</strong>
-                <p>Your first 5 minutes are free — no payment needed, no commitment. Just start talking.</p>
+                <p>Sessions start at 8 minutes — no payment needed, no commitment. Just start talking.</p>
               </div>
             </li>
             <li>
@@ -277,7 +277,7 @@ export default function AstroTalkAlternativePage() {
           </div>
           <div className="faq-item">
             <h3>Is How Was Your Day free to use?</h3>
-            <p>Your first 5-minute session is completely free. After that, a 15-minute session starts at £7,
+            <p>Sessions start at 8 minutes, from £4.20,
               depending on the listener.</p>
           </div>
           <div className="faq-item">

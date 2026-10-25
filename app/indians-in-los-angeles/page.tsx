@@ -14,7 +14,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
   { '@type': 'Question', name: 'Do How Was Your Day listeners understand what it means to be Indian in LA?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. How Was Your Day listeners are based in India and understand the NRI experience broadly — including the specific dynamics of LA Indian life: the cultural mismatch of Indian values in a city built around reinvention, the Artesia and Cerritos community dynamics, the entertainment industry adjacent Indian experience, and the economic range within the LA Indian community.' } },
   { '@type': 'Question', name: 'What time can I call from Los Angeles?', acceptedAnswer: { '@type': 'Answer', text: 'Los Angeles (PST) is 13.5 hours behind IST. 7am in LA = 8:30pm in India. Early mornings, before the commute, Indian listeners are in their evening and available. Weekend mornings also work well.' } },
   { '@type': 'Question', name: 'Is it confidential from my community?', acceptedAnswer: { '@type': 'Answer', text: 'Completely. How Was Your Day uses phone number and first name only. Sessions are private and nothing is shared with your Artesia temple community, your Cerritos family network, or anyone else in your LA circle.' } },
-  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Your first session is free (5 minutes). After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
+  { '@type': 'Question', name: 'How much does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Sessions start at 8 minutes. After that, sessions start at US$10 for 15 minutes. No subscription required.' } },
   { '@type': 'Question', name: 'I feel like I don\'t fully belong to either world — Indian or American. Can listeners understand this?', acceptedAnswer: { '@type': 'Answer', text: 'This is one of the most common things How Was Your Day listeners hear from NRIs. The in-between feeling — too Indian for LA, too LA for India — is real, and listeners are screened and expected to hold that complexity without trying to resolve it or give you an answer.' } },
 ] }
 
@@ -76,7 +76,7 @@ export default function IndiansInLosAngelesPage() {
         <div className="hero">
           <p className="badge">Indians in Los Angeles &middot; Artesia &middot; Cerritos &middot; South Bay</p>
           <h1>Little India in Artesia. <em>Big loneliness everywhere else.</em></h1>
-          <p className="lead">Los Angeles has one of America&rsquo;s most culturally rich Indian communities — and one of its most isolating cities. From Little India in Artesia to Silicon Beach in Culver City, LA Indians navigate enormous cultural distance in a city that runs on reinvention. Talk to someone who understands what it really means to be Indian in LA. First 5 minutes free.</p>
+          <p className="lead">Los Angeles has one of America&rsquo;s most culturally rich Indian communities — and one of its most isolating cities. From Little India in Artesia to Silicon Beach in Culver City, LA Indians navigate enormous cultural distance in a city that runs on reinvention. Talk to someone who understands what it really means to be Indian in LA. Sessions from 8 minutes.</p>
           <a href="https://www.howwasyourday.live/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
 
@@ -101,7 +101,7 @@ export default function IndiansInLosAngelesPage() {
         </div>
 
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>In a city of millions, talk to one person who actually listens.</h2><p>Real Indian peer listener. Understands the desi LA experience — from Artesia to Silicon Beach. Anonymous. First 5 minutes free. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>In a city of millions, talk to one person who actually listens.</h2><p>Real Indian peer listener. Understands the desi LA experience — from Artesia to Silicon Beach. Anonymous. Sessions from 8 minutes. From US$10.</p><a href="https://www.howwasyourday.live/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related">
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>

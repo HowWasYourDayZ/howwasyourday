@@ -41,7 +41,7 @@ export const post = {
 
 <p><strong>iCall (TISS):</strong> ₹200–₹500 per session. Subsidised by TISS. Staffed by trained counsellors, not peers. Requires booking.</p>
 
-<p><strong>Peer counselling on How Was Your Day:</strong> Around ₹160 per session. Your first 5-minute session is free, so you can talk to someone and decide whether it feels like the right fit before committing. There are no subscription fees and no automatic renewals. Pay per session.</p>
+<p><strong>Peer counselling on How Was Your Day:</strong> Around ₹160 per session. Sessions start at 8 minutes, so you can talk to someone and decide whether it feels like the right fit before committing. There are no subscription fees and no automatic renewals. Pay per session.</p>
 
 <p>The cost difference is significant. ₹160 for peer support versus ₹2,500+ for a private therapy session means peer counselling is genuinely accessible to people for whom clinical therapy is not a realistic option.</p>
 
@@ -63,7 +63,7 @@ export const post = {
 
 <h2>Where to Find Peer Counselling in India</h2>
 
-<p>The main online peer counselling option across India is <a href="/peer-counselling-india">How Was Your Day</a>. It offers screened peer listeners across a range of lived experience areas, with no appointment needed. Sessions cost approximately ₹160, and the first 5 minutes are free.</p>
+<p>The main online peer counselling option across India is <a href="/peer-counselling-india">How Was Your Day</a>. It offers screened peer listeners across a range of lived experience areas, with no appointment needed. Sessions cost approximately ₹160.</p>
 
 <p>If you need professional counselling — licensed, clinical, structured — iCall (run by TISS) is the most affordable option, starting at around ₹200. Private therapists and online platforms like YourDOST are available at higher price points.</p>
 

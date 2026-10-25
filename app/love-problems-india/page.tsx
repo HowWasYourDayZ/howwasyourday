@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Love Problem? Talk to a Real Person Who Actually Listens | How Was Your Day India',
-  description: 'Dealing with a love problem? Talk anonymously to a real peer listener in India. No astrology, no judgment. ₹160/session. First 5 min free.',
+  description: 'Dealing with a love problem? Talk anonymously to a real peer listener in India. No astrology, no judgment. ₹160/session. From 8 minutes.',
   keywords: [
     'love problem solution india', 'love problems help online india', 'relationship problem solution india',
     'love issue talk to someone india', 'love problem solution online india', 'love problem advice india',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Love Problem? Talk to a Real Person Who Actually Listens | How Was Your Day India',
-    description: 'Dealing with a love problem? Talk anonymously to a real peer listener in India. No astrology, no judgment. ₹160/session. First 5 min free.',
+    description: 'Dealing with a love problem? Talk anonymously to a real peer listener in India. No astrology, no judgment. ₹160/session. From 8 minutes.',
     url: 'https://www.howwasyourday.live/love-problems-india',
     siteName: 'How Was Your Day',
     type: 'article',
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'How much does a love problem session cost on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The first 5 minutes of your first session are free. After that, sessions are ₹160 for 15 minutes, ₹300 for 30 minutes, or ₹430 for 45 minutes. There is a flat ₹10 platform fee per paid session. No subscription required.',
+        text: 'The first 5 minutes of a session are not charged. After that, sessions are ₹160 for 15 minutes, ₹300 for 30 minutes, or ₹430 for 45 minutes. There is a flat ₹10 platform fee per paid session. No subscription required.',
       },
     },
   ],
@@ -153,7 +153,7 @@ export default function LoveProblemsIndiaPage() {
           will listen while you think it through out loud.
         </p>
 
-        <a href="/talk?src=seo" className="cta-hero">Talk it through — first 5 min free →</a>
+        <a href="/talk?src=seo" className="cta-hero">Talk it through →</a>
 
         <div className="card">
           <h2>What kind of love problems people talk about</h2>
@@ -257,7 +257,7 @@ export default function LoveProblemsIndiaPage() {
           </div>
           <div className="faq-item">
             <h3>How much does a session cost?</h3>
-            <p>The first 5 minutes are free. After that: ₹160 for 15 min, ₹300 for 30 min, ₹430
+            <p>Sessions start at 8 minutes. After that: ₹160 for 15 min, ₹300 for 30 min, ₹430
               for 45 min. Flat ₹10 platform fee per paid session. No subscription required.</p>
           </div>
         </div>
@@ -265,7 +265,7 @@ export default function LoveProblemsIndiaPage() {
         <div className="cta">
           <h2>Ready to talk it through?</h2>
           <p>Private, no judgment, no appointment.</p>
-          <a href="/talk?src=seo" className="btn-white">Talk it through — first 5 min free →</a><br />
+          <a href="/talk?src=seo" className="btn-white">Talk it through →</a><br />
           <a href="/browse" className="btn-orange">Browse listeners →</a>
         </div>
 

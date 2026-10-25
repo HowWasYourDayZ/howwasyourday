@@ -5,18 +5,18 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   robots: NOINDEX_ROBOTS, // wrong-intent traffic — see lib/seo-noindex.ts
-  title: 'Talk to Someone Free India — First 5 Minutes Free | How Was Your Day',
-  description: 'First 5-minute session free. No subscription, no commitment. Real peer listeners in India. Start now.',
+  title: 'Talk to Someone Free India — From 8 Minutes | How Was Your Day',
+  description: 'Sessions from 8 minutes. No subscription, no commitment. Real peer listeners in India. Start now.',
   keywords: ['talk to someone free India', 'free emotional support India', 'free chat India mental health', 'talk to someone online free India'],
   alternates: { canonical: 'https://www.howwasyourday.live/talk-to-someone-free-india', languages: { 'en-GB': 'https://www.howwasyourday.live/talk-to-someone-free-india' } },
-  openGraph: { title: 'Talk to Someone Free India — First 5 Minutes Free | How Was Your Day', description: 'First 5-minute session free. No subscription, no commitment. Real peer listeners in India. Start now.', url: 'https://www.howwasyourday.live/talk-to-someone-free-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
+  openGraph: { title: 'Talk to Someone Free India — From 8 Minutes | How Was Your Day', description: 'Sessions from 8 minutes. No subscription, no commitment. Real peer listeners in India. Start now.', url: 'https://www.howwasyourday.live/talk-to-someone-free-india', siteName: 'How Was Your Day', type: 'article', images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'How Was Your Day' }] },
 }
 
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     {'@type': 'Question', name: 'Is there really no subscription?', acceptedAnswer: {'@type': 'Answer', text: 'No. How Was Your Day does not have a subscription. You buy session credits when you want them and use them when you need them. There is no monthly fee and no auto-renewal.'}},
     {'@type': 'Question', name: 'What happens at the end of the 5 free minutes?', acceptedAnswer: {'@type': 'Answer', text: 'The session pauses and you are prompted to add credits to continue. The listener waits. If you decide not to continue, the session ends and you have paid nothing.'}},
     {'@type': 'Question', name: 'How much does it cost after the free 5 minutes?', acceptedAnswer: {'@type': 'Answer', text: 'Sessions start at ₹160 for 15 minutes. You can extend in 15-minute increments.'}},
-    {'@type': 'Question', name: 'Can I use the free trial more than once?', acceptedAnswer: {'@type': 'Answer', text: 'Each session begins with 5 free minutes. You can have as many sessions as you like &mdash; each one starts with the free 5 minutes.'}}
+    {'@type': 'Question', name: 'Can I use the free trial more than once?', acceptedAnswer: {'@type': 'Answer', text: 'Each session begins with 5 free minutes. You can have as many sessions as you like &mdash; each one from 8 minutes.'}}
 ] }
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -73,7 +73,7 @@ export default function TalkToSomeoneFreeIndiaPage() {
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Talk to Someone Free India</span></nav>
         <div className="hero">
           <p className="badge">Free Session · First 5 Minutes · India</p>
-          <h1>First 5 minutes are free. <em>No subscription, no commitment.</em></h1>
+          <h1>Sessions start at 8 minutes. <em>No subscription, no commitment.</em></h1>
           <p className="lead">Try a real peer listener for free. No credit card, no subscription. If the first 5 minutes help, continue. If not, you pay nothing.</p>
           <a href="/browse" className="cta-hero">Talk to someone now &rarr;</a>
         </div>
@@ -87,7 +87,7 @@ export default function TalkToSomeoneFreeIndiaPage() {
           <p>A lot, actually. The listener opens by creating a space for you to say what is on your mind. You begin. In 5 minutes, most people know whether this is the kind of conversation they need. If it feels right, continuing is simple. If it does not feel right, you end it &mdash; no charge, no obligation.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
-        <div className="cta-card"><h2>Try it. First 5 minutes free, always.</h2><p>Real peer listener. No subscription. From ₹160 if you continue.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
+        <div className="cta-card"><h2>Try it. Sessions from 8 minutes, always.</h2><p>Real peer listener. No subscription. From ₹160 if you continue.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>
         <div className="section"><h2>You Might Also Find This Helpful</h2><div className="related"><a href="/support/emotional-support">Emotional support India &rarr;</a>
             <a href="/need-to-vent-india">Need to vent &rarr;</a>
             <a href="/bad-day-india">Bad day India &rarr;</a>
