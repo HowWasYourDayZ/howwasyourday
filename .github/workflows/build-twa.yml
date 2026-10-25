@@ -1,0 +1,146 @@
+# ⚠️ DEPRECATED (Oct 2026) — do not run. Targets API 34 (Play now requires 36), generates a
+# new signing key on every run (the live app needs its original upload key), and logs the password.
+# Build with PWABuilder instead: see docs/PLAY_STORE_STEP_BY_STEP.md.
+#
+# Build LeanOn TWA (Trusted Web Activity) Android app
+#
+# Triggered manually from:
+#   github.com/zubairalibaig/LeanOn2.0/actions → Build Android TWA → Run workflow
+#
+# After the build succeeds, scroll to Artifacts at the bottom of the run page and download:
+#   leanon-signed-aab      → upload this to Google Play Console
+#   leanon-keystore-SAVE-THIS → save to Google Drive IMMEDIATELY (expires in 7 days)
+#
+# Also look at the "Print SHA-256 fingerprint" step and copy that fingerprint to send to Claude.
+#
+# FIRST RUN: the workflow auto-generates a keystore + prints the password in a warning.
+#   Save it as a repo secret named KEYSTORE_PASSWORD (Settings → Secrets → Actions).
+# LATER RUNS: set KEYSTORE_PASSWORD + KEY_PASSWORD secrets so the same signing key is reused.
+
+name: Build Android TWA
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_code:
+        description: 'Version code (integer — must increase with each Play Store upload)'
+        required: true
+        default: '1'
+      version_name:
+        description: 'Version name shown to users (e.g. 1.0.0)'
+        required: true
+        default: '1.0.0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install required SDK packages
+        run: yes | sdkmanager "platforms;android-34" "build-tools;34.0.0" 2>/dev/null || true
+
+      - name: Generate signing keystore
+        run: |
+          KS_PASS="${{ secrets.KEYSTORE_PASSWORD }}"
+          KEY_PASS="${{ secrets.KEY_PASSWORD }}"
+
+          if [ -z "$KS_PASS" ]; then
+            KS_PASS=$(openssl rand -base64 24 | tr -d '=+/\n' | cut -c1-20)
+            KEY_PASS="$KS_PASS"
+            echo "::warning::FIRST RUN — save this as GitHub Secret KEYSTORE_PASSWORD: $KS_PASS"
+          fi
+          if [ -z "$KEY_PASS" ]; then
+            KEY_PASS="$KS_PASS"
+          fi
+
+          keytool -genkeypair \
+            -alias leanon \
+            -keyalg RSA -keysize 2048 \
+            -validity 10000 \
+            -keystore "$GITHUB_WORKSPACE/leanon-keystore.jks" \
+            -storepass "$KS_PASS" \
+            -keypass "$KEY_PASS" \
+            -dname "CN=LeanOn App, O=LeanOn, L=India, C=IN"
+
+          echo "KEYSTORE_PASSWORD=$KS_PASS" >> "$GITHUB_ENV"
+          echo "KEY_PASSWORD=$KEY_PASS"      >> "$GITHUB_ENV"
+
+      - name: Write SDK path for Gradle
+        run: echo "sdk.dir=$ANDROID_SDK_ROOT" > android/local.properties
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.4'
+
+      - name: Generate Gradle wrapper
+        working-directory: android
+        run: gradle wrapper --gradle-version=8.4
+
+      - name: Build signed AAB
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew bundleRelease \
+            -PversionCode=${{ github.event.inputs.version_code }} \
+            -PversionName=${{ github.event.inputs.version_name }} \
+            --no-daemon
+        env:
+          KEYSTORE_PASSWORD: ${{ env.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD:      ${{ env.KEY_PASSWORD }}
+
+      - name: Print SHA-256 fingerprint (paste this to Claude)
+        run: |
+          echo ""
+          echo "========================================================"
+          echo " Copy this SHA-256 fingerprint and paste it to Claude"
+          echo "========================================================"
+          keytool -list -v \
+            -keystore "$GITHUB_WORKSPACE/leanon-keystore.jks" \
+            -alias leanon \
+            -storepass "$KEYSTORE_PASSWORD" 2>&1 | grep "SHA256:"
+          echo "========================================================"
+
+      - name: Upload signed AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: leanon-signed-aab
+          path: android/app/build/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Upload keystore (save to Google Drive — expires in 7 days!)
+        uses: actions/upload-artifact@v4
+        with:
+          name: leanon-keystore-SAVE-THIS
+          path: leanon-keystore.jks
+          retention-days: 7
+
+      - name: Build summary
+        run: |
+          {
+            echo "## Build complete ✅"
+            echo ""
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Package ID | \`app.leanon.therapy\` |"
+            echo "| Version | ${{ github.event.inputs.version_name }} (${{ github.event.inputs.version_code }}) |"
+            echo ""
+            echo "### What to do next"
+            echo "1. Download **leanon-signed-aab** from Artifacts below"
+            echo "2. Download **leanon-keystore-SAVE-THIS** → save to Google Drive now"
+            echo "3. Copy SHA-256 fingerprint from the 'Print SHA-256 fingerprint' step → paste to Claude"
+            echo "4. Upload the .aab to Google Play Console (Step 2 in the guide)"
+          } >> "$GITHUB_STEP_SUMMARY"

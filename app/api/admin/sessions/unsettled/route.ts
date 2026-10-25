@@ -1,0 +1,120 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createAdminClient } from '@/lib/supabase-server'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { logger } from '@/lib/logger'
+import { requireAdmin, ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS } from '@/lib/require-admin'
+import { serviceFeeRateAt } from '@/lib/constants'
+
+// GET /api/admin/sessions/unsettled
+// Returns completed paid sessions where no credit wallet_transaction exists
+// for the listener — i.e., sessions where the listener was never paid.
+// Excludes accidental starts (< 60 seconds): those correctly have listenerEarning = 0
+// and a full refund to the seeker instead — no listener credit is expected.
+// Used by the admin sessions tab to surface "Fix Settlement" buttons.
+export async function GET(req: NextRequest) {
+  const { error, code, status, user } = await requireAdmin(req)
+  if (error) return NextResponse.json({ error, code }, { status })
+  if (!checkRateLimit(`admin:${user!.id}`, ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
+  try {
+    const sb = createAdminClient()
+
+    // Completed, paid sessions that ran at least 60 seconds.
+    // Sessions under 60s are "accidental starts": settleSession() returns listenerEarning=0
+    // and refundAmount=amountHeld (full refund to seeker). No listener credit is expected
+    // for those, so they must not appear in the unsettled list.
+    const { data: sessions, error: sErr } = await sb
+      .from('sessions')
+      .select('id, listener_id, amount_held, platform_fee, service_fee_rate, created_at, started_at, ended_at, duration_mins, listener_rate_per_min, listener:users!listener_id(name)')
+      .eq('status', 'completed')
+      .eq('is_free_trial', false)
+      .gt('amount_held', 0)
+      .order('created_at', { ascending: false })
+      .limit(500)
+    if (sErr) throw sErr
+
+    // Count total so the UI can warn when the 500-row cap silently truncates.
+    const { count: totalCompleted } = await sb
+      .from('sessions')
+      .select('id', { count: 'exact', head: true })
+      .eq('status', 'completed')
+      .eq('is_free_trial', false)
+      .gt('amount_held', 0)
+
+    if (!sessions || sessions.length === 0) {
+      return NextResponse.json({ unsettled: [], truncated: false })
+    }
+
+    const sessionIds = sessions.map((s: { id: string }) => s.id)
+
+    // Find which of these have a listener credit wallet_transaction
+    const { data: credits } = await sb
+      .from('wallet_transactions')
+      .select('session_id, user_id')
+      .in('session_id', sessionIds)
+      .eq('type', 'credit')
+    type CreditRow = { session_id: string; user_id: string }
+    const creditedSessionIds = new Set((credits ?? []).map((c: CreditRow) => c.session_id))
+
+    type RawSession = {
+      id: string; listener_id: string; amount_held: number | null; platform_fee: number | null
+      service_fee_rate: number | null; created_at: string | null; started_at: string | null
+      ended_at: string | null; duration_mins: number | null; listener_rate_per_min: number | null
+      listener: { name?: string } | null
+    }
+
+    // Sessions with NO credit = potentially unsettled.
+    // Exclusions:
+    // 1. Accidental starts (< 60s): settleSession returns listenerEarning=0, no credit expected.
+    // 2. 100% custom service fee: listenerEarning=0 by design, no credit is ever written.
+    const unsettled = (sessions as RawSession[]).filter((s: RawSession) => {
+      if (creditedSessionIds.has(s.id)) return false
+      if (s.started_at && s.ended_at) {
+        const ranSecs = (new Date(s.ended_at).getTime() - new Date(s.started_at).getTime()) / 1000
+        if (ranSecs < 60) return false
+      }
+      // Custom 100% fee: listener earns nothing, no wallet credit is produced.
+      if (s.service_fee_rate !== null && s.service_fee_rate >= 1) return false
+      return true
+    }).map((s: RawSession) => {
+      // Use the session's own service_fee_rate when available; fall back to the
+      // schedule-based global rate for rows predating the service_fee_rate column.
+      const feeRate = (s.service_fee_rate !== null && Number.isFinite(s.service_fee_rate))
+        ? s.service_fee_rate
+        : serviceFeeRateAt(s.started_at)
+
+      // Raw share — NRI sessions: listener's INR rate × actual mins (amount_held
+      // includes an NRI margin not payable to the listener, so using it overstates).
+      // India sessions: amount_held − ₹10 platform fee is the correct raw share.
+      let rawShare: number
+      if (s.listener_rate_per_min && s.listener_rate_per_min > 0 && s.started_at && s.ended_at) {
+        const elapsedMins = (new Date(s.ended_at).getTime() - new Date(s.started_at).getTime()) / 60000
+        const actualMins = Math.min(elapsedMins, s.duration_mins ?? elapsedMins)
+        rawShare = Math.round(actualMins * s.listener_rate_per_min)
+      } else {
+        rawShare = (s.amount_held ?? 0) - (s.platform_fee ?? 0)
+      }
+
+      return {
+        id: s.id,
+        listener_id: s.listener_id,
+        listener_name: s.listener?.name ?? 'Unknown',
+        amount_held: s.amount_held ?? 0,
+        platform_fee: s.platform_fee ?? 0,
+        listener_earning: Math.round(rawShare * (1 - feeRate)),
+        created_at: s.created_at,
+      }
+    })
+
+    return NextResponse.json({
+      unsettled,
+      total: unsettled.length,
+      truncated: (totalCompleted ?? 0) > 500,
+    })
+  } catch (err) {
+    logger.error('unsettled sessions GET error:', { error: err instanceof Error ? err.message : String(err) })
+    return NextResponse.json({ error: 'Server error' }, { status: 500 })
+  }
+}

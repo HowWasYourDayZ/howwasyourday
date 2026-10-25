@@ -1,0 +1,10 @@
+{
+  "crons": [
+    {
+      "path": "/api/sessions/cleanup",
+      "schedule": "0 2 * * *"
+    }
+  ],
+  "buildCommand": "next build",
+  "framework": "nextjs"
+}

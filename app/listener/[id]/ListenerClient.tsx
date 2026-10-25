@@ -1,0 +1,571 @@
+'use client'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import { createClient } from '@/lib/supabase'
+import { LANGUAGES, PLATFORM_FEE, MAX_FREE_TRIALS, VOICE_PRICING_ENABLED, sessionRatePerMin } from '@/lib/constants'
+import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
+import { isNriCountry, getBookingPriceDisplay, sessionTotalInr } from '@/lib/geo-pricing'
+import Avatar from '@/app/components/Avatar'
+import { EDUCATION_LEVELS, EDUCATION_FIELDS, labelOf } from '@/lib/listener-onboarding'
+import { trackEvent } from '@/lib/analytics'
+
+type ListenerProfile = {
+  id: string
+  voice_disabled?: boolean
+  user_id: string
+  name: string
+  bio: string
+  rating: number
+  total_sessions: number
+  rate_per_min: number
+  is_available: boolean
+  is_in_session?: boolean  // derived: has an active session right now (feature-flagged)
+  is_verified: boolean
+  specialty_tags: string[]
+  languages_spoken: string[]
+  avatar_url?: string
+  education_level?: string | null
+  education_field?: string | null
+  tagline_phrases?: string[] | null
+  lived_experience?: string | null
+}
+
+type Review = {
+  seeker_rating: number
+  seeker_review: string | null
+  created_at: string
+  users: { name: string } | null
+}
+
+const TAGS: Record<string,string> = {
+  loneliness:'Loneliness 🌙', anxiety:'Anxiety 😰', stress:'Work stress 💼',
+  burnout:'Burnout 🔥', career:'Career confusion 🧭', relationships:'Relationships 💬',
+  breakup:'Breakup & divorce 💔', grief:'Grief & loss 🌿', students:'Student pressure 📚',
+  selfesteem:'Self-esteem 💙', lgbtq:'LGBTQ+ 🌈', parenting:'Parenting 👶',
+  startup:'Startup journey 🚀', general:'Just need to talk ☕'
+}
+
+const S = `
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+  background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+a{text-decoration:none;color:inherit;}
+.page{max-width:480px;margin:0 auto;padding-bottom:280px;}
+.topbar{display:flex;align-items:center;gap:12px;padding:16px 20px;}
+.back{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.8);border:1.5px solid var(--border);cursor:pointer;font-size:18px;color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.profile-hdr{padding:0 20px 24px;}
+.av-row{display:flex;align-items:flex-end;gap:16px;margin-bottom:16px;}
+.av{width:96px;height:96px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:32px;color:white;position:relative;flex-shrink:0;overflow:hidden;}
+.av img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.av-dot{position:absolute;bottom:2px;right:2px;width:18px;height:18px;border-radius:50%;border:3px solid white;}
+.av-dot.on{background:#34C759;}.av-dot.off{background:#C7C7CC;}.av-dot.busy{background:#FF9933;}
+.listener-name{font-size:24px;font-weight:900;color:var(--navy);margin-bottom:4px;}
+.verified-badge{display:inline-flex;align-items:center;gap:4px;background:#E6F6FF;color:#0F4867;font-size:11px;font-weight:800;padding:3px 8px;border-radius:50px;border:1.5px solid #B8D9F0;}
+.stats-row{display:flex;align-items:center;gap:12px;}
+.stat{font-size:13px;color:var(--gray);font-weight:600;}
+.rate-badge{background:var(--orange);color:white;font-weight:800;font-size:14px;padding:5px 14px;border-radius:50px;margin-left:auto;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.tag{background:rgba(26,143,160,.1);color:var(--navy);font-size:12px;font-weight:700;padding:5px 12px;border-radius:50px;}
+.bio{font-size:15px;color:#3A5A6E;line-height:1.7;font-weight:500;margin-bottom:16px;}
+.story-card{background:white;border:1.5px solid var(--border);border-radius:18px;padding:18px;margin:0 20px 24px;}
+.story-label{font-size:11px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+.story-text{font-size:14px;color:#3A5A6E;line-height:1.65;font-weight:500;font-style:italic;}
+.reviews-section{padding:0 20px;margin-bottom:28px;}
+.sec-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;}
+.reviews{display:flex;flex-direction:column;gap:10px;}
+.review{background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px;}
+.review-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;}
+.review-stars{font-size:13px;color:var(--orange);}
+.review-date{font-size:11px;color:#8AAAB8;font-weight:600;}
+.review-text{font-size:13px;color:#3A5A6E;font-weight:500;line-height:1.55;margin-bottom:8px;}
+.review-name{font-size:12px;color:var(--gray);font-weight:700;}
+.book-bar{position:fixed;bottom:60px;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:white;border-top:1px solid var(--border);padding:16px 20px;box-shadow:0 -4px 24px rgba(15,72,103,.1);}
+.book-opts{display:flex;gap:8px;margin-bottom:12px;}
+.book-opt{flex:1;padding:12px;border:2px solid var(--border);border-radius:14px;text-align:center;cursor:pointer;transition:all .15s;background:white;}
+.book-opt.sel{border-color:var(--orange);background:#FFF3E0;}
+.opt-label{font-size:13px;font-weight:800;color:var(--navy);}
+.opt-price{font-size:12px;color:var(--gray);font-weight:600;margin-top:2px;}
+.opt-free{font-size:10px;background:var(--orange);color:white;font-weight:800;padding:2px 7px;border-radius:50px;display:inline-block;margin-top:3px;}
+.type-row{display:flex;gap:6px;margin-bottom:12px;align-items:center;}
+.type-row-label{font-size:12px;font-weight:700;color:var(--gray);margin-right:4px;white-space:nowrap;}
+.type-btn{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;font-family:'Nunito',sans-serif;font-weight:700;font-size:12px;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
+.type-btn.sel{border-color:var(--navy);color:var(--navy);background:var(--light);}
+.btn-book{width:100%;padding:15px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(255,153,51,.3);}
+.btn-book:hover{background:#e8861a;}
+.btn-book:disabled{opacity:.5;cursor:not-allowed;}
+.wallet-warn{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:12px;padding:12px 16px;font-size:13px;color:#7A2020;font-weight:600;text-align:center;margin-bottom:12px;}
+.spin{display:inline-block;animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+`
+
+export default function ListenerClient({ id }: { id: string }) {
+  const router   = useRouter()
+  const client   = createClient()
+
+  const [listener, setListener] = useState<ListenerProfile|null>(null)
+  const [reviews,  setReviews]  = useState<Review[]>([])
+  // Default to the free 5-min trial; switched to 15 once we know the trial is used.
+  const [duration, setDuration] = useState<number>(5)
+  const [type,     setType]     = useState<'text'|'voice'>('text')
+  const [balance,  setBalance]  = useState<number>(0)
+  const [loading,  setLoading]  = useState(false)
+  const [userId,   setUserId]   = useState<string|null>(null)
+  const [notFound, setNotFound] = useState(false)
+  const [isBooking, setIsBooking] = useState(false)
+  const [showInsufficient, setShowInsufficient] = useState(false)
+  const [bookError, setBookError] = useState<string | null>(null)
+  const [freeTrialUsed, setFreeTrialUsed] = useState(false)
+  const [isUnlimitedTester, setIsUnlimitedTester] = useState(false)
+  // Wallet top-up context: show confirmation when arriving back from /wallet?return=
+  const [fromWallet, setFromWallet] = useState(false)
+  const [pricingReady, setPricingReady] = useState(false)
+  const [accountCountry, setAccountCountry] = useState<string | null>(null)
+  // Offline messaging state
+  const [msgCount, setMsgCount]         = useState(0)
+  const [showMsgCompose, setShowMsgCompose] = useState(false)
+  const [msgText, setMsgText]           = useState('')
+  const [sendingMsg, setSendingMsg]     = useState(false)
+  const [msgSent, setMsgSent]           = useState(false)
+  const [msgError, setMsgError]         = useState<string | null>(null)
+
+  // Read URL params client-side (avoids Suspense boundary requirement)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const t = params.get('type')
+    if (t === 'text' || t === 'voice') setType(t)
+    if (params.get('from') === 'trial') setDuration(15)
+    if (params.get('from') === 'wallet') {
+      setFromWallet(true)
+      // Auto-select 15 min (not 5 min which is the free trial) since user just topped up
+      setDuration(15)
+    }
+  }, [])
+
+  useEffect(() => {
+    // Fetch via API route (admin client server-side) — avoids the
+    // users!inner join failing due to RLS drift on users_select_listener_public
+    fetch(`/api/listener/${id}`)
+      .then(r => r.json())
+      .then(json => {
+        if (json.profile) {
+          const lp = json.profile
+          if (lp.voice_disabled === true) setType('text')
+          setListener({
+            ...lp,
+            name: (lp.users as {name:string}|null)?.name || 'Listener',
+            avatar_url: (lp.users as {avatar_url?:string}|null)?.avatar_url,
+          })
+        } else {
+          setNotFound(true)
+        }
+      })
+      .catch(() => setNotFound(true))
+
+    client.from('sessions')
+      .select('seeker_rating, seeker_review, created_at, users!seeker_id(name)')
+      .eq('listener_id', id).eq('status', 'completed').not('seeker_rating', 'is', null)
+      .or('is_free_trial.eq.false,is_free_trial.is.null')
+      .order('created_at', {ascending:false}).limit(10)
+      .then(({data}) => { if (data) setReviews(data as unknown as Review[]) })
+
+    client.auth.getUser().then(async ({data:{user}}) => {
+      if (!user) return
+      setUserId(user.id)
+
+      // Check profile first — unlimited testers skip all trial / balance gates
+      const profileRes = await fetch('/api/auth/profile')
+      const profileData = profileRes.ok ? await profileRes.json() : {}
+      const unlimited = profileData.is_unlimited_tester === true
+      setIsUnlimitedTester(unlimited)
+      // Store for geo-pricing display (NRI vs India)
+      if (profileData.account_country) setAccountCountry(profileData.account_country as string)
+      setPricingReady(true)
+
+      const [{data: userData}, totalTrials, listenerTrial] = await Promise.all([
+        client.from('users').select('wallet_balance').eq('id', user.id).single(),
+        unlimited ? Promise.resolve({ count: 0 }) : client.from('sessions').select('id', { count: 'exact', head: true }).eq('seeker_id', user.id).eq('is_free_trial', true).eq('status', 'completed'),
+        unlimited ? Promise.resolve({ count: 0 }) : client.from('sessions').select('id', { count: 'exact', head: true }).eq('seeker_id', user.id).eq('listener_id', id).eq('is_free_trial', true).eq('status', 'completed'),
+      ])
+      if (userData) setBalance(userData.wallet_balance as number)
+      if (!unlimited) {
+        const used = (totalTrials.count ?? 0) >= MAX_FREE_TRIALS || (listenerTrial.count ?? 0) > 0
+        setFreeTrialUsed(used)
+        if (used) setDuration(15)
+      }
+    })
+  }, [id])
+
+  // Fetch existing offline message count for this listener once we know auth + availability
+  useEffect(() => {
+    if (!userId || !listener || listener.is_available) return
+    fetch(`/api/listener/${id}/message`)
+      .then(r => r.ok ? r.json() : { count: 0 })
+      .then(d => setMsgCount(d.count ?? 0))
+      .catch(() => {})
+  }, [userId, id, listener?.is_available])
+
+  if (notFound) return (
+    <>
+      <style>{S}</style>
+      <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',color:'#0F4867',gap:16,padding:24,textAlign:'center'}}>
+        <div style={{fontSize:48}}>🔍</div>
+        <div style={{fontSize:20,fontWeight:900}}>Listener not found</div>
+        <div style={{fontSize:14,color:'#5A7A8A',fontWeight:500}}>This profile may no longer be active.</div>
+        <button style={{background:'#FF9933',color:'white',border:'none',borderRadius:50,padding:'12px 28px',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer'}} onClick={()=>router.push('/browse')}>Browse listeners →</button>
+      </div>
+    </>
+  )
+
+  if (!listener) return (
+    <>
+      <style>{S}</style>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',color:'#0F4867'}}>Loading...</div>
+    </>
+  )
+
+  const ini  = (n:string) => n.split(' ').map((x:string)=>x[0]||'').join('').slice(0,2).toUpperCase()||'?'
+  const rate = sessionRatePerMin(Number(listener.rate_per_min), type)
+  // Same rule as /api/sessions: overseas = flat price, never below the Indian price.
+  const cost = duration === 5 ? 0 : sessionTotalInr(rate * duration + PLATFORM_FEE, accountCountry, duration)
+
+  const ERROR_MESSAGES: Record<string, string> = {
+    listener_unavailable: 'This listener is currently unavailable.',
+    listener_offline: 'This listener is offline right now.',
+    listener_busy: 'This listener is in a session. Please try again shortly.',
+    already_in_session: 'You already have an active session.',
+    insufficient_balance: 'Your wallet balance is too low. Top up to continue.',
+    free_trial_used: "You've used your free trial. Recharge your wallet to continue.",
+    cannot_book_self: 'You cannot start a session with your own listener profile.',
+  }
+
+  async function sendMsg() {
+    if (!userId) { router.push('/auth'); return }
+    if (msgText.trim().length < 10) return
+    setSendingMsg(true)
+    setMsgError(null)
+    try {
+      const res = await fetch(`/api/listener/${id}/message`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: msgText.trim() }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setMsgError(data.message || 'Failed to send. Please try again.')
+        return
+      }
+      setMsgCount(data.count ?? msgCount + 1)
+      setMsgSent(true)
+      setShowMsgCompose(false)
+      setMsgText('')
+    } catch {
+      setMsgError('Network error. Please try again.')
+    } finally {
+      setSendingMsg(false)
+    }
+  }
+
+  async function book() {
+    if (!userId) { router.push('/auth'); return }
+    // Double-click guard
+    if (isBooking) return
+    // Client-side balance check (skipped for unlimited testers — server makes it free)
+    // Don't book on a price computed before the pricing country loaded
+    // (an overseas seeker would see the Indian price and be charged more).
+    if (duration !== 5 && !pricingReady) return
+    if (!isUnlimitedTester && duration !== 5 && balance < cost) { setShowInsufficient(true); return }
+    setIsBooking(true)
+    setBookError(null)
+    try {
+      const res = await fetch('/api/sessions', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ listenerId: id, durationMins: duration, sessionType: type }),
+      })
+      const data = await res.json()
+      if (data.error) {
+        if (data.error === 'already_in_session' && data.sessionId) {
+          router.push(`/session/${data.sessionId}?duration=${duration}&type=${type}`)
+          return
+        }
+        if (data.error === 'insufficient_balance') { setShowInsufficient(true); return }
+        setBookError(ERROR_MESSAGES[data.error] || data.message || 'Something went wrong. Please try again.')
+        return
+      }
+      if (data.sessionId) {
+        trackEvent('browse_request', { mode: type, mins: duration, free: typeof data.total === 'number' && data.total > 0 ? 0 : 1 })
+        router.push(`/session/${data.sessionId}?name=${encodeURIComponent(listener?.name ?? '')}&duration=${duration}&type=${type}`)
+      }
+    } catch {
+      setBookError('Network error. Please check your connection and try again.')
+    } finally {
+      setIsBooking(false)
+    }
+  }
+
+  return (
+    <>
+      <style>{S}</style>
+      <div className="page">
+        <div className="topbar">
+          <button className="back" aria-label="Go back" onClick={()=>router.back()}>←</button>
+        </div>
+
+        <div className="profile-hdr">
+          <div className="av-row">
+            <div className="av">
+              {listener.avatar_url
+                ? <Avatar src={listener.avatar_url} alt={listener.name} size={256} />
+                : ini(listener.name)}
+              <div className={`av-dot ${SHOW_LISTENER_IN_SESSION_STATUS && listener.is_in_session ? 'busy' : listener.is_available ? 'on' : 'off'}`}/>
+            </div>
+            <div style={{flex:1}}>
+              <div className="listener-name">{listener.name}</div>
+              <div className="stats-row">
+                {listener.is_verified && <span className="verified-badge">✓ Verified</span>}
+                {listener.rating > 0 && <span className="stat">⭐ {(+listener.rating).toFixed(1)}</span>}
+                {listener.total_sessions > 0 && <span className="stat">{listener.total_sessions} sessions</span>}
+                <span className="rate-badge" style={{whiteSpace:'nowrap'}}>
+                  {VOICE_PRICING_ENABLED ? `From ₹${listener.rate_per_min}/min` : `₹${listener.rate_per_min}/min`}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="tags">
+            {(listener.specialty_tags||[]).map((t:string) => (
+              <span key={t} className="tag">{TAGS[t]||t}</span>
+            ))}
+            {(listener.languages_spoken||[]).map((lid:string) => {
+              const info = LANGUAGES.find(x=>x.id===lid)
+              return <span key={lid} className="tag" style={{background:'rgba(255,153,51,.12)',color:'#7A4A00'}}>🌐 {info?.label||lid}</span>
+            })}
+          </div>
+          {(listener.tagline_phrases ?? []).length > 0 && (
+            <div style={{display:'flex',flexWrap:'wrap',gap:6,marginTop:10}}>
+              {(listener.tagline_phrases ?? []).map(t => (
+                <span key={t} style={{background:'#E7F6EC',color:'#1B5E32',fontSize:12,fontWeight:800,padding:'4px 10px',borderRadius:50}}>{t}</span>
+              ))}
+            </div>
+          )}
+          <p className="bio">{listener.bio}</p>
+          {listener.lived_experience && (
+            <div style={{marginTop:12,background:'var(--light)',border:'1.5px solid var(--border)',borderRadius:14,padding:'12px 14px'}}>
+              <div style={{fontSize:12,fontWeight:900,color:'var(--navy)',textTransform:'uppercase',letterSpacing:'.04em',marginBottom:4}}>What I&apos;ve been through</div>
+              <p style={{fontSize:14,color:'#3A6070',lineHeight:1.65,fontWeight:500,margin:0,whiteSpace:'pre-wrap'}}>{listener.lived_experience}</p>
+            </div>
+          )}
+          {listener.education_level && (
+            <div style={{marginTop:10,fontSize:13,fontWeight:700,color:'var(--gray)'}}>
+              🎓 {labelOf(EDUCATION_LEVELS, listener.education_level)}
+              {listener.education_field && listener.education_field !== 'none' ? ` · ${labelOf(EDUCATION_FIELDS, listener.education_field)}` : ''}
+            </div>
+          )}
+        </div>
+
+        {reviews.length > 0 && (
+          <div className="reviews-section">
+            <div className="sec-title">What others say</div>
+            <div className="reviews">
+              {reviews.map((r,i) => {
+                const name = r.users?.name || 'Anonymous'
+                const masked = name.length <= 2 ? name[0] + '***' : name[0] + '***' + name[name.length - 1]
+                const date = r.created_at ? new Date(r.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : ''
+                return (
+                <div key={i} className="review">
+                  <div className="review-top">
+                    <div className="review-stars">{'★'.repeat(r.seeker_rating)}{'☆'.repeat(5 - r.seeker_rating)}</div>
+                    {date && <span className="review-date">{date}</span>}
+                  </div>
+                  {r.seeker_review && <p className="review-text">"{r.seeker_review}"</p>}
+                  <span className="review-name">— {masked}</span>
+                </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {showInsufficient && (
+        <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,.5)',zIndex:200,display:'flex',alignItems:'flex-end',justifyContent:'center'}}>
+          <div style={{background:'white',borderRadius:'20px 20px 0 0',padding:24,width:'100%',maxWidth:480,fontFamily:'Nunito,sans-serif'}}>
+            <div style={{fontSize:24,marginBottom:12}}>💰</div>
+            <div style={{fontSize:18,fontWeight:900,color:'#0F4867',marginBottom:8}}>Insufficient Balance</div>
+            <div style={{fontSize:14,color:'#5A7A8A',marginBottom:20,lineHeight:1.6}}>
+              Your wallet has ₹{balance}. This session costs ₹{cost}. You need ₹{cost - balance} more.
+            </div>
+            <div style={{display:'flex',gap:10}}>
+              <button onClick={()=>setShowInsufficient(false)} style={{flex:1,padding:13,background:'white',border:'1.5px solid #D5EEF6',borderRadius:12,fontFamily:'Nunito,sans-serif',fontWeight:700,cursor:'pointer'}}>Cancel</button>
+              <a href={`/wallet?return=${encodeURIComponent(`/listener/${id}?from=wallet&type=${type}`)}`} style={{flex:1}}>
+                <button style={{width:'100%',padding:13,background:'#FF9933',color:'white',border:'none',borderRadius:12,fontFamily:'Nunito,sans-serif',fontWeight:800,cursor:'pointer'}}>Top Up Wallet →</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="book-bar">
+        {userId === id ? (
+          // ── Own profile: you cannot book or message yourself ─────────────
+          <div style={{textAlign:'center'}}>
+            <div style={{fontSize:13,fontWeight:700,color:'#5A7A8A',marginBottom:12,lineHeight:1.5}}>
+              👀 This is your public listener profile — exactly how seekers see you.
+            </div>
+            <a href="/dashboard"><button className="btn-book">Go to your dashboard →</button></a>
+          </div>
+        ) : SHOW_LISTENER_IN_SESSION_STATUS && listener.is_in_session ? (
+          // ── In session: show waiting state, no booking possible ──────────
+          <div style={{textAlign:'center',padding:'4px 0'}}>
+            <div style={{fontSize:28,marginBottom:10}}>🟠</div>
+            <div style={{fontSize:16,fontWeight:900,color:'var(--navy)',marginBottom:8}}>
+              {listener.name} is in a session
+            </div>
+            <div style={{fontSize:13,fontWeight:600,color:'var(--gray)',lineHeight:1.65,marginBottom:16}}>
+              They&apos;re with someone right now. Sessions are typically 15–45 minutes.
+              Check back shortly — they&apos;ll be available again soon.
+            </div>
+            <a href="/browse">
+              <button className="btn-book" style={{background:'var(--teal)'}}>Browse other listeners →</button>
+            </a>
+          </div>
+        ) : listener.is_available ? (
+          // ── Online: existing booking UI ──────────────────────────────────
+          <>
+            {fromWallet && (
+              <div style={{background:'rgba(52,199,89,.12)',border:'1px solid rgba(52,199,89,.35)',borderRadius:12,padding:'10px 14px',fontSize:13,fontWeight:700,color:'#166534',marginBottom:12,textAlign:'center'}}>
+                ✅ Wallet topped up! Ready to book your session.
+              </div>
+            )}
+            {bookError && <div className="wallet-warn">{bookError}</div>}
+            <div className="type-row">
+              <span className="type-row-label">Mode:</span>
+              <button className={`type-btn${type==='text'?' sel':''}`} onClick={()=>setType('text')}>
+                💬 Text{VOICE_PRICING_ENABLED && !isNriCountry(accountCountry) ? ` · ₹${sessionRatePerMin(Number(listener.rate_per_min), 'text')}/min` : ''}
+              </button>
+              {!listener.voice_disabled && (
+                <button className={`type-btn${type==='voice'?' sel':''}`} onClick={()=>setType('voice')}>
+                  📞 Voice{VOICE_PRICING_ENABLED && !isNriCountry(accountCountry) ? ` · ₹${sessionRatePerMin(Number(listener.rate_per_min), 'voice')}/min` : ''}
+                </button>
+              )}
+            </div>
+            <div className="book-opts">
+              {([5,15,30,45] as const).map(d => {
+                const isFreeTier = d === 5
+                const disabled = isFreeTier && freeTrialUsed
+                return (
+                  <div key={d}
+                    className={`book-opt${duration===d?' sel':''}${disabled?' disabled':''}`}
+                    onClick={() => !disabled && setDuration(d)}
+                    role="button"
+                    aria-pressed={duration===d}
+                    aria-disabled={disabled}
+                    aria-label={`${d} minute session${isFreeTier && !freeTrialUsed ? ' free' : ''}`}
+                    style={disabled ? {opacity:0.45,cursor:'not-allowed'} : undefined}
+                  >
+                    <div className="opt-label">{d} min</div>
+                    <div className="opt-price">
+                      {isFreeTier ? '—' : (() => {
+                        const inrCost = rate * d + PLATFORM_FEE
+                        if (!isNriCountry(accountCountry)) return `₹${inrCost}`
+                        const { primary } = getBookingPriceDisplay(inrCost, accountCountry, d)
+                        return primary
+                      })()}
+                    </div>
+                    {isFreeTier && (
+                      freeTrialUsed
+                        ? <div className="opt-free" style={{background:'#8E8E93'}}>Used</div>
+                        : <div className="opt-free">FREE</div>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+            {userId && balance > 0 && (
+              <div style={{fontSize:12,fontWeight:700,color:'#5A7A8A',textAlign:'right',marginBottom:6}}>
+                💰 Wallet: ₹{balance}
+                {duration !== 5 && balance < cost && <span style={{color:'#c53030',marginLeft:6}}>· need ₹{cost - balance} more</span>}
+              </div>
+            )}
+            {duration === 5 && !freeTrialUsed && (
+              <div style={{background:'rgba(52,199,89,.1)',border:'1px solid rgba(52,199,89,.3)',borderRadius:10,padding:'8px 12px',fontSize:12,fontWeight:700,color:'#166534',marginBottom:8,textAlign:'center'}}>
+                ✅ No payment needed — completely free for 5 minutes
+              </div>
+            )}
+            {isNriCountry(accountCountry) && duration !== 5 && (() => {
+              const { note } = getBookingPriceDisplay(cost, accountCountry, duration)
+              return note ? (
+                <div style={{fontSize:11,color:'#5A7A8A',fontWeight:600,textAlign:'center',marginBottom:6}}>
+                  {note}
+                </div>
+              ) : null
+            })()}
+            <button className="btn-book" onClick={book} disabled={isBooking}>
+              {isBooking ? <span className="spin">⟳</span>
+                : duration===5 ? '🎁 Try Free — 5 min, no payment needed →'
+                : (() => {
+                    if (isNriCountry(accountCountry)) {
+                      const { primary } = getBookingPriceDisplay(cost, accountCountry, duration)
+                      return `Book ${duration}-min ${type} — ${primary} →`
+                    }
+                    return `Book ${duration}-min ${type} — ₹${cost} →`
+                  })()}
+            </button>
+          </>
+        ) : (
+          // ── Offline: message request UI ──────────────────────────────────
+          <div>
+            <div style={{textAlign:'center',fontSize:13,fontWeight:700,color:'#5A7A8A',marginBottom:12}}>
+              😴 {listener.name} is offline right now
+            </div>
+            {msgSent && (
+              <div style={{background:'rgba(52,199,89,.1)',border:'1px solid rgba(52,199,89,.3)',borderRadius:12,padding:'10px 14px',fontSize:13,fontWeight:700,color:'#166534',marginBottom:12,textAlign:'center'}}>
+                ✅ Message sent! They&apos;ll see it when they&apos;re back online.
+                {msgCount < 2 && <div style={{fontSize:12,fontWeight:500,marginTop:4}}>You can send one follow-up from this page.</div>}
+              </div>
+            )}
+            {msgError && (
+              <div className="wallet-warn" style={{marginBottom:10}}>{msgError}</div>
+            )}
+            {showMsgCompose ? (
+              <div>
+                <textarea
+                  placeholder={`What's on your mind? ${listener.name} will see this when they're back.`}
+                  value={msgText}
+                  onChange={e => setMsgText(e.target.value)}
+                  maxLength={300}
+                  rows={4}
+                  style={{width:'100%',padding:'12px 14px',fontSize:14,fontFamily:'Nunito,sans-serif',fontWeight:500,color:'#0F4867',border:'1.5px solid #D5EEF6',borderRadius:14,outline:'none',resize:'none',marginBottom:6,boxSizing:'border-box'}}
+                />
+                <div style={{fontSize:11,color:'#5A7A8A',fontWeight:600,textAlign:'right',marginBottom:10}}>
+                  {msgText.trim().length}/300
+                </div>
+                <button className="btn-book" onClick={sendMsg} disabled={sendingMsg || msgText.trim().length < 10}>
+                  {sendingMsg ? <span className="spin">⟳</span> : 'Send message →'}
+                </button>
+                <button
+                  onClick={() => { setShowMsgCompose(false); setMsgText(''); setMsgError(null) }}
+                  style={{width:'100%',marginTop:8,padding:10,background:'none',border:'none',fontFamily:'Nunito,sans-serif',fontWeight:700,fontSize:13,color:'#5A7A8A',cursor:'pointer'}}
+                >
+                  Cancel
+                </button>
+              </div>
+            ) : msgCount >= 2 ? (
+              <div style={{textAlign:'center',fontSize:13,fontWeight:600,color:'#5A7A8A',padding:'8px 0'}}>
+                You&apos;ve sent {msgCount} messages. Come back when they&apos;re online to book a session.
+              </div>
+            ) : (
+              <button
+                className="btn-book"
+                onClick={() => userId ? setShowMsgCompose(true) : router.push('/auth')}
+              >
+                {msgCount === 0 ? '✉️ Leave a message →' : '➕ Send a follow-up →'}
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+    </>
+  )
+}

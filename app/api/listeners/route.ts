@@ -1,0 +1,203 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createAdminClient } from '@/lib/supabase-server'
+import { logger } from '@/lib/logger'
+import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
+import { sweepStaleListeners } from '@/lib/listener-presence'
+
+export const dynamic = 'force-dynamic'
+
+// GET — public listener list for the browse page.
+// Uses admin client (bypasses RLS) to avoid the silent-empty issue with
+// PostgREST's embedded !inner join when anonymous users hit complex
+// cross-table RLS policies. Filters are applied server-side.
+export async function GET(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url)
+    const tag  = searchParams.get('tag')  || 'all'
+    const lang = searchParams.get('lang') || 'all'
+
+    const sb = createAdminClient()
+
+    // Self-heal stuck-online ghosts before reading the list — awaited so the
+    // list below already reflects it; never throws. Rules (15-min heartbeat,
+    // longer "away" window only for listeners push alerts can reach) live in
+    // lib/listener-presence.ts.
+    await sweepStaleListeners(sb)
+
+    // Exclude orphaned accounts: LeanOn is phone-only, so a listener whose users
+    // row has no phone can never be logged into and must not appear bookable.
+    // These ghosts come from auth-account recreation (see lib/ensure-user-row.ts).
+    // We fetch phone ONLY to filter on it, then strip it from the response below
+    // so it never leaves the server.
+    // Build the list query. Factored so we can retry with a smaller select if
+    // the birth_* columns aren't present yet (migration 049 not applied) — this
+    // keeps browse alive during the deploy-before-migration window.
+    let hasPendingAvatarCol = true
+    const buildQuery = (selectStr: string) => {
+      let q = sb
+        .from('listener_profiles')
+        .select(selectStr)
+        .eq('is_approved', true)
+        .or('is_active.eq.true,is_active.is.null')
+        .eq('is_suspended', false)
+      if (hasPendingAvatarCol) q = q.is('pending_avatar_url', null)
+      q = q.not('users.phone', 'is', null)
+        .order('is_available', { ascending: false })
+        // Recency of being online decides WHICH rows survive the limit(50) among
+        // offline listeners, so a dormant-but-high-rated profile can no longer
+        // push out someone who was active an hour ago. Online listeners are
+        // unaffected — is_available still leads, and the JS sort below restores
+        // rating order within the online group.
+        .order('last_heartbeat_at', { ascending: false, nullsFirst: false })
+        .order('rating',       { ascending: false })
+        .limit(50)
+      if (tag  !== 'all') q = q.contains('specialty_tags',    [tag])
+      if (lang !== 'all') q = q.contains('languages_spoken', [lang])
+      return q
+    }
+
+    // last_heartbeat_at powers the "last online" label + offline ordering on
+    // browse. The column is guaranteed present (migration 041; the staleness
+    // sweep above already queries it), so no fallback select is needed.
+    // is_in_session (migration 052): included in SELECT; if the column doesn't
+    // exist yet, the query retries with SELECT_BASE (same fallback as birth_*).
+    const SELECT_BASE = 'user_id, bio, specialty_tags, languages_spoken, rate_per_min, rating, total_sessions, is_available, is_verified, last_heartbeat_at, users!inner(name, avatar_url, phone)'
+    // is_in_session drives the orange "In session" dot on browse cards.
+    const SELECT_WITH_IN_SESSION = SELECT_BASE.replace('is_available', 'is_available, is_in_session')
+    // birth_year/birth_month drive the browse age-range filter (migration 049).
+    const SELECT_WITH_AGE = SELECT_WITH_IN_SESSION.replace(', users!inner', ', birth_year, birth_month, users!inner')
+
+    // tagline_phrases (migration 060) — the "People talk to me about…" line on
+    // browse cards. Tried first; dropped if the column doesn't exist yet.
+    let { data, error } = await buildQuery(SELECT_WITH_AGE.replace(', users!inner', ', tagline_phrases, users!inner'))
+    if (error && error.message?.includes('tagline_phrases')) {
+      ;({ data, error } = await buildQuery(SELECT_WITH_AGE))
+    }
+    if (error && (error.message?.includes('birth_year') || error.message?.includes('birth_month'))) {
+      ;({ data, error } = await buildQuery(SELECT_WITH_IN_SESSION))
+    }
+    // If is_in_session column not present yet (migration 052 pending), fall back
+    if (error && error.message?.includes('is_in_session')) {
+      ;({ data, error } = await buildQuery(SELECT_WITH_AGE.replace(', is_in_session', '')))
+      if (error && (error.message?.includes('birth_year') || error.message?.includes('birth_month'))) {
+        ;({ data, error } = await buildQuery(SELECT_BASE))
+      }
+    }
+
+    // If pending_avatar_url column not present yet, retry entire chain without it
+    if (error && error.message?.includes('pending_avatar_url')) {
+      hasPendingAvatarCol = false
+      ;({ data, error } = await buildQuery(SELECT_WITH_AGE))
+      if (error && (error.message?.includes('birth_year') || error.message?.includes('birth_month'))) {
+        ;({ data, error } = await buildQuery(SELECT_WITH_IN_SESSION))
+      }
+      if (error && error.message?.includes('is_in_session')) {
+        ;({ data, error } = await buildQuery(SELECT_WITH_AGE.replace(', is_in_session', '')))
+        if (error && (error.message?.includes('birth_year') || error.message?.includes('birth_month'))) {
+          ;({ data, error } = await buildQuery(SELECT_BASE))
+        }
+      }
+    }
+
+    if (error) {
+      logger.error('listeners query failed:', { error: error.message })
+      return NextResponse.json({ error: 'Failed to fetch listeners. Please try again.' }, { status: 503 })
+    }
+
+    // Trust is_available directly from the DB. The staleness sweep above
+    // corrects stuck-online ghosts on every browse load; the toggle writes
+    // is_available authoritatively. No per-request display gate here — that
+    // previously caused false-offline flicker on mobile.
+    const listeners = ((data ?? []) as unknown as Record<string, unknown>[]).map((l) => {
+      const rawUsers = (l as { users?: { name?: string; avatar_url?: string; phone?: string } }).users
+      const users = rawUsers ? { name: rawUsers.name, avatar_url: rawUsers.avatar_url } : rawUsers
+      return {
+        ...l,
+        users,
+        is_available: Boolean((l as { is_available?: boolean }).is_available),
+      }
+    })
+    // Sort order (UNCHANGED at the top): online listeners always come first.
+    // Within the online group we keep rating DESC — all of them are available
+    // right now, so heartbeat recency there is meaningless noise (every value is
+    // within ~60s). Within the OFFLINE group we now order by how recently they
+    // were online, since that is the best predictor of who will come back soon.
+    const heartbeatMs = (x: Record<string, unknown>) => {
+      const raw = x.last_heartbeat_at as string | null | undefined
+      const t = raw ? new Date(raw).getTime() : NaN
+      return Number.isFinite(t) ? t : -1 // never-online sinks to the bottom
+    }
+    listeners.sort((a, b) => {
+      const av = a.is_available ? 1 : 0
+      const bv = b.is_available ? 1 : 0
+      if (av !== bv) return bv - av
+      if (!a.is_available) {
+        const diff = heartbeatMs(b) - heartbeatMs(a)
+        if (diff !== 0) return diff
+      }
+      return ((b as { rating?: number }).rating || 0) - ((a as { rating?: number }).rating || 0)
+    })
+
+    // is_in_session: prefer the DB column (listener_profiles.is_in_session, set
+    // by the accept route and cleared on session end — migration 052). If the
+    // column was already selected above, we just count it. If not in SELECT yet,
+    // fall back to a cross-table sessions query (pre-migration path).
+    // Either way this is a derived display field — is_available is NOT modified.
+    const hasDbColumn = listeners.length === 0 || 'is_in_session' in (listeners[0] as Record<string, unknown>)
+    let inSessionCount = 0
+    if (SHOW_LISTENER_IN_SESSION_STATUS) {
+      if (hasDbColumn) {
+        // Migration 052 applied: is_in_session is already in each listener row.
+        inSessionCount = listeners.filter(l => Boolean((l as Record<string, unknown>).is_in_session)).length
+      } else {
+        // Pre-migration fallback: derive from sessions table.
+        try {
+          const { data: activeSessions, error: sessErr } = await sb
+            .from('sessions')
+            .select('listener_id')
+            .eq('status', 'active')
+          if (sessErr) {
+            logger.warn('is_in_session query failed', { error: sessErr.message, code: sessErr.code })
+          } else {
+            const inSessionSet = new Set((activeSessions || []).map((s: Record<string, unknown>) => s.listener_id as string))
+            inSessionCount = inSessionSet.size
+            listeners.forEach(l => {
+              (l as Record<string, unknown>).is_in_session = inSessionSet.has((l as Record<string, unknown>).user_id as string)
+            })
+          }
+        } catch (e) {
+          logger.warn('is_in_session threw', { error: String(e) })
+        }
+      }
+    }
+
+    // Per-listener "no voice calls" switch (migration 067). Separate read: before
+    // the migration runs the column is missing and this is simply skipped.
+    {
+      const { data: noVoice, error: nvErr } = await sb.from('listener_profiles').select('user_id').eq('voice_disabled', true)
+      if (!nvErr) {
+        const off = new Set(((noVoice ?? []) as { user_id: string }[]).map(r => r.user_id))
+        listeners.forEach(l => { (l as Record<string, unknown>).voice_disabled = off.has((l as Record<string, unknown>).user_id as string) })
+      }
+    }
+
+    const onlineCount = listeners.filter(l => l.is_available).length
+
+    return NextResponse.json({ listeners }, {
+      headers: {
+        // Prevent every caching layer from serving stale data.
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Surrogate-Control': 'no-store',
+        // Diagnostic header — lets the owner verify which deploy is running and
+        // what the server sees, without exposing sensitive data.
+        'X-LeanOn-Ts': new Date().toISOString(),
+        'X-LeanOn-Online': String(onlineCount),
+        'X-LeanOn-InSession': String(inSessionCount),
+      },
+    })
+  } catch (err) {
+    logger.error('listeners route error:', { error: err instanceof Error ? err.message : String(err) })
+    return NextResponse.json({ error: 'Failed to fetch listeners. Please try again.' }, { status: 503 })
+  }
+}

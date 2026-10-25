@@ -1,0 +1,180 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { notifyPayoutRequested } from '@/lib/notify'
+import { logger } from '@/lib/logger'
+
+// POST — request a payout (listener-only action)
+// Replaces the client-side direct Supabase insert so we can send a notification.
+export async function POST(req: NextRequest) {
+  const userSb = createServerSupabaseClient()
+  const { data: { user } } = await userSb.auth.getUser()
+  if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
+  // SECURITY: 1 payout request per 7 days — prevents spam and abuse
+  if (!checkRateLimit(`payout:${user.id}`, 1, 7 * 24 * 60 * 60_000)) {
+    return NextResponse.json({ error: 'You can only request a payout once per week. Please try again later.' }, { status: 429 })
+  }
+
+  const sb = createAdminClient()
+
+  // Check for existing pending payout
+  const { data: existing } = await sb
+    .from('payout_requests')
+    .select('id')
+    .eq('user_id', user.id)
+    .eq('status', 'pending')
+    .limit(1)
+
+  if (existing && existing.length > 0) {
+    return NextResponse.json({ error: 'already_pending', message: 'You already have a pending payout request.' }, { status: 409 })
+  }
+
+  // Also block if a pending REFUND exists — both claim the full balance with no
+  // hold; allowing both would present admin with two full-balance disbursements.
+  const { data: pendingRefund } = await sb
+    .from('refund_requests')
+    .select('id')
+    .eq('user_id', user.id)
+    .eq('status', 'pending')
+    .limit(1)
+
+  if (pendingRefund && pendingRefund.length > 0) {
+    return NextResponse.json({ error: 'already_pending', message: 'You have a pending refund request. Please wait for it to be processed before requesting a payout.' }, { status: 409 })
+  }
+
+  // Fetch listener profile — SECURITY: only approved listeners may request payouts.
+  // NOTE: wallet_balance lives on the users table, NOT listener_profiles — selecting
+  // a nonexistent column here previously errored and 403'd every listener.
+  const { data: profile } = await sb
+    .from('listener_profiles')
+    .select('is_approved')
+    .eq('user_id', user.id)
+    .maybeSingle()
+
+  if (!profile) {
+    return NextResponse.json({ error: 'Not a listener' }, { status: 403 })
+  }
+  if (!profile.is_approved) {
+    return NextResponse.json({ error: 'Your listener account is not yet approved for payouts.' }, { status: 403 })
+  }
+
+  // wallet_balance lives on users table
+  const { data: userData } = await sb
+    .from('users')
+    .select('name, wallet_balance')
+    .eq('id', user.id)
+    .single()
+
+  const walletBalance = Number(userData?.wallet_balance ?? 0)
+  if (!walletBalance || walletBalance <= 0) {
+    return NextResponse.json({ error: 'No balance to withdraw' }, { status: 400 })
+  }
+
+  // Payouts pay out EARNINGS only. A listener who also recharged as a seeker
+  // has card/UPI deposits in the same wallet; paying those out by UPI would turn
+  // the payout into an unrefunded cash-out of customer deposits. For such users
+  // cap the payout at settled earnings minus payouts already requested; the
+  // rest stays in the wallet (spendable, or refundable via the wallet page).
+  let amount = walletBalance
+  const { count: rechargeCount } = await sb.from('wallet_transactions')
+    .select('id', { count: 'exact', head: true })
+    .eq('user_id', user.id).eq('type', 'credit').ilike('description', '%recharge%')
+  if ((rechargeCount ?? 0) > 0) {
+    const [{ data: earned }, { data: claimed }] = await Promise.all([
+      sb.from('listener_earnings').select('net_amount').eq('listener_id', user.id).eq('status', 'settled'),
+      sb.from('payout_requests').select('amount').eq('user_id', user.id).neq('status', 'rejected'),
+    ])
+    const earnedTotal  = (earned ?? []).reduce((t, r) => t + Number(r.net_amount ?? 0), 0)
+    const claimedTotal = (claimed ?? []).reduce((t, r) => t + Number(r.amount ?? 0), 0)
+    amount = Math.min(walletBalance, Math.max(0, earnedTotal - claimedTotal))
+    if (amount <= 0) {
+      return NextResponse.json({
+        error: 'Your wallet balance is from recharges, not session earnings, so it can\'t be paid out. You can spend it on sessions or request a refund from the Wallet page.',
+        code: 'RECHARGE_NOT_PAYABLE',
+      }, { status: 400 })
+    }
+  }
+  amount = Math.floor(amount)
+  if (amount <= 0) {
+    return NextResponse.json({ error: 'No balance to withdraw' }, { status: 400 })
+  }
+
+  // Parse body; fall back to the UPI/bank details captured at application time
+  // so the dashboard "Request Payout" button works without re-asking for UPI.
+  const body = await req.json().catch(() => ({}))
+  let upiId = typeof body?.upi_id === 'string' ? body.upi_id.trim() : null
+
+  if (!upiId || !upiId.includes('@')) {
+    const { data: app } = await sb
+      .from('listener_applications')
+      .select('upi_id, bank_account, ifsc_code')
+      .eq('user_id', user.id)
+      .maybeSingle()
+    const storedUpi = typeof app?.upi_id === 'string' ? app.upi_id.trim() : null
+    if (storedUpi && storedUpi.includes('@')) {
+      upiId = storedUpi
+    } else if (app?.bank_account && app?.ifsc_code) {
+      // No UPI but bank details exist — admin will transfer via bank. Use a marker.
+      upiId = `bank:${app.ifsc_code}/${app.bank_account}`
+    } else {
+      return NextResponse.json({ error: 'No payout method on file. Please add a UPI ID or bank account in your application.' }, { status: 400 })
+    }
+  }
+
+  // Second guard right before the deduct to narrow the TOCTOU window on concurrent
+  // requests (the first SELECT above and this SELECT are not a DB transaction, so
+  // two concurrent requests can both pass the first check; this re-check + the
+  // atomic deduct_wallet RPC together make a double-submission very unlikely).
+  const { data: existingRetry } = await sb
+    .from('payout_requests')
+    .select('id')
+    .eq('user_id', user.id)
+    .eq('status', 'pending')
+    .limit(1)
+  if (existingRetry && existingRetry.length > 0) {
+    return NextResponse.json({ error: 'already_pending', message: 'You already have a pending payout request.' }, { status: 409 })
+  }
+
+  // Soft-hold: deduct the wallet immediately so the balance can't be spent (or
+  // double-requested) while the payout is pending. Credited back if the admin
+  // rejects it. The admin "Mark Paid" step then does NOT deduct again.
+  const holdAmount = amount
+  const { error: holdErr } = await sb.rpc('deduct_wallet', { p_user_id: user.id, p_amount: holdAmount })
+  if (holdErr) {
+    logger.error('Payout hold (deduct_wallet) failed:', { error: holdErr.message })
+    return NextResponse.json({ error: 'Could not hold your balance for payout. Please try again.' }, { status: 500 })
+  }
+
+  const { error: insertErr } = await sb
+    .from('payout_requests')
+    .insert({ user_id: user.id, amount, status: 'pending', ...(upiId ? { upi_id: upiId } : {}) })
+
+  if (insertErr) {
+    // Roll the hold back so the listener isn't left short with no request on file.
+    await sb.rpc('credit_wallet', { p_user_id: user.id, p_amount: holdAmount }).then(() => {}, () => {})
+    logger.error('Payout insert failed:', { error: insertErr instanceof Error ? insertErr.message : String(insertErr) })
+    return NextResponse.json({ error: 'Failed to submit payout request' }, { status: 500 })
+  }
+
+  // Record the hold in the ledger
+  await sb.from('wallet_transactions').insert({
+    user_id: user.id, amount: holdAmount, type: 'debit', description: 'Payout requested — balance held',
+  }).then(() => {}, (e) => logger.error('payout hold: wallet_transactions insert failed', { error: String(e) }))
+
+  // Fire-and-forget notification
+  ;(async () => {
+    try {
+      const { data: authUser } = await sb.auth.admin.getUserById(user.id)
+      await notifyPayoutRequested({
+        listenerEmail: authUser?.user?.email ?? null,
+        listenerName:  userData?.name ?? 'Listener',
+        amount,
+      })
+    } catch (err) {
+      logger.error('notifyPayoutRequested failed (non-critical):', { error: err instanceof Error ? err.message : String(err) })
+    }
+  })()
+
+  return NextResponse.json({ ok: true, amount })
+}

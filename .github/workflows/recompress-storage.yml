@@ -1,0 +1,144 @@
+# Run the Storage image backfill from the GitHub UI — no local machine needed.
+#
+# The owner has no local dev environment, so scripts/recompress-storage.mjs
+# needs somewhere to run that can hold the service-role key securely. GitHub
+# Actions gives us both: a Node runtime and encrypted secrets that are never
+# printed in logs.
+#
+# ONE-TIME SETUP
+#   Repo -> Settings -> Secrets and variables -> Actions -> New repository secret
+#     NEXT_PUBLIC_SUPABASE_URL   https://<project>.supabase.co
+#     SUPABASE_SERVICE_ROLE_KEY  <service role key from Supabase -> Settings -> API>
+#
+# TO RUN
+#   Actions tab -> "Re-compress Storage images" -> Run workflow
+#   Leave apply = false for a dry run first. Then run again with apply = true.
+
+name: Re-compress Storage images
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Actually rewrite the files? Leave false for a dry run first.'
+        type: boolean
+        default: false
+
+# Never run two rewrites of the same bucket at once.
+concurrency:
+  group: recompress-storage
+  cancel-in-progress: false
+
+jobs:
+  recompress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          # 22, not 20: @supabase/supabase-js always constructs a RealtimeClient
+          # on createClient(), and that client requires a native WebSocket —
+          # available from Node 22 on, not Node 20. This script never touches
+          # Realtime (Storage is plain REST), but the constructor runs anyway,
+          # so it throws on import even though nothing here needs it.
+          node-version: '22'
+
+      - name: Install dependencies
+        # Only the two packages the script needs — a full install would pull
+        # the whole Next.js toolchain for nothing.
+        #
+        # --include=optional is load-bearing: sharp ships its libvips binary as
+        # an OPTIONAL platform-specific dependency, and npm is known to skip
+        # those when a lockfile from another platform is present. The module
+        # then installs "successfully" but throws on import. That is the most
+        # likely reason the first run finished green with an empty report — the
+        # script's sharp check writes to stderr, which was not being captured.
+        # ws: supabase-js's RealtimeClient needs a WebSocket implementation at
+        # construction time even though this script never opens one — see the
+        # comment on createClient() in the script for why transport:undefined
+        # does not work and this does.
+        run: npm install --no-save --include=optional sharp @supabase/supabase-js ws
+
+      - name: Verify sharp actually loads
+        # Fail HERE with a clear message rather than inside the backfill, where
+        # an import error is easy to mistake for "nothing needed compressing".
+        run: |
+          node -e "import('sharp').then(m => console.log('sharp OK, libvips ' + m.default.versions.vips)).catch(e => { console.error('sharp failed to load: ' + e.message); process.exit(1) })"
+
+      - name: Fail early if the secrets are missing
+        env:
+          SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_KEY" ]; then
+            echo "::error::Missing secrets. Add NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY under Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+
+      - name: Run the backfill
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        # `bash` (not the default `bash -e`) so we get pipefail. Without it the
+        # exit status of `script | tee` is TEE's, so a crashing script still
+        # reported Success — which is exactly what happened on the first run:
+        # green tick, empty summary, nothing actually rewritten.
+        shell: bash
+        run: |
+          set -o pipefail
+          # 2>&1 so stderr lands in the report too. The script's own failure
+          # paths (missing env, missing sharp) and any uncaught exception write
+          # to stderr, so without this the log came back blank.
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            echo "Running in APPLY mode — files will be rewritten."
+            node scripts/recompress-storage.mjs --apply 2>&1 | tee result.txt
+          else
+            echo "Running in DRY RUN mode — nothing will be written."
+            node scripts/recompress-storage.mjs 2>&1 | tee result.txt
+          fi
+
+      - name: Put the report in the run summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## Storage re-compress'
+            echo ''
+            echo '```'
+            # -s catches the empty-file case too; the previous `||` fallback
+            # only fired when the file was MISSING, so an empty file printed
+            # an empty code block and told us nothing.
+            if [ -s result.txt ]; then
+              cat result.txt
+            else
+              echo '(script produced no output — it likely crashed before printing.'
+              echo ' Check the "Run the backfill" step log above for the error.)'
+            fi
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Environment probe. The first run came back green with an empty report,
+      # so capture enough to tell WHY without another round trip.
+      - name: Diagnostics
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '### Diagnostics'
+            echo '```'
+            echo "node            : $(node --version)"
+            echo "npm             : $(npm --version)"
+            echo -n "sharp loads     : "
+            node -e "import('sharp').then(m=>console.log('yes, libvips '+m.default.versions.vips)).catch(e=>console.log('NO — '+e.message))"
+            echo -n "supabase-js     : "
+            node -e "import('@supabase/supabase-js').then(()=>console.log('yes')).catch(e=>console.log('NO — '+e.message))"
+            echo -n "ws              : "
+            node -e "import('ws').then(()=>console.log('yes')).catch(e=>console.log('NO — '+e.message))"
+            echo "result.txt bytes: $(wc -c < result.txt 2>/dev/null || echo 'file missing')"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

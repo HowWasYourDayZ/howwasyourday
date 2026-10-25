@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# Misc
+.DS_Store
+*.pem
+
+# Playwright
+test-results/
+playwright-report/
+
+# Claude Code agent worktrees (temp clones, not project files)
+.claude/worktrees/

@@ -1,0 +1,72 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createAdminClient } from '@/lib/supabase-server'
+import { UUID_RE } from '@/lib/constants'
+import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
+
+// GET — public listener profile (admin client bypasses RLS, so the
+// users!inner join can't fail due to users_select_listener_public policy drift)
+export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
+  const { id } = params
+  if (!id || !UUID_RE.test(id)) {
+    return NextResponse.json({ error: 'Invalid listener id' }, { status: 400 })
+  }
+
+  const admin = createAdminClient()
+
+  // Gallery photos (profile_photos) are no longer shown publicly — they were
+  // never reviewed. Onboarding fields (migration 060) are fetched separately
+  // so a missing column can't break the profile page.
+  const { data: lp, error } = await admin
+    .from('listener_profiles')
+    .select('user_id, bio, specialty_tags, languages_spoken, rate_per_min, rating, total_sessions, is_available, is_approved, is_active, is_verified, is_in_session, users!inner(name, avatar_url)')
+    .eq('user_id', id)
+    .eq('is_approved', true)
+    .eq('is_active', true)
+    .eq('is_suspended', false)
+    .maybeSingle()
+
+  let extras: Record<string, unknown> = {}
+  if (lp) {
+    const { data: ex, error: exErr } = await admin
+      .from('listener_profiles')
+      .select('education_level, education_field, tagline_phrases, lived_experience')
+      .eq('user_id', id)
+      .maybeSingle()
+    if (!exErr && ex) extras = ex as Record<string, unknown>
+  }
+
+  if (error) {
+    return NextResponse.json({ error: 'Failed to load profile' }, { status: 500 })
+  }
+  if (!lp) {
+    return NextResponse.json({ error: 'not_found' }, { status: 404 })
+  }
+
+  // is_in_session: use the DB column (listener_profiles.is_in_session, set by
+  // the accept route and cleared on session end). Falls back to a sessions query
+  // if the column doesn't exist yet (migration 052 not applied) — so the profile
+  // page keeps working during the deploy-before-migration window.
+  let is_in_session = (lp as Record<string, unknown>).is_in_session as boolean | null
+  if (is_in_session === null || is_in_session === undefined) {
+    // Migration 052 not applied yet — derive from sessions table
+    is_in_session = false
+    if (SHOW_LISTENER_IN_SESSION_STATUS) {
+      try {
+        const { count } = await admin
+          .from('sessions')
+          .select('id', { count: 'exact', head: true })
+          .eq('listener_id', id)
+          .eq('status', 'active')
+        is_in_session = (count ?? 0) > 0
+      } catch {
+        // silent — default false
+      }
+    }
+  }
+
+  // Per-listener "no voice calls" switch (migration 067) — tolerate the column being absent.
+  const { data: vd, error: vdErr } = await admin.from('listener_profiles').select('voice_disabled').eq('user_id', id).maybeSingle()
+  const voice_disabled = !vdErr && (vd as { voice_disabled?: boolean } | null)?.voice_disabled === true
+
+  return NextResponse.json({ profile: { ...lp, ...extras, is_in_session: Boolean(is_in_session), voice_disabled } })
+}

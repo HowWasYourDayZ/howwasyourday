@@ -1,0 +1,157 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createAdminClient } from '@/lib/supabase-server'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { logger } from '@/lib/logger'
+import { requireAdmin, dbUserIdOrNull , ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS } from '@/lib/require-admin'
+import { idVerificationSignedUrl } from '@/lib/selfie-storage'
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+
+
+// POST /api/admin/verify-listener
+// Body: { verificationId, action: 'approve'|'reject', notes? }
+export async function POST(req: NextRequest) {
+  const { error, code, status, user } = await requireAdmin(req)
+  if (error) return NextResponse.json({ error, code }, { status })
+  if (!checkRateLimit(`admin:${user!.id}`, ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
+  try {
+    const raw = await req.json()
+    const { verificationId, action } = raw
+    const notes = typeof raw.notes === 'string' ? raw.notes.slice(0, 500) : undefined
+
+    if (!verificationId || !UUID_RE.test(verificationId)) {
+      return NextResponse.json({ error: 'Invalid verificationId' }, { status: 400 })
+    }
+    if (!['approve', 'reject'].includes(action)) {
+      return NextResponse.json({ error: 'Invalid action' }, { status: 400 })
+    }
+
+    const sb = createAdminClient()
+
+    const { data: verification } = await sb.from('listener_verifications')
+      .select('listener_id, status')
+      .eq('id', verificationId)
+      .single()
+
+    if (!verification) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+
+    // Idempotency guard — prevent double-processing (duplicate notifications / badge flicker)
+    const newStatus = action === 'approve' ? 'approved' : 'rejected'
+    if (verification.status === newStatus) {
+      return NextResponse.json({ ok: true, alreadyProcessed: true })
+    }
+
+    const { error: vErr } = await sb.from('listener_verifications').update({
+      status:      newStatus,
+      admin_notes: notes ?? null,
+      reviewed_at: new Date().toISOString(),
+      // reviewed_by has an FK to users(id) — the synthetic password-admin id
+      // would violate it and fail the whole update.
+      reviewed_by: dbUserIdOrNull(user!.id),
+    }).eq('id', verificationId)
+    if (vErr) {
+      logger.error('verify-listener: verification update failed', { verificationId, error: vErr.message })
+      return NextResponse.json({ error: 'Failed to update verification' }, { status: 500 })
+    }
+
+    if (action === 'approve') {
+      const { error: lpErr } = await sb.from('listener_profiles')
+        .update({ is_verified: true })
+        .eq('user_id', verification.listener_id)
+      if (lpErr) {
+        logger.error('verify-listener: is_verified update failed', { listenerId: verification.listener_id, error: lpErr.message })
+        return NextResponse.json({ error: 'Verification approved but badge update failed. Run migration 008/014 (is_verified column) and retry.' }, { status: 500 })
+      }
+    } else {
+      // Reject — clear is_verified in case a previously-verified listener resubmits
+      // and is rejected; leaving is_verified=true would let them keep the badge.
+      const { error: lpErr } = await sb.from('listener_profiles')
+        .update({ is_verified: false })
+        .eq('user_id', verification.listener_id)
+      if (lpErr) {
+        logger.error('verify-listener: is_verified clear failed — RECONCILIATION NEEDED — badge may still show', { listenerId: verification.listener_id, error: lpErr.message })
+        return NextResponse.json({ error: 'Verification rejected but badge clear failed. Run migration for is_verified column and retry.' }, { status: 500 })
+      }
+    }
+
+    // Notify the listener
+    const notifBody = action === 'approve'
+      ? 'Congratulations! Your identity has been verified. A verified badge now appears on your profile.'
+      : `Your verification was not approved. ${notes ? `Reason: ${notes}` : 'Please resubmit with clearer documents.'}`
+
+    await sb.from('notifications').insert({
+      user_id:    verification.listener_id,
+      type:       'verification_update',
+      title:      action === 'approve' ? '✓ Identity verified!' : 'Verification not approved',
+      body:       notifBody,
+      action_url: '/become-listener/verify',
+    }).then(() => {}, () => {})
+
+    await sb.from('admin_audit_logs').insert({
+      admin_id:  dbUserIdOrNull(user!.id),
+      action:    `${action}_verification`,
+      target_id: verification.listener_id,
+    }).then(() => {}, () => {})
+
+    return NextResponse.json({ ok: true })
+  } catch (err) {
+    logger.error('verify-listener admin error:', { error: err instanceof Error ? err.message : String(err) })
+    return NextResponse.json({ error: 'Server error' }, { status: 500 })
+  }
+}
+
+// GET /api/admin/verify-listener — list verifications
+export async function GET(req: NextRequest) {
+  const { error, code, status, user } = await requireAdmin(req)
+  if (error) return NextResponse.json({ error, code }, { status })
+  if (!checkRateLimit(`admin:${user!.id}`, ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
+  const url = new URL(req.url)
+  const statusFilter = url.searchParams.get('status') || 'pending'
+  if (!['pending', 'approved', 'rejected', 'needs_resubmission'].includes(statusFilter)) {
+    return NextResponse.json({ error: 'Invalid status filter' }, { status: 400 })
+  }
+
+  const sb = createAdminClient()
+  const { data, error: qErr } = await sb.from('listener_verifications')
+    .select('id, listener_id, full_name, id_type, selfie_url, id_doc_url, status, submitted_at, admin_notes')
+    .eq('status', statusFilter)
+    .order('submitted_at', { ascending: false })
+    .limit(50)
+
+  if (qErr) {
+    logger.error('verify-listener GET error:', { error: qErr.message })
+    return NextResponse.json({ error: 'Server error' }, { status: 500 })
+  }
+
+  // Replace storage paths with short-lived signed URLs (10 min) so the admin
+  // UI can display the photos without the files ever being publicly accessible.
+  // Backward compat: old rows stored full public https:// URLs — return as-is.
+  const rows = await Promise.all((data ?? []).map(async (v) => {
+    // Legacy rows stored full public https:// URLs. Log these so they can be
+    // identified and migrated to private storage paths. These are identity
+    // documents; public URLs are a privacy risk and should be migrated.
+    if (v.selfie_url?.startsWith('http')) {
+      logger.warn('verify-listener: legacy public selfie URL found — migrate to private storage', { listenerId: v.listener_id })
+    }
+    if (v.id_doc_url?.startsWith('http')) {
+      logger.warn('verify-listener: legacy public id_doc URL found — migrate to private storage', { listenerId: v.listener_id })
+    }
+    const [selfieUrl, idDocUrl] = await Promise.all([
+      v.selfie_url && !v.selfie_url.startsWith('http')
+        ? idVerificationSignedUrl(sb, v.selfie_url)
+        : Promise.resolve(v.selfie_url),
+      v.id_doc_url && !v.id_doc_url.startsWith('http')
+        ? idVerificationSignedUrl(sb, v.id_doc_url)
+        : Promise.resolve(v.id_doc_url),
+    ])
+    return { ...v, selfie_url: selfieUrl, id_doc_url: idDocUrl }
+  }))
+
+  return NextResponse.json({ verifications: rows })
+}

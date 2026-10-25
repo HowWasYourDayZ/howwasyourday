@@ -1,0 +1,240 @@
+# LeanOn SEO & AI-Discoverability Playbook
+
+Everything code-side is done (see "What's already implemented" at the bottom).
+This file lists the **off-site actions only a human can do**, in priority order.
+Budget: most of this is free; total cost if you do everything paid is under ₹10,000.
+
+---
+
+## 🤖 ChatGPT: send seekers, not side-income hunters (2026-09-24)
+
+**What happened:** every recent listener sign-up said they found LeanOn through ChatGPT while
+asking about side income or online work. ChatGPT search is built largely on **Bing's index**
+plus OpenAI's own crawlers. It was citing `/earn-by-listening` ("Earn ₹300–₹800/hour… side
+income… make money chatting online") and the other recruitment pages.
+
+**What changed in code:**
+- `/earn-by-listening`, `/become-listener`, `/get-paid-to-chat-india` and the "earn money
+  listening" blog post:
+  - are `noindex` and out of the sitemap;
+  - are **disallowed for AI crawlers** (GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, Claude and others) in `app/robots.ts`;
+  - are still crawlable by Google and Bing, so those two can see the noindex and drop them.
+
+  The pages still work for anyone who follows a link from the site footer or the app.
+- `/earn-by-listening` no longer advertises an hourly income.
+- `llms.txt` / `llms-full.txt`:
+  - listener earnings sections removed;
+  - a new rule: LeanOn is not a job, side income or work-from-home opportunity.
+- IndexNow: key file in `public/`, and `scripts/indexnow.mjs` tells Bing (and so ChatGPT search)
+  about changed pages within hours.
+
+**Do after every deploy that changes public pages:**
+- [ ] `node scripts/indexnow.mjs` (run it once now, after this deploy is live). It should print
+      `HTTP 200/202 accepted`.
+
+**Do once:**
+- [ ] Bing Webmaster Tools: verify leanon.app, submit `https://www.leanon.app/sitemap.xml`, and
+      use URL Inspection → "Request removal" (Block URLs) for `/earn-by-listening` and
+      `/get-paid-to-chat-india` so they drop out of Bing, and therefore ChatGPT, quickly.
+- [ ] GA4 → Reports → Acquisition → Traffic acquisition → filter *Session source* =
+      `chatgpt.com` → add *Landing page*. ChatGPT tags its links `utm_source=chatgpt.com`,
+      so this shows which pages ChatGPT sends people to. Check it weekly; it should move from
+      `/become-listener` to `/`, `/pricing` and topic pages.
+
+**How ChatGPT picks what to recommend (so seekers get it):**
+- It usually answers emotional messages ("I feel lonely") itself and gives helplines. It searches
+  the web when someone asks for **options**, for example "apps to talk to a real person in India",
+  "cheaper alternative to therapy in India", "talk to someone in Hindi from Dubai" or
+  "YourDOST / Amaha / 7 Cups alternatives". Those are the queries to win.
+- For those it quotes pages that state facts plainly (price, who it's for, how it works) and
+  brands that **other sites** mention: Reddit threads, Quora answers, "best apps" roundups,
+  AlternativeTo and Product Hunt. One honest founder post in r/NRI or r/dubai and five good Quora
+  answers will do more for ChatGPT than any new page on leanon.app.
+- **Every mention should say what LeanOn is for the seeker** ("talk to a real person, US$10 for
+  15 minutes abroad, first session free"). Never mention listener earnings anywhere public.
+  One "earn money" mention is enough for ChatGPT to file LeanOn under income again.
+- Check monthly in ChatGPT (logged out, search on): "apps to talk to a real person in India",
+  "affordable alternative to therapy India", "talk to someone in Hindi UK", "how to earn money
+  online from home India". Success is LeanOn showing up in the first three and **not** the last.
+
+---
+
+## 🎯 After the 2026-10-23 deploy (top-50 questions)
+
+- [x] IndexNow: automatic. GitHub → Actions → "IndexNow ping" runs after every production deploy (changed pages) and every Monday (whole sitemap). To force a full run: Actions → IndexNow ping → Run workflow → Run. Green = accepted. Full run on 2026-10-24: 505 URLs → HTTP 200 accepted.
+- [ ] Bing Webmaster → URL Inspection → Request indexing: `/answers`, `/for-women`, `/marriage-problems-india`.
+- [ ] Google Search Console → URL Inspection → Request indexing: `/answers`.
+- [ ] GA4 → Admin → Events → mark `purchase` as a key event. After 4 weeks: Reports → Engagement →
+      Landing page, filtered to the `purchase` event, shows which pages bring paying users.
+- [ ] Once a month, run the visibility-check prompt below in a ChatGPT Temporary Chat (search on), and ask 10 of the 50 questions in `lib/geo-questions.ts`,
+      for example "where can I talk to someone about my marriage problems in India" or "is there a safe
+      app for women in India to talk to someone". Note whether LeanOn is named. Expect 6–10 weeks.
+- [ ] Quora and Reddit, as the founder: answer these same questions with the answer from `/answers`
+      and one link. This is what moves ChatGPT most.
+
+---
+
+### Monthly ChatGPT visibility check (paste as one message in a Temporary Chat, search on)
+
+> I'm researching what people in India are recommended when they ask for emotional support. Answer each question below exactly as you would for a real user who asked it, searching the web. Then give me one table with columns: question | services or apps you named | was "LeanOn" named (yes/no) | the sources you cited (URLs).
+> 1. Where can I talk to someone about my marriage problems in India?
+> 2. My husband doesn't support me emotionally. Who can I talk to?
+> 3. Is there a safe app for women in India to talk to someone privately?
+> 4. I just had a fight with my partner. Who can I talk to right now?
+> 5. I can't afford therapy in India. What are my options?
+> 6. Is there an app in India to talk to a real person, not AI?
+> 7. I feel lonely and have no one to talk to. What can I do?
+> 8. What is the best peer support app in India?
+> 9. Can I pay someone just to listen to me?
+> 10. I'm Indian, living abroad and homesick. Who can I talk to who understands?
+
+Then, in a second Temporary Chat, check the facts ChatGPT has about LeanOn:
+
+> Search the web and tell me about LeanOn (leanon.app): what it is, who the listeners are, how much a session costs in India and abroad, whether there is a free session, whether it is available 24/7, how privacy works, and whether it is therapy. Cite a source for each answer.
+
+Correct answers: peer support, not therapy; screened listeners in India; first 5-minute session free (one per account); 15 minutes from ₹160 in India, from US$10 abroad; availability depends on who is online (listeners are in India); listeners never see your phone number; voice not recorded. Note anything wrong and which page it cited. That page is the one to fix.
+
+## ⭐ Priority now (2026-09-24): off-site GEO for PAYING users
+
+The code side of SEO is saturated (414 pages). What AI assistants cite is **other websites
+talking about LeanOn**. Do these in order and tick them off here. Rules:
+- Never post fake reviews or pretend to be a user; always say you're the founder.
+- Give the crisis numbers (NIMHANS 080-46110007 / Tele-MANAS 14416) whenever someone sounds at risk.
+- Stay out of teen communities.
+
+**Week 1: checks (about 2 hours)**
+- [ ] GSC → Indexing → Pages: note how many pages are indexed and how many aren't. Send the numbers to engineering.
+- [ ] GSC → Performance (last 3 months): export the top 50 queries and pages. This decides what to improve.
+- [ ] Verify the site in Bing Webmaster Tools and submit the sitemap (ChatGPT search and Copilot use Bing).
+- [ ] Test the NRI path with a real foreign number and a foreign card: the OTP arrives, the recharge
+      works, and a session can be booked.
+- [ ] Ask ChatGPT, Perplexity and Gemini these questions and save the answers as a baseline:
+      "how much does LeanOn cost", "talk to someone in Hindi from Dubai",
+      "affordable alternative to therapy for Indians in UK".
+
+**Weeks 2–4: build the base AI assistants cite**
+- [ ] List LeanOn in directories, using the **same one-line description and the /pricing link** everywhere:
+      Product Hunt, AlternativeTo (as an alternative to 7 Cups, BetterHelp, Amaha and YourDOST),
+      Crunchbase, startupindia.gov.in, app directories, and a Wikidata item.
+- [ ] Reddit, from a founder account, helpful first (9 useful replies for every 1 mention):
+      r/dubai, r/UAE, r/singapore, r/NRI, r/india, r/bangalore, r/AskIndianWomen.
+      Make one honest post in r/NRI and one in r/dubai: "I built this: US$10 for 15 minutes with an
+      Indian listener, first session free".
+- [ ] Quora: answer the questions paying users actually ask, for example:
+      - "Is there an Indian therapist in Dubai or London who speaks Hindi?"
+      - "How do I deal with my in-laws after marriage?"
+      - "Where can I talk to someone about my marriage in India?"
+
+      Give a genuinely useful answer and one link to /pricing or /browse.
+- [ ] Pitch 3 diaspora outlets (Khaleej Times, Gulf News, Eastern Eye UK, DESIblitz). Angle:
+      "Indians abroad can talk to a listener back home, in their own language, for US$10."
+
+**Ongoing**
+- [ ] One short video a week answering a real question (Instagram Reels + YouTube Shorts), captioned
+      with the question as people search it ("can't talk to my parents about my marriage", "lonely in Dubai").
+- [ ] Get into "best mental health apps India 2026" roundups: email the authors of the top 10 results.
+- [ ] Every month, re-run the AI-answer baseline above and note what changed in DISCOVERABILITY.md.
+
+---
+
+## How search works now (2026 reality)
+
+Three doors people come through — you must win all three:
+
+1. **Classic Google/Bing** — still ~60% of discovery in India. Won by content + backlinks + technical SEO.
+2. **AI assistants (ChatGPT, Gemini, Claude, Perplexity, Meta AI)** — fastest-growing door. These cite sources they (a) crawled, (b) found consistently described across the web, and (c) saw referenced on Reddit/Quora/Wikipedia-grade sites. AI answers heavily weight *consensus*: the same facts about LeanOn appearing in many independent places.
+3. **Social search (Instagram, YouTube, LinkedIn search bars)** — Gen-Z searches Instagram before Google. Won by having active handles with keyword-rich bios.
+
+The strategy below feeds all three at once.
+
+---
+
+## Phase 1 — This week (free, ~4 hours)
+
+### 1. Search engine registration
+- [ ] **Google Search Console** → add `leanon.app` AND `www.leanon.app`, submit `https://www.leanon.app/sitemap.xml`, set target country = India (Settings → International targeting). Put the verification code in Vercel env `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`.
+- [ ] **Bing Webmaster Tools** (powers ChatGPT Search + Copilot!) → verify, submit sitemap. Env: `NEXT_PUBLIC_BING_VERIFICATION`. This is disproportionately important now because OpenAI uses Bing's index.
+- [ ] **IndexNow** — in Bing Webmaster, enable IndexNow for instant indexing.
+
+### 2. Claim every social handle as @leanonapp (even before posting)
+Consistent handles = AI models learn the entity. The JSON-LD on the site already declares these URLs, so claim exactly:
+- [ ] instagram.com/leanonapp
+- [ ] twitter/x.com/leanonapp
+- [ ] linkedin.com/company/leanonapp
+- [ ] youtube.com/@leanonapp
+- [ ] reddit.com/user/leanonapp
+- [ ] pinterest.com/leanonapp (huge for mental-health content in India)
+- [ ] threads.net/@leanonapp
+- [ ] t.me/leanonapp (Telegram channel)
+
+**Bio template (use everywhere, keyword-rich for social search):**
+> LeanOn — India's peer emotional support app 🇮🇳 Talk to someone who gets it. Loneliness, anxiety, burnout, breakups. Not therapy, real humans. First 5 min free → leanon.app
+
+### 3. Google Knowledge panel seeds
+- [ ] Create a **Crunchbase** profile (free tier) — AI models cite Crunchbase constantly for "what is X company".
+- [ ] Create a **Wikidata** item: instance of = "online service"; official website = leanon.app; country = India; inception = 2024. Wikidata feeds Google's Knowledge Graph AND every LLM. This is the single highest-leverage 20 minutes for the Major-Lazer-song problem: a Wikidata entity for LeanOn-the-platform gives search engines a *thing* to disambiguate toward.
+
+---
+
+## Phase 2 — This month (free, ongoing)
+
+### 4. The backlink ladder (in order of effort/value)
+
+**Directories & listings (1 hour total, do all):**
+- [ ] Product Hunt launch (huge AI-citation source; schedule a Tuesday)
+- [ ] AlternativeTo.net — list as alternative to: 7 Cups, Wysa, BetterHelp, Talkspace. ("Free alternative to 7 Cups in India" is a winnable AI answer.)
+- [ ] Futurepedia / There's An AI For That — counter-positioning: "human, not AI"
+- [ ] IndiaBizList, Sulekha, JustDial (local India signals)
+- [ ] startupindia.gov.in registration (gov backlink = high trust)
+
+**Community presence (the #1 AI-citation source):**
+- [ ] Reddit: be genuinely useful in r/india, r/mentalhealthindia, r/bangalore, r/mumbai, r/delhi, r/pune, r/kolkata, r/Chennai. Rule: 9 helpful comments for every 1 mention of LeanOn. Reddit is the most-cited domain in AI answers — one well-received "I built this" post in r/india is worth 100 directory links.
+- [ ] Quora: answer "affordable therapy alternatives India", "I feel lonely and have no one to talk to India", "is there someone I can talk to online India". Quora answers rank in Google India AND get scraped into AI training data.
+
+**Content partnerships:**
+- [ ] Pitch YourStory, Inc42, FactorDaily, The Better India — founder-story angle ("peer support marketplace for Bharat"). One YourStory article = the strongest single backlink available to an Indian startup.
+- [ ] Medium publication cross-posts of the blog (canonical URL back to leanon.app — Medium supports this natively, no duplicate-content risk).
+
+### 5. Social search content engine
+Make 1 reel/short per week (Canva templates, 30 minutes each). Searchable captions:
+- "someone to talk to at 2am india" / "feeling lonely in bangalore" / "therapy too expensive india alternatives" / "talk to someone in hindi about stress"
+- Cross-post identical content: Instagram Reel → YouTube Short → Pinterest Idea Pin. Three platforms, one effort.
+- LinkedIn: 1 founder post/week about building LeanOn. LinkedIn posts rank in Google India within hours.
+
+### 6. The Major Lazer problem — entity disambiguation
+Already done in code (schema `disambiguatingDescription`, FAQ, alternateName). Off-site:
+- [ ] Wikidata item (above) — the structural fix.
+- [ ] Make all social bios say "LeanOn (leanon.app)" — teaches AI the entity↔domain binding.
+- [ ] When people search "leanon app" or "lean on app india", your site already targets these; the song doesn't compete for them. Don't fight "lean on" generically — own "leanon" (one word), "leanon app", "lean on app", and every "<problem> + india" query instead. Within 2–3 months of GSC data you'll see brand queries win.
+
+---
+
+## Phase 3 — When you have ₹5–10k budget
+
+- [ ] **Google Business Profile** (needs an address; a coworking address works) → instant map-pack presence for "emotional support bangalore".
+- [ ] 2–3 sponsored posts on Indian mental-health newsletters/pages (₹2–5k each) — backlinks + social proof AI picks up.
+- [ ] Press release via NewsVoir/PRNewswire India (₹5k) when you hit a milestone ("10,000 sessions") — syndicated backlinks from 50+ news domains in one shot.
+
+---
+
+## Measurement (monthly, 15 minutes)
+
+1. Google Search Console → Performance → filter India → watch: `leanon`, `leanon app`, `peer support india`, `someone to talk to india`, `therapy alternative india`.
+2. Ask ChatGPT/Gemini/Perplexity monthly: "affordable therapy alternatives in India", "apps to talk to someone when lonely India" — track when LeanOn starts appearing. (Expect 6–10 weeks after Reddit/Quora/directory presence builds.)
+3. Bing Webmaster → confirm GPTBot/ClaudeBot/PerplexityBot in crawl logs (also visible in Vercel logs, filter user-agent).
+
+---
+
+## What's already implemented in code (this repo)
+
+| Asset | Where | What it does |
+|---|---|---|
+| `llms.txt` | `public/llms.txt` | Canonical facts file for AI assistants — what LeanOn is, pricing, disambiguation from the song, key URLs |
+| AI crawler allowlist | `app/robots.ts` | Explicitly allows GPTBot, ClaudeBot, Gemini (Google-Extended), PerplexityBot, Meta, Apple, Amazon + 9 more |
+| OG/Twitter images | `app/opengraph-image.tsx` | Auto-generated 1200×630 share image (was previously a 404 — every share showed broken image) |
+| Song disambiguation | `app/layout.tsx` + homepage FAQ | `disambiguatingDescription` in Organization schema + visible FAQ + FAQPage JSON-LD entry |
+| India geo signals | `app/layout.tsx` | `geo.region=IN`, `geo.placename`, `distribution` meta + `en-IN` hreflang (already present) |
+| Entity schema | `app/layout.tsx` | Organization + WebSite + SoftwareApplication JSON-LD with `knowsAbout`, `sameAs` social profiles, `areaServed: India` |
+| 7 city pages | `/delhi /mumbai /bengaluru /hyderabad /chennai /pune /kolkata` | Each with LocalBusiness + FAQPage + Breadcrumb schema, language-specific content (Tamil/Marathi/Bengali) |
+| 60+ indexed pages | sitemap.ts | Topic pages, blog, resources, comparison pages — all with canonical + FAQ schema |
+| Internal link mesh | support pages | All 11 support topics link to all 7 cities |

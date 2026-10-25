@@ -1,0 +1,1194 @@
+import { NextRequest, NextResponse } from 'next/server'
+import Razorpay from 'razorpay'
+import { selfieSignedUrls, selfieTakenAt, archiveSelfie } from '@/lib/selfie-storage'
+import { createAdminClient } from '@/lib/supabase-server'
+import { logger } from '@/lib/logger'
+import { refundAcrossPayments, rupees } from '@/lib/razorpay-refund'
+import { requireAdmin, dbUserIdOrNull , ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS } from '@/lib/require-admin'
+import { syncAuthBan } from '@/lib/suspension'
+
+function getRzp() {
+  return new Razorpay({
+    key_id:     process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!,
+    key_secret: process.env.RAZORPAY_KEY_SECRET!,
+  })
+}
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+const PAGE_SIZE = 25
+
+// Enrich a page of rows with last_sign_in_at from auth.users (Supabase Auth
+// maintains it automatically on every OTP sign-in — no public column needed).
+// One getUserById per row; the page is capped at PAGE_SIZE (25), and all calls
+// run in parallel. Failures degrade to null rather than breaking the listing.
+async function withLastLogin<T extends Record<string, unknown>>(
+  sb: ReturnType<typeof createAdminClient>,
+  rows: T[],
+  idOf: (row: T) => string | undefined,
+): Promise<(T & { last_sign_in_at: string | null })[]> {
+  return Promise.all(rows.map(async (row) => {
+    const id = idOf(row)
+    let lastSignIn: string | null = null
+    if (id) {
+      try {
+        const { data } = await sb.auth.admin.getUserById(id)
+        lastSignIn = data?.user?.last_sign_in_at ?? null
+      } catch {
+        lastSignIn = null
+      }
+    }
+    return { ...row, last_sign_in_at: lastSignIn }
+  }))
+}
+
+
+// GET — list users or listeners with pagination + filter
+// Query params: ?type=user|listener&status=active|inactive|suspended|pending&page=0&search=
+export async function GET(req: NextRequest) {
+  const { error, code, status, user: adminUser } = await requireAdmin(req)
+  if (error) return NextResponse.json({ error, code }, { status })
+  const { checkRateLimit } = await import('@/lib/rate-limit')
+  if (!checkRateLimit(`admin:${adminUser!.id}`, ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
+  const sb = createAdminClient()
+  const url = new URL(req.url)
+  const type = url.searchParams.get('type') || 'user'
+  const userStatus = url.searchParams.get('status') || 'all'
+  const parsedPage = parseInt(url.searchParams.get('page') || '0', 10)
+  const page = Math.max(0, Number.isFinite(parsedPage) ? parsedPage : 0)
+  const search = url.searchParams.get('search') || ''
+  // Sort direction for the "Joined" column. Applied server-side so it orders
+  // across ALL pages, not just the visible one. (Last-login sorting stays
+  // client-side — that value is enriched per-row from auth.users after
+  // pagination, so it cannot be ordered in the query.)
+  const sortAsc = url.searchParams.get('dir') === 'asc'
+  // Which column to sort by. 'joined' (default) and 'wallet' order in the
+  // query so they span every page. 'earnings' is handled separately for
+  // listeners, because that total lives in another table.
+  const sortBy = url.searchParams.get('sort') || 'joined'
+
+  try {
+    if (type === 'listener') {
+      // For 'pending', source of truth is listener_applications.status (not is_approved/is_active,
+      // which can be ambiguous for new applicants whose is_active defaults to TRUE).
+      let userIdFilter: string[] | null = null
+      if (userStatus === 'pending') {
+        // Source 1: applications explicitly awaiting admin review.
+        // needs_resubmission is excluded — the ball is in the applicant's court;
+        // showing them in the pending queue implies the admin still needs to act.
+        const { data: pendingApps } = await sb.from('listener_applications')
+          .select('user_id')
+          .eq('status', 'pending')
+        const idSet = new Set(pendingApps?.map((a: { user_id: string }) => a.user_id) ?? [])
+
+        // Source 2: unapproved profiles with NO application row at all (recovery
+        // for broken states where apply/route.ts wrote listener_profiles but the
+        // listener_applications upsert failed — e.g. during the account_holder_name
+        // column-missing window).
+        const [unapprovedRes, allAppsRes] = await Promise.all([
+          sb.from('listener_profiles').select('user_id').eq('is_approved', false).eq('is_suspended', false),
+          sb.from('listener_applications').select('user_id'),
+        ])
+        const allAppIds = new Set((allAppsRes.data ?? []).map((a: { user_id: string }) => a.user_id))
+        for (const p of (unapprovedRes.data ?? [])) {
+          if (!allAppIds.has(p.user_id as string)) idSet.add(p.user_id as string)
+        }
+
+        userIdFilter = Array.from(idSet)
+        if (userIdFilter.length === 0) {
+          return NextResponse.json({ items: [], total: 0, page, type: 'listener' })
+        }
+      } else if (userStatus === 'rejected') {
+        const { data: rejectedApps } = await sb.from('listener_applications')
+          .select('user_id')
+          .eq('status', 'rejected')
+        userIdFilter = (rejectedApps ?? []).map((a: { user_id: string }) => a.user_id)
+        if (userIdFilter.length === 0) {
+          return NextResponse.json({ items: [], total: 0, page, type: 'listener' })
+        }
+      } else if (userStatus === 'needs_resubmission') {
+        const { data: fixApps } = await sb.from('listener_applications')
+          .select('user_id')
+          .eq('status', 'needs_resubmission')
+        userIdFilter = (fixApps ?? []).map((a: { user_id: string }) => a.user_id)
+        if (userIdFilter.length === 0) {
+          return NextResponse.json({ items: [], total: 0, page, type: 'listener' })
+        }
+      } else if (userStatus === 'pending_selfie') {
+        const { data: selfieProfiles } = await sb.from('listener_profiles')
+          .select('user_id')
+          .eq('is_approved', true)
+          // Suspended listeners can't go live — their photo isn't reviewable.
+          .eq('is_suspended', false)
+          .not('pending_avatar_url', 'is', null)
+        userIdFilter = (selfieProfiles ?? []).map((p: { user_id: string }) => p.user_id)
+        if (userIdFilter.length === 0) {
+          return NextResponse.json({ items: [], total: 0, page, type: 'listener' })
+        }
+      }
+
+      // Try with is_verified first (added by migration 008/014).
+      // Fall back without it if the column doesn't exist yet.
+      // avatar_url is included so the admin can visually verify the applicant's
+      // profile photo before approving (alongside the Aadhaar number joined in
+      // from listener_applications below).
+      const selectWithVerified = `
+        user_id, bio, specialty_tags, rate_per_min, rating, total_sessions,
+        is_active, is_approved, is_available, is_verified, is_suspended, created_at, pending_avatar_url, custom_service_fee_rate,
+        users!inner(id, name, email, phone, avatar_url, created_at, is_active, is_suspended, wallet_balance)
+      `
+      const selectWithoutVerified = `
+        user_id, bio, specialty_tags, rate_per_min, rating, total_sessions,
+        is_active, is_approved, is_available, is_suspended, created_at, pending_avatar_url, custom_service_fee_rate,
+        users!inner(id, name, email, phone, avatar_url, created_at, is_active, is_suspended, wallet_balance)
+      `
+
+      // Earnings and name sorts require fetching the whole filtered set and
+      // sorting in memory (earnings live in another table; name lives on the
+      // joined users row which PostgREST can't order by directly). That is
+      // fine because listener counts are small (dozens). All other sorts
+      // paginate in the query.
+      const sortByEarnings = sortBy === 'earnings'
+      const sortByName = sortBy === 'name'
+      const sortByWallet = sortBy === 'wallet'
+      const needsInMemorySort = sortByEarnings || sortByName || sortByWallet
+
+      const buildQuery = (selectStr: string) => {
+        let q = sb.from('listener_profiles')
+          .select(selectStr, { count: 'exact' })
+          .order('created_at', { ascending: needsInMemorySort ? false : sortAsc })
+        if (!needsInMemorySort) q = q.range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1)
+
+        if (userIdFilter !== null) {
+          q = q.in('user_id', userIdFilter)
+        } else if (userStatus === 'active') {
+          q = q.eq('is_active', true).eq('is_approved', true)
+        } else if (userStatus === 'suspended') {
+          q = q.eq('is_suspended', true)
+        }
+
+        if (search) {
+          const safe = search.replace(/[,()*:\\%_']/g, '').slice(0, 100)
+          // Filter on the joined users row — must use referencedTable so PostgREST
+          // knows the columns belong to the foreign table, not listener_profiles.
+          if (safe) q = q.or(`name.ilike.%${safe}%,phone.ilike.%${safe}%`, { referencedTable: 'users' })
+        }
+        return q
+      }
+
+      let { data, count, error: qErr } = await buildQuery(selectWithVerified)
+      if (qErr) {
+        // Column is_verified may not exist — retry without it
+        const fallback = await buildQuery(selectWithoutVerified)
+        if (fallback.error) throw fallback.error
+        data = fallback.data
+        count = fallback.count
+      }
+
+      // Enrich each listener row with application status/notes/payment info.
+      // listener_profiles and listener_applications share no direct FK, so a second query is needed.
+      // admin_notes requires migration 029 — fall back gracefully if column missing.
+      let items: Record<string, unknown>[] = (data ?? []) as unknown as Record<string, unknown>[]
+      if (items.length > 0) {
+        const userIds = items.map(p => p.user_id as string)
+        // Full Aadhaar number is intentionally excluded from the listener listing —
+        // aadhaar_last4 is sufficient for display here. The full document is
+        // accessible only via the dedicated /api/admin/verify-listener endpoint
+        // where an admin is specifically reviewing the identity submission.
+        const withNotesSelect = 'user_id, status, admin_notes, upi_id, bank_account, ifsc_code, aadhaar_last4, account_holder_name'
+        const minimalSelect = 'user_id, status, upi_id, bank_account, ifsc_code, account_holder_name'
+        let appsData: Record<string, unknown>[] = []
+        const notesRes = await sb.from('listener_applications').select(withNotesSelect).in('user_id', userIds)
+        appsData = !notesRes.error
+          ? (notesRes.data ?? []) as Record<string, unknown>[]
+          : ((await sb.from('listener_applications').select(minimalSelect).in('user_id', userIds)).data ?? []) as Record<string, unknown>[]
+        const appMap = new Map(appsData.map(a => [a.user_id as string, a]))
+        items = items.map(p => ({ ...p, application: appMap.get(p.user_id as string) ?? null }))
+
+        // Review data for the approval screen: onboarding fields (migration 060),
+        // private screening answers, legacy gallery photos (no longer public) and
+        // a short-lived signed URL for the private verification selfie. Each
+        // query degrades independently so a missing column never breaks the list.
+        const extrasRes = await sb.from('listener_profiles')
+          .select('user_id, education_level, education_field, tagline_phrases, lived_experience, profile_photos')
+          .in('user_id', userIds)
+        const extrasRows = (!extrasRes.error ? extrasRes.data
+          : (await sb.from('listener_profiles').select('user_id, profile_photos').in('user_id', userIds)).data) ?? []
+        const extrasMap = new Map((extrasRows as Record<string, unknown>[]).map(r => [r.user_id as string, r]))
+        const screenRes = await sb.from('listener_applications').select('user_id, screening').in('user_id', userIds)
+        const screenMap = new Map(((screenRes.error ? [] : screenRes.data) ?? [])
+          .map(r => [(r as Record<string, unknown>).user_id as string, (r as Record<string, unknown>).screening]))
+        const [selfies, selfieTimes] = await Promise.all([
+          selfieSignedUrls(sb, userIds).catch(() => ({} as Record<string, string>)),
+          selfieTakenAt(sb, userIds).catch(() => ({} as Record<string, string>)),
+        ])
+        items = items.map(p => {
+          const uid = p.user_id as string
+          const ex = extrasMap.get(uid) ?? {}
+          return {
+            ...p,
+            review: {
+              education_level:  ex.education_level ?? null,
+              education_field:  ex.education_field ?? null,
+              tagline_phrases:  ex.tagline_phrases ?? null,
+              lived_experience: ex.lived_experience ?? null,
+              legacy_gallery:   ((ex.profile_photos as string[] | null) ?? []).filter(Boolean),
+              screening:        screenMap.get(uid) ?? null,
+              selfie_url:       selfies[uid] ?? null,
+              selfie_taken_at:  selfieTimes[uid] ?? null,
+            },
+          }
+        })
+
+        // Total earned per listener, from the earnings ledger. `total` is
+        // everything the ledger credits them; `settled` is the subset that has
+        // actually cleared and is therefore payable. Degrades to 0 rather than
+        // breaking the listing if the table is missing or unreadable.
+        const earnMap = new Map<string, { total: number; settled: number }>()
+        const earnRes = await sb.from('listener_earnings')
+          .select('listener_id, net_amount, status')
+          .in('listener_id', userIds)
+        if (!earnRes.error) {
+          for (const row of (earnRes.data ?? []) as { listener_id: string; net_amount: number; status: string }[]) {
+            const cur = earnMap.get(row.listener_id) ?? { total: 0, settled: 0 }
+            const amt = Number(row.net_amount ?? 0)
+            cur.total += amt
+            if (row.status === 'settled') cur.settled += amt
+            earnMap.set(row.listener_id, cur)
+          }
+        }
+        // What a payout would actually pay now — the SAME rule as force_payout
+        // below and /api/payout: min(wallet, settled earnings − payouts already
+        // requested). The Payout button used to show lifetime settled earnings
+        // (e.g. ₹5,882) while the server correctly queued ~₹42.
+        const claimedMap = new Map<string, number>()
+        const claimRes = await sb.from('payout_requests')
+          .select('user_id, amount, status')
+          .in('user_id', userIds)
+          .neq('status', 'rejected')
+        if (!claimRes.error) {
+          for (const row of (claimRes.data ?? []) as { user_id: string; amount: number }[]) {
+            claimedMap.set(row.user_id, (claimedMap.get(row.user_id) ?? 0) + Number(row.amount ?? 0))
+          }
+        }
+        items = items.map(p => {
+          const e = earnMap.get(p.user_id as string) ?? { total: 0, settled: 0 }
+          const wallet = Number((p.users as { wallet_balance?: number } | null | undefined)?.wallet_balance ?? 0)
+          const claimed = claimedMap.get(p.user_id as string) ?? 0
+          const payoutAvailable = claimRes.error ? null : Math.floor(Math.min(wallet, Math.max(0, e.settled - claimed)))
+          return { ...p, earned_total: e.total, earned_settled: e.settled, payout_claimed: claimed, payout_available: payoutAvailable }
+        })
+      }
+
+      // In-memory sort + pagination for earnings and name sorts.
+      let listenerTotal = count ?? 0
+      if (needsInMemorySort) {
+        listenerTotal = items.length
+        items.sort((a, b) => {
+          if (sortByName) {
+            const an = String((a.users as { name?: string } | undefined)?.name ?? '').toLowerCase()
+            const bn = String((b.users as { name?: string } | undefined)?.name ?? '').toLowerCase()
+            return sortAsc ? an.localeCompare(bn) : bn.localeCompare(an)
+          }
+          if (sortByWallet) {
+            const aw = Number((a.users as { wallet_balance?: number } | undefined)?.wallet_balance ?? 0)
+            const bw = Number((b.users as { wallet_balance?: number } | undefined)?.wallet_balance ?? 0)
+            return sortAsc ? aw - bw : bw - aw
+          }
+          // sortByEarnings
+          const d = Number(a.earned_total ?? 0) - Number(b.earned_total ?? 0)
+          return sortAsc ? d : -d
+        })
+        items = items.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE)
+      }
+
+      items = await withLastLogin(sb, items, p => (p.users as { id?: string } | undefined)?.id ?? (p.user_id as string))
+
+      return NextResponse.json({ items, total: listenerTotal, page, type: 'listener' })
+    }
+
+    // Regular users.
+    // Status/search filters are applied identically to the page query and the
+    // wallet-total query, so the headline total always describes exactly the
+    // set the admin is looking at.
+    const safeSearch = search ? search.replace(/[,()*:\\%_']/g, '').slice(0, 100) : ''
+    const searchFilter = safeSearch ? `name.ilike.%${safeSearch}%,phone.ilike.%${safeSearch}%` : ''
+
+    let query = sb.from('users')
+      .select('id, name, phone, email, avatar_url, created_at, is_active, is_suspended, wallet_balance, updated_at', { count: 'exact' })
+      .order(sortBy === 'wallet' ? 'wallet_balance' : sortBy === 'name' ? 'name' : 'created_at', { ascending: sortAsc })
+      .range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1)
+
+    // Unspent customer money across the WHOLE filtered set, not just this page.
+    // Degrades to null (UI hides the figure) rather than failing the listing.
+    let walletQ = sb.from('users').select('wallet_balance')
+
+    // NOTE: these two filter blocks MUST stay identical, or the headline total
+    // would describe a different set of users than the rows on screen.
+    if (userStatus === 'active') {
+      query = query.eq('is_active', true).eq('is_suspended', false)
+      walletQ = walletQ.eq('is_active', true).eq('is_suspended', false)
+    } else if (userStatus === 'inactive') {
+      query = query.eq('is_active', false)
+      walletQ = walletQ.eq('is_active', false)
+    } else if (userStatus === 'suspended') {
+      query = query.eq('is_suspended', true)
+      walletQ = walletQ.eq('is_suspended', true)
+    }
+    if (searchFilter) {
+      query = query.or(searchFilter)
+      walletQ = walletQ.or(searchFilter)
+    }
+
+    const [{ data, count, error: qErr }, walletRes] = await Promise.all([query, walletQ])
+    if (qErr) throw qErr
+
+    const walletRows = walletRes.error ? null : (walletRes.data as { wallet_balance: number }[] | null)
+    const walletTotal = walletRows
+      ? walletRows.reduce((s, r) => s + Number(r.wallet_balance ?? 0), 0)
+      : null
+
+    const items = await withLastLogin(sb, (data ?? []) as Record<string, unknown>[], u => u.id as string)
+    return NextResponse.json({ items, total: count ?? 0, page, type: 'user', walletTotal })
+  } catch (err) {
+    logger.error('Admin users GET error:', { error: err instanceof Error ? err.message : String(err) })
+    return NextResponse.json({ error: 'Server error' }, { status: 500 })
+  }
+}
+
+// PATCH — user management actions
+// Body: { userId, action: 'activate'|'deactivate'|'suspend'|'ban'|'unsuspend'|'approve_listener'|'reject_listener', notes? }
+export async function PATCH(req: NextRequest) {
+  const { error, code, status, user } = await requireAdmin(req)
+  if (error) return NextResponse.json({ error, code }, { status })
+
+  const { checkRateLimit } = await import('@/lib/rate-limit')
+  if (!checkRateLimit(`admin:${user!.id}`, ADMIN_ACTION_LIMIT, ADMIN_ACTION_WINDOW_MS)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
+  let body: { userId?: string; action?: string; notes?: string; name?: string; account_holder_name?: string; bank_account?: string; ifsc_code?: string; upi_id?: string; retake_selfie?: boolean; custom_service_fee_rate?: number | null }
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
+  }
+
+  const { userId, action, name } = body
+  const notes = typeof body.notes === 'string' ? body.notes.slice(0, 500) : undefined
+  const retakeSelfie = body?.retake_selfie === true
+  if (!userId || !UUID_RE.test(userId)) return NextResponse.json({ error: 'Invalid userId' }, { status: 400 })
+
+  const validActions = ['activate', 'deactivate', 'suspend', 'ban', 'unsuspend', 'unban', 'approve_listener', 'reject_listener', 'request_resubmission', 'approve_selfie', 'reject_selfie', 'restore_listener', 'rename', 'update_bank_details', 'set_custom_fee_rate', 'force_refund', 'force_payout']
+  if (!action || !validActions.includes(action)) return NextResponse.json({ error: 'Invalid action' }, { status: 400 })
+
+  const sb = createAdminClient()
+
+  try {
+    switch (action) {
+      case 'approve_listener': {
+        // Fetch pending_avatar_url and is_suspended together — one round-trip.
+        // is_suspended matters: approving a currently-suspended listener must NOT
+        // set is_active=true, which would create the impossible {is_suspended:true,
+        // is_active:true} state and could expose them as active in downstream checks.
+        const { data: lpCurrent } = await sb
+          .from('listener_profiles')
+          .select('pending_avatar_url, is_suspended')
+          .eq('user_id', userId)
+          .maybeSingle()
+        const pendingAvatar = (lpCurrent as Record<string, unknown> | null)?.pending_avatar_url as string | null ?? null
+        const isSuspended = (lpCurrent as Record<string, unknown> | null)?.is_suspended === true
+
+        // listener_profiles is the authoritative approval gate — must succeed.
+        // Only include pending_avatar_url: null when there's a value to clear,
+        // avoiding a column-missing error when the migration hasn't run yet.
+        const lpUpdate: Record<string, unknown> = { is_approved: true, is_active: !isSuspended }
+        if (pendingAvatar) lpUpdate.pending_avatar_url = null // clear after promoting
+        let lpErr = (await sb.from('listener_profiles').update(lpUpdate).eq('user_id', userId)).error
+        if (lpErr?.message?.includes('pending_avatar_url')) {
+          // Column not yet in production — approve without touching it
+          lpErr = (await sb.from('listener_profiles')
+            .update({ is_approved: true, is_active: !isSuspended })
+            .eq('user_id', userId)).error
+        }
+        if (lpErr) {
+          logger.error('approve_listener: listener_profiles update failed', { userId, error: lpErr.message })
+          return NextResponse.json({ error: `Failed to approve listener: ${lpErr.message}` }, { status: 500 })
+        }
+
+        // Promote pending selfie to public avatar atomically with approval.
+        if (pendingAvatar) {
+          const { error: avErr } = await sb.from('users')
+            .update({ avatar_url: pendingAvatar })
+            .eq('id', userId)
+          if (avErr) {
+            logger.warn('approve_listener: pending_avatar_url promotion failed', { userId, error: avErr.message })
+            // Not fatal — profile is approved; admin can recheck photo in UI.
+          }
+        }
+
+        // Sync application status and clear stale admin_notes so the pending filter
+        // removes this listener and old rejection reasons don't confuse future reviews.
+        const { error: laErr } = await sb.from('listener_applications')
+          .update({ status: 'approved', admin_notes: null })
+          .eq('user_id', userId)
+        if (laErr) {
+          logger.warn('approve_listener: listener_applications sync failed (listener IS approved)', { userId, error: laErr.message })
+          // Not fatal — profile is approved; the application row is a secondary record.
+        }
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'verification_update',
+          title: 'Application approved!',
+          body: 'Congratulations! Your listener application has been approved. Set your availability and start taking sessions.',
+          action_url: '/dashboard',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'reject_listener': {
+        // A reason is required so the listener always receives a meaningful notification.
+        if (!notes?.trim()) {
+          return NextResponse.json({ error: 'A reason is required when permanently rejecting an application.' }, { status: 400 })
+        }
+        // Clear pending_avatar_url on rejection — the pending selfie is discarded.
+        // The existing avatar_url (if any) is deliberately NOT touched so the
+        // listener retains their current photo if they reapply.
+        // Degrade gracefully if pending_avatar_url column doesn't exist yet.
+        let lpErr = (await sb.from('listener_profiles')
+          .update({ is_approved: false, is_active: false, pending_avatar_url: null })
+          .eq('user_id', userId)).error
+        if (lpErr?.message?.includes('pending_avatar_url')) {
+          lpErr = (await sb.from('listener_profiles')
+            .update({ is_approved: false, is_active: false })
+            .eq('user_id', userId)).error
+        }
+        if (lpErr) {
+          logger.error('reject_listener: listener_profiles update failed', { userId, error: lpErr.message })
+          return NextResponse.json({ error: `Failed to reject listener: ${lpErr.message}` }, { status: 500 })
+        }
+        // Upsert status + always write admin_notes (even to null) so stale notes
+        // from a prior "Request Fix" action never persist into a new rejection.
+        // Upsert (not UPDATE) handles legacy profiles that have no application row —
+        // a plain UPDATE would silently skip and leave them visible in the pending queue.
+        const { error: laErr } = await sb.from('listener_applications')
+          .upsert({ user_id: userId, status: 'rejected', admin_notes: notes || null }, { onConflict: 'user_id' })
+        if (laErr) {
+          logger.warn('reject_listener: listener_applications upsert failed', { userId, error: laErr.message })
+        }
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'verification_update',
+          title: 'Application not approved',
+          body: notes
+            ? `We've reviewed your listener application and are unable to approve it. Reason: ${notes}`
+            : "We've completed our review and are unable to approve your listener application. Contact support if you'd like to discuss this.",
+          action_url: '/become-listener/status',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'request_resubmission': {
+        // Try with pending_avatar_url first; if the column doesn't exist yet
+        // in production (schema drift), retry without it — clearing the
+        // approval/active flags is what matters for the resubmission flow.
+        let lpErr = (await sb.from('listener_profiles')
+          .update({ is_approved: false, is_active: false, is_available: false, pending_avatar_url: null })
+          .eq('user_id', userId)).error
+        if (lpErr?.message?.includes('pending_avatar_url')) {
+          lpErr = (await sb.from('listener_profiles')
+            .update({ is_approved: false, is_active: false, is_available: false })
+            .eq('user_id', userId)).error
+        }
+        if (lpErr) {
+          logger.error('request_resubmission: listener_profiles update failed', { userId, error: lpErr.message })
+          return NextResponse.json({ error: `Failed to update listener: ${lpErr.message}` }, { status: 500 })
+        }
+        // Identity/photo concern: move the current verification selfie aside so
+        // the resubmission can't reuse it — the applicant must take a new one.
+        if (retakeSelfie) {
+          const { error: archErr } = await archiveSelfie(sb, userId)
+          if (archErr) {
+            logger.error('request_resubmission: selfie archive failed', { userId, error: archErr })
+            return NextResponse.json({ error: `Could not reset the selfie: ${archErr}` }, { status: 500 })
+          }
+        }
+        // Upsert (not UPDATE) handles legacy profiles with no application row.
+        // Always write admin_notes (even to null) so stale rejection notes
+        // never persist alongside a new resubmission request.
+        const { error: laErr } = await sb.from('listener_applications')
+          .upsert({
+            user_id: userId,
+            status: 'needs_resubmission',
+            // Shown on the applicant's form, so the retake requirement is visible there too.
+            admin_notes: [notes?.trim().replace(/([^.!?])$/, '$1.'), retakeSelfie ? 'Please also take a new verification selfie.' : ''].filter(Boolean).join(' ') || null,
+          }, { onConflict: 'user_id' })
+        if (laErr) {
+          logger.warn('request_resubmission: listener_applications upsert failed', { userId, error: laErr.message })
+        }
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'verification_update',
+          title: 'Action needed on your application',
+          body: (notes
+            ? `Please fix the following and resubmit your application: ${notes}`
+            : 'Your listener application needs a correction. Please review the feedback and resubmit.')
+            + (retakeSelfie ? ' You will also need to take a new verification selfie.' : ''),
+          action_url: '/become-listener/status',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'approve_selfie': {
+        // Promote pending_avatar_url → users.avatar_url for an already-approved listener.
+        const { data: lpSelfie } = await sb
+          .from('listener_profiles')
+          .select('pending_avatar_url, is_suspended')
+          .eq('user_id', userId)
+          .maybeSingle()
+        const pendingSelfie = lpSelfie?.pending_avatar_url
+        if (!pendingSelfie) {
+          return NextResponse.json({ error: 'No pending selfie to approve' }, { status: 400 })
+        }
+        if (lpSelfie?.is_suspended) {
+          return NextResponse.json({ error: 'This listener is suspended — reject the photo instead (or unsuspend first).' }, { status: 409 })
+        }
+        const { error: avErr } = await sb.from('users')
+          .update({ avatar_url: pendingSelfie })
+          .eq('id', userId)
+        if (avErr) {
+          logger.error('approve_selfie: users avatar_url update failed', { userId, error: avErr.message })
+          return NextResponse.json({ error: `Failed to approve selfie: ${avErr.message}` }, { status: 500 })
+        }
+        const { error: clearPendingErr } = await sb.from('listener_profiles')
+          .update({ pending_avatar_url: null })
+          .eq('user_id', userId)
+        if (clearPendingErr) {
+          logger.error('approve_selfie: pending_avatar_url clear failed — photo is live but may still appear in pending queue', { userId, error: clearPendingErr.message })
+        }
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'verification_update',
+          title: 'Photo approved',
+          body: 'Your new profile photo is live. Head to your dashboard to re-enable your availability.',
+          action_url: '/dashboard',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'reject_selfie': {
+        // Rejected replacement photo for an already-approved listener.
+        // IMPORTANT: only clear pending_avatar_url and take the listener offline
+        // temporarily — do NOT revoke is_approved or is_active. The listener's
+        // existing live photo remains unchanged.
+        //
+        // Read the pending URL before clearing so we can delete the rejected file
+        // from storage — avoids accumulating unreferenced photo objects in the
+        // public avatars bucket.
+        const { data: lpBeforeReject } = await sb
+          .from('listener_profiles')
+          .select('pending_avatar_url')
+          .eq('user_id', userId)
+          .maybeSingle()
+        const rejectedPhotoUrl = (lpBeforeReject as { pending_avatar_url?: string | null } | null)?.pending_avatar_url ?? null
+
+        let lpErr = (await sb.from('listener_profiles')
+          .update({ pending_avatar_url: null, is_available: false })
+          .eq('user_id', userId)).error
+        if (lpErr?.message?.includes('pending_avatar_url')) {
+          // Column not yet migrated — just take offline
+          lpErr = (await sb.from('listener_profiles')
+            .update({ is_available: false })
+            .eq('user_id', userId)).error
+        }
+        if (lpErr) {
+          logger.error('reject_selfie: listener_profiles update failed', { userId, error: lpErr.message })
+          return NextResponse.json({ error: `Failed to reject photo: ${lpErr.message}` }, { status: 500 })
+        }
+
+        // Delete the rejected photo from the avatars bucket (non-fatal).
+        if (rejectedPhotoUrl) {
+          const match = rejectedPhotoUrl.match(/\/avatars\/([^?]+)/)
+          if (match?.[1]) {
+            sb.storage.from('avatars').remove([match[1]]).catch(() => {})
+          }
+        }
+
+        // No listener_applications status change — listener remains approved.
+        const reason = notes?.trim() || 'Your new profile photo was not approved.'
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'verification_update',
+          title: 'Profile photo not approved',
+          body: `${reason} Your current photo is still active on your profile. Please upload another clear, well-lit photo of your face from your dashboard settings.`,
+          action_url: '/dashboard',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'restore_listener': {
+        // Restore a previously-approved listener whose approval was incorrectly
+        // stripped by the old reject_selfie bug. Only valid when:
+        //   1. The user has an existing avatar_url (evidence of prior approval — only
+        //      set by the approve_listener / approve_selfie paths, not at application time).
+        //   2. Their application is in needs_resubmission.
+        //   3. The admin_notes contain a photo-related keyword (this was a photo case,
+        //      not a bio/skills/identity resubmission).
+        const [
+          { data: uRow },
+          { data: userSuspRow, error: suspCheckErr },
+          { data: laRow },
+        ] = await Promise.all([
+          sb.from('users').select('avatar_url').eq('id', userId).maybeSingle(),
+          sb.from('users').select('is_suspended').eq('id', userId).maybeSingle(),
+          sb.from('listener_applications').select('status, admin_notes').eq('user_id', userId).maybeSingle(),
+        ])
+        // A suspended listener must be unsuspended explicitly. Restoring here used to
+        // set is_active=true while listener_profiles.is_suspended stayed true, and
+        // told the person "your listener account is active again".
+        const { data: lpSusp, error: lpSuspErr } = await sb.from('listener_profiles')
+          .select('is_suspended').eq('user_id', userId).maybeSingle()
+        if (lpSuspErr) {
+          return NextResponse.json({ error: 'Could not verify listener suspension state. Please try again.' }, { status: 500 })
+        }
+        if (lpSusp?.is_suspended) {
+          return NextResponse.json({ error: 'Cannot restore: this listener is suspended. Use Unsuspend first if you want them back.' }, { status: 409 })
+        }
+        if (!uRow?.avatar_url) {
+          return NextResponse.json({ error: 'Cannot restore: no prior approved photo found. Use the standard Approve action.' }, { status: 400 })
+        }
+        if (laRow?.status !== 'needs_resubmission') {
+          return NextResponse.json({ error: 'Cannot restore: listener is not in needs_resubmission state. Use the standard Approve action.' }, { status: 400 })
+        }
+        const notesLower = (laRow?.admin_notes ?? '').toLowerCase()
+        const photoKeywords = ['photo', 'selfie', 'image', 'picture', 'display']
+        if (!photoKeywords.some(kw => notesLower.includes(kw))) {
+          return NextResponse.json({ error: 'Cannot restore: admin notes do not indicate a photo-rejection case. Use the standard Approve action for other resubmission types.' }, { status: 400 })
+        }
+        // Never set is_active=true for a suspended account — that creates the
+        // forbidden {is_active:true, is_suspended:true} state. Restore approval
+        // only; is_active will be set when the account is unsuspended.
+        // Fail closed on DB error: if we can't read is_suspended, don't assume false
+        // (that would produce the forbidden state for a suspended account).
+        if (suspCheckErr) {
+          logger.error('restore_listener: could not read is_suspended', { userId, error: suspCheckErr.message })
+          return NextResponse.json({ error: 'Could not verify account suspension state. Please try again.' }, { status: 500 })
+        }
+        const isSuspended = (userSuspRow as { is_suspended?: boolean } | null)?.is_suspended ?? false
+        let lpErr = (await sb.from('listener_profiles')
+          .update({ is_approved: true, is_active: !isSuspended })
+          .eq('user_id', userId)).error
+        if (lpErr) {
+          logger.error('restore_listener: listener_profiles update failed', { userId, error: lpErr.message })
+          return NextResponse.json({ error: `Failed to restore listener: ${lpErr.message}` }, { status: 500 })
+        }
+        await sb.from('listener_applications')
+          .update({ status: 'approved', admin_notes: null })
+          .eq('user_id', userId)
+          .then(() => {}, () => {})
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'verification_update',
+          title: 'Your account has been restored',
+          body: 'Your listener account is active again. Please upload a new profile photo from your dashboard — go to Edit Profile and tap your photo.',
+          action_url: '/dashboard',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'suspend': {
+        // Temporary block — can be reversed with 'unsuspend'.
+        const { error: uErr } = await sb.from('users')
+          .update({ is_suspended: true, is_active: false })
+          .eq('id', userId)
+        if (uErr) {
+          logger.error('suspend: users update failed', { userId, error: uErr.message })
+          return NextResponse.json({ error: `Failed to suspend user: ${uErr.message}` }, { status: 500 })
+        }
+        // Not fire-and-forget: if this fails, users is suspended but the listener
+        // profile stays live — log so it surfaces for manual reconciliation.
+        // Also clear pending_avatar_url so a pre-suspension photo doesn't appear
+        // as a legitimate pending review in the admin queue.
+        const { error: lpSuspendErr } = await sb.from('listener_profiles')
+          .update({ is_active: false, is_available: false, is_suspended: true, pending_avatar_url: null })
+          .eq('user_id', userId)
+        if (lpSuspendErr) {
+          logger.error('suspend: listener_profiles update failed — RECONCILIATION NEEDED — profile may still be live', { userId, error: lpSuspendErr.message })
+        }
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'system',
+          title: 'Account suspended',
+          body: notes || 'Your account has been temporarily suspended. Contact support if you believe this is an error.',
+          action_url: '/support',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'ban': {
+        // Severe block — logged as user_ban in audit_logs so unsuspend is blocked.
+        // Use the explicit 'unban' action to restore a banned account.
+        const { error: uErr } = await sb.from('users')
+          .update({ is_suspended: true, is_active: false })
+          .eq('id', userId)
+        if (uErr) {
+          logger.error('ban: users update failed', { userId, error: uErr.message })
+          return NextResponse.json({ error: `Failed to ban user: ${uErr.message}` }, { status: 500 })
+        }
+        const { error: lpBanErr } = await sb.from('listener_profiles')
+          .update({ is_active: false, is_available: false, is_suspended: true, pending_avatar_url: null })
+          .eq('user_id', userId)
+        if (lpBanErr) {
+          logger.error('ban: listener_profiles update failed — RECONCILIATION NEEDED — profile may still be live', { userId, error: lpBanErr.message })
+        }
+        // Ban the auth user now (the shared syncAuthBan below is skipped by
+        // this case's early return).
+        const banSyncErr = await syncAuthBan(sb, userId)
+        if (banSyncErr) logger.error('ban: auth ban failed — DB flags still block login/pages', { userId, error: banSyncErr })
+        // Write audit log BEFORE the notification. If the audit log fails, return 500
+        // without sending any notification — on retry the notification goes out exactly
+        // once (after the now-successful audit write). Notification before audit log
+        // caused duplicate push alerts when the admin retried after an audit failure.
+        const { error: banAuditErr } = await sb.from('admin_audit_logs').insert({
+          admin_id: dbUserIdOrNull(user!.id),
+          action: 'user_ban',
+          target_id: userId,
+        })
+        if (banAuditErr) {
+          logger.error('ban: critical audit log write FAILED — account is suspended but ban record missing; unsuspend guard will not work', { userId, error: banAuditErr.message })
+          return NextResponse.json({
+            error: 'Account suspended but the ban record could not be written. The ban may be undone by a routine Unsuspend. Retry the ban action.',
+            code: 'AUDIT_LOG_FAILED',
+          }, { status: 500 })
+        }
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'system',
+          title: 'Account suspended',
+          body: notes || 'Your account has been suspended for violating our community guidelines. Contact support to appeal.',
+          action_url: '/support',
+        }).then(() => {}, () => {})
+        // Return early — the audit log was already written above (before the notification).
+        // The shared audit write at the end of this handler must not run a second time.
+        return NextResponse.json({ ok: true })
+      }
+
+      case 'unsuspend': {
+        // Guard: if this account was banned (audit log has user_ban with no subsequent
+        // user_unban), require the explicit 'unban' action to restore it. This prevents
+        // accidentally undoing a deliberate ban with a routine Unsuspend click.
+        const { data: auditRows } = await sb.from('admin_audit_logs')
+          .select('action')
+          .eq('target_id', userId)
+          .in('action', ['user_ban', 'user_unban'])
+          .order('created_at', { ascending: false })
+          .limit(10)
+        const lastBanAction = (auditRows ?? []).find(r => r.action === 'user_ban' || r.action === 'user_unban')
+        if (lastBanAction?.action === 'user_ban') {
+          return NextResponse.json({
+            error: 'This account was banned. Use the "Unban" action to explicitly restore it.',
+            code: 'ACCOUNT_BANNED',
+          }, { status: 409 })
+        }
+
+        const { error: uErr } = await sb.from('users')
+          .update({ is_suspended: false, is_active: true })
+          .eq('id', userId)
+        if (uErr) {
+          logger.error('unsuspend: users update failed', { userId, error: uErr.message })
+          return NextResponse.json({ error: `Failed to unsuspend user: ${uErr.message}` }, { status: 500 })
+        }
+        // For listeners: only restore is_active if already approved — an unapproved
+        // applicant who was suspended must not become active just by being unsuspended.
+        const { data: lpUnsuspend, error: lpUnsuspendErr } = await sb.from('listener_profiles')
+          .select('is_approved').eq('user_id', userId).maybeSingle()
+        if (lpUnsuspendErr) {
+          logger.error('unsuspend: is_approved read failed — aborting listener profile update to avoid data corruption', { userId, error: lpUnsuspendErr.message })
+          return NextResponse.json({ error: `Failed to read listener profile: ${lpUnsuspendErr.message}` }, { status: 500 })
+        }
+        const wasApprovedUnsuspend = lpUnsuspend?.is_approved === true
+        const { error: lpUnsuspendProfileErr } = await sb.from('listener_profiles')
+          .update({ is_active: wasApprovedUnsuspend, is_suspended: false, is_available: false })
+          .eq('user_id', userId)
+        if (lpUnsuspendProfileErr) {
+          logger.error('unsuspend: listener_profiles update failed — RECONCILIATION NEEDED', { userId, error: lpUnsuspendProfileErr.message })
+        }
+        break
+      }
+
+      case 'unban': {
+        // Explicit unban — clears ban state and creates user_unban audit entry so
+        // subsequent unsuspend/activate calls work normally.
+        const { error: uErr } = await sb.from('users')
+          .update({ is_suspended: false, is_active: true })
+          .eq('id', userId)
+        if (uErr) {
+          logger.error('unban: users update failed', { userId, error: uErr.message })
+          return NextResponse.json({ error: `Failed to unban user: ${uErr.message}` }, { status: 500 })
+        }
+        const { data: lpUnban, error: lpUnbanReadErr } = await sb.from('listener_profiles')
+          .select('is_approved').eq('user_id', userId).maybeSingle()
+        if (!lpUnbanReadErr) {
+          const wasApprovedUnban = lpUnban?.is_approved === true
+          await sb.from('listener_profiles')
+            .update({ is_active: wasApprovedUnban, is_suspended: false, is_available: false })
+            .eq('user_id', userId)
+            .then(() => {}, (e) => logger.error('unban: listener_profiles update failed — RECONCILIATION NEEDED', { userId, error: String(e) }))
+        }
+        await sb.from('notifications').insert({
+          user_id: userId,
+          type: 'system',
+          title: 'Account reinstated',
+          body: notes || 'Your account ban has been lifted. You may now use the app again.',
+          action_url: '/browse',
+        }).then(() => {}, () => {})
+        break
+      }
+
+      case 'deactivate': {
+        const { error: uErr } = await sb.from('users').update({ is_active: false }).eq('id', userId)
+        if (uErr) {
+          logger.error('deactivate: users update failed', { userId, error: uErr.message })
+          return NextResponse.json({ error: `Failed to deactivate user: ${uErr.message}` }, { status: 500 })
+        }
+        // Cascade to listener profile — a deactivated account must not remain live as a listener.
+        const { error: lpErr } = await sb.from('listener_profiles')
+          .update({ is_active: false, is_available: false })
+          .eq('user_id', userId)
+        if (lpErr) {
+          logger.error('deactivate: listener_profiles cascade failed — RECONCILIATION NEEDED — profile may still be live', { userId, error: lpErr.message })
+        }
+        break
+      }
+
+      case 'activate': {
+        // Guard: if this account was banned, require the explicit 'unban' action —
+        // same check as 'unsuspend' to prevent ban bypass via the activate path.
+        const { data: activateAuditRows } = await sb.from('admin_audit_logs')
+          .select('action')
+          .eq('target_id', userId)
+          .in('action', ['user_ban', 'user_unban'])
+          .order('created_at', { ascending: false })
+          .limit(10)
+        const lastActivateBanAction = (activateAuditRows ?? []).find((r: { action: string }) => r.action === 'user_ban' || r.action === 'user_unban')
+        if (lastActivateBanAction?.action === 'user_ban') {
+          return NextResponse.json({
+            error: 'This account was banned. Use the "Unban" action to explicitly restore it.',
+            code: 'ACCOUNT_BANNED',
+          }, { status: 409 })
+        }
+        // Also clear is_suspended — a suspended user's is_suspended=true would otherwise
+        // create the impossible {is_active:true, is_suspended:true} state.
+        const { error: uErr } = await sb.from('users').update({ is_active: true, is_suspended: false }).eq('id', userId)
+        if (uErr) {
+          logger.error('activate: users update failed', { userId, error: uErr.message })
+          return NextResponse.json({ error: `Failed to activate user: ${uErr.message}` }, { status: 500 })
+        }
+        break
+      }
+
+      case 'rename': {
+        const newName = typeof name === 'string' ? name.trim() : ''
+        if (newName.length < 2 || newName.length > 80) {
+          return NextResponse.json({ error: 'Name must be 2–80 characters.' }, { status: 400 })
+        }
+        const { error: uErr } = await sb.from('users').update({ name: newName }).eq('id', userId)
+        if (uErr) {
+          logger.error('rename: users update failed', { userId, error: uErr.message })
+          return NextResponse.json({ error: `Failed to rename user: ${uErr.message}` }, { status: 500 })
+        }
+        // Keep listener_profiles display name in sync if applicable.
+        await sb.from('listener_profiles').update({ display_name: newName }).eq('user_id', userId)
+          .then(() => {}, () => {})
+        break
+      }
+
+      case 'update_bank_details': {
+        // Admin-only: update bank/UPI details + account holder name on listener_applications.
+        // Works for both existing rows (UPDATE) and listeners whose application row was never
+        // created due to the account_holder_name column-missing bug (INSERT).
+        const updates: Record<string, string | null> = {}
+        const holderName = typeof body.account_holder_name === 'string' ? body.account_holder_name.trim() : null
+        const bankAcc    = typeof body.bank_account        === 'string' ? body.bank_account.trim() : null
+        const ifsc       = typeof body.ifsc_code           === 'string' ? body.ifsc_code.trim().toUpperCase() : null
+        const upi        = typeof body.upi_id              === 'string' ? body.upi_id.trim() : null
+        // Format validation
+        if (bankAcc !== null && bankAcc !== '' && !/^\d{9,18}$/.test(bankAcc)) {
+          return NextResponse.json({ error: 'Bank account must be 9–18 digits.' }, { status: 400 })
+        }
+        if (ifsc !== null && ifsc !== '' && !/^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifsc)) {
+          return NextResponse.json({ error: 'Invalid IFSC code (expected format: XXXX0XXXXXXX).' }, { status: 400 })
+        }
+        if (upi !== null && upi !== '' && !upi.includes('@')) {
+          return NextResponse.json({ error: 'UPI ID must contain @.' }, { status: 400 })
+        }
+        if (holderName !== null) updates.account_holder_name = holderName || null
+        if (bankAcc    !== null && bankAcc !== '') updates.bank_account = bankAcc
+        else if (bankAcc === '') { /* ignore empty string — don't wipe valid account number */ }
+        if (ifsc       !== null && ifsc !== '') updates.ifsc_code = ifsc
+        if (upi        !== null) updates.upi_id              = upi || null
+        if (Object.keys(updates).length === 0) {
+          return NextResponse.json({ error: 'No fields to update' }, { status: 400 })
+        }
+
+        const { data: existingApp } = await sb.from('listener_applications')
+          .select('user_id').eq('user_id', userId).maybeSingle()
+
+        if (existingApp) {
+          const { error: baErr } = await sb.from('listener_applications')
+            .update(updates)
+            .eq('user_id', userId)
+          if (baErr) {
+            logger.error('update_bank_details: update failed', { userId, error: baErr.message })
+            return NextResponse.json({ error: `Failed to update bank details: ${baErr.message}` }, { status: 500 })
+          }
+          // Sync corrected UPI/bank to any pending payout request so the admin
+          // doesn't accidentally pay out to the old (wrong) details.
+          if (updates.upi_id !== undefined || updates.bank_account || updates.ifsc_code) {
+            const payoutUpdate: Record<string, string | null> = {}
+            if (updates.upi_id !== undefined) {
+              payoutUpdate.upi_id = updates.upi_id
+            } else {
+              // Partial bank update: fetch current values so the marker stays complete
+              const { data: freshApp } = await sb.from('listener_applications')
+                .select('bank_account, ifsc_code').eq('user_id', userId).maybeSingle()
+              const ba = updates.bank_account ?? (freshApp as Record<string, string | null> | null)?.bank_account
+              const ic = updates.ifsc_code ?? (freshApp as Record<string, string | null> | null)?.ifsc_code
+              if (ba && ic) payoutUpdate.upi_id = `bank:${ic}/${ba}`
+            }
+            if (Object.keys(payoutUpdate).length > 0) {
+              await sb.from('payout_requests').update(payoutUpdate)
+                .eq('user_id', userId).eq('status', 'pending')
+                .then(({ error: e }) => { if (e) logger.warn('update_bank_details: payout_requests sync failed', { userId, error: e.message }) })
+            }
+          }
+        } else {
+          // No application row — listener applied during the broken period. Create one.
+          // bank_account and ifsc_code are required by the DB; abort if not supplied.
+          if (!updates.bank_account || !updates.ifsc_code) {
+            return NextResponse.json({ error: 'Bank account and IFSC code are required to create an application record.' }, { status: 400 })
+          }
+          const { data: listenerUser } = await sb.from('users').select('name, phone').eq('id', userId).maybeSingle()
+          const insertRow: Record<string, string | null | undefined> = {
+            user_id: userId,
+            name: listenerUser?.name ?? '',
+            phone: listenerUser?.phone ?? null,
+            status: 'approved',
+            // Explicitly include account_holder_name — defaults to null when not in updates.
+            account_holder_name: updates.account_holder_name ?? null,
+            ...updates,
+          }
+          let baErr = (await sb.from('listener_applications').insert(insertRow)).error
+          if (baErr?.message?.includes('column') && baErr.message?.includes('account_holder_name')) {
+            // Column does not exist yet (pre-migration) — retry without it
+            delete insertRow.account_holder_name
+            baErr = (await sb.from('listener_applications').insert(insertRow)).error
+          }
+          if (baErr) {
+            logger.error('update_bank_details: insert failed', { userId, error: baErr.message })
+            return NextResponse.json({ error: `Failed to create application record: ${baErr.message}` }, { status: 500 })
+          }
+        }
+        break
+      }
+
+      // ── Admin-initiated wallet refund (before ban) ───────────────────────────
+      // Mirrors /api/refund but bypasses the user-facing guards and auto-calls
+      // the Razorpay refund API immediately. The wallet is zeroed first so the
+      // user can't spend funds between the admin's decision and the Razorpay call.
+      // Works after T+2 settlement — Razorpay nets the amount against the next
+      // incoming settlement. No extra API flag needed; Razorpay handles it.
+      case 'force_refund': {
+        const { data: userRow } = await sb.from('users').select('wallet_balance').eq('id', userId).maybeSingle()
+        const balance = Number((userRow as { wallet_balance?: number } | null)?.wallet_balance ?? 0)
+        if (balance <= 0) return NextResponse.json({ error: 'User has no wallet balance to refund' }, { status: 400 })
+
+        // Block duplicate
+        const { data: existing } = await sb.from('refund_requests').select('id').eq('user_id', userId).eq('status', 'pending').maybeSingle()
+        if (existing) return NextResponse.json({ error: 'A refund request is already pending for this user' }, { status: 409 })
+
+        // Most recent Razorpay payment ID (same heuristic as /api/refund)
+        const { data: lastCredit } = await sb.from('wallet_transactions')
+          .select('reference_id')
+          .eq('user_id', userId)
+          .eq('type', 'credit')
+          .not('reference_id', 'ilike', 'gf_%')
+          .order('created_at', { ascending: false })
+          .limit(1)
+          .maybeSingle()
+        const paymentId: string | null = (lastCredit as { reference_id?: string | null } | null)?.reference_id ?? null
+
+        // Insert refund row first (idempotency anchor)
+        const { data: refundRow, error: insertErr } = await sb.from('refund_requests').insert({
+          user_id: userId,
+          amount: balance,
+          reason: 'Admin-initiated refund',
+          status: 'pending',
+          ...(paymentId ? { razorpay_payment_id: paymentId } : {}),
+        }).select('id').single()
+        if (insertErr) {
+          logger.error('force_refund: insert failed', { userId, error: insertErr.message })
+          return NextResponse.json({ error: `Failed to create refund: ${insertErr.message}` }, { status: 500 })
+        }
+
+        // Zero the wallet
+        const { error: deductErr } = await sb.rpc('deduct_wallet', { p_user_id: userId, p_amount: balance })
+        if (deductErr) {
+          await sb.from('refund_requests').update({ status: 'rejected', admin_notes: 'Auto-reverted: wallet deduct failed' }).eq('id', refundRow.id)
+          return NextResponse.json({ error: `Wallet deduct failed: ${deductErr.message}` }, { status: 500 })
+        }
+
+        // Audit ledger row
+        await sb.from('wallet_transactions').insert({
+          user_id: userId, type: 'debit', amount: balance,
+          reference_id: `rfnd_${refundRow.id}`, description: 'Admin-initiated refund — balance cleared',
+        }).then(() => {}, () => {})
+
+        // Attempt Razorpay refund immediately, split across recharges if one
+        // payment doesn't cover the balance.
+        const out = await refundAcrossPayments(sb, getRzp(), {
+          userId, requestId: refundRow.id, amountRupees: balance, preferredPaymentId: paymentId,
+        })
+        const razorpayRefundId: string | null = out.remainingPaise === 0 && out.refundIds.length ? out.refundIds.join(', ') : null
+        const razorpayNote = razorpayRefundId
+          ? `Razorpay refund ID(s): ${razorpayRefundId}`
+          : `Auto-refund incomplete: ${rupees(out.sentNowPaise)} sent${out.refundIds.length ? ` (${out.refundIds.join(', ')})` : ''}, ${rupees(out.remainingPaise)} NOT refunded — ${out.errors.join('; ') || 'no refundable recharge found'}`
+        if (!razorpayRefundId) logger.error('force_refund: Razorpay refund incomplete', { userId, refundRowId: refundRow.id, note: razorpayNote })
+
+        const finalStatus = razorpayRefundId ? 'completed' : 'pending'
+        const { error: refundUpdateErr } = await sb.from('refund_requests').update({
+          status: finalStatus,
+          admin_notes: `Admin-initiated. ${razorpayNote}`,
+        }).eq('id', refundRow.id)
+        if (refundUpdateErr) {
+          logger.error('force_refund: refund_requests status update failed — row stays pending, Razorpay refund was issued', { userId, refundRowId: refundRow.id, razorpayRefundId, error: refundUpdateErr.message })
+          // Don't block the response — money was moved and wallet zeroed. Admin sees the row as pending.
+        }
+
+        return NextResponse.json({ ok: true, amount: balance, razorpayRefundId, requiresManualRefund: !razorpayRefundId })
+      }
+
+      // ── Admin-initiated listener payout (before ban) ─────────────────────────
+      // Creates a payout_requests row on behalf of the listener and deducts the
+      // soft hold — the admin then does the actual UPI transfer and marks it paid
+      // in the Payouts tab (same manual flow as all listener payouts today).
+      case 'force_payout': {
+        const { data: listenerUser } = await sb.from('users').select('wallet_balance').eq('id', userId).maybeSingle()
+        const walletBalance = Number((listenerUser as { wallet_balance?: number } | null)?.wallet_balance ?? 0)
+
+        // Cap at settled earnings (same rule as /api/payout for listeners who also recharged)
+        const [{ data: earned }, { data: claimed }] = await Promise.all([
+          sb.from('listener_earnings').select('net_amount').eq('listener_id', userId).eq('status', 'settled'),
+          sb.from('payout_requests').select('amount').eq('user_id', userId).neq('status', 'rejected'),
+        ])
+        const earnedTotal  = (earned  ?? []).reduce((t, r) => t + Number((r as { net_amount?: number }).net_amount ?? 0), 0)
+        const claimedTotal = (claimed ?? []).reduce((t, r) => t + Number((r as { amount?: number }).amount ?? 0), 0)
+        const available = Math.min(walletBalance, Math.max(0, earnedTotal - claimedTotal))
+        const amount = Math.floor(available)
+
+        if (amount <= 0) return NextResponse.json({ error: 'No settled earnings available for payout' }, { status: 400 })
+
+        // Block duplicate
+        const { data: existingPayout } = await sb.from('payout_requests').select('id').eq('user_id', userId).eq('status', 'pending').maybeSingle()
+        if (existingPayout) return NextResponse.json({ error: 'A payout request is already pending for this listener' }, { status: 409 })
+
+        // Get payment details from application
+        const { data: app } = await sb.from('listener_applications')
+          .select('upi_id, bank_account, ifsc_code, account_holder_name')
+          .eq('user_id', userId)
+          .maybeSingle()
+        const appRow = app as { upi_id?: string | null; bank_account?: string | null; ifsc_code?: string | null } | null
+        let upiId: string | null = null
+        if (appRow?.upi_id && (appRow.upi_id as string).includes('@')) {
+          upiId = appRow.upi_id as string
+        } else if (appRow?.bank_account && appRow?.ifsc_code) {
+          upiId = `bank:${appRow.ifsc_code}/${appRow.bank_account}`
+        }
+
+        // Soft hold
+        const { error: holdErr } = await sb.rpc('deduct_wallet', { p_user_id: userId, p_amount: amount })
+        if (holdErr) return NextResponse.json({ error: `Wallet hold failed: ${holdErr.message}` }, { status: 500 })
+
+        const { error: insertErr } = await sb.from('payout_requests').insert({
+          user_id: userId, amount, status: 'pending',
+          admin_notes: 'Admin-initiated payout (pre-ban)',
+          ...(upiId ? { upi_id: upiId } : {}),
+        })
+        if (insertErr) {
+          // Roll back the hold — log if rollback also fails (funds stranded)
+          const { error: rollbackErr } = await sb.rpc('credit_wallet', { p_user_id: userId, p_amount: amount })
+          if (rollbackErr) {
+            logger.error('force_payout: payout insert AND rollback both failed — wallet decremented with no payout record. MANUAL RECONCILIATION REQUIRED.', { userId, amount, insertError: insertErr.message, rollbackError: rollbackErr.message })
+            return NextResponse.json({ error: `Payout insert failed AND wallet rollback failed — ₹${amount} deducted but no payout record created. Fix manually: credit_wallet(${userId}, ${amount}) and verify payout_requests.` }, { status: 500 })
+          }
+          return NextResponse.json({ error: `Failed to create payout: ${insertErr.message}` }, { status: 500 })
+        }
+
+        await sb.from('wallet_transactions').insert({
+          user_id: userId, type: 'debit', amount,
+          description: 'Admin-initiated payout — balance held',
+        }).then(() => {}, (e) => logger.error('force_payout: wallet_transactions insert failed — ledger desync', { userId, amount, error: String(e) }))
+
+        return NextResponse.json({ ok: true, amount })
+      }
+
+      case 'set_custom_fee_rate': {
+        // null clears the override (listener reverts to global schedule on next booking).
+        // Validate range when a value is provided.
+        const raw = body.custom_service_fee_rate
+        if (raw !== null && raw !== undefined) {
+          if (typeof raw !== 'number' || raw < 0 || raw > 1) {
+            return NextResponse.json({ error: 'custom_service_fee_rate must be null or a number between 0 and 1' }, { status: 400 })
+          }
+        }
+        const rate = raw === undefined ? null : raw  // undefined from body means clear
+        // Read previous rate first so the audit log captures the full change.
+        const { data: prevRow } = await sb.from('listener_profiles')
+          .select('custom_service_fee_rate').eq('user_id', userId).maybeSingle()
+        const prevRate = (prevRow as { custom_service_fee_rate?: number | null } | null)?.custom_service_fee_rate ?? null
+        const { data: updated, error: feeErr } = await sb
+          .from('listener_profiles')
+          .update({ custom_service_fee_rate: rate })
+          .eq('user_id', userId)
+          .select('user_id')
+          .maybeSingle()
+        if (feeErr) {
+          logger.error('set_custom_fee_rate: update failed', { userId, rate, error: feeErr.message })
+          return NextResponse.json({ error: `Failed to set custom fee rate: ${feeErr.message}` }, { status: 500 })
+        }
+        if (!updated) {
+          return NextResponse.json({ error: 'Listener profile not found' }, { status: 404 })
+        }
+        logger.info('set_custom_fee_rate', { userId, previousRate: prevRate, newRate: rate, adminId: user!.id })
+        break
+      }
+    }
+
+    // Any change to a suspension flag → mirror it onto Supabase Auth (ban/unban).
+    if (['suspend', 'unsuspend', 'unban', 'activate'].includes(action)) {
+      const banSyncErr = await syncAuthBan(sb, userId)
+      if (banSyncErr) {
+        logger.error('auth ban sync failed', { action, userId, error: banSyncErr })
+        return NextResponse.json({ ok: true, warning: `Saved, but the login block could not be updated (${banSyncErr}). Retry the action.` })
+      }
+    }
+
+    const { error: auditErr } = await sb.from('admin_audit_logs').insert({
+      admin_id: dbUserIdOrNull(user!.id),
+      action: `user_${action}`,
+      target_id: userId,
+    })
+    if (auditErr) {
+      logger.error('Admin audit log write FAILED — privileged action completed without audit trail', {
+        action: `user_${action}`, userId, error: auditErr.message,
+      })
+    }
+
+    return NextResponse.json({ ok: true })
+  } catch (err) {
+    logger.error('Admin users PATCH error:', { error: err instanceof Error ? err.message : String(err) })
+    return NextResponse.json({ error: 'Server error' }, { status: 500 })
+  }
+}

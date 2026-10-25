@@ -1,0 +1,27 @@
+# One-off: build Google Play store screenshots + feature graphic from the live
+# site and commit them to the 'store-assets' branch. Manual or push to store-assets-src/**.
+name: Store assets
+on:
+  workflow_dispatch:
+  push:
+    branches: ['store-assets-src/**']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - run: npm i --no-save playwright-core@1.48.2 && (which google-chrome || which google-chrome-stable || which chromium)
+      - run: node scripts/store-assets.mjs
+      - name: Commit assets to store-assets branch
+        run: |
+          git config user.name "github-actions" && git config user.email "actions@github.com"
+          git checkout --orphan store-assets
+          git rm -rf --cached . >/dev/null
+          git add -f store-assets
+          git commit -m "Google Play store assets (generated from live site)"
+          git push -f origin store-assets

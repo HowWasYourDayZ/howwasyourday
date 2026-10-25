@@ -1,0 +1,173 @@
+// Sliding-window rate limiter with optional Upstash Redis backend.
+// Set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN in Vercel env vars
+// to enable distributed rate limiting across serverless instances.
+// Without those vars, falls back to in-memory (per-container, dev/local friendly).
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+let redisLimiterCache: Record<string, any> | null = null
+
+function getRedisLimiter() {
+  if (redisLimiterCache !== null) return redisLimiterCache
+
+  try {
+    if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+      const { Redis } = require('@upstash/redis')
+      const { Ratelimit } = require('@upstash/ratelimit')
+      const redis = new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+      })
+      redisLimiterCache = { Redis, Ratelimit, redis }
+      return redisLimiterCache
+    }
+  } catch {
+    // Fall back to in-memory
+  }
+
+  redisLimiterCache = {}
+  return redisLimiterCache
+}
+
+// ── In-memory fallback (per-container, no cross-instance sync)
+const store = new Map<string, number[]>()
+
+// Periodic cleanup: purge stale entries every 5 minutes
+if (typeof setInterval !== 'undefined') {
+  setInterval(() => {
+    const now = Date.now()
+    const maxWindow = 60 * 60_000 // 1 hour
+    store.forEach((hits: number[], key: string) => {
+      const fresh = hits.filter((t: number) => t > now - maxWindow)
+      if (fresh.length === 0) store.delete(key)
+      else store.set(key, fresh)
+    })
+  }, 5 * 60_000)
+}
+
+/**
+ * Synchronous in-memory rate limiter.
+ * Returns true if the request is allowed, false if rate-limited.
+ * @param key      Unique identifier (e.g. `session:${userId}`)
+ * @param limit    Max requests per window
+ * @param windowMs Window size in milliseconds
+ */
+export function checkRateLimit(key: string, limit: number, windowMs: number): boolean {
+  const now = Date.now()
+  const hits = (store.get(key) ?? []).filter(t => t > now - windowMs)
+  if (hits.length >= limit) return false
+  hits.push(now)
+  store.set(key, hits)
+  return true
+}
+
+/**
+ * Read-only check — is this key ALREADY over its limit?
+ *
+ * Unlike checkRateLimit, this records nothing. Pair it with recordAttempt() to
+ * build a failure-only limiter: check before verifying credentials, then record
+ * ONLY when verification fails. That way brute-force guessing is still capped,
+ * but a caller presenting valid credentials is never locked out of their own
+ * account — which is what happens if you count successful auths too.
+ */
+export function isRateLimited(key: string, limit: number, windowMs: number): boolean {
+  const now = Date.now()
+  const hits = (store.get(key) ?? []).filter(t => t > now - windowMs)
+  return hits.length >= limit
+}
+
+/** Record one attempt against a key (used for FAILED attempts only). */
+export function recordAttempt(key: string, windowMs: number): void {
+  const now = Date.now()
+  const hits = (store.get(key) ?? []).filter(t => t > now - windowMs)
+  hits.push(now)
+  store.set(key, hits)
+}
+
+/**
+ * Async rate limiter — uses Upstash Redis when configured, falls back to in-memory.
+ * Prefer this in API routes for production correctness across serverless instances.
+ *
+ * NOTE: Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN environment variables
+ * to enable distributed rate limiting.
+ */
+export async function checkRateLimitAsync(key: string, max: number, windowMs: number): Promise<boolean> {
+  const rl = getRedisLimiter()
+  if (rl.Ratelimit && rl.redis) {
+    try {
+      const limiter = new rl.Ratelimit({
+        redis: rl.redis,
+        limiter: rl.Ratelimit.slidingWindow(max, `${windowMs}ms`),
+      })
+      const { success } = await limiter.limit(key)
+      return success
+    } catch {
+      // Fall through to in-memory on Redis error
+    }
+  }
+  return checkRateLimit(key, max, windowMs)
+}
+
+/**
+ * Strict async rate limiter — FAIL CLOSED when Redis is configured but unavailable.
+ *
+ * Use this for security-critical paths (authentication, payment, admin PIN) where
+ * an in-memory per-container fallback would allow bypass via concurrent cold starts.
+ * If Redis is configured but throws, this returns false (deny) rather than falling
+ * back to the per-process store.
+ *
+ * Without Redis configured, falls back to in-memory (dev/staging parity).
+ */
+export async function checkRateLimitStrict(key: string, max: number, windowMs: number): Promise<boolean> {
+  const rl = getRedisLimiter()
+  if (rl.Ratelimit && rl.redis) {
+    // Redis is configured — fail closed on any error
+    const limiter = new rl.Ratelimit({
+      redis: rl.redis,
+      limiter: rl.Ratelimit.slidingWindow(max, `${windowMs}ms`),
+    })
+    const { success } = await limiter.limit(key)
+    return success
+  }
+  // No Redis configured (dev / no env vars) — use in-memory
+  return checkRateLimit(key, max, windowMs)
+}
+
+/**
+ * Async read-only rate-limit check (does NOT record an attempt).
+ * Mirrors isRateLimited() but uses Redis sliding window when configured,
+ * giving globally-consistent enforcement across all serverless containers.
+ * Pair with recordAttemptAsync() for failure-only counting.
+ */
+export async function isRateLimitedAsync(key: string, limit: number, windowMs: number): Promise<boolean> {
+  const rl = getRedisLimiter()
+  if (rl.redis) {
+    try {
+      const now = Date.now()
+      const count = await rl.redis.zcount(key, now - windowMs, now)
+      return count >= limit
+    } catch {
+      // Fall through to in-memory on Redis error
+    }
+  }
+  return isRateLimited(key, limit, windowMs)
+}
+
+/**
+ * Async version of recordAttempt() — records one failed attempt.
+ * Uses Redis sorted set for cross-container persistence when configured.
+ */
+export async function recordAttemptAsync(key: string, windowMs: number): Promise<void> {
+  const rl = getRedisLimiter()
+  if (rl.redis) {
+    try {
+      const now = Date.now()
+      await rl.redis.zadd(key, { score: now, member: `${now}-${Math.random().toString(36).slice(2)}` })
+      await rl.redis.zremrangebyscore(key, 0, now - windowMs)
+      await rl.redis.expire(key, Math.ceil(windowMs / 1000) + 60)
+      return
+    } catch {
+      // Fall through to in-memory on Redis error
+    }
+  }
+  recordAttempt(key, windowMs)
+}

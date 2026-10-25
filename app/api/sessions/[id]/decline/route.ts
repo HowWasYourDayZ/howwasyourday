@@ -1,0 +1,131 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
+import { logger } from '@/lib/logger'
+import { sendRequestWithdrawn } from '@/lib/push'
+import { REQUEST_RESPONSE_WINDOW_MS } from '@/lib/constants'
+import { recordMissedRequest } from '@/lib/listener-presence'
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+
+// POST /api/sessions/[id]/decline
+// Called by:
+//   - Listener: explicitly decline a pending request
+//   - Seeker:   cancel their own pending request
+// In both cases: session → cancelled, seeker's held wallet amount refunded.
+// Body { reason: 'timeout' } = sent automatically when the response window ran
+// out (seeker's waiting screen or the listener's countdown). Recorded as
+// 'timed_out' — not 'seeker_cancelled' / 'declined' — so missed requests are
+// counted correctly and the listener can be set offline (recordMissedRequest).
+export async function POST(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  const sessionId = params.id
+  if (!sessionId || !UUID_RE.test(sessionId)) {
+    return NextResponse.json({ error: 'Invalid session id' }, { status: 400 })
+  }
+
+  const userSb = createServerSupabaseClient()
+  const { data: { user } } = await userSb.auth.getUser()
+  if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
+  const sb = createAdminClient()
+
+  const { data: session } = await sb
+    .from('sessions')
+    .select('id, listener_id, seeker_id, status, amount_held, is_free_trial, created_at')
+    .eq('id', sessionId)
+    .single()
+
+  if (!session) return NextResponse.json({ error: 'Session not found' }, { status: 404 })
+  if (session.listener_id !== user.id && session.seeker_id !== user.id) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 403 })
+  }
+  if (session.status !== 'pending') {
+    return NextResponse.json({ error: 'Session is no longer pending', status: session.status }, { status: 409 })
+  }
+
+  const isListener = session.listener_id === user.id
+  const body = await req.json().catch(() => ({}))
+  // A timeout counts against the listener (recordMissedRequest can set them
+  // offline), so a SEEKER's claim must be backed by the full window — otherwise
+  // anyone could book, "time out" early, and knock a listener offline for free.
+  // The listener's own countdown gets 5s of clock-skew slack (see below).
+  const ageMs = Date.now() - new Date(session.created_at as string).getTime()
+  // Listener gets 5s of clock-skew slack; seeker gets none — a seeker must not be
+  // able to claim a timeout early and trigger recordMissedRequest.
+  // A "timeout" sent before the window has actually passed (device clock ahead,
+  // or a countdown that drifted) must NOT cancel the request — it used to cancel
+  // anyway, just under another label, so listeners lost requests they never saw.
+  const slackMs = isListener ? 5_000 : 0
+  if (body?.reason === 'timeout' && ageMs < REQUEST_RESPONSE_WINDOW_MS - slackMs) {
+    return NextResponse.json({
+      error: 'not_expired',
+      retryInMs: REQUEST_RESPONSE_WINDOW_MS - slackMs - ageMs,
+      status: 'pending',
+    }, { status: 409 })
+  }
+  const timedOut = body?.reason === 'timeout'
+  const cancelReason = timedOut ? 'timed_out' : isListener ? 'declined' : 'seeker_cancelled'
+
+  // Atomically cancel (optimistic lock on status='pending' → refund fires once)
+  const { data: cancelled } = await sb
+    .from('sessions')
+    .update({
+      status: 'cancelled',
+      ended_at: new Date().toISOString(),
+      cancel_reason: cancelReason,
+      responded_at: new Date().toISOString(),
+    })
+    .eq('id', sessionId)
+    .eq('status', 'pending')
+    .select('id')
+    .maybeSingle()
+
+  if (!cancelled) {
+    return NextResponse.json({ error: 'Session already handled' }, { status: 409 })
+  }
+
+  // The seeker withdrew (Cancel / left / ran out of time): clear the ringing
+  // alert on the listener's phone so it can't lead to an empty dashboard.
+  if (!isListener) await sendRequestWithdrawn(sb, session.listener_id, sessionId)
+
+  // Refund the held amount to the seeker
+  const held = Number(session.amount_held) || 0
+  if (held > 0 && !session.is_free_trial) {
+    const { error: refundErr } = await sb.rpc('credit_wallet', {
+      p_user_id: session.seeker_id,
+      p_amount:  held,
+    })
+    if (refundErr) {
+      logger.error('decline: seeker refund failed — manual action needed', {
+        sessionId, seekerId: session.seeker_id, held, error: refundErr.message,
+      })
+    } else {
+      const { error: txErr } = await sb.from('wallet_transactions').insert({
+        user_id:     session.seeker_id,
+        amount:      held,
+        type:        'refund',
+        description: timedOut ? 'Refund — listener did not respond' : isListener ? 'Refund — listener declined' : 'Refund — request cancelled',
+        session_id:  sessionId,
+      })
+      if (txErr) logger.error('decline: wallet_transactions insert failed (audit gap)', { sessionId, error: txErr.message })
+    }
+  }
+
+  if (timedOut) await recordMissedRequest(sb, { listenerId: session.listener_id as string, sessionId })
+
+  // Notify the seeker (only meaningful when the LISTENER declined; if the seeker
+  // cancelled their own request they already know)
+  if (isListener) {
+    await sb.from('notifications').insert({
+      user_id:    session.seeker_id,
+      type:       'session_cancelled',
+      title:      'Listener unavailable',
+      body:       'The listener was unavailable right now. Your wallet has been fully refunded — try another listener!',
+      action_url: '/browse',
+    }).then(() => {}, () => {})
+  }
+
+  return NextResponse.json({ ok: true })
+}
