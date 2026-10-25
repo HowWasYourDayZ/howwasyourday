@@ -259,7 +259,7 @@ export default function EmotionalSupportHubPage() {
         </div>
 
         <p style={{fontSize:12,color:'var(--gray)',textAlign:'center',lineHeight:1.6}}>
-          🆘 In crisis? Call <strong><a href="tel:08046110007" style={{color:'inherit'}}>NIMHANS 080-46110007</a></strong> or <strong><a href="tel:14416" style={{color:'inherit'}}>Tele-MANAS 14416</a></strong> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <strong><a href="tel:116123" style={{color:'inherit'}}>Samaritans 116 123</a></strong> or <strong><a href="sms:85258" style={{color:'inherit'}}>text SHOUT to 85258</a></strong> (free · 24/7)
         </p>
       </div>
     </>

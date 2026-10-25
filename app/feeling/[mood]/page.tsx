@@ -125,7 +125,7 @@ export default function FeelingPage({ params }: { params: { mood: string } }) {
         </nav>
 
         <div style={{ background:'#EBF5FB', borderLeft:'4px solid #1A8FA0', borderRadius:'0 12px 12px 0', padding:'14px 18px', marginBottom:28, fontSize:14, color:'#0F4867', fontWeight:600, lineHeight:1.65 }}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{ color:'#1A8FA0', fontWeight:800 }}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{ color:'#1A8FA0', fontWeight:800 }}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{ color:'#1A8FA0', fontWeight:800 }}>Samaritans 116 123</a> or <a href="sms:85258" style={{ color:'#1A8FA0', fontWeight:800 }}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -181,7 +181,7 @@ export default function FeelingPage({ params }: { params: { mood: string } }) {
 
         <div className="disclaimer">
           <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
-          <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
+          <p><strong>Samaritans:</strong> <a href="tel:116123">116 123</a> &nbsp;|&nbsp; <strong>Shout:</strong> <a href="sms:85258">85258</a> (free · 24/7)</p>
           <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>

@@ -43,7 +43,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Do I need to be in crisis to use How Was Your Day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Not at all. Most people who use How Was Your Day are not in crisis — they are just carrying something they need to say out loud. Everyday weight is reason enough: work stress, relationship tension, family pressure, or simply feeling off without knowing why. If you are in a mental health crisis or having thoughts of self-harm, please call NIMHANS (080-46110007) or Tele-MANAS (14416), both free and 24/7.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Not at all. Most people who use How Was Your Day are not in crisis — they are just carrying something they need to say out loud. Everyday weight is reason enough: work stress, relationship tension, family pressure, or simply feeling off without knowing why. If you are in a mental health crisis or having thoughts of self-harm, please call Samaritans (116 123) or Shout (text SHOUT to 85258), both free and 24/7.' },
     },
     {
       '@type': 'Question',
@@ -132,7 +132,7 @@ export default function TalkAboutMyProblemsOnlinePage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">

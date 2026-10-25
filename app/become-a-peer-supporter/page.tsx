@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: 'What happens if someone is in crisis?',
-    a: 'Peer supporters are not crisis counsellors. If someone may be in danger, you point them to Tele-MANAS (14416, free, 24/7) or NIMHANS (080-46110007) and can flag the session to How Was Your Day.',
+    a: 'Peer supporters are not crisis counsellors. If someone may be in danger, you point them to text SHOUT to (85258, free, 24/7) or Samaritans (116 123) and can flag the session to How Was Your Day.',
   },
   {
     q: 'How much time does it take?',

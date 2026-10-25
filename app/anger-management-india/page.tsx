@@ -159,7 +159,7 @@ export default function AngerManagementIndiaPage() {
         <div className="section">
           <h2>Panic Attacks and Anger</h2>
           <p>Anger and panic are not opposites — they often overlap. The racing heart, the inability to think clearly, the physical intensity — these can accompany both states. If you have panic attacks, peer support can help you process the emotional content that triggers them and work through the aftermath when they happen.</p>
-          <p>If you are having a panic attack right now, please reach out to <a href="tel:14416" style={{color:'var(--teal)',fontWeight:700}}>Tele-MANAS: 14416</a> or <a href="tel:08046110007" style={{color:'var(--teal)',fontWeight:700}}>NIMHANS: 080-46110007</a>.</p>
+          <p>If you are having a panic attack right now, please reach out to <a href="sms:85258" style={{color:'var(--teal)',fontWeight:700}}>text SHOUT to 85258</a> or <a href="tel:116123" style={{color:'var(--teal)',fontWeight:700}}>Samaritans 116 123</a>.</p>
         </div>
 
         <div className="cta-card">

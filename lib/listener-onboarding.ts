@@ -95,14 +95,14 @@ export const TAGLINE_PHRASES = [
 
 // Screening quiz — auto-scored server-side; the score is shown to the admin
 // (not a hard gate yet). `correct` is the index of the right option.
-// Crisis answers may only reference NIMHANS and Tele-MANAS (see CLAUDE.md).
+// Crisis answers may only reference Samaritans and Shout (text SHOUT to 85258) (see CLAUDE.md).
 export const SCREENING_QUIZ: ReadonlyArray<{ id: string; q: string; options: readonly string[]; correct: number }> = [
   {
     id: 'crisis',
     q: 'A seeker says they are thinking of ending their life. What do you do?',
     options: [
       'Tell them to calm down and change the topic',
-      'Take it seriously, stay with them, and share NIMHANS (080-46110007) or Tele-MANAS (14416) for immediate help',
+      'Take it seriously, stay with them, and share Samaritans (116 123) or Shout (text SHOUT to 85258) for immediate help',
       'End the session — it is not your responsibility',
       'Promise to keep it a secret and keep chatting',
     ],

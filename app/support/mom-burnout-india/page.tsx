@@ -173,7 +173,7 @@ export default function MomBurnoutIndiaPage() {
 
         <div className="crisis">
           <strong>If you are having thoughts of self-harm or feel you cannot go on</strong>
-          NIMHANS helpline: <a href="tel:08046110007">080-46110007</a> · Tele-MANAS: <a href="tel:14416">14416</a> (free, 24/7)
+          Samaritans: <a href="tel:116123">116 123</a> · text SHOUT to 85258 (free, 24/7)
         </div>
 
         <h2>Signs of Maternal Burnout</h2>
@@ -189,7 +189,7 @@ export default function MomBurnoutIndiaPage() {
 
         <h2>Why Maternal Burnout Is Particularly Hard in India</h2>
         <p>
-          In India, mothers are expected to be selfless. To prioritise the child, the family, the household —
+          In the UK or Ireland, mothers are expected to be selfless. To prioritise the child, the family, the household —
           always. There is almost no cultural permission to say: I am burnt out by this role that I also love.
         </p>
         <p>

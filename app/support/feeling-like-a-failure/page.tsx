@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'When does feeling like a failure need professional help?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If the feeling is persistent (weeks to months), if it is affecting your ability to work or function, if it comes with thoughts of harming yourself or not wanting to be here, please speak to a mental health professional or call NIMHANS (080-46110007). Peer support is for processing and being heard — not for clinical treatment.',
+        text: 'If the feeling is persistent (weeks to months), if it is affecting your ability to work or function, if it comes with thoughts of harming yourself or not wanting to be here, please speak to a mental health professional or call Samaritans (116 123). Peer support is for processing and being heard — not for clinical treatment.',
       },
     },
   ],
@@ -152,7 +152,7 @@ export default function FeelingLikeAFailurePage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -181,7 +181,7 @@ export default function FeelingLikeAFailurePage() {
           <p>India&apos;s education system runs on rank. Not pass or fail — rank. Where you placed in class, in district, in state. Children internalise early that their value is a number relative to other children. This way of measuring worth does not disappear when school ends. It continues into careers, salaries, neighbourhoods, the school the children attend. The comparison never stops.</p>
 
           <h3>Parental Pressure and Family Expectations</h3>
-          <p>In India, family expectations are not a background presence — they are an active daily reality. Parents have sacrificed for children to succeed. Children carry that weight. When you feel like you are falling short, you are not just disappointing yourself. You are carrying the fear of disappointing people who love you and who you love. That is an enormous emotional load.</p>
+          <p>In the UK or Ireland, family expectations are not a background presence — they are an active daily reality. Parents have sacrificed for children to succeed. Children carry that weight. When you feel like you are falling short, you are not just disappointing yourself. You are carrying the fear of disappointing people who love you and who you love. That is an enormous emotional load.</p>
 
           <h3>Salary as Identity</h3>
           <p>A specific and very Indian form of the failure feeling comes from salary comparisons. In many families and social circles, income is discussed openly, and your worth as an adult is substantially tied to what you earn. This creates a chronic low-grade sense of inadequacy in anyone who earns less than the comparison point — which, given the way comparisons work, is almost everyone.</p>

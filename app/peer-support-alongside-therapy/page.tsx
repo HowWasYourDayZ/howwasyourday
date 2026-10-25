@@ -7,8 +7,8 @@ export const dynamic = 'force-static'
 // For people already living with a mental health condition — in treatment,
 // on medication, between therapy sessions, or on a waiting list — who also
 // want someone to talk to. How Was Your Day is ALONGSIDE care, never instead of it:
-// listeners never advise on diagnosis or medication. Only Tele-MANAS /
-// NIMHANS as crisis numbers (CLAUDE.md).
+// listeners never advise on diagnosis or medication. Only Shout (text SHOUT to 85258) /
+// Samaritans as crisis numbers (CLAUDE.md).
 
 const URL = 'https://www.howwasyourday.live/peer-support-alongside-therapy'
 
@@ -26,7 +26,7 @@ const QA_A = 'Yes. Many people use How Was Your Day between therapy sessions, la
 const faqs = [
   { q: 'Can I use How Was Your Day if I have depression, anxiety or another diagnosis?', a: 'Yes, as long as you keep your professional care. A peer listener can be someone to talk to about your day, your worries or how you are coping. They are not clinicians: they will not diagnose you, change your treatment or tell you what medication to take. Share only what you are comfortable sharing.' },
   { q: 'Can a listener tell me whether to change or stop my medication?', a: 'No — and they will not try. Only your psychiatrist or doctor should decide anything about medication. If something about your treatment worries you, write it down and take it to them.' },
-  { q: 'I am on a waiting list for therapy. Is it okay to talk to someone meanwhile?', a: 'Yes. Waiting can be hard, and talking to someone who listens can make it more bearable. If things get worse while you wait — especially thoughts of harming yourself — call Tele-MANAS on 14416 (free, 24/7) or NIMHANS on 080-46110007, and contact the service you are waiting for.' },
+  { q: 'I am on a waiting list for therapy. Is it okay to talk to someone meanwhile?', a: 'Yes. Waiting can be hard, and talking to someone who listens can make it more bearable. If things get worse while you wait — especially thoughts of harming yourself — text SHOUT to 85258 (free, 24/7) or Samaritans 116 123, and contact the service you are waiting for.' },
   { q: 'Should I tell my therapist I use How Was Your Day?', a: 'It is up to you, but many therapists welcome knowing what helps you between sessions. You can bring anything that came up in a How Was Your Day conversation into therapy.' },
   { q: 'What is the difference between a peer listener and my therapist?', a: 'Your therapist is a trained professional who assesses and treats. A peer listener is an ordinary adult with lived experience who listens — no treatment plan, no diagnosis. Peer support can sit alongside therapy, but it does not replace it.' },
   { q: 'Is it private?', a: 'The listener sees only the name you choose, never your phone number. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session.' },

@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'How much does it cost per minute to talk on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In India, the session total is the selected listener’s per-minute rate × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; another listener rate changes the total. One introductory session of up to 5 minutes is free per account. See https://www.howwasyourday.live/pricing for current details.',
+        text: 'In the UK or Ireland, the session total is the selected listener’s per-minute rate × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; another listener rate changes the total. One introductory session of up to 5 minutes is free per account. See https://www.howwasyourday.live/pricing for current details.',
       },
     },
     {
@@ -289,7 +289,7 @@ export default function PayToTalkOnlineIndiaPage() {
           </div>
           <div className="faq-item">
             <h3>How much does it cost per minute?</h3>
-            <p>In India, the total is the selected listener’s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; the total changes with the listener’s rate. One introductory session of up to 5 minutes is free per account. See <a href="/pricing">current pricing</a>.</p>
+            <p>In the UK or Ireland, the total is the selected listener’s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160; the total changes with the listener’s rate. One introductory session of up to 5 minutes is free per account. See <a href="/pricing">current pricing</a>.</p>
           </div>
           <div className="faq-item">
             <h3>Is it anonymous?</h3>
@@ -312,8 +312,8 @@ export default function PayToTalkOnlineIndiaPage() {
 
         <div className="disclaimer">
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
-            <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
-            <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
+            <strong>Samaritans 116 123</strong> &nbsp;|&nbsp;
+            <strong>text SHOUT to 85258</strong> (free, 24/7)<br />
             How Was Your Day is peer support — not a substitute for emergency mental health care.
           </p>
         </div>

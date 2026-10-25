@@ -82,7 +82,7 @@ export const post = {
 
 <p>Peer support is right for a great many things, but not for everything. If alongside the loneliness there is persistent hopelessness, a sense that things will never change, or any thoughts of harming yourself, that deserves professional care — not because you are too much, but because you deserve properly qualified support.</p>
 
-<p>Two free government helplines in India are available 24/7: <strong>NIMHANS at 080-46110007</strong> and <strong>Tele-MANAS at 14416</strong>. Please use them. They exist precisely for this, and calling costs you nothing.</p>
+<p>Two free crisis helplines are available 24/7: <strong>Samaritans 116 123</strong> and <strong>text SHOUT to 85258</strong>. Please use them. They exist precisely for this, and calling costs you nothing.</p>
 
 <p>Whatever you decide to do next, hold on to this: having no one to talk to is a circumstance, and circumstances change. The absence of someone right now says nothing about whether you are worth talking to. It only means the right person has not been in the room yet.</p>
   `.trim(),

@@ -50,7 +50,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is peer support appropriate for postpartum depression or do I need a professional?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Postpartum depression is a medical condition and a doctor or therapist is the right primary support. How Was Your Day is peer support — it is not therapy and does not replace professional care. But if access to a therapist is limited or you are on a waitlist, or if you want a space to talk between professional appointments, peer support can provide genuine relief and reduce isolation. If you are in distress, please reach out to NIMHANS (080-46110007) or Tele-MANAS (14416).' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Postpartum depression is a medical condition and a doctor or therapist is the right primary support. How Was Your Day is peer support — it is not therapy and does not replace professional care. But if access to a therapist is limited or you are on a waitlist, or if you want a space to talk between professional appointments, peer support can provide genuine relief and reduce isolation. If you are in distress, please reach out to Samaritans (116 123) or Shout (text SHOUT to 85258).' },
     },
     {
       '@type': 'Question',
@@ -137,7 +137,7 @@ export default function PostpartumIndiaPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -185,7 +185,7 @@ export default function PostpartumIndiaPage() {
 
         <div className="section">
           <h2>A Space Where You Can Say the Real Thing</h2>
-          <p>A How Was Your Day session is not a substitute for medical care. If you are experiencing symptoms of postpartum depression — persistent low mood, difficulty bonding, intrusive thoughts, or thoughts of harming yourself or your baby — please talk to a doctor. The helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free and available 24/7.</p>
+          <p>A How Was Your Day session is not a substitute for medical care. If you are experiencing symptoms of postpartum depression — persistent low mood, difficulty bonding, intrusive thoughts, or thoughts of harming yourself or your baby — please talk to a doctor. The helplines Samaritans (116 123) and Shout (text SHOUT to 85258) are free and available 24/7.</p>
           <p>But for the vast territory between clinical crisis and performing-fine — the exhaustion, the ambivalence, the grief, the loneliness, the anger you cannot show, the feelings you have not named to anyone yet — peer support offers something that therapy and helplines do not always provide: a real person who has been through something similar, listening without agenda, without judgment, and without needing anything from you in return.</p>
           <p>You can start a session with "I just had a baby and I do not know how I feel" or "I am not okay and I do not know how to say it to anyone in my life." That is enough. A listener will meet you there.</p>
           <div className="how-steps" style={{marginTop:20}}>

@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'Is How Was Your Day safe for teenagers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. How Was Your Day is designed to be safe and anonymous. Listeners are screened, sessions are confidential, and there is no sharing of information with parents or schools. For anyone in crisis, How Was Your Day always refers to professional helplines: NIMHANS (080-46110007) and Tele-MANAS (14416).',
+        text: 'Yes. How Was Your Day is designed to be safe and anonymous. Listeners are screened, sessions are confidential, and there is no sharing of information with parents or schools. For anyone in crisis, How Was Your Day always refers to professional helplines: Samaritans (116 123) and Shout (text SHOUT to 85258).',
       },
     },
     {
@@ -179,7 +179,7 @@ export default function TeenMentalHealthIndiaPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">Is How Was Your Day safe for teenagers?</div>
-            <div className="faq-a">Yes. How Was Your Day is anonymous and confidential. Listeners are screened, sessions are private, and no information is shared with parents or schools. For anyone in crisis, How Was Your Day always refers to NIMHANS (080-46110007) and Tele-MANAS (14416).</div>
+            <div className="faq-a">Yes. How Was Your Day is anonymous and confidential. Listeners are screened, sessions are private, and no information is shared with parents or schools. For anyone in crisis, How Was Your Day always refers to Samaritans (116 123) and Shout (text SHOUT to 85258).</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Will my parents know?</div>

@@ -173,7 +173,7 @@ export default function CanadaLonelinessPage() {
 
         <div className="night-box">
           <h2>❄️ The first winter hits different</h2>
-          <p>In India, even a bad day ends with noise, people, movement. In Canada, winter evenings are dark
+          <p>In the UK or Ireland, even a bad day ends with noise, people, movement. In Canada, winter evenings are dark
             by 4 PM and profoundly silent. That contrast — especially in your first year — can be genuinely
             overwhelming.</p>
           <p>How Was Your Day listeners are available whenever the silence gets too loud — midnight, 2 AM, any time.
@@ -250,8 +250,8 @@ export default function CanadaLonelinessPage() {
 
         <div className="disclaimer">
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
-            <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
-            <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
+            <strong>Samaritans 116 123</strong> &nbsp;|&nbsp;
+            <strong>text SHOUT to 85258</strong> (free, 24/7)<br />
             How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>

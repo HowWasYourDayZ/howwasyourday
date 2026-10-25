@@ -100,7 +100,7 @@ export default function IndiansInChicagoPage() {
           <a href="/usa-loneliness">NRI loneliness USA &rarr;</a>
           <a href="/indians-in-texas">Indians in Texas &rarr;</a>
         </div></div>
-        <div className="crisis"><strong>In a crisis?</strong> NIMHANS: 080-46110007 &nbsp;&middot;&nbsp; Tele-MANAS: 14416 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
+        <div className="crisis"><strong>In a crisis?</strong> Samaritans 116 123 &nbsp;&middot;&nbsp; text SHOUT to 85258 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
       </div>
     </>
   )

@@ -216,8 +216,10 @@ No other session states may exist. Any new state requires updating this file fir
 
 Every screen showing an active or pending conversation must render a fixed, **un-dismissible** footer with **only** these two official helplines — no others permitted anywhere on the platform:
 
-- **NIMHANS:** 080-46110007
-- **Tele-MANAS:** 14416
+- **Samaritans (UK & Ireland):** 116 123 (free, 24/7)
+- **Shout (UK):** text SHOUT to 85258 (free, 24/7)
+- **Emergency:** 999 (UK) / 112 (UK & EU)
+- **Other EU countries:** findahelpline.com
 
 If a user appears to be in crisis, surface these and do not attempt to handle the crisis through the peer-support flow.
 

@@ -358,9 +358,9 @@ export default function LateNightSupportIndiaPage() {
         <div className="crisis-box">
           <p>🆘 If you are having thoughts of self-harm or are in crisis right now, please reach out immediately:</p>
           <p style={{ marginTop: 8 }}>
-            <strong><a href="tel:08046110007">NIMHANS: 080-46110007</a></strong> (free, 24/7)
+            <strong><a href="tel:116123">Samaritans 116 123</a></strong> (free, 24/7)
             &nbsp;·&nbsp;
-            <strong><a href="tel:14416">Tele-MANAS: 14416</a></strong> (free, Govt of India)
+            <strong><a href="sms:85258">text SHOUT to 85258</a></strong> (free)
           </p>
         </div>
 

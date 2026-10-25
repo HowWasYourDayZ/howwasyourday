@@ -30,7 +30,7 @@ async function get(path, ua = 'browser') {
 function inspect(path, r) {
   const b = r.body
   const text = b.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ')
-  const lines247 = (text.match(/[^.]{0,80}24\s*\/\s*7[^.]{0,40}/gi) || []).filter(x => !/tele-?manas|14416|nimhans|helpline|government/i.test(x))
+  const lines247 = (text.match(/[^.]{0,80}24\s*\/\s*7[^.]{0,40}/gi) || []).filter(x => !/tele-?manas|85258|nimhans|helpline|government/i.test(x))
   return {
     path, status: r.status, ms: r.ms, location: r.location || undefined, xrobots: r.xrobots || undefined,
     title: pick(/<title[^>]*>([^<]*)<\/title>/i, b),

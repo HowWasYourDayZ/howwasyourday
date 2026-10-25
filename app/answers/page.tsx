@@ -72,8 +72,8 @@ export default function AnswersPage() {
           The first 5 minutes are free; in India a 15-minute session starts at ₹160.
         </p>
         <div className="crisis">
-          If you are thinking about harming yourself, call Tele-MANAS <a href="tel:14416">14416</a> or
-          NIMHANS <a href="tel:08046110007">080-46110007</a> (free). If you are in danger, contact the police.
+          If you are thinking about harming yourself, text SHOUT to 85258 or
+          Samaritans <a href="tel:116123">116 123</a> (free). If you are in danger, contact the police.
         </div>
         <nav className="toc" aria-label="Sections">
           {GROUPS.map(g => <a key={g.id} href={`#${g.id}`}>{g.title}</a>)}

@@ -80,7 +80,7 @@ const faqSchema = {
       name: 'What if I am not safe at home?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are in danger, contact the police or local emergency services first. If you are in emotional crisis or thinking of harming yourself, call Tele-MANAS on 14416 or NIMHANS on 080-46110007 (free). How Was Your Day is for talking things through, not for emergencies.',
+        text: 'If you are in danger, contact the police or local emergency services first. If you are in emotional crisis or thinking of harming yourself, text SHOUT to 85258 or Samaritans 116 123 (free). How Was Your Day is for talking things through, not for emergencies.',
       },
     },
   ],

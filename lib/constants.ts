@@ -79,9 +79,14 @@ export const AWAY_WITH_ALERTS_MINS = 60
 export const LEAVE_GRACE_SECS = 180
 export const RECHARGE_AMOUNTS   = [200, 500, 1000, 2000] as const
 export const UUID_RE            = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+// Crisis lines shown across the site (UK & Ireland + EU emergency). Only these —
+// see CLAUDE.md. 116 123 is Samaritans in both the UK and Ireland; 112 works in
+// the UK and every EU country; findahelpline.com covers the rest of Europe.
 export const CRISIS_RESOURCES   = {
-  NIMHANS:     { name: 'NIMHANS',     number: '080-46110007', tel: '08046110007' },
-  TELE_MANAS:  { name: 'Tele-MANAS', number: '14416',        tel: '14416'       },
+  SAMARITANS: { name: 'Samaritans', number: '116 123',            href: 'tel:116123' },
+  SHOUT:      { name: 'Shout',      number: 'text SHOUT to 85258', href: 'sms:85258' },
+  EMERGENCY:  { name: 'Emergency',  number: '999 / 112',          href: 'tel:112' },
+  EU_FINDER:  { name: 'Find a helpline (other EU countries)', number: 'findahelpline.com', href: 'https://findahelpline.com' },
 } as const
 
 export const LANGUAGES = [

@@ -73,7 +73,7 @@ export default function HowWasYourDayAppMentalHealth() {
 
         <div className="section">
           <h2>Is How Was Your Day safe?</h2>
-          <p>Yes. How Was Your Day is designed with privacy and safety at its core. Your identity is protected — a listener sees only the name you choose. Conversations are never shared outside How Was Your Day. If words linked to self-harm appear in a chat, How Was Your Day shows emergency helplines (NIMHANS: 080-46110007, Tele-MANAS: 14416) and flags the session for review. Every listener is manually verified before being approved.</p>
+          <p>Yes. How Was Your Day is designed with privacy and safety at its core. Your identity is protected — a listener sees only the name you choose. Conversations are never shared outside How Was Your Day. If words linked to self-harm appear in a chat, How Was Your Day shows emergency helplines (Samaritans 116 123, text SHOUT to 85258) and flags the session for review. Every listener is manually verified before being approved.</p>
         </div>
 
         <div className="cta-box">

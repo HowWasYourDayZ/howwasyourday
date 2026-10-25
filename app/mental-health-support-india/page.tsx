@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'Is mental health support free in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Tele-MANAS (14416) is a free, 24/7 Government of India mental-health helpline. Private-care fees vary by clinician, service and location. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the listener and mode and are shown before booking.',
+        text: 'Shout (text SHOUT to 85258) is a free, 24/7 mental-health helpline. Private-care fees vary by clinician, service and location. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the listener and mode and are shown before booking.',
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'How can I get immediate mental health support in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For a mental-health crisis or immediate danger, call Tele-MANAS at 14416 (free, 24/7) or contact local emergency services. For non-crisis emotional support, How Was Your Day offers peer-listener conversations without an appointment; availability depends on who is online. Peer support is not clinical treatment. Browse at howwasyourday.live/browse.',
+        text: 'For a mental-health crisis or immediate danger, text SHOUT to 85258 (free, 24/7) or contact local emergency services. For non-crisis emotional support, How Was Your Day offers peer-listener conversations without an appointment; availability depends on who is online. Peer support is not clinical treatment. Browse at howwasyourday.live/browse.',
       },
     },
   ],
@@ -159,7 +159,7 @@ export default function MentalHealthSupportIndiaPage() {
         </nav>
 
         <div className="crisis">
-          🆘 In crisis? Call <a href="tel:08046110007">NIMHANS 080-46110007</a> or <a href="tel:14416">Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123">Samaritans 116 123</a> or <a href="sms:85258">text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -279,7 +279,7 @@ export default function MentalHealthSupportIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is mental health support free in India?</div>
-            <div className="faq-a">Tele-MANAS (14416) is a free, 24/7 Government of India mental-health helpline. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the selected listener and mode and are shown before booking.</div>
+            <div className="faq-a">Shout (text SHOUT to 85258) is a free, 24/7 mental-health helpline. How Was Your Day offers one introductory session of up to 5 minutes free per account; paid prices depend on the selected listener and mode and are shown before booking.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What is the difference between mental health support and therapy?</div>
@@ -287,7 +287,7 @@ export default function MentalHealthSupportIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How can I get immediate mental health support in India?</div>
-            <div className="faq-a">For a mental health crisis or immediate danger, call NIMHANS 080-46110007 or Tele-MANAS 14416 — free and available 24/7. For non-crisis emotional support, How Was Your Day offers peer-listener conversations without an appointment; availability depends on which listeners are online. Peer support is not clinical treatment.</div>
+            <div className="faq-a">For a mental health crisis or immediate danger, call Samaritans 116 123 or text SHOUT to 85258 — free and available 24/7. For non-crisis emotional support, How Was Your Day offers peer-listener conversations without an appointment; availability depends on which listeners are online. Peer support is not clinical treatment.</div>
           </div>
         </div>
 

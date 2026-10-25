@@ -125,7 +125,7 @@ export default function AustraliaNriSupportPage() {
         </div>
 
         <p style={{ marginTop: 32, fontSize: 13, color: '#aaa', textAlign: 'center' }}>
-          Crisis support: NIMHANS 080-46110007 · Tele-MANAS 14416 · Outside India: your local emergency services
+          Crisis support: Samaritans 116 123 · text SHOUT to 85258 · Emergency 999 / 112
         </p>
       </main>
     </>

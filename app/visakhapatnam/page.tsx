@@ -159,7 +159,7 @@ export default function VisakhapatnamPage() {
         </div>
         <div className="disclaimer">
           <p><strong>How Was Your Day is peer support, not therapy.</strong> Listeners are screened peers, not licensed professionals. For clinical mental health conditions, please see a qualified professional.</p>
-          <p>Crisis support: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> (free, 24/7, Government of India).</p>
+          <p>Crisis support: <strong>Samaritans 116 123</strong> or <strong>text SHOUT to 85258</strong> (free, 24/7).</p>
         </div>
         <div className="cta-card">
           <h2>You don&apos;t have to carry it alone in Vizag.</h2>

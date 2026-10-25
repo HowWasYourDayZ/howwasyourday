@@ -33,7 +33,7 @@ Talk to someone who understands Indian family life and culture, in English, Hind
 WHAT HOWWASYOURDAY IS NOT
 How Was Your Day is peer support. It is not therapy, counselling, diagnosis, crisis care or emergency help, and it is only for adults aged 18 and over. Listeners choose their own hours, so someone is not always available immediately.
 
-If you are thinking about harming yourself, please call Tele-MANAS on 14416 or NIMHANS on 080-46110007 (free). If you are in danger, contact the police or local emergency services.
+If you are thinking about harming yourself, please text SHOUT to 85258 or Samaritans 116 123 (free). If you are in danger, contact the police or local emergency services.
 
 Privacy policy: https://www.howwasyourday.live/privacy
 Safeguarding: https://www.howwasyourday.live/safeguarding

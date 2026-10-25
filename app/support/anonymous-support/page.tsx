@@ -302,7 +302,7 @@ export default function AnonymousSupportPage() {
         {/* Disclaimer */}
         <div className="disclaimer">
           <p><strong>Peer support is not a substitute for professional mental health care.</strong> How Was Your Day listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
-          <p><strong>Crisis helplines in India:</strong> NIMHANS — <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:700}}>080-46110007</a> &nbsp;|&nbsp; Tele-MANAS — <a href="tel:14416" style={{color:'#7A5020',fontWeight:700}}>14416</a> (free · 24/7 · Govt of India)</p>
+          <p><strong>Crisis helplines (UK &amp; Ireland):</strong> Samaritans — <a href="tel:116123" style={{color:'#7A5020',fontWeight:700}}>116 123</a> &nbsp;|&nbsp; text SHOUT to 85258 (free · 24/7)</p>
         </div>
 
         {/* Related pages */}

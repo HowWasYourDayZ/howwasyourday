@@ -183,7 +183,7 @@ export default function PeerSupportPage() {
         </nav>
 
         <div className="crisis">
-          🆘 In crisis? Call <a href="tel:08046110007">NIMHANS 080-46110007</a> or <a href="tel:14416">Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123">Samaritans 116 123</a> or <a href="sms:85258">text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -303,7 +303,7 @@ export default function PeerSupportPage() {
             </tbody>
           </table></div>
           <h3 style={{marginTop:22}}>When a different kind of peer support fits better</h3>
-          <p>How Was Your Day is for everyday emotional weight — relationships, marriage, family pressure, loneliness, stress, wanting to vent. For some needs a specialist community is the better fit: addiction recovery (recovery fellowships), long-term support for a diagnosed mental health condition (condition-specific peer groups), LGBTQIA+-affirming support (LGBTQIA+-focused services), and anyone under 18. If you are in crisis, call Tele-MANAS on <a href="tel:14416" style={{color:'var(--teal)',fontWeight:800}}>14416</a> first.</p>
+          <p>How Was Your Day is for everyday emotional weight — relationships, marriage, family pressure, loneliness, stress, wanting to vent. For some needs a specialist community is the better fit: addiction recovery (recovery fellowships), long-term support for a diagnosed mental health condition (condition-specific peer groups), LGBTQIA+-affirming support (LGBTQIA+-focused services), and anyone under 18. If you are in crisis, text SHOUT to 85258 first.</p>
         </div>
 
         {/* Who it's for */}

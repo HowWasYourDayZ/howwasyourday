@@ -52,7 +52,7 @@ const faqSchema = {
       name: 'What if I need actual therapy, not just support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are experiencing symptoms of a serious mental health condition — persistent depression that impairs daily function, panic attacks, trauma responses, or thoughts of self-harm — please seek a licensed mental health professional. Government hospitals across India provide psychiatric services at subsidised or no cost. NIMHANS in Bengaluru and IHBAS in Delhi are examples. Many state mental health departments also run outpatient services. If you are in immediate crisis, call NIMHANS (080-46110007) or Tele-MANAS (14416).',
+        text: 'If you are experiencing symptoms of a serious mental health condition — persistent depression that impairs daily function, panic attacks, trauma responses, or thoughts of self-harm — please seek a licensed mental health professional. Government hospitals across India provide psychiatric services at subsidised or no cost. NIMHANS in Bengaluru and IHBAS in Delhi are examples. Many state mental health departments also run outpatient services. If you are in immediate crisis, call Samaritans (116 123) or Shout (text SHOUT to 85258).',
       },
     },
     {
@@ -157,7 +157,7 @@ export default function CantAffordTherapyIndiaPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -206,7 +206,7 @@ export default function CantAffordTherapyIndiaPage() {
           <p>The people in your life are often the first place you turn, and for good reason. But they come with real limitations: they have their own emotional states and limits, they are involved in your situation in ways that complicate objectivity, and the social cost of repeatedly burdening them with your problems is real. Many people stop sharing with friends because they do not want to be seen as &quot;a lot.&quot;</p>
 
           <h3>Free Government Helplines — Crisis-Only</h3>
-          <p>NIMHANS (080-46110007) and Tele-MANAS (14416) are run by the Government of India and are free, 24/7, and staffed by trained counsellors. They are genuinely useful in a crisis. But they are not designed for ongoing support or for the kind of regular processing that most people need — they are triaged for acute situations.</p>
+          <p>Samaritans (116 123) and Shout (text SHOUT to 85258) are run by the and are free, 24/7, and staffed by trained counsellors. They are genuinely useful in a crisis. But they are not designed for ongoing support or for the kind of regular processing that most people need — they are triaged for acute situations.</p>
 
           <h3>Journaling and Apps — Useful, But One-Sided</h3>
           <p>Writing, breathwork apps, and self-help tools can be genuinely useful as supplements. But they do not do the one thing that matters most: make you feel heard by another person. Research suggests that the felt experience of being understood by another human is qualitatively different from self-reflection, however rigorous.</p>

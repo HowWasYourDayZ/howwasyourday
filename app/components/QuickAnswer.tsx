@@ -6,8 +6,8 @@ import { PRICE_SNAPSHOT, seeker15 } from '@/lib/price-snapshot'
 // A short, direct answer at the top of a hub page, plus the same handful of
 // facts everywhere — what AI-powered search experiences (including ChatGPT Search, Copilot and Perplexity)
 // quote. Keep every claim literally true: prices from lib/constants and
-// lib/geo-pricing, listeners SCREENED (never "trained"), only Tele-MANAS and
-// NIMHANS, no listener earnings of any kind.
+// lib/geo-pricing, listeners SCREENED (never "trained"), only Shout (text SHOUT to 85258) and
+// Samaritans, no listener earnings of any kind.
 
 export const QUICK_ANSWER_UPDATED = '24 October 2026'
 
@@ -35,8 +35,8 @@ export default function QuickAnswer({ question, answer }: { question: string; an
       <a href="/talk?src=seo" style={{ display: 'inline-block', background: '#1A8FA0', color: '#fff', fontWeight: 900, fontSize: 15, padding: '11px 20px', borderRadius: 50, textDecoration: 'none' }}>Talk to someone now →</a>
       <a href="/is-howwasyourday-worth-it" style={{ display: 'block', marginTop: 10, color: '#1A8FA0', fontWeight: 800, fontSize: 13.5, textDecoration: 'none' }}>Is it worth it? Honest answers before you pay</a>
       <p style={{ fontSize: 12, color: '#7A8A96', margin: '12px 0 0', lineHeight: 1.6 }}>
-        In crisis? Call <a href="tel:14416" style={{ color: '#C0392B', fontWeight: 800 }}>Tele-MANAS 14416</a> (free, 24/7) or{' '}
-        <a href="tel:08046110007" style={{ color: '#C0392B', fontWeight: 800 }}>NIMHANS 080-46110007</a>. Updated {QUICK_ANSWER_UPDATED}.
+        In crisis? Text SHOUT to <a href="sms:85258" style={{ color: '#C0392B', fontWeight: 800 }}>85258</a> (free, 24/7) or{' '}
+        <a href="tel:116123" style={{ color: '#C0392B', fontWeight: 800 }}>Samaritans 116 123</a>. Updated {QUICK_ANSWER_UPDATED}.
       </p>
     </section>
   )

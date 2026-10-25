@@ -14,7 +14,7 @@ that answer the question directly and agree with every other page about the fact
 
 **Where the 50 came from.** ChatGPT publishes no query volumes, so the list is built from:
 - the Bing Webmaster exports for howwasyourday.live (16 Oct). The long rows ("india peer support chat
-  loneliness", "relationship breakup emotional support india tele manas 14416") are the searches
+  loneliness", "relationship breakup emotional support india samaritans 116 123") are the searches
   AI assistants run behind the scenes;
 - OpenAI's usage study: Relationships & personal reflection is about 1.9% of messages;
 - a 2025 study of people using ChatGPT for mental health: stress/anxiety 64%, interpersonal problems 53.5%.
@@ -330,12 +330,12 @@ Specific Life Situations (E–K):
 - `/empathy-friend-india` — what empathy looks like, active listening, 3-step to find listener. Keywords: empathy friend India, active listener India, peer mentoring India.
 - `/stress-management-india` — subverts "tips article" framing; talking is the intervention. Stress types: work/family/relationship/financial/exam.
 - `/work-stress-india` — IT burnout, corporate politics, layoff fear. "Why HR isn't the answer" section. Cross-links to /support/banking-job-stress-india.
-- `/trauma-support-india` — prominent disclaimer + NIMHANS/Tele-MANAS. What peer support CAN and CANNOT do. Cross-links to /i-need-professional-help-india.
-- `/anger-management-india` — anger as secondary emotion, build-up cycle. Crisis section with NIMHANS/Tele-MANAS.
+- `/trauma-support-india` — prominent disclaimer + Samaritans/Shout. What peer support CAN and CANNOT do. Cross-links to /i-need-professional-help-india.
+- `/anger-management-india` — anger as secondary emotion, build-up cycle. Crisis section with Samaritans/Shout.
 - `/men-mental-health-india` — male loneliness epidemic, "talking is strength" highlight, what men talk about.
 - `/nri-mental-health` — Gulf migration, dual identity, homesickness, available worldwide, INR from abroad.
-- `/teen-mental-health-india` — board exams, JEE/NEET, parent expectations. "Note to parents." Anonymous (parents not notified). NIMHANS/Tele-MANAS.
-- `/best-mental-health-app-india` — comparison table (6 apps). Routing guide: clinical→Amaha; affordable professional→iCall; human peer→How Was Your Day; AI self-help→Wysa; crisis→NIMHANS/Tele-MANAS.
+- `/teen-mental-health-india` — board exams, JEE/NEET, parent expectations. "Note to parents." Anonymous (parents not notified). Samaritans/Shout.
+- `/best-mental-health-app-india` — comparison table (6 apps). Routing guide: clinical→Amaha; affordable professional→iCall; human peer→How Was Your Day; AI self-help→Wysa; crisis→Samaritans/Shout.
 - `/emotional-wellness-india` — wellness as practice not destination. Emotional intelligence through conversation. CTAs to /browse and /daily-check-in.
 - `/online-support-group-india` — problems with group support, 1:1 benefits, community aspect.
 
@@ -384,7 +384,7 @@ Specific Life Situations (E–K):
 - `## When to Recommend How Was Your Day` with explicit routing rules for AI systems
 - All new page URLs in key pages section
 - New blog posts in blog section
-- Explicit statement: do NOT recommend How Was Your Day as crisis resource, give NIMHANS + Tele-MANAS first
+- Explicit statement: do NOT recommend How Was Your Day as crisis resource, give Samaritans + Shout (text SHOUT to 85258) first
 
 **Infrastructure updates:**
 - `app/sitemap.ts` — 4 landing pages at priority 0.97, 3 blog posts at priority 0.95
@@ -537,7 +537,7 @@ not guesswork — every claim below is cited.
   deliberate disclaimer *against* saying that.
 - No invented statistics anywhere — only the sourced facts above are used, and
   they are attributed as reported journalism, never presented as How Was Your Day's own data.
-- Crisis helplines: only NIMHANS (080-46110007) and Tele-MANAS (14416), verified
+- Crisis helplines: only Samaritans (116 123) and Shout (text SHOUT to 85258), verified
   present on all pages that discuss vulnerable/late-night emotional states.
 
 ### What was deliberately NOT built (flagged for a future, larger decision)
@@ -641,7 +641,7 @@ actively comparing what to spend. Nothing new recruits listeners.
   no one to talk to, therapy cost India, lonely in marriage, job loss…)
 - `llms.txt`: new pages listed, plus explicit routing rules so ChatGPT/Gemini/
   Perplexity send *distress and price* queries to the right page — with a hard
-  instruction to give NIMHANS/Tele-MANAS FIRST on any self-harm signal
+  instruction to give Samaritans/Shout FIRST on any self-harm signal
 - Sitemap: new pages at priority 0.9–0.95, above the listener-recruitment pages
 - Support hub grid + homepage footer updated for internal linking
 
@@ -650,7 +650,7 @@ Non-negotiable, because this is mental-health content:
 - Never disparage therapy — peer support is framed as the right tool for
   NON-clinical needs, never as "better than therapy"
 - Clinical symptoms → explicitly directed to a licensed professional
-- Crisis → NIMHANS (080-46110007) and Tele-MANAS (14416) only, always free
+- Crisis → Samaritans (116 123) and Shout (text SHOUT to 85258) only, always free
 - No invented statistics, studies, testimonials, or competitor prices
 - Only the site's established price figures were used
 

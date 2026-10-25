@@ -34,6 +34,6 @@ export const post = {
 <p>How Was Your Day connects NRIs with peer listeners who have lived the diaspora experience — available worldwide (availability follows Indian time), from US$10 per 15-minute session abroad. You do not need to be in India. You do not need to be in crisis. You just need to talk.</p>
 
 <h2>When Professional Help Is Warranted</h2>
-<p>Peer support is not a substitute for professional mental health care. If you are experiencing persistent depression, anxiety disorders, or thoughts of self-harm, please consult a mental health professional in your country. If you are in India and in crisis: NIMHANS (080-46110007) or Tele-MANAS (14416).</p>
+<p>Peer support is not a substitute for professional mental health care. If you are experiencing persistent depression, anxiety disorders, or thoughts of self-harm, please consult a mental health professional in your country. In the UK or Ireland: Samaritans (116 123) or Shout (text SHOUT to 85258).</p>
 `,
 }

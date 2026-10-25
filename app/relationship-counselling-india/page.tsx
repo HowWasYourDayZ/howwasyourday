@@ -144,7 +144,7 @@ export default function RelationshipCounsellingIndiaPage() {
         </nav>
 
         <div className="crisis">
-          🆘 In crisis? Call <a href="tel:08046110007">NIMHANS 080-46110007</a> or <a href="tel:14416">Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123">Samaritans 116 123</a> or <a href="sms:85258">text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">

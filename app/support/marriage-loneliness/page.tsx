@@ -142,7 +142,7 @@ export default function MarriageLonelinessSupportPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -204,7 +204,7 @@ export default function MarriageLonelinessSupportPage() {
           <p>No listener will tell you to stay, to leave, to confront, or to compromise. They will not diagnose your partner from one side of the story, and they will never suggest what you should do about your marriage. Those decisions are yours, and they deserve far more context than any stranger has. What a listener offers is empathetic attention while you think out loud.</p>
 
           <h3>When Something More Is the Right Step</h3>
-          <p>If you and your partner want to work on the relationship together, couples counselling or marital therapy is genuinely the right tool, and we would encourage you to seek it. The same is true if you are experiencing persistent depression, anxiety, or any situation where you feel unsafe — please reach out to a qualified mental health professional, or to NIMHANS on 080-46110007 or Tele-MANAS on 14416. Talking to a peer listener can sit alongside that support; it is not meant to replace it.</p>
+          <p>If you and your partner want to work on the relationship together, couples counselling or marital therapy is genuinely the right tool, and we would encourage you to seek it. The same is true if you are experiencing persistent depression, anxiety, or any situation where you feel unsafe — please reach out to a qualified mental health professional, or to Samaritans 116 123 or text SHOUT to 85258. Talking to a peer listener can sit alongside that support; it is not meant to replace it.</p>
         </div>
 
         {/* Listener cards */}

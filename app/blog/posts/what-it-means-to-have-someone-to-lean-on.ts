@@ -80,7 +80,7 @@ export const post = {
 
 <p>Peer support is right for a great many things, but not for everything. If what you are carrying includes persistent hopelessness, a conviction that nothing will ever change, or any thoughts of harming yourself, that deserves professional care — not because you are too much for anyone, but because you deserve properly qualified support.</p>
 
-<p>Two free government helplines in India are available 24/7: <strong>NIMHANS at 080-46110007</strong> and <strong>Tele-MANAS at 14416</strong>. Please use them. They exist precisely for this, and calling costs you nothing.</p>
+<p>Two free crisis helplines are available 24/7: <strong>Samaritans 116 123</strong> and <strong>text SHOUT to 85258</strong>. Please use them. They exist precisely for this, and calling costs you nothing.</p>
 
 <p>Whatever you decide from here, hold on to this. Not having someone to lean on right now describes your circumstances, not your worth. Circumstances move. The absence of a person today is not evidence that you are difficult to love — far more often it simply means the right person has not been in the room yet, and rooms can be changed.</p>
   `.trim(),

@@ -4,8 +4,8 @@
 //
 // SAFETY: How Was Your Day is peer emotional support, not professional mental health
 // care. Nothing here diagnoses, treats, or cures anything. The only crisis
-// helplines referenced anywhere in this file are NIMHANS (080-46110007) and
-// Tele-MANAS (14416).
+// helplines referenced anywhere in this file are Samaritans (116 123) and
+// Shout (text SHOUT to 85258).
 
 export type Feeling = {
   slug: string
@@ -121,7 +121,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "Is what I feel anxiety or just normal stress?",
-        a: `How Was Your Day cannot and does not diagnose anything — that is genuinely a job for a licensed professional. What people generally describe as everyday stress has an object and ends when the thing ends. What people describe as anxiety tends to outlive its cause, jumps to a new topic when one is resolved, and shows up in the body even on days with nothing happening. If it is persistent and getting in the way of your work, sleep or relationships, please speak to a qualified professional. India also has two free 24/7 government helplines: NIMHANS on 080-46110007 and Tele-MANAS on 14416.`,
+        a: `How Was Your Day cannot and does not diagnose anything — that is genuinely a job for a licensed professional. What people generally describe as everyday stress has an object and ends when the thing ends. What people describe as anxiety tends to outlive its cause, jumps to a new topic when one is resolved, and shows up in the body even on days with nothing happening. If it is persistent and getting in the way of your work, sleep or relationships, please speak to a qualified professional. There are also two free 24/7 helplines: Samaritans 116 123 and text SHOUT to 85258.`,
       },
       {
         q: "What if I start a session and cannot explain what is wrong?",
@@ -229,7 +229,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When it is bigger than a conversation, and where to go",
-        p: `How Was Your Day is peer emotional support. It is a real, human place to be heard, and it is not a substitute for professional mental health care. If the numbness has been constant for weeks, if you have stopped being able to do your normal daily life, if you find yourself feeling nothing about things that would once have frightened you, or if you are having any thoughts of harming yourself, please talk to a licensed mental health professional. India has two free, confidential helplines running 24/7 that anyone can call: NIMHANS at 080-46110007 and Tele-MANAS at 14416. Calling one of them is not an overreaction and it is not a permanent label. It is simply the right tool for that level of weight, and you deserve the right tool.`,
+        p: `How Was Your Day is peer emotional support. It is a real, human place to be heard, and it is not a substitute for professional mental health care. If the numbness has been constant for weeks, if you have stopped being able to do your normal daily life, if you find yourself feeling nothing about things that would once have frightened you, or if you are having any thoughts of harming yourself, please talk to a licensed mental health professional. India has two free, confidential helplines running 24/7 that anyone can call: Samaritans 116 123 and text SHOUT to 85258. Calling one of them is not an overreaction and it is not a permanent label. It is simply the right tool for that level of weight, and you deserve the right tool.`,
       },
     ],
     faqs: [
@@ -239,7 +239,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "Is numbness the same as depression?",
-        a: `How Was Your Day does not diagnose, and only a licensed professional can tell you what you are dealing with. What can be said honestly is that persistent emotional flatness is something professionals take seriously, and it is not something to wait out indefinitely. If it has lasted weeks, is stopping you from functioning, or comes with any thoughts of self-harm, please reach out to a qualified professional. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416, free, any time of day or night.`,
+        a: `How Was Your Day does not diagnose, and only a licensed professional can tell you what you are dealing with. What can be said honestly is that persistent emotional flatness is something professionals take seriously, and it is not something to wait out indefinitely. If it has lasted weeks, is stopping you from functioning, or comes with any thoughts of self-harm, please reach out to a qualified professional. You can also call Samaritans 116 123 or text SHOUT to 85258, free, any time of day or night.`,
       },
       {
         q: "What is the point of talking if I do not feel anything to say?",
@@ -288,7 +288,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When sadness needs more than a conversation",
-        p: `Sadness is a normal human response and most of it passes with time, care, and being heard. But there is a line worth knowing. If low mood has been constant for weeks rather than days, if you have stopped being able to work, eat, or sleep normally, if you have lost interest in everything you once cared about, or if you are having any thoughts of harming yourself, that deserves a licensed mental health professional — not because you are broken, but because that is the level of support the situation warrants. India has two free helplines available 24/7 to anyone: NIMHANS at 080-46110007 and Tele-MANAS at 14416. How Was Your Day is peer emotional support and sits alongside professional care, never in place of it.`,
+        p: `Sadness is a normal human response and most of it passes with time, care, and being heard. But there is a line worth knowing. If low mood has been constant for weeks rather than days, if you have stopped being able to work, eat, or sleep normally, if you have lost interest in everything you once cared about, or if you are having any thoughts of harming yourself, that deserves a licensed mental health professional — not because you are broken, but because that is the level of support the situation warrants. There are two free helplines available 24/7 to anyone: Samaritans 116 123 and text SHOUT to 85258. How Was Your Day is peer emotional support and sits alongside professional care, never in place of it.`,
       },
     ],
     faqs: [
@@ -298,7 +298,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "How do I know if this is more than ordinary sadness?",
-        a: `How Was Your Day cannot diagnose anything, and only a licensed professional can. The signals generally worth acting on are duration and function: sadness lasting weeks without lifting, and a real drop in your ability to work, eat, sleep or care about things you used to. If either applies — or if there are any thoughts of self-harm — please speak to a qualified professional. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416 free, at any hour.`,
+        a: `How Was Your Day cannot diagnose anything, and only a licensed professional can. The signals generally worth acting on are duration and function: sadness lasting weeks without lifting, and a real drop in your ability to work, eat, sleep or care about things you used to. If either applies — or if there are any thoughts of self-harm — please speak to a qualified professional. You can also call Samaritans 116 123 or text SHOUT to 85258 free, at any hour.`,
       },
       {
         q: "I do not want advice. Can I just talk?",
@@ -465,7 +465,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When lost sleep needs professional help",
-        p: `Occasional bad nights are part of being human. Sustained sleeplessness is not something to just push through. If you have been unable to sleep for weeks, if daytime functioning is going — driving, working, staying safe — or if the nights come with hopelessness or any thoughts of harming yourself, please speak to a licensed professional; poor sleep and low mood feed each other and both are treatable by the right people. Two free helplines are available across India at any hour, including the ones you are awake for: NIMHANS at 080-46110007 and Tele-MANAS at 14416. How Was Your Day listeners are peers who will keep you company and hear you out at 3 AM, and that is a real thing, but it is support rather than medical care.`,
+        p: `Occasional bad nights are part of being human. Sustained sleeplessness is not something to just push through. If you have been unable to sleep for weeks, if daytime functioning is going — driving, working, staying safe — or if the nights come with hopelessness or any thoughts of harming yourself, please speak to a licensed professional; poor sleep and low mood feed each other and both are treatable by the right people. Two free helplines are available across India at any hour, including the ones you are awake for: Samaritans 116 123 and text SHOUT to 85258. How Was Your Day listeners are peers who will keep you company and hear you out at 3 AM, and that is a real thing, but it is support rather than medical care.`,
       },
     ],
     faqs: [
@@ -483,7 +483,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         q: "When should I stop managing this myself and see a professional?",
-        a: `If sleeplessness has run for several weeks, if it is affecting your ability to work or stay safe during the day, or if the nights come with hopelessness or any thoughts of self-harm, that is the point to involve a licensed professional rather than keep coping alone. You can also call NIMHANS on 080-46110007 or Tele-MANAS on 14416 — both are free, confidential and open 24/7. How Was Your Day is peer emotional support and sits alongside that kind of care, not in place of it.`,
+        a: `If sleeplessness has run for several weeks, if it is affecting your ability to work or stay safe during the day, or if the nights come with hopelessness or any thoughts of self-harm, that is the point to involve a licensed professional rather than keep coping alone. You can also call Samaritans 116 123 or text SHOUT to 85258 — both are free, confidential and open 24/7. How Was Your Day is peer emotional support and sits alongside that kind of care, not in place of it.`,
       },
     ],
     relatedSupport: [

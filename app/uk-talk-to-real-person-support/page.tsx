@@ -330,7 +330,7 @@ export default function UKTalkToRealPersonPage() {
         </div>
 
         <div className="disclaimer">
-          ⚠️ If you&apos;re in crisis or thinking about self-harm, please contact your local emergency services right away. In India: <strong>NIMHANS 080-46110007</strong> · <strong>Tele-MANAS 14416</strong>.<br />
+          ⚠️ If you&apos;re in crisis or thinking about self-harm, please contact your local emergency services right away. In the UK or Ireland: <strong>Samaritans 116 123</strong> · <strong>text SHOUT to 85258</strong>.<br />
           How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
         </div>
       </div>

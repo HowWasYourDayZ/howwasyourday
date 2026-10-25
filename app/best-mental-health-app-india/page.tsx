@@ -236,7 +236,7 @@ export default function BestMentalHealthAppIndiaPage() {
             <li><strong>Affordable professional counselling</strong> → iCall (TISS)</li>
             <li><strong>Real human peer conversation, pay per session, anonymous</strong> → <a href="/browse">How Was Your Day</a></li>
             <li><strong>AI self-help tools, free</strong> → Wysa</li>
-            <li><strong>Crisis</strong> → NIMHANS 080-46110007 or Tele-MANAS 14416 — free, 24/7, Government of India</li>
+            <li><strong>Crisis</strong> → Samaritans 116 123 or text SHOUT to 85258 — free, 24/7</li>
           </ul>
         </div>
 

@@ -101,7 +101,7 @@ export default function NriDatingUsaPage() {
           <a href="/nri-relationship-problems">NRI relationship problems &rarr;</a>
           <a href="/second-generation-indian-usa">Second gen Indian USA &rarr;</a>
         </div></div>
-        <div className="crisis"><strong>In a crisis?</strong> NIMHANS: 080-46110007 &nbsp;&middot;&nbsp; Tele-MANAS: 14416 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
+        <div className="crisis"><strong>In a crisis?</strong> Samaritans 116 123 &nbsp;&middot;&nbsp; text SHOUT to 85258 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
       </div>
     </>
   )

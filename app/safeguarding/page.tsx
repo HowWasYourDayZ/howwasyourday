@@ -41,7 +41,7 @@ export default function SafeguardingPage() {
         <ul>
           <li>Everyone on How Was Your Day must be 18 or over. Seekers confirm this before they can sign in; sign-in is refused without it.</li>
           <li>Listeners give their month and year of birth when they apply and must be adults.</li>
-          <li>If you are under 18 and need to talk, please reach out to a trusted adult, or call Tele-MANAS on <a href="tel:14416">14416</a> (free).</li>
+          <li>If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).</li>
         </ul>
 
         <h2>2. Who the listeners are, and how they are screened</h2>
@@ -80,7 +80,7 @@ export default function SafeguardingPage() {
 
         <h2>6. What How Was Your Day is not</h2>
         <div className="note">
-          <p style={{ margin: 0 }}>How Was Your Day is not therapy, counselling, diagnosis, crisis care, addiction treatment or domestic-abuse assistance. If you are in danger, contact the police or local emergency services. If you are thinking about harming yourself, call Tele-MANAS on <a href="tel:14416">14416</a> or NIMHANS on <a href="tel:08046110007">080-46110007</a> (free).</p>
+          <p style={{ margin: 0 }}>How Was Your Day is not therapy, counselling, diagnosis, crisis care, addiction treatment or domestic-abuse assistance. If you are in danger, contact the police or local emergency services. If you are thinking about harming yourself, text SHOUT to 85258 or Samaritans on <a href="tel:116123">116 123</a> (free).</p>
         </div>
         <p>More detail: <a href="/trust">Trust &amp; safety</a> · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="/peer-support">What peer support is</a></p>
       </div>

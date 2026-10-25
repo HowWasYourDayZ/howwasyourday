@@ -63,7 +63,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does a vent session cost on How Was Your Day?',
-      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session of up to 5 minutes is free per account. In India, paid sessions are priced at the selected listener’s per-minute rate multiplied by the duration, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. The exact price is shown before you start; see https://www.howwasyourday.live/pricing.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'One introductory session of up to 5 minutes is free per account. In the UK or Ireland, paid sessions are priced at the selected listener’s per-minute rate multiplied by the duration, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. The exact price is shown before you start; see https://www.howwasyourday.live/pricing.' },
     },
     {
       '@type': 'Question',
@@ -148,7 +148,7 @@ export default function VentToSomeoneOnlinePage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -160,7 +160,7 @@ export default function VentToSomeoneOnlinePage() {
 
         <div className="section">
           <h2>Quick answer: vent to someone online in India</h2>
-          <p>How Was Your Day connects you with screened peer listeners for one-to-one text or voice conversations. One introductory session of up to 5 minutes is free per account. In India, paid sessions are charged at the selected listener&apos;s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Availability depends on which listeners are online and accept your request.</p>
+          <p>How Was Your Day connects you with screened peer listeners for one-to-one text or voice conversations. One introductory session of up to 5 minutes is free per account. In the UK or Ireland, paid sessions are charged at the selected listener&apos;s rate per minute × session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Availability depends on which listeners are online and accept your request.</p>
           <p><a href="/pricing" style={{color:'var(--teal)',fontWeight:800}}>See current pricing</a> · <a href="/trust" style={{color:'var(--teal)',fontWeight:800}}>Read about trust and safety</a> · <a href="/browse" style={{color:'var(--teal)',fontWeight:800}}>Browse real listeners</a></p>
         </div>
 

@@ -297,7 +297,7 @@ export default function JaipurPage() {
         {/* Disclaimer */}
         <div className="disclaimer">
           <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
-          <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
+          <p><strong>Samaritans:</strong> <a href="tel:116123">116 123</a> &nbsp;|&nbsp; <strong>Shout:</strong> <a href="sms:85258">85258</a> (free · 24/7)</p>
           <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>

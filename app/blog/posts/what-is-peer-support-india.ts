@@ -54,7 +54,7 @@ export const post = {
   <li>A peer listener is not a therapist, psychologist, or psychiatrist, and does not claim clinical training or credentials.</li>
   <li>A peer listener does not diagnose conditions like depression, anxiety disorder, OCD, or bipolar disorder — diagnosis requires professional clinical assessment.</li>
   <li>A peer listener does not give medical advice or recommend medication.</li>
-  <li>A peer listener is not a substitute for crisis intervention. If you are in crisis or having thoughts of self-harm, reach out to NIMHANS (080-46110007) or Tele-MANAS (14416) immediately.</li>
+  <li>A peer listener is not a substitute for crisis intervention. If you are in crisis or having thoughts of self-harm, reach out to Samaritans (116 123) or Shout (text SHOUT to 85258) immediately.</li>
   <li>A peer listener does not replace ongoing clinical treatment for someone already under professional care.</li>
 </ul>
 

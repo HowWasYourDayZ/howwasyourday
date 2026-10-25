@@ -1416,7 +1416,7 @@ function SessionContent() {
               )}
             </div>
             <div className="crisis-footer dark">
-              🆘 Crisis: <a href="tel:08046110007">NIMHANS 080-46110007</a> · <a href="tel:14416">Tele-MANAS 14416</a>
+              🆘 Crisis: <a href="tel:116123">Samaritans 116 123</a> · <a href="sms:85258">text SHOUT to 85258</a> · Emergency <a href="tel:112">999 / 112</a>
             </div>
           </div>
         </>
@@ -1490,7 +1490,7 @@ function SessionContent() {
           </div>
           {/* Crisis helpline footer — kept visible right after a session too. */}
           <div className="crisis-footer">
-            🆘 Crisis: <a href="tel:08046110007">NIMHANS 080-46110007</a> · <a href="tel:14416">Tele-MANAS 14416</a>
+            🆘 Crisis: <a href="tel:116123">Samaritans 116 123</a> · <a href="sms:85258">text SHOUT to 85258</a> · Emergency <a href="tel:112">999 / 112</a>
           </div>
         </div>
         {showReport && (listenerId || seekerId) && (
@@ -1642,7 +1642,7 @@ function SessionContent() {
             </div>
           )}
           <div className="crisis-footer">
-            🆘 Crisis: <a href="tel:08046110007">NIMHANS 080-46110007</a> · <a href="tel:14416">Tele-MANAS 14416</a>
+            🆘 Crisis: <a href="tel:116123">Samaritans 116 123</a> · <a href="sms:85258">text SHOUT to 85258</a> · Emergency <a href="tel:112">999 / 112</a>
           </div>
         </div>
       </>
@@ -1675,7 +1675,7 @@ function SessionContent() {
             </a>
           </div>
           <div className="crisis-footer">
-            🆘 Crisis: <a href="tel:08046110007">NIMHANS 080-46110007</a> · <a href="tel:14416">Tele-MANAS 14416</a>
+            🆘 Crisis: <a href="tel:116123">Samaritans 116 123</a> · <a href="sms:85258">text SHOUT to 85258</a> · Emergency <a href="tel:112">999 / 112</a>
           </div>
         </div>
       </>
@@ -1824,7 +1824,7 @@ function SessionContent() {
 
         {crisisAlert && (
           <div className="crisis-bar">
-            🆘 In crisis? Call <strong>NIMHANS: <a href="tel:08046110007">080-46110007</a></strong> or <strong>Tele-MANAS: <a href="tel:14416">14416</a></strong> (free · 24/7 · Govt of India). You can still continue this conversation.
+            🆘 In crisis? Call <strong>Samaritans: <a href="tel:116123">116 123</a></strong> or <strong>text SHOUT to <a href="sms:85258">85258</a></strong> (free · 24/7). In danger right now? Call <strong><a href="tel:112">999 / 112</a></strong>. Outside the UK &amp; Ireland: <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a>. You can still continue this conversation.
             <button onClick={() => setCrisisAlert(false)} style={{float:'right',background:'none',border:'none',cursor:'pointer',color:'#7A2020',fontWeight:900,fontSize:14}}>✕</button>
           </div>
         )}
@@ -1909,7 +1909,7 @@ function SessionContent() {
 
         {/* Crisis resources footer — always visible, not dismissible (Item 24) */}
         <div className="crisis-footer">
-          🆘 Crisis: <a href="tel:08046110007">NIMHANS 080-46110007</a> · <a href="tel:14416">Tele-MANAS 14416</a>
+          🆘 Crisis: <a href="tel:116123">Samaritans 116 123</a> · <a href="sms:85258">text SHOUT to 85258</a> · Emergency <a href="tel:112">999 / 112</a>
         </div>
 
         <div className="input-bar">

@@ -16,7 +16,7 @@ const example = (mins: number, voice = false) => (EXAMPLE_RATE + (voice ? VOICE_
 
 export const metadata: Metadata = {
   title: 'How Was Your Day Pricing — India & Abroad (NRI) | Free First Session',
-  description: `How much How Was Your Day costs: your first ${FREE_SESSION_MINS}-minute session is free. In India, 15 minutes costs from about ₹${seeker15(PRICE_SNAPSHOT.minRate)} depending on the listener (${inr(example(15))} at a ₹${EXAMPLE_RATE}/min listener). Abroad, sessions start at US$${NRI_USD_PRICES[15]} / $${NRI_USD_PRICES[30]} / $${NRI_USD_PRICES[45]} for 15 / 30 / 45 minutes. No subscription.`,
+  description: `How much How Was Your Day costs: your first ${FREE_SESSION_MINS}-minute session is free. In the UK or Ireland, 15 minutes costs from about ₹${seeker15(PRICE_SNAPSHOT.minRate)} depending on the listener (${inr(example(15))} at a ₹${EXAMPLE_RATE}/min listener). Abroad, sessions start at US$${NRI_USD_PRICES[15]} / $${NRI_USD_PRICES[30]} / $${NRI_USD_PRICES[45]} for 15 / 30 / 45 minutes. No subscription.`,
   alternates: { canonical: URL },
   openGraph: { title: 'How Was Your Day Pricing — India & Abroad', description: 'Free first session. Pay per session, no subscription. India: listener rate × minutes + ₹10. Abroad: from US$10 for 15 minutes.', url: URL, siteName: 'How Was Your Day', type: 'website' },
 }
@@ -87,7 +87,7 @@ export default function PricingPage() {
       </section>
 
       <section className="rounded-3xl bg-[#0F4867] p-7 text-white"><h2 className="mb-2 text-2xl font-black">Start with a free {FREE_SESSION_MINS}-minute session</h2><p className="mb-5 text-white/80">Pick a listener whose experience matches yours. Text or voice, private, no appointment.</p><a href="/browse" className="inline-block rounded-full bg-[#FF9933] px-6 py-3 font-extrabold text-white">Browse listeners →</a></section>
-      <p className="mt-8 text-xs leading-6 text-slate-500">How Was Your Day provides peer support, not therapy, counselling, diagnosis or emergency care. In India, if you are thinking about harming yourself, call NIMHANS (080-46110007) or Tele-MANAS (14416), free and 24/7.</p>
+      <p className="mt-8 text-xs leading-6 text-slate-500">How Was Your Day provides peer support, not therapy, counselling, diagnosis or emergency care. In the UK or Ireland, if you are thinking about harming yourself, call Samaritans (116 123) or Shout (text SHOUT to 85258), free and 24/7.</p>
     </div>
   </main>
 }

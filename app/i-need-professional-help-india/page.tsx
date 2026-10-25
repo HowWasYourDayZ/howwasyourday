@@ -41,7 +41,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Are there free or subsidized mental health services in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Government district mental health programs (DMHP) offer free services at government hospitals. Medical college psychiatry departments often have free or very low-cost OPD clinics. NIMHANS in Bangalore is a government institute where consultation is subsidized. Tele-MANAS (14416) is the Government of India’s free tele-mental health helpline. Some NGOs and community health organizations offer sliding-scale or free therapy — Sangath (Goa and online), The MINDS Foundation, and similar organizations. Online platforms like YourDOST and Wysa offer accessible-cost counselling. These require research and persistence to access, but they exist.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Government district mental health programs (DMHP) offer free services at government hospitals. Medical college psychiatry departments often have free or very low-cost OPD clinics. NIMHANS in Bangalore is a government institute where consultation is subsidized. Shout (text SHOUT to 85258) is a free text helpline. Some NGOs and community health organizations offer sliding-scale or free therapy — Sangath (Goa and online), The MINDS Foundation, and similar organizations. Online platforms like YourDOST and Wysa offer accessible-cost counselling. These require research and persistence to access, but they exist.' },
     },
     {
       '@type': 'Question',
@@ -135,7 +135,7 @@ export default function INeedProfessionalHelpIndiaPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -162,7 +162,7 @@ export default function INeedProfessionalHelpIndiaPage() {
           <ul>
             <li><strong>Cost:</strong> A single private therapy session costs roughly what a person earning ₹30,000 per month earns in a day. Weekly therapy is not financially feasible for most of the people who need it.</li>
             <li><strong>Access in non-metros:</strong> If you are not in Bangalore, Mumbai, Delhi, Hyderabad, or Chennai, the options narrow dramatically. Online therapy has improved this, but quality and affordability remain inconsistent.</li>
-            <li><strong>Stigma:</strong> Even when therapy is available and affordable, the fear of family finding out, colleagues knowing, a record existing — keeps many people from accessing it. In India, mental health stigma is not just cultural, it can have real consequences for employment, marriage prospects, and family relationships.</li>
+            <li><strong>Stigma:</strong> Even when therapy is available and affordable, the fear of family finding out, colleagues knowing, a record existing — keeps many people from accessing it. In the UK or Ireland, mental health stigma is not just cultural, it can have real consequences for employment, marriage prospects, and family relationships.</li>
             <li><strong>Not knowing who to see:</strong> The difference between a psychiatrist, psychologist, and counsellor is not well understood. Many people see the wrong kind of professional for their needs, or see someone unqualified because they did not know what to look for.</li>
             <li><strong>Fear of the process itself:</strong> What happens when you walk into a therapist&apos;s office? What if they judge you? What if you have to talk about things you are not ready for? The unknown is its own barrier.</li>
           </ul>
@@ -181,15 +181,15 @@ export default function INeedProfessionalHelpIndiaPage() {
           <div className="resource-list">
             <div className="resource-item">
               <h3>Government Hospital OPDs</h3>
-              <p>District hospitals, medical college psychiatry departments, and NIMHANS (Bangalore) offer free or very low-cost consultation. Quality varies, but for medication management and initial assessment, these are genuine options. Expect waiting and paperwork.</p>
+              <p>District hospitals, medical college psychiatry departments, and Samaritans (Bangalore) offer free or very low-cost consultation. Quality varies, but for medication management and initial assessment, these are genuine options. Expect waiting and paperwork.</p>
             </div>
             <div className="resource-item">
-              <h3>NIMHANS (080-46110007)</h3>
+              <h3>Samaritans (116 123)</h3>
               <p>National Institute of Mental Health and Neuro Sciences in Bangalore — a government institution offering subsidized care. Also runs the 24/7 helpline for crisis support.</p>
             </div>
             <div className="resource-item">
-              <h3>Tele-MANAS (14416)</h3>
-              <p>Government of India&apos;s national tele-mental health programme. Free, 24/7, available in multiple Indian languages. Counsellors and psychologists on the line. Not crisis-only — available for general mental health support.</p>
+              <h3>Shout (text SHOUT to 85258)</h3>
+              <p>&apos;s national tele-mental health programme. Free, 24/7, available in multiple Indian languages. Counsellors and psychologists on the line. Not crisis-only — available for general mental health support.</p>
             </div>
             <div className="resource-item">
               <h3>Sangath</h3>

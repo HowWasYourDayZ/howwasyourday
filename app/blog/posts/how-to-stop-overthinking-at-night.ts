@@ -107,7 +107,7 @@ export const post = {
 
 <p>If any of those describe you, treat it as information rather than failure. That is the territory of a licensed professional — a psychologist or psychiatrist — and it responds to proper treatment. Peer support can sit alongside that work, but it is not a substitute for it.</p>
 
-<p>If you need help right now, two free government helplines operate 24/7 across India: <strong>NIMHANS at 080-46110007</strong> and <strong>Tele-MANAS at 14416</strong>. They are staffed, they are free, and calling one at 3am is a completely reasonable thing to do.</p>
+<p>If you need help right now, two free crisis helplines are available 24/7: <strong>Samaritans 116 123</strong> and <strong>text SHOUT to 85258</strong>. They are staffed, they are free, and calling one at 3am is a completely reasonable thing to do.</p>
 
 <h2>Tonight</h2>
 

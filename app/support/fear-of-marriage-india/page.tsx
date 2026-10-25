@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'What if I decide I do not want to get married at all?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is a valid choice. Not everyone wants or needs a traditional marriage to live a full and connected life. In India, this choice comes with significant social pressure — family, peers, community — and living it authentically requires a degree of clarity and resilience. What matters is that the choice comes from your own honest assessment of what you want, not purely from fear or from avoiding what your parents had. Those can lead to the same destination, but one is chosen and the other is just reactive.',
+        text: 'That is a valid choice. Not everyone wants or needs a traditional marriage to live a full and connected life. In the UK or Ireland, this choice comes with significant social pressure — family, peers, community — and living it authentically requires a degree of clarity and resilience. What matters is that the choice comes from your own honest assessment of what you want, not purely from fear or from avoiding what your parents had. Those can lead to the same destination, but one is chosen and the other is just reactive.',
       },
     },
     {
@@ -161,7 +161,7 @@ export default function FearOfMarriageIndiaPage() {
 
         <div className="crisis">
           <strong>If you are struggling and need immediate support</strong>
-          NIMHANS helpline: <a href="tel:08046110007">080-46110007</a> · Tele-MANAS: <a href="tel:14416">14416</a> (free, 24/7)
+          Samaritans: <a href="tel:116123">116 123</a> · text SHOUT to 85258 (free, 24/7)
         </div>
 
 

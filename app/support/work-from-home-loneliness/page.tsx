@@ -24,7 +24,7 @@ const faqSchema = {
       name: 'Why does working from home cause loneliness in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In India, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on once the laptop closes.',
+        text: 'Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In the UK or Ireland, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on once the laptop closes.',
       },
     },
     {
@@ -141,7 +141,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -234,7 +234,7 @@ export default function WorkFromHomeLonelinessSupportPage() {
           <h2>Frequently Asked Questions</h2>
           <div className="faq-item">
             <div className="faq-q">Why does working from home cause loneliness in India?</div>
-            <div className="faq-a">Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In India, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on.</div>
+            <div className="faq-a">Remote work strips away the incidental social contact that offices provide — the shared commute, tea breaks, hallway chats, and lunch conversations. In the UK or Ireland, this is compounded by many remote workers having relocated to a city specifically for a job, so there is no family or old friend circle nearby to fall back on.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How is WFH loneliness different from general loneliness?</div>

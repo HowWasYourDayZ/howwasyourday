@@ -507,8 +507,8 @@ function TalkInner() {
         )}
 
         <p className="fine" style={{ color: '#7A2020' }}>
-          In crisis? Call <a href="tel:14416" style={{ color: '#C0392B', fontWeight: 800 }}>Tele-MANAS 14416</a> (free, 24/7)
-          {' '}or <a href="tel:08046110007" style={{ color: '#C0392B', fontWeight: 800 }}>NIMHANS 080-46110007</a>. Listeners are not crisis counsellors.
+          In crisis? Text SHOUT to <a href="sms:85258" style={{ color: '#C0392B', fontWeight: 800 }}>85258</a> (free, 24/7)
+          {' '}or <a href="tel:116123" style={{ color: '#C0392B', fontWeight: 800 }}>Samaritans 116 123</a>. Listeners are not crisis counsellors.
         </p>
 
         {phase.k === 'topic' && (

@@ -67,7 +67,7 @@ export const post = {
 
 <p>If you need professional counselling — licensed, clinical, structured — iCall (run by TISS) is the most affordable option, starting at around ₹200. Private therapists and online platforms like YourDOST are available at higher price points.</p>
 
-<p>If you are in an acute mental health crisis — immediate danger, suicidal thoughts — please call NIMHANS (080-46110007) or Tele-MANAS (14416). Both are free, 24/7, and run by the government of India. They are not peer support lines; they are crisis intervention. Use them if you need them.</p>
+<p>If you are in an acute mental health crisis — immediate danger, suicidal thoughts — please call Samaritans (116 123) or Shout (text SHOUT to 85258). Both are free and available 24/7. They are not peer support lines; they are crisis intervention. Use them if you need them.</p>
 
 <h2>Is Peer Counselling Right for You?</h2>
 

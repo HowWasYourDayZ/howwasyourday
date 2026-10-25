@@ -655,12 +655,12 @@ test.describe('Support pages — crisis resources', () => {
   ]
 
   for (const route of supportPages) {
-    test(`${route} — has NIMHANS or Tele-MANAS`, async ({ page }) => {
+    test(`${route} — has Samaritans or Shout (text SHOUT to 85258)`, async ({ page }) => {
       await skipIfBlocked(page)
       await page.goto(route)
       await page.waitForLoadState('domcontentloaded')
       const content = await page.content()
-      expect(content).toMatch(/NIMHANS|Tele-MANAS|14416|080-46110007/)
+      expect(content).toMatch(/Samaritans|Shout (text SHOUT to 85258)|85258|116 123/)
     })
 
     test(`${route} — NO forbidden helplines (iCall / Vandrevala)`, async ({ page }) => {

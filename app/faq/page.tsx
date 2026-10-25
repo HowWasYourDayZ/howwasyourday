@@ -16,7 +16,7 @@ const faqs = [
     items: [
       {
         q: 'Who can use How Was Your Day?',
-        a: 'Adults aged 18 and over, in India or abroad. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or call Tele-MANAS on 14416 (free).',
+        a: 'Adults aged 18 and over, in India or abroad. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).',
       },
       {
         q: 'What is How Was Your Day?',
@@ -57,7 +57,7 @@ const faqs = [
       },
       {
         q: 'How does pricing work?',
-        a: 'One 5-minute introductory session is free per account. In India, paid sessions are priced at the listener’s rate per minute × session length, plus a flat ₹10 platform fee; for example, 15 minutes with a ₹10/min listener costs ₹160. Voice calls cost ₹5/min more than text when voice pricing is enabled. Your exact price is shown before you start. See /pricing for details.',
+        a: 'One 5-minute introductory session is free per account. In the UK or Ireland, paid sessions are priced at the listener’s rate per minute × session length, plus a flat ₹10 platform fee; for example, 15 minutes with a ₹10/min listener costs ₹160. Voice calls cost ₹5/min more than text when voice pricing is enabled. Your exact price is shown before you start. See /pricing for details.',
       },
       {
         q: 'Do I need to book in advance?',
@@ -74,7 +74,7 @@ const faqs = [
     items: [
       {
         q: 'How much does How Was Your Day cost?',
-        a: 'One introductory session of up to 5 minutes is free per account. In India, the total is the selected listener\'s per-minute rate × session length, plus a flat ₹10 platform fee; for example, 15 minutes at ₹10/min costs ₹160 and 30 minutes costs ₹310. Voice calls are ₹5/min more than text when voice pricing is enabled. Outside India, sessions start at US$10 for 15 minutes, US$15 for 30 and US$20 for 45. See howwasyourday.live/pricing for details.',
+        a: 'One introductory session of up to 5 minutes is free per account. In the UK or Ireland, the total is the selected listener\'s per-minute rate × session length, plus a flat ₹10 platform fee; for example, 15 minutes at ₹10/min costs ₹160 and 30 minutes costs ₹310. Voice calls are ₹5/min more than text when voice pricing is enabled. Outside India, sessions start at US$10 for 15 minutes, US$15 for 30 and US$20 for 45. See howwasyourday.live/pricing for details.',
       },
       {
         q: 'How does the wallet work?',
@@ -103,7 +103,7 @@ const faqs = [
       },
       {
         q: 'What if I\'m in a mental health crisis?',
-        a: 'How Was Your Day is peer support, not a crisis service. If you are in crisis or having thoughts of self-harm, please call NIMHANS at <a href="tel:08046110007">080-46110007</a> or Tele-MANAS at <a href="tel:14416">14416</a> (free, 24/7, Govt of India).',
+        a: 'How Was Your Day is peer support, not a crisis service. If you are in crisis or having thoughts of self-harm, please call Samaritans at <a href="tel:116123">116 123</a> or text SHOUT to 85258 (free, 24/7).',
       },
     ],
   },

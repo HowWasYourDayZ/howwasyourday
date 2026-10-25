@@ -142,7 +142,7 @@ export default function JobLossSupportPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -161,7 +161,7 @@ export default function JobLossSupportPage() {
           <p>Job loss follows the shape of grief: the disbelief, the replaying of the last few weeks looking for the signal you missed, the anger at a manager or a founder or a spreadsheet, the flat exhaustion. People are often startled by how heavy it feels. It helps to know that you&apos;re not overreacting — you&apos;re mourning something real. Routine, colleagues, a place to be at 10 AM, and a plan for the next two years all disappeared in the same meeting.</p>
 
           <h3>When &quot;What Do You Do?&quot; Has No Answer</h3>
-          <p>In India, that question shows up within ninety seconds of meeting anyone — at a wedding, in a WhatsApp group, in the lift. For years you had a clean answer with a company name in it. Now you have a pause. That pause is where the identity collapse lives. It isn&apos;t vanity. Most working professionals have quietly built a large part of their self-concept on their designation, and losing it feels like losing a part of yourself, not just a source of income.</p>
+          <p>In the UK or Ireland, that question shows up within ninety seconds of meeting anyone — at a wedding, in a WhatsApp group, in the lift. For years you had a clean answer with a company name in it. Now you have a pause. That pause is where the identity collapse lives. It isn&apos;t vanity. Most working professionals have quietly built a large part of their self-concept on their designation, and losing it feels like losing a part of yourself, not just a source of income.</p>
 
           <h3>The Secret Months</h3>
           <p>This is the part almost nobody talks about. Plenty of people don&apos;t tell their family for weeks. They keep waking at the same hour, dressing, packing a laptop bag, and leaving the house — to a café, a co-working space, a library, sometimes just a long drive — because the alternative is a conversation they can&apos;t face yet. If you&apos;re doing this, you&apos;re not being dishonest. You&apos;re buying yourself time to feel steady enough to speak. But carrying it entirely alone is what makes it unbearable, and that is exactly the gap a peer listener can fill.</p>

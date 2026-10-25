@@ -150,7 +150,7 @@ export default function FounderBurnoutSupportPage() {
         </div>
 
         <div className="notice">
-          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support and cannot replace crisis intervention.
+          If you are in crisis or having thoughts of self-harm, please call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7). How Was Your Day is peer support and cannot replace crisis intervention.
         </div>
 
         <div className="section">

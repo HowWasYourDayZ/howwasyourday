@@ -1170,7 +1170,7 @@ export default function BecomeListenerPage() {
               <ul>
                 <li>Listen actively and reflect back what you hear. Don&apos;t lecture or fix.</li>
                 <li>Keep boundaries: no off-platform contact, no flirting, and end sessions on time.</li>
-                <li>If a seeker mentions self-harm or suicide, share NIMHANS (080-46110007) or Tele-MANAS (14416) and encourage them to call.</li>
+                <li>If a seeker mentions self-harm or suicide, share Samaritans (116 123) or Shout (text SHOUT to 85258) and encourage them to call.</li>
                 <li>Follow How Was Your Day&apos;s code of conduct. Never give medical or clinical advice.</li>
               </ul>
               <p style={{fontSize:12,marginTop:8,opacity:0.85}}>The screening questions in the next step check these.</p>

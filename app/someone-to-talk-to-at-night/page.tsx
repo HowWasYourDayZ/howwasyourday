@@ -52,7 +52,7 @@ export default function SomeoneTalkToAtNightPage() {
         <div className="card">
           <h2>Why nights feel harder</h2>
           <p>Night anxiety is real and common. When there&apos;s no distraction, no work, no noise — the thoughts you&apos;ve been pushing down all day come flooding in. Loneliness, regrets, fears about the future. Everything feels heavier at 2 AM.</p>
-          <p>In India, with joint families and shared spaces, there&apos;s often nowhere private to process these feelings. You can&apos;t call a friend at midnight without alarming them. Therapists aren&apos;t available at 3 AM. How Was Your Day fills that gap.</p>
+          <p>In the UK or Ireland, with joint families and shared spaces, there&apos;s often nowhere private to process these feelings. You can&apos;t call a friend at midnight without alarming them. Therapists aren&apos;t available at 3 AM. How Was Your Day fills that gap.</p>
         </div>
 
         <div className="card">
@@ -69,7 +69,7 @@ export default function SomeoneTalkToAtNightPage() {
 
         <div className="crisis-box">
           <p>🆘 If you are having thoughts of self-harm or are in crisis right now, please call:</p>
-          <p><strong><a href="tel:08046110007">NIMHANS: 080-46110007</a></strong> (free, 24/7) · <strong><a href="tel:14416">Tele-MANAS: 14416</a></strong> (free, Govt of India)</p>
+          <p><strong><a href="tel:116123">Samaritans 116 123</a></strong> (free, 24/7) · <strong><a href="sms:85258">text SHOUT to 85258</a></strong> (free)</p>
         </div>
 
         <div className="cta">

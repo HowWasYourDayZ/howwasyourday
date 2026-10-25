@@ -25,7 +25,7 @@ const faqSchema = {
       name: 'How much does therapy cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In India, a session with a clinical psychologist or qualified therapist typically costs between ₹1,500 and ₹4,000 per session, whether online or in person. A psychiatrist consultation usually costs ₹1,000 to ₹3,000 per visit, with medication as an additional ongoing cost. Established online therapy platforms are broadly in the same range, often ₹1,000 to ₹3,000 per session. Prices vary by city, by the practitioner\'s experience, and by whether the session is 45 or 60 minutes long.',
+        text: 'In the UK or Ireland, a session with a clinical psychologist or qualified therapist typically costs between ₹1,500 and ₹4,000 per session, whether online or in person. A psychiatrist consultation usually costs ₹1,000 to ₹3,000 per visit, with medication as an additional ongoing cost. Established online therapy platforms are broadly in the same range, often ₹1,000 to ₹3,000 per session. Prices vary by city, by the practitioner\'s experience, and by whether the session is 45 or 60 minutes long.',
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'Is free support good enough?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For crisis, free support is not just good enough — it is the correct choice. NIMHANS (080-46110007) and Tele-MANAS (14416) are staffed by trained professionals, cost nothing, and are genuinely excellent for acute distress. Use them without hesitation. Where free options fall short is ongoing, non-urgent emotional weight: helplines are built for crisis rather than for regular conversation, and free AI chatbots, while inexpensive and available, are not human and have no lived experience to offer you. If what you want is to be heard by a person on a Tuesday night, a paid human conversation is a different thing.',
+        text: 'For crisis, free support is not just good enough — it is the correct choice. Samaritans (116 123) and Shout (text SHOUT to 85258) are staffed by trained professionals, cost nothing, and are genuinely excellent for acute distress. Use them without hesitation. Where free options fall short is ongoing, non-urgent emotional weight: helplines are built for crisis rather than for regular conversation, and free AI chatbots, while inexpensive and available, are not human and have no lived experience to offer you. If what you want is to be heard by a person on a Tuesday night, a paid human conversation is a different thing.',
       },
     },
     {
@@ -165,7 +165,7 @@ export default function OnlineCounsellingCostPage() {
           <p>Online therapy in India is broadly comparable to in-person therapy in price, commonly ₹1,000 to ₹3,000 per session. You save on travel and gain flexibility, but you are still paying a licensed clinician for their time, so the underlying economics do not change much. Some platforms sell multi-session packages that reduce the per-session figure; check whether unused sessions expire before you buy one.</p>
 
           <h3>Government Helplines — Free</h3>
-          <p>NIMHANS (<a href="tel:08046110007" style={{color:'var(--teal)',fontWeight:700}}>080-46110007</a>) and Tele-MANAS (<a href="tel:14416" style={{color:'var(--teal)',fontWeight:700}}>14416</a>) cost nothing, run around the clock, and are staffed by trained professionals. These are crisis services, and for crisis they are genuinely excellent — this is not a lesser option, it is the correct option when distress is acute or you are having thoughts of self-harm. Call them without hesitation and without cost. They are built for urgent moments rather than for a standing weekly conversation.</p>
+          <p>Samaritans (<a href="tel:116123" style={{color:'var(--teal)',fontWeight:700}}>116 123</a>) and Shout (text SHOUT to 85258) cost nothing, run around the clock, and are staffed by trained professionals. These are crisis services, and for crisis they are genuinely excellent — this is not a lesser option, it is the correct option when distress is acute or you are having thoughts of self-harm. Call them without hesitation and without cost. They are built for urgent moments rather than for a standing weekly conversation.</p>
 
           <h3>AI Wellness Chatbots — low cost</h3>
           <p>AI chat apps are cheap or free, always awake, and never judgemental. They can be a reasonable place to journal or to structure a thought at 3 a.m. But it is worth being plain about the limit: an AI is not a human being. It has never lost a parent, failed an exam, ended a relationship, or moved to a city where it knew nobody. Simulated empathy is not the same as a person who has actually been where you are and says so.</p>
@@ -180,7 +180,7 @@ export default function OnlineCounsellingCostPage() {
           <p>Price should be the second question. The first is what you actually need. Spending ₹4,000 on the wrong kind of help is expensive; spending ₹160 on the wrong kind of help is still the wrong kind of help. Here is an honest way to decide.</p>
 
           <h3>If you are in crisis or in danger right now</h3>
-          <p>Call a free government helpline immediately — NIMHANS on <a href="tel:08046110007" style={{color:'var(--teal)',fontWeight:700}}>080-46110007</a> or Tele-MANAS on <a href="tel:14416" style={{color:'var(--teal)',fontWeight:700}}>14416</a>. Do not browse, do not compare, do not pay for anything. These lines are free, immediate, and staffed by people trained for exactly this. Cost is not a factor here and should never delay you.</p>
+          <p>Call a free helpline immediately — Samaritans on <a href="tel:116123" style={{color:'var(--teal)',fontWeight:700}}>116 123</a> or text SHOUT to 85258. Do not browse, do not compare, do not pay for anything. These lines are free, immediate, and staffed by people trained for exactly this. Cost is not a factor here and should never delay you.</p>
 
           <h3>If you have clinical symptoms</h3>
           <p>Persistent depression, panic disorder, trauma, disordered eating, thoughts of self-harm, symptoms that have lasted weeks and are affecting sleep, work or your ability to function — these need a licensed therapist or a psychiatrist. That ₹1,500 to ₹4,000 per session is the right spend, and it buys assessment, diagnosis and evidence-based treatment that nothing cheaper can provide. Peer support is not a substitute for clinical care, and we would rather tell you that than take your money. If therapy is out of reach financially, ask practitioners about sliding-scale fees, look at hospital outpatient departments and university training clinics, and use the free helplines in the meantime — many clinicians in India quietly reserve slots at reduced rates.</p>
@@ -246,7 +246,7 @@ export default function OnlineCounsellingCostPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Is free support good enough?</div>
-            <div className="faq-a">For crisis, free support is not just good enough — it is the correct choice. NIMHANS (080-46110007) and Tele-MANAS (14416) are staffed by trained professionals, cost nothing, and are excellent for acute distress. Where free options fall short is ongoing, non-urgent emotional weight: helplines are built for crisis rather than regular conversation, and AI chatbots, while cheap and available, are not human and have no lived experience to offer you.</div>
+            <div className="faq-a">For crisis, free support is not just good enough — it is the correct choice. Samaritans (116 123) and Shout (text SHOUT to 85258) are staffed by trained professionals, cost nothing, and are excellent for acute distress. Where free options fall short is ongoing, non-urgent emotional weight: helplines are built for crisis rather than regular conversation, and AI chatbots, while cheap and available, are not human and have no lived experience to offer you.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What exactly does a How Was Your Day session cost?</div>
@@ -271,7 +271,7 @@ export default function OnlineCounsellingCostPage() {
         {/* Disclaimer */}
         <div className="disclaimer">
           <p><strong>How Was Your Day is peer support, not a crisis service.</strong> If you are in immediate distress or having thoughts of self-harm, please reach out to a professional helpline immediately.</p>
-          <p><strong>NIMHANS:</strong> <a href="tel:08046110007">080-46110007</a> &nbsp;|&nbsp; <strong>Tele-MANAS (Govt. of India):</strong> <a href="tel:14416">14416</a> (free · 24/7)</p>
+          <p><strong>Samaritans:</strong> <a href="tel:116123">116 123</a> &nbsp;|&nbsp; <strong>Shout:</strong> <a href="sms:85258">85258</a> (free · 24/7)</p>
           <p>How Was Your Day listeners are screened peers, not licensed therapists or medical professionals. For clinical mental health support, please consult a qualified mental health professional.</p>
         </div>
       </div>

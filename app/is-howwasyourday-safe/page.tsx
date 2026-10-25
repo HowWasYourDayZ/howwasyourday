@@ -93,8 +93,8 @@ export default function IsHowWasYourDaySafePage() {
         <div className="crisis-box">
           <h2>🆘 Crisis resources</h2>
           <p>If you or someone you know is in crisis or having thoughts of self-harm, please contact:</p>
-          <p><strong><a href="tel:08046110007">NIMHANS: 080-46110007</a></strong> (free, 24/7)</p>
-          <p><strong><a href="tel:14416">Tele-MANAS: 14416</a></strong> (free, Government of India, 24/7)</p>
+          <p><strong><a href="tel:116123">Samaritans 116 123</a></strong> (free, 24/7)</p>
+          <p><strong><a href="sms:85258">text SHOUT to 85258</a></strong> (free, 24/7)</p>
         </div>
 
         <div className="cta">

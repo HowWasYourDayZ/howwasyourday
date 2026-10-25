@@ -18,7 +18,7 @@ export const post = {
   <li><strong>Psychiatrist consultation:</strong> roughly ₹1,000 to ₹3,000 per visit, plus the ongoing cost of any medication that is prescribed. Medication is usually a recurring monthly expense, not a one-time one.</li>
   <li><strong>Clinical psychologist or therapist:</strong> roughly ₹1,500 to ₹4,000 per session. Senior practitioners in metros sit at the upper end of that range, and sometimes above it.</li>
   <li><strong>Online therapy platforms:</strong> broadly similar to in-person rates — commonly ₹1,000 to ₹3,000 per session. Online delivery removes travel, not the cost of the clinician&apos;s time.</li>
-  <li><strong>Government helplines:</strong> completely free, 24/7. NIMHANS runs a national helpline at <strong>080-46110007</strong>, and Tele-MANAS is reachable at <strong>14416</strong>. These are staffed, real, and cost nothing.</li>
+  <li><strong>Government helplines:</strong> completely free, 24/7. Samaritans runs a free helpline at <strong>116 123</strong>, and Shout is reachable by texting SHOUT to <strong>85258</strong>. These are staffed, real, and cost nothing.</li>
   <li><strong>How Was Your Day peer support:</strong> listeners set their own per-minute rate, plus a flat ₹10 platform fee per session. For example, a 15-minute session with a listener charging ₹10/min costs ₹160 including the flat ₹10 platform fee. One introductory session of up to 5 minutes is free per account. Any unused wallet balance is fully refundable.</li>
 </ul>
 
@@ -58,7 +58,7 @@ export const post = {
 
 <h3>If you are in crisis, or thinking of harming yourself</h3>
 
-<p>Call a helpline right now. NIMHANS at <strong>080-46110007</strong> or Tele-MANAS at <strong>14416</strong>. Both are free, both operate 24/7, and both are staffed by people trained specifically for this. Do not spend money, do not compare options, do not wait for a convenient time. This is the correct first call, and cost is not a factor in it.</p>
+<p>Call a helpline right now. Samaritans at <strong>116 123</strong> or Shout (text SHOUT to 85258) at <strong>85258</strong>. Both are free, both operate 24/7, and both are staffed by people trained specifically for this. Do not spend money, do not compare options, do not wait for a convenient time. This is the correct first call, and cost is not a factor in it.</p>
 
 <h3>If you have clinical symptoms</h3>
 
@@ -88,6 +88,6 @@ export const post = {
 
 <p>The case for <strong>peer support India</strong> is not that it beats professional care. It is that between a free crisis helpline and a ₹30,000 treatment course there was, until recently, almost nothing — and that most emotional difficulty lives precisely in that gap. Empathy from someone who has been there is not a lesser product. It is simply a different one, priced at what it actually costs to provide.</p>
 
-<p>If that sounds like what you need, you can <a href="/browse">browse peer listeners</a> and see who has lived something close to your situation — your first introductory session of up to five minutes is free once per account. If you would rather understand the exact session prices first, see <a href="/pricing">How Was Your Day pricing</a>; privacy and refund details are in our <a href="/faq">FAQ</a>. And if you are in crisis right now, please call NIMHANS on 080-46110007 or Tele-MANAS on 14416 before anything else.</p>
+<p>If that sounds like what you need, you can <a href="/browse">browse peer listeners</a> and see who has lived something close to your situation — your first introductory session of up to five minutes is free once per account. If you would rather understand the exact session prices first, see <a href="/pricing">How Was Your Day pricing</a>; privacy and refund details are in our <a href="/faq">FAQ</a>. And if you are in crisis right now, please call Samaritans 116 123 or text SHOUT to 85258 before anything else.</p>
   `.trim(),
 }

@@ -151,7 +151,7 @@ export default function AnxietySupportPage() {
         </div>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <strong><a href="tel:08046110007" style={{color:'#0F4867',fontWeight:800}}>NIMHANS 080-46110007</a></strong> or <strong><a href="tel:14416" style={{color:'#0F4867',fontWeight:800}}>Tele-MANAS 14416</a></strong> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <strong><a href="tel:116123" style={{color:'#0F4867',fontWeight:800}}>Samaritans 116 123</a></strong> or <strong><a href="sms:85258" style={{color:'#0F4867',fontWeight:800}}>text SHOUT to 85258</a></strong> (free · 24/7)
         </div>
 
         <div className="section">

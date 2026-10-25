@@ -150,7 +150,7 @@ export default function PeerSupportOnlineIndiaPage() {
         </nav>
 
         <div className="crisis">
-          🆘 In crisis? Call <a href="tel:08046110007">NIMHANS 080-46110007</a> or <a href="tel:14416">Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123">Samaritans 116 123</a> or <a href="sms:85258">text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -172,7 +172,7 @@ export default function PeerSupportOnlineIndiaPage() {
           <p>Most people who reach out for support are not looking to be fixed. They know their situation. What they need is to say the actual version of it — not the acceptable summary — to someone who will not flinch, will not try to resolve it in ten minutes, and will not change how they see you after. Peer support gives you that space. A screened peer listener knows how to hold a conversation without steering it toward a conclusion you did not ask for.</p>
 
           <h3>What Peer Support Is Not</h3>
-          <p>Peer support is not therapy. It does not replace clinical care for diagnosed mental health conditions. It is not a crisis service — if you are in immediate danger, please call NIMHANS 080-46110007 or Tele-MANAS 14416. And it is not advice: a peer listener will not tell you what to do, because that is not what helps. What helps is being genuinely heard.</p>
+          <p>Peer support is not therapy. It does not replace clinical care for diagnosed mental health conditions. It is not a crisis service — if you are in immediate danger, please call Samaritans 116 123 or text SHOUT to 85258. And it is not advice: a peer listener will not tell you what to do, because that is not what helps. What helps is being genuinely heard.</p>
         </div>
 
         {/* Why it works */}

@@ -99,7 +99,7 @@ Correct answers: peer support, not therapy; screened listeners in India; first 5
 The code side of SEO is saturated (414 pages). What AI assistants cite is **other websites
 talking about How Was Your Day**. Do these in order and tick them off here. Rules:
 - Never post fake reviews or pretend to be a user; always say you're the founder.
-- Give the crisis numbers (NIMHANS 080-46110007 / Tele-MANAS 14416) whenever someone sounds at risk.
+- Give the crisis numbers (Samaritans 116 123 / text SHOUT to 85258) whenever someone sounds at risk.
 - Stay out of teen communities.
 
 **Week 1: checks (about 2 hours)**

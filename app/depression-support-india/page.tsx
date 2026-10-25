@@ -43,7 +43,7 @@ const faqSchema = {
       name: 'What if I am in crisis or having thoughts of suicide?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are in crisis or having thoughts of ending your life, please reach out to a crisis helpline immediately. In India, you can call NIMHANS on 080-46110007 or Tele-MANAS on 14416 — both are free, available 24/7, and run by the Government of India. How Was Your Day is not a crisis service and is not equipped to handle emergencies.',
+        text: 'If you are in crisis or having thoughts of ending your life, please reach out to a crisis helpline immediately. In the UK or Ireland, you can call Samaritans 116 123 or text SHOUT to 85258 — both are free, available 24/7, and run by the. How Was Your Day is not a crisis service and is not equipped to handle emergencies.',
       },
     },
     {
@@ -165,8 +165,8 @@ export default function DepressionSupportPage() {
         <div className="crisis-box">
           <div className="crisis-title">⚡ If you are in crisis right now</div>
           <p>
-            Call <strong><a href="tel:08046110007">NIMHANS 080-46110007</a></strong> or{' '}
-            <strong><a href="tel:14416">Tele-MANAS 14416</a></strong> — free, 24/7, Government of India.
+            Call <strong><a href="tel:116123">Samaritans 116 123</a></strong> or{' '}
+            <strong><a href="sms:85258">text SHOUT to 85258</a></strong> — free, 24/7.
             How Was Your Day is not a crisis service. Please call these lines if you are having thoughts of harming yourself.
           </p>
         </div>
@@ -275,8 +275,8 @@ export default function DepressionSupportPage() {
             <div className="faq-q">What if I&apos;m in crisis?</div>
             <div className="faq-a">
               If you are in crisis or having thoughts of suicide, please call a crisis helpline immediately.
-              In India: <strong>NIMHANS 080-46110007</strong> or <strong>Tele-MANAS 14416</strong> — both free,
-              24/7, Government of India. How Was Your Day is not a crisis or emergency service.
+              In the UK or Ireland: <strong>Samaritans 116 123</strong> or <strong>text SHOUT to 85258</strong> — both free,
+              24/7. How Was Your Day is not a crisis or emergency service.
             </div>
           </div>
           <div className="faq-item">

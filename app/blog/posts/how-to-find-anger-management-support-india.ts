@@ -31,7 +31,7 @@ export const post = {
 
 <h2>When to Seek Urgent Help</h2>
 <p>If your anger is leading to physical aggression, threats, or behaviour that puts yourself or others at risk — please seek professional help immediately. This is beyond anger management and requires clinical intervention.</p>
-<p>For crisis support: NIMHANS (080-46110007) or Tele-MANAS (14416).</p>
+<p>For crisis support: Samaritans (116 123) or Shout (text SHOUT to 85258).</p>
 
 <h2>How to Start</h2>
 <p>The most common barrier to getting support for anger is the shame and stigma around admitting it. There is a cultural narrative in India (and elsewhere) that anger is a character flaw — that needing help with it is an admission of weakness or danger.</p>

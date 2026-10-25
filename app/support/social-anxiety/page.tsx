@@ -141,7 +141,7 @@ export default function SocialAnxietySupportPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -154,7 +154,7 @@ export default function SocialAnxietySupportPage() {
         {/* Understanding social anxiety */}
         <div className="section">
           <h2>Understanding Social Anxiety in India</h2>
-          <p>Social anxiety is far more than nervousness before a big event — it is a persistent, exhausting fear of being watched, judged, or embarrassed in front of others. In India, where social life is deeply woven into family, community, and career, social anxiety can feel especially isolating because so much of daily life happens in groups.</p>
+          <p>Social anxiety is far more than nervousness before a big event — it is a persistent, exhausting fear of being watched, judged, or embarrassed in front of others. In the UK or Ireland, where social life is deeply woven into family, community, and career, social anxiety can feel especially isolating because so much of daily life happens in groups.</p>
 
           <h3>Shyness, Introversion, or Social Anxiety?</h3>
           <p>It is easy to dismiss social anxiety as &quot;just being shy&quot; or introverted, but they are not the same. Introverts often enjoy social interaction in smaller doses and recharge alone by choice. Someone with social anxiety, on the other hand, may desperately want connection but be gripped by an intense fear of judgment, humiliation, or saying the wrong thing — often with racing thoughts, a pounding heart, and physical discomfort well before the situation even begins.</p>

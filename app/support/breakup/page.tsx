@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'How do I cope with a breakup when I cannot tell my family?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. This can make breakup pain significantly harder to process. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.',
+        text: 'In the UK or Ireland, many relationships are kept private from family — which means when they end, you are also grieving in secret. This can make breakup pain significantly harder to process. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.',
       },
     },
     {
@@ -149,7 +149,7 @@ export default function BreakupSupportPage() {
         </div>
 
         <div className="notice">
-          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support and cannot replace crisis intervention.
+          If you are in crisis or having thoughts of self-harm, please call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7). How Was Your Day is peer support and cannot replace crisis intervention.
         </div>
 
         <div className="section">
@@ -240,7 +240,7 @@ export default function BreakupSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How do I cope with a breakup when I cannot tell my family?</div>
-            <div className="faq-a">In India, many relationships are kept private from family — which means when they end, you are also grieving in secret. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.</div>
+            <div className="faq-a">In the UK or Ireland, many relationships are kept private from family — which means when they end, you are also grieving in secret. How Was Your Day offers completely private peer support where you can talk openly about relationships your family may not know about.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support help after a divorce?</div>

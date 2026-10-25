@@ -137,7 +137,7 @@ export default function KuwaitTalkToSomeonePage() {
         </div>
 
         <p style={{ marginTop: 32, fontSize: 13, color: '#aaa', textAlign: 'center' }}>
-          Crisis support: NIMHANS 080-46110007 · Tele-MANAS 14416
+          Crisis support: Samaritans 116 123 · text SHOUT to 85258
         </p>
       </main>
     </>

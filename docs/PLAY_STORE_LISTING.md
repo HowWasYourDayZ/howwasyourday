@@ -8,8 +8,8 @@ in-app currency are not). Never describe the wallet as "coins", "credits",
 "tokens" or "digital currency" anywhere in the listing — it is a **prepaid
 balance for sessions with real people**.
 
-Rules honored: no "free" as a marketing hook; crisis line is NIMHANS +
-Tele-MANAS only; peer-support-not-therapy disclaimer included; no owner name.
+Rules honored: no "free" as a marketing hook; crisis line is Samaritans +
+Shout (text SHOUT to 85258) only; peer-support-not-therapy disclaimer included; no owner name.
 
 ---
 
@@ -94,9 +94,9 @@ If you need clinical care, please consult a qualified professional.
 
 IN CRISIS RIGHT NOW?
 Please reach out to a professional helpline immediately:
-- NIMHANS: 080-46110007
-- Tele-MANAS: 14416
-(Both free, 24/7, Government of India.)
+- Samaritans 116 123
+- text SHOUT to 85258
+(Both free, 24/7.)
 
 You don't have to carry it alone. Someone is ready to listen.
 

@@ -56,12 +56,12 @@ export default function NeedSomeoneToTalkToIndia() {
         </p>
 
         <div className="crisis-box">
-          <p>🆘 In immediate crisis? Call <strong><a href="tel:08046110007">NIMHANS: 080-46110007</a></strong> or <strong><a href="tel:14416">Tele-MANAS: 14416</a></strong> (free · 24/7 · Govt of India)</p>
+          <p>🆘 In immediate crisis? Call <strong><a href="tel:116123">Samaritans 116 123</a></strong> or <strong><a href="sms:85258">text SHOUT to 85258</a></strong> (free · 24/7)</p>
         </div>
 
         <div className="section">
           <h2>You deserve someone who truly understands</h2>
-          <p>In India, it&apos;s often hard to find someone to talk to — really talk to. Family members may not understand or may judge you. Friends get tired of hearing about the same problems. Therapy feels too clinical or is simply too expensive. And at 2 AM when the feelings are worst, there&apos;s often no one available at all.</p>
+          <p>In the UK or Ireland, it&apos;s often hard to find someone to talk to — really talk to. Family members may not understand or may judge you. Friends get tired of hearing about the same problems. Therapy feels too clinical or is simply too expensive. And at 2 AM when the feelings are worst, there&apos;s often no one available at all.</p>
           <p>How Was Your Day changes this. Our peer listeners go online at different hours — and they genuinely understand. Not because they have a degree, but because they have lived through something similar.</p>
         </div>
 

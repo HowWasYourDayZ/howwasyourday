@@ -83,7 +83,7 @@ const questions = [
   },
   {
     q: 'What should I do if I feel unsafe in my relationship or might harm myself?',
-    a: 'How Was Your Day is not an emergency, domestic-abuse or crisis service. If you face immediate danger, contact the police or local emergency services, or go to a safe place and trusted local support. For urgent mental-health support in India, Tele-MANAS is available at 14416. Do not rely on a peer-listening session for crisis response.',
+    a: 'How Was Your Day is not an emergency, domestic-abuse or crisis service. If you face immediate danger, contact the police or local emergency services, or go to a safe place and trusted local support. For urgent mental-health support in India, Shout (text SHOUT to 85258) is available at 85258. Do not rely on a peer-listening session for crisis response.',
   },
 ]
 
@@ -150,7 +150,7 @@ export default function RelationshipEmotionalSupportGuide() {
         <p>How Was Your Day serves adults 18 and older. A screened peer listener may accept a request for text or voice. There is one free introductory session up to 5 minutes per account; availability and paid rates vary.</p>
         <a href="/talk?src=relationship-guide" style={{ display: 'inline-block', background: '#fff', color: '#12596B', borderRadius: 25, padding: '11px 20px', fontWeight: 750, textDecoration: 'none', marginRight: 10 }}>Request a conversation</a>
         <a href="/trust" style={{ color: '#fff', display: 'inline-block', padding: 10 }}>Read how it works and privacy details →</a>
-        <p style={{ fontSize: 13, marginTop: 18 }}>Immediate danger: contact the police or local emergency services. Mental-health crisis: Tele-MANAS 14416 or NIMHANS 080-46110007. How Was Your Day is not an emergency service.</p>
+        <p style={{ fontSize: 13, marginTop: 18 }}>Immediate danger: contact the police or local emergency services. Mental-health crisis: text SHOUT to 85258 or Samaritans 116 123. How Was Your Day is not an emergency service.</p>
       </section>
     </main>
   )

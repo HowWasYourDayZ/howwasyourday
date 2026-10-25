@@ -130,7 +130,7 @@ export default function PaidFriendIndiaPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free, 24/7)
+          In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free, 24/7)
         </div>
 
         <div className="hero">
@@ -143,7 +143,7 @@ export default function PaidFriendIndiaPage() {
         <div className="section">
           <h2>What Is a Paid Friend?</h2>
           <p>The concept of paying someone to listen &mdash; or to spend time with you &mdash; is not new. In Japan, the &ldquo;rent-a-friend&rdquo; industry has existed for decades, with people hiring &ldquo;client partners&rdquo; to accompany them to events, provide company, or simply listen. The industry is enormous and mainstream there.</p>
-          <p>In India, the concept is arriving in a different form. Not companionship for events, but emotional support through conversation. The need is the same: a real human being, without agenda, who will give you their full attention and genuinely hear you.</p>
+          <p>In the UK or Ireland, the concept is arriving in a different form. Not companionship for events, but emotional support through conversation. The need is the same: a real human being, without agenda, who will give you their full attention and genuinely hear you.</p>
           <p>How Was Your Day is not &ldquo;rent a friend&rdquo; in the companionship sense. It is peer emotional support &mdash; a screened listener who holds space for your experience without judging, steering, or advising. Closer to the best version of a friend who actually listens than to a therapist or a companion service.</p>
         </div>
 

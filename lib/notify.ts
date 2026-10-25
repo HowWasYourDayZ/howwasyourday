@@ -59,7 +59,7 @@ export async function notifySessionComplete(opts: {
           <p style="color:#5A7A8A;">You just had a ${esc(durationMins)}-min ${esc(sessionType)} session with <strong>${esc(listenerName)}</strong>.</p>
           <p style="color:#5A7A8A;">We hope it helped. You can rate your session and book again anytime.</p>
           <a href="https://howwasyourday.live/sessions" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View my sessions →</a>
-          <p style="font-size:12px;color:#8AAAB8;margin-top:24px;">In crisis? Call Tele-MANAS 14416 (free, 24/7).</p>
+          <p style="font-size:12px;color:#8AAAB8;margin-top:24px;">In crisis? text SHOUT to 85258 (free, 24/7).</p>
         </div>
       `,
     })

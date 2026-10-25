@@ -42,9 +42,9 @@ export const post = {
 
 <p>India has several free mental health helplines that provide immediate support, mostly by telephone:</p>
 
-<p><strong>NIMHANS</strong> (080-46110007) — the National Institute of Mental Health and Neuro Sciences, a premier government institution offering mental health support. Free helpline available for people in distress.</p>
+<p><strong>Samaritans</strong> (116 123) — free, confidential emotional support by phone in the UK and Ireland, 24/7. Free helpline available for people in distress.</p>
 
-<p><strong>Tele-MANAS</strong> (14416) — the Government of India's national mental health helpline. Free, available 24/7, accessible in multiple languages across India.</p>
+<p><strong>Shout</strong> (text SHOUT to 85258) — a free, 24/7 text support service in the UK.</p>
 
 <p>These helplines are valuable for crisis situations and for people who need immediate support. They are not designed for ongoing therapeutic relationships — the nature of a helpline is that you speak with whoever is available — but they are an important first resource and genuinely free.</p>
 

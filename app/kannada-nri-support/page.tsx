@@ -107,7 +107,7 @@ export default function KannadaNriSupportPage() {
           <a href="/nri-burnout">NRI burnout &rarr;</a>
           <a href="/tamil-nri-support">Tamil NRI support &rarr;</a>
         </div></div>
-        <div className="crisis"><strong>In a crisis?</strong> NIMHANS: 080-46110007 &nbsp;&middot;&nbsp; Tele-MANAS: 14416 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
+        <div className="crisis"><strong>In a crisis?</strong> Samaritans 116 123 &nbsp;&middot;&nbsp; text SHOUT to 85258 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
       </div>
     </>
   )

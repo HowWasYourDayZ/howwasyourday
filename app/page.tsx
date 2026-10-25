@@ -537,7 +537,7 @@ export default function Home() {
           <h3>ℹ️ How Was Your Day is peer support — not therapy</h3>
           <p><strong>Our listeners are real people with lived experience — not licensed therapists or counselors.</strong> Peer support is legitimate and valuable. It is different from, and not a replacement for, professional mental health treatment.</p>
           <p>If you need clinical mental health support, please consult a qualified professional.</p>
-          <div className="cb"><p>🆘 <strong>In crisis?</strong> Call <strong><a href="tel:08046110007" style={{color:'inherit'}}>NIMHANS 080-46110007</a></strong> or <strong><a href="tel:14416" style={{color:'inherit'}}>Tele-MANAS 14416</a></strong> (free · 24/7 · Govt of India)</p></div>
+          <div className="cb"><p>🆘 <strong>In crisis?</strong> Call <strong><a href="tel:116123" style={{color:'inherit'}}>Samaritans 116 123</a></strong> or <strong><a href="sms:85258" style={{color:'inherit'}}>text SHOUT to 85258</a></strong> (free · 24/7)</p></div>
         </div>
       </div>
 

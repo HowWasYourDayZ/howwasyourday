@@ -58,7 +58,7 @@ const faqSchema = {
       name: 'Are there free peer support apps in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Wysa offers a free AI chatbot. iCall (run by TISS) offers subsidised counselling sessions starting at ₹200. Government crisis helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.',
+        text: 'Wysa offers a free AI chatbot. iCall (run by TISS) offers subsidised counselling sessions starting at ₹200. Crisis helplines Samaritans (116 123) and Shout (text SHOUT to 85258) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.',
       },
     },
     {
@@ -162,7 +162,7 @@ export default function BestPeerSupportAppIndiaPage() {
         </nav>
 
         <div className="crisis">
-          🆘 In crisis? Call <a href="tel:08046110007">NIMHANS 080-46110007</a> or <a href="tel:14416">Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123">Samaritans 116 123</a> or <a href="sms:85258">text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -232,7 +232,7 @@ export default function BestPeerSupportAppIndiaPage() {
               </tbody>
             </table>
           </div>
-          <p style={{marginTop:12,fontSize:13,color:'var(--gray)'}}>Costs are approximate and may vary. This table compares options — it is not an endorsement of all platforms. For mental health crises, use NIMHANS 080-46110007 or Tele-MANAS 14416 (free, government of India).</p>
+          <p style={{marginTop:12,fontSize:13,color:'var(--gray)'}}>Costs are approximate and may vary. This table compares options — it is not an endorsement of all platforms. For mental health crises, use Samaritans 116 123 or text SHOUT to 85258 (free, 24/7).</p>
         </div>
 
         {/* What makes How Was Your Day different */}
@@ -307,7 +307,7 @@ export default function BestPeerSupportAppIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">Are there free peer support apps in India?</div>
-            <div className="faq-a">Wysa offers a free AI chatbot. iCall offers subsidised counselling from ₹200. Government crisis helplines NIMHANS (080-46110007) and Tele-MANAS (14416) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.</div>
+            <div className="faq-a">Wysa offers a free AI chatbot. iCall offers subsidised counselling from ₹200. Crisis helplines Samaritans (116 123) and Shout (text SHOUT to 85258) are free but designed for acute crises, not ongoing peer support. How Was Your Day offers a free 5-minute trial for every session, with paid sessions from ₹160.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How is peer support different from counselling?</div>

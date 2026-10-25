@@ -82,7 +82,7 @@ export default function ArrangedMarriageNriPage() {
 
         <div className="section">
           <h2>The NRI Arranged Marriage Pressure: A Different Kind</h2>
-          <p>Arranged marriage pressure on NRIs has a particular character. In India, the pressure exists within a world where everyone around you is navigating the same thing — your friends are also dealing with rishtas, your colleagues are also having the family conversations. You can complain, compare notes, laugh about it together.</p>
+          <p>Arranged marriage pressure on NRIs has a particular character. In the UK or Ireland, the pressure exists within a world where everyone around you is navigating the same thing — your friends are also dealing with rishtas, your colleagues are also having the family conversations. You can complain, compare notes, laugh about it together.</p>
           <p>Abroad, it is different. The rishta pressure comes from family back in India, who worry that time is running out and that you are drifting away from your culture and values. It comes from the diaspora community around you, which has its own dense social surveillance. And it arrives into a world — your American, British, or Canadian life — where none of your non-Indian friends understand what a rishta even is, and where your Indian friends are also carrying the same pressure but rarely talking about it openly.</p>
           <p>The result is a very specific kind of silence. You say yes to the meetings, the WhatsApp exchanges, the visits. You smile. You perform openness. And inside, you have a different set of feelings that there is no safe place to voice. How Was Your Day gives you that place. First 5 minutes free.</p>
         </div>
@@ -101,7 +101,7 @@ export default function ArrangedMarriageNriPage() {
           <a href="/indian-emotional-support-abroad">NRI support &rarr;</a>
           <a href="/nri-dating-usa">NRI dating USA &rarr;</a>
         </div></div>
-        <div className="crisis"><strong>In a crisis?</strong> NIMHANS: 080-46110007 &nbsp;&middot;&nbsp; Tele-MANAS: 14416 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
+        <div className="crisis"><strong>In a crisis?</strong> Samaritans 116 123 &nbsp;&middot;&nbsp; text SHOUT to 85258 &nbsp;&middot;&nbsp; Both free, 24/7.</div>
       </div>
     </>
   )

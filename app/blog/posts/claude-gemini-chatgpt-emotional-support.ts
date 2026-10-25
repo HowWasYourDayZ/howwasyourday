@@ -64,6 +64,6 @@ export const post = {
 
 <p style="margin-top: 32px"><a href="/browse" style="display:inline-block;background:#0F4867;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700">Browse listeners — first 5 minutes free</a></p>
 
-<p style="margin-top: 16px; color: #666; font-size: 0.85em">If you are in crisis: NIMHANS helpline 080-46110007 · Tele-MANAS 14416</p>
+<p style="margin-top: 16px; color: #666; font-size: 0.85em">If you are in crisis: Samaritans 116 123 · text SHOUT to 85258</p>
 `,
 }

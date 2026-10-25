@@ -144,7 +144,7 @@ export default function OverthinkingSupportPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         {/* Hero */}
@@ -167,7 +167,7 @@ export default function OverthinkingSupportPage() {
           <p>They can feel identical from the inside, which is why overthinking is so convincing. Problem-solving moves — it asks what can I do, arrives at something, and lets go. Rumination replays — it asks why did this happen, what did they mean, what if it happens again, and never reaches an end because it was never looking for one. A useful test at 2 AM: has this thinking produced anything new in the last twenty minutes? If it is the same loop wearing a different sentence, your mind is not solving. It is circling, and it needs rest or company, not more thinking.</p>
 
           <h3>Overthinking Work and Career</h3>
-          <p>In India, work is rarely just work. There is family expectation layered on top of it, comparisons with cousins and batchmates, the weight of a decision someone else partly made for you, and the constant background sense that you should be further along by now. So one offhand comment from a manager becomes three hours of analysis. A quiet appraisal cycle becomes a full imagined future. High-pressure work cultures give the mind endless raw material — and very few people you can say any of it to without it getting back to someone.</p>
+          <p>In the UK or Ireland, work is rarely just work. There is family expectation layered on top of it, comparisons with cousins and batchmates, the weight of a decision someone else partly made for you, and the constant background sense that you should be further along by now. So one offhand comment from a manager becomes three hours of analysis. A quiet appraisal cycle becomes a full imagined future. High-pressure work cultures give the mind endless raw material — and very few people you can say any of it to without it getting back to someone.</p>
 
           <h3>Replaying Conversations</h3>
           <p>Social overthinking has its own particular sting. You reread a message you sent hours ago, hunting for the wrong word. You replay a conversation from a party last week and cringe at something nobody else remembers. You watch someone go from replying quickly to replying slowly and write an entire story about what it means. Underneath it is usually a simple, deeply human worry: that you might not be wanted. The mind tries to solve that fear by reviewing the evidence again and again, but there is no amount of reviewing that ever settles it.</p>

@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Is peer support the same as counselling?',
-    a: 'No. In India, counselling typically refers to professional support from a licensed counsellor — usually someone with a postgraduate qualification in psychology or counselling. Counsellors can assess, provide structured interventions and refer for psychiatric care. Peer support is non-clinical and based on lived experience. How Was Your Day is peer support, not counselling or therapy.',
+    a: 'No. In the UK or Ireland, counselling typically refers to professional support from a licensed counsellor — usually someone with a postgraduate qualification in psychology or counselling. Counsellors can assess, provide structured interventions and refer for psychiatric care. Peer support is non-clinical and based on lived experience. How Was Your Day is peer support, not counselling or therapy.',
   },
   {
     q: 'Who can benefit from peer support?',
@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: 'What does a peer support session on How Was Your Day cost?',
-    a: 'In India: the listener\'s per-minute rate × minutes + a flat ₹10 platform fee. At ₹10/min, a 15-minute session is ₹160. Voice calls are ₹5/min more than text. Outside India, prices start at US$10 (15 min), US$15 (30 min), US$20 (45 min). Every new account receives one free 5-minute introduction.',
+    a: 'In the UK or Ireland: the listener\'s per-minute rate × minutes + a flat ₹10 platform fee. At ₹10/min, a 15-minute session is ₹160. Voice calls are ₹5/min more than text. Outside India, prices start at US$10 (15 min), US$15 (30 min), US$20 (45 min). Every new account receives one free 5-minute introduction.',
   },
 ]
 
@@ -206,7 +206,7 @@ export default function PeerSupportIndiaGuidePage() {
           <p>Understanding the difference is important because the needs are different and choosing the wrong form of support can be genuinely harmful.</p>
 
           <h3>Therapy</h3>
-          <p>Therapy — provided by a licensed psychologist, psychiatrist, or counsellor — is clinical care. A therapist is qualified to assess and diagnose mental health conditions, design treatment plans, and provide structured psychotherapy. In India, this typically requires a postgraduate qualification in clinical psychology, psychiatry, or counselling psychology. Therapy is appropriate for diagnosed or suspected clinical conditions: major depression, OCD, trauma requiring structured treatment, bipolar disorder, severe anxiety disorders, eating disorders.</p>
+          <p>Therapy — provided by a licensed psychologist, psychiatrist, or counsellor — is clinical care. A therapist is qualified to assess and diagnose mental health conditions, design treatment plans, and provide structured psychotherapy. In the UK or Ireland, this typically requires a postgraduate qualification in clinical psychology, psychiatry, or counselling psychology. Therapy is appropriate for diagnosed or suspected clinical conditions: major depression, OCD, trauma requiring structured treatment, bipolar disorder, severe anxiety disorders, eating disorders.</p>
 
           <h3>Counselling</h3>
           <p>Counselling in India is a professional service delivered by a trained counsellor. It may involve structured interventions, assessment, and referral. It is clinical or semi-clinical in nature and distinct from peer support.</p>
@@ -250,7 +250,7 @@ export default function PeerSupportIndiaGuidePage() {
 
           <div className="crisis-box">
             <strong>In crisis?</strong> If you are experiencing thoughts of self-harm or suicide, please contact a crisis service immediately.
-            India crisis lines: <strong>NIMHANS: 080-46110007</strong> · <strong>Tele-MANAS: 14416</strong> (free, 24/7, Government of India).
+            India crisis lines: <strong>Samaritans 116 123</strong> · <strong>text SHOUT to 85258</strong> (free, 24/7).
             How Was Your Day is not an emergency or crisis service.
           </div>
         </div>
@@ -291,8 +291,8 @@ export default function PeerSupportIndiaGuidePage() {
           <p>If you disclose something that suggests immediate risk — thoughts of self-harm, suicidal intent, a dangerous situation — a How Was Your Day listener will refer you to appropriate services. They will not attempt to provide crisis intervention themselves.</p>
           <div className="crisis-box">
             <strong>India crisis helplines:</strong><br/>
-            NIMHANS: <a href="tel:08046110007">080-46110007</a><br/>
-            Tele-MANAS: <a href="tel:14416">14416</a> (free · 24/7 · Government of India)
+            Samaritans: <a href="tel:116123">116 123</a><br/>
+            text SHOUT to 85258 (free · 24/7)
           </div>
         </div>
 

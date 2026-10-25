@@ -26,7 +26,7 @@ const faqSchema = {
       name: 'Is feeling lost in your 20s or 30s normal in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Extremely. The quarter-life period — roughly 22 to 32 — is one of the most disorienting stretches a person navigates. You have often done what you were supposed to do: finished your degree, started a job, maybe moved to a new city. And then you look around and feel nothing like what you expected to feel. In India, this is compounded by the gap between the life you were trained to want and the life you are discovering you actually want. That gap is not a failure. It is a very normal reckoning.',
+        text: 'Extremely. The quarter-life period — roughly 22 to 32 — is one of the most disorienting stretches a person navigates. You have often done what you were supposed to do: finished your degree, started a job, maybe moved to a new city. And then you look around and feel nothing like what you expected to feel. In the UK or Ireland, this is compounded by the gap between the life you were trained to want and the life you are discovering you actually want. That gap is not a failure. It is a very normal reckoning.',
       },
     },
     {
@@ -151,7 +151,7 @@ export default function FeelingLostPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -173,7 +173,7 @@ export default function FeelingLostPage() {
 
         <div className="section">
           <h2>Why the Quarter-Life Period Is So Disorienting in India</h2>
-          <p>The quarter-life period — roughly 22 to 35 — is one of the most disorienting stretches of adulthood for anyone. In India, it is compounded by the specific nature of the script that most people have been handed.</p>
+          <p>The quarter-life period — roughly 22 to 35 — is one of the most disorienting stretches of adulthood for anyone. In the UK or Ireland, it is compounded by the specific nature of the script that most people have been handed.</p>
 
           <h3>The Script Runs Out</h3>
           <p>For the first 22 years of most Indian lives, the path is clearly marked. School, board exams, entrance exams, degree, first job. There are waypoints. There is a clear next step. And then, at some point in your mid-twenties, the script runs out. No one tells you what comes next — not in a way that feels genuinely true for you. The job is there, but what is it for? The city is there, but is this where you want to be? The relationship path is there, but is this what you actually want?</p>

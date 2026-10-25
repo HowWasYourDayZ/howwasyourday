@@ -58,6 +58,6 @@ export const post = {
 
 <p>The relief you are looking for — being heard, feeling like what you are going through matters, having permission to feel what you are feeling — is available directly. It does not need a birth chart as an entrance fee.</p>
 
-<p>A final honest note: peer support is the right fit for most of what this article has described. But if what you are carrying goes beyond wanting to talk — if there is persistent hopelessness, or any thoughts of harming yourself — please reach out to professional support. Two free government crisis helplines are available in India 24/7: <strong>NIMHANS at 080-46110007</strong> and <strong>Tele-MANAS at 14416</strong>. They cost nothing and are there exactly for this.</p>
+<p>A final honest note: peer support is the right fit for most of what this article has described. But if what you are carrying goes beyond wanting to talk — if there is persistent hopelessness, or any thoughts of harming yourself — please reach out to professional support. Two free crisis helplines are available 24/7: <strong>Samaritans 116 123</strong> and <strong>text SHOUT to 85258</strong>. They cost nothing and are there exactly for this.</p>
   `.trim(),
 }

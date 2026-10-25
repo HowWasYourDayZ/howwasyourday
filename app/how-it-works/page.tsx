@@ -25,7 +25,7 @@ const FAQ: { q: string; a: string }[] = [
   { q: 'What is How Was Your Day?', a: 'How Was Your Day (howwasyourday.live) is an online peer-support service from India. You talk privately, one to one, by text or voice, with a screened peer listener: an ordinary person with lived experience who listens without judgment. It is paid per session, with your first 5 minutes free.' },
   { q: 'Is How Was Your Day therapy?', a: 'No. How Was Your Day is peer support, not therapy, counselling, diagnosis or medical care. Listeners are not psychologists, psychiatrists or licensed counsellors and do not give medical or clinical advice. For a mental health condition, please see a qualified professional.' },
   { q: 'Who is How Was Your Day for?', a: 'Adults (18+) who want to talk something through with a real person: relationship trouble, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day. It also suits Indians living abroad who want someone who understands the Indian context.' },
-  { q: 'Who is How Was Your Day not for?', a: 'Anyone in immediate danger or thinking about suicide or self-harm should call NIMHANS (080-46110007) or Tele-MANAS (14416), free in India, or local emergency services. How Was Your Day is also not the right place for a diagnosis, medication, or treatment of a mental health condition.' },
+  { q: 'Who is How Was Your Day not for?', a: 'Anyone in immediate danger or thinking about suicide or self-harm should call Samaritans (116 123) or Shout (text SHOUT to 85258), or call 999 / 112 in an emergency. How Was Your Day is also not the right place for a diagnosis, medication, or treatment of a mental health condition.' },
   { q: 'How are How Was Your Day listeners chosen?', a: 'Every listener applies with a written application about their lived experience and why they want to listen, completes a screening quiz on handling difficult conversations, takes a live verification selfie, and is reviewed manually by How Was Your Day before they can take any session. Listeners are screened, not clinically trained, and agree to a code of conduct: confidentiality, no judgment, and no medical advice.' },
   { q: 'How much does How Was Your Day cost?', a: `Your first ${FREE_SESSION_MINS}-minute session is free (once per account). After that, in India each listener sets a per-minute rate and a session costs rate × minutes + a flat ₹${PLATFORM_FEE} fee — for example ₹${ex15} for 15 minutes with a ₹${EXAMPLE_RATE}/min listener.${VOICE_PRICING_ENABLED ? ` Voice calls cost ₹${VOICE_RATE_PREMIUM}/min more than text.` : ''} Outside India, sessions start at US$${NRI_USD_PRICES[15]} for 15 minutes, US$${NRI_USD_PRICES[30]} for 30 and US$${NRI_USD_PRICES[45]} for 45. You always see the price before you start.` },
   { q: 'Do I pay if I end early or nobody answers?', a: 'If no listener accepts your request, the amount held is returned to your wallet in full. If you end a session early, you pay only for the minutes used, and nothing if it lasted under a minute.' },
@@ -151,7 +151,7 @@ export default function HowItWorksPage() {
           <h2>What it costs</h2>
           <ul>
             <li>Your first {FREE_SESSION_MINS}-minute session is free — once per account.</li>
-            <li>In India, each listener sets a per-minute rate. A session costs <strong>rate × minutes + ₹{PLATFORM_FEE}</strong>: for example ₹{ex15} for 15 minutes with a ₹{EXAMPLE_RATE}/min listener.{VOICE_PRICING_ENABLED ? ` Voice calls are ₹${VOICE_RATE_PREMIUM}/min more than text.` : ''}</li>
+            <li>In the UK or Ireland, each listener sets a per-minute rate. A session costs <strong>rate × minutes + ₹{PLATFORM_FEE}</strong>: for example ₹{ex15} for 15 minutes with a ₹{EXAMPLE_RATE}/min listener.{VOICE_PRICING_ENABLED ? ` Voice calls are ₹${VOICE_RATE_PREMIUM}/min more than text.` : ''}</li>
             <li>Outside India, sessions start at US${NRI_USD_PRICES[15]} for 15 minutes, US${NRI_USD_PRICES[30]} for 30 and US${NRI_USD_PRICES[45]} for 45, billed in Indian rupees and shown in your currency.</li>
             <li>You pay from a How Was Your Day wallet. If nobody accepts your request, the full amount comes back. If you end early, you pay only for the minutes used — nothing if it lasted under a minute.</li>
           </ul>
@@ -175,7 +175,7 @@ export default function HowItWorksPage() {
         </section>
 
         <div className="crisis">
-          <strong>In a crisis or thinking about self-harm?</strong> Please call <a href="tel:14416">Tele-MANAS: 14416</a> (free, all India, 24/7, Government of India) or <a href="tel:08046110007">NIMHANS: 080-46110007</a>, or your local emergency number. How Was Your Day listeners are not crisis counsellors.
+          <strong>In a crisis or thinking about self-harm?</strong> Please text SHOUT to <a href="sms:85258">85258</a> (free, 24/7) or <a href="tel:116123">Samaritans 116 123</a>, or your local emergency number. How Was Your Day listeners are not crisis counsellors.
         </div>
 
         <section className="sec faq">

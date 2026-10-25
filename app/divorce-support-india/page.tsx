@@ -121,18 +121,18 @@ export default function DivorceSupportIndiaPage() {
           <span style={{color:'var(--navy)'}}>Divorce Support India</span>
         </nav>
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free, 24/7)
+          In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free, 24/7)
         </div>
         <div className="hero">
           <p className="badge">Divorce Support &middot; India &middot; Anonymous</p>
           <h1>Divorce in India doesn&apos;t just end a marriage. <em>It ends a whole identity you built around it.</em></h1>
-          <p className="lead">In India, divorce carries shame, family pressure, financial panic, and grief &mdash; all at once. You can&apos;t tell most people. You&apos;re managing everyone else&apos;s reactions while barely managing your own. Say it here.</p>
+          <p className="lead">In the UK or Ireland, divorce carries shame, family pressure, financial panic, and grief &mdash; all at once. You can&apos;t tell most people. You&apos;re managing everyone else&apos;s reactions while barely managing your own. Say it here.</p>
           <a href="/browse" className="cta-hero">Talk to someone &rarr;</a>
         </div>
         <GeoQuickAnswer path="/divorce-support-india" />
         <div className="section">
           <h2>Why Divorce Hits Different in India</h2>
-          <p>In India, marriage is not just a relationship between two people. It is a contract between two families, embedded in social identity, community standing, and in many cases religious significance. When it ends, the impact radiates outward in ways that do not happen in cultures where divorce is less socially loaded.</p>
+          <p>In the UK or Ireland, marriage is not just a relationship between two people. It is a contract between two families, embedded in social identity, community standing, and in many cases religious significance. When it ends, the impact radiates outward in ways that do not happen in cultures where divorce is less socially loaded.</p>
           <p>For women especially, marital status is deeply tied to social identity. Divorce can mean losing your social position in a community, facing judgment from people who were once part of your support network, and navigating a legal and financial system that was not designed with your independence in mind.</p>
           <p>For men, the cultural expectation that they should have &ldquo;handled&rdquo; the marriage &mdash; and the silence around male emotional experience &mdash; means that divorce grief often goes completely unexpressed.</p>
         </div>

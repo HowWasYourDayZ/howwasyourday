@@ -247,8 +247,8 @@ export default function CanadaRelationshipPage() {
 
         <div className="disclaimer">
           <p>⚠️ If you are in crisis or thinking about self-harm, please reach out immediately:<br />
-            <strong>NIMHANS helpline: 080-46110007</strong> &nbsp;|&nbsp;
-            <strong>Tele-MANAS: 14416</strong> (free, 24/7)<br />
+            <strong>Samaritans 116 123</strong> &nbsp;|&nbsp;
+            <strong>text SHOUT to 85258</strong> (free, 24/7)<br />
             How Was Your Day is peer support — not a substitute for professional mental health care or emergency services.
           </p>
         </div>

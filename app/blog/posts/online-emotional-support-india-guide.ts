@@ -28,7 +28,7 @@ export const post = {
 
 <h3>Government Crisis Helplines</h3>
 
-<p>If you are in a mental health emergency — active suicidal thoughts, a crisis you cannot get through alone, a situation where your safety is at risk — the first call should always be to a crisis helpline, not to any app. In India, <strong>NIMHANS (080-46110007)</strong> and <strong>Tele-MANAS (14416)</strong> are free, 24/7, government-run helplines staffed to handle exactly this kind of emergency. They exist for crisis intervention. Please use them if you are in that place right now, before reading any further.</p>
+<p>If you are in a mental health emergency — active suicidal thoughts, a crisis you cannot get through alone, a situation where your safety is at risk — the first call should always be to a crisis helpline, not to any app. In the UK or Ireland, <strong>Samaritans (116 123)</strong> and <strong>Shout (text SHOUT to 85258)</strong> are free, 24/7 helplines staffed to handle exactly this kind of emergency. They exist for crisis intervention. Please use them if you are in that place right now, before reading any further.</p>
 
 <h3>Online Therapy and Counselling Platforms</h3>
 
@@ -51,7 +51,7 @@ export const post = {
 <p>Rather than guessing, use this simple decision framework:</p>
 
 <ul>
-  <li><strong>In crisis or unsafe right now?</strong> Call NIMHANS (080-46110007) or Tele-MANAS (14416) immediately. Do not wait, do not scroll further.</li>
+  <li><strong>In crisis or unsafe right now?</strong> Call Samaritans (116 123) or Shout (text SHOUT to 85258) immediately. Do not wait, do not scroll further.</li>
   <li><strong>Experiencing clinical symptoms</strong> — persistent depression, panic attacks, trauma responses, symptoms that stop you from functioning day to day? See a licensed therapist or psychiatrist. Online therapy platforms are a legitimate, accessible way to start.</li>
   <li><strong>Need everyday empathetic, judgment-free support</strong> — going through a hard period, feeling lonely, processing a breakup or family conflict, wanting to be heard without a clinical framework? Peer support is often the best fit — accessible, immediate, and human.</li>
   <li><strong>Want structured self-help tools</strong> — habit tracking, guided breathing, journaling prompts? A wellness app can be a useful supplement, though not a substitute for human connection.</li>
@@ -75,7 +75,7 @@ export const post = {
 
 <h2>Evaluating a Platform for Safety</h2>
 
-<p>Before trusting any platform with something personal, check for a few basics: is there a verification process for whoever you will be talking to, so you know they are who they say they are? Is there a clear crisis protocol — what happens if a conversation reveals a genuine emergency? And how is your data handled? In India, the <strong>DPDP Act, 2023</strong> sets legal standards for how personal data must be protected; a platform that takes privacy seriously should be able to speak clearly to how it complies.</p>
+<p>Before trusting any platform with something personal, check for a few basics: is there a verification process for whoever you will be talking to, so you know they are who they say they are? Is there a clear crisis protocol — what happens if a conversation reveals a genuine emergency? And how is your data handled? In the UK or Ireland, the <strong>DPDP Act, 2023</strong> sets legal standards for how personal data must be protected; a platform that takes privacy seriously should be able to speak clearly to how it complies.</p>
 
 <h2>How the app Fits Into This Landscape</h2>
 

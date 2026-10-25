@@ -210,7 +210,7 @@ export default function SomeoneToTalkToPage() {
           <p>A therapist is a licensed professional who works within a clinical framework — diagnosing conditions, applying evidence-based interventions, and tracking therapeutic progress over time. That structure is exactly right for people who need clinical care. But many people do not need treatment. They need to be heard by someone who has been through something similar and come out the other side.</p>
 
           <h3>Accessibility and Affordability</h3>
-          <p>Clinical therapy and peer support are different services, so price is not a like-for-like comparison. On How Was Your Day, one 5-minute introductory session is free per account. In India, a paid session costs the selected listener&apos;s per-minute rate multiplied by the session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Check <a href="/pricing" style={{color:'var(--teal)',fontWeight:700}}>current pricing</a>; the exact price is displayed before you start.</p>
+          <p>Clinical therapy and peer support are different services, so price is not a like-for-like comparison. On How Was Your Day, one 5-minute introductory session is free per account. In the UK or Ireland, a paid session costs the selected listener&apos;s per-minute rate multiplied by the session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160. Check <a href="/pricing" style={{color:'var(--teal)',fontWeight:700}}>current pricing</a>; the exact price is displayed before you start.</p>
 
           <h3>Complementary, Not Competing</h3>
           <p>Many people use peer support alongside therapy — as a way to process between clinical sessions, access support when a therapist is not available, or take a meaningful first step before they are ready for formal treatment. How Was Your Day listeners are screened and expected to recognise when someone might benefit from professional care and will gently say so when that appears to be the case.</p>
@@ -234,7 +234,7 @@ export default function SomeoneToTalkToPage() {
         <div className="section">
           <h2>Browse real peer listeners</h2>
           <p>Use the live directory to review listener introductions, lived-experience topics, languages, ratings and current availability. Choose based on the details shown in each real profile and whether the listener is currently available.</p>
-          <p>One 5-minute introductory session is free per account. In India, paid pricing depends on the listener&apos;s rate and session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160.</p>
+          <p>One 5-minute introductory session is free per account. In the UK or Ireland, paid pricing depends on the listener&apos;s rate and session length, plus a flat ₹10 platform fee. For example, 15 minutes at ₹10/min costs ₹160.</p>
           <div className="related" style={{marginTop:16}}>
             <a href="/browse" className="related-link">Browse real listeners →</a>
             <a href="/pricing" className="related-link">See all prices →</a>
@@ -280,7 +280,7 @@ export default function SomeoneToTalkToPage() {
         {/* Disclaimer */}
         <div className="disclaimer">
           <p><strong>Peer support is not a substitute for professional mental health care.</strong> How Was Your Day listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
-          <p><strong>Crisis helplines in India:</strong> NIMHANS — <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:700}}>080-46110007</a> &nbsp;|&nbsp; Tele-MANAS — <a href="tel:14416" style={{color:'#7A5020',fontWeight:700}}>14416</a> (free · 24/7 · Govt of India)</p>
+          <p><strong>Crisis helplines (UK &amp; Ireland):</strong> Samaritans — <a href="tel:116123" style={{color:'#7A5020',fontWeight:700}}>116 123</a> &nbsp;|&nbsp; text SHOUT to 85258 (free · 24/7)</p>
         </div>
 
         {/* Related pages */}

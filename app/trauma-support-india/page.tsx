@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'What if I get triggered during a session?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You can end a session at any time for any reason. If you feel overwhelmed during a session, tell your listener and they will follow your lead. If you are in acute distress, please call NIMHANS (080-46110007) or Tele-MANAS (14416).',
+        text: 'You can end a session at any time for any reason. If you feel overwhelmed during a session, tell your listener and they will follow your lead. If you are in acute distress, please call Samaritans (116 123) or Shout (text SHOUT to 85258).',
       },
     },
     {
@@ -138,7 +138,7 @@ export default function TraumaSupportIndiaPage() {
         </nav>
 
         <div className="disclaimer-box">
-          <p>⚠️ <strong>Important:</strong> For crisis or psychiatric trauma treatment, please see a mental health professional or call <a href="tel:08046110007">NIMHANS: 080-46110007</a> or <a href="tel:14416">Tele-MANAS: 14416</a> (free · 24/7 · Govt of India).</p>
+          <p>⚠️ <strong>Important:</strong> For crisis or psychiatric trauma treatment, please see a mental health professional or call <a href="tel:116123">Samaritans 116 123</a> or <a href="sms:85258">text SHOUT to 85258</a> (free · 24/7).</p>
           <p>How Was Your Day is peer support, not clinical trauma therapy. If you are in acute distress or experiencing PTSD symptoms, please seek professional help first.</p>
         </div>
 
@@ -205,7 +205,7 @@ export default function TraumaSupportIndiaPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I get triggered during a session?</div>
-            <div className="faq-a">You can end a session at any time. If you feel overwhelmed, tell your listener and they will follow your lead. If you are in acute distress, please call NIMHANS (080-46110007) or Tele-MANAS (14416).</div>
+            <div className="faq-a">You can end a session at any time. If you feel overwhelmed, tell your listener and they will follow your lead. If you are in acute distress, please call Samaritans (116 123) or Shout (text SHOUT to 85258).</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">When should I see a professional instead?</div>

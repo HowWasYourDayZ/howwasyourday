@@ -42,7 +42,7 @@ const faqSchema = {
       name: 'How does relationship stress affect mental health in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In India, relationship stress is one of the leading contributors to anxiety, sleep problems, and low self-esteem — particularly because cultural expectations around family, marriage, and loyalty make it hard to set boundaries or talk openly. Many people suffer in silence, which compounds the mental health impact. Getting even one safe space to process these feelings can significantly reduce that burden.',
+        text: 'In the UK or Ireland, relationship stress is one of the leading contributors to anxiety, sleep problems, and low self-esteem — particularly because cultural expectations around family, marriage, and loyalty make it hard to set boundaries or talk openly. Many people suffer in silence, which compounds the mental health impact. Getting even one safe space to process these feelings can significantly reduce that burden.',
       },
     },
     {
@@ -157,7 +157,7 @@ export default function RelationshipStressSupportPage() {
         {/* What Is Relationship Stress */}
         <div className="section">
           <h2>What Is Relationship Stress?</h2>
-          <p>Relationship stress is the emotional and psychological strain that comes from conflict, uncertainty, or disconnection in your personal connections. It is not limited to romantic partnerships — it can arise in marriages, friendships, family dynamics, or even professional relationships. In India, where relationships are deeply tied to identity, duty, and social standing, the pressure can feel especially overwhelming and hard to escape.</p>
+          <p>Relationship stress is the emotional and psychological strain that comes from conflict, uncertainty, or disconnection in your personal connections. It is not limited to romantic partnerships — it can arise in marriages, friendships, family dynamics, or even professional relationships. In the UK or Ireland, where relationships are deeply tied to identity, duty, and social standing, the pressure can feel especially overwhelming and hard to escape.</p>
 
           <h3>Romantic Relationship Stress</h3>
           <p>Whether you are navigating disagreements with a partner, struggling with jealousy or insecurity, coping with a long-distance situation, or simply wondering whether the relationship is right for you — romantic relationship stress is exhausting. The uncertainty alone can keep you awake at night and make it difficult to focus on anything else.</p>
@@ -285,7 +285,7 @@ export default function RelationshipStressSupportPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">How does relationship stress affect mental health in India?</div>
-            <div className="faq-a">In India, relationship stress is one of the leading contributors to anxiety, sleep problems, and low self-esteem — particularly because cultural expectations around family, marriage, and loyalty make it hard to set boundaries or talk openly. Getting even one safe space to process these feelings can significantly reduce that burden.</div>
+            <div className="faq-a">In the UK or Ireland, relationship stress is one of the leading contributors to anxiety, sleep problems, and low self-esteem — particularly because cultural expectations around family, marriage, and loyalty make it hard to set boundaries or talk openly. Getting even one safe space to process these feelings can significantly reduce that burden.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can I talk about family relationship stress, not just romantic relationships?</div>
@@ -300,7 +300,7 @@ export default function RelationshipStressSupportPage() {
         {/* Disclaimer */}
         <div className="disclaimer">
           <p><strong>Peer support is not a substitute for professional mental health care.</strong> How Was Your Day listeners are screened peers, not licensed therapists or counsellors. If you are in crisis or experiencing thoughts of self-harm, please contact a professional immediately.</p>
-          <p><strong>Crisis helplines in India:</strong> NIMHANS — <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:700}}>080-46110007</a> &nbsp;|&nbsp; Tele-MANAS — <a href="tel:14416" style={{color:'#7A5020',fontWeight:700}}>14416</a> (free · 24/7 · Govt of India)</p>
+          <p><strong>Crisis helplines (UK &amp; Ireland):</strong> Samaritans — <a href="tel:116123" style={{color:'#7A5020',fontWeight:700}}>116 123</a> &nbsp;|&nbsp; text SHOUT to 85258 (free · 24/7)</p>
         </div>
 
         {/* Related pages */}

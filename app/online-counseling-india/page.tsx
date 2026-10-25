@@ -156,7 +156,7 @@ export default function OnlineCounselingIndiaPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
@@ -228,7 +228,7 @@ export default function OnlineCounselingIndiaPage() {
           <p>For many users, How Was Your Day is the only form of emotional support they have access to. At ₹160 for a session, it is within reach for someone earning a modest salary. For people who genuinely cannot afford therapy, this is not a compromise — it is the option that actually exists.</p>
 
           <h3>People Who Do Not Want a Formal Record</h3>
-          <p>In India, seeking mental health support still carries stigma in many contexts. People worry about records that could affect employment, relationships, or family dynamics. How Was Your Day is anonymous, generates no formal records, and requires no identification that links your real identity to what you share.</p>
+          <p>In the UK or Ireland, seeking mental health support still carries stigma in many contexts. People worry about records that could affect employment, relationships, or family dynamics. How Was Your Day is anonymous, generates no formal records, and requires no identification that links your real identity to what you share.</p>
 
           <h3>People Between Therapy Sessions</h3>
           <p>Some users see a therapist monthly but need support in between. How Was Your Day fills the gap — a place to process what has come up between sessions without waiting for the next appointment.</p>

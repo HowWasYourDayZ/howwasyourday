@@ -32,7 +32,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "I need someone to talk to right now \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. One introductory session up to 5 minutes is free per account; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, call Tele-MANAS 14416 first." } },
+    { '@type': 'Question', name: "I need someone to talk to right now \u2014 where can I go?", acceptedAnswer: { '@type': 'Answer', text: "Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. One introductory session up to 5 minutes is free per account; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, text SHOUT to 85258 first." } },
     {
       '@type': 'Question',
       name: 'How do I find someone to talk to right now in India?',
@@ -61,7 +61,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is How Was Your Day the same as a crisis helpline?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day is non-clinical peer support, not a crisis service. If you are in crisis or at risk of self-harm, call Tele-MANAS (14416; free, 24/7) or contact local emergency services.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day is non-clinical peer support, not a crisis service. If you are in crisis or at risk of self-harm, text SHOUT to 85258 (free, 24/7) or contact local emergency services.' },
     },
   ],
 }
@@ -141,14 +141,14 @@ export default function INeedSomeoneToTalkToPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India)
+          🆘 In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">
           <p className="badge">Real People · Text or Voice · Peer Support</p>
           <h1>Someone Is Here to <em>Listen</em> — Right Now</h1>
           <p className="lead">You do not need a diagnosis or a perfectly formed problem to ask for a conversation. How Was Your Day lets adults request a one-to-one text or voice chat with a screened peer listener. It is non-clinical support; timing depends on listener availability and acceptance.</p>
-          <QuickAnswer question={"I need someone to talk to right now \u2014 where can I go?"} answer={"Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. One introductory session up to 5 minutes is free per account; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, call Tele-MANAS 14416 first."} />
+          <QuickAnswer question={"I need someone to talk to right now \u2014 where can I go?"} answer={"Open howwasyourday.live/talk, choose text or voice and select what is on your mind. How Was Your Day requests a conversation with a screened peer listener and may try another if there is no response in about 30 seconds. One introductory session up to 5 minutes is free per account; listeners do not see your phone number. Availability varies, so a match is not guaranteed. If you are in danger or at risk of self-harm, text SHOUT to 85258 first."} />
           <a href="/talk?src=seo" className="cta-hero">Talk to someone →</a>
         </div>
 

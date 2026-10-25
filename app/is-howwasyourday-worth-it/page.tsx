@@ -9,7 +9,7 @@ export const dynamic = 'force-static'
 // before paying for their first session — "is it legit", "is it worth it",
 // "will anyone find out", "what if it doesn't help". Every answer must stay
 // literally true: prices from lib/constants + lib/geo-pricing, listeners
-// SCREENED (never "trained"), only Tele-MANAS / NIMHANS, no listener earnings.
+// SCREENED (never "trained"), only Shout (text SHOUT to 85258) / Samaritans, no listener earnings.
 
 const URL = 'https://www.howwasyourday.live/is-howwasyourday-worth-it'
 const R = TALK_MAX_TEXT_RATE
@@ -61,7 +61,7 @@ const groups: { h: string; items: { q: string; a: string }[] }[] = [
   {
     h: 'When is How Was Your Day the wrong choice?',
     items: [
-      { q: 'When should I not use How Was Your Day?', a: 'If you are in danger or thinking about harming yourself, call Tele-MANAS on 14416 (free, 24/7) or NIMHANS on 080-46110007 now. How Was Your Day is also not for diagnosis, medication, couples therapy or legal advice — for those, see a qualified professional. How Was Your Day is peer support alongside professional care, never instead of it.' },
+      { q: 'When should I not use How Was Your Day?', a: 'If you are in danger or thinking about harming yourself, text SHOUT to 85258 (free, 24/7) or Samaritans 116 123 now. How Was Your Day is also not for diagnosis, medication, couples therapy or legal advice — for those, see a qualified professional. How Was Your Day is peer support alongside professional care, never instead of it.' },
     ],
   },
 ]

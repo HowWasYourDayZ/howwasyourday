@@ -23,11 +23,13 @@ export type ContactCheck = { block: ContactKind[]; flag: ContactKind[] }
 
 // ── Shared pieces ────────────────────────────────────────────────────────────
 
-// Fine to share: How Was Your Day's crisis lines, plus well-known helplines a seeker may
-// mention having called (iCall, Vandrevala, AASRA, Sneha). Allowing a mention in
-// chat is NOT How Was Your Day listing them (CLAUDE.md: How Was Your Day itself shows only
-// Tele-MANAS and NIMHANS). Any 1800 toll-free number is fine too.
-const ALLOWED_NUMBERS = new Set(['14416', '08046110007', '8046110007', '918046110007',
+// Fine to share: How Was Your Day's crisis lines (Samaritans 116 123, Shout 85258,
+// 999/112, NHS 111), plus well-known helplines a seeker may mention having called
+// (UK: CALM, Mind, Papyrus; older Indian lines kept from the original list).
+// Allowing a mention in chat is NOT How Was Your Day listing them (CLAUDE.md).
+// Any 1800 toll-free number is fine too.
+const ALLOWED_NUMBERS = new Set(['116123', '85258', '999', '112', '111', '08006585858', '03001233393', '08000684141',
+  '08046110007', '8046110007', '918046110007',
   '9152987821', '919152987821', '9999666555', '919999666555', '9820466726', '919820466726', '04424640050', '4424640050'])
 
 // Apps used to move a chat elsewhere — NOT words that also mean something else

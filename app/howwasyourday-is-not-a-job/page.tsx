@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: 'Can I use How Was Your Day if I am under 18?',
-    a: 'No. Everyone on How Was Your Day — people seeking support and listeners — must be 18 or older. If you are under 18 and struggling, talk to a trusted adult or call Tele-MANAS on 14416 (free, 24/7).',
+    a: 'No. Everyone on How Was Your Day — people seeking support and listeners — must be 18 or older. If you are under 18 and struggling, talk to a trusted adult or text SHOUT to 85258 (free, 24/7).',
   },
   {
     q: 'Is How Was Your Day a side hustle?',

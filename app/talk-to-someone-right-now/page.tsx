@@ -21,7 +21,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "Can I talk to someone right now, without an appointment?", acceptedAnswer: { '@type': 'Answer', text: "Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, call Tele-MANAS 14416 first." } },
+    { '@type': 'Question', name: "Can I talk to someone right now, without an appointment?", acceptedAnswer: { '@type': 'Answer', text: "Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, text SHOUT to 85258 first." } },
     {
       '@type': 'Question',
       name: 'How fast can I actually talk to someone?',
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'What if I am in crisis?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you are thinking of harming yourself or you are in immediate danger, please call NIMHANS at 080-46110007 or Tele-MANAS at 14416 right now. Both are free, 24/7 Government of India helplines staffed by trained crisis professionals. How Was Your Day is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.',
+        text: 'If you are thinking of harming yourself or you are in immediate danger, please call Samaritans 116 123 or text SHOUT to 85258 right now. Both are free, 24/7 helplines staffed by trained crisis professionals. How Was Your Day is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.',
       },
     },
   ],
@@ -142,7 +142,7 @@ export default function TalkToSomeoneRightNowPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          🆘 If you are thinking of harming yourself, call now: <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support, not a crisis service.
+          🆘 If you are thinking of harming yourself, call now: <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7). How Was Your Day is peer support, not a crisis service.
         </div>
 
         {/* Hero */}
@@ -150,7 +150,7 @@ export default function TalkToSomeoneRightNowPage() {
           <p className="tag">No Appointment · Private</p>
           <h1>Someone Is Ready to <em>Listen</em> — Right Now</h1>
           <p className="lead">You do not need an appointment, a referral, or a reason good enough. Open the listener directory, see who is online, and start talking when a listener accepts.</p>
-          <QuickAnswer question={"Can I talk to someone right now, without an appointment?"} answer={"Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, call Tele-MANAS 14416 first."} />
+          <QuickAnswer question={"Can I talk to someone right now, without an appointment?"} answer={"Yes. Open howwasyourday.live/talk, choose text or voice and tap what is on your mind. How Was Your Day asks a screened peer listener who is online now, and the next one if they can't answer within about 30 seconds. Your first 5 minutes are free. If you are in danger, text SHOUT to 85258 first."} />
         </div>
 
         {/* How it works */}
@@ -185,7 +185,7 @@ export default function TalkToSomeoneRightNowPage() {
           <p>First name only. No photo, no full name, no phone number shared with your listener. Nothing you say reaches anyone in your life.</p>
 
           <h3>It is NOT a crisis service</h3>
-          <p>If you are in danger, thinking about ending your life, or in a medical emergency, please stop reading and call <a href="tel:08046110007" style={{color:'var(--teal)',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'var(--teal)',fontWeight:800}}>Tele-MANAS 14416</a> right now. Both are free, 24/7 Government of India helplines with trained crisis counsellors. That is the right help for this moment. We will be here afterwards.</p>
+          <p>If you are in danger, thinking about ending your life, or in a medical emergency, please stop reading and call <a href="tel:116123" style={{color:'var(--teal)',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'var(--teal)',fontWeight:800}}>text SHOUT to 85258</a> right now. Both are free, 24/7 helplines with trained crisis counsellors. That is the right help for this moment. We will be here afterwards.</p>
         </div>
 
         {/* Not knowing what to say */}
@@ -266,7 +266,7 @@ export default function TalkToSomeoneRightNowPage() {
           </div>
           <div className="faq-item">
             <div className="faq-q">What if I am in crisis?</div>
-            <div className="faq-a">If you are thinking of harming yourself or you are in immediate danger, please call <a href="tel:08046110007" style={{color:'var(--teal)',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'var(--teal)',fontWeight:800}}>Tele-MANAS 14416</a> right now. Both are free, 24/7 Government of India helplines staffed by trained crisis professionals. How Was Your Day is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.</div>
+            <div className="faq-a">If you are thinking of harming yourself or you are in immediate danger, please call <a href="tel:116123" style={{color:'var(--teal)',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'var(--teal)',fontWeight:800}}>text SHOUT to 85258</a> right now. Both are free, 24/7 helplines staffed by trained crisis professionals. How Was Your Day is peer support, not a crisis service — please reach the helplines first, and lean on us afterwards.</div>
           </div>
         </div>
 

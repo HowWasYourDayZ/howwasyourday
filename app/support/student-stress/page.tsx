@@ -146,11 +146,11 @@ export default function StudentStressSupportPage() {
         </div>
 
         <div className="notice">
-          If you are in crisis or having thoughts of self-harm, please call <a href="tel:08046110007" style={{color:'#7A5020',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#7A5020',fontWeight:800}}>Tele-MANAS 14416</a> (free · 24/7 · Govt of India). How Was Your Day is peer support and cannot replace crisis intervention.
+          If you are in crisis or having thoughts of self-harm, please call <a href="tel:116123" style={{color:'#7A5020',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#7A5020',fontWeight:800}}>text SHOUT to 85258</a> (free · 24/7). How Was Your Day is peer support and cannot replace crisis intervention.
         </div>
 
         <div className="section">
-          <p style={{background:'#FFF8F0',borderLeft:'4px solid #FF9933',borderRadius:'0 12px 12px 0',padding:'14px 18px',fontWeight:600}}>How Was Your Day is for adults aged 18 and over. If you are under 18 and need to talk, please reach out to a parent, teacher or another adult you trust, or call Tele-MANAS on <a href="tel:14416">14416</a> (free).</p>
+          <p style={{background:'#FFF8F0',borderLeft:'4px solid #FF9933',borderRadius:'0 12px 12px 0',padding:'14px 18px',fontWeight:600}}>How Was Your Day is for adults aged 18 and over. If you are under 18 and need to talk, please reach out to a parent, teacher or another adult you trust, or text SHOUT to 85258 (free).</p>
           <h2>The Reality of Student Life in India</h2>
           <p>India&apos;s education system is one of the most demanding in the world. The stakes attached to competitive examinations, the family expectations that surround academic success, and the lack of adequate mental health support in most educational institutions create a perfect storm of student stress.</p>
 

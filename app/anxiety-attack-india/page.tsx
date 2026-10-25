@@ -70,7 +70,7 @@ export default function AnxietyAttackIndiaPage() {
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span style={{color:'var(--navy)'}}>Anxiety Attack India</span></nav>
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free, 24/7)
+          In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free, 24/7)
         </div>
         <div className="hero">
           <p className="badge">Anxiety Attack · After the Storm · India</p>
@@ -86,7 +86,7 @@ export default function AnxietyAttackIndiaPage() {
         <div className="section">
           <h2>When to Seek Professional Help</h2>
           <p>If anxiety attacks are frequent, significantly impacting your daily functioning, or increasing in intensity over time, please consider speaking to a mental health professional. How Was Your Day peer support is for processing the emotional weight of anxiety &mdash; it is not a substitute for clinical care.</p>
-          <p>In an immediate crisis, please call NIMHANS on 080-46110007 or Tele-MANAS on 14416. Both are free and 24/7.</p>
+          <p>In an immediate crisis, please call Samaritans 116 123 or text SHOUT to 85258. Both are free and 24/7.</p>
         </div>
         <div className="section"><h2>Frequently Asked Questions</h2>{faqs.map((f, i) => (<div className="faq-item" key={i}><p className="faq-q">{f.name}</p><p className="faq-a">{f.acceptedAnswer.text}</p></div>))}</div>
         <div className="cta-card"><h2>You survived it. Now let someone help you process it.</h2><p>Anonymous peer support. No judgment. From ₹160. First 5 minutes free.</p><a href="/browse" className="btn-cta">Find a listener &rarr;</a></div>

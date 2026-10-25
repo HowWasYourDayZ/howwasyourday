@@ -56,7 +56,7 @@ export const post = {
 <li><strong>Self-guided CBT tools?</strong> → Wysa</li>
 <li><strong>Affordable professional counselling?</strong> → iCall</li>
 <li><strong>Just need to talk — human peer, no clinical framing?</strong> → How Was Your Day</li>
-<li><strong>Crisis or emergency?</strong> → NIMHANS: 080-46110007 or Tele-MANAS: 14416</li>
+<li><strong>Crisis or emergency?</strong> → Samaritans 116 123 or text SHOUT to 85258</li>
 </ul>
 <p>The best app is the one that matches what you actually need right now — not the one with the most features or the biggest marketing budget.</p>
 `,

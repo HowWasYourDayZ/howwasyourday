@@ -42,17 +42,17 @@ export const TALK_MAX_TRIES = 10
 
 // ── Public description of Talk now (server-rendered on /talk + JSON-LD) ──────
 // Must stay literally true: prices from lib/constants + lib/geo-pricing,
-// listeners are SCREENED (never "trained"), only NIMHANS / Tele-MANAS.
+// listeners are SCREENED (never "trained"), only Samaritans / Shout (text SHOUT to 85258).
 
 const TALK_EX15 = TALK_MAX_TEXT_RATE * 15 + PLATFORM_FEE
 
 export const TALK_FAQ: { q: string; a: string }[] = [
   { q: 'What is How Was Your Day Talk now?', a: `Talk now (howwasyourday.live/talk) is the quickest way to talk to a real person in India or abroad. You pick what is on your mind and text or voice, and How Was Your Day asks a screened peer listener who is online — no browsing and no appointment. If a listener does not answer within about ${TALK_TRY_SECS} seconds, How Was Your Day asks the next one automatically, for up to ${Math.round(TALK_MAX_WAIT_SECS / 60)} minutes. A session starts only when a listener accepts; if nobody can, you are not charged.` },
   { q: 'How much does it cost?', a: `Your first ${FREE_SESSION_MINS} minutes are free, once per account. After that a Talk now session is 15 minutes, up to ₹${TALK_EX15} for text in India (you pay the matched listener's own price, shown before anyone is asked), and from US$${NRI_USD_PRICES[15]} outside India. You see the price before anyone is asked, it is charged only if a listener accepts, and unused minutes come back to your wallet.` },
-  { q: 'Who can use it?', a: 'Adults 18 and over. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or call Tele-MANAS on 14416 (free).' },
+  { q: 'Who can use it?', a: 'Adults 18 and over. How Was Your Day is not for under-18s. If you are under 18 and need to talk, please reach out to a trusted adult, or text SHOUT to 85258 (free).' },
   { q: 'Who will I talk to?', a: 'A screened peer listener based in India — an ordinary adult with lived experience who listens without judging you. Listeners pass a written application, a screening quiz, a live selfie check and a manual review by How Was Your Day. They are not therapists and do not give medical advice.' },
   { q: 'What can I talk about?', a: 'Relationship problems, a breakup, marriage or family pressure, loneliness, work or study stress, overthinking, grief, or simply a hard day. You choose the topic so How Was Your Day can start with listeners who talk about it.' },
   { q: 'Can Indians living abroad (NRIs) use it?', a: 'Yes. Talk now works from India, the USA, UK, Canada, Australia, the UAE, Kuwait, Oman, Singapore and Malaysia, with prices shown in your currency. Listeners are in India and understand the Indian context.' },
   { q: 'Is it private?', a: 'A listener sees only the name you choose, never your phone number. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported session.' },
-  { q: 'Is it therapy or a crisis line?', a: 'No. How Was Your Day is peer support, not therapy or emergency care. If you are in crisis or thinking about self-harm, call Tele-MANAS on 14416 (free, 24/7) or NIMHANS on 080-46110007.' },
+  { q: 'Is it therapy or a crisis line?', a: 'No. How Was Your Day is peer support, not therapy or emergency care. If you are in crisis or thinking about self-harm, text SHOUT to 85258 (free, 24/7) or Samaritans 116 123.' },
 ]

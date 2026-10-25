@@ -48,7 +48,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What if I am in danger?',
-      acceptedAnswer: { '@type': 'Answer', text: 'If you are in immediate danger or fear for your physical safety, contact the police or local emergency services first. If you are in emotional crisis, call Tele-MANAS on 14416 or NIMHANS on 080-46110007 (free). How Was Your Day peer support is for emotional processing — it is not a crisis intervention service.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'If you are in immediate danger or fear for your physical safety, contact the police or local emergency services first. If you are in emotional crisis, text SHOUT to 85258 or Samaritans 116 123 (free). How Was Your Day peer support is for emotional processing — it is not a crisis intervention service.' },
     },
     {
       '@type': 'Question',
@@ -128,7 +128,7 @@ export default function EmotionalAbuseIndiaPage() {
         </nav>
 
         <div style={{background:'#EBF5FB',borderLeft:'4px solid #1A8FA0',borderRadius:'0 12px 12px 0',padding:'14px 18px',marginBottom:28,fontSize:14,color:'#0F4867',fontWeight:600,lineHeight:1.65}}>
-          In crisis? Call <a href="tel:08046110007" style={{color:'#1A8FA0',fontWeight:800}}>NIMHANS 080-46110007</a> or <a href="tel:14416" style={{color:'#1A8FA0',fontWeight:800}}>Tele-MANAS 14416</a> (free, 24/7)
+          In crisis? Call <a href="tel:116123" style={{color:'#1A8FA0',fontWeight:800}}>Samaritans 116 123</a> or <a href="sms:85258" style={{color:'#1A8FA0',fontWeight:800}}>text SHOUT to 85258</a> (free, 24/7)
         </div>
 
         <div className="hero">
@@ -154,7 +154,7 @@ export default function EmotionalAbuseIndiaPage() {
         <div className="section">
           <h2>Why It Is Hard to Name</h2>
           <p>There is no bruise. No moment you can point to and say: this is the evidence. The person doing it often presents themselves as the reasonable one, and you as the difficult, sensitive, dramatic one. After enough time, you begin to believe that version.</p>
-          <p>In India, there is also a strong cultural pressure to keep family matters private and to "adjust." Women especially are expected to manage conflict through accommodation rather than direct expression. This means that naming emotional abuse as abuse &mdash; rather than as a personality clash or a phase &mdash; requires overcoming not just the abuser&apos;s narrative but the cultural one as well.</p>
+          <p>In the UK or Ireland, there is also a strong cultural pressure to keep family matters private and to "adjust." Women especially are expected to manage conflict through accommodation rather than direct expression. This means that naming emotional abuse as abuse &mdash; rather than as a personality clash or a phase &mdash; requires overcoming not just the abuser&apos;s narrative but the cultural one as well.</p>
         </div>
 
         <div className="section">

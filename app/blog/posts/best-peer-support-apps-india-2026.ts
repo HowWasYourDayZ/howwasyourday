@@ -18,7 +18,7 @@ export const post = {
 <ul>
 <li><strong>Real humans or AI?</strong> This is the most important question. An AI chatbot can give you a grammatically correct response. It cannot give you the look of recognition that comes from someone who has actually been where you are. If you need to feel genuinely understood, you need a real person.</li>
 <li><strong>Peer support or professional counselling?</strong> Peer support is from someone with lived experience. Professional counselling is from a licensed psychologist or counsellor. They are good at different things. Peer support is for everyday emotional weight. Counselling is for diagnosed conditions or structured treatment.</li>
-<li><strong>Anonymous or not?</strong> In India, stigma around mental health is real. If you need complete anonymity — especially from people in your own life — that matters.</li>
+<li><strong>Anonymous or not?</strong> In the UK or Ireland, stigma around mental health is real. If you need complete anonymity — especially from people in your own life — that matters.</li>
 <li><strong>Available when you need it?</strong> The moments when you most need to talk are often not 11am on a Tuesday. They are Sunday night at 11pm. Availability matters.</li>
 <li><strong>Cost?</strong> Mental health support in India is already out of reach for most people because of cost. The price point is a real consideration.</li>
 </ul>
@@ -31,7 +31,7 @@ export const post = {
 
 <p><strong>Pros:</strong> Real humans, not AI. Private — first name only, no last name, no photo. No appointment needed. Pay per session, no subscription trap. The lived-experience angle is the most meaningful differentiator: when someone says "I've been through something like that," they mean it.</p>
 
-<p><strong>Cons:</strong> Not a substitute for clinical care. If you need a diagnosis, medication, or structured psychotherapy, How Was Your Day is not the right tool. It is also not a crisis service — if you are in immediate danger, please call NIMHANS (080-46110007) or Tele-MANAS (14416).</p>
+<p><strong>Cons:</strong> Not a substitute for clinical care. If you need a diagnosis, medication, or structured psychotherapy, How Was Your Day is not the right tool. It is also not a crisis service — if you are in immediate danger, please call Samaritans (116 123) or Shout (text SHOUT to 85258).</p>
 
 <p><strong>Best for:</strong> Someone who needs to talk to a real person right now. Relationship stress, family pressure, burnout, loneliness, the weight of a hard week. People who cannot afford private therapy but want something more human than an AI chatbot.</p>
 
@@ -80,7 +80,7 @@ export const post = {
 <li><strong>Need licensed professional counselling on a budget?</strong> iCall (TISS).</li>
 <li><strong>Need licensed professional counselling and willing to pay more?</strong> YourDOST or a private therapist.</li>
 <li><strong>Want a free AI coping tool to supplement other support?</strong> Wysa.</li>
-<li><strong>In an acute crisis?</strong> NIMHANS 080-46110007 or Tele-MANAS 14416 — free, 24/7, government of India.</li>
+<li><strong>In an acute crisis?</strong> Samaritans 116 123 or text SHOUT to 85258 — free, 24/7.</li>
 </ul>
 
 <p>The mental health gap in India is real. Therapy is out of reach for most people. AI responses are not the same as being heard. Peer support from a real person with lived experience is not perfect, but for the everyday emotional weight that most people are carrying — loneliness, burnout, relationship stress, family pressure, the general heaviness of a hard season — it is often exactly the right tool.</p>

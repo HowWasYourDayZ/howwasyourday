@@ -42,8 +42,8 @@ export const post = {
 <p>Government crisis helplines are free and staffed 24/7:</p>
 
 <ul>
-<li><strong>NIMHANS (080-46110007)</strong> — the National Institute of Mental Health and Neurosciences, Bengaluru. Free crisis line.</li>
-<li><strong>Tele-MANAS (14416)</strong> — the Government of India's national mental health helpline. Free, 24/7.</li>
+<li><strong>Samaritans (116 123)</strong> — free, 24/7 emotional support in the UK and Ireland.</li>
+<li><strong>Shout (text SHOUT to 85258)</strong> — free, 24/7 text support in the UK.</li>
 </ul>
 
 <p>These are crisis intervention services — they are designed for people in acute distress or immediate danger. They are not designed for ongoing peer support, regular check-ins, or processing everyday emotional difficulty.</p>
@@ -58,7 +58,7 @@ export const post = {
 
 <p><strong>If you are carrying everyday emotional weight</strong> — the kind that accumulates across a hard month, a difficult relationship, a job that is depleting you, the feeling of being alone with something you cannot say to the people around you — peer support is often exactly the right tool. At ₹160/session, with no appointment and the first 5 minutes free, How Was Your Day is accessible in a way that therapy is not for most people.</p>
 
-<p><strong>If you are in a crisis right now</strong> — please call NIMHANS (080-46110007) or Tele-MANAS (14416). Both are free and available right now.</p>
+<p><strong>If you are in a crisis right now</strong> — please call Samaritans (116 123) or Shout (text SHOUT to 85258). Both are free and available right now.</p>
 
 <h2>The Gap in the Middle</h2>
 

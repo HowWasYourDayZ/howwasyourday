@@ -228,7 +228,7 @@ async function runTests() {
   // ─── 13. SUPPORT PAGES — FORBIDDEN CRISIS NUMBERS ─────────────────────────
   console.log('\n══════ 13. SUPPORT PAGES ══════')
   const forbiddenPhrases = ['iCall', '9152987821', 'Vandrevala', '1860-2662-345', 'icallhelpline']
-  const allowedCrisis = ['NIMHANS', 'Tele-MANAS', '14416', '080-46110007']
+  const allowedCrisis = ['Samaritans', 'Shout (text SHOUT to 85258)', '85258', '116 123']
   for (const sp of ['/support/loneliness', '/support/anxiety', '/support/grief', '/faq']) {
     await page.goto(`${BASE}${sp}`, { waitUntil: 'networkidle', timeout: 12000 })
     const content = await page.content()
