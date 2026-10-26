@@ -57,7 +57,7 @@ day) — next to the wordmark *How Was* (ink) / *Your Day* (orange), set in Nuni
 paths. Master files live in **`logo/`** (see `logo/README.md`): SVGs in `logo/svg/`, transparent high-res PNGs
 and app icons in `logo/png/`. Regenerate with `logo/generate-svg.cjs` + `logo/export.mjs`, which also update
 `public/` (logo.png, icons, favicon) and the Android app icons/splash screens. Never redraw it by hand per page —
-use `/logo.png` or `/brand/*.svg`.
+use `/brand/logo.png` or `/brand/*.svg`.
 **Type:** Nunito (self-hosted), 800–900 for headings, 500–700 for body.
 
 **Voice:** warm, plain British English, short sentences, no clinical language, no hype. Prices in £

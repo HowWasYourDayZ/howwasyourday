@@ -63,7 +63,7 @@ export default function TrustPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trustSchema) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
-        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">

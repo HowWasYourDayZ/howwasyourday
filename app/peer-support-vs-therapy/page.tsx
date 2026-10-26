@@ -31,7 +31,7 @@ const rows = [
 export default function PeerSupportVsTherapyPage() {
   return <main style={s.page}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}} />
-    <nav style={s.nav}><a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a><a href="/browse" style={s.navCta}>Find peer support</a></nav>
+    <nav style={s.nav}><a href="/"><img src="/brand/logo.png" alt="How Was Your Day" style={{height:48}} /></a><a href="/browse" style={s.navCta}>Find peer support</a></nav>
     <div style={s.wrap}>
       <p style={s.kicker}>PEER SUPPORT · THERAPY · COUNSELLING · MENTAL HEALTH SUPPORT</p>
       <h1 style={s.h1}>Peer support vs therapy: different tools for different needs.</h1>

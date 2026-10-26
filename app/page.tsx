@@ -166,7 +166,7 @@ export default function Home() {
       <header className="hw-hero">
         <div className="hw-wrap">
           <nav className="hw-nav" aria-label="Main">
-            <a href="/" aria-label="How Was Your Day — home"><img src="/logo.png" alt="How Was Your Day" width={141} height={44} /></a>
+            <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png" alt="How Was Your Day" width={141} height={44} /></a>
             <div className="hw-nav-links">
               <a className="t" href="/how-it-works">How it works</a>
               <a className="t" href="/pricing">Pricing</a>

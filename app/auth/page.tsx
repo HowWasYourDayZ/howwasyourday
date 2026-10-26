@@ -536,7 +536,7 @@ export default function AuthPage() {
       <>
         <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="page">
-          <div className="topbar"><a href="/" className="back">←</a><img className="logo" src="/logo.png" alt="How Was Your Day" /><div className="spacer" /></div>
+          <div className="topbar"><a href="/" className="back">←</a><img className="logo" src="/brand/logo.png" alt="How Was Your Day" /><div className="spacer" /></div>
           <div className="content">
             <div className="step-icon">🔧</div>
             <h1>Sign-in is being set up</h1>
@@ -557,7 +557,7 @@ export default function AuthPage() {
             : step === 'phone'
               ? <a href="/" className="back">←</a>
               : <div className="spacer" />}
-          <img className="logo" src="/logo.png" alt="How Was Your Day" />
+          <img className="logo" src="/brand/logo.png" alt="How Was Your Day" />
           <div className="spacer" />
         </div>
 

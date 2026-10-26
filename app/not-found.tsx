@@ -22,7 +22,7 @@ export default function NotFound() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="wrap">
-        <img src="/logo.png" alt="How Was Your Day" className="logo" />
+        <img src="/brand/logo.png" alt="How Was Your Day" className="logo" />
         <h1>404</h1>
         <h2>Page not found.</h2>
         <p>The page you&apos;re looking for doesn&apos;t exist — but someone to talk to always does.</p>

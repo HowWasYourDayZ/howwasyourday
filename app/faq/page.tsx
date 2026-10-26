@@ -157,7 +157,7 @@ export default function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo" style={{background:'#E8743B',color:'white',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
       </nav>
 

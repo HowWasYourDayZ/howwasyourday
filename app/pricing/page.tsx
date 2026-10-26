@@ -43,7 +43,7 @@ export default function PricingPage() {
   const cell = 'border-b border-slate-200 px-3 py-3 text-left'
   return <main className="min-h-screen bg-white text-[#3B2F2A]"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <div className="mx-auto max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
-      <nav className="mb-10 flex items-center justify-between"><a href="/"><img src="/logo.png" alt="How Was Your Day" className="h-11 w-auto" /></a><a href="/browse" className="rounded-full bg-[#B85520] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a></nav>
+      <nav className="mb-10 flex items-center justify-between"><a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="h-11 w-auto" /></a><a href="/browse" className="rounded-full bg-[#B85520] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a></nav>
       <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-[#B85520]">Pricing</p>
       <h1 className="mb-4 text-4xl font-black leading-tight">What How Was Your Day costs</h1>
       <p className="mb-8 text-lg leading-8 text-slate-600">Pay per session — {SESSION_DURATIONS.join(', ')} minutes, now or booked for later — with no subscription. You always see the price before a session starts, and pay only for the minutes you use.</p>

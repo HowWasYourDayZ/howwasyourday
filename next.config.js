@@ -58,9 +58,15 @@ const nextConfig = {
       },
       // Long-lived cache for static public assets — logo, manifest, llms.txt, OG images
       // CDN caches these at the edge; stale-while-revalidate keeps latency low on revalidation
+      // Brand files change rarely but DO change (2026-10-26: a 1-year max-age kept the old
+      // LeanOn logo in browsers). One day, then revalidate — never 'immutable' for these.
       {
         source: '/logo.png',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/brand/:file*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=86400' }],
       },
       {
         source: '/manifest.json',

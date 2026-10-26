@@ -35,7 +35,8 @@ execFileSync('convert', [`${PNG}/app-icon-16.png`, `${PNG}/app-icon-32.png`, `${
 mkdirSync('public/brand', { recursive: true })
 for (const f of ['mark.svg', 'mark-white.svg', 'app-icon.svg', 'logo-horizontal.svg', 'logo-stacked.svg', 'logo-horizontal-white.svg'])
   copyFileSync(`${SVG}/${f}`, `public/brand/${f}`)
-await render('logo-stacked.svg', 'public/logo.png', 960)             // nav/header logo used by every page
+await render('logo-stacked.svg', 'public/brand/logo.png', 960)       // nav/header logo used by every page
+copyFileSync('public/brand/logo.png', 'public/logo.png')            // old URL, kept for emails/old links
 await render('logo-horizontal.svg', 'public/logo-horizontal.png', 1200)
 copyFileSync(`${PNG}/app-icon-192.png`, 'public/icon-192.png')
 copyFileSync(`${PNG}/app-icon-512.png`, 'public/icon-512.png')

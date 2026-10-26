@@ -55,7 +55,7 @@ export async function notifySessionComplete(opts: {
       subject: `Your How Was Your Day session with ${esc(listenerName)} is complete`,
       html: `
         <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-          <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
+          <img src="https://howwasyourday.live/brand/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
           <h2 style="color:#3B2F2A;">Your session is complete 🙏</h2>
           <p style="color:#6E5B50;">You just had a ${esc(durationMins)}-min ${esc(sessionType)} session with <strong>${esc(listenerName)}</strong>.</p>
           <p style="color:#6E5B50;">We hope it helped. You can rate your session and book again anytime.</p>
@@ -74,7 +74,7 @@ export async function notifySessionComplete(opts: {
       subject: `Session complete — ${formatGBP(listenerEarning)} credited to your wallet`,
       html: `
         <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-          <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
+          <img src="https://howwasyourday.live/brand/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
           <h2 style="color:#3B2F2A;">Great session, ${esc(listenerName)}! 🎉</h2>
           <p style="color:#6E5B50;">Your ${esc(durationMins)}-min ${esc(sessionType)} session is complete.</p>
           <p style="color:#6E5B50;"><strong>${formatGBP(listenerEarning)} has been credited to your How Was Your Day wallet.</strong></p>
@@ -99,7 +99,7 @@ export async function notifyWalletRecharge(opts: {
     subject: `${formatGBP(amount)} added to your How Was Your Day wallet`,
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-        <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
+        <img src="https://howwasyourday.live/brand/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
         <h2 style="color:#3B2F2A;">Wallet topped up! 💰</h2>
         <p style="color:#6E5B50;">Hi ${esc(userName || 'there')}, <strong>${formatGBP(amount)} has been added to your How Was Your Day wallet.</strong></p>
         <p style="color:#6E5B50;">You're all set to book a session. Browse available listeners now.</p>
@@ -123,7 +123,7 @@ export async function notifyPayoutRequested(opts: {
     subject: `Payout of ${formatGBP(amount)} requested — we'll process it in 3 business days`,
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-        <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
+        <img src="https://howwasyourday.live/brand/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
         <h2 style="color:#3B2F2A;">Payout request received 🏦</h2>
         <p style="color:#6E5B50;">Hi ${esc(listenerName)}, your request to withdraw <strong>${formatGBP(amount)}</strong> has been received.</p>
         <p style="color:#6E5B50;">We'll transfer it to your registered bank account within <strong>3 business days</strong>.</p>

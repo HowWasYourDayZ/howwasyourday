@@ -117,7 +117,7 @@ export default function BecomeAPeerSupporterPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
 
       <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
       </nav>
 
       <main className="page">

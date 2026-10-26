@@ -30,7 +30,7 @@ outlined to vector paths, so the SVGs look identical everywhere and need no font
 - Minimum size: the mark at 16px (favicon), the stacked logo at 32px tall.
 - Don't recolour, stretch, rotate, outline or add shadows; don't put the orange logo on an orange background
   (use the white version).
-- Never redraw the logo in a page with text or CSS — use `/logo.png` or `/brand/*.svg`.
+- Never redraw the logo in a page with text or CSS — use `/brand/logo.png` or `/brand/*.svg`.
 
 ## Regenerate
 Edit `generate-svg.cjs` (the single source of the drawing), then from the repo root:

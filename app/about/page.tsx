@@ -19,7 +19,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white text-[#3B2F2A]">
       <div className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
         <nav className="mb-12 flex items-center justify-between">
-          <a href="/"><img src="/logo.png" alt="How Was Your Day" className="h-11 w-auto" /></a>
+          <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="h-11 w-auto" /></a>
           <a href="/talk?src=about" className="rounded-full bg-[#B85520] px-5 py-2.5 text-sm font-extrabold text-white">Talk now</a>
         </nav>
 

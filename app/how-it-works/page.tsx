@@ -90,7 +90,7 @@ export default function HowItWorksPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
-        <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{ height: 48 }} /></a>
+        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" style={{ height: 48 }} /></a>
         <a href="/talk"><button className="btn" style={{ fontSize: 13, padding: '8px 18px', margin: 0 }}>Talk now</button></a>
       </nav>
       <main className="page">
