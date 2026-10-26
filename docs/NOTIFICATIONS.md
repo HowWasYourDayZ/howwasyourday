@@ -147,7 +147,7 @@ Known and accepted:
   The dashboard's **Send a test alert** button says "not set up on the server"
   when the server credentials are missing. If the browser keys are missing,
   the alerts card doesn't show at all.
-- [ ] Run `supabase/migrations/061_push_tokens.sql` so each device gets its own
+- [ ] Run `061_push_tokens.sql` (now part of `supabase/setup/01_schema.sql`) so each device gets its own
       token. Everything works before it runs, with one device per listener.
 - [ ] Rebuild the Play Store app (Actions → Build Android TWA) with a higher
       version code, so the notification permission ships.

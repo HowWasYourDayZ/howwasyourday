@@ -10,7 +10,7 @@ database. Everything the app needs is built by **three SQL files** in
 | `02_storage.sql` | Two storage buckets: `avatars` (public photos) and `verifications` (private selfies), plus the photo-upload rules | `Storage buckets ready — now run 03_verify.sql` |
 | `03_verify.sql` | Read-only check of the other two files | One row: `ALL 102 CHECKS PASSED · OK` |
 
-> ⚠️ **Do not run anything in `supabase/migrations/`.** Those 83 files are LeanOn's
+> ⚠️ **Never run anything in `db/leanon-migrations/`.** Those 83 archived files are LeanOn's
 > patch history; `01_schema.sql` already contains their end result, converted for
 > the UK (pence, 8/16/32-minute sessions, scheduled sessions, GDPR consent).
 
@@ -87,6 +87,10 @@ for the real one. The two should be identical.
 ---
 
 ## Part B — Authentication settings
+
+> **Launching with Google sign-in only (no MSG91 yet)?** Follow
+> [`VERCEL_SETUP.md`](VERCEL_SETUP.md) instead of steps 7–12; it covers Vercel,
+> Google and these Supabase settings in the right order (Phone stays OFF until MSG91).
 
 ### 7. Sign-in methods (Authentication → Sign In / Providers)
 

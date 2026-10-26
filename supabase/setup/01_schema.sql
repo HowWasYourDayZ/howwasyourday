@@ -3,7 +3,7 @@
 -- File 1 of 3. Run it in Supabase Dashboard → SQL Editor (as the default
 -- `postgres` role). Full guide: docs/SUPABASE_SETUP.md
 --
--- This ONE file replaces the 83 historical LeanOn files in supabase/migrations/
+-- This ONE file replaces the 83 historical LeanOn files archived in db/leanon-migrations/
 -- (001 … 077, 2025*, 999). Those describe how the LeanOn production database
 -- was patched over time; never run them on this project. This file is the
 -- end state of all of them (db/LIVE_SCHEMA.md + migrations 041–077), cleaned up:

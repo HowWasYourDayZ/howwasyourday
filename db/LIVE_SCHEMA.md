@@ -10,9 +10,9 @@ How Was Your Day runs on its **own new Supabase project** (London region, create
 Oct 2026). It was built in one go from **`supabase/setup/`** (`01_schema.sql`,
 `02_storage.sql`, then `03_verify.sql`), following **`docs/SUPABASE_SETUP.md`**.
 
-`supabase/migrations/001 … 077` are the **LeanOn history** that `01_schema.sql`
+`db/leanon-migrations/` (001 … 077) is the **LeanOn history** that `01_schema.sql`
 consolidates. **Never run them on this project.** Future schema changes are new
-files numbered from `078_…`, run by the owner in the SQL Editor, after which
+files in `supabase/migrations/` numbered from `078_…`, run by the owner in the SQL Editor, after which
 this snapshot is refreshed.
 
 Differences from the LeanOn database (deliberate):

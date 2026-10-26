@@ -655,7 +655,7 @@ export default function AuthPage() {
                   </button>
                   <p className="fine-print" style={{ fontSize: 12, color: '#6B8FA8', textAlign: 'center', marginTop: 8 }}>
                     We only use your Google email to recover your account and send booking emails. Listeners see only the first name you choose.
-                    Signing in with Google and with your phone creates two separate accounts.
+                    {widgetConfigured && ' Signing in with Google and with your phone creates two separate accounts.'}
                   </p>
                 </>
               )}
