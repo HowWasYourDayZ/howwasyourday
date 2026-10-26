@@ -1,80 +1,64 @@
 # Live DB Schema — Ground Truth
 
-> **This file is the authoritative description of the production database.**
-> Migration files in `supabase/migrations/` describe *intent*, not reality —
-> the live DB has drifted from them before (phone NOT NULL + UNIQUE,
-> duration check missing 45, missing RLS policies, no auth.users FK cascade).
-> Any code or migration change MUST be validated against this file.
+> **This file describes the production database.** Validate every DB-touching
+> change against it. Migration files describe *intent*; this file describes
+> what the database actually holds.
+
+## How this database was built
+
+How Was Your Day runs on its **own new Supabase project** (London region, created
+Oct 2026). It was built in one go from **`supabase/setup/`** (`01_schema.sql`,
+`02_storage.sql`, then `03_verify.sql`), following **`docs/SUPABASE_SETUP.md`**.
+
+`supabase/migrations/001 … 077` are the **LeanOn history** that `01_schema.sql`
+consolidates. **Never run them on this project.** Future schema changes are new
+files numbered from `078_…`, run by the owner in the SQL Editor, after which
+this snapshot is refreshed.
+
+Differences from the LeanOn database (deliberate):
+- Money is GBP integer pence; listener rate 10p–500p/min (default 40p).
+- Sessions are 8 / 16 / 32 minutes; status can be `scheduled` (077).
+- **Browsers can only SELECT** (RLS-scoped). `anon`/`authenticated` hold no
+  INSERT/UPDATE/DELETE grant on any `public` table and cannot execute any `public`
+  function — every write goes through server routes (service role) or the
+  SECURITY DEFINER functions. Only the `avatars` storage bucket accepts browser
+  uploads (own `<uid>.*` files).
+- No duplicate policies / triggers / indexes; no admin RLS policies (the admin is
+  env-var based and uses the service role); no `specialty_tags` table and no
+  `handle_new_user` trigger on `auth.users` (rows are created by `lib/ensure-user-row.ts`).
+- `public.users.id` still has **no FK to `auth.users`** (same as LeanOn — see CLAUDE.md).
+- ⚠️ New tables created later inherit Supabase's default grants (browser can
+  write them, subject to RLS). Every new-table migration must `ENABLE ROW LEVEL
+  SECURITY` and `REVOKE INSERT, UPDATE, DELETE … FROM anon, authenticated`.
 
 ## How to refresh (owner)
 
-1. Open Supabase Dashboard → SQL Editor
-2. Run the query in `db/dump-live-schema.sql`
-3. Export the result as Markdown
-4. Replace everything below the `<!-- SNAPSHOT -->` marker
-5. Update the snapshot date
-6. Commit
+1. Supabase Dashboard → SQL Editor → run `db/dump-live-schema.sql`
+2. Export the result as Markdown (or CSV)
+3. Replace everything below the `<!-- SNAPSHOT -->` marker and update the heading date
+4. Commit
 
-**Refresh after:** running any migration, or making ANY change in the
-Supabase dashboard (columns, constraints, policies, triggers, auth settings).
+**Refresh after:** running any migration, or making ANY change in the Supabase
+dashboard (columns, constraints, policies, triggers, auth settings).
 
-## Migrations applied (post-launch)
+## Migrations applied after setup
 
 | Migration | What it does | Status |
 |---|---|---|
-| `041_listener_heartbeat.sql` | Adds `listener_profiles.last_heartbeat_at` timestamptz | **✅ Applied — confirmed in snapshot 2026-06-20** |
-| `043_session_request_flow.sql` | Adds `sessions.cancel_reason` + `sessions.responded_at`, partial index on pending requests, rewrites `create_session` to insert `pending`, adds `accept_session()` RPC | **✅ Applied — confirmed in snapshot 2026-06-20** |
-| `044_fix_users_rls_recursion.sql` | Drops ALL users RLS policies via pg_catalog loop, recreates 6 clean policies | **✅ Applied 2026-06-20 — necessary but NOT sufficient (see 045)** |
-
-## ⚠️ Pending migration (run before code relies on it)
-
-| Migration | What it does | Status |
-|---|---|---|
-| `061_push_tokens.sql` | New `push_tokens` table (token PK, user_id, user_agent, created_at, last_seen_at; RLS on, service-role only) — one row per device so a listener's phone AND laptop both get request alerts. Copies existing `users.fcm_token` values in. | **✅ Applied — confirmed by owner 2026-09-25** (not yet in a schema snapshot; refresh with `db/dump-live-schema.sql`). `users.fcm_token` is still read as a fallback. |
-| `051_refund_dedupe_and_reactions.sql` | **A:** partial unique index `refund_requests_one_pending_per_user` on `(user_id) WHERE status='pending'` — the read-then-insert guard in `/api/refund` was not atomic, so concurrent submissions created two pending rows sharing one `razorpay_payment_id` and the admin refunded the same payment twice. Collapses existing duplicates (keeps the oldest) before creating the index. **B:** new `message_reactions` table (supportive emoji only, CHECK-constrained), participant-only SELECT, writes reserved to the service role, added to the realtime publication. | **Run in Supabase SQL Editor.** Until run: duplicate refunds remain possible and reactions degrade silently (the API returns `unavailable`, the UI shows none). |
-| `050_fix_sessions_write_rls.sql` | 🔴 Drops `sessions_seeker_rating_update` and `sessions_insert`, and revokes INSERT/UPDATE/DELETE on `sessions` from `authenticated`/`anon`. The UPDATE policy allowed row-level writes on a seeker's own COMPLETED sessions — and RLS cannot scope columns — so `status`/`amount_held` could be rewritten from the browser and the settlement replayed to mint wallet balance. Verified the browser only ever SELECTs `sessions`. | **✅ APPLIED — confirmed by owner 2026-08-12.** `sessions_select_participant` (migration 045) remains, so all reads are unaffected. |
-| `049_listener_age.sql` | Adds `listener_profiles.birth_year` + `birth_month` (smallint, nullable) — month+year age precision only (never the day) to power the `/browse` age-range filter (18–29 / 30–39 / 40–49 / 50–59 / 60+). Code degrades gracefully until applied: the apply route retries the profile upsert without the birth columns, and `/api/listeners` retries its SELECT without them, so listener sign-up and browse keep working. Existing approved listeners keep NULL age (shown under "All ages" only) until they re-submit. | **Run in Supabase SQL Editor.** Until run: age is not captured and the age-range filter matches no one (only "All ages" shows results). |
-| `048_listener_messages.sql` | Offline message requests table (seeker → offline listener, max 2). | **Run in Supabase SQL Editor.** Confirmed applied by owner. |
-| `047_admin_aadhaar_tracking.sql` | Adds `listener_applications.aadhaar` (text, full 12-digit number) for manual KYC review in the admin dashboard. **SENSITIVE PII — admin-only;** never selected by public/listener APIs. Code degrades gracefully until applied (apply route stores only `aadhaar_last4`; admin routes fall back to the masked tail). "Joined date" and "last login" need NO schema change — joined = `users.created_at`, last login = `auth.users.last_sign_in_at` (auto-maintained, surfaced via the admin API). | **Run in Supabase SQL Editor.** Until run: the full Aadhaar number is not captured/shown; the masked `aadhaar_last4` continues to work. |
-| `045_fix_sessions_users_rls_cycle.sql` | Completes the `42P17` fix. The recursion is a **cross-table cycle**, not a self-reference: `users.users_select_session_participant` reads `sessions`, and `sessions.sessions_read_participants` reads `users` (admin `EXISTS`). 044 only cleaned the `users` side, so the cycle survived. 045 drops all `sessions` SELECT policies and recreates ONE clean participant-only policy (`sessions_select_participant`) that references no other table — admin reads go through the service-role client, so the admin clause is unnecessary. After 045 the policy dependency graph is a DAG; `42P17` cannot occur. | **MUST RUN in Supabase SQL Editor.** Until run: every anon/authenticated read touching `users` or `sessions` (dashboard sessions list, browse wallet read, session page, message history) throws `42P17`. The `/api/listeners` browse list survives only because it uses the service-role admin client. |
-
-## Known live-vs-migrations drift (history)
-
-| Found | Drift | Resolution |
-|---|---|---|
-| 2026-06-11 | `users.phone` had NOT NULL (no migration defines it) | Dropped via migration 033 |
-| 2026-06-11 | `users_phone_key` UNIQUE on phone (no migration defines it) | Kept; recorded in 033 |
-| 2026-06-11 | `sessions_duration_mins_check` only allowed 5/15/30 | Migration 034 adds 45 — **confirmed in snapshot** |
-| 2026-06-11 | `public.users.id` has NO FK to `auth.users` (schema file says CASCADE) | Orphan rows possible — `ensureUserRow` reconciles |
-| 2026-06-11 | `users_select_listener_public` policy missing | Re-asserted via migration 035 — **confirmed in snapshot** |
-| 2026-06-11 | `wallet_txn_payment_id_unique` index missing | Added manually in SQL Editor — **confirmed in snapshot** |
-| 2026-06-11 | `admin_audit_logs.admin_id` was NOT NULL (migration 030 intended nullable) | NOT NULL dropped manually in SQL Editor — **confirmed in snapshot** |
-| 2026-06-20 | Unknown recursive admin policy added via Supabase dashboard caused `42P17` on any users-table read | Dropped by migration 044; all 6 clean users policies recreated — **confirmed 2026-06-20** |
-| 2026-06-20 | `listener_profiles.last_heartbeat_at` not in earlier snapshots | Column confirmed present (migration 041 applied) |
-| 2026-06-20 | `sessions.cancel_reason` + `sessions.responded_at` not in earlier snapshots | Columns confirmed present (migration 043 applied) |
-
-## Code-vs-DB issues found in validation (2026-06-11)
-
-| Severity | Issue | File | Status |
-|---|---|---|---|
-| ✅ FIXED | `wallet_txn_payment_id_unique` partial index was missing (double-credit risk) | `app/api/wallet/route.ts`, Supabase RPC | **Fixed 2026-06-11 — index confirmed in snapshot** |
-| ✅ FIXED | `admin_audit_logs.admin_id` was `NOT NULL` — audit log INSERT silently failed for password-auth admin | `lib/require-admin.ts` | **Fixed 2026-06-11 — column now nullable, confirmed in snapshot** |
-| 🟡 MED | `listener_earnings.status` DEFAULT is `'settled'` — new earnings rows are immediately settled; pending→settled flow is bypassed for all new earnings | `supabase/migrations/009_payouts.sql` vs live | Harmless now (no payout pipeline uses pending), but wrong intent |
-| 🟡 MED | Three duplicate SELECT policies on `wallet_transactions`: `wallet_own`, `wallet_transactions_select_own`, `wallet_txns_own` — all identical `auth.uid() = user_id`. Harmless but adds noise | migrations | Cosmetic |
-| 🟡 MED | `sessions` has three SELECT policies: `sessions_own`, `sessions_participant_select`, `sessions_read_participants` — overlapping but harmless (OR logic) | migrations | Cosmetic |
-| 🟡 MED | `messages` has two INSERT policies: `messages_participant_insert` lacks the sender_id and active-session checks that `messages_insert` has — a participant can insert into ended sessions (or spoof sender_id) via direct PostgREST calls. App sends go through `/api/messages` which enforces both, so no app-level breakage | migrations | **Migration 036 drops the permissive policy — owner must run it** |
-| 🟡 MED | `users` has two SELECT policies for listeners: `users_select_listener_public` and `users_listener_public_read` — both check `id IN (SELECT user_id FROM listener_profiles WHERE is_approved=true)` | migration 035 vs 20250512 | Harmless |
-| 🟢 LOW | `payout_requests.user_id` column (not `listener_id` as in migration 009 spec) — code must use `user_id` | `app/api/listener/payout/route.ts` | Confirmed — code already uses correct column name |
+| — | none yet | — |
 
 <!-- SNAPSHOT -->
 
-## Snapshot — 2026-06-20 (refresh after migrations 041, 043, 044)
+## Snapshot — EXPECTED state, 2026-10-26
 
-Full dump via `db/dump-live-schema.sql`.
+Generated by running `supabase/setup/01_schema.sql` + `02_storage.sql` on a
+Postgres 16 database with Supabase's `auth`/`storage` schemas and roles stubbed,
+then `db/dump-live-schema.sql`. **Replace it with a dump from the real project
+once setup is done** (it should be identical).
 
-### 1_COLUMNS (171 total — added last_heartbeat_at, cancel_reason, responded_at)
+### 1_COLUMNS (240)
 
-| table.column | definition |
+| object | definition |
 | --- | --- |
 | admin_audit_logs.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | admin_audit_logs.admin_id | uuid |
@@ -108,42 +92,77 @@ Full dump via `db/dump-live-schema.sql`.
 | listener_applications.user_id | uuid NOT NULL |
 | listener_applications.name | text |
 | listener_applications.phone | text |
-| listener_applications.aadhaar_last4 | text |
+| listener_applications.status | text NOT NULL DEFAULT 'pending'::text |
+| listener_applications.admin_notes | text |
+| listener_applications.screening | jsonb |
+| listener_applications.account_holder_name | text |
 | listener_applications.bank_account | text |
 | listener_applications.ifsc_code | text |
-| listener_applications.status | text NOT NULL DEFAULT 'pending'::text |
+| listener_applications.upi_id | text |
+| listener_applications.aadhaar | text |
+| listener_applications.aadhaar_last4 | text |
 | listener_applications.created_at | timestamp with time zone NOT NULL DEFAULT now() |
 | listener_applications.updated_at | timestamp with time zone NOT NULL DEFAULT now() |
-| listener_applications.upi_id | text |
-| listener_applications.admin_notes | text |
+| listener_availability.id | uuid NOT NULL DEFAULT gen_random_uuid() |
+| listener_availability.listener_id | uuid NOT NULL |
+| listener_availability.weekday | smallint NOT NULL |
+| listener_availability.start_min | integer NOT NULL |
+| listener_availability.end_min | integer NOT NULL |
+| listener_availability.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| listener_blocked_dates.listener_id | uuid NOT NULL |
+| listener_blocked_dates.day | date NOT NULL |
+| listener_blocked_dates.created_at | timestamp with time zone NOT NULL DEFAULT now() |
 | listener_earnings.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | listener_earnings.listener_id | uuid NOT NULL |
 | listener_earnings.session_id | uuid |
 | listener_earnings.gross_amount | integer NOT NULL |
 | listener_earnings.platform_fee | integer NOT NULL |
 | listener_earnings.net_amount | integer NOT NULL |
+| listener_earnings.listener_gross | integer |
+| listener_earnings.service_fee | integer |
 | listener_earnings.status | text NOT NULL DEFAULT 'settled'::text |
 | listener_earnings.settled_at | timestamp with time zone NOT NULL DEFAULT now() |
 | listener_earnings.created_at | timestamp with time zone NOT NULL DEFAULT now() |
-| listener_profiles.id | uuid NOT NULL DEFAULT uuid_generate_v4() |
+| listener_messages.id | uuid NOT NULL DEFAULT gen_random_uuid() |
+| listener_messages.seeker_id | uuid NOT NULL |
+| listener_messages.listener_id | uuid NOT NULL |
+| listener_messages.messages | ARRAY NOT NULL DEFAULT '{}'::text[] |
+| listener_messages.is_read | boolean NOT NULL DEFAULT false |
+| listener_messages.read_at | timestamp with time zone |
+| listener_messages.last_invited_at | timestamp with time zone |
+| listener_messages.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| listener_messages.updated_at | timestamp with time zone NOT NULL DEFAULT now() |
+| listener_profiles.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | listener_profiles.user_id | uuid NOT NULL |
 | listener_profiles.bio | text NOT NULL DEFAULT ''::text |
 | listener_profiles.specialty_tags | ARRAY NOT NULL DEFAULT '{}'::text[] |
-| listener_profiles.rate_per_min | numeric NOT NULL DEFAULT 10.00 |
+| listener_profiles.languages_spoken | ARRAY NOT NULL DEFAULT '{english}'::text[] |
+| listener_profiles.rate_per_min | numeric NOT NULL DEFAULT 40 |
+| listener_profiles.custom_service_fee_rate | numeric |
 | listener_profiles.is_available | boolean NOT NULL DEFAULT false |
 | listener_profiles.is_approved | boolean NOT NULL DEFAULT false |
-| listener_profiles.rating | numeric NOT NULL DEFAULT 0.00 |
+| listener_profiles.is_active | boolean NOT NULL DEFAULT true |
+| listener_profiles.is_verified | boolean NOT NULL DEFAULT false |
+| listener_profiles.is_suspended | boolean NOT NULL DEFAULT false |
+| listener_profiles.is_in_session | boolean NOT NULL DEFAULT false |
+| listener_profiles.voice_disabled | boolean NOT NULL DEFAULT false |
+| listener_profiles.rating | numeric NOT NULL DEFAULT 0 |
 | listener_profiles.total_sessions | integer NOT NULL DEFAULT 0 |
 | listener_profiles.total_minutes | integer NOT NULL DEFAULT 0 |
+| listener_profiles.last_heartbeat_at | timestamp with time zone |
+| listener_profiles.pending_avatar_url | text |
+| listener_profiles.profile_photos | ARRAY DEFAULT '{}'::text[] |
+| listener_profiles.birth_year | smallint |
+| listener_profiles.birth_month | smallint |
+| listener_profiles.education_level | text |
+| listener_profiles.education_field | text |
+| listener_profiles.tagline_phrases | ARRAY DEFAULT '{}'::text[] |
+| listener_profiles.lived_experience | text |
+| listener_profiles.account_holder_name | text |
 | listener_profiles.bank_account | text |
 | listener_profiles.ifsc_code | text |
 | listener_profiles.created_at | timestamp with time zone NOT NULL DEFAULT now() |
 | listener_profiles.updated_at | timestamp with time zone NOT NULL DEFAULT now() |
-| listener_profiles.languages_spoken | ARRAY DEFAULT '{english}'::text[] |
-| listener_profiles.is_active | boolean DEFAULT true |
-| listener_profiles.is_verified | boolean NOT NULL DEFAULT false |
-| listener_profiles.is_suspended | boolean NOT NULL DEFAULT false |
-| listener_profiles.last_heartbeat_at | timestamp with time zone |
 | listener_verifications.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | listener_verifications.listener_id | uuid NOT NULL |
 | listener_verifications.full_name | text NOT NULL |
@@ -156,7 +175,18 @@ Full dump via `db/dump-live-schema.sql`.
 | listener_verifications.submitted_at | timestamp with time zone NOT NULL DEFAULT now() |
 | listener_verifications.reviewed_at | timestamp with time zone |
 | listener_verifications.reviewed_by | uuid |
-| messages.id | uuid NOT NULL DEFAULT uuid_generate_v4() |
+| lounge_messages.id | uuid NOT NULL DEFAULT gen_random_uuid() |
+| lounge_messages.sender_id | uuid NOT NULL |
+| lounge_messages.content | text NOT NULL |
+| lounge_messages.deleted_at | timestamp with time zone |
+| lounge_messages.deleted_by | uuid |
+| lounge_messages.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| message_reactions.id | uuid NOT NULL DEFAULT gen_random_uuid() |
+| message_reactions.message_id | uuid NOT NULL |
+| message_reactions.user_id | uuid NOT NULL |
+| message_reactions.emoji | text NOT NULL |
+| message_reactions.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| messages.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | messages.session_id | uuid NOT NULL |
 | messages.sender_id | uuid NOT NULL |
 | messages.content | text NOT NULL |
@@ -174,16 +204,23 @@ Full dump via `db/dump-live-schema.sql`.
 | payout_requests.user_id | uuid NOT NULL |
 | payout_requests.amount | integer NOT NULL |
 | payout_requests.status | text NOT NULL DEFAULT 'pending'::text |
-| payout_requests.created_at | timestamp with time zone NOT NULL DEFAULT now() |
 | payout_requests.upi_id | text |
 | payout_requests.admin_notes | text |
 | payout_requests.processed_at | timestamp with time zone |
 | payout_requests.processed_by | uuid |
+| payout_requests.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| push_tokens.token | text NOT NULL |
+| push_tokens.user_id | uuid NOT NULL |
+| push_tokens.user_agent | text |
+| push_tokens.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| push_tokens.last_seen_at | timestamp with time zone NOT NULL DEFAULT now() |
 | refund_requests.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | refund_requests.user_id | uuid NOT NULL |
 | refund_requests.amount | integer NOT NULL |
 | refund_requests.reason | text |
 | refund_requests.status | text NOT NULL DEFAULT 'pending'::text |
+| refund_requests.razorpay_payment_id | text |
+| refund_requests.admin_notes | text |
 | refund_requests.created_at | timestamp with time zone NOT NULL DEFAULT now() |
 | reports.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | reports.reporter_id | uuid NOT NULL |
@@ -196,50 +233,66 @@ Full dump via `db/dump-live-schema.sql`.
 | reports.resolved_by | uuid |
 | reports.created_at | timestamp with time zone NOT NULL DEFAULT now() |
 | reports.updated_at | timestamp with time zone NOT NULL DEFAULT now() |
-| sessions.id | uuid NOT NULL DEFAULT uuid_generate_v4() |
+| sessions.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | sessions.seeker_id | uuid NOT NULL |
 | sessions.listener_id | uuid NOT NULL |
 | sessions.session_type | text NOT NULL |
 | sessions.duration_mins | integer NOT NULL |
 | sessions.status | text NOT NULL DEFAULT 'pending'::text |
-| sessions.amount_held | numeric NOT NULL DEFAULT 0.00 |
-| sessions.platform_fee | numeric NOT NULL DEFAULT 0.00 |
-| sessions.started_at | timestamp with time zone |
-| sessions.ended_at | timestamp with time zone |
-| sessions.seeker_rating | smallint |
-| sessions.seeker_review | text |
+| sessions.amount_held | numeric NOT NULL DEFAULT 0 |
+| sessions.platform_fee | numeric NOT NULL DEFAULT 0 |
+| sessions.listener_rate_per_min | integer |
+| sessions.service_fee_rate | numeric |
 | sessions.is_free_trial | boolean NOT NULL DEFAULT false |
 | sessions.agora_channel | text |
-| sessions.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| sessions.started_at | timestamp with time zone |
+| sessions.ended_at | timestamp with time zone |
+| sessions.responded_at | timestamp with time zone |
+| sessions.cancel_reason | text |
+| sessions.ended_by | text |
+| sessions.booked_via | text |
+| sessions.talk_search_id | uuid |
+| sessions.request_push | jsonb |
+| sessions.seeker_rating | smallint |
+| sessions.seeker_review | text |
 | sessions.crisis_flagged | boolean NOT NULL DEFAULT false |
 | sessions.crisis_flagged_at | timestamp with time zone |
 | sessions.seeker_last_seen | timestamp with time zone |
 | sessions.listener_last_seen | timestamp with time zone |
-| sessions.cancel_reason | text |
-| sessions.responded_at | timestamp with time zone |
-| specialty_tags.id | text NOT NULL |
-| specialty_tags.label | text NOT NULL |
-| specialty_tags.icon | text |
-| specialty_tags.sort_order | integer DEFAULT 0 |
+| sessions.scheduled_start_at | timestamp with time zone |
+| sessions.seeker_joined_at | timestamp with time zone |
+| sessions.listener_joined_at | timestamp with time zone |
+| sessions.reminder_24h_sent_at | timestamp with time zone |
+| sessions.reminder_15m_sent_at | timestamp with time zone |
+| sessions.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| talk_searches.id | uuid NOT NULL |
+| talk_searches.seeker_id | uuid NOT NULL |
+| talk_searches.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| talk_searches.free | boolean |
+| talk_searches.candidates | integer |
 | user_blocks.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | user_blocks.blocker_id | uuid NOT NULL |
 | user_blocks.blocked_id | uuid NOT NULL |
 | user_blocks.created_at | timestamp with time zone NOT NULL DEFAULT now() |
-| users.id | uuid NOT NULL DEFAULT uuid_generate_v4() |
+| users.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | users.phone | text |
+| users.email | text |
 | users.name | text |
 | users.avatar_url | text |
-| users.role | text NOT NULL DEFAULT 'seeker'::text |
-| users.wallet_balance | numeric NOT NULL DEFAULT 0.00 |
-| users.is_active | boolean NOT NULL DEFAULT true |
-| users.created_at | timestamp with time zone NOT NULL DEFAULT now() |
-| users.updated_at | timestamp with time zone NOT NULL DEFAULT now() |
 | users.gender | text |
+| users.role | text NOT NULL DEFAULT 'seeker'::text |
+| users.wallet_balance | numeric NOT NULL DEFAULT 0 |
+| users.is_active | boolean NOT NULL DEFAULT true |
+| users.is_admin | boolean NOT NULL DEFAULT false |
 | users.is_suspended | boolean NOT NULL DEFAULT false |
 | users.fcm_token | text |
-| users.is_admin | boolean NOT NULL DEFAULT false |
-| users.email | text |
-| wallet_transactions.id | uuid NOT NULL DEFAULT uuid_generate_v4() |
+| users.account_country | text |
+| users.push_last_error | text |
+| users.push_last_error_at | timestamp with time zone |
+| users.sensitive_data_consent_at | timestamp with time zone |
+| users.created_at | timestamp with time zone NOT NULL DEFAULT now() |
+| users.updated_at | timestamp with time zone NOT NULL DEFAULT now() |
+| wallet_transactions.id | uuid NOT NULL DEFAULT gen_random_uuid() |
 | wallet_transactions.user_id | uuid NOT NULL |
 | wallet_transactions.amount | numeric NOT NULL |
 | wallet_transactions.type | text NOT NULL |
@@ -248,9 +301,9 @@ Full dump via `db/dump-live-schema.sql`.
 | wallet_transactions.session_id | uuid |
 | wallet_transactions.created_at | timestamp with time zone NOT NULL DEFAULT now() |
 
-### 2_CONSTRAINTS (75 total)
+### 2_CONSTRAINTS (102)
 
-| table constraint | definition |
+| object | definition |
 | --- | --- |
 | admin_audit_logs admin_audit_logs_pkey | PRIMARY KEY (id) |
 | audit_logs audit_logs_actor_id_fkey | FOREIGN KEY (actor_id) REFERENCES users(id) ON DELETE SET NULL |
@@ -258,79 +311,106 @@ Full dump via `db/dump-live-schema.sql`.
 | contact_messages contact_messages_pkey | PRIMARY KEY (id) |
 | content_flags content_flags_details_check | CHECK ((char_length(details) <= 1000)) |
 | content_flags content_flags_pkey | PRIMARY KEY (id) |
-| content_flags content_flags_reason_check | CHECK ((reason = ANY (ARRAY['harassment','spam','inappropriate','self_harm','other']))) |
+| content_flags content_flags_reason_check | CHECK ((reason = ANY (ARRAY['harassment'::text, 'spam'::text, 'inappropriate'::text, 'self_harm'::text, 'other'::text]))) |
 | content_flags content_flags_reporter_id_fkey | FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE |
 | content_flags content_flags_resolved_by_fkey | FOREIGN KEY (resolved_by) REFERENCES users(id) ON DELETE SET NULL |
 | content_flags content_flags_session_id_fkey | FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE SET NULL |
-| content_flags content_flags_status_check | CHECK ((status = ANY (ARRAY['pending','reviewed','resolved','dismissed']))) |
+| content_flags content_flags_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'reviewed'::text, 'resolved'::text, 'dismissed'::text]))) |
 | content_flags content_flags_target_user_id_fkey | FOREIGN KEY (target_user_id) REFERENCES users(id) ON DELETE SET NULL |
 | listener_applications listener_applications_pkey | PRIMARY KEY (id) |
-| listener_applications listener_applications_status_check | CHECK ((status = ANY (ARRAY['pending','approved','rejected','needs_resubmission']))) |
+| listener_applications listener_applications_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'approved'::text, 'rejected'::text, 'needs_resubmission'::text]))) |
 | listener_applications listener_applications_user_id_fkey | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE |
 | listener_applications listener_applications_user_id_key | UNIQUE (user_id) |
-| listener_earnings earnings_net_positive | CHECK ((net_amount >= 0)) NOT VALID |
+| listener_availability listener_availability_check | CHECK ((start_min < end_min)) |
+| listener_availability listener_availability_end_min_check | CHECK (((end_min >= 15) AND (end_min <= 1440))) |
+| listener_availability listener_availability_listener_id_fkey | FOREIGN KEY (listener_id) REFERENCES users(id) ON DELETE CASCADE |
+| listener_availability listener_availability_pkey | PRIMARY KEY (id) |
+| listener_availability listener_availability_start_min_check | CHECK (((start_min >= 0) AND (start_min <= 1425))) |
+| listener_availability listener_availability_weekday_check | CHECK (((weekday >= 1) AND (weekday <= 7))) |
+| listener_blocked_dates listener_blocked_dates_listener_id_fkey | FOREIGN KEY (listener_id) REFERENCES users(id) ON DELETE CASCADE |
+| listener_blocked_dates listener_blocked_dates_pkey | PRIMARY KEY (listener_id, day) |
+| listener_earnings earnings_net_positive | CHECK ((net_amount >= 0)) |
 | listener_earnings listener_earnings_listener_id_fkey | FOREIGN KEY (listener_id) REFERENCES users(id) ON DELETE CASCADE |
 | listener_earnings listener_earnings_pkey | PRIMARY KEY (id) |
 | listener_earnings listener_earnings_session_id_fkey | FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE SET NULL |
-| listener_earnings listener_earnings_status_check | CHECK ((status = ANY (ARRAY['pending','settled','held','disputed']))) |
+| listener_earnings listener_earnings_session_id_key | UNIQUE (session_id) |
+| listener_earnings listener_earnings_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'settled'::text, 'held'::text, 'disputed'::text]))) |
+| listener_messages listener_messages_listener_id_fkey | FOREIGN KEY (listener_id) REFERENCES users(id) ON DELETE CASCADE |
+| listener_messages listener_messages_pair_unique | UNIQUE (seeker_id, listener_id) |
+| listener_messages listener_messages_pkey | PRIMARY KEY (id) |
+| listener_messages listener_messages_seeker_id_fkey | FOREIGN KEY (seeker_id) REFERENCES users(id) ON DELETE CASCADE |
+| listener_profiles listener_profiles_birth_month_chk | CHECK (((birth_month IS NULL) OR ((birth_month >= 1) AND (birth_month <= 12)))) |
+| listener_profiles listener_profiles_birth_year_chk | CHECK (((birth_year IS NULL) OR ((birth_year >= 1920) AND (birth_year <= 2015)))) |
+| listener_profiles listener_profiles_custom_service_fee_rate_check | CHECK (((custom_service_fee_rate IS NULL) OR ((custom_service_fee_rate >= (0)::numeric) AND (custom_service_fee_rate <= (1)::numeric)))) |
 | listener_profiles listener_profiles_pkey | PRIMARY KEY (id) |
 | listener_profiles listener_profiles_user_id_fkey | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE |
 | listener_profiles listener_profiles_user_id_key | UNIQUE (user_id) |
-| listener_profiles lp_rate_range | CHECK (((rate_per_min >= 1) AND (rate_per_min <= 200))) |
-| listener_verifications listener_verifications_id_type_check | CHECK ((id_type = ANY (ARRAY['aadhaar','pan','passport','voter_id','driving_license']))) |
+| listener_profiles lp_rate_range | CHECK (((rate_per_min >= (10)::numeric) AND (rate_per_min <= (500)::numeric))) |
+| listener_verifications listener_verifications_id_type_check | CHECK ((id_type = ANY (ARRAY['passport'::text, 'driving_license'::text, 'national_id_card'::text, 'residence_permit'::text, 'aadhaar'::text, 'pan'::text, 'voter_id'::text]))) |
 | listener_verifications listener_verifications_listener_id_fkey | FOREIGN KEY (listener_id) REFERENCES users(id) ON DELETE CASCADE |
 | listener_verifications listener_verifications_listener_id_key | UNIQUE (listener_id) |
 | listener_verifications listener_verifications_pkey | PRIMARY KEY (id) |
 | listener_verifications listener_verifications_reviewed_by_fkey | FOREIGN KEY (reviewed_by) REFERENCES users(id) |
-| listener_verifications listener_verifications_status_check | CHECK ((status = ANY (ARRAY['pending','approved','rejected','needs_resubmission']))) |
+| listener_verifications listener_verifications_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'approved'::text, 'rejected'::text, 'needs_resubmission'::text]))) |
+| lounge_messages lounge_messages_content_check | CHECK (((char_length(content) >= 1) AND (char_length(content) <= 2000))) |
+| lounge_messages lounge_messages_deleted_by_fkey | FOREIGN KEY (deleted_by) REFERENCES users(id) |
+| lounge_messages lounge_messages_pkey | PRIMARY KEY (id) |
+| lounge_messages lounge_messages_sender_id_fkey | FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE CASCADE |
+| message_reactions message_reactions_emoji_chk | CHECK ((emoji = ANY (ARRAY['❤️'::text, '🙏'::text, '🫂'::text, '😊'::text]))) |
+| message_reactions message_reactions_message_id_fkey | FOREIGN KEY (message_id) REFERENCES messages(id) ON DELETE CASCADE |
+| message_reactions message_reactions_pkey | PRIMARY KEY (id) |
+| message_reactions message_reactions_unique_per_user | UNIQUE (message_id, user_id) |
 | messages messages_pkey | PRIMARY KEY (id) |
 | messages messages_sender_id_fkey | FOREIGN KEY (sender_id) REFERENCES users(id) |
 | messages messages_session_id_fkey | FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE CASCADE |
 | notifications notifications_pkey | PRIMARY KEY (id) |
 | notifications notifications_user_id_fkey | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE |
-| payout_requests payout_amount_positive | CHECK ((amount > 0)) NOT VALID |
+| payout_requests payout_amount_positive | CHECK ((amount > 0)) |
 | payout_requests payout_requests_pkey | PRIMARY KEY (id) |
 | payout_requests payout_requests_processed_by_fkey | FOREIGN KEY (processed_by) REFERENCES users(id) |
-| payout_requests payout_requests_status_check | CHECK ((status = ANY (ARRAY['pending','approved','processing','paid','completed','rejected']))) |
+| payout_requests payout_requests_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'approved'::text, 'processing'::text, 'paid'::text, 'completed'::text, 'rejected'::text]))) |
 | payout_requests payout_requests_user_id_fkey | FOREIGN KEY (user_id) REFERENCES users(id) |
-| refund_requests refund_amount_positive | CHECK ((amount > 0)) NOT VALID |
+| push_tokens push_tokens_pkey | PRIMARY KEY (token) |
+| push_tokens push_tokens_user_id_fkey | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE |
+| refund_requests refund_amount_positive | CHECK ((amount > 0)) |
 | refund_requests refund_requests_pkey | PRIMARY KEY (id) |
-| refund_requests refund_requests_status_check | CHECK ((status = ANY (ARRAY['pending','completed','rejected']))) |
+| refund_requests refund_requests_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'completed'::text, 'rejected'::text, 'cancelled'::text]))) |
 | refund_requests refund_requests_user_id_fkey | FOREIGN KEY (user_id) REFERENCES users(id) |
 | reports reports_pkey | PRIMARY KEY (id) |
 | reports reports_reported_user_id_fkey | FOREIGN KEY (reported_user_id) REFERENCES users(id) ON DELETE SET NULL |
 | reports reports_reporter_id_fkey | FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE |
 | reports reports_resolved_by_fkey | FOREIGN KEY (resolved_by) REFERENCES users(id) ON DELETE SET NULL |
 | reports reports_session_id_fkey | FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE SET NULL |
-| reports reports_status_check | CHECK ((status = ANY (ARRAY['pending','reviewed','resolved','dismissed']))) |
-| sessions sessions_amount_held_non_negative | CHECK ((amount_held >= 0)) |
-| sessions sessions_duration_mins_check | CHECK ((duration_mins = ANY (ARRAY[5, 15, 30, 45]))) |
+| reports reports_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'reviewed'::text, 'resolved'::text, 'dismissed'::text]))) |
+| sessions sessions_amount_held_non_negative | CHECK ((amount_held >= (0)::numeric)) |
+| sessions sessions_duration_mins_check | CHECK ((duration_mins = ANY (ARRAY[8, 16, 32]))) |
 | sessions sessions_listener_id_fkey | FOREIGN KEY (listener_id) REFERENCES users(id) |
 | sessions sessions_pkey | PRIMARY KEY (id) |
-| sessions sessions_platform_fee_nonneg | CHECK ((platform_fee >= 0)) |
+| sessions sessions_platform_fee_nonneg | CHECK ((platform_fee >= (0)::numeric)) |
 | sessions sessions_seeker_id_fkey | FOREIGN KEY (seeker_id) REFERENCES users(id) |
 | sessions sessions_seeker_rating_check | CHECK (((seeker_rating >= 1) AND (seeker_rating <= 5))) |
-| sessions sessions_session_type_check | CHECK ((session_type = ANY (ARRAY['text','voice']))) |
-| sessions sessions_status_check | CHECK ((status = ANY (ARRAY['pending','active','completed','cancelled']))) |
-| specialty_tags specialty_tags_pkey | PRIMARY KEY (id) |
+| sessions sessions_service_fee_rate_check | CHECK (((service_fee_rate IS NULL) OR ((service_fee_rate >= (0)::numeric) AND (service_fee_rate <= (1)::numeric)))) |
+| sessions sessions_session_type_check | CHECK ((session_type = ANY (ARRAY['text'::text, 'voice'::text]))) |
+| sessions sessions_status_check | CHECK ((status = ANY (ARRAY['pending'::text, 'scheduled'::text, 'active'::text, 'completed'::text, 'cancelled'::text]))) |
+| talk_searches talk_searches_pkey | PRIMARY KEY (id) |
 | user_blocks user_blocks_blocked_id_fkey | FOREIGN KEY (blocked_id) REFERENCES users(id) ON DELETE CASCADE |
 | user_blocks user_blocks_blocker_id_blocked_id_key | UNIQUE (blocker_id, blocked_id) |
 | user_blocks user_blocks_blocker_id_fkey | FOREIGN KEY (blocker_id) REFERENCES users(id) ON DELETE CASCADE |
 | user_blocks user_blocks_check | CHECK ((blocker_id <> blocked_id)) |
 | user_blocks user_blocks_pkey | PRIMARY KEY (id) |
-| users users_gender_check | CHECK ((gender = ANY (ARRAY['male','female','other','prefer_not_to_say']))) |
+| users users_gender_check | CHECK ((gender = ANY (ARRAY['male'::text, 'female'::text, 'other'::text, 'prefer_not_to_say'::text]))) |
 | users users_phone_key | UNIQUE (phone) |
 | users users_pkey | PRIMARY KEY (id) |
-| users users_role_check | CHECK ((role = ANY (ARRAY['seeker','listener','admin']))) |
-| wallet_balance_non_negative | CHECK ((wallet_balance >= 0)) NOT VALID |
+| users users_role_check | CHECK ((role = ANY (ARRAY['seeker'::text, 'listener'::text, 'admin'::text]))) |
+| users wallet_balance_non_negative | CHECK ((wallet_balance >= (0)::numeric)) |
 | wallet_transactions wallet_transactions_pkey | PRIMARY KEY (id) |
 | wallet_transactions wallet_transactions_session_id_fkey | FOREIGN KEY (session_id) REFERENCES sessions(id) |
-| wallet_transactions wallet_transactions_type_check | CHECK ((type = ANY (ARRAY['credit','debit','refund']))) — ⚠️ migration 070 adds 'gateway_fee'; refresh after running it |
+| wallet_transactions wallet_transactions_type_check | CHECK ((type = ANY (ARRAY['credit'::text, 'debit'::text, 'refund'::text, 'gateway_fee'::text]))) |
 | wallet_transactions wallet_transactions_user_id_fkey | FOREIGN KEY (user_id) REFERENCES users(id) |
 
-### 3_INDEXES (56 total)
+### 3_INDEXES (76)
 
-| table index | definition |
+| object | definition |
 | --- | --- |
 | admin_audit_logs admin_audit_logs_pkey | CREATE UNIQUE INDEX admin_audit_logs_pkey ON public.admin_audit_logs USING btree (id) |
 | admin_audit_logs idx_audit_admin | CREATE INDEX idx_audit_admin ON public.admin_audit_logs USING btree (admin_id, created_at DESC) |
@@ -345,10 +425,16 @@ Full dump via `db/dump-live-schema.sql`.
 | content_flags content_flags_target_idx | CREATE INDEX content_flags_target_idx ON public.content_flags USING btree (target_user_id) |
 | listener_applications listener_applications_pkey | CREATE UNIQUE INDEX listener_applications_pkey ON public.listener_applications USING btree (id) |
 | listener_applications listener_applications_user_id_key | CREATE UNIQUE INDEX listener_applications_user_id_key ON public.listener_applications USING btree (user_id) |
+| listener_availability listener_availability_listener_idx | CREATE INDEX listener_availability_listener_idx ON public.listener_availability USING btree (listener_id) |
+| listener_availability listener_availability_pkey | CREATE UNIQUE INDEX listener_availability_pkey ON public.listener_availability USING btree (id) |
+| listener_blocked_dates listener_blocked_dates_pkey | CREATE UNIQUE INDEX listener_blocked_dates_pkey ON public.listener_blocked_dates USING btree (listener_id, day) |
 | listener_earnings listener_earnings_listener_idx | CREATE INDEX listener_earnings_listener_idx ON public.listener_earnings USING btree (listener_id, created_at DESC) |
 | listener_earnings listener_earnings_pkey | CREATE UNIQUE INDEX listener_earnings_pkey ON public.listener_earnings USING btree (id) |
-| listener_earnings listener_earnings_session_idx | CREATE INDEX listener_earnings_session_idx ON public.listener_earnings USING btree (session_id) |
-| listener_profiles idx_listener_profiles_languages | CREATE INDEX idx_listener_profiles_languages ON public.listener_profiles USING gin (languages_spoken) |
+| listener_earnings listener_earnings_session_id_key | CREATE UNIQUE INDEX listener_earnings_session_id_key ON public.listener_earnings USING btree (session_id) |
+| listener_messages listener_messages_listener_idx | CREATE INDEX listener_messages_listener_idx ON public.listener_messages USING btree (listener_id, is_read) |
+| listener_messages listener_messages_pair_unique | CREATE UNIQUE INDEX listener_messages_pair_unique ON public.listener_messages USING btree (seeker_id, listener_id) |
+| listener_messages listener_messages_pkey | CREATE UNIQUE INDEX listener_messages_pkey ON public.listener_messages USING btree (id) |
+| listener_messages listener_messages_seeker_idx | CREATE INDEX listener_messages_seeker_idx ON public.listener_messages USING btree (seeker_id) |
 | listener_profiles idx_lp_approved | CREATE INDEX idx_lp_approved ON public.listener_profiles USING btree (is_approved, is_available, rating DESC) |
 | listener_profiles idx_lp_languages | CREATE INDEX idx_lp_languages ON public.listener_profiles USING gin (languages_spoken) |
 | listener_profiles idx_lp_suspended | CREATE INDEX idx_lp_suspended ON public.listener_profiles USING btree (is_suspended) WHERE (is_suspended = true) |
@@ -358,184 +444,143 @@ Full dump via `db/dump-live-schema.sql`.
 | listener_verifications listener_verifications_listener_id_key | CREATE UNIQUE INDEX listener_verifications_listener_id_key ON public.listener_verifications USING btree (listener_id) |
 | listener_verifications listener_verifications_pkey | CREATE UNIQUE INDEX listener_verifications_pkey ON public.listener_verifications USING btree (id) |
 | listener_verifications listener_verifications_status_idx | CREATE INDEX listener_verifications_status_idx ON public.listener_verifications USING btree (status) |
+| lounge_messages idx_lounge_messages_created | CREATE INDEX idx_lounge_messages_created ON public.lounge_messages USING btree (created_at) |
+| lounge_messages lounge_messages_pkey | CREATE UNIQUE INDEX lounge_messages_pkey ON public.lounge_messages USING btree (id) |
+| message_reactions message_reactions_message_idx | CREATE INDEX message_reactions_message_idx ON public.message_reactions USING btree (message_id) |
+| message_reactions message_reactions_pkey | CREATE UNIQUE INDEX message_reactions_pkey ON public.message_reactions USING btree (id) |
+| message_reactions message_reactions_unique_per_user | CREATE UNIQUE INDEX message_reactions_unique_per_user ON public.message_reactions USING btree (message_id, user_id) |
 | messages idx_messages_session_created | CREATE INDEX idx_messages_session_created ON public.messages USING btree (session_id, created_at) |
-| messages idx_messages_session_id | CREATE INDEX idx_messages_session_id ON public.messages USING btree (session_id) |
 | messages messages_pkey | CREATE UNIQUE INDEX messages_pkey ON public.messages USING btree (id) |
 | notifications notifications_pkey | CREATE UNIQUE INDEX notifications_pkey ON public.notifications USING btree (id) |
 | notifications notifications_user_unread_idx | CREATE INDEX notifications_user_unread_idx ON public.notifications USING btree (user_id, is_read, created_at DESC) |
 | payout_requests payout_requests_pkey | CREATE UNIQUE INDEX payout_requests_pkey ON public.payout_requests USING btree (id) |
+| payout_requests payout_requests_user_idx | CREATE INDEX payout_requests_user_idx ON public.payout_requests USING btree (user_id) |
+| push_tokens push_tokens_pkey | CREATE UNIQUE INDEX push_tokens_pkey ON public.push_tokens USING btree (token) |
+| push_tokens push_tokens_user_idx | CREATE INDEX push_tokens_user_idx ON public.push_tokens USING btree (user_id, last_seen_at DESC) |
+| refund_requests refund_requests_one_pending_per_user | CREATE UNIQUE INDEX refund_requests_one_pending_per_user ON public.refund_requests USING btree (user_id) WHERE (status = 'pending'::text) |
 | refund_requests refund_requests_pkey | CREATE UNIQUE INDEX refund_requests_pkey ON public.refund_requests USING btree (id) |
 | reports reports_pkey | CREATE UNIQUE INDEX reports_pkey ON public.reports USING btree (id) |
 | reports reports_reporter_idx | CREATE INDEX reports_reporter_idx ON public.reports USING btree (reporter_id) |
 | reports reports_status_idx | CREATE INDEX reports_status_idx ON public.reports USING btree (status) |
-| sessions idx_sessions_listener_active | CREATE INDEX idx_sessions_listener_active ON public.sessions USING btree (listener_id, status) WHERE (status = 'active') |
+| sessions idx_sessions_listener_active | CREATE INDEX idx_sessions_listener_active ON public.sessions USING btree (listener_id, status) WHERE (status = 'active'::text) |
 | sessions idx_sessions_listener_id | CREATE INDEX idx_sessions_listener_id ON public.sessions USING btree (listener_id) |
+| sessions idx_sessions_listener_pending | CREATE INDEX idx_sessions_listener_pending ON public.sessions USING btree (listener_id, created_at DESC) WHERE (status = 'pending'::text) |
 | sessions idx_sessions_seeker_id | CREATE INDEX idx_sessions_seeker_id ON public.sessions USING btree (seeker_id) |
 | sessions idx_sessions_started_at | CREATE INDEX idx_sessions_started_at ON public.sessions USING btree (started_at DESC) |
 | sessions idx_sessions_status | CREATE INDEX idx_sessions_status ON public.sessions USING btree (status) |
+| sessions sessions_booked_via_created_idx | CREATE INDEX sessions_booked_via_created_idx ON public.sessions USING btree (booked_via, created_at) WHERE (booked_via IS NOT NULL) |
 | sessions sessions_crisis_idx | CREATE INDEX sessions_crisis_idx ON public.sessions USING btree (crisis_flagged) WHERE (crisis_flagged = true) |
-| sessions sessions_listener_one_active | CREATE UNIQUE INDEX sessions_listener_one_active ON public.sessions USING btree (listener_id) WHERE ((status = 'active') AND (is_free_trial = false)) |
+| sessions sessions_listener_one_active | CREATE UNIQUE INDEX sessions_listener_one_active ON public.sessions USING btree (listener_id) WHERE ((status = 'active'::text) AND (is_free_trial = false)) |
 | sessions sessions_pkey | CREATE UNIQUE INDEX sessions_pkey ON public.sessions USING btree (id) |
-| sessions sessions_seeker_one_active | CREATE UNIQUE INDEX sessions_seeker_one_active ON public.sessions USING btree (seeker_id) WHERE (status = 'active') |
-| specialty_tags specialty_tags_pkey | CREATE UNIQUE INDEX specialty_tags_pkey ON public.specialty_tags USING btree (id) |
+| sessions sessions_scheduled_listener_idx | CREATE INDEX sessions_scheduled_listener_idx ON public.sessions USING btree (listener_id, scheduled_start_at) WHERE (status = 'scheduled'::text) |
+| sessions sessions_scheduled_seeker_idx | CREATE INDEX sessions_scheduled_seeker_idx ON public.sessions USING btree (seeker_id, scheduled_start_at) WHERE (status = 'scheduled'::text) |
+| sessions sessions_scheduled_start_idx | CREATE INDEX sessions_scheduled_start_idx ON public.sessions USING btree (scheduled_start_at) WHERE (status = 'scheduled'::text) |
+| sessions sessions_seeker_one_active | CREATE UNIQUE INDEX sessions_seeker_one_active ON public.sessions USING btree (seeker_id) WHERE (status = 'active'::text) |
+| sessions sessions_talk_search_idx | CREATE INDEX sessions_talk_search_idx ON public.sessions USING btree (talk_search_id) WHERE (talk_search_id IS NOT NULL) |
+| talk_searches talk_searches_created_idx | CREATE INDEX talk_searches_created_idx ON public.talk_searches USING btree (created_at) |
+| talk_searches talk_searches_pkey | CREATE UNIQUE INDEX talk_searches_pkey ON public.talk_searches USING btree (id) |
 | user_blocks user_blocks_blocked_idx | CREATE INDEX user_blocks_blocked_idx ON public.user_blocks USING btree (blocked_id) |
 | user_blocks user_blocks_blocker_id_blocked_id_key | CREATE UNIQUE INDEX user_blocks_blocker_id_blocked_id_key ON public.user_blocks USING btree (blocker_id, blocked_id) |
-| user_blocks user_blocks_blocker_idx | CREATE INDEX user_blocks_blocker_idx ON public.user_blocks USING btree (blocker_id) |
 | user_blocks user_blocks_pkey | CREATE UNIQUE INDEX user_blocks_pkey ON public.user_blocks USING btree (id) |
-| users idx_users_fcm_token | CREATE INDEX idx_users_fcm_token ON public.users USING btree (id) WHERE (fcm_token IS NOT NULL) |
+| users users_account_country_idx | CREATE INDEX users_account_country_idx ON public.users USING btree (account_country) |
 | users users_phone_key | CREATE UNIQUE INDEX users_phone_key ON public.users USING btree (phone) |
 | users users_pkey | CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id) |
 | wallet_transactions idx_wallet_txns_user_id | CREATE INDEX idx_wallet_txns_user_id ON public.wallet_transactions USING btree (user_id) |
 | wallet_transactions wallet_transactions_pkey | CREATE UNIQUE INDEX wallet_transactions_pkey ON public.wallet_transactions USING btree (id) |
 | wallet_transactions wallet_txn_payment_id_unique | CREATE UNIQUE INDEX wallet_txn_payment_id_unique ON public.wallet_transactions USING btree (reference_id) WHERE (reference_id IS NOT NULL) |
 
-> ✅ `wallet_txn_payment_id_unique` confirmed present (added 2026-06-11) —
-> `credit_wallet_idempotent`'s `ON CONFLICT (reference_id) WHERE reference_id
-> IS NOT NULL` now works; recharge double-credits are prevented.
+### 4_RLS_POLICIES (20)
 
-### 4_RLS_POLICIES (45 total — users policies cleaned by migration 044)
-
-| table policy | definition |
+| object | definition |
 | --- | --- |
-| admin_audit_logs admin_read_audit_logs | SELECT TO public USING (EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND (role = 'admin' OR is_admin = true))) |
-| contact_messages contact_insert | INSERT TO public WITH CHECK (char_length(name) BETWEEN 1 AND 200 AND char_length(message) BETWEEN 1 AND 5000) |
-| content_flags admin_all_flags | ALL TO public USING (EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND (role = 'admin' OR is_admin = true))) |
-| content_flags users_insert_content_flags | INSERT TO public WITH CHECK (reporter_id = auth.uid()) |
-| content_flags users_select_own_flags | SELECT TO public USING (reporter_id = auth.uid()) |
-| listener_applications la_own | ALL TO public USING (auth.uid() = user_id) |
-| listener_earnings listener_own_earnings | SELECT TO public USING (auth.uid() = listener_id) |
-| listener_profiles listener_profiles_own_write | ALL TO public USING (auth.uid() = user_id) |
-| listener_profiles lp_insert_own | INSERT TO public WITH CHECK (auth.uid() = user_id) |
-| listener_profiles lp_select_approved | SELECT TO public USING ((is_approved = true) OR (auth.uid() = user_id)) |
-| listener_profiles lp_update_own | UPDATE TO public USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id) |
-| listener_verifications admin_all_verifications | ALL TO public USING (EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND (role = 'admin' OR is_admin = true))) |
-| listener_verifications listener_own_verification_insert | INSERT TO public WITH CHECK (auth.uid() = listener_id) |
-| listener_verifications listener_own_verification_select | SELECT TO public USING (auth.uid() = listener_id) |
-| listener_verifications listener_own_verification_update | UPDATE TO public USING (auth.uid() = listener_id) WITH CHECK (auth.uid() = listener_id) |
-| messages messages_insert | INSERT TO public WITH CHECK (auth.uid() = sender_id AND participant of session AND session status = 'active') |
-| messages messages_participant_insert | INSERT TO public WITH CHECK (participant of session — NO active-status requirement, NO sender_id check) |
-| messages messages_select_admin | SELECT TO public USING (EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND (role = 'admin' OR is_admin = true))) |
-| messages messages_select_participants | SELECT TO public USING (EXISTS (SELECT 1 FROM sessions WHERE ...)) |
-| notifications notif_select_own | SELECT TO public USING (auth.uid() = user_id) |
-| notifications notif_update_own | UPDATE TO public USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id) |
-| payout_requests payout_insert_own | INSERT TO public WITH CHECK (auth.uid() = user_id AND status = 'pending' AND amount > 0) |
-| payout_requests payout_select_own | SELECT TO public USING (auth.uid() = user_id) |
-| refund_requests refund_insert_own | INSERT TO public WITH CHECK (auth.uid() = user_id AND status = 'pending' AND amount > 0) |
-| refund_requests refund_select_own | SELECT TO public USING (auth.uid() = user_id) |
-| reports users_insert_reports | INSERT TO public WITH CHECK (reporter_id = auth.uid()) |
-| reports users_select_own_reports | SELECT TO public USING (reporter_id = auth.uid()) |
-| sessions sessions_insert | INSERT TO public WITH CHECK (auth.uid() = seeker_id) |
-| sessions sessions_own | SELECT TO public USING (auth.uid() = seeker_id OR auth.uid() = listener_id) — **⚠️ 045 drops this** |
-| sessions sessions_participant_select | SELECT TO public USING (seeker_id = auth.uid() OR listener_id = auth.uid()) — **⚠️ 045 drops this** |
-| sessions sessions_read_participants | SELECT TO public USING (seeker_id = auth.uid() OR listener_id = auth.uid() OR EXISTS (SELECT 1 FROM users WHERE id=auth.uid() AND (role='admin' OR is_admin))) — **🔴 THIS is the 42P17 cycle (reads users); 045 replaces all three with `sessions_select_participant`** |
-| sessions sessions_seeker_rating_update | UPDATE TO public USING (auth.uid() = seeker_id AND status = 'completed') WITH CHECK (auth.uid() = seeker_id) |
-| specialty_tags specialty_tags_read_all | SELECT TO public USING (true) |
-| user_blocks users_delete_own_blocks | DELETE TO public USING (blocker_id = auth.uid()) |
-| user_blocks users_insert_own_blocks | INSERT TO public WITH CHECK (blocker_id = auth.uid()) |
-| user_blocks users_select_own_blocks | SELECT TO public USING (blocker_id = auth.uid()) |
-| users users_select_own | SELECT TO public USING (auth.uid() = id) |
-| users users_insert_own | INSERT TO public WITH CHECK (auth.uid() = id) |
-| users users_update_own | UPDATE TO public USING (auth.uid() = id) |
-| users users_listener_public_read | SELECT TO public USING (id IN (SELECT user_id FROM listener_profiles WHERE is_approved = true)) |
-| users users_select_listener_public | SELECT TO public USING (id IN (SELECT user_id FROM listener_profiles WHERE is_approved = true AND is_active = true)) |
-| users users_select_session_participant | SELECT TO public USING (id IN (SELECT listener_id FROM sessions WHERE seeker_id = auth.uid() UNION SELECT seeker_id FROM sessions WHERE listener_id = auth.uid())) |
-| wallet_transactions wallet_own | SELECT TO public USING (auth.uid() = user_id) |
-| wallet_transactions wallet_transactions_select_own | SELECT TO public USING (auth.uid() = user_id) |
-| wallet_transactions wallet_txns_own | SELECT TO public USING (auth.uid() = user_id) |
+| content_flags users_select_own_flags | SELECT TO public USING ((reporter_id = auth.uid())) |
+| listener_applications la_select_own | SELECT TO public USING ((auth.uid() = user_id)) |
+| listener_earnings listener_own_earnings | SELECT TO public USING ((auth.uid() = listener_id)) |
+| listener_messages lm_listener_select | SELECT TO public USING ((auth.uid() = listener_id)) |
+| listener_messages lm_seeker_select | SELECT TO public USING ((auth.uid() = seeker_id)) |
+| listener_profiles lp_select_approved | SELECT TO public USING (((is_approved = true) OR (auth.uid() = user_id))) |
+| listener_verifications listener_own_verification_select | SELECT TO public USING ((auth.uid() = listener_id)) |
+| lounge_messages lounge_select | SELECT TO public USING (((deleted_at IS NULL) AND (EXISTS ( SELECT 1 FROM listener_profiles WHERE ((listener_profiles.user_id = auth.uid()) AND (listener_profiles.is_approved = true) AND (listener_profiles.is_active = true) AND (listener_profiles.is_suspended = false)))) AND (NOT (EXISTS ( SELECT 1 FROM users WHERE ((users.id = auth.uid()) AND (users.is_suspended = true))))))) |
+| message_reactions message_reactions_select_participant | SELECT TO public USING ((EXISTS ( SELECT 1 FROM (messages m JOIN sessions s ON ((s.id = m.session_id))) WHERE ((m.id = message_reactions.message_id) AND ((s.seeker_id = auth.uid()) OR (s.listener_id = auth.uid())))))) |
+| messages messages_select_participants | SELECT TO public USING ((EXISTS ( SELECT 1 FROM sessions s WHERE ((s.id = messages.session_id) AND ((s.seeker_id = auth.uid()) OR (s.listener_id = auth.uid())))))) |
+| notifications notif_select_own | SELECT TO public USING ((auth.uid() = user_id)) |
+| payout_requests payout_select_own | SELECT TO public USING ((auth.uid() = user_id)) |
+| refund_requests refund_select_own | SELECT TO public USING ((auth.uid() = user_id)) |
+| reports users_select_own_reports | SELECT TO public USING ((reporter_id = auth.uid())) |
+| sessions sessions_select_participant | SELECT TO public USING (((seeker_id = auth.uid()) OR (listener_id = auth.uid()))) |
+| user_blocks users_select_own_blocks | SELECT TO public USING ((blocker_id = auth.uid())) |
+| users users_select_listener_public | SELECT TO public USING ((id IN ( SELECT listener_profiles.user_id FROM listener_profiles WHERE ((listener_profiles.is_approved = true) AND (listener_profiles.is_active = true))))) |
+| users users_select_own | SELECT TO public USING ((auth.uid() = id)) |
+| users users_select_session_participant | SELECT TO public USING ((id IN ( SELECT sessions.listener_id FROM sessions WHERE (sessions.seeker_id = auth.uid()) UNION SELECT sessions.seeker_id FROM sessions WHERE (sessions.listener_id = auth.uid())))) |
+| wallet_transactions wallet_transactions_select_own | SELECT TO public USING ((auth.uid() = user_id)) |
 
-> ⚠️ Duplicate policies noted (cosmetic, harmless — OR semantics):
-> - `wallet_transactions`: 3 identical SELECT policies (`wallet_own`, `wallet_transactions_select_own`, `wallet_txns_own`)
-> - `sessions`: 3 overlapping SELECT policies (`sessions_own`, `sessions_participant_select`, `sessions_read_participants`)
-> - `users`: 2 listener SELECT policies — `users_listener_public_read` (approved only) + `users_select_listener_public` (approved AND active). Net effect: approved-but-inactive listeners are publicly readable via the looser policy.
-> - `messages`: 2 INSERT policies (`messages_insert` enforces sender_id + active-session; `messages_participant_insert` does not — migration 036 should be run to drop the permissive one)
->
-> ⚠️ **Migration 044 (2026-06-20):** cleaned the `users` policies but did NOT
-> resolve `42P17`. The recursion is a **cross-table cycle**:
-> `users.users_select_session_participant` → reads `sessions`;
-> `sessions.sessions_read_participants` → reads `users`. The cycle survives
-> as long as EITHER side references the other. **Migration 045** breaks it on
-> the `sessions` side (drops the three SELECT policies above, recreates one
-> clean `sessions_select_participant` that references no other table). Run 045,
-> then re-snapshot: the `sessions` rows above collapse to a single
-> `sessions_select_participant` and `42P17` is gone.
+### 5_RLS_ENABLED (24)
 
-### 5_RLS_ENABLED (18 tables, all ENABLED)
-
-| table | status |
+| object | definition |
 | --- | --- |
 | admin_audit_logs | ENABLED |
 | audit_logs | ENABLED |
 | contact_messages | ENABLED |
 | content_flags | ENABLED |
 | listener_applications | ENABLED |
+| listener_availability | ENABLED |
+| listener_blocked_dates | ENABLED |
 | listener_earnings | ENABLED |
+| listener_messages | ENABLED |
 | listener_profiles | ENABLED |
 | listener_verifications | ENABLED |
+| lounge_messages | ENABLED |
+| message_reactions | ENABLED |
 | messages | ENABLED |
 | notifications | ENABLED |
 | payout_requests | ENABLED |
+| push_tokens | ENABLED |
 | refund_requests | ENABLED |
 | reports | ENABLED |
 | sessions | ENABLED |
-| specialty_tags | ENABLED |
+| talk_searches | ENABLED |
 | user_blocks | ENABLED |
 | users | ENABLED |
 | wallet_transactions | ENABLED |
 
-### 6_TRIGGERS (8 total)
+### 6_TRIGGERS (12)
 
-| table trigger | definition |
+| object | definition |
 | --- | --- |
-| listener_applications la_guard_status | BEFORE UPDATE → guard_listener_app_status() |
-| listener_profiles listener_profiles_updated_at | BEFORE UPDATE → handle_updated_at() |
-| listener_profiles lp_guard_privileged | BEFORE UPDATE → guard_lp_privileged_cols() |
-| listener_verifications verif_guard_status | BEFORE UPDATE → guard_verif_status() |
-| users users_guard_insert | BEFORE INSERT → guard_users_insert_cols() |
-| users users_guard_privileged | BEFORE UPDATE → guard_users_privileged_cols() |
-| users users_set_updated_at | BEFORE UPDATE → set_updated_at() |
-| users users_updated_at | BEFORE UPDATE → handle_updated_at() |
+| listener_applications la_guard_status | CREATE TRIGGER la_guard_status BEFORE UPDATE ON public.listener_applications FOR EACH ROW EXECUTE FUNCTION guard_listener_app_status() |
+| listener_applications listener_applications_updated_at | CREATE TRIGGER listener_applications_updated_at BEFORE UPDATE ON public.listener_applications FOR EACH ROW EXECUTE FUNCTION set_updated_at() |
+| listener_messages listener_messages_updated_at | CREATE TRIGGER listener_messages_updated_at BEFORE UPDATE ON public.listener_messages FOR EACH ROW EXECUTE FUNCTION set_updated_at() |
+| listener_profiles listener_profiles_updated_at | CREATE TRIGGER listener_profiles_updated_at BEFORE UPDATE ON public.listener_profiles FOR EACH ROW EXECUTE FUNCTION set_updated_at() |
+| listener_profiles lp_guard_insert | CREATE TRIGGER lp_guard_insert BEFORE INSERT ON public.listener_profiles FOR EACH ROW EXECUTE FUNCTION guard_lp_insert_cols() |
+| listener_profiles lp_guard_privileged | CREATE TRIGGER lp_guard_privileged BEFORE UPDATE ON public.listener_profiles FOR EACH ROW EXECUTE FUNCTION guard_lp_privileged_cols() |
+| listener_profiles lp_sync_auth_ban | CREATE TRIGGER lp_sync_auth_ban AFTER UPDATE OF is_suspended ON public.listener_profiles FOR EACH ROW WHEN ((old.is_suspended IS DISTINCT FROM new.is_suspended)) EXECUTE FUNCTION trg_lp_sync_auth_ban() |
+| listener_verifications verif_guard_status | CREATE TRIGGER verif_guard_status BEFORE UPDATE ON public.listener_verifications FOR EACH ROW EXECUTE FUNCTION guard_verif_status() |
+| users users_guard_insert | CREATE TRIGGER users_guard_insert BEFORE INSERT ON public.users FOR EACH ROW EXECUTE FUNCTION guard_users_insert_cols() |
+| users users_guard_privileged | CREATE TRIGGER users_guard_privileged BEFORE UPDATE ON public.users FOR EACH ROW EXECUTE FUNCTION guard_users_privileged_cols() |
+| users users_set_updated_at | CREATE TRIGGER users_set_updated_at BEFORE UPDATE ON public.users FOR EACH ROW EXECUTE FUNCTION set_updated_at() |
+| users users_sync_auth_ban | CREATE TRIGGER users_sync_auth_ban AFTER UPDATE OF is_suspended ON public.users FOR EACH ROW WHEN ((old.is_suspended IS DISTINCT FROM new.is_suspended)) EXECUTE FUNCTION trg_users_sync_auth_ban() |
 
-> ⚠️ Two `updated_at` triggers on `users` (`users_set_updated_at` + `users_updated_at`) — both fire on every update. Harmless but redundant.
+### 7_FUNCTIONS (20)
 
-### 7_FUNCTIONS (15 total)
-
-All functions have `config: search_path=public, pg_temp` (search-path hardening confirmed).
-
-| function | security |
+| object | definition |
 | --- | --- |
-| complete_session(p_session_id uuid) | SECURITY DEFINER returns void |
-| create_session(p_seeker_id uuid, p_listener_id uuid, p_session_type text, p_duration_mins integer, p_amount_held numeric, p_platform_fee numeric, p_is_free_trial boolean, p_agora_channel text) | SECURITY DEFINER returns uuid |
-| credit_wallet(p_user_id uuid, p_amount integer) | SECURITY DEFINER returns void |
-| credit_wallet_idempotent(p_user_id uuid, p_amount integer, p_reference_id text, p_description text) | SECURITY DEFINER returns integer |
-| deduct_wallet(p_user_id uuid, p_amount integer) | SECURITY DEFINER returns void |
-| guard_listener_app_status() | SECURITY DEFINER returns trigger |
-| guard_lp_privileged_cols() | SECURITY DEFINER returns trigger |
-| guard_users_insert_cols() | SECURITY DEFINER returns trigger |
-| guard_users_privileged_cols() | SECURITY DEFINER returns trigger |
-| guard_verif_status() | SECURITY DEFINER returns trigger |
-| handle_new_user() | SECURITY DEFINER returns trigger |
-| handle_updated_at() | returns trigger |
-| is_service_role() | returns boolean |
-| set_updated_at() | SECURITY DEFINER returns trigger |
-| start_session(p_session_id uuid, p_seeker_id uuid, p_amount numeric) | SECURITY DEFINER returns void |
-
-## Key facts derived from the live DB (not from migrations)
-
-- `users.wallet_balance` is **numeric**, not integer
-- `users.phone` is **nullable** since migration 033 (was NOT NULL undocumented)
-- `users.phone` has UNIQUE constraint `users_phone_key` — reconcile stale rows before new sign-ups
-- `public.users.id` has **no FK to auth.users** → deleting an auth user leaves an orphan `public.users` row; phone reconciliation in `lib/ensure-user-row.ts` handles the resulting `users_phone_key` conflicts
-- `admin_audit_logs.admin_id` is **nullable** (fixed 2026-06-11) — password-auth admin actions now log with `admin_id = NULL`
-- Two duplicate `updated_at` triggers on `users` (`set_updated_at` + `handle_updated_at`) — both fire on every UPDATE; harmless but both run
-- `@supabase/ssr` is **v0.3.0**: cookie API is get/set/remove ONLY (`getAll`/`setAll` silently no-op — caused the global login-redirect bug)
-- `wallet_txn_payment_id_unique` partial unique index on `wallet_transactions.reference_id` is present (added 2026-06-11) — `credit_wallet_idempotent` is now truly idempotent
-- Admin RLS policies check `role = 'admin' OR is_admin = true` (both columns honored)
-- `users_select_listener_public` requires `is_approved AND is_active`; the older duplicate `users_listener_public_read` only requires `is_approved` — net effect: approved-but-inactive listeners are still publicly readable via the older policy
-- `listener_earnings.status` defaults to `'settled'` (not `'pending'`); new earnings are immediately settled
-- `payout_requests` column is `user_id` (not `listener_id`) — code must use `user_id`
-- `sessions_duration_mins_check` includes 45 — confirmed fixed
-- `sessions` has `crisis_flagged` and `crisis_flagged_at` columns — confirmed present
-- `sessions.cancel_reason` (text, nullable) and `sessions.responded_at` (timestamptz, nullable) — confirmed present (migration 043 applied)
-- `listener_profiles.last_heartbeat_at` (timestamptz, nullable) — confirmed present (migration 041 applied). **Code no longer writes or checks this column for availability logic** — `is_available` is the sole source of truth.
-- **users RLS policies are clean and non-recursive (migration 044, 2026-06-20).** No admin policy exists on `public.users` — admin reads go through the service-role client which bypasses RLS entirely.
-- Both `reports` table AND `content_flags` table exist — they serve the same purpose; use `content_flags` (older, more RLS policies) for admin moderation queue
+| accept_session(p_session_id uuid, p_listener_id uuid) | SECURITY DEFINER returns void \| config: search_path=public, pg_temp |
+| book_scheduled_session(p_seeker_id uuid, p_listener_id uuid, p_session_type text, p_duration_mins integer, p_amount_held integer, p_platform_fee integer, p_rate_per_min integer, p_service_fee_rate numeric, p_start_at timestamp with time zone, p_buffer_mins integer, p_agora_channel text) | SECURITY DEFINER returns uuid \| config: search_path=public, pg_temp |
+| create_session(p_seeker_id uuid, p_listener_id uuid, p_session_type text, p_duration_mins integer, p_amount_held numeric, p_platform_fee numeric, p_is_free_trial boolean, p_agora_channel text) | SECURITY DEFINER returns uuid \| config: search_path=public, pg_temp |
+| credit_wallet(p_user_id uuid, p_amount integer) | SECURITY DEFINER returns void \| config: search_path=public, pg_temp |
+| credit_wallet_idempotent(p_user_id uuid, p_amount integer, p_reference_id text, p_description text) | SECURITY DEFINER returns integer \| config: search_path=public, pg_temp |
+| deduct_wallet(p_user_id uuid, p_amount integer) | SECURITY DEFINER returns void \| config: search_path=public, pg_temp |
+| guard_listener_app_status() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |
+| guard_lp_insert_cols() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |
+| guard_lp_privileged_cols() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |
+| guard_users_insert_cols() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |
+| guard_users_privileged_cols() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |
+| guard_verif_status() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |
+| increment_listener_sessions(p_listener_id uuid) | SECURITY DEFINER returns void \| config: search_path=public, pg_temp |
+| is_end_user_request() | returns boolean \| config: search_path=public, pg_temp |
+| is_service_role() | returns boolean \| config: search_path=public, pg_temp |
+| set_updated_at() | returns trigger \| config: search_path=public, pg_temp |
+| start_scheduled_session(p_session_id uuid) | SECURITY DEFINER returns boolean \| config: search_path=public, pg_temp |
+| sync_auth_ban(p_user_id uuid) | SECURITY DEFINER returns void \| config: search_path=public, pg_temp |
+| trg_lp_sync_auth_ban() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |
+| trg_users_sync_auth_ban() | SECURITY DEFINER returns trigger \| config: search_path=public, pg_temp |

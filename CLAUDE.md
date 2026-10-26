@@ -11,6 +11,12 @@
    missing policies, missing FK cascades). Validate every DB-touching
    change against LIVE_SCHEMA.md. If it's stale, ask the owner to re-run
    `db/dump-live-schema.sql` and refresh it.
+   **HWYD has its own new Supabase project (Oct 2026), built from `supabase/setup/`
+   (`docs/SUPABASE_SETUP.md`).** `supabase/migrations/001–077` are LeanOn history that
+   `01_schema.sql` consolidates — never run them. New migrations start at `078_`. Browsers
+   (`anon`/`authenticated`) may only SELECT: every new table needs RLS + `REVOKE INSERT,
+   UPDATE, DELETE … FROM anon, authenticated`, every new function `REVOKE ALL … FROM PUBLIC,
+   anon, authenticated` (Supabase grants new objects to them by default).
 2. **`PROJECT.md`** — business rules (fee model, session durations, trials).
    **2026-10-25 owner decisions in PROJECT.md override older rules in this file:** UK-only launch,
    NO free sessions, 8/16/32-minute sessions, Google sign-in, in-house scheduled sessions. Where this
@@ -361,4 +367,5 @@ daily cron); `/contact,/wallet,/history,/profile,/sessions` made static (were
 
 - Push to `main` → Vercel auto-deploys howwasyourday.live.
 - Migrations are MANUAL: owner runs them in Supabase SQL Editor, then
-  refreshes `db/LIVE_SCHEMA.md`.
+  refreshes `db/LIVE_SCHEMA.md`. A fresh database is built with `supabase/setup/`
+  (`docs/SUPABASE_SETUP.md`), not by replaying `supabase/migrations/`.
