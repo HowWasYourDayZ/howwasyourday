@@ -5,13 +5,13 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-  body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+  body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
     background:radial-gradient(ellipse 90% 55% at 0% 0%, #C2E4F2 0%, #DAEEF8 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
   .nav-logo{height:56px;width:auto;}
-  .btn-nav{background:var(--teal);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
-  .btn-nav-ghost{background:transparent;color:var(--teal);font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:8px 16px;border-radius:50px;border:1.5px solid var(--teal);cursor:pointer;}
+  .btn-nav{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
+  .btn-nav-ghost{background:transparent;color:var(--teal);font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:8px 16px;border-radius:50px;border:1.5px solid var(--teal);cursor:pointer;}
   .page{max-width:560px;margin:0 auto;padding:16px 24px 80px;}
   .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--gray);margin-bottom:28px;}
   h1{font-size:28px;font-weight:900;color:var(--navy);margin-bottom:8px;}
@@ -19,14 +19,14 @@ const S = `
   .form-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:24px;}
   .form-card h2{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:20px;}
   .label{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;display:block;}
-  .input{width:100%;padding:13px 16px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border:2px solid var(--border);border-radius:14px;outline:none;background:white;transition:border-color 0.2s;margin-bottom:16px;}
+  .input{width:100%;padding:13px 16px;font-family:Nunito,sans-serif;font-size:15px;font-weight:600;color:var(--navy);border:2px solid var(--border);border-radius:14px;outline:none;background:white;transition:border-color 0.2s;margin-bottom:16px;}
   .input:focus{border-color:var(--navy);}
   .input::placeholder{color:#B0C8D8;font-weight:400;}
   .input.error{border-color:#E53935;}
   .field-error{font-size:12px;color:#E53935;font-weight:700;margin-top:-12px;margin-bottom:12px;}
   textarea.input{resize:vertical;min-height:110px;line-height:1.5;}
   select.input{cursor:pointer;}
-  .btn{width:100%;padding:15px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(255,153,51,0.3);}
+  .btn{width:100%;padding:15px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(255,153,51,0.3);}
   .btn:hover{background:#e8861a;}
   .success{text-align:center;padding:32px 0;}
   .success-icon{font-size:48px;margin-bottom:16px;}
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav">
         <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <div style={{display:'flex',gap:8,alignItems:'center'}}>

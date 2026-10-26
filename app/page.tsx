@@ -124,7 +124,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
 
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
         :root{
@@ -142,7 +142,7 @@ export default function Home() {
 
         /* THE KEY FIX: seamless radial gradient from top-left, white everywhere else */
         body{
-          font-family:'Nunito',sans-serif;
+          font-family:Nunito,sans-serif;
           color:var(--navy);
           -webkit-font-smoothing:antialiased;
           background: radial-gradient(ellipse 90% 55% at 0% 0%, #C2E4F2 0%, #DAEEF8 22%, #FFFFFF 58%);
@@ -165,9 +165,9 @@ export default function Home() {
         }
         .nav-logo{height:90px;width:auto;}
         .nav-right{display:flex;align-items:center;gap:12px;}
-        .btn-nav{background:var(--teal);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;padding:11px 24px;border-radius:50px;border:none;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 12px rgba(26,143,160,0.35);}
+        .btn-nav{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:11px 24px;border-radius:50px;border:none;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 12px rgba(26,143,160,0.35);}
         .btn-nav:hover{background:#167a8a;transform:translateY(-1px);}
-        .btn-listener{background:transparent;color:var(--navy);font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:50px;border:1.5px solid var(--border);cursor:pointer;transition:all 0.2s;display:none;white-space:nowrap;}
+        .btn-listener{background:transparent;color:var(--navy);font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:50px;border:1.5px solid var(--border);cursor:pointer;transition:all 0.2s;display:none;white-space:nowrap;}
         .btn-listener:hover{border-color:var(--teal);color:var(--teal);}
         @media(min-width:480px){.btn-listener{display:block;}}
 
@@ -179,9 +179,9 @@ export default function Home() {
         .hero h1 .o{color:var(--orange);}
         .hero p{font-size:17px;color:var(--gray);line-height:1.72;margin-bottom:36px;max-width:400px;}
         .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;}
-        .btn-primary{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;padding:16px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;text-align:center;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,153,51,0.35);}
+        .btn-primary{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:16px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;text-align:center;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,153,51,0.35);}
         .btn-primary:hover{background:#e8861a;transform:translateY(-2px);}
-        .btn-outline{background:transparent;color:var(--teal);font-family:'Nunito',sans-serif;font-weight:700;font-size:16px;padding:14px 30px;border-radius:50px;border:2px solid var(--teal);cursor:pointer;display:inline-block;text-align:center;transition:all 0.2s;}
+        .btn-outline{background:transparent;color:var(--teal);font-family:Nunito,sans-serif;font-weight:700;font-size:16px;padding:14px 30px;border-radius:50px;border:2px solid var(--teal);cursor:pointer;display:inline-block;text-align:center;transition:all 0.2s;}
         .btn-outline:hover{background:var(--teal);color:white;}
         .hero-note{font-size:12px;color:var(--muted);font-weight:600;}
 
@@ -289,7 +289,7 @@ export default function Home() {
         .cta-c{background:var(--navy);border-radius:28px;padding:48px 28px;text-align:center;}
         .cta-c h2{font-size:clamp(20px,5vw,28px);font-weight:900;color:white;margin-bottom:12px;line-height:1.25;}
         .cta-c p{font-size:15px;color:rgba(213,238,246,0.8);margin-bottom:28px;font-weight:500;}
-        .btn-cta{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:17px;padding:18px 40px;border-radius:50px;border:none;cursor:pointer;display:inline-block;transition:all 0.2s;box-shadow:0 6px 24px rgba(255,153,51,0.4);}
+        .btn-cta{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:17px;padding:18px 40px;border-radius:50px;border:none;cursor:pointer;display:inline-block;transition:all 0.2s;box-shadow:0 6px 24px rgba(255,153,51,0.4);}
         .btn-cta:hover{background:#e8861a;transform:translateY(-2px);}
 
         /* FOOTER */
@@ -299,7 +299,7 @@ export default function Home() {
         .fli a{font-size:13px;color:var(--gray);font-weight:600;}
         .fli a:hover{color:var(--navy);}
         .fcp{font-size:12px;color:var(--muted);font-weight:600;margin-top:20px;}
-      `}</style>
+      ` }} />
 
       {/* NAV — transparent, sits on gradient */}
       <nav className="nav">

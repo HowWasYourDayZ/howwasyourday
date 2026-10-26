@@ -11,7 +11,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:12px;}
@@ -26,8 +26,8 @@ a{text-decoration:none;color:inherit;}
 .name-display{font-size:22px;font-weight:900;color:var(--navy);}
 .pencil-btn{background:none;border:none;cursor:pointer;font-size:16px;padding:4px;opacity:0.6;}
 .pencil-btn:hover{opacity:1;}
-.name-input{font-family:'Nunito',sans-serif;font-size:18px;font-weight:800;color:var(--navy);border:2px solid var(--teal);border-radius:10px;padding:6px 12px;outline:none;width:200px;text-align:center;}
-.save-btn{background:var(--teal);color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:7px 14px;border-radius:8px;border:none;cursor:pointer;}
+.name-input{font-family:Nunito,sans-serif;font-size:18px;font-weight:800;color:var(--navy);border:2px solid var(--teal);border-radius:10px;padding:6px 12px;outline:none;width:200px;text-align:center;}
+.save-btn{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:7px 14px;border-radius:8px;border:none;cursor:pointer;}
 .phone{font-size:14px;color:var(--gray);font-weight:600;margin-top:6px;}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;}
 .stat-card{background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px 12px;text-align:center;box-shadow:0 1px 4px rgba(15,72,103,.04);}
@@ -38,21 +38,21 @@ a{text-decoration:none;color:inherit;}
 .stat-label{font-size:11px;color:var(--gray);font-weight:600;}
 .listener-banner{background:var(--light);border:1.5px solid var(--border);border-radius:16px;padding:18px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;}
 .listener-banner p{font-size:14px;font-weight:700;color:var(--navy);}
-.go-btn{background:var(--navy);color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
-.help-row{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:white;border:1.5px solid var(--border);border-radius:14px;padding:15px 18px;margin-bottom:12px;cursor:pointer;text-align:left;font-family:'Nunito',sans-serif;transition:all .2s;}
+.go-btn{background:var(--navy);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
+.help-row{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:white;border:1.5px solid var(--border);border-radius:14px;padding:15px 18px;margin-bottom:12px;cursor:pointer;text-align:left;font-family:Nunito,sans-serif;transition:all .2s;}
 .help-row:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(15,72,103,.06);}
 .help-row-label{font-size:15px;font-weight:800;color:var(--navy);}
 .help-row-sub{font-size:12px;font-weight:600;color:var(--gray);margin-top:2px;}
 .help-row-arrow{font-size:18px;color:var(--gray);}
-.logout-btn{width:100%;background:white;color:#E53E3E;font-family:'Nunito',sans-serif;font-weight:700;font-size:15px;padding:14px;border-radius:14px;border:1.5px solid #FED7D7;cursor:pointer;transition:all .2s;}
+.logout-btn{width:100%;background:white;color:#E53E3E;font-family:Nunito,sans-serif;font-weight:700;font-size:15px;padding:14px;border-radius:14px;border:1.5px solid #FED7D7;cursor:pointer;transition:all .2s;}
 .logout-btn:hover{background:#FFF5F5;}
-.delete-btn{width:100%;background:transparent;color:#aaa;font-family:'Nunito',sans-serif;font-weight:600;font-size:13px;padding:10px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;transition:color .2s;}
+.delete-btn{width:100%;background:transparent;color:#aaa;font-family:Nunito,sans-serif;font-weight:600;font-size:13px;padding:10px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;transition:color .2s;}
 .delete-btn:hover{color:#E53E3E;}
 .confirm-box{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:16px;padding:18px;margin-top:12px;}
 .confirm-box p{font-size:13px;color:#7A2020;font-weight:600;line-height:1.6;margin-bottom:14px;}
 .confirm-actions{display:flex;gap:10px;}
-.confirm-yes{flex:1;background:#E53E3E;color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;padding:11px;border-radius:10px;border:none;cursor:pointer;}
-.confirm-no{flex:1;background:white;color:var(--navy);font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:11px;border-radius:10px;border:1.5px solid var(--border);cursor:pointer;}
+.confirm-yes{flex:1;background:#E53E3E;color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:11px;border-radius:10px;border:none;cursor:pointer;}
+.confirm-no{flex:1;background:white;color:var(--navy);font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:11px;border-radius:10px;border:1.5px solid var(--border);cursor:pointer;}
 .loading{text-align:center;padding:60px 20px;font-size:16px;font-weight:600;color:var(--gray);}
 `
 
@@ -208,7 +208,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="topbar">
         <button className="back-btn" onClick={() => router.push('/browse')}>←</button>
         <h1>My Profile</h1>

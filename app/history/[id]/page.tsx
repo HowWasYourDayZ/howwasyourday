@@ -8,7 +8,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-  body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
   .wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#E8F4FD;}
   .hdr{background:var(--navy);padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;position:sticky;top:0;z-index:50;}
   .back-btn{background:none;border:none;cursor:pointer;font-size:20px;color:white;padding:4px;line-height:1;flex-shrink:0;}
@@ -122,7 +122,7 @@ export default function ChatHistoryPage() {
   if (loading) {
     return (
       <>
-        <style>{S}</style>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap"><div className="loading">Loading conversation…</div></div>
       </>
     )
@@ -131,7 +131,7 @@ export default function ChatHistoryPage() {
   if (error || !session) {
     return (
       <>
-        <style>{S}</style>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap">
           <div className="hdr">
             <button className="back-btn" onClick={() => router.push('/history')}>←</button>
@@ -151,7 +151,7 @@ export default function ChatHistoryPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="wrap">
         <div className="hdr">
           <button className="back-btn" onClick={() => router.push('/history')}>←</button>

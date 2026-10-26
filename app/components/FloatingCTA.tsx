@@ -43,7 +43,7 @@ export default function FloatingCTA() {
       }}
       aria-label="Talk to someone now"
     >
-      <style>{`@keyframes floatIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@keyframes floatIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}` }} />
       <span>💬</span> Talk now
     </a>
   )

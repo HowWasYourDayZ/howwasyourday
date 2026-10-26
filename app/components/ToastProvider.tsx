@@ -34,7 +34,7 @@ export default function ToastProvider() {
           {t.message}
         </div>
       ))}
-      <style>{`@keyframes toastIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@keyframes toastIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}` }} />
     </div>
   )
 }

@@ -73,8 +73,8 @@ export default function TalkLayout({ children }: { children: React.ReactNode }) 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {children}
       <section className="talk-info" aria-labelledby="talk-info-h">
-        <style>{`
-          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:'Nunito',system-ui,sans-serif;color:#27394A;}
+        <style dangerouslySetInnerHTML={{ __html: `
+          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:Nunito,system-ui,sans-serif;color:#27394A;}
           body.talk-busy .talk-info{display:none;}
           .talk-info h2{font-size:16px;font-weight:900;color:#0F4867;margin:26px 0 8px;}
           .talk-info details{border-bottom:1px solid #E3EFF3;padding:10px 0;}
@@ -83,7 +83,7 @@ export default function TalkLayout({ children }: { children: React.ReactNode }) 
           .talk-info p,.talk-info li{font-size:13.5px;line-height:1.6;color:#3A6070;}
           .talk-info ol{margin:6px 0 0 20px;}
           .talk-info a{color:#1A8FA0;font-weight:800;}
-        `}</style>
+        ` }} />
         <h2 id="talk-info-h">How Talk now works</h2>
         <ol>
           <li>Choose text or voice and tap what&apos;s on your mind.</li>

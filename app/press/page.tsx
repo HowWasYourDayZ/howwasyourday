@@ -30,11 +30,11 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:760px;margin:0 auto;}
 .nav-logo{height:56px;}
-.btn-nav{background:var(--teal);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
+.btn-nav{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
 .page{max-width:760px;margin:0 auto;padding:16px 24px 100px;}
 .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--gray);margin-bottom:32px;}
 .hero{margin-bottom:34px;}
@@ -54,7 +54,7 @@ h1{font-size:clamp(28px,5vw,42px);font-weight:900;line-height:1.15;margin-bottom
 .cta{background:var(--navy);border-radius:22px;padding:32px;text-align:center;margin-top:24px;}
 .cta h2{font-size:21px;font-weight:900;color:white;margin-bottom:10px;}
 .cta p{font-size:14px;color:rgba(201,231,244,.85);margin-bottom:22px;line-height:1.65;}
-.btn{display:inline-block;background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;}
+.btn{display:inline-block;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;}
 @media(max-width:560px){.fact-grid{grid-template-columns:1fr;}}
 `
 
@@ -62,7 +62,7 @@ export default function PressPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
         <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/browse"><button className="btn-nav">Find a listener</button></a>

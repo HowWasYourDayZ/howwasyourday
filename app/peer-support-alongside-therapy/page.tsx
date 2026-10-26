@@ -43,7 +43,7 @@ const jsonLd = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Nunito',sans-serif;color:#0F4867;-webkit-font-smoothing:antialiased;
+  body{font-family:Nunito,sans-serif;color:#0F4867;-webkit-font-smoothing:antialiased;
     background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
   a{color:#1A8FA0;font-weight:800;text-decoration:none;}
   .nav{padding:0 20px;height:72px;display:flex;align-items:center;max-width:900px;margin:0 auto;}
@@ -64,7 +64,7 @@ export default function PeerSupportAlongsideTherapyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav"><a href="/"><img src="/logo.png" alt="How Was Your Day" /></a></nav>
       <main className="page">
         <h1>Someone to talk to between therapy sessions — or while you wait</h1>

@@ -24,7 +24,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-  body{font-family:'Nunito',sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  body{font-family:Nunito,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   nav{padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
   .page{max-width:680px;margin:0 auto;padding:16px 24px 80px;}
@@ -45,7 +45,7 @@ const S = `
   .cta{text-align:center;background:var(--navy);border-radius:24px;padding:32px;color:white;}
   .cta h2{font-size:22px;font-weight:900;margin-bottom:10px;}
   .cta p{font-size:14px;opacity:.8;margin-bottom:20px;}
-  .btn{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;}
+  .btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;}
   @media(max-width:640px){.compare-grid{grid-template-columns:1fr;}}
 `
 
@@ -53,7 +53,7 @@ export default function WhyHowWasYourDayPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
         <a href="/"><img src="/logo.png" alt="How Was Your Day" style={{height:48}} /></a>
         <a href="/talk?src=seo"><button className="btn" style={{fontSize:13,padding:'8px 20px'}}>Try now</button></a>

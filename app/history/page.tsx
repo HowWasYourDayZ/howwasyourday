@@ -8,7 +8,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:var(--light);}
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:var(--light);}
 .page{max-width:480px;margin:0 auto;background:white;min-height:100dvh;padding-bottom:90px;}
 .topbar{position:sticky;top:0;z-index:50;background:var(--navy);padding:16px 18px 14px;}
 .topbar h1{font-size:20px;font-weight:900;color:white;}
@@ -33,14 +33,14 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .badge-missed{display:inline-block;padding:2px 8px;border-radius:50px;font-size:10px;font-weight:800;background:#FFEBEE;color:#C62828;flex-shrink:0;}
 .role-missed{background:#FFEBEE;color:#C62828;}
 .filter-tabs{display:flex;gap:8px;padding:12px 16px;background:white;border-bottom:1px solid var(--border);}
-.filter-tab{flex:1;padding:8px 12px;border:1.5px solid var(--border);border-radius:50px;background:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--gray);cursor:pointer;transition:all .15s;}
+.filter-tab{flex:1;padding:8px 12px;border:1.5px solid var(--border);border-radius:50px;background:white;font-family:Nunito,sans-serif;font-weight:800;font-size:13px;color:var(--gray);cursor:pointer;transition:all .15s;}
 .filter-tab.active{background:var(--navy);color:white;border-color:var(--navy);}
-.join-btn{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:12px;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;flex-shrink:0;}
+.join-btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:12px;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;flex-shrink:0;}
 .empty{text-align:center;padding:60px 24px;}
 .empty-icon{font-size:48px;margin-bottom:16px;}
 .empty h3{font-size:18px;font-weight:800;margin-bottom:8px;color:var(--navy);}
 .empty p{font-size:14px;color:var(--gray);font-weight:500;margin-bottom:24px;line-height:1.6;}
-.empty button{background:var(--orange);color:white;border:none;border-radius:50px;padding:12px 28px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;cursor:pointer;}
+.empty button{background:var(--orange);color:white;border:none;border-radius:50px;padding:12px 28px;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;cursor:pointer;}
 .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:8px;}
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
 `
@@ -231,7 +231,7 @@ export default function HistoryPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar">
           <h1>Chats</h1>

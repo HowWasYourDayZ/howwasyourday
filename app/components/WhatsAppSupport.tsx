@@ -27,7 +27,7 @@ export default function WhatsAppSupport() {
 
   return (
     <>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .wa-support{
           position:fixed;
           bottom:${hasBottomNav ? '72' : '20'}px;
@@ -42,7 +42,7 @@ export default function WhatsAppSupport() {
         .wa-support-pill{
           background:white;
           color:#0F4867;
-          font-family:'Nunito',sans-serif;
+          font-family:Nunito,sans-serif;
           font-weight:700;
           font-size:12px;
           padding:8px 14px;
@@ -62,7 +62,7 @@ export default function WhatsAppSupport() {
         .wa-support-btn svg{width:28px;height:28px;fill:white;}
         @keyframes waFadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
         @media(max-width:400px){.wa-support-pill{display:none;}}
-      `}</style>
+      ` }} />
       <a
         href={WA_URL}
         target="_blank"

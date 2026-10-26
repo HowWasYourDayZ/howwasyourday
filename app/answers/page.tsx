@@ -35,7 +35,7 @@ const faqSchema = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Nunito',sans-serif;color:#0F4867;background:#FFFBF5;-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;color:#0F4867;background:#FFFBF5;-webkit-font-smoothing:antialiased;}
   a{text-decoration:none;color:#1A8FA0;}
   .page{max-width:760px;margin:0 auto;padding:24px 20px 100px;}
   .back{display:inline-flex;font-size:14px;font-weight:700;color:#6B8FA8;margin-bottom:24px;}
@@ -59,7 +59,7 @@ export default function AnswersPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <a href="/" className="back">← How Was Your Day</a>
         <h1>Answers about relationships, mental health and talking to someone in India</h1>

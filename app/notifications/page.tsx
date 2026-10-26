@@ -52,7 +52,7 @@ function groupByDate(notifs: Notification[]): { label: string; items: Notificati
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Nunito',sans-serif;color:#0F4867;background:#F0F8FC;-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;color:#0F4867;background:#F0F8FC;-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:0 0 90px;}
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 14px;background:white;border-bottom:1.5px solid #D5EEF6;position:sticky;top:0;z-index:10;}
   .topbar-left{display:flex;align-items:center;gap:10px;}
@@ -70,7 +70,7 @@ const S = `
   .notif-text{font-size:13px;color:#5A7A8A;font-weight:500;line-height:1.5;margin-bottom:4px;}
   .notif-time{font-size:11px;color:#8AAAB8;font-weight:600;}
   .empty{text-align:center;padding:60px 20px;color:#5A7A8A;font-size:14px;font-weight:600;}
-  .load-more{display:block;width:100%;padding:14px;background:white;border:1.5px solid #D5EEF6;border-radius:12px;margin:16px 20px;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;color:#1A8FA0;cursor:pointer;width:calc(100% - 40px);}
+  .load-more{display:block;width:100%;padding:14px;background:white;border:1.5px solid #D5EEF6;border-radius:12px;margin:16px 20px;font-family:Nunito,sans-serif;font-weight:700;font-size:14px;color:#1A8FA0;cursor:pointer;width:calc(100% - 40px);}
 `
 
 const LIMIT = 20
@@ -171,7 +171,7 @@ export default function NotificationsPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar">
           <div className="topbar-left">

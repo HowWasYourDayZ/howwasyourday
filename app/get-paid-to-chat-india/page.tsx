@@ -22,7 +22,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .page{max-width:640px;margin:0 auto;padding:32px 24px 80px;}
@@ -51,7 +51,7 @@ h1 span{color:var(--orange);}
 .cta-box{background:var(--orange);border-radius:20px;padding:28px;text-align:center;margin-top:24px;}
 .cta-box h2{font-size:18px;font-weight:900;color:white;margin-bottom:10px;}
 .cta-box p{font-size:13px;color:rgba(255,255,255,.85);margin-bottom:20px;font-weight:500;}
-.btn{background:white;color:var(--orange);font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;border:none;cursor:pointer;}
+.btn{background:white;color:var(--orange);font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;border:none;cursor:pointer;}
 .back{font-size:14px;font-weight:700;color:var(--gray);margin-bottom:24px;display:inline-block;}
 `
 
@@ -59,7 +59,7 @@ export default function GetPaidToChatIndia() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <a href="/" className="back">← How Was Your Day Home</a>
         <h1>Get <span>Paid to Listen</span> — Peer Support Work in India</h1>

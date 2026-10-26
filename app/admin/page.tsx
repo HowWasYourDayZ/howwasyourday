@@ -150,13 +150,13 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;--green:#34C759;--red:#FF3B30;}
-  body{font-family:'Nunito',sans-serif;background:var(--light);color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;background:var(--light);color:var(--navy);-webkit-font-smoothing:antialiased;}
   .page{max-width:1100px;margin:0 auto;padding:0 20px 80px;}
   .topbar{padding:24px 0 16px;display:flex;align-items:center;justify-content:space-between;}
   .topbar h1{font-size:26px;font-weight:900;color:var(--navy);}
   .topbar p{font-size:13px;color:var(--gray);font-weight:600;margin-top:4px;}
   .tab-row{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap;}
-  .tab-btn{padding:8px 16px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;transition:all .15s;}
+  .tab-btn{padding:8px 16px;border-radius:50px;border:none;cursor:pointer;font-family:Nunito,sans-serif;font-weight:800;font-size:13px;transition:all .15s;}
   .tab-btn.active{background:var(--navy);color:white;}
   .tab-btn:not(.active){background:white;color:var(--gray);border:1.5px solid var(--border);}
   .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:32px;}
@@ -169,9 +169,9 @@ const S = `
   .section-title{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:10px;}
   .count-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;background:var(--orange);color:white;font-size:11px;font-weight:800;border-radius:50px;padding:0 6px;}
   .filter-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center;}
-  .filter-btn{padding:5px 14px;border-radius:50px;border:1.5px solid var(--border);background:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:12px;cursor:pointer;color:var(--gray);transition:all .15s;}
+  .filter-btn{padding:5px 14px;border-radius:50px;border:1.5px solid var(--border);background:white;font-family:Nunito,sans-serif;font-weight:700;font-size:12px;cursor:pointer;color:var(--gray);transition:all .15s;}
   .filter-btn.active{background:var(--teal);color:white;border-color:var(--teal);}
-  .search-input{flex:1;min-width:160px;padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:'Nunito',sans-serif;font-size:13px;outline:none;color:var(--navy);}
+  .search-input{flex:1;min-width:160px;padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:Nunito,sans-serif;font-size:13px;outline:none;color:var(--navy);}
   .search-input:focus{border-color:var(--teal);}
   .table-wrap{overflow-x:auto;background:white;border:1.5px solid var(--border);border-radius:16px;}
   table{width:100%;border-collapse:collapse;}
@@ -187,7 +187,7 @@ const S = `
   .badge-gray{background:rgba(90,122,138,.12);color:var(--gray);}
   .badge-teal{background:rgba(26,143,160,.12);color:#0d6e7e;}
   .action-row{display:flex;gap:6px;flex-wrap:wrap;}
-  .btn{font-family:'Nunito',sans-serif;font-weight:800;font-size:12px;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .15s;white-space:nowrap;}
+  .btn{font-family:Nunito,sans-serif;font-weight:800;font-size:12px;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .15s;white-space:nowrap;}
   .btn:disabled{opacity:.45;cursor:not-allowed;}
   .btn-green{background:var(--green);color:white;}
   .btn-green:hover:not(:disabled){background:#2aad4a;}
@@ -215,7 +215,7 @@ const S = `
   .meta-text{font-size:12px;color:var(--gray);font-weight:600;margin-top:2px;}
   .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:14px;}
   @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-  .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;box-shadow:0 4px 24px rgba(15,72,103,.3);z-index:9999;animation:toastIn .25s ease;white-space:nowrap;}
+  .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;box-shadow:0 4px 24px rgba(15,72,103,.3);z-index:9999;animation:toastIn .25s ease;white-space:nowrap;}
   .modal-overlay{position:fixed;inset:0;background:rgba(15,34,51,0.55);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;}
   .modal-card{background:white;border-radius:16px;padding:20px 22px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;}
   .transcript-card{max-width:640px;}
@@ -227,7 +227,7 @@ const S = `
   @keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(14px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
   .error-page{text-align:center;padding:80px 20px;}
   .error-page h2{font-size:22px;font-weight:900;color:var(--navy);margin-bottom:10px;}
-  .reject-input{width:100%;padding:7px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:'Nunito',sans-serif;font-size:12px;margin-bottom:8px;outline:none;color:var(--navy);}
+  .reject-input{width:100%;padding:7px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:Nunito,sans-serif;font-size:12px;margin-bottom:8px;outline:none;color:var(--navy);}
   .reject-input:focus{border-color:var(--red);}
 `
 
@@ -958,7 +958,7 @@ export default function AdminPage() {
   // Show loading while checking session
   if (authChecking) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',flexDirection:'column',gap:12}}>
         <div style={{fontSize:32}}>🔐</div>
         <p style={{fontWeight:700,fontSize:16,color:'#0F4867'}}>Verifying access…</p>
@@ -969,7 +969,7 @@ export default function AdminPage() {
   // PIN gate — shown when API returns 403 with pinRequired
   if (pinRequired && !pinVerified) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif'}}>
         <div style={{background:'white',borderRadius:24,padding:'40px 32px',boxShadow:'0 8px 40px rgba(15,72,103,0.12)',maxWidth:360,width:'100%',textAlign:'center'}}>
           <div style={{fontSize:40,marginBottom:16}}>🔒</div>
@@ -995,7 +995,7 @@ export default function AdminPage() {
 
   if (denied) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{display:'flex',alignItems:'center',justifyContent:'center',minHeight:'100vh',fontFamily:'Nunito,sans-serif',background:'#F0F8FC',padding:'20px'}}>
         {authUser ? (
           // Logged in but not admin
@@ -1042,7 +1042,7 @@ export default function AdminPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
 
         {/* Header */}

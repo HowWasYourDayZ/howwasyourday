@@ -11,7 +11,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-  body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+  body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
     background:radial-gradient(ellipse 90% 55% at 0% 0%, #C2E4F2 0%, #DAEEF8 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 88px;}
@@ -22,7 +22,7 @@ const S = `
   .balance-label{font-size:13px;color:rgba(213,238,246,0.7);font-weight:700;margin-bottom:8px;}
   .balance-amount{font-size:48px;font-weight:900;color:white;margin-bottom:6px;}
   .balance-sub{font-size:13px;color:rgba(213,238,246,0.6);font-weight:500;}
-  .refund-btn{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2);font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:8px 18px;border-radius:50px;cursor:pointer;margin-top:16px;}
+  .refund-btn{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2);font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:8px 18px;border-radius:50px;cursor:pointer;margin-top:16px;}
   .section-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;}
   .presets{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
   .preset{background:white;border:2px solid var(--border);border-radius:16px;padding:18px;text-align:center;cursor:pointer;transition:all 0.2s;}
@@ -30,7 +30,7 @@ const S = `
   .preset-amount{font-size:22px;font-weight:900;color:var(--navy);}
   .preset-sessions{font-size:12px;color:var(--gray);font-weight:600;margin-top:4px;}
   .preset-tag{font-size:10px;background:var(--orange);color:white;font-weight:800;padding:3px 8px;border-radius:50px;display:inline-block;margin-top:6px;}
-  .btn{width:100%;padding:16px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,153,51,0.3);}
+  .btn{width:100%;padding:16px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,153,51,0.3);}
   .btn:hover{background:#e8861a;}
   .btn:disabled{opacity:0.5;cursor:not-allowed;}
   .note{background:rgba(26,143,160,0.08);border:1px solid rgba(26,143,160,0.2);border-radius:14px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;margin-bottom:24px;}
@@ -278,7 +278,7 @@ function WalletPageInner() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         {/* Context banner: user came from the free-trial conversion screen */}
         {returnUrl && (

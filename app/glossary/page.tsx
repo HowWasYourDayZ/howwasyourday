@@ -113,7 +113,7 @@ const terms = [
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Nunito',sans-serif;color:#0F4867;background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  body{font-family:Nunito,sans-serif;color:#0F4867;background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:48px;}
@@ -137,7 +137,7 @@ const S = `
   .cta-box{background:linear-gradient(135deg,#0F4867,#1A8FA0);border-radius:20px;padding:32px 24px;text-align:center;color:#fff;margin-top:40px;}
   .cta-box h2{color:#fff;margin:0 0 8px;font-size:20px;}
   .cta-box p{color:rgba(255,255,255,0.85);margin-bottom:20px;font-size:15px;}
-  .btn-cta{background:#FF9933;color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
+  .btn-cta{background:#FF9933;color:#fff;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
 `
 
 export default function GlossaryPage() {
@@ -145,7 +145,7 @@ export default function GlossaryPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav">
         <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo" style={{background:'#FF9933',color:'#fff',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>

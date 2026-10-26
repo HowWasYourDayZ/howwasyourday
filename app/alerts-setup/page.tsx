@@ -109,8 +109,8 @@ export default function AlertsSetupPage() {
 
   return (
     <>
-      <style>{`
-        .as-wrap{max-width:560px;margin:0 auto;padding:20px 16px 120px;font-family:'Nunito',system-ui,sans-serif;color:#27394A;}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .as-wrap{max-width:560px;margin:0 auto;padding:20px 16px 120px;font-family:Nunito,system-ui,sans-serif;color:#27394A;}
         .as-wrap h1{font-size:22px;font-weight:900;color:#0F4867;margin:8px 0 6px;}
         .as-lead{font-size:14px;color:#5A7A8A;line-height:1.55;margin-bottom:18px;}
         .as-step{background:#fff;border:1.5px solid #D5EEF6;border-radius:14px;padding:14px;margin-bottom:12px;}
@@ -130,7 +130,7 @@ export default function AlertsSetupPage() {
         .as-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:-6px 0 16px;}
         .as-tab{font-size:12px;font-weight:700;border:1.5px solid #D5EEF6;background:#fff;border-radius:50px;padding:4px 12px;cursor:pointer;font-family:inherit;color:#5A7A8A;}
         .as-tab.on{border-color:#1A8FA0;color:#1A8FA0;background:#EEF9FB;}
-      `}</style>
+      ` }} />
       <div className="as-wrap">
         <Link href="/dashboard" style={{ fontSize: 13, color: '#1A8FA0', fontWeight: 700, textDecoration: 'none' }}>← Back to dashboard</Link>
         <h1>🔔 Turn on How Was Your Day alerts</h1>

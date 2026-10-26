@@ -22,12 +22,12 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
 .nav-logo{height:56px;}
-.btn-nav{background:var(--teal);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
+.btn-nav{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
 .page{max-width:680px;margin:0 auto;padding:16px 24px 80px;}
 .back{font-size:14px;font-weight:700;color:var(--gray);margin-bottom:24px;display:inline-block;}
 h1{font-size:clamp(24px,5vw,36px);font-weight:900;line-height:1.15;margin-bottom:14px;}
@@ -43,13 +43,13 @@ h1{font-size:clamp(24px,5vw,36px);font-weight:900;line-height:1.15;margin-bottom
 .section p{font-size:14px;color:#3A6070;line-height:1.75;margin-bottom:10px;}
 .section p:last-child{margin-bottom:0;}
 .share-row{display:flex;gap:10px;margin:24px 0;flex-wrap:wrap;}
-.share-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;border:none;cursor:pointer;}
+.share-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:50px;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;border:none;cursor:pointer;}
 .share-wa{background:#25D366;color:white;}
 .share-tw{background:#1DA1F2;color:white;}
 .cta-box{background:var(--navy);border-radius:20px;padding:28px;text-align:center;margin-top:28px;}
 .cta-box h2{font-size:18px;font-weight:900;color:white;margin-bottom:10px;}
 .cta-box p{font-size:13px;color:rgba(201,231,244,.8);margin-bottom:20px;font-weight:500;}
-.btn{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;border:none;cursor:pointer;}
+.btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;border:none;cursor:pointer;}
 `
 
 export default function LonelinessStatisticsIndia() {
@@ -59,7 +59,7 @@ export default function LonelinessStatisticsIndia() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
         <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/talk?src=seo"><button className="btn-nav">Get support</button></a>

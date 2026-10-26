@@ -374,8 +374,8 @@ function TalkInner() {
 
   return (
     <>
-      <style>{`
-        .tk{max-width:520px;margin:0 auto;padding:28px 18px 120px;font-family:'Nunito',system-ui,sans-serif;color:#27394A;}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .tk{max-width:520px;margin:0 auto;padding:28px 18px 120px;font-family:Nunito,system-ui,sans-serif;color:#27394A;}
         .tk h1{font-size:25px;font-weight:900;color:#0F4867;line-height:1.25;margin:6px 0 8px;}
         .tk .sub{font-size:14.5px;color:#5A7A8A;line-height:1.55;margin-bottom:18px;}
         .tk .chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
@@ -401,7 +401,7 @@ function TalkInner() {
         .tk .fine{font-size:12.5px;color:#7A8A96;line-height:1.55;margin-top:18px;text-align:center;}
         .tk .live{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#276749;background:#E6F6EC;border-radius:50px;padding:5px 12px;margin-bottom:12px;}
         .tk .live i{width:8px;height:8px;border-radius:50%;background:#38A169;display:inline-block;}
-      `}</style>
+      ` }} />
       <div className="tk">
         {phase.k === 'topic' && (
           <>

@@ -8,7 +8,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+body{font-family:Nunito,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
 .page{max-width:460px;margin:0 auto;padding:24px 20px 80px;}
 .topbar{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
 .back{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.8);border:1.5px solid var(--border);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;}
@@ -20,8 +20,8 @@ h1{font-size:22px;font-weight:900;}
 .notes-box{background:var(--light);border:1.5px solid var(--border);border-radius:14px;padding:16px;text-align:left;margin-bottom:20px;}
 .notes-label{font-size:11px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
 .notes-text{font-size:14px;color:var(--gray);line-height:1.6;font-weight:500;}
-.btn{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(255,153,51,.3);}
-.btn-outline{background:white;color:var(--teal);font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:13px 32px;border-radius:50px;border:2px solid var(--teal);cursor:pointer;margin-top:10px;display:inline-block;}
+.btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(255,153,51,.3);}
+.btn-outline{background:white;color:var(--teal);font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 32px;border-radius:50px;border:2px solid var(--teal);cursor:pointer;margin-top:10px;display:inline-block;}
 .steps{background:white;border:1.5px solid var(--border);border-radius:20px;padding:20px;margin-top:20px;}
 .step{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);}
 .step:last-child{border-bottom:none;}
@@ -117,14 +117,14 @@ export default function ListenerStatusPage() {
 
   if (loading) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page"><div style={{textAlign:'center',padding:'60px 0',color:'var(--gray)'}}>Loading…</div></div>
     </>
   )
 
   if (loadError) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar">
           <button className="back" onClick={() => router.push('/')}>←</button>
@@ -142,7 +142,7 @@ export default function ListenerStatusPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar">
           <button className="back" onClick={() => router.push('/')}>←</button>

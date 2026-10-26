@@ -7,7 +7,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:var(--light);}
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:var(--light);}
 .page{max-width:480px;margin:0 auto;background:white;min-height:100dvh;padding-bottom:100px;}
 .topbar{background:var(--navy);padding:16px 18px 14px;display:flex;align-items:center;gap:12px;}
 .back{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.15);border:none;color:white;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -23,7 +23,7 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .msg-time{font-size:11px;color:var(--gray);font-weight:600;margin-top:6px;}
 .msg-label{font-size:11px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
 .cta-bar{position:fixed;bottom:60px;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:white;border-top:1px solid var(--border);padding:16px 20px;}
-.btn-cta{width:100%;padding:15px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;}
+.btn-cta{width:100%;padding:15px;font-family:Nunito,sans-serif;font-size:15px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;}
 .unread-badge{display:inline-block;background:var(--teal);color:white;font-size:10px;font-weight:800;padding:2px 8px;border-radius:50px;margin-left:8px;}
 `
 
@@ -102,7 +102,7 @@ export default function MessageThreadPage({ params }: { params: { id: string } }
 
   if (notFound) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', gap: 16, padding: 24, textAlign: 'center' }}>
         <div style={{ fontSize: 48 }}>💬</div>
         <div style={{ fontSize: 18, fontWeight: 900, color: '#0F4867' }}>Message not found</div>
@@ -113,14 +113,14 @@ export default function MessageThreadPage({ params }: { params: { id: string } }
 
   if (!thread) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', color: '#0F4867' }}>Loading…</div>
     </>
   )
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar">
           <button className="back" onClick={() => router.push('/history')}>←</button>

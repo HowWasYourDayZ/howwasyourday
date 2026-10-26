@@ -33,7 +33,7 @@ const S = `
     --star:#C8DCF0;
   }
   html{background:var(--navy-deep);}
-  body{font-family:'Nunito',sans-serif;color:var(--navy);background:#fff;}
+  body{font-family:Nunito,sans-serif;color:var(--navy);background:#fff;}
   a{text-decoration:none;color:inherit;}
 
   /* ── NAV ── */
@@ -76,8 +76,8 @@ const S = `
   .hero h1{font-size:clamp(26px,6vw,44px);font-weight:900;color:#fff;line-height:1.18;margin-bottom:18px;position:relative;}
   .hero .sub{font-size:16px;color:rgba(255,255,255,.72);line-height:1.75;max-width:480px;margin:0 auto 28px;}
   .hero-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
-  .btn-primary{background:var(--orange);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;padding:14px 30px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
-  .btn-outline{background:transparent;color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:15px;padding:13px 28px;border-radius:50px;border:1.5px solid rgba(255,255,255,.35);cursor:pointer;display:inline-block;}
+  .btn-primary{background:var(--orange);color:#fff;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:14px 30px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
+  .btn-outline{background:transparent;color:#fff;font-family:Nunito,sans-serif;font-weight:700;font-size:15px;padding:13px 28px;border-radius:50px;border:1.5px solid rgba(255,255,255,.35);cursor:pointer;display:inline-block;}
   .btn-outline:hover{border-color:rgba(255,255,255,.65);}
   .hero-note{margin-top:16px;font-size:12px;color:rgba(255,255,255,.45);font-weight:600;}
 
@@ -131,7 +131,7 @@ const S = `
   .cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
 
   /* small btn in nav */
-  .btn-nav{background:var(--orange);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;padding:8px 18px;border-radius:50px;border:none;cursor:pointer;}
+  .btn-nav{background:var(--orange);color:#fff;font-family:Nunito,sans-serif;font-weight:800;font-size:13px;padding:8px 18px;border-radius:50px;border:none;cursor:pointer;}
 `
 
 const jsonLd = JSON.stringify([
@@ -196,7 +196,7 @@ const jsonLd = JSON.stringify([
 export default function LateNightSupportIndiaPage() {
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}

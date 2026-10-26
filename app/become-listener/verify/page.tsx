@@ -20,7 +20,7 @@ const ID_TYPES = [
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Nunito',sans-serif;color:#0F4867;background:#F0F8FC;-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;color:#0F4867;background:#F0F8FC;-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:20px 20px 80px;}
   .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#1A8FA0;background:none;border:none;cursor:pointer;margin-bottom:24px;padding:0;}
   h1{font-size:24px;font-weight:900;margin-bottom:6px;}
@@ -30,9 +30,9 @@ const S = `
   .step-dot.done{background:#1A8FA0;}
   .step-dot.active{background:#0F4867;}
   .label{font-size:12px;font-weight:800;color:#5A7A8A;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;display:block;}
-  .input{width:100%;padding:12px 14px;border:1.5px solid #D5EEF6;border-radius:12px;font-family:'Nunito',sans-serif;font-size:15px;color:#0F4867;outline:none;transition:border-color .15s;}
+  .input{width:100%;padding:12px 14px;border:1.5px solid #D5EEF6;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#0F4867;outline:none;transition:border-color .15s;}
   .input:focus{border-color:#1A8FA0;}
-  .select{width:100%;padding:12px 14px;border:1.5px solid #D5EEF6;border-radius:12px;font-family:'Nunito',sans-serif;font-size:15px;color:#0F4867;outline:none;background:white;}
+  .select{width:100%;padding:12px 14px;border:1.5px solid #D5EEF6;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#0F4867;outline:none;background:white;}
   .field{margin-bottom:20px;}
   .note{background:#E6F6FF;border-left:3px solid #1A8FA0;padding:10px 14px;border-radius:0 10px 10px 0;font-size:13px;color:#0F4867;font-weight:600;margin-bottom:20px;line-height:1.5;}
   .upload-box{border:2px dashed #D5EEF6;border-radius:14px;padding:28px;text-align:center;cursor:pointer;transition:border-color .15s;background:white;}
@@ -41,7 +41,7 @@ const S = `
   .upload-icon{font-size:32px;margin-bottom:8px;}
   .upload-label{font-size:14px;font-weight:700;color:#0F4867;margin-bottom:4px;}
   .upload-sub{font-size:12px;color:#5A7A8A;font-weight:500;}
-  .btn{width:100%;padding:15px;border-radius:14px;border:none;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-top:8px;}
+  .btn{width:100%;padding:15px;border-radius:14px;border:none;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-top:8px;}
   .btn-primary{background:#0F4867;color:white;}
   .btn-primary:disabled{background:#ccc;cursor:not-allowed;}
   .done-wrap{text-align:center;padding:40px 20px;}
@@ -144,7 +144,7 @@ export default function VerifyPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <button className="back" onClick={() => router.push('/become-listener')}>← Back</button>
 

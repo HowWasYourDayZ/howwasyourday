@@ -192,7 +192,7 @@ export default function BottomNav() {
 
   return (
     <>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
 
         .bottom-nav{
           position:fixed;bottom:0;left:0;right:0;z-index:100;
@@ -206,14 +206,14 @@ export default function BottomNav() {
         .nav-tab{
           flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
           padding:10px 0 8px;cursor:pointer;border:none;background:transparent;
-          font-family:'Nunito',sans-serif;font-weight:600;font-size:11px;
+          font-family:Nunito,sans-serif;font-weight:600;font-size:11px;
           color:#5A7A8A;transition:color .15s;gap:3px;
         }
         .nav-tab.active{color:#0F4867;}
         .nav-tab.accent{color:#E07B10;font-weight:800;}
         .nav-tab.accent.active{color:#B35C00;}
         .nav-tab-icon{font-size:20px;line-height:1;}
-      `}</style>
+      ` }} />
       <nav className="bottom-nav">
         <div className="bottom-nav-inner">
           {TABS.map(tab => {

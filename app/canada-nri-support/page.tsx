@@ -83,12 +83,12 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-  body{font-family:'Nunito',sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  body{font-family:Nunito,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   nav{padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
   .logo{font-size:22px;font-weight:900;color:var(--navy);}
   .logo span{color:var(--teal);}
-  .nav-cta{background:var(--teal);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
+  .nav-cta{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
   .page{max-width:680px;margin:0 auto;padding:16px 24px 80px;}
   .breadcrumb{font-size:12px;color:var(--gray);margin-bottom:20px;}
   .breadcrumb a{color:var(--teal);}
@@ -116,8 +116,8 @@ const S = `
   .cta{text-align:center;background:var(--navy);border-radius:24px;padding:32px;color:white;margin-bottom:24px;}
   .cta h2{font-size:22px;font-weight:900;margin-bottom:10px;}
   .cta p{font-size:14px;opacity:.8;margin-bottom:20px;}
-  .btn-white{background:white;color:var(--navy);font-family:'Nunito',sans-serif;font-weight:900;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
-  .btn-orange{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:900;font-size:15px;padding:12px 28px;border-radius:50px;border:none;cursor:pointer;display:inline-block;margin-top:10px;}
+  .btn-white{background:white;color:var(--navy);font-family:Nunito,sans-serif;font-weight:900;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
+  .btn-orange{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:900;font-size:15px;padding:12px 28px;border-radius:50px;border:none;cursor:pointer;display:inline-block;margin-top:10px;}
   .related{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
   .related a{background:white;border:1.5px solid var(--border);border-radius:14px;padding:14px 16px;font-size:13px;font-weight:700;color:var(--navy);line-height:1.4;}
   .related a:hover{border-color:var(--teal);}
@@ -136,7 +136,7 @@ export default function CanadaNriSupportPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
 
       <nav>
         <a href="/" className="logo">How Was <span>Your Day</span></a>

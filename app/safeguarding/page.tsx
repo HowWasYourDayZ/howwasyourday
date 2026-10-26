@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Nunito',sans-serif;background:#FFFBF5;color:#0F4867;-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;background:#FFFBF5;color:#0F4867;-webkit-font-smoothing:antialiased;}
   a{color:#1A8FA0;font-weight:700;text-decoration:none;}
   .page{max-width:720px;margin:0 auto;padding:24px 20px 90px;}
   .back{display:inline-flex;font-size:14px;font-weight:700;color:#6B8FA8;margin-bottom:24px;}
@@ -30,7 +30,7 @@ const S = `
 export default function SafeguardingPage() {
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Safeguarding at How Was Your Day</h1>
