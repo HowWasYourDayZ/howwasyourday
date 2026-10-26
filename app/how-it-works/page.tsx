@@ -18,7 +18,7 @@ const LENGTHS = SESSION_DURATIONS.join(', ').replace(/, (\d+)$/, ' or $1')
 export const metadata: Metadata = {
   title: 'How It Works — Paid Peer Support, Explained Honestly',
   description: `What How Was Your Day is, who it helps, how listeners are screened, what a session costs (${formatGBP(ex8)} for 8 minutes at the standard rate), booking a time, privacy, safety, and what How Was Your Day is not.`,
-  keywords: ['how howwasyourday works', 'what is howwasyourday', 'paid peer support india', 'talk to someone online india', 'online emotional support india', 'relationship support online', 'peer support vs therapy'],
+  keywords: ['how howwasyourday works', 'what is howwasyourday', 'peer support UK', 'talk to someone online UK', 'online emotional support', 'relationship support online', 'peer support vs therapy'],
   alternates: { canonical: 'https://www.howwasyourday.live/how-it-works' },
 }
 
@@ -47,7 +47,7 @@ const howToJsonLd = {
   description: 'Get one-to-one peer emotional support on How Was Your Day, by text or voice.',
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Tell us what it is about, or choose someone', text: 'Use Talk now (pick a topic and text or voice, and How Was Your Day connects you with a listener who is free) or browse listeners by topic and language.' },
-    { '@type': 'HowToStep', position: 2, name: 'Confirm your phone number', text: 'Sign in with a one-time code sent to your mobile number. UK and EU mobile numbers are supported. No email or full name needed.' },
+    { '@type': 'HowToStep', position: 2, name: 'Sign in', text: 'Sign in with Google in a few seconds. Listeners never see your email; they see only the first name you choose.' },
     { '@type': 'HowToStep', position: 3, name: 'Choose a length — now or later', text: `Choose ${LENGTHS} minutes, paid from your How Was Your Day wallet (${formatGBP(ex8)} for 8 minutes at the standard rate). Talk now, or book a time that suits you.` },
     { '@type': 'HowToStep', position: 4, name: 'Talk by text or voice', text: 'Your session starts when the listener accepts, or at the time you booked.' },
   ],
@@ -56,8 +56,8 @@ const howToJsonLd = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-  body{font-family:Nunito,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+  body{font-family:Nunito,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   nav{padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;max-width:760px;margin:0 auto;}
   .page{max-width:720px;margin:0 auto;padding:16px 20px 110px;}
@@ -65,7 +65,7 @@ const S = `
   .lead{font-size:16px;color:var(--gray);line-height:1.75;margin-bottom:24px;}
   .sec{background:white;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
   .sec h2{font-size:19px;font-weight:900;margin-bottom:10px;}
-  .sec p,.sec li{font-size:14.5px;color:#3A6070;line-height:1.72;}
+  .sec p,.sec li{font-size:14.5px;color:#4A3C34;line-height:1.72;}
   .sec p+p{margin-top:8px;}
   .sec ul{margin:8px 0 0 20px;list-style:disc;}
   .sec li{margin-bottom:5px;}
@@ -129,7 +129,7 @@ export default function HowItWorksPage() {
           <ul>
             <li><strong>Talk now:</strong> pick what it is about and choose text or voice. How Was Your Day asks a listener who is free right now and, if they cannot answer within about 30 seconds, asks the next one. <a href="/talk">Talk now →</a></li>
             <li><strong>Or choose someone yourself:</strong> browse listeners by topic, language, age group and who is online. <a href="/browse">See listeners →</a></li>
-            <li>Sign in with a one-time code sent to your phone. UK and EU mobile numbers work. No email or full name needed.</li>
+            <li>Sign in with Google in a few seconds. Listeners never see your email — only the first name you choose.</li>
             <li>Sessions are {LENGTHS} minutes, all paid. You can switch a voice call to text during the session.</li>
             <li><strong>Book a time:</strong> on a listener&apos;s profile, pick one of their published slots. The price is held when you book; cancel at least 2 hours before for a full refund.</li>
           </ul>
@@ -166,7 +166,7 @@ export default function HowItWorksPage() {
         <section className="sec">
           <h2>Privacy and safety</h2>
           <ul>
-            <li>A listener sees only the name you choose — never your phone number.</li>
+            <li>A listener sees only the name you choose — never your email or phone number.</li>
             <li>Voice calls are not recorded. Text messages are stored securely; only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session.</li>
             <li>If words linked to self-harm appear in a chat, How Was Your Day shows crisis helplines, alerts the listener and flags the session for review.</li>
             <li>You can report a listener from any session; every report is reviewed by a person. How Was Your Day does not sell your data.</li>

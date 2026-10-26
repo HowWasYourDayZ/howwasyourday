@@ -5,7 +5,7 @@ import type { ToastType } from '@/lib/toast'
 type Toast = { id: number; message: string; type: ToastType }
 
 const COLORS: Record<ToastType, string> = {
-  info:    '#0F4867',
+  info:    '#3B2F2A',
   success: '#276749',
   error:   '#C0392B',
   warning: '#B7570B',

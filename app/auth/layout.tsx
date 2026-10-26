@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sign In — How Was Your Day Peer Support India',
+  title: 'Sign In — How Was Your Day',
   description: 'Sign in or create your How Was Your Day account. OTP-verified with your mobile number. Start a peer support session in 30 seconds.',
   alternates: { canonical: 'https://www.howwasyourday.live/auth' },
   robots: { index: false, follow: false },

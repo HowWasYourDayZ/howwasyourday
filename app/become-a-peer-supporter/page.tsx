@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'Who can become a peer supporter?',
-    a: 'Adults aged 18 or older, based in India, who have personally been through something hard — loneliness, a breakup, family pressure, burnout, grief, anxiety, study or work stress — and have come far enough through it to sit with someone else\'s pain without being overwhelmed. No degree or qualification is needed.',
+    a: 'Adults aged 18 or older, living in the UK, who have personally been through something hard — loneliness, a breakup, family pressure, burnout, grief, anxiety, study or work stress — and have come far enough through it to sit with someone else\'s pain without being overwhelmed. No degree or qualification is needed.',
   },
   {
     q: 'How are peer supporters selected?',
@@ -80,9 +80,9 @@ const jsonLd = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
   body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:52px;width:auto;}
@@ -104,7 +104,7 @@ const S = `
   .faq-a{font-size:15px;color:var(--gray);line-height:1.7;font-weight:500;}
   .cta{background:var(--navy);border-radius:22px;padding:32px 22px;text-align:center;margin-top:36px;}
   .cta h2{color:#fff;margin:0 0 10px;}
-  .cta p{color:rgba(201,231,244,.88);font-size:15px;line-height:1.6;margin-bottom:22px;}
+  .cta p{color:rgba(251,227,210,.88);font-size:15px;line-height:1.6;margin-bottom:22px;}
   .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:900;font-size:16px;padding:14px 28px;border-radius:50px;}
   .small{font-size:13.5px;color:var(--gray);text-align:center;margin-top:18px;line-height:1.6;}
   .small a{color:var(--teal);font-weight:800;}
@@ -131,7 +131,7 @@ export default function BecomeAPeerSupporterPage() {
         <div className="who">
           <div><b>You&apos;ve lived it.</b> Loneliness, a breakup, family or marriage pressure, burnout, grief, anxiety, exam or work stress — and you&apos;ve come through enough to hold space for someone else.</div>
           <div><b>You can listen without fixing.</b> No advice, no lectures, no medical opinions. Just being present.</div>
-          <div><b>You&apos;re 18 or older and in India.</b> No degree or qualification needed.</div>
+          <div><b>You&apos;re 18 or older and live in the UK.</b> No degree or qualification needed.</div>
         </div>
 
         <h2>How you&apos;re selected</h2>

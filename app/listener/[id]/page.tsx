@@ -50,16 +50,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tags = ((data.specialty_tags as string[]) || []).slice(0, 3).join(', ')
   const verified = (data as { is_verified?: boolean }).is_verified === true
   const title = verified
-    ? `${name} — Verified Peer Listener on How Was Your Day India`
-    : `${name} — Peer Listener on How Was Your Day India`
+    ? `${name} — Verified Peer Listener on How Was Your Day`
+    : `${name} — Peer Listener on How Was Your Day`
   const description = data.bio
     ? `Talk to ${name} on How Was Your Day — ${data.bio.slice(0, 130)}… No appointment needed.`
-    : `Talk to ${name}, a verified peer listener on How Was Your Day India. ${tags ? `Specialises in: ${tags}.` : ''} Affordable peer support. No appointment needed.`
+    : `Talk to ${name}, a verified peer listener on How Was Your Day. ${tags ? `Specialises in: ${tags}.` : ''} Affordable peer support. No appointment needed.`
 
   return {
     title,
     description,
-    keywords: [name, 'peer listener India', 'howwasyourday', tags, 'emotional support India', 'peer support'].filter(Boolean),
+    keywords: [name, 'peer listener UK', 'howwasyourday', tags, 'emotional support UK', 'peer support'].filter(Boolean),
     openGraph: {
       title,
       description,

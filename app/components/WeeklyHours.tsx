@@ -51,14 +51,14 @@ export default function WeeklyHours() {
     finally { setSaving(false) }
   }
 
-  const sel: React.CSSProperties = { padding: '6px 8px', borderRadius: 8, border: '1.5px solid #DDE8F0', fontFamily: 'inherit', fontWeight: 700, color: '#0F4867', background: 'white' }
-  const small: React.CSSProperties = { padding: '5px 10px', borderRadius: 50, border: '1.5px solid #DDE8F0', background: 'white', color: '#0F4867', fontWeight: 800, fontSize: 12, cursor: 'pointer', fontFamily: 'inherit' }
+  const sel: React.CSSProperties = { padding: '6px 8px', borderRadius: 8, border: '1.5px solid #F2DFD1', fontFamily: 'inherit', fontWeight: 700, color: '#3B2F2A', background: 'white' }
+  const small: React.CSSProperties = { padding: '5px 10px', borderRadius: 50, border: '1.5px solid #F2DFD1', background: 'white', color: '#3B2F2A', fontWeight: 800, fontSize: 12, cursor: 'pointer', fontFamily: 'inherit' }
   const today = new Date().toISOString().slice(0, 10)
 
   return (
-    <section aria-labelledby="weekly-hours" style={{ background: 'white', border: '1.5px solid #DDE8F0', borderRadius: 18, padding: 16, margin: '0 0 20px', fontFamily: "'Nunito',sans-serif" }}>
-      <h2 id="weekly-hours" style={{ fontSize: 16, fontWeight: 900, color: '#0F4867', margin: '0 0 4px' }}>🗓️ Weekly hours for booked sessions</h2>
-      <p style={{ fontSize: 12.5, color: '#6B8FA8', fontWeight: 600, margin: '0 0 12px' }}>
+    <section aria-labelledby="weekly-hours" style={{ background: 'white', border: '1.5px solid #F2DFD1', borderRadius: 18, padding: 16, margin: '0 0 20px', fontFamily: "'Nunito',sans-serif" }}>
+      <h2 id="weekly-hours" style={{ fontSize: 16, fontWeight: 900, color: '#3B2F2A', margin: '0 0 4px' }}>🗓️ Weekly hours for booked sessions</h2>
+      <p style={{ fontSize: 12.5, color: '#6E5B50', fontWeight: 600, margin: '0 0 12px' }}>
         Seekers can book 8, 16 or 32-minute sessions inside these times (UK time), 2 hours to 14 days ahead, with a 10-minute gap between bookings.
         You don&apos;t need to be online — please join on time; a no-show refunds the seeker.
       </p>
@@ -66,16 +66,16 @@ export default function WeeklyHours() {
         const weekday = idx + 1
         const list = wins.map((w, i) => ({ w, i })).filter(x => x.w.weekday === weekday)
         return (
-          <div key={weekday} style={{ display: 'flex', gap: 8, alignItems: 'flex-start', padding: '6px 0', borderTop: idx ? '1px solid #F0F5F8' : 'none' }}>
-            <div style={{ width: 38, fontWeight: 900, color: '#0F4867', fontSize: 13, paddingTop: 6 }}>{label}</div>
+          <div key={weekday} style={{ display: 'flex', gap: 8, alignItems: 'flex-start', padding: '6px 0', borderTop: idx ? '1px solid #FFF6EF' : 'none' }}>
+            <div style={{ width: 38, fontWeight: 900, color: '#3B2F2A', fontSize: 13, paddingTop: 6 }}>{label}</div>
             <div style={{ flex: 1 }}>
-              {list.length === 0 && <span style={{ fontSize: 12.5, color: '#9AB0BF', fontWeight: 700, lineHeight: '30px' }}>Not available</span>}
+              {list.length === 0 && <span style={{ fontSize: 12.5, color: '#B59A89', fontWeight: 700, lineHeight: '30px' }}>Not available</span>}
               {list.map(({ w, i }) => (
                 <div key={i} style={{ display: 'flex', gap: 6, alignItems: 'center', marginBottom: 6, flexWrap: 'wrap' }}>
                   <select aria-label={`${label} start`} style={sel} value={w.start_min} onChange={e => update(i, { start_min: Number(e.target.value) })}>
                     {TIMES.slice(0, -1).map(t => <option key={t} value={t}>{toHHMM(t)}</option>)}
                   </select>
-                  <span style={{ fontWeight: 800, color: '#6B8FA8' }}>–</span>
+                  <span style={{ fontWeight: 800, color: '#6E5B50' }}>–</span>
                   <select aria-label={`${label} end`} style={sel} value={w.end_min} onChange={e => update(i, { end_min: Number(e.target.value) })}>
                     {TIMES.slice(1).map(t => <option key={t} value={t}>{t === 1440 ? '24:00' : toHHMM(t)}</option>)}
                   </select>
@@ -88,7 +88,7 @@ export default function WeeklyHours() {
         )
       })}
       <div style={{ marginTop: 12 }}>
-        <div style={{ fontSize: 13, fontWeight: 900, color: '#0F4867', marginBottom: 6 }}>Days off</div>
+        <div style={{ fontSize: 13, fontWeight: 900, color: '#3B2F2A', marginBottom: 6 }}>Days off</div>
         <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
           {daysOff.map(d => (
             <span key={d} style={{ ...small, cursor: 'default' }}>
@@ -104,7 +104,7 @@ export default function WeeklyHours() {
       </div>
       {msg && <p role="status" style={{ fontSize: 13, fontWeight: 800, color: msg.ok ? '#1E7A3E' : '#C0392B', margin: '10px 0 0' }}>{msg.text}</p>}
       <button type="button" onClick={save} disabled={saving}
-        style={{ marginTop: 12, width: '100%', padding: 12, borderRadius: 50, border: 'none', background: '#0F4867', color: 'white', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit' }}>
+        style={{ marginTop: 12, width: '100%', padding: 12, borderRadius: 50, border: 'none', background: '#3B2F2A', color: 'white', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit' }}>
         {saving ? 'Saving…' : 'Save weekly hours'}
       </button>
     </section>

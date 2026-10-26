@@ -14,7 +14,7 @@
   /* Custom scrollbar */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: #B8D4E8; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb { background: #F2DFD1; border-radius: 2px; }
 }
 
 @layer components {

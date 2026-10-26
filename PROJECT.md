@@ -29,6 +29,40 @@
 
 ---
 
+## 1a. Brand (decided 2026-10-26)
+
+**Name:** How Was Your Day (short form **HWYD** internally only; on the site always write it in full).
+**Tagline:** *Talk it through. 8 minutes is enough.* — the 8-minute session is the hero of the brand:
+a short, affordable, low-commitment conversation with a real person.
+
+**Colours — orange and white.** A soft, warm "sunset" orange that feels calm and trustworthy,
+on lots of white space. Never a loud or neon orange, never the LeanOn navy/teal.
+
+| Token | Hex | Use |
+|---|---|---|
+| Sunset orange (brand) | `#E8743B` | Logo, accents, highlights, large headings, icons, decorative fills |
+| Ember (action) | `#B85520` | Buttons with white text, links, focus rings — 4.8:1 on white (WCAG AA) |
+| Ember dark (hover) | `#9E4719` | Hover/pressed state of Ember |
+| Peach (soft background) | `#FFF6EF` | Section backgrounds, cards, chips |
+| Apricot (tint / border) | `#FBE3D2` / `#F2DFD1` | Badges, dividers, card borders |
+| White | `#FFFFFF` | Main background — keep it the dominant colour |
+| Ink (text) | `#3B2F2A` | Headings and body text (warm charcoal, 12.9:1 on white) |
+| Muted text | `#6E5B50` | Secondary text (6.4:1 on white) |
+
+Rules: white text only on Ember (or darker), never on Sunset orange at body sizes (3:1 — large/bold only).
+Crisis callouts keep a red tint; nothing else introduces new hues.
+
+**Logo:** a speech bubble holding a sun on the horizon ("talk about your day"), next to the stacked
+wordmark *How Was* (ink) / *Your Day* (orange). Files: `public/brand/mark.svg`, `public/brand/icon.svg`,
+`public/logo.png` (lockup), `public/icon-192.png`, `public/icon-512.png`, `public/apple-touch-icon.png`.
+**Type:** Nunito (self-hosted), 800–900 for headings, 500–700 for body.
+
+**Voice:** warm, plain British English, short sentences, no clinical language, no hype. Prices in £
+(`lib/money.ts`). Nothing about India, NRIs or any other country on the site, and the name LeanOn
+never appears in anything a user can see.
+
+---
+
 ## 2. The Core Insight (never forget this)
 
 People often pay for a conversation that is nominally about something else (a reading, a "consultation", a coaching call) when what they actually want is to be heard. The LeanOn team saw this first-hand: reporting on India's astrology-app boom quotes an astrologer saying *"When I am doing night sessions, most people just wanna talk."*
@@ -338,4 +372,4 @@ Implementation status belongs in STATUS.md; this list exists only so nobody mist
 | Scheduled sessions | Built (migration 077, docs/SCHEDULED_SESSIONS.md). Partial charges for late cancellation / seeker no-show not built (all refunds are full until decided) |
 | Whop payments and payouts | Razorpay / RazorpayX still wired (`TODO(whop)`); listener application still asks for Indian bank details (IFSC/UPI) |
 | Rule-based moderation only | Matches code; the LeanOn "Claude moderation" plan is dropped |
-| India / NRI content removed | India/NRI pages 308-redirect; India copy remains in parts of the home page, footer links, `llms.txt`, blog index and a few hub pages |
+| India / NRI content removed | Done 2026-10-26: India/NRI/other-country pages, blog and support hubs deleted; home page rebuilt for the UK. Remaining gaps: listener payout details (IFSC/UPI) until Whop |

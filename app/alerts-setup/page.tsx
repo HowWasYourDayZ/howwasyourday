@@ -110,29 +110,29 @@ export default function AlertsSetupPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        .as-wrap{max-width:560px;margin:0 auto;padding:20px 16px 120px;font-family:Nunito,system-ui,sans-serif;color:#27394A;}
-        .as-wrap h1{font-size:22px;font-weight:900;color:#0F4867;margin:8px 0 6px;}
-        .as-lead{font-size:14px;color:#5A7A8A;line-height:1.55;margin-bottom:18px;}
-        .as-step{background:#fff;border:1.5px solid #D5EEF6;border-radius:14px;padding:14px;margin-bottom:12px;}
+        .as-wrap{max-width:560px;margin:0 auto;padding:20px 16px 120px;font-family:Nunito,system-ui,sans-serif;color:#3B2F2A;}
+        .as-wrap h1{font-size:22px;font-weight:900;color:#3B2F2A;margin:8px 0 6px;}
+        .as-lead{font-size:14px;color:#6E5B50;line-height:1.55;margin-bottom:18px;}
+        .as-step{background:#fff;border:1.5px solid #F2DFD1;border-radius:14px;padding:14px;margin-bottom:12px;}
         .as-step.ok{border-color:#B7EBC6;background:#F6FFF8;}
         .as-step.fail{border-color:#F5C2C0;background:#FFF8F7;}
-        .as-head{display:flex;gap:10px;align-items:flex-start;font-weight:800;font-size:15px;color:#0F4867;}
-        .as-icon{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;background:#EEF4F7;}
+        .as-head{display:flex;gap:10px;align-items:flex-start;font-weight:800;font-size:15px;color:#3B2F2A;}
+        .as-icon{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;background:#FFF6EF;}
         .ok .as-icon{background:#C6F0D2;} .fail .as-icon{background:#FAD4D2;}
         .as-body{font-size:13.5px;line-height:1.6;margin:8px 0 0 36px;}
         .as-body ol{margin:6px 0 0 18px;padding:0;} .as-body li{margin-bottom:6px;}
-        .as-body b{color:#0F4867;}
-        .as-btn{display:inline-block;margin-top:10px;background:#1A8FA0;color:#fff;border:none;border-radius:50px;padding:9px 18px;font-weight:800;font-size:13.5px;cursor:pointer;font-family:inherit;text-decoration:none;}
-        .as-btn.ghost{background:#fff;color:#1A8FA0;border:1.5px solid #1A8FA0;margin-left:6px;}
+        .as-body b{color:#3B2F2A;}
+        .as-btn{display:inline-block;margin-top:10px;background:#B85520;color:#fff;border:none;border-radius:50px;padding:9px 18px;font-weight:800;font-size:13.5px;cursor:pointer;font-family:inherit;text-decoration:none;}
+        .as-btn.ghost{background:#fff;color:#B85520;border:1.5px solid #B85520;margin-left:6px;}
         .as-btn:disabled{opacity:.6;cursor:default;}
-        .as-err{font-size:11.5px;color:#7A8A96;margin-top:6px;word-break:break-word;}
+        .as-err{font-size:11.5px;color:#7A675C;margin-top:6px;word-break:break-word;}
         .as-done{background:#E6F6EC;border-radius:14px;padding:14px;font-weight:800;color:#22543D;margin-top:6px;}
         .as-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:-6px 0 16px;}
-        .as-tab{font-size:12px;font-weight:700;border:1.5px solid #D5EEF6;background:#fff;border-radius:50px;padding:4px 12px;cursor:pointer;font-family:inherit;color:#5A7A8A;}
-        .as-tab.on{border-color:#1A8FA0;color:#1A8FA0;background:#EEF9FB;}
+        .as-tab{font-size:12px;font-weight:700;border:1.5px solid #F2DFD1;background:#fff;border-radius:50px;padding:4px 12px;cursor:pointer;font-family:inherit;color:#6E5B50;}
+        .as-tab.on{border-color:#B85520;color:#B85520;background:#FFF6EF;}
       ` }} />
       <div className="as-wrap">
-        <Link href="/dashboard" style={{ fontSize: 13, color: '#1A8FA0', fontWeight: 700, textDecoration: 'none' }}>← Back to dashboard</Link>
+        <Link href="/dashboard" style={{ fontSize: 13, color: '#B85520', fontWeight: 700, textDecoration: 'none' }}>← Back to dashboard</Link>
         <h1>🔔 Turn on How Was Your Day alerts</h1>
         <p className="as-lead">
           Alerts make your phone ring when a seeker requests a session, even when you&apos;re using other apps.
@@ -234,7 +234,7 @@ device === 'desktop'
         )}
 
         <p className="as-lead" style={{ marginTop: 18, fontSize: 12.5 }}>
-          Still stuck? Take a screenshot of this page and send it to How Was Your Day support from the <Link href="/contact" style={{ color: '#1A8FA0', fontWeight: 700 }}>contact page</Link>.
+          Still stuck? Take a screenshot of this page and send it to How Was Your Day support from the <Link href="/contact" style={{ color: '#B85520', fontWeight: 700 }}>contact page</Link>.
         </p>
       </div>
     </>

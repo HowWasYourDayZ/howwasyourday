@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const S = `
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--orange:#FF9933;--gray:#6B8FA8;--border:#DDE8F0;--cream:#FFFBF5;}
+  :root{--navy:#3B2F2A;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--cream:#FFFAF6;}
   body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   a{color:var(--orange);text-decoration:none;}
   .page{max-width:720px;margin:0 auto;padding:24px 20px 80px;}
@@ -17,8 +17,8 @@ const S = `
   h1{font-size:28px;font-weight:900;margin-bottom:8px;}
   .updated{font-size:13px;color:var(--gray);font-weight:500;margin-bottom:24px;}
   h2{font-size:17px;font-weight:800;margin:28px 0 10px;}
-  p{font-size:14px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:10px;}
-  .tbl{width:100%;border-collapse:collapse;font-size:13px;color:#3A5A6E;margin:8px 0 14px;}
+  p{font-size:14px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:10px;}
+  .tbl{width:100%;border-collapse:collapse;font-size:13px;color:#4A3C34;margin:8px 0 14px;}
   .tbl th,.tbl td{border-bottom:1px solid var(--border);padding:8px 6px;text-align:left;vertical-align:top;}
   .tbl th{color:var(--navy);font-weight:800;}
   .wrap{overflow-x:auto;}
@@ -32,7 +32,6 @@ const essential: [string, string, string, string][] = [
   ['howwasyourday_intent_topic, howwasyourday_last_topic', 'Session / local storage', 'Remembers the topic you picked for Talk now.', 'Until cleared'],
   ['howwasyourday_onboarded, howwasyourday_welcome_new, howwasyourday_listener_agreed', 'Local storage', 'Remembers that you have seen a welcome or agreement screen, so it is not shown again.', 'Until cleared'],
   ['lounge_last_seen_…, lounge_launch_v1_seen_…', 'Local storage', 'Remembers which listener-lounge messages you have already seen.', 'Until cleared'],
-  ['Cloudflare Turnstile', 'Cookie / storage set by Cloudflare', 'Security check that stops bots abusing sign-in (only on the sign-in page).', 'Short-lived'],
 ]
 
 const analytics: [string, string, string, string][] = [

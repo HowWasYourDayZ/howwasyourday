@@ -31,7 +31,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Feeling lonely right now? Talk to a verified How Was Your Day listener who has felt it too. Anonymous, judgement-free, sessions from 8 minutes.",
     keywords:
-      "feeling lonely, i feel lonely today, lonely in a new city, loneliness india, someone to talk to when lonely, anonymous emotional support india, feeling alone at night",
+      "feeling lonely, i feel lonely today, lonely in a new city, someone to talk to when lonely, feeling alone at night",
     lead: `Loneliness is not the same as being by yourself. You can feel it in a full house, in a WhatsApp group with two hundred people, at a wedding where everyone knows your name. What is actually missing is not company — it is the feeling that someone knows what your day was like and cares how it went.`,
     sections: [
       {
@@ -39,8 +39,8 @@ export const FEELINGS: Feeling[] = [
         p: `Loneliness rarely announces itself. It shows up as a flat, heavy feeling in the chest around evening, or the strange restlessness where you open and close the same three apps for an hour. Many people describe a delay in their own reactions — jokes land late, food tastes like nothing much, the day passes without a single moment worth telling anyone about. Physically it can look like poor sleep, tension in the jaw and shoulders, eating at odd hours or not at all. Mentally, it narrows your world: you start assuming people are busy, so you stop reaching out, which makes the silence more convincing. That is the cruel part — loneliness slowly builds the evidence for its own story about you.`,
       },
       {
-        h: "Why so many people in India feel this right now",
-        p: `A whole generation moved cities for work. You land in Bengaluru, Pune, Gurgaon or Hyderabad, find a flat, find a desk, and discover that no one there has known you longer than a quarter. Back home the assumption is that you are thriving — you have the job everyone wanted. Meanwhile your closest friendships have quietly become a birthday message once a year. For others it is the opposite shape: living inside a joint family with almost no privacy, surrounded by people all day, yet with nobody you can say the honest thing to. Add "log kya kahenge", the sense that admitting loneliness means admitting failure, and most people simply carry it silently and call it being busy.`,
+        h: "Why so many people feel this right now",
+        p: `Lots of us moved for work or study. You land in a new city, find a flat and a desk, and realise nobody there has known you longer than a few months. Back home people assume you are thriving. Meanwhile your closest friendships have quietly become a birthday message once a year. For others it is the opposite shape: surrounded by people all day — a busy house, a busy office — yet with nobody you can say the honest thing to. Add the feeling that admitting loneliness means admitting something has gone wrong, and most people simply carry it silently and call it being busy.`,
       },
       {
         h: "Why the usual advice does not help",
@@ -90,7 +90,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Anxious and cannot switch your mind off? Talk to a How Was Your Day listener who has been there. Anonymous, no judgement, sessions from 8 minutes.",
     keywords:
-      "feeling anxious, anxiety right now, cannot stop overthinking, anxious about work, anxiety help india, someone to talk to about anxiety, racing thoughts at night",
+      "feeling anxious, anxiety right now, cannot stop overthinking, anxious about work, someone to talk to about anxiety, racing thoughts at night",
     lead: `Anxiety is not just worrying. It is your body running an emergency drill for something that has not happened, over and over, while you are supposed to sit in a meeting and behave normally. If your chest is tight and your mind will not stop rehearsing, you are not being dramatic — your alarm system is simply stuck on.`,
     sections: [
       {
@@ -99,7 +99,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why it builds up, especially here",
-        p: `Anxiety tends to grow where the stakes feel high and the ground feels uncertain. In India that combination is everywhere: appraisal cycles and layoff rumours you cannot ask anyone about, an entire family's expectations resting on one person's job, exam results that get discussed by relatives who never asked how you are. Comparison has also become continuous — you see the promotion, the wedding, the flat purchase and the foreign move on your feed all day, and your brain reads it as a scoreboard. Add "log kya kahenge", where the fear is not just failing but being seen failing, and the mind starts pre-worrying about judgement that has not happened yet. That is anxiety with a very Indian accent.`,
+        p: `Anxiety tends to grow where the stakes feel high and the ground feels uncertain. Restructures and redundancy rumours you cannot ask anyone about, rent and bills that keep rising, results or reviews that feel like they decide everything. Comparison has become continuous too — you see the promotion, the wedding, the house and the holiday on your feed all day, and your brain reads it as a scoreboard. Add the fear of not just failing but being seen to fail, and the mind starts pre-worrying about judgement that has not happened yet.`,
       },
       {
         h: "Why 'just relax' and 'don't overthink' backfire",
@@ -149,7 +149,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Everything at once and no room to breathe? Talk to a How Was Your Day listener who has been there. Anonymous, judgement-free, sessions from 8 minutes.",
     keywords:
-      "feeling overwhelmed, too much to handle, overwhelmed with work, cannot cope right now, overwhelmed india, someone to talk to when overwhelmed, mental load",
+      "feeling overwhelmed, too much to handle, overwhelmed with work, cannot cope right now, someone to talk to when overwhelmed, mental load",
     lead: `Overwhelm is what happens when the demands stack higher than the capacity, and everything starts feeling equally urgent. It is not weakness and it is not poor time management. It is a signal that you have been running above your limit for long enough that your system has stopped being able to prioritise.`,
     sections: [
       {
@@ -158,7 +158,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why the load gets this heavy",
-        p: `Very few people are overwhelmed by one big thing. It is usually a dozen medium things with no gaps between them: a job with no real boundaries because the team is spread across time zones, parents whose health needs managing over phone from another city, a home that runs on your invisible admin, and a family that expects your presence at every function. In India the load is rarely just yours — you are often the first person in your family in this kind of career, so you are absorbing everyone's expectations along with your own deadlines. Add long commutes, the assumption that you should always be reachable, and the guilt of saying no to relatives, and the calendar stops having any recovery space in it at all.`,
+        p: `Very few people are overwhelmed by one big thing. It is usually a dozen medium things with no gaps between them: a job with no real boundaries because the team is spread across time zones, parents whose health needs managing over phone from another city, a home that runs on your invisible admin, and a family that expects your presence at every function. The load is rarely just yours — you are often the person everyone else relies on, so you are absorbing everyone's expectations along with your own deadlines. Add long commutes, the assumption that you should always be reachable, and the guilt of saying no to relatives, and the calendar stops having any recovery space in it at all.`,
       },
       {
         h: "Why productivity advice makes it worse",
@@ -208,7 +208,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Feeling numb, blank or emotionally empty? Talk anonymously to a How Was Your Day listener who has been through it. Sessions from 8 minutes.",
     keywords:
-      "feeling numb, emotionally numb, feeling empty inside, why do i feel nothing, no motivation feeling blank, emotional numbness india, someone to talk to",
+      "feeling numb, emotionally numb, feeling empty inside, why do i feel nothing, no motivation feeling blank, someone to talk to",
     lead: `Numbness is harder to describe than sadness, which is partly why people carry it silently for so long. Things that used to matter register as beige. You function, you reply, you show up — and none of it reaches you. This is not you becoming a cold person. It is usually what a mind does after carrying too much for too long.`,
     sections: [
       {
@@ -217,7 +217,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why the mind goes quiet like this",
-        p: `Numbness usually arrives after something, not out of nowhere. It follows long stretches of stress with no recovery, grief that was never allowed a pause because there was a job to return to, a breakup you handled by staying busy, or years of keeping a lid on things because expressing them was not an option at home. In many Indian families feelings are managed rather than discussed — you are told to focus on studies, to not let it show, to think of what people will say. Do that long enough and the mechanism that suppresses hard feelings starts suppressing everything. It is protective in origin. It just outstays its usefulness, and then the flatness itself becomes the problem.`,
+        p: `Numbness usually arrives after something, not out of nowhere. It follows long stretches of stress with no recovery, grief that was never allowed a pause because there was a job to return to, a breakup you handled by staying busy, or years of keeping a lid on things because expressing them was not an option at home. In a lot of families feelings are managed rather than discussed — you are told to keep calm and carry on, to not let it show, to think of what people will say. Do that long enough and the mechanism that suppresses hard feelings starts suppressing everything. It is protective in origin. It just outstays its usefulness, and then the flatness itself becomes the problem.`,
       },
       {
         h: "Why 'cheer up' and 'be grateful' do nothing",
@@ -229,7 +229,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When it is bigger than a conversation, and where to go",
-        p: `How Was Your Day is peer emotional support. It is a real, human place to be heard, and it is not a substitute for professional mental health care. If the numbness has been constant for weeks, if you have stopped being able to do your normal daily life, if you find yourself feeling nothing about things that would once have frightened you, or if you are having any thoughts of harming yourself, please talk to a licensed mental health professional. India has two free, confidential helplines running 24/7 that anyone can call: Samaritans 116 123 and text SHOUT to 85258. Calling one of them is not an overreaction and it is not a permanent label. It is simply the right tool for that level of weight, and you deserve the right tool.`,
+        p: `How Was Your Day is peer emotional support. It is a real, human place to be heard, and it is not a substitute for professional mental health care. If the numbness has been constant for weeks, if you have stopped being able to do your normal daily life, if you find yourself feeling nothing about things that would once have frightened you, or if you are having any thoughts of harming yourself, please talk to a licensed mental health professional. In the UK you can call Samaritans free on 116 123 or text SHOUT to 85258, 24/7 — and 999 in an emergency. Calling one of them is not an overreaction and it is not a permanent label. It is simply the right tool for that level of weight, and you deserve the right tool.`,
       },
     ],
     faqs: [
@@ -267,7 +267,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Feeling low or sad and cannot say why? Talk anonymously to a How Was Your Day listener who understands. Judgement-free, sessions from 8 minutes.",
     keywords:
-      "feeling sad, feeling low today, why am i so sad, sadness without reason, low mood help india, someone to talk to when sad, emotional support india",
+      "feeling sad, feeling low today, why am i so sad, sadness without reason, someone to talk to when sad",
     lead: `Sadness does not always come with a headline. Some days it arrives with an obvious cause and some days it just settles in, and the second kind is often harder because you feel you have to justify it. You do not. Sadness is information, not a fault, and it does not need to earn its place before you are allowed to feel it.`,
     sections: [
       {
@@ -276,7 +276,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why sadness sometimes has no obvious cause",
-        p: `Sometimes there is a clear reason — a loss, a breakup, a rejection, a distance that grew. But sadness also accumulates. A year of small disappointments, a friendship that quietly ended, a version of your life you had pictured and had to let go of, the slow ache of being far from home while everyone assumes you are settled. In many Indian families, sadness is not really given room; you are told to be strong, to think of what others have endured, to not let it show before a function. So it goes underground and surfaces later without a label attached. If you cannot point to a cause, it usually means several small things have been carried for a long time, not that you are being irrational.`,
+        p: `Sometimes there is a clear reason — a loss, a breakup, a rejection, a distance that grew. But sadness also accumulates. A year of small disappointments, a friendship that quietly ended, a version of your life you had pictured and had to let go of, the slow ache of being far from home while everyone assumes you are settled. In a lot of families, sadness is not really given room; you are told to be strong, to think of what others have endured, to not let it show before a function. So it goes underground and surfaces later without a label attached. If you cannot point to a cause, it usually means several small things have been carried for a long time, not that you are being irrational.`,
       },
       {
         h: "Why the standard responses do not land",
@@ -326,7 +326,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Exhausted, cynical and running on empty? Talk anonymously to a How Was Your Day listener who has burnt out too. Sessions from 8 minutes.",
     keywords:
-      "feeling burnt out, burnout symptoms, exhausted from work, work burnout india, cannot work anymore tired, founder burnout, someone to talk to about work stress",
+      "feeling burnt out, burnout symptoms, exhausted from work, cannot work anymore tired, founder burnout, someone to talk to about work stress",
     lead: `Burnout is not a bad week. It is what happens when high demand meets low recovery for months, until the work you once cared about produces nothing but dread. The tell is not tiredness — it is the cynicism and the sense that nothing you do makes a difference any more.`,
     sections: [
       {
@@ -335,7 +335,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why it builds so quietly here",
-        p: `Burnout thrives where boundaries are thin and identity is welded to work. In much of Indian professional life, availability is the proof of commitment — messages at eleven at night, weekend calls, a team spread across time zones so there is always someone awake wanting something. If you are the first in your family to have this kind of career, there is an extra weight: rest feels like ingratitude when people sacrificed so you could be here. Founders and early employees carry it differently, where every hour off feels like a risk to the company. Add relentless comparison with peers who appear to be scaling effortlessly, and the natural response to exhaustion becomes working harder, which is exactly the accelerant.`,
+        p: `Burnout thrives where boundaries are thin and identity is welded to work. In plenty of jobs, availability has become the proof of commitment — messages at eleven at night, weekend calls, a team spread across time zones so there is always someone awake wanting something. Carers and parents juggling work carry a second shift on top. Founders and early employees carry it differently, where every hour off feels like a risk to the company. Add relentless comparison with people who appear to be coping effortlessly, and the natural response to exhaustion becomes working harder, which is exactly the accelerant.`,
       },
       {
         h: "Why a vacation does not fix it",
@@ -385,7 +385,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Stuck in a job, a city or a decision you cannot make? Talk to a How Was Your Day listener who has been there. Anonymous, sessions from 8 minutes.",
     keywords:
-      "feeling stuck in life, stuck in a job, cannot make a decision, no direction in life, career confusion india, feeling left behind, someone to talk to",
+      "feeling stuck in life, stuck in a job, cannot make a decision, no direction in life, feeling left behind, someone to talk to",
     lead: `Feeling stuck is the sense that time is passing while nothing is moving — the same job, the same city, the same conversation with yourself every few months. It is not a lack of ambition. It usually means you are standing between options where every path costs something you are not ready to pay.`,
     sections: [
       {
@@ -394,7 +394,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "Why so many people get stuck here",
-        p: `Many careers in India were chosen at seventeen, from a shortlist someone else drew up, and then built on for a decade. Walking away later means unpicking not just a job but a family's plan and a considerable amount of pride. There are real constraints too — loans, dependent parents, a visa, a salary the whole household relies on. Then there is the audience: cousins doing well, batchmates announcing moves, and relatives who treat your life as a public scoreboard, so any experiment risks being seen as a failure in front of everyone. When "log kya kahenge" is a live factor and the safe option is genuinely comfortable, staying still is the rational choice right up until it starts to hurt.`,
+        p: `Many of us chose a path at seventeen, from a shortlist that seemed sensible at the time, and then built on it for a decade. Walking away later means unpicking not just a job but other people's expectations and a fair amount of pride. There are real constraints too — a mortgage or rent, people who rely on your salary, a career you have invested years in. Then there is the audience: friends doing well, old classmates announcing moves, family asking what's next, so any experiment risks feeling like a public failure. When the safe option is genuinely comfortable, staying still is the rational choice right up until it starts to hurt.`,
       },
       {
         h: "Why 'just take the leap' is useless advice",
@@ -444,7 +444,7 @@ export const FEELINGS: Feeling[] = [
     metaDescription:
       "Awake at 3 AM with a mind that will not stop? Talk to a How Was Your Day listener who is online late. Anonymous, sessions from 8 minutes.",
     keywords:
-      "cannot sleep, awake at 3am, overthinking at night, sleepless nights anxiety, insomnia stress india, someone to talk to at night, racing thoughts before sleep",
+      "cannot sleep, awake at 3am, overthinking at night, sleepless nights anxiety, someone to talk to at night, racing thoughts before sleep",
     lead: `There is a particular loneliness to being awake when everyone else is not. The thoughts you outran all day finally catch up, the house is silent, and every worry sounds louder and more permanent than it will at nine in the morning. If you are reading this at an unreasonable hour, you are not the only one.`,
     sections: [
       {
@@ -465,7 +465,7 @@ export const FEELINGS: Feeling[] = [
       },
       {
         h: "When lost sleep needs professional help",
-        p: `Occasional bad nights are part of being human. Sustained sleeplessness is not something to just push through. If you have been unable to sleep for weeks, if daytime functioning is going — driving, working, staying safe — or if the nights come with hopelessness or any thoughts of harming yourself, please speak to a licensed professional; poor sleep and low mood feed each other and both are treatable by the right people. Two free helplines are available across India at any hour, including the ones you are awake for: Samaritans 116 123 and text SHOUT to 85258. How Was Your Day listeners are peers who will keep you company and hear you out at 3 AM, and that is a real thing, but it is support rather than medical care.`,
+        p: `Occasional bad nights are part of being human. Sustained sleeplessness is not something to just push through. If you have been unable to sleep for weeks, if daytime functioning is going — driving, working, staying safe — or if the nights come with hopelessness or any thoughts of harming yourself, please speak to a licensed professional; poor sleep and low mood feed each other and both are treatable by the right people. Free support is available across the UK at any hour, including the ones you are awake for: Samaritans on 116 123 and text SHOUT to 85258. How Was Your Day listeners are peers who will keep you company and hear you out at 3 AM, and that is a real thing, but it is support rather than medical care.`,
       },
     ],
     faqs: [

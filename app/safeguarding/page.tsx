@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Nunito,sans-serif;background:#FFFBF5;color:#0F4867;-webkit-font-smoothing:antialiased;}
-  a{color:#1A8FA0;font-weight:700;text-decoration:none;}
+  body{font-family:Nunito,sans-serif;background:#FFFAF6;color:#3B2F2A;-webkit-font-smoothing:antialiased;}
+  a{color:#B85520;font-weight:700;text-decoration:none;}
   .page{max-width:720px;margin:0 auto;padding:24px 20px 90px;}
-  .back{display:inline-flex;font-size:14px;font-weight:700;color:#6B8FA8;margin-bottom:24px;}
+  .back{display:inline-flex;font-size:14px;font-weight:700;color:#6E5B50;margin-bottom:24px;}
   h1{font-size:clamp(26px,5vw,36px);font-weight:900;line-height:1.15;margin-bottom:10px;}
-  .updated{font-size:13px;color:#6B8FA8;margin-bottom:20px;}
-  .lead{font-size:15px;color:#3A5A6E;line-height:1.75;font-weight:500;background:#F0F8FC;border:1.5px solid #D5EEF6;border-radius:16px;padding:16px 18px;margin-bottom:8px;}
+  .updated{font-size:13px;color:#6E5B50;margin-bottom:20px;}
+  .lead{font-size:15px;color:#4A3C34;line-height:1.75;font-weight:500;background:#FFF6EF;border:1.5px solid #F2DFD1;border-radius:16px;padding:16px 18px;margin-bottom:8px;}
   h2{font-size:19px;font-weight:900;margin:30px 0 10px;}
-  p{font-size:14.5px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:10px;}
+  p{font-size:14.5px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:10px;}
   ul{padding-left:20px;margin-bottom:10px;}
-  li{font-size:14.5px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:4px;}
-  .note{background:#FFF8F0;border-left:4px solid #FF9933;border-radius:0 12px 12px 0;padding:14px 18px;margin:20px 0;}
+  li{font-size:14.5px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:4px;}
+  .note{background:#FFF8F0;border-left:4px solid #E8743B;border-radius:0 12px 12px 0;padding:14px 18px;margin:20px 0;}
 `
 
 export default function SafeguardingPage() {
@@ -46,7 +46,7 @@ export default function SafeguardingPage() {
 
         <h2>2. Who the listeners are, and how they are screened</h2>
         <ul>
-          <li>Listeners are ordinary adults in India with lived experience — peers, not therapists or counsellors. They are screened, not clinically trained.</li>
+          <li>Listeners are ordinary adults in the UK with lived experience — peers, not therapists or counsellors. They are screened, not clinically trained.</li>
           <li>Every applicant completes a written application and a screening quiz on difficult situations: a seeker who mentions ending their life, requests for phone numbers or Instagram, flirting or sexual comments, questions about medication, and looking after their own wellbeing after a heavy session.</li>
           <li>Identity is checked with a live camera selfie (kept private, never shown to seekers) and a manual review by our team.</li>
           <li>Every application and every profile photo is reviewed by a person at How Was Your Day before it goes live; many applicants are asked to fix something or are turned down.</li>

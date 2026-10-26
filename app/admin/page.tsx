@@ -149,7 +149,7 @@ type LoungeRow = { id: string; content: string; created_at: string; sender: { id
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;--green:#34C759;--red:#FF3B30;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;--green:#34C759;--red:#FF3B30;}
   body{font-family:Nunito,sans-serif;background:var(--light);color:var(--navy);-webkit-font-smoothing:antialiased;}
   .page{max-width:1100px;margin:0 auto;padding:0 20px 80px;}
   .topbar{padding:24px 0 16px;display:flex;align-items:center;justify-content:space-between;}
@@ -183,9 +183,9 @@ const S = `
   .badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:50px;font-size:11px;font-weight:800;}
   .badge-green{background:rgba(52,199,89,.15);color:#1a7a2a;}
   .badge-red{background:rgba(255,59,48,.15);color:#c0392b;}
-  .badge-orange{background:rgba(255,153,51,.15);color:#b35c00;}
+  .badge-orange{background:rgba(232,116,59,.15);color:#b35c00;}
   .badge-gray{background:rgba(90,122,138,.12);color:var(--gray);}
-  .badge-teal{background:rgba(26,143,160,.12);color:#0d6e7e;}
+  .badge-teal{background:rgba(184,85,32,.12);color:#9E4719;}
   .action-row{display:flex;gap:6px;flex-wrap:wrap;}
   .btn{font-family:Nunito,sans-serif;font-weight:800;font-size:12px;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .15s;white-space:nowrap;}
   .btn:disabled{opacity:.45;cursor:not-allowed;}
@@ -196,7 +196,7 @@ const S = `
   .btn-orange{background:var(--orange);color:white;}
   .btn-orange:hover:not(:disabled){background:#d97c00;}
   .btn-teal{background:var(--teal);color:white;}
-  .btn-teal:hover:not(:disabled){background:#147a8a;}
+  .btn-teal:hover:not(:disabled){background:#9E4719;}
   .btn-gray{background:var(--light);color:var(--gray);border:1.5px solid var(--border);}
   .btn-gray:hover:not(:disabled){background:var(--border);}
   .pagination{display:flex;justify-content:space-between;align-items:center;margin-top:12px;}
@@ -215,7 +215,7 @@ const S = `
   .meta-text{font-size:12px;color:var(--gray);font-weight:600;margin-top:2px;}
   .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:14px;}
   @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-  .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;box-shadow:0 4px 24px rgba(15,72,103,.3);z-index:9999;animation:toastIn .25s ease;white-space:nowrap;}
+  .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;box-shadow:0 4px 24px rgba(59,47,42,.3);z-index:9999;animation:toastIn .25s ease;white-space:nowrap;}
   .modal-overlay{position:fixed;inset:0;background:rgba(15,34,51,0.55);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;}
   .modal-card{background:white;border-radius:16px;padding:20px 22px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;}
   .transcript-card{max-width:640px;}
@@ -268,14 +268,14 @@ function TalkMetricsCard({ headers }: { headers: () => Record<string, string> })
   }, [days]) // eslint-disable-line react-hooks/exhaustive-deps
   const pct = (n: number, d: number) => (d > 0 ? `${Math.round((n / d) * 100)}%` : '—')
   const box = (label: string, value: string | number, sub?: string) => (
-    <div style={{ background: '#fff', border: '1.5px solid #D5EEF6', borderRadius: 12, padding: '10px 12px', minWidth: 120, flex: '1 1 120px' }}>
+    <div style={{ background: '#fff', border: '1.5px solid #F2DFD1', borderRadius: 12, padding: '10px 12px', minWidth: 120, flex: '1 1 120px' }}>
       <div style={{ fontSize: 11, color: 'var(--gray)', fontWeight: 700 }}>{label}</div>
       <div style={{ fontSize: 20, fontWeight: 800 }}>{value}</div>
       {sub && <div style={{ fontSize: 11, color: 'var(--gray)' }}>{sub}</div>}
     </div>
   )
   return (
-    <div style={{ background: '#F4FBFD', border: '1.5px solid #D5EEF6', borderRadius: 14, padding: 14, marginBottom: 14 }}>
+    <div style={{ background: '#FFFAF6', border: '1.5px solid #F2DFD1', borderRadius: 14, padding: 14, marginBottom: 14 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10, flexWrap: 'wrap' }}>
         <strong>⚡ Talk now</strong>
         <span style={{ fontSize: 12, color: 'var(--gray)' }}>signed-in searches · a hop = one request to one listener</span>
@@ -961,7 +961,7 @@ export default function AdminPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',flexDirection:'column',gap:12}}>
         <div style={{fontSize:32}}>🔐</div>
-        <p style={{fontWeight:700,fontSize:16,color:'#0F4867'}}>Verifying access…</p>
+        <p style={{fontWeight:700,fontSize:16,color:'#3B2F2A'}}>Verifying access…</p>
       </div>
     </>
   )
@@ -971,21 +971,21 @@ export default function AdminPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif'}}>
-        <div style={{background:'white',borderRadius:24,padding:'40px 32px',boxShadow:'0 8px 40px rgba(15,72,103,0.12)',maxWidth:360,width:'100%',textAlign:'center'}}>
+        <div style={{background:'white',borderRadius:24,padding:'40px 32px',boxShadow:'0 8px 40px rgba(59,47,42,0.12)',maxWidth:360,width:'100%',textAlign:'center'}}>
           <div style={{fontSize:40,marginBottom:16}}>🔒</div>
-          <h2 style={{fontSize:22,fontWeight:900,color:'#0F4867',marginBottom:8}}>Admin PIN Required</h2>
-          <p style={{fontSize:14,color:'#5A7A8A',marginBottom:24,lineHeight:1.6}}>Enter your admin PIN to access the dashboard.</p>
+          <h2 style={{fontSize:22,fontWeight:900,color:'#3B2F2A',marginBottom:8}}>Admin PIN Required</h2>
+          <p style={{fontSize:14,color:'#6E5B50',marginBottom:24,lineHeight:1.6}}>Enter your admin PIN to access the dashboard.</p>
           <input
             type="password"
             placeholder="Enter PIN"
             value={pinInput}
             onChange={e => { setPinInput(e.target.value); setPinError('') }}
             onKeyDown={e => { if (e.key === 'Enter') verifyPin() }}
-            style={{width:'100%',padding:'14px 16px',borderRadius:14,border:'2px solid #D5EEF6',fontFamily:'Nunito,sans-serif',fontSize:18,fontWeight:700,letterSpacing:'0.2em',textAlign:'center',outline:'none',boxSizing:'border-box',marginBottom:8}}
+            style={{width:'100%',padding:'14px 16px',borderRadius:14,border:'2px solid #F2DFD1',fontFamily:'Nunito,sans-serif',fontSize:18,fontWeight:700,letterSpacing:'0.2em',textAlign:'center',outline:'none',boxSizing:'border-box',marginBottom:8}}
             autoFocus
           />
           {pinError && <p style={{color:'#FF3B30',fontSize:13,fontWeight:700,marginBottom:8}}>{pinError}</p>}
-          <button onClick={verifyPin} style={{width:'100%',padding:'14px',background:'#0F4867',color:'white',border:'none',borderRadius:50,fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer',marginTop:8}}>
+          <button onClick={verifyPin} style={{width:'100%',padding:'14px',background:'#3B2F2A',color:'white',border:'none',borderRadius:50,fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer',marginTop:8}}>
             Unlock Dashboard
           </button>
         </div>
@@ -996,13 +996,13 @@ export default function AdminPage() {
   if (denied) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center',minHeight:'100vh',fontFamily:'Nunito,sans-serif',background:'#F0F8FC',padding:'20px'}}>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',minHeight:'100vh',fontFamily:'Nunito,sans-serif',background:'#FFF6EF',padding:'20px'}}>
         {authUser ? (
           // Logged in but not admin
           <div style={{textAlign:'center',padding:'40px 24px',maxWidth:380}}>
             <div style={{fontSize:48,marginBottom:16}}>🔒</div>
-            <h2 style={{fontSize:22,fontWeight:900,color:'#0F4867',marginBottom:10}}>Access Denied</h2>
-            <p style={{fontSize:14,color:'#5A7A8A',fontWeight:600,lineHeight:1.7}}>
+            <h2 style={{fontSize:22,fontWeight:900,color:'#3B2F2A',marginBottom:10}}>Access Denied</h2>
+            <p style={{fontSize:14,color:'#6E5B50',fontWeight:600,lineHeight:1.7}}>
               Your account does not have admin access.
             </p>
           </div>
@@ -1010,13 +1010,13 @@ export default function AdminPage() {
           // Not logged in — redirect to app sign-in
           <div style={{textAlign:'center',padding:'40px 24px',maxWidth:380}}>
             <div style={{fontSize:48,marginBottom:16}}>🔐</div>
-            <h2 style={{fontSize:22,fontWeight:900,color:'#0F4867',marginBottom:10}}>Sign in required</h2>
-            <p style={{fontSize:14,color:'#5A7A8A',fontWeight:600,lineHeight:1.7,marginBottom:24}}>
+            <h2 style={{fontSize:22,fontWeight:900,color:'#3B2F2A',marginBottom:10}}>Sign in required</h2>
+            <p style={{fontSize:14,color:'#6E5B50',fontWeight:600,lineHeight:1.7,marginBottom:24}}>
               Sign in to your How Was Your Day account first, then return to this page.
             </p>
             <a
               href="/auth?redirect=/admin"
-              style={{display:'block',padding:'14px',background:'#0F4867',color:'white',textDecoration:'none',borderRadius:50,fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15}}
+              style={{display:'block',padding:'14px',background:'#3B2F2A',color:'white',textDecoration:'none',borderRadius:50,fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15}}
             >
               Sign in →
             </a>
@@ -1161,7 +1161,7 @@ export default function AdminPage() {
                                 {([
                                   { label: '📷 Profile photo', text: 'Please upload a clearer profile photo of yourself.' },
                                   { label: '📝 Bio/info', text: 'Please update your bio or application details.' },
-                                  { label: '🏦 Bank details', text: 'Please provide valid bank or UPI payment details.' },
+                                  { label: '🏦 Bank details', text: 'Please provide a valid UK sort code and account number.' },
                                 ] as { label: string; text: string }[]).map(({ label, text }) => (
                                   <button key={label} type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: '1.5px solid var(--border)', background: 'var(--light)', cursor: 'pointer', fontFamily: 'Nunito,sans-serif', fontWeight: 700, color: 'var(--navy)' }}
                                     onClick={() => setRejectNotesOverview(prev => { const e = prev[l.user_id]?.trim(); return { ...prev, [l.user_id]: e ? `${e} ${text}` : text } })}>
@@ -1219,7 +1219,7 @@ export default function AdminPage() {
                       <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--navy)', marginBottom: 8 }}>Seeker funnel (unique people, all time)</div>
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(140px,1fr))', gap: 8 }}>
                         {steps.map(([label, n, sub], i) => (
-                          <div key={label} style={{ background: i >= 3 ? '#F0FBF8' : 'var(--light)', borderRadius: 12, padding: '8px 10px' }}>
+                          <div key={label} style={{ background: i >= 3 ? '#FFF6EF' : 'var(--light)', borderRadius: 12, padding: '8px 10px' }}>
                             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--gray)' }}>{i + 1}. {label}</div>
                             <div style={{ fontSize: 22, fontWeight: 900, color: i >= 3 ? 'var(--teal)' : 'var(--navy)' }}>{fmt(n)}</div>
                             <div style={{ fontSize: 11, color: 'var(--gray)', fontWeight: 600 }}>{sub}</div>
@@ -1265,7 +1265,7 @@ export default function AdminPage() {
                                 <td style={td}>{d(c.last_paid_session)}</td>
                                 <td style={{ ...td, whiteSpace: 'normal', minWidth: 140 }}>
                                   {c.flags.map(f => <span key={f} style={{ display: 'inline-block', margin: '0 4px 4px 0', padding: '2px 8px', borderRadius: 999, fontSize: 11, fontWeight: 800,
-                                    background: f === 'spent more than wallet inflows' || f === 'paid without recharging' ? '#FFF0EE' : '#F0F8FC',
+                                    background: f === 'spent more than wallet inflows' || f === 'paid without recharging' ? '#FFF0EE' : '#FFF6EF',
                                     color: f === 'spent more than wallet inflows' || f === 'paid without recharging' ? '#c0392b' : 'var(--navy)' }}>{f}</span>)}
                                   {c.other_credits > 0 && <div style={{ color: 'var(--gray)' }}>other credits {fmtRs(c.other_credits)}{c.earned_as_listener ? ' (incl. listener earnings)' : ''}</div>}
                                 </td>
@@ -1377,7 +1377,7 @@ export default function AdminPage() {
                         <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 800, fontSize: 18, color: 'var(--navy)' }}>{fmt(kpis.sessions.freeTrialThisMonth ?? 0)}</td>
                         <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 700, fontSize: 15, color: 'var(--gray)' }}>{fmt(kpis.sessions.freeTrial)}</td>
                       </tr>
-                      <tr style={{ borderTop: '1px solid var(--border)', background: '#FAFCFF' }}>
+                      <tr style={{ borderTop: '1px solid var(--border)', background: '#FFFAF6' }}>
                         <td style={{ padding: '12px 16px', fontWeight: 700, color: 'var(--gray)', fontSize: 13 }}>Paid Sessions</td>
                         <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 800, fontSize: 18, color: 'var(--teal)' }}>{fmt(kpis.sessions.paidToday ?? 0)}</td>
                         <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 800, fontSize: 18, color: 'var(--teal)' }}>{fmt(kpis.sessions.paidThisMonth ?? 0)}</td>
@@ -1431,14 +1431,14 @@ export default function AdminPage() {
                     </div>
                     {/* 2 — Listener earnings settled but not yet requested for payout */}
                     {(kpis.walletLiability.listenerEarningsUnrequestedRupees ?? 0) > 0 && (
-                      <div className="liability-bar" style={{ borderLeftColor: 'var(--teal)', borderColor: '#B2DEB2', background: '#F0FBF8' }}>
+                      <div className="liability-bar" style={{ borderLeftColor: 'var(--teal)', borderColor: '#B2DEB2', background: '#FFF6EF' }}>
                         <div>
-                          <div className="liability-label" style={{ color: '#0d6e7e' }}>Unrequested listener earnings</div>
+                          <div className="liability-label" style={{ color: '#9E4719' }}>Unrequested listener earnings</div>
                           <div className="liability-sub">
                             Listener wallet balances ({kpis.walletLiability.listenersWithBalance ?? '—'} listener{kpis.walletLiability.listenersWithBalance === 1 ? '' : 's'}) not yet requested as payout. Owed to them on demand.
                           </div>
                         </div>
-                        <div className="liability-amount" style={{ color: '#0d6e7e' }}>{fmtRs(kpis.walletLiability.listenerEarningsUnrequestedRupees ?? 0)}</div>
+                        <div className="liability-amount" style={{ color: '#9E4719' }}>{fmtRs(kpis.walletLiability.listenerEarningsUnrequestedRupees ?? 0)}</div>
                       </div>
                     )}
                     {/* Deleted accounts still holding money — they can't log in to withdraw it */}
@@ -1997,7 +1997,7 @@ export default function AdminPage() {
                               )}
                               {l.application?.ifsc_code && (
                                 <div>
-                                  <span style={{ fontWeight: 700, color: 'var(--gray)', marginRight: 4 }}>IFSC</span>
+                                  <span style={{ fontWeight: 700, color: 'var(--gray)', marginRight: 4 }}>Sort code</span>
                                   <span
                                     style={{ fontFamily: 'monospace', background: 'var(--light)', padding: '1px 6px', borderRadius: 4, cursor: 'pointer', userSelect: 'all' }}
                                     title="Click to select and copy"
@@ -2079,7 +2079,7 @@ export default function AdminPage() {
                                         {([
                                           { label: '📷 Profile photo', text: 'Please upload a clearer profile photo of yourself.' },
                                           { label: '📝 Bio/info', text: 'Please update your bio or application details.' },
-                                          { label: '🏦 Bank details', text: 'Please provide valid bank or UPI payment details.' },
+                                          { label: '🏦 Bank details', text: 'Please provide a valid UK sort code and account number.' },
                                         ] as { label: string; text: string }[]).map(({ label, text }) => (
                                           <button key={label} type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: '1.5px solid var(--border)', background: 'var(--light)', cursor: 'pointer', fontFamily: 'Nunito,sans-serif', fontWeight: 700, color: 'var(--navy)' }}
                                             onClick={() => setRejectNotesListeners(prev => { const e = prev[l.user_id]?.trim(); return { ...prev, [l.user_id]: e ? `${e} ${text}` : text } })}>
@@ -2134,7 +2134,7 @@ export default function AdminPage() {
                                       <input
                                         className="reject-input"
                                         style={{ width: 160, marginBottom: 0 }}
-                                        placeholder="e.g. blurry selfie, invalid IFSC…"
+                                        placeholder="e.g. blurry selfie, invalid sort code…"
                                         value={rejectNotesListeners[l.user_id] || ''}
                                         onChange={e => setRejectNotesListeners(prev => ({ ...prev, [l.user_id]: e.target.value }))}
                                       />
@@ -2437,7 +2437,7 @@ export default function AdminPage() {
                     loadSessions(sessionsStatus, sessionsSort, 0, sessionsSortBy, v)
                   }, 400)
                 }}
-                style={{ width: '100%', padding: '9px 14px', borderRadius: 10, border: '1.5px solid #D5EEF6', fontSize: 14, fontFamily: 'inherit', outline: 'none' }}
+                style={{ width: '100%', padding: '9px 14px', borderRadius: 10, border: '1.5px solid #F2DFD1', fontSize: 14, fontFamily: 'inherit', outline: 'none' }}
               />
             </div>
             <div className="filter-row">
@@ -2581,7 +2581,7 @@ export default function AdminPage() {
 
                                   return (
                                     <span title={tooltip}>
-                                      {isNri && <span style={{ fontSize: 9, background: '#E8F4FF', color: '#0066CC', borderRadius: 3, padding: '1px 4px', marginRight: 4, fontWeight: 800 }}>NRI</span>}
+                                      {isNri && <span style={{ fontSize: 9, background: '#FFF6EF', color: '#B85520', borderRadius: 3, padding: '1px 4px', marginRight: 4, fontWeight: 800 }}>NRI</span>}
                                       {formatGBP(listenerNet)}
                                       <span style={{ fontSize: 10, color: 'var(--green)', marginLeft: 3 }}>+{formatGBP(howWasYourDayEarned)}</span>
                                       {isEarlyExit && <span style={{ fontSize: 10, color: 'var(--orange)', marginLeft: 3 }}>↩{formatGBP(refund)}</span>}
@@ -2855,7 +2855,7 @@ export default function AdminPage() {
                   </span>
                 </div>
                 <div style={{ background: 'var(--light)', borderRadius: 10, padding: '10px 12px', marginBottom: 12 }}>
-                  <div style={{ fontSize: 13, color: '#4A6B7E', lineHeight: 1.6 }}>{r.description}</div>
+                  <div style={{ fontSize: 13, color: '#5C4A40', lineHeight: 1.6 }}>{r.description}</div>
                   <div style={{ fontSize: 11, color: 'var(--gray)', marginTop: 6, fontWeight: 600 }}>{fmtDate(r.created_at)}</div>
                 </div>
                 {r.status === 'pending' && (
@@ -2966,7 +2966,7 @@ export default function AdminPage() {
                     const [markerIfsc, markerAcct] = bankMarker ? bankMarker.split('/') : [null, null]
                     const acct = p.bank?.bank_account ?? markerAcct ?? null
                     const ifsc = p.bank?.ifsc_code ?? markerIfsc ?? null
-                    const pill: React.CSSProperties = { userSelect: 'all', background: '#F0F8FC', padding: '2px 8px', borderRadius: 6 }
+                    const pill: React.CSSProperties = { userSelect: 'all', background: '#FFF6EF', padding: '2px 8px', borderRadius: 6 }
                     return (
                       <>
                         {isVpa && (
@@ -2985,7 +2985,7 @@ export default function AdminPage() {
                         {acct && ifsc && (
                           <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--navy)', marginTop: 4, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                             🏦 A/C: <span style={pill}>{acct}</span>
-                            IFSC: <span style={pill}>{ifsc}</span>
+                            Sort code: <span style={pill}>{ifsc}</span>
                             <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--gray)' }}>transfer via your bank app (IMPS/NEFT), then Mark Paid</span>
                           </div>
                         )}
@@ -3335,17 +3335,17 @@ export default function AdminPage() {
           <div style={{ background: 'white', borderRadius: 20, padding: '28px 24px', maxWidth: 400, width: '100%', textAlign: 'center' }}>
             <div style={{ fontSize: 36, marginBottom: 12 }}>⚠️</div>
             <h3 style={{ fontSize: 18, fontWeight: 800, color: '#B71C1C', marginBottom: 8 }}>Permanently delete this account?</h3>
-            <p style={{ fontSize: 13, color: '#5A7A8A', fontWeight: 600, lineHeight: 1.6, marginBottom: 6 }}>
+            <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 600, lineHeight: 1.6, marginBottom: 6 }}>
               All personal data (name, phone, bank details, aadhaar, selfie, ID docs) will be permanently erased. Phone number will be replaced with a DELETE + last 5 digits stub for audit trail. Sessions and financial records stay but are anonymized.
             </p>
             <p style={{ fontSize: 12, color: '#B71C1C', fontWeight: 700, marginBottom: 16 }}>
               This cannot be undone.
             </p>
-            <p style={{ fontSize: 13, fontWeight: 700, color: '#0F4867', marginBottom: 10 }}>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#3B2F2A', marginBottom: 10 }}>
               Type <strong>DELETE</strong> to confirm
             </p>
             <input
-              style={{ width: '100%', padding: '10px 14px', border: '2px solid #D5EEF6', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: "'Nunito', sans-serif", letterSpacing: 2 }}
+              style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: "'Nunito', sans-serif", letterSpacing: 2 }}
               value={deleteConfirmInput}
               onChange={e => setDeleteConfirmInput(e.target.value.toUpperCase())}
               placeholder="DELETE"
@@ -3360,7 +3360,7 @@ export default function AdminPage() {
                 {deletingUser ? 'Deleting...' : 'Permanently delete'}
               </button>
               <button
-                style={{ flex: 1, padding: '12px 0', background: 'white', color: '#0F4867', border: '2px solid #D5EEF6', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" }}
+                style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" }}
                 onClick={() => { setConfirmDeleteUserId(null); setDeleteConfirmInput('') }}
               >
                 Cancel

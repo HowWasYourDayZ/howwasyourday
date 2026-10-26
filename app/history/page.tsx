@@ -7,7 +7,7 @@ import Avatar from '@/app/components/Avatar'
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
 body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:var(--light);}
 .page{max-width:480px;margin:0 auto;background:white;min-height:100dvh;padding-bottom:90px;}
 .topbar{position:sticky;top:0;z-index:50;background:var(--navy);padding:16px 18px 14px;}
@@ -15,7 +15,7 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .topbar p{font-size:12px;color:rgba(255,255,255,0.7);font-weight:600;margin-top:2px;}
 .chat-row{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;}
 .chat-row:hover{background:var(--light);}
-.chat-row:active{background:#E8F4FD;}
+.chat-row:active{background:#FFF6EF;}
 .avatar{width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:white;flex-shrink:0;overflow:hidden;}
 .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
 .active-ring{outline:2.5px solid #34C759;outline-offset:2px;}
@@ -24,7 +24,7 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .chat-name{font-size:15px;font-weight:800;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .role-tag{font-size:10px;font-weight:800;padding:1px 7px;border-radius:50px;flex-shrink:0;}
 .role-listener{background:#FFF3E0;color:#B35C00;}
-.role-seeker{background:rgba(26,143,160,.12);color:#0d6e7e;}
+.role-seeker{background:rgba(184,85,32,.12);color:#9E4719;}
 .chat-time{font-size:11px;color:var(--gray);font-weight:600;flex-shrink:0;}
 .chat-preview{display:flex;align-items:center;gap:6px;}
 .preview-text{font-size:13px;color:var(--gray);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;}

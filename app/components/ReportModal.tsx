@@ -91,38 +91,38 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
         {submitted ? (
           <div style={{ textAlign: 'center', padding: '20px 0' }}>
             <div style={{ fontSize: 48, marginBottom: 12 }}>🙏</div>
-            <div style={{ fontSize: 18, fontWeight: 800, color: '#0F4867', marginBottom: 8 }}>
+            <div style={{ fontSize: 18, fontWeight: 800, color: '#3B2F2A', marginBottom: 8 }}>
               Thank you for reporting
             </div>
-            <div style={{ fontSize: 14, color: '#5A7A8A', fontWeight: 500, lineHeight: 1.6 }}>
+            <div style={{ fontSize: 14, color: '#6E5B50', fontWeight: 500, lineHeight: 1.6 }}>
               We&apos;ll review this within 24 hours. Your safety matters to us.
             </div>
           </div>
         ) : (
           <>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-              <div style={{ fontSize: 18, fontWeight: 900, color: '#0F4867' }}>
+              <div style={{ fontSize: 18, fontWeight: 900, color: '#3B2F2A' }}>
                 Report {targetName}
               </div>
               <button
                 ref={firstBtn}
                 onClick={onClose}
-                style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: '#5A7A8A', lineHeight: 1 }}
+                style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: '#6E5B50', lineHeight: 1 }}
                 aria-label="Close"
               >✕</button>
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <label style={{ fontSize: 12, fontWeight: 800, color: '#5A7A8A', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: 8 }}>
+              <label style={{ fontSize: 12, fontWeight: 800, color: '#6E5B50', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: 8 }}>
                 What happened?
               </label>
               <select
                 value={reason}
                 onChange={e => setReason(e.target.value)}
                 style={{
-                  width: '100%', padding: '10px 12px', border: '1.5px solid #D5EEF6',
+                  width: '100%', padding: '10px 12px', border: '1.5px solid #F2DFD1',
                   borderRadius: 10, fontFamily: "'Nunito', sans-serif",
-                  fontSize: 14, fontWeight: 600, color: '#0F4867', outline: 'none',
+                  fontSize: 14, fontWeight: 600, color: '#3B2F2A', outline: 'none',
                   background: 'white',
                 }}
               >
@@ -134,7 +134,7 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
             </div>
 
             <div style={{ marginBottom: 20 }}>
-              <label style={{ fontSize: 12, fontWeight: 800, color: '#5A7A8A', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: 8 }}>
+              <label style={{ fontSize: 12, fontWeight: 800, color: '#6E5B50', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: 8 }}>
                 Details <span style={{ fontWeight: 500, textTransform: 'none' }}>(min 10 chars)</span>
               </label>
               <textarea
@@ -143,13 +143,13 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
                 placeholder="Please describe what happened…"
                 rows={4}
                 style={{
-                  width: '100%', padding: '10px 12px', border: '1.5px solid #D5EEF6',
+                  width: '100%', padding: '10px 12px', border: '1.5px solid #F2DFD1',
                   borderRadius: 10, fontFamily: "'Nunito', sans-serif",
-                  fontSize: 14, fontWeight: 500, color: '#0F4867', outline: 'none',
+                  fontSize: 14, fontWeight: 500, color: '#3B2F2A', outline: 'none',
                   resize: 'vertical', boxSizing: 'border-box',
                 }}
               />
-              <div style={{ fontSize: 11, color: '#8AAAB8', textAlign: 'right', marginTop: 4 }}>
+              <div style={{ fontSize: 11, color: '#8A766B', textAlign: 'right', marginTop: 4 }}>
                 {details.length}/500
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
             >
               {loading ? 'Submitting…' : 'Submit Report'}
             </button>
-            <p style={{ fontSize: 12, color: '#8AAAB8', textAlign: 'center', marginTop: 12, marginBottom: 0 }}>
+            <p style={{ fontSize: 12, color: '#8A766B', textAlign: 'center', marginTop: 12, marginBottom: 0 }}>
               All reports are anonymous and reviewed within 24 hours.
             </p>
           </>

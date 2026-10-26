@@ -43,9 +43,9 @@ export async function generateMetadata({ params }: { params: { mood: string } })
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
   body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:56px;width:auto;}
@@ -60,7 +60,7 @@ const S = `
   .lead{font-size:17px;color:var(--gray);line-height:1.78;font-weight:500;max-width:640px;}
   .section{background:white;border-radius:24px;padding:32px;margin-bottom:24px;border:1.5px solid var(--border);}
   .section h2{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:12px;}
-  .section p{font-size:15px;color:#3A6070;line-height:1.80;margin-bottom:0;}
+  .section p{font-size:15px;color:#4A3C34;line-height:1.80;margin-bottom:0;}
   .faq-item{border-bottom:1.5px solid var(--border);padding:20px 0;}
   .faq-item:first-of-type{padding-top:0;}
   .faq-item:last-of-type{border-bottom:none;padding-bottom:0;}
@@ -68,8 +68,8 @@ const S = `
   .faq-a{font-size:14px;color:var(--gray);line-height:1.75;font-weight:500;}
   .cta-card{background:var(--navy);border-radius:24px;padding:40px 32px;text-align:center;margin-bottom:24px;}
   .cta-card h2{font-size:24px;font-weight:900;color:white;margin-bottom:12px;}
-  .cta-card p{font-size:15px;color:rgba(201,231,244,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
-  .btn-primary{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(255,153,51,0.35);}
+  .cta-card p{font-size:15px;color:rgba(251,227,210,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
+  .btn-primary{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(232,116,59,0.35);}
   .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:8px;}
   .related-link{background:var(--light);border:1.5px solid var(--border);border-radius:16px;padding:14px 16px;font-size:14px;font-weight:700;color:var(--navy);}
   .mood-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:8px;}
@@ -124,8 +124,8 @@ export default function FeelingPage({ params }: { params: { mood: string } }) {
           <span style={{ color: 'var(--navy)' }}>{f.label}</span>
         </nav>
 
-        <div style={{ background:'#EBF5FB', borderLeft:'4px solid #1A8FA0', borderRadius:'0 12px 12px 0', padding:'14px 18px', marginBottom:28, fontSize:14, color:'#0F4867', fontWeight:600, lineHeight:1.65 }}>
-          🆘 In crisis? Call <a href="tel:116123" style={{ color:'#1A8FA0', fontWeight:800 }}>Samaritans 116 123</a> or <a href="sms:85258" style={{ color:'#1A8FA0', fontWeight:800 }}>text SHOUT to 85258</a> (free · 24/7)
+        <div style={{ background:'#FFF6EF', borderLeft:'4px solid #B85520', borderRadius:'0 12px 12px 0', padding:'14px 18px', marginBottom:28, fontSize:14, color:'#3B2F2A', fontWeight:600, lineHeight:1.65 }}>
+          🆘 In crisis? Call <a href="tel:116123" style={{ color:'#B85520', fontWeight:800 }}>Samaritans 116 123</a> or <a href="sms:85258" style={{ color:'#B85520', fontWeight:800 }}>text SHOUT to 85258</a> (free · 24/7)
         </div>
 
         <div className="hero">

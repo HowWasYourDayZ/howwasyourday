@@ -15,12 +15,7 @@ export default function robots(): MetadataRoute.Robots {
       ...SEARCH_CRAWLERS.map(userAgent=>({userAgent,allow:'/',disallow:PRIVATE})),
       ...AI_CRAWLERS.map(userAgent=>({userAgent,allow:'/',disallow:[...PRIVATE, ...AI_BLOCKED_PATHS]})),
     ],
-    sitemap: [
-      'https://www.howwasyourday.live/sitemap.xml',
-      'https://www.howwasyourday.live/country-sitemap.xml',
-      'https://www.howwasyourday.live/nri-sitemap.xml',
-      'https://www.howwasyourday.live/seo-sitemap.xml',
-    ],
+    sitemap: 'https://www.howwasyourday.live/sitemap.xml',
     host:'https://www.howwasyourday.live',
   }
 }

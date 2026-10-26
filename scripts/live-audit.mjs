@@ -13,10 +13,9 @@ const UAS = {
   'chatgpt-user': 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot',
   perplexitybot: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot',
 }
-const KEY_PAGES = ['/', '/talk', '/browse', '/pricing', '/answers', '/trust', '/faq', '/terms', '/privacy', '/is-howwasyourday-worth-it',
-  '/for-women', '/marriage-problems-india', '/relationship-support-real-person', '/relationship-emotional-support-guide-india',
-  '/support/loneliness', '/peer-support', '/delete-account', '/llms.txt', '/become-a-peer-supporter', '/become-listener']
-const geoUrls = [...new Set([...readFileSync('lib/geo-questions.ts', 'utf8').matchAll(/url: '([^']+)'/g)].map(m => m[1]))]
+const KEY_PAGES = ['/', '/talk', '/browse', '/pricing', '/how-it-works', '/trust', '/faq', '/terms', '/privacy',
+  '/safeguarding', '/peer-support', '/delete-account', '/llms.txt', '/become-a-peer-supporter', '/become-listener']
+const geoUrls = []
 
 const pick = (re, s) => { const m = s.match(re); return m ? m[1].replace(/\s+/g, ' ').trim() : null }
 async function get(path, ua = 'browser') {
@@ -100,13 +99,13 @@ for (const p of ['/', '/talk', '/for-women']) {
       field: j.loadingExperience?.overall_category ?? 'no field data' }
   } catch (e) { report.pagespeed[p] = { error: String(e) } }
 }
-// Brand guard: the home page is what ChatGPT cites for "I feel lonely… real human
-// listeners?" (docs/ai-visibility/WINNING_ANSWERS.md). Fail the run if it changes.
+// Brand guard: the home page's title and description carry the brand promise
+// (PROJECT.md §1a). Fail the run if they disappear.
 const home = report.pages.find(p => p.path === '/') || {}
 const guard = {
   homeOk: home.status === 200,
-  titleCited: (home.title || '').includes('Talk to a Listener in India'),
-  descriptionFacts: ['real human peer listeners', 'one-to-one', 'free 5-minute introduction'].every(f => (home.metaDescription || '').includes(f)),
+  titleCited: (home.title || '').includes('Talk It Through With a Real Person'),
+  descriptionFacts: ['real person', '8 minutes is enough', 'Not therapy'].every(f => (home.metaDescription || '').includes(f)),
   crawlersGetHome: ['googlebot', 'bingbot', 'oai-searchbot', 'chatgpt-user'].every(ua => report.botAccess['/']?.[ua] === 200),
   talkOk: report.pages.find(p => p.path === '/talk')?.status === 200,
   llmsOk: report.pages.find(p => p.path === '/llms.txt')?.status === 200,

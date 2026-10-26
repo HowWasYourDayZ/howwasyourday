@@ -56,11 +56,11 @@ export async function notifySessionComplete(opts: {
       html: `
         <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
           <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
-          <h2 style="color:#0F4867;">Your session is complete 🙏</h2>
-          <p style="color:#5A7A8A;">You just had a ${esc(durationMins)}-min ${esc(sessionType)} session with <strong>${esc(listenerName)}</strong>.</p>
-          <p style="color:#5A7A8A;">We hope it helped. You can rate your session and book again anytime.</p>
-          <a href="https://howwasyourday.live/sessions" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View my sessions →</a>
-          <p style="font-size:12px;color:#8AAAB8;margin-top:24px;">In crisis? text SHOUT to 85258 (free, 24/7).</p>
+          <h2 style="color:#3B2F2A;">Your session is complete 🙏</h2>
+          <p style="color:#6E5B50;">You just had a ${esc(durationMins)}-min ${esc(sessionType)} session with <strong>${esc(listenerName)}</strong>.</p>
+          <p style="color:#6E5B50;">We hope it helped. You can rate your session and book again anytime.</p>
+          <a href="https://howwasyourday.live/sessions" style="display:inline-block;background:#E8743B;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View my sessions →</a>
+          <p style="font-size:12px;color:#8A766B;margin-top:24px;">In crisis? text SHOUT to 85258 (free, 24/7).</p>
         </div>
       `,
     })
@@ -75,10 +75,10 @@ export async function notifySessionComplete(opts: {
       html: `
         <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
           <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
-          <h2 style="color:#0F4867;">Great session, ${esc(listenerName)}! 🎉</h2>
-          <p style="color:#5A7A8A;">Your ${esc(durationMins)}-min ${esc(sessionType)} session is complete.</p>
-          <p style="color:#5A7A8A;"><strong>${formatGBP(listenerEarning)} has been credited to your How Was Your Day wallet.</strong></p>
-          <a href="https://howwasyourday.live/dashboard" style="display:inline-block;background:#1A8FA0;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View dashboard →</a>
+          <h2 style="color:#3B2F2A;">Great session, ${esc(listenerName)}! 🎉</h2>
+          <p style="color:#6E5B50;">Your ${esc(durationMins)}-min ${esc(sessionType)} session is complete.</p>
+          <p style="color:#6E5B50;"><strong>${formatGBP(listenerEarning)} has been credited to your How Was Your Day wallet.</strong></p>
+          <a href="https://howwasyourday.live/dashboard" style="display:inline-block;background:#B85520;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">View dashboard →</a>
         </div>
       `,
     })
@@ -100,10 +100,10 @@ export async function notifyWalletRecharge(opts: {
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
         <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
-        <h2 style="color:#0F4867;">Wallet topped up! 💰</h2>
-        <p style="color:#5A7A8A;">Hi ${esc(userName || 'there')}, <strong>${formatGBP(amount)} has been added to your How Was Your Day wallet.</strong></p>
-        <p style="color:#5A7A8A;">You're all set to book a session. Browse available listeners now.</p>
-        <a href="https://howwasyourday.live/browse" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">Browse listeners →</a>
+        <h2 style="color:#3B2F2A;">Wallet topped up! 💰</h2>
+        <p style="color:#6E5B50;">Hi ${esc(userName || 'there')}, <strong>${formatGBP(amount)} has been added to your How Was Your Day wallet.</strong></p>
+        <p style="color:#6E5B50;">You're all set to book a session. Browse available listeners now.</p>
+        <a href="https://howwasyourday.live/browse" style="display:inline-block;background:#E8743B;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">Browse listeners →</a>
       </div>
     `,
   })
@@ -124,9 +124,9 @@ export async function notifyPayoutRequested(opts: {
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
         <img src="https://howwasyourday.live/logo.png" alt="How Was Your Day" style="height:40px;margin-bottom:20px;" />
-        <h2 style="color:#0F4867;">Payout request received 🏦</h2>
-        <p style="color:#5A7A8A;">Hi ${esc(listenerName)}, your request to withdraw <strong>${formatGBP(amount)}</strong> has been received.</p>
-        <p style="color:#5A7A8A;">We'll transfer it to your registered bank account within <strong>3 business days</strong>.</p>
+        <h2 style="color:#3B2F2A;">Payout request received 🏦</h2>
+        <p style="color:#6E5B50;">Hi ${esc(listenerName)}, your request to withdraw <strong>${formatGBP(amount)}</strong> has been received.</p>
+        <p style="color:#6E5B50;">We'll transfer it to your registered bank account within <strong>3 business days</strong>.</p>
       </div>
     `,
   })
@@ -154,11 +154,11 @@ export async function sendScheduledSessionEmail(opts: {
     subject,
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
-        <h2 style="color:#0F4867;">${opts.kind === 'confirmation' ? 'Your session is booked' : 'Your session is coming up'}</h2>
-        <p style="color:#5A7A8A;">${esc(opts.durationMins)}-minute ${esc(opts.sessionType)} session on <strong>${esc(opts.when)}</strong> (UK time).</p>
-        <p style="color:#5A7A8A;">The session page opens 5 minutes before the start. If you can't make it, cancel from your sessions page at least 2 hours before for a full refund.</p>
-        <a href="${esc(opts.url)}" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">Open session →</a>
-        <p style="font-size:12px;color:#8AAAB8;margin-top:24px;">In crisis? Call Samaritans on 116 123 or text SHOUT to 85258 (free, 24/7). In an emergency call 999.</p>
+        <h2 style="color:#3B2F2A;">${opts.kind === 'confirmation' ? 'Your session is booked' : 'Your session is coming up'}</h2>
+        <p style="color:#6E5B50;">${esc(opts.durationMins)}-minute ${esc(opts.sessionType)} session on <strong>${esc(opts.when)}</strong> (UK time).</p>
+        <p style="color:#6E5B50;">The session page opens 5 minutes before the start. If you can't make it, cancel from your sessions page at least 2 hours before for a full refund.</p>
+        <a href="${esc(opts.url)}" style="display:inline-block;background:#E8743B;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">Open session →</a>
+        <p style="font-size:12px;color:#8A766B;margin-top:24px;">In crisis? Call Samaritans on 116 123 or text SHOUT to 85258 (free, 24/7). In an emergency call 999.</p>
       </div>
     `,
     ...(opts.ics ? { attachments: [{ filename: 'how-was-your-day-session.ics', content: Buffer.from(opts.ics).toString('base64') }] } : {}),

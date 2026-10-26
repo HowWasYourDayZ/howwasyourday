@@ -6,7 +6,7 @@ import Avatar from '@/app/components/Avatar'
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
 body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:var(--light);}
 .page{max-width:480px;margin:0 auto;background:white;min-height:100dvh;padding-bottom:100px;}
 .topbar{background:var(--navy);padding:16px 18px 14px;display:flex;align-items:center;gap:12px;}
@@ -105,8 +105,8 @@ export default function MessageThreadPage({ params }: { params: { id: string } }
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', gap: 16, padding: 24, textAlign: 'center' }}>
         <div style={{ fontSize: 48 }}>💬</div>
-        <div style={{ fontSize: 18, fontWeight: 900, color: '#0F4867' }}>Message not found</div>
-        <button style={{ background: '#FF9933', color: 'white', border: 'none', borderRadius: 50, padding: '12px 28px', fontFamily: 'Nunito,sans-serif', fontWeight: 800, cursor: 'pointer' }} onClick={() => router.push('/history')}>Back to Chats</button>
+        <div style={{ fontSize: 18, fontWeight: 900, color: '#3B2F2A' }}>Message not found</div>
+        <button style={{ background: '#E8743B', color: 'white', border: 'none', borderRadius: 50, padding: '12px 28px', fontFamily: 'Nunito,sans-serif', fontWeight: 800, cursor: 'pointer' }} onClick={() => router.push('/history')}>Back to Chats</button>
       </div>
     </>
   )
@@ -114,7 +114,7 @@ export default function MessageThreadPage({ params }: { params: { id: string } }
   if (!thread) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', color: '#0F4867' }}>Loading…</div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', color: '#3B2F2A' }}>Loading…</div>
     </>
   )
 
@@ -156,7 +156,7 @@ export default function MessageThreadPage({ params }: { params: { id: string } }
           ))}
 
           {thread.iAmListener && (
-            <div style={{ marginTop: 12, background: '#F0F8FC', border: '1.5px solid #D5EEF6', borderRadius: 14, padding: '14px 16px', fontSize: 13, fontWeight: 600, color: '#5A7A8A', lineHeight: 1.6 }}>
+            <div style={{ marginTop: 12, background: '#FFF6EF', border: '1.5px solid #F2DFD1', borderRadius: 14, padding: '14px 16px', fontSize: 13, fontWeight: 600, color: '#6E5B50', lineHeight: 1.6 }}>
               💡 Reach back out with one tap. Go online, then tap the button below — we&apos;ll let {thread.otherName} know you&apos;re available and send them to your profile to start a live session. (You can&apos;t chat here — How Was Your Day keeps support to live sessions.)
             </div>
           )}

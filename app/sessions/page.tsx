@@ -8,15 +8,15 @@ import { createClient } from '@/lib/supabase'
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
 body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-  background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:12px;}
 .back-btn{background:none;border:none;cursor:pointer;font-size:20px;color:var(--navy);padding:4px;line-height:1;}
 .topbar h1{font-size:20px;font-weight:900;color:var(--navy);}
 .page{max-width:540px;margin:0 auto;padding:16px 20px 100px;}
-.card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:18px;margin-bottom:14px;box-shadow:0 1px 4px rgba(15,72,103,.04);}
+.card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:18px;margin-bottom:14px;box-shadow:0 1px 4px rgba(59,47,42,.04);}
 .card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px;}
 .listener-name{font-size:16px;font-weight:800;color:var(--navy);}
 .badge{display:inline-block;padding:4px 10px;border-radius:50px;font-size:11px;font-weight:700;}
@@ -31,7 +31,7 @@ a{text-decoration:none;color:inherit;}
 .rating-row{font-size:13px;font-weight:600;color:var(--gray);margin-bottom:10px;}
 .stars{color:#F59E0B;letter-spacing:1px;}
 .rejoin-btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:13px;padding:10px 18px;border-radius:12px;border:none;cursor:pointer;transition:all .2s;}
-.rejoin-btn:hover{background:#e8861a;}
+.rejoin-btn:hover{background:#D0632D;}
 .empty{text-align:center;padding:60px 20px;}
 .empty-icon{font-size:48px;margin-bottom:16px;}
 .empty h3{font-size:18px;font-weight:800;margin-bottom:8px;color:var(--navy);}

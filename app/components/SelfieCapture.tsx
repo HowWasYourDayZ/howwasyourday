@@ -184,7 +184,7 @@ export default function SelfieCapture({ onCapture, preview, loading, hasError }:
         style={{
           display: 'block',
           width: '100%',
-          border: `2px dashed ${hasError ? '#FF3B30' : '#B0D4E8'}`,
+          border: `2px dashed ${hasError ? '#FF3B30' : '#F2DFD1'}`,
           borderRadius: 14,
           padding: '18px 12px 14px',
           textAlign: 'center',
@@ -205,10 +205,10 @@ export default function SelfieCapture({ onCapture, preview, loading, hasError }:
         ) : (
           <div style={{ fontSize: 40, marginBottom: 6 }}>🤳</div>
         )}
-        <div style={{ fontSize: 14, fontWeight: 700, color: '#0F4867' }}>
+        <div style={{ fontSize: 14, fontWeight: 700, color: '#3B2F2A' }}>
           {loading ? 'Uploading…' : cameraStarting ? 'Opening camera…' : preview ? 'Retake selfie' : 'Take a selfie'}
         </div>
-        <div style={{ fontSize: 11, color: '#5A7A8A', fontWeight: 600, marginTop: 3 }}>
+        <div style={{ fontSize: 11, color: '#6E5B50', fontWeight: 600, marginTop: 3 }}>
           {cameraStarting ? 'Allow camera access when prompted' : 'Uses your camera · no file upload'}
         </div>
       </button>
@@ -303,7 +303,7 @@ export default function SelfieCapture({ onCapture, preview, loading, hasError }:
               <button
                 type="button"
                 onClick={close}
-                style={{ background: '#1A8FA0', color: 'white', border: 'none', borderRadius: 50, padding: '13px 32px', fontWeight: 800, fontSize: 15, fontFamily: 'inherit', cursor: 'pointer' }}
+                style={{ background: '#B85520', color: 'white', border: 'none', borderRadius: 50, padding: '13px 32px', fontWeight: 800, fontSize: 15, fontFamily: 'inherit', cursor: 'pointer' }}
               >
                 Try again
               </button>
@@ -319,7 +319,7 @@ export default function SelfieCapture({ onCapture, preview, loading, hasError }:
                 disabled={busy || !videoReady}
                 style={{
                   width: '100%', padding: '16px', borderRadius: 50,
-                  background: (busy || !videoReady) ? 'rgba(26,143,160,0.5)' : '#1A8FA0',
+                  background: (busy || !videoReady) ? 'rgba(184,85,32,0.5)' : '#B85520',
                   color: 'white', border: 'none', cursor: (busy || !videoReady) ? 'default' : 'pointer',
                   fontWeight: 800, fontSize: 16, fontFamily: 'inherit',
                   transition: 'background .15s',

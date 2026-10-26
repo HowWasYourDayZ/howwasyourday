@@ -83,30 +83,30 @@ function WelcomeBanner({
         }}>
           Someone to talk to, from 8 minutes.
         </h2>
-        <p style={{fontSize:16, color:'rgba(213,238,246,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
+        <p style={{fontSize:16, color:'rgba(251,227,210,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
           Real person, not AI.
         </p>
-        <p style={{fontSize:16, color:'rgba(213,238,246,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
+        <p style={{fontSize:16, color:'rgba(251,227,210,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
           Anonymous. No prescription.
         </p>
-        <p style={{fontSize:16, color:'rgba(213,238,246,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:40, maxWidth:300}}>
+        <p style={{fontSize:16, color:'rgba(251,227,210,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:40, maxWidth:300}}>
           Just someone who listens.
         </p>
         <button
           onClick={dismiss}
           style={{
-            background:'#FF9933', color:'white',
+            background:'#E8743B', color:'white',
             border:'none', borderRadius:50,
             padding:'16px 40px',
             fontSize:17, fontWeight:900,
             cursor:'pointer', width:'100%', maxWidth:320,
-            boxShadow:'0 4px 24px rgba(255,153,51,0.45)',
+            boxShadow:'0 4px 24px rgba(232,116,59,0.45)',
             fontFamily:'Nunito,sans-serif',
           }}
         >
           {topicLabel ? `Find a ${topicLabel.toLowerCase()} listener →` : 'Find a listener →'}
         </button>
-        <p style={{fontSize:13, color:'rgba(213,238,246,0.45)', marginTop:20, fontWeight:600}}>
+        <p style={{fontSize:13, color:'rgba(251,227,210,0.45)', marginTop:20, fontWeight:600}}>
           No credit card needed for the free session.
         </p>
       </div>
@@ -120,7 +120,7 @@ function WelcomeBanner({
         <p style={{fontSize:14,fontWeight:800,margin:0,marginBottom:2}}>
           Not sure where to start?
         </p>
-        <p style={{fontSize:13,fontWeight:600,color:'rgba(213,238,246,0.9)',margin:0}}>
+        <p style={{fontSize:13,fontWeight:600,color:'rgba(251,227,210,0.9)',margin:0}}>
           Pick someone you’d feel comfortable talking to — text or voice, now or at a time you book. Sessions start at 8 minutes.
         </p>
       </div>
@@ -132,7 +132,7 @@ function WelcomeBanner({
 // Photo-less listeners get a stable brand-palette colour from their name, so
 // cards don't all look identical. Blues/teals only (orange is the CTA colour);
 // all pass 4.5:1 with white initials.
-const INITIALS_COLORS = ['#0F4867', '#137A89', '#2E6F8E', '#3B6E86']
+const INITIALS_COLORS = ['#3B2F2A', '#9E4719', '#B85520', '#6E5B50']
 function initialsColor(name: string): string {
   let h = 0
   for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0
@@ -225,33 +225,20 @@ const TOPIC_ALIASES: Record<string, string> = {
   'feeling-like-a-failure':          'selfesteem',
   'work-from-home-loneliness':       'loneliness',
   'sunday-night-loneliness':         'loneliness',
-  'new-city-india':                  'loneliness',
-  'men-loneliness-india':            'loneliness',
   'marriage-loneliness':             'relationships',
   'relationship-stress':             'relationships',
   'relationship-anxiety':            'relationships',
   'married-but-lonely':              'relationships',
   'long-distance-relationship':      'relationships',
-  'family-pressure-india':           'relationships',
   'arranged-marriage-stress':        'relationships',
-  'husband-not-supportive-india':    'relationships',
-  'not-ready-to-get-married-india':  'relationships',
-  'fear-of-marriage-india':          'relationships',
   'job-loss':                        'career',
   'career-confusion':                'career',
-  'career-pressure-india':           'career',
   'founder-burnout':                 'startup',
   'student-stress':                  'students',
-  'mom-burnout-india':               'parenting',
-  'postpartum-india':                'parenting',
   'emotional-exhaustion':            'burnout',
-  'banking-job-stress-india':        'stress',
-  'working-woman-india':             'stress',
   'emotional-support':               'general',
   'someone-to-talk-to':              'general',
   'anonymous-support':               'general',
-  'adulting-india':                  'general',
-  'childhood-trauma-india':          'general',
   'dont-want-to-get-out-of-bed':     'general',
   'emotional-numbness':              'general',
   'feeling-empty':                   'general',
@@ -273,9 +260,9 @@ type SortId = typeof SORTS[number]['id']
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
 body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-  background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
 .head{padding:16px 0 10px;}
@@ -300,8 +287,8 @@ a{text-decoration:none;color:inherit;}
 .list{padding:16px 20px 96px;display:grid;grid-template-columns:minmax(0,1fr);gap:14px;max-width:1200px;margin:0 auto;}
 @media(min-width:640px){.list{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(min-width:960px){.list{grid-template-columns:repeat(3,minmax(0,1fr));}}
-.card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:18px;transition:border-color .2s,box-shadow .2s;box-shadow:0 1px 4px rgba(15,72,103,.04);display:flex;flex-direction:column;}
-.card:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(15,72,103,.08);}
+.card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:18px;transition:border-color .2s,box-shadow .2s;box-shadow:0 1px 4px rgba(59,47,42,.04);display:flex;flex-direction:column;}
+.card:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(59,47,42,.08);}
 .card-link{display:block;color:inherit;border-radius:14px;outline-offset:4px;}
 .card-link:focus-visible{outline:2.5px solid var(--teal);}
 .card-actions{margin-top:auto;padding-top:4px;}
@@ -323,30 +310,30 @@ a{text-decoration:none;color:inherit;}
 .fit .ln{display:flex;align-items:center;gap:6px;}
 .btn-filters{flex-shrink:0;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:50px;font-size:13px;font-weight:800;border:1.5px solid var(--navy);background:white;color:var(--navy);cursor:pointer;font-family:Nunito,sans-serif;}
 .btn-filters .cnt{background:var(--orange);color:white;border-radius:50px;padding:0 6px;font-size:11px;}
-.verified-chip{display:inline-flex;align-items:center;gap:3px;flex-shrink:0;background:#E6F6FF;color:#0F4867;font-size:11px;font-weight:800;padding:2px 8px 2px 6px;border-radius:50px;border:1.5px solid #B8D9F0;}
+.verified-chip{display:inline-flex;align-items:center;gap:3px;flex-shrink:0;background:#FFF6EF;color:#3B2F2A;font-size:11px;font-weight:800;padding:2px 8px 2px 6px;border-radius:50px;border:1.5px solid #F2DFD1;}
 .mode-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .btn-mode{color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;min-height:52px;padding:6px;border-radius:12px;border:1.5px solid transparent;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;line-height:1.25;transition:background .2s;width:100%;}
 .btn-mode .bl{display:inline-flex;align-items:center;gap:6px;}
 .btn-mode small{font-size:12px;font-weight:700;opacity:.95;}
-.btn-mode.text{background:#137A89;}
-.btn-mode.text:hover{background:#0F6673;}
+.btn-mode.text{background:#9E4719;}
+.btn-mode.text:hover{background:#9E4719;}
 .btn-mode.voice{background:var(--navy);}
-.btn-mode.voice:hover{background:#0b3650;}
+.btn-mode.voice:hover{background:#9E4719;}
 .btn-mode.full{grid-column:1 / -1;flex-direction:row;gap:8px;}
-.btn-mode.msg{background:#137A89;}
-.btn-mode.msg:hover{background:#0F6673;}
-.btn-mode.busy{background:white;color:#4E6B7A;border-color:var(--border);cursor:not-allowed;}
+.btn-mode.msg{background:#9E4719;}
+.btn-mode.msg:hover{background:#9E4719;}
+.btn-mode.busy{background:white;color:#6E5B50;border-color:var(--border);cursor:not-allowed;}
 .card-caption{margin-top:8px;font-size:12px;font-weight:700;color:var(--gray);display:flex;align-items:center;justify-content:center;gap:6px;text-align:center;}
 .card-caption.free{color:#1B7A3A;}
 .status-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;}
 .avail-label{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;padding:3px 10px;border-radius:50px;white-space:nowrap;}
 .avail-label::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor;}
-.avail-label.on{color:#1B7A3A;background:#E7F6EC;}.avail-label.off{color:#4E6B7A;background:#EEF3F6;}.avail-label.busy{color:#9A4E00;background:#FFF1E0;}
+.avail-label.on{color:#1B7A3A;background:#E7F6EC;}.avail-label.off{color:#6E5B50;background:#FFF6EF;}.avail-label.busy{color:#9A4E00;background:#FFF1E0;}
 .last-seen{font-size:12px;font-weight:600;color:var(--gray);}
-.skeleton{background:linear-gradient(90deg,#E6F2F8 25%,#F4FAFD 50%,#E6F2F8 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:20px;height:250px;border:1.5px solid var(--border);}
+.skeleton{background:linear-gradient(90deg,#FFF6EF 25%,#FFFAF6 50%,#FFF6EF 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:20px;height:250px;border:1.5px solid var(--border);}
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
 .empty{text-align:center;padding:60px 20px;}
-.session-toast{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--orange);color:white;font-family:Nunito,sans-serif;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 20px rgba(255,153,51,.35);animation:toastDrop .25s ease;}
+.session-toast{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--orange);color:white;font-family:Nunito,sans-serif;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 20px rgba(232,116,59,.35);animation:toastDrop .25s ease;}
 @keyframes toastDrop{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:translateY(0)}}
 .session-toast-text{font-size:14px;font-weight:800;}
 .session-toast-sub{font-size:12px;font-weight:600;opacity:.85;margin-top:2px;}
@@ -359,7 +346,7 @@ a{text-decoration:none;color:inherit;}
 .avail-bar-dot.on{background:#34C759;box-shadow:0 0 0 3px rgba(52,199,89,.2);}
 .avail-bar-dot.off{background:#C7C7CC;}
 .avail-bar-left{display:flex;align-items:center;gap:8px;}
-.avail-bar-recovery{margin:0 20px 0;background:rgba(255,153,51,.06);border:1.5px solid rgba(255,153,51,.2);border-radius:16px;padding:14px 16px;}
+.avail-bar-recovery{margin:0 20px 0;background:rgba(232,116,59,.06);border:1.5px solid rgba(232,116,59,.2);border-radius:16px;padding:14px 16px;}
 .avail-bar-recovery-title{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;}
 .avail-bar-recovery-chips{display:flex;flex-wrap:wrap;gap:8px;}
 .avail-bar-recovery-chip{background:white;border:1.5px solid var(--border);border-radius:50px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:5px;cursor:pointer;transition:border-color .15s;}
@@ -852,14 +839,14 @@ function BrowseContent() {
               >
                 Browse All Listeners
               </button>
-              <a href="/support"
+              <a href="/talk?src=browse_empty"
                 style={{background:'white',color:'var(--navy)',border:'1.5px solid var(--border)',borderRadius:50,padding:'12px 24px',fontFamily:'Nunito,sans-serif',fontWeight:700,fontSize:14,display:'inline-block'}}
               >
-                Explore Support Topics
+                Try Talk now
               </a>
             </div>
             <p style={{marginTop:20,fontSize:13,color:'var(--gray)'}}>
-              💙 Need immediate support? <a href="/faq" style={{color:'var(--teal)'}}>See crisis resources →</a>
+              In crisis? Call 999, ring Samaritans on <a href="tel:116123" style={{color:'var(--teal)'}}>116 123</a> or text SHOUT to 85258.
             </p>
           </div>
         ) : visible.map(l => {
@@ -903,7 +890,7 @@ function BrowseContent() {
                     {isNew
                       ? <span className="new-tag">New listener</span>
                       : <>
-                          {l.rating > 0 && <span className="st"><Star size={14} fill="#FF9933" color="#FF9933" aria-hidden />{(+l.rating).toFixed(1)}</span>}
+                          {l.rating > 0 && <span className="st"><Star size={14} fill="#E8743B" color="#E8743B" aria-hidden />{(+l.rating).toFixed(1)}</span>}
                           {l.total_sessions > 0 && <span className="st">{l.total_sessions} {l.total_sessions === 1 ? 'conversation' : 'conversations'}</span>}
                         </>}
                   </div>
@@ -918,7 +905,7 @@ function BrowseContent() {
               {(goodFor.length > 0 || langs.length > 0) && (
                 <div className="fit">
                   {goodFor.length > 0 && <div className="ln">Good for <span>{goodFor.join(' · ')}</span></div>}
-                  {langs.length > 0 && <div className="ln"><Globe size={14} color="#5A7A8A" aria-hidden /><span>{langs.join(' · ')}</span></div>}
+                  {langs.length > 0 && <div className="ln"><Globe size={14} color="#6E5B50" aria-hidden /><span>{langs.join(' · ')}</span></div>}
                 </div>
               )}
             </Link>

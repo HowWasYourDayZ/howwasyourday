@@ -49,10 +49,10 @@ self.addEventListener('fetch', (event) => {
           new Response(
             '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
               '<title>Offline · How Was Your Day</title>' +
-              '<div style="font-family:system-ui,sans-serif;max-width:420px;margin:16vh auto;padding:0 24px;text-align:center;color:#0F4867">' +
+              '<div style="font-family:system-ui,sans-serif;max-width:420px;margin:16vh auto;padding:0 24px;text-align:center;color:#3B2F2A">' +
               '<div style="font-size:44px;margin-bottom:12px">🌙</div>' +
               '<h1 style="font-size:20px;margin:0 0 8px">You\'re offline</h1>' +
-              '<p style="font-size:15px;color:#5A7A8A;line-height:1.6;margin:0">Reconnect to reach your listener. How Was Your Day needs a live connection for sessions.</p>' +
+              '<p style="font-size:15px;color:#6E5B50;line-height:1.6;margin:0">Reconnect to reach your listener. How Was Your Day needs a live connection for sessions.</p>' +
               '</div>',
             { headers: { 'Content-Type': 'text/html; charset=utf-8' } }
           )

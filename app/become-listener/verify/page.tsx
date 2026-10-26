@@ -20,34 +20,34 @@ const ID_TYPES = [
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Nunito,sans-serif;color:#0F4867;background:#F0F8FC;-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;color:#3B2F2A;background:#FFF6EF;-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:20px 20px 80px;}
-  .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#1A8FA0;background:none;border:none;cursor:pointer;margin-bottom:24px;padding:0;}
+  .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#B85520;background:none;border:none;cursor:pointer;margin-bottom:24px;padding:0;}
   h1{font-size:24px;font-weight:900;margin-bottom:6px;}
-  .sub{font-size:14px;color:#5A7A8A;font-weight:500;margin-bottom:28px;line-height:1.6;}
+  .sub{font-size:14px;color:#6E5B50;font-weight:500;margin-bottom:28px;line-height:1.6;}
   .steps{display:flex;gap:6px;margin-bottom:28px;}
-  .step-dot{width:28px;height:6px;border-radius:3px;background:#D5EEF6;}
-  .step-dot.done{background:#1A8FA0;}
-  .step-dot.active{background:#0F4867;}
-  .label{font-size:12px;font-weight:800;color:#5A7A8A;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;display:block;}
-  .input{width:100%;padding:12px 14px;border:1.5px solid #D5EEF6;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#0F4867;outline:none;transition:border-color .15s;}
-  .input:focus{border-color:#1A8FA0;}
-  .select{width:100%;padding:12px 14px;border:1.5px solid #D5EEF6;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#0F4867;outline:none;background:white;}
+  .step-dot{width:28px;height:6px;border-radius:3px;background:#F2DFD1;}
+  .step-dot.done{background:#B85520;}
+  .step-dot.active{background:#3B2F2A;}
+  .label{font-size:12px;font-weight:800;color:#6E5B50;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;display:block;}
+  .input{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#3B2F2A;outline:none;transition:border-color .15s;}
+  .input:focus{border-color:#B85520;}
+  .select{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#3B2F2A;outline:none;background:white;}
   .field{margin-bottom:20px;}
-  .note{background:#E6F6FF;border-left:3px solid #1A8FA0;padding:10px 14px;border-radius:0 10px 10px 0;font-size:13px;color:#0F4867;font-weight:600;margin-bottom:20px;line-height:1.5;}
-  .upload-box{border:2px dashed #D5EEF6;border-radius:14px;padding:28px;text-align:center;cursor:pointer;transition:border-color .15s;background:white;}
-  .upload-box:hover{border-color:#1A8FA0;}
-  .upload-box.has-file{border-style:solid;border-color:#1A8FA0;background:#F0FCF8;}
+  .note{background:#FFF6EF;border-left:3px solid #B85520;padding:10px 14px;border-radius:0 10px 10px 0;font-size:13px;color:#3B2F2A;font-weight:600;margin-bottom:20px;line-height:1.5;}
+  .upload-box{border:2px dashed #F2DFD1;border-radius:14px;padding:28px;text-align:center;cursor:pointer;transition:border-color .15s;background:white;}
+  .upload-box:hover{border-color:#B85520;}
+  .upload-box.has-file{border-style:solid;border-color:#B85520;background:#F0FCF8;}
   .upload-icon{font-size:32px;margin-bottom:8px;}
-  .upload-label{font-size:14px;font-weight:700;color:#0F4867;margin-bottom:4px;}
-  .upload-sub{font-size:12px;color:#5A7A8A;font-weight:500;}
+  .upload-label{font-size:14px;font-weight:700;color:#3B2F2A;margin-bottom:4px;}
+  .upload-sub{font-size:12px;color:#6E5B50;font-weight:500;}
   .btn{width:100%;padding:15px;border-radius:14px;border:none;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-top:8px;}
-  .btn-primary{background:#0F4867;color:white;}
+  .btn-primary{background:#3B2F2A;color:white;}
   .btn-primary:disabled{background:#ccc;cursor:not-allowed;}
   .done-wrap{text-align:center;padding:40px 20px;}
   .done-icon{font-size:56px;margin-bottom:20px;}
   .done-h{font-size:22px;font-weight:900;margin-bottom:10px;}
-  .done-p{font-size:14px;color:#5A7A8A;font-weight:500;line-height:1.6;margin-bottom:28px;}
+  .done-p{font-size:14px;color:#6E5B50;font-weight:500;line-height:1.6;margin-bottom:28px;}
 `
 
 async function hashString(str: string): Promise<string> {
@@ -215,7 +215,7 @@ export default function VerifyPage() {
             {step === 2 && (
               <div>
                 <label className="label">Selfie photo</label>
-                <p style={{ fontSize: 13, color: '#5A7A8A', marginBottom: 14, fontWeight: 500 }}>
+                <p style={{ fontSize: 13, color: '#6E5B50', marginBottom: 14, fontWeight: 500 }}>
                   Take a clear photo of your face. No sunglasses or masks.
                 </p>
                 <label
@@ -248,7 +248,7 @@ export default function VerifyPage() {
             {step === 3 && (
               <div>
                 <label className="label">ID document photo</label>
-                <p style={{ fontSize: 13, color: '#5A7A8A', marginBottom: 14, fontWeight: 500 }}>
+                <p style={{ fontSize: 13, color: '#6E5B50', marginBottom: 14, fontWeight: 500 }}>
                   Upload a clear photo of your {ID_TYPES.find(t => t.value === idType)?.label || 'ID'}.
                 </p>
                 <label

@@ -58,7 +58,7 @@ const SPECIALTY_TAGS = [
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--orange:#FF9933;--blue:#C9E7F4;--cream:#FFFBF5;--gray:#6B8FA8;--border:#DDE8F0;--light:#F0F4F7;}
+  :root{--navy:#3B2F2A;--orange:#E8743B;--blue:#F2DFD1;--cream:#FFFAF6;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
   body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 60px;}
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0 20px;}
@@ -72,18 +72,18 @@ const S = `
   .stat-card{background:white;border:1.5px solid var(--border);border-radius:18px;padding:18px;}
   .stat-card.accent{background:var(--navy);border-color:var(--navy);}
   .stat-label{font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
-  .stat-card.accent .stat-label{color:rgba(201,231,244,0.7);}
+  .stat-card.accent .stat-label{color:rgba(251,227,210,0.7);}
   .stat-value{font-size:26px;font-weight:900;color:var(--navy);}
   .stat-card.accent .stat-value{color:white;}
   .stat-sub{font-size:12px;color:var(--gray);font-weight:500;margin-top:3px;}
-  .stat-card.accent .stat-sub{color:rgba(201,231,244,0.6);}
+  .stat-card.accent .stat-sub{color:rgba(251,227,210,0.6);}
   .section-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;}
   .payout-card{background:white;border:2px solid var(--border);border-radius:18px;padding:20px;margin-bottom:24px;}
   .payout-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
   .payout-balance{font-size:32px;font-weight:900;color:var(--navy);}
   .payout-label{font-size:13px;color:var(--gray);font-weight:600;}
-  .btn-payout{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 3px 12px rgba(255,153,51,0.3);transition:all 0.2s;}
-  .btn-payout:hover{background:#e8861a;}
+  .btn-payout{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 3px 12px rgba(232,116,59,0.3);transition:all 0.2s;}
+  .btn-payout:hover{background:#D0632D;}
   .btn-payout:disabled{opacity:.5;cursor:not-allowed;}
   .payout-note{font-size:12px;color:var(--gray);font-weight:500;}
   .session-list{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;}
@@ -113,7 +113,7 @@ const S = `
   .btn-apply{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;}
   .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:12px;}
   @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-  .modal-overlay{position:fixed;inset:0;background:rgba(15,72,103,0.55);z-index:200;display:flex;align-items:flex-end;justify-content:center;padding:0;animation:fadeIn .2s ease;}
+  .modal-overlay{position:fixed;inset:0;background:rgba(59,47,42,0.55);z-index:200;display:flex;align-items:flex-end;justify-content:center;padding:0;animation:fadeIn .2s ease;}
   @keyframes fadeIn{from{opacity:0}to{opacity:1}}
   .modal-card{background:white;border-radius:24px 24px 0 0;padding:28px 24px 40px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;animation:slideUp .25s ease;}
   @keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
@@ -125,8 +125,8 @@ const S = `
   .modal-detail-item{text-align:center;}
   .modal-detail-label{font-size:10px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
   .modal-detail-value{font-size:16px;font-weight:900;color:var(--navy);}
-  .btn-join-session{width:100%;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 16px rgba(255,153,51,.35);transition:all .2s;}
-  .btn-join-session:hover{background:#e8861a;}
+  .btn-join-session{width:100%;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 16px rgba(232,116,59,.35);transition:all .2s;}
+  .btn-join-session:hover{background:#D0632D;}
   .btn-dismiss{width:100%;background:transparent;color:var(--gray);font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;}
   .countdown-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:16px;}
   .countdown-fill{height:100%;background:var(--orange);border-radius:2px;transition:width 1s linear;}
@@ -1152,9 +1152,9 @@ export default function DashboardPage() {
                 <div style={{
                   marginTop: 8, fontSize: 12, fontWeight: 600, lineHeight: 1.5,
                   padding: '8px 12px', borderRadius: 8,
-                  background: avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.07)' : 'rgba(26,143,160,0.07)',
-                  border: `1px solid ${avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.25)' : 'rgba(26,143,160,0.25)'}`,
-                  color: avatarUploadMsg.type === 'error' ? '#C0392B' : '#0F4867',
+                  background: avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.07)' : 'rgba(184,85,32,0.07)',
+                  border: `1px solid ${avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.25)' : 'rgba(184,85,32,0.25)'}`,
+                  color: avatarUploadMsg.type === 'error' ? '#C0392B' : '#3B2F2A',
                   width: '100%', textAlign: 'center',
                 }}>
                   {avatarUploadMsg.text}
@@ -1337,7 +1337,7 @@ export default function DashboardPage() {
             How Was Your Day in the background. Before, a missing/blocked permission failed
             silently and listeners only found out by missing requests. */}
         {profile.is_approved !== false && alertStatus && alertStatus !== 'not_configured' && (
-          <div style={{background: alertStatus === 'granted' && pushRegistered !== false ? '#F0FFF4' : '#FFF8EC', border: `1.5px solid ${alertStatus === 'granted' && pushRegistered !== false ? '#B7EBC6' : '#FFD9A0'}`, borderRadius:14, padding:'12px 14px', marginBottom:18, fontSize:12.5, lineHeight:1.55, color:'#27394A'}}>
+          <div style={{background: alertStatus === 'granted' && pushRegistered !== false ? '#F0FFF4' : '#FFF8EC', border: `1.5px solid ${alertStatus === 'granted' && pushRegistered !== false ? '#B7EBC6' : '#FFD9A0'}`, borderRadius:14, padding:'12px 14px', marginBottom:18, fontSize:12.5, lineHeight:1.55, color:'#3B2F2A'}}>
             {alertStatus === 'granted' && pushRegistered !== false ? (
               <>
                 <div style={{fontWeight:800, color:'#276749', marginBottom:2}}>🔔 Request alerts are on for this device</div>
@@ -1368,11 +1368,11 @@ export default function DashboardPage() {
                 </div>
                 <div style={{display:'flex', gap:8, flexWrap:'wrap', marginTop:10}}>
                   {(alertStatus === 'prompt' || alertStatus === 'granted') && (
-                    <button onClick={enableAlerts} style={{flex:'1 1 140px', background:'white', border:'1.5px solid #FF9933', color:'#B35C00', borderRadius:50, padding:'9px 14px', fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:'inherit'}}>
+                    <button onClick={enableAlerts} style={{flex:'1 1 140px', background:'white', border:'1.5px solid #E8743B', color:'#B35C00', borderRadius:50, padding:'9px 14px', fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:'inherit'}}>
                       {alertStatus === 'granted' ? 'Try again' : 'Turn on alerts'}
                     </button>
                   )}
-                  <a href="/alerts-setup" style={{flex:'1 1 140px', textAlign:'center', background:'#FF9933', color:'white', borderRadius:50, padding:'9px 14px', fontWeight:800, fontSize:13, textDecoration:'none'}}>Fix it step by step →</a>
+                  <a href="/alerts-setup" style={{flex:'1 1 140px', textAlign:'center', background:'#E8743B', color:'white', borderRadius:50, padding:'9px 14px', fontWeight:800, fontSize:13, textDecoration:'none'}}>Fix it step by step →</a>
                 </div>
               </>
             )}
@@ -1383,7 +1383,7 @@ export default function DashboardPage() {
           <div style={{background:'#FFFBF0',border:'1.5px solid #FFE0B2',borderRadius:14,padding:'14px 16px',marginBottom:18,fontSize:13,fontWeight:700,color:'#b35c00',lineHeight:1.6}}>
             ⏳ Your listener application is under review. You can edit your profile, but you won&apos;t
             appear in search or receive sessions until you&apos;re approved.{' '}
-            <a href="/become-listener/status" style={{color:'#0F4867',textDecoration:'underline'}}>Check status →</a>
+            <a href="/become-listener/status" style={{color:'#3B2F2A',textDecoration:'underline'}}>Check status →</a>
           </div>
         )}
 
@@ -1414,13 +1414,13 @@ export default function DashboardPage() {
             try { localStorage.setItem(PRICING_NOTICE.storageKey, '1') } catch { /* ignore */ }
           }
           return (
-            <div role="region" aria-label="Pricing update" style={{marginBottom:20,background:'linear-gradient(135deg,#F0F8FC,#FFF8F0)',border:'1.5px solid var(--border)',borderRadius:18,padding:'18px 20px',position:'relative'}}>
+            <div role="region" aria-label="Pricing update" style={{marginBottom:20,background:'linear-gradient(135deg,#FFF6EF,#FFF8F0)',border:'1.5px solid var(--border)',borderRadius:18,padding:'18px 20px',position:'relative'}}>
               <button onClick={dismiss} aria-label="Dismiss"
                 style={{position:'absolute',top:12,right:12,background:'transparent',border:'none',color:'var(--gray)',fontSize:20,fontWeight:900,cursor:'pointer',lineHeight:1,padding:4}}>×</button>
               <div style={{fontSize:16,fontWeight:900,color:'var(--navy)',marginBottom:12,paddingRight:24}}>
                 📣 {VOICE_PRICING_ENABLED ? 'Two updates' : 'An update'} to how you earn on How Was Your Day
               </div>
-              <div style={{fontSize:13,color:'#3A6070',lineHeight:1.65,fontWeight:500,display:'grid',gap:10}}>
+              <div style={{fontSize:13,color:'#4A3C34',lineHeight:1.65,fontWeight:500,display:'grid',gap:10}}>
                 {VOICE_PRICING_ENABLED && <div>
                   <strong style={{color:'var(--navy)'}}>📞 Voice calls now earn you more.</strong> Seekers can now pick text chat
                   or a voice call, and voice is always priced {formatRate(VOICE_RATE_PREMIUM)} above your text rate — automatically.
@@ -1497,9 +1497,9 @@ export default function DashboardPage() {
               <div style={{ fontSize: 12, color: '#7A5C00', marginTop: 2 }}>Your bank account holder name is missing. We need this to verify payouts match your bank records before processing.</div>
             </div>
             <button
-              style={{ background: '#FF9933', color: 'white', border: 'none', borderRadius: 10, padding: '8px 16px', fontFamily: 'inherit', fontWeight: 800, fontSize: 13, cursor: 'pointer', whiteSpace: 'nowrap' }}
+              style={{ background: '#E8743B', color: 'white', border: 'none', borderRadius: 10, padding: '8px 16px', fontFamily: 'inherit', fontWeight: 800, fontSize: 13, cursor: 'pointer', whiteSpace: 'nowrap' }}
               onClick={async () => {
-                const n = window.prompt('Enter the name exactly as it appears on your bank account / UPI registration:')
+                const n = window.prompt('Enter the name exactly as it appears on your bank account:')
                 if (!n?.trim()) return
                 const res = await fetch('/api/listener/bank-name', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ account_holder_name: n.trim() }) }).catch(() => null)
                 const json = await res?.json().catch(() => ({}))
@@ -1564,14 +1564,14 @@ export default function DashboardPage() {
               <div style={{ background: 'white', borderRadius: 20, padding: '28px 24px', maxWidth: 380, width: '100%', textAlign: 'center' }}>
                 <div style={{ fontSize: 36, marginBottom: 12 }}>⚠️</div>
                 <h3 style={{ fontSize: 18, fontWeight: 800, color: '#B71C1C', marginBottom: 8 }}>Delete your account?</h3>
-                <p style={{ fontSize: 13, color: '#5A7A8A', fontWeight: 600, lineHeight: 1.6, marginBottom: 16 }}>
+                <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 600, lineHeight: 1.6, marginBottom: 16 }}>
                   This is permanent and cannot be undone. Your name, phone number, bank details, profile, and all personal data will be permanently erased. Your listener profile will be removed from How Was Your Day.
                 </p>
-                <p style={{ fontSize: 13, fontWeight: 700, color: '#0F4867', marginBottom: 10 }}>
+                <p style={{ fontSize: 13, fontWeight: 700, color: '#3B2F2A', marginBottom: 10 }}>
                   Type <strong>DELETE</strong> to confirm
                 </p>
                 <input
-                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #D5EEF6', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Nunito, sans-serif', letterSpacing: 2 }}
+                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Nunito, sans-serif', letterSpacing: 2 }}
                   value={deleteInput}
                   onChange={e => setDeleteInput(e.target.value.toUpperCase())}
                   placeholder="DELETE"
@@ -1586,7 +1586,7 @@ export default function DashboardPage() {
                     {deactivating ? 'Deleting...' : 'Permanently delete'}
                   </button>
                   <button
-                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#0F4867', border: '2px solid #D5EEF6', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
+                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
                     onClick={() => setShowDeactivateConfirm(false)}
                   >
                     Cancel
@@ -1653,19 +1653,19 @@ export default function DashboardPage() {
           <>
             {/* One-time launch announcement */}
             {!loungeAnnouncementDismissed && (
-              <div style={{ background:'linear-gradient(135deg,#E8F4FD,#EBF8FF)', border:'2px solid #1A8FA0', borderRadius:18, padding:'16px 18px', marginBottom:12, position:'relative' }}>
+              <div style={{ background:'linear-gradient(135deg,#FFF6EF,#FFF6EF)', border:'2px solid #B85520', borderRadius:18, padding:'16px 18px', marginBottom:12, position:'relative' }}>
                 <button
                   onClick={() => {
                     setLoungeAnnouncementDismissed(true)
                     try { localStorage.setItem(`lounge_launch_v1_seen_${user?.id}`, '1') } catch (_) {}
                   }}
-                  style={{ position:'absolute', top:10, right:12, background:'none', border:'none', fontSize:18, color:'#5A7A8A', cursor:'pointer', lineHeight:1 }}
+                  style={{ position:'absolute', top:10, right:12, background:'none', border:'none', fontSize:18, color:'#6E5B50', cursor:'pointer', lineHeight:1 }}
                   aria-label="Dismiss"
                 >✕</button>
-                <div style={{ fontSize:15, fontWeight:800, color:'#0F4867', marginBottom:4 }}>
+                <div style={{ fontSize:15, fontWeight:800, color:'#3B2F2A', marginBottom:4 }}>
                   🛋️ New: Listener Lounge is here!
                 </div>
-                <div style={{ fontSize:13, color:'#3A6070', fontWeight:600, lineHeight:1.6, marginBottom:10 }}>
+                <div style={{ fontSize:13, color:'#4A3C34', fontWeight:600, lineHeight:1.6, marginBottom:10 }}>
                   A private space just for listeners — ask questions, share experiences, and support each other. No seeker details, just real talk between peers.
                 </div>
                 <button
@@ -1678,7 +1678,7 @@ export default function DashboardPage() {
                     } catch (_) {}
                     router.push('/listener-lounge')
                   }}
-                  style={{ background:'#1A8FA0', color:'white', border:'none', borderRadius:50, padding:'9px 20px', fontFamily:'Nunito,sans-serif', fontWeight:800, fontSize:13, cursor:'pointer' }}
+                  style={{ background:'#B85520', color:'white', border:'none', borderRadius:50, padding:'9px 20px', fontFamily:'Nunito,sans-serif', fontWeight:800, fontSize:13, cursor:'pointer' }}
                 >
                   Open Listener Lounge →
                 </button>
@@ -1692,7 +1692,7 @@ export default function DashboardPage() {
                 try { localStorage.setItem(`lounge_last_seen_${user?.id}`, new Date().toISOString()) } catch (_) {}
                 router.push('/listener-lounge')
               }}
-              style={{ width:'100%', background:'linear-gradient(135deg,#E8F4FD,#F0F8FC)', border:`1.5px solid ${loungeHasNew ? '#1A8FA0' : 'var(--border)'}`, borderRadius:18, padding:'16px 20px', marginBottom:20, display:'flex', alignItems:'center', justifyContent:'space-between', cursor:'pointer', textAlign:'left', position:'relative' }}
+              style={{ width:'100%', background:'linear-gradient(135deg,#FFF6EF,#FFF6EF)', border:`1.5px solid ${loungeHasNew ? '#B85520' : 'var(--border)'}`, borderRadius:18, padding:'16px 20px', marginBottom:20, display:'flex', alignItems:'center', justifyContent:'space-between', cursor:'pointer', textAlign:'left', position:'relative' }}
             >
               <div>
                 <div style={{ fontSize:16, fontWeight:800, color:'var(--navy)', display:'flex', alignItems:'center', gap:8 }}>
@@ -1701,7 +1701,7 @@ export default function DashboardPage() {
                     <span style={{ display:'inline-block', width:9, height:9, borderRadius:'50%', background:'#FF5252', flexShrink:0 }} />
                   )}
                 </div>
-                <div style={{ fontSize:13, color: loungeHasNew ? '#1A8FA0' : 'var(--gray)', fontWeight:600, marginTop:2 }}>
+                <div style={{ fontSize:13, color: loungeHasNew ? '#B85520' : 'var(--gray)', fontWeight:600, marginTop:2 }}>
                   {loungeHasNew ? 'New messages from fellow listeners' : 'Chat with other listeners · Ask questions · Share knowledge'}
                 </div>
               </div>
@@ -1749,7 +1749,7 @@ export default function DashboardPage() {
         )}
 
         {sessions.length === 0 && SHOW_LISTENER_GROWTH_NOTICE && (
-          <div style={{marginTop:8,background:'rgba(255,153,51,0.08)',border:'1.5px solid rgba(255,153,51,0.25)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'#7A5200',lineHeight:1.6,fontWeight:500}}>
+          <div style={{marginTop:8,background:'rgba(232,116,59,0.08)',border:'1.5px solid rgba(232,116,59,0.25)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'#7A5200',lineHeight:1.6,fontWeight:500}}>
             <strong style={{fontWeight:800}}>A heads up:</strong> How Was Your Day is a growing platform with a smaller user base right now. Your first session request might take a few days — session volume depends on how many seekers are active when you&apos;re online. Keep your availability on and we&apos;ll notify you the moment someone books.
           </div>
         )}

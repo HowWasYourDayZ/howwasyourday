@@ -8,7 +8,7 @@ import { SHOW_LISTENER_GROWTH_NOTICE, SHOW_NEW_LISTENER_ONBOARDING } from '@/lib
 import { compressImage, extForType, AVATAR_OPTS, MAX_INPUT_BYTES } from '@/lib/compress-image'
 import SelfieCapture from '@/app/components/SelfieCapture'
 import {
-  EDUCATION_LEVELS, EDUCATION_FIELDS, OCCUPATIONS, INDIAN_STATES, HOURS_PER_WEEK, TIME_SLOTS,
+  EDUCATION_LEVELS, EDUCATION_FIELDS, OCCUPATIONS, UK_REGIONS, HOURS_PER_WEEK, TIME_SLOTS,
   PRIOR_EXPERIENCE, HEARD_FROM, TAGLINE_PHRASES, TAGLINE_PICK, SCREENING_QUIZ,
   WHY_MIN_WORDS, WHY_MAX_WORDS, LIVED_MIN_CHARS, LIVED_MAX_CHARS, wordCount, isValidLinkedIn,
 } from '@/lib/listener-onboarding'
@@ -36,9 +36,9 @@ const TAGS = [
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--bg:#FFFFFF;--light:#F0F8FC;--border:#D5EEF6;--gray:#5A7A8A;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--bg:#FFFFFF;--light:#FFF6EF;--border:#F2DFD1;--gray:#6E5B50;}
   body{font-family:Nunito,sans-serif;background:var(--bg);color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%, #C2E4F2 0%, #DAEEF8 22%, #FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%, #FDE6D6 0%, #FFF1E6 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 60px;}
   .topbar{display:flex;align-items:center;gap:12px;padding:16px 0 24px;}
@@ -46,18 +46,18 @@ const S = `
 
   .hero-card{background:var(--navy);border-radius:24px;padding:28px;margin-bottom:32px;text-align:center;}
   .hero-card h1{font-size:24px;font-weight:900;color:white;margin-bottom:10px;}
-  .hero-card p{font-size:14px;color:rgba(201,231,244,0.8);font-weight:500;line-height:1.6;margin-bottom:24px;}
+  .hero-card p{font-size:14px;color:rgba(251,227,210,0.8);font-weight:500;line-height:1.6;margin-bottom:24px;}
   .earn-row{display:flex;justify-content:center;gap:20px;}
   .earn-item .amount{font-size:24px;font-weight:900;color:var(--orange);}
-  .earn-item .label{font-size:11px;color:rgba(201,231,244,0.7);font-weight:600;margin-top:2px;}
+  .earn-item .label{font-size:11px;color:rgba(251,227,210,0.7);font-weight:600;margin-top:2px;}
 
-  .fee-box{background:rgba(26,143,160,0.08);border:1.5px solid rgba(26,143,160,0.2);border-radius:16px;padding:16px;margin-bottom:24px;}
+  .fee-box{background:rgba(184,85,32,0.08);border:1.5px solid rgba(184,85,32,0.2);border-radius:16px;padding:16px;margin-bottom:24px;}
   .fee-box h3{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:10px;}
-  .fee-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(26,143,160,0.12);font-size:13px;}
+  .fee-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(184,85,32,0.12);font-size:13px;}
   .fee-row:last-child{border-bottom:none;font-weight:800;}
   .fee-row .label{color:var(--gray);font-weight:500;}
   .fee-row .value{color:var(--navy);font-weight:700;}
-  .fee-row.highlight .value{color:#1A8FA0;font-weight:800;}
+  .fee-row.highlight .value{color:#B85520;font-weight:800;}
 
   .step-dots{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:28px;}
   .dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;}
@@ -70,7 +70,7 @@ const S = `
   .input{width:100%;padding:13px 16px;font-family:Nunito,sans-serif;font-size:15px;font-weight:600;color:var(--navy);border:2px solid var(--border);border-radius:14px;outline:none;background:white;transition:border-color 0.2s;margin-bottom:4px;}
   .input:focus{border-color:var(--navy);}
   .input.err{border-color:#E53935;background:#FFF5F5;}
-  .input::placeholder{color:#B0C8D8;font-weight:400;}
+  .input::placeholder{color:#E9CDB9;font-weight:400;}
   textarea.input{resize:vertical;min-height:100px;line-height:1.5;}
   .field-err{font-size:12px;color:#E53935;font-weight:700;margin-bottom:12px;display:block;}
   .char-count{font-size:12px;color:var(--gray);font-weight:600;text-align:right;margin-bottom:12px;}
@@ -96,8 +96,8 @@ const S = `
   .errors-list p{font-size:13px;color:#7A2020;font-weight:700;margin-bottom:6px;}
   .errors-list ul{padding-left:16px;}
   .errors-list li{font-size:12px;color:#7A2020;font-weight:600;margin-bottom:2px;}
-  .btn{width:100%;padding:16px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,153,51,0.3);}
-  .btn:hover{background:#e8861a;transform:translateY(-1px);}
+  .btn{width:100%;padding:16px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(232,116,59,0.3);}
+  .btn:hover{background:#D0632D;transform:translateY(-1px);}
   .btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
   .btn-ghost{width:100%;padding:16px;font-family:Nunito,sans-serif;font-size:15px;font-weight:700;color:var(--navy);background:white;border:2px solid var(--border);border-radius:50px;cursor:pointer;margin-top:10px;}
   .success{text-align:center;padding:40px 20px;}
@@ -110,11 +110,11 @@ const S = `
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
   .otp-row{display:flex;gap:10px;justify-content:center;margin-bottom:8px;}
   .otp-box{width:48px;height:56px;border:2px solid var(--border);border-radius:14px;font-family:Nunito,sans-serif;font-size:22px;font-weight:900;color:var(--navy);text-align:center;background:white;outline:none;transition:all 0.2s;}
-  .otp-box:focus{border-color:var(--orange);background:#FFFBF5;}
+  .otp-box:focus{border-color:var(--orange);background:#FFFAF6;}
   .otp-box.err{border-color:#E53935;background:#FFF5F5;}
   .resend-btn{background:none;border:none;font-family:Nunito,sans-serif;font-size:14px;font-weight:700;color:var(--teal);cursor:pointer;}
   .resend-count{font-size:14px;color:var(--gray);font-weight:600;}
-  .already-reg{background:#F0F8FC;border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;margin-bottom:24px;}
+  .already-reg{background:#FFF6EF;border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;margin-bottom:24px;}
   .already-reg p{font-size:15px;color:var(--navy);font-weight:600;margin-bottom:12px;}
   .photo-box{border:2px dashed var(--border);border-radius:16px;padding:20px;text-align:center;cursor:pointer;transition:all 0.2s;margin-bottom:4px;background:white;position:relative;overflow:hidden;}
   .photo-box:hover,.photo-box.has-photo{border-color:var(--teal);border-style:solid;}
@@ -123,7 +123,7 @@ const S = `
   .photo-placeholder{width:64px;height:64px;border-radius:50%;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;}
   .photo-label{font-size:13px;font-weight:700;color:var(--teal);display:block;}
   .photo-sub{font-size:11px;color:var(--gray);font-weight:500;margin-top:3px;}
-  .training-box{background:rgba(26,143,160,0.06);border:1.5px solid rgba(26,143,160,0.2);border-radius:14px;padding:14px 16px;margin-bottom:20px;}
+  .training-box{background:rgba(184,85,32,0.06);border:1.5px solid rgba(184,85,32,0.2);border-radius:14px;padding:14px 16px;margin-bottom:20px;}
   .training-box h3{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;}
   .training-box li{font-size:12px;color:var(--gray);font-weight:600;margin-bottom:4px;list-style:none;padding-left:4px;}
   .training-box li::before{content:"✓ ";color:var(--teal);}
@@ -133,16 +133,17 @@ const S = `
 function validateName(v: string): string {
   if (!v || v.trim().length < 2) return 'Please enter your full name (2–60 characters)'
   if (v.trim().length > 60) return 'Please enter your full name (2–60 characters)'
-  // Allow: Latin letters, common accented chars, Devanagari (Hindi/Marathi),
-  // Tamil, Telugu, Kannada, Malayalam, Bengali, spaces, hyphens, dots
+  // Allow: Latin letters, common accented chars, a range of non-Latin scripts,
+  // spaces, hyphens, dots
   // (e.g. "A.P.J. Singh", "Md. Irfan"), and apostrophes (e.g. "O'Brien").
   if (!/^[a-zA-ZÀ-ɏऀ-ൿ\s\-.']+$/.test(v.trim())) return "Name can only contain letters, spaces, hyphens, dots, and apostrophes"
   return ''
 }
 function validatePhone(v: string): string {
   const d = v.replace(/\D/g, '')
-  if (d.length !== 10) return 'Enter a valid 10-digit Indian mobile number'
-  if (!/^[6789]/.test(d)) return 'Enter a valid 10-digit Indian mobile number'
+  // UK mobile: 07xxx xxxxxx or +44 7xxx xxxxxx — compared on the last 10 digits.
+  const n = d.slice(-10)
+  if (n.length !== 10 || !/^7/.test(n)) return 'Enter a valid UK mobile number (07…)'
   return ''
 }
 function validateBio(v: string): string {
@@ -168,17 +169,12 @@ function validateRate(v: string): string {
 }
 function validateBank(v: string): string {
   const d = v.replace(/\D/g, '')
-  if (d.length < 9 || d.length > 18) return 'Enter a valid 9–18 digit account number'
+  if (d.length !== 8) return 'Enter your 8-digit UK account number'
   return ''
 }
-function validateIFSC(v: string): string {
-  if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(v.trim().toUpperCase())) return 'Enter a valid IFSC code (e.g. SBIN0001234)'
-  return ''
-}
-function validateUPI(v: string): string {
-  // Local-part: 2+ alphanumeric/dot/hyphen/underscore chars
-  // VPA suffix: 2+ alphanumeric chars (e.g. @okaxis, @ybl, @paytm1, @okhdfcbank)
-  if (!/^[\w.\-]{2,}@[\w]{2,}$/.test(v)) return 'Enter a valid UPI ID (e.g. yourname@okaxis)'
+// UK sort code (stored in listener_applications.ifsc_code until Whop payouts replace it).
+function validateSortCode(v: string): string {
+  if (!/^\d{6}$/.test(v.replace(/\D/g, ''))) return 'Enter your 6-digit sort code (e.g. 12-34-56)'
   return ''
 }
 function validateBirth(monthStr: string, yearStr: string): string {
@@ -203,17 +199,6 @@ const NO_INCOME_ACK_KEY = 'howwasyourday_listener_noincome_ack'
 // Kept short and literal on purpose.
 const NO_INCOME_NOTICE: { lang: string; code: string; rtl?: boolean; text: string }[] = [
   { lang: 'English', code: 'en', text: 'How Was Your Day is new. Very few people use it yet. You may get few or no sessions. There is no salary, no minimum and no guaranteed income. How Was Your Day is not a job.' },
-  { lang: 'हिंदी (Hindi)', code: 'hi', text: 'How Was Your Day नया है। अभी बहुत कम लोग इसका इस्तेमाल करते हैं। ऐसा हो सकता है कि आपको बहुत कम सेशन मिलें, या एक भी न मिले। कोई वेतन, न्यूनतम या गारंटीड कमाई नहीं है। How Was Your Day नौकरी नहीं है।' },
-  { lang: 'தமிழ் (Tamil)', code: 'ta', text: 'How Was Your Day புதியது. இப்போது மிகச் சிலரே இதைப் பயன்படுத்துகின்றனர். உங்களுக்கு மிகக் குறைவான அமர்வுகளே கிடைக்கலாம், அல்லது ஒன்றுமே கிடைக்காமல் போகலாம். சம்பளம், குறைந்தபட்ச வருமானம் அல்லது உத்தரவாத வருமானம் எதுவும் இல்லை. How Was Your Day ஒரு வேலை அல்ல.' },
-  { lang: 'తెలుగు (Telugu)', code: 'te', text: 'How Was Your Day కొత్తది. ఇప్పుడు చాలా తక్కువ మంది మాత్రమే దీన్ని వాడుతున్నారు. మీకు చాలా తక్కువ సెషన్లు రావచ్చు, లేదా ఒక్కటి కూడా రాకపోవచ్చు. జీతం, కనీస ఆదాయం లేదా హామీ ఆదాయం ఏదీ లేదు. How Was Your Day ఉద్యోగం కాదు.' },
-  { lang: 'ಕನ್ನಡ (Kannada)', code: 'kn', text: 'How Was Your Day ಹೊಸದು. ಈಗ ತುಂಬಾ ಕಡಿಮೆ ಜನರು ಮಾತ್ರ ಇದನ್ನು ಬಳಸುತ್ತಿದ್ದಾರೆ. ನಿಮಗೆ ತುಂಬಾ ಕಡಿಮೆ ಸೆಷನ್‌ಗಳು ಸಿಗಬಹುದು ಅಥವಾ ಒಂದೂ ಸಿಗದಿರಬಹುದು. ಸಂಬಳ, ಕನಿಷ್ಠ ಆದಾಯ ಅಥವಾ ಖಚಿತ ಆದಾಯ ಇಲ್ಲ. How Was Your Day ಉದ್ಯೋಗವಲ್ಲ.' },
-  { lang: 'മലയാളം (Malayalam)', code: 'ml', text: 'How Was Your Day പുതിയതാണ്. ഇപ്പോൾ വളരെ കുറച്ചു പേർ മാത്രമേ ഇത് ഉപയോഗിക്കുന്നുള്ളൂ. നിങ്ങൾക്ക് വളരെ കുറച്ച് സെഷനുകൾ മാത്രം ലഭിച്ചേക്കാം, അല്ലെങ്കിൽ ഒന്നും ലഭിക്കാതിരിക്കാം. ശമ്പളമോ മിനിമം വരുമാനമോ ഉറപ്പുള്ള വരുമാനമോ ഇല്ല. How Was Your Day ഒരു ജോലിയല്ല.' },
-  { lang: 'मराठी (Marathi)', code: 'mr', text: 'How Was Your Day नवीन आहे. सध्या खूप कमी लोक ते वापरतात. तुम्हाला खूप कमी सेशन मिळू शकतात, किंवा एकही मिळणार नाही, असेही होऊ शकते. पगार, किमान किंवा खात्रीशीर उत्पन्न नाही. How Was Your Day ही नोकरी नाही.' },
-  { lang: 'বাংলা (Bengali)', code: 'bn', text: 'How Was Your Day নতুন। এখন খুব কম মানুষ এটি ব্যবহার করেন। আপনি খুব কম সেশন পেতে পারেন, বা একটিও না-ও পেতে পারেন। কোনো বেতন, ন্যূনতম বা নিশ্চিত আয় নেই। How Was Your Day কোনো চাকরি নয়।' },
-  { lang: 'ગુજરાતી (Gujarati)', code: 'gu', text: 'How Was Your Day નવું છે. હાલમાં બહુ ઓછા લોકો તેનો ઉપયોગ કરે છે. તમને બહુ ઓછા સેશન મળે અથવા એક પણ ન મળે એવું બની શકે. કોઈ પગાર, ન્યૂનતમ કે ગેરંટીવાળી કમાણી નથી. How Was Your Day નોકરી નથી.' },
-  { lang: 'ਪੰਜਾਬੀ (Punjabi)', code: 'pa', text: 'How Was Your Day ਨਵਾਂ ਹੈ। ਹਾਲੇ ਬਹੁਤ ਘੱਟ ਲੋਕ ਇਸਨੂੰ ਵਰਤਦੇ ਹਨ। ਤੁਹਾਨੂੰ ਬਹੁਤ ਘੱਟ ਸੈਸ਼ਨ ਮਿਲ ਸਕਦੇ ਹਨ, ਜਾਂ ਇੱਕ ਵੀ ਨਹੀਂ। ਕੋਈ ਤਨਖਾਹ, ਘੱਟੋ-ਘੱਟ ਜਾਂ ਪੱਕੀ ਆਮਦਨ ਨਹੀਂ ਹੈ। How Was Your Day ਨੌਕਰੀ ਨਹੀਂ ਹੈ।' },
-  { lang: 'ଓଡ଼ିଆ (Odia)', code: 'or', text: 'How Was Your Day ନୂଆ। ଏବେ ବହୁତ କମ୍ ଲୋକ ଏହାକୁ ବ୍ୟବହାର କରନ୍ତି। ଆପଣ ବହୁତ କମ୍ ସେସନ୍ ପାଇପାରନ୍ତି, କିମ୍ବା ଗୋଟିଏ ବି ନ ମିଳିପାରେ। କୌଣସି ଦରମା, ସର୍ବନିମ୍ନ କିମ୍ବା ନିଶ୍ଚିତ ଆୟ ନାହିଁ। How Was Your Day ଚାକିରି ନୁହେଁ।' },
-  { lang: 'اردو (Urdu)', code: 'ur', rtl: true, text: 'How Was Your Day نیا ہے۔ ابھی بہت کم لوگ اسے استعمال کرتے ہیں۔ ہو سکتا ہے آپ کو بہت کم سیشن ملیں، یا ایک بھی نہ ملے۔ کوئی تنخواہ، کم از کم یا یقینی آمدنی نہیں ہے۔ How Was Your Day نوکری نہیں ہے۔' },
 ]
 
 export default function BecomeListenerPage() {
@@ -543,8 +528,7 @@ export default function BecomeListenerPage() {
     const re = validateRate(rate); if (re) errs.push(re)
     if (!accountHolder.trim()) errs.push('Enter the name exactly as on your bank account')
     const banke = validateBank(bank); if (banke) errs.push(banke)
-    const ifsce = validateIFSC(ifsc); if (ifsce) errs.push(ifsce)
-    if (upi.trim()) { const upie = validateUPI(upi); if (upie) errs.push(upie) }
+    const ifsce = validateSortCode(ifsc); if (ifsce) errs.push(ifsce)
     return errs
   }
 
@@ -618,8 +602,7 @@ export default function BecomeListenerPage() {
       const re = validateRate(rate); if (re) fe.rate = re
       if (!accountHolder.trim()) fe.accountHolder = 'Enter the name exactly as on your bank account'
       const banke = validateBank(bank); if (banke) fe.bank = banke
-      const ifsce = validateIFSC(ifsc); if (ifsce) fe.ifsc = ifsce
-      if (upi.trim()) { const upie = validateUPI(upi); if (upie) fe.upi = upie }
+      const ifsce = validateSortCode(ifsc); if (ifsce) fe.ifsc = ifsce
       setFieldErrors(fe)
       setShaking(true)
       setTimeout(() => setShaking(false), 500)
@@ -653,7 +636,7 @@ export default function BecomeListenerPage() {
           birthYear:  parseInt(birthYear, 10),
           account_holder_name: accountHolder.trim(),
           bank:       bank.trim(),
-          ifsc:       ifsc.trim().toUpperCase(),
+          ifsc:       ifsc.replace(/\D/g, ''),
           upi:        upi.trim(),
           avatar_url: avatarUrl || undefined,
           tagline_phrases: taglines,
@@ -716,7 +699,7 @@ export default function BecomeListenerPage() {
         </div>
         <div style={{background:'white',border:'1.5px solid var(--border)',borderRadius:20,padding:'6px 18px',marginBottom:16}}>
           {NO_INCOME_NOTICE.map(n => (
-            <div key={n.lang} lang={n.code} dir={n.rtl ? 'rtl' : 'ltr'} style={{padding:'12px 0',borderBottom:'1px solid #EEF4F7',textAlign:n.rtl ? 'right' : 'left'}}>
+            <div key={n.lang} lang={n.code} dir={n.rtl ? 'rtl' : 'ltr'} style={{padding:'12px 0',borderBottom:'1px solid #FFF6EF',textAlign:n.rtl ? 'right' : 'left'}}>
               <div style={{fontSize:11,fontWeight:800,color:'var(--teal)',textTransform:'uppercase',letterSpacing:'.05em',marginBottom:4}} dir="ltr">{n.lang}</div>
               <div style={{fontSize:14,color:'var(--navy)',fontWeight:600,lineHeight:1.65}}>{n.text}</div>
             </div>
@@ -760,14 +743,14 @@ export default function BecomeListenerPage() {
       <style dangerouslySetInnerHTML={{ __html: `
         .landing-section{background:white;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
         .landing-section h2{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px;}
-        .landing-row{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#3A6070;line-height:1.6;margin-bottom:8px;}
+        .landing-row{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#4A3C34;line-height:1.6;margin-bottom:8px;}
         .landing-row:last-child{margin-bottom:0;}
         .landing-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
         .not-row{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#5A4020;line-height:1.6;margin-bottom:8px;}
         .not-row:last-child{margin-bottom:0;}
         .not-section{background:#FFF8F0;border:1.5px solid #FFD9A0;border-radius:20px;padding:22px;margin-bottom:16px;}
         .not-section h2{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px;}
-        .identity-section{background:#F0F8FC;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
+        .identity-section{background:#FFF6EF;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
         .identity-section h2{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px;}
         .agree-box{background:white;border:2px solid var(--border);border-radius:16px;padding:18px 20px;margin-bottom:20px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color 0.2s;}
         .agree-box.checked{border-color:var(--orange);}
@@ -864,7 +847,7 @@ export default function BecomeListenerPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar"><a href="/" className="back">←</a></div>
-        <div style={{ textAlign: 'center', padding: '64px 20px', fontFamily: "'Nunito',sans-serif", fontWeight: 600, color: '#5A7A8A' }}>
+        <div style={{ textAlign: 'center', padding: '64px 20px', fontFamily: "'Nunito',sans-serif", fontWeight: 600, color: '#6E5B50' }}>
           {guardError ? (
             <>
               <div style={{ marginBottom: 16 }}>Connection problem — please try again.</div>
@@ -887,19 +870,19 @@ export default function BecomeListenerPage() {
             <>
               <div style={{fontSize:48,marginBottom:12}}>😔</div>
               <p style={{fontWeight:800,fontSize:17,marginBottom:6}}>Application not approved</p>
-              <p style={{fontSize:14,color:'#5A7A8A',marginBottom:16}}>
+              <p style={{fontSize:14,color:'#6E5B50',marginBottom:16}}>
                 We&apos;ve completed our review and we&apos;re unable to approve your application.
               </p>
               {rejectedNotes && (
-                <div style={{background:'#F0F8FC',border:'1.5px solid #D5EEF6',borderRadius:14,padding:'14px 16px',textAlign:'left',marginBottom:16}}>
-                  <div style={{fontSize:11,fontWeight:800,color:'#1A8FA0',textTransform:'uppercase',letterSpacing:'.06em',marginBottom:6}}>Reason from our team</div>
-                  <div style={{fontSize:14,color:'#0F4867',lineHeight:1.6,fontWeight:500}}>{rejectedNotes}</div>
+                <div style={{background:'#FFF6EF',border:'1.5px solid #F2DFD1',borderRadius:14,padding:'14px 16px',textAlign:'left',marginBottom:16}}>
+                  <div style={{fontSize:11,fontWeight:800,color:'#B85520',textTransform:'uppercase',letterSpacing:'.06em',marginBottom:6}}>Reason from our team</div>
+                  <div style={{fontSize:14,color:'#3B2F2A',lineHeight:1.6,fontWeight:500}}>{rejectedNotes}</div>
                 </div>
               )}
-              <p style={{fontSize:13,color:'#5A7A8A',marginBottom:6}}>
+              <p style={{fontSize:13,color:'#6E5B50',marginBottom:6}}>
                 You cannot resubmit this application directly.
               </p>
-              <p style={{fontSize:13,color:'#5A7A8A',marginBottom:16}}>
+              <p style={{fontSize:13,color:'#6E5B50',marginBottom:16}}>
                 If you believe this decision was made in error, contact support and we&apos;ll review your case.
               </p>
               <a href="/contact">
@@ -913,7 +896,7 @@ export default function BecomeListenerPage() {
             <>
               <div style={{fontSize:48,marginBottom:12}}>✅</div>
               <p style={{fontWeight:800,fontSize:17,marginBottom:6}}>Application submitted!</p>
-              <p style={{fontSize:14,color:'#5A7A8A',marginBottom:16}}>Our team is reviewing your profile. You&apos;ll hear from us within 24–48 hours — check the status page for updates anytime.</p>
+              <p style={{fontSize:14,color:'#6E5B50',marginBottom:16}}>Our team is reviewing your profile. You&apos;ll hear from us within 24–48 hours — check the status page for updates anytime.</p>
               <a href="/become-listener/status">
                 <button className="btn">Check application status →</button>
               </a>
@@ -967,7 +950,7 @@ export default function BecomeListenerPage() {
               <div className="earn-item"><div className="amount">{Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}%</div><div className="label">of your rate you keep on paid sessions</div></div>
             </div>
             {SHOW_LISTENER_GROWTH_NOTICE && (
-              <div style={{marginTop:16,background:'rgba(255,153,51,0.13)',border:'1.5px solid rgba(255,153,51,0.35)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'rgba(255,220,140,0.95)',lineHeight:1.6,fontWeight:500}}>
+              <div style={{marginTop:16,background:'rgba(232,116,59,0.13)',border:'1.5px solid rgba(232,116,59,0.35)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'rgba(255,220,140,0.95)',lineHeight:1.6,fontWeight:500}}>
                 <strong style={{fontWeight:800}}>Honest note:</strong> How Was Your Day is a growing platform. How much you earn depends entirely on how many seekers are using How Was Your Day when you&apos;re online. Early listeners focus on building their profile and first few ratings — volume grows as the platform does. We don&apos;t promise a specific income.
               </div>
             )}
@@ -1017,13 +1000,13 @@ export default function BecomeListenerPage() {
             />
             {fieldErrors.name && <span className="field-err">{fieldErrors.name}</span>}
 
-            <label className="lbl">Phone number (India)</label>
+            <label className="lbl">Mobile number (UK)</label>
             <input
               className={`input${fieldErrors.phone ? ' err' : ''}`}
               type="tel"
               inputMode="numeric"
-              maxLength={10}
-              placeholder="98765 43210 (10 digits)"
+              maxLength={13}
+              placeholder="07700 900123"
               value={phone}
               disabled={otpVerified}
               onChange={e => { setPhone(e.target.value.replace(/\D/g,'')); if (fieldErrors.phone) setFieldErrors(f => ({...f, phone: ''})) }}
@@ -1033,7 +1016,7 @@ export default function BecomeListenerPage() {
             {/* Phone is verified at sign-in via the MSG91 widget — show badge only. */}
             {digits().length === 10 && (
               <div style={{background:'#F0FFF4',border:'1.5px solid #34C759',borderRadius:12,padding:'10px 14px',marginBottom:16,fontSize:13,fontWeight:700,color:'#276749'}}>
-                {'✓'} Phone verified: +91 {digits()}
+                {'✓'} Phone verified: +44 {digits()}
               </div>
             )}
 
@@ -1205,10 +1188,10 @@ export default function BecomeListenerPage() {
             </select>
             {fieldErrors.occupation && <span className="field-err">{fieldErrors.occupation}</span>}
 
-            <label className="lbl">State</label>
+            <label className="lbl">Where in the UK</label>
             <select className={`input${fieldErrors.stateName ? ' err' : ''}`} value={stateName} onChange={e => { setStateName(e.target.value); setFieldErrors(f => ({...f, stateName: ''})) }}>
               <option value="">Select…</option>
-              {INDIAN_STATES.map(o => <option key={o} value={o}>{o}</option>)}
+              {UK_REGIONS.map(o => <option key={o} value={o}>{o}</option>)}
             </select>
             {fieldErrors.stateName && <span className="field-err">{fieldErrors.stateName}</span>}
 
@@ -1368,7 +1351,7 @@ export default function BecomeListenerPage() {
             {fieldErrors.rate && <span className="field-err">{fieldErrors.rate}</span>}
             <p style={{fontSize:12,color:'var(--gray)',marginBottom:12,fontWeight:500}}>You keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of your rate on every paid session. The standard starting rate is {formatRate(DEFAULT_LISTENER_RATE)}; you can raise it as you build reviews.</p>
 
-            <div style={{background:'#F0F8FC',borderRadius:12,padding:'10px 14px',marginBottom:12,fontSize:13,color:'#0F4867',fontWeight:600}}>
+            <div style={{background:'#FFF6EF',borderRadius:12,padding:'10px 14px',marginBottom:12,fontSize:13,color:'#3B2F2A',fontWeight:600}}>
               📅 Sessions are <strong>8, 16 or 32 minutes</strong> — instant, or booked into weekly hours you set. No open-ended calls — clean start and end times for both sides.
             </div>
 
@@ -1411,40 +1394,30 @@ export default function BecomeListenerPage() {
             />
             {fieldErrors.accountHolder
               ? <span className="field-err">{fieldErrors.accountHolder}</span>
-              : <span style={{fontSize:11,color:'#8aabbc',marginTop:2,display:'block'}}>Must match your bank records exactly — used to verify payouts</span>
+              : <span style={{fontSize:11,color:'#B59A89',marginTop:2,display:'block'}}>Must match your bank records exactly — used to verify payouts</span>
             }
 
-            <label className="lbl">Bank account number (9–18 digits) <span style={{color:'#c0392b'}}>*</span></label>
+            <label className="lbl">Account number (8 digits) <span style={{color:'#c0392b'}}>*</span></label>
             <input
               className={`input${fieldErrors.bank ? ' err' : ''}`}
               type="text"
               inputMode="numeric"
-              placeholder="Enter account number"
+              placeholder="12345678"
               value={bank}
               onChange={e => { setBank(e.target.value.replace(/\D/g,'')); if (fieldErrors.bank) setFieldErrors(f => ({...f, bank: ''})) }}
             />
             {fieldErrors.bank && <span className="field-err">{fieldErrors.bank}</span>}
 
-            <label className="lbl">IFSC code <span style={{color:'#c0392b'}}>*</span></label>
+            <label className="lbl">Sort code <span style={{color:'#c0392b'}}>*</span></label>
             <input
               className={`input${fieldErrors.ifsc ? ' err' : ''}`}
               type="text"
-              placeholder="e.g. SBIN0001234"
+              placeholder="12-34-56"
+              inputMode="numeric"
               value={ifsc}
-              onChange={e => { setIfsc(e.target.value.toUpperCase()); if (fieldErrors.ifsc) setFieldErrors(f => ({...f, ifsc: ''})) }}
+              onChange={e => { setIfsc(e.target.value.replace(/[^\d-]/g, '').slice(0, 8)); if (fieldErrors.ifsc) setFieldErrors(f => ({...f, ifsc: ''})) }}
             />
             {fieldErrors.ifsc && <span className="field-err">{fieldErrors.ifsc}</span>}
-
-            <label className="lbl">UPI ID (optional)</label>
-            <input
-              className={`input${fieldErrors.upi ? ' err' : ''}`}
-              type="text"
-              placeholder="e.g. yourname@upi"
-              value={upi}
-              onChange={e => { setUpi(e.target.value); if (fieldErrors.upi) setFieldErrors(f => ({...f, upi: ''})) }}
-            />
-            {fieldErrors.upi && <span className="field-err">{fieldErrors.upi}</span>}
-
 
             <div className="disclaimer">
               <p>⚠️ <strong>Important:</strong> How Was Your Day is a peer support platform. By applying, you confirm you are sharing personal lived experience only — not providing clinical advice, therapy, or counseling of any kind.</p>

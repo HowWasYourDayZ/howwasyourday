@@ -17,176 +17,13 @@ export default function BottomNav() {
   const pathname = usePathname()
   const router = useRouter()
 
+  // The tab bar belongs to the signed-in app; marketing and info pages have their own nav.
+  const APP_PATHS = ['/browse', '/talk', '/history', '/wallet', '/notifications', '/profile', '/dashboard',
+    '/sessions', '/listener', '/messages', '/listener-lounge', '/feeling', '/daily-check-in']
   const shouldHide =
-    pathname === '/' ||
-    pathname === '/auth' ||
-    pathname.startsWith('/session/') ||
+    !APP_PATHS.some(p => pathname === p || pathname.startsWith(p + '/')) ||
     // Full-height read-only chat detail (/history/<id>) — but keep nav on /history itself
-    (pathname.startsWith('/history/') && pathname !== '/history') ||
-    pathname === '/become-listener' ||
-    pathname === '/about' ||
-    pathname === '/privacy' ||
-    pathname === '/terms' ||
-    pathname === '/contact' ||
-    pathname === '/admin' ||
-    pathname.startsWith('/admin/') ||
-    pathname === '/trust' ||
-    pathname === '/press' ||
-    pathname === '/howwasyourday' ||
-    pathname.startsWith('/resources') ||
-    pathname.startsWith('/support/') ||
-    pathname === '/support' ||
-    pathname.startsWith('/howwasyourday-app-mental-health') ||
-    pathname.startsWith('/anonymous-peer-support') ||
-    pathname.startsWith('/need-someone-to-talk-to-india') ||
-    pathname.startsWith('/get-paid-to-chat-india') ||
-    pathname.startsWith('/delhi') ||
-    pathname.startsWith('/mumbai') ||
-    pathname.startsWith('/bengaluru') ||
-    pathname.startsWith('/hyderabad') ||
-    pathname.startsWith('/blog') ||
-    pathname.startsWith('/faq') ||
-    pathname.startsWith('/pricing') ||
-    pathname.startsWith('/emotional-support') ||
-    pathname.startsWith('/anonymous-support-online') ||
-    pathname.startsWith('/someone-to-talk-to-at-night') ||
-    pathname.startsWith('/alternatives-to-therapy-india') ||
-    pathname.startsWith('/feeling-lonely-in-india') ||
-    pathname.startsWith('/online-emotional-support-india') ||
-    pathname.startsWith('/our-story') ||
-    pathname.startsWith('/why-howwasyourday') ||
-    pathname.startsWith('/how-it-works') ||
-    pathname.startsWith('/is-howwasyourday-safe') ||
-    // SEO / marketing landing pages — these are seeker-acquisition pages
-    // and must not show the authenticated app nav bar
-    pathname.startsWith('/astrotalk-alternative') ||
-    pathname.startsWith('/relationship-advice-online-india') ||
-    pathname.startsWith('/talk-to-real-person-online-india') ||
-    pathname.startsWith('/loneliness-support-india') ||
-    pathname.startsWith('/for-women') ||
-    pathname.startsWith('/i-need-someone-to-talk-to') ||
-    pathname.startsWith('/need-to-vent-right-now') ||
-    pathname.startsWith('/vent-to-someone-online') ||
-    pathname.startsWith('/having-a-bad-day') ||
-    pathname.startsWith('/just-had-a-fight') ||
-    pathname.startsWith('/talk-to-someone-not-astrologer') ||
-    pathname.startsWith('/talk-to-someone-right-now') ||
-    pathname.startsWith('/online-counseling-india') ||
-    pathname.startsWith('/online-counselling-india') ||
-    pathname.startsWith('/cant-afford-therapy-india') ||
-    pathname.startsWith('/chat-with-real-person') ||
-    pathname.startsWith('/ai-chatbot-alternative') ||
-    pathname.startsWith('/earn-by-listening') ||
-    pathname.startsWith('/i-need-professional-help-india') ||
-    pathname.startsWith('/someone-to-lean-on') ||
-    pathname.startsWith('/talk-to-stranger-online-india') ||
-    pathname.startsWith('/daily-check-in') ||
-    pathname.startsWith('/feeling/') ||
-    pathname === '/feeling' ||
-    pathname.startsWith('/feeling-lonely') ||
-    pathname.startsWith('/glossary') ||
-    pathname.startsWith('/press') ||
-    pathname.startsWith('/chennai') ||
-    pathname.startsWith('/pune') ||
-    pathname.startsWith('/kolkata') ||
-    pathname.startsWith('/jaipur') ||
-    pathname.startsWith('/ahmedabad') ||
-    pathname.startsWith('/yourdost-alternative') ||
-    pathname.startsWith('/wysa-alternative') ||
-    pathname.startsWith('/depression-support-india') ||
-    pathname.startsWith('/peer-support-online-india') ||
-    pathname.startsWith('/talk-about-my-problems-online') ||
-    pathname.startsWith('/feeling-overwhelmed-india') ||
-    // Round 8: peer support keyword cluster
-    pathname === '/peer-support' ||
-    pathname.startsWith('/peer-counselling-india') ||
-    pathname.startsWith('/mental-health-support-india') ||
-    pathname.startsWith('/best-peer-support-app-india') ||
-    // Round 9: landing pages + city pages
-    pathname.startsWith('/paid-counselling-india') ||
-    pathname.startsWith('/relationship-counselling-india') ||
-    pathname.startsWith('/betterhelp-alternative-india') ||
-    pathname.startsWith('/innerhour-alternative') ||
-    pathname.startsWith('/empathy-friend-india') ||
-    pathname.startsWith('/stress-management-india') ||
-    pathname.startsWith('/work-stress-india') ||
-    pathname.startsWith('/trauma-support-india') ||
-    pathname.startsWith('/anger-management-india') ||
-    pathname.startsWith('/men-mental-health-india') ||
-    pathname.startsWith('/nri-mental-health') ||
-    pathname.startsWith('/teen-mental-health-india') ||
-    pathname.startsWith('/best-mental-health-app-india') ||
-    pathname.startsWith('/emotional-wellness-india') ||
-    pathname.startsWith('/online-support-group-india') ||
-    pathname.startsWith('/noida') ||
-    pathname.startsWith('/gurgaon') ||
-    pathname.startsWith('/chandigarh') ||
-    pathname.startsWith('/kochi') ||
-    // Round 10: relationship & moment-specific landing pages
-    pathname.startsWith('/vent-about-relationship-india') ||
-    pathname.startsWith('/relationship-frustration-india') ||
-    pathname.startsWith('/partner-not-understanding-india') ||
-    pathname.startsWith('/morning-emotional-support-india') ||
-    pathname.startsWith('/after-fight-with-partner-india') ||
-    pathname.startsWith('/talk-during-commute-india') ||
-    pathname.startsWith('/relationship-advice-vs-venting-india') ||
-    // Round 11: emotional support verticals
-    pathname.startsWith('/empathy-india') ||
-    pathname.startsWith('/paid-friend-india') ||
-    pathname.startsWith('/online-friend-india') ||
-    pathname.startsWith('/stranger-friend-india') ||
-    pathname.startsWith('/someone-who-gets-it-india') ||
-    pathname.startsWith('/rant-online-india') ||
-    pathname.startsWith('/get-it-off-your-chest-india') ||
-    pathname.startsWith('/tarot-alternative-india') ||
-    pathname.startsWith('/astroyogi-alternative') ||
-    pathname.startsWith('/talk-therapy-india') ||
-    pathname.startsWith('/walk-in-counselling-india') ||
-    pathname.startsWith('/quarter-life-crisis-india') ||
-    pathname.startsWith('/midlife-crisis-india') ||
-    pathname.startsWith('/existential-crisis-india') ||
-    pathname.startsWith('/housewife-support-india') ||
-    pathname.startsWith('/single-parent-india') ||
-    pathname.startsWith('/divorce-support-india') ||
-    pathname.startsWith('/interfaith-relationship-india') ||
-    pathname.startsWith('/cant-tell-anyone-india') ||
-    pathname.startsWith('/doctor-burnout-india') ||
-    // Round 12: high-intent paying-user keyword pages
-    pathname.startsWith('/cheating-partner-india') ||
-    pathname.startsWith('/mother-in-law-stress-india') ||
-    pathname.startsWith('/toxic-relationship-india') ||
-    pathname.startsWith('/emotional-abuse-india') ||
-    pathname.startsWith('/affair-recovery-india') ||
-    pathname.startsWith('/feeling-trapped-india') ||
-    pathname.startsWith('/heartbreak-india') ||
-    pathname.startsWith('/overthinking-relationship-india') ||
-    pathname.startsWith('/controlling-relationship-india') ||
-    pathname.startsWith('/gaslighting-india') ||
-    pathname.startsWith('/financial-anxiety-india') ||
-    pathname.startsWith('/job-loss-support-india') ||
-    pathname.startsWith('/upsc-stress-india') ||
-    pathname.startsWith('/competitive-exam-stress-india') ||
-    pathname.startsWith('/anxiety-attack-india') ||
-    pathname.startsWith('/crying-for-no-reason-india') ||
-    pathname.startsWith('/no-motivation-india') ||
-    pathname.startsWith('/feeling-empty-inside-india') ||
-    pathname.startsWith('/panic-attack-india') ||
-    pathname.startsWith('/people-pleaser-india') ||
-    pathname.startsWith('/low-self-esteem-india') ||
-    pathname.startsWith('/social-anxiety-india') ||
-    pathname.startsWith('/imposter-syndrome-india') ||
-    pathname.startsWith('/joint-family-stress-india') ||
-    pathname.startsWith('/parents-forcing-marriage-india') ||
-    pathname.startsWith('/sasural-problems-india') ||
-    pathname.startsWith('/bad-day-india') ||
-    pathname.startsWith('/need-to-vent-india') ||
-    pathname.startsWith('/emotional-support-india') ||
-    pathname.startsWith('/talk-to-someone-free-india') ||
-    pathname.startsWith('/working-woman-stress-india') ||
-    pathname.startsWith('/new-mom-india') ||
-    pathname.startsWith('/relationship-trust-issues-india') ||
-    pathname.startsWith('/communication-problems-relationship-india') ||
-    pathname.startsWith('/feeling-invisible-india')
+    (pathname.startsWith('/history/') && pathname !== '/history')
 
   if (shouldHide) return null
 
@@ -196,7 +33,7 @@ export default function BottomNav() {
 
         .bottom-nav{
           position:fixed;bottom:0;left:0;right:0;z-index:100;
-          background:white;border-top:1.5px solid #D5EEF6;
+          background:white;border-top:1.5px solid #F2DFD1;
           display:flex;justify-content:center;
           padding-bottom:env(safe-area-inset-bottom,0px);
         }
@@ -207,9 +44,9 @@ export default function BottomNav() {
           flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
           padding:10px 0 8px;cursor:pointer;border:none;background:transparent;
           font-family:Nunito,sans-serif;font-weight:600;font-size:11px;
-          color:#5A7A8A;transition:color .15s;gap:3px;
+          color:#6E5B50;transition:color .15s;gap:3px;
         }
-        .nav-tab.active{color:#0F4867;}
+        .nav-tab.active{color:#3B2F2A;}
         .nav-tab.accent{color:#E07B10;font-weight:800;}
         .nav-tab.accent.active{color:#B35C00;}
         .nav-tab-icon{font-size:20px;line-height:1;}

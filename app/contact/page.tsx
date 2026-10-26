@@ -4,9 +4,9 @@ import { useState } from 'react'
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
   body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%, #C2E4F2 0%, #DAEEF8 22%, #FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%, #FDE6D6 0%, #FFF1E6 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
   .nav-logo{height:56px;width:auto;}
@@ -21,13 +21,13 @@ const S = `
   .label{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;display:block;}
   .input{width:100%;padding:13px 16px;font-family:Nunito,sans-serif;font-size:15px;font-weight:600;color:var(--navy);border:2px solid var(--border);border-radius:14px;outline:none;background:white;transition:border-color 0.2s;margin-bottom:16px;}
   .input:focus{border-color:var(--navy);}
-  .input::placeholder{color:#B0C8D8;font-weight:400;}
+  .input::placeholder{color:#E9CDB9;font-weight:400;}
   .input.error{border-color:#E53935;}
   .field-error{font-size:12px;color:#E53935;font-weight:700;margin-top:-12px;margin-bottom:12px;}
   textarea.input{resize:vertical;min-height:110px;line-height:1.5;}
   select.input{cursor:pointer;}
-  .btn{width:100%;padding:15px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(255,153,51,0.3);}
-  .btn:hover{background:#e8861a;}
+  .btn{width:100%;padding:15px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(232,116,59,0.3);}
+  .btn:hover{background:#D0632D;}
   .success{text-align:center;padding:32px 0;}
   .success-icon{font-size:48px;margin-bottom:16px;}
   .success h3{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:8px;}

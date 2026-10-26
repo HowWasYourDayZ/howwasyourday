@@ -58,19 +58,19 @@ const data: ReadyToTalkLandingData = {
   ],
   "related": [
     {
-      "href": "/talk-to-someone-right-now",
-      "label": "Someone to talk to right now"
+      "href": "/talk",
+      "label": "Talk to someone now"
     },
     {
-      "href": "/chat-with-real-person",
-      "label": "Talk to a real person"
+      "href": "/how-it-works",
+      "label": "How it works"
     },
     {
       "href": "/peer-support",
       "label": "What is peer support?"
     },
     {
-      "href": "/alternatives-to-therapy-india",
+      "href": "/peer-support-vs-therapy",
       "label": "Therapy vs peer support"
     }
   ]

@@ -41,8 +41,9 @@ export async function POST(req: NextRequest) {
     const name      = typeof body?.name       === 'string' ? body.name.trim() : ''
     const bio       = typeof body?.bio        === 'string' ? body.bio.trim()  : ''
     const accountHolderName = typeof body?.account_holder_name === 'string' ? body.account_holder_name.trim() : ''
-    const bank      = typeof body?.bank       === 'string' ? body.bank.trim() : ''
-    const ifsc      = typeof body?.ifsc       === 'string' ? body.ifsc.trim().toUpperCase() : ''
+    const bank      = typeof body?.bank       === 'string' ? body.bank.replace(/\D/g, '') : ''
+    // UK sort code — kept in the ifsc_code column until Whop payouts replace bank details.
+    const ifsc      = typeof body?.ifsc       === 'string' ? body.ifsc.replace(/\D/g, '') : ''
     const upi       = typeof body?.upi        === 'string' ? body.upi.trim()  : ''
     // Validate avatar_url — must be this project's Supabase Storage, in the
     // avatars bucket, and the path must start with the caller's own user ID.
@@ -94,10 +95,10 @@ export async function POST(req: NextRequest) {
     if ('error' in onboarding) return NextResponse.json({ error: onboarding.error }, { status: 400 })
     if (detectContact(onboarding.public.lived_experience).length)
       return NextResponse.json({ error: 'Your profile is public, so it can’t include contact details (phone, social media, email or links). Please remove them.' }, { status: 400 })
-    if (!/^\d{9,18}$/.test(bank))
-      return NextResponse.json({ error: 'Please enter a valid bank account number.' }, { status: 400 })
-    if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifsc))
-      return NextResponse.json({ error: 'Please enter a valid IFSC code.' }, { status: 400 })
+    if (!/^\d{8}$/.test(bank))
+      return NextResponse.json({ error: 'Please enter your 8-digit UK account number.' }, { status: 400 })
+    if (!/^\d{6}$/.test(ifsc))
+      return NextResponse.json({ error: 'Please enter your 6-digit sort code.' }, { status: 400 })
     if (upi && !/^[\w.\-]{2,}@[\w]{2,}$/.test(upi))
       return NextResponse.json({ error: 'Please enter a valid UPI ID.' }, { status: 400 })
     if (aadhaar && !/^\d{12}$/.test(aadhaar))

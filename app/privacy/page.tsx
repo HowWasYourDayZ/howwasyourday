@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--orange:#FF9933;--gray:#6B8FA8;--border:#DDE8F0;--cream:#FFFBF5;}
+  :root{--navy:#3B2F2A;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--cream:#FFFAF6;}
   body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   a{color:var(--orange);text-decoration:none;}
   .page{max-width:640px;margin:0 auto;padding:24px 20px 80px;}
@@ -18,12 +18,12 @@ const S = `
   h1{font-size:28px;font-weight:900;color:var(--navy);margin-bottom:8px;}
   .updated{font-size:13px;color:var(--gray);font-weight:500;margin-bottom:32px;}
   h2{font-size:17px;font-weight:800;color:var(--navy);margin:28px 0 10px;}
-  p{font-size:14px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:10px;}
+  p{font-size:14px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:10px;}
   ul{padding-left:20px;margin-bottom:10px;}
-  li{font-size:14px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:4px;}
-  .highlight-box{background:#F0F7FF;border:1.5px solid #B8D4F0;border-radius:16px;padding:16px 18px;margin:24px 0;}
-  .highlight-box p{margin:0;font-size:13px;color:#1E3D5C;font-weight:600;}
-  .tbl{width:100%;border-collapse:collapse;font-size:13px;color:#3A5A6E;margin:8px 0 14px;}
+  li{font-size:14px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:4px;}
+  .highlight-box{background:#FFFAF6;border:1.5px solid #F2DFD1;border-radius:16px;padding:16px 18px;margin:24px 0;}
+  .highlight-box p{margin:0;font-size:13px;color:#9E4719;font-weight:600;}
+  .tbl{width:100%;border-collapse:collapse;font-size:13px;color:#4A3C34;margin:8px 0 14px;}
   .tbl th,.tbl td{border-bottom:1px solid var(--border);padding:8px 6px;text-align:left;vertical-align:top;}
   .tbl th{color:var(--navy);font-weight:800;}
   .wrap{overflow-x:auto;}
@@ -44,12 +44,11 @@ const purposes: [string, string, string][] = [
 const processors: [string, string, string][] = [
   ['Supabase', 'Database, sign-in and file storage', LEGAL.hostingRegion],
   ['Vercel', 'Website hosting', 'Global edge network; USA'],
-  ['MSG91', 'Sends and checks sign-in codes by SMS', 'India'],
+  // Add the SMS sign-in provider here (with its location) the day phone sign-in is switched on.
   ['Google (only if you sign in with Google)', 'Confirms your identity and shares your email address with us', 'USA'],
   ['Agora', 'Real-time voice connection (not recorded)', 'Global network; USA'],
   ['Google Firebase Cloud Messaging', 'Push notifications', 'USA'],
   ['Resend', 'Service emails', 'USA'],
-  ['Cloudflare Turnstile', 'Bot protection on sign-in', 'Global network'],
   ['Upstash', 'Rate limiting', 'Region chosen by us'],
   ['Our payment provider', 'Card payments, refunds and listener payouts', 'Shown at checkout'],
   ['Google Analytics (only with consent)', 'Usage statistics', 'USA'],

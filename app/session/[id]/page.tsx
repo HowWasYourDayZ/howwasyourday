@@ -19,22 +19,22 @@ const supabase = createBrowserClient(
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
 body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
-.wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#E8F4FD;}
-.hdr{background:#0F4867;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;position:sticky;top:0;z-index:50;}
-.av{width:40px;height:40px;border-radius:50%;background:#1A8FA0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:white;flex-shrink:0;}
+.wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#FFF6EF;}
+.hdr{background:#3B2F2A;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;position:sticky;top:0;z-index:50;}
+.av{width:40px;height:40px;border-radius:50%;background:#B85520;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:white;flex-shrink:0;}
 .hdr-info{flex:1;}
 .hdr-name{font-size:16px;font-weight:700;color:white;}
 .hdr-sub{font-size:12px;color:rgba(255,255,255,0.7);font-weight:500;}
 .timer{background:rgba(255,255,255,0.15);padding:5px 12px;border-radius:50px;font-size:13px;font-weight:800;color:white;font-variant-numeric:tabular-nums;}
-.timer.warn{background:rgba(255,153,51,0.4);color:#FFD580;}
+.timer.warn{background:rgba(232,116,59,0.4);color:#FFD580;}
 .timer.low{background:rgba(220,38,38,0.4);color:#FCA5A5;}
 .end-btn{background:rgba(220,38,38,0.25);color:#FCA5A5;border:1px solid rgba(220,38,38,0.3);font-family:Nunito,sans-serif;font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;}
 .msgs{flex:1;overflow-y:auto;padding:12px 8px 80px;display:flex;flex-direction:column;gap:3px;}
 .msgs::-webkit-scrollbar{width:3px;}
 .msgs::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.15);border-radius:2px;}
-.date-pill{align-self:center;background:rgba(255,255,255,0.85);color:#4A6B7E;font-size:12px;font-weight:600;padding:4px 12px;border-radius:8px;margin:8px 0;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.date-pill{align-self:center;background:rgba(255,255,255,0.85);color:#5C4A40;font-size:12px;font-weight:600;padding:4px 12px;border-radius:8px;margin:8px 0;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
 .msg-wrap{display:flex;flex-direction:column;max-width:80%;}
 .msg-wrap.me{align-self:flex-end;align-items:flex-end;}
 .msg-wrap.them{align-self:flex-start;align-items:flex-start;}
@@ -44,28 +44,28 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .bubble.temp{opacity:0.65;}
 .bubble-text{font-size:14px;font-weight:500;line-height:1.5;word-break:break-word;}
 .bubble.me .bubble-text{color:white;}
-.bubble.them .bubble-text{color:#0F2233;}
+.bubble.them .bubble-text{color:#9E4719;}
 .bubble-footer{display:flex;align-items:center;justify-content:flex-end;gap:4px;margin-top:2px;}
 .bubble-time{font-size:11px;font-weight:500;}
 .bubble.me .bubble-time{color:rgba(255,255,255,0.75);}
-.bubble.them .bubble-time{color:#4A6B7E;}
+.bubble.them .bubble-time{color:#5C4A40;}
 .ticks{font-size:13px;line-height:1;color:rgba(255,255,255,0.85);}
 .typing-indicator{align-self:flex-start;background:white;border-radius:18px;padding:10px 16px;font-size:13px;color:var(--gray);font-style:italic;font-weight:600;margin:4px 0;animation:pulse 1.5s ease-in-out infinite;}
 .bubble{cursor:pointer;}
 .rx-row{display:flex;gap:4px;margin-top:-2px;flex-wrap:wrap;}
 .rx-chip{background:white;border:1px solid var(--border);border-radius:50px;padding:2px 8px;font-size:12px;font-weight:700;color:var(--navy);cursor:pointer;line-height:1.5;box-shadow:0 1px 2px rgba(0,0,0,.08);}
-.rx-chip.mine{background:#E8F4FD;border-color:var(--teal);}
+.rx-chip.mine{background:#FFF6EF;border-color:var(--teal);}
 .rx-picker{display:flex;gap:6px;background:white;border:1px solid var(--border);border-radius:50px;padding:5px 8px;margin-top:4px;box-shadow:0 2px 10px rgba(0,0,0,.14);}
 .rx-opt{background:none;border:none;font-size:19px;cursor:pointer;line-height:1;padding:2px;border-radius:50%;}
 .rx-opt:hover{transform:scale(1.18);}
-.rx-opt.mine{background:#E8F4FD;}
-.input-bar{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;padding:8px 10px;padding-bottom:calc(8px + env(safe-area-inset-bottom));background:#D6EAF8;border-top:1px solid #C5DFF0;display:flex;align-items:flex-end;gap:8px;z-index:100;}
-.msg-input{flex:1;padding:10px 14px;font-family:Nunito,sans-serif;font-size:15px;color:#0F2233;border:none;border-radius:24px;outline:none;resize:none;max-height:100px;background:white;line-height:1.4;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
-.send{width:44px;height:44px;border-radius:50%;background:#0F4867;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.2);}
+.rx-opt.mine{background:#FFF6EF;}
+.input-bar{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;padding:8px 10px;padding-bottom:calc(8px + env(safe-area-inset-bottom));background:#FFF6EF;border-top:1px solid #F2DFD1;display:flex;align-items:flex-end;gap:8px;z-index:100;}
+.msg-input{flex:1;padding:10px 14px;font-family:Nunito,sans-serif;font-size:15px;color:#9E4719;border:none;border-radius:24px;outline:none;resize:none;max-height:100px;background:white;line-height:1.4;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.send{width:44px;height:44px;border-radius:50%;background:#3B2F2A;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.2);}
 .send svg{width:22px;height:22px;}
 .send:disabled{opacity:.5;cursor:not-allowed;}
-.note{padding:8px 16px;text-align:center;font-size:12px;color:#4A6B7E;font-weight:600;background:rgba(255,255,255,0.6);flex-shrink:0;}
-.listener-banner{padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;background:#E8F4FD;border-bottom:1px solid var(--border);}
+.note{padding:8px 16px;text-align:center;font-size:12px;color:#5C4A40;font-weight:600;background:rgba(255,255,255,0.6);flex-shrink:0;}
+.listener-banner{padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;background:#FFF6EF;border-bottom:1px solid var(--border);}
 .listener-banner.free{background:#FFF8E8;border-color:#FFE3A3;}
 .listener-banner-icon{font-size:17px;flex-shrink:0;line-height:1;}
 .listener-banner-text{flex:1;font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.4;}
@@ -81,13 +81,13 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .trial-conv{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;text-align:center;background:var(--navy);}
 .trial-conv-icon{font-size:52px;margin-bottom:24px;line-height:1;}
 .trial-conv-h{font-size:clamp(22px,5vw,28px);font-weight:900;color:white;line-height:1.18;margin-bottom:12px;}
-.trial-conv-sub{font-size:16px;color:rgba(213,238,246,0.8);font-weight:500;line-height:1.65;margin-bottom:36px;max-width:290px;}
+.trial-conv-sub{font-size:16px;color:rgba(251,227,210,0.8);font-weight:500;line-height:1.65;margin-bottom:36px;max-width:290px;}
 .trial-conv-btns{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;max-width:300px;}
-.btn-trial-continue{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:17px 36px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(255,153,51,0.45);width:100%;}
-.btn-trial-continue:hover{background:#e8861a;}
+.btn-trial-continue{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:17px 36px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(232,116,59,0.45);width:100%;}
+.btn-trial-continue:hover{background:#D0632D;}
 .btn-trial-leave{background:transparent;color:rgba(255,255,255,0.65);font-family:Nunito,sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.22);cursor:pointer;width:100%;}
 .btn-trial-leave:hover{background:rgba(255,255,255,0.06);}
-.trial-conv-hint{font-size:13px;color:rgba(213,238,246,0.5);font-weight:600;margin-top:18px;}
+.trial-conv-hint{font-size:13px;color:rgba(251,227,210,0.5);font-weight:600;margin-top:18px;}
 .end-icon{font-size:56px;margin-bottom:20px;}
 .end-h{font-size:24px;font-weight:900;color:var(--navy);margin-bottom:8px;}
 .end-p{font-size:15px;color:var(--gray);font-weight:500;margin-bottom:28px;}
@@ -97,7 +97,7 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .star.lit{filter:none;opacity:1;}
 .review-input{width:100%;max-width:340px;min-height:60px;border:1.5px solid var(--border);border-radius:14px;padding:12px 16px;font-family:Nunito,sans-serif;font-size:14px;font-weight:500;color:var(--navy);resize:vertical;outline:none;margin-bottom:20px;}
 .review-input:focus{border-color:var(--teal);}
-.review-input::placeholder{color:#8AAAB8;font-weight:500;}
+.review-input::placeholder{color:#8A766B;font-weight:500;}
 .btn-done{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:16px 40px;border-radius:50px;border:none;cursor:pointer;}
 .back-confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;}
 .back-confirm-card{background:white;border-radius:20px;padding:24px;max-width:340px;width:100%;text-align:center;}
@@ -145,8 +145,8 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .net-bar.on.fair{background:#FCD34D;}
 .net-bar.on.poor{background:#F87171;}
 .mic-select{background:rgba(255,255,255,0.12);color:white;font-family:Nunito,sans-serif;font-size:11px;font-weight:700;border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:4px 8px;cursor:pointer;max-width:160px;}
-.mic-select option{background:#0F4867;color:white;}
-.reconnecting-badge{background:rgba(255,153,51,0.2);border:1px solid rgba(255,153,51,0.4);color:#FFD580;font-size:11px;font-weight:700;padding:4px 10px;border-radius:50px;animation:pulse 1.5s ease-in-out infinite;}
+.mic-select option{background:#3B2F2A;color:white;}
+.reconnecting-badge{background:rgba(232,116,59,0.2);border:1px solid rgba(232,116,59,0.4);color:#FFD580;font-size:11px;font-weight:700;padding:4px 10px;border-radius:50px;animation:pulse 1.5s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
 `
 
@@ -1530,7 +1530,7 @@ function SessionContent() {
             {listenerId && (
               <button
                 onClick={() => setShowReport(true)}
-                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, color: '#8AAAB8', fontFamily: "'Nunito',sans-serif", marginTop: 12, fontWeight: 600 }}
+                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, color: '#8A766B', fontFamily: "'Nunito',sans-serif", marginTop: 12, fontWeight: 600 }}
               >
                 Report an issue with this session
               </button>
@@ -1603,7 +1603,7 @@ function SessionContent() {
             <div className="end-icon">📅</div>
             <h2 className="end-h">{durationMins}-minute {isVoice ? 'voice call' : 'text chat'}{isSeeker ? ` with ${name}` : ''}</h2>
             <p style={{ fontSize: 15, color: 'var(--navy)', fontWeight: 800, margin: '6px 0 14px' }}>{when} (UK time)</p>
-            <div style={{ margin: '0 auto 16px', maxWidth: 380, padding: '12px 14px', borderRadius: 14, fontSize: 14, fontWeight: 700, lineHeight: 1.45, background: '#EEF6FB', color: 'var(--navy)' }} aria-live="polite">
+            <div style={{ margin: '0 auto 16px', maxWidth: 380, padding: '12px 14px', borderRadius: 14, fontSize: 14, fontWeight: 700, lineHeight: 1.45, background: '#FFF6EF', color: 'var(--navy)' }} aria-live="polite">
               {untilOpen === null ? 'Loading…'
                 : untilOpen > 0 ? <>This page opens in <strong>{fmtWait(untilOpen)}</strong>. Keep it open, or come back 5 minutes before.</>
                 : schedWaitingFor ? <>You&apos;re in. Waiting for {schedWaitingFor === 'listener' ? name : 'the seeker'} to join — the session starts as soon as you&apos;re both here.</>
@@ -1622,7 +1622,7 @@ function SessionContent() {
                 </button>
               )}
             </div>
-            <a href="/sessions" style={{ fontSize: 13, fontWeight: 800, color: '#1A8FA0' }}>All my sessions →</a>
+            <a href="/sessions" style={{ fontSize: 13, fontWeight: 800, color: '#B85520' }}>All my sessions →</a>
           </div>
           <div className="crisis-footer">
             🆘 Crisis: <a href="tel:116123">Samaritans 116 123</a> · <a href="sms:85258">text SHOUT to 85258</a> · Emergency <a href="tel:112">999 / 112</a>
@@ -1655,7 +1655,7 @@ function SessionContent() {
 
               <div style={{
                 margin: '14px auto 10px', maxWidth: 380, padding: '12px 14px', borderRadius: 14, fontSize: 14, fontWeight: 700, lineHeight: 1.45,
-                background: alertStatus === 'not_delivered' ? '#FFF6E5' : alertStatus === 'delivered' ? '#E8F8EE' : '#EEF6FB',
+                background: alertStatus === 'not_delivered' ? '#FFF6E5' : alertStatus === 'delivered' ? '#E8F8EE' : '#FFF6EF',
                 color: alertStatus === 'not_delivered' ? '#9A5B00' : alertStatus === 'delivered' ? '#1E7A3E' : 'var(--navy)',
               }}>
                 {alertStatus === 'delivered' && <>✅ Alert delivered to {name}&apos;s phone.</>}
@@ -1669,8 +1669,8 @@ function SessionContent() {
 
               {requestSecsLeft !== null && (
                 <div style={{ maxWidth: 380, margin: '0 auto 6px' }}>
-                  <div style={{ height: 8, borderRadius: 8, background: '#E3EEF4', overflow: 'hidden' }}>
-                    <div style={{ height: '100%', width: `${progressPct}%`, background: 'var(--teal, #1A8FA0)', transition: 'width 1s linear' }} />
+                  <div style={{ height: 8, borderRadius: 8, background: '#FFF6EF', overflow: 'hidden' }}>
+                    <div style={{ height: '100%', width: `${progressPct}%`, background: 'var(--teal, #B85520)', transition: 'width 1s linear' }} />
                   </div>
                   <div style={{ fontSize: 12, color: 'var(--gray)', fontWeight: 700, marginTop: 6 }}>
                     {fmtTimer(requestSecsLeft)} left · {sessionIsFreeTrial ? 'your free intro isn\u2019t used up if they don\u2019t respond' : 'your money is on hold and fully refunded if they don\u2019t respond'}
@@ -1684,7 +1684,7 @@ function SessionContent() {
                   {alternatives === null ? (
                     <div style={{ fontSize: 13, color: 'var(--gray)', fontWeight: 600 }}>Finding listeners who are online…</div>
                   ) : alternatives.map(l => (
-                    <div key={l.user_id} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 12px', border: '1.5px solid #D5EEF6', borderRadius: 14, marginBottom: 8 }}>
+                    <div key={l.user_id} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 12px', border: '1.5px solid #F2DFD1', borderRadius: 14, marginBottom: 8 }}>
                       {l.users?.avatar_url
                         ? <img src={l.users.avatar_url} alt="" style={{ width: 44, height: 44, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
                         : <div className="av" style={{ flexShrink: 0 }}>{ini(l.users?.name ?? 'L')}</div>}
@@ -1702,7 +1702,7 @@ function SessionContent() {
                           onClick={() => switchTo(l)}
                           disabled={!!switchingTo}
                           aria-label={`Talk now with ${l.users?.name ?? 'this listener'}`}
-                          style={{ background: 'var(--orange, #FF9933)', color: 'white', border: 'none', borderRadius: 50, padding: '9px 14px', fontFamily: 'inherit', fontWeight: 800, fontSize: 13, cursor: switchingTo ? 'default' : 'pointer', opacity: switchingTo ? 0.5 : 1, flexShrink: 0 }}
+                          style={{ background: 'var(--orange, #E8743B)', color: 'white', border: 'none', borderRadius: 50, padding: '9px 14px', fontFamily: 'inherit', fontWeight: 800, fontSize: 13, cursor: switchingTo ? 'default' : 'pointer', opacity: switchingTo ? 0.5 : 1, flexShrink: 0 }}
                         >
                           Talk now
                         </button>
@@ -1710,7 +1710,7 @@ function SessionContent() {
                         <a
                           href={`/listener/${l.user_id}?type=${isVoice ? 'voice' : 'text'}`}
                           aria-label={`View ${l.users?.name ?? 'listener'} — top-up needed`}
-                          style={{ border: '1.5px solid var(--border, #D5EEF6)', color: 'var(--navy)', borderRadius: 50, padding: '8px 12px', fontWeight: 800, fontSize: 12, textDecoration: 'none', flexShrink: 0 }}
+                          style={{ border: '1.5px solid var(--border, #F2DFD1)', color: 'var(--navy)', borderRadius: 50, padding: '8px 12px', fontWeight: 800, fontSize: 12, textDecoration: 'none', flexShrink: 0 }}
                         >
                           Top-up needed
                         </a>
@@ -1794,7 +1794,7 @@ function SessionContent() {
     return (
       <>
         <style dangerouslySetInnerHTML={{ __html: S }} />
-        <div className="wrap" style={{ background: '#0F4867', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="wrap" style={{ background: '#3B2F2A', alignItems: 'center', justifyContent: 'center' }}>
           <div style={{ textAlign: 'center', color: 'rgba(255,255,255,.65)', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 16 }}>
             Loading session…
           </div>
@@ -1895,7 +1895,7 @@ function SessionContent() {
                 <div style={{ marginBottom: 8 }}>⚠️ {voiceError}</div>
                 <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button onClick={retryVoice} style={{ background: 'rgba(255,255,255,0.18)', color: 'white', border: '1.5px solid rgba(255,255,255,0.35)', borderRadius: 8, padding: '6px 14px', fontFamily: 'Nunito,sans-serif', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>🔄 Retry voice</button>
-                  <button onClick={switchToText} style={{ background: 'rgba(26,143,160,0.85)', color: 'white', border: 'none', borderRadius: 8, padding: '6px 14px', fontFamily: 'Nunito,sans-serif', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>💬 Text only</button>
+                  <button onClick={switchToText} style={{ background: 'rgba(184,85,32,0.85)', color: 'white', border: 'none', borderRadius: 8, padding: '6px 14px', fontFamily: 'Nunito,sans-serif', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>💬 Text only</button>
                 </div>
               </div>
             )}
@@ -2057,7 +2057,7 @@ type AltListener = {
 export default function SessionPage() {
   return (
     <Suspense fallback={
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', color: '#0F4867' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', color: '#3B2F2A' }}>
         Starting session...
       </div>
     }>

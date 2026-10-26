@@ -4,7 +4,7 @@ import { SERVICE_DESCRIPTION } from '@/lib/service-facts'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Trust & Safety | How Was Your Day — Anonymous Peer Support India',
+  title: 'Trust & Safety | How Was Your Day',
   description: 'How the app keeps you safe: privacy, how listeners are screened, safety checks during sessions, reporting, and crisis helplines. Peer support, not therapy.',
   alternates: { canonical: 'https://www.howwasyourday.live/trust' },
 }
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
 body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-  background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
 .nav-logo{height:56px;}
@@ -27,17 +27,17 @@ h1{font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1.15;margin-bottom
 .lead{font-size:16px;color:var(--gray);line-height:1.75;font-weight:500;}
 .section{background:white;border:1.5px solid var(--border);border-radius:22px;padding:26px;margin-bottom:20px;}
 .section h2{font-size:19px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
-.section p{font-size:14px;color:#3A6070;line-height:1.75;margin-bottom:10px;}
+.section p{font-size:14px;color:#4A3C34;line-height:1.75;margin-bottom:10px;}
 .section p:last-child{margin-bottom:0;}
 .section ul{margin:10px 0 10px 18px;}
-.section ul li{font-size:14px;color:#3A6070;line-height:1.7;margin-bottom:4px;}
+.section ul li{font-size:14px;color:#4A3C34;line-height:1.7;margin-bottom:4px;}
 .crisis-box{background:#FFF0F0;border:2px solid #FFCDD2;border-radius:16px;padding:18px;margin-bottom:20px;}
 .crisis-box h3{font-size:15px;font-weight:800;color:#7A2020;margin-bottom:8px;}
 .crisis-box p{font-size:13px;color:#7A2020;line-height:1.65;font-weight:600;}
 .cta{background:var(--navy);border-radius:22px;padding:32px;text-align:center;margin-top:24px;}
 .cta h2{font-size:20px;font-weight:900;color:white;margin-bottom:10px;}
-.cta p{font-size:14px;color:rgba(201,231,244,.8);margin-bottom:24px;font-weight:500;}
-.btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(255,153,51,.35);}
+.cta p{font-size:14px;color:rgba(251,227,210,.8);margin-bottom:24px;font-weight:500;}
+.btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,116,59,.35);}
 `
 
 const trustSchema = {
@@ -83,7 +83,7 @@ export default function TrustPage() {
           <h2>🔒 Your privacy</h2>
           <p>How Was Your Day was designed for privacy from the ground up. Here is exactly what we collect and what we don&apos;t:</p>
           <ul>
-            <li>Sign up with just your mobile number — no full name, no email required</li>
+            <li>Sign in with Google — listeners see only the first name you choose</li>
             <li>A listener sees only the name you choose — a first name or a nickname is fine</li>
             <li>No profile photos required for seekers</li>
             <li>Text messages are stored securely so a session can be reviewed if it is reported or flagged for safety. Only authorised How Was Your Day administrators can open them</li>
@@ -142,7 +142,8 @@ export default function TrustPage() {
         <div className="crisis-box">
           <h3>🆘 In a mental health crisis?</h3>
           <p>How Was Your Day peer listeners are not crisis counsellors. If you are in immediate danger or having thoughts of self-harm:<br/><br/>
-          Call <strong><a href="tel:116123">Samaritans 116 123</a></strong> (Bengaluru, 24/7)<br/>
+          Call <strong><a href="tel:116123">Samaritans 116 123</a></strong> (free · 24/7)<br/>
+          Call <strong><a href="tel:999">999</a></strong> if you are in immediate danger<br/>
           <strong><a href="sms:85258">Text SHOUT to 85258</a></strong> (free · 24/7)<br/><br/>
           These are free, confidential, and available around the clock.
           </p>
@@ -150,7 +151,7 @@ export default function TrustPage() {
 
         <div className="cta">
           <h2>Ready to start safely?</h2>
-          <p>Sign up with just your phone number. No appointment needed.</p>
+          <p>Sign in with Google in a few seconds. No appointment needed.</p>
           <a href="/talk?src=seo"><button className="btn">Start now →</button></a>
         </div>
       </div>

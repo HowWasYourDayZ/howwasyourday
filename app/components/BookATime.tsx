@@ -71,15 +71,15 @@ export default function BookATime({ listenerId, listenerName, voiceDisabled, sig
   }
 
   const chip = (on: boolean): React.CSSProperties => ({
-    padding: '8px 12px', borderRadius: 50, border: `1.5px solid ${on ? '#1A8FA0' : '#DDE8F0'}`, background: on ? '#EAF5F8' : 'white',
-    color: '#0F4867', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap',
+    padding: '8px 12px', borderRadius: 50, border: `1.5px solid ${on ? '#B85520' : '#F2DFD1'}`, background: on ? '#FFF6EF' : 'white',
+    color: '#3B2F2A', fontWeight: 800, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap',
   })
   const daySlots = days.find(([k]) => k === day)?.[1] ?? []
 
   return (
-    <section aria-labelledby="book-a-time" style={{ margin: '0 16px 24px', padding: 16, background: 'white', border: '1.5px solid #DDE8F0', borderRadius: 18, fontFamily: "'Nunito',sans-serif" }}>
-      <h2 id="book-a-time" style={{ fontSize: 17, fontWeight: 900, color: '#0F4867', margin: '0 0 4px' }}>📅 Book a time</h2>
-      <p style={{ fontSize: 13, color: '#6B8FA8', fontWeight: 600, margin: '0 0 12px' }}>
+    <section aria-labelledby="book-a-time" style={{ margin: '0 16px 24px', padding: 16, background: 'white', border: '1.5px solid #F2DFD1', borderRadius: 18, fontFamily: "'Nunito',sans-serif" }}>
+      <h2 id="book-a-time" style={{ fontSize: 17, fontWeight: 900, color: '#3B2F2A', margin: '0 0 4px' }}>📅 Book a time</h2>
+      <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 600, margin: '0 0 12px' }}>
         Pick a slot from {listenerName}&apos;s weekly hours (UK time). The price is held now; cancel at least 2 hours before for a full refund.
       </p>
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 10 }} role="radiogroup" aria-label="Text or voice">
@@ -91,9 +91,9 @@ export default function BookATime({ listenerId, listenerName, voiceDisabled, sig
         ))}
       </div>
       {loading ? (
-        <p style={{ fontSize: 13, color: '#6B8FA8', fontWeight: 700 }}>Loading times…</p>
+        <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 700 }}>Loading times…</p>
       ) : days.length === 0 ? (
-        <p style={{ fontSize: 13, color: '#6B8FA8', fontWeight: 700 }}>No bookable times in the next two weeks. {listenerName} may not have set weekly hours yet.</p>
+        <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 700 }}>No bookable times in the next two weeks. {listenerName} may not have set weekly hours yet.</p>
       ) : (
         <>
           <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 6, marginBottom: 8 }}>
@@ -110,11 +110,11 @@ export default function BookATime({ listenerId, listenerName, voiceDisabled, sig
           {needWallet && (
             <p role="alert" style={{ fontSize: 13, color: '#9A5B00', fontWeight: 700, margin: '0 0 8px' }}>
               Your wallet needs {data ? formatGBP(data.pricePence) : 'more'} for this booking.{' '}
-              <a href={`/wallet?return=${encodeURIComponent(`/listener/${listenerId}`)}`} style={{ color: '#1A8FA0' }}>Top up →</a>
+              <a href={`/wallet?return=${encodeURIComponent(`/listener/${listenerId}`)}`} style={{ color: '#B85520' }}>Top up →</a>
             </p>
           )}
           <button type="button" onClick={book} disabled={!slot || busy}
-            style={{ width: '100%', padding: 14, borderRadius: 50, border: 'none', background: slot ? '#0F4867' : '#B8CBD6', color: 'white', fontWeight: 900, fontSize: 15, cursor: slot ? 'pointer' : 'default', fontFamily: 'inherit' }}>
+            style={{ width: '100%', padding: 14, borderRadius: 50, border: 'none', background: slot ? '#3B2F2A' : '#F2DFD1', color: 'white', fontWeight: 900, fontSize: 15, cursor: slot ? 'pointer' : 'default', fontFamily: 'inherit' }}>
             {busy ? 'Booking…' : slot ? `Book ${ukDay(slot)}, ${ukTime(slot)} — ${data?.priceLabel ?? ''}` : 'Choose a time'}
           </button>
         </>

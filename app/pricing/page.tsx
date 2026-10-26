@@ -41,10 +41,10 @@ export default function PricingPage() {
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'How Was Your Day', item: 'https://www.howwasyourday.live' }, { '@type': 'ListItem', position: 2, name: 'Pricing', item: URL }] },
   ] }
   const cell = 'border-b border-slate-200 px-3 py-3 text-left'
-  return <main className="min-h-screen bg-white text-[#0F4867]"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  return <main className="min-h-screen bg-white text-[#3B2F2A]"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <div className="mx-auto max-w-3xl px-5 py-8 sm:px-8 sm:py-12">
-      <nav className="mb-10 flex items-center justify-between"><a href="/" className="text-2xl font-black">How Was <span className="text-[#1A8FA0]">Your Day</span></a><a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a></nav>
-      <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-[#1A8FA0]">Pricing</p>
+      <nav className="mb-10 flex items-center justify-between"><a href="/" className="text-2xl font-black">How Was <span className="text-[#B85520]">Your Day</span></a><a href="/browse" className="rounded-full bg-[#B85520] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a></nav>
+      <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-[#B85520]">Pricing</p>
       <h1 className="mb-4 text-4xl font-black leading-tight">What How Was Your Day costs</h1>
       <p className="mb-8 text-lg leading-8 text-slate-600">Pay per session — {SESSION_DURATIONS.join(', ')} minutes, now or booked for later — with no subscription. You always see the price before a session starts, and pay only for the minutes you use.</p>
 
@@ -70,7 +70,7 @@ export default function PricingPage() {
         {faqs.map(([q, a]) => <div key={q} className="mb-5"><h3 className="mb-1 text-lg font-extrabold">{q}</h3><p className="leading-7 text-slate-600">{a}</p></div>)}
       </section>
 
-      <section className="rounded-3xl bg-[#0F4867] p-7 text-white"><h2 className="mb-2 text-2xl font-black">Start with {SESSION_DURATIONS[0]} minutes</h2><p className="mb-5 text-white/80">Pick a listener whose experience matches yours. Text or voice, private, no appointment.</p><a href="/browse" className="inline-block rounded-full bg-[#FF9933] px-6 py-3 font-extrabold text-white">Browse listeners →</a></section>
+      <section className="rounded-3xl bg-[#3B2F2A] p-7 text-white"><h2 className="mb-2 text-2xl font-black">Start with {SESSION_DURATIONS[0]} minutes</h2><p className="mb-5 text-white/80">Pick a listener whose experience matches yours. Text or voice, private, no appointment.</p><a href="/browse" className="inline-block rounded-full bg-[#E8743B] px-6 py-3 font-extrabold text-white">Browse listeners →</a></section>
       <p className="mt-8 text-xs leading-6 text-slate-500">How Was Your Day provides peer support, not therapy, counselling, diagnosis or emergency care. If you are thinking about harming yourself, call Samaritans (116 123) or text SHOUT to 85258, free and 24/7. In an emergency call 999 or 112.</p>
     </div>
   </main>

@@ -14,7 +14,7 @@ const URL = 'https://www.howwasyourday.live/talk'
 export const metadata: Metadata = {
   title: 'Talk to Someone — Request a Listener, From 8 Minutes | How Was Your Day',
   description: `Request a conversation with a real person — no appointment. Pick what's on your mind, choose text or voice, and How Was Your Day asks screened peer listeners in the UK who are online; a session starts when one accepts. Paid ${SESSION_DURATIONS.join(', ')}-minute sessions.`,
-  keywords: ['talk to someone now', 'talk to someone online india', 'someone to talk to', 'talk to a real person', 'relationship problems talk to someone', 'nri talk to someone', 'peer support india', 'online emotional support india', 'vent to someone online'],
+  keywords: ['talk to someone now', 'someone to talk to', 'talk to a real person', 'relationship problems talk to someone', 'vent to someone online'],
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: {
@@ -56,7 +56,7 @@ const jsonLd = [
     step: [
       { '@type': 'HowToStep', position: 1, name: "Pick what's on your mind", text: 'Relationship, family, work or studies, loneliness, anxiety or overthinking, or just needing to talk.' },
       { '@type': 'HowToStep', position: 2, name: 'Choose text or voice', text: 'Type at your own pace or talk it through out loud.' },
-      { '@type': 'HowToStep', position: 3, name: 'Confirm your phone number', text: 'A one-time code; your number is never shown to the listener.' },
+      { '@type': 'HowToStep', position: 3, name: 'Sign in', text: 'Sign in with Google; the listener sees only the first name you choose.' },
       { '@type': 'HowToStep', position: 4, name: 'Get connected', text: `How Was Your Day asks a listener who is free now, and the next one if they cannot answer within about ${TALK_TRY_SECS} seconds.` },
     ],
   },
@@ -74,15 +74,15 @@ export default function TalkLayout({ children }: { children: React.ReactNode }) 
       {children}
       <section className="talk-info" aria-labelledby="talk-info-h">
         <style dangerouslySetInnerHTML={{ __html: `
-          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:Nunito,system-ui,sans-serif;color:#27394A;}
+          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:Nunito,system-ui,sans-serif;color:#3B2F2A;}
           body.talk-busy .talk-info{display:none;}
-          .talk-info h2{font-size:16px;font-weight:900;color:#0F4867;margin:26px 0 8px;}
-          .talk-info details{border-bottom:1px solid #E3EFF3;padding:10px 0;}
-          .talk-info summary{font-size:14.5px;font-weight:800;color:#0F4867;cursor:pointer;list-style-position:inside;}
+          .talk-info h2{font-size:16px;font-weight:900;color:#3B2F2A;margin:26px 0 8px;}
+          .talk-info details{border-bottom:1px solid #FFF6EF;padding:10px 0;}
+          .talk-info summary{font-size:14.5px;font-weight:800;color:#3B2F2A;cursor:pointer;list-style-position:inside;}
           .talk-info details p{margin:6px 0 2px;}
-          .talk-info p,.talk-info li{font-size:13.5px;line-height:1.6;color:#3A6070;}
+          .talk-info p,.talk-info li{font-size:13.5px;line-height:1.6;color:#4A3C34;}
           .talk-info ol{margin:6px 0 0 20px;}
-          .talk-info a{color:#1A8FA0;font-weight:800;}
+          .talk-info a{color:#B85520;font-weight:800;}
         ` }} />
         <h2 id="talk-info-h">How Talk now works</h2>
         <ol>

@@ -37,14 +37,10 @@ export const OCCUPATIONS = [
   { id: 'other',        label: 'Other' },
 ] as const
 
-export const INDIAN_STATES = [
-  'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat',
-  'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh',
-  'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab',
-  'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
-  'Uttarakhand', 'West Bengal', 'Andaman and Nicobar Islands', 'Chandigarh',
-  'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Jammu and Kashmir', 'Ladakh',
-  'Lakshadweep', 'Puducherry', 'Outside India',
+// Where in the UK the listener lives (admin-only screening data).
+export const UK_REGIONS = [
+  'London', 'South East', 'South West', 'East of England', 'East Midlands', 'West Midlands',
+  'Yorkshire and the Humber', 'North West', 'North East', 'Scotland', 'Wales', 'Northern Ireland',
 ] as const
 
 export const HOURS_PER_WEEK = [
@@ -198,7 +194,7 @@ export const WHY_MAX_WORDS = 300
 // Commas, semicolons and the Urdu comma separate words ("listen,care" = 2), but
 // not inside numbers ("1,000" = 1). Invisible zero-width spaces are removed —
 // not treated as gaps, which let one word be split into many unseen. ZWJ/ZWNJ
-// are kept: they are part of real words in several Indian scripts.
+// are kept: they are part of real words in several non-Latin scripts.
 const HAS_LETTER_OR_DIGIT = new RegExp('[\\p{L}\\p{N}]', 'u')
 export const wordCount = (s: string) =>
   s.replace(/[\u200B\u2060\uFEFF]/g, '')
@@ -248,7 +244,7 @@ export function parseOnboarding(body: Record<string, unknown>):
 
   const occupation = pick(OCCUPATIONS, body.occupation)
   if (!occupation) return { error: 'Please select your occupation.' }
-  const state = typeof body.state === 'string' && (INDIAN_STATES as readonly string[]).includes(body.state) ? body.state : null
+  const state = typeof body.state === 'string' && (UK_REGIONS as readonly string[]).includes(body.state) ? body.state : null
   if (!state) return { error: 'Please select your state.' }
   const hours_per_week = pick(HOURS_PER_WEEK, body.hours_per_week)
   if (!hours_per_week) return { error: 'Please select how many hours a week you can listen.' }
@@ -261,7 +257,7 @@ export function parseOnboarding(body: Record<string, unknown>):
   const wc = wordCount(why)
   if (wc < WHY_MIN_WORDS || wc > WHY_MAX_WORDS)
     return { error: `"Why do you want to be a listener?" must be ${WHY_MIN_WORDS}–${WHY_MAX_WORDS} words (you wrote ${wc}; emoji and punctuation don't count as words).` }
-  // Indian scripts use several characters per word — 300 words can pass 4000.
+  // Some scripts use several characters per word — 300 words can pass 4000.
   if (why.length > 9000) return { error: 'Your answer is too long.' }
   const heard_from = pick(HEARD_FROM, body.heard_from)
   if (!heard_from) return { error: 'Please tell us how you heard about How Was Your Day.' }

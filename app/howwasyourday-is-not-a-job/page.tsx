@@ -79,9 +79,9 @@ const jsonLd = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
   body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:56px;width:auto;}
@@ -102,8 +102,8 @@ const S = `
   .faq-a{font-size:15px;color:var(--gray);line-height:1.75;font-weight:500;}
   .cta-card{background:var(--navy);border-radius:24px;padding:40px 32px;text-align:center;margin-bottom:24px;}
   .cta-card h2{font-size:22px;font-weight:900;color:white;margin-bottom:12px;}
-  .cta-card p{font-size:15px;color:rgba(201,231,244,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
-  .btn-cta{display:inline-block;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;box-shadow:0 4px 20px rgba(255,153,51,0.35);}
+  .cta-card p{font-size:15px;color:rgba(251,227,210,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
+  .btn-cta{display:inline-block;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;box-shadow:0 4px 20px rgba(232,116,59,0.35);}
 `
 
 export default function HowWasYourDayIsNotAJobPage() {
@@ -154,7 +154,7 @@ export default function HowWasYourDayIsNotAJobPage() {
 
         <div className="section" style={{textAlign:'center'}}>
           <p style={{fontSize:14,color:'var(--gray)'}}>
-            <a href="/i-need-someone-to-talk-to" style={{color:'var(--teal)',fontWeight:800}}>I need someone to talk to →</a>
+            <a href="/talk-to-a-real-person-online" style={{color:"var(--teal)",fontWeight:800}}>Talk to a real person →</a>
             {' · '}
             <a href="/browse" style={{color:'var(--teal)',fontWeight:800}}>Browse listeners →</a>
           </p>

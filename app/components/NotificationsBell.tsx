@@ -123,34 +123,34 @@ export default function NotificationsBell() {
         <div style={{
           position: 'absolute', right: 0, bottom: '100%',
           background: 'white', borderRadius: 16,
-          border: '1.5px solid #D5EEF6',
-          boxShadow: '0 8px 32px rgba(15,72,103,0.15)',
+          border: '1.5px solid #F2DFD1',
+          boxShadow: '0 8px 32px rgba(59,47,42,0.15)',
           width: 300, zIndex: 500,
           fontFamily: "'Nunito', sans-serif",
           overflow: 'hidden',
         }}>
           <div style={{
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-            padding: '12px 16px', borderBottom: '1.5px solid #D5EEF6',
+            padding: '12px 16px', borderBottom: '1.5px solid #F2DFD1',
           }}>
-            <span style={{ fontWeight: 800, fontSize: 14, color: '#0F4867' }}>Notifications</span>
+            <span style={{ fontWeight: 800, fontSize: 14, color: '#3B2F2A' }}>Notifications</span>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
               {unread > 0 && (
                 <button
                   onClick={markAllRead}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12, fontWeight: 700, color: '#5A7A8A' }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12, fontWeight: 700, color: '#6E5B50' }}
                 >
                   Mark all read
                 </button>
               )}
-              <a href="/notifications" style={{ fontSize: 12, fontWeight: 700, color: '#1A8FA0', textDecoration: 'none' }}>
+              <a href="/notifications" style={{ fontSize: 12, fontWeight: 700, color: '#B85520', textDecoration: 'none' }}>
                 View all
               </a>
             </div>
           </div>
 
           {notifs.length === 0 ? (
-            <div style={{ padding: '24px 16px', textAlign: 'center', color: '#8AAAB8', fontSize: 13, fontWeight: 600 }}>
+            <div style={{ padding: '24px 16px', textAlign: 'center', color: '#8A766B', fontSize: 13, fontWeight: 600 }}>
               No notifications yet
             </div>
           ) : (
@@ -179,17 +179,17 @@ export default function NotificationsBell() {
                   }}
                   style={{
                     display: 'block', padding: '12px 16px',
-                    borderBottom: '1px solid #EFF6FA',
+                    borderBottom: '1px solid #FFF6EF',
                     textDecoration: 'none',
                     cursor: safeUrl ? 'pointer' : 'default',
-                    background: n.is_read ? 'white' : '#F0F8FC',
+                    background: n.is_read ? 'white' : '#FFF6EF',
                   }}
                 >
-                  <div style={{ fontSize: 13, fontWeight: 700, color: '#0F4867', marginBottom: 3 }}>{n.title}</div>
-                  <div style={{ fontSize: 12, color: '#5A7A8A', fontWeight: 500, lineHeight: 1.5, marginBottom: 4 }}>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: '#3B2F2A', marginBottom: 3 }}>{n.title}</div>
+                  <div style={{ fontSize: 12, color: '#6E5B50', fontWeight: 500, lineHeight: 1.5, marginBottom: 4 }}>
                     {(n.body ?? '').slice(0, 80)}{(n.body ?? '').length > 80 ? '…' : ''}
                   </div>
-                  <div style={{ fontSize: 11, color: '#8AAAB8', fontWeight: 600 }}>{timeAgo(n.created_at)}</div>
+                  <div style={{ fontSize: 11, color: '#8A766B', fontWeight: 600 }}>{timeAgo(n.created_at)}</div>
                 </a>
                 )
               })}

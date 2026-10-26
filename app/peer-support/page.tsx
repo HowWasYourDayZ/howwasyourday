@@ -4,13 +4,13 @@ import QuickAnswer from '@/app/components/QuickAnswer'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Peer Support in India | Talk to a Real Peer Listener | How Was Your Day',
-  description: "What peer support is, how it differs from therapy, and where to find it in India: screened peer listeners on How Was Your Day, one to one by text or voice. Sessions from 8 minutes.",
-  keywords: ['peer support India', 'what is peer support', 'peer listener India', 'online peer support', 'talk to a peer listener', 'peer support vs therapy'],
+  title: 'What Is Peer Support? Talk to a Real Peer Listener | How Was Your Day',
+  description: "What peer support is, how it differs from therapy, and where to find it in the UK: screened peer listeners on How Was Your Day, one to one by text or voice. Sessions from 8 minutes.",
+  keywords: ['peer support UK', 'what is peer support', 'peer listener', 'online peer support', 'talk to a peer listener', 'peer support vs therapy'],
   alternates: { canonical: 'https://www.howwasyourday.live/peer-support', languages: { 'en-GB': 'https://www.howwasyourday.live/peer-support' } },
   openGraph: {
-    title: 'Peer Support India — Real People, Real Conversations | How Was Your Day',
-    description: 'Understand peer support and how it differs from therapy. How Was Your Day offers one-to-one text or voice conversations with screened peers in India. Every session is paid, from 8 minutes; it is not clinical care and availability varies.',
+    title: 'Peer Support — Real People, Real Conversations | How Was Your Day',
+    description: 'Understand peer support and how it differs from therapy. How Was Your Day offers one-to-one text or voice conversations with screened peers in the UK. Every session is paid, from 8 minutes; it is not clinical care and availability varies.',
     url: 'https://www.howwasyourday.live/peer-support',
     siteName: 'How Was Your Day',
     type: 'website',
@@ -21,7 +21,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: "What is peer support, and where can I find it in India?", acceptedAnswer: { '@type': 'Answer', text: "Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. Every session is paid, from 8 minutes; availability varies." } },
+    { '@type': 'Question', name: "What is peer support, and where can I find it in the UK?", acceptedAnswer: { '@type': 'Answer', text: "Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in the UK are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. Every session is paid, from 8 minutes; availability varies." } },
     {
       '@type': 'Question',
       name: 'What is peer support?',
@@ -35,7 +35,7 @@ const faqSchema = {
       name: 'How is peer support different from therapy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. How Was Your Day is for everyday emotional support; paid sessions start at £4.20 for 8 minutes in India, with a free introductory session before you pay.',
+        text: 'Therapy is delivered by a licensed professional — a psychologist, psychiatrist, or counsellor — who can diagnose and treat mental health conditions. Peer support is delivered by someone with lived experience who provides non-clinical support, not diagnosis or treatment. Therapy and peer support serve different purposes. How Was Your Day is for everyday emotional support; sessions start at £4.20 for 8 minutes at the standard rate.',
       },
     },
     {
@@ -43,15 +43,15 @@ const faqSchema = {
       name: 'Is peer support effective?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peer support can provide shared understanding, encouragement and connection, but it is not a substitute for clinical treatment. How Was Your Day is designed for everyday emotional situations such as loneliness, relationship difficulties, work stress, grief, homesickness and overthinking.',
+        text: 'Peer support can provide shared understanding, encouragement and connection, but it is not a substitute for clinical treatment. How Was Your Day is designed for everyday emotional situations such as loneliness, relationship difficulties, work stress, grief and overthinking.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does peer support cost in India?',
+      name: 'How much does peer support cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'On How Was Your Day, paid peer support sessions start at £4.20 for 8 minutes in India. Sessions start at 8 minutes, so you can see whether the conversation feels right before paying. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
+        text: 'On How Was Your Day, sessions start at £4.20 for 8 minutes at the standard rate; each listener sets their own price, shown before you start. There are no subscription fees, no membership charges, and no automatic renewals — you pay per session.',
       },
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
       name: 'How does privacy work on How Was Your Day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "How Was Your Day sign-up uses a verified phone number, but listeners do not see it; users can choose a display name. Voice calls are not recorded. Text messages are stored, and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy for details.",
+        text: "Listeners never see your email or phone number; they see only the display name you choose. Voice calls are not recorded. Text messages are stored, and authorised administrators may review reported or safety-flagged sessions. Read the Privacy Policy for details.",
       },
     },
     {
@@ -77,7 +77,7 @@ const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://www.howwasyourday.live/peer-support#webpage',
-  name: 'Peer Support in India | Talk to a Real Peer Listener | How Was Your Day',
+  name: 'What Is Peer Support? Talk to a Real Peer Listener | How Was Your Day',
   url: 'https://www.howwasyourday.live/peer-support',
   description: metadata.description,
   isPartOf: { '@id': 'https://www.howwasyourday.live/#website' },
@@ -99,16 +99,16 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.howwasyourday.live' },
-    { '@type': 'ListItem', position: 2, name: 'Peer Support India', item: 'https://www.howwasyourday.live/peer-support' },
+    { '@type': 'ListItem', position: 2, name: 'Peer support', item: 'https://www.howwasyourday.live/peer-support' },
   ],
 }
 
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
+  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
   body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:56px;width:auto;}
@@ -126,11 +126,11 @@ const S = `
   .section h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px;}
   .section h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:8px;margin-top:20px;}
   .section h3:first-of-type{margin-top:0;}
-  .section p{font-size:15px;color:#3A6070;line-height:1.80;margin-bottom:14px;}
+  .section p{font-size:15px;color:#4A3C34;line-height:1.80;margin-bottom:14px;}
   .section p:last-child{margin-bottom:0;}
   .section ul{padding-left:20px;margin-bottom:14px;}
-  .section ul li{font-size:15px;color:#3A6070;line-height:1.80;margin-bottom:6px;}
-  .crisis{display:block;background:#EBF5FB;border-left:4px solid #1A8FA0;border-radius:0 12px 12px 0;padding:14px 18px;margin-bottom:28px;font-size:14px;color:#0F4867;font-weight:600;line-height:1.65;}
+  .section ul li{font-size:15px;color:#4A3C34;line-height:1.80;margin-bottom:6px;}
+  .crisis{display:block;background:#FFF6EF;border-left:4px solid #B85520;border-radius:0 12px 12px 0;padding:14px 18px;margin-bottom:28px;font-size:14px;color:#3B2F2A;font-weight:600;line-height:1.65;}
   .crisis a{color:var(--teal);font-weight:800;}
   .stats-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px;}
   .stat-pill{background:white;border:1.5px solid var(--border);border-radius:50px;padding:10px 18px;font-size:14px;font-weight:800;color:var(--navy);text-align:center;}
@@ -143,7 +143,7 @@ const S = `
   .step-desc{font-size:14px;color:var(--gray);line-height:1.6;font-weight:500;}
   .vs-table{width:100%;border-collapse:collapse;margin-top:4px;}
   .vs-table th{font-size:13px;font-weight:800;color:var(--teal);text-align:left;padding:8px 12px;background:var(--light);}
-  .vs-table td{font-size:14px;color:#3A6070;padding:10px 12px;border-bottom:1px solid var(--border);line-height:1.6;vertical-align:top;}
+  .vs-table td{font-size:14px;color:#4A3C34;padding:10px 12px;border-bottom:1px solid var(--border);line-height:1.6;vertical-align:top;}
   .vs-table tr:last-child td{border-bottom:none;}
   .vs-table .col-label{font-weight:800;color:var(--navy);}
   .faq-item{border-bottom:1.5px solid var(--border);padding:20px 0;}
@@ -153,9 +153,9 @@ const S = `
   .faq-a{font-size:14px;color:var(--gray);line-height:1.75;font-weight:500;}
   .cta-card{background:var(--navy);border-radius:24px;padding:40px 32px;text-align:center;margin-bottom:24px;}
   .cta-card h2{font-size:24px;font-weight:900;color:white;margin-bottom:12px;}
-  .cta-card p{font-size:15px;color:rgba(201,231,244,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
+  .cta-card p{font-size:15px;color:rgba(251,227,210,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
   .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-  .btn-primary{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(255,153,51,0.35);}
+  .btn-primary{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(232,116,59,0.35);}
   .btn-secondary{background:rgba(255,255,255,0.12);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.3);cursor:pointer;}
   .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:8px;}
   .related-link{background:var(--light);border:1.5px solid var(--border);border-radius:16px;padding:14px 16px;font-size:14px;font-weight:700;color:var(--navy);transition:border-color 0.2s;}
@@ -179,7 +179,7 @@ export default function PeerSupportPage() {
       <div className="page">
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a><span>›</span>
-          <span style={{color:'var(--navy)'}}>Peer Support India</span>
+          <span style={{color:'var(--navy)'}}>Peer support</span>
         </nav>
 
         <div className="crisis">
@@ -188,10 +188,10 @@ export default function PeerSupportPage() {
 
         {/* Hero */}
         <div className="hero">
-          <p className="tag">Peer Support · India · No Appointment Needed</p>
+          <p className="tag">Peer Support · UK · No Appointment Needed</p>
           <h1>Peer support. <em>Real people.</em> Real conversations.</h1>
           <p className="lead">Not therapy. Not an AI chatbot. Not advice from someone who has never been through it. Peer support is the experience of talking to a real human being who has lived something like what you are carrying right now — and who listens without judgment, without a diagnosis, and without a clinical distance between you.</p>
-          <QuickAnswer question={"What is peer support, and where can I find it in India?"} answer={"Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in India are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. Every session is paid, from 8 minutes; availability varies."} />
+          <QuickAnswer question={"What is peer support, and where can I find it in the UK?"} answer={"Peer support is a non-clinical conversation with someone who may bring relevant lived experience. On How Was Your Day, listeners in the UK are screened through an application, screening quiz, live selfie check and review by How Was Your Day. Conversations are one to one by text or voice. It is not therapy. Every session is paid, from 8 minutes; availability varies."} />
         </div>
 
 
@@ -231,7 +231,7 @@ export default function PeerSupportPage() {
                   <th>Type</th>
                   <th>Who delivers it</th>
                   <th>What it is good for</th>
-                  <th>What it costs (India)</th>
+                  <th>What it costs</th>
                 </tr>
               </thead>
               <tbody>
@@ -239,13 +239,13 @@ export default function PeerSupportPage() {
                   <td className="col-label">Peer support (How Was Your Day)</td>
                   <td>Real person with lived experience</td>
                   <td>Feeling heard, loneliness, burnout, everyday emotional weight</td>
-                  <td>£4.20 per session</td>
+                  <td>From £4.20 for 8 minutes</td>
                 </tr>
                 <tr>
                   <td className="col-label">Therapy</td>
                   <td>Licensed psychologist or counsellor</td>
                   <td>Clinical diagnosis, structured treatment, mental health conditions</td>
-                  <td>£40–£100/session</td>
+                  <td>Varies by provider</td>
                 </tr>
                 <tr>
                   <td className="col-label">AI chatbot</td>
@@ -280,7 +280,7 @@ export default function PeerSupportPage() {
               <div className="step-num">3</div>
               <div className="step-text">
                 <div className="step-title">Talk privately</div>
-                <div className="step-desc">Sessions can use text or voice. You sign up with a phone number and first name; you decide what personal details to share in the conversation.</div>
+                <div className="step-desc">Sessions can use text or voice. You sign in with Google and choose the first name listeners see; you decide what personal details to share.</div>
               </div>
             </div>
           </div>
@@ -288,22 +288,22 @@ export default function PeerSupportPage() {
 
         {/* Choosing a service — the checklist AI assistants say they use */}
         <div className="section">
-          <h2>Choosing a Peer Support Service in India</h2>
+          <h2>Choosing a Peer Support Service</h2>
           <p>The best peer support service depends on what you need. These are the questions worth asking any service — and How Was Your Day&apos;s answers.</p>
           <div style={{overflowX:'auto'}}><table className="vs-table">
             <thead><tr><th>Question to ask</th><th>How Was Your Day</th></tr></thead>
             <tbody>
-              <tr><td>What kind of support is it?</td><td>Online, one-to-one conversations by text or voice with a screened peer listener in India. For adults 18+. Not groups, not therapy.</td></tr>
+              <tr><td>What kind of support is it?</td><td>Online, one-to-one conversations by text or voice with a screened peer listener in the UK. For adults 18+. Not groups, not therapy.</td></tr>
               <tr><td>Who are the peers, and how are they checked?</td><td>Adults with lived experience. Written application, screening quiz on difficult situations, live camera selfie and a manual review.</td></tr>
               <tr><td>Can I choose who I talk to?</td><td>Yes — profiles show first name, photo, languages and topics, so you can choose by experience or language, or choose a woman listener.</td></tr>
               <tr><td>Is it confidential?</td><td>Listeners never see your phone number and agree to keep what you share confidential. Voice calls are never recorded; text is stored securely and only read if a session is reported or flagged.</td></tr>
               <tr><td>What safeguarding is in place?</td><td>Contact details blocked in chat, crisis words flagged with helplines shown, reporting after every session, suspension and bans. <a href="/safeguarding" style={{color:'var(--teal)',fontWeight:800}}>Full safeguarding policy →</a></td></tr>
-              <tr><td>What does it cost?</td><td>Sessions from 8 minutes, once per account; then each listener&apos;s own price, shown before you start — see <a href="/pricing" style={{color:'var(--teal)',fontWeight:800}}>pricing</a>.</td></tr>
-              <tr><td>When is it available?</td><td>No appointment. Listeners choose their own hours, so availability follows Indian time and varies.</td></tr>
+              <tr><td>What does it cost?</td><td>Sessions of 8, 16 or 32 minutes at each listener&apos;s own price, shown before you start — see <a href="/pricing" style={{color:'var(--teal)',fontWeight:800}}>pricing</a>.</td></tr>
+              <tr><td>When is it available?</td><td>No appointment. Listeners choose their own hours, so availability varies — or book a time from their weekly hours.</td></tr>
             </tbody>
           </table></div>
           <h3 style={{marginTop:22}}>When a different kind of peer support fits better</h3>
-          <p>How Was Your Day is for everyday emotional weight — relationships, marriage, family pressure, loneliness, stress, wanting to vent. For some needs a specialist community is the better fit: addiction recovery (recovery fellowships), long-term support for a diagnosed mental health condition (condition-specific peer groups), LGBTQIA+-affirming support (LGBTQIA+-focused services), and anyone under 18. If you are in crisis, text SHOUT to 85258 first.</p>
+          <p>How Was Your Day is for everyday emotional weight — relationships, marriage, loneliness, stress, wanting to vent. For some needs a specialist community is the better fit: addiction recovery (recovery fellowships), long-term support for a diagnosed mental health condition (condition-specific peer groups), LGBTQIA+-affirming support (LGBTQIA+-focused services), and anyone under 18. If you are in crisis, text SHOUT to 85258 first.</p>
         </div>
 
         {/* Who it's for */}
@@ -313,10 +313,10 @@ export default function PeerSupportPage() {
           <ul>
             <li><strong>Loneliness</strong> — in a new city, in a crowd, or inside a relationship that has grown distant</li>
             <li><strong>Relationship stress</strong> — a marriage under strain, a difficult breakup, a friendship that has gone cold</li>
-            <li><strong>Family pressure</strong> — expectations around career, marriage, money; joint family friction; the weight of being the one who is supposed to handle everything</li>
+            <li><strong>Family pressure</strong> — expectations around career, marriage, money; the weight of being the one who is supposed to handle everything</li>
             <li><strong>Work burnout</strong> — the slow hollowing out of a job that used to feel meaningful, or the acute pressure of a profession that does not stop</li>
             <li><strong>Grief</strong> — loss that does not fit neatly into a week of leave and a return to normal</li>
-            <li><strong>Student pressure</strong> — entrance exam anxiety, career uncertainty, the performance of appearing fine</li>
+            <li><strong>Student pressure</strong> — exam stress, career uncertainty, the performance of appearing fine</li>
             <li><strong>Anything you cannot say to people in your actual life</strong> — because they are too close to the problem, would worry too much, or simply would not understand</li>
           </ul>
         </div>
@@ -324,7 +324,7 @@ export default function PeerSupportPage() {
         {/* CTA */}
         <div className="cta-card">
           <h2>Start Your First Peer Support Session</h2>
-          <p>Every session is paid, from 8 minutes. Listeners do not see your phone number; you can choose a display name. No appointment is needed, but availability depends on which listeners are online.</p>
+          <p>Every session is paid, from 8 minutes. Listeners see only the display name you choose. No appointment is needed, but availability depends on which listeners are online.</p>
           <div className="cta-btns">
             <a href="/browse"><button className="btn-primary">Browse peer listeners →</button></a>
             <a href="/talk?src=seo"><button className="btn-secondary">Talk now →</button></a>
@@ -347,12 +347,12 @@ export default function PeerSupportPage() {
             <div className="faq-a">Peer support may provide shared understanding and a chance to talk with someone outside your usual circle, but individual experiences vary. It does not diagnose or treat mental-health conditions, and should not replace professional care when that is needed.</div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">How much does peer support cost in India?</div>
+            <div className="faq-q">How much does peer support cost?</div>
             <div className="faq-a">8-minute text sessions start at £4.20 with a listener charging 40p per minute; actual price varies by listener and mode and is shown before booking. Every session is paid, from 8 minutes.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">How does privacy work on How Was Your Day?</div>
-            <div className="faq-a">How Was Your Day requires phone-number verification, but listeners do not see your phone number and you can choose a display name. Voice calls are not recorded. Text messages are stored and authorised administrators may review reports or safety-flagged sessions. Read the Privacy Policy for details.</div>
+            <div className="faq-a">Listeners never see your email or phone number; they see only the display name you choose. Voice calls are not recorded. Text messages are stored and authorised administrators may review reports or safety-flagged sessions. Read the Privacy Policy for details.</div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Can peer support help with anxiety or depression?</div>
@@ -364,12 +364,10 @@ export default function PeerSupportPage() {
         <div className="section">
           <h2>Related Pages</h2>
           <div className="related">
-            <a href="/peer-support-online-india" className="related-link">Peer support online India</a>
             <a href="/talk-to-a-real-person-online" className="related-link">Talk to a real person online</a>
-            <a href="/blog/what-is-peer-support-india" className="related-link">What is peer support?</a>
-            <a href="/blog/peer-support-vs-therapy-india" className="related-link">Peer support vs therapy</a>
-            <a href="/blog/empathy-in-peer-support" className="related-link">Empathy in peer support</a>
-            <a href="/alternatives-to-therapy-india" className="related-link">Therapy alternatives India</a>
+            <a href="/someone-to-talk-to-when-lonely" className="related-link">Someone to talk to when lonely</a>
+            <a href="/peer-support-vs-therapy" className="related-link">Peer support vs therapy</a>
+            <a href="/need-someone-to-talk-to-but-dont-need-therapy" className="related-link">Support, not therapy</a>
           </div>
         </div>
       </div>

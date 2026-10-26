@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#0F4867;--orange:#FF9933;--gray:#6B8FA8;--border:#DDE8F0;--cream:#FFFBF5;}
+  :root{--navy:#3B2F2A;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--cream:#FFFAF6;}
   body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   a{color:var(--orange);text-decoration:none;}
   .page{max-width:640px;margin:0 auto;padding:24px 20px 80px;}
@@ -19,11 +19,11 @@ const S = `
   h1{font-size:28px;font-weight:900;color:var(--navy);margin-bottom:8px;}
   .updated{font-size:13px;color:var(--gray);font-weight:500;margin-bottom:24px;}
   h2{font-size:17px;font-weight:800;color:var(--navy);margin:28px 0 10px;}
-  p{font-size:14px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:10px;}
+  p{font-size:14px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:10px;}
   ol,ul{padding-left:20px;margin-bottom:10px;}
-  li{font-size:14px;color:#3A5A6E;line-height:1.75;font-weight:500;margin-bottom:4px;}
-  .steps{background:#F0F7FF;border:1.5px solid #B8D4F0;border-radius:16px;padding:16px 18px 8px 36px;margin:16px 0;}
-  .steps li{color:#1E3D5C;font-weight:700;}
+  li{font-size:14px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:4px;}
+  .steps{background:#FFFAF6;border:1.5px solid #F2DFD1;border-radius:16px;padding:16px 18px 8px 36px;margin:16px 0;}
+  .steps li{color:#9E4719;font-weight:700;}
 `
 
 export default function DeleteAccountPage() {

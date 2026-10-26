@@ -1,29 +1,78 @@
 import type { Metadata } from 'next'
+import { formatGBP } from '@/lib/money'
+import { DEFAULT_LISTENER_RATE, PLATFORM_FEE, SESSION_DURATIONS } from '@/lib/constants'
+
+const P1 = formatGBP(DEFAULT_LISTENER_RATE * SESSION_DURATIONS[0] + PLATFORM_FEE)
 
 export const metadata: Metadata = {
-  title: 'About How Was Your Day — Real Human Peer Support for India & Indian Diaspora',
-  description: 'Learn what How Was Your Day is, how peer support works, and how How Was Your Day connects people in India and supported international markets with real human listeners for private text or voice conversations.',
+  title: 'About How Was Your Day — Peer Support From Real People in the UK',
+  description: 'Why How Was Your Day exists: a short, affordable conversation with a real person who listens. Screened UK peer listeners, by text or voice. Not therapy.',
   alternates: { canonical: 'https://www.howwasyourday.live/about' },
-  openGraph: { title: 'About How Was Your Day — Real Human Peer Support', description: 'How Was Your Day connects people in India and supported international markets with real peer listeners for private one-to-one conversations by text or voice.', url: 'https://www.howwasyourday.live/about', siteName: 'How Was Your Day', type: 'website' },
+  openGraph: { title: 'About How Was Your Day', description: 'A short, affordable conversation with a real person who listens — by text or voice, across the UK.', url: 'https://www.howwasyourday.live/about', siteName: 'How Was Your Day', type: 'website' },
 }
 
-const countries = ['India', 'USA', 'UK', 'Canada', 'Australia', 'UAE', 'Oman', 'Kuwait', 'Singapore', 'Malaysia']
-const slugs = ['india','usa','uk','canada','australia','uae','oman','kuwait','singapore','malaysia']
+const card = 'rounded-3xl border border-[#F2DFD1] bg-white p-6'
+const body = 'leading-7 text-[#6E5B50]'
 
 export default function AboutPage() {
-  const jsonLd = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Organization', '@id': 'https://www.howwasyourday.live/#organization', name: 'How Was Your Day', alternateName: ['HowWasYourDay', 'howwasyourday'], url: 'https://www.howwasyourday.live', description: 'India-origin peer-support platform connecting people with real human listeners for private one-to-one conversations by text or voice.', foundingLocation: { '@type': 'Country', name: 'India' }, areaServed: countries.map(name => ({ '@type': 'Country', name })) },
-    { '@type': 'WebPage', name: metadata.title, description: metadata.description, url: 'https://www.howwasyourday.live/about', about: { '@id': 'https://www.howwasyourday.live/#organization' } },
-  ] }
-  return <main className="min-h-screen bg-white text-[#0F4867]"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-    <div className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
-      <nav className="mb-12 flex items-center justify-between"><a href="/" className="text-2xl font-black">How Was <span className="text-[#1A8FA0]">Your Day</span></a><a href="/browse" className="rounded-full bg-[#1A8FA0] px-5 py-2.5 text-sm font-extrabold text-white">Browse listeners</a></nav>
-      <header className="max-w-3xl"><p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-[#1A8FA0]">About How Was Your Day</p><h1 className="mb-6 text-4xl font-black leading-tight sm:text-6xl">A place to talk to a <span className="text-[#FF9933]">real person</span>.</h1><p className="text-lg leading-8 text-slate-600">How Was Your Day is an India-origin peer-support platform connecting people who want human connection with real listeners for private one-to-one conversations by text or voice.</p></header>
-      <section className="mt-12 grid gap-6 md:grid-cols-3"><article className="rounded-3xl border border-slate-200 p-6"><h2 className="mb-3 text-xl font-black">Human, not AI</h2><p className="leading-7 text-slate-600">How Was Your Day sessions are conversations with real people. AI assistants can be useful; How Was Your Day exists for the different need of human-to-human connection.</p></article><article className="rounded-3xl border border-slate-200 p-6"><h2 className="mb-3 text-xl font-black">Peer, not clinical</h2><p className="leading-7 text-slate-600">Listeners provide peer support informed by lived experience. How Was Your Day is not therapy, counselling, diagnosis or clinical treatment.</p></article><article className="rounded-3xl border border-slate-200 p-6"><h2 className="mb-3 text-xl font-black">Choose your conversation</h2><p className="leading-7 text-slate-600">Seekers browse listener profiles and choose who they want to talk to. Conversations can use text or voice.</p></article></section>
-      <section className="mt-8 rounded-3xl bg-[#F0F8FC] p-7 sm:p-9"><h2 className="mb-4 text-2xl font-black">Why How Was Your Day exists</h2><p className="leading-7 text-slate-600">Sometimes you have friends, family and colleagues and still want a neutral person to hear the whole story. How Was Your Day is designed for ordinary moments: loneliness, homesickness, relationship difficulties, work stress, overthinking, grief, family pressure or simply needing to vent.</p><p className="mt-4 leading-7 text-slate-600">The platform began in India and now has dedicated experiences for people in the Indian and South Asian diaspora across the United States, United Kingdom, Canada, Australia, UAE, Oman, Kuwait, Singapore and Malaysia.</p></section>
-      <section className="mt-8"><h2 className="mb-5 text-2xl font-black">Current markets</h2><div className="flex flex-wrap gap-2">{countries.map((country, i) => <a key={country} href={`/${slugs[i]}`} className="rounded-full border border-[#D5EEF6] bg-[#F0F8FC] px-4 py-2 text-sm font-bold">{country}</a>)}</div></section>
-      <section className="mt-8 rounded-3xl bg-[#0F4867] p-7 text-white sm:p-9"><h2 className="mb-3 text-2xl font-black">Start with an 8-minute session.</h2><p className="leading-7 text-white/85">Browse listeners, choose someone who feels relevant, and start talking. Continue only if the conversation feels right. Eligibility, payment methods and availability can vary by market.</p><a href="/browse" className="mt-6 inline-flex rounded-full bg-[#FF9933] px-7 py-3.5 font-extrabold text-white">Browse listeners →</a></section>
-      <p className="mt-10 text-xs leading-6 text-slate-500">How Was Your Day provides peer support and human connection, not therapy, counselling, diagnosis or clinical treatment. If you are in immediate danger or experiencing a mental-health emergency, contact an appropriate local emergency or crisis service where you are.</p>
-    </div>
-  </main>
+  return (
+    <main className="min-h-screen bg-white text-[#3B2F2A]">
+      <div className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
+        <nav className="mb-12 flex items-center justify-between">
+          <a href="/"><img src="/logo.png" alt="How Was Your Day" className="h-11 w-auto" /></a>
+          <a href="/talk?src=about" className="rounded-full bg-[#B85520] px-5 py-2.5 text-sm font-extrabold text-white">Talk now</a>
+        </nav>
+
+        <header className="max-w-3xl">
+          <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-[#B85520]">About us</p>
+          <h1 className="mb-6 text-4xl font-black leading-tight sm:text-6xl">Everyone deserves someone who asks <span className="text-[#E8743B]">how your day was</span> — and listens.</h1>
+          <p className={`text-lg ${body}`}>
+            How Was Your Day is a UK peer support service. You talk one to one, by text or voice, with a real person who has
+            been through things too. No waiting list, no diagnosis, no chatbot — just a human conversation, starting from 8 minutes.
+          </p>
+        </header>
+
+        <section className="mt-12 grid gap-5 md:grid-cols-3">
+          <article className={card}><h2 className="mb-3 text-xl font-black">Human, not AI</h2><p className={body}>Every listener is a real adult in the UK. AI has its uses; this is for when you want a person on the other end.</p></article>
+          <article className={card}><h2 className="mb-3 text-xl font-black">Short and affordable</h2><p className={body}>8 minutes is often enough to feel lighter — {P1} at the standard rate, with 16 and 32 minutes when you need more.</p></article>
+          <article className={card}><h2 className="mb-3 text-xl font-black">Peer, not clinical</h2><p className={body}>Listeners are screened peers with lived experience, not therapists. We&apos;re clear about that, always.</p></article>
+        </section>
+
+        <section className="mt-8 rounded-3xl bg-[#FFF6EF] p-7 sm:p-9">
+          <h2 className="mb-4 text-2xl font-black">Why we exist</h2>
+          <p className={body}>
+            Plenty of us have friends and family and still have days we can&apos;t quite say out loud to them — because we don&apos;t want to
+            worry them, because it&apos;s complicated, or because it&apos;s late and everyone&apos;s asleep. Professional support matters, but not
+            every hard day needs an appointment. Sometimes you just need someone to hear the whole story.
+          </p>
+          <p className={`mt-4 ${body}`}>
+            How Was Your Day makes that easy: pick text or voice, choose how long, and talk now or at a time you book. Listeners set their
+            own price, you see it before you start, and there&apos;s no subscription.
+          </p>
+        </section>
+
+        <section className="mt-8 rounded-3xl border border-[#F2DFD1] p-7 sm:p-9">
+          <h2 className="mb-4 text-2xl font-black">How we keep it safe</h2>
+          <ul className={`list-disc space-y-2 pl-5 ${body}`}>
+            <li>Every listener passes an identity selfie check, a screening quiz and a review by our team.</li>
+            <li>Listeners see only the first name you choose. Voice calls are not recorded.</li>
+            <li>You can end a session, block or report anyone at any time.</li>
+            <li>We are not an emergency service: in danger, call 999; Samaritans are free on 116 123; or text SHOUT to 85258.</li>
+          </ul>
+          <a href="/safeguarding" className="mt-5 inline-block font-extrabold text-[#B85520]">Read our safeguarding approach →</a>
+        </section>
+
+        <section className="mt-8 rounded-3xl bg-[#E8743B] p-7 text-center text-white sm:p-9">
+          <h2 className="mb-3 text-2xl font-black">So… how was your day?</h2>
+          <p className="mb-6 font-semibold">Tell someone who&apos;s listening. 8 minutes is enough.</p>
+          <a href="/talk?src=about" className="inline-flex rounded-full bg-white px-7 py-3.5 font-extrabold text-[#9E4719]">Talk to someone now</a>
+        </section>
+
+        <p className="mt-10 text-xs leading-6 text-[#6E5B50]">
+          Want to help others? <a href="/become-a-peer-supporter" className="font-bold text-[#B85520]">Become a peer supporter</a>.
+          Questions? <a href="/contact" className="font-bold text-[#B85520]">Contact us</a>.
+        </p>
+      </div>
+    </main>
+  )
 }

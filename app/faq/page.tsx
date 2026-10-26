@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'How the app works, what a session costs, booking a time, privacy and safety. Compare peer support with therapy and see prices before starting.',
   alternates: { canonical: 'https://www.howwasyourday.live/faq', languages: { 'en-GB': 'https://www.howwasyourday.live/faq' } },
   keywords: [
-    'lean on app FAQ', 'howwasyourday FAQ', 'what is howwasyourday', 'lean on meaning', 'lean on someone',
+    'How Was Your Day FAQ', 'howwasyourday FAQ', 'what is How Was Your Day',
     'peer support UK FAQ', 'How Was Your Day how it works', 'howwasyourday pricing', 'howwasyourday privacy',
   ],
 }
@@ -23,10 +23,6 @@ const faqs = [
         a: 'How Was Your Day is an online peer-support platform where people can browse screened human listeners for one-to-one text or voice conversations about everyday challenges such as loneliness, work stress, relationship difficulties, grief and overthinking. It is not therapy or a crisis service. A conversation can start when a listener is available; availability varies.',
       },
       {
-        q: 'What does "lean on" mean?',
-        a: '"Lean on" means having someone you can emotionally rely on — someone in your corner who listens without judgment and supports you through hard times. The phrase comes from the idea of physically leaning on someone for support. How Was Your Day (the app) is built on that idea: everyone deserves someone to lean on.',
-      },
-      {
         q: 'How is How Was Your Day different from therapy or counselling?',
         a: 'Listeners on How Was Your Day are not licensed therapists or clinical counsellors. They are real people with lived experience — people who have navigated the same challenges and found their way through. Peer support is different from therapy, and valuable in its own right: it offers empathy, understanding, and connection. How Was Your Day is ideal when you need someone who truly gets it, not a clinical diagnosis.',
       },
@@ -36,11 +32,7 @@ const faqs = [
       },
       {
         q: 'What topics can I talk about?',
-        a: 'Listeners on How Was Your Day specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, startup journey, breakups, anxiety, and general emotional support. If you just need someone to lean on with no specific topic, that\'s perfectly fine too.',
-      },
-      {
-        q: 'How is How Was Your Day different from companionship apps like GetCompanion?',
-        a: 'How Was Your Day is built around peer support: one-to-one conversations with screened listeners who bring relevant lived experience. It is not therapy or a clinical service. Every session is paid, from 8 minutes; paid session prices are shown before you start. See the pricing page for the current India and international rates.',
+        a: 'Listeners on How Was Your Day specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, breakups, anxiety, and general emotional support. If you just need someone to talk to with no specific topic, that\'s perfectly fine too.',
       },
     ],
   },
@@ -49,7 +41,7 @@ const faqs = [
     items: [
       {
         q: 'How do I start using How Was Your Day?',
-        a: 'The quickest way is Talk now at howwasyourday.live/talk: choose text or voice, tap what is on your mind, confirm your phone number with a one-time code, and How Was Your Day connects you with a screened listener who is online. Every session is paid, from 8 minutes. You can also browse listener profiles at howwasyourday.live/browse and choose someone yourself.',
+        a: 'The quickest way is Talk now at howwasyourday.live/talk: choose text or voice, tap what is on your mind, sign in with Google, and How Was Your Day connects you with a screened listener who is online. Every session is paid, from 8 minutes. You can also browse listener profiles at howwasyourday.live/browse and choose someone yourself.',
       },
       {
         q: 'Is there a How Was Your Day app on the Play Store or App Store?',
@@ -95,7 +87,7 @@ const faqs = [
     items: [
       {
         q: 'Are my conversations private?',
-        a: 'How Was Your Day uses your phone number for OTP sign-in, but it is not shown to listeners; you can use a display name. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. Read the Privacy Policy for details, and avoid sharing identifying information you do not want to disclose.',
+        a: 'Listeners never see your email or phone number; they see only the display name you choose. Voice calls are not recorded. Text messages are stored securely and only authorised How Was Your Day administrators can open them, for example to review a reported or safety-flagged session. Read the Privacy Policy for details, and avoid sharing identifying information you do not want to disclose.',
       },
       {
         q: 'Is How Was Your Day safe?',
@@ -137,26 +129,26 @@ const faqSchema = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Nunito,sans-serif;color:#0F4867;background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
+  body{font-family:Nunito,sans-serif;color:#3B2F2A;background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{background:transparent;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:52px;width:auto;}
   .wrap{max-width:800px;margin:0 auto;padding:32px 24px 80px;}
-  .breadcrumb{font-size:13px;color:#5A7A8A;margin-bottom:24px;}
-  .breadcrumb a{color:#1A8FA0;font-weight:600;}
+  .breadcrumb{font-size:13px;color:#6E5B50;margin-bottom:24px;}
+  .breadcrumb a{color:#B85520;font-weight:600;}
   .breadcrumb span{margin:0 6px;opacity:0.5;}
-  h1{font-size:clamp(26px,5vw,40px);font-weight:900;color:#0F4867;line-height:1.15;margin-bottom:10px;}
-  .subtitle{font-size:16px;color:#5A7A8A;margin-bottom:40px;line-height:1.6;}
+  h1{font-size:clamp(26px,5vw,40px);font-weight:900;color:#3B2F2A;line-height:1.15;margin-bottom:10px;}
+  .subtitle{font-size:16px;color:#6E5B50;margin-bottom:40px;line-height:1.6;}
   .cat{margin-bottom:40px;}
-  .cat-title{font-size:13px;font-weight:800;color:#1A8FA0;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #D5EEF6;}
-  .faq-item{background:#FFFFFF;border:1.5px solid #D5EEF6;border-radius:16px;margin-bottom:10px;overflow:hidden;}
-  .faq-q{font-size:16px;font-weight:800;color:#0F4867;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
-  .faq-q::after{content:'+';font-size:22px;font-weight:400;color:#1A8FA0;flex-shrink:0;}
-  .faq-a{font-size:15px;color:#5A7A8A;line-height:1.72;padding:0 20px 18px;font-weight:500;}
-  .cta-box{background:linear-gradient(135deg,#0F4867 0%,#1A8FA0 100%);border-radius:20px;padding:36px 28px;text-align:center;color:white;margin-top:48px;}
+  .cat-title{font-size:13px;font-weight:800;color:#B85520;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #F2DFD1;}
+  .faq-item{background:#FFFFFF;border:1.5px solid #F2DFD1;border-radius:16px;margin-bottom:10px;overflow:hidden;}
+  .faq-q{font-size:16px;font-weight:800;color:#3B2F2A;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .faq-q::after{content:'+';font-size:22px;font-weight:400;color:#B85520;flex-shrink:0;}
+  .faq-a{font-size:15px;color:#6E5B50;line-height:1.72;padding:0 20px 18px;font-weight:500;}
+  .cta-box{background:linear-gradient(135deg,#3B2F2A 0%,#B85520 100%);border-radius:20px;padding:36px 28px;text-align:center;color:white;margin-top:48px;}
   .cta-box h2{font-size:22px;font-weight:900;margin-bottom:10px;}
   .cta-box p{font-size:15px;opacity:0.85;margin-bottom:24px;line-height:1.6;}
-  .btn-cta{background:#FF9933;color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
+  .btn-cta{background:#E8743B;color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
 `
 
 export default function FAQPage() {
@@ -166,7 +158,7 @@ export default function FAQPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav">
         <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
-        <a href="/talk?src=seo" style={{background:'#FF9933',color:'white',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
+        <a href="/talk?src=seo" style={{background:'#E8743B',color:'white',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
       </nav>
 
       <div className="wrap">
@@ -175,7 +167,7 @@ export default function FAQPage() {
         </div>
 
         <h1>Frequently Asked Questions</h1>
-        <p className="subtitle">Everything you need to know about How Was Your Day — someone to lean on, anytime.</p>
+        <p className="subtitle">Everything you need to know about How Was Your Day. Talk it through — 8 minutes is enough.</p>
 
         {faqs.map((cat) => (
           <div key={cat.category} className="cat">

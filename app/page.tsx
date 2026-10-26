@@ -1,674 +1,333 @@
-import { formatGBP } from '@/lib/money'
 import type { Metadata } from 'next'
-import { PLATFORM_FEE, DEFAULT_LISTENER_RATE } from '@/lib/constants'
+import AuthRedirect from '@/app/components/AuthRedirect'
+import { formatGBP } from '@/lib/money'
+import {
+  PLATFORM_FEE, DEFAULT_LISTENER_RATE, SESSION_DURATIONS, VOICE_PRICING_ENABLED, VOICE_RATE_PREMIUM,
+} from '@/lib/constants'
+import { TALK_TOPICS } from '@/lib/talk-match'
 
-// Example prices at the standard listener rate (pence, lib/money.ts).
-const P8 = formatGBP(DEFAULT_LISTENER_RATE * 8 + PLATFORM_FEE)
-const P16 = formatGBP(DEFAULT_LISTENER_RATE * 16 + PLATFORM_FEE)
-const P32 = formatGBP(DEFAULT_LISTENER_RATE * 32 + PLATFORM_FEE)
+// Home page. Brand + voice: PROJECT.md §1a (orange and white, "8 minutes is enough").
+// Prices are the RULE at the standard rate (CLAUDE.md): listener rate × minutes + £1.
+const price = (mins: number) => formatGBP(DEFAULT_LISTENER_RATE * mins + PLATFORM_FEE)
+const [M1, M2, M3] = SESSION_DURATIONS
+const P1 = price(M1)
 const FEE = formatGBP(PLATFORM_FEE)
+
 export const metadata: Metadata = {
-  title: 'How Was Your Day — Real Human Peer Support | Talk to a Listener in the UK',
-  // Cited by ChatGPT (24 Oct 2026) for "I feel lonely… services with real human listeners?" —
-  // keep this description and the title stable; see docs/ai-visibility/WINNING_ANSWERS.md.
-  description: `Need someone to talk to? How Was Your Day connects people in the UK with real human peer listeners for private one-to-one conversations by text or voice. Talk now or book a time; sessions are ${P8} for 8 minutes at the standard rate.`,
+  title: 'How Was Your Day — Talk It Through With a Real Person | UK',
+  description: `Had a day? Talk it through with a real person who listens, by text or voice. 8 minutes is enough — ${P1} at the standard rate. Screened peer listeners for adults in the UK. Not therapy.`,
   alternates: { canonical: 'https://www.howwasyourday.live' },
-  keywords: [
-    'howwasyourday', 'lean on', 'How Was Your Day', 'lean on app',
-    'someone to talk to', 'talk to someone online', 'talk to a real person online',
-    'real person to talk to India', 'someone to talk to India',
-    'peer support India', 'peer emotional support India', 'paid peer support India',
-    'emotional support India', 'online emotional support India',
-    'anonymous emotional support India', 'private emotional support India',
-    'talk to someone right now', 'no one to talk to', 'someone to listen to me',
-    'need to vent India', 'relationship support India', 'work stress support India',
-    'loneliness support India', 'grief support India', 'family pressure support India',
-    'AI chatbot alternative India', 'talk to real human not AI',
-    'tired of talking to AI', 'ChatGPT alternative India',
-    'paid support online India', 'paid human conversation India', 'pay to talk to someone India', 'affordable peer support India',
-    'online peer support cost India',
-    'NRI emotional support', 'Indian diaspora emotional support',
-    'Indian NRI someone to talk to', 'Indian expat loneliness',
-    'peer support for Indians abroad', 'talk to Indian listener online',
-    'Indian emotional support USA', 'Indian emotional support UK',
-    'Indian emotional support Canada', 'Indian emotional support Australia',
-    'Indian emotional support UAE', 'Indian homesickness support',
-  ],
 }
 
-const faqSchema = {
+const FAQ: { q: string; a: string }[] = [
+  { q: 'What is How Was Your Day?', a: 'How Was Your Day is a UK peer support service. You talk one to one, by text or voice, with a real person who has been screened to listen well. It is not therapy, counselling or a chatbot — it is a human conversation about whatever is on your mind.' },
+  { q: 'Is 8 minutes really enough?', a: `Often, yes. Eight minutes is long enough to say what is on your mind and feel heard, and short enough to fit into a lunch break or the walk home. If you want longer, choose ${M2} or ${M3} minutes.` },
+  { q: 'How much does it cost?', a: `Each listener sets their own price per minute, plus a flat ${FEE} per session. At the standard rate, ${M1} minutes is ${price(M1)}, ${M2} minutes ${price(M2)} and ${M3} minutes ${price(M3)}${VOICE_PRICING_ENABLED ? `; voice is ${VOICE_RATE_PREMIUM}p a minute more` : ''}. You always see the price before you start, and there is no subscription.` },
+  { q: 'Who are the listeners?', a: 'Adults in the UK with lived experience of things like loneliness, relationships, work pressure, grief or big life changes. Every listener passes an identity selfie check, a screening quiz on listening, boundaries and when to point someone to urgent help, and a review by our team. They are peers, not therapists.' },
+  { q: 'Is it private?', a: 'Listeners only see the first name you choose — never your phone number or email. Voice calls are not recorded. You can end a session, block or report someone at any time.' },
+  { q: 'Can I talk right now, or book for later?', a: 'Both. "Talk now" looks for a listener who is online — availability varies, so a match is not guaranteed straight away. Or open a listener\'s profile and book a time from their weekly hours (UK time); we remind you before it starts.' },
+  { q: 'What if I am in crisis?', a: 'How Was Your Day is not an emergency service. If you are in danger, call 999. You can ring Samaritans free on 116 123 or text SHOUT to 85258, any time of day or night.' },
+]
+
+const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'What is How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is a peer support platform built on empathy — someone to lean on anytime you need it. You talk to real people in India who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. Every listener brings genuine empathy from lived experience, not a script. It is not therapy, but real human connection through one-to-one peer conversations.' } },
-    { '@type': 'Question', name: 'What makes How Was Your Day listeners empathetic?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day screens listener applications for identity, active listening, boundaries and crisis-referral understanding. Listener profiles also show the topics and lived experience they can support with, so you can choose someone who feels relevant. How Was Your Day listeners are peers, not therapists.' } },
-    { '@type': 'Question', name: 'What does "lean on" mean in How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: '"Lean on" means having someone you can rely on emotionally — someone who supports you without judgment when you\'re going through something hard. How Was Your Day (the platform) gives everyone access to that kind of support through verified peer listeners who have lived experience.' } },
-    { '@type': 'Question', name: 'How does pricing work?', acceptedAnswer: { '@type': 'Answer', text: `Each listener sets their own per-minute price, plus a flat ${FEE} platform fee per paid session. Sessions are 8, 16 or 32 minutes — ${P8} for 8 minutes at the standard rate. Every session is paid; there is no free trial.` } },
-    { '@type': 'Question', name: 'How much does a paid How Was Your Day session cost?', acceptedAnswer: { '@type': 'Answer', text: `An 8-minute session is ${P8} at the standard rate, 16 minutes ${P16} and 32 minutes ${P32} (listeners set their own price, shown before you start). There are no subscriptions; you pay for the conversation time you choose.` } },
-    { '@type': 'Question', name: 'How is How Was Your Day different from therapy?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day listeners are real people with lived experience, not licensed therapists. They offer empathy and peer support, not clinical diagnosis or treatment. How Was Your Day is ideal when you need someone to lean on — not a diagnosis.' } },
-    { '@type': 'Question', name: 'Is How Was Your Day related to the song "Lean On" by Major Lazer?', acceptedAnswer: { '@type': 'Answer', text: 'No. How Was Your Day (one word, at howwasyourday.live) is an Indian peer emotional support platform where you talk to verified human listeners. It has no connection to the 2015 song "Lean On" by Major Lazer and DJ Snake. The name comes from the phrase "someone to lean on" — having a person you can rely on emotionally.' } },
-    { '@type': 'Question', name: 'Is How Was Your Day confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sessions are private. How Was Your Day explains its information practices in its Privacy and Trust pages, and you decide what personal details to share in a conversation.' } },
-    { '@type': 'Question', name: 'How do I start a paid How Was Your Day session?', acceptedAnswer: { '@type': 'Answer', text: 'Browse listener profiles, choose someone who feels relevant, and start with an 8-minute session. If you want to continue, the paid session price is shown before you start.' } },
-    { '@type': 'Question', name: 'Which cities does How Was Your Day serve?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day is available across all of India — Bengaluru, Mumbai, Delhi, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Ahmedabad, and everywhere else. It is fully online — accessible from anywhere.' } },
-    { '@type': 'Question', name: 'What topics can I talk about on How Was Your Day?', acceptedAnswer: { '@type': 'Answer', text: 'Listeners on How Was Your Day specialise in loneliness, work stress, career confusion, relationships, grief and loss, student pressure, startup journey, breakups, anxiety, and more. If you just need someone to lean on with no specific topic, that\'s fine too.' } },
-    { '@type': 'Question', name: 'Is How Was Your Day an AI or are the listeners real people?', acceptedAnswer: { '@type': 'Answer', text: 'Every listener on How Was Your Day is a real, verified human being — no bots, no AI-generated responses, no scripts. Listeners apply to join, go through identity verification and a screening assessment on active listening, boundaries and crisis referral before their first session. When you talk to someone on How Was Your Day, there is a real person on the other side of the conversation.' } },
-    { '@type': 'Question', name: 'Can ChatGPT or AI chatbots replace talking to a real person?', acceptedAnswer: { '@type': 'Answer', text: 'AI assistants can be useful for information, reflection and conversation. How Was Your Day serves a different need: talking with another human being. A peer listener can bring their own lived experience and respond as a person in a two-way conversation.' } },
-    { '@type': 'Question', name: 'Where can I talk to a real person online when I feel lonely?', acceptedAnswer: { '@type': 'Answer', text: `How Was Your Day (howwasyourday.live) connects you with real human peer listeners for private one-to-one conversations by text or voice. You can browse listener profiles, start with an 8-minute session, and choose someone who has lived experience with what you are going through. Paid sessions are ${P8} for 8 minutes at the standard rate.` } },
-    { '@type': 'Question', name: 'How is How Was Your Day different from talking to ChatGPT or an AI?', acceptedAnswer: { '@type': 'Answer', text: 'How Was Your Day provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI is useful for information, brainstorming, and reflection. How Was Your Day is useful when the person specifically wants another human being to listen — for emotional connection rather than information.' } },
-  ],
-}
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://www.howwasyourday.live/#organization',
-      name: 'How Was Your Day',
-      alternateName: ['HowWasYourDay', 'howwasyourday'],
-      url: 'https://www.howwasyourday.live',
-      logo: { '@type': 'ImageObject', url: 'https://www.howwasyourday.live/logo.png', width: 512, height: 512 },
-      description: "India-origin peer support platform connecting people with real human peer listeners for private one-to-one conversations by text or voice. Not therapy or clinical care.",
-      areaServed: [
-        { '@type': 'Country', name: 'India' },
-        { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'United Kingdom' },
-        { '@type': 'Country', name: 'Canada' },
-        { '@type': 'Country', name: 'United Arab Emirates' },
-        { '@type': 'Country', name: 'Australia' },
-        { '@type': 'Country', name: 'Singapore' },
-      ],
-    },
-    {
-      '@type': 'WebSite',
-      '@id': 'https://www.howwasyourday.live/#website',
-      url: 'https://www.howwasyourday.live',
-      name: 'How Was Your Day',
-      publisher: { '@id': 'https://www.howwasyourday.live/#organization' },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: { '@type': 'EntryPoint', urlTemplate: 'https://www.howwasyourday.live/browse?query={search_term_string}' },
-        'query-input': 'required name=search_term_string',
-      },
-    },
-  ],
+  mainEntity: FAQ.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 }
 
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How to use How Was Your Day for peer support',
-  description: 'Start talking to a real human peer listener on How Was Your Day in under 60 seconds — no appointment needed.',
-  totalTime: 'PT1M',
-  tool: [{ '@type': 'HowToTool', name: 'Smartphone or computer with internet access' }],
-  step: [
-    { '@type': 'HowToStep', position: 1, name: 'Sign up to How Was Your Day', text: 'Enter your phone number and verify with OTP. Takes 30 seconds, no email or full name required.' },
-    { '@type': 'HowToStep', position: 2, name: 'Browse peer listeners', text: 'Filter listeners by topic (loneliness, relationships, work stress, grief, etc.). Read their bios, ratings, and lived experience.' },
-    { '@type': 'HowToStep', position: 3, name: 'Top up and choose a length', text: `Top up your wallet by card and choose 8, 16 or 32 minutes — ${P8} for 8 minutes at the standard rate.` },
-    { '@type': 'HowToStep', position: 4, name: 'Talk now or book a time', text: 'Start straight away with someone online, or book a slot from a listener\'s weekly hours.' },
-    { '@type': 'HowToStep', position: 5, name: 'Talk by text or voice', text: 'Choose text chat for privacy or voice call for warmth. Your session begins immediately — no appointment.' },
-    { '@type': 'HowToStep', position: 6, name: 'Rate and return', text: 'Rate your listener after the session. Book again anytime. Unused wallet balance is fully refundable.' },
-  ],
-}
+const CSS = `
+.hw{--sun:#E8743B;--ember:#B85520;--ember-d:#9E4719;--peach:#FFF6EF;--apricot:#FBE3D2;--line:#F2DFD1;--ink:#3B2F2A;--muted:#6E5B50;
+  font-family:Nunito,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.hw *{box-sizing:border-box;margin:0;padding:0}
+.hw a{text-decoration:none;color:inherit}
+.hw-wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hw-nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.hw-nav img{height:44px;width:auto;display:block}
+.hw-nav-links{display:flex;align-items:center;gap:22px}
+.hw-nav-links a.t{font-size:14.5px;font-weight:800;color:var(--muted);display:none}
+.hw-nav-links a.t:hover{color:var(--ember)}
+@media(min-width:760px){.hw-nav-links a.t{display:inline}}
+.hw-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:900;font-size:16px;padding:15px 28px;transition:transform .15s,background .15s,box-shadow .15s;border:2px solid transparent;cursor:pointer}
+.hw-btn:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.hw-btn-p{background:var(--ember);color:#fff;box-shadow:0 8px 24px rgba(184,85,32,.25)}
+.hw-btn-p:hover{background:var(--ember-d);transform:translateY(-1px)}
+.hw-btn-g{background:#fff;color:var(--ember);border-color:var(--line)}
+.hw-btn-g:hover{border-color:var(--ember)}
+.hw-btn-s{padding:10px 20px;font-size:14px}
 
-import AuthRedirect from '@/app/components/AuthRedirect'
-import { VOICE_PRICING_ENABLED, VOICE_RATE_PREMIUM } from '@/lib/constants'
+/* hero */
+.hw-hero{background:radial-gradient(ellipse 80% 70% at 85% 0%,#FFE9DA 0%,rgba(255,246,239,.6) 45%,#fff 75%)}
+.hw-hero-grid{display:grid;gap:44px;padding:36px 0 72px;align-items:center}
+@media(min-width:900px){.hw-hero-grid{grid-template-columns:1.1fr .9fr;padding:56px 0 96px}}
+.hw-pill{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1.5px solid var(--line);color:var(--muted);font-weight:800;font-size:13px;padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.hw-dot{width:8px;height:8px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(232,116,59,.18)}
+.hw-h1{font-size:clamp(44px,8vw,76px);line-height:1;font-weight:900;letter-spacing:-1.5px;margin-bottom:18px}
+.hw-h1 span{color:var(--sun)}
+.hw-lead{font-size:clamp(20px,2.6vw,26px);font-weight:800;line-height:1.35;margin-bottom:14px}
+.hw-lead em{font-style:normal;color:var(--ember);background:linear-gradient(transparent 62%,var(--apricot) 62%)}
+.hw-sub{font-size:17px;line-height:1.7;color:var(--muted);max-width:520px;margin-bottom:30px;font-weight:600}
+.hw-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+.hw-note{font-size:13.5px;color:var(--muted);font-weight:700}
 
-// Homepage price cards use the standard DEFAULT_LISTENER_RATE text rate.
-const voiceFrom = (mins: number, textPrice: number) =>
-  VOICE_PRICING_ENABLED ? ` · Voice from ${formatGBP(textPrice + VOICE_RATE_PREMIUM * mins)}` : ' or voice'
+/* example chat card */
+.hw-card{background:#fff;border:1.5px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(59,47,42,.10);max-width:420px;width:100%;justify-self:center}
+.hw-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.hw-who{display:flex;gap:10px;align-items:center}
+.hw-av{width:40px;height:40px;border-radius:50%;background:var(--apricot);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--ember)}
+.hw-who b{display:block;font-size:15px}.hw-who small{font-size:12px;color:var(--muted);font-weight:700}
+.hw-timer{position:relative;width:58px;height:58px}
+.hw-timer svg{transform:rotate(-90deg)}
+.hw-timer span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--ember)}
+.hw-ring{stroke-dasharray:157;stroke-dashoffset:0;animation:hwRing 16s linear infinite}
+@keyframes hwRing{to{stroke-dashoffset:157}}
+.hw-msgs{display:flex;flex-direction:column;gap:10px}
+.hw-m{max-width:82%;padding:11px 15px;border-radius:18px;font-size:14.5px;line-height:1.5;font-weight:600;opacity:0;animation:hwIn .5s ease forwards}
+.hw-m.l{background:var(--peach);border-bottom-left-radius:6px}
+.hw-m.r{background:var(--ember);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+.hw-m:nth-child(1){animation-delay:.2s}.hw-m:nth-child(2){animation-delay:1.1s}.hw-m:nth-child(3){animation-delay:2s}.hw-m:nth-child(4){animation-delay:2.9s}
+@keyframes hwIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hw-m{opacity:1;animation:none}.hw-ring{animation:none}}
+.hw-card-foot{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--muted);font-weight:700;text-align:center}
+
+/* sections */
+.hw-sec{padding:76px 0}
+.hw-sec.peach{background:var(--peach)}
+.hw-eye{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);margin-bottom:10px}
+.hw-h2{font-size:clamp(28px,4.4vw,42px);line-height:1.12;font-weight:900;letter-spacing:-.6px;margin-bottom:14px}
+.hw-h2 span{color:var(--sun)}
+.hw-p{font-size:17px;line-height:1.7;color:var(--muted);font-weight:600;max-width:640px}
+.hw-grid3{display:grid;gap:16px;margin-top:36px}
+@media(min-width:760px){.hw-grid3{grid-template-columns:repeat(3,1fr)}}
+.hw-tile{background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:26px}
+.hw-ico{width:48px;height:48px;border-radius:14px;background:var(--apricot);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
+.hw-tile h3{font-size:19px;font-weight:900;margin-bottom:8px}
+.hw-tile p{font-size:15px;line-height:1.65;color:var(--muted);font-weight:600}
+
+/* 8 minutes */
+.hw-eight{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.hw-eight{grid-template-columns:.7fr 1.3fr;gap:36px}}
+.hw-big8{font-size:clamp(120px,22vw,220px);font-weight:900;line-height:.85;color:var(--sun);letter-spacing:-6px}
+.hw-big8 small{display:block;font-size:22px;letter-spacing:0;color:var(--ink);margin-top:10px}
+
+/* steps */
+.hw-steps{display:grid;gap:16px;margin-top:36px;counter-reset:s}
+@media(min-width:760px){.hw-steps{grid-template-columns:repeat(3,1fr)}}
+.hw-step{padding:26px;border-radius:22px;background:#fff;border:1.5px solid var(--line)}
+.hw-step:before{counter-increment:s;content:counter(s);display:flex;width:38px;height:38px;border-radius:50%;background:var(--sun);color:#fff;font-weight:900;align-items:center;justify-content:center;margin-bottom:14px}
+.hw-step h3{font-size:18px;font-weight:900;margin-bottom:6px}
+.hw-step p{font-size:15px;line-height:1.6;color:var(--muted);font-weight:600}
+
+/* topics */
+.hw-topics{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hw-topic{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:11px 18px;font-weight:800;font-size:15px;transition:border-color .15s,transform .15s}
+.hw-topic:hover{border-color:var(--sun);transform:translateY(-1px)}
+
+/* pricing */
+.hw-prices{display:grid;gap:16px;margin-top:36px}
+@media(min-width:760px){.hw-prices{grid-template-columns:repeat(3,1fr)}}
+.hw-price{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:28px;position:relative}
+.hw-price.f{border:2.5px solid var(--sun);box-shadow:0 18px 40px rgba(232,116,59,.14)}
+.hw-badge{position:absolute;top:-13px;left:24px;background:var(--sun);color:#fff;font-size:12px;font-weight:900;padding:5px 12px;border-radius:999px}
+.hw-price .min{font-size:15px;font-weight:900;color:var(--ember)}
+.hw-price .amt{font-size:44px;font-weight:900;letter-spacing:-1px;margin:6px 0 4px}
+.hw-price .nm{font-size:17px;font-weight:900;margin-bottom:6px}
+.hw-price p{font-size:14.5px;color:var(--muted);line-height:1.6;font-weight:600}
+.hw-small{font-size:14px;color:var(--muted);line-height:1.7;font-weight:600;margin-top:20px;max-width:760px}
+
+/* crisis */
+.hw-crisis{margin-top:28px;background:#FFF4F2;border:1.5px solid #F6D3CC;border-radius:20px;padding:20px 22px;font-size:15px;line-height:1.7;font-weight:600}
+.hw-crisis strong{color:#8E2A1B}.hw-crisis a{color:#B71C1C;font-weight:900}
+
+/* faq */
+.hw-faq{max-width:780px;margin-top:28px;border-top:1.5px solid var(--line)}
+.hw-faq details{border-bottom:1.5px solid var(--line);padding:18px 4px}
+.hw-faq summary{cursor:pointer;font-size:17px;font-weight:900;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.hw-faq summary::-webkit-details-marker{display:none}
+.hw-faq summary:after{content:'+';color:var(--sun);font-size:22px;line-height:1}
+.hw-faq details[open] summary:after{content:'–'}
+.hw-faq p{margin-top:10px;font-size:15.5px;line-height:1.7;color:var(--muted);font-weight:600}
+
+/* final call to action */
+.hw-final{background:linear-gradient(135deg,#E8743B 0%,#C95C26 100%);border-radius:32px;padding:56px 28px;text-align:center;color:#fff}
+.hw-final h2{font-size:clamp(30px,5vw,48px);font-weight:900;letter-spacing:-.6px;margin-bottom:10px}
+.hw-final p{font-size:18px;font-weight:700;margin-bottom:26px}
+.hw-final .hw-btn{background:#fff;color:var(--ember-d)}
+.hw-final .hw-btn:hover{transform:translateY(-1px)}
+`
 
 export default function Home() {
   return (
-    <>
+    <div className="hw">
       <AuthRedirect />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <style dangerouslySetInnerHTML={{ __html: `
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
 
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-        :root{
-          --navy:#0F4867;
-          --teal:#1A8FA0;
-          --orange:#FF9933;
-          --white:#FFFFFF;
-          --card:#FFFFFF;
-          --light:#F0F8FC;
-          --border:#D5EEF6;
-          --gray:#5A7A8A;
-          --muted:#8AAAB8;
-        }
-        html{scroll-behavior:smooth;}
-
-        /* THE KEY FIX: seamless radial gradient from top-left, white everywhere else */
-        body{
-          font-family:Nunito,sans-serif;
-          color:var(--navy);
-          -webkit-font-smoothing:antialiased;
-          background: radial-gradient(ellipse 90% 55% at 0% 0%, #C2E4F2 0%, #DAEEF8 22%, #FFFFFF 58%);
-          background-attachment: fixed;
-          min-height:100vh;
-        }
-        a{text-decoration:none;color:inherit;}
-        img{max-width:100%;display:block;}
-
-        /* NAV — transparent so gradient shows through seamlessly */
-        .nav{
-          background:transparent;
-          padding:0 28px;
-          height:100px;
-          display:flex;
-          align-items:center;
-          justify-content:space-between;
-          max-width:1100px;
-          margin:0 auto;
-        }
-        .nav-logo{height:90px;width:auto;}
-        .nav-right{display:flex;align-items:center;gap:12px;}
-        .btn-nav{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:11px 24px;border-radius:50px;border:none;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 12px rgba(26,143,160,0.35);}
-        .btn-nav:hover{background:#167a8a;transform:translateY(-1px);}
-        .btn-listener{background:transparent;color:var(--navy);font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:50px;border:1.5px solid var(--border);cursor:pointer;transition:all 0.2s;display:none;white-space:nowrap;}
-        .btn-listener:hover{border-color:var(--teal);color:var(--teal);}
-        @media(min-width:480px){.btn-listener{display:block;}}
-
-        /* HERO — no background, flows with body gradient */
-        .hero{padding:48px 28px 64px;max-width:600px;margin:0 auto;text-align:left;}
-        @media(min-width:700px){.hero{padding:56px 28px 72px;}}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(26,143,160,0.1);color:var(--teal);font-weight:700;font-size:13px;padding:7px 18px;border-radius:50px;margin-bottom:28px;border:1.5px solid rgba(26,143,160,0.25);}
-        .hero h1{font-size:clamp(30px,7vw,48px);font-weight:900;line-height:1.12;color:var(--navy);margin-bottom:20px;letter-spacing:-0.5px;}
-        .hero h1 .o{color:var(--orange);}
-        .hero p{font-size:17px;color:var(--gray);line-height:1.72;margin-bottom:36px;max-width:400px;}
-        .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;}
-        .btn-primary{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:16px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;text-align:center;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,153,51,0.35);}
-        .btn-primary:hover{background:#e8861a;transform:translateY(-2px);}
-        .btn-outline{background:transparent;color:var(--teal);font-family:Nunito,sans-serif;font-weight:700;font-size:16px;padding:14px 30px;border-radius:50px;border:2px solid var(--teal);cursor:pointer;display:inline-block;text-align:center;transition:all 0.2s;}
-        .btn-outline:hover{background:var(--teal);color:white;}
-        .hero-note{font-size:12px;color:var(--muted);font-weight:600;}
-
-        /* WHITE section divider */
-        .white-section{background:var(--white);}
-        .inner{max-width:600px;margin:0 auto;padding:52px 28px;}
-        .sh{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:6px;}
-        .ss{font-size:14px;color:var(--gray);margin-bottom:24px;font-weight:500;}
-
-        /* TOPICS */
-        .topic-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-        .tc{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:15px 16px;display:flex;align-items:flex-start;gap:12px;transition:all 0.2s;cursor:pointer;box-shadow:0 1px 4px rgba(15,72,103,0.04);}
-        .tc:hover{border-color:var(--teal);background:var(--light);transform:translateY(-2px);box-shadow:0 4px 16px rgba(15,72,103,0.08);}
-        .tc-ico{font-size:22px;flex-shrink:0;line-height:1.2;}
-        .tc-body{display:flex;flex-direction:column;gap:3px;min-width:0;}
-        .tc-label{font-weight:800;font-size:14px;color:var(--navy);line-height:1.2;}
-        .tc-sub{font-weight:600;font-size:11.5px;color:var(--gray);line-height:1.4;}
-
-        /* ABOUT */
-        .al{font-size:12px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;}
-        .at{font-size:clamp(20px,5vw,28px);font-weight:900;color:var(--navy);margin-bottom:20px;line-height:1.25;}
-        .at .o{color:var(--orange);}
-        .ab p{font-size:15px;color:#3A6070;line-height:1.78;margin-bottom:14px;}
-
-        /* FEATURES */
-        .fl{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
-        .fi{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:1.5px solid var(--border);border-radius:18px;padding:18px;box-shadow:0 1px 4px rgba(15,72,103,0.04);}
-        .fw{width:44px;height:44px;border-radius:12px;background:rgba(26,143,160,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
-        .ft{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:4px;}
-        .fd{font-size:13px;color:var(--gray);line-height:1.6;font-weight:500;}
-
-        /* MADE FOR INDIA */
-        .india{background:var(--light);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-        .india-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;}
-        .ig{background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px;display:flex;gap:12px;align-items:flex-start;}
-        .ig-icon{font-size:24px;flex-shrink:0;}
-        .ig-t{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:3px;}
-        .ig-d{font-size:12px;color:var(--gray);font-weight:500;line-height:1.5;}
-        .city-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-        .city-chip{background:white;border:1.5px solid var(--border);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:700;color:var(--navy);}
-
-        /* HOW IT WORKS — navy dark section */
-        .how{background:var(--navy);padding:56px 28px;}
-        .hi{max-width:600px;margin:0 auto;}
-        .ht{font-size:24px;font-weight:900;color:white;text-align:center;margin-bottom:36px;}
-        .sl{display:flex;flex-direction:column;}
-        .si{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
-        .si:last-child{border-bottom:none;}
-        .sn{width:36px;height:36px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:white;flex-shrink:0;margin-top:2px;}
-        .stit{font-size:15px;font-weight:800;color:white;margin-bottom:3px;}
-        .sd{font-size:13px;color:rgba(213,238,246,0.75);line-height:1.5;font-weight:500;}
-
-        /* PRICING */
-        .pc{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
-        .pcard{background:var(--white);border:1.5px solid var(--border);border-radius:18px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 4px rgba(15,72,103,0.04);}
-        .pcard.feat{border:2.5px solid var(--orange);background:#FFFDF8;}
-        .pl{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:3px;}
-        .pd{font-size:13px;color:var(--gray);font-weight:500;}
-        .pb{background:rgba(255,153,51,0.12);color:var(--orange);font-size:11px;font-weight:800;padding:3px 10px;border-radius:50px;display:inline-block;margin-top:5px;}
-        .pa{font-size:28px;font-weight:900;color:var(--navy);flex-shrink:0;}
-        .fee-note{background:rgba(26,143,160,0.06);border:1px solid rgba(26,143,160,0.18);border-radius:14px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;margin-top:14px;}
-        .fee-note span{font-size:13px;color:#1A5F6A;line-height:1.6;font-weight:600;}
-
-        /* TESTIMONIALS */
-        .tlist{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
-        .tcard{background:var(--light);border:1.5px solid var(--border);border-radius:18px;padding:20px;}
-        .tst{font-size:14px;color:var(--orange);margin-bottom:10px;letter-spacing:2px;}
-        .ttx{font-size:14px;color:#2A4F60;line-height:1.68;font-weight:500;margin-bottom:14px;font-style:italic;}
-        .tau{display:flex;align-items:center;gap:10px;}
-        .tav{width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:white;flex-shrink:0;}
-        .tnm{font-size:13px;font-weight:700;color:var(--navy);}
-        .tcy{font-size:12px;color:var(--gray);font-weight:500;}
-
-        /* TRUST GRID */
-        .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;}
-        .ti{display:flex;flex-direction:column;align-items:center;gap:10px;}
-        .tic{width:52px;height:52px;border-radius:18px;background:var(--white);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 1px 4px rgba(15,72,103,0.04);}
-        .tl{font-size:12px;color:var(--gray);font-weight:700;line-height:1.3;}
-
-        /* DISCLAIMER */
-        .db{background:rgba(26,143,160,0.05);border:1.5px solid rgba(26,143,160,0.18);border-radius:20px;padding:20px;}
-        .db h3{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:10px;}
-        .db p{font-size:13px;color:#2A4F60;line-height:1.68;font-weight:500;margin-bottom:8px;}
-        .cb{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:14px;padding:14px 16px;margin-top:8px;}
-        .cb p{font-size:12px;color:#7A2020;font-weight:700;line-height:1.7;}
-
-        /* FAQ */
-        .faq-section{max-width:700px;margin:0 auto 0;padding:0 28px;}
-        .faq-section h2{font-size:clamp(20px,4vw,26px);font-weight:900;color:var(--navy);margin-bottom:24px;text-align:center;}
-        .faq-item{border-bottom:1px solid var(--border);padding:16px 0;}
-        .faq-item:last-child{border-bottom:none;}
-        .faq-q{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-        .faq-a{font-size:14px;color:var(--gray);font-weight:500;line-height:1.7;}
-
-        /* BREATHE — quiet pause moment */
-        .breathe{max-width:600px;margin:0 auto;padding:8px 28px 28px;}
-        .breathe-card{background:radial-gradient(ellipse 120% 100% at 50% 0%, #EAF6FB 0%, #F6FBFD 60%, #FFFFFF 100%);border:1.5px solid var(--border);border-radius:24px;padding:38px 28px;text-align:center;}
-        .breathe-eyebrow{font-size:12px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:14px;}
-        .breathe-dot{width:52px;height:52px;border-radius:50%;background:rgba(26,143,160,0.12);margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-size:24px;animation:breathePulse 5s ease-in-out infinite;}
-        @keyframes breathePulse{0%,100%{transform:scale(1);opacity:0.85;}50%{transform:scale(1.14);opacity:1;}}
-        .breathe-quote{font-size:clamp(19px,4.6vw,24px);font-weight:900;color:var(--navy);line-height:1.35;margin-bottom:12px;}
-        .breathe-sub{font-size:14px;color:var(--gray);font-weight:600;line-height:1.65;max-width:360px;margin:0 auto;}
-
-        /* BOTTOM CTA */
-        .cta-c{background:var(--navy);border-radius:28px;padding:48px 28px;text-align:center;}
-        .cta-c h2{font-size:clamp(20px,5vw,28px);font-weight:900;color:white;margin-bottom:12px;line-height:1.25;}
-        .cta-c p{font-size:15px;color:rgba(213,238,246,0.8);margin-bottom:28px;font-weight:500;}
-        .btn-cta{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:17px;padding:18px 40px;border-radius:50px;border:none;cursor:pointer;display:inline-block;transition:all 0.2s;box-shadow:0 6px 24px rgba(255,153,51,0.4);}
-        .btn-cta:hover{background:#e8861a;transform:translateY(-2px);}
-
-        /* FOOTER */
-        .footer{background:var(--white);border-top:1px solid var(--border);padding:36px 28px 52px;}
-        .fi2{max-width:600px;margin:0 auto;}
-        .fli{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:18px;}
-        .fli a{font-size:13px;color:var(--gray);font-weight:600;}
-        .fli a:hover{color:var(--navy);}
-        .fcp{font-size:12px;color:var(--muted);font-weight:600;margin-top:20px;}
-      ` }} />
-
-      {/* NAV — transparent, sits on gradient */}
-      <nav className="nav">
-        <a href="/"><img src="/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
-        <div className="nav-right">
-          {/* Recruitment ("Become a listener") deliberately does NOT live here.
-              Above-the-fold it competed with the seeker CTA and converted
-              help-seekers into applicants; it now sits in the footer only.
-              "Listener login" stays — that's access for people who already
-              signed up, not a pitch. */}
-          <a href="/auth" className="btn-nav">Sign in</a>
-          <a href="/auth?mode=listener" className="btn-listener">Listener login</a>
-        </div>
-      </nav>
-
-      {/* HERO — flows with same gradient background */}
-      <section className="hero">
-        <div className="hero-badge"><span>🤝</span><span>Real people · Real conversations · No appointment</span></div>
-        <h1>Someone to<br /><span className="o">lean on,</span><br />who listens.</h1>
-        <p>Had a fight. Going through something. Need to vent before you explode. Talk one-to-one with a screened peer listener in India. Conversations are private, and no appointment is required; start when a listener is available.</p>
-        <div className="hero-btns">
-          <a href="/talk?src=home" className="btn-primary">Talk to someone now</a>
-          <a href="/browse" className="btn-outline">Browse peer listeners</a>
-        </div>
-        <p className="hero-note">Private one-to-one conversation · No appointment · Talk now or book a time · From {P8} for 8 minutes</p>
-      </section>
-
-      {/* TOPICS */}
-      <div className="white-section">
-        <div className="inner">
-          <h2 className="sh">What&apos;s weighing on you?</h2>
-          <p className="ss">Pick what feels closest — and find someone who gets it.</p>
-          <div className="topic-grid">
-            {[
-              {id:'loneliness',   i:'😔', l:'Loneliness',                    s:"when you feel alone even with people around"},
-              {id:'relationships',i:'💕', l:'Love & relationship problems',   s:"what you can't say to them, say here",  href:'/love-problems-india'},
-              {id:'stress',       i:'💼', l:'Work & money stress',            s:"when the day just won't switch off"},
-              {id:'relationships',i:'💍', l:'Marriage & family',              s:'the weight you carry alone at home',    href:'/marriage-problems-india'},
-              {id:'grief',        i:'🌿', l:'Grief & loss',                   s:'carrying someone no longer here'},
-              {id:'students',     i:'📚', l:'Student pressure',               s:"the weight of everyone's expectations"},
-              {id:'career',       i:'🧭', l:'Career confusion',               s:'not sure which way is forward'},
-              {id:'general',      i:'☕', l:'Just need to talk',              s:'no reason needed — just talk'},
-            ].map(t=>(
-              <a key={t.l} href={'href' in t ? (t as {href:string}).href : `/browse?topic=${t.id}`} className="tc">
-                <span className="tc-ico">{t.i}</span>
-                <span className="tc-body">
-                  <span className="tc-label">{t.l}</span>
-                  <span className="tc-sub">{t.s}</span>
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ABOUT */}
-      <div className="inner">
-        <p className="al">Our mission</p>
-        <h2 className="at">Let&apos;s change the conversation on <span className="o">emotional wellness</span></h2>
-        <div className="ab">
-          <p>We believe solving emotional challenges should be no different from solving any other health challenge. When you&apos;re struggling, you deserve someone who truly understands — not just a stranger, but someone who has been there and found their way through.</p>
-          <p>Stigma still holds people back. How Was Your Day is here to change that — making human connection easier, affordable, and free of judgment. You don&apos;t need a diagnosis or an appointment. You just need someone to lean on.</p>
-        </div>
-      </div>
-
-
-      {/* GEO / ENTITY CLARITY */}
-      <section className="white-section" aria-labelledby="howwasyourday-at-a-glance">
-        <div className="inner">
-          <h2 id="howwasyourday-at-a-glance" className="sh">What is How Was Your Day?</h2>
-          <p className="ss">A clear answer for people — and for search systems — looking for the right kind of support.</p>
-          <div className="india-grid">
-            {[
-              {i:'🤝',t:'Human peer support',d:'How Was Your Day connects you with a real person for a one-to-one conversation. It is not an AI chatbot.'},
-              {i:'🧭',t:'Peer, not clinical care',d:'Listeners provide peer support based on lived experience. How Was Your Day does not provide therapy, counselling, diagnosis or clinical treatment.'},
-              {i:'💬',t:'Text or voice',d:'Choose a private text or voice conversation depending on how you want to communicate.'},
-              {i:'🎯',t:'For everyday emotional needs',d:'People use How Was Your Day when they want someone to listen through loneliness, relationship difficulties, work stress, homesickness, grief or simply a difficult day.'},
-              {i:'🇮🇳',t:'India-origin platform',d:'How Was Your Day was built in India and serves people in India and supported international markets, including members of the Indian diaspora.'},
-              {i:'💳',t:'Pay for conversation time',d:'How Was Your Day is a transaction-based platform: listeners set rates and seekers pay for the conversation time they choose.'},
-            ].map((item,i)=>(
-              <div key={i} className="ig"><div className="ig-icon">{item.i}</div><div><div className="ig-t">{item.t}</div><div className="ig-d">{item.d}</div></div></div>
-            ))}
-          </div>
-          <div className="db" style={{marginTop:24}}>
-            <h3>Which kind of support is right for you?</h3>
-            <p><strong>Want information, ideas or an AI conversation?</strong> An AI assistant may fit. <strong>Want another human being to listen?</strong> How Was Your Day is designed for peer support. <strong>Need diagnosis or clinical treatment?</strong> Speak with an appropriately qualified mental-health professional. <strong>In immediate danger or crisis?</strong> Use the appropriate emergency or crisis service where you are.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURES */}
-      <div className="white-section">
-        <div className="inner">
-          <h2 className="sh">Why choose How Was Your Day?</h2>
-          <p className="ss">Built around what actually helps people feel better.</p>
-          <div className="fl">
-            {[
-              {i:'🔍',t:'Open listener directory',d:'Browse peer listeners by topic. Read their stories and ratings before you pay anything.'},
-              {i:'⚡',t:'No appointment',d:'No appointment is required. Browse listeners who are online and start when someone is available.'},
-              {i:'💳',t:'Pay-per-session flexibility',d:'No subscriptions. Recharge your wallet and use it whenever. Unused balance refunded anytime.'},
-              {i:'💬',t:'Text or voice — your choice',d:'Type for privacy in a joint home. Talk for the warmth of a real voice. Always your call.'},
-              {i:'🤝',t:'Lived-experience listeners',d:'Our listeners have been through it — breakups, burnout, grief, startup failure. They get it.'},
-              {i:'🔒',t:'Private conversations',d:'Sessions are intended to be private. See the Privacy and Trust pages for how information is handled.'},
-            ].map((f,i)=>(
-              <div key={i} className="fi"><div className="fw">{f.i}</div><div><div className="ft">{f.t}</div><div className="fd">{f.d}</div></div></div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* MADE FOR INDIA */}
-      <div className="india">
-        <div className="inner">
-          <h2 className="sh">Built for India 🇮🇳</h2>
-          <p className="ss">Designed around how India actually lives — joint families, late nights, privacy needs, and UPI.</p>
-          <div className="india-grid">
-            {[
-              {i:'📱',t:'Phone OTP sign-up',d:'No email. No full name. Sign up in 30 seconds with just your number.'},
-              {i:'🔒',t:'Private sign-up',d:'Phone OTP sign-up; no email or full legal name required. Choose what personal details to share.'},
-              {i:'💸',t:'UPI & wallet payments',d:'Recharge with UPI, cards, or net banking. Refundable, no subscription lock-in.'},
-              {i:'⚡',t:'No appointment needed',d:'Browse listeners and start a conversation when someone is online and available.'},
-              {i:'🗣️',t:'Text or voice in Hindi',d:'Chat in English or Hindi. Voice call when you need a real voice.'},
-              {i:'🤝',t:'Lived-experience listeners',d:'Listeners from Bengaluru, Mumbai, Delhi, Chennai, Hyderabad and across India.'},
-            ].map((item,i)=>(
-              <div key={i} className="ig"><div className="ig-icon">{item.i}</div><div><div className="ig-t">{item.t}</div><div className="ig-d">{item.d}</div></div></div>
-            ))}
-          </div>
-          <div className="city-row">
-            {['Bengaluru','Mumbai','Delhi','Chennai','Hyderabad','Pune','Kolkata','Jaipur','Ahmedabad','Chandigarh'].map(c=>(
-              <span key={c} className="city-chip">📍 {c}</span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* INDIAN DIASPORA */}
-      <section className="white-section" aria-labelledby="indians-abroad">
-        <div className="inner">
-          <p className="al">For Indians abroad</p>
-          <h2 id="indians-abroad" className="at">Far from India. <span className="o">Still someone to talk to.</span></h2>
-          <div className="ab">
-            <p>Living abroad can make some conversations harder — homesickness, family expectations, marriage or relationship pressure, work stress, immigration uncertainty, or simply having a difficult day when you do not want to call home.</p>
-            <p>How Was Your Day gives Indians and South Asians abroad a private one-to-one conversation with a real peer listener. Start with an 8-minute session, then continue with paid text or voice time only if you want to.</p>
-          </div>
-          <div className="city-row" style={{marginTop:20}}>
-            {['USA','UK','Canada','Australia','UAE','Singapore'].map(c=>(
-              <a key={c} href={c==='USA'?'/usa':c==='UK'?'/uk':c==='Canada'?'/canada':c==='Australia'?'/australia':c==='UAE'?'/uae':'/singapore'} className="city-chip">🇮🇳 Indians in {c} →</a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <div className="how">
-        <div className="hi">
-          <h2 className="ht">Start your journey with How Was Your Day</h2>
-          <div className="sl">
-            {[
-              {t:'Sign up to How Was Your Day',d:'Just your phone number. OTP verified. 30 seconds.'},
-              {t:'Browse peer listeners',d:'Filter by topic. Read bios and ratings. Browse anonymously.'},
-              {t:'Pick your session length',d:'8, 16 or 32 minutes — now or at a time you book.'},
-              {t:'Top up your wallet',d:'Top up £10, £20 or £50 by card. Refundable anytime.'},
-              {t:'No appointment',d:'Choose text or voice; the conversation can begin when a listener accepts your request.'},
-              {t:'Get the support you need',d:'Rate your listener. Book again anytime. You are not alone.'},
-            ].map((s,i)=>(
-              <div key={i} className="si"><div className="sn">{i+1}</div><div><div className="stit">{s.t}</div><div className="sd">{s.d}</div></div></div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* PRICING — seeker pays listener's rate + flat PLATFORM_FEE. Listener
-          side of the ledger (LISTENER_SERVICE_FEE_RATE) is not this page's
-          concern — never claim "100% to listener" here, it's no longer true. */}
-      <div className="inner">
-        <h2 className="sh">Simple, honest pricing</h2>
-        <p className="ss">No subscriptions. Pay only for the time you use — refundable anytime.</p>
-        {/* Card copy is deliberately seeker-side ("what you get"), not
-            "listener earns £X · you pay £Y". The old split framing showed a
-            visitor the earnings arithmetic at the exact moment they were
-            deciding whether to pay, which read as an earning opportunity.
-            Full fee transparency is preserved in the explainer below —
-            PROJECT.md §10.4 requires the platform fee be honest, and also says
-            not to over-advertise it in marketing copy. */}
-        <div className="pc">
-          {[
-            {l:'Quick check-in',d:`8 minutes · One-on-one · Text${voiceFrom(8, DEFAULT_LISTENER_RATE * 8 + PLATFORM_FEE)}`,p:P8,b:'',feat:false},
-            {l:'Talk it through',d:`16 minutes · One-on-one · Text${voiceFrom(16, DEFAULT_LISTENER_RATE * 16 + PLATFORM_FEE)}`,p:P16,b:'Most popular',feat:true},
-            {l:'Deep dive',d:`32 minutes · One-on-one · Text${voiceFrom(32, DEFAULT_LISTENER_RATE * 32 + PLATFORM_FEE)}`,p:P32,b:'',feat:false},
-          ].map((item,i)=>(
-            <div key={i} className={`pcard${item.feat?' feat':''}`}>
-              <div><div className="pl">{item.l}</div><div className="pd">{item.d}</div>{item.b&&<div className="pb">{item.b}</div>}</div>
-              <div className="pa">{item.p}</div>
+      <header className="hw-hero">
+        <div className="hw-wrap">
+          <nav className="hw-nav" aria-label="Main">
+            <a href="/" aria-label="How Was Your Day — home"><img src="/logo.png" alt="How Was Your Day" width={129} height={44} /></a>
+            <div className="hw-nav-links">
+              <a className="t" href="/how-it-works">How it works</a>
+              <a className="t" href="/pricing">Pricing</a>
+              <a className="t" href="/browse">Listeners</a>
+              <a className="hw-btn hw-btn-g hw-btn-s" href="/auth">Sign in</a>
             </div>
-          ))}
-        </div>
-        <div className="fee-note">
-          <span>💡</span>
-          <span><strong>Where your money goes:</strong> You pay your listener&apos;s rate plus a flat {FEE} per session — that&apos;s the only fee you see, and it&apos;s how we keep the lights on. Unused wallet balance is fully refundable, anytime.</span>
-        </div>
-      </div>
+          </nav>
 
-      {/* TESTIMONIALS — removed for launch: LeanOn's testimonials are not How Was
-          Your Day reviews (UK DMCC Act 2024 bans fake/misleading reviews). Add real
-          HWYD reviews only, with consent. */}
-
-      {/* TRUST */}
-      <div className="inner">
-        <div className="tg">
-          {[{i:'🔒',l:'Safe & private'},{i:'💬',l:'Text or voice'},{i:'🔄',l:'Refund anytime'},{i:'⚡',l:'No appointment'},{i:'🤝',l:'Lived experience'},{i:'⏱️',l:'Text or voice'}].map((t,i)=>(
-            <div key={i} className="ti"><div className="tic">{t.i}</div><span className="tl">{t.l}</span></div>
-          ))}
-        </div>
-      </div>
-
-      {/* DISCLAIMER */}
-      <div className="inner" style={{paddingTop:0}}>
-        <div className="db">
-          <h3>ℹ️ How Was Your Day is peer support — not therapy</h3>
-          <p><strong>Our listeners are real people with lived experience — not licensed therapists or counselors.</strong> Peer support is legitimate and valuable. It is different from, and not a replacement for, professional mental health treatment.</p>
-          <p>If you need clinical mental health support, please consult a qualified professional.</p>
-          <div className="cb"><p>🆘 <strong>In crisis?</strong> Call <strong><a href="tel:116123" style={{color:'inherit'}}>Samaritans 116 123</a></strong> or <strong><a href="sms:85258" style={{color:'inherit'}}>text SHOUT to 85258</a></strong> (free · 24/7)</p></div>
-        </div>
-      </div>
-
-      {/* FAQ — drives rich snippets in Google */}
-      <div className="inner" style={{paddingBottom:0}}>
-        <div className="faq-section">
-          <h2>Frequently asked questions</h2>
-          {[
-            { q: 'What is How Was Your Day?', a: 'How Was Your Day is a peer support platform built on empathy — you talk to real people who have lived through what you\'re facing: loneliness, burnout, anxiety, grief, relationships, and more. It\'s not therapy, but real human connection through one-to-one peer conversations.' },
-            { q: 'What makes How Was Your Day listeners empathetic?', a: 'Every listener has personally lived through what they support others with. That lived experience is what makes their empathy real, not rehearsed — you\'re heard without being judged, fixed, or rushed.' },
-            { q: 'How does pricing work?', a: `Every session is paid. Sessions cost the per-minute rate set by the listener plus a ${FEE} platform fee, in 8, 16 or 32-minute sessions — ${P8} for 8 minutes at the standard rate. You pay only for the minutes you use. Prices are in pounds sterling.` },
-            { q: 'How much is a paid session, and is it worth it?', a: `An 8-minute session is ${P8} at the standard rate. You can start short and decide whether you want to continue. How Was Your Day is a peer-support service, not a therapy substitute.` },
-            { q: 'How is this different from therapy or counselling?', a: 'Listeners on How Was Your Day are real people with lived experience, not licensed therapists. They offer peer support, not clinical diagnosis or treatment. How Was Your Day is for people who want human conversation and everyday emotional support.' },
-            { q: 'Is my conversation private?', a: 'Yes. Sessions are intended to be private. See How Was Your Day\'s Privacy and Trust pages for the specific information practices that apply.' },
-                    { q: 'Is How Was Your Day related to the song "Lean On"?', a: 'No. How Was Your Day (one word, at howwasyourday.live) is an Indian peer emotional support platform — no connection to the Major Lazer song. The name comes from the phrase "someone to lean on": having a person you can rely on emotionally, anytime you need it.' },
-            { q: 'Where can I talk to a real person when I feel lonely?', a: `How Was Your Day connects you with real human peer listeners for private conversations by text or voice. Browse listener profiles, start with an 8-minute session, and choose someone who has lived experience with what you are going through. Paid sessions are ${P8} for 8 minutes at the standard rate.` },
-            { q: 'How is How Was Your Day different from talking to ChatGPT or AI?', a: 'How Was Your Day provides conversations with real human beings who bring their own lived experience. AI assistants provide generated responses. Both have valid uses: AI for information and reflection, How Was Your Day for when you specifically want another human being to listen.' },
-          ].map((f,i) => (
-            <div key={i} className="faq-item">
-              <div className="faq-q">{f.q}</div>
-              <div className="faq-a">{f.a}</div>
+          <div className="hw-hero-grid">
+            <div>
+              <p className="hw-pill"><span className="hw-dot" aria-hidden="true" /> Real people · Text or voice · Across the UK</p>
+              <h1 className="hw-h1">How was <span>your day?</span></h1>
+              <p className="hw-lead">Talk it through with someone who actually listens. <em>8&nbsp;minutes is enough.</em></p>
+              <p className="hw-sub">
+                A real person, not a chatbot — a screened peer listener who has been through things too.
+                Talk now if someone&apos;s online, or book a time that suits you.
+              </p>
+              <div className="hw-ctas">
+                <a className="hw-btn hw-btn-p" href="/talk?src=home">Talk to someone now</a>
+                <a className="hw-btn hw-btn-g" href="/browse">Book a time</a>
+              </div>
+              <p className="hw-note">{M1} minutes from {P1} · No subscription · You see the price before you start</p>
             </div>
-          ))}
-        </div>
-      </div>
 
-
-      {/* READY-TO-TALK INTENT HUB — routes high-volume homepage traffic into seeker pages */}
-      <div className="white-section">
-        <div className="inner">
-          <div className="al">What is How Was Your Day?</div>
-          <h2 className="at">Real human peer support when you want someone to listen.</h2>
-          <div className="ab">
-            <p><strong>How Was Your Day is an India-origin peer-support platform that connects people with real human peer listeners for private one-to-one conversations by text or voice.</strong> It is designed for everyday situations such as loneliness, relationship difficulties, work stress, grief, homesickness, family pressure and overthinking.</p>
-            <p>How Was Your Day is <strong>not therapy, counselling, diagnosis, clinical treatment or crisis care</strong>. It is also not a dating or friendship-matching service. The core use case is simple: you want another person to listen, and you want to choose who you talk to.</p>
-          </div>
-          <div style={{display:'flex',flexWrap:'wrap',gap:8,marginTop:22}}>
-            <a href="/peer-support" className="city-chip">What is peer support?</a>
-            <a href="/trust" className="city-chip">How the app handles trust</a>
-            <a href="/pricing" className="city-chip">See pricing</a>
-            <a href="/browse" className="city-chip" style={{background:'#1A8FA0',color:'#fff',borderColor:'#1A8FA0'}}>Browse listeners →</a>
-          </div>
-        </div>
-      </div>
-
-      <div className="white-section">
-        <div className="inner">
-          <div className="al">Not sure where to start?</div>
-          <h2 className="at">Start with the situation you&apos;re actually in.</h2>
-          <div className="topic-grid">
-            <a className="tc" href="/talk-to-a-real-person-online"><div className="tc-ico">🧑</div><div className="tc-body"><div className="tc-label">I want a real person</div><div className="tc-sub">Talk to a human online</div></div></a>
-            <a className="tc" href="/someone-to-talk-to-when-lonely"><div className="tc-ico">💙</div><div className="tc-body"><div className="tc-label">I feel lonely</div><div className="tc-sub">Find someone to talk to</div></div></a>
-            <a className="tc" href="/need-someone-to-talk-to-but-dont-need-therapy"><div className="tc-ico">💬</div><div className="tc-body"><div className="tc-label">I need support, not therapy</div><div className="tc-sub">Understand peer support</div></div></a>
-            <a className="tc" href="/talk-to-someone-after-relationship-fight"><div className="tc-ico">❤️</div><div className="tc-body"><div className="tc-label">I had a relationship fight</div><div className="tc-sub">Talk it through privately</div></div></a>
-            <a className="tc" href="/talk-to-human-instead-of-chatgpt"><div className="tc-ico">🤝</div><div className="tc-body"><div className="tc-label">I want a human, not AI</div><div className="tc-sub">Human conversation vs AI</div></div></a>
-            <a className="tc" href="/indian-emotional-support-abroad"><div className="tc-ico">🌍</div><div className="tc-body"><div className="tc-label">I&apos;m Indian and live abroad</div><div className="tc-sub">Diaspora peer support</div></div></a>
+            <div className="hw-card" aria-hidden="true">
+              <div className="hw-card-top">
+                <div className="hw-who"><div className="hw-av">S</div><div><b>Sam</b><small>Peer listener</small></div></div>
+                <div className="hw-timer">
+                  <svg width="58" height="58" viewBox="0 0 58 58">
+                    <circle cx="29" cy="29" r="25" fill="none" stroke="#FBE3D2" strokeWidth="5" />
+                    <circle className="hw-ring" cx="29" cy="29" r="25" fill="none" stroke="#E8743B" strokeWidth="5" strokeLinecap="round" />
+                  </svg>
+                  <span>8:00</span>
+                </div>
+              </div>
+              <div className="hw-msgs">
+                <div className="hw-m l">Hi, I&apos;m Sam. So… how was your day?</div>
+                <div className="hw-m r">Honestly? Long. Can I just get something off my chest?</div>
+                <div className="hw-m l">Of course. Take your time — I&apos;m listening.</div>
+                <div className="hw-m r">Thank you. I didn&apos;t want to put this on my friends.</div>
+              </div>
+              <p className="hw-card-foot">Illustration · Listeners see only the first name you choose</p>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* BREATHE — a quiet pause before the final ask */}
-      <div className="breathe">
-        <div className="breathe-card">
-          <div className="breathe-eyebrow">A small pause</div>
-          <div className="breathe-dot">🫧</div>
-          <p className="breathe-quote">Take one slow breath in.<br />Hold. And gently let it out.</p>
-          <p className="breathe-sub">Whatever you&apos;re carrying tonight, you don&apos;t have to carry it alone.</p>
-        </div>
-      </div>
+      <main>
+        <section className="hw-sec" aria-labelledby="eight">
+          <div className="hw-wrap hw-eight">
+            <div className="hw-big8" aria-hidden="true">8<small>minutes</small></div>
+            <div>
+              <p className="hw-eye">Why 8 minutes?</p>
+              <h2 id="eight" className="hw-h2">Not every hard day needs an hour. <span>Sometimes it just needs saying out loud.</span></h2>
+              <p className="hw-p">
+                Eight minutes with someone who is fully listening can take the weight off — before bed, on a lunch break,
+                or on the walk home. No waiting list, no forms, no pressure to explain everything. If you need longer,
+                choose {M2} or {M3} minutes.
+              </p>
+            </div>
+          </div>
+          <div className="hw-wrap">
+            <div className="hw-grid3">
+              <div className="hw-tile"><div className="hw-ico">👂</div><h3>Long enough to be heard</h3><p>Say what happened and how it felt, to someone whose only job right now is to listen.</p></div>
+              <div className="hw-tile"><div className="hw-ico">⏱️</div><h3>Short enough to fit in</h3><p>Squeeze it in between everything else your day is asking of you.</p></div>
+              <div className="hw-tile"><div className="hw-ico">💷</div><h3>Small enough to afford</h3><p>{P1} for {M1} minutes at the standard rate. Pay as you go — no subscription.</p></div>
+            </div>
+          </div>
+        </section>
 
-      {/* CTA */}
-      <div className="inner">
-        <div className="cta-c">
-          <h2>Tonight doesn&apos;t have to feel this heavy.</h2>
-          <p>One breath, then one small step. A listener who gets it is a tap away — no appointment.</p>
-          <a href="/talk?src=home" className="btn-cta">Talk to someone now →</a>
-        </div>
-      </div>
+        <section className="hw-sec peach" aria-labelledby="how">
+          <div className="hw-wrap">
+            <p className="hw-eye">How it works</p>
+            <h2 id="how" className="hw-h2">Three steps to a <span>real conversation</span></h2>
+            <div className="hw-steps">
+              <div className="hw-step"><h3>Say what&apos;s on your mind</h3><p>Pick a topic — or just &ldquo;I need to talk&rdquo;. Sign in with Google in a few seconds.</p></div>
+              <div className="hw-step"><h3>Choose how and how long</h3><p>Text or voice, {M1}, {M2} or {M3} minutes. You see the exact price before anyone is asked.</p></div>
+              <div className="hw-step"><h3>Talk now — or book a time</h3><p>Get matched with a listener who&apos;s online, or book a slot from someone&apos;s weekly hours.</p></div>
+            </div>
+            <div style={{ marginTop: 30 }}><a className="hw-btn hw-btn-g" href="/how-it-works">More about how it works</a></div>
+          </div>
+        </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="fi2">
-          <div style={{marginBottom:18}}><img src="/logo.png" alt="How Was Your Day — Someone to Lean On" style={{height:48}} /></div>
-          <div className="fli">
-            <a href="/about">About How Was Your Day</a>
-            <a href="/browse">Find a listener</a>
-            <a href="/blog">Blog</a>
-            <a href="/faq">FAQ</a>
-            <a href="/contact">Contact</a>
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-            <a href="/cookies">Cookies</a>
+        <section className="hw-sec" aria-labelledby="topics">
+          <div className="hw-wrap">
+            <p className="hw-eye">What people talk about</p>
+            <h2 id="topics" className="hw-h2">Big things, small things, <span>in-between things</span></h2>
+            <p className="hw-p">A falling-out, a bad day at work, feeling lonely in a busy city, missing someone — or nothing in particular. You don&apos;t need a reason.</p>
+            <div className="hw-topics">
+              {TALK_TOPICS.map(t => (
+                <a key={t.id} className="hw-topic" href="/talk?src=home_topic"><span aria-hidden="true">{t.emoji}</span>{t.label}</a>
+              ))}
+            </div>
           </div>
-          <div className="fli" style={{marginTop:4,fontSize:12,opacity:0.75}}>
-            <a href="/support/loneliness">Loneliness support India</a>
-            <a href="/support/anxiety">Anxiety support India</a>
-            <a href="/support/breakup">Breakup support</a>
-            <a href="/support/grief">Grief support</a>
-            <a href="/support/founder-burnout">Startup burnout support</a>
-            <a href="/support/student-stress">Student stress help</a>
-            <a href="/support/emotional-support">Emotional support online</a>
-            <a href="/support/someone-to-talk-to">Someone to talk to</a>
-            <a href="/support/anonymous-support">Anonymous support India</a>
-            <a href="/support/relationship-stress">Relationship stress</a>
-            <a href="/support/social-anxiety">Social anxiety support</a>
-            <a href="/support/imposter-syndrome">Imposter syndrome help</a>
-            <a href="/support/work-from-home-loneliness">WFH loneliness support</a>
-            <a href="/support/overthinking">Overthinking help</a>
-            <a href="/support/marriage-loneliness">Lonely in marriage</a>
-            <a href="/support/job-loss">Job loss support</a>
-            <a href="/support/sunday-night-loneliness">Sunday night loneliness</a>
-            <a href="/support/long-distance-relationship">Long-distance relationship</a>
+        </section>
+
+        <section className="hw-sec peach" aria-labelledby="pricing">
+          <div className="hw-wrap">
+            <p className="hw-eye">Pricing</p>
+            <h2 id="pricing" className="hw-h2">Simple, honest, <span>in pounds</span></h2>
+            <p className="hw-p">Each listener sets their own price per minute, plus a flat {FEE} per session. Prices below are at the standard rate.</p>
+            <div className="hw-prices">
+              <div className="hw-price f">
+                <span className="hw-badge">8 minutes is enough</span>
+                <div className="min">{M1} minutes</div><div className="amt">{price(M1)}</div>
+                <div className="nm">Quick check-in</div><p>Get it off your chest and feel lighter.</p>
+              </div>
+              <div className="hw-price">
+                <div className="min">{M2} minutes</div><div className="amt">{price(M2)}</div>
+                <div className="nm">Talk it through</div><p>Room to unpack what happened.</p>
+              </div>
+              <div className="hw-price">
+                <div className="min">{M3} minutes</div><div className="amt">{price(M3)}</div>
+                <div className="nm">Deeper conversation</div><p>For the days that need more time.</p>
+              </div>
+            </div>
+            <p className="hw-small">
+              Text prices shown{VOICE_PRICING_ENABLED ? `; voice is ${VOICE_RATE_PREMIUM}p a minute more` : ''}. You top up a wallet and pay per
+              session — no subscription, and unused balance can be refunded. You&apos;re only charged if a listener accepts.{' '}
+              <a href="/pricing" style={{ color: '#B85520', fontWeight: 900 }}>Full pricing →</a>
+            </p>
           </div>
-          <div className="fli" style={{marginTop:4,fontSize:12,opacity:0.75}}>
-            <a href="/talk-to-a-real-person-online">Talk to a real person online</a>
-            <a href="/someone-to-talk-to-when-lonely">Someone to talk to when lonely</a>
-            <a href="/i-need-someone-to-talk-to">I need someone to talk to</a>
-            <a href="/need-someone-to-talk-to-but-dont-need-therapy">Support, not therapy</a>
-            <a href="/talk-to-human-instead-of-chatgpt">Talk to a human instead of AI</a>
-            <a href="/indian-emotional-support-abroad">Indian support abroad</a>
-            <a href="/peer-support">Peer support India</a>
-            <a href="/pricing">How Was Your Day pricing</a>
-            <a href="/trust">Trust &amp; safety</a>
+        </section>
+
+        <section className="hw-sec" aria-labelledby="trust">
+          <div className="hw-wrap">
+            <p className="hw-eye">Safe and private</p>
+            <h2 id="trust" className="hw-h2">Real people you can <span>trust</span></h2>
+            <div className="hw-grid3">
+              <div className="hw-tile"><div className="hw-ico">✅</div><h3>Screened listeners</h3><p>An identity selfie check, a screening quiz on listening and boundaries, and a review by our team before anyone can listen.</p></div>
+              <div className="hw-tile"><div className="hw-ico">🔒</div><h3>Private by design</h3><p>Listeners see only the first name you choose — never your number or email. Voice calls aren&apos;t recorded.</p></div>
+              <div className="hw-tile"><div className="hw-ico">🤝</div><h3>You&apos;re in control</h3><p>End a session whenever you like, and block or report anyone. Reports go straight to our team.</p></div>
+            </div>
+            <div className="hw-crisis" role="note">
+              <strong>How Was Your Day is peer support — not therapy and not an emergency service.</strong>{' '}
+              If you are in danger, call <a href="tel:999">999</a>. You can ring <a href="tel:116123">Samaritans on 116 123</a> or
+              text <a href="sms:85258?body=SHOUT">SHOUT to 85258</a> — free, any time.{' '}
+              <a href="/safeguarding" style={{ color: '#B85520' }}>How we keep people safe →</a>
+            </div>
           </div>
-          <div className="fli" style={{marginTop:4,fontSize:12,opacity:0.75}}>
-            <a href="/blog/what-does-lean-on-mean">What does lean on mean</a>
-            <a href="/blog/peer-support-vs-therapy-india">Peer support vs therapy</a>
-            <a href="/blog/loneliness-at-night">Loneliness at night</a>
-            <a href="/blog/joint-family-emotional-support">Joint family support</a>
-            <a href="/blog/empathy-in-peer-support">What is empathy?</a>
-            <a href="/blog/what-is-peer-support-india">What is peer support?</a>
-            <a href="/blog/online-emotional-support-india-guide">Online emotional support guide</a>
-            <a href="/glossary">Peer support glossary</a>
+        </section>
+
+        <section className="hw-sec peach" aria-labelledby="faq">
+          <div className="hw-wrap">
+            <p className="hw-eye">Questions</p>
+            <h2 id="faq" className="hw-h2">Good to know</h2>
+            <div className="hw-faq">
+              {FAQ.map(f => (<details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>))}
+            </div>
           </div>
-          <div className="fli" style={{marginTop:4,fontSize:12,opacity:0.75}}>
-            <a href="/jaipur">Peer support Jaipur</a>
-            <a href="/ahmedabad">Peer support Ahmedabad</a>
+        </section>
+
+        <section className="hw-sec" aria-labelledby="final">
+          <div className="hw-wrap">
+            <div className="hw-final">
+              <h2 id="final">So… how was your day?</h2>
+              <p>Tell someone who&apos;s listening. 8 minutes is enough.</p>
+              <a className="hw-btn" href="/talk?src=home_final">Talk to someone now</a>
+            </div>
           </div>
-          {/* Listener recruitment lives here and nowhere else on this page:
-              discoverable for anyone genuinely looking, with no earnings hook
-              competing against the seeker funnel above. */}
-          <div className="fli" style={{marginTop:4,fontSize:12,opacity:0.75}}>
-            
-          </div>
-          <p className="fcp">© 2026 How Was Your Day (Lean On) · howwasyourday.live · Peer support platform · Made in India 🇮🇳</p>
-        </div>
-      </footer>
-    </>
+        </section>
+      </main>
+    </div>
   )
 }
