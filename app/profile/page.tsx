@@ -1,4 +1,5 @@
 'use client'
+import BrandMark from '@/app/components/BrandMark'
 import { formatGBP } from '@/lib/money'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -211,6 +212,7 @@ export default function ProfilePage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="topbar">
         <button className="back-btn" onClick={() => router.push('/browse')}>←</button>
+        <BrandMark />
         <h1>My Profile</h1>
       </div>
 

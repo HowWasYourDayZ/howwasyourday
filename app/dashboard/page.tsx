@@ -1,4 +1,5 @@
 'use client'
+import BrandMark from '@/app/components/BrandMark'
 import UpcomingSessions from '@/app/components/UpcomingSessions'
 import WeeklyHours from '@/app/components/WeeklyHours'
 import { formatGBP, formatRate } from '@/lib/money'
@@ -1072,7 +1073,7 @@ export default function DashboardPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       {incomingModal}
       <div className="page">
-        <div className="topbar"><h1>My Dashboard</h1></div>
+        <div className="topbar"><div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><BrandMark /><h1>My Dashboard</h1></div></div>
         <div className="stats-grid">
           {[1,2,3,4].map(i => <div key={i} className="skeleton" style={{height:80}} />)}
         </div>
@@ -1085,7 +1086,7 @@ export default function DashboardPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       {incomingModal}
       <div className="page">
-        <div className="topbar"><h1>My Dashboard</h1></div>
+        <div className="topbar"><div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><BrandMark /><h1>My Dashboard</h1></div></div>
         <div className="not-listener">
           <div style={{fontSize:48,marginBottom:16}}>⚠️</div>
           <p>{loadError}</p>
@@ -1102,7 +1103,7 @@ export default function DashboardPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       {incomingModal}
       <div className="page">
-        <div className="topbar"><h1>My Dashboard</h1></div>
+        <div className="topbar"><div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><BrandMark /><h1>My Dashboard</h1></div></div>
         <div className="not-listener">
           <div style={{fontSize:48,marginBottom:16}}>🎧</div>
           <p>You haven&apos;t applied to become a listener yet.</p>

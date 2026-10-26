@@ -61,8 +61,7 @@ const S = `
   .page{min-height:100vh;display:flex;flex-direction:column;max-width:420px;margin:0 auto;padding:0 20px;}
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
   .back{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,0.8);border:1.5px solid var(--border);cursor:pointer;font-size:18px;color:var(--navy);display:flex;align-items:center;justify-content:center;}
-  .logo{font-family:Nunito,sans-serif;font-weight:900;font-size:20px;color:var(--navy);}
-  .logo span{color:var(--orange);}
+  .logo{height:36px;width:auto;display:block;}
   .spacer{width:40px;}
   .content{flex:1;padding:32px 0;}
   .step-icon{width:60px;height:60px;border-radius:20px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;}
@@ -537,7 +536,7 @@ export default function AuthPage() {
       <>
         <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="page">
-          <div className="topbar"><a href="/" className="back">←</a><span className="logo">How Was <span>Your Day</span></span><div className="spacer" /></div>
+          <div className="topbar"><a href="/" className="back">←</a><img className="logo" src="/logo.png" alt="How Was Your Day" /><div className="spacer" /></div>
           <div className="content">
             <div className="step-icon">🔧</div>
             <h1>Sign-in is being set up</h1>
@@ -558,7 +557,7 @@ export default function AuthPage() {
             : step === 'phone'
               ? <a href="/" className="back">←</a>
               : <div className="spacer" />}
-          <span className="logo">How Was <span>Your Day</span></span>
+          <img className="logo" src="/logo.png" alt="How Was Your Day" />
           <div className="spacer" />
         </div>
 

@@ -52,9 +52,12 @@ on lots of white space. Never a loud or neon orange, never the LeanOn navy/teal.
 Rules: white text only on Ember (or darker), never on Sunset orange at body sizes (3:1 — large/bold only).
 Crisis callouts keep a red tint; nothing else introduces new hues.
 
-**Logo:** a speech bubble holding a sun on the horizon ("talk about your day"), next to the stacked
-wordmark *How Was* (ink) / *Your Day* (orange). Files: `public/brand/mark.svg`, `public/brand/icon.svg`,
-`public/logo.png` (lockup), `public/icon-192.png`, `public/icon-512.png`, `public/apple-touch-icon.png`.
+**Logo (2026-10-26):** a rounded speech bubble (talk) holding a sun — a circle with eight short rays (your
+day) — next to the wordmark *How Was* (ink) / *Your Day* (orange), set in Nunito Black and outlined to vector
+paths. Master files live in **`logo/`** (see `logo/README.md`): SVGs in `logo/svg/`, transparent high-res PNGs
+and app icons in `logo/png/`. Regenerate with `logo/generate-svg.cjs` + `logo/export.mjs`, which also update
+`public/` (logo.png, icons, favicon) and the Android app icons/splash screens. Never redraw it by hand per page —
+use `/logo.png` or `/brand/*.svg`.
 **Type:** Nunito (self-hosted), 800–900 for headings, 500–700 for body.
 
 **Voice:** warm, plain British English, short sentences, no clinical language, no hype. Prices in £

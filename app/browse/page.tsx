@@ -1,4 +1,5 @@
 'use client'
+import BrandMark from '@/app/components/BrandMark'
 import { useState, useEffect, useRef, RefObject } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -702,7 +703,7 @@ function BrowseContent() {
       />
       <div className="head">
         <div className="wrap head-row">
-          <h1>Who would you like to talk to?</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}><BrandMark size={32} /><h1>Who would you like to talk to?</h1></div>
           {authChecked && (myUserId ? (
             <a href="/wallet" className="wallet-chip" aria-label="Wallet balance">
               <WalletIcon size={17} aria-hidden /> {balance !== null ? formatGBP(balance) : 'Wallet'}

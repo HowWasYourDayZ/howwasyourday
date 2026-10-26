@@ -1,4 +1,5 @@
 'use client'
+import BrandMark from '@/app/components/BrandMark'
 import { useState, useEffect, useRef, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
@@ -288,6 +289,7 @@ function WalletPageInner() {
         )}
         <div className="topbar">
           <button className="back" onClick={() => router.back()}>←</button>
+          <BrandMark />
           <h1>My Wallet</h1>
         </div>
 

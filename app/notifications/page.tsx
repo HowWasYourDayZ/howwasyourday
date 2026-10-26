@@ -1,4 +1,5 @@
 'use client'
+import BrandMark from '@/app/components/BrandMark'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
@@ -176,6 +177,7 @@ export default function NotificationsPage() {
         <div className="topbar">
           <div className="topbar-left">
             <button className="back" onClick={() => router.back()}>←</button>
+            <BrandMark />
             <h1>Notifications</h1>
           </div>
           {notifs.some(n => !n.is_read) && (

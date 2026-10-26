@@ -39,7 +39,8 @@ const CSS = `
 .hw{--sun:#E8743B;--ember:#B85520;--ember-d:#9E4719;--peach:#FFF6EF;--apricot:#FBE3D2;--line:#F2DFD1;--ink:#3B2F2A;--muted:#6E5B50;
   font-family:Nunito,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .hw *{box-sizing:border-box;margin:0;padding:0}
-.hw a{text-decoration:none;color:inherit}
+.hw a{text-decoration:none}
+.hw a:not(.hw-btn){color:inherit}
 .hw-wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 .hw-nav{display:flex;align-items:center;justify-content:space-between;height:76px}
 .hw-nav img{height:44px;width:auto;display:block}
@@ -165,7 +166,7 @@ export default function Home() {
       <header className="hw-hero">
         <div className="hw-wrap">
           <nav className="hw-nav" aria-label="Main">
-            <a href="/" aria-label="How Was Your Day — home"><img src="/logo.png" alt="How Was Your Day" width={129} height={44} /></a>
+            <a href="/" aria-label="How Was Your Day — home"><img src="/logo.png" alt="How Was Your Day" width={141} height={44} /></a>
             <div className="hw-nav-links">
               <a className="t" href="/how-it-works">How it works</a>
               <a className="t" href="/pricing">Pricing</a>

@@ -1,4 +1,5 @@
 'use client'
+import BrandMark from '@/app/components/BrandMark'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
@@ -234,7 +235,7 @@ export default function HistoryPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar">
-          <h1>Chats</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><BrandMark /><h1>Chats</h1></div>
           <p>Your conversations and session history</p>
         </div>
 

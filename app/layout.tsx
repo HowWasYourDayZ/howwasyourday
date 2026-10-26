@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: { default: 'How Was Your Day — Talk It Through With a Real Person | UK', template: '%s' },
   description: 'Had a day? Talk it through with a real person who listens — by text or voice, in 8, 16 or 32 minutes. Private peer support for adults in the UK.',
   manifest: '/manifest.json',
-  icons: { icon: '/icon-192.png', apple: '/apple-touch-icon.png' },
+  icons: { icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/brand/mark.svg', type: 'image/svg+xml' }], apple: '/apple-touch-icon.png' },
   keywords: [
     'howwasyourday','How Was Your Day','How Was Your Day app','peer support','peer support online','peer emotional support','peer listener','emotional support','emotional support online','human emotional support','mental health support','mental health support online','talk to someone online','talk to a real person online','real human listener','human connection online','someone to talk to','someone to listen to me','active listening','empathetic listening','empathetic listener','empathy','empathy in peer support','peer counselling','peer support vs counselling','counselling vs peer support','peer support vs therapy','online counselling alternative','support for loneliness','relationship support','burnout support','grief support',
   ],

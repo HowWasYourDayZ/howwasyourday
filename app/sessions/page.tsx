@@ -1,4 +1,5 @@
 'use client'
+import BrandMark from '@/app/components/BrandMark'
 import UpcomingSessions from '@/app/components/UpcomingSessions'
 import { formatGBP } from '@/lib/money'
 import { useState, useEffect } from 'react'
@@ -135,6 +136,7 @@ export default function SessionsPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="topbar">
         <button className="back-btn" onClick={() => router.push('/browse')}>←</button>
+        <BrandMark />
         <h1>My Sessions</h1>
       </div>
 

@@ -52,6 +52,8 @@ export default function CookiesPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
+        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/logo.png" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
+        <br />
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Cookie Policy</h1>
         <p className="updated">Last updated: 25 October 2026</p>
