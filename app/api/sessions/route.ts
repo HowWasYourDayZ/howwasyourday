@@ -13,6 +13,7 @@ import { expireStalePendingRequests } from '@/lib/expire-pending'
 import { endedByOnPatch, recordEndedBy, recordBookingSource, validSearchId } from '@/lib/session-analytics'
 import { sweepStaleListeners, recordMissedRequest, TALK_SWITCH_MISS_SECS } from '@/lib/listener-presence'
 import { suspensionStatus } from '@/lib/suspension'
+import { listenerHasBookingSoon } from '@/lib/scheduled-sessions'
 
 const VALID_SESSION_TYPES = ['text', 'voice'] as const
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
@@ -164,6 +165,10 @@ export async function POST(req: NextRequest) {
       if (blocking.length > 0) {
         return NextResponse.json({ error: 'listener_busy', message: 'This listener is in a session right now. Please try again shortly.' }, { status: 409 })
       }
+    }
+    // A booked session coming up would run into this one (PROJECT.md §8.4).
+    if (await listenerHasBookingSoon(sb, listenerId, durationMins)) {
+      return NextResponse.json({ error: 'listener_busy', message: 'This listener has a booked session coming up. Try someone else, or book a time with them.' }, { status: 409 })
     }
 
     // Multi-device guard: seeker cannot start two sessions simultaneously

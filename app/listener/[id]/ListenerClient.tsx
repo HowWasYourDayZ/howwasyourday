@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import BookATime from '@/app/components/BookATime'
 import { createClient } from '@/lib/supabase'
 import { LANGUAGES, PLATFORM_FEE, SESSION_DURATIONS, VOICE_PRICING_ENABLED, sessionRatePerMin } from '@/lib/constants'
 import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
@@ -49,7 +50,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#C2E4F2 0%,#DAEEF8 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .page{max-width:480px;margin:0 auto;padding-bottom:280px;}
@@ -90,9 +91,9 @@ a{text-decoration:none;color:inherit;}
 .opt-free{font-size:10px;background:var(--orange);color:white;font-weight:800;padding:2px 7px;border-radius:50px;display:inline-block;margin-top:3px;}
 .type-row{display:flex;gap:6px;margin-bottom:12px;align-items:center;}
 .type-row-label{font-size:12px;font-weight:700;color:var(--gray);margin-right:4px;white-space:nowrap;}
-.type-btn{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;font-family:'Nunito',sans-serif;font-weight:700;font-size:12px;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
+.type-btn{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;font-family:Nunito,sans-serif;font-weight:700;font-size:12px;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
 .type-btn.sel{border-color:var(--navy);color:var(--navy);background:var(--light);}
-.btn-book{width:100%;padding:15px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(255,153,51,.3);}
+.btn-book{width:100%;padding:15px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(255,153,51,.3);}
 .btn-book:hover{background:#e8861a;}
 .btn-book:disabled{opacity:.5;cursor:not-allowed;}
 .wallet-warn{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:12px;padding:12px 16px;font-size:13px;color:#7A2020;font-weight:600;text-align:center;margin-bottom:12px;}
@@ -193,7 +194,7 @@ export default function ListenerClient({ id }: { id: string }) {
 
   if (notFound) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',color:'#0F4867',gap:16,padding:24,textAlign:'center'}}>
         <div style={{fontSize:48}}>🔍</div>
         <div style={{fontSize:20,fontWeight:900}}>Listener not found</div>
@@ -205,7 +206,7 @@ export default function ListenerClient({ id }: { id: string }) {
 
   if (!listener) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',color:'#0F4867'}}>Loading...</div>
     </>
   )
@@ -289,7 +290,7 @@ export default function ListenerClient({ id }: { id: string }) {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar">
           <button className="back" aria-label="Go back" onClick={()=>router.back()}>←</button>
@@ -369,6 +370,10 @@ export default function ListenerClient({ id }: { id: string }) {
           </div>
         )}
       </div>
+
+      {userId !== id && (
+        <BookATime listenerId={id} listenerName={listener.name} voiceDisabled={listener.voice_disabled === true} signedIn={!!userId} />
+      )}
 
       {showInsufficient && (
         <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,.5)',zIndex:200,display:'flex',alignItems:'flex-end',justifyContent:'center'}}>

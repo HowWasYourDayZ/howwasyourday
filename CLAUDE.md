@@ -313,6 +313,19 @@
   (+ optional UK/EU ID document, migration 075). Never send conversation content to analytics or AI.
 - Retention periods stated in `lib/legal.ts` are a promise — an enforcement job is still TODO.
 
+## Scheduled sessions (2026-10-25) — read `docs/SCHEDULED_SESSIONS.md`
+
+- Status `scheduled` (migration 077) = booked, money held. It becomes `active` ONLY via
+  `start_scheduled_session` once both have joined; it is cancelled ONLY through `cancelScheduled()`
+  (`lib/scheduled-sessions.ts`) — conditional on `status='scheduled'`, refund + ledger + notifications.
+- Book only through `POST /api/sessions/schedule` → `book_scheduled_session` RPC (advisory lock per listener
+  + wallet row lock). The requested time must be one of `loadListenerSlots()` — the same function the slot
+  list uses. Policy numbers live in `lib/scheduling.ts`.
+- Instant paths (`/api/sessions` POST, Talk now candidates, accept) must keep refusing listeners with a
+  booking soon (`listenerHasBookingSoon` / `listenersWithBookingSoon`).
+- Reminders/no-shows: `/api/sessions/scheduled-tick` every 5 min from GitHub Actions (Vercel free = daily
+  crons only) + lazily on join/upcoming. Calendar exports stay neutral (no names/topic).
+
 ## Cost control (Vercel free tier — Fluid Active CPU is the binding limit)
 
 The constraint is **Fluid Active CPU** (billed on compute, NOT DB-wait time), not

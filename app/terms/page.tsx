@@ -12,7 +12,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--orange:#FF9933;--gray:#6B8FA8;--border:#DDE8F0;--cream:#FFFBF5;}
-  body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   a{color:var(--orange);}
   .page{max-width:640px;margin:0 auto;padding:24px 20px 80px;}
   .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--gray);margin-bottom:28px;text-decoration:none;}
@@ -29,7 +29,7 @@ const S = `
 export default function TermsPage() {
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Terms of Use</h1>
@@ -70,6 +70,7 @@ export default function TermsPage() {
           <li>All prices are in pounds sterling (GBP) and include any VAT that applies. If you pay with a card in another currency, your bank sets the exchange rate and any fee</li>
           <li>Wallet top-ups and payments are processed by our payment provider using the payment methods shown at checkout</li>
           <li>Unused wallet balance is refundable on request, to the original payment method, through the wallet page</li>
+          <li><strong>Booked sessions:</strong> the price is held from your wallet when you book. Cancel at least 2 hours before the start for a full refund. If your listener cancels or does not join within 5 minutes of the start, you get a full refund. Times are UK time</li>
           <li><strong>Your right to cancel:</strong> as a consumer you can cancel a wallet top-up within 14 days and get back any unused balance. When you start a session you ask us to provide the service straight away, and you accept that you lose the right to cancel that session once it has been fully provided; for a session ended early you pay only for the minutes used</li>
           <li>Completed sessions are generally non-refundable unless a safety, billing, or platform error requires an adjustment</li>
           <li>Any platform fee and applicable taxes are shown before a paid session is started</li>

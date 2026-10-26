@@ -334,11 +334,8 @@ Implementation status belongs in STATUS.md; this list exists only so nobody mist
 
 | Decision (2026-10-25) | Code today |
 |---|---|
-| 8 / 16 / 32-minute sessions | `SESSION_DURATIONS = [5, 15, 30, 45]`; DB duration checks; UI and copy quote 15/30/45 |
-| No free sessions | `MAX_FREE_TRIALS = 1`, free-trial flows in booking, Talk now, session page and copy |
-| Google sign-in | Phone (MSG91 widget) only |
-| Scheduled sessions | Not built; no `scheduled` status, availability or booking tables |
-| UK-only launch | Sign-in offers UK, Ireland and EU numbers; some copy says "UK and Europe" |
+| Google sign-in | Built; off until configured (`NEXT_PUBLIC_GOOGLE_AUTH_ENABLED`, docs/GOOGLE_SIGN_IN.md). Account linking (Google ↔ phone) not built |
+| Scheduled sessions | Built (migration 077, docs/SCHEDULED_SESSIONS.md). Partial charges for late cancellation / seeker no-show not built (all refunds are full until decided) |
 | Whop payments and payouts | Razorpay / RazorpayX still wired (`TODO(whop)`); listener application still asks for Indian bank details (IFSC/UPI) |
 | Rule-based moderation only | Matches code; the LeanOn "Claude moderation" plan is dropped |
-| India / NRI content removed | ~200 India/NRI pages and India copy on the home page, footer, `llms.txt` and site metadata remain |
+| India / NRI content removed | India/NRI pages 308-redirect; India copy remains in parts of the home page, footer links, `llms.txt`, blog index and a few hub pages |

@@ -131,3 +131,36 @@ export async function notifyPayoutRequested(opts: {
     `,
   })
 }
+
+// Scheduled sessions (PROJECT.md §8.4): booking confirmation and reminders.
+// Neutral wording — no names or topic in the email or the calendar file, so a
+// shared inbox or calendar reveals nothing personal.
+export async function sendScheduledSessionEmail(opts: {
+  to: string
+  kind: 'confirmation' | 'reminder'
+  when: string            // already formatted in UK time
+  durationMins: number
+  sessionType: string
+  url: string             // absolute join link
+  sessionId: string
+  ics?: string            // calendar file for confirmations
+}) {
+  const subject = opts.kind === 'confirmation'
+    ? `Booked: your How Was Your Day session on ${opts.when}`
+    : `Reminder: your How Was Your Day session on ${opts.when}`
+  await send({
+    from: FROM(),
+    to: opts.to,
+    subject,
+    html: `
+      <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
+        <h2 style="color:#0F4867;">${opts.kind === 'confirmation' ? 'Your session is booked' : 'Your session is coming up'}</h2>
+        <p style="color:#5A7A8A;">${esc(opts.durationMins)}-minute ${esc(opts.sessionType)} session on <strong>${esc(opts.when)}</strong> (UK time).</p>
+        <p style="color:#5A7A8A;">The session page opens 5 minutes before the start. If you can't make it, cancel from your sessions page at least 2 hours before for a full refund.</p>
+        <a href="${esc(opts.url)}" style="display:inline-block;background:#FF9933;color:white;padding:12px 28px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px;">Open session →</a>
+        <p style="font-size:12px;color:#8AAAB8;margin-top:24px;">In crisis? Call Samaritans on 116 123 or text SHOUT to 85258 (free, 24/7). In an emergency call 999.</p>
+      </div>
+    `,
+    ...(opts.ics ? { attachments: [{ filename: 'how-was-your-day-session.ics', content: Buffer.from(opts.ics).toString('base64') }] } : {}),
+  })
+}

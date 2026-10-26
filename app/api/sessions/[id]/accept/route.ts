@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { logger } from '@/lib/logger'
 import { REQUEST_RESPONSE_WINDOW_MS } from '@/lib/constants'
+import { listenerHasBookingSoon } from '@/lib/scheduled-sessions'
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 const REQUEST_TTL_MS = REQUEST_RESPONSE_WINDOW_MS
@@ -24,7 +25,7 @@ export async function POST(
 
   const { data: session } = await sb
     .from('sessions')
-    .select('id, listener_id, seeker_id, status, created_at, is_free_trial, amount_held')
+    .select('id, listener_id, seeker_id, status, created_at, is_free_trial, amount_held, duration_mins')
     .eq('id', sessionId)
     .single()
 
@@ -43,6 +44,11 @@ export async function POST(
   if (ageMs > REQUEST_TTL_MS) {
     await expireSession(sb, sessionId, session)
     return NextResponse.json({ error: 'request_expired', message: 'This request expired. Ask the seeker to try again.' }, { status: 409 })
+  }
+
+  // Accepting must not run into one of the listener's booked sessions (PROJECT.md §8.4).
+  if (await listenerHasBookingSoon(sb, user.id, Number(session.duration_mins) || 0)) {
+    return NextResponse.json({ error: 'booking_soon', message: 'You have a booked session coming up, so you can\'t take this request. Please decline it.' }, { status: 409 })
   }
 
   // Atomically flip pending → active

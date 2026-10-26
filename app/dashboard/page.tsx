@@ -1,4 +1,6 @@
 'use client'
+import UpcomingSessions from '@/app/components/UpcomingSessions'
+import WeeklyHours from '@/app/components/WeeklyHours'
 import { formatGBP, formatRate } from '@/lib/money'
 export const dynamic = 'force-dynamic'
 import { syncServerClock, serverNow } from '@/lib/server-clock'
@@ -57,7 +59,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#0F4867;--orange:#FF9933;--blue:#C9E7F4;--cream:#FFFBF5;--gray:#6B8FA8;--border:#DDE8F0;--light:#F0F4F7;}
-  body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 60px;}
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0 20px;}
   .topbar h1{font-size:22px;font-weight:900;}
@@ -80,7 +82,7 @@ const S = `
   .payout-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
   .payout-balance{font-size:32px;font-weight:900;color:var(--navy);}
   .payout-label{font-size:13px;color:var(--gray);font-weight:600;}
-  .btn-payout{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 3px 12px rgba(255,153,51,0.3);transition:all 0.2s;}
+  .btn-payout{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 3px 12px rgba(255,153,51,0.3);transition:all 0.2s;}
   .btn-payout:hover{background:#e8861a;}
   .btn-payout:disabled{opacity:.5;cursor:not-allowed;}
   .payout-note{font-size:12px;color:var(--gray);font-weight:500;}
@@ -96,9 +98,9 @@ const S = `
   .profile-name{font-size:16px;font-weight:800;color:var(--navy);}
   .profile-rate{font-size:13px;color:var(--gray);font-weight:600;}
   .profile-actions{display:flex;gap:8px;margin-top:14px;}
-  .btn-edit{flex:1;padding:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;color:var(--navy);background:var(--light);border:none;border-radius:10px;cursor:pointer;}
-  .btn-share{flex:1;padding:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;color:var(--orange);background:#FFF3E0;border:none;border-radius:10px;cursor:pointer;}
-  .btn-deactivate{width:100%;margin-top:10px;padding:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:12px;color:#B71C1C;background:#FFF5F5;border:1.5px solid #FFCDD2;border-radius:10px;cursor:pointer;transition:all 0.2s;}
+  .btn-edit{flex:1;padding:10px;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;color:var(--navy);background:var(--light);border:none;border-radius:10px;cursor:pointer;}
+  .btn-share{flex:1;padding:10px;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;color:var(--orange);background:#FFF3E0;border:none;border-radius:10px;cursor:pointer;}
+  .btn-deactivate{width:100%;margin-top:10px;padding:10px;font-family:Nunito,sans-serif;font-weight:700;font-size:12px;color:#B71C1C;background:#FFF5F5;border:1.5px solid #FFCDD2;border-radius:10px;cursor:pointer;transition:all 0.2s;}
   .btn-deactivate:hover{background:#FFEBEE;}
   .btn-deactivate:disabled{opacity:0.5;cursor:not-allowed;}
   .progress-section{margin-bottom:28px;}
@@ -108,7 +110,7 @@ const S = `
   .level-label{font-size:12px;font-weight:700;color:var(--gray);}
   .not-listener{text-align:center;padding:60px 20px;}
   .not-listener p{font-size:15px;color:var(--gray);margin-bottom:20px;}
-  .btn-apply{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;}
+  .btn-apply{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;}
   .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:12px;}
   @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
   .modal-overlay{position:fixed;inset:0;background:rgba(15,72,103,0.55);z-index:200;display:flex;align-items:flex-end;justify-content:center;padding:0;animation:fadeIn .2s ease;}
@@ -123,24 +125,24 @@ const S = `
   .modal-detail-item{text-align:center;}
   .modal-detail-label{font-size:10px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
   .modal-detail-value{font-size:16px;font-weight:900;color:var(--navy);}
-  .btn-join-session{width:100%;background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 16px rgba(255,153,51,.35);transition:all .2s;}
+  .btn-join-session{width:100%;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 16px rgba(255,153,51,.35);transition:all .2s;}
   .btn-join-session:hover{background:#e8861a;}
-  .btn-dismiss{width:100%;background:transparent;color:var(--gray);font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;}
+  .btn-dismiss{width:100%;background:transparent;color:var(--gray);font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;}
   .countdown-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:16px;}
   .countdown-fill{height:100%;background:var(--orange);border-radius:2px;transition:width 1s linear;}
   .field-label{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:6px;}
   .field-group{margin-bottom:18px;}
-  .field-input{width:100%;padding:12px 14px;font-family:'Nunito',sans-serif;font-size:14px;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;resize:vertical;}
+  .field-input{width:100%;padding:12px 14px;font-family:Nunito,sans-serif;font-size:14px;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;resize:vertical;}
   .field-input:focus{border-color:var(--navy);}
   .tag-grid{display:flex;flex-wrap:wrap;gap:8px;}
-  .tag-chip{padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
+  .tag-chip{padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:Nunito,sans-serif;font-size:12px;font-weight:700;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
   .tag-chip.sel{background:var(--navy);color:white;border-color:var(--navy);}
   .rate-row{display:flex;align-items:center;gap:12px;}
-  .rate-input{width:100px;padding:12px 14px;font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;text-align:center;}
+  .rate-input{width:100px;padding:12px 14px;font-family:Nunito,sans-serif;font-size:18px;font-weight:900;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;text-align:center;}
   .rate-input:focus{border-color:var(--navy);}
-  .btn-save-profile{width:100%;background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;}
+  .btn-save-profile{width:100%;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;}
   .btn-save-profile:disabled{opacity:.5;cursor:not-allowed;}
-  .btn-cancel{width:100%;background:transparent;color:var(--gray);font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;margin-top:8px;}
+  .btn-cancel{width:100%;background:transparent;color:var(--gray);font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;margin-top:8px;}
   .avatar-edit{display:flex;flex-direction:column;align-items:center;margin-bottom:20px;}
   .avatar-edit-img{width:72px;height:72px;border-radius:20px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:var(--navy);overflow:hidden;margin-bottom:8px;}
   .avatar-edit-img img{width:100%;height:100%;object-fit:cover;border-radius:20px;}
@@ -1067,7 +1069,7 @@ export default function DashboardPage() {
 
   if (loading) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       {incomingModal}
       <div className="page">
         <div className="topbar"><h1>My Dashboard</h1></div>
@@ -1080,7 +1082,7 @@ export default function DashboardPage() {
 
   if (loadError) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       {incomingModal}
       <div className="page">
         <div className="topbar"><h1>My Dashboard</h1></div>
@@ -1097,7 +1099,7 @@ export default function DashboardPage() {
 
   if (!profile) return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
       {incomingModal}
       <div className="page">
         <div className="topbar"><h1>My Dashboard</h1></div>
@@ -1114,7 +1116,7 @@ export default function DashboardPage() {
 
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
 
       {/* Incoming session modal */}
       {incomingModal}
@@ -1525,6 +1527,10 @@ export default function DashboardPage() {
             View full session history →
           </a>
         </div>
+
+        {/* Booked sessions + weekly hours (PROJECT.md §8.4) */}
+        <UpcomingSessions title="Your booked sessions" />
+        {profile.is_approved && <WeeklyHours />}
 
         <div className="section-title">Your listener profile</div>
         <div className="profile-section">

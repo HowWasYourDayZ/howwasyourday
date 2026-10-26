@@ -9,6 +9,7 @@ import { talkTopic, TALK_MAX_TEXT_RATE } from '@/lib/talk-match'
 import { logger } from '@/lib/logger'
 import { expireStalePendingRequests } from '@/lib/expire-pending'
 import { recordTalkSearch, validSearchId } from '@/lib/session-analytics'
+import { listenersWithBookingSoon } from '@/lib/scheduled-sessions'
 
 export const dynamic = 'force-dynamic'
 
@@ -127,7 +128,9 @@ export async function GET(req: NextRequest) {
     }
 
     const wanted = new Set<string>(topic?.tags ?? [])
-    const eligible = rows.filter(r => !busy.has(r.user_id) && !voiceOff.has(r.user_id))
+    // Listeners with a booked session coming up can't take this one (PROJECT.md §8.4).
+    const booked = await listenersWithBookingSoon(sb, rows.map(r => r.user_id), durationMins)
+    const eligible = rows.filter(r => !busy.has(r.user_id) && !voiceOff.has(r.user_id) && !booked.has(r.user_id))
     // Admin Talk now metrics (migration 071) — the first fetch of a search only.
     if (searchId) await recordTalkSearch(sb, { id: searchId, seekerId: user.id, free, candidates: eligible.length })
     const ranked = eligible

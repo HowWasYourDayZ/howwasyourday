@@ -20,7 +20,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0F4867;--teal:#1A8FA0;--orange:#FF9933;--gray:#5A7A8A;--border:#D5EEF6;--light:#F0F8FC;}
-body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
 .wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#E8F4FD;}
 .hdr{background:#0F4867;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;position:sticky;top:0;z-index:50;}
 .av{width:40px;height:40px;border-radius:50%;background:#1A8FA0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:white;flex-shrink:0;}
@@ -30,7 +30,7 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .timer{background:rgba(255,255,255,0.15);padding:5px 12px;border-radius:50px;font-size:13px;font-weight:800;color:white;font-variant-numeric:tabular-nums;}
 .timer.warn{background:rgba(255,153,51,0.4);color:#FFD580;}
 .timer.low{background:rgba(220,38,38,0.4);color:#FCA5A5;}
-.end-btn{background:rgba(220,38,38,0.25);color:#FCA5A5;border:1px solid rgba(220,38,38,0.3);font-family:'Nunito',sans-serif;font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;}
+.end-btn{background:rgba(220,38,38,0.25);color:#FCA5A5;border:1px solid rgba(220,38,38,0.3);font-family:Nunito,sans-serif;font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;}
 .msgs{flex:1;overflow-y:auto;padding:12px 8px 80px;display:flex;flex-direction:column;gap:3px;}
 .msgs::-webkit-scrollbar{width:3px;}
 .msgs::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.15);border-radius:2px;}
@@ -60,7 +60,7 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .rx-opt:hover{transform:scale(1.18);}
 .rx-opt.mine{background:#E8F4FD;}
 .input-bar{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;padding:8px 10px;padding-bottom:calc(8px + env(safe-area-inset-bottom));background:#D6EAF8;border-top:1px solid #C5DFF0;display:flex;align-items:flex-end;gap:8px;z-index:100;}
-.msg-input{flex:1;padding:10px 14px;font-family:'Nunito',sans-serif;font-size:15px;color:#0F2233;border:none;border-radius:24px;outline:none;resize:none;max-height:100px;background:white;line-height:1.4;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.msg-input{flex:1;padding:10px 14px;font-family:Nunito,sans-serif;font-size:15px;color:#0F2233;border:none;border-radius:24px;outline:none;resize:none;max-height:100px;background:white;line-height:1.4;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
 .send{width:44px;height:44px;border-radius:50%;background:#0F4867;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.2);}
 .send svg{width:22px;height:22px;}
 .send:disabled{opacity:.5;cursor:not-allowed;}
@@ -83,9 +83,9 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .trial-conv-h{font-size:clamp(22px,5vw,28px);font-weight:900;color:white;line-height:1.18;margin-bottom:12px;}
 .trial-conv-sub{font-size:16px;color:rgba(213,238,246,0.8);font-weight:500;line-height:1.65;margin-bottom:36px;max-width:290px;}
 .trial-conv-btns{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;max-width:300px;}
-.btn-trial-continue{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;padding:17px 36px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(255,153,51,0.45);width:100%;}
+.btn-trial-continue{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:17px 36px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(255,153,51,0.45);width:100%;}
 .btn-trial-continue:hover{background:#e8861a;}
-.btn-trial-leave{background:transparent;color:rgba(255,255,255,0.65);font-family:'Nunito',sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.22);cursor:pointer;width:100%;}
+.btn-trial-leave{background:transparent;color:rgba(255,255,255,0.65);font-family:Nunito,sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.22);cursor:pointer;width:100%;}
 .btn-trial-leave:hover{background:rgba(255,255,255,0.06);}
 .trial-conv-hint{font-size:13px;color:rgba(213,238,246,0.5);font-weight:600;margin-top:18px;}
 .end-icon{font-size:56px;margin-bottom:20px;}
@@ -95,16 +95,16 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .stars{display:flex;gap:8px;justify-content:center;margin-bottom:28px;}
 .star{font-size:36px;background:none;border:none;cursor:pointer;filter:grayscale(1);opacity:.3;}
 .star.lit{filter:none;opacity:1;}
-.review-input{width:100%;max-width:340px;min-height:60px;border:1.5px solid var(--border);border-radius:14px;padding:12px 16px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:500;color:var(--navy);resize:vertical;outline:none;margin-bottom:20px;}
+.review-input{width:100%;max-width:340px;min-height:60px;border:1.5px solid var(--border);border-radius:14px;padding:12px 16px;font-family:Nunito,sans-serif;font-size:14px;font-weight:500;color:var(--navy);resize:vertical;outline:none;margin-bottom:20px;}
 .review-input:focus{border-color:var(--teal);}
 .review-input::placeholder{color:#8AAAB8;font-weight:500;}
-.btn-done{background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;padding:16px 40px;border-radius:50px;border:none;cursor:pointer;}
+.btn-done{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:16px 40px;border-radius:50px;border:none;cursor:pointer;}
 .back-confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;}
 .back-confirm-card{background:white;border-radius:20px;padding:24px;max-width:340px;width:100%;text-align:center;}
 .back-confirm-card h3{font-size:18px;font-weight:900;color:var(--navy);margin-bottom:10px;}
 .back-confirm-card p{font-size:14px;color:var(--gray);font-weight:500;margin-bottom:20px;}
 .back-confirm-btns{display:flex;gap:10px;}
-.back-confirm-btns button{flex:1;padding:12px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;}
+.back-confirm-btns button{flex:1;padding:12px;border-radius:12px;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;cursor:pointer;}
 .back-stay{background:var(--navy);color:white;border:none;}
 .back-leave{background:white;color:#E53935;border:1.5px solid #FFCDD2;}
 
@@ -123,7 +123,7 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .voice-btn{
   min-width:44px;min-height:44px;border-radius:50%;border:none;cursor:pointer;
   display:flex;align-items:center;justify-content:center;font-size:20px;
-  font-family:'Nunito',sans-serif;font-weight:700;
+  font-family:Nunito,sans-serif;font-weight:700;
 }
 .voice-btn.mute{background:rgba(255,255,255,0.15);color:white;width:44px;height:44px;}
 .voice-btn.mute.muted{background:rgba(220,38,38,0.35);color:#FCA5A5;}
@@ -144,7 +144,7 @@ body{font-family:'Nunito',sans-serif;color:var(--navy);-webkit-font-smoothing:an
 .net-bar.on.good{background:#4ADE80;}
 .net-bar.on.fair{background:#FCD34D;}
 .net-bar.on.poor{background:#F87171;}
-.mic-select{background:rgba(255,255,255,0.12);color:white;font-family:'Nunito',sans-serif;font-size:11px;font-weight:700;border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:4px 8px;cursor:pointer;max-width:160px;}
+.mic-select{background:rgba(255,255,255,0.12);color:white;font-family:Nunito,sans-serif;font-size:11px;font-weight:700;border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:4px 8px;cursor:pointer;max-width:160px;}
 .mic-select option{background:#0F4867;color:white;}
 .reconnecting-badge{background:rgba(255,153,51,0.2);border:1px solid rgba(255,153,51,0.4);color:#FFD580;font-size:11px;font-weight:700;padding:4px 10px;border-radius:50px;animation:pulse 1.5s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
@@ -244,6 +244,11 @@ function SessionContent() {
   const [sessionStatus, setSessionStatus]       = useState<string | null>(null)
   const [cancellingRequest, setCancellingRequest] = useState(false)
   const [requestCreatedAt, setRequestCreatedAt]   = useState<string | null>(null)
+  // Booked (scheduled) sessions — PROJECT.md §8.4
+  const [scheduledStartAt, setScheduledStartAt] = useState<string | null>(null)
+  const [schedWaitingFor, setSchedWaitingFor]   = useState<string | null>(null)
+  const [schedNow, setSchedNow]                 = useState(() => Date.now())
+  const [schedCancelling, setSchedCancelling]   = useState(false)
   const crisisFlaggedRef                  = useRef(false)
   // Paid/free + earnings context for the listener — surfaced once at the top
   // of the live chat window (not on the accept/decline banner, which is a
@@ -368,7 +373,7 @@ function SessionContent() {
   useEffect(() => {
     if (!sessionId) return
     supabase.from('sessions')
-      .select('status, started_at, created_at, duration_mins, session_type, listener_id, seeker_id, is_free_trial, amount_held, platform_fee, listener:users!listener_id(name), seeker:users!seeker_id(name)')
+      .select('status, started_at, created_at, scheduled_start_at, duration_mins, session_type, listener_id, seeker_id, is_free_trial, amount_held, platform_fee, listener:users!listener_id(name), seeker:users!seeker_id(name)')
       .eq('id', sessionId)
       .single()
       .then(({ data, error }) => {
@@ -377,6 +382,7 @@ function SessionContent() {
         if (error || !data) { setSessionStatus('cancelled'); return }
         if (data?.status) setSessionStatus(data.status)
         if (data?.created_at) setRequestCreatedAt(data.created_at as string)
+        if (data?.scheduled_start_at) setScheduledStartAt(data.scheduled_start_at as string)
         if (typeof data?.is_free_trial === 'boolean') setSessionIsFreeTrial(data.is_free_trial)
         if (data?.duration_mins) setReqDuration(Number(data.duration_mins))
         if (data?.amount_held != null) setSessionAmountHeld(Number(data.amount_held))
@@ -404,6 +410,51 @@ function SessionContent() {
       })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionId, userId])
+
+  // Booked session: tell the server we're here (POST /join) every 15s. It starts
+  // the session once both have joined, and settles a no-show if one is due.
+  useEffect(() => {
+    if (sessionStatus !== 'scheduled' || !sessionId) return
+    let stop = false
+    const join = async () => {
+      try {
+        const res = await fetch(`/api/sessions/${sessionId}/join`, { method: 'POST' })
+        const d = await res.json().catch(() => ({}))
+        if (stop || !res.ok) return
+        if (d.startAt) setScheduledStartAt(d.startAt)
+        setSchedWaitingFor(d.waitingFor ?? null)
+        if (d.status === 'active') {
+          const { data } = await supabase.from('sessions').select('status, started_at, duration_mins').eq('id', sessionId).single()
+          if (data?.started_at) {
+            sessionStartRef.current = new Date(data.started_at)
+            const elapsed = Math.floor((Date.now() - new Date(data.started_at).getTime()) / 1000)
+            setSecs(Math.max(0, (data.duration_mins as number) * 60 - elapsed))
+          }
+          setSessionStatus('active')
+        } else if (d.status && d.status !== 'scheduled') {
+          setSessionStatus(d.status)
+        }
+      } catch { /* retry on the next tick */ }
+    }
+    join()
+    const iv = setInterval(join, 15_000)
+    const clock = setInterval(() => setSchedNow(Date.now()), 1000)
+    return () => { stop = true; clearInterval(iv); clearInterval(clock) }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sessionStatus, sessionId])
+
+  async function cancelBooking() {
+    if (schedCancelling) return
+    if (!confirm('Cancel this booked session?')) return
+    setSchedCancelling(true)
+    try {
+      const res = await fetch(`/api/sessions/${sessionId}/cancel`, { method: 'POST' })
+      const d = await res.json().catch(() => ({}))
+      if (!res.ok) { showToast(d.message || d.error || 'Could not cancel. Please try again.', 'error'); return }
+      showToast('Booking cancelled', 'success')
+      setSessionStatus('cancelled')
+    } finally { setSchedCancelling(false) }
+  }
 
   // Poll session status every 4s while pending — fallback if the realtime
   // UPDATE is missed. Flips into the live room the moment the listener accepts,
@@ -820,7 +871,7 @@ function SessionContent() {
   // Countdown timer — auto-ends session when it hits 0.
   // Paused while a request is pending or after it's cancelled (no live timer).
   useEffect(() => {
-    if (ended || sessionStatus === 'pending' || sessionStatus === 'cancelled') return
+    if (ended || sessionStatus === 'pending' || sessionStatus === 'scheduled' || sessionStatus === 'cancelled') return
     const t = setInterval(() => setSecs(s => {
       if (s <= 1) { setEnded(true); return 0 }
       return s - 1
@@ -856,7 +907,7 @@ function SessionContent() {
     if (!ended || completedRef.current || !sessionId) return
     // Never PATCH-complete a request that never went live (pending/cancelled) —
     // that path is settled by accept/decline, not the session-complete flow.
-    if (sessionStatus === 'pending' || sessionStatus === 'cancelled') return
+    if (sessionStatus === 'pending' || sessionStatus === 'scheduled' || sessionStatus === 'cancelled') return
     completedRef.current = true
     if (!peerEndedRef.current) {
       channelRef.current?.send({ type: 'broadcast', event: 'session_ended', payload: {} }).catch?.(() => {})
@@ -1369,7 +1420,7 @@ function SessionContent() {
 
       return (
         <>
-          <style>{S}</style>
+          <style dangerouslySetInnerHTML={{ __html: S }} />
           <div className="wrap" style={{ background: 'var(--navy)' }}>
             <div className="hdr">
               <div className="av">{ini(resolvedListenerName)}</div>
@@ -1422,7 +1473,7 @@ function SessionContent() {
 
     return (
       <>
-        <style>{S}</style>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap">
           <div className="hdr">
             <div className="av">{ini(resolvedListenerName)}</div>
@@ -1510,7 +1561,7 @@ function SessionContent() {
   if (switchingTo) {
     return (
       <>
-        <style>{S}</style>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap" style={{ background: 'white' }}>
           <div className="end-screen">
             <div className="end-icon">💬</div>
@@ -1523,6 +1574,64 @@ function SessionContent() {
   }
 
   // ── Pending request screen (seeker waiting / listener opened the link directly)
+  // ── Booked (scheduled) session: before it starts
+  if (sessionStatus === 'scheduled') {
+    const isSeeker = userId !== null && listenerId !== null && userId !== listenerId
+    const name = resolvedListenerName
+    const startMs = scheduledStartAt ? Date.parse(scheduledStartAt) : null
+    const opensMs = startMs !== null ? startMs - 5 * 60_000 : null
+    const untilOpen = opensMs !== null ? Math.max(0, Math.round((opensMs - schedNow) / 1000)) : null
+    const when = scheduledStartAt
+      ? new Date(scheduledStartAt).toLocaleString('en-GB', { timeZone: 'Europe/London', weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit', hour12: true })
+      : ''
+    const fmtWait = (secs: number) => {
+      const d = Math.floor(secs / 86400), h = Math.floor((secs % 86400) / 3600), m = Math.floor((secs % 3600) / 60)
+      return d > 0 ? `${d} day${d === 1 ? '' : 's'} ${h} h` : h > 0 ? `${h} h ${m} min` : `${m} min ${secs % 60} s`
+    }
+    return (
+      <>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
+        <div className="wrap" style={{ background: 'white' }}>
+          <div className="hdr">
+            <div className="av">{ini(name)}</div>
+            <div className="hdr-info">
+              <div className="hdr-name">{name}</div>
+              <div className="hdr-sub">📅 Booked session</div>
+            </div>
+          </div>
+          <div style={{ flex: 1, overflowY: 'auto', padding: '28px 20px 20px', textAlign: 'center', fontFamily: "'Nunito',sans-serif" }}>
+            <div className="end-icon">📅</div>
+            <h2 className="end-h">{durationMins}-minute {isVoice ? 'voice call' : 'text chat'}{isSeeker ? ` with ${name}` : ''}</h2>
+            <p style={{ fontSize: 15, color: 'var(--navy)', fontWeight: 800, margin: '6px 0 14px' }}>{when} (UK time)</p>
+            <div style={{ margin: '0 auto 16px', maxWidth: 380, padding: '12px 14px', borderRadius: 14, fontSize: 14, fontWeight: 700, lineHeight: 1.45, background: '#EEF6FB', color: 'var(--navy)' }} aria-live="polite">
+              {untilOpen === null ? 'Loading…'
+                : untilOpen > 0 ? <>This page opens in <strong>{fmtWait(untilOpen)}</strong>. Keep it open, or come back 5 minutes before.</>
+                : schedWaitingFor ? <>You&apos;re in. Waiting for {schedWaitingFor === 'listener' ? name : 'the seeker'} to join — the session starts as soon as you&apos;re both here.</>
+                : <>Joining…</>}
+            </div>
+            <p style={{ fontSize: 13, color: 'var(--gray)', fontWeight: 600, margin: '0 auto 18px', maxWidth: 380 }}>
+              {isSeeker
+                ? 'Your payment is held. If the listener doesn’t join within 5 minutes of the start, you get a full refund. Cancel at least 2 hours before for a full refund.'
+                : 'Please join on time. If you don’t join within 5 minutes of the start, the seeker is refunded and it counts against your reliability.'}
+            </p>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 14 }}>
+              <a href={`/api/sessions/${sessionId}/ics`} className="btn-trial-leave" style={{ textDecoration: 'none', padding: '10px 16px' }}>Add to calendar</a>
+              {startMs !== null && schedNow < startMs && (
+                <button className="btn-trial-leave" style={{ padding: '10px 16px' }} onClick={cancelBooking} disabled={schedCancelling}>
+                  {schedCancelling ? 'Cancelling…' : 'Cancel booking'}
+                </button>
+              )}
+            </div>
+            <a href="/sessions" style={{ fontSize: 13, fontWeight: 800, color: '#1A8FA0' }}>All my sessions →</a>
+          </div>
+          <div className="crisis-footer">
+            🆘 Crisis: <a href="tel:116123">Samaritans 116 123</a> · <a href="sms:85258">text SHOUT to 85258</a> · Emergency <a href="tel:112">999 / 112</a>
+          </div>
+        </div>
+      </>
+    )
+  }
+
   if (sessionStatus === 'pending') {
     const isSeeker = userId !== null && listenerId !== null && userId !== listenerId
     const totalSecs = Math.round(REQUEST_RESPONSE_WINDOW_MS / 1000)
@@ -1530,7 +1639,7 @@ function SessionContent() {
     const name = resolvedListenerName
     return (
       <>
-        <style>{S}</style>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap" style={{ background: 'white' }}>
           <div className="hdr">
             <div className="av">{ini(name)}</div>
@@ -1650,7 +1759,7 @@ function SessionContent() {
   if (sessionStatus === 'cancelled') {
     return (
       <>
-        <style>{S}</style>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap" style={{ background: 'white' }}>
           <div className="hdr">
             <div className="av">{ini(resolvedListenerName)}</div>
@@ -1684,7 +1793,7 @@ function SessionContent() {
   if (sessionStatus === null) {
     return (
       <>
-        <style>{S}</style>
+        <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap" style={{ background: '#0F4867', alignItems: 'center', justifyContent: 'center' }}>
           <div style={{ textAlign: 'center', color: 'rgba(255,255,255,.65)', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 16 }}>
             Loading session…
@@ -1716,7 +1825,7 @@ function SessionContent() {
   // ── Text chat
   return (
     <>
-      <style>{S}</style>
+      <style dangerouslySetInnerHTML={{ __html: S }} />
 
       {/* Back button confirm dialog (Item 17) */}
       {showBackConfirm && (

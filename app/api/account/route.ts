@@ -70,11 +70,12 @@ async function assertNoMoneyOutstanding(admin: ReturnType<typeof createAdminClie
 
 async function scrubUserData(admin: ReturnType<typeof createAdminClient>, userId: string, opts: { byAdmin?: boolean } = {}) {
   if (!opts.byAdmin) await assertNoMoneyOutstanding(admin, userId)
-  // Block deletion if the user has an active or pending session
+  // Block deletion if the user has an active, pending or BOOKED session (a
+  // booking holds the seeker's money — cancel it first so it's refunded).
   const { count: activeSessions } = await admin.from('sessions')
     .select('id', { count: 'exact', head: true })
     .or(`seeker_id.eq.${userId},listener_id.eq.${userId}`)
-    .in('status', ['active', 'pending'])
+    .in('status', ['active', 'pending', 'scheduled'])
   if (activeSessions && activeSessions > 0) {
     throw new Error('ACTIVE_SESSION')
   }
@@ -249,7 +250,7 @@ export async function POST() {
     }
     const msg = err instanceof Error ? err.message : String(err)
     if (msg === 'ACTIVE_SESSION') {
-      return NextResponse.json({ error: 'You have an active session. Please end it before deleting your account.' }, { status: 409 })
+      return NextResponse.json({ error: 'You have an active or booked session. Please end or cancel it (Sessions page) before deleting your account.' }, { status: 409 })
     }
     logger.error('Account deletion error:', { error: msg })
     return NextResponse.json({ error: 'Failed to delete account' }, { status: 500 })
