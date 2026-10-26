@@ -305,6 +305,23 @@ function TalkInner() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Arriving with a choice already made (home-page "How was your day?" answers, pricing
+  // cards): /talk?topic=…&mins=…&mode=…. Pre-fill the controls and, if a topic was picked,
+  // start straight away — a paid search still stops at the price-confirm step before any
+  // listener is asked, and a signed-out visitor goes to sign-in first (choice saved).
+  useEffect(() => {
+    if (params.get('go') === '1') return
+    const m = params.get('mins'), md = params.get('mode'), t = talkTopic(params.get('topic'))
+    const mins0 = m ? validMins(m) : null
+    const mode0: Mode | null = md === 'voice' || md === 'text' ? md : null
+    if (!mins0 && !mode0 && !t) return
+    if (mins0) setMins(mins0)
+    if (mode0) setMode(mode0)
+    router.replace('/talk')   // consume, so Back / a reopened tab doesn't start again
+    if (t) { setTopic(t.id); start({ topic: t.id, mode: mode0 ?? 'text', mins: mins0 ?? SESSION_DURATIONS[0] }) }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   // While a request is out: watch it, count down, move on when time is up.
   useEffect(() => {
     if (phase.k !== 'waiting') return
@@ -444,7 +461,7 @@ function TalkInner() {
                 </>
               )
             })()}
-            {loggedIn === false && <p className="fine" style={{ marginTop: 12 }}>You&apos;ll confirm your phone with a one-time code. Listeners never see your number.</p>}
+            {loggedIn === false && <p className="fine" style={{ marginTop: 12 }}>You&apos;ll sign in with Google first. Listeners only ever see the first name you choose.</p>}
           </>
         )}
 

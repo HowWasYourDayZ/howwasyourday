@@ -1,6 +1,6 @@
 # Supabase setup — new How Was Your Day project, step by step
 
-How Was Your Day uses its **own new Supabase project**. It does not share LeanOn's
+How Was Your Day uses its **own new Supabase project**. It does not share the legacy app's
 database. Everything the app needs is built by **three SQL files** in
 `supabase/setup/`, run once in the Supabase SQL Editor:
 
@@ -10,7 +10,7 @@ database. Everything the app needs is built by **three SQL files** in
 | `02_storage.sql` | Two storage buckets: `avatars` (public photos) and `verifications` (private selfies), plus the photo-upload rules | `Storage buckets ready — now run 03_verify.sql` |
 | `03_verify.sql` | Read-only check of the other two files | One row: `ALL 102 CHECKS PASSED · OK` |
 
-> ⚠️ **Never run anything in `db/leanon-migrations/`.** Those 83 archived files are LeanOn's
+> ⚠️ **Never run anything in `db/legacy-migrations/`.** Those 83 archived files are the legacy app's
 > patch history; `01_schema.sql` already contains their end result, converted for
 > the UK (pence, 8/16/32-minute sessions, scheduled sessions, GDPR consent).
 
@@ -160,7 +160,7 @@ To make a random secret, use one of these (each run gives a different value):
   `$b=[byte[]]::new(32); [Security.Cryptography.RandomNumberGenerator]::Fill($b); [Convert]::ToHexString($b)`
 - A password manager's generator: 64 characters, letters and digits only.
 
-Use **new** values; don't copy LeanOn's. The other variables (MSG91, Agora,
+Use **new** values; don't copy old ones. The other variables (MSG91, Agora,
 Firebase, Resend, admin login) are listed in `.env.example`.
 
 Then **Deployments → ⋯ → Redeploy** so the new values take effect.

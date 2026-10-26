@@ -115,5 +115,5 @@ console.log('LIVE_AUDIT_JSON_START')
 console.log(JSON.stringify(report))
 console.log('LIVE_AUDIT_JSON_END')
 const failed = Object.entries(guard).filter(([, ok]) => !ok).map(([k]) => k)
-if (failed.length) { console.error(`BRAND GUARD FAILED: ${failed.join(', ')} — see docs/ai-visibility/WINNING_ANSWERS.md`); process.exit(1) }
+if (failed.length) { console.error(`BRAND GUARD FAILED: ${failed.join(', ')} — see PROJECT.md §1a`); process.exit(1) }
 console.log('Brand guard OK:', Object.keys(guard).join(', '))

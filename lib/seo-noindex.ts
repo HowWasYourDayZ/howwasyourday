@@ -1,7 +1,7 @@
 // Public pages deliberately kept OUT of search results (noindex, follow) and
 // out of the sitemap. They stay live for anyone who has the link.
 //
-// Listener recruitment: AI assistants once recommended LeanOn's recruitment
+// Listener recruitment: AI assistants once recommended the legacy app's recruitment
 // pages to people asking about side income (CLAUDE.md, SEO rules). The one
 // indexable recruitment page is /become-a-peer-supporter (no money details).
 // To re-index a page: remove it here. Nothing else needs changing.

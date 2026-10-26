@@ -193,7 +193,7 @@ Copy text from **`docs/PLAY_STORE_LISTING.md`** in the repo.
 - **App icon**: download **https://www.howwasyourday.live/icon-512.png** (right-click →
   Save image as) and upload it.
 - **Feature graphic** (1024 × 500): on **canva.com** search "Google Play feature
-  graphic", put the How Was Your Day logo + "Someone to lean on, anytime." on a navy/teal
+  graphic", put the How Was Your Day logo + "Talk it through. 8 minutes is enough." on a white/peach
   background → Download PNG → upload.
 - **Phone screenshots** (2–8): take them **inside the installed app** on your
   phone — home, browse listeners, a chat, wallet. **Hide or blur real users'

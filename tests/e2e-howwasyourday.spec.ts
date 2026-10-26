@@ -1273,7 +1273,7 @@ test.describe('Admin page', () => {
 
 test.describe('Sessions API — input validation', () => {
   test('valid durations: 8, 16, 32 minutes only', async ({ request }) => {
-    const invalidDurations = [0, 1, 5, 10, 15, 20, 30, 45, 60, -1, 999] // 5/15/30/45 were LeanOn's lengths
+    const invalidDurations = [0, 1, 5, 10, 15, 20, 30, 45, 60, -1, 999] // 5/15/30/45 were the legacy app's lengths
     for (const dur of invalidDurations) {
       const res = await request.post('/api/sessions', {
         data: { listenerId: FAKE_UUID, durationMins: dur, sessionType: 'text' },

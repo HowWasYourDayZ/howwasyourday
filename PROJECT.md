@@ -8,8 +8,8 @@
 > If a request contradicts anything here, stop and flag it — do not silently
 > reinterpret. If a detail you need is not specified here, ask rather than invent.**
 >
-> HWYD started as a copy of the LeanOn 2.0 codebase (India). Where the code still
-> behaves like LeanOn and this file says otherwise, **this file wins** — §16 lists
+> HWYD started from an earlier codebase built for another market. Where the code still
+> behaves like that legacy app and this file says otherwise, **this file wins** — §16 lists
 > the decisions the code does not implement yet.
 
 ---
@@ -36,7 +36,7 @@
 a short, affordable, low-commitment conversation with a real person.
 
 **Colours — orange and white.** A soft, warm "sunset" orange that feels calm and trustworthy,
-on lots of white space. Never a loud or neon orange, never the LeanOn navy/teal.
+on lots of white space. Never a loud or neon orange, never navy or teal.
 
 | Token | Hex | Use |
 |---|---|---|
@@ -61,14 +61,14 @@ use `/brand/logo.png` or `/brand/*.svg`.
 **Type:** Nunito (self-hosted), 800–900 for headings, 500–700 for body.
 
 **Voice:** warm, plain British English, short sentences, no clinical language, no hype. Prices in £
-(`lib/money.ts`). Nothing about India, NRIs or any other country on the site, and the name LeanOn
+(`lib/money.ts`). Nothing about India, NRIs or any other country on the site, and the legacy product's name
 never appears in anything a user can see.
 
 ---
 
 ## 2. The Core Insight (never forget this)
 
-People often pay for a conversation that is nominally about something else (a reading, a "consultation", a coaching call) when what they actually want is to be heard. The LeanOn team saw this first-hand: reporting on India's astrology-app boom quotes an astrologer saying *"When I am doing night sessions, most people just wanna talk."*
+People often pay for a conversation that is nominally about something else (a reading, a "consultation", a coaching call) when what they actually want is to be heard. Reporting on the astrology-app boom quotes an astrologer saying *"When I am doing night sessions, most people just wanna talk."*
 
 How Was Your Day removes the wrapper and offers the real thing: **human connection and lived-experience peer support.**
 
@@ -112,7 +112,7 @@ How Was Your Day is a **PEER SUPPORT** platform. It is not a mental health, clin
 - Want someone to listen — now, or at a booked time — without a waiting list or a diagnosis.
 
 ### Listeners (earn)
-- Everyday UK-based adults with **lived experience** of a specific situation — NOT professionals. (The LeanOn v1 product used professionals and failed on supply — see §11.)
+- Everyday UK-based adults with **lived experience** of a specific situation — NOT professionals. (An earlier product built on professionals failed on supply — see §11.)
 - Examples: someone who rebuilt after a breakup or divorce, survived burnout, lost a parent, changed career, got through exams.
 - Work from their phone: they go online for instant sessions, and/or publish weekly hours for scheduled sessions (§8.4).
 
@@ -275,7 +275,7 @@ No other session states may exist. Any new state requires updating this file fir
 
 ## 10. Non-Negotiable Product Principles
 
-1. **Low-friction sign-in.** Google sign-in or a phone code — no passwords. Mobile-first. (Replaces the LeanOn "phone OTP only" rule, 2026-10-25.)
+1. **Low-friction sign-in.** Google sign-in or a phone code — no passwords. Mobile-first. (Replaces the legacy "phone OTP only" rule, 2026-10-25.)
 2. **Session-based, not open-ended.** 8, 16 or 32-minute blocks. No meter anxiety.
 3. **Every session is paid; nothing is charged for time not used.** No free sessions. Pro-rata for early ends; full refund if nobody connects.
 4. **Wallet refundable anytime.** Trust driver.
@@ -290,7 +290,7 @@ No other session states may exist. Any new state requires updating this file fir
 
 ## 11. Key Risks (keep front of mind)
 
-1. **Supply side.** Professionals didn't onboard in LeanOn v1. HWYD recruits UK peer listeners; recruitment and vetting must stay lightweight. Scheduled availability helps people with day jobs listen in the evenings.
+1. **Supply side.** Professionals didn't onboard in the earlier product. HWYD recruits UK peer listeners; recruitment and vetting must stay lightweight. Scheduled availability helps people with day jobs listen in the evenings.
 2. **No free trial.** Removing it raises the first-session barrier. Watch first-session conversion; the 8-minute session must feel low-risk (clear price, pay only for minutes used).
 3. **Platform drift.** Monetising attention risks parasocial/romantic dynamics (§10.6–10.7).
 4. **AI companions.** General AI keeps improving at emotional support. The moat is **human lived experience**.
@@ -327,16 +327,16 @@ If a user appears to be in crisis, surface these and do not attempt to handle th
 - Listeners must live in the UK (identity, payouts, and UK safeguarding expectations).
 - Crisis resources are UK ones (§12).
 - **EU later:** the code already has groundwork from the first UK/EU pass (EU phone codes, EU GDPR wording, findahelpline.com). Expanding to the EU needs: an EU representative (GDPR Art. 27), EU payment/VAT handling, local crisis lines per country, and a decision on listener supply. Do not market to EU users until then.
-- The LeanOn India / NRI pages and copy are out of scope for HWYD and are to be removed or redirected.
+- Pages and copy for other markets are out of scope for HWYD and have been removed.
 
 ---
 
-## 15. Product-Market Fit Learnings (inherited from LeanOn, Sept 2026)
+## 15. Product-Market Fit Learnings (inherited from the legacy app, Sept 2026)
 
-These come from LeanOn's live usage in India. Treat them as hypotheses to re-test in the UK, not as UK facts.
+These come from the legacy app's live usage in another market. Treat them as hypotheses to re-test in the UK, not as UK facts.
 
 ### The core mechanism that drove paid repeat usage
-A single LeanOn listener ("Listener A") earned a large share of one seeker's spend over two days. The seeker ("Seeker B") had tried other listeners and rejected them; he paid specifically for one person who genuinely engaged. His stated reason: "no one else actually listens."
+A single legacy-app listener ("Listener A") earned a large share of one seeker's spend over two days. The seeker ("Seeker B") had tried other listeners and rejected them; he paid specifically for one person who genuinely engaged. His stated reason: "no one else actually listens."
 
 **What this means for the product:** people do not pay for access to listeners. They pay for a specific human who makes them feel genuinely heard. The loop is *discover the right listener → feel heard → return and pay repeatedly*. This is a relationship marketplace, not a commodity chat marketplace. **Scheduled sessions serve this loop** — a seeker can book the listener who helped them — but must stay within §10.7 (no auto-recurring bookings).
 
@@ -361,11 +361,11 @@ Very high spend with one listener is a revenue signal AND a platform-drift warni
 - ❌ Any individual seeker's spend as a marketing angle — it is private data.
 
 ### The listener playbook
-What made the best LeanOn listeners work: genuine, active listening (asking, engaging, remembering); consistency (seekers can predict they'll be there — published weekly hours now make this visible); and treating the seeker's stories as worth hearing, not as a job. Screen for **empathy and active listening** above credentials. The admin review should probe this, not just check documents.
+What made the best listeners work: genuine, active listening (asking, engaging, remembering); consistency (seekers can predict they'll be there — published weekly hours now make this visible); and treating the seeker's stories as worth hearing, not as a job. Screen for **empathy and active listening** above credentials. The admin review should probe this, not just check documents.
 
 ---
 
-## 16. Decided but not yet built (code still behaves like LeanOn)
+## 16. Decided but not yet built (code still behaves like the legacy app)
 
 Implementation status belongs in STATUS.md; this list exists only so nobody mistakes current code for the decision. Remove an item when it ships.
 
@@ -374,5 +374,5 @@ Implementation status belongs in STATUS.md; this list exists only so nobody mist
 | Google sign-in | Built; off until configured (`NEXT_PUBLIC_GOOGLE_AUTH_ENABLED`, docs/GOOGLE_SIGN_IN.md). Account linking (Google ↔ phone) not built |
 | Scheduled sessions | Built (migration 077, docs/SCHEDULED_SESSIONS.md). Partial charges for late cancellation / seeker no-show not built (all refunds are full until decided) |
 | Whop payments and payouts | Razorpay / RazorpayX still wired (`TODO(whop)`); listener application still asks for Indian bank details (IFSC/UPI) |
-| Rule-based moderation only | Matches code; the LeanOn "Claude moderation" plan is dropped |
+| Rule-based moderation only | Matches code; the legacy "Claude moderation" plan is dropped |
 | India / NRI content removed | Done 2026-10-26: India/NRI/other-country pages, blog and support hubs deleted; home page rebuilt for the UK. Remaining gaps: listener payout details (IFSC/UPI) until Whop |

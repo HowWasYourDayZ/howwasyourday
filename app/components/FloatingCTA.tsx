@@ -16,6 +16,8 @@ export default function FloatingCTA() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // The home page has its own sticky start bar (app/components/HomeStickyCta.tsx).
+  if (pathname === '/') return null
   if (!visible || HIDE_ON.some(p => pathname === p || pathname.startsWith(p.endsWith('/') ? p : p + '/'))) return null
 
   return (

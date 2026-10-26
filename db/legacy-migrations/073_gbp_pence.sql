@@ -6,7 +6,7 @@
 --   rate_per_min: 10p … 500p (£5) per minute, default 40p   (lib/constants.ts
 --   MIN_LISTENER_RATE / MAX_LISTENER_RATE / DEFAULT_LISTENER_RATE)
 --
--- Run on a FRESH database only. Existing LeanOn rows hold rupees and must not
+-- Run on a FRESH database only. Existing legacy rows hold another currency and must not
 -- be reinterpreted as pence. Afterwards refresh db/LIVE_SCHEMA.md.
 
 ALTER TABLE public.listener_profiles

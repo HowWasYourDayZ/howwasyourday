@@ -28,7 +28,7 @@ Alternatives if you want more keyword weight:
 **Talk to a verified peer listener in India — anonymous, human, 24/7.**   (69 chars)
 
 Alternative:
-- `Someone to lean on, anytime. Real peer listeners, private sessions, 24/7.` (72)
+- `Talk it through with a real person. 8 minutes is enough. UK peer support.` (72)
 
 ---
 

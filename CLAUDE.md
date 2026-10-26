@@ -12,7 +12,7 @@
    change against LIVE_SCHEMA.md. If it's stale, ask the owner to re-run
    `db/dump-live-schema.sql` and refresh it.
    **HWYD has its own new Supabase project (Oct 2026), built from `supabase/setup/`
-   (`docs/SUPABASE_SETUP.md`).** `db/leanon-migrations/` (001–077) is LeanOn history that
+   (`docs/SUPABASE_SETUP.md`).** `db/legacy-migrations/` (001–077) is legacy-app history that
    `01_schema.sql` consolidates — never run them. New migrations go in `supabase/migrations/`, starting at `078_`. Browsers
    (`anon`/`authenticated`) may only SELECT: every new table needs RLS + `REVOKE INSERT,
    UPDATE, DELETE … FROM anon, authenticated`, every new function `REVOKE ALL … FROM PUBLIC,
@@ -117,7 +117,7 @@
 - **Money is GBP and every amount is INTEGER PENCE** (Oct 2026, migration 073): wallet, `amount_held`,
   `rate_per_min`, fees, earnings, payouts. Display only through `lib/money.ts` (`formatGBP`, `formatRate`);
   never store or compute in pounds, never show ₹/US$. One price for every seeker (UK and EU) — the
-  LeanOn India-vs-NRI pricing was removed; `lib/geo-pricing.ts quoteSession()` is the single quote.
+  legacy regional pricing was removed; `lib/geo-pricing.ts quoteSession()` is the single quote.
   Prices in copy must match `/pricing` (reads `lib/constants.ts`); quote the RULES (listener rate ×
   minutes + £1, standard rate `DEFAULT_LISTENER_RATE` 40p/min → £4.20 for 8 min) — never an invented
   "typical" price until `lib/price-snapshot.ts` has real listener data. **No free sessions** (2026-10-25):
@@ -143,7 +143,7 @@
 - After deploying public-page changes, run `node scripts/indexnow.mjs` (Bing → ChatGPT search).
 - **Home page title + meta description carry the brand promise** ("Talk It Through With a Real Person",
   "8 minutes is enough", "Not therapy" — PROJECT.md §1a). `scripts/live-audit.mjs` fails if they disappear; change
-  them deliberately. The site is UK-only: no India/NRI/other-country pages or copy, and never the name LeanOn.
+  them deliberately. The site is UK-only: no India/NRI/other-country pages or copy, and never the legacy product's name.
 
 ## Listener presence & request alerts (2026-09-24) — read `docs/NOTIFICATIONS.md` first
 
@@ -367,4 +367,4 @@ daily cron); `/contact,/wallet,/history,/profile,/sessions` made static (were
 - Push to `main` → Vercel auto-deploys howwasyourday.live.
 - Migrations are MANUAL: owner runs them in Supabase SQL Editor, then
   refreshes `db/LIVE_SCHEMA.md`. A fresh database is built with `supabase/setup/`
-  (`docs/SUPABASE_SETUP.md`), not by replaying the archived `db/leanon-migrations/`.
+  (`docs/SUPABASE_SETUP.md`), not by replaying the archived `db/legacy-migrations/`.

@@ -4,7 +4,7 @@ import { formatGBP } from '@/lib/money'
 // Session pricing — one currency (GBP, integer pence) for every seeker in the
 // UK and EU. There is no country-based pricing: a session costs the listener's
 // per-minute rate × minutes + the flat PLATFORM_FEE, wherever the seeker is.
-// (The LeanOn original had India vs overseas "NRI" pricing; it was removed.)
+// (The legacy app had region-based pricing; it was removed.)
 
 export const HOME_COUNTRY = 'GB'
 

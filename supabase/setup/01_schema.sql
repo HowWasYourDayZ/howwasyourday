@@ -3,8 +3,8 @@
 -- File 1 of 3. Run it in Supabase Dashboard → SQL Editor (as the default
 -- `postgres` role). Full guide: docs/SUPABASE_SETUP.md
 --
--- This ONE file replaces the 83 historical LeanOn files archived in db/leanon-migrations/
--- (001 … 077, 2025*, 999). Those describe how the LeanOn production database
+-- This ONE file replaces the 83 historical legacy files archived in db/legacy-migrations/
+-- (001 … 077, 2025*, 999). Those describe how the legacy production database
 -- was patched over time; never run them on this project. This file is the
 -- end state of all of them (db/LIVE_SCHEMA.md + migrations 041–077), cleaned up:
 --   * money is INTEGER PENCE (GBP); rate 10p–500p/min, default 40p (073)
@@ -13,7 +13,7 @@
 --   * the browser can only READ (RLS-scoped). Every write goes through the
 --     server's service-role client or a SECURITY DEFINER function — the rule in
 --     CLAUDE.md, enforced here by grants instead of by many write policies.
---   * duplicate policies / triggers / indexes from the LeanOn history removed.
+--   * duplicate policies / triggers / indexes from the legacy history removed.
 --
 -- It runs as one transaction: if anything fails, nothing is created and you
 -- can fix the problem and run it again. It refuses to run twice.
@@ -138,7 +138,7 @@ CREATE INDEX idx_lp_tags       ON public.listener_profiles USING gin (specialty_
 CREATE INDEX idx_lp_suspended  ON public.listener_profiles (is_suspended) WHERE is_suspended = true;
 
 -- Payout details + private screening answers. Admin-only except the owner's
--- own row. (The aadhaar* / ifsc_code / upi_id columns are LeanOn leftovers the
+-- own row. (The aadhaar* / ifsc_code / upi_id columns are legacy leftovers the
 -- code still reads; they stay empty until Whop payouts replace them.)
 CREATE TABLE public.listener_applications (
   id                  uuid        PRIMARY KEY DEFAULT gen_random_uuid(),

@@ -6,8 +6,8 @@ then refreshes `db/LIVE_SCHEMA.md`.
 
 - The database itself was built in one step from [`../setup/`](../setup/)
   ([`docs/SUPABASE_SETUP.md`](../../docs/SUPABASE_SETUP.md)).
-- LeanOn's 83 old files (001–077, 2025*, 999) are archived in
-  [`db/leanon-migrations/`](../../db/leanon-migrations/) for reference only
+- The legacy app's 83 old files (001–077, 2025*, 999) are archived in
+  [`db/legacy-migrations/`](../../db/legacy-migrations/) for reference only
   (code comments cite them as "migration 068"). **Never run them.**
 - Every new table: `ENABLE ROW LEVEL SECURITY` and
   `REVOKE INSERT, UPDATE, DELETE, TRUNCATE … FROM anon, authenticated`.

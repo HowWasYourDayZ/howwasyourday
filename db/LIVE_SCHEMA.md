@@ -10,12 +10,12 @@ How Was Your Day runs on its **own new Supabase project** (London region, create
 Oct 2026). It was built in one go from **`supabase/setup/`** (`01_schema.sql`,
 `02_storage.sql`, then `03_verify.sql`), following **`docs/SUPABASE_SETUP.md`**.
 
-`db/leanon-migrations/` (001 … 077) is the **LeanOn history** that `01_schema.sql`
+`db/legacy-migrations/` (001 … 077) is the **legacy-app history** that `01_schema.sql`
 consolidates. **Never run them on this project.** Future schema changes are new
 files in `supabase/migrations/` numbered from `078_…`, run by the owner in the SQL Editor, after which
 this snapshot is refreshed.
 
-Differences from the LeanOn database (deliberate):
+Differences from the legacy database (deliberate):
 - Money is GBP integer pence; listener rate 10p–500p/min (default 40p).
 - Sessions are 8 / 16 / 32 minutes; status can be `scheduled` (077).
 - **Browsers can only SELECT** (RLS-scoped). `anon`/`authenticated` hold no
@@ -26,7 +26,7 @@ Differences from the LeanOn database (deliberate):
 - No duplicate policies / triggers / indexes; no admin RLS policies (the admin is
   env-var based and uses the service role); no `specialty_tags` table and no
   `handle_new_user` trigger on `auth.users` (rows are created by `lib/ensure-user-row.ts`).
-- `public.users.id` still has **no FK to `auth.users`** (same as LeanOn — see CLAUDE.md).
+- `public.users.id` still has **no FK to `auth.users`** (same as the legacy app — see CLAUDE.md).
 - ⚠️ New tables created later inherit Supabase's default grants (browser can
   write them, subject to RLS). Every new-table migration must `ENABLE ROW LEVEL
   SECURITY` and `REVOKE INSERT, UPDATE, DELETE … FROM anon, authenticated`.
