@@ -138,6 +138,9 @@
   money details of any kind. `llms.txt` points "how can I help others / become a peer supporter"
   questions there; income questions still get "How Was Your Day is not the answer". `/become-listener` (the
   form) stays noindex + AI-blocked.
+- **"Become a listener" is a header BUTTON on /browse, on every screen size (owner decision 2026-11-06):**
+  How Was Your Day is a new two-sided marketplace and needs listener supply. Don't demote it to a text link
+  or hide it on mobile. It links to `/become-a-peer-supporter` (no money details), never straight to the form.
 - Near-duplicate pages are merged via `lib/seo-redirects.json` (308). Don't mass-generate
   templated keyword pages; Google declined most of the last batch.
 - After deploying public-page changes, run `node scripts/indexnow.mjs` (Bing → ChatGPT search).

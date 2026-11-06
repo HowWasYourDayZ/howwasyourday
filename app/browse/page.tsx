@@ -277,7 +277,7 @@ a{text-decoration:none;color:inherit;}
 .bh-wallet{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:800;color:var(--navy);padding:9px 14px;border-radius:999px;border:1.5px solid var(--border);background:#fff;}
 .bh-cta{display:inline-flex;align-items:center;font-size:15px;font-weight:800;color:#fff;background:var(--teal);padding:12px 22px;border-radius:999px;white-space:nowrap;}
 .bh-cta:hover{background:#9E4719;}
-@media(max-width:560px){.bh-cta{display:none}.bh-row img{height:34px}}
+@media(max-width:560px){.bh-row{gap:8px}.bh-row img{height:32px}.bh-nav{gap:4px}.bh-link{padding:8px 8px;font-size:14px}.bh-wallet{display:none}.bh-cta{font-size:13.5px;padding:10px 14px}}
 
 /* title + toolbar */
 .bt{padding:44px 0 8px;}
