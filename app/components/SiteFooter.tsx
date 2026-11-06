@@ -1,10 +1,11 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import { openCookieSettings } from './CookieConsent'
+import { BUILD } from '@/lib/build'
 
 // Pages with their own footer (home) or full-screen flows get none.
 function hideOn(pathname: string): boolean {
-  if (['/about', '/talk', '/auth', '/contact'].includes(pathname)) return true  // '/about' has its own minimal footer
+  if (['/', '/talk', '/auth', '/contact'].includes(pathname)) return true  // '/' has its own minimal footer
   if (pathname.startsWith('/session/') || pathname.startsWith('/messages/')) return true
   if (pathname === '/admin' || pathname.startsWith('/admin/')) return true
   if (pathname.startsWith('/history/') && pathname !== '/history') return true
@@ -75,7 +76,7 @@ export default function SiteFooter() {
               <a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a>
               <a href="/cookies" onClick={e => { e.preventDefault(); openCookieSettings() }}>Cookie settings</a>
             </nav>
-            <p className="sf-copy">© {new Date().getFullYear()} How Was Your Day · howwasyourday.live · Peer support for adults in the UK</p>
+            <p className="sf-copy">© {new Date().getFullYear()} How Was Your Day · howwasyourday.live · Peer support for adults in the UK{BUILD && <> · build {BUILD}</>}</p>
           </div>
         </footer>
       )}
