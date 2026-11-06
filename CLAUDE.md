@@ -146,9 +146,8 @@
 - After deploying public-page changes, run `node scripts/indexnow.mjs` (Bing → ChatGPT search).
 - **Home page title + meta description carry the brand promise** ("Talk It Through With a Real Person",
   "8 minutes is enough", "Not therapy" — PROJECT.md §1a). `scripts/live-audit.mjs` fails if they disappear; change
-  them deliberately. **The home page is deliberately minimal** (owner decision 2026-11-06: hero → three steps → ways to
-  talk → topics → safety → become a listener → final CTA); the long-form story lives on `/about` (`/aboutus` 308s there).
-  Don't grow the home page back. The site is UK-only: no India/NRI/other-country pages or copy, and never the legacy product's name.
+  them deliberately. **Home = the full page; `/about` = the minimal overview** (owner decisions 2026-11-06: the two were
+  swapped after a minimal-home trial). `/aboutus` 308s to `/about`. The site is UK-only: no India/NRI/other-country pages or copy, and never the legacy product's name.
 
 ## Listener presence & request alerts (2026-09-24) — read `docs/NOTIFICATIONS.md` first
 
