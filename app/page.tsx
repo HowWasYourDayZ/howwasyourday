@@ -67,6 +67,7 @@ const CSS = `
 .hw-nav-links{display:flex;align-items:center;gap:22px}
 .hw-nav-links a.t{font-size:14.5px;font-weight:800;color:var(--muted);display:none}
 .hw-nav-links a.t:hover{color:var(--ember)}
+.hw-nav-links a.t.a{display:inline}  /* About shows on every screen size */
 @media(min-width:760px){.hw-nav-links a.t{display:inline}}
 
 /* buttons */
@@ -235,6 +236,7 @@ export default function Home() {
           <nav className="hw-nav" aria-label="Main">
             <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png" alt="How Was Your Day" width={141} height={44} /></a>
             <div className="hw-nav-links">
+              <a className="t a" href="/about">About</a>
               <a className="t" href="/how-it-works">How it works</a>
               <a className="t" href="/pricing">Pricing</a>
               <a className="t" href="/browse">Listeners</a>
