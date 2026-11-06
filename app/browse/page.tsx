@@ -1,14 +1,13 @@
 'use client'
-import BrandMark from '@/app/components/BrandMark'
 import { useState, useEffect, useRef, RefObject } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { BadgeCheck, Globe, LogIn, Mail, MessageCircle, Phone, Search, SlidersHorizontal, Star, Wallet as WalletIcon, X } from 'lucide-react'
+import { BadgeCheck, Globe, Heart, MessageCircle, Phone, Search, SlidersHorizontal, Star, Wallet as WalletIcon, X } from 'lucide-react'
 import { createClient } from '@/lib/supabase'
-import { LANGUAGES, AGE_RANGES, ageRangeId, VOICE_PRICING_ENABLED, sessionRatePerMin } from '@/lib/constants'
+import { LANGUAGES, AGE_RANGES, ageRangeId, sessionRatePerMin } from '@/lib/constants'
 import { SHOW_LISTENER_IN_SESSION_STATUS } from '@/lib/feature-flags'
 import { estimateListenerTakeHome } from '@/lib/session-billing'
-import { formatGBP, formatRate } from '@/lib/money'
+import { formatGBP } from '@/lib/money'
 import { showToast } from '@/lib/toast'
 import Avatar from '@/app/components/Avatar'
 
@@ -258,101 +257,105 @@ const SORTS = [
 ] as const
 type SortId = typeof SORTS[number]['id']
 
-const S = `
+const SAVED_KEY = 'howwasyourday_saved_listeners'
 
+const S = `
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;--apricot:#FBE3D2;}
+body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:#FFFCFA;}
 a{text-decoration:none;color:inherit;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
-.head{padding:16px 0 10px;}
-.head-row{display:flex;align-items:center;justify-content:space-between;gap:12px;}
-.head h1{font-size:21px;font-weight:900;color:var(--navy);line-height:1.2;}
-.wallet-chip{display:flex;align-items:center;gap:6px;background:var(--light);min-height:44px;padding:0 16px;border-radius:50px;font-weight:800;font-size:14px;color:var(--navy);cursor:pointer;border:1.5px solid var(--border);flex-shrink:0;}
-.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 0;}
-.search-container{width:100%;max-width:600px;margin:0 0 10px;position:relative;}
-.search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--gray);pointer-events:none;display:flex;}
-.search-wrap{width:100%;min-height:44px;padding:10px 16px 10px 44px;border-radius:50px;border:1.5px solid var(--border);font-family:Nunito,sans-serif;font-size:15px;font-weight:600;color:var(--navy);background:white;outline:none;display:block;box-sizing:border-box;}
-.search-wrap:focus{border-color:var(--navy);}
-.search-wrap::placeholder{color:var(--gray);font-weight:500;}
-.tag-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;
-  -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);}
-.tag-scroll::-webkit-scrollbar{display:none;}
-@media(min-width:960px){.tag-scroll{flex-wrap:wrap;overflow:visible;-webkit-mask-image:none;mask-image:none;}}
-.tag-pill{flex-shrink:0;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:50px;font-size:13px;font-weight:700;border:1.5px solid var(--border);background:white;color:var(--gray);cursor:pointer;transition:all .15s;white-space:nowrap;font-family:Nunito,sans-serif;}
-.tag-pill.active{background:var(--navy);color:white;border-color:var(--navy);}
-.filter-panel{margin-top:10px;display:grid;gap:8px;}
-/* Bottom padding clears the fixed BottomNav — previously supplied by the
-   listener-recruitment CTA that used to sit below this list. */
-.list{padding:16px 20px 96px;display:grid;grid-template-columns:minmax(0,1fr);gap:14px;max-width:1200px;margin:0 auto;}
-@media(min-width:640px){.list{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(min-width:960px){.list{grid-template-columns:repeat(3,minmax(0,1fr));}}
-.card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:18px;transition:border-color .2s,box-shadow .2s;box-shadow:0 1px 4px rgba(59,47,42,.04);display:flex;flex-direction:column;}
-.card:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(59,47,42,.08);}
-.card-link{display:block;color:inherit;border-radius:14px;outline-offset:4px;}
-.card-link:focus-visible{outline:2.5px solid var(--teal);}
-.card-actions{margin-top:auto;padding-top:4px;}
-.card-top{display:flex;gap:14px;align-items:center;margin-bottom:12px;}
-.av{width:88px;height:88px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;color:white;flex-shrink:0;position:relative;overflow:hidden;}
-.av img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
-.dot{position:absolute;bottom:1px;right:1px;width:14px;height:14px;border-radius:50%;border:2.5px solid white;}
-.dot.on{background:#34C759;}.dot.off{background:#C7C7CC;}.dot.busy{background:var(--orange);}
-.meta{flex:1;min-width:0;}
-.name{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:2px;display:flex;align-items:center;gap:6px;min-width:0;}
-.name-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;}
-.card-tagline{font-size:13px;font-weight:600;color:var(--gray);margin-bottom:4px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-.stats{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;font-size:13px;color:var(--gray);font-weight:600;margin-bottom:6px;}
-.stats .st{display:inline-flex;align-items:center;gap:4px;}
-.new-tag{background:#FFF4E5;color:#7A4A00;font-size:11px;font-weight:800;padding:2px 8px;border-radius:50px;}
-.stats span{white-space:nowrap;}
-.fit{font-size:13px;color:var(--navy);font-weight:700;line-height:1.6;margin-bottom:14px;}
-.fit span{color:var(--gray);font-weight:600;}
-.fit .ln{display:flex;align-items:center;gap:6px;}
-.btn-filters{flex-shrink:0;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:50px;font-size:13px;font-weight:800;border:1.5px solid var(--navy);background:white;color:var(--navy);cursor:pointer;font-family:Nunito,sans-serif;}
-.btn-filters .cnt{background:var(--orange);color:white;border-radius:50px;padding:0 6px;font-size:11px;}
-.verified-chip{display:inline-flex;align-items:center;gap:3px;flex-shrink:0;background:#FFF6EF;color:#3B2F2A;font-size:11px;font-weight:800;padding:2px 8px 2px 6px;border-radius:50px;border:1.5px solid #F2DFD1;}
-.mode-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.btn-mode{color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;min-height:52px;padding:6px;border-radius:12px;border:1.5px solid transparent;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;line-height:1.25;transition:background .2s;width:100%;}
-.btn-mode .bl{display:inline-flex;align-items:center;gap:6px;}
-.btn-mode small{font-size:12px;font-weight:700;opacity:.95;}
-.btn-mode.text{background:#9E4719;}
-.btn-mode.text:hover{background:#9E4719;}
-.btn-mode.voice{background:var(--navy);}
-.btn-mode.voice:hover{background:#9E4719;}
-.btn-mode.full{grid-column:1 / -1;flex-direction:row;gap:8px;}
-.btn-mode.msg{background:#9E4719;}
-.btn-mode.msg:hover{background:#9E4719;}
-.btn-mode.busy{background:white;color:#6E5B50;border-color:var(--border);cursor:not-allowed;}
-.card-caption{margin-top:8px;font-size:12px;font-weight:700;color:var(--gray);display:flex;align-items:center;justify-content:center;gap:6px;text-align:center;}
-.card-caption.free{color:#1B7A3A;}
-.status-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;}
-.avail-label{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;padding:3px 10px;border-radius:50px;white-space:nowrap;}
-.avail-label::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor;}
-.avail-label.on{color:#1B7A3A;background:#E7F6EC;}.avail-label.off{color:#6E5B50;background:#FFF6EF;}.avail-label.busy{color:#9A4E00;background:#FFF1E0;}
-.last-seen{font-size:12px;font-weight:600;color:var(--gray);}
-.skeleton{background:linear-gradient(90deg,#FFF6EF 25%,#FFFAF6 50%,#FFF6EF 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:20px;height:250px;border:1.5px solid var(--border);}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;}
+
+/* header */
+.bh{background:#fff;border-bottom:1px solid var(--border);}
+.bh-row{display:flex;align-items:center;justify-content:space-between;gap:12px;height:72px;}
+.bh-row img{height:40px;width:auto;display:block;}
+.bh-nav{display:flex;align-items:center;gap:8px;}
+.bh-link{font-size:15px;font-weight:700;color:var(--gray);padding:10px 12px;border-radius:999px;}
+.bh-link:hover{color:var(--navy);}
+.bh-wallet{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:800;color:var(--navy);padding:9px 14px;border-radius:999px;border:1.5px solid var(--border);background:#fff;}
+.bh-cta{display:inline-flex;align-items:center;font-size:15px;font-weight:800;color:#fff;background:var(--teal);padding:12px 22px;border-radius:999px;white-space:nowrap;}
+.bh-cta:hover{background:#9E4719;}
+@media(max-width:560px){.bh-cta{display:none}.bh-row img{height:34px}}
+
+/* title + toolbar */
+.bt{padding:44px 0 8px;}
+.bt h1{font-size:clamp(34px,5.4vw,52px);font-weight:900;letter-spacing:-1px;line-height:1.05;margin-bottom:12px;}
+.bt p{font-size:clamp(16px,2vw,19px);font-weight:600;color:var(--gray);line-height:1.5;}
+.tools{display:flex;gap:12px;align-items:center;margin-top:28px;flex-wrap:wrap;}
+.search{flex:1 1 320px;position:relative;}
+.search svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--gray);pointer-events:none;}
+.search input{width:100%;height:58px;padding:0 20px 0 50px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Nunito,sans-serif;font-size:16px;font-weight:600;color:var(--navy);outline:none;}
+.search input:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(232,116,59,.12);}
+.search input::placeholder{color:#8A766B;font-weight:500;}
+.tbtn{height:58px;display:inline-flex;align-items:center;gap:10px;padding:0 24px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Nunito,sans-serif;font-size:16px;font-weight:700;color:var(--navy);cursor:pointer;white-space:nowrap;}
+.tbtn:hover{border-color:var(--orange);}
+.tbtn.on{background:var(--teal);border-color:var(--teal);color:#fff;}
+.tbtn .cnt{background:var(--orange);color:#fff;border-radius:999px;font-size:12px;font-weight:900;padding:1px 8px;}
+.tbtn.on .cnt{background:#fff;color:var(--teal);}
+.tbtn .live{width:9px;height:9px;border-radius:50%;background:#2E9E5B;box-shadow:0 0 0 3px rgba(46,158,91,.18);}
+.tbtn.on .live{background:#fff;box-shadow:none;}
+@media(max-width:560px){.tools{gap:10px}.tbtn{height:50px;padding:0 18px;font-size:15px;flex:1;justify-content:center}.search input{height:52px}}
+
+.fpanel{margin-top:16px;background:#fff;border:1.5px solid var(--border);border-radius:24px;padding:20px;display:grid;gap:16px;}
+.fgroup h4{font-size:12.5px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
+.fchips{display:flex;flex-wrap:wrap;gap:8px;}
+.fchip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 15px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Nunito,sans-serif;font-size:14px;font-weight:700;color:var(--gray);cursor:pointer;}
+.fchip.on{background:var(--navy);border-color:var(--navy);color:#fff;}
+.freset{justify-self:start;background:none;border:none;font-family:Nunito,sans-serif;font-size:14px;font-weight:800;color:var(--teal);cursor:pointer;padding:4px 0;}
+
+.count{margin:28px 0 16px;font-size:16px;font-weight:700;color:var(--gray);}
+
+/* grid + listener cards */
+.list{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;padding-bottom:110px;}
+@media(min-width:700px){.list{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(min-width:1040px){.list{grid-template-columns:repeat(3,minmax(0,1fr));}}
+.lc{position:relative;background:#fff;border:1.5px solid var(--border);border-radius:28px;transition:border-color .2s,box-shadow .2s,transform .2s;}
+.lc:hover{border-color:#EBC3A6;box-shadow:0 14px 36px rgba(59,47,42,.08);transform:translateY(-2px);}
+.lc-link{display:flex;flex-direction:column;height:100%;padding:34px 34px 28px;border-radius:28px;}
+@media(max-width:560px){.lc-link{padding:26px 24px 22px;}}
+.lc-top{display:flex;gap:22px;align-items:center;margin-bottom:22px;padding-right:44px;}
+.lc-av{width:92px;height:92px;border-radius:50%;flex-shrink:0;position:relative;box-shadow:0 0 0 4px #fff,0 6px 16px rgba(59,47,42,.12);}
+.lc-av .ph{width:100%;height:100%;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;color:#fff;}
+.lc-av img{width:100%;height:100%;object-fit:cover;}
+.lc-dot{position:absolute;right:0;bottom:2px;width:22px;height:22px;border-radius:50%;border:4px solid #fff;}
+.lc-dot.on{background:#2E9E5B;}.lc-dot.off{background:#C9BDB4;}.lc-dot.busy{background:var(--orange);}
+.lc-name{font-size:24px;font-weight:900;line-height:1.15;letter-spacing:-.3px;display:flex;align-items:center;gap:6px;min-width:0;}
+.lc-name span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.lc-status{font-size:15px;font-weight:700;color:var(--gray);margin-top:4px;}
+.lc-status.on{color:#23794A;}.lc-status.busy{color:#9A4E00;}
+.lc-sub{font-size:14.5px;font-weight:600;color:var(--gray);margin-top:4px;display:flex;align-items:center;gap:4px;}
+.lc-bio{font-size:16.5px;line-height:1.6;color:var(--gray);font-weight:600;margin-bottom:22px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:3.2em;}
+.lc-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;}
+.lc-chip{background:var(--light);color:#8A3F15;font-size:14.5px;font-weight:700;padding:6px 15px;border-radius:999px;}
+.lc-lang{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--border);color:var(--navy);font-size:14.5px;font-weight:700;padding:5px 14px;border-radius:999px;}
+.lc-foot{margin-top:auto;padding-top:22px;border-top:1.5px solid #F7ECE3;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.lc-modes{display:flex;gap:14px;color:var(--navy);}
+.lc-price{font-size:15px;font-weight:600;color:var(--gray);white-space:nowrap;}
+.lc-price b{font-size:21px;font-weight:900;color:var(--navy);}
+.lc-heart{position:absolute;top:24px;right:24px;width:50px;height:50px;border-radius:50%;border:1.5px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--navy);cursor:pointer;transition:border-color .15s,color .15s,transform .15s;}
+.lc-heart:hover{border-color:var(--orange);color:var(--orange);}
+.lc-heart[aria-pressed="true"]{color:var(--orange);border-color:var(--apricot);background:var(--light);}
+.lc-heart:active{transform:scale(.92);}
+
+.skeleton{background:linear-gradient(90deg,#FFF6EF 25%,#FFFAF6 50%,#FFF6EF 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:28px;height:380px;border:1.5px solid var(--border);}
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-.empty{text-align:center;padding:60px 20px;}
+.empty{grid-column:1/-1;text-align:center;padding:56px 20px;background:#fff;border-radius:28px;border:1.5px solid var(--border);}
+.empty h3{font-size:22px;font-weight:900;margin-bottom:8px;}
+.empty p{font-size:15.5px;color:var(--gray);line-height:1.7;max-width:420px;margin:0 auto 24px;font-weight:600;}
+.empty .acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.empty .acts button,.empty .acts a{font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 24px;border-radius:999px;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--navy);}
+.empty .acts .p{background:var(--teal);border-color:var(--teal);color:#fff;}
+.empty small{display:block;margin-top:20px;font-size:13.5px;color:var(--gray);font-weight:600;}
+.empty small a{color:#B71C1C;font-weight:800;}
+
 .session-toast{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--orange);color:white;font-family:Nunito,sans-serif;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 20px rgba(232,116,59,.35);animation:toastDrop .25s ease;}
 @keyframes toastDrop{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:translateY(0)}}
 .session-toast-text{font-size:14px;font-weight:800;}
 .session-toast-sub{font-size:12px;font-weight:600;opacity:.85;margin-top:2px;}
 .btn-toast-join{background:white;color:var(--orange);font-family:Nunito,sans-serif;font-weight:800;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
 .btn-toast-dismiss{background:transparent;color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:20px;border:none;cursor:pointer;padding:0 4px;line-height:1;}
-.avail-bar{margin:0 20px 4px;border-radius:16px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;font-weight:700;}
-.avail-bar.has-online{background:rgba(52,199,89,.1);border:1.5px solid rgba(52,199,89,.25);color:#1A5C2A;}
-.avail-bar.no-online{background:rgba(90,122,138,.07);border:1.5px solid var(--border);color:var(--gray);}
-.avail-bar-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-.avail-bar-dot.on{background:#34C759;box-shadow:0 0 0 3px rgba(52,199,89,.2);}
-.avail-bar-dot.off{background:#C7C7CC;}
-.avail-bar-left{display:flex;align-items:center;gap:8px;}
-.avail-bar-recovery{margin:0 20px 0;background:rgba(232,116,59,.06);border:1.5px solid rgba(232,116,59,.2);border-radius:16px;padding:14px 16px;}
-.avail-bar-recovery-title{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;}
-.avail-bar-recovery-chips{display:flex;flex-wrap:wrap;gap:8px;}
-.avail-bar-recovery-chip{background:white;border:1.5px solid var(--border);border-radius:50px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:5px;cursor:pointer;transition:border-color .15s;}
-.avail-bar-recovery-chip:hover{border-color:var(--teal);color:var(--teal);}
-.avail-bar-recovery-chip .dot-sm{width:6px;height:6px;border-radius:50%;background:#34C759;display:inline-block;}
 `
 
 function BrowseContent() {
@@ -382,6 +385,19 @@ function BrowseContent() {
   const [authChecked, setAuthChecked] = useState(false)
   // Anonymous visitors are assumed eligible; logged-in seekers are checked below.
   const [showFilters, setShowFilters] = useState(false)
+  const [availableOnly, setAvailableOnly] = useState(false)
+  const [savedOnly, setSavedOnly] = useState(false)
+  // Hearted listeners — this browser only (a per-viewer convenience; listed on /cookies).
+  const [saved, setSaved] = useState<Set<string>>(new Set())
+  useEffect(() => {
+    try { setSaved(new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'))) } catch { /* storage blocked */ }
+  }, [])
+  const toggleSaved = (id: string) => setSaved(prev => {
+    const next = new Set(prev)
+    if (next.has(id)) next.delete(id); else next.add(id)
+    try { localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(next))) } catch { /* storage blocked */ }
+    return next
+  })
 
   // Read ?topic= from URL after hydration to avoid SSR mismatch.
   //
@@ -595,6 +611,8 @@ function BrowseContent() {
     // Item 2: age-range filter. A listener with no age set is only excluded
     // when a specific range is chosen (they still appear under "All ages").
     .filter(l => ageRange === 'all' || ageRangeId(l.birth_year, l.birth_month) === ageRange)
+    .filter(l => !availableOnly || l.is_available)
+    .filter(l => !savedOnly || saved.has(l.user_id))
     .filter(l => {
       const q = query.trim().toLowerCase()
       if (!q) return true
@@ -614,19 +632,6 @@ function BrowseContent() {
     if (sortBy === 'rating')    return (b.rating || 0) - (a.rating || 0)
     return 0
   })
-
-  // ─── Availability stats for the current filter ───────────────────────────
-  // Computed at render time from the already-fetched `visible` list.
-  const onlineNow = visible.filter(l => l.is_available).length
-  const showAvailBar = !loading && tag !== 'all'
-
-  // Adjacent tags with at least one online listener — shown as recovery chips
-  // when no listeners are online for the current tag.
-  const recoveryTags = tag !== 'all' && onlineNow === 0
-    ? TAGS.filter(t => t.id !== 'all' && t.id !== tag).filter(t =>
-        listeners.some(l => l.is_available && l.specialty_tags?.includes(t.id))
-      ).slice(0, 4)
-    : []
 
   const ini = (n:string) => n.split(' ').map((x:string)=>x[0]||'').join('').slice(0,2).toUpperCase()||'?'
   const tagInfo = (id:string) => TAGS.find(t=>t.id===id)
@@ -701,248 +706,171 @@ function BrowseContent() {
           if (topic && TAGS.some(t => t.id === topic)) setTag(topic)
         }}
       />
-      <div className="head">
-        <div className="wrap head-row">
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}><BrandMark size={32} /><h1>Who would you like to talk to?</h1></div>
-          {authChecked && (myUserId ? (
-            <a href="/wallet" className="wallet-chip" aria-label="Wallet balance">
-              <WalletIcon size={17} aria-hidden /> {balance !== null ? formatGBP(balance) : 'Wallet'}
-            </a>
-          ) : (
-            <a href="/auth?redirect=/browse" className="wallet-chip">
-              <LogIn size={17} aria-hidden /> Log in
-            </a>
-          ))}
+      <header className="bh">
+        <div className="wrap bh-row">
+          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png" alt="How Was Your Day" width={128} height={40} /></a>
+          <nav className="bh-nav" aria-label="Account">
+            {authChecked && (myUserId ? (
+              <>
+                <a href="/wallet" className="bh-wallet" aria-label="Wallet balance"><WalletIcon size={16} aria-hidden /> {balance !== null ? formatGBP(balance) : 'Wallet'}</a>
+                <a href="/profile" className="bh-link">My account</a>
+              </>
+            ) : (
+              <a href="/auth?redirect=/browse" className="bh-link">Sign in</a>
+            ))}
+            <a href="/become-a-peer-supporter" className="bh-cta">Become a listener</a>
+          </nav>
         </div>
-      </div>
-      <div className="topbar">
-        <div className="wrap">
-          <div className="search-container">
-            <span className="search-icon"><Search size={18} aria-hidden /></span>
-            <input
-              className="search-wrap"
-              placeholder="Search by name or topic"
-              value={query}
-              onChange={e=>setQuery(e.target.value)}
-              aria-label="Search listeners by name or topic"
-            />
-          </div>
-          <div className="tag-scroll">
+      </header>
+
+      <main className="wrap">
+        <section className="bt">
+          <h1>Find your listener</h1>
+          <p>Kind, patient people ready to hear you. Browse freely — no account needed to look.</p>
+
+          <div className="tools">
+            <label className="search">
+              <Search size={20} aria-hidden />
+              <input
+                placeholder="Search by name, topic or anything they mention…"
+                value={query}
+                onChange={e => setQuery(e.target.value)}
+                aria-label="Search listeners by name, topic or anything they mention"
+              />
+            </label>
             {(() => {
-              const activeFilters = (lang !== 'all' ? 1 : 0) + (ageRange !== 'all' ? 1 : 0) + (sortBy !== 'best' ? 1 : 0)
+              const active = (tag !== 'all' ? 1 : 0) + (lang !== 'all' ? 1 : 0) + (ageRange !== 'all' ? 1 : 0) + (sortBy !== 'best' ? 1 : 0) + (savedOnly ? 1 : 0)
               return (
-                <button className="btn-filters" onClick={() => setShowFilters(v => !v)} aria-expanded={showFilters}>
-                  <SlidersHorizontal size={16} aria-hidden /> Filters{activeFilters > 0 && <span className="cnt">{activeFilters}</span>}
+                <button type="button" className={`tbtn${showFilters ? ' on' : ''}`} onClick={() => setShowFilters(v => !v)} aria-expanded={showFilters} aria-controls="browse-filters">
+                  <SlidersHorizontal size={18} aria-hidden /> Filters{active > 0 && <span className="cnt">{active}</span>}
                 </button>
               )
             })()}
-            {TAGS.map(t=>(
-              <button key={t.id} className={`tag-pill${tag===t.id?' active':''}`} onClick={()=>setTag(t.id)}>
-                {t.icon} {t.label}
-              </button>
-            ))}
-          </div>
-          {showFilters && (
-            <div className="filter-panel">
-          <div className="tag-scroll">
-            <button className={`tag-pill${lang==='all'?' active':''}`} onClick={()=>setLang('all')}>
-              🌐 All languages
+            <button type="button" className={`tbtn${availableOnly ? ' on' : ''}`} aria-pressed={availableOnly} onClick={() => setAvailableOnly(v => !v)}>
+              <span className="live" aria-hidden /> Available now
             </button>
-            {LANGUAGES.map(l=>(
-              <button key={l.id} className={`tag-pill${lang===l.id?' active':''}`} onClick={()=>setLang(l.id)}>
-                {l.label}
-              </button>
-            ))}
           </div>
-          <div className="tag-scroll">
-            <button className={`tag-pill${ageRange==='all'?' active':''}`} onClick={()=>setAgeRange('all')}>
-              🎂 All ages
-            </button>
-            {AGE_RANGES.map(r=>(
-              <button key={r.id} className={`tag-pill${ageRange===r.id?' active':''}`} onClick={()=>setAgeRange(r.id)}>
-                {r.label}
-              </button>
-            ))}
-          </div>
-          {/* Sort — online listeners stay first in every mode. */}
-          <div className="tag-scroll">
-            {SORTS.map(s=>(
-              <button
-                key={s.id}
-                className={`tag-pill${sortBy===s.id?' active':''}`}
-                onClick={()=>setSortBy(s.id)}
-                title="Listeners who are online always appear first"
-              >
-                {s.label}
-              </button>
-            ))}
-          </div>
-            </div>
-          )}
-        </div>
-      </div>
 
-      {showAvailBar && (
-        onlineNow > 0 ? (
-          <div className="avail-bar has-online">
-            <div className="avail-bar-left">
-              <div className="avail-bar-dot on" />
-              <span>
-                {onlineNow === 1
-                  ? `1 ${tagInfo(tag)?.label ?? tag} listener available right now`
-                  : `${onlineNow} ${tagInfo(tag)?.label ?? tag} listeners available right now`}
-              </span>
-            </div>
-          </div>
-        ) : (
-          <div>
-            <div className="avail-bar no-online">
-              <div className="avail-bar-left">
-                <div className="avail-bar-dot off" />
-                <span>No {tagInfo(tag)?.label ?? tag} listeners online right now</span>
-              </div>
-            </div>
-            {recoveryTags.length > 0 && (
-              <div className="avail-bar-recovery">
-                <div className="avail-bar-recovery-title">Others available now:</div>
-                <div className="avail-bar-recovery-chips">
-                  {recoveryTags.map(t => (
-                    <button
-                      key={t.id}
-                      className="avail-bar-recovery-chip"
-                      onClick={() => setTag(t.id)}
-                    >
-                      <span className="dot-sm" />
-                      {t.icon} {t.label}
-                    </button>
+          {showFilters && (
+            <div className="fpanel" id="browse-filters">
+              <div className="fgroup">
+                <h4>Topic</h4>
+                <div className="fchips">
+                  {TAGS.map(t => (
+                    <button type="button" key={t.id} className={`fchip${tag === t.id ? ' on' : ''}`} aria-pressed={tag === t.id} onClick={() => setTag(t.id)}>{t.icon} {t.label}</button>
                   ))}
                 </div>
               </div>
-            )}
-          </div>
-        )
-      )}
-
-      <div className="list" ref={listenerGridRef}>
-        {loading ? (
-          [1,2,3].map(i=><div key={i} className="skeleton"/>)
-        ) : visible.length === 0 ? (
-          <div style={{textAlign:'center',padding:'60px 20px',background:'white',borderRadius:24,border:'1.5px solid var(--border)',gridColumn:'1 / -1'}}>
-            <div style={{fontSize:48,marginBottom:16}}>🔍</div>
-            <h3 style={{fontSize:20,fontWeight:800,color:'var(--navy)',marginBottom:8}}>No listeners match right now</h3>
-            <p style={{fontSize:15,color:'var(--gray)',lineHeight:1.7,marginBottom:24,maxWidth:400,margin:'0 auto 24px'}}>
-              Listeners are usually most active in the evenings. Try broadening your topic, or check back in 30 minutes.
-            </p>
-            <div style={{display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap'}}>
-              <button
-                onClick={()=>{ setTag('all'); setLang('all'); setAgeRange('all'); setSortBy('best'); setQuery('') }}
-                style={{background:'var(--navy)',color:'white',border:'none',borderRadius:50,padding:'12px 24px',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,cursor:'pointer'}}
-              >
-                Browse All Listeners
-              </button>
-              <a href="/talk?src=browse_empty"
-                style={{background:'white',color:'var(--navy)',border:'1.5px solid var(--border)',borderRadius:50,padding:'12px 24px',fontFamily:'Nunito,sans-serif',fontWeight:700,fontSize:14,display:'inline-block'}}
-              >
-                Try Talk now
-              </a>
-            </div>
-            <p style={{marginTop:20,fontSize:13,color:'var(--gray)'}}>
-              In crisis? Call 999, ring Samaritans on <a href="tel:116123" style={{color:'var(--teal)'}}>116 123</a> or text SHOUT to 85258.
-            </p>
-          </div>
-        ) : visible.map(l => {
-          const inSession = SHOW_LISTENER_IN_SESSION_STATUS && !!l.is_in_session
-          const statusClass = inSession ? 'busy' : l.is_available ? 'on' : 'off'
-          const statusLabel = inSession ? 'In a conversation' : l.is_available ? 'Available now' : 'Offline'
-          // Listener-picked phrases ("People talk to me about…") when set; else the bio's first sentence.
-          const bioFirstLine = (l.tagline_phrases ?? []).length > 0
-            ? (l.tagline_phrases ?? []).join(' · ')
-            : l.bio ? l.bio.split(/[.\n]/).filter(Boolean)[0]?.trim() : ''
-          const isNew = !(l.rating > 0) && !(l.total_sessions > 0)
-          const textRate  = sessionRatePerMin(Number(l.rate_per_min), 'text')
-          const voiceRate = sessionRatePerMin(Number(l.rate_per_min), 'voice')
-          const noVoice = l.voice_disabled === true
-          const textLabel  = formatRate(textRate)
-          const voiceLabel = formatRate(voiceRate)
-          const priceCaption = noVoice ? `Text ${textLabel}` : VOICE_PRICING_ENABLED ? `Text ${textLabel} · Call ${voiceLabel}` : `${textLabel} · text or call`
-          const goodFor = (l.specialty_tags||[]).slice(0,2).map(t => tagInfo(t)?.label || t)
-          const langs = (l.languages_spoken||[]).slice(0,2).map(lid => {
-            const label = LANGUAGES.find(x=>x.id===lid)?.label || lid
-            return label.match(/\(([^)]+)\)/)?.[1] ?? label
-          })
-          const go = (type?: 'text' | 'voice') => router.push(`/listener/${l.user_id}${type ? `?type=${type}` : ''}`)
-          return (
-          <div key={l.id} className="card">
-            <Link href={`/listener/${l.user_id}`} className="card-link" aria-label={`${l.name} — view profile`}>
-              <div className="card-top">
-                <div className="av" style={l.avatar_url ? undefined : { background: initialsColor(l.name) }}>
-                  {l.avatar_url
-                    ? <Avatar src={l.avatar_url} alt="" size={176} />
-                    : <span aria-hidden>{ini(l.name)}</span>}
-                  <div className={`dot ${statusClass}`}/>
-                </div>
-                <div className="meta">
-                  <div className="name">
-                    <span className="name-text" title={l.name}>{l.name}</span>
-                    {l.is_verified && <span className="verified-chip"><BadgeCheck size={12} aria-hidden /> Verified</span>}
-                  </div>
-                  {bioFirstLine && <div className="card-tagline">{bioFirstLine}</div>}
-                  <div className="stats">
-                    {isNew
-                      ? <span className="new-tag">New listener</span>
-                      : <>
-                          {l.rating > 0 && <span className="st"><Star size={14} fill="#E8743B" color="#E8743B" aria-hidden />{(+l.rating).toFixed(1)}</span>}
-                          {l.total_sessions > 0 && <span className="st">{l.total_sessions} {l.total_sessions === 1 ? 'conversation' : 'conversations'}</span>}
-                        </>}
-                  </div>
-                  <div className="status-row">
-                    <span className={`avail-label ${statusClass}`}>{statusLabel}</span>
-                    {!l.is_available && !inSession && lastOnlineLabel(l) && (
-                      <span className="last-seen">{lastOnlineLabel(l)}</span>
-                    )}
-                  </div>
+              <div className="fgroup">
+                <h4>Language</h4>
+                <div className="fchips">
+                  <button type="button" className={`fchip${lang === 'all' ? ' on' : ''}`} aria-pressed={lang === 'all'} onClick={() => setLang('all')}>Any language</button>
+                  {LANGUAGES.map(l => (
+                    <button type="button" key={l.id} className={`fchip${lang === l.id ? ' on' : ''}`} aria-pressed={lang === l.id} onClick={() => setLang(l.id)}>{l.label}</button>
+                  ))}
                 </div>
               </div>
-              {(goodFor.length > 0 || langs.length > 0) && (
-                <div className="fit">
-                  {goodFor.length > 0 && <div className="ln">Good for <span>{goodFor.join(' · ')}</span></div>}
-                  {langs.length > 0 && <div className="ln"><Globe size={14} color="#6E5B50" aria-hidden /><span>{langs.join(' · ')}</span></div>}
+              <div className="fgroup">
+                <h4>Age</h4>
+                <div className="fchips">
+                  <button type="button" className={`fchip${ageRange === 'all' ? ' on' : ''}`} aria-pressed={ageRange === 'all'} onClick={() => setAgeRange('all')}>Any age</button>
+                  {AGE_RANGES.map(r => (
+                    <button type="button" key={r.id} className={`fchip${ageRange === r.id ? ' on' : ''}`} aria-pressed={ageRange === r.id} onClick={() => setAgeRange(r.id)}>{r.label}</button>
+                  ))}
                 </div>
-              )}
-            </Link>
-            <div className="card-actions">
-              {l.is_available && !inSession ? (
-                <>
-                  <div className="mode-btns">
-                    <button className={`btn-mode text${noVoice ? ' full' : ''}`} aria-label={`Text conversation with ${l.name}, ${textLabel}`} onClick={() => go('text')}>
-                      <span className="bl"><MessageCircle size={16} aria-hidden /> Text</span><small>{textLabel}</small>
-                    </button>
-                    {!noVoice && (
-                      <button className="btn-mode voice" aria-label={`Voice call with ${l.name}, ${voiceLabel}`} onClick={() => go('voice')}>
-                        <span className="bl"><Phone size={16} aria-hidden /> Call</span><small>{voiceLabel}</small>
-                      </button>
-                    )}
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="mode-btns">
-                    {inSession ? (
-                      <button className="btn-mode full busy" disabled aria-disabled>In a conversation — back soon</button>
-                    ) : (
-                      <button className="btn-mode full msg" onClick={() => go()}>
-                        <Mail size={16} aria-hidden /> Leave a message
-                      </button>
-                    )}
-                  </div>
-                  <div className="card-caption">{priceCaption}</div>
-                </>
-              )}
+              </div>
+              <div className="fgroup">
+                <h4>Sort and saved</h4>
+                <div className="fchips">
+                  {SORTS.map(o => (
+                    <button type="button" key={o.id} className={`fchip${sortBy === o.id ? ' on' : ''}`} aria-pressed={sortBy === o.id} onClick={() => setSortBy(o.id)} title="Listeners who are online always appear first">{o.label}</button>
+                  ))}
+                  <button type="button" className={`fchip${savedOnly ? ' on' : ''}`} aria-pressed={savedOnly} onClick={() => setSavedOnly(v => !v)}>♥ Saved only</button>
+                </div>
+              </div>
+              <button type="button" className="freset" onClick={() => { setTag('all'); setLang('all'); setAgeRange('all'); setSortBy('best'); setSavedOnly(false) }}>Clear filters</button>
             </div>
-          </div>
-          )
-        })}
-      </div>
+          )}
+        </section>
+
+        {!loading && <p className="count" aria-live="polite">{visible.length} {visible.length === 1 ? 'listener' : 'listeners'}{availableOnly ? ' available now' : ''}</p>}
+
+        <div className="list" ref={listenerGridRef} style={loading ? { marginTop: 28 } : undefined}>
+          {loading ? (
+            [1, 2, 3].map(i => <div key={i} className="skeleton" />)
+          ) : visible.length === 0 ? (
+            <div className="empty">
+              <div style={{ fontSize: 44, marginBottom: 14 }} aria-hidden>🔍</div>
+              <h3>{availableOnly ? 'Nobody is free this minute' : 'No listeners match'}</h3>
+              <p>{availableOnly ? 'Listeners come and go through the day. Try Talk now — we’ll ask whoever comes online — or book a time with someone.' : 'Try clearing a filter or searching for something else.'}</p>
+              <div className="acts">
+                <button type="button" className="p" onClick={() => { setTag('all'); setLang('all'); setAgeRange('all'); setSortBy('best'); setQuery(''); setAvailableOnly(false); setSavedOnly(false) }}>Show all listeners</button>
+                <a href="/talk?src=browse_empty">Try Talk now</a>
+              </div>
+              <small>In crisis? Call <a href="tel:999">999</a>, ring Samaritans on <a href="tel:116123">116 123</a> or text SHOUT to 85258.</small>
+            </div>
+          ) : visible.map(l => {
+            const inSession = SHOW_LISTENER_IN_SESSION_STATUS && !!l.is_in_session
+            const statusClass = inSession ? 'busy' : l.is_available ? 'on' : 'off'
+            const lastSeen = !l.is_available && !inSession ? lastOnlineLabel(l) : null
+            const statusLabel = inSession ? 'In a conversation' : l.is_available ? 'Available now' : lastSeen ? `Offline · ${lastSeen.replace(/^Active /, '')}` : 'Offline'
+            const bio = (l.bio || '').trim() || (l.tagline_phrases ?? []).join(' · ')
+            const isNew = !(l.rating > 0) && !(l.total_sessions > 0)
+            const textRate = sessionRatePerMin(Number(l.rate_per_min), 'text')
+            const noVoice = l.voice_disabled === true
+            const topics = (l.specialty_tags || []).slice(0, 3).map(t => tagInfo(t)?.label || t)
+            const langs = (l.languages_spoken || []).slice(0, 2).map(lid => {
+              const label = LANGUAGES.find(x => x.id === lid)?.label || lid
+              return label.match(/\(([^)]+)\)/)?.[1] ?? label
+            })
+            const isSaved = saved.has(l.user_id)
+            return (
+              <article key={l.id} className="lc">
+                <Link href={`/listener/${l.user_id}`} className="lc-link" aria-label={`${l.name}, ${statusLabel}, ${formatGBP(textRate)} a minute — view profile`}>
+                  <div className="lc-top">
+                    <div className="lc-av">
+                      <div className="ph" style={l.avatar_url ? undefined : { background: initialsColor(l.name) }}>
+                        {l.avatar_url ? <Avatar src={l.avatar_url} alt="" size={184} /> : <span aria-hidden>{ini(l.name)}</span>}
+                      </div>
+                      <span className={`lc-dot ${statusClass}`} aria-hidden />
+                    </div>
+                    <div style={{ minWidth: 0 }}>
+                      <h2 className="lc-name"><span title={l.name}>{l.name}</span>{l.is_verified && <BadgeCheck size={18} color="#B85520" aria-label="Verified" />}</h2>
+                      <div className={`lc-status ${statusClass}`}>{statusLabel}</div>
+                      <div className="lc-sub">
+                        {isNew ? 'New listener' : (
+                          <>
+                            {l.rating > 0 && <><Star size={14} fill="#E8743B" color="#E8743B" aria-hidden /> {(+l.rating).toFixed(1)}</>}
+                            {l.rating > 0 && l.total_sessions > 0 && ' · '}
+                            {l.total_sessions > 0 && `${l.total_sessions} ${l.total_sessions === 1 ? 'conversation' : 'conversations'}`}
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  {bio && <p className="lc-bio">{bio}</p>}
+                  {(topics.length > 0 || langs.length > 0) && (
+                    <div className="lc-chips">
+                      {topics.map(t => <span key={t} className="lc-chip">{t}</span>)}
+                      {langs.length > 0 && <span className="lc-lang"><Globe size={15} aria-hidden /> {langs.join(', ')}</span>}
+                    </div>
+                  )}
+                  <div className="lc-foot">
+                    <div className="lc-modes" aria-label={noVoice ? 'Text chat' : 'Text chat or voice call'}>
+                      <MessageCircle size={22} aria-hidden />
+                      {!noVoice && <Phone size={22} aria-hidden />}
+                    </div>
+                    <div className="lc-price"><b>{formatGBP(textRate)}</b>/min</div>
+                  </div>
+                </Link>
+                <button type="button" className="lc-heart" aria-pressed={isSaved} aria-label={isSaved ? `Remove ${l.name} from saved` : `Save ${l.name}`} onClick={() => toggleSaved(l.user_id)}>
+                  <Heart size={22} fill={isSaved ? '#E8743B' : 'none'} aria-hidden />
+                </button>
+              </article>
+            )
+          })}
+        </div>
+      </main>
 
     </>
   )

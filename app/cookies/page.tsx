@@ -30,6 +30,7 @@ const essential: [string, string, string, string][] = [
   ['hwyd_cookie_consent', 'Cookie', 'Remembers whether you accepted or rejected analytics cookies.', '6 months'],
   ['auth_redirect, auth_mode', 'Session storage', 'Returns you to the right page after signing in.', 'Until you close the tab'],
   ['howwasyourday_intent_topic, howwasyourday_last_topic', 'Session / local storage', 'Remembers the topic you picked for Talk now.', 'Until cleared'],
+  ['howwasyourday_saved_listeners', 'Local storage', 'Remembers the listeners you saved with the heart on Browse (only on this device).', 'Until cleared'],
   ['howwasyourday_onboarded, howwasyourday_welcome_new, howwasyourday_listener_agreed', 'Local storage', 'Remembers that you have seen a welcome or agreement screen, so it is not shown again.', 'Until cleared'],
   ['lounge_last_seen_…, lounge_launch_v1_seen_…', 'Local storage', 'Remembers which listener-lounge messages you have already seen.', 'Until cleared'],
 ]
