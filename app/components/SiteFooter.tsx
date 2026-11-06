@@ -4,7 +4,7 @@ import { openCookieSettings } from './CookieConsent'
 
 // Pages with their own footer (home) or full-screen flows get none.
 function hideOn(pathname: string): boolean {
-  if (['/talk', '/auth', '/contact'].includes(pathname)) return true
+  if (['/', '/talk', '/auth', '/contact'].includes(pathname)) return true  // '/' has its own minimal footer
   if (pathname.startsWith('/session/') || pathname.startsWith('/messages/')) return true
   if (pathname === '/admin' || pathname.startsWith('/admin/')) return true
   if (pathname.startsWith('/history/') && pathname !== '/history') return true
