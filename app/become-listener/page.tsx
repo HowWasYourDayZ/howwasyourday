@@ -37,7 +37,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--bg:#FFFFFF;--light:#FFF6EF;--border:#F2DFD1;--gray:#6E5B50;}
-  body{font-family:Nunito,sans-serif;background:var(--bg);color:var(--navy);-webkit-font-smoothing:antialiased;
+  body{font-family:Karla,sans-serif;background:var(--bg);color:var(--navy);-webkit-font-smoothing:antialiased;
     background:radial-gradient(ellipse 90% 55% at 0% 0%, #FDE6D6 0%, #FFF1E6 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 60px;}
@@ -67,7 +67,7 @@ const S = `
   .section-title{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:6px;}
   .section-sub{font-size:13px;color:var(--gray);font-weight:500;margin-bottom:20px;}
   .lbl{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;display:block;}
-  .input{width:100%;padding:13px 16px;font-family:Nunito,sans-serif;font-size:15px;font-weight:600;color:var(--navy);border:2px solid var(--border);border-radius:14px;outline:none;background:white;transition:border-color 0.2s;margin-bottom:4px;}
+  .input{width:100%;padding:13px 16px;font-family:Karla,sans-serif;font-size:15px;font-weight:600;color:var(--navy);border:2px solid var(--border);border-radius:14px;outline:none;background:white;transition:border-color 0.2s;margin-bottom:4px;}
   .input:focus{border-color:var(--navy);}
   .input.err{border-color:#E53935;background:#FFF5F5;}
   .input::placeholder{color:#E9CDB9;font-weight:400;}
@@ -76,13 +76,13 @@ const S = `
   .char-count{font-size:12px;color:var(--gray);font-weight:600;text-align:right;margin-bottom:12px;}
   .char-count.warn{color:#E53935;}
   .tag-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
-  .tag-chip{padding:10px 14px;border:2px solid var(--border);border-radius:12px;font-family:Nunito,sans-serif;font-size:13px;font-weight:700;color:var(--gray);background:white;cursor:pointer;text-align:left;transition:all 0.15s;}
+  .tag-chip{padding:10px 14px;border:2px solid var(--border);border-radius:12px;font-family:Karla,sans-serif;font-size:13px;font-weight:700;color:var(--gray);background:white;cursor:pointer;text-align:left;transition:all 0.15s;}
   .tag-chip.sel{border-color:var(--orange);background:#FFF3E0;color:var(--navy);}
   .rate-wrap{display:flex;align-items:center;gap:0;background:white;border:2px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:4px;}
   .rate-wrap:focus-within{border-color:var(--navy);}
   .rate-wrap.err{border-color:#E53935;}
   .rate-prefix{padding:13px 14px;font-weight:800;color:var(--gray);border-right:2px solid var(--border);}
-  .rate-input{flex:1;min-width:0;padding:13px 14px;border:none;outline:none;font-family:Nunito,sans-serif;font-size:18px;font-weight:800;color:var(--navy);}
+  .rate-input{flex:1;min-width:0;padding:13px 14px;border:none;outline:none;font-family:Karla,sans-serif;font-size:18px;font-weight:800;color:var(--navy);}
   .rate-suffix{padding:13px 14px;font-size:13px;font-weight:600;color:var(--gray);}
   .rate-pair .rate-prefix,.rate-pair .rate-suffix{padding:13px 8px;}
   .rate-pair .rate-input{padding:13px 6px;}
@@ -96,10 +96,10 @@ const S = `
   .errors-list p{font-size:13px;color:#7A2020;font-weight:700;margin-bottom:6px;}
   .errors-list ul{padding-left:16px;}
   .errors-list li{font-size:12px;color:#7A2020;font-weight:600;margin-bottom:2px;}
-  .btn{width:100%;padding:16px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(232,116,59,0.3);}
+  .btn{width:100%;padding:16px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(232,116,59,0.3);}
   .btn:hover{background:#D0632D;transform:translateY(-1px);}
   .btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
-  .btn-ghost{width:100%;padding:16px;font-family:Nunito,sans-serif;font-size:15px;font-weight:700;color:var(--navy);background:white;border:2px solid var(--border);border-radius:50px;cursor:pointer;margin-top:10px;}
+  .btn-ghost{width:100%;padding:16px;font-family:Karla,sans-serif;font-size:15px;font-weight:700;color:var(--navy);background:white;border:2px solid var(--border);border-radius:50px;cursor:pointer;margin-top:10px;}
   .success{text-align:center;padding:40px 20px;}
   .success-icon{font-size:64px;margin-bottom:20px;}
   .success h2{font-size:24px;font-weight:900;color:var(--navy);margin-bottom:12px;}
@@ -109,10 +109,10 @@ const S = `
   .shake{animation:shake 0.4s ease;}
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
   .otp-row{display:flex;gap:10px;justify-content:center;margin-bottom:8px;}
-  .otp-box{width:48px;height:56px;border:2px solid var(--border);border-radius:14px;font-family:Nunito,sans-serif;font-size:22px;font-weight:900;color:var(--navy);text-align:center;background:white;outline:none;transition:all 0.2s;}
+  .otp-box{width:48px;height:56px;border:2px solid var(--border);border-radius:14px;font-family:Karla,sans-serif;font-size:22px;font-weight:900;color:var(--navy);text-align:center;background:white;outline:none;transition:all 0.2s;}
   .otp-box:focus{border-color:var(--orange);background:#FFFAF6;}
   .otp-box.err{border-color:#E53935;background:#FFF5F5;}
-  .resend-btn{background:none;border:none;font-family:Nunito,sans-serif;font-size:14px;font-weight:700;color:var(--teal);cursor:pointer;}
+  .resend-btn{background:none;border:none;font-family:Karla,sans-serif;font-size:14px;font-weight:700;color:var(--teal);cursor:pointer;}
   .resend-count{font-size:14px;color:var(--gray);font-weight:600;}
   .already-reg{background:#FFF6EF;border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;margin-bottom:24px;}
   .already-reg p{font-size:15px;color:var(--navy);font-weight:600;margin-bottom:12px;}
@@ -847,7 +847,7 @@ export default function BecomeListenerPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar"><a href="/" className="back">←</a></div>
-        <div style={{ textAlign: 'center', padding: '64px 20px', fontFamily: "'Nunito',sans-serif", fontWeight: 600, color: '#6E5B50' }}>
+        <div style={{ textAlign: 'center', padding: '64px 20px', fontFamily: "Karla,sans-serif", fontWeight: 600, color: '#6E5B50' }}>
           {guardError ? (
             <>
               <div style={{ marginBottom: 16 }}>Connection problem — please try again.</div>

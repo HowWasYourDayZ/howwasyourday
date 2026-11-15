@@ -29,7 +29,7 @@ export default class ErrorBoundary extends Component<Props, State> {
         <div style={{
           minHeight: '100vh', display: 'flex', flexDirection: 'column',
           alignItems: 'center', justifyContent: 'center',
-          fontFamily: 'Nunito, sans-serif', padding: '20px', textAlign: 'center',
+          fontFamily: 'Karla, sans-serif', padding: '20px', textAlign: 'center',
           background: 'radial-gradient(ellipse 90% 55% at 0% 0%, #FDE6D6 0%, #FFF1E6 22%, #FFFFFF 58%)',
         }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>😕</div>
@@ -44,7 +44,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             style={{
               background: '#E8743B', color: 'white', border: 'none',
               borderRadius: 50, padding: '12px 28px',
-              fontFamily: 'Nunito, sans-serif', fontWeight: 800, fontSize: 15,
+              fontFamily: 'Karla, sans-serif', fontWeight: 800, fontSize: 15,
               cursor: 'pointer',
             }}
           >

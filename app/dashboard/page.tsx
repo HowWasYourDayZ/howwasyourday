@@ -60,7 +60,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--orange:#E8743B;--blue:#F2DFD1;--cream:#FFFAF6;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-  body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 60px;}
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0 20px;}
   .topbar h1{font-size:22px;font-weight:900;}
@@ -83,7 +83,7 @@ const S = `
   .payout-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
   .payout-balance{font-size:32px;font-weight:900;color:var(--navy);}
   .payout-label{font-size:13px;color:var(--gray);font-weight:600;}
-  .btn-payout{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 3px 12px rgba(232,116,59,0.3);transition:all 0.2s;}
+  .btn-payout{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:14px;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 3px 12px rgba(232,116,59,0.3);transition:all 0.2s;}
   .btn-payout:hover{background:#D0632D;}
   .btn-payout:disabled{opacity:.5;cursor:not-allowed;}
   .payout-note{font-size:12px;color:var(--gray);font-weight:500;}
@@ -99,9 +99,9 @@ const S = `
   .profile-name{font-size:16px;font-weight:800;color:var(--navy);}
   .profile-rate{font-size:13px;color:var(--gray);font-weight:600;}
   .profile-actions{display:flex;gap:8px;margin-top:14px;}
-  .btn-edit{flex:1;padding:10px;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;color:var(--navy);background:var(--light);border:none;border-radius:10px;cursor:pointer;}
-  .btn-share{flex:1;padding:10px;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;color:var(--orange);background:#FFF3E0;border:none;border-radius:10px;cursor:pointer;}
-  .btn-deactivate{width:100%;margin-top:10px;padding:10px;font-family:Nunito,sans-serif;font-weight:700;font-size:12px;color:#B71C1C;background:#FFF5F5;border:1.5px solid #FFCDD2;border-radius:10px;cursor:pointer;transition:all 0.2s;}
+  .btn-edit{flex:1;padding:10px;font-family:Karla,sans-serif;font-weight:700;font-size:13px;color:var(--navy);background:var(--light);border:none;border-radius:10px;cursor:pointer;}
+  .btn-share{flex:1;padding:10px;font-family:Karla,sans-serif;font-weight:700;font-size:13px;color:var(--orange);background:#FFF3E0;border:none;border-radius:10px;cursor:pointer;}
+  .btn-deactivate{width:100%;margin-top:10px;padding:10px;font-family:Karla,sans-serif;font-weight:700;font-size:12px;color:#B71C1C;background:#FFF5F5;border:1.5px solid #FFCDD2;border-radius:10px;cursor:pointer;transition:all 0.2s;}
   .btn-deactivate:hover{background:#FFEBEE;}
   .btn-deactivate:disabled{opacity:0.5;cursor:not-allowed;}
   .progress-section{margin-bottom:28px;}
@@ -111,7 +111,7 @@ const S = `
   .level-label{font-size:12px;font-weight:700;color:var(--gray);}
   .not-listener{text-align:center;padding:60px 20px;}
   .not-listener p{font-size:15px;color:var(--gray);margin-bottom:20px;}
-  .btn-apply{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;}
+  .btn-apply{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;}
   .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:12px;}
   @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
   .modal-overlay{position:fixed;inset:0;background:rgba(59,47,42,0.55);z-index:200;display:flex;align-items:flex-end;justify-content:center;padding:0;animation:fadeIn .2s ease;}
@@ -126,24 +126,24 @@ const S = `
   .modal-detail-item{text-align:center;}
   .modal-detail-label{font-size:10px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
   .modal-detail-value{font-size:16px;font-weight:900;color:var(--navy);}
-  .btn-join-session{width:100%;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 16px rgba(232,116,59,.35);transition:all .2s;}
+  .btn-join-session{width:100%;background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:16px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 16px rgba(232,116,59,.35);transition:all .2s;}
   .btn-join-session:hover{background:#D0632D;}
-  .btn-dismiss{width:100%;background:transparent;color:var(--gray);font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;}
+  .btn-dismiss{width:100%;background:transparent;color:var(--gray);font-family:Karla,sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;}
   .countdown-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:16px;}
   .countdown-fill{height:100%;background:var(--orange);border-radius:2px;transition:width 1s linear;}
   .field-label{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:6px;}
   .field-group{margin-bottom:18px;}
-  .field-input{width:100%;padding:12px 14px;font-family:Nunito,sans-serif;font-size:14px;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;resize:vertical;}
+  .field-input{width:100%;padding:12px 14px;font-family:Karla,sans-serif;font-size:14px;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;resize:vertical;}
   .field-input:focus{border-color:var(--navy);}
   .tag-grid{display:flex;flex-wrap:wrap;gap:8px;}
-  .tag-chip{padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:Nunito,sans-serif;font-size:12px;font-weight:700;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
+  .tag-chip{padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:Karla,sans-serif;font-size:12px;font-weight:700;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
   .tag-chip.sel{background:var(--navy);color:white;border-color:var(--navy);}
   .rate-row{display:flex;align-items:center;gap:12px;}
-  .rate-input{width:100px;padding:12px 14px;font-family:Nunito,sans-serif;font-size:18px;font-weight:900;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;text-align:center;}
+  .rate-input{width:100px;padding:12px 14px;font-family:Karla,sans-serif;font-size:18px;font-weight:900;color:var(--navy);border:1.5px solid var(--border);border-radius:12px;outline:none;text-align:center;}
   .rate-input:focus{border-color:var(--navy);}
-  .btn-save-profile{width:100%;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;}
+  .btn-save-profile{width:100%;background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:15px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;}
   .btn-save-profile:disabled{opacity:.5;cursor:not-allowed;}
-  .btn-cancel{width:100%;background:transparent;color:var(--gray);font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;margin-top:8px;}
+  .btn-cancel{width:100%;background:transparent;color:var(--gray);font-family:Karla,sans-serif;font-weight:700;font-size:14px;padding:10px;border-radius:14px;border:1.5px solid var(--border);cursor:pointer;margin-top:8px;}
   .avatar-edit{display:flex;flex-direction:column;align-items:center;margin-bottom:20px;}
   .avatar-edit-img{width:72px;height:72px;border-radius:20px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:var(--navy);overflow:hidden;margin-bottom:8px;}
   .avatar-edit-img img{width:100%;height:100%;object-fit:cover;border-radius:20px;}
@@ -1396,7 +1396,7 @@ export default function DashboardPage() {
             <div style={{fontSize:13,fontWeight:700,color:'var(--navy)',lineHeight:1.5,flex:1,minWidth:200}}>
               📷 Add a profile photo — seekers find it easier to choose someone they can see.
             </div>
-            <button onClick={openEdit} style={{background:'var(--navy)',color:'white',border:'none',borderRadius:50,minHeight:44,padding:'0 18px',fontFamily:"'Nunito',sans-serif",fontWeight:800,fontSize:13,cursor:'pointer'}}>
+            <button onClick={openEdit} style={{background:'var(--navy)',color:'white',border:'none',borderRadius:50,minHeight:44,padding:'0 18px',fontFamily:"Karla,sans-serif",fontWeight:800,fontSize:13,cursor:'pointer'}}>
               Add photo →
             </button>
           </div>
@@ -1442,11 +1442,11 @@ export default function DashboardPage() {
               </div>
               <div style={{display:'flex',gap:10,marginTop:14,flexWrap:'wrap'}}>
                 <button onClick={() => { dismiss(); openEdit() }}
-                  style={{background:'var(--navy)',color:'white',border:'none',borderRadius:50,padding:'10px 18px',fontFamily:"'Nunito',sans-serif",fontWeight:800,fontSize:13,cursor:'pointer'}}>
+                  style={{background:'var(--navy)',color:'white',border:'none',borderRadius:50,padding:'10px 18px',fontFamily:"Karla,sans-serif",fontWeight:800,fontSize:13,cursor:'pointer'}}>
                   Review my pricing →
                 </button>
                 <button onClick={dismiss}
-                  style={{background:'white',color:'var(--navy)',border:'1.5px solid var(--border)',borderRadius:50,padding:'10px 18px',fontFamily:"'Nunito',sans-serif",fontWeight:700,fontSize:13,cursor:'pointer'}}>
+                  style={{background:'white',color:'var(--navy)',border:'1.5px solid var(--border)',borderRadius:50,padding:'10px 18px',fontFamily:"Karla,sans-serif",fontWeight:700,fontSize:13,cursor:'pointer'}}>
                   Got it
                 </button>
               </div>
@@ -1572,7 +1572,7 @@ export default function DashboardPage() {
                   Type <strong>DELETE</strong> to confirm
                 </p>
                 <input
-                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Nunito, sans-serif', letterSpacing: 2 }}
+                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Karla, sans-serif', letterSpacing: 2 }}
                   value={deleteInput}
                   onChange={e => setDeleteInput(e.target.value.toUpperCase())}
                   placeholder="DELETE"
@@ -1580,14 +1580,14 @@ export default function DashboardPage() {
                 />
                 <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
                   <button
-                    style={{ flex: 1, padding: '12px 0', background: deleteInput === 'DELETE' ? '#B71C1C' : '#ccc', color: 'white', border: 'none', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: deleteInput === 'DELETE' ? 'pointer' : 'not-allowed', fontFamily: 'Nunito, sans-serif' }}
+                    style={{ flex: 1, padding: '12px 0', background: deleteInput === 'DELETE' ? '#B71C1C' : '#ccc', color: 'white', border: 'none', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: deleteInput === 'DELETE' ? 'pointer' : 'not-allowed', fontFamily: 'Karla, sans-serif' }}
                     onClick={deleteAccount}
                     disabled={deactivating || deleteInput !== 'DELETE'}
                   >
                     {deactivating ? 'Deleting...' : 'Permanently delete'}
                   </button>
                   <button
-                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
+                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Karla, sans-serif' }}
                     onClick={() => setShowDeactivateConfirm(false)}
                   >
                     Cancel
@@ -1679,7 +1679,7 @@ export default function DashboardPage() {
                     } catch (_) {}
                     router.push('/listener-lounge')
                   }}
-                  style={{ background:'#B85520', color:'white', border:'none', borderRadius:50, padding:'9px 20px', fontFamily:'Nunito,sans-serif', fontWeight:800, fontSize:13, cursor:'pointer' }}
+                  style={{ background:'#B85520', color:'white', border:'none', borderRadius:50, padding:'9px 20px', fontFamily:'Karla,sans-serif', fontWeight:800, fontSize:13, cursor:'pointer' }}
                 >
                   Open Listener Lounge →
                 </button>

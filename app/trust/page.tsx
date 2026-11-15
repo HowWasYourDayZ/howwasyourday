@@ -13,12 +13,12 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
 .nav-logo{height:56px;}
-.btn-nav{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
+.btn-nav{background:var(--teal);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:14px;padding:10px 22px;border-radius:50px;border:none;cursor:pointer;}
 .page{max-width:640px;margin:0 auto;padding:16px 24px 80px;}
 .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--gray);margin-bottom:32px;}
 .hero{margin-bottom:40px;}
@@ -37,7 +37,7 @@ h1{font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1.15;margin-bottom
 .cta{background:var(--navy);border-radius:22px;padding:32px;text-align:center;margin-top:24px;}
 .cta h2{font-size:20px;font-weight:900;color:white;margin-bottom:10px;}
 .cta p{font-size:14px;color:rgba(251,227,210,.8);margin-bottom:24px;font-weight:500;}
-.btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,116,59,.35);}
+.btn{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,116,59,.35);}
 `
 
 const trustSchema = {
@@ -63,7 +63,7 @@ export default function TrustPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trustSchema) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
-        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">

@@ -8,7 +8,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-  body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
   .wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#FFF6EF;}
   .hdr{background:var(--navy);padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;position:sticky;top:0;z-index:50;}
   .back-btn{background:none;border:none;cursor:pointer;font-size:20px;color:white;padding:4px;line-height:1;flex-shrink:0;}

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Nunito,sans-serif;background:#FFFAF6;color:#3B2F2A;-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;background:#FFFAF6;color:#3B2F2A;-webkit-font-smoothing:antialiased;}
   a{color:#B85520;font-weight:700;text-decoration:none;}
   .page{max-width:720px;margin:0 auto;padding:24px 20px 90px;}
   .back{display:inline-flex;font-size:14px;font-weight:700;color:#6E5B50;margin-bottom:24px;}
@@ -32,7 +32,7 @@ export default function SafeguardingPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
-        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
+        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png?v=2" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
         <br />
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Safeguarding at How Was Your Day</h1>

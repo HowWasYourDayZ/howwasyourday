@@ -9,7 +9,7 @@ mkdirSync(`${OUT}/raw`, { recursive: true })
 const BASE = process.env.BASE || 'https://www.howwasyourday.live'
 // Brand font, embedded (no Google Fonts request).
 const NUNITO = readFileSync('node_modules/@fontsource/nunito/files/nunito-latin-900-normal.woff2').toString('base64')
-const FONT = `@font-face{font-family:Nunito;font-weight:700 900;src:url(data:font/woff2;base64,${NUNITO}) format('woff2')}`
+const FONT = `@font-face{font-family:Karla;font-weight:700 900;src:url(data:font/woff2;base64,${NUNITO}) format('woff2')}`
 const SHOTS = [
   { path: '/', file: '01-home', caption: 'How was your day?\n8 minutes is enough' },
   { path: '/talk', file: '02-talk', caption: 'Say what’s on your mind,\nby text or voice' },
@@ -42,7 +42,7 @@ const frame = await browser.newContext({ viewport: { width: 1080, height: 1920 }
 for (const s of SHOTS) {
   const img = readFileSync(`${OUT}/raw/${s.file}.png`).toString('base64')
   const html = `<!doctype html><html><head><meta charset="utf-8">
-  <style>${FONT}*{margin:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:Nunito,sans-serif;
+  <style>${FONT}*{margin:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:Karla,sans-serif;
   background:linear-gradient(170deg,#FFE9DA 0%,#FFF6EF 45%,#FFFFFF 100%);display:flex;flex-direction:column;align-items:center}
   h1{color:#3B2F2A;font-size:68px;line-height:1.12;font-weight:900;text-align:center;margin:96px 60px 64px;white-space:pre-line}
   .phone{width:780px;height:1387px;border-radius:56px;overflow:hidden;border:14px solid #3B2F2A;box-shadow:0 40px 90px rgba(59,47,42,.25);background:#fff}
@@ -61,7 +61,7 @@ const logo = readFileSync('logo/svg/logo-horizontal.svg').toString('base64')
 const fg = await browser.newContext({ viewport: { width: 1024, height: 500 }, deviceScaleFactor: 1 })
 const page = await fg.newPage()
 await page.setContent(`<!doctype html><html><head><meta charset="utf-8">
-<style>${FONT}*{margin:0;box-sizing:border-box}body{width:1024px;height:500px;overflow:hidden;font-family:Nunito,sans-serif;
+<style>${FONT}*{margin:0;box-sizing:border-box}body{width:1024px;height:500px;overflow:hidden;font-family:Karla,sans-serif;
 background:radial-gradient(ellipse 80% 90% at 90% 0%,#FFE1CC 0%,#FFF6EF 45%,#FFFFFF 80%);display:flex;flex-direction:column;justify-content:center;padding:0 80px}
 img{height:120px;width:auto;margin-bottom:40px}
 h2{color:#3B2F2A;font-size:44px;font-weight:900;line-height:1.1;letter-spacing:-1px}

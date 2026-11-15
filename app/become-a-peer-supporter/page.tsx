@@ -81,7 +81,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--teal:#B85520;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-  body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+  body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
     background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
@@ -117,7 +117,7 @@ export default function BecomeAPeerSupporterPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
 
       <nav className="nav">
-        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
       </nav>
 
       <main className="page">

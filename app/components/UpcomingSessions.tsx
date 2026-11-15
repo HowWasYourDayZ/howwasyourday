@@ -51,7 +51,7 @@ export default function UpcomingSessions({ title = 'Upcoming booked sessions', e
   const btn: React.CSSProperties = { padding: '7px 12px', borderRadius: 50, border: '1.5px solid #F2DFD1', background: 'white', color: '#3B2F2A', fontWeight: 800, fontSize: 12.5, cursor: 'pointer', textDecoration: 'none', fontFamily: 'inherit' }
 
   return (
-    <section aria-label={title} style={{ margin: '0 0 20px', fontFamily: "'Nunito',sans-serif" }}>
+    <section aria-label={title} style={{ margin: '0 0 20px', fontFamily: "Karla,sans-serif" }}>
       <h2 style={{ fontSize: 16, fontWeight: 900, color: '#3B2F2A', margin: '0 0 10px' }}>📅 {title}</h2>
       {justBooked && <p role="status" style={{ background: '#E8F8EE', color: '#1E7A3E', borderRadius: 12, padding: '10px 12px', fontSize: 13, fontWeight: 800, margin: '0 0 10px' }}>✅ Booked. We&apos;ll remind you 24 hours and 15 minutes before.</p>}
       {items.length === 0 && <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 600 }}>{emptyText}</p>}

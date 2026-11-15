@@ -436,7 +436,7 @@ export default function ListenerPresence() {
   // ── Incoming request (takes precedence over the nudge) ─────────────────────
   if (incoming) {
     return (
-      <div style={{ position:'fixed', left:0, right:0, bottom:0, zIndex:300, display:'flex', justifyContent:'center', padding:'0 12px 12px', fontFamily:"'Nunito',sans-serif" }}>
+      <div style={{ position:'fixed', left:0, right:0, bottom:0, zIndex:300, display:'flex', justifyContent:'center', padding:'0 12px 12px', fontFamily:"Karla,sans-serif" }}>
         <div style={{ width:'100%', maxWidth:480, background:'#3B2F2A', color:'white', borderRadius:18, padding:'16px 18px', boxShadow:'0 8px 30px rgba(0,0,0,.3)' }}>
           <div style={{ fontSize:15, fontWeight:900, marginBottom:2 }}>🔔 New session request</div>
           <div style={{ fontSize:12.5, opacity:.85, marginBottom:12 }}>
@@ -485,7 +485,7 @@ export default function ListenerPresence() {
   // ── Offline nudge ──────────────────────────────────────────────────────────
   if (available === false && !dismissedNudge) {
     return (
-      <div style={{ position:'fixed', left:0, right:0, bottom:62, zIndex:120, display:'flex', justifyContent:'center', padding:'0 12px', fontFamily:"'Nunito',sans-serif", pointerEvents:'none' }}>
+      <div style={{ position:'fixed', left:0, right:0, bottom:62, zIndex:120, display:'flex', justifyContent:'center', padding:'0 12px', fontFamily:"Karla,sans-serif", pointerEvents:'none' }}>
         <div style={{ width:'100%', maxWidth:480, background:'#FFF4E5', border:'1.5px solid #FFD09B', borderRadius:14, padding:'10px 12px', display:'flex', alignItems:'center', gap:10, boxShadow:'0 4px 18px rgba(59,47,42,.12)', pointerEvents:'auto' }}>
           <div style={{ flex:1, fontSize:12.5, fontWeight:700, color:'#7A4A00', lineHeight:1.45 }}>
             You&apos;re offline — seekers can&apos;t reach you. Go online to start receiving requests.

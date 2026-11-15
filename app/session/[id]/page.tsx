@@ -20,7 +20,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
+body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
 .wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#FFF6EF;}
 .hdr{background:#3B2F2A;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;position:sticky;top:0;z-index:50;}
 .av{width:40px;height:40px;border-radius:50%;background:#B85520;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:white;flex-shrink:0;}
@@ -30,7 +30,7 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .timer{background:rgba(255,255,255,0.15);padding:5px 12px;border-radius:50px;font-size:13px;font-weight:800;color:white;font-variant-numeric:tabular-nums;}
 .timer.warn{background:rgba(232,116,59,0.4);color:#FFD580;}
 .timer.low{background:rgba(220,38,38,0.4);color:#FCA5A5;}
-.end-btn{background:rgba(220,38,38,0.25);color:#FCA5A5;border:1px solid rgba(220,38,38,0.3);font-family:Nunito,sans-serif;font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;}
+.end-btn{background:rgba(220,38,38,0.25);color:#FCA5A5;border:1px solid rgba(220,38,38,0.3);font-family:Karla,sans-serif;font-weight:700;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;}
 .msgs{flex:1;overflow-y:auto;padding:12px 8px 80px;display:flex;flex-direction:column;gap:3px;}
 .msgs::-webkit-scrollbar{width:3px;}
 .msgs::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.15);border-radius:2px;}
@@ -60,7 +60,7 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .rx-opt:hover{transform:scale(1.18);}
 .rx-opt.mine{background:#FFF6EF;}
 .input-bar{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;padding:8px 10px;padding-bottom:calc(8px + env(safe-area-inset-bottom));background:#FFF6EF;border-top:1px solid #F2DFD1;display:flex;align-items:flex-end;gap:8px;z-index:100;}
-.msg-input{flex:1;padding:10px 14px;font-family:Nunito,sans-serif;font-size:15px;color:#9E4719;border:none;border-radius:24px;outline:none;resize:none;max-height:100px;background:white;line-height:1.4;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.msg-input{flex:1;padding:10px 14px;font-family:Karla,sans-serif;font-size:15px;color:#9E4719;border:none;border-radius:24px;outline:none;resize:none;max-height:100px;background:white;line-height:1.4;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
 .send{width:44px;height:44px;border-radius:50%;background:#3B2F2A;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.2);}
 .send svg{width:22px;height:22px;}
 .send:disabled{opacity:.5;cursor:not-allowed;}
@@ -83,9 +83,9 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .trial-conv-h{font-size:clamp(22px,5vw,28px);font-weight:900;color:white;line-height:1.18;margin-bottom:12px;}
 .trial-conv-sub{font-size:16px;color:rgba(251,227,210,0.8);font-weight:500;line-height:1.65;margin-bottom:36px;max-width:290px;}
 .trial-conv-btns{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;max-width:300px;}
-.btn-trial-continue{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:17px 36px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(232,116,59,0.45);width:100%;}
+.btn-trial-continue{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:16px;padding:17px 36px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(232,116,59,0.45);width:100%;}
 .btn-trial-continue:hover{background:#D0632D;}
-.btn-trial-leave{background:transparent;color:rgba(255,255,255,0.65);font-family:Nunito,sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.22);cursor:pointer;width:100%;}
+.btn-trial-leave{background:transparent;color:rgba(255,255,255,0.65);font-family:Karla,sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.22);cursor:pointer;width:100%;}
 .btn-trial-leave:hover{background:rgba(255,255,255,0.06);}
 .trial-conv-hint{font-size:13px;color:rgba(251,227,210,0.5);font-weight:600;margin-top:18px;}
 .end-icon{font-size:56px;margin-bottom:20px;}
@@ -95,16 +95,16 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .stars{display:flex;gap:8px;justify-content:center;margin-bottom:28px;}
 .star{font-size:36px;background:none;border:none;cursor:pointer;filter:grayscale(1);opacity:.3;}
 .star.lit{filter:none;opacity:1;}
-.review-input{width:100%;max-width:340px;min-height:60px;border:1.5px solid var(--border);border-radius:14px;padding:12px 16px;font-family:Nunito,sans-serif;font-size:14px;font-weight:500;color:var(--navy);resize:vertical;outline:none;margin-bottom:20px;}
+.review-input{width:100%;max-width:340px;min-height:60px;border:1.5px solid var(--border);border-radius:14px;padding:12px 16px;font-family:Karla,sans-serif;font-size:14px;font-weight:500;color:var(--navy);resize:vertical;outline:none;margin-bottom:20px;}
 .review-input:focus{border-color:var(--teal);}
 .review-input::placeholder{color:#8A766B;font-weight:500;}
-.btn-done{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:16px 40px;border-radius:50px;border:none;cursor:pointer;}
+.btn-done{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:16px;padding:16px 40px;border-radius:50px;border:none;cursor:pointer;}
 .back-confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;}
 .back-confirm-card{background:white;border-radius:20px;padding:24px;max-width:340px;width:100%;text-align:center;}
 .back-confirm-card h3{font-size:18px;font-weight:900;color:var(--navy);margin-bottom:10px;}
 .back-confirm-card p{font-size:14px;color:var(--gray);font-weight:500;margin-bottom:20px;}
 .back-confirm-btns{display:flex;gap:10px;}
-.back-confirm-btns button{flex:1;padding:12px;border-radius:12px;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;cursor:pointer;}
+.back-confirm-btns button{flex:1;padding:12px;border-radius:12px;font-family:Karla,sans-serif;font-weight:800;font-size:14px;cursor:pointer;}
 .back-stay{background:var(--navy);color:white;border:none;}
 .back-leave{background:white;color:#E53935;border:1.5px solid #FFCDD2;}
 
@@ -123,7 +123,7 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .voice-btn{
   min-width:44px;min-height:44px;border-radius:50%;border:none;cursor:pointer;
   display:flex;align-items:center;justify-content:center;font-size:20px;
-  font-family:Nunito,sans-serif;font-weight:700;
+  font-family:Karla,sans-serif;font-weight:700;
 }
 .voice-btn.mute{background:rgba(255,255,255,0.15);color:white;width:44px;height:44px;}
 .voice-btn.mute.muted{background:rgba(220,38,38,0.35);color:#FCA5A5;}
@@ -144,7 +144,7 @@ body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:anti
 .net-bar.on.good{background:#4ADE80;}
 .net-bar.on.fair{background:#FCD34D;}
 .net-bar.on.poor{background:#F87171;}
-.mic-select{background:rgba(255,255,255,0.12);color:white;font-family:Nunito,sans-serif;font-size:11px;font-weight:700;border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:4px 8px;cursor:pointer;max-width:160px;}
+.mic-select{background:rgba(255,255,255,0.12);color:white;font-family:Karla,sans-serif;font-size:11px;font-weight:700;border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:4px 8px;cursor:pointer;max-width:160px;}
 .mic-select option{background:#3B2F2A;color:white;}
 .reconnecting-badge{background:rgba(232,116,59,0.2);border:1px solid rgba(232,116,59,0.4);color:#FFD580;font-size:11px;font-weight:700;padding:4px 10px;border-radius:50px;animation:pulse 1.5s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
@@ -1522,7 +1522,7 @@ function SessionContent() {
             {userId !== listenerId && (
               <a
                 href={listenerId ? `/listener/${listenerId}` : '/browse'}
-                style={{display:'block',marginTop:16,fontFamily:'Nunito,sans-serif',fontSize:14,fontWeight:700,color:'var(--teal)'}}
+                style={{display:'block',marginTop:16,fontFamily:'Karla,sans-serif',fontSize:14,fontWeight:700,color:'var(--teal)'}}
               >
                 {listenerId ? `Book another session with ${resolvedListenerName} →` : 'Book another session →'}
               </a>
@@ -1530,7 +1530,7 @@ function SessionContent() {
             {listenerId && (
               <button
                 onClick={() => setShowReport(true)}
-                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, color: '#8A766B', fontFamily: "'Nunito',sans-serif", marginTop: 12, fontWeight: 600 }}
+                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, color: '#8A766B', fontFamily: "Karla,sans-serif", marginTop: 12, fontWeight: 600 }}
               >
                 Report an issue with this session
               </button>
@@ -1599,7 +1599,7 @@ function SessionContent() {
               <div className="hdr-sub">📅 Booked session</div>
             </div>
           </div>
-          <div style={{ flex: 1, overflowY: 'auto', padding: '28px 20px 20px', textAlign: 'center', fontFamily: "'Nunito',sans-serif" }}>
+          <div style={{ flex: 1, overflowY: 'auto', padding: '28px 20px 20px', textAlign: 'center', fontFamily: "Karla,sans-serif" }}>
             <div className="end-icon">📅</div>
             <h2 className="end-h">{durationMins}-minute {isVoice ? 'voice call' : 'text chat'}{isSeeker ? ` with ${name}` : ''}</h2>
             <p style={{ fontSize: 15, color: 'var(--navy)', fontWeight: 800, margin: '6px 0 14px' }}>{when} (UK time)</p>
@@ -1649,7 +1649,7 @@ function SessionContent() {
             </div>
           </div>
           {isSeeker ? (
-            <div style={{ flex: 1, overflowY: 'auto', padding: '28px 20px 20px', background: 'white', textAlign: 'center', fontFamily: "'Nunito',sans-serif" }}>
+            <div style={{ flex: 1, overflowY: 'auto', padding: '28px 20px 20px', background: 'white', textAlign: 'center', fontFamily: "Karla,sans-serif" }}>
               <div className="end-icon">⏳</div>
               <h2 className="end-h">Waiting for {name}…</h2>
 
@@ -1795,7 +1795,7 @@ function SessionContent() {
       <>
         <style dangerouslySetInnerHTML={{ __html: S }} />
         <div className="wrap" style={{ background: '#3B2F2A', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ textAlign: 'center', color: 'rgba(255,255,255,.65)', fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 16 }}>
+          <div style={{ textAlign: 'center', color: 'rgba(255,255,255,.65)', fontFamily: "Karla,sans-serif", fontWeight: 700, fontSize: 16 }}>
             Loading session…
           </div>
         </div>
@@ -1894,8 +1894,8 @@ function SessionContent() {
               <div className="voice-err">
                 <div style={{ marginBottom: 8 }}>⚠️ {voiceError}</div>
                 <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-                  <button onClick={retryVoice} style={{ background: 'rgba(255,255,255,0.18)', color: 'white', border: '1.5px solid rgba(255,255,255,0.35)', borderRadius: 8, padding: '6px 14px', fontFamily: 'Nunito,sans-serif', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>🔄 Retry voice</button>
-                  <button onClick={switchToText} style={{ background: 'rgba(184,85,32,0.85)', color: 'white', border: 'none', borderRadius: 8, padding: '6px 14px', fontFamily: 'Nunito,sans-serif', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>💬 Text only</button>
+                  <button onClick={retryVoice} style={{ background: 'rgba(255,255,255,0.18)', color: 'white', border: '1.5px solid rgba(255,255,255,0.35)', borderRadius: 8, padding: '6px 14px', fontFamily: 'Karla,sans-serif', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>🔄 Retry voice</button>
+                  <button onClick={switchToText} style={{ background: 'rgba(184,85,32,0.85)', color: 'white', border: 'none', borderRadius: 8, padding: '6px 14px', fontFamily: 'Karla,sans-serif', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}>💬 Text only</button>
                 </div>
               </div>
             )}
@@ -2057,7 +2057,7 @@ type AltListener = {
 export default function SessionPage() {
   return (
     <Suspense fallback={
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Nunito,sans-serif', color: '#3B2F2A' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'Karla,sans-serif', color: '#3B2F2A' }}>
         Starting session...
       </div>
     }>

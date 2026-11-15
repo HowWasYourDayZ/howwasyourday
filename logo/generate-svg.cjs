@@ -3,7 +3,7 @@
 //   npm i --no-save opentype.js@1.3.4 && node logo/generate-svg.cjs   (then node logo/export.mjs)
 const fs = require('fs'), path = require('path'), opentype = require('opentype.js')
 const OUT = path.join(__dirname, 'svg')
-const font = opentype.loadSync(path.join(__dirname, '../node_modules/@fontsource/nunito/files/nunito-latin-900-normal.woff'))
+const font = opentype.loadSync(path.join(__dirname, '../node_modules/@fontsource/lora/files/lora-latin-600-normal.woff'))
 const C = { sun: '#E8743B', ink: '#3B2F2A', white: '#FFFFFF' }
 
 // ── Mark, 512 grid: a speech bubble (talk) holding a sun (your day) — circle + 8 rays. ──

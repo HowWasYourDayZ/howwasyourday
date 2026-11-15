@@ -8,7 +8,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-body{font-family:Nunito,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+body{font-family:Karla,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 .page{max-width:460px;margin:0 auto;padding:24px 20px 80px;}
 .topbar{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
 .back{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.8);border:1.5px solid var(--border);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;}
@@ -20,8 +20,8 @@ h1{font-size:22px;font-weight:900;}
 .notes-box{background:var(--light);border:1.5px solid var(--border);border-radius:14px;padding:16px;text-align:left;margin-bottom:20px;}
 .notes-label{font-size:11px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
 .notes-text{font-size:14px;color:var(--gray);line-height:1.6;font-weight:500;}
-.btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,116,59,.3);}
-.btn-outline{background:white;color:var(--teal);font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 32px;border-radius:50px;border:2px solid var(--teal);cursor:pointer;margin-top:10px;display:inline-block;}
+.btn{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,116,59,.3);}
+.btn-outline{background:white;color:var(--teal);font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:13px 32px;border-radius:50px;border:2px solid var(--teal);cursor:pointer;margin-top:10px;display:inline-block;}
 .steps{background:white;border:1.5px solid var(--border);border-radius:20px;padding:20px;margin-top:20px;}
 .step{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);}
 .step:last-child{border-bottom:none;}

@@ -20,7 +20,7 @@ const ID_TYPES = [
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Nunito,sans-serif;color:#3B2F2A;background:#FFF6EF;-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;color:#3B2F2A;background:#FFF6EF;-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:20px 20px 80px;}
   .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#B85520;background:none;border:none;cursor:pointer;margin-bottom:24px;padding:0;}
   h1{font-size:24px;font-weight:900;margin-bottom:6px;}
@@ -30,9 +30,9 @@ const S = `
   .step-dot.done{background:#B85520;}
   .step-dot.active{background:#3B2F2A;}
   .label{font-size:12px;font-weight:800;color:#6E5B50;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;display:block;}
-  .input{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#3B2F2A;outline:none;transition:border-color .15s;}
+  .input{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Karla,sans-serif;font-size:15px;color:#3B2F2A;outline:none;transition:border-color .15s;}
   .input:focus{border-color:#B85520;}
-  .select{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#3B2F2A;outline:none;background:white;}
+  .select{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Karla,sans-serif;font-size:15px;color:#3B2F2A;outline:none;background:white;}
   .field{margin-bottom:20px;}
   .note{background:#FFF6EF;border-left:3px solid #B85520;padding:10px 14px;border-radius:0 10px 10px 0;font-size:13px;color:#3B2F2A;font-weight:600;margin-bottom:20px;line-height:1.5;}
   .upload-box{border:2px dashed #F2DFD1;border-radius:14px;padding:28px;text-align:center;cursor:pointer;transition:border-color .15s;background:white;}
@@ -41,7 +41,7 @@ const S = `
   .upload-icon{font-size:32px;margin-bottom:8px;}
   .upload-label{font-size:14px;font-weight:700;color:#3B2F2A;margin-bottom:4px;}
   .upload-sub{font-size:12px;color:#6E5B50;font-weight:500;}
-  .btn{width:100%;padding:15px;border-radius:14px;border:none;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-top:8px;}
+  .btn{width:100%;padding:15px;border-radius:14px;border:none;font-family:Karla,sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-top:8px;}
   .btn-primary{background:#3B2F2A;color:white;}
   .btn-primary:disabled{background:#ccc;cursor:not-allowed;}
   .done-wrap{text-align:center;padding:40px 20px;}

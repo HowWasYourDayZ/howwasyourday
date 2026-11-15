@@ -1,13 +1,16 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
-// Nunito is self-hosted (served from our own domain) — loading it from Google
-// Fonts would send every visitor's IP address to Google (GDPR).
-import '@fontsource/nunito/400.css'
-import '@fontsource/nunito/500.css'
-import '@fontsource/nunito/600.css'
-import '@fontsource/nunito/700.css'
-import '@fontsource/nunito/800.css'
-import '@fontsource/nunito/900.css'
+// Fonts (2026-11-15, matching the reference design): Lora for headings, Karla for everything
+// else. Self-hosted (served from our own domain) — loading them from Google Fonts would send
+// every visitor's IP address to Google (GDPR).
+import '@fontsource/karla/400.css'
+import '@fontsource/karla/500.css'
+import '@fontsource/karla/600.css'
+import '@fontsource/karla/700.css'
+import '@fontsource/karla/800.css'
+import '@fontsource/lora/500.css'
+import '@fontsource/lora/600.css'
+import '@fontsource/lora/700.css'
 import BottomNav from './components/BottomNav'
 import ToastProvider from './components/ToastProvider'
 import ErrorBoundary from './components/ErrorBoundary'

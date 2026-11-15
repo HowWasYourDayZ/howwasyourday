@@ -56,7 +56,7 @@ export default function WeeklyHours() {
   const today = new Date().toISOString().slice(0, 10)
 
   return (
-    <section aria-labelledby="weekly-hours" style={{ background: 'white', border: '1.5px solid #F2DFD1', borderRadius: 18, padding: 16, margin: '0 0 20px', fontFamily: "'Nunito',sans-serif" }}>
+    <section aria-labelledby="weekly-hours" style={{ background: 'white', border: '1.5px solid #F2DFD1', borderRadius: 18, padding: 16, margin: '0 0 20px', fontFamily: "Karla,sans-serif" }}>
       <h2 id="weekly-hours" style={{ fontSize: 16, fontWeight: 900, color: '#3B2F2A', margin: '0 0 4px' }}>🗓️ Weekly hours for booked sessions</h2>
       <p style={{ fontSize: 12.5, color: '#6E5B50', fontWeight: 600, margin: '0 0 12px' }}>
         Seekers can book 8, 16 or 32-minute sessions inside these times (UK time), 2 hours to 14 days ahead, with a 10-minute gap between bookings.

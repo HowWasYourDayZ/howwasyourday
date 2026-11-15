@@ -74,7 +74,7 @@ export default function TalkLayout({ children }: { children: React.ReactNode }) 
       {children}
       <section className="talk-info" aria-labelledby="talk-info-h">
         <style dangerouslySetInnerHTML={{ __html: `
-          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:Nunito,system-ui,sans-serif;color:#3B2F2A;}
+          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:Karla,system-ui,sans-serif;color:#3B2F2A;}
           body.talk-busy .talk-info{display:none;}
           .talk-info h2{font-size:16px;font-weight:900;color:#3B2F2A;margin:26px 0 8px;}
           .talk-info details{border-bottom:1px solid #FFF6EF;padding:10px 0;}

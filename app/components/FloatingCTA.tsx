@@ -30,7 +30,7 @@ export default function FloatingCTA() {
         zIndex: 999,
         background: '#E8743B',
         color: 'white',
-        fontFamily: "'Nunito', sans-serif",
+        fontFamily: "Karla, sans-serif",
         fontWeight: 800,
         fontSize: 14,
         padding: '13px 22px',

@@ -10,7 +10,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:12px;}
@@ -31,13 +31,13 @@ a{text-decoration:none;color:inherit;}
 .amount{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:8px;}
 .rating-row{font-size:13px;font-weight:600;color:var(--gray);margin-bottom:10px;}
 .stars{color:#F59E0B;letter-spacing:1px;}
-.rejoin-btn{background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:13px;padding:10px 18px;border-radius:12px;border:none;cursor:pointer;transition:all .2s;}
+.rejoin-btn{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:13px;padding:10px 18px;border-radius:12px;border:none;cursor:pointer;transition:all .2s;}
 .rejoin-btn:hover{background:#D0632D;}
 .empty{text-align:center;padding:60px 20px;}
 .empty-icon{font-size:48px;margin-bottom:16px;}
 .empty h3{font-size:18px;font-weight:800;margin-bottom:8px;color:var(--navy);}
 .empty p{font-size:14px;color:var(--gray);font-weight:500;margin-bottom:24px;}
-.browse-btn{background:var(--navy);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:12px;border:none;cursor:pointer;}
+.browse-btn{background:var(--navy);color:white;font-family:Karla,sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:12px;border:none;cursor:pointer;}
 .loading{text-align:center;padding:60px 20px;font-size:16px;font-weight:600;color:var(--gray);}
 .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:16px;height:130px;margin-bottom:14px;}
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}

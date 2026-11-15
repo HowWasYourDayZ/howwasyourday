@@ -50,7 +50,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .page{max-width:480px;margin:0 auto;padding-bottom:280px;}
@@ -91,9 +91,9 @@ a{text-decoration:none;color:inherit;}
 .opt-free{font-size:10px;background:var(--orange);color:white;font-weight:800;padding:2px 7px;border-radius:50px;display:inline-block;margin-top:3px;}
 .type-row{display:flex;gap:6px;margin-bottom:12px;align-items:center;}
 .type-row-label{font-size:12px;font-weight:700;color:var(--gray);margin-right:4px;white-space:nowrap;}
-.type-btn{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;font-family:Nunito,sans-serif;font-weight:700;font-size:12px;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
+.type-btn{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;font-family:Karla,sans-serif;font-weight:700;font-size:12px;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
 .type-btn.sel{border-color:var(--navy);color:var(--navy);background:var(--light);}
-.btn-book{width:100%;padding:15px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(232,116,59,.3);}
+.btn-book{width:100%;padding:15px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(232,116,59,.3);}
 .btn-book:hover{background:#D0632D;}
 .btn-book:disabled{opacity:.5;cursor:not-allowed;}
 .wallet-warn{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:12px;padding:12px 16px;font-size:13px;color:#7A2020;font-weight:600;text-align:center;margin-bottom:12px;}
@@ -195,11 +195,11 @@ export default function ListenerClient({ id }: { id: string }) {
   if (notFound) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',color:'#3B2F2A',gap:16,padding:24,textAlign:'center'}}>
+      <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif',color:'#3B2F2A',gap:16,padding:24,textAlign:'center'}}>
         <div style={{fontSize:48}}>🔍</div>
         <div style={{fontSize:20,fontWeight:900}}>Listener not found</div>
         <div style={{fontSize:14,color:'#6E5B50',fontWeight:500}}>This profile may no longer be active.</div>
-        <button style={{background:'#E8743B',color:'white',border:'none',borderRadius:50,padding:'12px 28px',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer'}} onClick={()=>router.push('/browse')}>Browse listeners →</button>
+        <button style={{background:'#E8743B',color:'white',border:'none',borderRadius:50,padding:'12px 28px',fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer'}} onClick={()=>router.push('/browse')}>Browse listeners →</button>
       </div>
     </>
   )
@@ -207,7 +207,7 @@ export default function ListenerClient({ id }: { id: string }) {
   if (!listener) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',color:'#3B2F2A'}}>Loading...</div>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif',color:'#3B2F2A'}}>Loading...</div>
     </>
   )
 
@@ -377,16 +377,16 @@ export default function ListenerClient({ id }: { id: string }) {
 
       {showInsufficient && (
         <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,.5)',zIndex:200,display:'flex',alignItems:'flex-end',justifyContent:'center'}}>
-          <div style={{background:'white',borderRadius:'20px 20px 0 0',padding:24,width:'100%',maxWidth:480,fontFamily:'Nunito,sans-serif'}}>
+          <div style={{background:'white',borderRadius:'20px 20px 0 0',padding:24,width:'100%',maxWidth:480,fontFamily:'Karla,sans-serif'}}>
             <div style={{fontSize:24,marginBottom:12}}>💰</div>
             <div style={{fontSize:18,fontWeight:900,color:'#3B2F2A',marginBottom:8}}>Insufficient Balance</div>
             <div style={{fontSize:14,color:'#6E5B50',marginBottom:20,lineHeight:1.6}}>
               Your wallet has {formatGBP(balance)}. This session costs {formatGBP(cost)}. You need {formatGBP(cost - balance)} more.
             </div>
             <div style={{display:'flex',gap:10}}>
-              <button onClick={()=>setShowInsufficient(false)} style={{flex:1,padding:13,background:'white',border:'1.5px solid #F2DFD1',borderRadius:12,fontFamily:'Nunito,sans-serif',fontWeight:700,cursor:'pointer'}}>Cancel</button>
+              <button onClick={()=>setShowInsufficient(false)} style={{flex:1,padding:13,background:'white',border:'1.5px solid #F2DFD1',borderRadius:12,fontFamily:'Karla,sans-serif',fontWeight:700,cursor:'pointer'}}>Cancel</button>
               <a href={`/wallet?return=${encodeURIComponent(`/listener/${id}?from=wallet&type=${type}`)}`} style={{flex:1}}>
-                <button style={{width:'100%',padding:13,background:'#E8743B',color:'white',border:'none',borderRadius:12,fontFamily:'Nunito,sans-serif',fontWeight:800,cursor:'pointer'}}>Top Up Wallet →</button>
+                <button style={{width:'100%',padding:13,background:'#E8743B',color:'white',border:'none',borderRadius:12,fontFamily:'Karla,sans-serif',fontWeight:800,cursor:'pointer'}}>Top Up Wallet →</button>
               </a>
             </div>
           </div>
@@ -485,7 +485,7 @@ export default function ListenerClient({ id }: { id: string }) {
                   onChange={e => setMsgText(e.target.value)}
                   maxLength={300}
                   rows={4}
-                  style={{width:'100%',padding:'12px 14px',fontSize:14,fontFamily:'Nunito,sans-serif',fontWeight:500,color:'#3B2F2A',border:'1.5px solid #F2DFD1',borderRadius:14,outline:'none',resize:'none',marginBottom:6,boxSizing:'border-box'}}
+                  style={{width:'100%',padding:'12px 14px',fontSize:14,fontFamily:'Karla,sans-serif',fontWeight:500,color:'#3B2F2A',border:'1.5px solid #F2DFD1',borderRadius:14,outline:'none',resize:'none',marginBottom:6,boxSizing:'border-box'}}
                 />
                 <div style={{fontSize:11,color:'#6E5B50',fontWeight:600,textAlign:'right',marginBottom:10}}>
                   {msgText.trim().length}/300
@@ -495,7 +495,7 @@ export default function ListenerClient({ id }: { id: string }) {
                 </button>
                 <button
                   onClick={() => { setShowMsgCompose(false); setMsgText(''); setMsgError(null) }}
-                  style={{width:'100%',marginTop:8,padding:10,background:'none',border:'none',fontFamily:'Nunito,sans-serif',fontWeight:700,fontSize:13,color:'#6E5B50',cursor:'pointer'}}
+                  style={{width:'100%',marginTop:8,padding:10,background:'none',border:'none',fontFamily:'Karla,sans-serif',fontWeight:700,fontSize:13,color:'#6E5B50',cursor:'pointer'}}
                 >
                   Cancel
                 </button>

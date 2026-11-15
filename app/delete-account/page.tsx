@@ -12,7 +12,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--cream:#FFFAF6;}
-  body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   a{color:var(--orange);text-decoration:none;}
   .page{max-width:640px;margin:0 auto;padding:24px 20px 80px;}
   .back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--gray);margin-bottom:28px;}
@@ -31,7 +31,7 @@ export default function DeleteAccountPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
-        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
+        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png?v=2" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
         <br />
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Delete your How Was Your Day account</h1>

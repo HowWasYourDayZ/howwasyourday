@@ -34,7 +34,7 @@ type PayoutRequest = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Nunito,sans-serif;color:#3B2F2A;background:#FFF6EF;-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;color:#3B2F2A;background:#FFF6EF;-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:20px 20px 80px;}
   .topbar{display:flex;align-items:center;gap:12px;padding:0 0 20px;}
   .back{width:40px;height:40px;border-radius:12px;background:white;border:1.5px solid #F2DFD1;cursor:pointer;font-size:18px;color:#3B2F2A;display:flex;align-items:center;justify-content:center;}
@@ -53,22 +53,22 @@ const S = `
   .earning-net{font-size:18px;font-weight:900;color:#3B2F2A;}
   .earning-fee{font-size:11px;color:#6E5B50;font-weight:600;text-align:right;}
   .empty{text-align:center;padding:32px;color:#6E5B50;font-size:14px;font-weight:600;}
-  .btn-payout{width:100%;padding:15px;background:#E8743B;color:white;border:none;border-radius:14px;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-bottom:24px;}
+  .btn-payout{width:100%;padding:15px;background:#E8743B;color:white;border:none;border-radius:14px;font-family:Karla,sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-bottom:24px;}
   .btn-payout:disabled{background:#ccc;cursor:not-allowed;}
   .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;display:flex;align-items:flex-end;justify-content:center;}
-  .modal{background:white;border-radius:20px 20px 0 0;padding:24px 20px;width:100%;max-width:480px;font-family:Nunito,sans-serif;}
+  .modal{background:white;border-radius:20px 20px 0 0;padding:24px 20px;width:100%;max-width:480px;font-family:Karla,sans-serif;}
   .modal h2{font-size:18px;font-weight:900;margin-bottom:16px;}
-  .input{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Nunito,sans-serif;font-size:15px;color:#3B2F2A;outline:none;margin-bottom:14px;}
+  .input{width:100%;padding:12px 14px;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Karla,sans-serif;font-size:15px;color:#3B2F2A;outline:none;margin-bottom:14px;}
   .input:focus{border-color:#B85520;}
   .modal-btns{display:flex;gap:10px;}
-  .btn-cancel{flex:1;padding:14px;background:white;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;cursor:pointer;color:#3B2F2A;}
-  .btn-submit{flex:1;padding:14px;background:#3B2F2A;color:white;border:none;border-radius:12px;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;cursor:pointer;}
+  .btn-cancel{flex:1;padding:14px;background:white;border:1.5px solid #F2DFD1;border-radius:12px;font-family:Karla,sans-serif;font-weight:800;font-size:14px;cursor:pointer;color:#3B2F2A;}
+  .btn-submit{flex:1;padding:14px;background:#3B2F2A;color:white;border:none;border-radius:12px;font-family:Karla,sans-serif;font-weight:800;font-size:14px;cursor:pointer;}
   .btn-submit:disabled{background:#ccc;cursor:not-allowed;}
   .payout-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:50px;font-size:11px;font-weight:700;}
   .badge-pending{background:#FFF3E0;color:#E65100;}
   .badge-completed{background:#E8F5E9;color:#2E7D32;}
   .badge-rejected{background:#FFF0EF;color:#FF3B30;}
-  .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#3B2F2A;color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:12px 24px;border-radius:50px;z-index:200;}
+  .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#3B2F2A;color:white;font-family:Karla,sans-serif;font-weight:700;font-size:14px;padding:12px 24px;border-radius:50px;z-index:200;}
 `
 
 function fmt(pence: number) { return `${formatGBP(pence)}` }

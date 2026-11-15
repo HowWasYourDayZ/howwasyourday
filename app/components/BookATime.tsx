@@ -77,7 +77,7 @@ export default function BookATime({ listenerId, listenerName, voiceDisabled, sig
   const daySlots = days.find(([k]) => k === day)?.[1] ?? []
 
   return (
-    <section aria-labelledby="book-a-time" style={{ margin: '0 16px 24px', padding: 16, background: 'white', border: '1.5px solid #F2DFD1', borderRadius: 18, fontFamily: "'Nunito',sans-serif" }}>
+    <section aria-labelledby="book-a-time" style={{ margin: '0 16px 24px', padding: 16, background: 'white', border: '1.5px solid #F2DFD1', borderRadius: 18, fontFamily: "Karla,sans-serif" }}>
       <h2 id="book-a-time" style={{ fontSize: 17, fontWeight: 900, color: '#3B2F2A', margin: '0 0 4px' }}>📅 Book a time</h2>
       <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 600, margin: '0 0 12px' }}>
         Pick a slot from {listenerName}&apos;s weekly hours (UK time). The price is held now; cancel at least 2 hours before for a full refund.

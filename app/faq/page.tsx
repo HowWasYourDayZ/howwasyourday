@@ -129,7 +129,7 @@ const faqSchema = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Nunito,sans-serif;color:#3B2F2A;background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+  body{font-family:Karla,sans-serif;color:#3B2F2A;background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{background:transparent;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:52px;width:auto;}
@@ -148,7 +148,7 @@ const S = `
   .cta-box{background:linear-gradient(135deg,#3B2F2A 0%,#B85520 100%);border-radius:20px;padding:36px 28px;text-align:center;color:white;margin-top:48px;}
   .cta-box h2{font-size:22px;font-weight:900;margin-bottom:10px;}
   .cta-box p{font-size:15px;opacity:0.85;margin-bottom:24px;line-height:1.6;}
-  .btn-cta{background:#E8743B;color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
+  .btn-cta{background:#E8743B;color:white;font-family:Karla,sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
 `
 
 export default function FAQPage() {
@@ -157,8 +157,8 @@ export default function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav">
-        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" className="nav-logo" /></a>
-        <a href="/talk?src=seo" style={{background:'#E8743B',color:'white',fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
+        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/talk?src=seo" style={{background:'#E8743B',color:'white',fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
       </nav>
 
       <div className="wrap">

@@ -112,7 +112,7 @@ export default function NotificationsBell() {
             fontSize: 10, fontWeight: 800,
             width: 16, height: 16, borderRadius: 8,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontFamily: "'Nunito', sans-serif",
+            fontFamily: "Karla, sans-serif",
           }}>
             {unread > 9 ? '9+' : unread}
           </span>
@@ -126,7 +126,7 @@ export default function NotificationsBell() {
           border: '1.5px solid #F2DFD1',
           boxShadow: '0 8px 32px rgba(59,47,42,0.15)',
           width: 300, zIndex: 500,
-          fontFamily: "'Nunito', sans-serif",
+          fontFamily: "Karla, sans-serif",
           overflow: 'hidden',
         }}>
           <div style={{

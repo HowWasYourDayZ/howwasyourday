@@ -15,7 +15,7 @@ function hideOn(pathname: string): boolean {
 const APP_SCREENS = ['/browse', '/dashboard', '/wallet', '/history', '/profile', '/notifications', '/sessions']
 const isAppScreen = (p: string) => APP_SCREENS.some(s => p === s || p.startsWith(s + '/'))
 
-const CSS = `.site-footer{font-family:Nunito,sans-serif;background:#FFF6EF;border-top:1.5px solid #F2DFD1;color:#6E5B50;padding:28px 20px calc(84px + env(safe-area-inset-bottom,0px));}
+const CSS = `.site-footer{font-family:Karla,sans-serif;background:#FFF6EF;border-top:1.5px solid #F2DFD1;color:#6E5B50;padding:28px 20px calc(84px + env(safe-area-inset-bottom,0px));}
 .site-footer-inner{max-width:720px;margin:0 auto;text-align:center}
 .sf-help{font-size:16px;font-weight:900;color:#3B2F2A;margin:0 0 6px}
 .sf-sub{font-size:13.5px;font-weight:600;color:#6E5B50;line-height:1.6;margin:0 0 14px}

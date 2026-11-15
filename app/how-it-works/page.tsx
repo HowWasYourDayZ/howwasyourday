@@ -57,7 +57,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-  body{font-family:Nunito,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+  body{font-family:Karla,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   nav{padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;max-width:760px;margin:0 auto;}
   .page{max-width:720px;margin:0 auto;padding:16px 20px 110px;}
@@ -79,7 +79,7 @@ const S = `
   .cta{text-align:center;background:var(--navy);border-radius:24px;padding:30px 22px;color:white;margin-top:8px;}
   .cta h2{font-size:21px;font-weight:900;margin-bottom:8px;}
   .cta p{font-size:14px;opacity:.85;margin-bottom:18px;}
-  .btn{display:inline-block;background:var(--orange);color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 26px;border-radius:50px;border:none;cursor:pointer;margin:4px;}
+  .btn{display:inline-block;background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:13px 26px;border-radius:50px;border:none;cursor:pointer;margin:4px;}
   .btn.alt{background:white;color:var(--navy);}
 `
 
@@ -90,7 +90,7 @@ export default function HowItWorksPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
-        <a href="/"><img src="/brand/logo.png" alt="How Was Your Day" style={{ height: 48 }} /></a>
+        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" style={{ height: 48 }} /></a>
         <a href="/talk"><button className="btn" style={{ fontSize: 13, padding: '8px 18px', margin: 0 }}>Talk now</button></a>
       </nav>
       <main className="page">

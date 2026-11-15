@@ -25,7 +25,7 @@ const TOPICS: [string, string][] = [
 
 const CSS = `
 .mn{--sun:#E8743B;--ember:#B85520;--ember-d:#9E4719;--peach:#FFF6EF;--apricot:#FBE3D2;--line:#F2DFD1;--ink:#3B2F2A;--muted:#6E5B50;
-  font-family:Nunito,sans-serif;color:var(--ink);background:#FFFCF9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  font-family:Karla,sans-serif;color:var(--ink);background:#FFFCF9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .mn *{box-sizing:border-box;margin:0;padding:0}
 .mn a{text-decoration:none;color:inherit}
 .mn :focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:12px}
@@ -37,9 +37,9 @@ const CSS = `
 .mn-nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:12px}
 .mn-nav img{height:38px;width:auto;display:block}
 .mn-nav nav{display:flex;align-items:center;gap:4px}
-.mn-link{white-space:nowrap;font-size:14.5px;font-weight:700;color:var(--muted)!important;padding:9px 12px;border-radius:12px}
+.mn-link{white-space:nowrap;font-size:14.5px;font-weight:500;color:var(--muted)!important;padding:9px 12px;border-radius:12px}
 .mn-link:hover{color:var(--ink)!important;background:var(--peach)}
-.mn-btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:800;font-size:15.5px;padding:13px 30px;border:1.5px solid transparent;transition:background .15s,border-color .15s;text-align:center}
+.mn-btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:600;font-size:15.5px;padding:13px 30px;border:1.5px solid transparent;transition:background .15s,border-color .15s;text-align:center}
 .mn-btn.p{background:var(--ember);color:#fff!important}
 .mn-btn.p:hover{background:var(--ember-d)}
 .mn-btn.g{background:transparent;color:var(--ember)!important;border-color:rgba(184,85,32,.3)}
@@ -51,7 +51,7 @@ const CSS = `
 @media(max-width:520px){.mn-nav img{height:32px}.mn-link{padding:8px 7px;font-size:13.5px}.mn-btn.s{padding:8px 14px;font-size:13.5px}}
 
 .mn-hero{text-align:center;padding:88px 0 120px;background:radial-gradient(ellipse 60% 55% at 50% 30%,#FFF0E5 0%,rgba(255,252,249,0) 70%)}
-.mn-pill{display:inline-flex;align-items:center;gap:7px;background:var(--peach);border:1px solid var(--line);color:var(--ember);font-weight:700;font-size:13.5px;padding:6px 14px;border-radius:999px;margin-bottom:26px}
+.mn-pill{display:inline-flex;align-items:center;gap:7px;background:var(--peach);border:1px solid var(--line);color:var(--ember);font-weight:500;font-size:13.5px;padding:6px 14px;border-radius:999px;margin-bottom:26px}
 .mn-pill svg{width:15px;height:15px}
 .mn-h1{font-size:clamp(46px,7.5vw,72px);font-weight:800;line-height:1.04;letter-spacing:-1.5px;margin-bottom:24px}
 .mn-h1 span{color:var(--sun);display:block}
@@ -61,7 +61,7 @@ const CSS = `
 
 .mn-sec{padding:88px 0}
 .mn-sec.alt{background:var(--peach);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.mn-head{text-align:center;max-width:560px;margin:0 auto 44px}
+.mn-head{text-align:center;max-width:680px;margin:0 auto 44px}
 .mn-h2{font-size:clamp(28px,3.6vw,36px);font-weight:800;line-height:1.2;letter-spacing:-.5px;margin-bottom:12px}
 .mn-sub{font-size:16px;line-height:1.6;color:var(--muted)}
 .mn-grid{display:grid;gap:18px}
@@ -75,7 +75,7 @@ const CSS = `
 .mn-card p{font-size:14.5px;line-height:1.6;color:var(--muted)}
 
 .mn-topics{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:720px;margin:0 auto}
-.mn-topic{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:14.5px;font-weight:700;color:var(--ink);transition:border-color .15s,color .15s}
+.mn-topic{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:14.5px;font-weight:500;color:var(--ink);transition:border-color .15s,color .15s}
 .mn-topic:hover{border-color:var(--sun);color:var(--ember)}
 
 .mn-safe{display:grid;gap:28px}
@@ -128,7 +128,7 @@ export default function Home() {
 
       <div className="mn-top">
         <div className="mn-wrap mn-nav">
-          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png" alt="How Was Your Day" width={122} height={38} /></a>
+          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=2" alt="How Was Your Day" width={122} height={38} /></a>
           <nav aria-label="Main">
             <a className="mn-link" href="/about">About</a>
             <a className="mn-link mn-hide-sm" href="/become-a-peer-supporter">Become a Listener</a>
@@ -232,7 +232,7 @@ export default function Home() {
 
       <footer className="mn-foot">
         <div className="mn-wrap mn-foot-in">
-          <div className="mn-foot-brand"><img src="/brand/logo.png" alt="How Was Your Day" width={90} height={28} /> · Everyone deserves to feel heard.</div>
+          <div className="mn-foot-brand"><img src="/brand/logo.png?v=2" alt="How Was Your Day" width={90} height={28} /> · Everyone deserves to feel heard.</div>
           <nav aria-label="Footer">
             <a href="/about">About us</a>
             <a href="/safeguarding">Safety</a>

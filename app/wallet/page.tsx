@@ -12,7 +12,7 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-  body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+  body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
     background:radial-gradient(ellipse 90% 55% at 0% 0%, #FDE6D6 0%, #FFF1E6 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 88px;}
@@ -23,7 +23,7 @@ const S = `
   .balance-label{font-size:13px;color:rgba(251,227,210,0.7);font-weight:700;margin-bottom:8px;}
   .balance-amount{font-size:48px;font-weight:900;color:white;margin-bottom:6px;}
   .balance-sub{font-size:13px;color:rgba(251,227,210,0.6);font-weight:500;}
-  .refund-btn{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2);font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:8px 18px;border-radius:50px;cursor:pointer;margin-top:16px;}
+  .refund-btn{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2);font-family:Karla,sans-serif;font-weight:700;font-size:13px;padding:8px 18px;border-radius:50px;cursor:pointer;margin-top:16px;}
   .section-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;}
   .presets{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
   .preset{background:white;border:2px solid var(--border);border-radius:16px;padding:18px;text-align:center;cursor:pointer;transition:all 0.2s;}
@@ -31,7 +31,7 @@ const S = `
   .preset-amount{font-size:22px;font-weight:900;color:var(--navy);}
   .preset-sessions{font-size:12px;color:var(--gray);font-weight:600;margin-top:4px;}
   .preset-tag{font-size:10px;background:var(--orange);color:white;font-weight:800;padding:3px 8px;border-radius:50px;display:inline-block;margin-top:6px;}
-  .btn{width:100%;padding:16px;font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(232,116,59,0.3);}
+  .btn{width:100%;padding:16px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(232,116,59,0.3);}
   .btn:hover{background:#D0632D;}
   .btn:disabled{opacity:0.5;cursor:not-allowed;}
   .note{background:rgba(184,85,32,0.08);border:1px solid rgba(184,85,32,0.2);border-radius:14px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;margin-bottom:24px;}
@@ -283,7 +283,7 @@ function WalletPageInner() {
       <div className="page">
         {/* Context banner: user came from the free-trial conversion screen */}
         {returnUrl && (
-          <div style={{background:'#3B2F2A',color:'white',padding:'12px 20px',margin:'0 -20px',fontFamily:'Nunito,sans-serif',fontSize:14,fontWeight:700,lineHeight:1.5,borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
+          <div style={{background:'#3B2F2A',color:'white',padding:'12px 20px',margin:'0 -20px',fontFamily:'Karla,sans-serif',fontSize:14,fontWeight:700,lineHeight:1.5,borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
             💙 Top up to continue your conversation — your listener is still available.
           </div>
         )}
@@ -307,7 +307,7 @@ function WalletPageInner() {
               </div>
               <button
                 onClick={() => router.push('/dashboard/earnings')}
-                style={{ width: '100%', padding: '9px 0', borderRadius: 50, background: 'white', color: 'var(--navy)', border: 'none', fontFamily: 'Nunito,sans-serif', fontWeight: 800, fontSize: 13, cursor: 'pointer' }}
+                style={{ width: '100%', padding: '9px 0', borderRadius: 50, background: 'white', color: 'var(--navy)', border: 'none', fontFamily: 'Karla,sans-serif', fontWeight: 800, fontSize: 13, cursor: 'pointer' }}
               >
                 Withdraw Earnings →
               </button>
@@ -322,10 +322,10 @@ function WalletPageInner() {
                   Request a refund of {formatGBP(balance ?? 0)} to your original payment method? We&apos;ll process it within 3–5 business days.
                 </p>
                 <div style={{ display: 'flex', gap: 8 }}>
-                  <button onClick={confirmRefund} style={{ flex: 1, padding: '9px 0', borderRadius: 50, background: 'white', color: 'var(--navy)', border: 'none', fontFamily: 'Nunito,sans-serif', fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>
+                  <button onClick={confirmRefund} style={{ flex: 1, padding: '9px 0', borderRadius: 50, background: 'white', color: 'var(--navy)', border: 'none', fontFamily: 'Karla,sans-serif', fontWeight: 800, fontSize: 13, cursor: 'pointer' }}>
                     Yes, refund
                   </button>
-                  <button onClick={() => setShowRefundConfirm(false)} style={{ flex: 1, padding: '9px 0', borderRadius: 50, background: 'transparent', color: 'rgba(255,255,255,0.8)', border: '1px solid rgba(255,255,255,0.3)', fontFamily: 'Nunito,sans-serif', fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
+                  <button onClick={() => setShowRefundConfirm(false)} style={{ flex: 1, padding: '9px 0', borderRadius: 50, background: 'transparent', color: 'rgba(255,255,255,0.8)', border: '1px solid rgba(255,255,255,0.3)', fontFamily: 'Karla,sans-serif', fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
                     Cancel
                   </button>
                 </div>
@@ -352,7 +352,7 @@ function WalletPageInner() {
             <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:12,maxWidth:320,margin:'0 auto 20px'}}>
               {PRESETS.map(p => p.amount).map(amt => (
                 <button key={amt} onClick={() => setSelected(amt)}
-                  style={{background: selected===amt ? '#FFF8F0' : 'white',border:`2px solid ${selected===amt?'var(--orange)':'var(--border)'}`,borderRadius:16,padding:'16px 8px',textAlign:'center',cursor:'pointer',fontFamily:'Nunito,sans-serif',fontWeight:900,fontSize:20,color:'var(--navy)'}}>
+                  style={{background: selected===amt ? '#FFF8F0' : 'white',border:`2px solid ${selected===amt?'var(--orange)':'var(--border)'}`,borderRadius:16,padding:'16px 8px',textAlign:'center',cursor:'pointer',fontFamily:'Karla,sans-serif',fontWeight:900,fontSize:20,color:'var(--navy)'}}>
                   {formatGBP(amt)}
                 </button>
               ))}
@@ -390,7 +390,7 @@ function WalletPageInner() {
                 const n = parseInt(v, 10)
                 if (!isNaN(n) && n * 100 >= MIN_RECHARGE && n * 100 <= MAX_RECHARGE) setSelected(n * 100)
               }}
-              style={{flex:1,padding:'12px 16px 12px 4px',fontFamily:'Nunito,sans-serif',fontSize:16,fontWeight:700,color:'var(--navy)',border:'none',outline:'none',background:'transparent'}}
+              style={{flex:1,padding:'12px 16px 12px 4px',fontFamily:'Karla,sans-serif',fontSize:16,fontWeight:700,color:'var(--navy)',border:'none',outline:'none',background:'transparent'}}
             />
           </div>
           {customInput && (() => {

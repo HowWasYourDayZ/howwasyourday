@@ -43,7 +43,7 @@ export default function BottomNav() {
         .nav-tab{
           flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
           padding:10px 0 8px;cursor:pointer;border:none;background:transparent;
-          font-family:Nunito,sans-serif;font-weight:600;font-size:11px;
+          font-family:Karla,sans-serif;font-weight:600;font-size:11px;
           color:#6E5B50;transition:color .15s;gap:3px;
         }
         .nav-tab.active{color:#3B2F2A;}

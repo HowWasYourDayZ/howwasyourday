@@ -83,7 +83,7 @@ export default function CookieConsent({ gaId }: { gaId?: string }) {
   if (!open) return null
   return (
     <div role="dialog" aria-modal="false" aria-labelledby="cc-title" aria-describedby="cc-desc"
-      style={{ position: 'fixed', left: 12, right: 12, bottom: 12, zIndex: 10000, maxWidth: 560, margin: '0 auto', background: '#fff', color: '#3B2F2A', border: '1.5px solid #F2DFD1', borderRadius: 18, boxShadow: '0 10px 40px rgba(59,47,42,.18)', padding: '16px 18px', fontFamily: 'Nunito, system-ui, sans-serif' }}>
+      style={{ position: 'fixed', left: 12, right: 12, bottom: 12, zIndex: 10000, maxWidth: 560, margin: '0 auto', background: '#fff', color: '#3B2F2A', border: '1.5px solid #F2DFD1', borderRadius: 18, boxShadow: '0 10px 40px rgba(59,47,42,.18)', padding: '16px 18px', fontFamily: 'Karla, system-ui, sans-serif' }}>
       <p id="cc-title" style={{ margin: '0 0 6px', fontWeight: 900, fontSize: 15 }}>Cookies on How Was Your Day</p>
       <p id="cc-desc" style={{ margin: '0 0 12px', fontSize: 13.5, lineHeight: 1.55, color: '#4A3C34', fontWeight: 600 }}>
         We use essential cookies to keep you signed in and the site secure. With your permission we&apos;d also like to use

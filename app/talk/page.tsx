@@ -392,7 +392,7 @@ function TalkInner() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        .tk{max-width:520px;margin:0 auto;padding:28px 18px 120px;font-family:Nunito,system-ui,sans-serif;color:#3B2F2A;}
+        .tk{max-width:520px;margin:0 auto;padding:28px 18px 120px;font-family:Karla,system-ui,sans-serif;color:#3B2F2A;}
         .tk h1{font-size:25px;font-weight:900;color:#3B2F2A;line-height:1.25;margin:6px 0 8px;}
         .tk .sub{font-size:14.5px;color:#6E5B50;line-height:1.55;margin-bottom:18px;}
         .tk .chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;}

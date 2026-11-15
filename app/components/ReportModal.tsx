@@ -85,7 +85,7 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
       <div style={{
         background: 'white', borderRadius: 20, padding: '28px 24px',
         width: '100%', maxWidth: 400,
-        fontFamily: "'Nunito', sans-serif",
+        fontFamily: "Karla, sans-serif",
         boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
       }}>
         {submitted ? (
@@ -121,7 +121,7 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
                 onChange={e => setReason(e.target.value)}
                 style={{
                   width: '100%', padding: '10px 12px', border: '1.5px solid #F2DFD1',
-                  borderRadius: 10, fontFamily: "'Nunito', sans-serif",
+                  borderRadius: 10, fontFamily: "Karla, sans-serif",
                   fontSize: 14, fontWeight: 600, color: '#3B2F2A', outline: 'none',
                   background: 'white',
                 }}
@@ -144,7 +144,7 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
                 rows={4}
                 style={{
                   width: '100%', padding: '10px 12px', border: '1.5px solid #F2DFD1',
-                  borderRadius: 10, fontFamily: "'Nunito', sans-serif",
+                  borderRadius: 10, fontFamily: "Karla, sans-serif",
                   fontSize: 14, fontWeight: 500, color: '#3B2F2A', outline: 'none',
                   resize: 'vertical', boxSizing: 'border-box',
                 }}
@@ -166,7 +166,7 @@ export default function ReportModal({ targetUserId, targetName, sessionId, onClo
                 width: '100%', padding: '14px',
                 background: loading || !reason || details.trim().length < 10 ? '#ccc' : '#FF3B30',
                 color: 'white', border: 'none', borderRadius: 12,
-                fontFamily: "'Nunito', sans-serif", fontWeight: 800, fontSize: 15,
+                fontFamily: "Karla, sans-serif", fontWeight: 800, fontSize: 15,
                 cursor: loading || !reason || details.trim().length < 10 ? 'not-allowed' : 'pointer',
               }}
             >

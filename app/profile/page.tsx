@@ -12,7 +12,7 @@ const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
+body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
   background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:12px;}
@@ -27,8 +27,8 @@ a{text-decoration:none;color:inherit;}
 .name-display{font-size:22px;font-weight:900;color:var(--navy);}
 .pencil-btn{background:none;border:none;cursor:pointer;font-size:16px;padding:4px;opacity:0.6;}
 .pencil-btn:hover{opacity:1;}
-.name-input{font-family:Nunito,sans-serif;font-size:18px;font-weight:800;color:var(--navy);border:2px solid var(--teal);border-radius:10px;padding:6px 12px;outline:none;width:200px;text-align:center;}
-.save-btn{background:var(--teal);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:7px 14px;border-radius:8px;border:none;cursor:pointer;}
+.name-input{font-family:Karla,sans-serif;font-size:18px;font-weight:800;color:var(--navy);border:2px solid var(--teal);border-radius:10px;padding:6px 12px;outline:none;width:200px;text-align:center;}
+.save-btn{background:var(--teal);color:white;font-family:Karla,sans-serif;font-weight:700;font-size:13px;padding:7px 14px;border-radius:8px;border:none;cursor:pointer;}
 .phone{font-size:14px;color:var(--gray);font-weight:600;margin-top:6px;}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;}
 .stat-card{background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px 12px;text-align:center;box-shadow:0 1px 4px rgba(59,47,42,.04);}
@@ -39,21 +39,21 @@ a{text-decoration:none;color:inherit;}
 .stat-label{font-size:11px;color:var(--gray);font-weight:600;}
 .listener-banner{background:var(--light);border:1.5px solid var(--border);border-radius:16px;padding:18px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;}
 .listener-banner p{font-size:14px;font-weight:700;color:var(--navy);}
-.go-btn{background:var(--navy);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
-.help-row{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:white;border:1.5px solid var(--border);border-radius:14px;padding:15px 18px;margin-bottom:12px;cursor:pointer;text-align:left;font-family:Nunito,sans-serif;transition:all .2s;}
+.go-btn{background:var(--navy);color:white;font-family:Karla,sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
+.help-row{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:white;border:1.5px solid var(--border);border-radius:14px;padding:15px 18px;margin-bottom:12px;cursor:pointer;text-align:left;font-family:Karla,sans-serif;transition:all .2s;}
 .help-row:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(59,47,42,.06);}
 .help-row-label{font-size:15px;font-weight:800;color:var(--navy);}
 .help-row-sub{font-size:12px;font-weight:600;color:var(--gray);margin-top:2px;}
 .help-row-arrow{font-size:18px;color:var(--gray);}
-.logout-btn{width:100%;background:white;color:#E53E3E;font-family:Nunito,sans-serif;font-weight:700;font-size:15px;padding:14px;border-radius:14px;border:1.5px solid #FED7D7;cursor:pointer;transition:all .2s;}
+.logout-btn{width:100%;background:white;color:#E53E3E;font-family:Karla,sans-serif;font-weight:700;font-size:15px;padding:14px;border-radius:14px;border:1.5px solid #FED7D7;cursor:pointer;transition:all .2s;}
 .logout-btn:hover{background:#FFF5F5;}
-.delete-btn{width:100%;background:transparent;color:#aaa;font-family:Nunito,sans-serif;font-weight:600;font-size:13px;padding:10px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;transition:color .2s;}
+.delete-btn{width:100%;background:transparent;color:#aaa;font-family:Karla,sans-serif;font-weight:600;font-size:13px;padding:10px;border-radius:14px;border:none;cursor:pointer;margin-top:8px;transition:color .2s;}
 .delete-btn:hover{color:#E53E3E;}
 .confirm-box{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:16px;padding:18px;margin-top:12px;}
 .confirm-box p{font-size:13px;color:#7A2020;font-weight:600;line-height:1.6;margin-bottom:14px;}
 .confirm-actions{display:flex;gap:10px;}
-.confirm-yes{flex:1;background:#E53E3E;color:white;font-family:Nunito,sans-serif;font-weight:800;font-size:14px;padding:11px;border-radius:10px;border:none;cursor:pointer;}
-.confirm-no{flex:1;background:white;color:var(--navy);font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:11px;border-radius:10px;border:1.5px solid var(--border);cursor:pointer;}
+.confirm-yes{flex:1;background:#E53E3E;color:white;font-family:Karla,sans-serif;font-weight:800;font-size:14px;padding:11px;border-radius:10px;border:none;cursor:pointer;}
+.confirm-no{flex:1;background:white;color:var(--navy);font-family:Karla,sans-serif;font-weight:700;font-size:14px;padding:11px;border-radius:10px;border:1.5px solid var(--border);cursor:pointer;}
 .loading{text-align:center;padding:60px 20px;font-size:16px;font-weight:600;color:var(--gray);}
 `
 
@@ -335,7 +335,7 @@ export default function ProfilePage() {
                   Type <strong>DELETE</strong> to confirm
                 </p>
                 <input
-                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Nunito, sans-serif', letterSpacing: 2 }}
+                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Karla, sans-serif', letterSpacing: 2 }}
                   value={deleteInput}
                   onChange={e => setDeleteInput(e.target.value.toUpperCase())}
                   placeholder="DELETE"
@@ -343,14 +343,14 @@ export default function ProfilePage() {
                 />
                 <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
                   <button
-                    style={{ flex: 1, padding: '12px 0', background: deleteInput === 'DELETE' ? '#B71C1C' : '#ccc', color: 'white', border: 'none', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: deleteInput === 'DELETE' ? 'pointer' : 'not-allowed', fontFamily: 'Nunito, sans-serif' }}
+                    style={{ flex: 1, padding: '12px 0', background: deleteInput === 'DELETE' ? '#B71C1C' : '#ccc', color: 'white', border: 'none', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: deleteInput === 'DELETE' ? 'pointer' : 'not-allowed', fontFamily: 'Karla, sans-serif' }}
                     onClick={handleDeleteAccount}
                     disabled={deleting || deleteInput !== 'DELETE'}
                   >
                     {deleting ? 'Deleting...' : 'Permanently delete'}
                   </button>
                   <button
-                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
+                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Karla, sans-serif' }}
                     onClick={() => setShowDeleteConfirm(false)}
                   >
                     Cancel

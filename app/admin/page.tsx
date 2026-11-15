@@ -150,13 +150,13 @@ const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;--green:#34C759;--red:#FF3B30;}
-  body{font-family:Nunito,sans-serif;background:var(--light);color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;background:var(--light);color:var(--navy);-webkit-font-smoothing:antialiased;}
   .page{max-width:1100px;margin:0 auto;padding:0 20px 80px;}
   .topbar{padding:24px 0 16px;display:flex;align-items:center;justify-content:space-between;}
   .topbar h1{font-size:26px;font-weight:900;color:var(--navy);}
   .topbar p{font-size:13px;color:var(--gray);font-weight:600;margin-top:4px;}
   .tab-row{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap;}
-  .tab-btn{padding:8px 16px;border-radius:50px;border:none;cursor:pointer;font-family:Nunito,sans-serif;font-weight:800;font-size:13px;transition:all .15s;}
+  .tab-btn{padding:8px 16px;border-radius:50px;border:none;cursor:pointer;font-family:Karla,sans-serif;font-weight:800;font-size:13px;transition:all .15s;}
   .tab-btn.active{background:var(--navy);color:white;}
   .tab-btn:not(.active){background:white;color:var(--gray);border:1.5px solid var(--border);}
   .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:32px;}
@@ -169,9 +169,9 @@ const S = `
   .section-title{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:10px;}
   .count-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;background:var(--orange);color:white;font-size:11px;font-weight:800;border-radius:50px;padding:0 6px;}
   .filter-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center;}
-  .filter-btn{padding:5px 14px;border-radius:50px;border:1.5px solid var(--border);background:white;font-family:Nunito,sans-serif;font-weight:700;font-size:12px;cursor:pointer;color:var(--gray);transition:all .15s;}
+  .filter-btn{padding:5px 14px;border-radius:50px;border:1.5px solid var(--border);background:white;font-family:Karla,sans-serif;font-weight:700;font-size:12px;cursor:pointer;color:var(--gray);transition:all .15s;}
   .filter-btn.active{background:var(--teal);color:white;border-color:var(--teal);}
-  .search-input{flex:1;min-width:160px;padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:Nunito,sans-serif;font-size:13px;outline:none;color:var(--navy);}
+  .search-input{flex:1;min-width:160px;padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-family:Karla,sans-serif;font-size:13px;outline:none;color:var(--navy);}
   .search-input:focus{border-color:var(--teal);}
   .table-wrap{overflow-x:auto;background:white;border:1.5px solid var(--border);border-radius:16px;}
   table{width:100%;border-collapse:collapse;}
@@ -187,7 +187,7 @@ const S = `
   .badge-gray{background:rgba(90,122,138,.12);color:var(--gray);}
   .badge-teal{background:rgba(184,85,32,.12);color:#9E4719;}
   .action-row{display:flex;gap:6px;flex-wrap:wrap;}
-  .btn{font-family:Nunito,sans-serif;font-weight:800;font-size:12px;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .15s;white-space:nowrap;}
+  .btn{font-family:Karla,sans-serif;font-weight:800;font-size:12px;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .15s;white-space:nowrap;}
   .btn:disabled{opacity:.45;cursor:not-allowed;}
   .btn-green{background:var(--green);color:white;}
   .btn-green:hover:not(:disabled){background:#2aad4a;}
@@ -215,7 +215,7 @@ const S = `
   .meta-text{font-size:12px;color:var(--gray);font-weight:600;margin-top:2px;}
   .skeleton{background:linear-gradient(90deg,#e8e8e4 25%,#f2f2ee 50%,#e8e8e4 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:14px;}
   @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-  .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;box-shadow:0 4px 24px rgba(59,47,42,.3);z-index:9999;animation:toastIn .25s ease;white-space:nowrap;}
+  .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;font-family:Karla,sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;box-shadow:0 4px 24px rgba(59,47,42,.3);z-index:9999;animation:toastIn .25s ease;white-space:nowrap;}
   .modal-overlay{position:fixed;inset:0;background:rgba(15,34,51,0.55);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;}
   .modal-card{background:white;border-radius:16px;padding:20px 22px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;}
   .transcript-card{max-width:640px;}
@@ -227,7 +227,7 @@ const S = `
   @keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(14px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
   .error-page{text-align:center;padding:80px 20px;}
   .error-page h2{font-size:22px;font-weight:900;color:var(--navy);margin-bottom:10px;}
-  .reject-input{width:100%;padding:7px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:Nunito,sans-serif;font-size:12px;margin-bottom:8px;outline:none;color:var(--navy);}
+  .reject-input{width:100%;padding:7px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:Karla,sans-serif;font-size:12px;margin-bottom:8px;outline:none;color:var(--navy);}
   .reject-input:focus{border-color:var(--red);}
 `
 
@@ -959,7 +959,7 @@ export default function AdminPage() {
   if (authChecking) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif',flexDirection:'column',gap:12}}>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif',flexDirection:'column',gap:12}}>
         <div style={{fontSize:32}}>🔐</div>
         <p style={{fontWeight:700,fontSize:16,color:'#3B2F2A'}}>Verifying access…</p>
       </div>
@@ -970,7 +970,7 @@ export default function AdminPage() {
   if (pinRequired && !pinVerified) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Nunito,sans-serif'}}>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif'}}>
         <div style={{background:'white',borderRadius:24,padding:'40px 32px',boxShadow:'0 8px 40px rgba(59,47,42,0.12)',maxWidth:360,width:'100%',textAlign:'center'}}>
           <div style={{fontSize:40,marginBottom:16}}>🔒</div>
           <h2 style={{fontSize:22,fontWeight:900,color:'#3B2F2A',marginBottom:8}}>Admin PIN Required</h2>
@@ -981,11 +981,11 @@ export default function AdminPage() {
             value={pinInput}
             onChange={e => { setPinInput(e.target.value); setPinError('') }}
             onKeyDown={e => { if (e.key === 'Enter') verifyPin() }}
-            style={{width:'100%',padding:'14px 16px',borderRadius:14,border:'2px solid #F2DFD1',fontFamily:'Nunito,sans-serif',fontSize:18,fontWeight:700,letterSpacing:'0.2em',textAlign:'center',outline:'none',boxSizing:'border-box',marginBottom:8}}
+            style={{width:'100%',padding:'14px 16px',borderRadius:14,border:'2px solid #F2DFD1',fontFamily:'Karla,sans-serif',fontSize:18,fontWeight:700,letterSpacing:'0.2em',textAlign:'center',outline:'none',boxSizing:'border-box',marginBottom:8}}
             autoFocus
           />
           {pinError && <p style={{color:'#FF3B30',fontSize:13,fontWeight:700,marginBottom:8}}>{pinError}</p>}
-          <button onClick={verifyPin} style={{width:'100%',padding:'14px',background:'#3B2F2A',color:'white',border:'none',borderRadius:50,fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer',marginTop:8}}>
+          <button onClick={verifyPin} style={{width:'100%',padding:'14px',background:'#3B2F2A',color:'white',border:'none',borderRadius:50,fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer',marginTop:8}}>
             Unlock Dashboard
           </button>
         </div>
@@ -996,7 +996,7 @@ export default function AdminPage() {
   if (denied) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center',minHeight:'100vh',fontFamily:'Nunito,sans-serif',background:'#FFF6EF',padding:'20px'}}>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',minHeight:'100vh',fontFamily:'Karla,sans-serif',background:'#FFF6EF',padding:'20px'}}>
         {authUser ? (
           // Logged in but not admin
           <div style={{textAlign:'center',padding:'40px 24px',maxWidth:380}}>
@@ -1016,7 +1016,7 @@ export default function AdminPage() {
             </p>
             <a
               href="/auth?redirect=/admin"
-              style={{display:'block',padding:'14px',background:'#3B2F2A',color:'white',textDecoration:'none',borderRadius:50,fontFamily:'Nunito,sans-serif',fontWeight:800,fontSize:15}}
+              style={{display:'block',padding:'14px',background:'#3B2F2A',color:'white',textDecoration:'none',borderRadius:50,fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:15}}
             >
               Sign in →
             </a>
@@ -1163,12 +1163,12 @@ export default function AdminPage() {
                                   { label: '📝 Bio/info', text: 'Please update your bio or application details.' },
                                   { label: '🏦 Bank details', text: 'Please provide a valid UK sort code and account number.' },
                                 ] as { label: string; text: string }[]).map(({ label, text }) => (
-                                  <button key={label} type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: '1.5px solid var(--border)', background: 'var(--light)', cursor: 'pointer', fontFamily: 'Nunito,sans-serif', fontWeight: 700, color: 'var(--navy)' }}
+                                  <button key={label} type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: '1.5px solid var(--border)', background: 'var(--light)', cursor: 'pointer', fontFamily: 'Karla,sans-serif', fontWeight: 700, color: 'var(--navy)' }}
                                     onClick={() => setRejectNotesOverview(prev => { const e = prev[l.user_id]?.trim(); return { ...prev, [l.user_id]: e ? `${e} ${text}` : text } })}>
                                     {label}
                                   </button>
                                 ))}
-                                <button type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: `1.5px solid ${retakeSelfie[l.user_id] ? '#d4a017' : 'var(--border)'}`, background: retakeSelfie[l.user_id] ? '#FFF3CD' : 'var(--light)', cursor: 'pointer', fontFamily: 'Nunito,sans-serif', fontWeight: 700, color: retakeSelfie[l.user_id] ? '#856404' : 'var(--navy)' }}
+                                <button type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: `1.5px solid ${retakeSelfie[l.user_id] ? '#d4a017' : 'var(--border)'}`, background: retakeSelfie[l.user_id] ? '#FFF3CD' : 'var(--light)', cursor: 'pointer', fontFamily: 'Karla,sans-serif', fontWeight: 700, color: retakeSelfie[l.user_id] ? '#856404' : 'var(--navy)' }}
                                   title="Requires a new verification selfie" onClick={() => setRetakeSelfie(prev => ({ ...prev, [l.user_id]: !prev[l.user_id] }))}>
                                   {retakeSelfie[l.user_id] ? '✓ ' : ''}🪪 New verification selfie
                                 </button>
@@ -2081,12 +2081,12 @@ export default function AdminPage() {
                                           { label: '📝 Bio/info', text: 'Please update your bio or application details.' },
                                           { label: '🏦 Bank details', text: 'Please provide a valid UK sort code and account number.' },
                                         ] as { label: string; text: string }[]).map(({ label, text }) => (
-                                          <button key={label} type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: '1.5px solid var(--border)', background: 'var(--light)', cursor: 'pointer', fontFamily: 'Nunito,sans-serif', fontWeight: 700, color: 'var(--navy)' }}
+                                          <button key={label} type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: '1.5px solid var(--border)', background: 'var(--light)', cursor: 'pointer', fontFamily: 'Karla,sans-serif', fontWeight: 700, color: 'var(--navy)' }}
                                             onClick={() => setRejectNotesListeners(prev => { const e = prev[l.user_id]?.trim(); return { ...prev, [l.user_id]: e ? `${e} ${text}` : text } })}>
                                             {label}
                                           </button>
                                         ))}
-                                        <button type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: `1.5px solid ${retakeSelfie[l.user_id] ? '#d4a017' : 'var(--border)'}`, background: retakeSelfie[l.user_id] ? '#FFF3CD' : 'var(--light)', cursor: 'pointer', fontFamily: 'Nunito,sans-serif', fontWeight: 700, color: retakeSelfie[l.user_id] ? '#856404' : 'var(--navy)' }}
+                                        <button type="button" style={{ fontSize: 10, padding: '3px 9px', borderRadius: 20, border: `1.5px solid ${retakeSelfie[l.user_id] ? '#d4a017' : 'var(--border)'}`, background: retakeSelfie[l.user_id] ? '#FFF3CD' : 'var(--light)', cursor: 'pointer', fontFamily: 'Karla,sans-serif', fontWeight: 700, color: retakeSelfie[l.user_id] ? '#856404' : 'var(--navy)' }}
                                           title="Requires the applicant to take a new verification selfie"
                                           onClick={() => setRetakeSelfie(prev => ({ ...prev, [l.user_id]: !prev[l.user_id] }))}>
                                           {retakeSelfie[l.user_id] ? '✓ ' : ''}🪪 New verification selfie
@@ -3345,7 +3345,7 @@ export default function AdminPage() {
               Type <strong>DELETE</strong> to confirm
             </p>
             <input
-              style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: "'Nunito', sans-serif", letterSpacing: 2 }}
+              style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: "Karla, sans-serif", letterSpacing: 2 }}
               value={deleteConfirmInput}
               onChange={e => setDeleteConfirmInput(e.target.value.toUpperCase())}
               placeholder="DELETE"
@@ -3353,14 +3353,14 @@ export default function AdminPage() {
             />
             <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
               <button
-                style={{ flex: 1, padding: '12px 0', background: deleteConfirmInput === 'DELETE' ? '#B71C1C' : '#ccc', color: 'white', border: 'none', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: deleteConfirmInput === 'DELETE' ? 'pointer' : 'not-allowed', fontFamily: "'Nunito', sans-serif" }}
+                style={{ flex: 1, padding: '12px 0', background: deleteConfirmInput === 'DELETE' ? '#B71C1C' : '#ccc', color: 'white', border: 'none', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: deleteConfirmInput === 'DELETE' ? 'pointer' : 'not-allowed', fontFamily: "Karla, sans-serif" }}
                 onClick={() => adminDeleteAccount(confirmDeleteUserId)}
                 disabled={deletingUser || deleteConfirmInput !== 'DELETE'}
               >
                 {deletingUser ? 'Deleting...' : 'Permanently delete'}
               </button>
               <button
-                style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "'Nunito', sans-serif" }}
+                style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: "Karla, sans-serif" }}
                 onClick={() => { setConfirmDeleteUserId(null); setDeleteConfirmInput('') }}
               >
                 Cancel

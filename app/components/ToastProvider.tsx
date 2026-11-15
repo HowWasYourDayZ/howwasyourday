@@ -30,7 +30,7 @@ export default function ToastProvider() {
   return (
     <div style={{ position: 'fixed', top: 16, left: '50%', transform: 'translateX(-50%)', zIndex: 9999, display: 'flex', flexDirection: 'column', gap: 8, width: 'min(92vw, 420px)', pointerEvents: 'none' }}>
       {toasts.map(t => (
-        <div key={t.id} style={{ background: COLORS[t.type], color: 'white', fontFamily: 'Nunito, sans-serif', fontWeight: 700, fontSize: 14, padding: '12px 20px', borderRadius: 14, boxShadow: '0 4px 20px rgba(0,0,0,0.18)', animation: 'toastIn .2s ease', pointerEvents: 'auto' }}>
+        <div key={t.id} style={{ background: COLORS[t.type], color: 'white', fontFamily: 'Karla, sans-serif', fontWeight: 700, fontSize: 14, padding: '12px 20px', borderRadius: 14, boxShadow: '0 4px 20px rgba(0,0,0,0.18)', animation: 'toastIn .2s ease', pointerEvents: 'auto' }}>
           {t.message}
         </div>
       ))}

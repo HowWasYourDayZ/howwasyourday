@@ -53,12 +53,12 @@ Rules: white text only on Ember (or darker), never on Sunset orange at body size
 Crisis callouts keep a red tint; nothing else introduces new hues.
 
 **Logo (2026-10-26):** a rounded speech bubble (talk) holding a sun — a circle with eight short rays (your
-day) — next to the wordmark *How Was* (ink) / *Your Day* (orange), set in Nunito Black and outlined to vector
+day) — next to the wordmark *How Was* (ink) / *Your Day* (orange), set in Lora SemiBold and outlined to vector
 paths. Master files live in **`logo/`** (see `logo/README.md`): SVGs in `logo/svg/`, transparent high-res PNGs
 and app icons in `logo/png/`. Regenerate with `logo/generate-svg.cjs` + `logo/export.mjs`, which also update
 `public/` (logo.png, icons, favicon) and the Android app icons/splash screens. Never redraw it by hand per page —
 use `/brand/logo.png` or `/brand/*.svg`.
-**Type:** Nunito (self-hosted), 800–900 for headings, 500–700 for body.
+**Type (2026-11-15, matching the reference design prompt.overskill.app):** **Lora** 600 for headings (h1–h3, and the logo wordmark), **Karla** 400–500 for body text, buttons and UI (700 for emphasis). Both self-hosted via `@fontsource` (never Google Fonts). Nunito was dropped as too playful.
 
 **Voice:** warm, plain British English, short sentences, no clinical language, no hype. Prices in £
 (`lib/money.ts`). Nothing about India, NRIs or any other country on the site, and the legacy product's name

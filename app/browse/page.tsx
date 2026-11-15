@@ -73,7 +73,7 @@ function WelcomeBanner({
         display:'flex', flexDirection:'column',
         alignItems:'center', justifyContent:'center',
         padding:'32px 28px',
-        fontFamily:'Nunito,sans-serif',
+        fontFamily:'Karla,sans-serif',
         textAlign:'center',
       }}>
         <div style={{fontSize:56, marginBottom:24, lineHeight:1}}>💙</div>
@@ -101,7 +101,7 @@ function WelcomeBanner({
             fontSize:17, fontWeight:900,
             cursor:'pointer', width:'100%', maxWidth:320,
             boxShadow:'0 4px 24px rgba(232,116,59,0.45)',
-            fontFamily:'Nunito,sans-serif',
+            fontFamily:'Karla,sans-serif',
           }}
         >
           {topicLabel ? `Find a ${topicLabel.toLowerCase()} listener →` : 'Find a listener →'}
@@ -115,7 +115,7 @@ function WelcomeBanner({
 
   // The one intro strip on /browse (it replaced a separate free-trial nudge).
   return (
-    <div style={{background:'var(--navy)',color:'white',padding:'10px 8px 10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:8,fontFamily:'Nunito,sans-serif'}}>
+    <div style={{background:'var(--navy)',color:'white',padding:'10px 8px 10px 20px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:8,fontFamily:'Karla,sans-serif'}}>
       <div style={{flex:1}}>
         <p style={{fontSize:14,fontWeight:800,margin:0,marginBottom:2}}>
           Not sure where to start?
@@ -262,7 +262,7 @@ const SAVED_KEY = 'howwasyourday_saved_listeners'
 const S = `
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;--apricot:#FBE3D2;}
-body{font-family:Nunito,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:#FFFCFA;}
+body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:#FFFCFA;}
 a{text-decoration:none;color:inherit;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px;}
@@ -286,10 +286,10 @@ a{text-decoration:none;color:inherit;}
 .tools{display:flex;gap:12px;align-items:center;margin-top:28px;flex-wrap:wrap;}
 .search{flex:1 1 320px;position:relative;}
 .search svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--gray);pointer-events:none;}
-.search input{width:100%;height:58px;padding:0 20px 0 50px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Nunito,sans-serif;font-size:16px;font-weight:600;color:var(--navy);outline:none;}
+.search input{width:100%;height:58px;padding:0 20px 0 50px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Karla,sans-serif;font-size:16px;font-weight:600;color:var(--navy);outline:none;}
 .search input:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(232,116,59,.12);}
 .search input::placeholder{color:#8A766B;font-weight:500;}
-.tbtn{height:58px;display:inline-flex;align-items:center;gap:10px;padding:0 24px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Nunito,sans-serif;font-size:16px;font-weight:700;color:var(--navy);cursor:pointer;white-space:nowrap;}
+.tbtn{height:58px;display:inline-flex;align-items:center;gap:10px;padding:0 24px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Karla,sans-serif;font-size:16px;font-weight:700;color:var(--navy);cursor:pointer;white-space:nowrap;}
 .tbtn:hover{border-color:var(--orange);}
 .tbtn.on{background:var(--teal);border-color:var(--teal);color:#fff;}
 .tbtn .cnt{background:var(--orange);color:#fff;border-radius:999px;font-size:12px;font-weight:900;padding:1px 8px;}
@@ -301,9 +301,9 @@ a{text-decoration:none;color:inherit;}
 .fpanel{margin-top:16px;background:#fff;border:1.5px solid var(--border);border-radius:24px;padding:20px;display:grid;gap:16px;}
 .fgroup h4{font-size:12.5px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
 .fchips{display:flex;flex-wrap:wrap;gap:8px;}
-.fchip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 15px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Nunito,sans-serif;font-size:14px;font-weight:700;color:var(--gray);cursor:pointer;}
+.fchip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 15px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Karla,sans-serif;font-size:14px;font-weight:700;color:var(--gray);cursor:pointer;}
 .fchip.on{background:var(--navy);border-color:var(--navy);color:#fff;}
-.freset{justify-self:start;background:none;border:none;font-family:Nunito,sans-serif;font-size:14px;font-weight:800;color:var(--teal);cursor:pointer;padding:4px 0;}
+.freset{justify-self:start;background:none;border:none;font-family:Karla,sans-serif;font-size:14px;font-weight:800;color:var(--teal);cursor:pointer;padding:4px 0;}
 
 .count{margin:28px 0 16px;font-size:16px;font-weight:700;color:var(--gray);}
 
@@ -345,17 +345,17 @@ a{text-decoration:none;color:inherit;}
 .empty h3{font-size:22px;font-weight:900;margin-bottom:8px;}
 .empty p{font-size:15.5px;color:var(--gray);line-height:1.7;max-width:420px;margin:0 auto 24px;font-weight:600;}
 .empty .acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.empty .acts button,.empty .acts a{font-family:Nunito,sans-serif;font-weight:800;font-size:15px;padding:13px 24px;border-radius:999px;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--navy);}
+.empty .acts button,.empty .acts a{font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:13px 24px;border-radius:999px;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--navy);}
 .empty .acts .p{background:var(--teal);border-color:var(--teal);color:#fff;}
 .empty small{display:block;margin-top:20px;font-size:13.5px;color:var(--gray);font-weight:600;}
 .empty small a{color:#B71C1C;font-weight:800;}
 
-.session-toast{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--orange);color:white;font-family:Nunito,sans-serif;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 20px rgba(232,116,59,.35);animation:toastDrop .25s ease;}
+.session-toast{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--orange);color:white;font-family:Karla,sans-serif;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 20px rgba(232,116,59,.35);animation:toastDrop .25s ease;}
 @keyframes toastDrop{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:translateY(0)}}
 .session-toast-text{font-size:14px;font-weight:800;}
 .session-toast-sub{font-size:12px;font-weight:600;opacity:.85;margin-top:2px;}
-.btn-toast-join{background:white;color:var(--orange);font-family:Nunito,sans-serif;font-weight:800;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
-.btn-toast-dismiss{background:transparent;color:white;font-family:Nunito,sans-serif;font-weight:700;font-size:20px;border:none;cursor:pointer;padding:0 4px;line-height:1;}
+.btn-toast-join{background:white;color:var(--orange);font-family:Karla,sans-serif;font-weight:800;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
+.btn-toast-dismiss{background:transparent;color:white;font-family:Karla,sans-serif;font-weight:700;font-size:20px;border:none;cursor:pointer;padding:0 4px;line-height:1;}
 `
 
 function BrowseContent() {
@@ -708,7 +708,7 @@ function BrowseContent() {
       />
       <header className="bh">
         <div className="wrap bh-row">
-          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png" alt="How Was Your Day" width={128} height={40} /></a>
+          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=2" alt="How Was Your Day" width={128} height={40} /></a>
           <nav className="bh-nav" aria-label="Account">
             {authChecked && (myUserId ? (
               <>

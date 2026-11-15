@@ -110,7 +110,7 @@ export default function AlertsSetupPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        .as-wrap{max-width:560px;margin:0 auto;padding:20px 16px 120px;font-family:Nunito,system-ui,sans-serif;color:#3B2F2A;}
+        .as-wrap{max-width:560px;margin:0 auto;padding:20px 16px 120px;font-family:Karla,system-ui,sans-serif;color:#3B2F2A;}
         .as-wrap h1{font-size:22px;font-weight:900;color:#3B2F2A;margin:8px 0 6px;}
         .as-lead{font-size:14px;color:#6E5B50;line-height:1.55;margin-bottom:18px;}
         .as-step{background:#fff;border:1.5px solid #F2DFD1;border-radius:14px;padding:14px;margin-bottom:12px;}
