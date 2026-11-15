@@ -49,9 +49,9 @@ const TAGS: Record<string,string> = {
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+:root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
 body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FCE5D3 0%,#FDEEDB 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .page{max-width:480px;margin:0 auto;padding-bottom:280px;}
 .topbar{display:flex;align-items:center;gap:12px;padding:16px 20px;}
@@ -61,28 +61,28 @@ a{text-decoration:none;color:inherit;}
 .av{width:96px;height:96px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:32px;color:white;position:relative;flex-shrink:0;overflow:hidden;}
 .av img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
 .av-dot{position:absolute;bottom:2px;right:2px;width:18px;height:18px;border-radius:50%;border:3px solid white;}
-.av-dot.on{background:#34C759;}.av-dot.off{background:#C7C7CC;}.av-dot.busy{background:#E8743B;}
+.av-dot.on{background:#34C759;}.av-dot.off{background:#C7C7CC;}.av-dot.busy{background:#E65A22;}
 .listener-name{font-size:24px;font-weight:900;color:var(--navy);margin-bottom:4px;}
-.verified-badge{display:inline-flex;align-items:center;gap:4px;background:#FFF6EF;color:#3B2F2A;font-size:11px;font-weight:800;padding:3px 8px;border-radius:50px;border:1.5px solid #F2DFD1;}
+.verified-badge{display:inline-flex;align-items:center;gap:4px;background:#FFF6E8;color:#172B4D;font-size:11px;font-weight:800;padding:3px 8px;border-radius:50px;border:1.5px solid #EEDFCB;}
 .stats-row{display:flex;align-items:center;gap:12px;}
 .stat{font-size:13px;color:var(--gray);font-weight:600;}
 .rate-badge{background:var(--orange);color:white;font-weight:800;font-size:14px;padding:5px 14px;border-radius:50px;margin-left:auto;}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
-.tag{background:rgba(184,85,32,.1);color:var(--navy);font-size:12px;font-weight:700;padding:5px 12px;border-radius:50px;}
-.bio{font-size:15px;color:#4A3C34;line-height:1.7;font-weight:500;margin-bottom:16px;}
+.tag{background:rgba(194,71,26,.1);color:var(--navy);font-size:12px;font-weight:700;padding:5px 12px;border-radius:50px;}
+.bio{font-size:15px;color:#24395C;line-height:1.7;font-weight:500;margin-bottom:16px;}
 .story-card{background:white;border:1.5px solid var(--border);border-radius:18px;padding:18px;margin:0 20px 24px;}
 .story-label{font-size:11px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
-.story-text{font-size:14px;color:#4A3C34;line-height:1.65;font-weight:500;font-style:italic;}
+.story-text{font-size:14px;color:#24395C;line-height:1.65;font-weight:500;font-style:italic;}
 .reviews-section{padding:0 20px;margin-bottom:28px;}
 .sec-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;}
 .reviews{display:flex;flex-direction:column;gap:10px;}
 .review{background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px;}
 .review-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;}
 .review-stars{font-size:13px;color:var(--orange);}
-.review-date{font-size:11px;color:#8A766B;font-weight:600;}
-.review-text{font-size:13px;color:#4A3C34;font-weight:500;line-height:1.55;margin-bottom:8px;}
+.review-date{font-size:11px;color:#66768F;font-weight:600;}
+.review-text{font-size:13px;color:#24395C;font-weight:500;line-height:1.55;margin-bottom:8px;}
 .review-name{font-size:12px;color:var(--gray);font-weight:700;}
-.book-bar{position:fixed;bottom:60px;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:white;border-top:1px solid var(--border);padding:16px 20px;box-shadow:0 -4px 24px rgba(59,47,42,.1);}
+.book-bar{position:fixed;bottom:60px;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:white;border-top:1px solid var(--border);padding:16px 20px;box-shadow:0 -4px 24px rgba(23,43,77,.1);}
 .book-opts{display:flex;gap:8px;margin-bottom:12px;}
 .book-opt{flex:1;padding:12px;border:2px solid var(--border);border-radius:14px;text-align:center;cursor:pointer;transition:all .15s;background:white;}
 .book-opt.sel{border-color:var(--orange);background:#FFF3E0;}
@@ -93,8 +93,8 @@ a{text-decoration:none;color:inherit;}
 .type-row-label{font-size:12px;font-weight:700;color:var(--gray);margin-right:4px;white-space:nowrap;}
 .type-btn{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;font-family:Karla,sans-serif;font-weight:700;font-size:12px;color:var(--gray);background:white;cursor:pointer;transition:all .15s;}
 .type-btn.sel{border-color:var(--navy);color:var(--navy);background:var(--light);}
-.btn-book{width:100%;padding:15px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(232,116,59,.3);}
-.btn-book:hover{background:#D0632D;}
+.btn-book{width:100%;padding:15px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(230,90,34,.3);}
+.btn-book:hover{background:#D9531F;}
 .btn-book:disabled{opacity:.5;cursor:not-allowed;}
 .wallet-warn{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:12px;padding:12px 16px;font-size:13px;color:#7A2020;font-weight:600;text-align:center;margin-bottom:12px;}
 .spin{display:inline-block;animation:spin .8s linear infinite;}
@@ -195,11 +195,11 @@ export default function ListenerClient({ id }: { id: string }) {
   if (notFound) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif',color:'#3B2F2A',gap:16,padding:24,textAlign:'center'}}>
+      <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif',color:'#172B4D',gap:16,padding:24,textAlign:'center'}}>
         <div style={{fontSize:48}}>🔍</div>
         <div style={{fontSize:20,fontWeight:900}}>Listener not found</div>
-        <div style={{fontSize:14,color:'#6E5B50',fontWeight:500}}>This profile may no longer be active.</div>
-        <button style={{background:'#E8743B',color:'white',border:'none',borderRadius:50,padding:'12px 28px',fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer'}} onClick={()=>router.push('/browse')}>Browse listeners →</button>
+        <div style={{fontSize:14,color:'#4A5A73',fontWeight:500}}>This profile may no longer be active.</div>
+        <button style={{background:'#E65A22',color:'white',border:'none',borderRadius:50,padding:'12px 28px',fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:15,cursor:'pointer'}} onClick={()=>router.push('/browse')}>Browse listeners →</button>
       </div>
     </>
   )
@@ -207,7 +207,7 @@ export default function ListenerClient({ id }: { id: string }) {
   if (!listener) return (
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif',color:'#3B2F2A'}}>Loading...</div>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',fontFamily:'Karla,sans-serif',color:'#172B4D'}}>Loading...</div>
     </>
   )
 
@@ -322,7 +322,7 @@ export default function ListenerClient({ id }: { id: string }) {
             ))}
             {(listener.languages_spoken||[]).map((lid:string) => {
               const info = LANGUAGES.find(x=>x.id===lid)
-              return <span key={lid} className="tag" style={{background:'rgba(232,116,59,.12)',color:'#7A4A00'}}>🌐 {info?.label||lid}</span>
+              return <span key={lid} className="tag" style={{background:'rgba(230,90,34,.12)',color:'#7A4A00'}}>🌐 {info?.label||lid}</span>
             })}
           </div>
           {(listener.tagline_phrases ?? []).length > 0 && (
@@ -336,7 +336,7 @@ export default function ListenerClient({ id }: { id: string }) {
           {listener.lived_experience && (
             <div style={{marginTop:12,background:'var(--light)',border:'1.5px solid var(--border)',borderRadius:14,padding:'12px 14px'}}>
               <div style={{fontSize:12,fontWeight:900,color:'var(--navy)',textTransform:'uppercase',letterSpacing:'.04em',marginBottom:4}}>What I&apos;ve been through</div>
-              <p style={{fontSize:14,color:'#4A3C34',lineHeight:1.65,fontWeight:500,margin:0,whiteSpace:'pre-wrap'}}>{listener.lived_experience}</p>
+              <p style={{fontSize:14,color:'#24395C',lineHeight:1.65,fontWeight:500,margin:0,whiteSpace:'pre-wrap'}}>{listener.lived_experience}</p>
             </div>
           )}
           {listener.education_level && (
@@ -379,14 +379,14 @@ export default function ListenerClient({ id }: { id: string }) {
         <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,.5)',zIndex:200,display:'flex',alignItems:'flex-end',justifyContent:'center'}}>
           <div style={{background:'white',borderRadius:'20px 20px 0 0',padding:24,width:'100%',maxWidth:480,fontFamily:'Karla,sans-serif'}}>
             <div style={{fontSize:24,marginBottom:12}}>💰</div>
-            <div style={{fontSize:18,fontWeight:900,color:'#3B2F2A',marginBottom:8}}>Insufficient Balance</div>
-            <div style={{fontSize:14,color:'#6E5B50',marginBottom:20,lineHeight:1.6}}>
+            <div style={{fontSize:18,fontWeight:900,color:'#172B4D',marginBottom:8}}>Insufficient Balance</div>
+            <div style={{fontSize:14,color:'#4A5A73',marginBottom:20,lineHeight:1.6}}>
               Your wallet has {formatGBP(balance)}. This session costs {formatGBP(cost)}. You need {formatGBP(cost - balance)} more.
             </div>
             <div style={{display:'flex',gap:10}}>
-              <button onClick={()=>setShowInsufficient(false)} style={{flex:1,padding:13,background:'white',border:'1.5px solid #F2DFD1',borderRadius:12,fontFamily:'Karla,sans-serif',fontWeight:700,cursor:'pointer'}}>Cancel</button>
+              <button onClick={()=>setShowInsufficient(false)} style={{flex:1,padding:13,background:'white',border:'1.5px solid #EEDFCB',borderRadius:12,fontFamily:'Karla,sans-serif',fontWeight:700,cursor:'pointer'}}>Cancel</button>
               <a href={`/wallet?return=${encodeURIComponent(`/listener/${id}?from=wallet&type=${type}`)}`} style={{flex:1}}>
-                <button style={{width:'100%',padding:13,background:'#E8743B',color:'white',border:'none',borderRadius:12,fontFamily:'Karla,sans-serif',fontWeight:800,cursor:'pointer'}}>Top Up Wallet →</button>
+                <button style={{width:'100%',padding:13,background:'#E65A22',color:'white',border:'none',borderRadius:12,fontFamily:'Karla,sans-serif',fontWeight:800,cursor:'pointer'}}>Top Up Wallet →</button>
               </a>
             </div>
           </div>
@@ -397,7 +397,7 @@ export default function ListenerClient({ id }: { id: string }) {
         {userId === id ? (
           // ── Own profile: you cannot book or message yourself ─────────────
           <div style={{textAlign:'center'}}>
-            <div style={{fontSize:13,fontWeight:700,color:'#6E5B50',marginBottom:12,lineHeight:1.5}}>
+            <div style={{fontSize:13,fontWeight:700,color:'#4A5A73',marginBottom:12,lineHeight:1.5}}>
               👀 This is your public listener profile — exactly how seekers see you.
             </div>
             <a href="/dashboard"><button className="btn-book">Go to your dashboard →</button></a>
@@ -452,7 +452,7 @@ export default function ListenerClient({ id }: { id: string }) {
               ))}
             </div>
             {userId && balance > 0 && (
-              <div style={{fontSize:12,fontWeight:700,color:'#6E5B50',textAlign:'right',marginBottom:6}}>
+              <div style={{fontSize:12,fontWeight:700,color:'#4A5A73',textAlign:'right',marginBottom:6}}>
                 💰 Wallet: {formatGBP(balance)}
                 {balance < cost && <span style={{color:'#c53030',marginLeft:6}}>· need {formatGBP(cost - balance)} more</span>}
               </div>
@@ -465,7 +465,7 @@ export default function ListenerClient({ id }: { id: string }) {
         ) : (
           // ── Offline: message request UI ──────────────────────────────────
           <div>
-            <div style={{textAlign:'center',fontSize:13,fontWeight:700,color:'#6E5B50',marginBottom:12}}>
+            <div style={{textAlign:'center',fontSize:13,fontWeight:700,color:'#4A5A73',marginBottom:12}}>
               😴 {listener.name} is offline right now
             </div>
             {msgSent && (
@@ -485,9 +485,9 @@ export default function ListenerClient({ id }: { id: string }) {
                   onChange={e => setMsgText(e.target.value)}
                   maxLength={300}
                   rows={4}
-                  style={{width:'100%',padding:'12px 14px',fontSize:14,fontFamily:'Karla,sans-serif',fontWeight:500,color:'#3B2F2A',border:'1.5px solid #F2DFD1',borderRadius:14,outline:'none',resize:'none',marginBottom:6,boxSizing:'border-box'}}
+                  style={{width:'100%',padding:'12px 14px',fontSize:14,fontFamily:'Karla,sans-serif',fontWeight:500,color:'#172B4D',border:'1.5px solid #EEDFCB',borderRadius:14,outline:'none',resize:'none',marginBottom:6,boxSizing:'border-box'}}
                 />
-                <div style={{fontSize:11,color:'#6E5B50',fontWeight:600,textAlign:'right',marginBottom:10}}>
+                <div style={{fontSize:11,color:'#4A5A73',fontWeight:600,textAlign:'right',marginBottom:10}}>
                   {msgText.trim().length}/300
                 </div>
                 <button className="btn-book" onClick={sendMsg} disabled={sendingMsg || msgText.trim().length < 10}>
@@ -495,13 +495,13 @@ export default function ListenerClient({ id }: { id: string }) {
                 </button>
                 <button
                   onClick={() => { setShowMsgCompose(false); setMsgText(''); setMsgError(null) }}
-                  style={{width:'100%',marginTop:8,padding:10,background:'none',border:'none',fontFamily:'Karla,sans-serif',fontWeight:700,fontSize:13,color:'#6E5B50',cursor:'pointer'}}
+                  style={{width:'100%',marginTop:8,padding:10,background:'none',border:'none',fontFamily:'Karla,sans-serif',fontWeight:700,fontSize:13,color:'#4A5A73',cursor:'pointer'}}
                 >
                   Cancel
                 </button>
               </div>
             ) : msgCount >= 2 ? (
-              <div style={{textAlign:'center',fontSize:13,fontWeight:600,color:'#6E5B50',padding:'8px 0'}}>
+              <div style={{textAlign:'center',fontSize:13,fontWeight:600,color:'#4A5A73',padding:'8px 0'}}>
                 You&apos;ve sent {msgCount} messages. Come back when they&apos;re online to book a session.
               </div>
             ) : (

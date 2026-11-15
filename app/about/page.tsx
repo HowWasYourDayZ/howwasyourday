@@ -52,7 +52,7 @@ const faqJsonLd = {
 }
 
 const CSS = `
-.hw{--sun:#E8743B;--ember:#B85520;--ember-d:#9E4719;--peach:#FFF6EF;--apricot:#FBE3D2;--line:#F2DFD1;--ink:#3B2F2A;--muted:#6E5B50;
+.hw{--sun:#E65A22;--ember:#C2471A;--ember-d:#A33B14;--peach:#FFF6E8;--apricot:#FBE0CC;--line:#EEDFCB;--ink:#172B4D;--muted:#4A5A73;
   font-family:Karla,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .hw *{box-sizing:border-box;margin:0;padding:0}
 .hw a{text-decoration:none}
@@ -71,7 +71,7 @@ const CSS = `
 
 /* buttons */
 .hw-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:900;font-size:16px;padding:15px 26px;transition:transform .15s,background .15s,box-shadow .15s,border-color .15s;border:2px solid transparent;cursor:pointer;text-align:center}
-.hw-btn-p{background:var(--ember);color:#fff;box-shadow:0 8px 24px rgba(184,85,32,.25)}
+.hw-btn-p{background:var(--ember);color:#fff;box-shadow:0 8px 24px rgba(194,71,26,.25)}
 .hw-btn-p:hover{background:var(--ember-d);transform:translateY(-1px)}
 .hw-btn-g{background:#fff;color:var(--ember);border-color:var(--line)}
 .hw-btn-g:hover{border-color:var(--ember)}
@@ -90,9 +90,9 @@ const CSS = `
 .hw-answers{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:560px}
 @media(min-width:560px){.hw-answers{grid-template-columns:1fr 1fr 1fr}}
 .hw-ans{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px 14px;font-weight:900;font-size:15.5px;color:var(--ink);transition:border-color .15s,transform .15s,box-shadow .15s;min-height:56px}
-.hw-ans:hover{border-color:var(--sun);transform:translateY(-2px);box-shadow:0 10px 24px rgba(232,116,59,.14)}
+.hw-ans:hover{border-color:var(--sun);transform:translateY(-2px);box-shadow:0 10px 24px rgba(230,90,34,.14)}
 .hw-ans .e{font-size:22px;line-height:1}
-.hw-ans.main{grid-column:1/-1;background:var(--ember);border-color:var(--ember);color:#fff;justify-content:space-between;font-size:17px;padding:16px 20px;box-shadow:0 10px 26px rgba(184,85,32,.28)}
+.hw-ans.main{grid-column:1/-1;background:var(--ember);border-color:var(--ember);color:#fff;justify-content:space-between;font-size:17px;padding:16px 20px;box-shadow:0 10px 26px rgba(194,71,26,.28)}
 .hw-ans.main:hover{background:var(--ember-d);border-color:var(--ember-d)}
 .hw-ans.main small{font-weight:800;font-size:13.5px;opacity:.9;white-space:nowrap}
 .hw-reass{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:13.5px;font-weight:800;color:var(--muted)}
@@ -101,7 +101,7 @@ const CSS = `
 .hw-alt a{color:var(--ember)!important;font-weight:900;border-bottom:2px solid var(--apricot)}
 
 /* example chat */
-.hw-card{background:#fff;border:1.5px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(59,47,42,.10);max-width:420px;width:100%;justify-self:center}
+.hw-card{background:#fff;border:1.5px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(23,43,77,.10);max-width:420px;width:100%;justify-self:center}
 .hw-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .hw-who{display:flex;gap:10px;align-items:center}
 .hw-av{width:40px;height:40px;border-radius:50%;background:var(--apricot);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--ember)}
@@ -158,7 +158,7 @@ const CSS = `
 .hw-prices{display:grid;gap:16px;margin-top:32px}
 @media(min-width:760px){.hw-prices{grid-template-columns:repeat(3,1fr)}}
 .hw-price{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:28px;position:relative;display:flex;flex-direction:column}
-.hw-price.f{border:2.5px solid var(--sun);box-shadow:0 18px 40px rgba(232,116,59,.14)}
+.hw-price.f{border:2.5px solid var(--sun);box-shadow:0 18px 40px rgba(230,90,34,.14)}
 .hw-badge{position:absolute;top:-13px;left:24px;background:var(--sun);color:#fff;font-size:12px;font-weight:900;padding:5px 12px;border-radius:999px}
 .hw-price .min{font-size:15px;font-weight:900;color:var(--ember)}
 .hw-price .amt{font-size:44px;font-weight:900;letter-spacing:-1px;margin:6px 0 4px}
@@ -187,18 +187,18 @@ const CSS = `
 .hw-faq p{margin-top:10px;font-size:15.5px;line-height:1.7;color:var(--muted);font-weight:600}
 
 /* final */
-.hw-final{background:linear-gradient(135deg,#E8743B 0%,#C95C26 100%);border-radius:32px;padding:52px 24px;text-align:center;color:#fff}
+.hw-final{background:linear-gradient(135deg,#E65A22 0%,#C95C26 100%);border-radius:32px;padding:52px 24px;text-align:center;color:#fff}
 .hw-final h2{font-size:clamp(30px,5vw,48px);font-weight:900;letter-spacing:-.6px;margin-bottom:10px}
 .hw-final p{font-size:18px;font-weight:700;margin-bottom:24px}
 .hw-final .hw-answers{margin:0 auto;max-width:640px}
 .hw-final .hw-ans{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35);color:#fff}
 .hw-final .hw-ans:hover{background:rgba(255,255,255,.24);border-color:#fff;box-shadow:none}
 .hw-final .hw-ans.main{background:#fff;border-color:#fff;color:var(--ember-d)}
-.hw-final .hw-ans.main:hover{background:#FFF6EF}
+.hw-final .hw-ans.main:hover{background:#FFF6E8}
 
 /* mobile sticky start bar */
 .hw-sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:900;display:flex;align-items:center;justify-content:space-between;gap:12px;
-  background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:10px 10px 10px 16px;box-shadow:0 14px 40px rgba(59,47,42,.18);
+  background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:10px 10px 10px 16px;box-shadow:0 14px 40px rgba(23,43,77,.18);
   transform:translateY(140%);transition:transform .25s ease;pointer-events:none}
 .hw-sticky.on{transform:none;pointer-events:auto}
 .hw-sticky b{display:block;font-size:15px;font-weight:900}
@@ -232,7 +232,7 @@ export default function Home() {
       <header className="hw-hero">
         <div className="hw-wrap">
           <nav className="hw-nav" aria-label="Main">
-            <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=2" alt="How Was Your Day" width={141} height={44} /></a>
+            <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=3" alt="How Was Your Day" width={141} height={44} /></a>
             <div className="hw-nav-links">
               <a className="t a" href="/">Home</a>
               <a className="t" href="/how-it-works">How it works</a>
@@ -260,8 +260,8 @@ export default function Home() {
                 <div className="hw-who"><div className="hw-av">S</div><div><b>Sam</b><small>Peer listener</small></div></div>
                 <div className="hw-timer">
                   <svg width="58" height="58" viewBox="0 0 58 58">
-                    <circle cx="29" cy="29" r="25" fill="none" stroke="#FBE3D2" strokeWidth="5" />
-                    <circle className="hw-ring" cx="29" cy="29" r="25" fill="none" stroke="#E8743B" strokeWidth="5" strokeLinecap="round" />
+                    <circle cx="29" cy="29" r="25" fill="none" stroke="#FBE0CC" strokeWidth="5" />
+                    <circle className="hw-ring" cx="29" cy="29" r="25" fill="none" stroke="#E65A22" strokeWidth="5" strokeLinecap="round" />
                   </svg>
                   <span>8:00</span>
                 </div>
@@ -375,7 +375,7 @@ export default function Home() {
             <p className="hw-small">
               Text prices shown{VOICE_PRICING_ENABLED ? `; voice is ${VOICE_RATE_PREMIUM}p a minute more` : ''}. You top up a wallet and pay per
               session — no subscription, and unused balance can be refunded. You&apos;re only charged if a listener accepts.{' '}
-              <a href="/pricing" style={{ color: '#B85520', fontWeight: 900 }}>Full pricing →</a>
+              <a href="/pricing" style={{ color: '#C2471A', fontWeight: 900 }}>Full pricing →</a>
             </p>
           </div>
         </section>
@@ -393,7 +393,7 @@ export default function Home() {
               <strong>How Was Your Day is peer support — not therapy and not an emergency service.</strong>{' '}
               If you are in danger, call <a href="tel:999">999</a>. You can ring <a href="tel:116123">Samaritans on 116 123</a> or
               text <a href="sms:85258?body=SHOUT">SHOUT to 85258</a> — free, any time.{' '}
-              <a href="/safeguarding" style={{ color: '#B85520' }}>How we keep people safe →</a>
+              <a href="/safeguarding" style={{ color: '#C2471A' }}>How we keep people safe →</a>
             </div>
           </div>
         </section>

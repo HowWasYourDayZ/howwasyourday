@@ -33,7 +33,7 @@ export default function BottomNav() {
 
         .bottom-nav{
           position:fixed;bottom:0;left:0;right:0;z-index:100;
-          background:white;border-top:1.5px solid #F2DFD1;
+          background:white;border-top:1.5px solid #EEDFCB;
           display:flex;justify-content:center;
           padding-bottom:env(safe-area-inset-bottom,0px);
         }
@@ -44,9 +44,9 @@ export default function BottomNav() {
           flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
           padding:10px 0 8px;cursor:pointer;border:none;background:transparent;
           font-family:Karla,sans-serif;font-weight:600;font-size:11px;
-          color:#6E5B50;transition:color .15s;gap:3px;
+          color:#4A5A73;transition:color .15s;gap:3px;
         }
-        .nav-tab.active{color:#3B2F2A;}
+        .nav-tab.active{color:#172B4D;}
         .nav-tab.accent{color:#E07B10;font-weight:800;}
         .nav-tab.accent.active{color:#B35C00;}
         .nav-tab-icon{font-size:20px;line-height:1;}

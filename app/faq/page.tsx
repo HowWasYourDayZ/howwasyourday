@@ -129,26 +129,26 @@ const faqSchema = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Karla,sans-serif;color:#3B2F2A;background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+  body{font-family:Karla,sans-serif;color:#172B4D;background:radial-gradient(ellipse 90% 55% at 0% 0%,#FCE5D3 0%,#FDEEDB 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{background:transparent;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:52px;width:auto;}
   .wrap{max-width:800px;margin:0 auto;padding:32px 24px 80px;}
-  .breadcrumb{font-size:13px;color:#6E5B50;margin-bottom:24px;}
-  .breadcrumb a{color:#B85520;font-weight:600;}
+  .breadcrumb{font-size:13px;color:#4A5A73;margin-bottom:24px;}
+  .breadcrumb a{color:#C2471A;font-weight:600;}
   .breadcrumb span{margin:0 6px;opacity:0.5;}
-  h1{font-size:clamp(26px,5vw,40px);font-weight:900;color:#3B2F2A;line-height:1.15;margin-bottom:10px;}
-  .subtitle{font-size:16px;color:#6E5B50;margin-bottom:40px;line-height:1.6;}
+  h1{font-size:clamp(26px,5vw,40px);font-weight:900;color:#172B4D;line-height:1.15;margin-bottom:10px;}
+  .subtitle{font-size:16px;color:#4A5A73;margin-bottom:40px;line-height:1.6;}
   .cat{margin-bottom:40px;}
-  .cat-title{font-size:13px;font-weight:800;color:#B85520;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #F2DFD1;}
-  .faq-item{background:#FFFFFF;border:1.5px solid #F2DFD1;border-radius:16px;margin-bottom:10px;overflow:hidden;}
-  .faq-q{font-size:16px;font-weight:800;color:#3B2F2A;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
-  .faq-q::after{content:'+';font-size:22px;font-weight:400;color:#B85520;flex-shrink:0;}
-  .faq-a{font-size:15px;color:#6E5B50;line-height:1.72;padding:0 20px 18px;font-weight:500;}
-  .cta-box{background:linear-gradient(135deg,#3B2F2A 0%,#B85520 100%);border-radius:20px;padding:36px 28px;text-align:center;color:white;margin-top:48px;}
+  .cat-title{font-size:13px;font-weight:800;color:#C2471A;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #EEDFCB;}
+  .faq-item{background:#FFFFFF;border:1.5px solid #EEDFCB;border-radius:16px;margin-bottom:10px;overflow:hidden;}
+  .faq-q{font-size:16px;font-weight:800;color:#172B4D;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .faq-q::after{content:'+';font-size:22px;font-weight:400;color:#C2471A;flex-shrink:0;}
+  .faq-a{font-size:15px;color:#4A5A73;line-height:1.72;padding:0 20px 18px;font-weight:500;}
+  .cta-box{background:linear-gradient(135deg,#172B4D 0%,#C2471A 100%);border-radius:20px;padding:36px 28px;text-align:center;color:white;margin-top:48px;}
   .cta-box h2{font-size:22px;font-weight:900;margin-bottom:10px;}
   .cta-box p{font-size:15px;opacity:0.85;margin-bottom:24px;line-height:1.6;}
-  .btn-cta{background:#E8743B;color:white;font-family:Karla,sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
+  .btn-cta{background:#E65A22;color:white;font-family:Karla,sans-serif;font-weight:800;font-size:16px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;display:inline-block;}
 `
 
 export default function FAQPage() {
@@ -157,8 +157,8 @@ export default function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav">
-        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
-        <a href="/talk?src=seo" style={{background:'#E8743B',color:'white',fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
+        <a href="/"><img src="/brand/logo.png?v=3" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/talk?src=seo" style={{background:'#E65A22',color:'white',fontFamily:'Karla,sans-serif',fontWeight:800,fontSize:14,padding:'10px 22px',borderRadius:50,border:'none',cursor:'pointer'}}>Get started</a>
       </nav>
 
       <div className="wrap">

@@ -392,30 +392,30 @@ function TalkInner() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        .tk{max-width:520px;margin:0 auto;padding:28px 18px 120px;font-family:Karla,system-ui,sans-serif;color:#3B2F2A;}
-        .tk h1{font-size:25px;font-weight:900;color:#3B2F2A;line-height:1.25;margin:6px 0 8px;}
-        .tk .sub{font-size:14.5px;color:#6E5B50;line-height:1.55;margin-bottom:18px;}
+        .tk{max-width:520px;margin:0 auto;padding:28px 18px 120px;font-family:Karla,system-ui,sans-serif;color:#172B4D;}
+        .tk h1{font-size:25px;font-weight:900;color:#172B4D;line-height:1.25;margin:6px 0 8px;}
+        .tk .sub{font-size:14.5px;color:#4A5A73;line-height:1.55;margin-bottom:18px;}
         .tk .chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-        .tk .chip{display:flex;align-items:center;gap:10px;text-align:left;background:#fff;border:2px solid #F2DFD1;border-radius:16px;padding:14px 12px;font:inherit;font-weight:800;font-size:14.5px;color:#3B2F2A;cursor:pointer;min-height:64px;}
-        .tk .chip:hover,.tk .chip:focus-visible{border-color:#B85520;background:#FFF6EF;outline:none;}
+        .tk .chip{display:flex;align-items:center;gap:10px;text-align:left;background:#fff;border:2px solid #EEDFCB;border-radius:16px;padding:14px 12px;font:inherit;font-weight:800;font-size:14.5px;color:#172B4D;cursor:pointer;min-height:64px;}
+        .tk .chip:hover,.tk .chip:focus-visible{border-color:#C2471A;background:#FFF6E8;outline:none;}
         .tk .chip .e{font-size:22px;line-height:1;}
         .tk .chips .chip:last-child:nth-child(odd){grid-column:1/-1;}
-        .tk .seg{display:grid;grid-template-columns:1fr 1fr;background:#FFF6EF;border-radius:14px;padding:4px;margin-bottom:14px;}
-        .tk .seg button{border:none;background:none;border-radius:11px;padding:10px 8px;font:inherit;font-weight:800;font-size:14.5px;color:#6E5B50;cursor:pointer;}
-        .tk .seg button.on{background:#fff;color:#3B2F2A;box-shadow:0 1px 4px rgba(59,47,42,.15);}
-        .tk .seg button:focus-visible{outline:2px solid #B85520;}
-        .tk .primary{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:#B85520;color:#fff;border:none;border-radius:16px;padding:17px 16px;font:inherit;font-weight:900;font-size:17px;cursor:pointer;box-shadow:0 4px 14px rgba(184,85,32,.3);}
-        .tk .primary:hover,.tk .primary:focus-visible{background:#9E4719;outline:none;}
-        .tk .or{text-align:center;font-size:13px;font-weight:700;color:#7A675C;margin:14px 0 10px;}
-        .tk .back{background:none;border:none;color:#B85520;font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;padding:0;margin-bottom:6px;}
-        .tk .card{background:#fff;border:2px solid #F2DFD1;border-radius:20px;padding:26px 20px;text-align:center;}
-        .tk .pulse{width:72px;height:72px;border-radius:50%;background:#FFF6EF;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;animation:tkp 1.6s ease-in-out infinite;}
-        @keyframes tkp{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(184,85,32,.35)}50%{transform:scale(1.05);box-shadow:0 0 0 14px rgba(184,85,32,0)}}
+        .tk .seg{display:grid;grid-template-columns:1fr 1fr;background:#FFF6E8;border-radius:14px;padding:4px;margin-bottom:14px;}
+        .tk .seg button{border:none;background:none;border-radius:11px;padding:10px 8px;font:inherit;font-weight:800;font-size:14.5px;color:#4A5A73;cursor:pointer;}
+        .tk .seg button.on{background:#fff;color:#172B4D;box-shadow:0 1px 4px rgba(23,43,77,.15);}
+        .tk .seg button:focus-visible{outline:2px solid #C2471A;}
+        .tk .primary{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:#C2471A;color:#fff;border:none;border-radius:16px;padding:17px 16px;font:inherit;font-weight:900;font-size:17px;cursor:pointer;box-shadow:0 4px 14px rgba(194,71,26,.3);}
+        .tk .primary:hover,.tk .primary:focus-visible{background:#A33B14;outline:none;}
+        .tk .or{text-align:center;font-size:13px;font-weight:700;color:#5A6B85;margin:14px 0 10px;}
+        .tk .back{background:none;border:none;color:#C2471A;font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;padding:0;margin-bottom:6px;}
+        .tk .card{background:#fff;border:2px solid #EEDFCB;border-radius:20px;padding:26px 20px;text-align:center;}
+        .tk .pulse{width:72px;height:72px;border-radius:50%;background:#FFF6E8;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;animation:tkp 1.6s ease-in-out infinite;}
+        @keyframes tkp{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(194,71,26,.35)}50%{transform:scale(1.05);box-shadow:0 0 0 14px rgba(194,71,26,0)}}
         @media (prefers-reduced-motion: reduce){.tk .pulse{animation:none}}
-        .tk .btn{display:inline-block;background:#B85520;color:#fff;border:none;border-radius:50px;padding:12px 22px;font:inherit;font-weight:900;font-size:15px;cursor:pointer;text-decoration:none;margin-top:14px;}
-        .tk .btn.ghost{background:#fff;color:#B85520;border:2px solid #B85520;}
-        .tk .link{display:inline-block;margin-top:14px;color:#B85520;font-weight:800;font-size:13.5px;}
-        .tk .fine{font-size:12.5px;color:#7A675C;line-height:1.55;margin-top:18px;text-align:center;}
+        .tk .btn{display:inline-block;background:#C2471A;color:#fff;border:none;border-radius:50px;padding:12px 22px;font:inherit;font-weight:900;font-size:15px;cursor:pointer;text-decoration:none;margin-top:14px;}
+        .tk .btn.ghost{background:#fff;color:#C2471A;border:2px solid #C2471A;}
+        .tk .link{display:inline-block;margin-top:14px;color:#C2471A;font-weight:800;font-size:13.5px;}
+        .tk .fine{font-size:12.5px;color:#5A6B85;line-height:1.55;margin-top:18px;text-align:center;}
         .tk .live{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#276749;background:#E6F6EC;border-radius:50px;padding:5px 12px;margin-bottom:12px;}
         .tk .live i{width:8px;height:8px;border-radius:50%;background:#38A169;display:inline-block;}
       ` }} />
@@ -476,7 +476,7 @@ function TalkInner() {
         {phase.k === 'waiting' && (
           <div className="card" aria-live="polite">
             <div className="pulse" aria-hidden>🔔</div>
-            <div style={{ fontSize: 12.5, fontWeight: 800, color: '#7A675C', marginBottom: 4 }}>Listener {phase.tryNo} of up to {TALK_MAX_TRIES}</div>
+            <div style={{ fontSize: 12.5, fontWeight: 800, color: '#5A6B85', marginBottom: 4 }}>Listener {phase.tryNo} of up to {TALK_MAX_TRIES}</div>
             <h1 style={{ fontSize: 21 }}>Asking {phase.name}…</h1>
             <p className="sub" style={{ marginBottom: 6 }}>
               {secsLeft > 0
@@ -541,7 +541,7 @@ function TalkInner() {
         </p>
 
         {phase.k === 'topic' && (
-          <p className="fine">Prefer to choose someone yourself? <Link href="/browse" style={{ color: '#B85520', fontWeight: 800 }}>See all listeners</Link></p>
+          <p className="fine">Prefer to choose someone yourself? <Link href="/browse" style={{ color: '#C2471A', fontWeight: 800 }}>See all listeners</Link></p>
         )}
       </div>
     </>

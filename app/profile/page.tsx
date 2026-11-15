@@ -11,9 +11,9 @@ import SelfieCapture from '@/app/components/SelfieCapture'
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+:root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
 body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FCE5D3 0%,#FDEEDB 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:12px;}
 .back-btn{background:none;border:none;cursor:pointer;font-size:20px;color:var(--navy);padding:4px;line-height:1;}
@@ -31,9 +31,9 @@ a{text-decoration:none;color:inherit;}
 .save-btn{background:var(--teal);color:white;font-family:Karla,sans-serif;font-weight:700;font-size:13px;padding:7px 14px;border-radius:8px;border:none;cursor:pointer;}
 .phone{font-size:14px;color:var(--gray);font-weight:600;margin-top:6px;}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;}
-.stat-card{background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px 12px;text-align:center;box-shadow:0 1px 4px rgba(59,47,42,.04);}
+.stat-card{background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px 12px;text-align:center;box-shadow:0 1px 4px rgba(23,43,77,.04);}
 .stat-card.clickable{cursor:pointer;transition:all .2s;}
-.stat-card.clickable:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(59,47,42,.08);transform:translateY(-1px);}
+.stat-card.clickable:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(23,43,77,.08);transform:translateY(-1px);}
 .stat-icon{font-size:22px;margin-bottom:6px;}
 .stat-value{font-size:18px;font-weight:900;color:var(--navy);margin-bottom:2px;}
 .stat-label{font-size:11px;color:var(--gray);font-weight:600;}
@@ -41,7 +41,7 @@ a{text-decoration:none;color:inherit;}
 .listener-banner p{font-size:14px;font-weight:700;color:var(--navy);}
 .go-btn{background:var(--navy);color:white;font-family:Karla,sans-serif;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;}
 .help-row{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:white;border:1.5px solid var(--border);border-radius:14px;padding:15px 18px;margin-bottom:12px;cursor:pointer;text-align:left;font-family:Karla,sans-serif;transition:all .2s;}
-.help-row:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(59,47,42,.06);}
+.help-row:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(23,43,77,.06);}
 .help-row-label{font-size:15px;font-weight:800;color:var(--navy);}
 .help-row-sub{font-size:12px;font-weight:600;color:var(--gray);margin-top:2px;}
 .help-row-arrow{font-size:18px;color:var(--gray);}
@@ -244,9 +244,9 @@ export default function ProfilePage() {
               <div style={{
                 marginTop: 8, fontSize: 12, fontWeight: 600, lineHeight: 1.5,
                 padding: '8px 12px', borderRadius: 8, maxWidth: 280, textAlign: 'center',
-                background: avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.07)' : 'rgba(184,85,32,0.07)',
-                border: `1px solid ${avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.25)' : 'rgba(184,85,32,0.25)'}`,
-                color: avatarUploadMsg.type === 'error' ? '#C0392B' : '#3B2F2A',
+                background: avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.07)' : 'rgba(194,71,26,0.07)',
+                border: `1px solid ${avatarUploadMsg.type === 'error' ? 'rgba(255,59,48,0.25)' : 'rgba(194,71,26,0.25)'}`,
+                color: avatarUploadMsg.type === 'error' ? '#C0392B' : '#172B4D',
               }}>
                 {avatarUploadMsg.text}
               </div>
@@ -323,7 +323,7 @@ export default function ProfilePage() {
               <div style={{ background: 'white', borderRadius: 20, padding: '28px 24px', maxWidth: 380, width: '100%', textAlign: 'center' }}>
                 <div style={{ fontSize: 36, marginBottom: 12 }}>⚠️</div>
                 <h3 style={{ fontSize: 18, fontWeight: 800, color: '#B71C1C', marginBottom: 8 }}>Delete your account?</h3>
-                <p style={{ fontSize: 13, color: '#6E5B50', fontWeight: 600, lineHeight: 1.6, marginBottom: walletBalance > 0 ? 8 : 16 }}>
+                <p style={{ fontSize: 13, color: '#4A5A73', fontWeight: 600, lineHeight: 1.6, marginBottom: walletBalance > 0 ? 8 : 16 }}>
                   This is permanent and cannot be undone. Your sign-in, photos, profile and payout details will be erased. Session and payment records are kept without your contact details.
                 </p>
                 {walletBalance > 0 && (
@@ -331,11 +331,11 @@ export default function ProfilePage() {
                     You have {formatGBP(walletBalance)} in your wallet. You'll need to use or withdraw this balance before your account can be deleted.
                   </p>
                 )}
-                <p style={{ fontSize: 13, fontWeight: 700, color: '#3B2F2A', marginBottom: 10 }}>
+                <p style={{ fontSize: 13, fontWeight: 700, color: '#172B4D', marginBottom: 10 }}>
                   Type <strong>DELETE</strong> to confirm
                 </p>
                 <input
-                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #F2DFD1', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Karla, sans-serif', letterSpacing: 2 }}
+                  style={{ width: '100%', padding: '10px 14px', border: '2px solid #EEDFCB', borderRadius: 10, fontSize: 16, fontWeight: 700, textAlign: 'center', fontFamily: 'Karla, sans-serif', letterSpacing: 2 }}
                   value={deleteInput}
                   onChange={e => setDeleteInput(e.target.value.toUpperCase())}
                   placeholder="DELETE"
@@ -350,7 +350,7 @@ export default function ProfilePage() {
                     {deleting ? 'Deleting...' : 'Permanently delete'}
                   </button>
                   <button
-                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#3B2F2A', border: '2px solid #F2DFD1', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Karla, sans-serif' }}
+                    style={{ flex: 1, padding: '12px 0', background: 'white', color: '#172B4D', border: '2px solid #EEDFCB', borderRadius: 12, fontSize: 14, fontWeight: 800, cursor: 'pointer', fontFamily: 'Karla, sans-serif' }}
                     onClick={() => setShowDeleteConfirm(false)}
                   >
                     Cancel

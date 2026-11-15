@@ -24,8 +24,8 @@ const TOPICS: [string, string][] = [
 ]
 
 const CSS = `
-.mn{--sun:#E8743B;--ember:#B85520;--ember-d:#9E4719;--peach:#FFF6EF;--apricot:#FBE3D2;--line:#F2DFD1;--ink:#3B2F2A;--muted:#6E5B50;
-  font-family:Karla,sans-serif;color:var(--ink);background:#FFFCF9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mn{--sun:#E65A22;--ember:#C2471A;--ember-d:#A33B14;--peach:#FFF6E8;--apricot:#FBE0CC;--line:#EEDFCB;--ink:#172B4D;--muted:#4A5A73;
+  font-family:Karla,sans-serif;color:var(--ink);background:var(--peach);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .mn *{box-sizing:border-box;margin:0;padding:0}
 .mn a{text-decoration:none;color:inherit}
 .mn :focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:12px}
@@ -33,16 +33,16 @@ const CSS = `
 .mn-wrap{max-width:1060px;margin:0 auto;padding:0 20px}
 .mn-narrow{max-width:880px}
 
-.mn-top{border-bottom:1px solid var(--line);background:rgba(255,252,249,.9)}
+.mn-top{border-bottom:1px solid var(--line);background:var(--peach)}
 .mn-nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:12px}
-.mn-nav img{height:38px;width:auto;display:block}
+.mn-nav img{height:44px;width:auto;display:block}
 .mn-nav nav{display:flex;align-items:center;gap:4px}
 .mn-link{white-space:nowrap;font-size:14.5px;font-weight:500;color:var(--muted)!important;padding:9px 12px;border-radius:12px}
 .mn-link:hover{color:var(--ink)!important;background:var(--peach)}
 .mn-btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:600;font-size:15.5px;padding:13px 30px;border:1.5px solid transparent;transition:background .15s,border-color .15s;text-align:center}
 .mn-btn.p{background:var(--ember);color:#fff!important}
 .mn-btn.p:hover{background:var(--ember-d)}
-.mn-btn.g{background:transparent;color:var(--ember)!important;border-color:rgba(184,85,32,.3)}
+.mn-btn.g{background:transparent;color:var(--ember)!important;border-color:rgba(194,71,26,.3)}
 .mn-btn.g:hover{border-color:var(--ember);background:#fff}
 .mn-btn.w{background:#fff;color:var(--ember)!important}
 .mn-btn.w:hover{background:var(--peach)}
@@ -50,7 +50,7 @@ const CSS = `
 @media(max-width:440px){.mn-hide-sm{display:none}}
 @media(max-width:520px){.mn-nav img{height:32px}.mn-link{padding:8px 7px;font-size:13.5px}.mn-btn.s{padding:8px 14px;font-size:13.5px}}
 
-.mn-hero{text-align:center;padding:88px 0 120px;background:radial-gradient(ellipse 60% 55% at 50% 30%,#FFF0E5 0%,rgba(255,252,249,0) 70%)}
+.mn-hero{text-align:center;padding:88px 0 120px;background:radial-gradient(ellipse 60% 55% at 50% 30%,#FDEEDB 0%,rgba(255,252,249,0) 70%)}
 .mn-pill{display:inline-flex;align-items:center;gap:7px;background:var(--peach);border:1px solid var(--line);color:var(--ember);font-weight:500;font-size:13.5px;padding:6px 14px;border-radius:999px;margin-bottom:26px}
 .mn-pill svg{width:15px;height:15px}
 .mn-h1{font-size:clamp(46px,7.5vw,72px);font-weight:800;line-height:1.04;letter-spacing:-1.5px;margin-bottom:24px}
@@ -60,7 +60,7 @@ const CSS = `
 .mn-note{font-size:13.5px;color:var(--muted)}
 
 .mn-sec{padding:88px 0}
-.mn-sec.alt{background:var(--peach);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mn-sec.alt{background:#FFFFFF;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .mn-head{text-align:center;max-width:680px;margin:0 auto 44px}
 .mn-h2{font-size:clamp(28px,3.6vw,36px);font-weight:800;line-height:1.2;letter-spacing:-.5px;margin-bottom:12px}
 .mn-sub{font-size:16px;line-height:1.6;color:var(--muted)}
@@ -68,7 +68,7 @@ const CSS = `
 @media(min-width:760px){.mn-grid{grid-template-columns:repeat(3,1fr)}}
 .mn-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 26px}
 .mn-card.c{text-align:center}
-.mn-num{position:absolute;top:20px;right:24px;font-size:30px;font-weight:300;color:#D9B8A3}
+.mn-num{position:absolute;top:20px;right:24px;font-size:30px;font-weight:300;color:#C9B39E}
 .mn-ico{width:44px;height:44px;border-radius:12px;background:var(--apricot);color:var(--ember);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .mn-card.c .mn-ico{border-radius:50%;margin:0 auto 16px}
 .mn-card h3{font-size:18px;font-weight:800;margin-bottom:8px}
@@ -86,9 +86,9 @@ const CSS = `
 .mn-safe p{font-size:14.5px;line-height:1.6;color:var(--muted)}
 
 .mn-band{background:var(--ember);color:#fff;border-radius:26px;padding:60px 28px;text-align:center;max-width:860px;margin:0 auto}
-.mn-band .mn-star{color:#FFD2B3;display:flex;justify-content:center;margin-bottom:16px}
+.mn-band .mn-star{color:#FFC9A8;display:flex;justify-content:center;margin-bottom:16px}
 .mn-band .mn-star svg{width:28px;height:28px}
-.mn-band .mn-sub{color:#FFE9DB;max-width:560px;margin:0 auto 28px}
+.mn-band .mn-sub{color:#FFE6D6;max-width:560px;margin:0 auto 28px}
 .mn-final{text-align:center;padding:24px 0 72px}
 .mn-final .mn-sub{margin-bottom:28px}
 
@@ -102,7 +102,7 @@ const CSS = `
 .mn-foot nav{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:13.5px;font-weight:600}
 .mn-foot nav a{color:var(--muted)!important}
 .mn-foot nav a:hover{color:var(--ember)!important}
-.mn-copy{width:100%;text-align:center;font-size:12.5px;color:#8A766B;padding-top:20px}
+.mn-copy{width:100%;text-align:center;font-size:12.5px;color:#66768F;padding-top:20px}
 `
 
 // Line icons (24px grid, stroke = currentColor).
@@ -128,7 +128,7 @@ export default function Home() {
 
       <div className="mn-top">
         <div className="mn-wrap mn-nav">
-          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=2" alt="How Was Your Day" width={122} height={38} /></a>
+          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=3" alt="How Was Your Day" width={122} height={38} /></a>
           <nav aria-label="Main">
             <a className="mn-link" href="/about">About</a>
             <a className="mn-link mn-hide-sm" href="/become-a-peer-supporter">Become a Listener</a>
@@ -232,7 +232,7 @@ export default function Home() {
 
       <footer className="mn-foot">
         <div className="mn-wrap mn-foot-in">
-          <div className="mn-foot-brand"><img src="/brand/logo.png?v=2" alt="How Was Your Day" width={90} height={28} /> · Everyone deserves to feel heard.</div>
+          <div className="mn-foot-brand"><img src="/brand/logo.png?v=3" alt="How Was Your Day" width={90} height={28} /> · Everyone deserves to feel heard.</div>
           <nav aria-label="Footer">
             <a href="/about">About us</a>
             <a href="/safeguarding">Safety</a>

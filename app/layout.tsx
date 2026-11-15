@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? undefined },
 }
 
-export const viewport: Viewport = { themeColor:'#E8743B', width:'device-width', initialScale:1 }
+export const viewport: Viewport = { themeColor:'#E65A22', width:'device-width', initialScale:1 }
 
 const organizationJsonLd = {
   '@context':'https://schema.org','@type':'Organization','@id':'https://www.howwasyourday.live/#organization',name:'How Was Your Day',alternateName:['HWYD','howwasyourday','How Was Your Day App'],url:'https://www.howwasyourday.live',logo:{'@type':'ImageObject',url:'https://www.howwasyourday.live/icon-512.png',width:512,height:512},

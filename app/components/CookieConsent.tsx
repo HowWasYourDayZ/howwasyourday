@@ -83,20 +83,20 @@ export default function CookieConsent({ gaId }: { gaId?: string }) {
   if (!open) return null
   return (
     <div role="dialog" aria-modal="false" aria-labelledby="cc-title" aria-describedby="cc-desc"
-      style={{ position: 'fixed', left: 12, right: 12, bottom: 12, zIndex: 10000, maxWidth: 560, margin: '0 auto', background: '#fff', color: '#3B2F2A', border: '1.5px solid #F2DFD1', borderRadius: 18, boxShadow: '0 10px 40px rgba(59,47,42,.18)', padding: '16px 18px', fontFamily: 'Karla, system-ui, sans-serif' }}>
+      style={{ position: 'fixed', left: 12, right: 12, bottom: 12, zIndex: 10000, maxWidth: 560, margin: '0 auto', background: '#fff', color: '#172B4D', border: '1.5px solid #EEDFCB', borderRadius: 18, boxShadow: '0 10px 40px rgba(23,43,77,.18)', padding: '16px 18px', fontFamily: 'Karla, system-ui, sans-serif' }}>
       <p id="cc-title" style={{ margin: '0 0 6px', fontWeight: 900, fontSize: 15 }}>Cookies on How Was Your Day</p>
-      <p id="cc-desc" style={{ margin: '0 0 12px', fontSize: 13.5, lineHeight: 1.55, color: '#4A3C34', fontWeight: 600 }}>
+      <p id="cc-desc" style={{ margin: '0 0 12px', fontSize: 13.5, lineHeight: 1.55, color: '#24395C', fontWeight: 600 }}>
         We use essential cookies to keep you signed in and the site secure. With your permission we&apos;d also like to use
         Google Analytics cookies to understand how the site is used. We never send what you write, your name or your phone number
-        to analytics. <a href="/cookies" style={{ color: '#B85520', fontWeight: 800 }}>Cookie details</a>
+        to analytics. <a href="/cookies" style={{ color: '#C2471A', fontWeight: 800 }}>Cookie details</a>
       </p>
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
         <button type="button" onClick={() => decide('denied')}
-          style={{ flex: '1 1 140px', padding: '11px 14px', borderRadius: 50, border: '2px solid #3B2F2A', background: '#fff', color: '#3B2F2A', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit' }}>
+          style={{ flex: '1 1 140px', padding: '11px 14px', borderRadius: 50, border: '2px solid #172B4D', background: '#fff', color: '#172B4D', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit' }}>
           Reject analytics
         </button>
         <button type="button" onClick={() => decide('granted')}
-          style={{ flex: '1 1 140px', padding: '11px 14px', borderRadius: 50, border: '2px solid #3B2F2A', background: '#3B2F2A', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit' }}>
+          style={{ flex: '1 1 140px', padding: '11px 14px', borderRadius: 50, border: '2px solid #172B4D', background: '#172B4D', color: '#fff', fontWeight: 900, fontSize: 14, cursor: 'pointer', fontFamily: 'inherit' }}>
           Accept analytics
         </button>
       </div>

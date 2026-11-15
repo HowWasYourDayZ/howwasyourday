@@ -106,9 +106,9 @@ const breadcrumbSchema = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+  :root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
   body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FCE5D3 0%,#FDEEDB 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:56px;width:auto;}
@@ -126,11 +126,11 @@ const S = `
   .section h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px;}
   .section h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:8px;margin-top:20px;}
   .section h3:first-of-type{margin-top:0;}
-  .section p{font-size:15px;color:#4A3C34;line-height:1.80;margin-bottom:14px;}
+  .section p{font-size:15px;color:#24395C;line-height:1.80;margin-bottom:14px;}
   .section p:last-child{margin-bottom:0;}
   .section ul{padding-left:20px;margin-bottom:14px;}
-  .section ul li{font-size:15px;color:#4A3C34;line-height:1.80;margin-bottom:6px;}
-  .crisis{display:block;background:#FFF6EF;border-left:4px solid #B85520;border-radius:0 12px 12px 0;padding:14px 18px;margin-bottom:28px;font-size:14px;color:#3B2F2A;font-weight:600;line-height:1.65;}
+  .section ul li{font-size:15px;color:#24395C;line-height:1.80;margin-bottom:6px;}
+  .crisis{display:block;background:#FFF6E8;border-left:4px solid #C2471A;border-radius:0 12px 12px 0;padding:14px 18px;margin-bottom:28px;font-size:14px;color:#172B4D;font-weight:600;line-height:1.65;}
   .crisis a{color:var(--teal);font-weight:800;}
   .stats-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px;}
   .stat-pill{background:white;border:1.5px solid var(--border);border-radius:50px;padding:10px 18px;font-size:14px;font-weight:800;color:var(--navy);text-align:center;}
@@ -143,7 +143,7 @@ const S = `
   .step-desc{font-size:14px;color:var(--gray);line-height:1.6;font-weight:500;}
   .vs-table{width:100%;border-collapse:collapse;margin-top:4px;}
   .vs-table th{font-size:13px;font-weight:800;color:var(--teal);text-align:left;padding:8px 12px;background:var(--light);}
-  .vs-table td{font-size:14px;color:#4A3C34;padding:10px 12px;border-bottom:1px solid var(--border);line-height:1.6;vertical-align:top;}
+  .vs-table td{font-size:14px;color:#24395C;padding:10px 12px;border-bottom:1px solid var(--border);line-height:1.6;vertical-align:top;}
   .vs-table tr:last-child td{border-bottom:none;}
   .vs-table .col-label{font-weight:800;color:var(--navy);}
   .faq-item{border-bottom:1.5px solid var(--border);padding:20px 0;}
@@ -153,9 +153,9 @@ const S = `
   .faq-a{font-size:14px;color:var(--gray);line-height:1.75;font-weight:500;}
   .cta-card{background:var(--navy);border-radius:24px;padding:40px 32px;text-align:center;margin-bottom:24px;}
   .cta-card h2{font-size:24px;font-weight:900;color:white;margin-bottom:12px;}
-  .cta-card p{font-size:15px;color:rgba(251,227,210,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
+  .cta-card p{font-size:15px;color:rgba(251,224,204,0.85);font-weight:500;margin-bottom:28px;line-height:1.7;}
   .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-  .btn-primary{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(232,116,59,0.35);}
+  .btn-primary{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(230,90,34,0.35);}
   .btn-secondary{background:rgba(255,255,255,0.12);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.3);cursor:pointer;}
   .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:8px;}
   .related-link{background:var(--light);border:1.5px solid var(--border);border-radius:16px;padding:14px 16px;font-size:14px;font-weight:700;color:var(--navy);transition:border-color 0.2s;}
@@ -172,7 +172,7 @@ export default function PeerSupportPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
 
       <nav className="nav">
-        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png?v=3" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
 

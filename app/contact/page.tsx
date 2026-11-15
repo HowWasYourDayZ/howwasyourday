@@ -4,9 +4,9 @@ import { useState } from 'react'
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+  :root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
   body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%, #FDE6D6 0%, #FFF1E6 22%, #FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%, #FCE5D3 0%, #FDEEDB 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
   .nav-logo{height:56px;width:auto;}
@@ -26,8 +26,8 @@ const S = `
   .field-error{font-size:12px;color:#E53935;font-weight:700;margin-top:-12px;margin-bottom:12px;}
   textarea.input{resize:vertical;min-height:110px;line-height:1.5;}
   select.input{cursor:pointer;}
-  .btn{width:100%;padding:15px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(232,116,59,0.3);}
-  .btn:hover{background:#D0632D;}
+  .btn{width:100%;padding:15px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(230,90,34,0.3);}
+  .btn:hover{background:#D9531F;}
   .success{text-align:center;padding:32px 0;}
   .success-icon{font-size:48px;margin-bottom:16px;}
   .success h3{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:8px;}
@@ -72,7 +72,7 @@ export default function ContactPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav className="nav">
-        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png?v=3" alt="How Was Your Day" className="nav-logo" /></a>
         <div style={{display:'flex',gap:8,alignItems:'center'}}>
           <a href="/auth?mode=listener"><button className="btn-nav-ghost">Listener login</button></a>
           <a href="/auth"><button className="btn-nav">Sign in</button></a>

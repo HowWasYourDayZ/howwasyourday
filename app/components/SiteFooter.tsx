@@ -15,19 +15,19 @@ function hideOn(pathname: string): boolean {
 const APP_SCREENS = ['/browse', '/dashboard', '/wallet', '/history', '/profile', '/notifications', '/sessions']
 const isAppScreen = (p: string) => APP_SCREENS.some(s => p === s || p.startsWith(s + '/'))
 
-const CSS = `.site-footer{font-family:Karla,sans-serif;background:#FFF6EF;border-top:1.5px solid #F2DFD1;color:#6E5B50;padding:28px 20px calc(84px + env(safe-area-inset-bottom,0px));}
+const CSS = `.site-footer{font-family:Karla,sans-serif;background:#FFF6E8;border-top:1.5px solid #EEDFCB;color:#4A5A73;padding:28px 20px calc(84px + env(safe-area-inset-bottom,0px));}
 .site-footer-inner{max-width:720px;margin:0 auto;text-align:center}
-.sf-help{font-size:16px;font-weight:900;color:#3B2F2A;margin:0 0 6px}
-.sf-sub{font-size:13.5px;font-weight:600;color:#6E5B50;line-height:1.6;margin:0 0 14px}
+.sf-help{font-size:16px;font-weight:900;color:#172B4D;margin:0 0 6px}
+.sf-sub{font-size:13.5px;font-weight:600;color:#4A5A73;line-height:1.6;margin:0 0 14px}
 .sf-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}
 .sf-btn{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:800;text-decoration:none;padding:10px 20px;border-radius:50px}
-.sf-btn-primary{background:#B85520;color:#fff}.sf-btn-ghost{background:#fff;color:#B85520;border:1.5px solid #B85520}
-.sf-crisis{font-size:12.5px;font-weight:600;color:#6E5B50;line-height:1.6;background:#fff;border:1.5px solid #F2DFD1;border-radius:12px;padding:10px 14px;margin:0 0 16px}
-.sf-crisis strong{color:#3B2F2A}.sf-crisis a{color:#B71C1C;font-weight:800;text-decoration:none}
+.sf-btn-primary{background:#C2471A;color:#fff}.sf-btn-ghost{background:#fff;color:#C2471A;border:1.5px solid #C2471A}
+.sf-crisis{font-size:12.5px;font-weight:600;color:#4A5A73;line-height:1.6;background:#fff;border:1.5px solid #EEDFCB;border-radius:12px;padding:10px 14px;margin:0 0 16px}
+.sf-crisis strong{color:#172B4D}.sf-crisis a{color:#B71C1C;font-weight:800;text-decoration:none}
 .sf-links{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;margin-bottom:12px}
-.sf-links a{font-size:13px;font-weight:700;color:#B85520;text-decoration:none}
-.sf-links.sf-small a{font-size:12px;color:#6E5B50}
-.sf-copy{font-size:11.5px;font-weight:600;color:#8A766B;margin:8px 0 0}
+.sf-links a{font-size:13px;font-weight:700;color:#C2471A;text-decoration:none}
+.sf-links.sf-small a{font-size:12px;color:#4A5A73}
+.sf-copy{font-size:11.5px;font-weight:600;color:#66768F;margin:8px 0 0}
 @media(max-width:380px){.sf-actions{flex-direction:column}.sf-btn{justify-content:center}}`
 
 function Crisis({ style }: { style?: React.CSSProperties }) {

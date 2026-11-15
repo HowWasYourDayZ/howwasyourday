@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const S = `
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+:root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
 body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+  background:radial-gradient(ellipse 90% 55% at 0% 0%,#FCE5D3 0%,#FDEEDB 22%,#FFFFFF 58%) fixed;}
 a{text-decoration:none;color:inherit;}
 nav{padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:700px;margin:0 auto;}
 .nav-logo{height:56px;}
@@ -27,17 +27,17 @@ h1{font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1.15;margin-bottom
 .lead{font-size:16px;color:var(--gray);line-height:1.75;font-weight:500;}
 .section{background:white;border:1.5px solid var(--border);border-radius:22px;padding:26px;margin-bottom:20px;}
 .section h2{font-size:19px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
-.section p{font-size:14px;color:#4A3C34;line-height:1.75;margin-bottom:10px;}
+.section p{font-size:14px;color:#24395C;line-height:1.75;margin-bottom:10px;}
 .section p:last-child{margin-bottom:0;}
 .section ul{margin:10px 0 10px 18px;}
-.section ul li{font-size:14px;color:#4A3C34;line-height:1.7;margin-bottom:4px;}
+.section ul li{font-size:14px;color:#24395C;line-height:1.7;margin-bottom:4px;}
 .crisis-box{background:#FFF0F0;border:2px solid #FFCDD2;border-radius:16px;padding:18px;margin-bottom:20px;}
 .crisis-box h3{font-size:15px;font-weight:800;color:#7A2020;margin-bottom:8px;}
 .crisis-box p{font-size:13px;color:#7A2020;line-height:1.65;font-weight:600;}
 .cta{background:var(--navy);border-radius:22px;padding:32px;text-align:center;margin-top:24px;}
 .cta h2{font-size:20px;font-weight:900;color:white;margin-bottom:10px;}
-.cta p{font-size:14px;color:rgba(251,227,210,.8);margin-bottom:24px;font-weight:500;}
-.btn{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,116,59,.35);}
+.cta p{font-size:14px;color:rgba(251,224,204,.8);margin-bottom:24px;font-weight:500;}
+.btn{background:var(--orange);color:white;font-family:Karla,sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(230,90,34,.35);}
 `
 
 const trustSchema = {
@@ -63,7 +63,7 @@ export default function TrustPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trustSchema) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
-        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png?v=3" alt="How Was Your Day" className="nav-logo" /></a>
         <a href="/auth"><button className="btn-nav">Open app</button></a>
       </nav>
       <div className="page">

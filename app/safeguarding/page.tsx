@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Karla,sans-serif;background:#FFFAF6;color:#3B2F2A;-webkit-font-smoothing:antialiased;}
-  a{color:#B85520;font-weight:700;text-decoration:none;}
+  body{font-family:Karla,sans-serif;background:#FFFBF3;color:#172B4D;-webkit-font-smoothing:antialiased;}
+  a{color:#C2471A;font-weight:700;text-decoration:none;}
   .page{max-width:720px;margin:0 auto;padding:24px 20px 90px;}
-  .back{display:inline-flex;font-size:14px;font-weight:700;color:#6E5B50;margin-bottom:24px;}
+  .back{display:inline-flex;font-size:14px;font-weight:700;color:#4A5A73;margin-bottom:24px;}
   h1{font-size:clamp(26px,5vw,36px);font-weight:900;line-height:1.15;margin-bottom:10px;}
-  .updated{font-size:13px;color:#6E5B50;margin-bottom:20px;}
-  .lead{font-size:15px;color:#4A3C34;line-height:1.75;font-weight:500;background:#FFF6EF;border:1.5px solid #F2DFD1;border-radius:16px;padding:16px 18px;margin-bottom:8px;}
+  .updated{font-size:13px;color:#4A5A73;margin-bottom:20px;}
+  .lead{font-size:15px;color:#24395C;line-height:1.75;font-weight:500;background:#FFF6E8;border:1.5px solid #EEDFCB;border-radius:16px;padding:16px 18px;margin-bottom:8px;}
   h2{font-size:19px;font-weight:900;margin:30px 0 10px;}
-  p{font-size:14.5px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:10px;}
+  p{font-size:14.5px;color:#24395C;line-height:1.75;font-weight:500;margin-bottom:10px;}
   ul{padding-left:20px;margin-bottom:10px;}
-  li{font-size:14.5px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:4px;}
-  .note{background:#FFF8F0;border-left:4px solid #E8743B;border-radius:0 12px 12px 0;padding:14px 18px;margin:20px 0;}
+  li{font-size:14.5px;color:#24395C;line-height:1.75;font-weight:500;margin-bottom:4px;}
+  .note{background:#FFF8EC;border-left:4px solid #E65A22;border-radius:0 12px 12px 0;padding:14px 18px;margin:20px 0;}
 `
 
 export default function SafeguardingPage() {
@@ -32,7 +32,7 @@ export default function SafeguardingPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
-        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png?v=2" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
+        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png?v=3" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
         <br />
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Safeguarding at How Was Your Day</h1>

@@ -43,9 +43,9 @@ for (const s of SHOTS) {
   const img = readFileSync(`${OUT}/raw/${s.file}.png`).toString('base64')
   const html = `<!doctype html><html><head><meta charset="utf-8">
   <style>${FONT}*{margin:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:Karla,sans-serif;
-  background:linear-gradient(170deg,#FFE9DA 0%,#FFF6EF 45%,#FFFFFF 100%);display:flex;flex-direction:column;align-items:center}
-  h1{color:#3B2F2A;font-size:68px;line-height:1.12;font-weight:900;text-align:center;margin:96px 60px 64px;white-space:pre-line}
-  .phone{width:780px;height:1387px;border-radius:56px;overflow:hidden;border:14px solid #3B2F2A;box-shadow:0 40px 90px rgba(59,47,42,.25);background:#fff}
+  background:linear-gradient(170deg,#FFE9DA 0%,#FFF6E8 45%,#FFFFFF 100%);display:flex;flex-direction:column;align-items:center}
+  h1{color:#172B4D;font-size:68px;line-height:1.12;font-weight:900;text-align:center;margin:96px 60px 64px;white-space:pre-line}
+  .phone{width:780px;height:1387px;border-radius:56px;overflow:hidden;border:14px solid #172B4D;box-shadow:0 40px 90px rgba(23,43,77,.25);background:#fff}
   .phone img{width:100%;display:block}</style></head>
   <body><h1>${s.caption}</h1><div class="phone"><img src="data:image/png;base64,${img}"></div></body></html>`
   const page = await frame.newPage()
@@ -62,11 +62,11 @@ const fg = await browser.newContext({ viewport: { width: 1024, height: 500 }, de
 const page = await fg.newPage()
 await page.setContent(`<!doctype html><html><head><meta charset="utf-8">
 <style>${FONT}*{margin:0;box-sizing:border-box}body{width:1024px;height:500px;overflow:hidden;font-family:Karla,sans-serif;
-background:radial-gradient(ellipse 80% 90% at 90% 0%,#FFE1CC 0%,#FFF6EF 45%,#FFFFFF 80%);display:flex;flex-direction:column;justify-content:center;padding:0 80px}
+background:radial-gradient(ellipse 80% 90% at 90% 0%,#FFE1CC 0%,#FFF6E8 45%,#FFFFFF 80%);display:flex;flex-direction:column;justify-content:center;padding:0 80px}
 img{height:120px;width:auto;margin-bottom:40px}
-h2{color:#3B2F2A;font-size:44px;font-weight:900;line-height:1.1;letter-spacing:-1px}
-h2 span{color:#E8743B}
-p{color:#6E5B50;font-size:26px;font-weight:700;margin-top:16px}</style></head>
+h2{color:#172B4D;font-size:44px;font-weight:900;line-height:1.1;letter-spacing:-1px}
+h2 span{color:#E65A22}
+p{color:#4A5A73;font-size:26px;font-weight:700;margin-top:16px}</style></head>
 <body><img src="data:image/svg+xml;base64,${logo}"><h2>Talk it through. <span>8 minutes is enough.</span></h2>
 <p>A real person who listens · text or voice · UK</p></body></html>`, { waitUntil: 'networkidle' }).catch(() => {})
 await page.waitForTimeout(800)

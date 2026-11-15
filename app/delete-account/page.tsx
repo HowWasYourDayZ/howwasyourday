@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#3B2F2A;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--cream:#FFFAF6;}
+  :root{--navy:#172B4D;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--cream:#FFFBF3;}
   body{font-family:Karla,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased;}
   a{color:var(--orange);text-decoration:none;}
   .page{max-width:640px;margin:0 auto;padding:24px 20px 80px;}
@@ -19,11 +19,11 @@ const S = `
   h1{font-size:28px;font-weight:900;color:var(--navy);margin-bottom:8px;}
   .updated{font-size:13px;color:var(--gray);font-weight:500;margin-bottom:24px;}
   h2{font-size:17px;font-weight:800;color:var(--navy);margin:28px 0 10px;}
-  p{font-size:14px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:10px;}
+  p{font-size:14px;color:#24395C;line-height:1.75;font-weight:500;margin-bottom:10px;}
   ol,ul{padding-left:20px;margin-bottom:10px;}
-  li{font-size:14px;color:#4A3C34;line-height:1.75;font-weight:500;margin-bottom:4px;}
-  .steps{background:#FFFAF6;border:1.5px solid #F2DFD1;border-radius:16px;padding:16px 18px 8px 36px;margin:16px 0;}
-  .steps li{color:#9E4719;font-weight:700;}
+  li{font-size:14px;color:#24395C;line-height:1.75;font-weight:500;margin-bottom:4px;}
+  .steps{background:#FFFBF3;border:1.5px solid #EEDFCB;border-radius:16px;padding:16px 18px 8px 36px;margin:16px 0;}
+  .steps li{color:#A33B14;font-weight:700;}
 `
 
 export default function DeleteAccountPage() {
@@ -31,7 +31,7 @@ export default function DeleteAccountPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
-        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png?v=2" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
+        <a href="/" aria-label="How Was Your Day — home" style={{ display: 'inline-block', marginBottom: 18 }}><img src="/brand/logo.png?v=3" alt="How Was Your Day" style={{ height: 40, width: 'auto', display: 'block' }} /></a>
         <br />
         <a href="/" className="back">← Back to How Was Your Day</a>
         <h1>Delete your How Was Your Day account</h1>

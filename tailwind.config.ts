@@ -10,16 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         // Brand palette — PROJECT.md §1a. Old names kept so existing classes still work.
-        navy:         '#3B2F2A',   // ink
-        'navy-light': '#6E5B50',   // muted
-        orange:       '#E8743B',   // sunset orange
-        'orange-light':'#FBE3D2',  // apricot
-        ember:        '#B85520',   // action
-        peach:        '#FFF6EF',
-        cream:        '#FFFAF6',
-        'slate-blue': '#6E5B50',
-        'soft-blue':  '#F2DFD1',
-        'warm-gray':  '#FFF6EF',
+        navy:         '#172B4D',   // ink
+        'navy-light': '#4A5A73',   // muted
+        orange:       '#E65A22',   // sunset orange
+        'orange-light':'#FBE0CC',  // apricot
+        ember:        '#C2471A',   // action
+        peach:        '#FFF6E8',
+        cream:        '#FFFBF3',
+        'slate-blue': '#4A5A73',
+        'soft-blue':  '#EEDFCB',
+        'warm-gray':  '#FFF6E8',
       },
       fontFamily: {
         display: ['var(--font-display)', 'sans-serif'],
@@ -37,9 +37,9 @@ const config: Config = {
         '3xl': '1.5rem',
       },
       boxShadow: {
-        'card':       '0 2px 12px rgba(59,47,42,0.08)',
-        'card-hover': '0 4px 24px rgba(59,47,42,0.14)',
-        'orange':     '0 4px 16px rgba(232,116,59,0.30)',
+        'card':       '0 2px 12px rgba(23,43,77,0.08)',
+        'card-hover': '0 4px 24px rgba(23,43,77,0.14)',
+        'orange':     '0 4px 16px rgba(230,90,34,0.30)',
       },
     },
   },

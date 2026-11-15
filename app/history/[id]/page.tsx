@@ -7,9 +7,9 @@ import Avatar from '@/app/components/Avatar'
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+  :root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
   body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;}
-  .wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#FFF6EF;}
+  .wrap{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto;background:#FFF6E8;}
   .hdr{background:var(--navy);padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;position:sticky;top:0;z-index:50;}
   .back-btn{background:none;border:none;cursor:pointer;font-size:20px;color:white;padding:4px;line-height:1;flex-shrink:0;}
   .av{width:40px;height:40px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:white;flex-shrink:0;overflow:hidden;}
@@ -20,7 +20,7 @@ const S = `
   .msgs{flex:1;overflow-y:auto;padding:12px 8px 20px;display:flex;flex-direction:column;gap:3px;}
   .msgs::-webkit-scrollbar{width:3px;}
   .msgs::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.15);border-radius:2px;}
-  .date-pill{align-self:center;background:rgba(255,255,255,0.85);color:#5C4A40;font-size:12px;font-weight:600;padding:4px 12px;border-radius:8px;margin:8px 0;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+  .date-pill{align-self:center;background:rgba(255,255,255,0.85);color:#3A4A66;font-size:12px;font-weight:600;padding:4px 12px;border-radius:8px;margin:8px 0;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
   .msg-wrap{display:flex;flex-direction:column;max-width:80%;}
   .msg-wrap.me{align-self:flex-end;align-items:flex-end;}
   .msg-wrap.them{align-self:flex-start;align-items:flex-start;}
@@ -29,12 +29,12 @@ const S = `
   .bubble.them{background:#FFFFFF;color:var(--navy);border-radius:18px 18px 18px 4px;}
   .bubble-text{font-size:14px;font-weight:500;line-height:1.5;word-break:break-word;}
   .bubble.me .bubble-text{color:white;}
-  .bubble.them .bubble-text{color:#9E4719;}
+  .bubble.them .bubble-text{color:#A33B14;}
   .bubble-time{font-size:11px;font-weight:500;margin-top:2px;}
   .bubble.me .bubble-time{color:rgba(255,255,255,0.75);}
-  .bubble.them .bubble-time{color:#5C4A40;}
+  .bubble.them .bubble-time{color:#3A4A66;}
   .ended-note{background:rgba(255,255,255,0.8);text-align:center;padding:10px 16px;font-size:12px;color:var(--gray);font-weight:600;border-radius:8px;margin:8px auto;max-width:280px;}
-  .readonly-bar{background:rgba(59,47,42,0.06);border-top:1px solid rgba(59,47,42,0.1);padding:12px 16px;text-align:center;font-size:13px;color:var(--gray);font-weight:600;flex-shrink:0;}
+  .readonly-bar{background:rgba(23,43,77,0.06);border-top:1px solid rgba(23,43,77,0.1);padding:12px 16px;text-align:center;font-size:13px;color:var(--gray);font-weight:600;flex-shrink:0;}
   .loading{flex:1;display:flex;align-items:center;justify-content:center;color:var(--gray);font-weight:600;}
   .empty-msgs{align-self:center;background:rgba(255,255,255,0.85);padding:16px 24px;border-radius:12px;font-size:14px;color:var(--gray);font-weight:600;margin:auto;}
 `

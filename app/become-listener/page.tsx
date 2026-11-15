@@ -36,9 +36,9 @@ const TAGS = [
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--bg:#FFFFFF;--light:#FFF6EF;--border:#F2DFD1;--gray:#6E5B50;}
+  :root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--bg:#FFFFFF;--light:#FFF6E8;--border:#EEDFCB;--gray:#4A5A73;}
   body{font-family:Karla,sans-serif;background:var(--bg);color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%, #FDE6D6 0%, #FFF1E6 22%, #FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%, #FCE5D3 0%, #FDEEDB 22%, #FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .page{max-width:480px;margin:0 auto;padding:0 20px 60px;}
   .topbar{display:flex;align-items:center;gap:12px;padding:16px 0 24px;}
@@ -46,18 +46,18 @@ const S = `
 
   .hero-card{background:var(--navy);border-radius:24px;padding:28px;margin-bottom:32px;text-align:center;}
   .hero-card h1{font-size:24px;font-weight:900;color:white;margin-bottom:10px;}
-  .hero-card p{font-size:14px;color:rgba(251,227,210,0.8);font-weight:500;line-height:1.6;margin-bottom:24px;}
+  .hero-card p{font-size:14px;color:rgba(251,224,204,0.8);font-weight:500;line-height:1.6;margin-bottom:24px;}
   .earn-row{display:flex;justify-content:center;gap:20px;}
   .earn-item .amount{font-size:24px;font-weight:900;color:var(--orange);}
-  .earn-item .label{font-size:11px;color:rgba(251,227,210,0.7);font-weight:600;margin-top:2px;}
+  .earn-item .label{font-size:11px;color:rgba(251,224,204,0.7);font-weight:600;margin-top:2px;}
 
-  .fee-box{background:rgba(184,85,32,0.08);border:1.5px solid rgba(184,85,32,0.2);border-radius:16px;padding:16px;margin-bottom:24px;}
+  .fee-box{background:rgba(194,71,26,0.08);border:1.5px solid rgba(194,71,26,0.2);border-radius:16px;padding:16px;margin-bottom:24px;}
   .fee-box h3{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:10px;}
-  .fee-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(184,85,32,0.12);font-size:13px;}
+  .fee-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(194,71,26,0.12);font-size:13px;}
   .fee-row:last-child{border-bottom:none;font-weight:800;}
   .fee-row .label{color:var(--gray);font-weight:500;}
   .fee-row .value{color:var(--navy);font-weight:700;}
-  .fee-row.highlight .value{color:#B85520;font-weight:800;}
+  .fee-row.highlight .value{color:#C2471A;font-weight:800;}
 
   .step-dots{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:28px;}
   .dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;}
@@ -89,15 +89,15 @@ const S = `
   .rate-preview{background:var(--light);border-radius:12px;padding:12px 16px;margin-bottom:16px;}
   .rate-preview p{font-size:13px;color:var(--gray);font-weight:600;line-height:1.8;}
   .rate-preview strong{color:var(--navy);}
-  .disclaimer{background:#FFF8F0;border:1.5px solid #FFD9A0;border-radius:14px;padding:14px 16px;margin-bottom:24px;}
+  .disclaimer{background:#FFF8EC;border:1.5px solid #FFD9A0;border-radius:14px;padding:14px 16px;margin-bottom:24px;}
   .disclaimer p{font-size:12px;color:#7A5C00;font-weight:600;line-height:1.6;}
   .error-box{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:12px;padding:12px 16px;margin-bottom:16px;font-size:13px;color:#7A2020;font-weight:600;}
   .errors-list{background:#FFF0F0;border:1.5px solid #FFCDD2;border-radius:12px;padding:12px 16px;margin-bottom:16px;}
   .errors-list p{font-size:13px;color:#7A2020;font-weight:700;margin-bottom:6px;}
   .errors-list ul{padding-left:16px;}
   .errors-list li{font-size:12px;color:#7A2020;font-weight:600;margin-bottom:2px;}
-  .btn{width:100%;padding:16px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(232,116,59,0.3);}
-  .btn:hover{background:#D0632D;transform:translateY(-1px);}
+  .btn{width:100%;padding:16px;font-family:Karla,sans-serif;font-size:16px;font-weight:800;color:white;background:var(--orange);border:none;border-radius:50px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(230,90,34,0.3);}
+  .btn:hover{background:#D9531F;transform:translateY(-1px);}
   .btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
   .btn-ghost{width:100%;padding:16px;font-family:Karla,sans-serif;font-size:15px;font-weight:700;color:var(--navy);background:white;border:2px solid var(--border);border-radius:50px;cursor:pointer;margin-top:10px;}
   .success{text-align:center;padding:40px 20px;}
@@ -110,11 +110,11 @@ const S = `
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
   .otp-row{display:flex;gap:10px;justify-content:center;margin-bottom:8px;}
   .otp-box{width:48px;height:56px;border:2px solid var(--border);border-radius:14px;font-family:Karla,sans-serif;font-size:22px;font-weight:900;color:var(--navy);text-align:center;background:white;outline:none;transition:all 0.2s;}
-  .otp-box:focus{border-color:var(--orange);background:#FFFAF6;}
+  .otp-box:focus{border-color:var(--orange);background:#FFFBF3;}
   .otp-box.err{border-color:#E53935;background:#FFF5F5;}
   .resend-btn{background:none;border:none;font-family:Karla,sans-serif;font-size:14px;font-weight:700;color:var(--teal);cursor:pointer;}
   .resend-count{font-size:14px;color:var(--gray);font-weight:600;}
-  .already-reg{background:#FFF6EF;border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;margin-bottom:24px;}
+  .already-reg{background:#FFF6E8;border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;margin-bottom:24px;}
   .already-reg p{font-size:15px;color:var(--navy);font-weight:600;margin-bottom:12px;}
   .photo-box{border:2px dashed var(--border);border-radius:16px;padding:20px;text-align:center;cursor:pointer;transition:all 0.2s;margin-bottom:4px;background:white;position:relative;overflow:hidden;}
   .photo-box:hover,.photo-box.has-photo{border-color:var(--teal);border-style:solid;}
@@ -123,7 +123,7 @@ const S = `
   .photo-placeholder{width:64px;height:64px;border-radius:50%;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;}
   .photo-label{font-size:13px;font-weight:700;color:var(--teal);display:block;}
   .photo-sub{font-size:11px;color:var(--gray);font-weight:500;margin-top:3px;}
-  .training-box{background:rgba(184,85,32,0.06);border:1.5px solid rgba(184,85,32,0.2);border-radius:14px;padding:14px 16px;margin-bottom:20px;}
+  .training-box{background:rgba(194,71,26,0.06);border:1.5px solid rgba(194,71,26,0.2);border-radius:14px;padding:14px 16px;margin-bottom:20px;}
   .training-box h3{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:8px;}
   .training-box li{font-size:12px;color:var(--gray);font-weight:600;margin-bottom:4px;list-style:none;padding-left:4px;}
   .training-box li::before{content:"✓ ";color:var(--teal);}
@@ -699,7 +699,7 @@ export default function BecomeListenerPage() {
         </div>
         <div style={{background:'white',border:'1.5px solid var(--border)',borderRadius:20,padding:'6px 18px',marginBottom:16}}>
           {NO_INCOME_NOTICE.map(n => (
-            <div key={n.lang} lang={n.code} dir={n.rtl ? 'rtl' : 'ltr'} style={{padding:'12px 0',borderBottom:'1px solid #FFF6EF',textAlign:n.rtl ? 'right' : 'left'}}>
+            <div key={n.lang} lang={n.code} dir={n.rtl ? 'rtl' : 'ltr'} style={{padding:'12px 0',borderBottom:'1px solid #FFF6E8',textAlign:n.rtl ? 'right' : 'left'}}>
               <div style={{fontSize:11,fontWeight:800,color:'var(--teal)',textTransform:'uppercase',letterSpacing:'.05em',marginBottom:4}} dir="ltr">{n.lang}</div>
               <div style={{fontSize:14,color:'var(--navy)',fontWeight:600,lineHeight:1.65}}>{n.text}</div>
             </div>
@@ -743,14 +743,14 @@ export default function BecomeListenerPage() {
       <style dangerouslySetInnerHTML={{ __html: `
         .landing-section{background:white;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
         .landing-section h2{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px;}
-        .landing-row{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#4A3C34;line-height:1.6;margin-bottom:8px;}
+        .landing-row{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#24395C;line-height:1.6;margin-bottom:8px;}
         .landing-row:last-child{margin-bottom:0;}
         .landing-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
         .not-row{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#5A4020;line-height:1.6;margin-bottom:8px;}
         .not-row:last-child{margin-bottom:0;}
-        .not-section{background:#FFF8F0;border:1.5px solid #FFD9A0;border-radius:20px;padding:22px;margin-bottom:16px;}
+        .not-section{background:#FFF8EC;border:1.5px solid #FFD9A0;border-radius:20px;padding:22px;margin-bottom:16px;}
         .not-section h2{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px;}
-        .identity-section{background:#FFF6EF;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
+        .identity-section{background:#FFF6E8;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
         .identity-section h2{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px;}
         .agree-box{background:white;border:2px solid var(--border);border-radius:16px;padding:18px 20px;margin-bottom:20px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color 0.2s;}
         .agree-box.checked{border-color:var(--orange);}
@@ -847,7 +847,7 @@ export default function BecomeListenerPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <div className="page">
         <div className="topbar"><a href="/" className="back">←</a></div>
-        <div style={{ textAlign: 'center', padding: '64px 20px', fontFamily: "Karla,sans-serif", fontWeight: 600, color: '#6E5B50' }}>
+        <div style={{ textAlign: 'center', padding: '64px 20px', fontFamily: "Karla,sans-serif", fontWeight: 600, color: '#4A5A73' }}>
           {guardError ? (
             <>
               <div style={{ marginBottom: 16 }}>Connection problem — please try again.</div>
@@ -870,19 +870,19 @@ export default function BecomeListenerPage() {
             <>
               <div style={{fontSize:48,marginBottom:12}}>😔</div>
               <p style={{fontWeight:800,fontSize:17,marginBottom:6}}>Application not approved</p>
-              <p style={{fontSize:14,color:'#6E5B50',marginBottom:16}}>
+              <p style={{fontSize:14,color:'#4A5A73',marginBottom:16}}>
                 We&apos;ve completed our review and we&apos;re unable to approve your application.
               </p>
               {rejectedNotes && (
-                <div style={{background:'#FFF6EF',border:'1.5px solid #F2DFD1',borderRadius:14,padding:'14px 16px',textAlign:'left',marginBottom:16}}>
-                  <div style={{fontSize:11,fontWeight:800,color:'#B85520',textTransform:'uppercase',letterSpacing:'.06em',marginBottom:6}}>Reason from our team</div>
-                  <div style={{fontSize:14,color:'#3B2F2A',lineHeight:1.6,fontWeight:500}}>{rejectedNotes}</div>
+                <div style={{background:'#FFF6E8',border:'1.5px solid #EEDFCB',borderRadius:14,padding:'14px 16px',textAlign:'left',marginBottom:16}}>
+                  <div style={{fontSize:11,fontWeight:800,color:'#C2471A',textTransform:'uppercase',letterSpacing:'.06em',marginBottom:6}}>Reason from our team</div>
+                  <div style={{fontSize:14,color:'#172B4D',lineHeight:1.6,fontWeight:500}}>{rejectedNotes}</div>
                 </div>
               )}
-              <p style={{fontSize:13,color:'#6E5B50',marginBottom:6}}>
+              <p style={{fontSize:13,color:'#4A5A73',marginBottom:6}}>
                 You cannot resubmit this application directly.
               </p>
-              <p style={{fontSize:13,color:'#6E5B50',marginBottom:16}}>
+              <p style={{fontSize:13,color:'#4A5A73',marginBottom:16}}>
                 If you believe this decision was made in error, contact support and we&apos;ll review your case.
               </p>
               <a href="/contact">
@@ -896,7 +896,7 @@ export default function BecomeListenerPage() {
             <>
               <div style={{fontSize:48,marginBottom:12}}>✅</div>
               <p style={{fontWeight:800,fontSize:17,marginBottom:6}}>Application submitted!</p>
-              <p style={{fontSize:14,color:'#6E5B50',marginBottom:16}}>Our team is reviewing your profile. You&apos;ll hear from us within 24–48 hours — check the status page for updates anytime.</p>
+              <p style={{fontSize:14,color:'#4A5A73',marginBottom:16}}>Our team is reviewing your profile. You&apos;ll hear from us within 24–48 hours — check the status page for updates anytime.</p>
               <a href="/become-listener/status">
                 <button className="btn">Check application status →</button>
               </a>
@@ -950,7 +950,7 @@ export default function BecomeListenerPage() {
               <div className="earn-item"><div className="amount">{Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}%</div><div className="label">of your rate you keep on paid sessions</div></div>
             </div>
             {SHOW_LISTENER_GROWTH_NOTICE && (
-              <div style={{marginTop:16,background:'rgba(232,116,59,0.13)',border:'1.5px solid rgba(232,116,59,0.35)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'rgba(255,220,140,0.95)',lineHeight:1.6,fontWeight:500}}>
+              <div style={{marginTop:16,background:'rgba(230,90,34,0.13)',border:'1.5px solid rgba(230,90,34,0.35)',borderRadius:12,padding:'12px 14px',fontSize:13,color:'rgba(255,220,140,0.95)',lineHeight:1.6,fontWeight:500}}>
                 <strong style={{fontWeight:800}}>Honest note:</strong> How Was Your Day is a growing platform. How much you earn depends entirely on how many seekers are using How Was Your Day when you&apos;re online. Early listeners focus on building their profile and first few ratings — volume grows as the platform does. We don&apos;t promise a specific income.
               </div>
             )}
@@ -1351,7 +1351,7 @@ export default function BecomeListenerPage() {
             {fieldErrors.rate && <span className="field-err">{fieldErrors.rate}</span>}
             <p style={{fontSize:12,color:'var(--gray)',marginBottom:12,fontWeight:500}}>You keep {Math.round((1 - LISTENER_SERVICE_FEE_RATE) * 100)}% of your rate on every paid session. The standard starting rate is {formatRate(DEFAULT_LISTENER_RATE)}; you can raise it as you build reviews.</p>
 
-            <div style={{background:'#FFF6EF',borderRadius:12,padding:'10px 14px',marginBottom:12,fontSize:13,color:'#3B2F2A',fontWeight:600}}>
+            <div style={{background:'#FFF6E8',borderRadius:12,padding:'10px 14px',marginBottom:12,fontSize:13,color:'#172B4D',fontWeight:600}}>
               📅 Sessions are <strong>8, 16 or 32 minutes</strong> — instant, or booked into weekly hours you set. No open-ended calls — clean start and end times for both sides.
             </div>
 
@@ -1394,7 +1394,7 @@ export default function BecomeListenerPage() {
             />
             {fieldErrors.accountHolder
               ? <span className="field-err">{fieldErrors.accountHolder}</span>
-              : <span style={{fontSize:11,color:'#B59A89',marginTop:2,display:'block'}}>Must match your bank records exactly — used to verify payouts</span>
+              : <span style={{fontSize:11,color:'#8F9BB0',marginTop:2,display:'block'}}>Must match your bank records exactly — used to verify payouts</span>
             }
 
             <label className="lbl">Account number (8 digits) <span style={{color:'#c0392b'}}>*</span></label>

@@ -2,16 +2,16 @@
 
 ![Logo overview](overview.png)
 
-**The mark:** a rounded speech bubble (talking) holding a sun (your day). It sits next to the
-wordmark *How Was* (ink) / *Your Day* (sunset orange), set in Nunito Black. All text is
+**The mark:** a line-drawn ear (listening) whose inner fold is a question mark ("How was your day?"), in orange #E65A22; the wordmark is navy #172B4D Lora Bold. All text is
 outlined to vector paths, so the SVGs look identical everywhere and need no font installed.
 
 ## Colours (PROJECT.md §1a)
 | Name | Hex | Use |
 |---|---|---|
-| Sunset orange | `#E8743B` | Bubble, "Your Day", app-icon background |
-| Ink | `#3B2F2A` | "How Was" and dark backgrounds |
-| White | `#FFFFFF` | Sun on the orange bubble, reversed logos |
+| Orange | `#E65A22` | The ear |
+| Navy | `#172B4D` | Wordmark "How Was / Your Day?", dark backgrounds |
+| Cream | `#FFF6E8` | App-icon background, Android splash |
+| White | `#FFFFFF` | Wordmark on dark backgrounds (reversed logos) |
 
 ## Files
 | Need | Use |
@@ -21,12 +21,12 @@ outlined to vector paths, so the SVGs look identical everywhere and need no font
 | Avatar, small spaces, social profile | `svg/mark.svg` (`mark-white.svg` on dark, `mark-ink.svg` for one-colour print) |
 | App icon: iOS, Play Store, PWA | `svg/app-icon.svg` (square, full bleed — the platform rounds the corners) |
 | App icon shown as-is (slides, docs) | `svg/app-icon-rounded.svg` |
-| Android adaptive icon | `svg/app-icon-foreground.svg` on the background colour `#E8743B` |
+| Android adaptive icon | `svg/app-icon-foreground.svg` on the background colour `#E65A22` |
 | Name only | `svg/wordmark.svg` |
 | Raster versions | `png/` — transparent PNGs up to 2400px wide / 2048px square, app icons 16–1024px, `favicon.ico` |
 
 ## Rules
-- Keep clear space around the logo of at least the height of the sun.
+- Keep clear space around the logo of at least half the width of the ear.
 - Minimum size: the mark at 16px (favicon), the stacked logo at 32px tall.
 - Don't recolour, stretch, rotate, outline or add shadows; don't put the orange logo on an orange background
   (use the white version).

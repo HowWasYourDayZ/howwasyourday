@@ -83,30 +83,30 @@ function WelcomeBanner({
         }}>
           Someone to talk to, from 8 minutes.
         </h2>
-        <p style={{fontSize:16, color:'rgba(251,227,210,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
+        <p style={{fontSize:16, color:'rgba(251,224,204,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
           Real person, not AI.
         </p>
-        <p style={{fontSize:16, color:'rgba(251,227,210,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
+        <p style={{fontSize:16, color:'rgba(251,224,204,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:10, maxWidth:300}}>
           Anonymous. No prescription.
         </p>
-        <p style={{fontSize:16, color:'rgba(251,227,210,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:40, maxWidth:300}}>
+        <p style={{fontSize:16, color:'rgba(251,224,204,0.85)', fontWeight:600, lineHeight:1.65, marginBottom:40, maxWidth:300}}>
           Just someone who listens.
         </p>
         <button
           onClick={dismiss}
           style={{
-            background:'#E8743B', color:'white',
+            background:'#E65A22', color:'white',
             border:'none', borderRadius:50,
             padding:'16px 40px',
             fontSize:17, fontWeight:900,
             cursor:'pointer', width:'100%', maxWidth:320,
-            boxShadow:'0 4px 24px rgba(232,116,59,0.45)',
+            boxShadow:'0 4px 24px rgba(230,90,34,0.45)',
             fontFamily:'Karla,sans-serif',
           }}
         >
           {topicLabel ? `Find a ${topicLabel.toLowerCase()} listener →` : 'Find a listener →'}
         </button>
-        <p style={{fontSize:13, color:'rgba(251,227,210,0.45)', marginTop:20, fontWeight:600}}>
+        <p style={{fontSize:13, color:'rgba(251,224,204,0.45)', marginTop:20, fontWeight:600}}>
           No credit card needed for the free session.
         </p>
       </div>
@@ -120,7 +120,7 @@ function WelcomeBanner({
         <p style={{fontSize:14,fontWeight:800,margin:0,marginBottom:2}}>
           Not sure where to start?
         </p>
-        <p style={{fontSize:13,fontWeight:600,color:'rgba(251,227,210,0.9)',margin:0}}>
+        <p style={{fontSize:13,fontWeight:600,color:'rgba(251,224,204,0.9)',margin:0}}>
           Pick someone you’d feel comfortable talking to — text or voice, now or at a time you book. Sessions start at 8 minutes.
         </p>
       </div>
@@ -132,7 +132,7 @@ function WelcomeBanner({
 // Photo-less listeners get a stable brand-palette colour from their name, so
 // cards don't all look identical. Blues/teals only (orange is the CTA colour);
 // all pass 4.5:1 with white initials.
-const INITIALS_COLORS = ['#3B2F2A', '#9E4719', '#B85520', '#6E5B50']
+const INITIALS_COLORS = ['#172B4D', '#A33B14', '#C2471A', '#4A5A73']
 function initialsColor(name: string): string {
   let h = 0
   for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0
@@ -261,7 +261,7 @@ const SAVED_KEY = 'howwasyourday_saved_listeners'
 
 const S = `
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;--apricot:#FBE3D2;}
+:root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;--apricot:#FBE0CC;}
 body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;background:#FFFCFA;}
 a{text-decoration:none;color:inherit;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
@@ -276,7 +276,7 @@ a{text-decoration:none;color:inherit;}
 .bh-link:hover{color:var(--navy);}
 .bh-wallet{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:800;color:var(--navy);padding:9px 14px;border-radius:999px;border:1.5px solid var(--border);background:#fff;}
 .bh-cta{display:inline-flex;align-items:center;font-size:15px;font-weight:800;color:#fff;background:var(--teal);padding:12px 22px;border-radius:999px;white-space:nowrap;}
-.bh-cta:hover{background:#9E4719;}
+.bh-cta:hover{background:#A33B14;}
 @media(max-width:560px){.bh-row{gap:8px}.bh-row img{height:32px}.bh-nav{gap:4px}.bh-link{padding:8px 8px;font-size:14px}.bh-wallet{display:none}.bh-cta{font-size:13.5px;padding:10px 14px}}
 
 /* title + toolbar */
@@ -287,8 +287,8 @@ a{text-decoration:none;color:inherit;}
 .search{flex:1 1 320px;position:relative;}
 .search svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--gray);pointer-events:none;}
 .search input{width:100%;height:58px;padding:0 20px 0 50px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Karla,sans-serif;font-size:16px;font-weight:600;color:var(--navy);outline:none;}
-.search input:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(232,116,59,.12);}
-.search input::placeholder{color:#8A766B;font-weight:500;}
+.search input:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(230,90,34,.12);}
+.search input::placeholder{color:#66768F;font-weight:500;}
 .tbtn{height:58px;display:inline-flex;align-items:center;gap:10px;padding:0 24px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-family:Karla,sans-serif;font-size:16px;font-weight:700;color:var(--navy);cursor:pointer;white-space:nowrap;}
 .tbtn:hover{border-color:var(--orange);}
 .tbtn.on{background:var(--teal);border-color:var(--teal);color:#fff;}
@@ -312,11 +312,11 @@ a{text-decoration:none;color:inherit;}
 @media(min-width:700px){.list{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(min-width:1040px){.list{grid-template-columns:repeat(3,minmax(0,1fr));}}
 .lc{position:relative;background:#fff;border:1.5px solid var(--border);border-radius:28px;transition:border-color .2s,box-shadow .2s,transform .2s;}
-.lc:hover{border-color:#EBC3A6;box-shadow:0 14px 36px rgba(59,47,42,.08);transform:translateY(-2px);}
+.lc:hover{border-color:#EBC3A6;box-shadow:0 14px 36px rgba(23,43,77,.08);transform:translateY(-2px);}
 .lc-link{display:flex;flex-direction:column;height:100%;padding:34px 34px 28px;border-radius:28px;}
 @media(max-width:560px){.lc-link{padding:26px 24px 22px;}}
 .lc-top{display:flex;gap:22px;align-items:center;margin-bottom:22px;padding-right:44px;}
-.lc-av{width:92px;height:92px;border-radius:50%;flex-shrink:0;position:relative;box-shadow:0 0 0 4px #fff,0 6px 16px rgba(59,47,42,.12);}
+.lc-av{width:92px;height:92px;border-radius:50%;flex-shrink:0;position:relative;box-shadow:0 0 0 4px #fff,0 6px 16px rgba(23,43,77,.12);}
 .lc-av .ph{width:100%;height:100%;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;color:#fff;}
 .lc-av img{width:100%;height:100%;object-fit:cover;}
 .lc-dot{position:absolute;right:0;bottom:2px;width:22px;height:22px;border-radius:50%;border:4px solid #fff;}
@@ -339,7 +339,7 @@ a{text-decoration:none;color:inherit;}
 .lc-heart[aria-pressed="true"]{color:var(--orange);border-color:var(--apricot);background:var(--light);}
 .lc-heart:active{transform:scale(.92);}
 
-.skeleton{background:linear-gradient(90deg,#FFF6EF 25%,#FFFAF6 50%,#FFF6EF 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:28px;height:380px;border:1.5px solid var(--border);}
+.skeleton{background:linear-gradient(90deg,#FFF6E8 25%,#FFFBF3 50%,#FFF6E8 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:28px;height:380px;border:1.5px solid var(--border);}
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
 .empty{grid-column:1/-1;text-align:center;padding:56px 20px;background:#fff;border-radius:28px;border:1.5px solid var(--border);}
 .empty h3{font-size:22px;font-weight:900;margin-bottom:8px;}
@@ -350,7 +350,7 @@ a{text-decoration:none;color:inherit;}
 .empty small{display:block;margin-top:20px;font-size:13.5px;color:var(--gray);font-weight:600;}
 .empty small a{color:#B71C1C;font-weight:800;}
 
-.session-toast{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--orange);color:white;font-family:Karla,sans-serif;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 20px rgba(232,116,59,.35);animation:toastDrop .25s ease;}
+.session-toast{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--orange);color:white;font-family:Karla,sans-serif;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 4px 20px rgba(230,90,34,.35);animation:toastDrop .25s ease;}
 @keyframes toastDrop{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:translateY(0)}}
 .session-toast-text{font-size:14px;font-weight:800;}
 .session-toast-sub{font-size:12px;font-weight:600;opacity:.85;margin-top:2px;}
@@ -708,7 +708,7 @@ function BrowseContent() {
       />
       <header className="bh">
         <div className="wrap bh-row">
-          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=2" alt="How Was Your Day" width={128} height={40} /></a>
+          <a href="/" aria-label="How Was Your Day — home"><img src="/brand/logo.png?v=3" alt="How Was Your Day" width={128} height={40} /></a>
           <nav className="bh-nav" aria-label="Account">
             {authChecked && (myUserId ? (
               <>
@@ -835,12 +835,12 @@ function BrowseContent() {
                       <span className={`lc-dot ${statusClass}`} aria-hidden />
                     </div>
                     <div style={{ minWidth: 0 }}>
-                      <h2 className="lc-name"><span title={l.name}>{l.name}</span>{l.is_verified && <BadgeCheck size={18} color="#B85520" aria-label="Verified" />}</h2>
+                      <h2 className="lc-name"><span title={l.name}>{l.name}</span>{l.is_verified && <BadgeCheck size={18} color="#C2471A" aria-label="Verified" />}</h2>
                       <div className={`lc-status ${statusClass}`}>{statusLabel}</div>
                       <div className="lc-sub">
                         {isNew ? 'New listener' : (
                           <>
-                            {l.rating > 0 && <><Star size={14} fill="#E8743B" color="#E8743B" aria-hidden /> {(+l.rating).toFixed(1)}</>}
+                            {l.rating > 0 && <><Star size={14} fill="#E65A22" color="#E65A22" aria-hidden /> {(+l.rating).toFixed(1)}</>}
                             {l.rating > 0 && l.total_sessions > 0 && ' · '}
                             {l.total_sessions > 0 && `${l.total_sessions} ${l.total_sessions === 1 ? 'conversation' : 'conversations'}`}
                           </>
@@ -864,7 +864,7 @@ function BrowseContent() {
                   </div>
                 </Link>
                 <button type="button" className="lc-heart" aria-pressed={isSaved} aria-label={isSaved ? `Remove ${l.name} from saved` : `Save ${l.name}`} onClick={() => toggleSaved(l.user_id)}>
-                  <Heart size={22} fill={isSaved ? '#E8743B' : 'none'} aria-hidden />
+                  <Heart size={22} fill={isSaved ? '#E65A22' : 'none'} aria-hidden />
                 </button>
               </article>
             )

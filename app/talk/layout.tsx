@@ -74,15 +74,15 @@ export default function TalkLayout({ children }: { children: React.ReactNode }) 
       {children}
       <section className="talk-info" aria-labelledby="talk-info-h">
         <style dangerouslySetInnerHTML={{ __html: `
-          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:Karla,system-ui,sans-serif;color:#3B2F2A;}
+          .talk-info{max-width:520px;margin:-90px auto 0;padding:0 18px 130px;font-family:Karla,system-ui,sans-serif;color:#172B4D;}
           body.talk-busy .talk-info{display:none;}
-          .talk-info h2{font-size:16px;font-weight:900;color:#3B2F2A;margin:26px 0 8px;}
-          .talk-info details{border-bottom:1px solid #FFF6EF;padding:10px 0;}
-          .talk-info summary{font-size:14.5px;font-weight:800;color:#3B2F2A;cursor:pointer;list-style-position:inside;}
+          .talk-info h2{font-size:16px;font-weight:900;color:#172B4D;margin:26px 0 8px;}
+          .talk-info details{border-bottom:1px solid #FFF6E8;padding:10px 0;}
+          .talk-info summary{font-size:14.5px;font-weight:800;color:#172B4D;cursor:pointer;list-style-position:inside;}
           .talk-info details p{margin:6px 0 2px;}
-          .talk-info p,.talk-info li{font-size:13.5px;line-height:1.6;color:#4A3C34;}
+          .talk-info p,.talk-info li{font-size:13.5px;line-height:1.6;color:#24395C;}
           .talk-info ol{margin:6px 0 0 20px;}
-          .talk-info a{color:#B85520;font-weight:800;}
+          .talk-info a{color:#C2471A;font-weight:800;}
         ` }} />
         <h2 id="talk-info-h">How Talk now works</h2>
         <ol>

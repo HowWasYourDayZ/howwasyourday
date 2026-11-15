@@ -64,11 +64,11 @@ for (const [dir, w, h] of splash) {
   await render('logo-stacked.svg', '/tmp/hwyd-splash-logo.png', lw, lh)
   const b64 = readFileSync('/tmp/hwyd-splash-logo.png').toString('base64')
   await page.setViewportSize({ width: w, height: h })
-  await page.setContent(`<body style="margin:0"><div id="x" style="width:${w}px;height:${h}px;background:#fff;display:flex;align-items:center;justify-content:center"><img src="data:image/png;base64,${b64}" width="${lw}" height="${lh}"></div></body>`)
+  await page.setContent(`<body style="margin:0"><div id="x" style="width:${w}px;height:${h}px;background:#FFF6E8;display:flex;align-items:center;justify-content:center"><img src="data:image/png;base64,${b64}" width="${lw}" height="${lh}"></div></body>`)
   await (await page.$('#x')).screenshot({ path: `mobile/android/app/src/main/res/${dir}/splash.png` })
 }
 writeFileSync('mobile/android/app/src/main/res/values/ic_launcher_background.xml',
-  '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <color name="ic_launcher_background">#E8743B</color>\n</resources>\n')
+  '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <color name="ic_launcher_background">#FFF6E8</color>\n</resources>\n')
 
 await browser.close()
 console.log('logo exported')

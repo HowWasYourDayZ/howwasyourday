@@ -80,9 +80,9 @@ const jsonLd = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#3B2F2A;--teal:#B85520;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
+  :root{--navy:#172B4D;--teal:#C2471A;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
   body{font-family:Karla,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;
-    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+    background:radial-gradient(ellipse 90% 55% at 0% 0%,#FCE5D3 0%,#FDEEDB 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   .nav{padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto;}
   .nav-logo{height:52px;width:auto;}
@@ -104,7 +104,7 @@ const S = `
   .faq-a{font-size:15px;color:var(--gray);line-height:1.7;font-weight:500;}
   .cta{background:var(--navy);border-radius:22px;padding:32px 22px;text-align:center;margin-top:36px;}
   .cta h2{color:#fff;margin:0 0 10px;}
-  .cta p{color:rgba(251,227,210,.88);font-size:15px;line-height:1.6;margin-bottom:22px;}
+  .cta p{color:rgba(251,224,204,.88);font-size:15px;line-height:1.6;margin-bottom:22px;}
   .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:900;font-size:16px;padding:14px 28px;border-radius:50px;}
   .small{font-size:13.5px;color:var(--gray);text-align:center;margin-top:18px;line-height:1.6;}
   .small a{color:var(--teal);font-weight:800;}
@@ -117,7 +117,7 @@ export default function BecomeAPeerSupporterPage() {
       <style dangerouslySetInnerHTML={{ __html: S }} />
 
       <nav className="nav">
-        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" className="nav-logo" /></a>
+        <a href="/"><img src="/brand/logo.png?v=3" alt="How Was Your Day" className="nav-logo" /></a>
       </nav>
 
       <main className="page">

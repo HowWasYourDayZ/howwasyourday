@@ -53,25 +53,25 @@ function groupByDate(notifs: Notification[]): { label: string; items: Notificati
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Karla,sans-serif;color:#3B2F2A;background:#FFF6EF;-webkit-font-smoothing:antialiased;}
+  body{font-family:Karla,sans-serif;color:#172B4D;background:#FFF6E8;-webkit-font-smoothing:antialiased;}
   .page{max-width:480px;margin:0 auto;padding:0 0 90px;}
-  .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 14px;background:white;border-bottom:1.5px solid #F2DFD1;position:sticky;top:0;z-index:10;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 14px;background:white;border-bottom:1.5px solid #EEDFCB;position:sticky;top:0;z-index:10;}
   .topbar-left{display:flex;align-items:center;gap:10px;}
-  .back{width:36px;height:36px;border-radius:10px;background:#FFF6EF;border:1.5px solid #F2DFD1;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:#3B2F2A;}
+  .back{width:36px;height:36px;border-radius:10px;background:#FFF6E8;border:1.5px solid #EEDFCB;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:#172B4D;}
   h1{font-size:20px;font-weight:900;}
-  .mark-all{font-size:13px;font-weight:700;color:#B85520;background:none;border:none;cursor:pointer;}
-  .group-label{font-size:12px;font-weight:800;color:#6E5B50;text-transform:uppercase;letter-spacing:.06em;padding:14px 20px 8px;}
-  .notif-row{display:flex;align-items:flex-start;gap:12px;padding:14px 20px;background:white;border-bottom:1px solid #FFF6EF;cursor:pointer;text-decoration:none;transition:background .15s;}
-  .notif-row:hover{background:#FFFAF6;}
-  .notif-row.unread{background:#FFF6EF;}
-  .notif-dot{width:8px;height:8px;border-radius:4px;background:#B85520;flex-shrink:0;margin-top:6px;}
+  .mark-all{font-size:13px;font-weight:700;color:#C2471A;background:none;border:none;cursor:pointer;}
+  .group-label{font-size:12px;font-weight:800;color:#4A5A73;text-transform:uppercase;letter-spacing:.06em;padding:14px 20px 8px;}
+  .notif-row{display:flex;align-items:flex-start;gap:12px;padding:14px 20px;background:white;border-bottom:1px solid #FFF6E8;cursor:pointer;text-decoration:none;transition:background .15s;}
+  .notif-row:hover{background:#FFFBF3;}
+  .notif-row.unread{background:#FFF6E8;}
+  .notif-dot{width:8px;height:8px;border-radius:4px;background:#C2471A;flex-shrink:0;margin-top:6px;}
   .notif-dot.read{background:transparent;}
   .notif-body{flex:1;}
-  .notif-title{font-size:14px;font-weight:800;color:#3B2F2A;margin-bottom:3px;}
-  .notif-text{font-size:13px;color:#6E5B50;font-weight:500;line-height:1.5;margin-bottom:4px;}
-  .notif-time{font-size:11px;color:#8A766B;font-weight:600;}
-  .empty{text-align:center;padding:60px 20px;color:#6E5B50;font-size:14px;font-weight:600;}
-  .load-more{display:block;width:100%;padding:14px;background:white;border:1.5px solid #F2DFD1;border-radius:12px;margin:16px 20px;font-family:Karla,sans-serif;font-weight:700;font-size:14px;color:#B85520;cursor:pointer;width:calc(100% - 40px);}
+  .notif-title{font-size:14px;font-weight:800;color:#172B4D;margin-bottom:3px;}
+  .notif-text{font-size:13px;color:#4A5A73;font-weight:500;line-height:1.5;margin-bottom:4px;}
+  .notif-time{font-size:11px;color:#66768F;font-weight:600;}
+  .empty{text-align:center;padding:60px 20px;color:#4A5A73;font-size:14px;font-weight:600;}
+  .load-more{display:block;width:100%;padding:14px;background:white;border:1.5px solid #EEDFCB;border-radius:12px;margin:16px 20px;font-family:Karla,sans-serif;font-weight:700;font-size:14px;color:#C2471A;cursor:pointer;width:calc(100% - 40px);}
 `
 
 const LIMIT = 20
@@ -190,8 +190,8 @@ export default function NotificationsPage() {
         ) : notifs.length === 0 ? (
           <div className="empty">
             <div style={{ fontSize: 40, marginBottom: 12 }}>🔔</div>
-            <div style={{ fontWeight: 800, fontSize: 16, marginBottom: 8, color: '#3B2F2A' }}>All caught up!</div>
-            <div style={{ fontSize: 14, color: '#6E5B50', lineHeight: 1.6 }}>Notifications about your sessions and account will appear here.</div>
+            <div style={{ fontWeight: 800, fontSize: 16, marginBottom: 8, color: '#172B4D' }}>All caught up!</div>
+            <div style={{ fontSize: 14, color: '#4A5A73', lineHeight: 1.6 }}>Notifications about your sessions and account will appear here.</div>
           </div>
         ) : (
           <>

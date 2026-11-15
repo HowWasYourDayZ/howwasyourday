@@ -56,8 +56,8 @@ const howToJsonLd = {
 const S = `
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  :root{--navy:#3B2F2A;--teal:#B85520;--orange:#E8743B;--gray:#6E5B50;--border:#F2DFD1;--light:#FFF6EF;}
-  body{font-family:Karla,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#FDE6D6 0%,#FFF1E6 22%,#FFFFFF 58%) fixed;}
+  :root{--navy:#172B4D;--teal:#C2471A;--orange:#E65A22;--gray:#4A5A73;--border:#EEDFCB;--light:#FFF6E8;}
+  body{font-family:Karla,sans-serif;color:var(--navy);background:radial-gradient(ellipse 90% 55% at 0% 0%,#FCE5D3 0%,#FDEEDB 22%,#FFFFFF 58%) fixed;}
   a{text-decoration:none;color:inherit;}
   nav{padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;max-width:760px;margin:0 auto;}
   .page{max-width:720px;margin:0 auto;padding:16px 20px 110px;}
@@ -65,14 +65,14 @@ const S = `
   .lead{font-size:16px;color:var(--gray);line-height:1.75;margin-bottom:24px;}
   .sec{background:white;border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;}
   .sec h2{font-size:19px;font-weight:900;margin-bottom:10px;}
-  .sec p,.sec li{font-size:14.5px;color:#4A3C34;line-height:1.72;}
+  .sec p,.sec li{font-size:14.5px;color:#24395C;line-height:1.72;}
   .sec p+p{margin-top:8px;}
   .sec ul{margin:8px 0 0 20px;list-style:disc;}
   .sec li{margin-bottom:5px;}
   .sec a{color:var(--teal);font-weight:800;}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   @media(max-width:620px){.two{grid-template-columns:1fr;}}
-  .note{background:#FFF8F0;border:1.5px solid #FFD9A0;border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13.5px;color:#7A5C00;font-weight:600;line-height:1.6;}
+  .note{background:#FFF8EC;border:1.5px solid #FFD9A0;border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13.5px;color:#7A5C00;font-weight:600;line-height:1.6;}
   .crisis{background:#FFF0F0;border:2px solid #FFCDD2;border-radius:16px;padding:16px 18px;margin-bottom:16px;font-size:14px;color:#7A2020;font-weight:600;line-height:1.65;}
   .crisis a{color:#C0392B;text-decoration:underline;}
   .faq h3{font-size:15px;font-weight:800;margin:14px 0 4px;}
@@ -90,7 +90,7 @@ export default function HowItWorksPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <style dangerouslySetInnerHTML={{ __html: S }} />
       <nav>
-        <a href="/"><img src="/brand/logo.png?v=2" alt="How Was Your Day" style={{ height: 48 }} /></a>
+        <a href="/"><img src="/brand/logo.png?v=3" alt="How Was Your Day" style={{ height: 48 }} /></a>
         <a href="/talk"><button className="btn" style={{ fontSize: 13, padding: '8px 18px', margin: 0 }}>Talk now</button></a>
       </nav>
       <main className="page">

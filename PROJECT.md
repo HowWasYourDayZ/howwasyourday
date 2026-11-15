@@ -35,29 +35,31 @@
 **Tagline:** *Talk it through. 8 minutes is enough.* — the 8-minute session is the hero of the brand:
 a short, affordable, low-commitment conversation with a real person.
 
-**Colours — orange and white.** A soft, warm "sunset" orange that feels calm and trustworthy,
-on lots of white space. Never a loud or neon orange, never navy or teal.
+**Colours — cream, orange and navy** (brand board, 2026-11-15; replaced "orange and white"). Warm cream
+backgrounds, navy for text, orange for the mark and actions. Calm and grown-up, never loud or neon.
+
+**Brand board (2026-11-15, from Rangana):** cream, orange, navy — tagline *"Making room for connection."*
 
 | Token | Hex | Use |
 |---|---|---|
-| Sunset orange (brand) | `#E8743B` | Logo, accents, highlights, large headings, icons, decorative fills |
-| Ember (action) | `#B85520` | Buttons with white text, links, focus rings — 4.8:1 on white (WCAG AA) |
-| Ember dark (hover) | `#9E4719` | Hover/pressed state of Ember |
-| Peach (soft background) | `#FFF6EF` | Section backgrounds, cards, chips |
-| Apricot (tint / border) | `#FBE3D2` / `#F2DFD1` | Badges, dividers, card borders |
-| White | `#FFFFFF` | Main background — keep it the dominant colour |
-| Ink (text) | `#3B2F2A` | Headings and body text (warm charcoal, 12.9:1 on white) |
-| Muted text | `#6E5B50` | Secondary text (6.4:1 on white) |
+| Orange (brand) | `#E65A22` | The ear mark, icons, accents, decorative fills |
+| Ember (action) | `#C2471A` | Buttons with white text, links, focus rings — 5.0:1 with white (WCAG AA) |
+| Ember dark (hover) | `#A33B14` | Hover/pressed state of Ember |
+| Cream (background) | `#FFF6E8` | Page and section backgrounds |
+| Apricot (tint / border) | `#FBE0CC` / `#EEDFCB` | Badges, dividers, card borders |
+| White | `#FFFFFF` | Cards on cream |
+| Navy (text) | `#172B4D` | Headings, body text and the wordmark (13:1 on cream) |
+| Muted text | `#4A5A73` | Secondary text (6.5:1 on cream) |
 
-Rules: white text only on Ember (or darker), never on Sunset orange at body sizes (3:1 — large/bold only).
+Rules: white text only on Ember (or darker), never on the brand orange at body sizes (3.6:1 — large/bold only).
 Crisis callouts keep a red tint; nothing else introduces new hues.
 
-**Logo (2026-10-26):** a rounded speech bubble (talk) holding a sun — a circle with eight short rays (your
-day) — next to the wordmark *How Was* (ink) / *Your Day* (orange), set in Lora SemiBold and outlined to vector
-paths. Master files live in **`logo/`** (see `logo/README.md`): SVGs in `logo/svg/`, transparent high-res PNGs
+**Logo (2026-11-15):** a line-drawn **ear** (we listen) whose inner fold is a **question mark** ("How was your
+day?"), in orange, next to the wordmark *How Was / Your Day?* in navy Lora Bold, outlined to vector paths. App icon:
+orange ear on cream. Master files live in **`logo/`** (see `logo/README.md`): SVGs in `logo/svg/`, transparent high-res PNGs
 and app icons in `logo/png/`. Regenerate with `logo/generate-svg.cjs` + `logo/export.mjs`, which also update
 `public/` (logo.png, icons, favicon) and the Android app icons/splash screens. Never redraw it by hand per page —
-use `/brand/logo.png` or `/brand/*.svg`.
+use `/brand/logo.png` or `/brand/*.svg` (bump the `?v=` on `/brand/logo.png` when it changes).
 **Type (2026-11-15, matching the reference design prompt.overskill.app):** **Lora** 600 for headings (h1–h3, and the logo wordmark), **Karla** 400–500 for body text, buttons and UI (700 for emphasis). Both self-hosted via `@fontsource` (never Google Fonts). Nunito was dropped as too playful.
 
 **Voice:** warm, plain British English, short sentences, no clinical language, no hype. Prices in £
