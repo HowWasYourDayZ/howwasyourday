@@ -9,7 +9,7 @@ import { execSync } from 'child_process'
 
 const HOST = 'www.howwasyourday.live'
 const KEY = '558002b252dcc5aa4ac94d43c11834b7'
-const SITEMAPS = ['sitemap.xml', 'country-sitemap.xml', 'nri-sitemap.xml']
+const SITEMAPS = ['sitemap.xml']
 
 async function sitemapUrls() {
   const urls = new Set()
