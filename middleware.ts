@@ -98,7 +98,7 @@ function isTrustedOrigin(origin: string, reqHostname: string): boolean {
     if (oh === reqHostname) return true
     if (oh === 'www.' + reqHostname || reqHostname === 'www.' + oh) return true
     // Only trust THIS project's Vercel preview deployments, not all *.vercel.app
-    if (/^lean-?on[a-z0-9-]*\.vercel\.app$/i.test(oh)) return true
+    if (/^howwasyourday[a-z0-9-]*\.vercel\.app$/i.test(oh)) return true
   } catch { /* malformed origin → deny */ }
   return false
 }
